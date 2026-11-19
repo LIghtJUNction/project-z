@@ -34,7 +34,7 @@ jobs:
       - name: Check pinned dependency graph and generated files
         run: python3 scripts/project_z.py check
       - name: Verify local dependency resolution
-        run: python3 scripts/project_z.py resolve
+        run: python3 scripts/project_z.py resolve --all
 
   core-libraries:
     needs: dependencies

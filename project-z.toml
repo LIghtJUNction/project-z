@@ -24,15 +24,18 @@ role = "bindings"
 
 [repositories.zcalld-compat]
 role = "extension"
+requires = ["zcalld"]
 
 [repositories.zshard]
 role = "shell"
 
 [repositories.oh-my-ztty]
 role = "suite"
+requires = ["ztty","ssmcp","zshard","zdot"]
 
 [repositories.zcall-gui]
 role = "application"
+requires = ["zcalld"]
 
 [repositories.lmm-api-source]
 role = "application"

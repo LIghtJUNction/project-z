@@ -118,6 +118,22 @@ class DependencyGraphTests(unittest.TestCase):
         with self.assertRaisesRegex(pz.CoordinationError, "duplicate package core"):
             pz.package_map(data)
 
+    def test_runtime_and_installer_consumers_join_package_impact(self):
+        data = catalog(package("core"), package("daemon", deps=[dependency("core")]), package("gui"))
+        next(repo for repo in data["repositories"] if repo["name"] == "gui")["requires"] = ["daemon"]
+        data["repositories"].append({"name": "installer", "requires": ["gui"], "manifests": []})
+        self.assertEqual(pz.impact(data, ["core"]), ["core", "daemon"])
+        self.assertEqual(pz.repository_impact(data, ["core"]), ["core", "daemon", "gui", "installer"])
+        self.assertEqual({repo["name"] for repo in pz.selected_repositories(data, ["core"], True)},
+                         {"core", "daemon", "gui"})
+        self.assertEqual(pz.repository_impact(data, ["installer"]), ["installer"])
+
+    def test_missing_runtime_repository_is_not_silently_ignored(self):
+        data = catalog(package("gui"))
+        data["repositories"][0]["requires"] = ["missing-daemon"]
+        self.assertTrue(any("unknown required repositories missing-daemon" in error
+                            for error in pz.validate(data, {})))
+
 
 class InventoryTests(FilesystemFixture):
     def test_multiple_manifests_of_one_workspace_do_not_duplicate_members(self):
@@ -253,6 +269,26 @@ class PathBoundaryTests(FilesystemFixture):
 class CliTests(FilesystemFixture):
     def cargo_result(self, packages, *, returncode=0, stderr=""):
         return SimpleNamespace(returncode=returncode, stdout=json.dumps({"packages": packages}), stderr=stderr)
+
+    def test_resolve_all_detects_an_application_using_an_external_core(self):
+        data = catalog(package("core"), package("app", deps=[dependency("core")]))
+        next(repo for repo in data["repositories"] if repo["name"] == "app")["role"] = "application"
+        self.generated(data)
+        self.write("core/Cargo.toml", '[package]\nname = "core"\nversion = "1.0.0"\n')
+        self.write("outside/core/Cargo.toml", '[package]\nname = "core"\nversion = "1.0.0"\n')
+
+        def metadata(repo, *_args, **_kwargs):
+            directory = "outside/core" if repo["name"] == "app" else "core"
+            return {"packages": [{"name": "core", "version": "1.0.0",
+                                  "manifest_path": str(self.root / directory / "Cargo.toml")}]}
+
+        stderr = io.StringIO()
+        with patch.object(pz, "inventory", return_value=data), patch.object(pz, "metadata", side_effect=metadata), \
+                redirect_stdout(io.StringIO()), redirect_stderr(stderr):
+            self.assertEqual(pz.main(["--root", str(self.root), "resolve"]), 0)
+            self.assertEqual(pz.main(["--root", str(self.root), "resolve", "--all"]), 1)
+        self.assertIn("app: Cargo resolved core 1.0.0 outside the canonical checkout", stderr.getvalue())
+        self.assertFalse((self.root / ".cargo/config.toml").exists())
 
     def test_locked_preflight_does_not_rewrite_the_lockfile(self):
         data = catalog(package("core"))

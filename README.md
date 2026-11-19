@@ -12,20 +12,21 @@ Project Z 把独立库和实际消费者固定在一组可以一起验证的源�
 git clone --recurse-submodules https://github.com/LIghtJUNction/project-z.git
 cd project-z
 python3 scripts/project_z.py check
-python3 scripts/project_z.py resolve
+python3 scripts/project_z.py resolve --all
 ```
 
-`check` 核对版本约束、依赖环、退役包名、源码归属和生成文件。`resolve` 进一步调用 Cargo，确认选中的 Project Z 依赖确实来自本次检出的源码。只有版本号一致还不够：同名同版本的旧注册表包，不能冒充正在修改的本地库。
+`check` 核对版本约束、依赖环、退役包名、源码归属和生成文件。`resolve` 进一步调用 Cargo，确认选中的 Project Z 依赖确实来自本次检出的源码；`--all` 包含应用在内的所有 Rust 工作区。只有版本号一致还不够：同名同版本的旧注册表包，不能冒充正在修改的本地库。
 
 运行指定消费者，或者运行某个库的所有 Rust 下游：
 
 ```sh
 python3 scripts/project_z.py run --repo zcall -- test --lib --tests
 python3 scripts/project_z.py impact zconv
+python3 scripts/project_z.py impact --repositories zconv
 python3 scripts/project_z.py run --affected zconv -- check
 ```
 
-不指定 `--repo` 或 `--affected` 时，`run` 和 `resolve` 默认选择角色为 `library` 的仓库。应用、绑定、安装套件和兼容层可单独选择；需要数据库、设备或桌面会话的应用验收继续按其自身文档执行。`impact` 输出 Cargo package 的传递下游，安装套件中的组件 gitlink 仍需一起更新和验收。
+不指定 `--repo` 或 `--affected` 时，`run` 和 `resolve` 默认选择角色为 `library` 的仓库。应用、绑定、安装套件和兼容层可单独选择；需要数据库、设备或桌面会话的应用验收继续按其自身文档执行。`impact` 默认输出 Cargo package 的传递下游；加 `--repositories` 会同时包含政策清单中 `requires` 声明的运行时服务和安装套件。`run --affected` 会验证这些下游中的 Rust 工作区，非 Rust 安装验收仍按对应项目执行。
 
 协调脚本临时创建根目录 `.cargo/config.toml`，让测试内部启动的 Cargo 进程使用相同覆盖；结束时清理自己创建且未被改动的文件。已有不同配置会明确报错，不会覆盖。Cargo 的版本约束、feature、目标平台和 `--locked` / `--offline` / `--frozen` 语义仍然有效。联调可能正常更新消费者的锁文件，提交前需要检查。
 
@@ -37,7 +38,8 @@ python3 scripts/project_z.py run --affected zconv -- check
 | 协议与调用 | `zconv`、`zcall`、`zmcpio`、`zdwire`、`zldap` | 协议状态、事件转换和调用契约 |
 | 执行与扩展 | `zharness`、`zplugin` | 工具执行、插件 ABI 和插件生命周期 |
 | 系统接口 | `zsys` | 可以复用的平台能力；原生动态库加载已集中在 `dylib` feature |
-| 终端与界面 | `zvte`、`ztuio`、`zui`、`ztty` | 终端状态、行与帧差分、原生界面、终端应用分别维护 |
+| 终端与界面 | `zvte`、`ztuio`、`zgpui`、`zui`、`ztty` | 终端状态、行与帧差分、可移植场景、原生界面、终端应用分别维护 |
+| 输入与输入法 | `zinput`、`ztype` | 有界组合输入、候选与插件契约由框架维护，词库、候选界面和文本送达由应用负责 |
 | 应用与集成 | `ssmcp`、`zuse`、`zcalld`、`zcall-gui`、LMM API | 消费公共库，保留应用状态与业务策略 |
 | 命令与安装 | `zclap`、`zclick`、`zshard`、`zdot`、`oh-my-ztty` | 参数解析、绑定、shell、配置和安装集成 |
 | 可选兼容 | `zcalld-compat` | 独立兼容层，其依赖和许可证单独管理 |

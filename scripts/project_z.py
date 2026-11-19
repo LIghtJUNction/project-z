@@ -69,6 +69,7 @@ def repositories(root=ROOT):
             "commit": command(["git", "rev-parse", "HEAD"], source).strip(),
             "role": options.get("role", "library"),
             "manifests": manifests,
+            "requires": sorted(options.get("requires", [])),
         })
     unknown = set(overrides) - {repo["name"] for repo in result}
     if unknown:
@@ -202,6 +203,25 @@ def impact(data, changed):
     return [name for name in ordered(dependency_graph(data)) if name in affected]
 
 
+def repository_impact(data, changed):
+    """Include declared runtime and installer consumers beyond Cargo links."""
+    packages = package_map(data)
+    graph = {repo["name"]: set(repo.get("requires", [])) for repo in data["repositories"]}
+    unknown = set(changed) - graph.keys() - packages.keys()
+    if unknown:
+        raise CoordinationError("unknown package/repository: " + ", ".join(sorted(unknown)))
+    for name, dependencies in dependency_graph(data, include_dev=True).items():
+        owner = packages[name]["repository"]
+        graph[owner].update(packages[dependency]["repository"] for dependency in dependencies
+                            if packages[dependency]["repository"] != owner)
+    affected = {name if name in graph else packages[name]["repository"] for name in changed}
+    while True:
+        expanded = affected | {name for name, dependencies in graph.items() if dependencies & affected}
+        if expanded == affected:
+            return sorted(affected)
+        affected = expanded
+
+
 def equivalent_source(path, package, data, root=ROOT):
     """A nested gitlink may reuse exactly the same clean package source."""
     actual = (root / path).resolve()
@@ -227,6 +247,11 @@ def validate(data, rules, root=ROOT):
     packages = package_map(data)
     errors = []
     forbidden = set(rules.get("policy", {}).get("forbidden_packages", []))
+    repo_names = {repo["name"] for repo in data["repositories"]}
+    for repo in data["repositories"]:
+        missing = set(repo.get("requires", [])) - repo_names
+        if missing:
+            errors.append(f"{repo['name']}: unknown required repositories {', '.join(sorted(missing))}")
     for name, package in packages.items():
         if name in forbidden:
             errors.append(f"{package['manifest']}: retired package name {name}")
@@ -332,7 +357,7 @@ def local_config(root=ROOT):
 def selected_repositories(data, names, downstream=False):
     packages = package_map(data)
     if downstream:
-        selected = {packages[name]["repository"] for name in impact(data, names)}
+        selected = set(repository_impact(data, names))
     elif names:
         selected = set()
         repos = {repo["name"] for repo in data["repositories"]}
@@ -379,8 +404,10 @@ def main(argv=None):
     graph = commands.add_parser("graph", help="Print the internal package dependency graph")
     graph.add_argument("--format", choices=["json", "mermaid"], default="json")
     affected = commands.add_parser("impact", help="Find transitive downstream packages")
+    affected.add_argument("--repositories", action="store_true", help="Include runtime and installer consumers")
     affected.add_argument("names", nargs="+")
     resolve = commands.add_parser("resolve", help="Verify Cargo actually resolves local Project Z packages")
+    resolve.add_argument("--all", action="store_true", help="Resolve every Rust workspace, including applications")
     resolve.add_argument("names", nargs="*")
     run = commands.add_parser("run", help="Run explicit Cargo arguments across selected repositories")
     run.add_argument("--repo", action="append", default=[])
@@ -413,7 +440,8 @@ def main(argv=None):
                 if packages[name]["publish"]:
                     print(f"{name}\t{packages[name]['version']}\t{packages[name]['repository']}")
         elif args.action == "impact":
-            print("\n".join(impact(data, args.names)))
+            affected = repository_impact(data, args.names) if args.repositories else impact(data, args.names)
+            print("\n".join(affected))
         elif args.action == "graph":
             dependencies = dependency_graph(data)
             if args.format == "json":
@@ -427,10 +455,13 @@ def main(argv=None):
                     for dep in sorted(deps):
                         print(f"    {ids[dep]} --> {ids[name]}")
         elif args.action == "resolve":
+            if args.all and args.names:
+                raise CoordinationError("choose --all or explicit package/repository names")
             errors = validate(data, policy(root), root) + stale_generated(data, root)
             if errors:
                 raise CoordinationError("\n".join(errors))
-            repos = selected_repositories(data, args.names)
+            names = [repo["name"] for repo in data["repositories"] if repo["manifests"]] if args.all else args.names
+            repos = selected_repositories(data, names)
             errors = resolved_paths(data, repos, root)
             if errors:
                 raise CoordinationError("\n".join(errors))
