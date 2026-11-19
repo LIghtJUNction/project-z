@@ -2,7 +2,7 @@
 
 Project Z 把独立库和实际消费者固定在一组可以一起验证的源码提交上。各仓库继续维护自己的实现、许可证和发布流程；本仓库负责回答三个问题：**改了哪个库、会影响谁、这次测试实际使用了哪份代码。**
 
-`catalog.json` 是由 Cargo 工作区信息生成的完整清单，`.gitmodules` 保存仓库来源，`project-z.toml` 声明消费者角色和特殊 manifest 位置。新增项目进入这些清单后，版本检查、本地依赖覆盖和下游影响分析一并生效。
+[项目与依赖索引](docs/PROJECTS.md) 列出每个仓库的角色、实际包名、版本、直接关联和固定源码；它与 `catalog.json` 一起由 Cargo 工作区信息生成。`.gitmodules` 保存仓库来源，`project-z.toml` 声明消费者角色和特殊 manifest 位置。新增项目进入这些清单后，版本检查、本地依赖覆盖和下游影响分析一并生效。
 
 ## 开始联调
 
@@ -28,7 +28,7 @@ python3 scripts/project_z.py run --affected zconv -- check
 
 不指定 `--repo` 或 `--affected` 时，`run` 和 `resolve` 默认选择角色为 `library` 的仓库。应用、绑定、安装套件和兼容层可单独选择；需要数据库、设备或桌面会话的应用验收继续按其自身文档执行。`impact` 默认输出 Cargo package 的传递下游；加 `--repositories` 会同时包含政策清单中 `requires` 声明的运行时服务和安装套件。`run --affected` 会验证这些下游中的 Rust 工作区，非 Rust 安装验收仍按对应项目执行。
 
-协调脚本临时创建根目录 `.cargo/config.toml`，让测试内部启动的 Cargo 进程使用相同覆盖；结束时清理自己创建且未被改动的文件。已有不同配置会明确报错，不会覆盖。Cargo 的版本约束、feature、目标平台和 `--locked` / `--offline` / `--frozen` 语义仍然有效。联调可能正常更新消费者的锁文件，提交前需要检查。
+协调脚本临时创建根目录 `.cargo/config.toml`，让测试内部启动的 Cargo 进程使用相同覆盖；结束时清理自己创建且未被改动的文件。已有不同配置会明确报错，不会覆盖。Cargo 的版本约束、feature、目标平台和 `--locked` / `--offline` / `--frozen` 语义仍然有效。协调器在解析与验证完成后，恢复各工作区锁文件调用前的内容、权限和存在性，避免本地 patch 把发布用锁文件留在修改状态；已有用户改动仍会保留。请在独立检出中联调，不要让其他 Cargo 作业同时改写同一锁文件。
 
 ## 库与消费者的分工
 
@@ -61,9 +61,11 @@ python3 scripts/project_z.py resolve PROJECT
 python3 scripts/project_z.py impact PROJECT
 ```
 
-`sync` 只重建目录清单和所有可发布 package 的本地 patch，不拉取远端、不修改依赖版本，也不把不兼容的组合变成兼容。仓库名、package 名、Rust 导入名和目录名可以不同；以 Cargo 的实际工作区成员为准，不根据名字以 `z` 开头来推断归属。
+`sync` 只重建目录清单、项目索引和所有可发布 package 的本地 patch，不拉取远端、不修改依赖版本，也不把不兼容的组合变成兼容。仓库名、package 名、Rust 导入名和目录名可以不同；以 Cargo 的实际工作区成员为准，不根据名字以 `z` 开头来推断归属。
 
 消费者可以持有独立库的嵌套子模块。只有提交、包在仓库中的相对位置和干净源码均一致时，协调器才接受它与根目录 canonical 副本等价。复制代码后保留同一版本号无法通过这项检查。
+
+**传播原则：底层库的负责人负责升级所有受影响的直接与间接下游。** 更新清单应包含库、应用、运行时服务和安装套件；通过 `impact --repositories` 枚举，再与现有维护者确认范围。完成标准是适配、依赖与锁文件更新、相应验证和远端提交都已落实，或明确记录尚未解除的阻碍及接手人。底层发布和通知本身不代表传播完成。
 
 发布顺序可由依赖图计算：
 
@@ -88,4 +90,4 @@ python3 scripts/release.py patch dist
 
 ## 定时维护
 
-运行 python3 scripts/maintenance.py 检查上游提交、注册表版本和待审查的新仓库，输出 JSON 与 Markdown。显式 --apply 在独立工作树中更新已知 gitlink，通过依赖检查后形成候选提交。每日 GitHub 审计与定时维护代理的职责、验证范围见 [自动维护说明](docs/automation.md)。
+运行 `python3 scripts/maintenance.py` 检查上游提交、注册表版本和待审查的新仓库，输出 JSON 与 Markdown。显式 `--apply` 在独立工作树中更新已知 gitlink，通过依赖检查后形成候选提交。每日 GitHub 审计与定时维护代理的职责、验证范围见 [自动维护说明](docs/automation.md)。

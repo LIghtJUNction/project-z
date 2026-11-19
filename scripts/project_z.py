@@ -6,19 +6,24 @@ from __future__ import annotations
 import argparse
 import configparser
 import json
+import os
 import re
+import stat
 import subprocess
 import sys
+import tempfile
 import tomllib
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import contextmanager
 from pathlib import Path
 
 from cargo_versions import satisfies
+from catalog_docs import render as render_catalog_docs
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = Path("catalog.json")
 PATCH = Path(".cargo/project-z.toml")
+PROJECTS = Path("docs/PROJECTS.md")
 
 
 class CoordinationError(RuntimeError):
@@ -290,7 +295,8 @@ def patch_text(data):
 
 
 def generated(data):
-    return {CATALOG: json.dumps(data, indent=2, ensure_ascii=False) + "\n", PATCH: patch_text(data)}
+    return {CATALOG: json.dumps(data, indent=2, ensure_ascii=False) + "\n",
+            PATCH: patch_text(data), PROJECTS: render_catalog_docs(data)}
 
 
 def stale_generated(data, root=ROOT):
@@ -378,13 +384,64 @@ def selected_repositories(data, names, downstream=False):
     return [next(repo for repo in data["repositories"] if repo["name"] == name) for name in order]
 
 
+def _lock_state(path):
+    try:
+        before = path.lstat()
+    except FileNotFoundError:
+        return None
+    if not stat.S_ISREG(before.st_mode):
+        raise CoordinationError(f"{path}: lockfile must be a regular file")
+    content = path.read_bytes()
+    after = path.lstat()
+    fingerprint = lambda item: (item.st_dev, item.st_ino, item.st_size, item.st_mtime_ns, item.st_ctime_ns)
+    if fingerprint(before) != fingerprint(after):
+        raise CoordinationError(f"{path}: lockfile changed while being read; use a separate checkout")
+    return content, stat.S_IMODE(after.st_mode), fingerprint(after)
+
+
+@contextmanager
+def preserved_workspace_locks(data, repo, root=ROOT):
+    """Discard local-patch resolutions while preserving pre-existing user edits.
+
+    Workspace roots come from Cargo's inventory, including virtual workspaces
+    and member manifests. Use an isolated checkout for concurrent Cargo work.
+    """
+    workspaces = {package["workspace"] for package in data["packages"]
+                  if package["repository"] == repo["name"]}
+    snapshots = []
+    for workspace in sorted(workspaces):
+        path = root / workspace / "Cargo.lock"
+        relative(path, root / repo["path"])
+        snapshots.append((path, _lock_state(path)))
+    try:
+        yield
+    finally:
+        for path, original in snapshots:
+            observed = _lock_state(path)
+            if (original[:2] if original else None) == (observed[:2] if observed else None):
+                continue
+            if original is None:
+                if _lock_state(path) != observed:
+                    raise CoordinationError(f"{path}: concurrent lockfile change; refusing to remove it")
+                path.unlink()
+                continue
+            descriptor, backup = tempfile.mkstemp(prefix=".Cargo.lock.project-z-", dir=path.parent)
+            with os.fdopen(descriptor, "wb") as stream:
+                stream.write(original[0])
+            os.chmod(backup, original[1])
+            if _lock_state(path) != observed:
+                raise CoordinationError(f"{path}: concurrent lockfile change; original preserved at {backup}")
+            os.replace(backup, path)
+
+
 def resolved_paths(data, repos, root=ROOT, options=()):
     canonical = package_map(data)
     errors = []
     with local_config(root):
         for repo in repos:
             for manifest in repo["manifests"]:
-                resolved = metadata(repo, manifest, root, resolve=True, options=options)
+                with preserved_workspace_locks(data, repo, root):
+                    resolved = metadata(repo, manifest, root, resolve=True, options=options)
                 for package in resolved["packages"]:
                     expected = canonical.get(package["name"])
                     if expected and not equivalent_source(Path(package["manifest_path"]).parent, expected, data, root):
@@ -487,7 +544,8 @@ def main(argv=None):
                     for manifest in repo["manifests"]:
                         print(f"[{repo['name']}] cargo {' '.join(cargo_args)}", flush=True)
                         invocation = cargo_invocation(cargo_args, root / repo["path"] / manifest)
-                        result = subprocess.run(invocation, cwd=root)
+                        with preserved_workspace_locks(data, repo, root):
+                            result = subprocess.run(invocation, cwd=root)
                         if result.returncode:
                             failures.append(f"{repo['name']}: exit {result.returncode}")
             if failures:

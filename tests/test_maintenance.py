@@ -83,6 +83,8 @@ class IsolatedApply(unittest.TestCase):
         (self.root / "catalog.json").write_text("{}\n")
         (self.root / ".cargo").mkdir()
         (self.root / ".cargo/project-z.toml").write_text("[patch.crates-io]\n")
+        (self.root / "docs").mkdir()
+        (self.root / "docs/PROJECTS.md").write_text("initial project map\n")
         git(self.root, "add", ".")
         git(self.root, "commit", "-m", "pin initial library")
         self.root_head = git(self.root, "rev-parse", "HEAD")
@@ -100,6 +102,7 @@ class IsolatedApply(unittest.TestCase):
     def coordinate(self, worktree):
         self.assertEqual(git(worktree / "zfixture", "rev-parse", "HEAD"), self.new)
         (worktree / "catalog.json").write_text(json.dumps({"commit": self.new}) + "\n")
+        (worktree / "docs/PROJECTS.md").write_text(f"pinned {self.new}\n")
         return {"sync": "updated", "check": "passed"}
 
     def unchanged_source(self):
@@ -112,6 +115,7 @@ class IsolatedApply(unittest.TestCase):
             result = maintenance.apply_snapshot(self.root, self.report, self.destination)
         self.assertEqual(result["status"], "ready", result)
         self.assertEqual(git(self.destination, "rev-parse", "HEAD:zfixture"), self.new)
+        self.assertEqual(git(self.destination, "show", "HEAD:docs/PROJECTS.md"), f"pinned {self.new}")
         self.assertEqual((self.destination / ".gitmodules").read_bytes(), original_modules)
         self.assertEqual(git(self.destination, "status", "--porcelain"), "")
         self.assertEqual(git(self.root, "status", "--porcelain"), "")

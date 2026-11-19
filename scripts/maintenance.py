@@ -20,7 +20,7 @@ from urllib.request import Request, urlopen
 import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
-GENERATED = ("catalog.json", ".cargo/project-z.toml")
+GENERATED = ("catalog.json", ".cargo/project-z.toml", "docs/PROJECTS.md")
 
 
 class MaintenanceError(RuntimeError):

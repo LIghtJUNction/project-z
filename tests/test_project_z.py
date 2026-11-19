@@ -160,6 +160,63 @@ class InventoryTests(FilesystemFixture):
         parsed = tomllib.loads(pz.patch_text(data))["patch"]["crates-io"]
         self.assertEqual(parsed, {"core": {"path": "suite/crates/core"}})
 
+    def test_project_documentation_uses_pinned_manifests_and_runtime_dependencies(self):
+        data = catalog(package("core", repo="suite", manifest="suite/crates/core/Cargo.toml"),
+                       package("desktop", deps=[dependency("core")]))
+        next(repo for repo in data["repositories"] if repo["name"] == "desktop")["requires"] = ["service"]
+        document = pz.generated(data)[pz.PROJECTS]
+        self.assertIn("https://example.invalid/suite/blob/" + "0" * 40 + "/crates/core/Cargo.toml", document)
+        self.assertIn("service, suite", document)
+        self.assertIn("注册表是否已发布", document)
+
+
+class LockfileTransactionTests(FilesystemFixture):
+    def setUp(self):
+        super().setUp()
+        self.data = catalog(package("core", repo="suite", manifest="suite/crates/core/Cargo.toml"))
+        self.repo = self.data["repositories"][0]
+        self.repo["manifests"] = ["crates/core/Cargo.toml"]
+        self.write("suite/crates/core/Cargo.toml", "[package]\nname = 'core'\nversion = '1.0.0'\n")
+
+    def test_member_workspace_restores_existing_dirty_bytes_and_permissions(self):
+        lock = self.write("suite/Cargo.lock", "user's existing edits\r\n")
+        lock.chmod(0o640)
+        original, mode = lock.read_bytes(), lock.stat().st_mode
+        with pz.preserved_workspace_locks(self.data, self.repo, self.root):
+            lock.write_bytes(b"Cargo's patched resolution\n")
+            lock.chmod(0o600)
+        self.assertEqual(lock.read_bytes(), original)
+        self.assertEqual(lock.stat().st_mode, mode)
+        self.assertFalse(list(lock.parent.glob(".Cargo.lock.project-z-*")))
+
+    def test_new_lock_is_removed_even_when_metadata_fails(self):
+        lock = self.root / "suite/Cargo.lock"
+        with self.assertRaisesRegex(pz.CoordinationError, "metadata failed"):
+            with pz.preserved_workspace_locks(self.data, self.repo, self.root):
+                lock.write_text("generated\n")
+                raise pz.CoordinationError("metadata failed")
+        self.assertFalse(lock.exists())
+
+    def test_existing_lock_is_restored_when_metadata_fails(self):
+        lock = self.write("suite/Cargo.lock", "original\n")
+        with self.assertRaisesRegex(pz.CoordinationError, "metadata failed"):
+            with pz.preserved_workspace_locks(self.data, self.repo, self.root):
+                lock.unlink()
+                raise pz.CoordinationError("metadata failed")
+        self.assertEqual(lock.read_text(), "original\n")
+
+    def test_lock_symlink_is_refused_without_touching_its_target(self):
+        target = self.write("elsewhere.lock", "preserve\n")
+        lock = self.root / "suite/Cargo.lock"
+        try:
+            lock.symlink_to(target)
+        except OSError:
+            self.skipTest("symlinks unavailable")
+        with self.assertRaises(pz.CoordinationError):
+            with pz.preserved_workspace_locks(self.data, self.repo, self.root):
+                self.fail("must refuse before invoking Cargo")
+        self.assertEqual(target.read_text(), "preserve\n")
+
 
 class VersionDeclarationTests(FilesystemFixture):
     def test_path_only_prerelease_is_accepted_but_explicit_star_is_checked(self):
@@ -420,6 +477,19 @@ class EquivalentSourceTests(FilesystemFixture):
         return pz.equivalent_source("consumer/vendor/shared/crates/core", self.pkg, self.data, self.root)
 
     def test_identical_clean_pinned_copy_is_accepted(self):
+        self.assertTrue(self.equivalent())
+
+    def test_resolver_lock_changes_are_restored_before_nested_source_proof(self):
+        self.generated(self.data)
+
+        def resolve(*_args, **_kwargs):
+            (self.shared / "Cargo.lock").write_text("temporary local patch resolution\n")
+            return {"packages": [{"name": "core", "version": "1.0.0",
+                                  "manifest_path": str(self.nested / "crates/core/Cargo.toml")}]}
+
+        with patch.object(pz, "metadata", side_effect=resolve):
+            self.assertEqual(pz.resolved_paths(self.data, self.data["repositories"], self.root), [])
+        self.assertEqual(self.git("status", "--porcelain", cwd=self.shared), "")
         self.assertTrue(self.equivalent())
 
     def test_untracked_build_script_makes_copy_different(self):
