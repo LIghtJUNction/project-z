@@ -413,25 +413,55 @@ def preserved_workspace_locks(data, repo, root=ROOT):
         path = root / workspace / "Cargo.lock"
         relative(path, root / repo["path"])
         snapshots.append((path, _lock_state(path)))
-    try:
-        yield
-    finally:
-        for path, original in snapshots:
-            observed = _lock_state(path)
-            if (original[:2] if original else None) == (observed[:2] if observed else None):
-                continue
-            if original is None:
-                if _lock_state(path) != observed:
-                    raise CoordinationError(f"{path}: concurrent lockfile change; refusing to remove it")
-                path.unlink()
-                continue
-            descriptor, backup = tempfile.mkstemp(prefix=".Cargo.lock.project-z-", dir=path.parent)
+
+    def backup_original(path, original):
+        descriptor, backup = tempfile.mkstemp(prefix=".Cargo.lock.project-z-", dir=path.parent)
+        try:
             with os.fdopen(descriptor, "wb") as stream:
                 stream.write(original[0])
             os.chmod(backup, original[1])
-            if _lock_state(path) != observed:
-                raise CoordinationError(f"{path}: concurrent lockfile change; original preserved at {backup}")
-            os.replace(backup, path)
+        except BaseException:
+            Path(backup).unlink(missing_ok=True)
+            raise
+        return backup
+
+    try:
+        yield
+    finally:
+        errors = []
+        for path, original in snapshots:
+            backup = None
+            backup_attempted = False
+            try:
+                observed = _lock_state(path)
+                if (original[:2] if original else None) == (observed[:2] if observed else None):
+                    continue
+                if original is None:
+                    if _lock_state(path) != observed:
+                        raise CoordinationError(f"{path}: concurrent lockfile change; refusing to remove it")
+                    path.unlink()
+                    continue
+                backup_attempted = True
+                backup = backup_original(path, original)
+                if _lock_state(path) != observed:
+                    raise CoordinationError(f"{path}: concurrent lockfile change")
+                os.replace(backup, path)
+                backup = None
+            except (CoordinationError, OSError) as error:
+                detail = str(error)
+                if original is not None:
+                    if not backup_attempted:
+                        try:
+                            backup = backup_original(path, original)
+                        except OSError as backup_error:
+                            detail += f"; backup failed: {backup_error}"
+                    if backup is not None:
+                        detail += f"; original preserved at {backup}"
+                    else:
+                        detail += f"; original lockfile backup unavailable for {path}"
+                errors.append(detail)
+        if errors:
+            raise CoordinationError("\n".join(errors))
 
 
 def resolved_paths(data, repos, root=ROOT, options=()):

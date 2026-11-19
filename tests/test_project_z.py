@@ -205,6 +205,45 @@ class LockfileTransactionTests(FilesystemFixture):
                 raise pz.CoordinationError("metadata failed")
         self.assertEqual(lock.read_text(), "original\n")
 
+    def test_restore_error_preserves_original_and_restores_other_workspaces(self):
+        first = self.write("suite/a/Cargo.lock", "first user's existing edits\r\n")
+        second = self.write("suite/b/Cargo.lock", "second user's existing edits\r\n")
+        target = self.write("elsewhere.lock", "another writer's file\n")
+        first.chmod(0o640)
+        second.chmod(0o600)
+        original_first, first_mode = first.read_bytes(), first.stat().st_mode
+        original_second, second_mode = second.read_bytes(), second.stat().st_mode
+        probe = self.root / "symlink-probe"
+        try:
+            probe.symlink_to(target)
+            probe.unlink()
+        except OSError as error:
+            self.skipTest(f"symlinks unavailable: {error}")
+        data = catalog(
+            package("first", repo="suite", manifest="suite/a/Cargo.toml"),
+            package("second", repo="suite", manifest="suite/b/Cargo.toml"),
+        )
+        for item, workspace in zip(data["packages"], ["suite/a", "suite/b"]):
+            item["workspace"] = workspace
+
+        with self.assertRaises(pz.CoordinationError) as failure:
+            with pz.preserved_workspace_locks(data, data["repositories"][0], self.root):
+                first.unlink()
+                first.symlink_to(target)
+                second.write_bytes(b"temporary Cargo resolution\n")
+                second.chmod(0o644)
+
+        self.assertTrue(first.is_symlink())
+        self.assertEqual(target.read_text(), "another writer's file\n")
+        self.assertEqual(second.read_bytes(), original_second)
+        self.assertEqual(second.stat().st_mode, second_mode)
+        backups = list(first.parent.glob(".Cargo.lock.project-z-*"))
+        self.assertEqual(len(backups), 1)
+        self.assertEqual(backups[0].read_bytes(), original_first)
+        self.assertEqual(backups[0].stat().st_mode, first_mode)
+        self.assertIn("lockfile must be a regular file", str(failure.exception))
+        self.assertIn(str(backups[0]), str(failure.exception))
+
     def test_lock_symlink_is_refused_without_touching_its_target(self):
         target = self.write("elsewhere.lock", "preserve\n")
         lock = self.root / "suite/Cargo.lock"
