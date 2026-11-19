@@ -8,6 +8,10 @@ When you change a foundational library, you own propagation to every affected di
 
 Update compatibility code, version constraints, pinned commits and lockfiles in dependency order. Run the relevant consumer checks, commit and push in meaningful batches, and verify remote state. A published library or delivered message does not complete propagation. Record any real blocker, the affected consumer, the next owner and the exact reusable source commit until it is resolved.
 
+## Local validation and release workflows
+
+Day-to-day development, fixes and merges are validated locally. Do not trigger, repeatedly rerun or wait for routine push/PR CI, CodeQL or remote review. Keep required formal release builds, signing, artifact and deployment pipelines; the coordinator workflow remains manually callable and reusable for those workflows. Report only platforms and native behaviors actually verified.
+
 ## Snapshot checks
 
 - Regenerate `catalog.json`, `.cargo/project-z.toml` and `docs/PROJECTS.md` with `python3 scripts/project_z.py sync`; do not edit generated content by hand.

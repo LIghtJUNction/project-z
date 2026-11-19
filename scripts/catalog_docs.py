@@ -6,7 +6,7 @@ from urllib.parse import quote
 
 ROLES = {
     "library": "公共库", "application": "应用", "bindings": "语言绑定",
-    "extension": "扩展", "shell": "Shell", "suite": "安装套件",
+    "extension": "扩展", "shell": "Shell", "suite": "安装套件", "configuration": "配置库",
 }
 
 
@@ -56,6 +56,6 @@ def render(data):
         "python3 scripts/project_z.py resolve --all",
         "python3 scripts/project_z.py run --affected zconv -- check", "```", "",
         "`impact` 展开传递下游，`resolve --all` 核对应用和库实际使用的源码，`run` 执行明确选择的 Cargo 检查。真实桌面、设备、服务和发行制品的验收继续按各仓库说明执行。", "",
-        "更新依赖后运行 `python3 scripts/project_z.py sync`。本索引、catalog.json 和本地依赖覆盖一起生成；CI 会拒绝过期的生成文件。", "",
+        "更新依赖后运行 `python3 scripts/project_z.py sync`。本索引、catalog.json 和本地依赖覆盖一起生成；协调检查会拒绝过期的生成文件。", "",
     ])
     return "\n".join(lines)
