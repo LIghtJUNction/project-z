@@ -66,9 +66,9 @@
 	path = ztty
 	url = https://github.com/LIghtJUNction/ztty.git
 	branch = main
-[submodule "ztui"]
-	path = ztui
-	url = https://github.com/LIghtJUNction/ztui.git
+[submodule "ztuio"]
+	path = ztuio
+	url = https://github.com/LIghtJUNction/ztuio.git
 	branch = main
 [submodule "zvte"]
 	path = zvte
@@ -105,4 +105,12 @@
 [submodule "oh-my-ztty"]
 	path = oh-my-ztty
 	url = https://github.com/LIghtJUNction/oh-my-ztty.git
+	branch = main
+[submodule "zcall-gui"]
+	path = zcall-gui
+	url = https://github.com/LIghtJUNction/zcall-gui.git
+	branch = main
+[submodule "lmm-api-source"]
+	path = lmm-api-source
+	url = https://github.com/TokenNotIncluded/lmm-api-source.git
 	branch = main

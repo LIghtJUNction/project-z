@@ -1,0 +1,39 @@
+schema_version = 1
+
+[policy]
+system_library = "zsys"
+forbidden_packages = ["ztty-ui", "ztui-core"]
+
+[repositories.ssmcp]
+role = "application"
+
+[repositories.ztty]
+role = "application"
+
+[repositories.zcalld]
+role = "application"
+
+[repositories.zuse]
+role = "application"
+
+[repositories.zdot]
+role = "application"
+
+[repositories.zclick]
+role = "bindings"
+
+[repositories.zcalld-compat]
+role = "extension"
+
+[repositories.zshard]
+role = "shell"
+
+[repositories.oh-my-ztty]
+role = "suite"
+
+[repositories.zcall-gui]
+role = "application"
+
+[repositories.lmm-api-source]
+role = "application"
+manifests = ["services/core/Cargo.toml", "apps/cli/Cargo.toml"]

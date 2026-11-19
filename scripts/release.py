@@ -4,6 +4,7 @@
 import argparse
 import re
 import subprocess
+import sys
 import tarfile
 from pathlib import Path
 
@@ -33,6 +34,14 @@ def main():
     parser.add_argument("bump", choices=["major", "minor", "patch"])
     parser.add_argument("output", type=Path)
     args = parser.parse_args()
+
+    verification = subprocess.run(
+        [sys.executable, str(ROOT / "scripts/project_z.py"), "check"],
+        cwd=ROOT, capture_output=True, text=True,
+    )
+    if verification.returncode:
+        parser.error(verification.stderr.strip() or verification.stdout.strip())
+    print(verification.stdout.strip(), file=sys.stderr)
 
     commit = git("rev-parse", "HEAD").decode().strip()
     if git("status", "--porcelain", "--untracked-files=no", "--ignore-submodules=none"):
