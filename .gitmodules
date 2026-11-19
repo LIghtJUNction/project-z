@@ -74,3 +74,35 @@
 	path = zvte
 	url = https://github.com/LIghtJUNction/zvte.git
 	branch = main
+[submodule "zui"]
+	path = zui
+	url = https://github.com/LIghtJUNction/zui.git
+	branch = main
+[submodule "zuse"]
+	path = zuse
+	url = https://github.com/LIghtJUNction/zuse.git
+	branch = main
+[submodule "zcalld"]
+	path = zcalld
+	url = https://github.com/LIghtJUNction/zcalld.git
+	branch = main
+[submodule "zcalld-compat"]
+	path = zcalld-compat
+	url = https://github.com/LIghtJUNction/zcalld-compat.git
+	branch = main
+[submodule "zshard"]
+	path = zshard
+	url = https://github.com/LIghtJUNction/zshard.git
+	branch = main
+[submodule "zdot"]
+	path = zdot
+	url = https://github.com/LIghtJUNction/zdot.git
+	branch = main
+[submodule "ssmcp"]
+	path = ssmcp
+	url = https://github.com/LIghtJUNction/ssmcp.git
+	branch = main
+[submodule "oh-my-ztty"]
+	path = oh-my-ztty
+	url = https://github.com/LIghtJUNction/oh-my-ztty.git
+	branch = main
