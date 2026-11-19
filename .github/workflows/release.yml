@@ -1,0 +1,71 @@
+name: Release Project Z
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: Project Z version increment
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+        default: patch
+      publish:
+        description: Publish a GitHub release
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: project-z-release
+  cancel-in-progress: false
+
+jobs:
+  package:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.package.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          submodules: recursive
+          persist-credentials: false
+      - name: Package pinned sources
+        id: package
+        env:
+          BUMP: ${{ inputs.bump }}
+        run: |
+          tag=$(python3 scripts/release.py "$BUMP" dist)
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "Packaged $tag" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: project-z-${{ steps.package.outputs.tag }}
+          path: dist/
+          if-no-files-found: error
+
+  publish:
+    if: inputs.publish
+    needs: package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: project-z-${{ needs.package.outputs.tag }}
+          path: dist
+      - name: Publish pinned snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ needs.package.outputs.tag }}
+          TARGET: ${{ github.sha }}
+        run: |
+          gh release create "$TAG" "dist/project-z-$TAG.tar.gz" dist/commits.txt \
+            --target "$TARGET" --title "Project Z $TAG" --generate-notes

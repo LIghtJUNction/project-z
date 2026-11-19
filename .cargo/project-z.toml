@@ -1,0 +1,6 @@
+[patch.crates-io]
+zcall = { path = "zcall" }
+zclap = { path = "zclap" }
+zconv = { path = "zconv" }
+zplugin = { path = "zplugin" }
+zvte = { path = "zvte" }

@@ -1,0 +1,76 @@
+[submodule "z58"]
+	path = z58
+	url = https://github.com/LIghtJUNction/z58.git
+	branch = main
+[submodule "z64"]
+	path = z64
+	url = https://github.com/LIghtJUNction/z64.git
+	branch = main
+[submodule "zcall"]
+	path = zcall
+	url = https://github.com/LIghtJUNction/zcall.git
+	branch = main
+[submodule "zclap"]
+	path = zclap
+	url = https://github.com/LIghtJUNction/zclap.git
+	branch = main
+[submodule "zclick"]
+	path = zclick
+	url = https://github.com/LIghtJUNction/zclick.git
+	branch = main
+[submodule "zconv"]
+	path = zconv
+	url = https://github.com/LIghtJUNction/zconv.git
+	branch = main
+[submodule "zdwire"]
+	path = zdwire
+	url = https://github.com/LIghtJUNction/zdwire.git
+	branch = main
+[submodule "zharness"]
+	path = zharness
+	url = https://github.com/LIghtJUNction/zharness.git
+	branch = main
+[submodule "zhex"]
+	path = zhex
+	url = https://github.com/LIghtJUNction/zhex.git
+	branch = main
+[submodule "zldap"]
+	path = zldap
+	url = https://github.com/LIghtJUNction/zldap.git
+	branch = main
+[submodule "zmcpio"]
+	path = zmcpio
+	url = https://github.com/LIghtJUNction/zmcpio.git
+	branch = main
+[submodule "zmime"]
+	path = zmime
+	url = https://github.com/LIghtJUNction/zmime.git
+	branch = main
+[submodule "zplugin"]
+	path = zplugin
+	url = https://github.com/LIghtJUNction/zplugin.git
+	branch = main
+[submodule "zscan"]
+	path = zscan
+	url = https://github.com/LIghtJUNction/zscan.git
+	branch = main
+[submodule "zsyn"]
+	path = zsyn
+	url = https://github.com/LIghtJUNction/zsyn.git
+	branch = main
+[submodule "zsys"]
+	path = zsys
+	url = https://github.com/LIghtJUNction/zsys.git
+	branch = main
+[submodule "ztty"]
+	path = ztty
+	url = https://github.com/LIghtJUNction/ztty.git
+	branch = main
+[submodule "ztui"]
+	path = ztui
+	url = https://github.com/LIghtJUNction/ztui.git
+	branch = main
+[submodule "zvte"]
+	path = zvte
+	url = https://github.com/LIghtJUNction/zvte.git
+	branch = main
