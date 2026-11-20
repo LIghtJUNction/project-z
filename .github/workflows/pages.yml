@@ -1,0 +1,44 @@
+name: Project Z Pages
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: project-z-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    permissions:
+      contents: read
+      pages: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+          persist-credentials: false
+      - name: Verify public repository and crate sources
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 site/scripts/refresh_public.py --verify-only
+      - name: Check and build the standalone site
+        run: |
+          python3 site/scripts/check.py
+          python3 site/scripts/build.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy reviewed site artifact
+        id: deployment
+        uses: actions/deploy-pages@v5

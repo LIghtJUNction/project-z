@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "categories": [
+    {
+      "id": "interface",
+      "label": "终端与界面",
+      "english": "TERMINAL & UI"
+    },
+    {
+      "id": "protocol",
+      "label": "协议与调用",
+      "english": "PROTOCOLS"
+    },
+    {
+      "id": "data",
+      "label": "编码与数据",
+      "english": "DATA"
+    },
+    {
+      "id": "system",
+      "label": "系统与扩展",
+      "english": "SYSTEMS"
+    },
+    {
+      "id": "tools",
+      "label": "命令与配置",
+      "english": "TOOLS"
+    },
+    {
+      "id": "applications",
+      "label": "应用与集成",
+      "english": "APPLICATIONS"
+    }
+  ],
+  "projects": [
+    {
+      "id": "zgpui",
+      "category": "interface",
+      "kind": "library",
+      "summary": "场景与布局核心，可选原生 GPU 与 CPU 窗口后端。",
+      "package": "zgpui"
+    },
+    {
+      "id": "zconv",
+      "category": "protocol",
+      "kind": "library",
+      "summary": "转换模型请求、响应与流式事件，让宿主连接不同协议。",
+      "package": "zconv"
+    },
+    {
+      "id": "zrc",
+      "category": "tools",
+      "kind": "tool",
+      "summary": "将十个原生应用配置模块组合为可由 zdot 部署的目录。",
+      "package": "zrc"
+    },
+    {
+      "id": "zterm",
+      "category": "interface",
+      "kind": "library",
+      "summary": "维护终端屏幕、光标、滚动历史与 VT 协议状态。",
+      "package": "zterm"
+    },
+    {
+      "id": "zsys",
+      "category": "system",
+      "kind": "library",
+      "summary": "复用系统信息、平台能力与共享的原生接口。",
+      "package": "zsys"
+    },
+    {
+      "id": "zuse",
+      "category": "applications",
+      "kind": "tool",
+      "summary": "原生桌面控制、MCP 服务与人工接管的工具和库。",
+      "package": "zuse-computer"
+    },
+    {
+      "id": "z58",
+      "category": "data",
+      "kind": "library",
+      "summary": "Base58 编码与解码，使用调用方提供的缓冲区。",
+      "package": "z58"
+    },
+    {
+      "id": "z64",
+      "category": "data",
+      "kind": "library",
+      "summary": "处理 Base64 与 Base64URL 的编码、解码与校验。",
+      "package": "z64"
+    },
+    {
+      "id": "zhex",
+      "category": "data",
+      "kind": "library",
+      "summary": "在字节数据与十六进制文本之间转换。",
+      "package": "zhex"
+    },
+    {
+      "id": "zmime",
+      "category": "data",
+      "kind": "library",
+      "summary": "解析 MIME 消息、头部与正文，并按需解码内容。",
+      "package": "zmime"
+    },
+    {
+      "id": "zscan",
+      "category": "data",
+      "kind": "library",
+      "summary": "面向字节与子串的搜索原语。",
+      "package": "zscan"
+    },
+    {
+      "id": "zsyn",
+      "category": "data",
+      "kind": "library",
+      "summary": "为 Typst 标记、代码和数学内容构建语法树。",
+      "package": "zsyn"
+    },
+    {
+      "id": "zcall",
+      "category": "protocol",
+      "kind": "library",
+      "summary": "协议无关的模型调用内核，由宿主提供传输与缓冲区。",
+      "package": "zcall"
+    },
+    {
+      "id": "zmcpio",
+      "category": "protocol",
+      "kind": "library",
+      "summary": "MCP 客户端与服务端原语，连接工具调用和宿主传输。",
+      "package": "zmcpio"
+    },
+    {
+      "id": "zdwire",
+      "category": "protocol",
+      "kind": "library",
+      "summary": "解析与编码 DNS 消息的线格式。",
+      "package": "zdwire"
+    },
+    {
+      "id": "zldap",
+      "category": "protocol",
+      "kind": "library",
+      "summary": "处理 LDAP 与 BER 消息的有界解析和编解码。",
+      "package": "zldap"
+    },
+    {
+      "id": "zharness",
+      "category": "system",
+      "kind": "library",
+      "summary": "复用上下文、工具循环、hook 与协作执行原语。",
+      "package": "zharness"
+    },
+    {
+      "id": "zplugin",
+      "category": "system",
+      "kind": "library",
+      "summary": "原生插件 ABI、动态库加载与可选 Wasm 沙箱。",
+      "package": "zplugin"
+    },
+    {
+      "id": "zpty",
+      "category": "interface",
+      "kind": "library",
+      "summary": "管理原生 PTY、ConPTY 与所属子进程。",
+      "package": "zpty"
+    },
+    {
+      "id": "zvte",
+      "category": "interface",
+      "kind": "library",
+      "summary": "将 ANSI / VT 字节流增量解析为终端事件。",
+      "package": "zvte"
+    },
+    {
+      "id": "ztuio",
+      "category": "interface",
+      "kind": "library",
+      "summary": "文本行布局、终端几何与 ANSI 帧差分原语。",
+      "package": "ztuio"
+    },
+    {
+      "id": "zgraphics",
+      "category": "interface",
+      "kind": "library",
+      "summary": "处理 Kitty / Sixel 图像协议，向宿主提供图像与放置数据。",
+      "package": "zgraphics"
+    },
+    {
+      "id": "zinput",
+      "category": "interface",
+      "kind": "library",
+      "summary": "输入法组合、候选状态与原生输入事件编解码。",
+      "package": "zinput"
+    },
+    {
+      "id": "ztty",
+      "category": "interface",
+      "kind": "tool",
+      "summary": "组合终端状态、进程与原生渲染的 Linux 终端应用。",
+      "package": "ztty"
+    },
+    {
+      "id": "ztype",
+      "category": "interface",
+      "kind": "tool",
+      "summary": "面向多语言组合输入的原生应用，支持候选与插件。",
+      "package": "ztype"
+    },
+    {
+      "id": "zclap",
+      "category": "tools",
+      "kind": "library",
+      "summary": "命令行参数解析核心，保留调用方的数据所有权。",
+      "package": "zclap"
+    },
+    {
+      "id": "zclick",
+      "category": "tools",
+      "kind": "bindings",
+      "summary": "基于 zclap 的 Click 参数语义与 Python 预览绑定。",
+      "package": "zclick-core"
+    },
+    {
+      "id": "zdot",
+      "category": "tools",
+      "kind": "tool",
+      "summary": "预览、应用、备份与恢复 dotfiles 部署。",
+      "package": "zdot"
+    },
+    {
+      "id": "zfetch",
+      "category": "tools",
+      "kind": "tool",
+      "summary": "以终端摘要查看 Linux 系统信息。",
+      "package": "zfetch"
+    },
+    {
+      "id": "zshard",
+      "category": "tools",
+      "kind": "tool",
+      "summary": "原生 zsh 配置框架，按需加载插件并显式提供上下文。",
+      "package": "zshard"
+    },
+    {
+      "id": "zdistro",
+      "category": "tools",
+      "kind": "tool",
+      "summary": "统一语言构建与发行格式生成，检查输出制品。",
+      "package": "zdistro"
+    },
+    {
+      "id": "oh-my-ztty",
+      "category": "tools",
+      "kind": "integration",
+      "summary": "把终端、shell 与配置工具组合成 Linux 使用入口。",
+      "package": "oh-my-ztty"
+    },
+    {
+      "id": "zcalld",
+      "category": "applications",
+      "kind": "tool",
+      "summary": "本地模型网关，管理提供方、路由与调用。",
+      "package": "zcalld"
+    },
+    {
+      "id": "zcall-gui",
+      "category": "applications",
+      "kind": "tool",
+      "summary": "用于管理 zcalld 本地模型网关的原生控制面板。",
+      "package": "zcall-gui"
+    },
+    {
+      "id": "zcall-omarchy",
+      "category": "applications",
+      "kind": "integration",
+      "summary": "面向 Omarchy 的 zcalld 桌面入口与命令集成。",
+      "package": "zcall-omarchy"
+    },
+    {
+      "id": "zcalld-compat",
+      "category": "applications",
+      "kind": "integration",
+      "summary": "为 zcalld 提供独立的兼容与扩展适配。",
+      "package": "zcalld-compat"
+    },
+    {
+      "id": "zmcl",
+      "category": "applications",
+      "kind": "tool",
+      "summary": "基于 Project Z 的原生 Minecraft 启动器。",
+      "package": "zmcl"
+    }
+  ]
+}

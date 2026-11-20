@@ -1,0 +1,4 @@
+/dist/
+/_validation/
+__pycache__/
+*.pyc
