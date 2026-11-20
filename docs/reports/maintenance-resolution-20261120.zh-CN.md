@@ -53,7 +53,7 @@ CARGO_NET_OFFLINE=true python3 scripts/project_z.py resolve --all
 | oh-my-ztty | [PR #1](https://github.com/LIghtJUNction/oh-my-ztty/pull/1) 已合并，合并提交 `463f1958555f13694de933b1b34d3ead4b9af642`；聚合已固定其中经过验证的 `0fdc87873c53e7c87d18952f83a7b94fc4149de5` | 套件正式发行及 SSMCP 制品传播继续按现有维护流程推进 |
 | SSMCP | [PR #110](https://github.com/LIghtJUNction/ssmcp/pull/110) 仍是草稿，提交 `bc0ef8e0b24f7e0e58271046743c89334041ec51` | v0.10.15 组合源需要原生验收，聚合保留已验证来源 |
 | WeightLang / LightNest | 已核对其[独立消费者图](https://github.com/WeightLang/WeightLang/blob/1abd163b4f60d7d4c748a509040708eb2419654f/docs/dependency-propagation.md)；当前 manifest 和锁文件没有真实 Z 库依赖 | 保留既有隔离登记草稿，后续按实际代码关系登记 |
-| MatriXpost | 主线 `d9dacc4e88bd176a734e38bd0b23b96b480f7b09` 干净；当前为无运行时 npm 依赖的 Chromium MV3 应用 | 按用户补充要求准备独立 Pro 接力，当前没有新增 Z 库依赖登记 |
+| MatriXpost | 主线 `d9dacc4e88bd176a734e38bd0b23b96b480f7b09` 干净；当前为无运行时 npm 依赖的 Chromium MV3 应用 | 独立 Pro 接力已开始，当前没有新增 Z 库依赖登记 |
 
 已被主线吸收的旧登记分支没有重复合入；带有未提交内容的历史工作树保留原状。
 
@@ -67,9 +67,11 @@ zdistro 已有 [GitHub 正式 v0.1.0](https://github.com/LIghtJUNction/zdistro/r
 
 ## zmcl 与 MatriXpost 接力
 
-已核对 zmcl 主线 `3659cf144c69356268f9a185d9ea80eecb50cc7c` 和 MatriXpost 主线 `d9dacc4e88bd176a734e38bd0b23b96b480f7b09`，并分别准备了包含项目目标、现场状态、优先项和验收要求的接力内容。
+已核对 zmcl 主线 `3659cf144c69356268f9a185d9ea80eecb50cc7c` 和 MatriXpost 主线 `d9dacc4e88bd176a734e38bd0b23b96b480f7b09`，并分别发送了包含项目目标、现场状态、优先项和验收要求的接力内容。
 
-新 Pro 对话尚未启动。开发机现有 Chrome 的 ChatGPT 页面显示登录入口，没有可用的 Pro 模型选择；页面已保留，等待用户在该浏览器完成登录。两个项目的源码和安装状态没有因本次接力准备而改变。
+两个独立 Pro 对话均已建立，并从页面菜单选中真实 ssmcp 应用引用。两边已经实际调用 GitHub、Google Drive 和 ssmcp，开始读取各自项目现场。每个项目只发送了一次接力，两个会话保持运行。
+
+zmcl 的最新验收目标是发布到 AUR 供用户下载安装，并将 GUI 内存控制在 10 MiB 内；接力要求分别测量主进程和完整相关进程树的 RSS/PSS，并核对显示服务增量。新会话已开始 GUI 内存分析及 zui-native 依赖影响检查。MatriXpost 新会话已找到上轮验收记录，正在推进创作、账号接入和任务恢复体验。后续源码改动、发行结果与性能验收由各自会话继续记录。
 
 ## 结论与证据核对
 
