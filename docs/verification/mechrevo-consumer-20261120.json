@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "base_commit": "b27ef85165902bcce1b583233d958bfaa8f76689",
-  "consumer_commit": "90f848035775d21efef6518a50964403ce09cb0b",
+  "consumer_commit": "e169128651b1aa175069ed9be80dd4368e31cccc",
   "baseline_sync": {
     "exit_code": 0,
     "stdout": "Updated 29 repositories and 48 packages\n",
@@ -49,7 +49,7 @@
     "stdout": "lmm-api-source\nmechrevo-drivers\nzhex\n",
     "stderr": ""
   },
-  "recorded_at_utc": "2026-11-20T00:14:26.762190+00:00",
+  "recorded_at_utc": "2026-11-20T00:30:08.541955+00:00",
   "status": "registration_prepared_baseline_blocked",
   "base_branch": "coord/shared-libraries",
   "complete_snapshot_accepted": false,
@@ -74,5 +74,21 @@
     "status": "blocked_by_check",
     "note": "The same four retired-package errors occur with and without this consumer. No policy was changed."
   },
-  "next_step": "Land the existing ssmcp/ztty retirement migration, run sync, then pass check and resolve --all before accepting the aggregate snapshot."
+  "next_step": "Land the existing ssmcp/ztty retirement migration, run sync, then pass check and resolve --all before accepting the aggregate snapshot.",
+  "consumer_ancestors": {
+    "project_z_reuse": "90f848035775d21efef6518a50964403ce09cb0b",
+    "gui": "d6993de4817eb9299ebb30e366495bb70e3275be",
+    "pl4": "4b9591499a8014e9b0d3f8a2be0aa7cb546b0ea7"
+  },
+  "pin_update": {
+    "previous_consumer_commit": "90f848035775d21efef6518a50964403ce09cb0b",
+    "checks": [
+      "sync",
+      "check compared with recorded baseline",
+      "cargo metadata with Project Z patches",
+      "impact zclap",
+      "impact zhex"
+    ],
+    "source_tests_rerun": false
+  }
 }
