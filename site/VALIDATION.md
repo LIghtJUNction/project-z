@@ -1,6 +1,6 @@
 # Project Z page validation — 2026-11-20
 
-The public page contains 37 reviewed repositories and 26 verified crate entries. The counts come from the snapshot in [projects.json](projects.json), which records public source URLs, visibility evidence, versions and registry checksums. The build does not read the aggregate catalog.
+The initial visual acceptance snapshot contained 37 reviewed repositories and 26 verified crate entries. Current counts come from the snapshot in [projects.json](projects.json), which records public source URLs, visibility evidence, versions and registry checksums. The build does not read the aggregate catalog.
 
 ## Visual review
 
@@ -43,8 +43,16 @@ node --check site/scripts/check_browser.mjs
 TMPDIR=/var/tmp node site/scripts/check_browser.mjs
 ```
 
-The builder produced exactly six regular files: `index.html`, `style.css`, `app.js`, `favicon.svg`, `projects.json` and `.nojekyll`. Together they contain 116,533 bytes. The SHA-256 of the public manifest is `227cf3d7ebbccad0d82aeb093a7060a159b0827ee10589007bdbaaaa65eda4f2`. Individual output hashes are in [bundle-manifest.json](evidence/bundle-manifest.json).
+The builder produced exactly six regular files: `index.html`, `style.css`, `app.js`, `favicon.svg`, `projects.json` and `.nojekyll`. The original visual-acceptance bundle contained 116,533 bytes. The original public-manifest SHA-256 was `227cf3d7ebbccad0d82aeb093a7060a159b0827ee10589007bdbaaaa65eda4f2`. Current output hashes, updated separately from the original visual acceptance, are in [bundle-manifest.json](evidence/bundle-manifest.json).
 
-The intended public destination is the separate `LIghtJUNction/project-z-site` repository. Only those six files belong in its site payload. The aggregate repository, catalog, history, local browser profiles and validation files are not part of that payload. Every asset URL is relative, so the page works under `https://lightjunction.github.io/project-z-site/`.
+The public destination is the separate `LIghtJUNction/project-z-site` repository. Only those six files belong in its site payload. The aggregate repository, catalog, history, local browser profiles and validation files are not part of that payload. Every asset URL is relative, so the page works under `https://lightjunction.github.io/project-z-site/`.
 
-These are local acceptance results; deployment is a separate maintainer action.
+These are the original local acceptance results. Subsequent data and publication checks are recorded separately below.
+
+## Published package data refresh
+
+The [release refresh record](evidence/release-refresh-20261120.json) records the current public-source and registry checks for zfetch 0.1.1, zgpui 0.1.2, zpty 0.2.3, zterm 0.5.2 and zrc 0.1.2. The refresh also records the public oh-my-ztty 0.2.4 source version after its formal release. All 37 repositories were rechecked for active public visibility, and every displayed crate version was checked against its registry checksum. The updated page contains 27 verified crate entries.
+
+The CSS, JavaScript, favicon and no-Jekyll marker are unchanged. The existing static checks and six-file build boundary passed again; the original visual acceptance images remain the evidence for the unchanged design. The current file hashes are in [bundle-manifest.json](evidence/bundle-manifest.json). Publication is recorded in the refresh record after the live files have been checked.
+
+The refreshed site was deployed from public commit [668080bc](https://github.com/LIghtJUNction/project-z-site/commit/668080bced1eb4c9941e324abc09e645d6e881f3). Its [Pages workflow](https://github.com/LIghtJUNction/project-z-site/actions/runs/44699517717) completed successfully. Live HTTPS checks of the root page and all six files returned HTTP 200 and matched the built byte counts and SHA-256 hashes; the served manifest contained the five updated crate versions and the oh-my-ztty 0.2.4 source version. Exact URLs, hashes and the verification time are saved in the refresh record.

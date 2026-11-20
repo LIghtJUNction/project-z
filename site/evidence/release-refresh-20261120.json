@@ -1,0 +1,367 @@
+{
+  "schema": "project-z.public-release-refresh.v1",
+  "source_base": "ad1c9e21c9a35ebb2f4059529409b4ad3f2960fd",
+  "verified_at_utc": "2026-11-20T08:02:27.491087+00:00",
+  "updates": [
+    {
+      "id": "zfetch",
+      "previous_source_version": {
+        "version": "0.1.0",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zfetch/main/Cargo.toml"
+      },
+      "previous_crate": null,
+      "source_version": {
+        "version": "0.1.1",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zfetch/main/Cargo.toml"
+      },
+      "crate": {
+        "name": "zfetch",
+        "version": "0.1.1",
+        "url": "https://crates.io/crates/zfetch/0.1.1",
+        "source": "https://crates.io/api/v1/crates/zfetch/0.1.1",
+        "checksum": "80c5c50101f8e3f08c7ed15005c26b005839863f2a45670ccb92e245534e8d2c",
+        "repository": "https://github.com/LIghtJUNction/zfetch",
+        "verified_at": "2026-11-20T07:58:18.811465+00:00"
+      },
+      "repository": {
+        "name": "LIghtJUNction/zfetch",
+        "url": "https://github.com/LIghtJUNction/zfetch",
+        "default_branch": "main",
+        "visibility": "public",
+        "verified_at": "2026-11-20T07:58:18.811465+00:00",
+        "source": "https://api.github.com/repos/LIghtJUNction/zfetch"
+      }
+    },
+    {
+      "id": "zgpui",
+      "previous_source_version": {
+        "version": "0.1.1",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zgpui/main/Cargo.toml"
+      },
+      "previous_crate": {
+        "name": "zgpui",
+        "version": "0.1.1",
+        "url": "https://crates.io/crates/zgpui/0.1.1",
+        "source": "https://crates.io/api/v1/crates/zgpui/0.1.1",
+        "checksum": "75d0c780f8139a6d8db1b7c9d0de64c51c55b2feb4a6973f743380799df7fcea",
+        "repository": "https://github.com/LIghtJUNction/zgpui",
+        "verified_at": "2026-11-20T06:42:24.377194+00:00"
+      },
+      "source_version": {
+        "version": "0.1.2",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zgpui/main/Cargo.toml"
+      },
+      "crate": {
+        "name": "zgpui",
+        "version": "0.1.2",
+        "url": "https://crates.io/crates/zgpui/0.1.2",
+        "source": "https://crates.io/api/v1/crates/zgpui/0.1.2",
+        "checksum": "0c5cddf5d0ed86ccb9cf21e035585146cf5aff0e316301bc037684b3c51b1046",
+        "repository": "https://github.com/LIghtJUNction/zgpui",
+        "verified_at": "2026-11-20T07:58:16.695119+00:00"
+      },
+      "repository": {
+        "name": "LIghtJUNction/zgpui",
+        "url": "https://github.com/LIghtJUNction/zgpui",
+        "default_branch": "main",
+        "visibility": "public",
+        "verified_at": "2026-11-20T07:58:16.695119+00:00",
+        "source": "https://api.github.com/repos/LIghtJUNction/zgpui"
+      }
+    },
+    {
+      "id": "zpty",
+      "previous_source_version": {
+        "version": "0.2.2",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zpty/main/Cargo.toml"
+      },
+      "previous_crate": {
+        "name": "zpty",
+        "version": "0.2.2",
+        "url": "https://crates.io/crates/zpty/0.2.2",
+        "source": "https://crates.io/api/v1/crates/zpty/0.2.2",
+        "checksum": "1d46215c9aaad115aa3637217dcd3d7752d4f511f05ca29729c83ae58c0dd955",
+        "repository": "https://github.com/LIghtJUNction/zpty",
+        "verified_at": "2026-11-20T06:42:33.421778+00:00"
+      },
+      "source_version": {
+        "version": "0.2.3",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zpty/main/Cargo.toml"
+      },
+      "crate": {
+        "name": "zpty",
+        "version": "0.2.3",
+        "url": "https://crates.io/crates/zpty/0.2.3",
+        "source": "https://crates.io/api/v1/crates/zpty/0.2.3",
+        "checksum": "a08f84625627fc124c4971e728d370a06b6c03fd1098c623a124aad80472aa17",
+        "repository": "https://github.com/LIghtJUNction/zpty",
+        "verified_at": "2026-11-20T07:58:16.655155+00:00"
+      },
+      "repository": {
+        "name": "LIghtJUNction/zpty",
+        "url": "https://github.com/LIghtJUNction/zpty",
+        "default_branch": "main",
+        "visibility": "public",
+        "verified_at": "2026-11-20T07:58:16.655155+00:00",
+        "source": "https://api.github.com/repos/LIghtJUNction/zpty"
+      }
+    },
+    {
+      "id": "zterm",
+      "previous_source_version": {
+        "version": "0.5.1",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zterm/main/Cargo.toml"
+      },
+      "previous_crate": {
+        "name": "zterm",
+        "version": "0.5.1",
+        "url": "https://crates.io/crates/zterm/0.5.1",
+        "source": "https://crates.io/api/v1/crates/zterm/0.5.1",
+        "checksum": "fc48bcaf9892a77d17ab235316448c3e235b0dccd00e5963b542586585c26c91",
+        "repository": "https://github.com/LIghtJUNction/zterm",
+        "verified_at": "2026-11-20T06:42:37.983323+00:00"
+      },
+      "source_version": {
+        "version": "0.5.2",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zterm/main/Cargo.toml"
+      },
+      "crate": {
+        "name": "zterm",
+        "version": "0.5.2",
+        "url": "https://crates.io/crates/zterm/0.5.2",
+        "source": "https://crates.io/api/v1/crates/zterm/0.5.2",
+        "checksum": "50845a461c4a11de2eceee265183e3e9e2a0d2ad8063266d234d22a25551e4bb",
+        "repository": "https://github.com/LIghtJUNction/zterm",
+        "verified_at": "2026-11-20T07:58:16.300470+00:00"
+      },
+      "repository": {
+        "name": "LIghtJUNction/zterm",
+        "url": "https://github.com/LIghtJUNction/zterm",
+        "default_branch": "main",
+        "visibility": "public",
+        "verified_at": "2026-11-20T07:58:16.300470+00:00",
+        "source": "https://api.github.com/repos/LIghtJUNction/zterm"
+      }
+    },
+    {
+      "id": "zrc",
+      "previous_source_version": {
+        "version": "0.1.2",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zrc/main/Cargo.toml"
+      },
+      "previous_crate": {
+        "name": "zrc",
+        "version": "0.1.2",
+        "url": "https://crates.io/crates/zrc/0.1.2",
+        "source": "https://crates.io/api/v1/crates/zrc/0.1.2",
+        "checksum": "dfadf16f7aa320d718f1f00a48f110de1a5bfa9d7b9abd939b7cb612d8483abb",
+        "repository": "https://github.com/LIghtJUNction/zrc",
+        "verified_at": "2026-11-20T06:42:34.519431+00:00"
+      },
+      "source_version": {
+        "version": "0.1.2",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zrc/main/Cargo.toml"
+      },
+      "crate": {
+        "name": "zrc",
+        "version": "0.1.2",
+        "url": "https://crates.io/crates/zrc/0.1.2",
+        "source": "https://crates.io/api/v1/crates/zrc/0.1.2",
+        "checksum": "dfadf16f7aa320d718f1f00a48f110de1a5bfa9d7b9abd939b7cb612d8483abb",
+        "repository": "https://github.com/LIghtJUNction/zrc",
+        "verified_at": "2026-11-20T07:58:16.394139+00:00"
+      },
+      "repository": {
+        "name": "LIghtJUNction/zrc",
+        "url": "https://github.com/LIghtJUNction/zrc",
+        "default_branch": "main",
+        "visibility": "public",
+        "verified_at": "2026-11-20T07:58:16.394139+00:00",
+        "source": "https://api.github.com/repos/LIghtJUNction/zrc"
+      }
+    },
+    {
+      "id": "oh-my-ztty",
+      "previous_source_version": {
+        "version": "0.2.3",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/oh-my-ztty/main/VERSION"
+      },
+      "previous_crate": null,
+      "source_version": {
+        "version": "0.2.4",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/oh-my-ztty/main/VERSION"
+      },
+      "crate": null,
+      "repository": {
+        "name": "LIghtJUNction/oh-my-ztty",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty",
+        "default_branch": "main",
+        "visibility": "public",
+        "verified_at": "2026-11-20T08:02:26.753040+00:00",
+        "source": "https://api.github.com/repos/LIghtJUNction/oh-my-ztty"
+      },
+      "release": {
+        "tag": "v0.2.4",
+        "published_at": "2026-11-20T07:44:21Z",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/releases/tag/v0.2.4",
+        "source": "https://api.github.com/repos/LIghtJUNction/oh-my-ztty/releases/tags/v0.2.4"
+      }
+    }
+  ],
+  "verified_public_projects": 37,
+  "projects": 37,
+  "verified_crates": 27,
+  "public_manifest_sha256": "67623595776342b0a1ec28db067d4437faf161d48ca955a3ab76fa353af39730",
+  "bundle_bytes": 117085,
+  "gates": [
+    "refresh_public --only zfetch zgpui zpty zterm zrc",
+    "refresh_public --verify-only",
+    "site/scripts/check.py",
+    "site/scripts/build.py",
+    "six-file output allowlist",
+    "app.js/style.css/favicon.svg/.nojekyll unchanged",
+    "refresh_public --only oh-my-ztty"
+  ],
+  "browser_validation": "Original 15-check acceptance retained; this refresh changes project metadata and rendered version links only.",
+  "publication": {
+    "schema": "project-z.public-site-publication.v1",
+    "source_candidate": "859e2e8be795323bab099d95ca1bdc95ab721930",
+    "public_repository": "LIghtJUNction/project-z-site",
+    "public_base": "afba5faa2ab28098e39c8f52984059e4e4fdc302",
+    "public_commit": "668080bced1eb4c9941e324abc09e645d6e881f3",
+    "public_url": "https://lightjunction.github.io/project-z-site/",
+    "changed_files": [
+      "index.html",
+      "projects.json"
+    ],
+    "public_tracked_files": [
+      ".nojekyll",
+      "README.md",
+      "app.js",
+      "favicon.svg",
+      "index.html",
+      "projects.json",
+      "style.css"
+    ],
+    "readme_sha256_unchanged": "aef0d08fd4d8d8502d034f974352b5b5107b44383ed0ab4d98390b55f9cae32b",
+    "bundle_manifest": {
+      "schema": "project-z.public-bundle.v1",
+      "source_base": "ad1c9e21c9a35ebb2f4059529409b4ad3f2960fd",
+      "files": [
+        {
+          "path": ".nojekyll",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "app.js",
+          "bytes": 4203,
+          "sha256": "93657999854f6d21d378fa387a0346c50528d8356a0a65b9a726662bd7672362"
+        },
+        {
+          "path": "favicon.svg",
+          "bytes": 321,
+          "sha256": "46b2270683a9f0443180adefa46d1e20c67792e6a4aac4a7ce7ae52eacfe00c8"
+        },
+        {
+          "path": "index.html",
+          "bytes": 44035,
+          "sha256": "3329e14ac3cd3328d644ca27d3ae2f06a0ee9e089e052bdefcb0521fca3b5677"
+        },
+        {
+          "path": "projects.json",
+          "bytes": 53966,
+          "sha256": "67623595776342b0a1ec28db067d4437faf161d48ca955a3ab76fa353af39730"
+        },
+        {
+          "path": "style.css",
+          "bytes": 14560,
+          "sha256": "dd39394ef7d3ca8eba8bc652670ea5e7c770ea0d84116efd7433fa4fbd5743a1"
+        }
+      ],
+      "bytes": 117085,
+      "projects": 37,
+      "verified_crates": 27
+    },
+    "pushed_at_utc": "2026-11-20T08:03:22.675644+00:00",
+    "live_verification": {
+      "status": "passed",
+      "verified_at_utc": "2026-11-20T08:04:41.312458+00:00",
+      "http_checks": [
+        {
+          "path": ".nojekyll",
+          "status": 200,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "url": "https://lightjunction.github.io/project-z-site/.nojekyll?v=668080bced1eb4c9941e324abc09e645d6e881f3"
+        },
+        {
+          "path": "app.js",
+          "status": 200,
+          "bytes": 4203,
+          "sha256": "93657999854f6d21d378fa387a0346c50528d8356a0a65b9a726662bd7672362",
+          "url": "https://lightjunction.github.io/project-z-site/app.js?v=668080bced1eb4c9941e324abc09e645d6e881f3"
+        },
+        {
+          "path": "favicon.svg",
+          "status": 200,
+          "bytes": 321,
+          "sha256": "46b2270683a9f0443180adefa46d1e20c67792e6a4aac4a7ce7ae52eacfe00c8",
+          "url": "https://lightjunction.github.io/project-z-site/favicon.svg?v=668080bced1eb4c9941e324abc09e645d6e881f3"
+        },
+        {
+          "path": "index.html",
+          "status": 200,
+          "bytes": 44035,
+          "sha256": "3329e14ac3cd3328d644ca27d3ae2f06a0ee9e089e052bdefcb0521fca3b5677",
+          "url": "https://lightjunction.github.io/project-z-site/index.html?v=668080bced1eb4c9941e324abc09e645d6e881f3"
+        },
+        {
+          "path": "projects.json",
+          "status": 200,
+          "bytes": 53966,
+          "sha256": "67623595776342b0a1ec28db067d4437faf161d48ca955a3ab76fa353af39730",
+          "url": "https://lightjunction.github.io/project-z-site/projects.json?v=668080bced1eb4c9941e324abc09e645d6e881f3"
+        },
+        {
+          "path": "style.css",
+          "status": 200,
+          "bytes": 14560,
+          "sha256": "dd39394ef7d3ca8eba8bc652670ea5e7c770ea0d84116efd7433fa4fbd5743a1",
+          "url": "https://lightjunction.github.io/project-z-site/style.css?v=668080bced1eb4c9941e324abc09e645d6e881f3"
+        },
+        {
+          "path": "/",
+          "status": 200,
+          "bytes": 44035,
+          "sha256": "3329e14ac3cd3328d644ca27d3ae2f06a0ee9e089e052bdefcb0521fca3b5677",
+          "url": "https://lightjunction.github.io/project-z-site/?v=668080bced1eb4c9941e324abc09e645d6e881f3"
+        }
+      ],
+      "projects": 37,
+      "verified_crates": 27,
+      "published_versions": {
+        "zfetch": "0.1.1",
+        "zgpui": "0.1.2",
+        "zpty": "0.2.3",
+        "zterm": "0.5.2",
+        "zrc": "0.1.2"
+      },
+      "oh_my_ztty_source": "0.2.4",
+      "public_manifest_sha256": "67623595776342b0a1ec28db067d4437faf161d48ca955a3ab76fa353af39730",
+      "pages_run": 44699517717
+    },
+    "status": "published",
+    "pages_workflow": {
+      "url": "https://github.com/LIghtJUNction/project-z-site/actions/runs/44699517717",
+      "id": 44699517717,
+      "conclusion": "success",
+      "jobs": {
+        "build": "success",
+        "report-build-status": "success",
+        "deploy": "success"
+      }
+    }
+  },
+  "visibility_verified_at_utc": "2026-11-20T07:58:32.360088+00:00"
+}
