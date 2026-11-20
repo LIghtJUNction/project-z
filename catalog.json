@@ -293,7 +293,7 @@
       "path": "zinput",
       "url": "https://github.com/LIghtJUNction/zinput",
       "branch": "main",
-      "commit": "37617313dd7aaabcca9dd567344a76c4cbe03907",
+      "commit": "4c7ffce564d2dae0875b0b632bef59febc2d1476",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -474,7 +474,7 @@
       "path": "ztype",
       "url": "https://github.com/LIghtJUNction/ztype",
       "branch": "main",
-      "commit": "9dd67a54ac536b22ab0fe4bd008d6b5cdd95c369",
+      "commit": "b69be3c6d0b6197a4c5d37a89e211dc3de1f48fd",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -3752,6 +3752,34 @@
       ]
     },
     {
+      "name": "zinput-wayland",
+      "version": "0.1.0",
+      "repository": "zinput",
+      "manifest": "zinput/native/wayland/Cargo.toml",
+      "workspace": "zinput",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zsys",
+          "alias": null,
+          "requirement": "^0.1.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "dylib"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
       "name": "zldap",
       "version": "0.1.3",
       "repository": "zldap",
@@ -4495,7 +4523,7 @@
     },
     {
       "name": "ztype",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "repository": "ztype",
       "manifest": "ztype/Cargo.toml",
       "workspace": "ztype",
@@ -4506,7 +4534,8 @@
         "default": [
           "desktop",
           "gui",
-          "plugins"
+          "plugins",
+          "wayland"
         ],
         "desktop": [
           "dep:zuse"
@@ -4518,6 +4547,9 @@
         "plugins": [
           "zinput/plugins",
           "dep:zplugin"
+        ],
+        "wayland": [
+          "dep:zinput-wayland"
         ]
       },
       "dependencies": [
@@ -4548,6 +4580,19 @@
           "features": [],
           "source": "registry+https://github.com/rust-lang/crates.io-index",
           "path": null
+        },
+        {
+          "name": "zinput-wayland",
+          "alias": null,
+          "requirement": "=0.1.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": "cfg(target_os = \"linux\")",
+          "optional": true,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "ztype/vendor/zinput/native/wayland"
         },
         {
           "name": "zplugin",

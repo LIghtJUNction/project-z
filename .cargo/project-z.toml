@@ -24,6 +24,7 @@
 "zharness" = { path = "zharness" }
 "zhex" = { path = "zhex" }
 "zinput" = { path = "zinput" }
+"zinput-wayland" = { path = "zinput/native/wayland" }
 "zldap" = { path = "zldap" }
 "zmcl" = { path = "zmcl" }
 "zmcl-core" = { path = "zmcl/crates/zmcl-core" }
