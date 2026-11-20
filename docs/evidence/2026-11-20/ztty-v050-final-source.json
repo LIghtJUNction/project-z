@@ -1,0 +1,1042 @@
+{
+  "schema": "project-z.ztty-formal-source-increment.v1",
+  "checked_at": "2026-11-20T03:48:46.008470+00:00",
+  "status": "final_source_verified_and_sync_check_passed; previous_full_resolution_reused_for_identical_dependency_inputs",
+  "baseline": {
+    "aggregate": "46e98822e8357b25670cea52794af3009d66660f",
+    "previous_ztty": "9f5a77a1299093d0ba609bfafa2cec3b0ba931dd",
+    "production_fix": "9855da563f3038adee2fa88e1e24e20eafb77010",
+    "formal_ztty": "c4f8f48c9598284a589e609f25242b49ceabfea8",
+    "evidence_only_commit": "db3f49ae77cfa14e6c91145a5bffe306a528a57c",
+    "formal_tree": "1939e20c34fe8dfea76f0bef9cc5cc6efe9171c8"
+  },
+  "tag": {
+    "name": "v0.5.0",
+    "object": "4288d646b3273285483cf1fdad0ccc8e0c42b9ae",
+    "peeled_commit": "c4f8f48c9598284a589e609f25242b49ceabfea8",
+    "signature": "unsigned"
+  },
+  "source_audit": {
+    "complete_git_tree_matches_api": true,
+    "git_fsck_passed": true,
+    "changed_paths_count": 321,
+    "non_documentation_changed_paths": [
+      "README.md",
+      "README.zh-CN.md",
+      "src/x11/gpu.rs",
+      "tools/benchmark_output_pipeline.py",
+      "tools/benchmark_terminals.py",
+      "tools/benchmark_throughput.py"
+    ],
+    "production_changed_paths": [
+      "src/x11/gpu.rs"
+    ],
+    "all_changed_paths": [
+      "README.md",
+      "README.zh-CN.md",
+      "docs/benchmarks/host-9f5a77a-20261120/README.md",
+      "docs/benchmarks/host-9f5a77a-20261120/SAMPLES.md",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt1/cohort-receipt.json",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt1/launch.json",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt1/throughput/paired.json",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt1/throughput/paired.stderr.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt1/throughput/paired.stdout.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt1/throughput/receipt.json",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/cohort-receipt.json",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/launch.json",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output.supervisor.stderr.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output.supervisor.stdout.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/ascii-log-headless.json",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/ascii-log-headless.stderr.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/ascii-log-headless.stdout.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/ascii-log-window.json",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/ascii-log-window.stderr.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/ascii-log-window.stdout.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/inplace-ascii-headless.json",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/inplace-ascii-headless.stderr.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/inplace-ascii-headless.stdout.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/inplace-ascii-window.json",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/inplace-ascii-window.stderr.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/inplace-ascii-window.stdout.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/receipt.json",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/unicode-log-headless.json",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/unicode-log-headless.stderr.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/unicode-log-headless.stdout.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/unicode-log-window.json",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/unicode-log-window.stderr.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/output/unicode-log-window.stdout.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/terminals.supervisor.stderr.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/terminals.supervisor.stdout.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/terminals/receipt.json",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/terminals/terminals-scaling.svg",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/terminals/terminals.json.gz",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/terminals/terminals.stderr.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/terminals/terminals.stdout.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/terminals/terminals.svg",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/throughput.supervisor.stderr.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/throughput.supervisor.stdout.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/throughput/paired.json.gz",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/throughput/paired.stderr.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/throughput/paired.stdout.log",
+      "docs/benchmarks/host-9f5a77a-20261120/attempt2/throughput/receipt.json",
+      "docs/benchmarks/host-9f5a77a-20261120/burst-samples.csv",
+      "docs/benchmarks/host-9f5a77a-20261120/collector/attempt1-tools/benchmark_terminals.py",
+      "docs/benchmarks/host-9f5a77a-20261120/collector/attempt1-tools/benchmark_throughput.py",
+      "docs/benchmarks/host-9f5a77a-20261120/collector/legacy-baseline-compatibility.json",
+      "docs/benchmarks/host-9f5a77a-20261120/collector/renderer-correction.json",
+      "docs/benchmarks/host-9f5a77a-20261120/collector/run-final-performance.attempt1.py",
+      "docs/benchmarks/host-9f5a77a-20261120/collector/run-final-performance.py",
+      "docs/benchmarks/host-9f5a77a-20261120/collector/tools/benchmark_output_pipeline.py",
+      "docs/benchmarks/host-9f5a77a-20261120/collector/tools/benchmark_terminals.py",
+      "docs/benchmarks/host-9f5a77a-20261120/collector/tools/benchmark_throughput.py",
+      "docs/benchmarks/host-9f5a77a-20261120/collector/tools/gui_renderer.py",
+      "docs/benchmarks/host-9f5a77a-20261120/collector/tools/isolated_xvfb.py",
+      "docs/benchmarks/host-9f5a77a-20261120/collector/tools/measure_multiwindow.py",
+      "docs/benchmarks/host-9f5a77a-20261120/collector/tools/measure_runtime.py",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/auto-697573-7967078-0.json",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/auto-697573-7967078-0.maps",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/auto-697573-7967078-0.smaps_rollup",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/auto-697573-7967078-1.json",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/auto-697573-7967078-1.maps",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/auto-697573-7967078-1.smaps_rollup",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/auto-697575-7967078-0.json",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/auto-697575-7967078-0.maps",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/auto-697575-7967078-0.smaps_rollup",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/auto-697575-7967078-1.json",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/auto-697575-7967078-1.maps",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/auto-697575-7967078-1.smaps_rollup",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/auto.json",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/diagnose.py",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/diagnostic.json",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/launch.json",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/software-698375-7967613-0.json",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/software-698375-7967613-0.maps",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/software-698375-7967613-0.smaps_rollup",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/software-698375-7967613-1.json",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/software-698375-7967613-1.maps",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/software-698375-7967613-1.smaps_rollup",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/software-698377-7967613-0.json",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/software-698377-7967613-0.maps",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/software-698377-7967613-0.smaps_rollup",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/software-698377-7967613-1.json",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/software-698377-7967613-1.maps",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/software-698377-7967613-1.smaps_rollup",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/software.json",
+      "docs/benchmarks/host-9f5a77a-20261120/diagnostic/unit.log",
+      "docs/benchmarks/host-9f5a77a-20261120/production-equivalence.json",
+      "docs/benchmarks/host-9f5a77a-20261120/redaction.json",
+      "docs/benchmarks/host-9f5a77a-20261120/summary.json",
+      "docs/benchmarks/host-9f5a77a-20261120/verify-record.py",
+      "docs/benchmarks/resume-2026-11-20.md",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/README.md",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/build-28d5.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/build-a207.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/1-borrowed.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/1-borrowed.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/1-print_batch.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/1-print_batch.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/2-borrowed.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/2-borrowed.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/2-print_batch.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/2-print_batch.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/3-borrowed.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/3-borrowed.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/3-print_batch.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/3-print_batch.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/4-borrowed.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/4-borrowed.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/4-print_batch.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/4-print_batch.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/5-borrowed.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/5-borrowed.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/5-print_batch.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/5-print_batch.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/6-borrowed.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/6-borrowed.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/6-print_batch.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/6-print_batch.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/comparison.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-focused-a207-28d5/launch-receipt.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/1-candidate_0_5_1.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/1-candidate_0_5_1.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/1-legacy_0_4.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/1-legacy_0_4.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/1-published_0_5.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/1-published_0_5.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/2-candidate_0_5_1.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/2-candidate_0_5_1.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/2-legacy_0_4.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/2-legacy_0_4.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/2-published_0_5.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/2-published_0_5.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/3-candidate_0_5_1.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/3-candidate_0_5_1.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/3-legacy_0_4.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/3-legacy_0_4.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/3-published_0_5.stderr.log",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/3-published_0_5.stdout.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/comparison.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/core-three-way-28d5d26/launch-receipt.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/decision.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/freeze-28d5.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/measurements.csv",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/redaction.json",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/run-focused-print-batch.py",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/run-three-way-print-batch.py",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/samples.md",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/source/benchmark.rs",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/source/build-print-batch.py",
+      "docs/benchmarks/resume-2026-11-20/rejected-print-batch-28d5d26/verify-record.py",
+      "docs/reports/host-9f5a77a-20261120/README.md",
+      "docs/reports/host-9f5a77a-20261120/egl/default-build.log",
+      "docs/reports/host-9f5a77a-20261120/egl/launch.json",
+      "docs/reports/host-9f5a77a-20261120/egl/original.json",
+      "docs/reports/host-9f5a77a-20261120/egl/run.py",
+      "docs/reports/host-9f5a77a-20261120/egl/tests.log",
+      "docs/reports/host-9f5a77a-20261120/egl/unit.log",
+      "docs/reports/host-9f5a77a-20261120/egl/verified.json",
+      "docs/reports/host-9f5a77a-20261120/gui/acceptance.json",
+      "docs/reports/host-9f5a77a-20261120/gui/final-closure.json",
+      "docs/reports/host-9f5a77a-20261120/gui/harness/identities.py",
+      "docs/reports/host-9f5a77a-20261120/gui/harness/owned_process.py",
+      "docs/reports/host-9f5a77a-20261120/gui/harness/plan.py",
+      "docs/reports/host-9f5a77a-20261120/gui/harness/prepare_check.py",
+      "docs/reports/host-9f5a77a-20261120/gui/harness/run.py",
+      "docs/reports/host-9f5a77a-20261120/gui/harness/wayland_cli.py",
+      "docs/reports/host-9f5a77a-20261120/gui/launch.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/01-xim-all.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/02-input-software.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/03-clipboard-transfer.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/04-copy-paste.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/05-osc52-gpu.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/06-graphics-software.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/07-graphics-gpu.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/08-text-software.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/09-text-gpu.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/10-retained-frame-software.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/11-repaint-software.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/12-repaint-gpu.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/13-native-ui-software.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/14-native-ui-gpu.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/15-workspaces.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/16-shared-gui.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/17-plugin-cli-current.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/18-plugin-cli-legacy.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/19-plugin-gui-current.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/20-wayland-shared-gui.json",
+      "docs/reports/host-9f5a77a-20261120/gui/stages/21-wayland-cli.json",
+      "docs/reports/host-9f5a77a-20261120/gui/unit-journal.jsonl",
+      "docs/reports/host-9f5a77a-20261120/local/gate.json",
+      "docs/reports/host-9f5a77a-20261120/local/gate.log",
+      "docs/reports/host-9f5a77a-20261120/local/launch.json",
+      "docs/reports/host-9f5a77a-20261120/local/run.py",
+      "docs/reports/host-9f5a77a-20261120/redaction.json",
+      "docs/reports/host-9f5a77a-20261120/registry/01-stderr.log",
+      "docs/reports/host-9f5a77a-20261120/registry/01-stdout.log",
+      "docs/reports/host-9f5a77a-20261120/registry/02-stderr.log",
+      "docs/reports/host-9f5a77a-20261120/registry/02-stdout.log",
+      "docs/reports/host-9f5a77a-20261120/registry/03-stderr.log",
+      "docs/reports/host-9f5a77a-20261120/registry/03-stdout.log",
+      "docs/reports/host-9f5a77a-20261120/registry/04-stderr.log",
+      "docs/reports/host-9f5a77a-20261120/registry/04-stdout.log",
+      "docs/reports/host-9f5a77a-20261120/registry/05-stderr.log",
+      "docs/reports/host-9f5a77a-20261120/registry/05-stdout.log",
+      "docs/reports/host-9f5a77a-20261120/registry/06-stderr.log",
+      "docs/reports/host-9f5a77a-20261120/registry/06-stdout.log",
+      "docs/reports/host-9f5a77a-20261120/registry/closure-helper-error.json",
+      "docs/reports/host-9f5a77a-20261120/registry/closure.json",
+      "docs/reports/host-9f5a77a-20261120/registry/consumers/combined/Cargo.lock",
+      "docs/reports/host-9f5a77a-20261120/registry/consumers/combined/Cargo.toml",
+      "docs/reports/host-9f5a77a-20261120/registry/consumers/combined/src/lib.rs",
+      "docs/reports/host-9f5a77a-20261120/registry/consumers/combined/src/main.rs",
+      "docs/reports/host-9f5a77a-20261120/registry/consumers/zterm/Cargo.lock",
+      "docs/reports/host-9f5a77a-20261120/registry/consumers/zterm/Cargo.toml",
+      "docs/reports/host-9f5a77a-20261120/registry/consumers/zterm/src/lib.rs",
+      "docs/reports/host-9f5a77a-20261120/registry/consumers/zterm/src/main.rs",
+      "docs/reports/host-9f5a77a-20261120/registry/launch.json",
+      "docs/reports/host-9f5a77a-20261120/registry/result.json",
+      "docs/reports/host-9f5a77a-20261120/registry/run.py",
+      "docs/reports/host-9f5a77a-20261120/registry/runner.log",
+      "docs/reports/host-9f5a77a-20261120/size/SUMMARY.md",
+      "docs/reports/host-9f5a77a-20261120/size/audit.json.gz",
+      "docs/reports/host-9f5a77a-20261120/size/audit.py",
+      "docs/reports/host-9f5a77a-20261120/size/invocation.json",
+      "docs/reports/host-9f5a77a-20261120/size/run.stderr.log",
+      "docs/reports/host-9f5a77a-20261120/size/run.stdout.log",
+      "docs/reports/host-9f5a77a-20261120/source/Cargo.lock",
+      "docs/reports/host-9f5a77a-20261120/source/Cargo.toml",
+      "docs/reports/host-9f5a77a-20261120/summary.json",
+      "docs/reports/host-9f5a77a-20261120/verify-record.py",
+      "docs/reports/native-edae40b-20261120/README.md",
+      "docs/reports/native-edae40b-20261120/acceptance.json",
+      "docs/reports/native-edae40b-20261120/artifacts.json",
+      "docs/reports/native-edae40b-20261120/audit/artifact-content-verification.json",
+      "docs/reports/native-edae40b-20261120/audit/identity-and-signing.json",
+      "docs/reports/native-edae40b-20261120/audit/linux-detailed-scope.json",
+      "docs/reports/native-edae40b-20261120/audit/spawn-and-windows-package.json",
+      "docs/reports/native-edae40b-20261120/dispatch-summary.json",
+      "docs/reports/native-edae40b-20261120/evidence-index.json",
+      "docs/reports/native-edae40b-20261120/jobs.json",
+      "docs/reports/native-edae40b-20261120/log-checksums.json",
+      "docs/reports/native-edae40b-20261120/members/ztty-linux-aarch64.json",
+      "docs/reports/native-edae40b-20261120/members/ztty-linux-aarch64.native.json",
+      "docs/reports/native-edae40b-20261120/members/ztty-linux-x86_64.json",
+      "docs/reports/native-edae40b-20261120/members/ztty-linux-x86_64.native.json",
+      "docs/reports/native-edae40b-20261120/members/ztty-macos-aarch64.json",
+      "docs/reports/native-edae40b-20261120/members/ztty-macos-x86_64.json",
+      "docs/reports/native-edae40b-20261120/members/ztty-windows-aarch64.json",
+      "docs/reports/native-edae40b-20261120/members/ztty-windows-x86_64.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/clipboard.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/daily_workflow/report.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/gpu-repaint.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/gpu-tests.log",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/gpu-text.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/gpu-ui.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/graphics-gpu/graphics-extensions.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/graphics-software/graphics-extensions.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/input_gui/report.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/native_ui_gui/report.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/osc52-gpu/osc52.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/osc52-software/osc52.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/repaint_gui/report.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/retained-frame.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/session_switcher/report.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/sixel_gui/report.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/wayland/validation.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/native/workspaces/report.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/ztty-linux-aarch64.gate-tests.log",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/ztty-linux-aarch64.native.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-aarch64/ztty-linux-aarch64.working-directory.log",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/clipboard.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/daily_workflow/report.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/gpu-repaint.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/gpu-tests.log",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/gpu-text.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/gpu-ui.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/graphics-gpu/graphics-extensions.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/graphics-software/graphics-extensions.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/input_gui/report.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/native_ui_gui/report.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/osc52-gpu/osc52.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/osc52-software/osc52.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/repaint_gui/report.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/retained-frame.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/session_switcher/report.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/sixel_gui/report.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/wayland/validation.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/native/workspaces/report.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/ztty-linux-x86_64.gate-tests.log",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/ztty-linux-x86_64.native.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-linux-x86_64/ztty-linux-x86_64.working-directory.log",
+      "docs/reports/native-edae40b-20261120/reports/ztty-macos-aarch64/ztty-macos-aarch64.manifest.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-macos-aarch64/ztty-macos-aarch64.native.contract.log",
+      "docs/reports/native-edae40b-20261120/reports/ztty-macos-aarch64/ztty-macos-aarch64.native.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-macos-aarch64/ztty-macos-aarch64.spawn.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-macos-x86_64/ztty-macos-x86_64.manifest.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-macos-x86_64/ztty-macos-x86_64.native.contract.log",
+      "docs/reports/native-edae40b-20261120/reports/ztty-macos-x86_64/ztty-macos-x86_64.native.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-macos-x86_64/ztty-macos-x86_64.spawn.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-windows-aarch64/ztty-windows-aarch64.manifest.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-windows-aarch64/ztty-windows-aarch64.native.contract.log",
+      "docs/reports/native-edae40b-20261120/reports/ztty-windows-aarch64/ztty-windows-aarch64.native.desktop.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-windows-aarch64/ztty-windows-aarch64.native.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-windows-aarch64/ztty-windows-aarch64.native.workspace.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-windows-x86_64/ztty-windows-x86_64.manifest.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-windows-x86_64/ztty-windows-x86_64.native.contract.log",
+      "docs/reports/native-edae40b-20261120/reports/ztty-windows-x86_64/ztty-windows-x86_64.native.desktop.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-windows-x86_64/ztty-windows-x86_64.native.json",
+      "docs/reports/native-edae40b-20261120/reports/ztty-windows-x86_64/ztty-windows-x86_64.native.workspace.json",
+      "docs/reports/native-edae40b-20261120/run.json",
+      "docs/reports/native-edae40b-20261120/source/release.yml",
+      "docs/reports/native-edae40b-20261120/verify-record.py",
+      "src/x11/gpu.rs",
+      "tools/benchmark_output_pipeline.py",
+      "tools/benchmark_terminals.py",
+      "tools/benchmark_throughput.py"
+    ],
+    "production_behavior": "Auto plus LIBGL_ALWAYS_SOFTWARE exactly 1 takes existing software return before EGL/GL initialization, including later start_gpu calls. Explicit GPU, absent variable and other values retain the previous selection logic.",
+    "benchmark_changes": [
+      "Output window measurements explicitly require and record software before/after.",
+      "Older before executable may opt into application-default without an unsupported renderer setting; report retains unknown identity and enforces explicit modes."
+    ],
+    "c4_from_9855": "93 documentation files only; production, tests, tools and workflows identical.",
+    "db3_from_c4": "83 documentation files only; evidence does not change the release pin.",
+    "resolution_input_records_unchanged": [
+      {
+        "path": ".gitmodules",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ef5cc5bc44b7492b41ebfba4fd63ea1d0f74d53e"
+      },
+      {
+        "path": "Cargo.lock",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3afaf7a933f46e0e26f7facfe2d5e62ae33b9b54"
+      },
+      {
+        "path": "Cargo.toml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "54c4597a7c06c62e74974fa6268fac9e137129c1"
+      },
+      {
+        "path": "crates/zgpui",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "1d796d1fc63808dc099ed7b10c92e75835ae2814"
+      },
+      {
+        "path": "crates/zgraphics",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "fe6357f98cf80fb6cc74739e45e8866ee17706ad"
+      },
+      {
+        "path": "crates/zinput",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "37617313dd7aaabcca9dd567344a76c4cbe03907"
+      },
+      {
+        "path": "crates/zpty",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "66919bc6dcb7757e0437fe955bfa809fb1282b68"
+      },
+      {
+        "path": "crates/zterm",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "a2074bac4c030cfd7c0b2514c852a89dcf54648f"
+      },
+      {
+        "path": "crates/ztty-plugin-api/Cargo.toml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6342aed930a1fb6bdb645f02398130de6716700c"
+      },
+      {
+        "path": "examples/dedent-plugin/Cargo.lock",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cf905c825d5e1f71ae823a6ca3b486780f3dba4e"
+      },
+      {
+        "path": "examples/dedent-plugin/Cargo.toml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a53dda295fe50dc601d230db6aba255229affbf1"
+      },
+      {
+        "path": "rust-toolchain.toml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "87cd0e8bf775c8a63f40ba57bba6088064a387fc"
+      },
+      {
+        "path": "tests/fixtures/text-plugin/Cargo.lock",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "87c0b18742f29fefabaeb13eec1c0f0774419ed7"
+      },
+      {
+        "path": "tests/fixtures/text-plugin/Cargo.toml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "24b278fb743210668a23c57b6962e8b183a3da20"
+      }
+    ],
+    "cargo_lock_sha256": "b86e3438a14ff8710a28b09bafa33ab1861f8cf116b722dc94be83133d4543b5",
+    "all_94_source_worktrees_clean": true
+  },
+  "dependency_resolution": {
+    "reused_receipt": {
+      "path": "project-z-three-source-delta-20261120.json",
+      "bytes": 71175,
+      "sha256": "a85e37dcca74c8f5a3d69e1d1d32f3a8666811a3450a17dfbd9601942a2b4f6f"
+    },
+    "previous_result": "36 Rust repositories / 37 workspace manifests actually resolved successfully at ztty 9f5a77a.",
+    "full_resolution_repeated": false,
+    "basis": "Every production Cargo manifest/lock, cargo configuration, workspace selection, and nested gitlink is unchanged; the only new Cargo files are archived documentation fixtures outside selected workspaces.",
+    "new_result": {
+      "repositories": 42,
+      "packages": 60,
+      "metadata_no_deps_calls": {
+        "sync": 37,
+        "check": 37
+      },
+      "gates": {
+        "fetch": {
+          "status": "passed",
+          "started_at": "2026-11-20T03:45:23.515454+00:00",
+          "finished_at": "2026-11-20T03:45:37.910963+00:00",
+          "exit_code": 0,
+          "elapsed_seconds": 14.395,
+          "rss_budget_bytes": 268435456,
+          "host_reserve_bytes": 3221225472,
+          "initial_available_bytes": 9396113408,
+          "minimum_available_bytes": 9363087360,
+          "minimum_startup_bytes": 4294967296,
+          "peak_task_rss_bytes": 47206400,
+          "samples": 142,
+          "nice": 19,
+          "cargo_jobs": 1,
+          "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+          "raw_receipt_sha256": "38d4e804c28bebee59e2b39c2adcdd3b8f71b43f16dead6a0ef9aaac231ac55f",
+          "stdout_sha256": "6cb337f539291c40ae3a4afe3e9e88f2717d617f0e51bd5f29a6e10ed2d52dc6",
+          "stderr_sha256": "36192e759fd06ff3c9a6a4d6ea54a3931c5b0b06baef17ffc1238796ceadf446"
+        },
+        "sync": {
+          "status": "passed",
+          "started_at": "2026-11-20T03:46:02.258028+00:00",
+          "finished_at": "2026-11-20T03:46:04.097452+00:00",
+          "exit_code": 0,
+          "elapsed_seconds": 1.839,
+          "rss_budget_bytes": 268435456,
+          "host_reserve_bytes": 3221225472,
+          "initial_available_bytes": 9389084672,
+          "minimum_available_bytes": 9319882752,
+          "minimum_startup_bytes": 4294967296,
+          "peak_task_rss_bytes": 48381952,
+          "samples": 18,
+          "nice": 19,
+          "cargo_jobs": 1,
+          "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+          "raw_receipt_sha256": "19eb53513db1a4abdc3be4edeca3614f984f653aeca67562e71d90654693fbb9",
+          "stdout_sha256": "f0da76fff12e199a4f53a8d8a79243c8a232cefc7c21f06827333c699868aba5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "check": {
+          "status": "passed",
+          "started_at": "2026-11-20T03:46:04.570335+00:00",
+          "finished_at": "2026-11-20T03:46:06.410994+00:00",
+          "exit_code": 0,
+          "elapsed_seconds": 1.839,
+          "rss_budget_bytes": 268435456,
+          "host_reserve_bytes": 3221225472,
+          "initial_available_bytes": 9347915776,
+          "minimum_available_bytes": 9314603008,
+          "minimum_startup_bytes": 4294967296,
+          "peak_task_rss_bytes": 48271360,
+          "samples": 18,
+          "nice": 19,
+          "cargo_jobs": 1,
+          "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+          "raw_receipt_sha256": "343c58d48a851c36bc083b978944cc9f4a2f3e1cd9a36257673940e109a8eb9a",
+          "stdout_sha256": "37e0b4f4a25fec7e71ad451e2f8d735ccb2b861f1cf0945cb8cc479d5c78e15d",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    "catalog_only_ztty_commit_changed_from_previous": true,
+    "previous_catalog_sha256": "b1ba57fdc052e407ebd66541de29aba80e6ae23d7c4fefbf1d5cde01f218ec09",
+    "final_catalog_sha256": "9ff4f64609594b9228cf99a7af2e9e2261f3f536c22bf6c9214c7d0904469dab",
+    "normalized_graph_sha256": "b467cda8ef50f8d6ac9555d00ac5ca69d14eb9b28953201fb9f27527efa4446f",
+    "all_direct_package_edges": 226,
+    "internal_package_edges": 84,
+    "repository_edges": 56,
+    "scope_limit": "Reuse proves dependency source/requirement closure, not runtime behavior, performance or application installation."
+  },
+  "preservation": {
+    "old_125_records_unchanged": true,
+    "new_tracked_documentation_locks": [
+      "ztty/docs/reports/host-9f5a77a-20261120/registry/consumers/combined/Cargo.lock",
+      "ztty/docs/reports/host-9f5a77a-20261120/registry/consumers/zterm/Cargo.lock",
+      "ztty/docs/reports/host-9f5a77a-20261120/source/Cargo.lock"
+    ],
+    "current_snapshot_records": 128,
+    "all_bytes_modes_existence_unchanged_during_sync_check": true,
+    "snapshot_sha256_before": "9485f5fa53a5187f17365a074166d1a379ab1fa05afe6f236b8f5bbc9e830cdb",
+    "snapshot_sha256_after": "9485f5fa53a5187f17365a074166d1a379ab1fa05afe6f236b8f5bbc9e830cdb",
+    "temporary_root_config_absent": true,
+    "old_full_resolution_and_256_mib_failure_receipts_overwritten": false
+  },
+  "source_bound_existing_acceptance": {
+    "source": "9855da563f3038adee2fa88e1e24e20eafb77010",
+    "elf_sha256": "9c0297477b2a24355f865d12413135a327a69a7a8f7dd50e40927ae9e21f1e66",
+    "cargo_lock_sha256": "b86e3438a14ff8710a28b09bafa33ab1861f8cf116b722dc94be83133d4543b5",
+    "rust_passed": 472,
+    "rust_failed": 0,
+    "rust_ignored": 6,
+    "gui_checks": 32,
+    "gui_scope": "24 actual native UI/Auto/software checks plus 8 explicit-GPU text/pixel checks, including hot switching; private Xvfb, not physical display latency.",
+    "original_wrapper_failure_preserved": "Auto product stage passed; wrapper then read display_ownership instead of xvfb. Auto was not rerun; resumed work ran only the unstarted GPU stage.",
+    "performance_phases": [
+      {
+        "phase": "throughput",
+        "exit_code": 0,
+        "elapsed_seconds": 32.458429761987645,
+        "receipt_sha256": "55572c48a96ca72e8292e2e4b687497da30bbde1796d02bbca986f01d1d08ed3"
+      },
+      {
+        "phase": "output",
+        "exit_code": 0,
+        "elapsed_seconds": 6.469466595008271,
+        "receipt_sha256": "7ccb83765c5048d94c7860d774fe7674be92fc6cee8de848654641f03ffdc93e"
+      },
+      {
+        "phase": "terminals",
+        "exit_code": 0,
+        "elapsed_seconds": 130.19735796700115,
+        "receipt_sha256": "8fac72a7398f35214b44f32bb05a8b3c3ac427ada9839073d924a743eed3e318"
+      }
+    ],
+    "performance_boundary": "Three phases belong to 9855, not the prior 9f cohort. DSR completion is logical processing, not display presentation; no broad speed claim. Ten-window throughput median remained 21.82% below the fixed old baseline in that cohort.",
+    "local_gate_resource_limit": {
+      "memory_bytes": 805306368,
+      "memory_peak_bytes": 805306368,
+      "max_events": 2856,
+      "oom_events": 0,
+      "swap_peak_bytes": 0
+    },
+    "owner_offline_verifier": "Owner reports 2437 read-only assertions; this audit did not rerun that verifier. It independently checked the selected published Git blobs, public SHA-256 records, raw Rust test totals, source/ELF identity and GUI/phase scope.",
+    "historical_not_rerun": [
+      "9f 365-check GUI matrix",
+      "9f six explicitly executed EGL cases",
+      "prior registry consumer matrix"
+    ],
+    "published_evidence_records_verified": [
+      {
+        "path": "local/local-gate.json",
+        "git_blob": "2c11f8edd75760d38f18384312fffac3ad7e3bc8",
+        "public_sha256": "586b8bb8f6dad9efeeee0171d40e652ad67076a7093023f12be68de2eaf10a92",
+        "public_bytes": 3826,
+        "original_sha256": "42a6580e0972b717cb87d728ddb9f97829cbd1a2f5d355d311dbf0a8d760b842",
+        "source_url": "https://github.com/LIghtJUNction/ztty/blob/db3f49ae77cfa14e6c91145a5bffe306a528a57c/docs/reports/host-9855da5-20261120/local/local-gate.json"
+      },
+      {
+        "path": "local/closure.json",
+        "git_blob": "11d737c361c7f47accb90958577bed7faf6e8e47",
+        "public_sha256": "e0b7bdae119fd7df0a97abaa6512a7e1fc777ddcf9bf8df351ff4e2737a4b768",
+        "public_bytes": 989,
+        "original_sha256": "347c02e24c3d6b4f76ddc07b32d8a6f0e81b11be61c5c15d10e98356ba659c35",
+        "source_url": "https://github.com/LIghtJUNction/ztty/blob/db3f49ae77cfa14e6c91145a5bffe306a528a57c/docs/reports/host-9855da5-20261120/local/closure.json"
+      },
+      {
+        "path": "gui/verified-acceptance.json",
+        "git_blob": "acdea967f0f07649f2e04fd8e65de278425cfb29",
+        "public_sha256": "8dcd9287372354499763be892dcb7d48e74d313ba498116c0348280da657af04",
+        "public_bytes": 3274,
+        "original_sha256": "5ba3188db7f33361f8097d8fbed24dc226c065f69a1bbe419d30b8785239f25b",
+        "source_url": "https://github.com/LIghtJUNction/ztty/blob/db3f49ae77cfa14e6c91145a5bffe306a528a57c/docs/reports/host-9855da5-20261120/gui/verified-acceptance.json"
+      },
+      {
+        "path": "gui/native-ui-auto.json",
+        "git_blob": "8d62eeba027867d1a455b135257e748c78bb5ec0",
+        "public_sha256": "f691b1bdc16f495d1dd42d86105434e646d12d9d8ae614f53bac67268fc12f1d",
+        "public_bytes": 7605,
+        "original_sha256": "80ce004845467e2df85f0c0aa9615ca94becbd9e34a92ca12f599cf3e2a12035",
+        "source_url": "https://github.com/LIghtJUNction/ztty/blob/db3f49ae77cfa14e6c91145a5bffe306a528a57c/docs/reports/host-9855da5-20261120/gui/native-ui-auto.json"
+      },
+      {
+        "path": "gui/text-gpu.json",
+        "git_blob": "276a628c7b2a9cfdd2a03cc80fa21abbbe58d062",
+        "public_sha256": "d0c25b739fcafa3cd8d71dd1facac85cc4ad67242978d32952ab0bfcbe1caa39",
+        "public_bytes": 10552,
+        "original_sha256": "394b77008983e0de21d39f7726888db7e9c2dcae96a4740995939c178967d321",
+        "source_url": "https://github.com/LIghtJUNction/ztty/blob/db3f49ae77cfa14e6c91145a5bffe306a528a57c/docs/reports/host-9855da5-20261120/gui/text-gpu.json"
+      },
+      {
+        "path": "performance/cohort-receipt.json",
+        "git_blob": "f5bfffd4af5315a2233068d92b0b87ce0ca17312",
+        "public_sha256": "2261bf8737db349c64ea8abc6f89b9a43f5b5217a682c7b37f8bad33da7fadcc",
+        "public_bytes": 803,
+        "original_sha256": "2261bf8737db349c64ea8abc6f89b9a43f5b5217a682c7b37f8bad33da7fadcc",
+        "source_url": "https://github.com/LIghtJUNction/ztty/blob/db3f49ae77cfa14e6c91145a5bffe306a528a57c/docs/reports/host-9855da5-20261120/performance/cohort-receipt.json"
+      },
+      {
+        "path": "local/local-gate.log",
+        "git_blob": "7890d5c9f98f30006a83996217e3540d3166e29e",
+        "public_sha256": "f37d67aa62dc0b1a629d63f5569c22258daa63d44468b86e922d15dd51ab7197",
+        "public_bytes": 66143,
+        "original_sha256": "1493382cbcd74b3ff3f20affdf7ca0cb89839d045a545a63ad1d4187b5e3a372",
+        "source_url": "https://github.com/LIghtJUNction/ztty/blob/db3f49ae77cfa14e6c91145a5bffe306a528a57c/docs/reports/host-9855da5-20261120/local/local-gate.log"
+      },
+      {
+        "path": "source/production-change.json",
+        "git_blob": "c50d88151b804f2bd529e9332fb7d89d625442fc",
+        "public_sha256": "2297dfab597c9164043dfd21ebe49babf06ea1fdeb3cb46fe678cc881e1aa6a6",
+        "public_bytes": 519,
+        "original_sha256": null,
+        "source_url": "https://github.com/LIghtJUNction/ztty/blob/db3f49ae77cfa14e6c91145a5bffe306a528a57c/docs/reports/host-9855da5-20261120/source/production-change.json"
+      },
+      {
+        "path": "performance/throughput/receipt.json",
+        "git_blob": "afe22e8445c613d4a52e1fe862db171ac9e5407b",
+        "public_sha256": "7e444c00397c4e88d53b490ac9a4e8d14ec3f9b3157e810de134d75f26e4d029",
+        "public_bytes": 7158,
+        "original_sha256": "55572c48a96ca72e8292e2e4b687497da30bbde1796d02bbca986f01d1d08ed3",
+        "source_url": "https://github.com/LIghtJUNction/ztty/blob/db3f49ae77cfa14e6c91145a5bffe306a528a57c/docs/reports/host-9855da5-20261120/performance/throughput/receipt.json"
+      },
+      {
+        "path": "performance/output/receipt.json",
+        "git_blob": "29d3446b38455b4425c206c9f237cffbb2927f70",
+        "public_sha256": "b2d96efa8c41156bdb25ccd1ade34dc64165af9c36b0a18fdeb42d204664248e",
+        "public_bytes": 19588,
+        "original_sha256": "7ccb83765c5048d94c7860d774fe7674be92fc6cee8de848654641f03ffdc93e",
+        "source_url": "https://github.com/LIghtJUNction/ztty/blob/db3f49ae77cfa14e6c91145a5bffe306a528a57c/docs/reports/host-9855da5-20261120/performance/output/receipt.json"
+      },
+      {
+        "path": "performance/terminals/receipt.json",
+        "git_blob": "87fdf2b4e10fd966eee05b4487942ba37610d4a7",
+        "public_sha256": "8a2dedd8f59e6f1ca622bf87cb6929f098106f782403b1615de08ba2d72786b6",
+        "public_bytes": 7319,
+        "original_sha256": "8fac72a7398f35214b44f32bb05a8b3c3ac427ada9839073d924a743eed3e318",
+        "source_url": "https://github.com/LIghtJUNction/ztty/blob/db3f49ae77cfa14e6c91145a5bffe306a528a57c/docs/reports/host-9855da5-20261120/performance/terminals/receipt.json"
+      },
+      {
+        "path": "README.md",
+        "git_blob": "d3ea56e1262e8aba33ff81e15dbd80b1caa8fc42",
+        "public_sha256": "f465c4a6bd8ef1f67fd9eb6daa18cde9031541870182f227447aa75eef1bf724",
+        "public_bytes": 15063,
+        "original_sha256": null,
+        "source_url": "https://github.com/LIghtJUNction/ztty/blob/db3f49ae77cfa14e6c91145a5bffe306a528a57c/docs/reports/host-9855da5-20261120/README.md"
+      }
+    ]
+  },
+  "formal_release": {
+    "id": 452238617,
+    "url": "https://github.com/LIghtJUNction/ztty/releases/tag/v0.5.0",
+    "published_at": "2026-11-20T03:41:44Z",
+    "draft": false,
+    "prerelease": false,
+    "asset_count": 47,
+    "run": {
+      "id": 44668398577,
+      "head_sha": "c4f8f48c9598284a589e609f25242b49ceabfea8",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/LIghtJUNction/ztty/actions/runs/44668398577"
+    },
+    "assets": [
+      {
+        "name": "install.sh",
+        "size": 9889,
+        "digest": "sha256:e078404f113ce6337c70f0878ab2be057f7135572a5e2c4ad19c6025206f2b08",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/install.sh"
+      },
+      {
+        "name": "SHA256SUMS",
+        "size": 84,
+        "digest": "sha256:b525a8b35bb2528c72b7894aa572633904cca1deb05f7d171199e8e160c9d249",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/SHA256SUMS"
+      },
+      {
+        "name": "ztty-0.5.0-native-evidence.zip",
+        "size": 16732253,
+        "digest": "sha256:e989afb67dacd1046e0620581023cff4701a88f4701c6d4b613dbefb494bce3d",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-0.5.0-native-evidence.zip"
+      },
+      {
+        "name": "ztty-0.5.0-native-evidence.zip.sha256",
+        "size": 97,
+        "digest": "sha256:54c7bc073eebdb8e64f9025a2a0386d5456af60343df937e6eecfb5620940bb9",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-0.5.0-native-evidence.zip.sha256"
+      },
+      {
+        "name": "ztty-0.5.0.tar.gz",
+        "size": 6666022,
+        "digest": "sha256:cca31ef869c0872e0fd4a772f008f5919bab85628c11824c13fe4908016d6059",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-0.5.0.tar.gz"
+      },
+      {
+        "name": "ztty-linux-aarch64.build.json",
+        "size": 1546,
+        "digest": "sha256:9d5fa6b864d064e9c4d65c4f458e75f03bdaf12047019a426eab8cbbe5039bb9",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-linux-aarch64.build.json"
+      },
+      {
+        "name": "ztty-linux-aarch64.build.json.sha256",
+        "size": 96,
+        "digest": "sha256:49e5fce1001b722dd9710482d1c1d5c51736550a556920b907d8ddb1688d9e41",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-linux-aarch64.build.json.sha256"
+      },
+      {
+        "name": "ztty-linux-aarch64.native.json",
+        "size": 27188,
+        "digest": "sha256:ffccf9297c896894f921155ec5fe37b85137243c0eab04aa591be3de394ad1c3",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-linux-aarch64.native.json"
+      },
+      {
+        "name": "ztty-linux-aarch64.tar.gz",
+        "size": 552407,
+        "digest": "sha256:f86ddc20d6359c8301e7198adf80359c067ea02c28228139e2a39705a5ddd09d",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-linux-aarch64.tar.gz"
+      },
+      {
+        "name": "ztty-linux-aarch64.tar.gz.sha256",
+        "size": 92,
+        "digest": "sha256:855b0c14c67740843b53be5f9b66ab7acd3571c09fc3c9f0bd0604dca0879bcf",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-linux-aarch64.tar.gz.sha256"
+      },
+      {
+        "name": "ztty-linux-x86_64.build.json",
+        "size": 1532,
+        "digest": "sha256:c8b93eee2c906bf419c6190049cac3d45cfa0ad269ff971c9ae712d084312fef",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-linux-x86_64.build.json"
+      },
+      {
+        "name": "ztty-linux-x86_64.build.json.sha256",
+        "size": 95,
+        "digest": "sha256:237ec98b8bd5e2835ba9bfa74693d0487eb21661e264ff124539bc2cbc5f027c",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-linux-x86_64.build.json.sha256"
+      },
+      {
+        "name": "ztty-linux-x86_64.native.json",
+        "size": 27129,
+        "digest": "sha256:66b52e9ea8305cec5f860e8314df6a6812e16f034151f924e12826b0fa1b1c23",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-linux-x86_64.native.json"
+      },
+      {
+        "name": "ztty-linux-x86_64.tar.gz",
+        "size": 584351,
+        "digest": "sha256:4b79ded489c37325ac049e4962e75c7ff773c2c5d073d8fbad154bb47dfed6b2",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-linux-x86_64.tar.gz"
+      },
+      {
+        "name": "ztty-linux-x86_64.tar.gz.sha256",
+        "size": 91,
+        "digest": "sha256:3031105f5dc6bb12619f91cabea80946993572fa2e0f5e5ee7acfcc49c3ea57a",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-linux-x86_64.tar.gz.sha256"
+      },
+      {
+        "name": "ztty-macos-aarch64.build.json",
+        "size": 11956,
+        "digest": "sha256:c719414fec2ee673aac5a24e736831ba554e4ae62b7845cac3bde7dd6791abc1",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-aarch64.build.json"
+      },
+      {
+        "name": "ztty-macos-aarch64.build.json.sha256",
+        "size": 96,
+        "digest": "sha256:d679f2276bef4f5d4e90e954fbb13d8d6fdb5a33b078a478cfe55fd985e1d1a6",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-aarch64.build.json.sha256"
+      },
+      {
+        "name": "ztty-macos-aarch64.manifest.json",
+        "size": 2967,
+        "digest": "sha256:6ca0c5d3f9b264556d64b24e6f17ab065a1d4722aeeed9dee8d5105d22067815",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-aarch64.manifest.json"
+      },
+      {
+        "name": "ztty-macos-aarch64.manifest.json.sha256",
+        "size": 99,
+        "digest": "sha256:f4400125602d97d696d8c786092ba7d5703c54398437453faa8f4353e4ff996d",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-aarch64.manifest.json.sha256"
+      },
+      {
+        "name": "ztty-macos-aarch64.native.json",
+        "size": 69957,
+        "digest": "sha256:ed0c51596a22d4c12b3e56510e04a7699709daa0fbfb305bf21128b891865346",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-aarch64.native.json"
+      },
+      {
+        "name": "ztty-macos-aarch64.tar.gz",
+        "size": 251447,
+        "digest": "sha256:3cf0005f5d47e05668f2de35da84ab51067c268c60ef7ef2b314e9e2d069c326",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-aarch64.tar.gz"
+      },
+      {
+        "name": "ztty-macos-aarch64.tar.gz.sha256",
+        "size": 92,
+        "digest": "sha256:0e8dc22acc649c5c41114b21a5d8864958f4b3be654a84aaa2c7261556d9e052",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-aarch64.tar.gz.sha256"
+      },
+      {
+        "name": "ztty-macos-aarch64.zip",
+        "size": 252006,
+        "digest": "sha256:27a6db5df663bc2d301af2095bd04668c9847b7fb2f842be96ef16dd855bad60",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-aarch64.zip"
+      },
+      {
+        "name": "ztty-macos-aarch64.zip.sha256",
+        "size": 89,
+        "digest": "sha256:6f03d281b2bc03692cb447528bba5bf7ba791c36f5f3ca6438d8e036a3f20f8f",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-aarch64.zip.sha256"
+      },
+      {
+        "name": "ztty-macos-x86_64.build.json",
+        "size": 11899,
+        "digest": "sha256:37ab2a922aa6f3cb1e1000367701f25a08d4757ae9e2a36bf018887d10cefdfb",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-x86_64.build.json"
+      },
+      {
+        "name": "ztty-macos-x86_64.build.json.sha256",
+        "size": 95,
+        "digest": "sha256:6b67cf0d5f09585754255577ddcebe42aa2668857caf71ab2be1f766602ba8ce",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-x86_64.build.json.sha256"
+      },
+      {
+        "name": "ztty-macos-x86_64.manifest.json",
+        "size": 2963,
+        "digest": "sha256:6b4d54f00ebc02d6421bb0ef6711dec7a275223bd947986f4f2b7745b3643da4",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-x86_64.manifest.json"
+      },
+      {
+        "name": "ztty-macos-x86_64.manifest.json.sha256",
+        "size": 98,
+        "digest": "sha256:7e6b7a56e225459b0b0b6d5c614da79996639d44f447afd5236dda420a08d5fa",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-x86_64.manifest.json.sha256"
+      },
+      {
+        "name": "ztty-macos-x86_64.native.json",
+        "size": 70033,
+        "digest": "sha256:d88c565ac9a3225450967c0e34306f79d279af803c0481aace725b3ca866daa3",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-x86_64.native.json"
+      },
+      {
+        "name": "ztty-macos-x86_64.tar.gz",
+        "size": 277930,
+        "digest": "sha256:dcf27e3d0dc86b67f35f44f365b6cc07fcc2e480c39ed412c017b2040fe129f8",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-x86_64.tar.gz"
+      },
+      {
+        "name": "ztty-macos-x86_64.tar.gz.sha256",
+        "size": 91,
+        "digest": "sha256:c7d53bd66392dfed5b599c5827a6dff65559b4927b2faacae52526ad9672f40b",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-x86_64.tar.gz.sha256"
+      },
+      {
+        "name": "ztty-macos-x86_64.zip",
+        "size": 278711,
+        "digest": "sha256:4af65abc7044ec307bb37b2cab1abafca4175f7025399f9ffcd369582f8460e7",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-x86_64.zip"
+      },
+      {
+        "name": "ztty-macos-x86_64.zip.sha256",
+        "size": 88,
+        "digest": "sha256:a1d446b450b51735256e2d2b63c2a6b4829e7cf6c49e7895f7db32ca05e5be4a",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-macos-x86_64.zip.sha256"
+      },
+      {
+        "name": "ztty-windows-aarch64.build.json",
+        "size": 72226,
+        "digest": "sha256:5b4715ddc7582f03b7221674b8564451e465289139c80bf0f6d87b4eca851f4c",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-windows-aarch64.build.json"
+      },
+      {
+        "name": "ztty-windows-aarch64.build.json.sha256",
+        "size": 99,
+        "digest": "sha256:0744e08b60484bcacb5551a20a16dd907d9263b0a33e57f17c2cf0f801eee1a2",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-windows-aarch64.build.json.sha256"
+      },
+      {
+        "name": "ztty-windows-aarch64.manifest.json",
+        "size": 1257,
+        "digest": "sha256:be044cc0ee156a0821136364b43046798ca7d96b14606f8e97a06f2bafd0f375",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-windows-aarch64.manifest.json"
+      },
+      {
+        "name": "ztty-windows-aarch64.manifest.json.sha256",
+        "size": 102,
+        "digest": "sha256:e32d3274cf3f414fb7b62bd9667ee329f40538c7bfb3b4dfa4a46ad61c9e3e96",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-windows-aarch64.manifest.json.sha256"
+      },
+      {
+        "name": "ztty-windows-aarch64.native.json",
+        "size": 338582,
+        "digest": "sha256:52d5248c5846aea0450254adea279f7c83eac9633080abccbd5ddbded94e66f5",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-windows-aarch64.native.json"
+      },
+      {
+        "name": "ztty-windows-aarch64.zip",
+        "size": 858047,
+        "digest": "sha256:43f3df89ce8a6c7507104df0883ea690848e7a37a77e9eaf76649765de97f06b",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-windows-aarch64.zip"
+      },
+      {
+        "name": "ztty-windows-aarch64.zip.sha256",
+        "size": 92,
+        "digest": "sha256:af433efcf348e4a419ca823d00c67e69988c77837eb08d08da81ca1dff33dc6b",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-windows-aarch64.zip.sha256"
+      },
+      {
+        "name": "ztty-windows-x86_64.build.json",
+        "size": 71829,
+        "digest": "sha256:92044dd85f2e9025c8fc1fec4e6febf9bef5e7b8ee39c72fb21656bbc79a0254",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-windows-x86_64.build.json"
+      },
+      {
+        "name": "ztty-windows-x86_64.build.json.sha256",
+        "size": 98,
+        "digest": "sha256:cc47712fdf62d9d1fc4242c450ce1f29ec3406fb1279c538768f20ab050b69cd",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-windows-x86_64.build.json.sha256"
+      },
+      {
+        "name": "ztty-windows-x86_64.manifest.json",
+        "size": 1255,
+        "digest": "sha256:e36c4e2e2a4a6c604dd83d5ab542fc763208c190387910ebe8fe9ed620a4266d",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-windows-x86_64.manifest.json"
+      },
+      {
+        "name": "ztty-windows-x86_64.manifest.json.sha256",
+        "size": 101,
+        "digest": "sha256:8047b778b2af4845ca5ea7fed4b0c9b711e3c24c1dcb654209579fdb23ff600c",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-windows-x86_64.manifest.json.sha256"
+      },
+      {
+        "name": "ztty-windows-x86_64.native.json",
+        "size": 336856,
+        "digest": "sha256:1191cbe6f54baf6bcc3595fa36844283e969c794d608dcc81d503f0b5d8eddff",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-windows-x86_64.native.json"
+      },
+      {
+        "name": "ztty-windows-x86_64.zip",
+        "size": 932505,
+        "digest": "sha256:8ad4f75dc47f8ef73ca86fda6ccceb8befdbb7abb3d788e96f7a0abc9db36390",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-windows-x86_64.zip"
+      },
+      {
+        "name": "ztty-windows-x86_64.zip.sha256",
+        "size": 91,
+        "digest": "sha256:4cbfbf5bbb00b86bdef3f7304789b5c25ec3b17b2c686f556246d4a6f8ad01d3",
+        "browser_download_url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-windows-x86_64.zip.sha256"
+      }
+    ],
+    "verification_scope": "GitHub release/tag/run/job and asset name/size/API digest metadata read. This increment did not download complete archives, verify signing, launch installed binaries or build a new suite bundle."
+  },
+  "adoption": {
+    "recommendation": "Adopt ztty c4f8f48 together with already verified zterm a2074ba and OniMods 14dba75; preserve 9f full-resolution history and add this final-source sync/check receipt.",
+    "gitlinks": {
+      "OniMods": "14dba75a5752c3142039a8660ce37cdf57d7082a",
+      "zterm": "a2074bac4c030cfd7c0b2514c852a89dcf54648f",
+      "ztty": "c4f8f48c9598284a589e609f25242b49ceabfea8"
+    },
+    "suite_candidate": "86bbbe3a54b62a1beffbc3f4596a9338b8ef7530",
+    "suite_status": "Separate owner is validating formal package consumption; no new bundle or deployment claimed here.",
+    "ssmcp_and_zcalld_sources_unchanged": true
+  },
+  "generated_files": [
+    {
+      "path": "catalog.json",
+      "bytes": 126810,
+      "sha256": "9ff4f64609594b9228cf99a7af2e9e2261f3f536c22bf6c9214c7d0904469dab"
+    },
+    {
+      "path": "docs/PROJECTS.md",
+      "bytes": 16637,
+      "sha256": "c462993165700ef2c45d4a25ba2defde49f22f3d06c064468e4e15c42cfa2e42"
+    },
+    {
+      "path": ".cargo/project-z.toml",
+      "bytes": 1681,
+      "sha256": "79f62559d8f5fe9a313ca3d6d5b8ab0ddaf39d47b0afe06b8a24a783c2c75d99"
+    }
+  ],
+  "executed_by_this_increment": [
+    "exact source fetch and Git/API tree comparison",
+    "read existing published acceptance evidence",
+    "cargo metadata --no-deps via sync/check",
+    "read-only byte/mode/source/graph preservation audit"
+  ],
+  "not_executed": [
+    "compilation",
+    "unit/native/GUI tests",
+    "performance sampling",
+    "full dependency resolution",
+    "CI dispatch",
+    "installation",
+    "service changes",
+    "suite bundle build"
+  ]
+}

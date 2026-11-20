@@ -448,7 +448,7 @@
       "path": "ztty",
       "url": "https://github.com/LIghtJUNction/ztty.git",
       "branch": "main",
-      "commit": "9f5a77a1299093d0ba609bfafa2cec3b0ba931dd",
+      "commit": "c4f8f48c9598284a589e609f25242b49ceabfea8",
       "role": "application",
       "manifests": [
         "Cargo.toml"
