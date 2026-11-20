@@ -1,6 +1,6 @@
 # Project Z 维护进展
 
-更新：2026-11-21 05:18（Asia/Taipei）。
+更新：2026-11-21 05:53（Asia/Taipei）。
 
 ## 当前结果
 
@@ -32,25 +32,38 @@
 | lmm | [`7ba45df943`](https://github.com/TokenNotIncluded/lmm/pull/4) | 已发布，各自适用门禁通过 |
 | OniMods | [`9d2ffb4f74`](https://github.com/LIghtJUNction/OniMods/commit/9d2ffb4f749919f513313d603daeed5a6767195b) | 已发布，各自适用门禁通过 |
 | mechrevo-drivers | [`eb2959aac4`](https://github.com/LIghtJUNction/mechrevo-drivers/pull/10) | 已合并，原正式四项门禁通过 |
-| ztype | [`76c43579b9`](https://github.com/LIghtJUNction/ztype/pull/2) | 已合并，最后 28 项私有 Wayland 检查通过 |
-| ztty | [`be29c6763d`](https://github.com/LIghtJUNction/ztty/commit/be29c6763d3f63832f77c21746d7d62aa70e7d62) | 原维护者发布；530 项 Rust 和完整适用原生门禁通过，目录解析后续已合入 c7c2 |
+| ztype | [`76c43579b9`](https://github.com/LIghtJUNction/ztype/pull/2) | 已合并，原 28 项私有 Wayland 检查使用 GTK 接收端；新增 ztty 兼容验收见下文 |
+| ztty | [`be29c6763d`](https://github.com/LIghtJUNction/ztty/commit/be29c6763d3f63832f77c21746d7d62aa70e7d62) | 原迁移门禁通过；最新内存回收修复已合入 febc9065，实际验证与合并树一致 |
 | API | [`304f49d87d`](https://github.com/TokenNotIncluded/lmm-api-source/commit/304f49d87df1c2fb83d4145386c569d237af8c90) | 已发布，13 项定向单元测试与源码、锁文件等价核对通过 |
 
 8 个核心仓库各自的 fmt、测试、严格 Clippy 及适用的 no_std/Wasm 检查已通过，固定提交、源码树、命令和日志摘要在 JSON 的 `core_git_source_migrations` 中。不同 feature 配置的重复运行不计作新增独立测试。
 
 三个应用仓库同时修正了共享 Cargo 构建目录的使用方式。安装、打包和验收脚本通过 Cargo metadata 找到真实产物路径；`zcalld` 保留并发更新的 `f32a25bb` 业务修复，完整官方门禁、私有原生包和安装器夹具通过。其监听功能仍由 [PR #1](https://github.com/LIghtJUNction/zcalld/pull/1) 单独集成和验收。
 
-ztype 已完成 28 项私有 Wayland 验收，且确认与此前通过 Rust、Clippy、CLI、私有安装和 Xvfb 检查的 ELF 摘要一致；[PR #2](https://github.com/LIghtJUNction/ztype/pull/2) 合并后的源码树也与测试树一致。私有兼容库依据固定源码及两份补丁重建，原环境失败记录完整保留。
+ztype 原迁移完成 28 项私有 Wayland 验收，接收端为 GTK；对应 ELF 与该轮 Rust、Clippy、CLI、私有安装和 Xvfb 检查一致，[PR #2](https://github.com/LIghtJUNction/ztype/pull/2) 的合并树也与测试树一致。这些结果保持原源码和接收端范围。当前针对真实 ztty 窗口的新一轮兼容验证单独记录。
 
 ztty 采用原维护者已发布的 be29c676：规范 Git 源、实际 Cargo compiler-artifact 路径、独立插件夹具和锁文件一起完成迁移。[已发布验收记录](https://github.com/LIghtJUNction/ztty/blob/be29c6763d3f63832f77c21746d7d62aa70e7d62/docs/reports/default-branch-sources-20261121/results.json)包含 530 项 Rust 通过、9 项原有忽略、22 项插件 CLI 检查，以及软件和 GPU 两种模式各 12 次 reload 尝试。GPU 使用私有 Xvfb 下的 Mesa llvmpipe；这轮是源码集成，未更新桌面安装或发行版。验收脚本的 Cargo 配置目录解析补丁也已随 [PR #21](https://github.com/LIghtJUNction/ztty/pull/21) 合入 c7c2a3e8。仅共享配置、绝对环境路径、异地启动的相对环境路径三种真实 metadata 场景均通过，8 组 GUI／Wayland 命令参数全部指向实际产物。该补丁只改一个 Python 文件；此前完整运行门禁仍保留 be29 的源码身份。
 
 用户追加的 ztty 迭代已完成两种模式各七阶段的内存基线。固定 c7c2a3e8 源码和同一 ELF，在私有 Xvfb 中从一个窗口增至十个，再关闭九个：软件模式的 broker PSS 从 6.5 MB 变为 8.4 MB；GPU 代码路径从 138.8 MB 变为 289.5 MB。这里的 GPU 使用 Mesa llvmpipe，不能外推硬件显存或真实 GPU 延迟。[完整基线](https://drive.google.com/file/d/12PscZCsQ0KP0I2jYPLLhS8vp2jjnbzXk/view)已下载逐字节核对，既有 72 个 worktree 保持原样。
 
-后续[分配器诊断](evidence/ztty-allocator-diagnosis-20261121.json)证实，渲染 context 和 surface 均正常销毁；关闭九个窗口后，活跃分配已从约 42.0 MB 回到 42.4 MB，但分配器仍保留约 335.4 MB 空闲块。在单独的诊断对照中归还空闲页后，匿名 PSS 回到 43.85 MB，活跃分配量不变。这解释了当前 llvmpipe 场景的内存保留。生产代码的最小候选已推送为 [ztty PR #22](https://github.com/LIghtJUNction/ztty/pull/22)：三文件、19 行，仅在确有窗口视图销毁的 retire／detach 完成点归还空闲页。固定 cad4d90f 候选正在准备编译及关窗、重开、detach／reattach 的会话身份、内容和耗时验收；诊断数据不作为该候选的优化成绩，也尚未写入最终 44 仓快照。
+后续[分配器诊断](evidence/ztty-allocator-diagnosis-20261121.json)确认，渲染 context 和 surface 均正常销毁；关闭九个窗口后，活跃分配回到约 42.4 MB，但分配器仍保留约 335.4 MB 空闲块。诊断性归还空闲页后，匿名 PSS 回到 43.85 MB，活跃分配量保持不变。因此修复放在实际窗口视图销毁、布局移除之后，由 GNU libc 尽力归还空闲页；其他 libc 保留原行为。
+
+[ztty PR #22](https://github.com/LIghtJUNction/ztty/pull/22) 已合并为 **febc9065**，合并树 ca160bd3 与实际验证的 **bfee445f** 完全一致。该提交保留并行主线 c6dc42c8 的搜索缓存更新，仅新增三个文件中的 19 行。固定产物完成实际源码 Clippy、release 编译、34 项窗口生命周期检查、6 组共 66 个采样阶段和 162 次关闭 RPC。对照使用软件模式 AB、GPU 代码路径 ABBA 顺序；后者在私有 Xvfb、Mesa llvmpipe、两个渲染线程下运行。
+
+| 最终对照指标 | 主线 c6dc42c8 | 内存修复 bfee445f |
+| --- | ---: | ---: |
+| GPU 代码路径第三轮关闭后 broker 匿名 PSS，两次运行 | 323.8–324.3 MB | 44.3–44.6 MB |
+| GPU 代码路径关闭 RPC 中位耗时，54 次 | 1.995 ms | 3.021 ms |
+| GPU 代码路径关闭 RPC 最大耗时 | 3.530 ms | 4.192 ms |
+| 软件模式关闭 RPC 中位耗时，27 次 | 0.132 ms | 0.181 ms |
+
+内存采用十进制 MB，取 broker 进程每阶段三次 `Pss_Anon` 采样的中位数。时间覆盖整个关闭请求的协议、销毁、内存回收和调度；物理 GPU、显存、帧时间与键盘输入延迟留待各自环境测量。[最终验证](evidence/ztty-memory-bfee-20261121.json)、[合并来源](evidence/ztty-memory-publication-20261121.json)、[逐项独立复核](evidence/ztty-bfee-independent-review-20261121.json)及[131 份文本证据包](https://drive.google.com/file/d/1kbVMmeWDPEmuYPJRlofrjwE06zTv0ARV/view)均已保存。GNU／musl 模块探针复用字节相同的代码与同一编译器的已通过结果。全部自有进程已回收；当前发布结果是源码合并。
 
 zcalld 监听器已更新到 **d5314fe9**，完整吸收当前 c4b4bbab 主线的安装器修复和 0.4.3 改动，同时刷新 zcall-gui 文档提交。逐叶比较确认保留 212 个其余主线条目，五个监听器文件与已审查版本一致。新候选实际通过 **179 项 Rust 测试、严格 Clippy、release 构建和 8 项 TCP／Unix curl 取消测试**，共 22 条命令、零跳过；实际外锁、构建来源和固定二进制摘要均保留在[完整回执](evidence/zcalld-listener-d531-20261121.json)及[云盘副本](https://drive.google.com/file/d/1lVa3-tGuOzOwhsOSooMiUX51kD4i0p_d/view)。现有 SSMCP 负责人正在准备最终固定组合的 Gate10/P1，PR #1 仍为草稿。原 97d 的 177 项测试与找回的 job39a 启动审计保持原身份；最终联调仍要求真实跨进程阻塞生成取消，不把旧 32 项集合中无关的 shared-library、Go、打包／安装检查计成本轮通过。
 
 `zrc`、`zdot`、`LMM`、`Oni` 和 `mechrevo-drivers` 也已发布；API 的三个 Git 源与最新 LMM gitlink 已随 304f49d8 发布，合计 13 项目标单元测试通过：1 项 hex、3 项流兼容和 9 项 CLI 参数解析。锁文件、26 份源码／feature 等价和格式检查也已保留。首轮 3 GiB 内存不足与续跑时误选 5 项缺少 DATABASE_URL 的 SQLx 测试均如实记录；之后以精确解析器选择器完成剩余检查，未连接数据库。聚合工具最初通过 80 项测试，规范 Git URL 修正另通过 21 项定向真实 Git/Cargo 测试，均零跳过；它们不替代各应用和新 44 仓完整图的验收。最终图将显式登记已确认活跃的独立 fuzz／插件测试工作区，并保留比较基准的有意旧版本来源。
+
+**递归源码检查已修复**：[Project Z PR #9](https://github.com/LIghtJUNction/project-z/pull/9) 已合入 PR #7 的协调分支，提交为 9d725a15。检查器逐层核对实际 Git 仓库、所固定的提交和工作区改动，并在整个子树通过后缓存结果；同步前先完成检查，保护已有文件。四层真实 Git 夹具覆盖深层修改、旧提交和缺失检出，最终 **91 项测试通过**，其中已包含 8 项递归检查和 9 项 SourceLink 检查。[合并核对](evidence/project-z-pr9-merge-20261121.json)与[原始证据包](https://drive.google.com/file/d/1r5nus_vSPZDMid_TMDYsuzxGdrPMJe9a/view)保留源码及原始测试结果。完整 44 仓图将使用更新后的检查器，在最终组件版本就位后执行。
 
 ## 历史附件清理
 
@@ -103,9 +116,13 @@ WGT 的 4 个精确 Cargo 缓存目录已全部删除并逐项验证。执行前
 
 **最新上游传播**：zuse [a1bb8fd2](https://github.com/LIghtJUNction/zuse/commit/a1bb8fd2cbce0a9d85134999883c578358065242) 已被 ztype [da6feb1a](https://github.com/LIghtJUNction/ztype/commit/da6feb1a3c5488f3854c63d5e5db173ca250dba4) 和 SSMCP [4237eea2](https://github.com/LIghtJUNction/ssmcp/commit/4237eea2cab8253b8dff84d81861ba1e1adf4246) 消费。ztype 的维护者记录 72 项通过、1 项可选词典测试忽略；SSMCP 的锁文件来源已独立核对。oh-my-ztty [f04f6ea8](https://github.com/LIghtJUNction/oh-my-ztty/commit/f04f6ea8ae909e121edabbd766ee725a472f8146) 又消费了 SSMCP 4237，原维护者记录 112 项检查。其 ztty c7 草稿与 SSMCP 后续 context／当前功能提交仍需在同一维护链合流，最终 44 仓实际 sync/check/resolve 尚未完成。
 
-**ztype 与 ztty 兼容**：开发机新增要求是继续完善 ztype，并指出目前不支持 ztty。已交由既有维护者协调原 ztype 负责人，先核对输入路径和原验收范围；独立只读调查正在整理现有交接。此前 da6feb1a 的依赖更新检查、旧源码的 28 项 Wayland 场景，都不能替代这次兼容性验收。ztty 的内存候选保持单独验证，最终 44 仓图将等待新增兼容工作收口。
+**ztype 与 ztty 兼容及界面更新**：当前 0.4.2 候选在独立工作区延续已安装 0.4.1 的焦点保护与不透明候选框，按 Material 的文字与颜色角色整理布局。固定 ELF 已通过编译、严格 Clippy、8 项 CLI 与 15 项私有安装检查；真实 X11／XIM ztty 接收端另通过 **13 项检查**，覆盖中文句子、非首候选、多窗口、焦点、候选框、晚启动和重连。[本轮 XIM 原始记录](evidence/ztype-xim-ui-20261121.json)绑定前后相同的两个二进制。
+
+真实 native Wayland ztty 接收端发现一个待修复问题：候选框呈现和隐藏成功，但 PTY 收到 `ihaoshijie`，预期为中文“你好世界”。现有维护者正在沿 text-input-v3 事件与提交路径定位，并已收到新合并 ztty 的固定产物用于复核。当前 0.4.2 草稿发布及完整原生兼容验收仍在进行；用户现有 0.4.1 安装和输入法配置保留。
 
 **SSMCP 输入与消息处理**：完整原始记录确认这是两个独立参数。`--input` 选择输入来源，默认 `terminal`，并支持 web 的 host／port、MCP 的 stdio／HTTP、默认或自定义 sock 路径及管道输入；用户最新补充，显式 `--input none` 禁用聊天框。`--agent` 指定聊天框消息的处理者，支持 Codex、Claude Code、其他 coding agent 或另一个 SSMCP，默认名称最终更正为 `next-caller`，表示交付到下一次符合条件的工具调用结果。当前源码负责人及原 CLI 线程统一实现。[只读架构核对](evidence/ssmcp-input-agent-contract-20261121.md)已明确输入、处理方、现有消息队列及保存重载的边界，并列出八组建议验收；建议尚未当作已运行结果。前一版报告把 input 解释为处理目标的错误已纠正，未据此修改源码。
+
+该功能已推送至 [SSMCP 草稿 PR #159](https://github.com/LIghtJUNction/ssmcp/pull/159)，当前冻结提交 cae35a82、树 2657970b。源码包含显式 `--input none` 的连接级聊天禁用、独立消息处理方及保存重载规则。原负责人正在完成五个固定产物的实际编译与来源校验，随后执行对应原生运行门禁；zcalld d531 的最终 Gate10/P1 仍待该组合就位。
 
 ## 仍需闭合的初始 PR
 

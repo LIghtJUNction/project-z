@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T21:18:10.714314+00:00",
+  "generated_at": "2026-11-21T05:53:12.837333+08:00",
   "timezone": "Asia/Taipei",
   "scope": "Initial 85 PRs, latest GitHub default-branch dependency migration, generated-binary history cleanup, development-machine cache cleanup, release integration and the requested named local/remote contexts",
   "batch_status": "in_progress",
@@ -1459,14 +1459,14 @@
     "url": "https://github.com/LIghtJUNction/project-z/pull/7",
     "number": 7,
     "branch": "coord/git-source-policy-20261120",
-    "head": "45b60092829d9336bfe512793d8d3d8d021c3f5a",
-    "tree": "5d355457e845e198915ff6cfe5e214d26875a182",
-    "status": "draft_component_migrations_and_complete_44_repository_graph_pending",
+    "head": "9d725a1525c8d4da933fae561cdd337db25e5583",
+    "tree": "df3e6ed3c4e9d950e6277bec472ea4c8406a94dc",
+    "status": "draft_final_components_and_complete_44_repository_graph_pending",
     "base": "d2a6616c85b7e47c3faa32bd5728db49cdd9c142",
-    "source_snapshot_note": "Head observed immediately before this report-only commit; subsequent graph publication must refresh actual component heads."
+    "source_snapshot_note": "Actual branch head read before this report-only commit. PR9 is integrated; final44 gitlinks/catalog remain owned by the aggregate maintainer and are not updated here."
   },
   "dependency_snapshot": {
-    "status": "16_repository_migrations_published_remaining_consumers_upstream_followup_and_full_44_graph_pending",
+    "status": "19_repository_migrations_published_recursive_checker_merged_final_44_graph_pending",
     "repositories_planned": 44,
     "package_count_pending_refresh": true,
     "historical_validation": {
@@ -10809,7 +10809,7 @@
     }
   },
   "current_maintenance": {
-    "generated_at": "2026-11-20T21:18:10.714314+00:00",
+    "generated_at": "2026-11-21T05:53:12.837333+08:00",
     "root_consumers": {
       "zcall-gui": {
         "status": "merged_and_main_tree_read_back",
@@ -16765,6 +16765,13 @@
         "ztty_gitlink": "be29c6763d3f63832f77c21746d7d62aa70e7d62",
         "native_owner_reported_checks": 112,
         "remaining": "Integrate draft zttyc7 pin and final SSMCP source without losing either source update; no new final bundle claim."
+      },
+      "ztty": {
+        "main": "febc90654e5fc680b0660f0874296e17eb389acf",
+        "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+        "tested_head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+        "merge_tree_equals_tested_tree": true,
+        "oh_my_ztty_and_final44_propagation": "pending"
       }
     },
     "prior_hireferry_mobile_snapshot_1955": {
@@ -16788,12 +16795,10 @@
       "runtime_scope": "Owned emulator5582; no physical phone, production authentication or release signing."
     },
     "ztty_memory_iteration": {
-      "status": "baseline_and_allocator_diagnosis_complete_minimal_pr22_candidate_preparing_validation",
+      "status": "production_candidate_merged_and_verified_final44_propagation_pending",
       "goal": "measure 1->10->close9 retain1 memory; no source optimization without evidence; original 256KiB PTY3-6ms/ZLE350-380ms boundary retained",
-      "source": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25",
-      "binary_sha256": "239aa74c8952d272832188ccde80c4805505faf892bb4247904aaafbba1e1e8c",
       "checkpoint": "/home/lightjunction/.local/state/work-maintainer/ztty-memory-iteration-20261120.json",
-      "resource": "Completed baseline/diagnostic used private Xvfb, 2GiB/CPU1 and no Rust rebuild. The fixed candidate now has a separately scoped jobs=1 build followed by bounded GUI cases under the same outer lock; no shared desktop input or production installation.",
+      "resource": "Completed fixed-source build and private Xvfb/Mesa llvmpipe GUI runs under the existing outer Cargo lock. Owned scopes inactive/dead, no remaining owned processes.",
       "owner": "builtin pr_personal_repos",
       "baseline": {
         "two_modes_each_seven_stages": true,
@@ -16832,7 +16837,9 @@
         "scope": "Two instrumented profiles on the unchanged c7 source/239aa ELF. The explicit trim profile proves allocator retention in this llvmpipe workload; it is not the production candidate result.",
         "process_cleanup": "Owned processes exited; scope inactive/dead with empty cgroup; shared lock released."
       },
-      "candidate": {
+      "baseline_source": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25",
+      "baseline_binary_sha256": "239aa74c8952d272832188ccde80c4805505faf892bb4247904aaafbba1e1e8c",
+      "initial_candidate": {
         "url": "https://github.com/LIghtJUNction/ztty/pull/22",
         "draft": true,
         "head": "cad4d90fabfd1a9a0abf4e419dd8683047fa6347",
@@ -16841,12 +16848,130 @@
         "added_lines": 19,
         "scope": "GNU/Linux best-effort free-page return after an actual retire/detach view destruction; non-GNU no-op; no timer or global allocator setting.",
         "static_review": "Independent Core review found no blocker; no compilation or runtime gate claimed by that review.",
-        "runtime_status": "Pending fixed-candidate build and close/reopen/detach/reattach semantics, PTY identity/content, and close latency measurements.",
+        "runtime_status": "cad4 passed before integration of concurrent c6; immutable independent receipt retained.",
+        "included_in_final44_snapshot": false,
+        "validation_sha256": "081f2797f5402588ba8d5478b1a4d039a01c5580a228564c98cdda342dee0f74",
+        "drive_url": "https://drive.google.com/file/d/1n8R7-o8wIaR2OAHtyWRcm9YYTckZOnvm/view"
+      },
+      "final_candidate": {
+        "publication": {
+          "main": {
+            "sha": "febc90654e5fc680b0660f0874296e17eb389acf",
+            "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+            "parents": [
+              "c6dc42c882d77d96dba96adb5b09ce177b579dfe",
+              "bfee445fb6d4bae932674c2d65c840513962ada7"
+            ],
+            "commit_date": "2026-11-20T21:47:26Z"
+          },
+          "pr": {
+            "number": 22,
+            "state": "closed",
+            "merged": true,
+            "merged_at": "2026-11-20T21:47:26Z",
+            "head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+            "base": "c6dc42c882d77d96dba96adb5b09ce177b579dfe",
+            "merge_commit_sha": "febc90654e5fc680b0660f0874296e17eb389acf",
+            "changed_files": 3,
+            "additions": 19,
+            "deletions": 0
+          }
+        },
+        "tested": {
+          "head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+          "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+          "baseline_head": "c6dc42c882d77d96dba96adb5b09ce177b579dfe",
+          "candidate_elf_sha256": "01269c72f7a56f273ad33c8c19b303c00310567ed79abb5b256b68e84e90bef6",
+          "baseline_elf_sha256": "748da679b89394d8f7a70ffb5872023ea7c4c02e3dc9563a22bff7bd1f133fa7",
+          "merge_tree_equals_tested_tree": true
+        },
+        "gates": {
+          "actual_root_clippy": true,
+          "actual_root_release_fresh_false": true,
+          "compiler_cwd_argv_verified": true,
+          "gnu_malloc_trim_symbol_verified": true,
+          "fmt": true,
+          "locked_offline_metadata": true,
+          "lifecycle_checks": 34,
+          "memory_profiles": 6,
+          "memory_stages": 66,
+          "close_rpc_measurements": 162,
+          "owned_processes_reaped": true,
+          "scope_inactive": true,
+          "gnu_musl_module_boundary": {
+            "passed": true,
+            "rerun_for_bfee": false,
+            "reason": "os.rs bytes and rustc version identical to actual cad4 GNU/musl object probes; no whole-application musl claim"
+          }
+        },
+        "measurement": {
+          "environment": "private Xvfb / Mesa llvmpipe / LP_NUM_THREADS=2",
+          "gpu_third_close_anonymous_bytes": {
+            "baseline": [
+              323821568,
+              324331520
+            ],
+            "candidate": [
+              44300288,
+              44615680
+            ]
+          },
+          "gpu_close_rpc_median_ms": {
+            "baseline": 1.994955,
+            "candidate": 3.0207035
+          },
+          "timing_scope": "whole close RPC including protocol, teardown, reclamation and scheduling",
+          "no_physical_gpu_vram_frame_or_input_latency_claim": true,
+          "metric_definition": "Median of three broker.Pss_Anon_bytes samples per stage; broker process anonymous proportional-set memory."
+        },
+        "scope": {
+          "production_paths": [
+            "src/os.rs",
+            "src/session/requests.rs",
+            "src/session/workspaces.rs"
+          ],
+          "insertions": 19,
+          "deletions": 0,
+          "upstream_c6_paths_preserved": 16,
+          "desktop_install": false,
+          "formal_release": false,
+          "generated_binaries_tracked": false,
+          "global_cargo_config_changed": false,
+          "shared_target_cleaned": false
+        },
         "included_in_final44_snapshot": false
+      },
+      "final_evidence": {
+        "validation": {
+          "path": "evidence/ztty-memory-bfee-20261121.json",
+          "bytes": 73251,
+          "sha256": "587ec15fdf4a1001cad71a58c517a5f54798e6af96d0edc5e9fabbfc5d792152",
+          "drive_id": "1zyoUnbShHBDViIePo7zsrtapY0ADlY9D"
+        },
+        "publication": {
+          "path": "evidence/ztty-memory-publication-20261121.json",
+          "bytes": 4406,
+          "sha256": "fae413afb291fcf2f29b7f59efa2b79d485dc7f1d2657451af68fc9d6ccd6d5e"
+        },
+        "archive": {
+          "bytes": 502187,
+          "sha256": "583d389c61cb32a693e4539382b5e07506ae4775abd31bca3e396d73bbd2685b",
+          "drive_id": "1kbVMmeWDPEmuYPJRlofrjwE06zTv0ARV",
+          "text_files": 131,
+          "full_download_verified": true
+        },
+        "independent_review": {
+          "path": "evidence/ztty-bfee-independent-review-20261121.json",
+          "bytes": 11692,
+          "sha256": "eacd7a2bdaf0e6243b9a2e750b6622f98ce5a0ca0234a42ff8b660fb48043621",
+          "raw_stage_samples_recomputed": 198,
+          "close_rpcs_recomputed": 162,
+          "new_runtime_execution": false
+        }
       }
     },
     "ssmcp_input_requirement": {
-      "status": "complete_original_history_read_owner_confirmed",
+      "status": "phase2_source_frozen_draft_pr159_build_artifacts_in_progress",
       "effective_name": "--input",
       "terminal": "Default input source",
       "web": "Input host/port explicit",
@@ -16900,6 +17025,15 @@
         "sha256": "989ff14390ce0b5c8da72478b7d53e0467ccf83df7af58a77d451c3ecb1196a2",
         "source": "90c497007f6d6f16c3dd2da6a4599c48787e5ee1",
         "scope": "Read-only routing and persistence review with eight proposed narrow acceptance groups, not executed acceptance results."
+      },
+      "publication": {
+        "url": "https://github.com/LIghtJUNction/ssmcp/pull/159",
+        "draft": true,
+        "head": "cae35a82683104049d4e30041df6e7e6bb3e6fc5",
+        "tree": "2657970b36433de80a3cea9de3c5c5d2aba8728a",
+        "source_published": true,
+        "runtime_pass_claimed": false,
+        "final_five_artifact_build": "in progress by existing source owner"
       }
     },
     "org_final_archive": {
@@ -16939,17 +17073,63 @@
       ]
     },
     "ztype_ztty_followup": {
-      "status": "authenticated_request_received_existing_owner_handoff_and_readonly_path_discovery",
-      "request": "Continue improving ztype; the user reports that it currently does not support ztty.",
+      "status": "private_0_4_2_build_and_13_xim_checks_passed_real_native_wayland_receiver_fix_in_progress",
+      "request": "Continue ztype, support ztty, improve UI with Google design principles.",
       "source": "Two authenticated client_user revision2 messages forwarded by the existing dependency maintainer.",
       "source_message_ids": [
         "6a46f03cb99610891b5de45e7e7b0752",
-        "956884afc78b0321f8ed3fe00dba91d9"
+        "956884afc78b0321f8ed3fe00dba91d9",
+        "695894e8eb44ad4e123c10d84d857871",
+        "28a8e74ff3ab7d72b11a72ee030e7e14"
       ],
       "last_verified_ztype_main": "da6feb1a3c5488f3854c63d5e5db173ca250dba4",
-      "scope_boundary": "Earlier72tests/1optional skip are the zuse pin update; earlier28Wayland cases belong to the prior76 source. Neither proves the newly requested ztty input interoperability.",
-      "ownership": "Existing dependency maintainer coordinates with the original ztype owner; Org only reads handoff and input paths. Personal retains the separate ztty memory candidate and final44 graph ownership.",
-      "implementation_or_runtime_acceptance_claimed": false
+      "scope_boundary": "Earlier28 Wayland checks used GTK; new13 XIM checks use actual private copied c7 ztty. Native Wayland ztty presented/hidden popup but failed Chinese PTY commit. New frozen febc/bfee binary provided to the owner for relevant revalidation.",
+      "ownership": "Existing native dependency maintainer owns ztype source and private runtime gates; Core reads the failing event path; Personal owns any coordinated ztty source edit and the final44 graph.",
+      "implementation_or_runtime_acceptance_claimed": true,
+      "preserved_installed_source": {
+        "version": "0.4.1",
+        "source": "05ee8403fac6232bcd692fb58e170a4c6b17fde0",
+        "elf_sha256": "7708a88b2a8b914a52abe2f10395378fb33c731621fdde9301a6679a83dc10c8"
+      },
+      "candidate": {
+        "base": "da6feb1a3c5488f3854c63d5e5db173ca250dba4",
+        "version": "0.4.2",
+        "elf_sha256": "1a2b96c03aa5129ea1935216da7b8696ef330a4a2ec49f0139027a4a9c0c82ae",
+        "build_receipt_sha256": "8b5147dc3b7887db41e2fd07eee8310971f82cf4c6f8f3e03203eef95239aee0",
+        "publication": "existing owner preparing immutable draft",
+        "cli_checks": 8,
+        "private_install_checks": 15,
+        "xim_checks": 13,
+        "xim_passed": true,
+        "native_wayland_passed": false,
+        "native_wayland_actual_pty": "ihaoshijie",
+        "native_wayland_expected_pty": "你好世界",
+        "evidence": "evidence/ztype-xim-ui-20261121.json",
+        "host_install_or_input_config_changed": false
+      }
+    },
+    "recursive_source_checks": {
+      "status": "merged_into_coordination_branch",
+      "pr": "https://github.com/LIghtJUNction/project-z/pull/9",
+      "tested_head": "bf0fae7587af37269f492dffeb80ad837647075e",
+      "tested_tree": "3d69d2c30774da3ec62ffdf18da43543ad8792b8",
+      "merge": "9d725a1525c8d4da933fae561cdd337db25e5583",
+      "merged_tree": "df3e6ed3c4e9d950e6277bec472ea4c8406a94dc",
+      "full_suite_passed": 91,
+      "recursive_cases_included_in_91": 8,
+      "source_link_cases_included_in_91": 9,
+      "skipped": 0,
+      "three_source_blobs_verified": true,
+      "concurrent_report_files_preserved": true,
+      "final44_run": false,
+      "proof": "evidence/project-z-pr9-merge-20261121.json",
+      "raw_archive": {
+        "drive_id": "1r5nus_vSPZDMid_TMDYsuzxGdrPMJe9a",
+        "bytes": 18082,
+        "sha256": "ee96020711d558b5f2a2adb996d6affe20c01860b365f2333af3401d5377bb42",
+        "payloads": 9,
+        "full_download_and_payload_hashes_verified": true
+      }
     }
   },
   "core_git_source_migrations": {

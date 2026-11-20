@@ -1,0 +1,1707 @@
+{
+  "schema": 1,
+  "status": "passed",
+  "recorded_unix": 1795210867.3292155,
+  "pull_request": "https://github.com/LIghtJUNction/ztty/pull/22",
+  "tested_source": {
+    "head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+    "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+    "baseline_head": "c6dc42c882d77d96dba96adb5b09ce177b579dfe",
+    "baseline_tree": "35a6535bb4e2a1e2ce6c2d2634a7c86c6ecb4ecd",
+    "changed_paths": [
+      "src/os.rs",
+      "src/session/requests.rs",
+      "src/session/workspaces.rs"
+    ],
+    "insertions": 19,
+    "deletions": 0
+  },
+  "identities": {
+    "source": {
+      "head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+      "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+      "status": ""
+    },
+    "candidate": {
+      "head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+      "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/ztty-bfee445",
+      "sha256": "01269c72f7a56f273ad33c8c19b303c00310567ed79abb5b256b68e84e90bef6",
+      "bytes": 1406272
+    },
+    "baseline": {
+      "head": "c6dc42c882d77d96dba96adb5b09ce177b579dfe",
+      "tree": "35a6535bb4e2a1e2ce6c2d2634a7c86c6ecb4ecd",
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/baseline-search/ztty",
+      "sha256": "748da679b89394d8f7a70ffb5872023ea7c4c02e3dc9563a22bff7bd1f133fa7",
+      "bytes": 1406000,
+      "note": "Original source owner c6 search-validation ELF; all nine published source hashes independently matched exact c6 Git objects."
+    },
+    "build_validation_sha256": "2413629a571493db7581d4ca26649d977b67cf99f506c5f7996671ab67e9354e",
+    "collector_sha256": "5ed5f225186498d4188117c8ee5d704bbbb66b780cc846569302b2c90d05a851",
+    "workspaces_fixture_sha256": "d6f2faaa5737b179700340d2e801f35babca9e040af5a109c157b446ecbe441e"
+  },
+  "build": {
+    "ok": true,
+    "steps": [
+      {
+        "name": "rustc-version",
+        "argv": [
+          "rustc",
+          "-Vv"
+        ],
+        "started_unix": 1795210674.206738,
+        "exit_code": 0,
+        "elapsed_seconds": 0.03228569030761719,
+        "stdout": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/rustc-version.stdout",
+        "stderr": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/rustc-version.stderr",
+        "stdout_sha256": "be69adad9137eaa0bdac1dd07e2fe286b1831fc8bad193ea27806ca0c7c8e7c6",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "fmt",
+        "argv": [
+          "cargo",
+          "fmt",
+          "--all",
+          "--",
+          "--check"
+        ],
+        "started_unix": 1795210674.2393622,
+        "exit_code": 0,
+        "elapsed_seconds": 0.5149481296539307,
+        "stdout": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/fmt.stdout",
+        "stderr": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/fmt.stderr",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "metadata",
+        "argv": [
+          "cargo",
+          "metadata",
+          "--locked",
+          "--offline",
+          "--features",
+          "wayland",
+          "--format-version",
+          "1"
+        ],
+        "started_unix": 1795210674.7546744,
+        "exit_code": 0,
+        "elapsed_seconds": 0.264573335647583,
+        "stdout": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/metadata.stdout",
+        "stderr": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/metadata.stderr",
+        "stdout_sha256": "106119783c9e346c5198aeefcf945d70f9881ce482fc21e85529d010f9415d4c",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "clippy",
+        "argv": [
+          "cargo",
+          "clippy",
+          "-vv",
+          "--locked",
+          "--offline",
+          "--features",
+          "wayland",
+          "--bin",
+          "ztty",
+          "--message-format=json-render-diagnostics",
+          "--",
+          "-D",
+          "warnings",
+          "-Cmetadata=ztty_bfee445_clippy"
+        ],
+        "started_unix": 1795210675.0203042,
+        "exit_code": 0,
+        "elapsed_seconds": 2.869643449783325,
+        "stdout": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/clippy.stdout",
+        "stderr": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/clippy.stderr",
+        "stdout_sha256": "380c621c767c0b2aab14ac66c5535e73f9950501634fd367a996272ef99b69bb",
+        "stderr_sha256": "eed13b7e3e2d25ae8a29c30b2b880aebd273fada9b82cc619ede71fb2bc09257"
+      },
+      {
+        "name": "release-build",
+        "argv": [
+          "cargo",
+          "build",
+          "--locked",
+          "--offline",
+          "--release",
+          "--features",
+          "wayland",
+          "--bin",
+          "ztty",
+          "--message-format=json-render-diagnostics"
+        ],
+        "started_unix": 1795210677.8911128,
+        "exit_code": 0,
+        "elapsed_seconds": 17.40249991416931,
+        "stdout": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/release-build.stdout",
+        "stderr": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/release-build.stderr",
+        "stdout_sha256": "9e57d1205c3bec80d4074ee0a0df00610561a273dee2028ca11e41fa320ddce1",
+        "stderr_sha256": "af4309dc3afa67173418de59c5c20e670ac8f11690cb7ac01e88ed39fabe570d"
+      },
+      {
+        "name": "binary-version",
+        "argv": [
+          "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/ztty-bfee445",
+          "--version"
+        ],
+        "started_unix": 1795210695.2996407,
+        "exit_code": 0,
+        "elapsed_seconds": 0.003985404968261719,
+        "stdout": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/binary-version.stdout",
+        "stderr": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/binary-version.stderr",
+        "stdout_sha256": "5e50472e0d636e9a7a26c02de57de79b5f2c3213ec9915e2b040ec121c353967",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "dynamic-symbols",
+        "argv": [
+          "readelf",
+          "--dyn-syms",
+          "--wide",
+          "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/ztty-bfee445"
+        ],
+        "started_unix": 1795210695.3041089,
+        "exit_code": 0,
+        "elapsed_seconds": 0.018837928771972656,
+        "stdout": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/dynamic-symbols.stdout",
+        "stderr": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/dynamic-symbols.stderr",
+        "stdout_sha256": "adc9d58442a441843202296fb57930b7999541f88b1d01a9ba56ae6eb139827a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "baseline-needed",
+        "argv": [
+          "readelf",
+          "-d",
+          "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/baseline-search/ztty"
+        ],
+        "started_unix": 1795210695.323681,
+        "exit_code": 0,
+        "elapsed_seconds": 0.008131742477416992,
+        "stdout": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/baseline-needed.stdout",
+        "stderr": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/baseline-needed.stderr",
+        "stdout_sha256": "3529cbecdbc6f00c9581c75e0948a86b1de8e4386887b99516e7f081083795ed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "candidate-needed",
+        "argv": [
+          "readelf",
+          "-d",
+          "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/ztty-bfee445"
+        ],
+        "started_unix": 1795210695.3323731,
+        "exit_code": 0,
+        "elapsed_seconds": 0.008231639862060547,
+        "stdout": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/candidate-needed.stdout",
+        "stderr": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/candidate-needed.stderr",
+        "stdout_sha256": "67399b055988a5a5895a606de6d74df86035feb199e9844c68ee9818d06db46f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "source_before": {
+      "head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+      "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+      "status": "",
+      "lock_sha256": "c08e1d48d3fd77067496512bd54fec042ecc625da362db14cd4cac1b1db86101",
+      "manifest_sha256": "439108c88d76063163efe87bb573811fc67aed7134e6826ba6e5d3cfaab2b481"
+    },
+    "workspace_cache_identity": {
+      "wrapper": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/workspace-rustc-bfee445",
+      "wrapper_sha256": "b1ef63385e76ac81c017023a43b2db39cf5236459e1a0608be3c0ac28af32cb9",
+      "purpose": "Separate this immutable workspace artifact cache while retaining the shared target and dependency cache.",
+      "compiler_arguments_changed": false,
+      "global_wrapper_changed": false,
+      "cargo_documentation": "https://doc.rust-lang.org/cargo/reference/environment-variables.html#environment-variables-cargo-reads"
+    },
+    "rustc_version": "rustc 1.100.0 (0ef1bc386 2026-11-09)\nbinary: rustc\ncommit-hash: 0ef1bc386059596dada8fb65b50425aab2ea637a\ncommit-date: 2026-11-09\nhost: x86_64-unknown-linux-gnu\nrelease: 1.100.0\nLLVM version: 23.1.5\n",
+    "git_dependencies": [
+      {
+        "name": "zgpui",
+        "version": "0.1.5",
+        "source": "git+https://github.com/LIghtJUNction/zgpui.git#b4d5493e0cd985d00558c7be0b5726965ab5163a"
+      },
+      {
+        "name": "zgraphics",
+        "version": "0.2.0",
+        "source": "git+https://github.com/LIghtJUNction/zgraphics.git#aa0ed19fb706ad147aff1df54c4ef762d918e864"
+      },
+      {
+        "name": "zinput",
+        "version": "0.1.3",
+        "source": "git+https://github.com/LIghtJUNction/zinput.git#fe1cbaec744fa790a043383d45f612b8d19dcd32"
+      },
+      {
+        "name": "zplugin",
+        "version": "0.3.1",
+        "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+      },
+      {
+        "name": "zplugin-macros",
+        "version": "0.3.1",
+        "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+      },
+      {
+        "name": "zpty",
+        "version": "0.2.3",
+        "source": "git+https://github.com/LIghtJUNction/zpty.git#d263f9a8f0881d259e46c51a7b6753c61ab9be59"
+      },
+      {
+        "name": "zsys",
+        "version": "0.1.1",
+        "source": "git+https://github.com/LIghtJUNction/zsys.git#808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+      },
+      {
+        "name": "zterm",
+        "version": "0.5.2",
+        "source": "git+https://github.com/LIghtJUNction/zterm.git#1a761334f0b9cf26da700426a5b82778f0d48c3d"
+      },
+      {
+        "name": "zvte",
+        "version": "0.1.3",
+        "source": "git+https://github.com/LIghtJUNction/zvte.git#b4e50a5cde476fb5303060f3ecbc9200ccea5cc0"
+      }
+    ],
+    "clippy_source_proof": {
+      "artifact": {
+        "reason": "compiler-artifact",
+        "package_id": "path+file:///home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source#ztty@0.5.2",
+        "manifest_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source/Cargo.toml",
+        "target": {
+          "kind": [
+            "bin"
+          ],
+          "crate_types": [
+            "bin"
+          ],
+          "name": "ztty",
+          "src_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source/src/main.rs",
+          "edition": "2024",
+          "doc": true,
+          "doctest": false,
+          "test": false
+        },
+        "profile": {
+          "opt_level": "0",
+          "debuginfo": 1,
+          "debug_assertions": true,
+          "overflow_checks": true,
+          "test": false
+        },
+        "features": [
+          "default",
+          "wayland"
+        ],
+        "filenames": [
+          "/var/tmp/project-z-cargo-target/debug/build/ztty/7ebdbbf9254337f8/out/libztty-7ebdbbf9254337f8.rmeta"
+        ],
+        "executable": null,
+        "fresh": false
+      },
+      "actual_command": "     Running `CARGO=/home/lightjunction/.rustup/toolchains/1.100.0-x86_64-unknown-linux-gnu/bin/cargo CARGO_BIN_NAME=ztty CARGO_CRATE_NAME=ztty CARGO_MANIFEST_DIR=/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source CARGO_MANIFEST_PATH=/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source/Cargo.toml CARGO_PKG_AUTHORS=LIghtJUNction CARGO_PKG_DESCRIPTION='A lean native no_std Rust terminal with Kitty graphics, built on Project Z' CARGO_PKG_HOMEPAGE='' CARGO_PKG_LICENSE=MIT CARGO_PKG_LICENSE_FILE='' CARGO_PKG_NAME=ztty CARGO_PKG_README=README.md CARGO_PKG_REPOSITORY='https://github.com/LIghtJUNction/ztty' CARGO_PKG_RUST_VERSION=1.100 CARGO_PKG_VERSION=0.5.2 CARGO_PKG_VERSION_MAJOR=0 CARGO_PKG_VERSION_MINOR=5 CARGO_PKG_VERSION_PATCH=2 CARGO_PKG_VERSION_PRE='' CARGO_PRIMARY_PACKAGE=1 LD_LIBRARY_PATH=/home/lightjunction/.rustup/toolchains/1.100.0-x86_64-unknown-linux-gnu/lib OUT_DIR=/var/tmp/project-z-cargo-target/debug/build/ztty/0bb75dbec3f88ede/out /home/lightjunction/.cargo/rustc-serial /home/lightjunction/.rustup/toolchains/1.100.0-x86_64-unknown-linux-gnu/bin/clippy-driver /home/lightjunction/.rustup/toolchains/1.100.0-x86_64-unknown-linux-gnu/bin/rustc --crate-name ztty --edition=2024 src/main.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat,unused-externs-silent --crate-type bin --emit=dep-info,metadata -C panic=abort -C embed-bitcode=no -C debuginfo=1 --cfg 'feature=\"default\"' --cfg 'feature=\"wayland\"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values(\"default\", \"wayland\"))' -C metadata=5d102f85c73649ba -C extra-filename=-7ebdbbf9254337f8 --out-dir /var/tmp/project-z-cargo-target/debug/build/ztty/7ebdbbf9254337f8/out -C linker=clang -C incremental=/var/tmp/project-z-cargo-target/debug/incremental -L dependency=/var/tmp/project-z-cargo-target/debug/build/libc/149d45d86b01f054/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/simd-adler32/28ee7a67a8992a79/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/unicode-segmentation/d195ff15c321c22e/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/unicode-width/7a026b3a0b300fd8/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/zgpui/48c28032d76bcfec/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/zgraphics/fd0d397097dcdcfe/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/zinput/c62f2c91d31aab31/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/zplugin-macros/c493b08b1771fc22/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/zplugin/3001c44fedbe9b03/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/zpty/0378a9d7b0cad02a/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/zsys/1a2f088bc2a6306b/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/zterm/1e83aa9ce3192626/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/ztty-plugin-api/4c680bc629fa5eef/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/zune-core/fa3aedc8e3fc7f88/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/zune-inflate/db0507f2c98255ed/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/zune-png/a3df03eda7aa9326/out -L dependency=/var/tmp/project-z-cargo-target/debug/build/zvte/b809750cec5e7ee8/out --extern libc=/var/tmp/project-z-cargo-target/debug/build/libc/149d45d86b01f054/out/liblibc-149d45d86b01f054.rmeta --extern unicode_segmentation=/var/tmp/project-z-cargo-target/debug/build/unicode-segmentation/d195ff15c321c22e/out/libunicode_segmentation-d195ff15c321c22e.rmeta --extern zgpui=/var/tmp/project-z-cargo-target/debug/build/zgpui/48c28032d76bcfec/out/libzgpui-48c28032d76bcfec.rmeta --extern zgraphics=/var/tmp/project-z-cargo-target/debug/build/zgraphics/fd0d397097dcdcfe/out/libzgraphics-fd0d397097dcdcfe.rmeta --extern zinput=/var/tmp/project-z-cargo-target/debug/build/zinput/c62f2c91d31aab31/out/libzinput-c62f2c91d31aab31.rmeta --extern zplugin=/var/tmp/project-z-cargo-target/debug/build/zplugin/3001c44fedbe9b03/out/libzplugin-3001c44fedbe9b03.rmeta --extern zpty=/var/tmp/project-z-cargo-target/debug/build/zpty/0378a9d7b0cad02a/out/libzpty-0378a9d7b0cad02a.rmeta --extern zterm=/var/tmp/project-z-cargo-target/debug/build/zterm/1e83aa9ce3192626/out/libzterm-1e83aa9ce3192626.rmeta --extern ztty=/var/tmp/project-z-cargo-target/debug/build/ztty/1f980c3c19a3345d/out/libztty-1f980c3c19a3345d.rmeta --extern ztty_plugin_api=/var/tmp/project-z-cargo-target/debug/build/ztty-plugin-api/4c680bc629fa5eef/out/libztty_plugin_api-4c680bc629fa5eef.rmeta -C link-arg=-fuse-ld=mold --force-warn=unused_crate_dependencies -L native=/var/tmp/project-z-cargo-target/debug/build/ztty/0bb75dbec3f88ede/out -C link-arg=-lgcc_s`",
+      "CLIPPY_ARGS_metadata_key": "ztty_bfee445_clippy"
+    },
+    "workspace_compiler_invocations": [
+      {
+        "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source",
+        "argv": [
+          "/home/lightjunction/.rustup/toolchains/1.100.0-x86_64-unknown-linux-gnu/bin/rustc",
+          "--crate-name",
+          "ztty",
+          "--edition=2024",
+          "src/main.rs",
+          "--error-format=json",
+          "--json=diagnostic-rendered-ansi,artifacts,future-incompat,unused-externs-silent",
+          "--crate-type",
+          "bin",
+          "--emit=dep-info,link",
+          "-C",
+          "opt-level=3",
+          "-C",
+          "panic=abort",
+          "-C",
+          "lto=fat",
+          "-C",
+          "codegen-units=1",
+          "--cfg",
+          "feature=\"default\"",
+          "--cfg",
+          "feature=\"wayland\"",
+          "--check-cfg",
+          "cfg(docsrs,test)",
+          "--check-cfg",
+          "cfg(feature, values(\"default\", \"wayland\"))",
+          "-C",
+          "metadata=f857dc7a54c5ce37",
+          "--out-dir",
+          "/var/tmp/project-z-cargo-target/release/build/ztty/3b2aefcb9e4e1761/out",
+          "-C",
+          "linker=clang",
+          "-C",
+          "strip=debuginfo",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/libc/c2e692d0c7ee2294/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/simd-adler32/cd183db913cddc51/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/unicode-segmentation/d67a8fda69c1d065/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/unicode-width/433db72d1773447c/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zgpui/7c1d7b841ad43ca4/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zgraphics/d11c6722300c222f/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zinput/12a72399f5d04ea4/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zplugin-macros/3468aa9d4b0c1d77/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zplugin/cedb39609fc3062e/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zpty/564bd0d6df4602f8/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zsys/3747a8d7e7400a75/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zterm/b955679ef04f1021/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/ztty-plugin-api/5f7d254af24237c2/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zune-core/de6a51a7ce223a80/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zune-inflate/a653afffbc860ea5/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zune-png/3fa074b4c96928ad/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zvte/a25265c072232668/out",
+          "--extern",
+          "libc=/var/tmp/project-z-cargo-target/release/build/libc/c2e692d0c7ee2294/out/liblibc-c2e692d0c7ee2294.rlib",
+          "--extern",
+          "unicode_segmentation=/var/tmp/project-z-cargo-target/release/build/unicode-segmentation/d67a8fda69c1d065/out/libunicode_segmentation-d67a8fda69c1d065.rlib",
+          "--extern",
+          "zgpui=/var/tmp/project-z-cargo-target/release/build/zgpui/7c1d7b841ad43ca4/out/libzgpui-7c1d7b841ad43ca4.rlib",
+          "--extern",
+          "zgraphics=/var/tmp/project-z-cargo-target/release/build/zgraphics/d11c6722300c222f/out/libzgraphics-d11c6722300c222f.rlib",
+          "--extern",
+          "zinput=/var/tmp/project-z-cargo-target/release/build/zinput/12a72399f5d04ea4/out/libzinput-12a72399f5d04ea4.rlib",
+          "--extern",
+          "zplugin=/var/tmp/project-z-cargo-target/release/build/zplugin/cedb39609fc3062e/out/libzplugin-cedb39609fc3062e.rlib",
+          "--extern",
+          "zpty=/var/tmp/project-z-cargo-target/release/build/zpty/564bd0d6df4602f8/out/libzpty-564bd0d6df4602f8.rlib",
+          "--extern",
+          "zterm=/var/tmp/project-z-cargo-target/release/build/zterm/b955679ef04f1021/out/libzterm-b955679ef04f1021.rlib",
+          "--extern",
+          "ztty=/var/tmp/project-z-cargo-target/release/build/ztty/49fb7d989d6b0ed4/out/libztty-49fb7d989d6b0ed4.rlib",
+          "--extern",
+          "ztty_plugin_api=/var/tmp/project-z-cargo-target/release/build/ztty-plugin-api/5f7d254af24237c2/out/libztty_plugin_api-5f7d254af24237c2.rlib",
+          "-C",
+          "link-arg=-fuse-ld=mold",
+          "--force-warn=unused_crate_dependencies",
+          "-L",
+          "native=/var/tmp/project-z-cargo-target/release/build/ztty/63fb17e7557f92b1/out",
+          "-C",
+          "link-arg=-lgcc_s"
+        ],
+        "time": 1795210680.7581005
+      }
+    ],
+    "binary": {
+      "compiler_artifact": {
+        "reason": "compiler-artifact",
+        "package_id": "path+file:///home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source#ztty@0.5.2",
+        "manifest_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source/Cargo.toml",
+        "target": {
+          "kind": [
+            "bin"
+          ],
+          "crate_types": [
+            "bin"
+          ],
+          "name": "ztty",
+          "src_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source/src/main.rs",
+          "edition": "2024",
+          "doc": true,
+          "doctest": false,
+          "test": false
+        },
+        "profile": {
+          "opt_level": "3",
+          "debuginfo": 0,
+          "debug_assertions": false,
+          "overflow_checks": false,
+          "test": false
+        },
+        "features": [
+          "default",
+          "wayland"
+        ],
+        "filenames": [
+          "/var/tmp/project-z-cargo-target/release/ztty"
+        ],
+        "executable": "/var/tmp/project-z-cargo-target/release/ztty",
+        "fresh": false
+      },
+      "actual_compiler_output": "/var/tmp/project-z-cargo-target/release/build/ztty/3b2aefcb9e4e1761/out/ztty",
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/ztty-bfee445",
+      "sha256": "01269c72f7a56f273ad33c8c19b303c00310567ed79abb5b256b68e84e90bef6",
+      "bytes": 1406272
+    },
+    "version": "ztty 0.5.2",
+    "needed_libraries_unchanged": [
+      "libEGL.so.1",
+      "libGLESv2.so.2",
+      "libX11.so.6",
+      "libXft.so.2",
+      "libXrender.so.1",
+      "libc.so.6",
+      "libfontconfig.so.1",
+      "libfreetype.so.6",
+      "libgcc_s.so.1",
+      "libharfbuzz.so.0",
+      "libm.so.6",
+      "libwayland-client.so.0",
+      "libwayland-cursor.so.0",
+      "libwayland-egl.so.1",
+      "libxkbcommon.so.0"
+    ],
+    "unchanged_libc_boundary": {
+      "receipt": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-cad4-r5/validation.json",
+      "sha256": "7f1e9b5d397e8f1cd2404eedf177aba7704f63b4a78f197a05248ff9aa485376",
+      "boundary": {
+        "scope": "Exact Linux os.rs object compile, not a full non-GNU desktop application.",
+        "module_sha256": "256a6965f9cd3785c69309e02b275f8852f576853e833a5ec938a17233e7474c",
+        "wrapper_sha256": "a06c66d8a27eb47369bd4b1cd3c27738ab772fd1d9df664740b0d11e287c83a7",
+        "targets": [
+          {
+            "target": "x86_64-unknown-linux-gnu",
+            "malloc_trim_reference": true,
+            "object_sha256": "205af75b3768498f55e1cb556dc97491b4381d8e3d08375f5127b680cf0fbed8",
+            "symbols_sha256": "aded2d2f731a6a178228ddbee98b823d9d042237cdec4367588fd2b3348b306a"
+          },
+          {
+            "target": "x86_64-unknown-linux-musl",
+            "malloc_trim_reference": false,
+            "object_sha256": "517fe5b8262f71948538483cfecb0fc17e416b5422cd55a3afb3166e964d6e6d",
+            "symbols_sha256": "97ddd62342d8e9122a1f5d3964d98d4eec9448ad0f06b9fca1259c0d215b6a8e"
+          }
+        ]
+      },
+      "rerun": false
+    },
+    "source_after": {
+      "head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+      "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+      "status": "",
+      "lock_sha256": "c08e1d48d3fd77067496512bd54fec042ecc625da362db14cd4cac1b1db86101",
+      "manifest_sha256": "439108c88d76063163efe87bb573811fc67aed7134e6826ba6e5d3cfaab2b481"
+    }
+  },
+  "build_receipt_sha256": "2413629a571493db7581d4ca26649d977b67cf99f506c5f7996671ab67e9354e",
+  "gui_receipt": {
+    "schema": 1,
+    "status": "passed",
+    "started_unix": 1795210718.730582,
+    "identities": {
+      "source": {
+        "head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+        "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+        "status": ""
+      },
+      "candidate": {
+        "head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+        "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/ztty-bfee445",
+        "sha256": "01269c72f7a56f273ad33c8c19b303c00310567ed79abb5b256b68e84e90bef6",
+        "bytes": 1406272
+      },
+      "baseline": {
+        "head": "c6dc42c882d77d96dba96adb5b09ce177b579dfe",
+        "tree": "35a6535bb4e2a1e2ce6c2d2634a7c86c6ecb4ecd",
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/baseline-search/ztty",
+        "sha256": "748da679b89394d8f7a70ffb5872023ea7c4c02e3dc9563a22bff7bd1f133fa7",
+        "bytes": 1406000,
+        "note": "Original source owner c6 search-validation ELF; all nine published source hashes independently matched exact c6 Git objects."
+      },
+      "build_validation_sha256": "2413629a571493db7581d4ca26649d977b67cf99f506c5f7996671ab67e9354e",
+      "collector_sha256": "5ed5f225186498d4188117c8ee5d704bbbb66b780cc846569302b2c90d05a851",
+      "workspaces_fixture_sha256": "d6f2faaa5737b179700340d2e801f35babca9e040af5a109c157b446ecbe441e"
+    },
+    "runner_sha256": "652b9ec6098fe67c5cfa28232f1ee9d35c2cfa4648ed8505bb6c6915942f9969",
+    "lock": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "new_compilation": false,
+    "lock_acquired_unix": 1795210718.7859075,
+    "systemd_scope": "personal-ztty-candidate-gui-1795210718-726074.scope",
+    "argv": [
+      "systemd-run",
+      "--user",
+      "--scope",
+      "--quiet",
+      "--collect",
+      "--unit=personal-ztty-candidate-gui-1795210718-726074",
+      "-p",
+      "MemoryMax=2G",
+      "-p",
+      "MemorySwapMax=0",
+      "-p",
+      "CPUQuota=100%",
+      "-p",
+      "TasksMax=256",
+      "/usr/bin/python3",
+      "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/run_integrated_gui.py",
+      "--worker"
+    ],
+    "exit_code": 0,
+    "validation_sha256": "f04f214681a5286b7f67ae27388b6f8efd8eb7cdfe6c03e7ef94d880a816ab8d",
+    "scope_state_after": "ActiveState=inactive\nSubState=dead\nControlGroup=",
+    "finished_unix": 1795210826.6656187
+  },
+  "gui_validation_sha256": "f04f214681a5286b7f67ae27388b6f8efd8eb7cdfe6c03e7ef94d880a816ab8d",
+  "semantic_checks": [
+    {
+      "name": "workspaces-software",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source/tests/workspaces.py",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/ztty-bfee445",
+        "--renderer",
+        "software",
+        "--output",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/workspaces-software/result.json",
+        "--screenshot",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/workspaces-software/workspaces.png"
+      ],
+      "started_unix": 1795210718.873488,
+      "loadavg_before": "4.19 3.04 3.68 6/3392 726117",
+      "exit_code": 0,
+      "elapsed_seconds": 1.6671009063720703,
+      "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/workspaces-software.log",
+      "log_sha256": "1fcac9a81447376cf68348ec09425cdeaf5f7c3554d6a17e79541965661becb8",
+      "report": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/workspaces-software/result.json",
+      "report_sha256": "1fcac9a81447376cf68348ec09425cdeaf5f7c3554d6a17e79541965661becb8",
+      "ok": true,
+      "renderer": "software",
+      "checks": [
+        "two PTYs share one workspace and only the focused pane receives real keyboard input",
+        "split resize, swap, maximize and restore change real window geometry",
+        "tabs unmap hidden panes while their PTYs keep draining; shortcut bytes never reach the shell",
+        "moving panes between native windows and layouts preserves the PTY process",
+        "versioned CLI layout snapshots restore tabs/splits/geometry with unchanged PTY PIDs; unknown sessions and nonlocal restores fail before mutation",
+        "injected ioctl EIO keeps both containers, every view, PTY identity and old dimensions alive; retrying the same snapshot repairs actual PTY sizes",
+        "rename keeps the URI stable; detach and observe reattach preserve PTY/output and enforce read-only input",
+        "per-request input ownership rejects old operators and permits multiple observers",
+        "a stale layout cannot adopt a new PTY that reuses the closed session's origin/name; rejection preserves the replacement view and process",
+        "new tab inherits encoded local OSC 7: actual child cwd/PWD and shortcut isolation",
+        "right split inherits encoded local OSC 7: actual child cwd/PWD and shortcut isolation",
+        "lower split inherits encoded local OSC 7: actual child cwd/PWD and shortcut isolation",
+        "new window inherits encoded local OSC 7: actual child cwd/PWD and shortcut isolation",
+        "remote OSC 7 uses initial launch directory: actual child cwd/PWD and shortcut isolation",
+        "bad-escape OSC 7 uses initial launch directory: actual child cwd/PWD and shortcut isolation",
+        "nul OSC 7 uses initial launch directory: actual child cwd/PWD and shortcut isolation",
+        "all launch/attach waiters complete and sessions release their views and PTYs"
+      ],
+      "binary_sha256": "01269c72f7a56f273ad33c8c19b303c00310567ed79abb5b256b68e84e90bef6"
+    },
+    {
+      "name": "workspaces-gpu",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source/tests/workspaces.py",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/ztty-bfee445",
+        "--renderer",
+        "gpu",
+        "--output",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/workspaces-gpu/result.json",
+        "--screenshot",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/workspaces-gpu/workspaces.png"
+      ],
+      "started_unix": 1795210720.5411828,
+      "loadavg_before": "4.19 3.04 3.68 4/3408 726768",
+      "exit_code": 0,
+      "elapsed_seconds": 2.268068790435791,
+      "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/workspaces-gpu.log",
+      "log_sha256": "8dc8596144bb50c8b31f1028630848693a823ea0ca61b5cb70b51dd6bf684542",
+      "report": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/workspaces-gpu/result.json",
+      "report_sha256": "8dc8596144bb50c8b31f1028630848693a823ea0ca61b5cb70b51dd6bf684542",
+      "ok": true,
+      "renderer": "gpu",
+      "checks": [
+        "two PTYs share one workspace and only the focused pane receives real keyboard input",
+        "split resize, swap, maximize and restore change real window geometry",
+        "tabs unmap hidden panes while their PTYs keep draining; shortcut bytes never reach the shell",
+        "moving panes between native windows and layouts preserves the PTY process",
+        "versioned CLI layout snapshots restore tabs/splits/geometry with unchanged PTY PIDs; unknown sessions and nonlocal restores fail before mutation",
+        "injected ioctl EIO keeps both containers, every view, PTY identity and old dimensions alive; retrying the same snapshot repairs actual PTY sizes",
+        "rename keeps the URI stable; detach and observe reattach preserve PTY/output and enforce read-only input",
+        "per-request input ownership rejects old operators and permits multiple observers",
+        "a stale layout cannot adopt a new PTY that reuses the closed session's origin/name; rejection preserves the replacement view and process",
+        "new tab inherits encoded local OSC 7: actual child cwd/PWD and shortcut isolation",
+        "right split inherits encoded local OSC 7: actual child cwd/PWD and shortcut isolation",
+        "lower split inherits encoded local OSC 7: actual child cwd/PWD and shortcut isolation",
+        "new window inherits encoded local OSC 7: actual child cwd/PWD and shortcut isolation",
+        "remote OSC 7 uses initial launch directory: actual child cwd/PWD and shortcut isolation",
+        "bad-escape OSC 7 uses initial launch directory: actual child cwd/PWD and shortcut isolation",
+        "nul OSC 7 uses initial launch directory: actual child cwd/PWD and shortcut isolation",
+        "all launch/attach waiters complete and sessions release their views and PTYs"
+      ],
+      "binary_sha256": "01269c72f7a56f273ad33c8c19b303c00310567ed79abb5b256b68e84e90bef6"
+    }
+  ],
+  "profiles": [
+    {
+      "name": "memory-0-software-baseline",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/measure_memory_reopen.py",
+        "--repo",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/baseline-search/ztty",
+        "--renderer",
+        "software",
+        "--output",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-0-software-baseline.json"
+      ],
+      "started_unix": 1795210722.8102207,
+      "loadavg_before": "4.19 3.04 3.68 2/3410 727448",
+      "exit_code": 0,
+      "elapsed_seconds": 16.695192337036133,
+      "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-0-software-baseline.log",
+      "log_sha256": "3a5488843811bcf13485bc3f0d18e473f1b4ef3a797b1834ee030dba6b31ea08",
+      "report": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-0-software-baseline.json",
+      "report_sha256": "0abb707bd8d563d3d38e756449a90a5d1b7f95e509f171fc3552c93cd86cc15e",
+      "ok": true,
+      "renderer": "software",
+      "treatment": "baseline",
+      "binary_identity": {
+        "head": "c6dc42c882d77d96dba96adb5b09ce177b579dfe",
+        "tree": "35a6535bb4e2a1e2ce6c2d2634a7c86c6ecb4ecd",
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/baseline-search/ztty",
+        "sha256": "748da679b89394d8f7a70ffb5872023ea7c4c02e3dc9563a22bff7bd1f133fa7",
+        "bytes": 1406000,
+        "note": "Original source owner c6 search-validation ELF; all nine published source hashes independently matched exact c6 Git objects."
+      },
+      "remaining_owned_pids": [],
+      "xserver_cleanup_exit_code": 0,
+      "stage_count": 11,
+      "reopen_cycles": 2,
+      "memory_stages": [
+        {
+          "stage": "one_blank",
+          "window_count": 1,
+          "anonymous_bytes": 3090432,
+          "pss_bytes": 7244800,
+          "xres_pixmap_bytes": 3840000
+        },
+        {
+          "stage": "ten_blank",
+          "window_count": 10,
+          "anonymous_bytes": 4667392,
+          "pss_bytes": 8164352,
+          "xres_pixmap_bytes": 38400000
+        },
+        {
+          "stage": "short_burst",
+          "window_count": 10,
+          "anonymous_bytes": 12380160,
+          "pss_bytes": 15877120,
+          "xres_pixmap_bytes": 38400000
+        },
+        {
+          "stage": "wide_burst",
+          "window_count": 10,
+          "anonymous_bytes": 12433408,
+          "pss_bytes": 15930368,
+          "xres_pixmap_bytes": 38400000
+        },
+        {
+          "stage": "screen_cleared_history_retained",
+          "window_count": 10,
+          "anonymous_bytes": 12433408,
+          "pss_bytes": 15984640,
+          "xres_pixmap_bytes": 38400000
+        },
+        {
+          "stage": "screen_and_history_cleared",
+          "window_count": 10,
+          "anonymous_bytes": 12433408,
+          "pss_bytes": 15984640,
+          "xres_pixmap_bytes": 38400000
+        },
+        {
+          "stage": "nine_closed_one_blank_remains",
+          "window_count": 1,
+          "anonymous_bytes": 4913152,
+          "pss_bytes": 9150464,
+          "xres_pixmap_bytes": 3840000
+        },
+        {
+          "stage": "reopened_ten_cycle_1",
+          "window_count": 10,
+          "anonymous_bytes": 4913152,
+          "pss_bytes": 8469504,
+          "xres_pixmap_bytes": 38400000
+        },
+        {
+          "stage": "reclosed_one_cycle_1",
+          "window_count": 1,
+          "anonymous_bytes": 4913152,
+          "pss_bytes": 9127936,
+          "xres_pixmap_bytes": 3840000
+        },
+        {
+          "stage": "reopened_ten_cycle_2",
+          "window_count": 10,
+          "anonymous_bytes": 4913152,
+          "pss_bytes": 8446976,
+          "xres_pixmap_bytes": 38400000
+        },
+        {
+          "stage": "reclosed_one_cycle_2",
+          "window_count": 1,
+          "anonymous_bytes": 4913152,
+          "pss_bytes": 9127936,
+          "xres_pixmap_bytes": 3840000
+        }
+      ],
+      "close_rpc_timing": {
+        "count": 27,
+        "median_ns": 132022,
+        "p95_nearest_rank_ns": 275997,
+        "max_ns": 498895,
+        "min_ns": 51978
+      },
+      "close_rpc_samples_ns": [
+        498895,
+        77284,
+        65711,
+        148304,
+        221768,
+        275997,
+        258055,
+        213517,
+        196301,
+        81965,
+        51978,
+        53858,
+        55439,
+        65212,
+        68969,
+        87207,
+        71951,
+        70746,
+        132022,
+        78995,
+        110783,
+        163718,
+        251254,
+        218496,
+        193950,
+        146873,
+        169422
+      ]
+    },
+    {
+      "name": "memory-1-software-candidate",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/measure_memory_reopen.py",
+        "--repo",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/ztty-bfee445",
+        "--renderer",
+        "software",
+        "--output",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-1-software-candidate.json"
+      ],
+      "started_unix": 1795210739.5094113,
+      "loadavg_before": "4.21 3.11 3.69 4/3425 732813",
+      "exit_code": 0,
+      "elapsed_seconds": 16.643977880477905,
+      "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-1-software-candidate.log",
+      "log_sha256": "1a9eb8003d45c4ff8f9a3faa394ba28dc9651a497ed93d88998a44618f31e2c3",
+      "report": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-1-software-candidate.json",
+      "report_sha256": "89e295d285fc45c1f3eb8fd686ee84333a47e0de3300c42f0033c9ecbe158cb6",
+      "ok": true,
+      "renderer": "software",
+      "treatment": "candidate",
+      "binary_identity": {
+        "head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+        "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/ztty-bfee445",
+        "sha256": "01269c72f7a56f273ad33c8c19b303c00310567ed79abb5b256b68e84e90bef6",
+        "bytes": 1406272
+      },
+      "remaining_owned_pids": [],
+      "xserver_cleanup_exit_code": 0,
+      "stage_count": 11,
+      "reopen_cycles": 2,
+      "memory_stages": [
+        {
+          "stage": "one_blank",
+          "window_count": 1,
+          "anonymous_bytes": 3094528,
+          "pss_bytes": 7021568,
+          "xres_pixmap_bytes": 3840000
+        },
+        {
+          "stage": "ten_blank",
+          "window_count": 10,
+          "anonymous_bytes": 4675584,
+          "pss_bytes": 7955456,
+          "xres_pixmap_bytes": 38400000
+        },
+        {
+          "stage": "short_burst",
+          "window_count": 10,
+          "anonymous_bytes": 12392448,
+          "pss_bytes": 15737856,
+          "xres_pixmap_bytes": 38400000
+        },
+        {
+          "stage": "wide_burst",
+          "window_count": 10,
+          "anonymous_bytes": 12445696,
+          "pss_bytes": 15791104,
+          "xres_pixmap_bytes": 38400000
+        },
+        {
+          "stage": "screen_cleared_history_retained",
+          "window_count": 10,
+          "anonymous_bytes": 12445696,
+          "pss_bytes": 15813632,
+          "xres_pixmap_bytes": 38400000
+        },
+        {
+          "stage": "screen_and_history_cleared",
+          "window_count": 10,
+          "anonymous_bytes": 12445696,
+          "pss_bytes": 15813632,
+          "xres_pixmap_bytes": 38400000
+        },
+        {
+          "stage": "nine_closed_one_blank_remains",
+          "window_count": 1,
+          "anonymous_bytes": 3368960,
+          "pss_bytes": 7427072,
+          "xres_pixmap_bytes": 3840000
+        },
+        {
+          "stage": "reopened_ten_cycle_1",
+          "window_count": 10,
+          "anonymous_bytes": 4601856,
+          "pss_bytes": 7975936,
+          "xres_pixmap_bytes": 38400000
+        },
+        {
+          "stage": "reclosed_one_cycle_1",
+          "window_count": 1,
+          "anonymous_bytes": 3405824,
+          "pss_bytes": 7434240,
+          "xres_pixmap_bytes": 3840000
+        },
+        {
+          "stage": "reopened_ten_cycle_2",
+          "window_count": 10,
+          "anonymous_bytes": 4605952,
+          "pss_bytes": 7960576,
+          "xres_pixmap_bytes": 38400000
+        },
+        {
+          "stage": "reclosed_one_cycle_2",
+          "window_count": 1,
+          "anonymous_bytes": 3434496,
+          "pss_bytes": 7491584,
+          "xres_pixmap_bytes": 3840000
+        }
+      ],
+      "close_rpc_timing": {
+        "count": 27,
+        "median_ns": 180873,
+        "p95_nearest_rank_ns": 438645,
+        "max_ns": 486422,
+        "min_ns": 70478
+      },
+      "close_rpc_samples_ns": [
+        486422,
+        260248,
+        103742,
+        99991,
+        78963,
+        82936,
+        159938,
+        324781,
+        266067,
+        110861,
+        118817,
+        275410,
+        275641,
+        216807,
+        131876,
+        70478,
+        115984,
+        180873,
+        124715,
+        83503,
+        88572,
+        261112,
+        307999,
+        302321,
+        285901,
+        282009,
+        438645
+      ]
+    },
+    {
+      "name": "memory-2-gpu-baseline",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/measure_memory_reopen.py",
+        "--repo",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/baseline-search/ztty",
+        "--renderer",
+        "gpu",
+        "--output",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-2-gpu-baseline.json"
+      ],
+      "started_unix": 1795210756.1585567,
+      "loadavg_before": "4.17 3.16 3.70 6/3446 742261",
+      "exit_code": 0,
+      "elapsed_seconds": 17.57404613494873,
+      "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-2-gpu-baseline.log",
+      "log_sha256": "87820dcf51c88b358ef9f9bdf45b1cad1575688e7d94c07ed2f20df40dae88b3",
+      "report": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-2-gpu-baseline.json",
+      "report_sha256": "eba72ccdb3a9dc5ecaa4ea2c5178cb0ae1d725068242a24043a05034030c889e",
+      "ok": true,
+      "renderer": "gpu",
+      "treatment": "baseline",
+      "binary_identity": {
+        "head": "c6dc42c882d77d96dba96adb5b09ce177b579dfe",
+        "tree": "35a6535bb4e2a1e2ce6c2d2634a7c86c6ecb4ecd",
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/baseline-search/ztty",
+        "sha256": "748da679b89394d8f7a70ffb5872023ea7c4c02e3dc9563a22bff7bd1f133fa7",
+        "bytes": 1406000,
+        "note": "Original source owner c6 search-validation ELF; all nine published source hashes independently matched exact c6 Git objects."
+      },
+      "remaining_owned_pids": [],
+      "xserver_cleanup_exit_code": 0,
+      "stage_count": 11,
+      "reopen_cycles": 2,
+      "memory_stages": [
+        {
+          "stage": "one_blank",
+          "window_count": 1,
+          "anonymous_bytes": 43810816,
+          "pss_bytes": 140179456,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "ten_blank",
+          "window_count": 10,
+          "anonymous_bytes": 184786944,
+          "pss_bytes": 315578368,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "short_burst",
+          "window_count": 10,
+          "anonymous_bytes": 193024000,
+          "pss_bytes": 323816448,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "wide_burst",
+          "window_count": 10,
+          "anonymous_bytes": 194318336,
+          "pss_bytes": 325109760,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "screen_cleared_history_retained",
+          "window_count": 10,
+          "anonymous_bytes": 194318336,
+          "pss_bytes": 325176320,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "screen_and_history_cleared",
+          "window_count": 10,
+          "anonymous_bytes": 194318336,
+          "pss_bytes": 325174272,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "nine_closed_one_blank_remains",
+          "window_count": 1,
+          "anonymous_bytes": 194134016,
+          "pss_bytes": 290720768,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "reopened_ten_cycle_1",
+          "window_count": 10,
+          "anonymous_bytes": 276824064,
+          "pss_bytes": 407756800,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "reclosed_one_cycle_1",
+          "window_count": 1,
+          "anonymous_bytes": 276639744,
+          "pss_bytes": 373223424,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "reopened_ten_cycle_2",
+          "window_count": 10,
+          "anonymous_bytes": 324005888,
+          "pss_bytes": 454918144,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "reclosed_one_cycle_2",
+          "window_count": 1,
+          "anonymous_bytes": 323821568,
+          "pss_bytes": 420404224,
+          "xres_pixmap_bytes": 4
+        }
+      ],
+      "close_rpc_timing": {
+        "count": 27,
+        "median_ns": 2196759,
+        "p95_nearest_rank_ns": 2814040,
+        "max_ns": 3530052,
+        "min_ns": 1801892
+      },
+      "close_rpc_samples_ns": [
+        2307164,
+        2136832,
+        2234920,
+        2063714,
+        2814040,
+        3530052,
+        2324408,
+        2203309,
+        2250820,
+        2014641,
+        2284333,
+        2160930,
+        2227075,
+        2324921,
+        2457645,
+        2196759,
+        2559175,
+        2646899,
+        1861894,
+        1925493,
+        1940479,
+        1801892,
+        1829956,
+        2083988,
+        1880175,
+        1916529,
+        1867696
+      ]
+    },
+    {
+      "name": "memory-3-gpu-candidate",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/measure_memory_reopen.py",
+        "--repo",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/ztty-bfee445",
+        "--renderer",
+        "gpu",
+        "--output",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-3-gpu-candidate.json"
+      ],
+      "started_unix": 1795210773.7369428,
+      "loadavg_before": "3.88 3.16 3.69 3/3404 749512",
+      "exit_code": 0,
+      "elapsed_seconds": 17.596723556518555,
+      "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-3-gpu-candidate.log",
+      "log_sha256": "fe64e551fcefd7f480dfe7afe93b6d2af9655fc85f60c4630e066ca2dc75bc7e",
+      "report": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-3-gpu-candidate.json",
+      "report_sha256": "3196bc59e3b2f2c9c67056f171afa87ccb7f3bbaed4202ab1105224656ae9a70",
+      "ok": true,
+      "renderer": "gpu",
+      "treatment": "candidate",
+      "binary_identity": {
+        "head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+        "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/ztty-bfee445",
+        "sha256": "01269c72f7a56f273ad33c8c19b303c00310567ed79abb5b256b68e84e90bef6",
+        "bytes": 1406272
+      },
+      "remaining_owned_pids": [],
+      "xserver_cleanup_exit_code": 0,
+      "stage_count": 11,
+      "reopen_cycles": 2,
+      "memory_stages": [
+        {
+          "stage": "one_blank",
+          "window_count": 1,
+          "anonymous_bytes": 43763712,
+          "pss_bytes": 140438528,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "ten_blank",
+          "window_count": 10,
+          "anonymous_bytes": 184715264,
+          "pss_bytes": 315757568,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "short_burst",
+          "window_count": 10,
+          "anonymous_bytes": 192931840,
+          "pss_bytes": 323974144,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "wide_burst",
+          "window_count": 10,
+          "anonymous_bytes": 194271232,
+          "pss_bytes": 325312512,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "screen_cleared_history_retained",
+          "window_count": 10,
+          "anonymous_bytes": 194271232,
+          "pss_bytes": 325359616,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "screen_and_history_cleared",
+          "window_count": 10,
+          "anonymous_bytes": 194271232,
+          "pss_bytes": 325358592,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "nine_closed_one_blank_remains",
+          "window_count": 1,
+          "anonymous_bytes": 43993088,
+          "pss_bytes": 140897280,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "reopened_ten_cycle_1",
+          "window_count": 10,
+          "anonymous_bytes": 201558016,
+          "pss_bytes": 332693504,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "reclosed_one_cycle_1",
+          "window_count": 1,
+          "anonymous_bytes": 44242944,
+          "pss_bytes": 141142016,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "reopened_ten_cycle_2",
+          "window_count": 10,
+          "anonymous_bytes": 202512384,
+          "pss_bytes": 333646848,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "reclosed_one_cycle_2",
+          "window_count": 1,
+          "anonymous_bytes": 44300288,
+          "pss_bytes": 141194240,
+          "xres_pixmap_bytes": 4
+        }
+      ],
+      "close_rpc_timing": {
+        "count": 27,
+        "median_ns": 3010385,
+        "p95_nearest_rank_ns": 3552402,
+        "max_ns": 4191991,
+        "min_ns": 2552834
+      },
+      "close_rpc_samples_ns": [
+        3155387,
+        3007181,
+        3118033,
+        2949929,
+        3114497,
+        4191991,
+        2934690,
+        2991070,
+        2822552,
+        3230006,
+        3552402,
+        3174801,
+        3147897,
+        3480807,
+        3010385,
+        3016961,
+        3207664,
+        3087180,
+        2552834,
+        2647352,
+        2629335,
+        2664188,
+        3193578,
+        2857653,
+        2635434,
+        2737235,
+        2725040
+      ]
+    },
+    {
+      "name": "memory-4-gpu-candidate",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/measure_memory_reopen.py",
+        "--repo",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/ztty-bfee445",
+        "--renderer",
+        "gpu",
+        "--output",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-4-gpu-candidate.json"
+      ],
+      "started_unix": 1795210791.337934,
+      "loadavg_before": "3.68 3.15 3.67 5/3406 755315",
+      "exit_code": 0,
+      "elapsed_seconds": 17.750732898712158,
+      "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-4-gpu-candidate.log",
+      "log_sha256": "29adf6596262729843d7a14c32596e0a549eb5c0955602cb8f36cb9fa0747b1d",
+      "report": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-4-gpu-candidate.json",
+      "report_sha256": "916df2a984c8c8c9376f5292b6801158873281b357f96ab5016195c58749c34a",
+      "ok": true,
+      "renderer": "gpu",
+      "treatment": "candidate",
+      "binary_identity": {
+        "head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+        "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-build-bfee-r1/ztty-bfee445",
+        "sha256": "01269c72f7a56f273ad33c8c19b303c00310567ed79abb5b256b68e84e90bef6",
+        "bytes": 1406272
+      },
+      "remaining_owned_pids": [],
+      "xserver_cleanup_exit_code": 0,
+      "stage_count": 11,
+      "reopen_cycles": 2,
+      "memory_stages": [
+        {
+          "stage": "one_blank",
+          "window_count": 1,
+          "anonymous_bytes": 44054528,
+          "pss_bytes": 140709888,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "ten_blank",
+          "window_count": 10,
+          "anonymous_bytes": 185124864,
+          "pss_bytes": 315590656,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "short_burst",
+          "window_count": 10,
+          "anonymous_bytes": 193349632,
+          "pss_bytes": 323815424,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "wide_burst",
+          "window_count": 10,
+          "anonymous_bytes": 194766848,
+          "pss_bytes": 325232640,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "screen_cleared_history_retained",
+          "window_count": 10,
+          "anonymous_bytes": 194766848,
+          "pss_bytes": 325070848,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "screen_and_history_cleared",
+          "window_count": 10,
+          "anonymous_bytes": 194766848,
+          "pss_bytes": 324898816,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "nine_closed_one_blank_remains",
+          "window_count": 1,
+          "anonymous_bytes": 44242944,
+          "pss_bytes": 100201472,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "reopened_ten_cycle_1",
+          "window_count": 10,
+          "anonymous_bytes": 201725952,
+          "pss_bytes": 287338496,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "reclosed_one_cycle_1",
+          "window_count": 1,
+          "anonymous_bytes": 44529664,
+          "pss_bytes": 95900672,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "reopened_ten_cycle_2",
+          "window_count": 10,
+          "anonymous_bytes": 201951232,
+          "pss_bytes": 283876352,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "reclosed_one_cycle_2",
+          "window_count": 1,
+          "anonymous_bytes": 44615680,
+          "pss_bytes": 92324864,
+          "xres_pixmap_bytes": 4
+        }
+      ],
+      "close_rpc_timing": {
+        "count": 27,
+        "median_ns": 3034357,
+        "p95_nearest_rank_ns": 3348780,
+        "max_ns": 3356868,
+        "min_ns": 2504892
+      },
+      "close_rpc_samples_ns": [
+        3356868,
+        3348780,
+        3052289,
+        2914990,
+        2971894,
+        3081965,
+        3101925,
+        3132829,
+        3331296,
+        2601668,
+        2737897,
+        2724641,
+        2845108,
+        2757625,
+        2515305,
+        2630211,
+        2504892,
+        2644438,
+        3120924,
+        3189045,
+        2972789,
+        3102692,
+        3024446,
+        3111147,
+        3247384,
+        3034357,
+        3146849
+      ]
+    },
+    {
+      "name": "memory-5-gpu-baseline",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/measure_memory_reopen.py",
+        "--repo",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/baseline-search/ztty",
+        "--renderer",
+        "gpu",
+        "--output",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-5-gpu-baseline.json"
+      ],
+      "started_unix": 1795210809.0926108,
+      "loadavg_before": "3.59 3.17 3.67 3/3419 759395",
+      "exit_code": 0,
+      "elapsed_seconds": 17.496914863586426,
+      "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-5-gpu-baseline.log",
+      "log_sha256": "b6f14025f53c1ae96f25895e628e075768892b9cba7757e04067b0715f4003f5",
+      "report": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/candidate-gui-bfee-r1/memory-5-gpu-baseline.json",
+      "report_sha256": "06d57601e8423e4283e23a10e56c0bf04a7d295ea5e3f2787349dfb4be5104f4",
+      "ok": true,
+      "renderer": "gpu",
+      "treatment": "baseline",
+      "binary_identity": {
+        "head": "c6dc42c882d77d96dba96adb5b09ce177b579dfe",
+        "tree": "35a6535bb4e2a1e2ce6c2d2634a7c86c6ecb4ecd",
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/baseline-search/ztty",
+        "sha256": "748da679b89394d8f7a70ffb5872023ea7c4c02e3dc9563a22bff7bd1f133fa7",
+        "bytes": 1406000,
+        "note": "Original source owner c6 search-validation ELF; all nine published source hashes independently matched exact c6 Git objects."
+      },
+      "remaining_owned_pids": [],
+      "xserver_cleanup_exit_code": 0,
+      "stage_count": 11,
+      "reopen_cycles": 2,
+      "memory_stages": [
+        {
+          "stage": "one_blank",
+          "window_count": 1,
+          "anonymous_bytes": 43640832,
+          "pss_bytes": 139523072,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "ten_blank",
+          "window_count": 10,
+          "anonymous_bytes": 184776704,
+          "pss_bytes": 314861568,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "short_burst",
+          "window_count": 10,
+          "anonymous_bytes": 192989184,
+          "pss_bytes": 323074048,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "wide_burst",
+          "window_count": 10,
+          "anonymous_bytes": 194422784,
+          "pss_bytes": 324520960,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "screen_cleared_history_retained",
+          "window_count": 10,
+          "anonymous_bytes": 194422784,
+          "pss_bytes": 324564992,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "screen_and_history_cleared",
+          "window_count": 10,
+          "anonymous_bytes": 194422784,
+          "pss_bytes": 324569088,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "nine_closed_one_blank_remains",
+          "window_count": 1,
+          "anonymous_bytes": 194238464,
+          "pss_bytes": 290138112,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "reopened_ten_cycle_1",
+          "window_count": 10,
+          "anonymous_bytes": 277866496,
+          "pss_bytes": 408013824,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "reclosed_one_cycle_1",
+          "window_count": 1,
+          "anonymous_bytes": 277682176,
+          "pss_bytes": 373580800,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "reopened_ten_cycle_2",
+          "window_count": 10,
+          "anonymous_bytes": 324515840,
+          "pss_bytes": 454667264,
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "reclosed_one_cycle_2",
+          "window_count": 1,
+          "anonymous_bytes": 324331520,
+          "pss_bytes": 420231168,
+          "xres_pixmap_bytes": 4
+        }
+      ],
+      "close_rpc_timing": {
+        "count": 27,
+        "median_ns": 1923652,
+        "p95_nearest_rank_ns": 2105314,
+        "max_ns": 2478544,
+        "min_ns": 1755138
+      },
+      "close_rpc_samples_ns": [
+        1878415,
+        1974782,
+        1971580,
+        2094740,
+        1852591,
+        1755138,
+        1923652,
+        2105314,
+        1847964,
+        1884334,
+        2047971,
+        2031500,
+        2068371,
+        1762839,
+        1855575,
+        1831663,
+        1884393,
+        1905746,
+        1805710,
+        1963877,
+        1878604,
+        1906875,
+        2478544,
+        1958697,
+        1999321,
+        1990589,
+        2072129
+      ]
+    }
+  ],
+  "candidate_memory_checks": [
+    {
+      "profile": "memory-1-software-candidate",
+      "initial_anonymous_bytes": 3094528,
+      "post_close_limit_bytes": 19871744,
+      "post_close_stages": [
+        {
+          "stage": "nine_closed_one_blank_remains",
+          "window_count": 1,
+          "anonymous_bytes": 3368960,
+          "pss_bytes": 7427072,
+          "xres_pixmap_bytes": 3840000
+        },
+        {
+          "stage": "reclosed_one_cycle_1",
+          "window_count": 1,
+          "anonymous_bytes": 3405824,
+          "pss_bytes": 7434240,
+          "xres_pixmap_bytes": 3840000
+        },
+        {
+          "stage": "reclosed_one_cycle_2",
+          "window_count": 1,
+          "anonymous_bytes": 3434496,
+          "pss_bytes": 7491584,
+          "xres_pixmap_bytes": 3840000
+        }
+      ],
+      "passed": true
+    },
+    {
+      "profile": "memory-3-gpu-candidate",
+      "initial_anonymous_bytes": 43763712,
+      "post_close_limit_bytes": 60540928,
+      "post_close_stages": [
+        {
+          "stage": "nine_closed_one_blank_remains",
+          "window_count": 1,
+          "anonymous_bytes": 43993088,
+          "pss_bytes": 140897280,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "reclosed_one_cycle_1",
+          "window_count": 1,
+          "anonymous_bytes": 44242944,
+          "pss_bytes": 141142016,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "reclosed_one_cycle_2",
+          "window_count": 1,
+          "anonymous_bytes": 44300288,
+          "pss_bytes": 141194240,
+          "xres_pixmap_bytes": 4
+        }
+      ],
+      "passed": true
+    },
+    {
+      "profile": "memory-4-gpu-candidate",
+      "initial_anonymous_bytes": 44054528,
+      "post_close_limit_bytes": 60831744,
+      "post_close_stages": [
+        {
+          "stage": "nine_closed_one_blank_remains",
+          "window_count": 1,
+          "anonymous_bytes": 44242944,
+          "pss_bytes": 100201472,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "reclosed_one_cycle_1",
+          "window_count": 1,
+          "anonymous_bytes": 44529664,
+          "pss_bytes": 95900672,
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "reclosed_one_cycle_2",
+          "window_count": 1,
+          "anonymous_bytes": 44615680,
+          "pss_bytes": 92324864,
+          "xres_pixmap_bytes": 4
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "timing_groups": {
+    "software-baseline": {
+      "samples": 27,
+      "median_ms": 0.132022,
+      "p95_nearest_rank_ms": 0.275997,
+      "max_ms": 0.498895
+    },
+    "software-candidate": {
+      "samples": 27,
+      "median_ms": 0.180873,
+      "p95_nearest_rank_ms": 0.438645,
+      "max_ms": 0.486422
+    },
+    "gpu-baseline": {
+      "samples": 54,
+      "median_ms": 1.994955,
+      "p95_nearest_rank_ms": 2.646899,
+      "max_ms": 3.530052
+    },
+    "gpu-candidate": {
+      "samples": 54,
+      "median_ms": 3.0207035,
+      "p95_nearest_rank_ms": 3.480807,
+      "max_ms": 4.191991
+    }
+  },
+  "scope_fresh": "ActiveState=inactive\nSubState=dead\nControlGroup=\n",
+  "initial_candidate": {
+    "head": "cad4d90fabfd1a9a0abf4e419dd8683047fa6347",
+    "compact_sha256": "081f2797f5402588ba8d5478b1a4d039a01c5580a228564c98cdda342dee0f74",
+    "drive_url": "https://drive.google.com/file/d/1n8R7-o8wIaR2OAHtyWRcm9YYTckZOnvm/view"
+  },
+  "diagnosis": {
+    "production_optimization_validation": false,
+    "source_head": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25",
+    "evidence_sha256": "4297855c1953d69b485fd98e0bd681e0557818550c3851552ff8d6ebf5300d59",
+    "drive_url": "https://drive.google.com/file/d/1hF3DgrucS-lK46YEcs_gYKwVIqGjyBSi/view"
+  },
+  "limitations": [
+    "Private Xvfb with Mesa llvmpipe, LP_NUM_THREADS=2; no hardware GPU or native Wayland performance claim.",
+    "Close timings are complete RPC round trips, not isolated malloc_trim, input latency or frame time.",
+    "GNU libc reclaims free pages after full view teardown; other libc implementations remain a no-op.",
+    "GNU/musl os.rs boundary is reused from the same byte-identical module and rustc; no full musl application validation.",
+    "No host installation, release tag or published installer was changed.",
+    "Previous failed cache identity and test harness receipts are preserved in the evidence archive."
+  ]
+}
