@@ -280,8 +280,8 @@ def isolated_destination(root, destination, known):
 
 def coordinate(root):
     output = {}
-    for action in ("sync", "check"):
-        output[action] = run([sys.executable, root / "scripts/project_z.py", "--root", root, action], root, 600)
+    for action in (("sync",), ("check",), ("resolve", "--all")):
+        output[action[0]] = run([sys.executable, root / "scripts/project_z.py", "--root", root, *action], root, 600)
     return output
 
 

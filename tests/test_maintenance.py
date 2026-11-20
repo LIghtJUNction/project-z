@@ -4,6 +4,7 @@ from copy import deepcopy
 import io
 import json
 import os
+import shutil
 from pathlib import Path
 import subprocess
 import sys
@@ -245,6 +246,101 @@ class IsolatedApply(unittest.TestCase):
         self.assertFalse((removed / "zfixture/nested").exists())
         self.assertEqual((source / "nested/value").read_text(), "old-leaf")
         self.assertEqual(git(source / "nested", "remote", "get-url", "origin"), str(leaves[0]))
+        self.unchanged_source()
+
+
+
+@unittest.skipUnless(shutil.which("git") and shutil.which("cargo"), "offline resolution fixtures require Git and Cargo")
+class OfflineResolutionApply(unittest.TestCase):
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory(prefix="project-z-resolution-tests-")
+        self.addCleanup(temporary.cleanup)
+        self.base = Path(temporary.name)
+        self.root = self.base / "root"
+        self.upstream = self.base / "upstream"
+        self.destination = self.base / "snapshot"
+        environment = patch.dict(os.environ, {
+            "GIT_ALLOW_PROTOCOL": "file",
+            "CARGO_NET_OFFLINE": "true",
+            "PYTHONDONTWRITEBYTECODE": "1",
+        })
+        environment.start()
+        self.addCleanup(environment.stop)
+        for repository in (self.root, self.upstream):
+            repository.mkdir()
+            git(repository, "init", "-b", "main")
+            git(repository, "config", "user.name", "Project Z test")
+            git(repository, "config", "user.email", "project-z-test@example.invalid")
+        (self.upstream / "Cargo.toml").write_text(
+            '[workspace]\nmembers = ["core", "app"]\nresolver = "2"\n')
+        for name in ("core", "app"):
+            directory = self.upstream / name
+            (directory / "src").mkdir(parents=True)
+            (directory / "src" / ("lib.rs" if name == "core" else "main.rs")).write_text(
+                "" if name == "core" else "fn main() {}\n")
+            manifest = f'[package]\nname = "fixture-{name}"\nversion = "1.0.0"\nedition = "2021"\n'
+            manifest += ('[features]\nallowed = []\n' if name == "core" else
+                         'publish = false\n[dependencies]\nfixture-core = { path = "../core", version = "=1.0.0" }\n')
+            (directory / "Cargo.toml").write_text(manifest)
+        git(self.upstream, "add", ".")
+        git(self.upstream, "commit", "-m", "initial workspace")
+        self.old = git(self.upstream, "rev-parse", "HEAD")
+        git(self.root, "submodule", "add", "-b", "main", str(self.upstream), "fixture")
+        (self.root / "scripts").mkdir()
+        source = Path(__file__).resolve().parents[1] / "scripts"
+        for name in ("project_z.py", "cargo_versions.py", "catalog_docs.py"):
+            shutil.copy2(source / name, self.root / "scripts" / name)
+        # An application must participate even though default resolve selects libraries.
+        (self.root / "project-z.toml").write_text('[repositories.fixture]\nrole = "application"\n')
+        maintenance.coordinate(self.root)
+        git(self.root, "add", ".")
+        git(self.root, "commit", "-m", "pin initial application")
+        self.root_head = git(self.root, "rev-parse", "HEAD")
+
+    def update(self, feature):
+        manifest = self.upstream / "app/Cargo.toml"
+        manifest.write_text(manifest.read_text().replace(
+            'version = "=1.0.0" }', f'version = "=1.0.0", features = ["{feature}"] }}'))
+        git(self.upstream, "commit", "-am", "update application features")
+        self.new = git(self.upstream, "rev-parse", "HEAD")
+        return {"root_head": self.root_head, "errors": [], "upstreams": [{
+            "path": "fixture", "url": str(self.upstream), "branch": "main",
+            "pinned": self.old, "upstream": self.new, "changed": True,
+        }]}
+
+    def unchanged_source(self):
+        self.assertEqual(git(self.root, "rev-parse", "HEAD"), self.root_head)
+        self.assertEqual(git(self.root / "fixture", "rev-parse", "HEAD"), self.old)
+        self.assertEqual(git(self.root, "status", "--porcelain"), "")
+        self.assertFalse((self.root / ".cargo/config.toml").exists())
+        self.assertFalse((self.root / "fixture/Cargo.lock").exists())
+
+    def test_application_feature_resolution_failure_cannot_create_ready_snapshot(self):
+        result = maintenance.apply_snapshot(self.root, self.update("absent"), self.destination)
+        self.assertEqual(result["status"], "blocked", result)
+        self.assertIn("does not have that feature", result["error"])
+        self.assertNotIn("commit", result)
+        self.assertEqual(git(self.destination, "rev-parse", "HEAD"), self.root_head)
+        self.assertEqual(git(self.destination / "fixture", "rev-parse", "HEAD"), self.new)
+        # Declaration checks alone pass: only the real Cargo resolver detects this mismatch.
+        for action in ("sync", "check"):
+            maintenance.run([sys.executable, self.destination / "scripts/project_z.py",
+                             "--root", self.destination, action], self.destination)
+        self.assertFalse((self.destination / ".cargo/config.toml").exists())
+        self.assertFalse((self.destination / "fixture/Cargo.lock").exists())
+        self.unchanged_source()
+
+    def test_resolved_application_snapshot_is_committed_with_resolution_evidence(self):
+        result = maintenance.apply_snapshot(self.root, self.update("allowed"), self.destination)
+        self.assertEqual(result["status"], "ready", result)
+        self.assertIn("resolve", result["validation"])
+        self.assertIn("1 repositories", result["validation"]["resolve"])
+        self.assertNotEqual(result["commit"], self.root_head)
+        self.assertEqual(git(self.destination, "rev-parse", "HEAD"), result["commit"])
+        self.assertEqual(git(self.destination, "rev-parse", "HEAD:fixture"), self.new)
+        self.assertEqual(git(self.destination, "status", "--porcelain"), "")
+        self.assertFalse((self.destination / ".cargo/config.toml").exists())
+        self.assertFalse((self.destination / "fixture/Cargo.lock").exists())
         self.unchanged_source()
 
 

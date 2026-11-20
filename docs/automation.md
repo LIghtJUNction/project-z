@@ -61,13 +61,19 @@ This avoids populating removed nested trees or retaining old nested URLs. The
 root update is not repeated, so its old index cannot reset the new gitlinks.
 Unknown candidates do not participate in this operation.
 
-The existing coordinator runs `sync` and `check` against the assembled sources.
-After those gates pass, the script commits only the selected gitlinks and the
-generated catalog and local registry patch. The JSON includes the branch,
-commit, worktree path and an explicit push command. It does not push, create a
-pull request or merge anything. This snapshot has passed the dependency graph
-and policy checks; the scheduled agent still runs affected resolution, library and
-platform tests before publishing or merging the coordinated change.
+The existing coordinator runs `sync`, `check` and `resolve --all` in order
+against the assembled sources. The final gate resolves every Rust workspace,
+including applications, and verifies the Project Z source selected by Cargo.
+This catches incompatible feature requests and other resolution failures before
+a candidate can be marked ready. Cargo resolution uses the configured toolchain
+and may need registry or Git access when dependencies are not already cached.
+
+After all three gates pass, the script commits only the selected gitlinks and
+the generated catalog and local registry patch. The JSON retains output from
+all three gates and includes the branch, commit, worktree path and an explicit
+push command. It does not push, create a pull request or merge anything.
+Affected library, platform and application tests still run before publishing
+or merging the coordinated change.
 
 A failed gate leaves the isolated worktree available for inspection and creates
 no snapshot commit. A dirty source or existing destination is rejected without
@@ -99,7 +105,11 @@ Tests use real temporary Git repositories and worktrees to verify exact gitlink
 updates, unchanged source checkouts, rejection of dirty trees and unknown plans,
 nested URL replacement and removal, isolated destination paths, shallow CI
 audit without initialized sources, and preserved work after a failed dependency
-gate. Mocked network boundaries
+gate. Real offline Cargo workspaces exercise both a resolvable update and an
+application requesting a missing library feature. The invalid update preserves
+the original checkout and the review worktree without creating a commit;
+the valid update records successful resolution and a clean candidate commit.
+Mocked network boundaries
 distinguish missing, yanked and unavailable registry versions and keep discovery
 scoped to the requested owner. No test mutates a production checkout or contacts
 GitHub or crates.io.

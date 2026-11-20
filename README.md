@@ -128,4 +128,4 @@ python3 scripts/release.py patch dist
 
 ## 定时维护
 
-运行 `python3 scripts/maintenance.py` 检查上游提交、注册表版本和待审查的新仓库，输出 JSON 与 Markdown。显式 `--apply` 在独立工作树中更新已知 gitlink，通过依赖检查后形成候选提交。每日 GitHub 审计与定时维护代理的职责、验证范围见 [自动维护说明](docs/automation.md)。
+运行 `python3 scripts/maintenance.py` 检查上游提交、注册表版本和待审查的新仓库，输出 JSON 与 Markdown。显式 `--apply` 在独立工作树中更新已知 gitlink，依次通过 `sync`、`check` 和覆盖所有 Rust 工作区的 `resolve --all` 后形成候选提交。解析失败时保留检查现场，候选不会提交。每日 GitHub 审计与定时维护代理的职责、验证范围见 [自动维护说明](docs/automation.md)。
