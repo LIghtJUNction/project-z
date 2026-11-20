@@ -3,9 +3,9 @@
   "status": "metadata_checks_passed",
   "ready_to_merge": true,
   "ready_to_merge_scope": "This dependency registration passed its metadata gates. Product browser qualification and production activation remain separately owned.",
-  "base_commit": "4ca04b7084711fde494129f9c1f34f5ae59f0739",
+  "base_commit": "5059dac2688080ada924f0f45e7c9f8cf5caca38",
   "review_branch": "review/extore-lmm-registration",
-  "checked_at": "2026-11-20T03:39:48.560036+00:00",
+  "checked_at": "2026-11-20T07:23:39.372211+00:00",
   "registration": {
     "extore": {
       "commit": "8e3063690cf5595884b1e639535869fd593e0296",
@@ -15,7 +15,7 @@
       ]
     },
     "lmm-api-source": {
-      "commit": "80e02c5053e2b85db9676831de7619e223ab6133",
+      "commit": "6102f997ce07c167acd403e9c6483b6c19036fbf",
       "role": "application",
       "manifests": [
         "services/core/Cargo.toml",
@@ -36,9 +36,9 @@
   "adopted_published_pins": [
     {
       "name": "lmm-api-source",
-      "before": "120e0401555c35b7e42eae89d44bab77b2b38087",
-      "after": "80e02c5053e2b85db9676831de7619e223ab6133",
-      "reason": "Advance to the reviewed responsive variants layout and PostgreSQL test-proxy fixes. Cargo manifests, lockfiles, package metadata and the nested Extore pin are unchanged."
+      "before": "80e02c5053e2b85db9676831de7619e223ab6133",
+      "after": "6102f997ce07c167acd403e9c6483b6c19036fbf",
+      "reason": "Advance to the published Core conversation/charge lock-order fix, its deterministic regression and retained upgrade-result diagnostics. Cargo manifests, lockfiles, package metadata and the nested Extore pin are unchanged."
     }
   ],
   "source_contract": {
@@ -117,28 +117,28 @@
     {
       "command": "python3 -B scripts/project_z.py sync",
       "exit_code": 0,
-      "seconds": 0.314,
+      "seconds": 0.315,
       "result": "Updated 30 repositories and 51 packages",
       "log_sha256": "8467880fe04473ea4f0f0eb56ec149aff9dc7cc4e2caeebaa5958415a3184e61"
     },
     {
       "command": "python3 -B scripts/project_z.py check",
       "exit_code": 0,
-      "seconds": 0.365,
+      "seconds": 0.415,
       "result": "OK: 30 repositories, 51 packages; versions and graph agree",
       "log_sha256": "9920d6d886d67e46deccf3b6507d52c86af26d0c52561c4f7435d5e5b8c80b76"
     },
     {
       "command": "python3 -B scripts/project_z.py resolve extore lmm-api-source",
       "exit_code": 0,
-      "seconds": 1.868,
+      "seconds": 3.122,
       "result": "OK: local dependencies resolved in 2 repositories",
       "log_sha256": "6489f1074099a3758ed283a3f412318f2f8babff224c9f311f9477179a9f9c68"
     },
     {
       "command": "python3 -B scripts/project_z.py check",
       "exit_code": 0,
-      "seconds": 0.415,
+      "seconds": 0.465,
       "result": "OK: 30 repositories, 51 packages; versions and graph agree",
       "log_sha256": "9920d6d886d67e46deccf3b6507d52c86af26d0c52561c4f7435d5e5b8c80b76",
       "phase": "after preserving and restoring only the four generated lockfiles"
@@ -207,9 +207,9 @@
     "other_consumers": "Reviewed published Cargo manifests, immutable gitlinks, and existing owner coordination records; no consumer applications or desktop actions were run."
   },
   "evidence": {
-    "metadata_and_source_equivalence_receipt_sha256": "9547e961a7aa385c387864a7b4a30d1b41e6084ef84ce16cfd558ae3e47fd0ae",
-    "local_bundle": "lmm-api/out/project-z-extore-cohort-evidence/update-80e02c50",
-    "previous_successful_registration": "4ca04b7084711fde494129f9c1f34f5ae59f0739"
+    "metadata_and_source_equivalence_receipt_sha256": "3bc2724eeaad38d06707f95ec516ebe2b597d82bc2ef8ad80bc26b6ef03dd07a",
+    "local_bundle": "lmm-api/out/project-z-extore-cohort-evidence/update-6102f997",
+    "previous_successful_registration": "5059dac2688080ada924f0f45e7c9f8cf5caca38"
   },
   "historical_registration": {
     "commit": "91c23210813fe6e1a4e8ef5071e7cfd2b7089d6c",
@@ -380,56 +380,51 @@
     "preserved_as_failed": true
   },
   "previous_successful_registration": {
-    "commit": "4ca04b7084711fde494129f9c1f34f5ae59f0739",
+    "commit": "5059dac2688080ada924f0f45e7c9f8cf5caca38",
     "path": "docs/registrations/extore-lmm.json",
-    "blob": "b1d384a5c47688fbb0ea5db7b4935cbe8ed555a5",
+    "blob": "02832909d1155e93a9ebe1082e014de7dff4802b",
     "checks": [
       {
         "command": "python3 -B scripts/project_z.py sync",
         "exit_code": 0,
-        "seconds": 0.328,
+        "seconds": 0.314,
         "result": "Updated 30 repositories and 51 packages",
         "log_sha256": "8467880fe04473ea4f0f0eb56ec149aff9dc7cc4e2caeebaa5958415a3184e61"
       },
       {
         "command": "python3 -B scripts/project_z.py check",
         "exit_code": 0,
-        "seconds": 0.434,
+        "seconds": 0.365,
         "result": "OK: 30 repositories, 51 packages; versions and graph agree",
         "log_sha256": "9920d6d886d67e46deccf3b6507d52c86af26d0c52561c4f7435d5e5b8c80b76"
       },
       {
         "command": "python3 -B scripts/project_z.py resolve extore lmm-api-source",
         "exit_code": 0,
-        "seconds": 1.706,
+        "seconds": 1.868,
         "result": "OK: local dependencies resolved in 2 repositories",
         "log_sha256": "6489f1074099a3758ed283a3f412318f2f8babff224c9f311f9477179a9f9c68"
       },
       {
         "command": "python3 -B scripts/project_z.py check",
         "exit_code": 0,
+        "seconds": 0.415,
         "result": "OK: 30 repositories, 51 packages; versions and graph agree",
         "log_sha256": "9920d6d886d67e46deccf3b6507d52c86af26d0c52561c4f7435d5e5b8c80b76",
         "phase": "after preserving and restoring only the four generated lockfiles"
       }
     ],
     "evidence": {
-      "metadata_and_source_equivalence_receipt_sha256": "b2a835d8f3f9363284da4e9c33dff0710423d9c3829e3f875331143dcb07a5d0",
-      "local_bundle": "lmm-api/out/project-z-extore-cohort-evidence/update-120e0401",
-      "previous_successful_registration": "473afa85d868c2f2c9f1d1ee4aea5e6763d16d65"
+      "metadata_and_source_equivalence_receipt_sha256": "9547e961a7aa385c387864a7b4a30d1b41e6084ef84ce16cfd558ae3e47fd0ae",
+      "local_bundle": "lmm-api/out/project-z-extore-cohort-evidence/update-80e02c50",
+      "previous_successful_registration": "4ca04b7084711fde494129f9c1f34f5ae59f0739"
     },
     "adopted_published_pins": [
       {
-        "name": "extore",
-        "before": "1c29a9a0bfa7e64c938581e5c5e5fcb1e6832f04",
-        "after": "8e3063690cf5595884b1e639535869fd593e0296",
-        "reason": "Advance the reviewed LMM/Extore pair together; actual Cargo manifests and lockfiles are unchanged."
-      },
-      {
         "name": "lmm-api-source",
-        "before": "44bae83fa2181bbfa49467a2140106b3fec9ff45",
-        "after": "120e0401555c35b7e42eae89d44bab77b2b38087",
-        "reason": "Advance the reviewed LMM/Extore pair together; actual Cargo manifests and lockfiles are unchanged."
+        "before": "120e0401555c35b7e42eae89d44bab77b2b38087",
+        "after": "80e02c5053e2b85db9676831de7619e223ab6133",
+        "reason": "Advance to the reviewed responsive variants layout and PostgreSQL test-proxy fixes. Cargo manifests, lockfiles, package metadata and the nested Extore pin are unchanged."
       }
     ]
   }
