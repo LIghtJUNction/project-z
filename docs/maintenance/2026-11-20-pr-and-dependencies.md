@@ -1,12 +1,12 @@
 # Project Z 维护进展
 
-更新：2026-11-21 03:55（Asia/Taipei）。
+更新：2026-11-21 04:39（Asia/Taipei）。
 
 ## 当前结果
 
 **内部 Git 源迁移已完成本页列出的 19 个仓库本轮发布；受控 Git 历史中的生成附件清理已完成 14 个完整核实的仓库。** oh-my-ztty 的 23 个引用、74 个原提交和 14 份历史图片也已完成独立复核。开发机首批 129 个闲置 Cargo 目录、另外 3 个 LMM 缓存和 4 个 WGT 缓存均已处理完成。当前继续推进其余消费者、上游新提交的定向传播、最新组合的原生验收、完整 44 仓依赖图及新版本发布。
 
-初始 85 项 PR 仍按原清单去重计数：**已合并 55、已关闭 14、仓库已归档 9、具体阻塞 5、验收／集成中 2**。新建的依赖迁移 PR 单独记录。[完整清单与逐项证据](2026-11-20-pr-and-dependencies.json)保留全部 85 项条目和历史验证范围。
+初始 85 项 PR 仍按原清单去重计数：**已合并 56、已关闭 14、仓库已归档 9、具体阻塞 5、验收／集成中 1**。新建的依赖迁移 PR 单独记录。[完整清单与逐项证据](2026-11-20-pr-and-dependencies.json)保留全部 85 项条目和历史验证范围。
 
 [Project Z PR #6](https://github.com/LIghtJUNction/project-z/pull/6) 已合并，其 43 仓、67 包、38 个 Rust 仓库的结果适用于原提交。[后续 PR #7](https://github.com/LIghtJUNction/project-z/pull/7) 引入新的 Git 来源规则和第 44 仓独立 LMM CLI，完整新图仍待最终组件提交就位后验收。
 
@@ -44,7 +44,9 @@ ztype 已完成 28 项私有 Wayland 验收，且确认与此前通过 Rust、Cl
 
 ztty 采用原维护者已发布的 be29c676：规范 Git 源、实际 Cargo compiler-artifact 路径、独立插件夹具和锁文件一起完成迁移。[已发布验收记录](https://github.com/LIghtJUNction/ztty/blob/be29c6763d3f63832f77c21746d7d62aa70e7d62/docs/reports/default-branch-sources-20261121/results.json)包含 530 项 Rust 通过、9 项原有忽略、22 项插件 CLI 检查，以及软件和 GPU 两种模式各 12 次 reload 尝试。GPU 使用私有 Xvfb 下的 Mesa llvmpipe；这轮是源码集成，未更新桌面安装或发行版。验收脚本的 Cargo 配置目录解析补丁也已随 [PR #21](https://github.com/LIghtJUNction/ztty/pull/21) 合入 c7c2a3e8。仅共享配置、绝对环境路径、异地启动的相对环境路径三种真实 metadata 场景均通过，8 组 GUI／Wayland 命令参数全部指向实际产物。该补丁只改一个 Python 文件；此前完整运行门禁仍保留 be29 的源码身份。
 
-zcalld 监听器候选 97d97e39 已保留并发进入主线的 Claude/community 适配、安装器和 0.4.1 改动，完成 177 项 Rust、严格 Clippy、实际 release 构建与 8 项 HTTP/Unix curl 取消检查。新主线 daaa5973 仅更新了该候选已包含的 compat gitlink，逐叶证明确认候选包含全部主线内容。其固定源码和冻结二进制已交现有 SSMCP 维护者作最终 Gate10/P1，PR #1 继续保留草稿状态。原 job39a 的启动审计已找回并独立核对，真实记录将 systemd scope、共享外锁和执行脚本关联到该作业；这是原始证据补齐，没有重跑测试。最终范围保留跨进程阻塞生成的实际取消断言；旧 32 项集合中不属于这条联调路径的 shared-library、Go、打包／安装检查不计作本轮新结果。
+用户追加的 ztty 迭代已接续：本轮先测一个窗口、十个窗口、关闭九个保留一个等七个阶段，分别记录软件和 GPU 模式的实际进程内存。测试绑定 c7c2a3e8 源码和固定 ELF，使用独立 Xvfb；context 验收释放资源后，当前已启动软件和 GPU 两轮基线测量。既有 72 个 worktree 保持原样。旧记录指向 GPU／分配器在关闭窗口后仍保留匿名页，尚未把这一现象认定为当前代码泄漏，也未宣称本轮已有内存优化结果。
+
+zcalld 监听器已更新到 **d5314fe9**，完整吸收当前 c4b4bbab 主线的安装器修复和 0.4.3 改动，同时刷新 zcall-gui 文档提交。逐叶比较确认保留 212 个其余主线条目，五个监听器文件与已审查版本一致。新候选实际通过 **179 项 Rust 测试、严格 Clippy、release 构建和 8 项 TCP／Unix curl 取消测试**，共 22 条命令、零跳过；实际外锁、构建来源和固定二进制摘要均保留在[完整回执](evidence/zcalld-listener-d531-20261121.json)及[云盘副本](https://drive.google.com/file/d/1lVa3-tGuOzOwhsOSooMiUX51kD4i0p_d/view)。现有 SSMCP 负责人正在准备最终固定组合的 Gate10/P1，PR #1 仍为草稿。原 97d 的 177 项测试与找回的 job39a 启动审计保持原身份；最终联调仍要求真实跨进程阻塞生成取消，不把旧 32 项集合中无关的 shared-library、Go、打包／安装检查计成本轮通过。
 
 `zrc`、`zdot`、`LMM`、`Oni` 和 `mechrevo-drivers` 也已发布；API 的三个 Git 源与最新 LMM gitlink 已随 304f49d8 发布，合计 13 项目标单元测试通过：1 项 hex、3 项流兼容和 9 项 CLI 参数解析。锁文件、26 份源码／feature 等价和格式检查也已保留。首轮 3 GiB 内存不足与续跑时误选 5 项缺少 DATABASE_URL 的 SQLx 测试均如实记录；之后以精确解析器选择器完成剩余检查，未连接数据库。聚合工具最初通过 80 项测试，规范 Git URL 修正另通过 21 项定向真实 Git/Cargo 测试，均零跳过；它们不替代各应用和新 44 仓完整图的验收。最终图将显式登记已确认活跃的独立 fuzz／插件测试工作区，并保留比较基准的有意旧版本来源。
 
@@ -89,13 +91,15 @@ WGT 的 4 个精确 Cargo 缓存目录已全部删除并逐项验证。执行前
 
 **SSMCP 新版本**由现有发布维护者继续处理。[PR #152](https://github.com/LIghtJUNction/ssmcp/pull/152) 已合并至 cbe3d0ef；发布前的固定基线构建、六个粘贴场景、后续粘贴补丁和最新 zcalld 监听组合的最终 Gate10/P1 分别保留各自证据。旧候选的 277 个包源码审计与 100 项 Python 检查保持原提交范围，正式新版本尚未发布。
 
-追加的 **Docker context 式本地／远程统一化** 已提交 [草稿 PR #153](https://github.com/LIghtJUNction/ssmcp/pull/153)，当前候选 ab980a3a。75 项定向单元测试已通过且零失败、零忽略。随后 CLI 测试夹具在摘要格式化处遇到编译错误，尚未执行 CLI 用例；维护者正在修正这一处测试代码，再续跑 CLI、Clippy 与二进制回执。命名配置将保存本地或 HTTPS relay 目标，统一处理命令行、环境变量和持久默认选择；凭据继续使用按 origin 隔离的现有存储。已有本地和远程连接共享 broker、wire 和原生 runtime。现行运行代码已移除 SSH 设备连接，因此此次不会把仅保留的旧参数解析器误当作可用 SSH 后端。切换 context 只影响新连接，保存的 session 和已有任务保持原目标。参考 [Docker contexts](https://docs.docker.com/engine/manage-resources/contexts/) 与 [context use](https://docs.docker.com/reference/cli/docker/context/use/)。实现与当前发布冻结源码隔离，尚未合并或发布。
+追加的 **Docker context 式本地／远程统一化** 已随 [PR #153](https://github.com/LIghtJUNction/ssmcp/pull/153) 合入 b0a07b04。独立验收发现前台 reload 仍会重新解析旧 context 名称：若默认配置已切换或原配置已删除，重载可能改变目标或失败。[后续 PR #155](https://github.com/LIghtJUNction/ssmcp/pull/155) 将重载固定到启动时已解析的本地／HTTPS 目标，并保留参数值、保存会话入口、cwd 和环境。aa1 候选的 **83 项单元测试与 17 项真实 CLI 检查全部通过**；严格 Clippy 随后指出一处 Vec 参数应改为切片，5ca8fb78 已做单行修复。5ca 已实际通过严格 Clippy、83 项单元测试、17 项 CLI 检查和构建产物来源核对；首个真实前台场景却在 UI 配置读取处报错，尚未进入 reload。原始失败与固定二进制已保留，维护者正在定位原因，三种真实重载场景仍待完成。配置优先级、按 origin 隔离凭据和保存会话固定目标的规则已补入文档；现行运行代码不提供 SSH 设备连接。参考 [Docker contexts](https://docs.docker.com/engine/manage-resources/contexts/) 与 [context use](https://docs.docker.com/reference/cli/docker/context/use/)。
 
 **开发机证据恢复**：19:32–19:34 UTC，多个现有维护者检查发现部分 `GITHUB/ssmcp-*` 源码／验收目录已不存在，根因尚未确定。本轮有回执的缓存删除没有包含这些路径。主 SSMCP Git 仓库、Project Z 内的 context 隔离树和 zcalld 交接目录仍在；原发布维护者正在从已有副本恢复源码与证据。缺失的五个基线二进制需要重新实编，旧测试记录保持原身份。
 
-**HireFerry 移动端**在私有 AVD 上已完成系统引导和 APK 安装，并复现登录返回时的实际原生崩溃：界面线程同步查询 WebView URL，出现 5006 ms Focus ANR，随后触发 wry GetUrl 回应的 SendError／SIGABRT。最小线程修复已推至 [PR #21 的 5d9313df](https://github.com/TokenNotIncluded/hireferry/commit/5d9313df5dc9c295a2ab575107ed665b3a92dc19)，保留同源校验、固定无载荷返回事件和冷启动不导航。当前等待新 APK、原 45 秒基线及 WebView／Chrome／私有服务的真实组合流程；尚未宣称设备验收通过。
+**HireFerry 移动端**的 [PR #21](https://github.com/TokenNotIncluded/hireferry/pull/21) 已合并为 **0d900c29**，合并树 b6e3e543 与实际通过验收的 5d9313df 候选完全一致。原先在界面线程同步查询 WebView URL 导致的 Focus ANR／SendError／SIGABRT 已修复，原 45 秒基线全部通过。随后在私有 Android 模拟器上实际完成 WebView → Chrome 明确授权 → 应用返回的流程，验证了授权前未勾选、确认码一致、独立应用会话、浏览器原会话保持、生命周期保持、拒绝重复兑换和返回本地设置页。新的流程没有 ANR 或崩溃，私有服务器、数据库与模拟器均已关闭。[最终验收回执](evidence/hireferry-21-final-20261121.json)及[云盘副本](https://drive.google.com/file/d/1j3JXDIKZQl9zzB_aLbWO06TLzOC85QDv/view)保留先前失败和修复边界；iOS 仍仅引用原历史验证，没有新增实机或正式签名／商店发布声明。
 
-**最新上游传播**：GitHub 已读回 zuse [a1bb8fd2](https://github.com/LIghtJUNction/zuse/commit/a1bb8fd2cbce0a9d85134999883c578358065242) 和 ztype [da6feb1a](https://github.com/LIghtJUNction/ztype/commit/da6feb1a3c5488f3854c63d5e5db173ca250dba4)。后者仅刷新 zuse 锁定来源，原维护者记录 72 项通过、1 项可选词典测试忽略。新的 SSMCP／oh-my 消费者与最终 44 仓聚合正在协调；旧 Wayland／打包验收不会自动转记到新依赖组合。
+**最新上游传播**：zuse [a1bb8fd2](https://github.com/LIghtJUNction/zuse/commit/a1bb8fd2cbce0a9d85134999883c578358065242) 已被 ztype [da6feb1a](https://github.com/LIghtJUNction/ztype/commit/da6feb1a3c5488f3854c63d5e5db173ca250dba4) 和 SSMCP [4237eea2](https://github.com/LIghtJUNction/ssmcp/commit/4237eea2cab8253b8dff84d81861ba1e1adf4246) 消费。ztype 的维护者记录 72 项通过、1 项可选词典测试忽略；SSMCP 的锁文件来源已独立核对。oh-my-ztty [f04f6ea8](https://github.com/LIghtJUNction/oh-my-ztty/commit/f04f6ea8ae909e121edabbd766ee725a472f8146) 又消费了 SSMCP 4237，原维护者记录 112 项检查。其 ztty c7 草稿与 SSMCP 后续 context／当前功能提交仍需在同一维护链合流，最终 44 仓实际 sync/check/resolve 尚未完成。
+
+**SSMCP 消息处理目标**：开发机上的连续需求已按最后更正统一为 `--input`，用于指定聊天框发出的消息交给谁处理。默认 `terminal`，web 需要 host／port，MCP 支持 stdio／HTTP，并支持管道。原始消息修订和更正关系已保存并交给现有主线负责人；本页只记录需求和源码检查，不宣称实现或运行验收完成。
 
 ## 仍需闭合的初始 PR
 
@@ -103,9 +107,8 @@ WGT 的 4 个精确 Cargo 缓存目录已全部删除并逐项验证。执行前
 | --- | --- |
 | [KernelSU #1](https://github.com/LIghtJUNction/KernelSU/pull/1) | 大范围上游迁移、设备适配与真实设备验证。 |
 | [video-work-api #11](https://github.com/LIghtJUNction/video-work-api/pull/11) | torch/torchaudio 与固定 FunClip/CosyVoice 约束及模型、CUDA 验证。 |
-| [zcalld #1](https://github.com/LIghtJUNction/zcalld/pull/1) | 最新 97d 候选本地门禁已过；等待现有维护者恢复固定组合并完成 native Gate10/P1，再核对合并树。 |
+| [zcalld #1](https://github.com/LIghtJUNction/zcalld/pull/1) | 最新 d531 候选已过 179 项 Rust 与 8 项实际取消测试；等待固定 SSMCP 组合的 native Gate10/P1，再核对合并树。 |
 | [codewhale-lmm-provider #3](https://github.com/TokenNotIncluded/codewhale-lmm-provider/pull/3) | 按用户组隔离的后端接口、客户端注册及真实宿主验收材料。 |
-| [hireferry #21](https://github.com/TokenNotIncluded/hireferry/pull/21) | 实际 WebView 同步 URL 查询崩溃已修为草稿；等待原 45 秒设备回归和 WebView／服务组合验收。 |
 | [lmm-api-source #10](https://github.com/TokenNotIncluded/lmm-api-source/pull/10) | 原定向回归已修复，最终组合验证及真实生产升级材料仍待闭合。 |
 | [lmm-api-source #11](https://github.com/TokenNotIncluded/lmm-api-source/pull/11) | 预留未结算与锁超时之间的实际因果关系。 |
 

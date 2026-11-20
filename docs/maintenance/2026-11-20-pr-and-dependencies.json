@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-20T19:55:18.107317+00:00",
+  "generated_at": "2026-11-20T20:39:54.429819+00:00",
   "timezone": "Asia/Taipei",
   "scope": "Initial 85 PRs, latest GitHub default-branch dependency migration, generated-binary history cleanup, development-machine cache cleanup, release integration and the requested named local/remote contexts",
   "batch_status": "in_progress",
   "counts": {
-    "已合并": 55,
-    "验收／集成中": 2,
+    "已合并": 56,
+    "验收／集成中": 1,
     "已关闭": 14,
     "具体阻塞": 5,
     "仓库已归档": 9
@@ -976,7 +976,7 @@
       }
     ],
     "pending": [
-      "LIghtJUNction/zcalld#1"
+      "Final fixed-component44-repository Git-source graph; current SSMCP/context/zcalld and ztty/oh-my source propagation still in progress."
     ],
     "dependency_snapshot": {
       "status": "git_latest_source_migration_in_progress",
@@ -1042,13 +1042,13 @@
       "cargo_metadata_locked": "passed",
       "binary_installation": false
     },
-    "updated_at": "2026-11-21T02:40:01.059357+08:00",
+    "updated_at": "2026-11-20T20:39:54.429819+00:00",
     "aggregate_pr": {
       "url": "https://github.com/LIghtJUNction/project-z/pull/7",
       "number": 7,
       "branch": "coord/git-source-policy-20261120",
-      "head": "3d2a408a8e4d4472c6b9e9cdae037f22c9bcb059",
-      "tree": "64825b021ce71d8aa33980d614f9edea27ba6d4f",
+      "head": "2665d4d0e3df502b6f036870c9432b4942face7b",
+      "tree": "c383f840c5074f9b48166a7f4311a61d8402b5ab",
       "status": "draft_component_migrations_and_complete_44_repository_graph_pending",
       "base": "d2a6616c85b7e47c3faa32bd5728db49cdd9c142",
       "source_snapshot_note": "Head observed immediately before this report-only commit; subsequent graph publication must refresh actual component heads."
@@ -1459,8 +1459,8 @@
     "url": "https://github.com/LIghtJUNction/project-z/pull/7",
     "number": 7,
     "branch": "coord/git-source-policy-20261120",
-    "head": "3d2a408a8e4d4472c6b9e9cdae037f22c9bcb059",
-    "tree": "64825b021ce71d8aa33980d614f9edea27ba6d4f",
+    "head": "2665d4d0e3df502b6f036870c9432b4942face7b",
+    "tree": "c383f840c5074f9b48166a7f4311a61d8402b5ab",
     "status": "draft_component_migrations_and_complete_44_repository_graph_pending",
     "base": "d2a6616c85b7e47c3faa32bd5728db49cdd9c142",
     "source_snapshot_note": "Head observed immediately before this report-only commit; subsequent graph publication must refresh actual component heads."
@@ -1558,9 +1558,40 @@
       "number": 1,
       "url": "https://github.com/LIghtJUNction/zcalld/pull/1",
       "title": "feat: add native SSMCP listener (unreleased P1 development)",
-      "status": "pending",
+      "status": "current_candidate_local_pass_native_final_p1_pending",
       "category": "验收／集成中",
-      "details": {}
+      "details": {},
+      "current_followup": {
+        "status": "current_d531_local_gate_passed_native_final_p1_pending",
+        "candidate": "d5314fe930b0932bbce076ff578474d3ef084695",
+        "tree": "06826bbb2eb2857ea1f0e9cc834abe9b149d3625",
+        "base": "c4b4bbabe0c718430ffe2f46936408e9bdef4885",
+        "url": "https://github.com/LIghtJUNction/zcalld/pull/1",
+        "gui_gitlink": "d357d39b24bdef0cba48ee4a8cc367ded1b2b45d",
+        "preserved_main_leaves": 212,
+        "all_five_listener_blobs_identical_to_97d": true,
+        "local_gate": {
+          "rust_passed": 179,
+          "rust_listener_tests": 7,
+          "actual_tcp_unix_cancellation_passed": 8,
+          "skipped": 0,
+          "commands": 22,
+          "fmt": "passed",
+          "strict_clippy": "passed",
+          "release_build": "passed"
+        },
+        "actual_job": "26c4545eae1eab8d27485f4a48077d3c-d3",
+        "exit_code": 0,
+        "binary_sha256": "8f9e63d1b9baede087fe7c7542e73852b4b078e7ebdbe03b3d8cc1e18a9185ed",
+        "receipt_path": "evidence/zcalld-listener-d531-20261121.json",
+        "receipt_bytes": 37172,
+        "receipt_sha256": "13ceab7433e2a276c39cf5b3325d23079e4b09b26f9760802e3b9c89e49a9802",
+        "receipt_github_commit": "2665d4d0e3df502b6f036870c9432b4942face7b",
+        "drive_url": "https://drive.google.com/file/d/1lVa3-tGuOzOwhsOSooMiUX51kD4i0p_d/view",
+        "drive_full_bytes_verified": true,
+        "remaining": "Existing native SSMCP owner must validate the final frozen SSMCP plus this exact CLI with Gate10/P1, including actual cross-process blocking-generation cancellation, before root merges PR1.",
+        "historical_scope": "Original97d177/8 and recovered job39a startup audit remain separately identified. No unrelated old32-stage suite is attributed to d531."
+      }
     },
     {
       "repository": "LIghtJUNction/zcalld-compat",
@@ -4194,12 +4225,11 @@
       "number": 21,
       "url": "https://github.com/TokenNotIncluded/hireferry/pull/21",
       "title": "Add shared Tauri Android and iOS client build paths",
-      "status": "updated_draft_current_android_acceptance_in_progress",
-      "category": "验收／集成中",
+      "status": "merged",
+      "category": "已合并",
       "source_sha": "130d89ef9879308413d63e472256ed6fff63887f",
-      "updated_head": "06b2863fd448136ca4011e0e5bac7deeacc99e54",
-      "base_sha": "3c3e52d1657f12b98ec639e5243153c92fe4c095",
-      "blocker": "Current integrated head06b2863 requires real Android return-to-launcher and combined native WebView/server acceptance. Mobile build inputs remain byte-identical to89120ef before current device diagnosis.",
+      "updated_head": "5d9313df5dc9c295a2ab575107ed665b3a92dc19",
+      "base_sha": "dd3c20e40093892cf14f50fe09cd8c6c93350525",
       "conflicts": [
         "desktop/src-tauri/Cargo.toml",
         "docs/mobile.md"
@@ -4365,7 +4395,7 @@
         },
         "portable_validation_base": "397addaaeb9568063f7f3806d3835ae035aff871"
       },
-      "current_followup": {
+      "prior_current_followup": {
         "url": "https://github.com/TokenNotIncluded/hireferry/pull/21",
         "status": "draft_native_crash_minimal_fix_pushed_rebuild_and_same_assertion_acceptance_pending",
         "head": "5d9313df5dc9c295a2ab575107ed665b3a92dc19",
@@ -4384,6 +4414,37 @@
           "Actual Android WebView/Chrome/private server integrated consent/session/replay/return flow"
         ],
         "runtime_scope": "Owned emulator5582; no physical phone, production authentication or release signing."
+      },
+      "merge_sha": "0d900c29de645bafbf6a858632c6506c91e6426a",
+      "current_followup": {
+        "status": "merged exact tested tree after full actual Android baseline and login joint pass",
+        "merged_main": "0d900c29de645bafbf6a858632c6506c91e6426a",
+        "tree": "b6e3e5439705b6c94e04180734c8bfeb49c33e53",
+        "merged_at": "2026-11-20T20:28:54Z",
+        "joint": "passed actual WebView->Chrome explicit consent->scheme return; independent app session/browser session retained; replay rejected; no external auth; no new ANR or crash",
+        "joint_marker_sha256": "faab8e9375bb15611914120786a360f0e201d4f2e7a6117e0f241dd89c2637a8",
+        "joint_actual_sha256": "d5ded8a35f0b92fe9e3a90ca0e188da32d0c7bb914ed850d28f196e2cbc41f5b",
+        "current_runtime": "AVD5582/scope/server/db stopped; scope inactive/dead/ControlGroup empty; native controls currently holds Cargo lock",
+        "verification": "Org independently verified then root GitHub PR + git commit API confirmed head5d/treeb6/parentsdd3+5d",
+        "url": "https://github.com/TokenNotIncluded/hireferry/pull/21",
+        "head": "5d9313df5dc9c295a2ab575107ed665b3a92dc19",
+        "base": "dd3c20e40093892cf14f50fe09cd8c6c93350525",
+        "apk_sha256": "935fc98fa8aa62ef84b6d12205f9216c6e8eaf2c9ffd3389bbe54a95a83c9b23",
+        "receipt_path": "evidence/hireferry-21-final-20261121.json",
+        "receipt_native": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/final-publication.json",
+        "receipt_bytes": 12031,
+        "receipt_sha256": "f7037e41ab116300d5188c9e6fc445997c3dcdcd1fe4e85e9f1d37ebfcd35c3e",
+        "baseline": "All original45-second-per-condition Android assertions passed at the fixed5d source; no ANR since boot.",
+        "prior_failures": "42d Focus5006ms/GetUrl SendError/SIGABRT and first Chrome fixture crash retained. Removing only the fixture disable-sync flag enabled the actual joint flow; exact Chrome crash root cause is not claimed from unsymbolized evidence.",
+        "boundaries": "Private API35 emulator5582 and synthetic local member/SQLite only. Formal signing, physical-phone acceptance, production authentication, release/store publication and new iOS execution are not claimed.",
+        "drive_url": "https://drive.google.com/file/d/1j3JXDIKZQl9zzB_aLbWO06TLzOC85QDv/view",
+        "drive_full_bytes_verified": true,
+        "root_independent_artifact_check": {
+          "evidence_files_verified": 15,
+          "all_bytes_and_sha256_match": true,
+          "apk_sha256_match": true,
+          "job": "26c4545eae1eab8d27485f4a48077d3c-174"
+        }
       }
     },
     {
@@ -10735,10 +10796,20 @@
     "pr-cleanup-root/magicbox-minimal-native-rebuild.json": {
       "sha256": "4b38722e7d45f965fd43772b396b75f5ed16c3a3147661c0ed4e2a65eb2ba134",
       "bytes": 9750
+    },
+    "zcalld_current_listener": {
+      "path": "evidence/zcalld-listener-d531-20261121.json",
+      "bytes": 37172,
+      "sha256": "13ceab7433e2a276c39cf5b3325d23079e4b09b26f9760802e3b9c89e49a9802"
+    },
+    "hireferry_mobile_final": {
+      "path": "evidence/hireferry-21-final-20261121.json",
+      "bytes": 12031,
+      "sha256": "f7037e41ab116300d5188c9e6fc445997c3dcdcd1fe4e85e9f1d37ebfcd35c3e"
     }
   },
   "current_maintenance": {
-    "generated_at": "2026-11-20T19:55:18.107317+00:00",
+    "generated_at": "2026-11-20T20:39:54.429819+00:00",
     "root_consumers": {
       "zcall-gui": {
         "status": "merged_and_main_tree_read_back",
@@ -11218,7 +11289,9 @@
           "finished": 1795198602.702862
         },
         "concurrent_business_source_preserved": "f32a25bb76a5268f5a8010286f1b3b4003fee60b",
-        "listen_integration": {
+        "latest_published_main": "c4b4bbabe0c718430ffe2f46936408e9bdef4885",
+        "latest_main_scope": "Mainc4 includes additional installer fixes and0.4.3; current d531 candidate incorporates all main leaves before new179/8 validation.",
+        "prior_listener_integration_97d": {
           "schema": "project-z.zcalld-listener-integration.v2",
           "status": "local_candidate_ready_for_native_p1",
           "recorded_at": "2026-11-20T19:19:59.881788+00:00",
@@ -13176,8 +13249,37 @@
             "draft": true
           }
         },
-        "latest_published_main": "daaa597374821670be119ba77de8704a773e989f",
-        "latest_main_scope": "Later Claude/community, portable compatibility installer and 0.4.1 changes preserved by PR1 candidate; daaa only syncs same compat4ccb pin already in tested candidate."
+        "listen_integration": {
+          "status": "current_d531_local_gate_passed_native_final_p1_pending",
+          "candidate": "d5314fe930b0932bbce076ff578474d3ef084695",
+          "tree": "06826bbb2eb2857ea1f0e9cc834abe9b149d3625",
+          "base": "c4b4bbabe0c718430ffe2f46936408e9bdef4885",
+          "url": "https://github.com/LIghtJUNction/zcalld/pull/1",
+          "gui_gitlink": "d357d39b24bdef0cba48ee4a8cc367ded1b2b45d",
+          "preserved_main_leaves": 212,
+          "all_five_listener_blobs_identical_to_97d": true,
+          "local_gate": {
+            "rust_passed": 179,
+            "rust_listener_tests": 7,
+            "actual_tcp_unix_cancellation_passed": 8,
+            "skipped": 0,
+            "commands": 22,
+            "fmt": "passed",
+            "strict_clippy": "passed",
+            "release_build": "passed"
+          },
+          "actual_job": "26c4545eae1eab8d27485f4a48077d3c-d3",
+          "exit_code": 0,
+          "binary_sha256": "8f9e63d1b9baede087fe7c7542e73852b4b078e7ebdbe03b3d8cc1e18a9185ed",
+          "receipt_path": "evidence/zcalld-listener-d531-20261121.json",
+          "receipt_bytes": 37172,
+          "receipt_sha256": "13ceab7433e2a276c39cf5b3325d23079e4b09b26f9760802e3b9c89e49a9802",
+          "receipt_github_commit": "2665d4d0e3df502b6f036870c9432b4942face7b",
+          "drive_url": "https://drive.google.com/file/d/1lVa3-tGuOzOwhsOSooMiUX51kD4i0p_d/view",
+          "drive_full_bytes_verified": true,
+          "remaining": "Existing native SSMCP owner must validate the final frozen SSMCP plus this exact CLI with Gate10/P1, including actual cross-process blocking-generation cancellation, before root merges PR1.",
+          "historical_scope": "Original97d177/8 and recovered job39a startup audit remain separately identified. No unrelated old32-stage suite is attributed to d531."
+        }
       },
       "ztty": {
         "status": "existing_native_owner_published_and_independently_read_back",
@@ -15469,8 +15571,8 @@
       }
     },
     "ssmcp_release": {
-      "status": "existing_owner_recovering_missing_worktree_and_evidence_before_final_gates",
-      "main_verified": "cbe3d0ef1f7fbe1a26ebe367edc646cd8ef429c3",
+      "status": "existing_native_owner_main_integration_build_and_final_acceptance_in_progress",
+      "main_verified": "31e4d0431a5da4dc5e298a0a9f06e8813b814e77",
       "candidate": "b156254b45c015a3994b8be1475b423167ac980f",
       "candidate_actual_source_audit": {
         "total_packages": 277,
@@ -15480,15 +15582,16 @@
       },
       "python_tests_passed": 100,
       "new_formal_release": false,
-      "current_public_tree": "ce92d08ad71dc1d7a26c68725f45a64ff6351763",
+      "current_public_tree": "ffdb0c658b484085199f008d1c2a1792ed272f2e",
       "scope_note": "Earlier source-audit and Python test counts retain their original frozen-candidate scope; not relabelled as complete validation of the latest public main.",
       "previous_final_gate_plan_text": "pending on final fixed SSMCP cohort plus zcalld97d; original build commits and evidence stay separate",
       "current_final_gate_plan": {
-        "status": "pending_existing_native_owner_recovered_candidate",
-        "plan": "Latest97d local19 commands/177 Rust/8 real TCP-Unix cancellation checks and immutable CLI, plus SSMCP Gate10 and the actual P1 runtime assertions. Genuine cross-process blocking-generation cancellation is required.",
+        "status": "pending_final_frozen_ssmcp_and_d531_integration",
+        "plan": "Existing native SSMCP owner must validate the final frozen SSMCP plus this exact CLI with Gate10/P1, including actual cross-process blocking-generation cancellation, before root merges PR1.",
         "original_32_scope": "The historical32 set included five shared-library checks, two Go checks and package/install work outside this P1 path. Those unrelated checks are not rerun or reported as new32 passes.",
         "merge_owner": "Project Z root, after native final acceptance and fresh main/candidate tree verification",
-        "draft": true
+        "draft": true,
+        "local_evidence": "evidence/zcalld-listener-d531-20261121.json"
       },
       "path_loss_observation": {
         "observed_window_utc": "2026-11-20T19:32:00Z/2026-11-20T19:34:00Z",
@@ -15500,7 +15603,7 @@
       }
     },
     "context_request": {
-      "status": "draft_75_unit_passed_cli_fixture_compile_fix_pending",
+      "status": "5ca_actual_foreground_launch_failed_before_reload_diagnosis_in_progress",
       "requested": "Use Docker-style named contexts to unify local and remote selection",
       "source_revision": "ccb91955c25969f4779588d4cebb09b72c00f829",
       "existing_state": "Local and HTTPS relay connections share broker, wire and native runtime. The current runtime explicitly rejects the legacy SSH destination form.",
@@ -15509,8 +15612,8 @@
         "https://docs.docker.com/reference/cli/docker/context/use/"
       ],
       "implemented": true,
-      "published": false,
-      "base": "cbe3d0ef1f7fbe1a26ebe367edc646cd8ef429c3",
+      "published": true,
+      "base": "31e4d0431a5da4dc5e298a0a9f06e8813b814e77",
       "worktree": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context",
       "transport_scope": [
         "local",
@@ -15520,32 +15623,108 @@
       "selection": "Explicit CLI > environment > persisted default; unknown context and conflicting explicit targets fail closed.",
       "credentials": "Existing origin-scoped account store remains separate.",
       "session_boundary": "Switch affects new connections; existing sessions/jobs and saved manifests remain pinned to resolved target.",
-      "draft_url": "https://github.com/LIghtJUNction/ssmcp/pull/153",
-      "draft_head": "ab980a3a8c1007459410eea34c2b16e5ae1208c1",
-      "draft_tree": "1dc7afce67e7fd2d4ddcf9081610f24d6d0bb6f4",
+      "draft_url": "https://github.com/LIghtJUNction/ssmcp/pull/155",
+      "draft_head": "5ca8fb78876c9270876b4240cda32c0e191ebe84",
+      "draft_tree": "8548187096d1d785b4030f55ef230d81c86497f7",
       "current_partial_validation": {
-        "locked_metadata": "passed",
-        "fmt": "passed",
-        "unit_passed": 75,
-        "unit_failed": 0,
-        "unit_ignored": 0,
-        "groups": {
-          "context": 8,
-          "Options": 30,
-          "account": 16,
-          "config": 5,
-          "trust": 9,
-          "session": 7
-        },
-        "remaining": [
-          "Fix test-only sha2 digest hexadecimal formatting compile error",
-          "Run previously unexecuted CLI integration",
-          "Strict Clippy",
-          "Compiler-artifact receipt"
-        ],
-        "original_failure": "CLI fixture compilation stopped at tests/connection_context.rs348: sha2 digest Array does not implement LowerHex. No CLI test executed. Source owner will replace the test-only format with existing per-byte hex pattern; original failure remains preserved."
+        "job": "89e6734e0887cd4fff5277f37e7545e7-44",
+        "exit_code": 1,
+        "unit_passed": 83,
+        "cli_passed": 17,
+        "failed_tests": 0,
+        "ignored_tests": 0,
+        "strict_clippy": "passed",
+        "compiler_artifact": "passed",
+        "immutable_cli_sha256": "a67e7ae9fa0f6c0ad74986162a5454d885ac01890c2ded0bba6bd206944703a5",
+        "binary_bytes": 215931224,
+        "actual_reload_executed": false,
+        "failure": "invalid ssmcp UI TOML configuration",
+        "receipt": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T203240Z/receipt.json",
+        "receipt_bytes": 26391,
+        "receipt_sha256": "6d2981c3d266f446ab60112bb0ce723af1db4e8519f6ef59604aa222954a005f"
       },
-      "release_boundary": "Isolated cbe-based worktree and shared Cargo outer lock; not merged into the current release or frozen final P1 candidate."
+      "release_boundary": "PR153 is merged. PR155 reload repair is under final isolated local validation and native sole source-owner integration; no new formal release is claimed.",
+      "prior_snapshot_1955": {
+        "status": "draft_75_unit_passed_cli_fixture_compile_fix_pending",
+        "requested": "Use Docker-style named contexts to unify local and remote selection",
+        "source_revision": "ccb91955c25969f4779588d4cebb09b72c00f829",
+        "implemented": true,
+        "published": false,
+        "base": "cbe3d0ef1f7fbe1a26ebe367edc646cd8ef429c3",
+        "worktree": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context",
+        "ssh": "Current runtime explicitly removed SSH device connections; no SSH profile advertised.",
+        "selection": "Explicit CLI > environment > persisted default; unknown context and conflicting explicit targets fail closed.",
+        "session_boundary": "Switch affects new connections; existing sessions/jobs and saved manifests remain pinned to resolved target.",
+        "draft_url": "https://github.com/LIghtJUNction/ssmcp/pull/153",
+        "draft_head": "ab980a3a8c1007459410eea34c2b16e5ae1208c1",
+        "draft_tree": "1dc7afce67e7fd2d4ddcf9081610f24d6d0bb6f4",
+        "current_partial_validation": {
+          "locked_metadata": "passed",
+          "fmt": "passed",
+          "unit_passed": 75,
+          "unit_failed": 0,
+          "unit_ignored": 0,
+          "groups": {
+            "context": 8,
+            "Options": 30,
+            "account": 16,
+            "config": 5,
+            "trust": 9,
+            "session": 7
+          },
+          "remaining": [
+            "Fix test-only sha2 digest hexadecimal formatting compile error",
+            "Run previously unexecuted CLI integration",
+            "Strict Clippy",
+            "Compiler-artifact receipt"
+          ],
+          "original_failure": "CLI fixture compilation stopped at tests/connection_context.rs348: sha2 digest Array does not implement LowerHex. No CLI test executed. Source owner will replace the test-only format with existing per-byte hex pattern; original failure remains preserved."
+        },
+        "release_boundary": "Isolated cbe-based worktree and shared Cargo outer lock; not merged into the current release or frozen final P1 candidate."
+      },
+      "followup": {
+        "status": "5ca_actual_foreground_launch_failed_before_reload_diagnosis_in_progress",
+        "followup_pr": 155,
+        "followup_head": "5ca8fb78876c9270876b4240cda32c0e191ebe84",
+        "followup_tree": "8548187096d1d785b4030f55ef230d81c86497f7",
+        "prior_gate": {
+          "head": "aa1fa28b45c71bd00f4916e72d220be2c2ecf0fe",
+          "unit_passed": 83,
+          "cli_passed": 17,
+          "clippy": "failed ptr_arg; no lint waiver; one parameter Vec->slice fixed5ca",
+          "job": "89e6734e0887cd4fff5277f37e7545e7-3a",
+          "exit_code": 1
+        },
+        "pending": "5ca Clippy + immutable CLI + three real foreground reload scenarios; native source owner owns main integration",
+        "actual_job": "89e6734e0887cd4fff5277f37e7545e7-44",
+        "actual_start_sha256": "12576dc756e368ed4b918d27f2945d9e23f63f8957d6d8c66c4d93cf2ce584be",
+        "original_pr": 153,
+        "original_merged_main": "b0a07b047b1532688f06b9df8423e9bfc044c405",
+        "original_merge_actor": "Existing other maintainer; not Project Z root/Core/Personal",
+        "original_merge_tree": "37b33d06c09dcadb6315f98b9c06d54d040822b2",
+        "current_base": "31e4d0431a5da4dc5e298a0a9f06e8813b814e77",
+        "current_url": "https://github.com/LIghtJUNction/ssmcp/pull/155",
+        "source_scope": "Reload must pin the resolved local/HTTPS endpoint even if the named/current context changes or disappears. Preserve argument values, saved session entry point, cwd and environment; serialize no credential.",
+        "original_75_scope": "ab980 unit75 passed; CLI fixture failed compilation and executed zero CLI tests; LowerHex fixture fixed in8de.",
+        "current_result_scope": "Exact5ca strict Clippy,83 unit,17 CLI and compiler-artifact passed. First actual foreground scenario failed with invalid ssmcp UI TOML configuration before any reload; diagnosis pending. No runtime reload pass claimed.",
+        "actual_result": {
+          "job": "89e6734e0887cd4fff5277f37e7545e7-44",
+          "exit_code": 1,
+          "unit_passed": 83,
+          "cli_passed": 17,
+          "failed_tests": 0,
+          "ignored_tests": 0,
+          "strict_clippy": "passed",
+          "compiler_artifact": "passed",
+          "immutable_cli_sha256": "a67e7ae9fa0f6c0ad74986162a5454d885ac01890c2ded0bba6bd206944703a5",
+          "binary_bytes": 215931224,
+          "actual_reload_executed": false,
+          "failure": "invalid ssmcp UI TOML configuration",
+          "receipt": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T203240Z/receipt.json",
+          "receipt_bytes": 26391,
+          "receipt_sha256": "6d2981c3d266f446ab60112bb0ce723af1db4e8519f6ef59604aa222954a005f"
+        }
+      }
     },
     "zgraphics_followup": {
       "head": "aa0ed19fb706ad147aff1df54c4ef762d918e864",
@@ -16482,6 +16661,63 @@
     },
     "fully_verified_history_repository_count": 14,
     "hireferry_mobile_current": {
+      "status": "merged exact tested tree after full actual Android baseline and login joint pass",
+      "merged_main": "0d900c29de645bafbf6a858632c6506c91e6426a",
+      "tree": "b6e3e5439705b6c94e04180734c8bfeb49c33e53",
+      "merged_at": "2026-11-20T20:28:54Z",
+      "joint": "passed actual WebView->Chrome explicit consent->scheme return; independent app session/browser session retained; replay rejected; no external auth; no new ANR or crash",
+      "joint_marker_sha256": "faab8e9375bb15611914120786a360f0e201d4f2e7a6117e0f241dd89c2637a8",
+      "joint_actual_sha256": "d5ded8a35f0b92fe9e3a90ca0e188da32d0c7bb914ed850d28f196e2cbc41f5b",
+      "current_runtime": "AVD5582/scope/server/db stopped; scope inactive/dead/ControlGroup empty; native controls currently holds Cargo lock",
+      "verification": "Org independently verified then root GitHub PR + git commit API confirmed head5d/treeb6/parentsdd3+5d",
+      "url": "https://github.com/TokenNotIncluded/hireferry/pull/21",
+      "head": "5d9313df5dc9c295a2ab575107ed665b3a92dc19",
+      "base": "dd3c20e40093892cf14f50fe09cd8c6c93350525",
+      "apk_sha256": "935fc98fa8aa62ef84b6d12205f9216c6e8eaf2c9ffd3389bbe54a95a83c9b23",
+      "receipt_path": "evidence/hireferry-21-final-20261121.json",
+      "receipt_native": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/final-publication.json",
+      "receipt_bytes": 12031,
+      "receipt_sha256": "f7037e41ab116300d5188c9e6fc445997c3dcdcd1fe4e85e9f1d37ebfcd35c3e",
+      "baseline": "All original45-second-per-condition Android assertions passed at the fixed5d source; no ANR since boot.",
+      "prior_failures": "42d Focus5006ms/GetUrl SendError/SIGABRT and first Chrome fixture crash retained. Removing only the fixture disable-sync flag enabled the actual joint flow; exact Chrome crash root cause is not claimed from unsymbolized evidence.",
+      "boundaries": "Private API35 emulator5582 and synthetic local member/SQLite only. Formal signing, physical-phone acceptance, production authentication, release/store publication and new iOS execution are not claimed.",
+      "drive_url": "https://drive.google.com/file/d/1j3JXDIKZQl9zzB_aLbWO06TLzOC85QDv/view",
+      "drive_full_bytes_verified": true,
+      "root_independent_artifact_check": {
+        "evidence_files_verified": 15,
+        "all_bytes_and_sha256_match": true,
+        "apk_sha256_match": true,
+        "job": "26c4545eae1eab8d27485f4a48077d3c-174"
+      }
+    },
+    "latest_upstream_propagation": {
+      "zuse": {
+        "main": "a1bb8fd2cbce0a9d85134999883c578358065242",
+        "tree": "62c26269d54b443addcd9da7bebc7a5a8d0fd645",
+        "url": "https://github.com/LIghtJUNction/zuse/commit/a1bb8fd2cbce0a9d85134999883c578358065242",
+        "readback": "GitHub plugin independently verified by root and aggregate owner",
+        "validation_scope": "Owner report records189-suite at the earlier source before a test-only Clippy fix and macOS visibility guard; final native X11 fixture/Clippy/cross-compilation are separately source-bound. No live Wayland/macOS/Windows runtime claim."
+      },
+      "ztype": {
+        "main": "da6feb1a3c5488f3854c63d5e5db173ca250dba4",
+        "tree": "e8a34d10f84572ef351f824a5e668286b58b1254",
+        "url": "https://github.com/LIghtJUNction/ztype/commit/da6feb1a3c5488f3854c63d5e5db173ca250dba4",
+        "delta": "Only Cargo.lock zuse source SHA changed from the76c migration publication.",
+        "owner_validation": "72 passed; one optional external-dictionary test ignored.",
+        "scope": "The earlier28 Wayland checks remain bound to76c and its recorded ELF, not automatically attributed to this new dependency source."
+      },
+      "ssmcp_consumer": "4237eea2 already published zusea1bb lock/gitlink. Root verified Cargo.lock SHA082cdef2ddb1a4acadf87bd927cb875c802808c20c303721829661c917a03aec; later main31e also contains context153 and PR154. Final source-owner integration and runtime acceptance remain in progress.",
+      "aggregate_owner": "Project Z root and builtin pr_personal_repos own the single final44 gitlink/catalog/check/resolve --all/impact snapshot.",
+      "oh_my_ztty": {
+        "main": "f04f6ea8ae909e121edabbd766ee725a472f8146",
+        "tree": "279a0254c9059156081892c008247e08fa608384",
+        "ssmcp_gitlink": "4237eea2cab8253b8dff84d81861ba1e1adf4246",
+        "ztty_gitlink": "be29c6763d3f63832f77c21746d7d62aa70e7d62",
+        "native_owner_reported_checks": 112,
+        "remaining": "Integrate draft zttyc7 pin and final SSMCP source without losing either source update; no new final bundle claim."
+      }
+    },
+    "prior_hireferry_mobile_snapshot_1955": {
       "url": "https://github.com/TokenNotIncluded/hireferry/pull/21",
       "status": "draft_native_crash_minimal_fix_pushed_rebuild_and_same_assertion_acceptance_pending",
       "head": "5d9313df5dc9c295a2ab575107ed665b3a92dc19",
@@ -16501,24 +16737,73 @@
       ],
       "runtime_scope": "Owned emulator5582; no physical phone, production authentication or release signing."
     },
-    "latest_upstream_propagation": {
-      "zuse": {
-        "main": "a1bb8fd2cbce0a9d85134999883c578358065242",
-        "tree": "62c26269d54b443addcd9da7bebc7a5a8d0fd645",
-        "url": "https://github.com/LIghtJUNction/zuse/commit/a1bb8fd2cbce0a9d85134999883c578358065242",
-        "readback": "GitHub plugin independently verified by root and aggregate owner",
-        "validation_scope": "Owner report records189-suite at the earlier source before a test-only Clippy fix and macOS visibility guard; final native X11 fixture/Clippy/cross-compilation are separately source-bound. No live Wayland/macOS/Windows runtime claim."
-      },
-      "ztype": {
-        "main": "da6feb1a3c5488f3854c63d5e5db173ca250dba4",
-        "tree": "e8a34d10f84572ef351f824a5e668286b58b1254",
-        "url": "https://github.com/LIghtJUNction/ztype/commit/da6feb1a3c5488f3854c63d5e5db173ca250dba4",
-        "delta": "Only Cargo.lock zuse source SHA changed from the76c migration publication.",
-        "owner_validation": "72 passed; one optional external-dictionary test ignored.",
-        "scope": "The earlier28 Wayland checks remain bound to76c and its recorded ELF, not automatically attributed to this new dependency source."
-      },
-      "ssmcp_consumer": "Native zuse owner preparing adapter/native E2E on isolated lock+gitlink update; must hand off to the existing sole SSMCP source/release owner before main mutation.",
-      "aggregate_owner": "Project Z root and builtin pr_personal_repos own the single final44 gitlink/catalog/check/resolve --all/impact snapshot."
+    "ztty_memory_iteration": {
+      "status": "Exact existing ELF private software/GPU sevenstage baseline running after Core released lock; no source edit",
+      "goal": "measure 1->10->close9 retain1 memory; no source optimization without evidence; original 256KiB PTY3-6ms/ZLE350-380ms boundary retained",
+      "source": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25",
+      "binary_sha256": "239aa74c8952d272832188ccde80c4805505faf892bb4247904aaafbba1e1e8c",
+      "checkpoint": "/home/lightjunction/.local/state/work-maintainer/ztty-memory-iteration-20261120.json",
+      "resource": "2GiB/CPU1 ~1-2min no Cargo or shared host input",
+      "owner": "builtin pr_personal_repos"
+    },
+    "ssmcp_input_requirement": {
+      "status": "authenticated_requirement_recorded_and_forwarded_existing_native_source_owner",
+      "effective_name": "--input",
+      "default": "terminal",
+      "terminal": "Default terminal handler",
+      "web": "Explicit host/port",
+      "mcp": [
+        "stdio",
+        "http"
+      ],
+      "superseded_name": "--watch",
+      "source_message_ids": [
+        "55753a3ee2edf2279d6cd787f1ec7c2b",
+        "53b2d1daf70333ef7bd05ee9f273b572",
+        "5dc97d5cef07e2ee4822303e19bd80e1",
+        "92cd69fcda5696c807ec3582c9696c77",
+        "8a1e4b8dd7f95a0120882ce12554cf87",
+        "afc50b750e3e865426123b9a85a63e61"
+      ],
+      "source_implementation_or_runtime_pass_claimed": false,
+      "semantics": "Select who handles messages sent FROM the chat box; destination/processing routing",
+      "pipeline_support": true
+    },
+    "org_final_archive": {
+      "folder_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+      "verified_at": "2026-11-20T20:36:23.331387+00:00",
+      "files": [
+        {
+          "id": "1v9KoSJmIDkTVZ8CyEJMbnWXlmaodHiAD",
+          "url": "https://drive.google.com/file/d/1v9KoSJmIDkTVZ8CyEJMbnWXlmaodHiAD/view?usp=drivesdk",
+          "name": "project-z-org-pr-cleanup-20261120.json",
+          "source_path": "/workspace/scratch/3cc863eec631/pr-cleanup-org.json",
+          "readback_path": "/workspace/scratch/3cc863eec631/pr-org-drive-readback/project-z-org-pr-cleanup-20261120.json",
+          "bytes": 63999,
+          "sha256": "ea39c35bc0d12a35ac8b86316e9a422edbd20c2384712aa39c52866f42fc3f52",
+          "complete_raw_readback_verified": true
+        },
+        {
+          "id": "1-qMxYDCrmQwEXC-U0C0qlNZD9IUH898Z",
+          "url": "https://docs.google.com/document/d/1-qMxYDCrmQwEXC-U0C0qlNZD9IUH898Z/edit?usp=drivesdk&ouid=112514559335332028622&rtpof=true&sd=true",
+          "name": "project-z-org-pr-cleanup-20261120.md",
+          "source_path": "/workspace/scratch/3cc863eec631/pr-cleanup-org.md",
+          "readback_path": "/workspace/scratch/3cc863eec631/pr-org-drive-readback/project-z-org-pr-cleanup-20261120.md",
+          "bytes": 12388,
+          "sha256": "5bb6d6f42a830ac4b279bce7a9dceab2cf55cfba001cf8fa657e8d3f0ee05ae7",
+          "complete_raw_readback_verified": true
+        },
+        {
+          "id": "1j3JXDIKZQl9zzB_aLbWO06TLzOC85QDv",
+          "url": "https://drive.google.com/file/d/1j3JXDIKZQl9zzB_aLbWO06TLzOC85QDv/view?usp=drivesdk",
+          "name": "project-z-hireferry21-native-final-20261120.json",
+          "source_path": "/workspace/scratch/3cc863eec631/pr-cleanup-org-hf21-final.json",
+          "readback_path": "/workspace/scratch/3cc863eec631/pr-org-drive-readback/project-z-hireferry21-native-final-20261120.json",
+          "bytes": 12031,
+          "sha256": "f7037e41ab116300d5188c9e6fc445997c3dcdcd1fe4e85e9f1d37ebfcd35c3e",
+          "complete_raw_readback_verified": true
+        }
+      ]
     }
   },
   "core_git_source_migrations": {
