@@ -162,3 +162,7 @@
 	path = mechrevo-drivers
 	url = https://github.com/LIghtJUNction/mechrevo-drivers.git
 	branch = main
+[submodule "zi18n"]
+	path = zi18n
+	url = https://github.com/LIghtJUNction/zi18n.git
+	branch = main

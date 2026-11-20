@@ -23,6 +23,7 @@
 "zgraphics" = { path = "zgraphics" }
 "zharness" = { path = "zharness" }
 "zhex" = { path = "zhex" }
+"zi18n" = { path = "zi18n" }
 "zinput" = { path = "zinput" }
 "zldap" = { path = "zldap" }
 "zmcl" = { path = "zmcl" }

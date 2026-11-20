@@ -114,7 +114,8 @@
         "Cargo.toml"
       ],
       "requires": [
-        "zcalld"
+        "zcalld",
+        "zgpui"
       ]
     },
     {
@@ -289,6 +290,18 @@
       "requires": []
     },
     {
+      "name": "zi18n",
+      "path": "zi18n",
+      "url": "https://github.com/LIghtJUNction/zi18n.git",
+      "branch": "main",
+      "commit": "b90984b48465a764bcb699ad2bb3251fa7020024",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
       "name": "zinput",
       "path": "zinput",
       "url": "https://github.com/LIghtJUNction/zinput",
@@ -322,7 +335,11 @@
       "manifests": [
         "Cargo.toml"
       ],
-      "requires": []
+      "requires": [
+        "zclap",
+        "zconv",
+        "zgpui"
+      ]
     },
     {
       "name": "zmcpio",
@@ -479,7 +496,9 @@
       "manifests": [
         "Cargo.toml"
       ],
-      "requires": []
+      "requires": [
+        "zgpui"
+      ]
     },
     {
       "name": "zuse",
@@ -3714,6 +3733,24 @@
       "features": {
         "default": [],
         "force-scalar": []
+      },
+      "dependencies": []
+    },
+    {
+      "name": "zi18n",
+      "version": "0.1.0",
+      "repository": "zi18n",
+      "manifest": "zi18n/Cargo.toml",
+      "workspace": "zi18n",
+      "publish": true,
+      "rust_version": "1.85",
+      "library": true,
+      "features": {
+        "alloc": [],
+        "default": [],
+        "std": [
+          "alloc"
+        ]
       },
       "dependencies": []
     },

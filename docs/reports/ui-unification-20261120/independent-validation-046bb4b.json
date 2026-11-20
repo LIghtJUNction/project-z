@@ -1,0 +1,30 @@
+{
+  "schema": "project-z.independent-validation-receipt.v1",
+  "source": "046bb4b0b73f82e0943c92d7c81facb9968b8520",
+  "tree": "8eedf730472ee2ec056c71ffafded2e73acaf4af",
+  "started_at_utc": "2026-11-20T09:05:52.095431+00:00",
+  "completed_at_utc": "2026-11-20T09:08:34.563350+00:00",
+  "scope": "Independent aggregate validation applies only to this exact source. Subsequent metadata and source pins require their own validation.",
+  "check": {
+    "command": "python3 scripts/project_z.py check",
+    "exit_code": 0,
+    "wall_seconds": 0.874,
+    "repositories": 41,
+    "packages": 60
+  },
+  "resolve_all": {
+    "command": "python3 scripts/project_z.py resolve --all",
+    "exit_code": 0,
+    "wall_seconds": 160.032,
+    "rust_repositories_resolved": 36
+  },
+  "preservation": {
+    "repository_checkouts_including_root": 99,
+    "root_and_recursive_checkouts_clean_and_pinned": true,
+    "protected_candidate_paths": 371,
+    "protected_existing_files": 138,
+    "preservation_changes": [],
+    "global_cargo_config_unchanged": true
+  },
+  "provenance": "Transcribed from the completed independent receipt and cross-checked against its command records, source provenance, baseline and final checkout inventories, and evidence checksums."
+}

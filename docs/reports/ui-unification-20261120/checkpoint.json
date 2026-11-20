@@ -1,7 +1,7 @@
 {
   "schema": "project-z.ui-migration-checkpoint.v1",
   "recorded_at": "2026-11-20T09:00:21.939780+00:00",
-  "status": "candidate-local-check-passed",
+  "status": "stage-1-metadata-check-passed",
   "base": "ad1c9e21c9a35ebb2f4059529409b4ad3f2960fd",
   "sync": "Updated 41 repositories and 60 packages",
   "check": {
@@ -22,15 +22,28 @@
     "ztype"
   ],
   "remaining_owners": {
-    "ztty": "Frozen 1631db8 passed 17 local gates. Formal run44706305817 has Linux toolchain/UI failures under investigation; no official publication is claimed.",
-    "oh-my-ztty": "Current suite owner: preserve 0.2.4 features and validate the 0.2.5 bundle against actual successful dependency releases.",
-    "ssmcp": "Emergency17 awaits complete UI and formal release gates. Existing feature18 owners are converging their branches; the aggregate keeps its compatible bfe5f25 dependency cohort."
+    "ztty": "The release owner is validating 0.5.2 artifacts for 6e2ce246b0b50e6b82da99756832feae6e966f21. The aggregate pin is 1631db8a02e8627d5d35ac0e1d4bef93475f45dc.",
+    "oh-my-ztty": "The suite owner is assembling 0.2.6 and will validate the bundle against successfully published component artifacts.",
+    "ssmcp": "The single feature release owner is preparing SSMCP 21. The aggregate pin is bfe5f25ffab718f100b11d2ce55c8dc839cbad71.",
+    "zgpui_consumers": "The respective consumer owners are preparing sources for the 0.1.4 and 0.1.5 wave.",
+    "zmcl": "The zmcl owner is preparing the zi18n consumer. Acceptance requires the exact consumer commit and its manifest and lockfile."
   },
-  "main_acceptance": "Requires check and resolve --all passing on the final coherent pins, plus independent verification of nested excluded applications and actual source archives. This checkpoint is not accepted as main.",
+  "main_acceptance": "Pending check and resolve --all on the final coherent pins, plus independent verification of nested excluded applications and actual source archives.",
   "merged_main": "f0659de7c732163b5ebb02c76516dd11b264d21c",
   "previous_checkpoint": "b84f610364b0e79124aceb7665100296187c43fb",
   "accepted_gui_source": "e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74",
   "source_links_validation": "source-links-validation.json",
   "accepted_outer_gui_source": "ab2b3b6726fa7c7c6ee092607f95861d2097e332",
-  "resolve_all": "Pending on this frozen candidate."
+  "resolve_all": "Independent validation passed for prior source 046bb4b0b73f82e0943c92d7c81facb9968b8520 (independent-validation-046bb4b.json). Final stage 2 pins still require resolve --all.",
+  "independent_validation": "independent-validation-046bb4b.json",
+  "stage_1": {
+    "base": "046bb4b0b73f82e0943c92d7c81facb9968b8520",
+    "dependency_audit": "stage-1-dependency-audit.md",
+    "sync": "Updated 42 repositories and 61 packages",
+    "check": {
+      "exit_code": 0,
+      "stdout": "OK: 42 repositories, 61 packages; versions and graph agree\n",
+      "stderr": ""
+    }
+  }
 }

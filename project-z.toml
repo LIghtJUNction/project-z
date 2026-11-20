@@ -39,7 +39,7 @@ requires = ["ztty", "ssmcp", "zshard", "zdot", "zrc", "zfetch"]
 
 [repositories.zcall-gui]
 role = "application"
-requires = ["zcalld"]
+requires = ["zcalld", "zgpui"]
 
 [repositories.lmm-api-source]
 role = "application"
@@ -47,6 +47,7 @@ manifests = ["services/core/Cargo.toml", "apps/cli/Cargo.toml"]
 
 [repositories.ztype]
 role = "application"
+requires = ["zgpui"]
 
 [repositories.zrc]
 role = "configuration"
@@ -61,6 +62,7 @@ role = "application"
 
 [repositories.zmcl]
 role = "application"
+requires = ["zconv", "zclap", "zgpui"]
 
 [repositories.OniMods]
 role = "application"
