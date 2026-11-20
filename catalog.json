@@ -108,7 +108,7 @@
       "path": "zcall-gui",
       "url": "https://github.com/LIghtJUNction/zcall-gui.git",
       "branch": "main",
-      "commit": "fee45f81d380acc4e16b7f448baac1c938075bb3",
+      "commit": "e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -2986,7 +2986,7 @@
         {
           "name": "zgpui",
           "alias": null,
-          "requirement": "=0.1.1",
+          "requirement": "=0.1.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
