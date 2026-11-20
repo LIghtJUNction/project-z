@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T20:44:09.232470+00:00",
+  "generated_at": "2026-11-20T21:18:10.714314+00:00",
   "timezone": "Asia/Taipei",
   "scope": "Initial 85 PRs, latest GitHub default-branch dependency migration, generated-binary history cleanup, development-machine cache cleanup, release integration and the requested named local/remote contexts",
   "batch_status": "in_progress",
@@ -10809,7 +10809,7 @@
     }
   },
   "current_maintenance": {
-    "generated_at": "2026-11-20T20:44:09.232470+00:00",
+    "generated_at": "2026-11-20T21:18:10.714314+00:00",
     "root_consumers": {
       "zcall-gui": {
         "status": "merged_and_main_tree_read_back",
@@ -15572,7 +15572,7 @@
     },
     "ssmcp_release": {
       "status": "existing_native_owner_main_integration_build_and_final_acceptance_in_progress",
-      "main_verified": "90c497007f6d6f16c3dd2da6a4599c48787e5ee1",
+      "main_verified": "cf0ab581700918a37fcccbebb93de2e0cab02841",
       "candidate": "b156254b45c015a3994b8be1475b423167ac980f",
       "candidate_actual_source_audit": {
         "total_packages": 277,
@@ -15582,7 +15582,7 @@
       },
       "python_tests_passed": 100,
       "new_formal_release": false,
-      "current_public_tree": "b66c011c488b79972760848abee8427b4bbfe706",
+      "current_public_tree": "bd2bcce33baffa69b82d69d9cff3abdb85baa0fb",
       "scope_note": "Earlier source-audit and Python test counts retain their original frozen-candidate scope; not relabelled as complete validation of the latest public main.",
       "previous_final_gate_plan_text": "pending on final fixed SSMCP cohort plus zcalld97d; original build commits and evidence stay separate",
       "current_final_gate_plan": {
@@ -15606,12 +15606,13 @@
         "merge": "90c497007f6d6f16c3dd2da6a4599c48787e5ee1",
         "tree": "b66c011c488b79972760848abee8427b4bbfe706",
         "owner_reported_scope": "178 unit /14 CLI/10 isolated PTY passed;10 helper fixtures ignored; no root rerun"
-      }
+      },
+      "main_observation_scope": "Root GitHub plugin observed PR155 integration; current input/agent authoring and final source freeze remain with the existing native owner. No main-wide validation is inherited from the context candidate."
     },
     "context_request": {
-      "status": "5ca_actual_foreground_launch_failed_before_reload_diagnosis_in_progress",
+      "status": "fixed_candidate_validated_and_existing_owner_merge_observed",
       "requested": "Use Docker-style named contexts to unify local and remote selection",
-      "source_revision": "ccb91955c25969f4779588d4cebb09b72c00f829",
+      "source_revision": "bbebfaef5eeefa182776ff03f21d510c1ea4fed3",
       "existing_state": "Local and HTTPS relay connections share broker, wire and native runtime. The current runtime explicitly rejects the legacy SSH destination form.",
       "reference_urls": [
         "https://docs.docker.com/engine/manage-resources/contexts/",
@@ -15620,7 +15621,7 @@
       "implemented": true,
       "published": true,
       "base": "31e4d0431a5da4dc5e298a0a9f06e8813b814e77",
-      "worktree": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context",
+      "worktree": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
       "transport_scope": [
         "local",
         "HTTPS relay"
@@ -15630,26 +15631,9 @@
       "credentials": "Existing origin-scoped account store remains separate.",
       "session_boundary": "Switch affects new connections; existing sessions/jobs and saved manifests remain pinned to resolved target.",
       "draft_url": "https://github.com/LIghtJUNction/ssmcp/pull/155",
-      "draft_head": "5ca8fb78876c9270876b4240cda32c0e191ebe84",
-      "draft_tree": "8548187096d1d785b4030f55ef230d81c86497f7",
-      "current_partial_validation": {
-        "job": "89e6734e0887cd4fff5277f37e7545e7-44",
-        "exit_code": 1,
-        "unit_passed": 83,
-        "cli_passed": 17,
-        "failed_tests": 0,
-        "ignored_tests": 0,
-        "strict_clippy": "passed",
-        "compiler_artifact": "passed",
-        "immutable_cli_sha256": "a67e7ae9fa0f6c0ad74986162a5454d885ac01890c2ded0bba6bd206944703a5",
-        "binary_bytes": 215931224,
-        "actual_reload_executed": false,
-        "failure": "invalid ssmcp UI TOML configuration",
-        "receipt": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T203240Z/receipt.json",
-        "receipt_bytes": 26391,
-        "receipt_sha256": "6d2981c3d266f446ab60112bb0ce723af1db4e8519f6ef59604aa222954a005f"
-      },
-      "release_boundary": "PR153 is merged. PR155 reload repair is under final isolated local validation and native sole source-owner integration; no new formal release is claimed.",
+      "draft_head": "bbebfaef5eeefa182776ff03f21d510c1ea4fed3",
+      "draft_tree": "1356b94a1e43b13185d280fec98451fdd5a6b010",
+      "release_boundary": "PR153 and PR155 are merged. The exact bbeb candidate passed its focused gates. Final combined SSMCP Gate10/P1 and a new formal release remain separate and pending.",
       "prior_snapshot_1955": {
         "status": "draft_75_unit_passed_cli_fixture_compile_fix_pending",
         "requested": "Use Docker-style named contexts to unify local and remote selection",
@@ -15689,54 +15673,107 @@
         "release_boundary": "Isolated cbe-based worktree and shared Cargo outer lock; not merged into the current release or frozen final P1 candidate."
       },
       "followup": {
-        "status": "5ca_actual_foreground_launch_failed_before_reload_diagnosis_in_progress",
-        "followup_pr": 155,
-        "followup_head": "5ca8fb78876c9270876b4240cda32c0e191ebe84",
-        "followup_tree": "8548187096d1d785b4030f55ef230d81c86497f7",
-        "prior_gate": {
-          "head": "aa1fa28b45c71bd00f4916e72d220be2c2ecf0fe",
-          "unit_passed": 83,
-          "cli_passed": 17,
-          "clippy": "failed ptr_arg; no lint waiver; one parameter Vec->slice fixed5ca",
-          "job": "89e6734e0887cd4fff5277f37e7545e7-3a",
-          "exit_code": 1
-        },
-        "pending": "5ca Clippy + immutable CLI + three real foreground reload scenarios; native source owner owns main integration",
-        "actual_job": "89e6734e0887cd4fff5277f37e7545e7-44",
-        "actual_start_sha256": "12576dc756e368ed4b918d27f2945d9e23f63f8957d6d8c66c4d93cf2ce584be",
-        "original_pr": 153,
-        "original_merged_main": "b0a07b047b1532688f06b9df8423e9bfc044c405",
-        "original_merge_actor": "Existing other maintainer; not Project Z root/Core/Personal",
-        "original_merge_tree": "37b33d06c09dcadb6315f98b9c06d54d040822b2",
-        "current_base": "31e4d0431a5da4dc5e298a0a9f06e8813b814e77",
-        "current_url": "https://github.com/LIghtJUNction/ssmcp/pull/155",
-        "source_scope": "Reload must pin the resolved local/HTTPS endpoint even if the named/current context changes or disappears. Preserve argument values, saved session entry point, cwd and environment; serialize no credential.",
-        "original_75_scope": "ab980 unit75 passed; CLI fixture failed compilation and executed zero CLI tests; LowerHex fixture fixed in8de.",
-        "current_result_scope": "Exact5ca strict Clippy,83 unit,17 CLI and compiler-artifact passed. First actual foreground scenario failed with invalid ssmcp UI TOML configuration before any reload; diagnosis pending. No runtime reload pass claimed.",
-        "actual_result": {
-          "job": "89e6734e0887cd4fff5277f37e7545e7-44",
-          "exit_code": 1,
-          "unit_passed": 83,
-          "cli_passed": 17,
-          "failed_tests": 0,
-          "ignored_tests": 0,
-          "strict_clippy": "passed",
-          "compiler_artifact": "passed",
-          "immutable_cli_sha256": "a67e7ae9fa0f6c0ad74986162a5454d885ac01890c2ded0bba6bd206944703a5",
-          "binary_bytes": 215931224,
-          "actual_reload_executed": false,
-          "failure": "invalid ssmcp UI TOML configuration",
-          "receipt": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T203240Z/receipt.json",
-          "receipt_bytes": 26391,
-          "receipt_sha256": "6d2981c3d266f446ab60112bb0ce723af1db4e8519f6ef59604aa222954a005f"
+        "pull_request": 155,
+        "url": "https://github.com/LIghtJUNction/ssmcp/pull/155",
+        "draft": false,
+        "merged": true,
+        "branch": "fix/context-reload-target-20261121",
+        "candidate": "bbebfaef5eeefa182776ff03f21d510c1ea4fed3",
+        "tree": "1356b94a1e43b13185d280fec98451fdd5a6b010",
+        "parents": [
+          "5ca8fb78876c9270876b4240cda32c0e191ebe84"
+        ],
+        "integration_base": "31e4d0431a5da4dc5e298a0a9f06e8813b814e77",
+        "native_source": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+        "native_clean_readback": true,
+        "changed_paths": [
+          "README.md",
+          "docs/client-server.md",
+          "docs/connection-contexts.md",
+          "scripts/e2e_connection_context_reload.py",
+          "src/client.rs",
+          "src/client/reload.rs",
+          "src/client/connection_context.rs",
+          "src/client/ui.rs"
+        ],
+        "dependency_change_from_base": false,
+        "merge_performed_by_this_agent": false,
+        "merge_sha": "cf0ab581700918a37fcccbebb93de2e0cab02841",
+        "merge_tree": "bd2bcce33baffa69b82d69d9cff3abdb85baa0fb",
+        "merge_parent": "e767225827eec4955ab49bb80629cea8879ec10b",
+        "merged_at": "2026-11-20T21:02:15Z",
+        "merged_by_login": "LIghtJUNction",
+        "mergeable": null,
+        "mergeable_state": "unknown (PR already merged)",
+        "github_pr_base_sha_returned": "31e4d0431a5da4dc5e298a0a9f06e8813b814e77",
+        "actual_main_ref_observed": "cf0ab581700918a37fcccbebb93de2e0cab02841",
+        "main_observed_via": "GitHub GET git/ref/heads/main; separate from PR.base.sha",
+        "tested_tree_differs_from_merge_tree": true,
+        "concurrent_main_changes_are_not_claimed_as_tested": true,
+        "evidence": {
+          "path": "evidence/ssmcp-context-bbeb-20261121.json",
+          "bytes": 50289,
+          "sha256": "4970fcca469fe47d3d080dff5d2cbbc483bbced2b5663bb69e81ff1ef640dd79",
+          "drive_archive": {
+            "file_id": "1I39T3KPk6004lvbh5HSOJOJNE_YrBo6m",
+            "url": "https://drive.google.com/file/d/1I39T3KPk6004lvbh5HSOJOJNE_YrBo6m/view",
+            "bytes": 20502,
+            "sha256": "d738b2768a4828e7097ce785852abd9bf915caaaa1fdb0f0d43f62d126e6d667",
+            "full_download_verified": true,
+            "all_7_payloads_verified": true,
+            "verified_at": "2026-11-20T21:09:55.057533+00:00"
+          }
         }
       },
       "pr_status_readback": {
         "number": 155,
-        "state": "open",
-        "merged": false,
-        "head": "5ca8fb78876c9270876b4240cda32c0e191ebe84",
-        "note": "Native724 integration is not the GitHub main PR merge; exact fresh PR/main state verified independently."
+        "state": "closed",
+        "merged": true,
+        "draft": false,
+        "head": "bbebfaef5eeefa182776ff03f21d510c1ea4fed3",
+        "merge": "cf0ab581700918a37fcccbebb93de2e0cab02841",
+        "merge_tree": "bd2bcce33baffa69b82d69d9cff3abdb85baa0fb",
+        "merge_parent": "e767225827eec4955ab49bb80629cea8879ec10b",
+        "merged_at": "2026-11-20T21:02:15Z",
+        "note": "Existing native source owner merged; root/Core did not. The merge tree contains concurrent main changes and is not represented as the tested bbeb tree."
+      },
+      "historical_inspection_source_revision": "ccb91955c25969f4779588d4cebb09b72c00f829",
+      "prior_5ca_validation": {
+        "job": "89e6734e0887cd4fff5277f37e7545e7-44",
+        "exit_code": 1,
+        "unit_passed": 83,
+        "cli_passed": 17,
+        "failed_tests": 0,
+        "ignored_tests": 0,
+        "strict_clippy": "passed",
+        "compiler_artifact": "passed",
+        "immutable_cli_sha256": "a67e7ae9fa0f6c0ad74986162a5454d885ac01890c2ded0bba6bd206944703a5",
+        "binary_bytes": 215931224,
+        "actual_reload_executed": false,
+        "failure": "invalid ssmcp UI TOML configuration",
+        "receipt": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T203240Z/receipt.json",
+        "receipt_bytes": 26391,
+        "receipt_sha256": "6d2981c3d266f446ab60112bb0ce723af1db4e8519f6ef59604aa222954a005f"
+      },
+      "current_validation": {
+        "status": "passed",
+        "candidate": "bbebfaef5eeefa182776ff03f21d510c1ea4fed3",
+        "tree": "1356b94a1e43b13185d280fec98451fdd5a6b010",
+        "unit_passed": 84,
+        "cli_passed": 17,
+        "failed_tests": 0,
+        "ignored_tests": 0,
+        "strict_clippy": "passed",
+        "actual_linux_local_reload_cases_passed": 3,
+        "immutable_cli_bytes": 215941144,
+        "immutable_cli_sha256": "9daa9e1af8152f2cfed004c7e484b3c5cdf2d5a7dde3866ed2cc0506d49f1657",
+        "continuation_job": "26c4545eae1eab8d27485f4a48077d3c-235",
+        "continuation_exit_code": 0,
+        "receipt_sha256": "d3808175dee4f5f26a43aa5228fcf2b14b7af722523647c5de9ebdca7d11d1d2",
+        "actual_reload_sha256": "bc0949d0b6bae2af68d1405008e11aab48f58eb2dc2bdbbba63b139d3dcb7a70",
+        "interruption_boundary": "Client reconnection interrupted the original bbeb artifact build after 84 unit and 17 CLI tests. Continuation verified exact source/lock/package/log identities and ran only the unfinished artifact and three real reloads. Original receipt is preserved.",
+        "root_independent_verification": "Receipt, immutable CLI and full runtime JSON hashes verified on native jobs279 and2b0; all three runtime cases read. GitHub plugin independently read merged PR155 and merge commit/tree/parent.",
+        "full_32_or_p1_rerun": false
       }
     },
     "zgraphics_followup": {
@@ -16751,13 +16788,62 @@
       "runtime_scope": "Owned emulator5582; no physical phone, production authentication or release signing."
     },
     "ztty_memory_iteration": {
-      "status": "Exact existing ELF private software/GPU sevenstage baseline running after Core released lock; no source edit",
+      "status": "baseline_and_allocator_diagnosis_complete_minimal_pr22_candidate_preparing_validation",
       "goal": "measure 1->10->close9 retain1 memory; no source optimization without evidence; original 256KiB PTY3-6ms/ZLE350-380ms boundary retained",
       "source": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25",
       "binary_sha256": "239aa74c8952d272832188ccde80c4805505faf892bb4247904aaafbba1e1e8c",
       "checkpoint": "/home/lightjunction/.local/state/work-maintainer/ztty-memory-iteration-20261120.json",
-      "resource": "2GiB/CPU1 ~1-2min no Cargo or shared host input",
-      "owner": "builtin pr_personal_repos"
+      "resource": "Completed baseline/diagnostic used private Xvfb, 2GiB/CPU1 and no Rust rebuild. The fixed candidate now has a separately scoped jobs=1 build followed by bounded GUI cases under the same outer lock; no shared desktop input or production installation.",
+      "owner": "builtin pr_personal_repos",
+      "baseline": {
+        "two_modes_each_seven_stages": true,
+        "scope": "Private Xvfb; GPU code path uses Mesa llvmpipe, not hardware GPU/VRAM/latency.",
+        "evidence_bytes": 909952,
+        "evidence_sha256": "f30320add876c6b86912e09337b2c4fc43ed4b64963e820d273e984fb3dc5cad",
+        "drive_url": "https://drive.google.com/file/d/12PscZCsQ0KP0I2jYPLLhS8vp2jjnbzXk/view",
+        "drive_full_download_verified": true,
+        "software_broker_pss_bytes": {
+          "one_blank": 6510592,
+          "close_nine_retain_one": 8439808
+        },
+        "llvmpipe_broker_pss_bytes": {
+          "one_blank": 138755072,
+          "close_nine_retain_one": 289515520
+        },
+        "root_review": "Independently read all fourteen baseline samples and verified bundle hash."
+      },
+      "diagnosis": {
+        "path": "evidence/ztty-allocator-diagnosis-20261121.json",
+        "bytes": 15835,
+        "sha256": "d18d023caf5e112e2f551161ea015b89184e690a2ba38cbb2155bfea763a3e1a",
+        "source": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25",
+        "production_source_changed": false,
+        "production_binary_changed": false,
+        "context_and_surface_destruction_successes_per_profile": 10,
+        "live_contexts_after_close_nine": 1,
+        "trace_live_allocated_bytes": {
+          "one_blank": 41980160,
+          "close_nine": 42357168
+        },
+        "trace_allocator_free_bytes_after_close_nine": 335380048,
+        "diagnostic_trim_live_allocations_before_and_after_bytes": 42360048,
+        "diagnostic_trim_anon_pss_bytes": 43849728,
+        "trace_close_nine_anon_pss_bytes": 193660928,
+        "scope": "Two instrumented profiles on the unchanged c7 source/239aa ELF. The explicit trim profile proves allocator retention in this llvmpipe workload; it is not the production candidate result.",
+        "process_cleanup": "Owned processes exited; scope inactive/dead with empty cgroup; shared lock released."
+      },
+      "candidate": {
+        "url": "https://github.com/LIghtJUNction/ztty/pull/22",
+        "draft": true,
+        "head": "cad4d90fabfd1a9a0abf4e419dd8683047fa6347",
+        "tree": "4ba7274a95f06ff0dcfdb8c371d94a5d286454dd",
+        "changed_files": 3,
+        "added_lines": 19,
+        "scope": "GNU/Linux best-effort free-page return after an actual retire/detach view destruction; non-GNU no-op; no timer or global allocator setting.",
+        "static_review": "Independent Core review found no blocker; no compilation or runtime gate claimed by that review.",
+        "runtime_status": "Pending fixed-candidate build and close/reopen/detach/reattach semantics, PTY identity/content, and close latency measurements.",
+        "included_in_final44_snapshot": false
+      }
     },
     "ssmcp_input_requirement": {
       "status": "complete_original_history_read_owner_confirmed",
@@ -16802,7 +16888,19 @@
         "latest_user_default_correction_index": 48
       },
       "implementation_owner": "Existing native SSMCP source/release owner and original CLI implementation thread; Project Z has no parallel source writer",
-      "input_default": "terminal"
+      "input_default": "terminal",
+      "explicit_none": "Disable the chat composer when --input none is explicitly selected; input default remains terminal and agent default remains next-caller.",
+      "latest_supplement": {
+        "message_id": "fbc265b0131638b26cee28102f5e1288",
+        "revision": 2,
+        "source": "Authenticated client_user envelope forwarded by the existing native source owner."
+      },
+      "architecture_review": {
+        "path": "evidence/ssmcp-input-agent-contract-20261121.md",
+        "sha256": "989ff14390ce0b5c8da72478b7d53e0467ccf83df7af58a77d451c3ecb1196a2",
+        "source": "90c497007f6d6f16c3dd2da6a4599c48787e5ee1",
+        "scope": "Read-only routing and persistence review with eight proposed narrow acceptance groups, not executed acceptance results."
+      }
     },
     "org_final_archive": {
       "folder_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
@@ -16839,6 +16937,19 @@
           "complete_raw_readback_verified": true
         }
       ]
+    },
+    "ztype_ztty_followup": {
+      "status": "authenticated_request_received_existing_owner_handoff_and_readonly_path_discovery",
+      "request": "Continue improving ztype; the user reports that it currently does not support ztty.",
+      "source": "Two authenticated client_user revision2 messages forwarded by the existing dependency maintainer.",
+      "source_message_ids": [
+        "6a46f03cb99610891b5de45e7e7b0752",
+        "956884afc78b0321f8ed3fe00dba91d9"
+      ],
+      "last_verified_ztype_main": "da6feb1a3c5488f3854c63d5e5db173ca250dba4",
+      "scope_boundary": "Earlier72tests/1optional skip are the zuse pin update; earlier28Wayland cases belong to the prior76 source. Neither proves the newly requested ztty input interoperability.",
+      "ownership": "Existing dependency maintainer coordinates with the original ztype owner; Org only reads handoff and input paths. Personal retains the separate ztty memory candidate and final44 graph ownership.",
+      "implementation_or_runtime_acceptance_claimed": false
     }
   },
   "core_git_source_migrations": {

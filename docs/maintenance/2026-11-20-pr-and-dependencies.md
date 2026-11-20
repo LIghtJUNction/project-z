@@ -1,6 +1,6 @@
 # Project Z 维护进展
 
-更新：2026-11-21 04:44（Asia/Taipei）。
+更新：2026-11-21 05:18（Asia/Taipei）。
 
 ## 当前结果
 
@@ -44,7 +44,9 @@ ztype 已完成 28 项私有 Wayland 验收，且确认与此前通过 Rust、Cl
 
 ztty 采用原维护者已发布的 be29c676：规范 Git 源、实际 Cargo compiler-artifact 路径、独立插件夹具和锁文件一起完成迁移。[已发布验收记录](https://github.com/LIghtJUNction/ztty/blob/be29c6763d3f63832f77c21746d7d62aa70e7d62/docs/reports/default-branch-sources-20261121/results.json)包含 530 项 Rust 通过、9 项原有忽略、22 项插件 CLI 检查，以及软件和 GPU 两种模式各 12 次 reload 尝试。GPU 使用私有 Xvfb 下的 Mesa llvmpipe；这轮是源码集成，未更新桌面安装或发行版。验收脚本的 Cargo 配置目录解析补丁也已随 [PR #21](https://github.com/LIghtJUNction/ztty/pull/21) 合入 c7c2a3e8。仅共享配置、绝对环境路径、异地启动的相对环境路径三种真实 metadata 场景均通过，8 组 GUI／Wayland 命令参数全部指向实际产物。该补丁只改一个 Python 文件；此前完整运行门禁仍保留 be29 的源码身份。
 
-用户追加的 ztty 迭代已接续：本轮先测一个窗口、十个窗口、关闭九个保留一个等七个阶段，分别记录软件和 GPU 模式的实际进程内存。测试绑定 c7c2a3e8 源码和固定 ELF，使用独立 Xvfb；context 验收释放资源后，当前已启动软件和 GPU 两轮基线测量。既有 72 个 worktree 保持原样。旧记录指向 GPU／分配器在关闭窗口后仍保留匿名页，尚未把这一现象认定为当前代码泄漏，也未宣称本轮已有内存优化结果。
+用户追加的 ztty 迭代已完成两种模式各七阶段的内存基线。固定 c7c2a3e8 源码和同一 ELF，在私有 Xvfb 中从一个窗口增至十个，再关闭九个：软件模式的 broker PSS 从 6.5 MB 变为 8.4 MB；GPU 代码路径从 138.8 MB 变为 289.5 MB。这里的 GPU 使用 Mesa llvmpipe，不能外推硬件显存或真实 GPU 延迟。[完整基线](https://drive.google.com/file/d/12PscZCsQ0KP0I2jYPLLhS8vp2jjnbzXk/view)已下载逐字节核对，既有 72 个 worktree 保持原样。
+
+后续[分配器诊断](evidence/ztty-allocator-diagnosis-20261121.json)证实，渲染 context 和 surface 均正常销毁；关闭九个窗口后，活跃分配已从约 42.0 MB 回到 42.4 MB，但分配器仍保留约 335.4 MB 空闲块。在单独的诊断对照中归还空闲页后，匿名 PSS 回到 43.85 MB，活跃分配量不变。这解释了当前 llvmpipe 场景的内存保留。生产代码的最小候选已推送为 [ztty PR #22](https://github.com/LIghtJUNction/ztty/pull/22)：三文件、19 行，仅在确有窗口视图销毁的 retire／detach 完成点归还空闲页。固定 cad4d90f 候选正在准备编译及关窗、重开、detach／reattach 的会话身份、内容和耗时验收；诊断数据不作为该候选的优化成绩，也尚未写入最终 44 仓快照。
 
 zcalld 监听器已更新到 **d5314fe9**，完整吸收当前 c4b4bbab 主线的安装器修复和 0.4.3 改动，同时刷新 zcall-gui 文档提交。逐叶比较确认保留 212 个其余主线条目，五个监听器文件与已审查版本一致。新候选实际通过 **179 项 Rust 测试、严格 Clippy、release 构建和 8 项 TCP／Unix curl 取消测试**，共 22 条命令、零跳过；实际外锁、构建来源和固定二进制摘要均保留在[完整回执](evidence/zcalld-listener-d531-20261121.json)及[云盘副本](https://drive.google.com/file/d/1lVa3-tGuOzOwhsOSooMiUX51kD4i0p_d/view)。现有 SSMCP 负责人正在准备最终固定组合的 Gate10/P1，PR #1 仍为草稿。原 97d 的 177 项测试与找回的 job39a 启动审计保持原身份；最终联调仍要求真实跨进程阻塞生成取消，不把旧 32 项集合中无关的 shared-library、Go、打包／安装检查计成本轮通过。
 
@@ -91,7 +93,9 @@ WGT 的 4 个精确 Cargo 缓存目录已全部删除并逐项验证。执行前
 
 **SSMCP 新版本**由现有发布维护者继续处理。[PR #152](https://github.com/LIghtJUNction/ssmcp/pull/152) 已合并至 cbe3d0ef；发布前的固定基线构建、六个粘贴场景、后续粘贴补丁和最新 zcalld 监听组合的最终 Gate10/P1 分别保留各自证据。旧候选的 277 个包源码审计与 100 项 Python 检查保持原提交范围，正式新版本尚未发布。
 
-追加的 **Docker context 式本地／远程统一化** 已随 [PR #153](https://github.com/LIghtJUNction/ssmcp/pull/153) 合入 b0a07b04。独立验收发现前台 reload 仍会重新解析旧 context 名称：若默认配置已切换或原配置已删除，重载可能改变目标或失败。[后续 PR #155](https://github.com/LIghtJUNction/ssmcp/pull/155) 将重载固定到启动时已解析的本地／HTTPS 目标，并保留参数值、保存会话入口、cwd 和环境。aa1 候选的 **83 项单元测试与 17 项真实 CLI 检查全部通过**；严格 Clippy 随后指出一处 Vec 参数应改为切片，5ca8fb78 已做单行修复。5ca 已实际通过严格 Clippy、83 项单元测试、17 项 CLI 检查和构建产物来源核对；首个真实前台场景却在 UI 配置读取处报错，尚未进入 reload。原始失败与固定二进制已保留，维护者正在定位原因，三种真实重载场景仍待完成。配置优先级、按 origin 隔离凭据和保存会话固定目标的规则已补入文档；现行运行代码不提供 SSH 设备连接。参考 [Docker contexts](https://docs.docker.com/engine/manage-resources/contexts/) 与 [context use](https://docs.docker.com/reference/cli/docker/context/use/)。
+追加的 **Docker context 式本地／远程统一化** 已随 [PR #153](https://github.com/LIghtJUNction/ssmcp/pull/153) 合入。独立验收又发现两个问题：前台 reload 重新解析旧 context，会在配置切换或删除后改变目标或失败；UI 的严格配置结构遗漏共享 config.toml 中的 contexts 表，导致启动失败。[PR #155](https://github.com/LIghtJUNction/ssmcp/pull/155) 已修复并由原主线负责人于 21:02 UTC 合入 cf0ab581。重载固定使用启动时已解析的本地／HTTPS 目标，保留字面参数、保存会话入口、cwd 和环境；UI 复用现有 typed context 校验，继续拒绝未知字段和凭据字段。
+
+固定 bbebfaef 候选实际通过 **84 项单元测试、17 项 CLI 检查、严格 Clippy，以及 3 次真实本地前台重载**。三个场景分别从命令行、环境变量、持久默认配置选择 context，随后更改或删除配置，再验证实际重载保持原目标。终端重连曾在 101 项 Rust 测试完成后中断构建；续跑先校验同一源码、锁文件、Git 来源和完整日志，再只补完产物构建与三次重载。原中断和更早失败记录均保留。已测试 tree 为 1356b94a，合并 tree 为 bd2bcce3，后者含并行主线改动，因此没有把此门禁标作整个新主线或最终 P1 的通过结果。[完整来源与验收回执](evidence/ssmcp-context-bbeb-20261121.json)和[原始证据包](https://drive.google.com/file/d/1I39T3KPk6004lvbh5HSOJOJNE_YrBo6m/view)已经校验归档。配置优先级、按 origin 隔离凭据及保存会话固定目标的规则保留；现行运行代码不提供 SSH 设备连接。
 
 **开发机证据恢复**：19:32–19:34 UTC，多个现有维护者检查发现部分 `GITHUB/ssmcp-*` 源码／验收目录已不存在，根因尚未确定。本轮有回执的缓存删除没有包含这些路径。主 SSMCP Git 仓库、Project Z 内的 context 隔离树和 zcalld 交接目录仍在；原发布维护者正在从已有副本恢复源码与证据。缺失的五个基线二进制需要重新实编，旧测试记录保持原身份。
 
@@ -99,7 +103,9 @@ WGT 的 4 个精确 Cargo 缓存目录已全部删除并逐项验证。执行前
 
 **最新上游传播**：zuse [a1bb8fd2](https://github.com/LIghtJUNction/zuse/commit/a1bb8fd2cbce0a9d85134999883c578358065242) 已被 ztype [da6feb1a](https://github.com/LIghtJUNction/ztype/commit/da6feb1a3c5488f3854c63d5e5db173ca250dba4) 和 SSMCP [4237eea2](https://github.com/LIghtJUNction/ssmcp/commit/4237eea2cab8253b8dff84d81861ba1e1adf4246) 消费。ztype 的维护者记录 72 项通过、1 项可选词典测试忽略；SSMCP 的锁文件来源已独立核对。oh-my-ztty [f04f6ea8](https://github.com/LIghtJUNction/oh-my-ztty/commit/f04f6ea8ae909e121edabbd766ee725a472f8146) 又消费了 SSMCP 4237，原维护者记录 112 项检查。其 ztty c7 草稿与 SSMCP 后续 context／当前功能提交仍需在同一维护链合流，最终 44 仓实际 sync/check/resolve 尚未完成。
 
-**SSMCP 输入与消息处理**：完整原始记录确认这是两个独立参数。`--input` 选择输入来源，默认 `terminal`，并支持 web 的 host／port、MCP 的 stdio／HTTP、默认或自定义 sock 路径及管道输入；`--agent` 指定聊天框消息的处理者，支持 Codex、Claude Code、其他 coding agent 或另一个 SSMCP，默认名称最终更正为 `next-caller`，表示交付到下一次符合条件的工具调用结果。当前源码负责人及原 CLI 线程统一实现。前一版报告根据分散消息把 input 当作处理目标的解释已纠正；尚未据此修改源码或宣称验收完成。
+**ztype 与 ztty 兼容**：开发机新增要求是继续完善 ztype，并指出目前不支持 ztty。已交由既有维护者协调原 ztype 负责人，先核对输入路径和原验收范围；独立只读调查正在整理现有交接。此前 da6feb1a 的依赖更新检查、旧源码的 28 项 Wayland 场景，都不能替代这次兼容性验收。ztty 的内存候选保持单独验证，最终 44 仓图将等待新增兼容工作收口。
+
+**SSMCP 输入与消息处理**：完整原始记录确认这是两个独立参数。`--input` 选择输入来源，默认 `terminal`，并支持 web 的 host／port、MCP 的 stdio／HTTP、默认或自定义 sock 路径及管道输入；用户最新补充，显式 `--input none` 禁用聊天框。`--agent` 指定聊天框消息的处理者，支持 Codex、Claude Code、其他 coding agent 或另一个 SSMCP，默认名称最终更正为 `next-caller`，表示交付到下一次符合条件的工具调用结果。当前源码负责人及原 CLI 线程统一实现。[只读架构核对](evidence/ssmcp-input-agent-contract-20261121.md)已明确输入、处理方、现有消息队列及保存重载的边界，并列出八组建议验收；建议尚未当作已运行结果。前一版报告把 input 解释为处理目标的错误已纠正，未据此修改源码。
 
 ## 仍需闭合的初始 PR
 
