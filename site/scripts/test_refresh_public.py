@@ -159,8 +159,6 @@ class RefreshCliTests(unittest.TestCase):
              ValueError, "not active and public"),
             (public_responses("zold", "znew", **{crate: (200, "{")}),
              json.JSONDecodeError, "Expecting property name"),
-            (public_responses("zold", "znew", **{crate: (200, '{"crate":{"repository":"https://github.com/other/znew"}}')}),
-             ValueError, "registry ownership"),
             (public_responses("zold", "znew", **{crate: (200, json.dumps(invalid_checksum))}),
              ValueError, "missing registry checksum"),
         ]
@@ -169,6 +167,30 @@ class RefreshCliTests(unittest.TestCase):
                 with self.assertRaisesRegex(error, message):
                     self.run_cli("--only", "zold", "znew", responses=responses)
                 self.assert_snapshot_unchanged()
+
+    def test_foreign_crate_name_keeps_new_public_source_only(self):
+        self.write_curation("zold", "zother", "znew")
+        registry = "https://crates.io/api/v1/crates/znew"
+        foreign_repo = "https://github.com/other/znew"
+        _, body = public_responses("znew")(registry)
+        metadata = json.loads(body)
+        metadata["crate"]["repository"] = foreign_repo
+        responses = public_responses("znew", **{registry: (200, json.dumps(metadata))})
+        self.run_cli("--only", "znew", responses=responses)
+
+        data = json.loads(self.snapshot.read_text())
+        self.assertEqual(data["projects"][:2], self.data["projects"])
+        new = data["projects"][2]
+        self.assertEqual(new["id"], "znew")
+        self.assertIsNone(new["crate"])
+        self.assertEqual(new["crate_lookup"]["status"], "repository_mismatch")
+        build.validate(data, self.curation)
+        page = build.render(data)
+        self.assertIn('data-project="znew"', page)
+        card = page.split('data-project="znew"', 1)[1].split("</li>", 1)[0]
+        self.assertIn(f'href="https://github.com/{OWNER}/znew"', card)
+        self.assertNotIn("crates.io", card)
+        self.assertNotIn(foreign_repo, page)
 
     def test_established_subset_refresh_leaves_other_row_and_order_intact(self):
         source = f"https://raw.githubusercontent.com/{OWNER}/zold/main/Cargo.toml"

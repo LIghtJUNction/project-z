@@ -109,13 +109,14 @@ def refresh(item):
         crate = data["crate"]
         expected = ("https://github.com/" + repo).lower()
         actual = (crate.get("repository") or "").rstrip("/").removesuffix(".git").lower()
-        if actual != expected:
-            raise ValueError("registry ownership does not match reviewed repository: " + package)
-        target = crate.get("default_version") or crate.get("max_stable_version") or crate.get("newest_version")
-        selected = next((value for value in data["versions"] if value["num"] == target and not value["yanked"]), None)
-        if selected:
-            published = {"name": package, "version": selected["num"], "checksum": selected["checksum"],
-                         "repository": crate["repository"], "api": "https://crates.io/api/v1/crates/" + package + "/" + selected["num"]}
+        if actual == expected:
+            target = crate.get("default_version") or crate.get("max_stable_version") or crate.get("newest_version")
+            selected = next((value for value in data["versions"] if value["num"] == target and not value["yanked"]), None)
+            if selected:
+                published = {"name": package, "version": selected["num"], "checksum": selected["checksum"],
+                             "repository": crate["repository"], "api": "https://crates.io/api/v1/crates/" + package + "/" + selected["num"]}
+        else:
+            crate_status = "repository_mismatch"
     evidence = {
         "name": name, "repository": repo, "public": True, "default_branch": branch,
         "repository_api": "https://api.github.com/repos/" + repo,
