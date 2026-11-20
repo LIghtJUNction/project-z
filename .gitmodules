@@ -74,10 +74,6 @@
 	path = zvte
 	url = https://github.com/LIghtJUNction/zvte.git
 	branch = main
-[submodule "zui"]
-	path = zui
-	url = https://github.com/LIghtJUNction/zui.git
-	branch = main
 [submodule "zuse"]
 	path = zuse
 	url = https://github.com/LIghtJUNction/zuse.git

@@ -39,7 +39,7 @@ python3 scripts/project_z.py run --affected zconv -- check
 | 执行与扩展 | `zharness`、`zplugin` | 工具执行、插件 ABI 和插件生命周期 |
 | 系统接口 | `zsys` | 可以复用的平台能力；原生动态库加载已集中在 `dylib` feature |
 | 进程与终端 | `zpty`、`zvte`、`zterm`、`ztuio` | 伪终端与子进程、协议解析、屏幕状态、行与帧差分分别维护 |
-| 图像与界面 | `zgraphics`、`zgpui`、`zui` | 图像协议和解码、可移植场景布局、原生窗口与控件分别维护 |
+| 图像与界面 | `zgraphics`、`zgpui` | 图像协议与解码；统一的场景、布局、原生窗口与控件入口 |
 | 输入与输入法 | `zinput`、`ztype` | 有界组合输入、候选与插件契约由框架维护，词库、候选界面和文本送达由应用负责 |
 | 应用与集成 | `ssmcp`、`zuse`、`ztty`、`zcalld`、`zcall-gui`、`zmcl`、LMM API | 消费公共库，保留应用状态与业务策略 |
 | 实际外部消费者 | OniMods 的 `onim`、`mechrevo-drivers` 控制台 | 从实际 Cargo manifest 跟踪 `zhex` 与 `zclap` 的传播 |
@@ -60,13 +60,13 @@ LMM API 作为真实消费者纳入清单，其 Rust Core 和 CLI 分别读取�
 | `zpty` | 管理 Linux/macOS PTY、Windows ConPTY 和直属子进程；非阻塞读写 | 进程字节流、就绪句柄与退出状态 |
 | `zterm` | 解释字节流，维护字符单元、光标、滚动历史与输入模式 | 屏幕状态、协议响应及可选使用的场景数据 |
 | `zgraphics` | Kitty/Sixel 图像协议、有界解码、存储和放置 | RGBA 缓冲和绘制矩形 |
-| `zgpui` | `no_std` 场景、布局和渲染契约 | 可由宿主渲染器执行的场景 |
-| `zui-native`（仓库 `zui`） | 标准库与原生平台桥接的窗口、事件、OpenGL 和控件 | 可运行的原生界面 |
+| `zgpui` 默认核心 | `no_std` 场景、布局和渲染契约 | 可由宿主渲染器执行的场景 |
+| `zgpui::native` | 显式启用 `native` 后提供原生窗口、事件、OpenGL 和控件；`linux-software` 选择 Linux CPU 后端 | 可运行的原生界面 |
 | `ztty` | 组合进程、终端状态、字体、窗口与剪贴板策略 | 用户使用的终端应用 |
 
 `zpty`、`zgraphics` 和 `zterm` 均使用 `no_std + alloc`。`zpty` 当前没有 Cargo 依赖；`zgraphics` 使用 Zune 解码库。`zterm` 通过常规 Cargo 依赖组合 `zvte`、`zinput`、`zgraphics` 和 `zgpui`，场景是否启用由宿主在运行时决定。
 
-`zui-native` 与 `zgpui` 当前拥有不同 API 和平台职责，现有消费者按实际接口固定来源。未来统一公共入口时，需要先落地接口迁移并验证窗口、输入和渲染，再同步消费者的包名与源码。
+原生窗口实现已并入 `zgpui`，消费者统一使用 `zgpui::native`；默认核心保持零 Cargo 依赖和 `no_std`，终端状态库无需启用原生窗口。旧 `zui` 仓库与 `zui-native` 包名已退出当前依赖清单，历史报告及既有线协议标识保留。统一入口需要同时验证应用窗口、输入、渲染和发布包；下游 gitlink 与版本约束必须指向经过验收的源码。
 
 以下箭头表示上游变更需要传播到的消费者。完整关系由[项目索引](docs/PROJECTS.md)和 `impact --repositories` 给出：
 

@@ -2,7 +2,7 @@ schema_version = 1
 
 [policy]
 system_library = "zsys"
-forbidden_packages = ["ztty-ui", "ztui-core"]
+forbidden_packages = ["ztty-ui", "ztui-core", "zui", "zui-native"]
 
 [repositories.ssmcp]
 role = "application"
@@ -48,7 +48,7 @@ role = "application"
 
 [repositories.zrc]
 role = "configuration"
-manifests = []
+manifests = ["Cargo.toml"]
 requires = ["zdot", "ssmcp"]
 
 [repositories.zfetch]

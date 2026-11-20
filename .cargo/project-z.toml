@@ -32,6 +32,7 @@
 "zplugin" = { path = "zplugin" }
 "zplugin-macros" = { path = "zplugin/crates/zplugin-macros" }
 "zpty" = { path = "zpty" }
+"zrc" = { path = "zrc" }
 "zscan" = { path = "zscan" }
 "zsyn" = { path = "zsyn" }
 "zsys" = { path = "zsys" }
@@ -39,6 +40,5 @@
 "ztty" = { path = "ztty" }
 "ztty-plugin-api" = { path = "ztty/crates/ztty-plugin-api" }
 "ztuio" = { path = "ztuio" }
-"zui-native" = { path = "zui" }
 "zuse-computer" = { path = "zuse" }
 "zvte" = { path = "zvte" }

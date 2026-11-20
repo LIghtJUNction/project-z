@@ -108,7 +108,7 @@
       "path": "zcall-gui",
       "url": "https://github.com/LIghtJUNction/zcall-gui.git",
       "branch": "main",
-      "commit": "5dbc423eedd4d529a38b3e8e3adc3e6355a56b2b",
+      "commit": "fee45f81d380acc4e16b7f448baac1c938075bb3",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -135,7 +135,7 @@
       "path": "zcalld",
       "url": "https://github.com/LIghtJUNction/zcalld.git",
       "branch": "main",
-      "commit": "b853e264eced9fbd25120d261eb188a3a8e3b1df",
+      "commit": "5b5e55af715f67562120873f170891ebd777a230",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -175,7 +175,7 @@
       "path": "zclick",
       "url": "https://github.com/LIghtJUNction/zclick.git",
       "branch": "main",
-      "commit": "530e2f347d2950605ee579a396d5760ebad034bd",
+      "commit": "21ac28b045447dec96a2de85d7aa6db0580081ab",
       "role": "bindings",
       "manifests": [
         "Cargo.toml"
@@ -233,7 +233,7 @@
       "path": "zfetch",
       "url": "https://github.com/LIghtJUNction/zfetch.git",
       "branch": "main",
-      "commit": "f19b278676206d76626dd01e4b89f7ad9ce9318f",
+      "commit": "5006d7a9e2a2d3f292f677df94395e27a794b9c7",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -245,7 +245,7 @@
       "path": "zgpui",
       "url": "https://github.com/LIghtJUNction/zgpui.git",
       "branch": "main",
-      "commit": "1d796d1fc63808dc099ed7b10c92e75835ae2814",
+      "commit": "5b268da910639abd2fb8e581acb4f6eed50b7516",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -317,7 +317,7 @@
       "path": "zmcl",
       "url": "https://github.com/LIghtJUNction/zmcl.git",
       "branch": "main",
-      "commit": "3659cf144c69356268f9a185d9ea80eecb50cc7c",
+      "commit": "35eb8a3242a6ba637266ba1480354138389c9cb0",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -365,7 +365,7 @@
       "path": "zpty",
       "url": "https://github.com/LIghtJUNction/zpty.git",
       "branch": "main",
-      "commit": "66919bc6dcb7757e0437fe955bfa809fb1282b68",
+      "commit": "d263f9a8f0881d259e46c51a7b6753c61ab9be59",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -377,9 +377,11 @@
       "path": "zrc",
       "url": "https://github.com/LIghtJUNction/zrc.git",
       "branch": "main",
-      "commit": "ef8bd9571e206c8086e38b9dcbdc760a466b5133",
+      "commit": "6311bf3377643fff0cff5a45a70b2256e22cc51f",
       "role": "configuration",
-      "manifests": [],
+      "manifests": [
+        "Cargo.toml"
+      ],
       "requires": [
         "ssmcp",
         "zdot"
@@ -436,7 +438,7 @@
       "path": "zterm",
       "url": "https://github.com/LIghtJUNction/zterm.git",
       "branch": "main",
-      "commit": "a2074bac4c030cfd7c0b2514c852a89dcf54648f",
+      "commit": "b5adc3dbc5ca5f28a3ea7e45650a45245be9dc2d",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -472,20 +474,8 @@
       "path": "ztype",
       "url": "https://github.com/LIghtJUNction/ztype",
       "branch": "main",
-      "commit": "12e8a458d69b222a001a9e479823b65da840db6b",
+      "commit": "9dd67a54ac536b22ab0fe4bd008d6b5cdd95c369",
       "role": "application",
-      "manifests": [
-        "Cargo.toml"
-      ],
-      "requires": []
-    },
-    {
-      "name": "zui",
-      "path": "zui",
-      "url": "https://github.com/LIghtJUNction/zui.git",
-      "branch": "main",
-      "commit": "5e37fcfb791eec9ac523fc19373e95d0a513112f",
-      "role": "library",
       "manifests": [
         "Cargo.toml"
       ],
@@ -2984,7 +2974,7 @@
     },
     {
       "name": "zcall-gui",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "repository": "zcall-gui",
       "manifest": "zcall-gui/Cargo.toml",
       "workspace": "zcall-gui",
@@ -2994,23 +2984,25 @@
       "features": {},
       "dependencies": [
         {
-          "name": "zui-native",
-          "alias": "zui",
-          "requirement": "=0.1.0",
+          "name": "zgpui",
+          "alias": null,
+          "requirement": "=0.1.1",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
           "optional": false,
           "default_features": true,
-          "features": [],
+          "features": [
+            "native"
+          ],
           "source": null,
-          "path": "zcall-gui/vendor/zui"
+          "path": "zcall-gui/vendor/zgpui"
         }
       ]
     },
     {
       "name": "zcalld",
-      "version": "0.2.1",
+      "version": "0.2.5",
       "repository": "zcalld",
       "manifest": "zcalld/Cargo.toml",
       "workspace": "zcalld",
@@ -3033,9 +3025,22 @@
           "path": null
         },
         {
+          "name": "zcalld-compat-client",
+          "alias": null,
+          "requirement": "=0.2.5",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zcalld/crates/zcalld-compat-client"
+        },
+        {
           "name": "zcalld-plugin-api",
           "alias": null,
-          "requirement": "=0.2.1",
+          "requirement": "=0.2.5",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3077,7 +3082,7 @@
     },
     {
       "name": "zcalld-compat-client",
-      "version": "0.2.1",
+      "version": "0.2.5",
       "repository": "zcalld",
       "manifest": "zcalld/crates/zcalld-compat-client/Cargo.toml",
       "workspace": "zcalld",
@@ -3103,7 +3108,7 @@
     },
     {
       "name": "zcalld-plugin-aliases",
-      "version": "0.2.1",
+      "version": "0.2.5",
       "repository": "zcalld",
       "manifest": "zcalld/plugins/aliases/Cargo.toml",
       "workspace": "zcalld",
@@ -3115,7 +3120,7 @@
         {
           "name": "zcalld-plugin-api",
           "alias": null,
-          "requirement": "=0.2.1",
+          "requirement": "=0.2.5",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3145,7 +3150,7 @@
     },
     {
       "name": "zcalld-plugin-api",
-      "version": "0.2.1",
+      "version": "0.2.5",
       "repository": "zcalld",
       "manifest": "zcalld/crates/zcalld-plugin-api/Cargo.toml",
       "workspace": "zcalld",
@@ -3188,7 +3193,7 @@
     },
     {
       "name": "zcalld-plugin-community",
-      "version": "0.2.1",
+      "version": "0.2.5",
       "repository": "zcalld",
       "manifest": "zcalld/plugins/community/Cargo.toml",
       "workspace": "zcalld",
@@ -3200,7 +3205,7 @@
         {
           "name": "zcalld-compat-client",
           "alias": null,
-          "requirement": "=0.2.1",
+          "requirement": "=0.2.5",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3213,7 +3218,7 @@
         {
           "name": "zcalld-plugin-api",
           "alias": null,
-          "requirement": "=0.2.1",
+          "requirement": "=0.2.5",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3242,7 +3247,7 @@
     },
     {
       "name": "zcalld-plugin-policy",
-      "version": "0.2.1",
+      "version": "0.2.5",
       "repository": "zcalld",
       "manifest": "zcalld/plugins/policy/Cargo.toml",
       "workspace": "zcalld",
@@ -3254,7 +3259,7 @@
         {
           "name": "zcalld-plugin-api",
           "alias": null,
-          "requirement": "=0.2.1",
+          "requirement": "=0.2.5",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3284,7 +3289,7 @@
     },
     {
       "name": "zcalld-plugin-redact",
-      "version": "0.2.1",
+      "version": "0.2.5",
       "repository": "zcalld",
       "manifest": "zcalld/plugins/redact/Cargo.toml",
       "workspace": "zcalld",
@@ -3296,7 +3301,7 @@
         {
           "name": "zcalld-compat-client",
           "alias": null,
-          "requirement": "=0.2.1",
+          "requirement": "=0.2.5",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3309,7 +3314,7 @@
         {
           "name": "zcalld-plugin-api",
           "alias": null,
-          "requirement": "=0.2.1",
+          "requirement": "=0.2.5",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3338,7 +3343,7 @@
     },
     {
       "name": "zcalld-plugin-routing",
-      "version": "0.2.1",
+      "version": "0.2.5",
       "repository": "zcalld",
       "manifest": "zcalld/plugins/routing/Cargo.toml",
       "workspace": "zcalld",
@@ -3350,7 +3355,7 @@
         {
           "name": "zcalld-compat-client",
           "alias": null,
-          "requirement": "=0.2.1",
+          "requirement": "=0.2.5",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3363,7 +3368,7 @@
         {
           "name": "zcalld-plugin-api",
           "alias": null,
-          "requirement": "=0.2.1",
+          "requirement": "=0.2.5",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3561,7 +3566,7 @@
     },
     {
       "name": "zfetch",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "repository": "zfetch",
       "manifest": "zfetch/Cargo.toml",
       "workspace": "zfetch",
@@ -3573,14 +3578,23 @@
     },
     {
       "name": "zgpui",
-      "version": "0.1.0",
+      "version": "0.1.2",
       "repository": "zgpui",
       "manifest": "zgpui/Cargo.toml",
       "workspace": "zgpui",
       "publish": true,
       "rust_version": "1.100",
       "library": true,
-      "features": {},
+      "features": {
+        "default": [],
+        "linux-software": [
+          "native"
+        ],
+        "native": [
+          "std"
+        ],
+        "std": []
+      },
       "dependencies": []
     },
     {
@@ -3753,7 +3767,7 @@
     },
     {
       "name": "zmcl",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "repository": "zmcl",
       "manifest": "zmcl/Cargo.toml",
       "workspace": "zmcl",
@@ -3765,7 +3779,7 @@
           "gui"
         ],
         "gui": [
-          "dep:zui"
+          "dep:zgpui"
         ]
       },
       "dependencies": [
@@ -3783,6 +3797,22 @@
           "path": "zmcl/vendor/zclap"
         },
         {
+          "name": "zgpui",
+          "alias": null,
+          "requirement": "=0.1.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": false,
+          "features": [
+            "linux-software",
+            "native"
+          ],
+          "source": null,
+          "path": "zmcl/vendor/zgpui"
+        },
+        {
           "name": "zmcl-core",
           "alias": null,
           "requirement": "=0.1.0",
@@ -3794,19 +3824,6 @@
           "features": [],
           "source": null,
           "path": "zmcl/crates/zmcl-core"
-        },
-        {
-          "name": "zui-native",
-          "alias": "zui",
-          "requirement": "=0.1.0",
-          "explicit_version": true,
-          "kind": "normal",
-          "target": null,
-          "optional": true,
-          "default_features": true,
-          "features": [],
-          "source": null,
-          "path": "zmcl/vendor/zui"
         }
       ]
     },
@@ -4167,7 +4184,7 @@
     },
     {
       "name": "zpty",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "repository": "zpty",
       "manifest": "zpty/Cargo.toml",
       "workspace": "zpty",
@@ -4176,6 +4193,32 @@
       "library": true,
       "features": {},
       "dependencies": []
+    },
+    {
+      "name": "zrc",
+      "version": "0.1.2",
+      "repository": "zrc",
+      "manifest": "zrc/Cargo.toml",
+      "workspace": "zrc",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zconv",
+          "alias": null,
+          "requirement": "=0.4.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
     },
     {
       "name": "zscan",
@@ -4227,7 +4270,7 @@
     },
     {
       "name": "zterm",
-      "version": "0.5.1",
+      "version": "0.5.2",
       "repository": "zterm",
       "manifest": "zterm/Cargo.toml",
       "workspace": "zterm",
@@ -4265,12 +4308,12 @@
         {
           "name": "zgpui",
           "alias": null,
-          "requirement": "^0.1.0",
+          "requirement": "^0.1.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
           "optional": false,
-          "default_features": true,
+          "default_features": false,
           "features": [],
           "source": "registry+https://github.com/rust-lang/crates.io-index",
           "path": null
@@ -4470,7 +4513,7 @@
         ],
         "gui": [
           "desktop",
-          "dep:zui"
+          "dep:zgpui"
         ],
         "plugins": [
           "zinput/plugins",
@@ -4478,6 +4521,21 @@
         ]
       },
       "dependencies": [
+        {
+          "name": "zgpui",
+          "alias": null,
+          "requirement": "=0.1.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": true,
+          "features": [
+            "native"
+          ],
+          "source": null,
+          "path": "ztype/vendor/zgpui"
+        },
         {
           "name": "zinput",
           "alias": null,
@@ -4507,19 +4565,6 @@
           "path": null
         },
         {
-          "name": "zui-native",
-          "alias": "zui",
-          "requirement": "=0.1.0",
-          "explicit_version": true,
-          "kind": "normal",
-          "target": null,
-          "optional": true,
-          "default_features": true,
-          "features": [],
-          "source": null,
-          "path": "ztype/vendor/zui"
-        },
-        {
           "name": "zuse-computer",
           "alias": "zuse",
           "requirement": "=0.2.2",
@@ -4533,18 +4578,6 @@
           "path": null
         }
       ]
-    },
-    {
-      "name": "zui-native",
-      "version": "0.1.0",
-      "repository": "zui",
-      "manifest": "zui/Cargo.toml",
-      "workspace": "zui",
-      "publish": true,
-      "rust_version": "1.100",
-      "library": true,
-      "features": {},
-      "dependencies": []
     },
     {
       "name": "zuse-computer",
