@@ -1,0 +1,499 @@
+{
+  "lmm-api-source/apps/cli/Cargo.lock": {
+    "sha256": "f7270c7dc7f357a7e5131741c98c32c97251798dc84944302185c6f875f3d175",
+    "mode": 420
+  },
+  "lmm-api-source/services/core/Cargo.lock": {
+    "sha256": "f4334263249f9d950cc54a59b19118e5ae6a304a3161344b678e075b500f378c",
+    "mode": 420
+  },
+  "oh-my-ztty/components/ssmcp/Cargo.lock": {
+    "sha256": "30babefccec2b91c44f10a93726718bafd84cdab6662ad4f8988261167eb1e3b",
+    "mode": 420
+  },
+  "oh-my-ztty/components/ssmcp/crates/zharness/Cargo.lock": {
+    "sha256": "76bec5c15df42bf75c0783b274e7cda3d66a47a37b3ec8524b2a28f845998e58",
+    "mode": 420
+  },
+  "oh-my-ztty/components/ssmcp/crates/zplugin/Cargo.lock": {
+    "sha256": "d0efda9e9dc1327c3a9414e6b21e852e31a4ebc08091f614df78d86e69603fa2",
+    "mode": 420
+  },
+  "oh-my-ztty/components/zdot/Cargo.lock": {
+    "sha256": "daaa5a2667dd5eecd2d12f87b3686b4b5d596fbe285b5b67b6e8fdfb52a3bf7b",
+    "mode": 420
+  },
+  "oh-my-ztty/components/zfetch/Cargo.lock": {
+    "sha256": "7223a3a845a4c0cfcf04b527d1637d5b5845823d866e2c0cacc9e3f0b0cc14d6",
+    "mode": 420
+  },
+  "oh-my-ztty/components/ztty/Cargo.lock": {
+    "sha256": "33a10d9de38ba104398fe97125047cdf23affd09fd3c26c4ce7ef2972e2ae139",
+    "mode": 420
+  },
+  "ssmcp/Cargo.lock": {
+    "sha256": "27556db8b55f570c5e5c46e8771faf90795a2dee55d773a2d5459f4a19fa62ba",
+    "mode": 420
+  },
+  "ssmcp/crates/zharness/Cargo.lock": {
+    "sha256": "1fcadc1ade554851dd59c8e1d3cdf3305f291981b23c6b7bda11faaf69ef4a94",
+    "mode": 420
+  },
+  "ssmcp/crates/zplugin/Cargo.lock": {
+    "sha256": "bd709cafd7050e4bd5ef62472ced181b61758cd52b8c9856e0c414438e26b15d",
+    "mode": 420
+  },
+  "ssmcp/crates/ztuio/Cargo.lock": {
+    "sha256": "b1932772b34fd2c36461d1f66b709f8b2c2e6c37818204282a229cbcee743a14",
+    "mode": 420
+  },
+  "ssmcp/crates/zuse/Cargo.lock": {
+    "sha256": "e92e1c82862c6bab4f674faadf03f2339f98d5c3b0257d7721b028757587875e",
+    "mode": 420
+  },
+  "z58/Cargo.lock": {
+    "sha256": "a1a9cec9d5520a31ea63c9d2eefc93eba223c87f42ddbb86204d3eed414b2ebc",
+    "mode": 420
+  },
+  "z58/comparison/Cargo.lock": {
+    "sha256": "9816e17e96945102d3ab78c6f1e23ec7a8e28cf378f5a6d587fb68357e2de432",
+    "mode": 420
+  },
+  "z58/comparison/results/exploratory-2026-11-09-native/Cargo.lock": {
+    "sha256": "4df004e9606b18554242546f75bbe3adf271bff188c1734351d62772afc52d87",
+    "mode": 420
+  },
+  "z58/comparison/results/exploratory-2026-11-09-portable/Cargo.lock": {
+    "sha256": "4df004e9606b18554242546f75bbe3adf271bff188c1734351d62772afc52d87",
+    "mode": 420
+  },
+  "z58/comparison/results/smoke/Cargo.lock": {
+    "sha256": "4df004e9606b18554242546f75bbe3adf271bff188c1734351d62772afc52d87",
+    "mode": 420
+  },
+  "z58/comparison/results/verified-2026-11-09-native/Cargo.lock": {
+    "sha256": "4df004e9606b18554242546f75bbe3adf271bff188c1734351d62772afc52d87",
+    "mode": 420
+  },
+  "z58/comparison/results/verified-2026-11-09-portable/Cargo.lock": {
+    "sha256": "4df004e9606b18554242546f75bbe3adf271bff188c1734351d62772afc52d87",
+    "mode": 420
+  },
+  "z64/Cargo.lock": {
+    "sha256": "57cd4b552b944dc250ee85424e948ba02bd36f99da38c220564454481a87a7bb",
+    "mode": 420
+  },
+  "z64/comparison/Cargo.lock": {
+    "sha256": "9482fb4f0393bba596aa0956161661a4ac53df5d6000fef3e389be76458aaa20",
+    "mode": 420
+  },
+  "z64/comparison/results/20261109-final-xeon8573c/Cargo.lock": {
+    "sha256": "4e31a882e7541c637cd46eae1dca542aa2be1fd214e5e6fcce33e0fe9aad6481",
+    "mode": 420
+  },
+  "z64/comparison/results/20261109-round2-xeon8573c/Cargo.lock": {
+    "sha256": "4e31a882e7541c637cd46eae1dca542aa2be1fd214e5e6fcce33e0fe9aad6481",
+    "mode": 420
+  },
+  "z64/comparison/results/20261109-xeon8573c/Cargo.lock": {
+    "sha256": "aa4c6284538f816dac84c1f201c6d66c0e0c4ed2822598418def5785a48c174e",
+    "mode": 420
+  },
+  "z64/comparison/results/20261110-combined-tail-swar-probe/Cargo.lock": {
+    "sha256": "7af1d8e67b8747d37a73760cf9defa7f98a06e479914db439b9935b70214d175",
+    "mode": 420
+  },
+  "z64/comparison/results/20261110-final-xeon8573c/Cargo.lock": {
+    "sha256": "7af1d8e67b8747d37a73760cf9defa7f98a06e479914db439b9935b70214d175",
+    "mode": 420
+  },
+  "z64/comparison/results/20261110-harness-setup/Cargo.lock": {
+    "sha256": "7af1d8e67b8747d37a73760cf9defa7f98a06e479914db439b9935b70214d175",
+    "mode": 420
+  },
+  "z64/comparison/results/20261110-noop-tail-probe/Cargo.lock": {
+    "sha256": "7af1d8e67b8747d37a73760cf9defa7f98a06e479914db439b9935b70214d175",
+    "mode": 420
+  },
+  "z64/comparison/results/reference-first/Cargo.lock": {
+    "sha256": "aa4c6284538f816dac84c1f201c6d66c0e0c4ed2822598418def5785a48c174e",
+    "mode": 420
+  },
+  "z64/comparison/results/round2-aligned-quick/Cargo.lock": {
+    "sha256": "4e31a882e7541c637cd46eae1dca542aa2be1fd214e5e6fcce33e0fe9aad6481",
+    "mode": 420
+  },
+  "z64/comparison/results/round2-quick-repeat/Cargo.lock": {
+    "sha256": "4e31a882e7541c637cd46eae1dca542aa2be1fd214e5e6fcce33e0fe9aad6481",
+    "mode": 420
+  },
+  "z64/comparison/results/round2-quick/Cargo.lock": {
+    "sha256": "4e31a882e7541c637cd46eae1dca542aa2be1fd214e5e6fcce33e0fe9aad6481",
+    "mode": 420
+  },
+  "z64/comparison/results/round2-routing-recovery/Cargo.lock": {
+    "sha256": "4e31a882e7541c637cd46eae1dca542aa2be1fd214e5e6fcce33e0fe9aad6481",
+    "mode": 420
+  },
+  "zcall/Cargo.lock": {
+    "sha256": "3a773a2f25a4ed0c793d4bd6569214e6072ed53b06a7029ff60bfb4ead2d8ea1",
+    "mode": 420
+  },
+  "zcall/fuzz/Cargo.lock": {
+    "sha256": "b20c549a0f16245af3b12ed93029fffed667948030b47e373d996be8fac2f9a9",
+    "mode": 420
+  },
+  "zcall-gui/Cargo.lock": {
+    "sha256": "ea61e02aba58214db94b50ede7e2ef4efd9ccd3db54e8fda18fbffd81fbebf0e",
+    "mode": 420
+  },
+  "zcall-gui/vendor/zui/Cargo.lock": {
+    "sha256": "2d045cf4525a19e101ff01229f2e31aa8c605f31be5b58f0df2538685f3a85bc",
+    "mode": 420
+  },
+  "zcalld/Cargo.lock": {
+    "sha256": "c330017ceea600bcb48a0d88c490f1862154d15fd91a2bcfb12a92487db63693",
+    "mode": 420
+  },
+  "zcalld/apps/zcall-gui/Cargo.lock": {
+    "sha256": "ea61e02aba58214db94b50ede7e2ef4efd9ccd3db54e8fda18fbffd81fbebf0e",
+    "mode": 420
+  },
+  "zcalld/apps/zcall-gui/vendor/zui/Cargo.lock": {
+    "sha256": "2d045cf4525a19e101ff01229f2e31aa8c605f31be5b58f0df2538685f3a85bc",
+    "mode": 420
+  },
+  "zcalld/vendor/zcall/Cargo.lock": {
+    "sha256": "3a773a2f25a4ed0c793d4bd6569214e6072ed53b06a7029ff60bfb4ead2d8ea1",
+    "mode": 420
+  },
+  "zcalld/vendor/zcall/fuzz/Cargo.lock": {
+    "sha256": "b20c549a0f16245af3b12ed93029fffed667948030b47e373d996be8fac2f9a9",
+    "mode": 420
+  },
+  "zcalld/vendor/zconv/Cargo.lock": {
+    "sha256": "e515decbc9cc3da2739824d646a1511e84afea955bb63a62e03f9a1757d2b59c",
+    "mode": 420
+  },
+  "zcalld/vendor/zconv/comparison/Cargo.lock": {
+    "sha256": "f92b4f690e693881a3bd1dc55dfb1ce99f8c9901b735ca52a9eb669f3e0b8d01",
+    "mode": 420
+  },
+  "zcalld/vendor/zconv/fuzz/Cargo.lock": {
+    "sha256": "c39f90135c09486ab9fa9e6374e67d3ad118fa56d28ca4147131dfd3a12c9e97",
+    "mode": 420
+  },
+  "zcalld/vendor/zplugin/Cargo.lock": {
+    "sha256": "bd709cafd7050e4bd5ef62472ced181b61758cd52b8c9856e0c414438e26b15d",
+    "mode": 420
+  },
+  "zcalld/vendor/zsys/Cargo.lock": {
+    "sha256": "7da45bf7d424ece39b8dd1cc7e7b41fbe23269b7a336d3d4e9e572f5a3c917f3",
+    "mode": 420
+  },
+  "zcalld/vendor/zsys/benchmarks/Cargo.lock": {
+    "sha256": "3ed1e3d33baca2e951fe0324ca959b07820d60e4e61dd4d5b5ab2c53c5fb6de0",
+    "mode": 420
+  },
+  "zclap/Cargo.lock": {
+    "sha256": "d288486dd35d22286de6ed5081a35ce5da6c773effabb2eb0495dd26e5122c8d",
+    "mode": 420
+  },
+  "zclap/comparison/Cargo.lock": {
+    "sha256": "98659cc30de3b6c04c8fba2fb84cafd7dd3948aec9ccb87717e6f3ac96479e15",
+    "mode": 420
+  },
+  "zclick/Cargo.lock": {
+    "sha256": "e1388e66bad5c93c59bfcfd9deecc1255c201fa18a30bc170d95c1459d5a969b",
+    "mode": 420
+  },
+  "zconv/Cargo.lock": {
+    "sha256": "e515decbc9cc3da2739824d646a1511e84afea955bb63a62e03f9a1757d2b59c",
+    "mode": 420
+  },
+  "zconv/comparison/Cargo.lock": {
+    "sha256": "f92b4f690e693881a3bd1dc55dfb1ce99f8c9901b735ca52a9eb669f3e0b8d01",
+    "mode": 420
+  },
+  "zconv/fuzz/Cargo.lock": {
+    "sha256": "c39f90135c09486ab9fa9e6374e67d3ad118fa56d28ca4147131dfd3a12c9e97",
+    "mode": 420
+  },
+  "zdot/Cargo.lock": {
+    "sha256": "daaa5a2667dd5eecd2d12f87b3686b4b5d596fbe285b5b67b6e8fdfb52a3bf7b",
+    "mode": 420
+  },
+  "zdwire/Cargo.lock": {
+    "sha256": "749bf7c4f2f912b2f156d81597758f370ffff1e8a28927207dccf047826d3a3c",
+    "mode": 420
+  },
+  "zdwire/comparison/Cargo.lock": {
+    "sha256": "3cc7498a3b462e5c58d63d3a05c9691281aebf446297ce078c1016533aaa1d13",
+    "mode": 420
+  },
+  "zdwire/fuzz/Cargo.lock": {
+    "sha256": "b478b4f57de608c3c54d9d98c47fb3f3b172944e0a599481afdcd95e5b65fc17",
+    "mode": 420
+  },
+  "zharness/Cargo.lock": {
+    "sha256": "1fcadc1ade554851dd59c8e1d3cdf3305f291981b23c6b7bda11faaf69ef4a94",
+    "mode": 420
+  },
+  "zhex/Cargo.lock": {
+    "sha256": "8249c4f31172c09f3508df8879e1c933afcc04ceec4394c7aa90749ae9a20b12",
+    "mode": 420
+  },
+  "zhex/comparison/Cargo.lock": {
+    "sha256": "6a38ac926c67a91c408cbf5bb4fdaa428fef42b3f7d862d2edc2b89023759170",
+    "mode": 420
+  },
+  "zldap/Cargo.lock": {
+    "sha256": "15b21c84a51ad24c18aced0e26077f1c778a7649990afd5ea8fb6abe05bde834",
+    "mode": 420
+  },
+  "zldap/comparison/Cargo.lock": {
+    "sha256": "c85a596c473c03d73c25c4ec37b7a95bd79604d94e0acd334c07cedad6113164",
+    "mode": 420
+  },
+  "zmcpio/Cargo.lock": {
+    "sha256": "ba7aa311f3c569465d6ae8eb7e0d7186ebb72081a985c7780edfbf70223d35a7",
+    "mode": 420
+  },
+  "zmime/Cargo.lock": {
+    "sha256": "bfd6f008bda55589c8c11028461d2b42a8ba2901e5f9210ed7700b739217342d",
+    "mode": 420
+  },
+  "zmime/comparison/Cargo.lock": {
+    "sha256": "b6ff1b99d550d4d692c6a98c43b4099868b6b7dc83371f0e5a2541ca8c08e962",
+    "mode": 420
+  },
+  "zplugin/Cargo.lock": {
+    "sha256": "bd709cafd7050e4bd5ef62472ced181b61758cd52b8c9856e0c414438e26b15d",
+    "mode": 420
+  },
+  "zscan/Cargo.lock": {
+    "sha256": "8b1d1a347dcde035c3351ffed503f0fbfbd163d2dfd72a49f2d4442c9a5301be",
+    "mode": 420
+  },
+  "zscan/comparison/Cargo.lock": {
+    "sha256": "f2b278c607665ac0f0292fd0d5dc779680c5c06f6498e332e872a4a69dc80fd4",
+    "mode": 420
+  },
+  "zscan/comparison/results/final/cold/generic/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zscan/comparison/results/final/generic/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zscan/comparison/results/final/native/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zscan/comparison/results/final/no-prefilter/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zscan/comparison/results/final/no-short/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zscan/comparison/results/final/scalar/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zscan/comparison/results/initial-optimized/generic/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zscan/comparison/results/round2-after-calibrated/generic/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zscan/comparison/results/round2-after-calibrated/native/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zscan/comparison/results/round2-after-repeat/generic/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zscan/comparison/results/round2-after-repeat/native/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zscan/comparison/results/round2-before-calibrated/generic/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zscan/comparison/results/round2-before-calibrated/native/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zscan/comparison/results/round2-before/generic/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zscan/comparison/results/round2-before/native/Cargo.lock": {
+    "sha256": "8d26b3e5727aa1bee97b92d9dd29f73add758f0a24671934c8d3edda7522cac2",
+    "mode": 420
+  },
+  "zsyn/Cargo.lock": {
+    "sha256": "0a6435bf7ccde0dd3875267a7583c78b1c781231e0c61e363b7ad81a84197052",
+    "mode": 420
+  },
+  "zsyn/comparison/Cargo.lock": {
+    "sha256": "91ba3351e39ad9c1dd1d60fbbd3be651db5eb4e7ef0f12bd885b2340f374ee78",
+    "mode": 420
+  },
+  "zsys/Cargo.lock": {
+    "sha256": "7da45bf7d424ece39b8dd1cc7e7b41fbe23269b7a336d3d4e9e572f5a3c917f3",
+    "mode": 420
+  },
+  "zsys/benchmarks/Cargo.lock": {
+    "sha256": "3ed1e3d33baca2e951fe0324ca959b07820d60e4e61dd4d5b5ab2c53c5fb6de0",
+    "mode": 420
+  },
+  "ztty/Cargo.lock": {
+    "sha256": "c4290a5f00aa4437ad31007dfcc0f35e582b4c4f62511ade176ff553fc34efa3",
+    "mode": 420
+  },
+  "ztty/crates/zgpui/Cargo.lock": {
+    "sha256": "252c9af25f71e4cfbe7f09e23a4f7e7a97597e8c66b8521eae08c4b118d83442",
+    "mode": 420
+  },
+  "ztty/crates/zinput/Cargo.lock": {
+    "sha256": "4f5e7d6b9d72f55407e31539d498a1ee5abd984dc4ac461301c286c1416e330b",
+    "mode": 420
+  },
+  "ztty/crates/zgraphics/Cargo.lock": {
+    "sha256": "1284cc4c284978b2ace3ccd2139502cd184a4508b6160d06db61cfa323d2b0a1",
+    "mode": 420
+  },
+  "ztty/crates/zpty/Cargo.lock": {
+    "sha256": "124c6a49f4748f05a832d28dbd71e9c02067a596bdde78e12ffeaad3b95baf93",
+    "mode": 420
+  },
+  "ztty/crates/zterm/Cargo.lock": {
+    "sha256": "bdf0b6e0cf0a3cc0186d9a507f12319076a58f3676af5d797f86fc6b6835100f",
+    "mode": 420
+  },
+  "ztty/examples/dedent-plugin/Cargo.lock": {
+    "sha256": "41993bef8193b51618bb7f0891c3401a767d9d445f259d4c5819c949b488307c",
+    "mode": 420
+  },
+  "ztty/tests/fixtures/text-plugin/Cargo.lock": {
+    "sha256": "9c8c813983226bfaca5ba46bb50f6182f896160df54d7125736e17a45fa6269c",
+    "mode": 420
+  },
+  "ztuio/Cargo.lock": {
+    "sha256": "b1932772b34fd2c36461d1f66b709f8b2c2e6c37818204282a229cbcee743a14",
+    "mode": 420
+  },
+  "zui/Cargo.lock": {
+    "sha256": "2d045cf4525a19e101ff01229f2e31aa8c605f31be5b58f0df2538685f3a85bc",
+    "mode": 420
+  },
+  "zuse/Cargo.lock": {
+    "sha256": "e92e1c82862c6bab4f674faadf03f2339f98d5c3b0257d7721b028757587875e",
+    "mode": 420
+  },
+  "zvte/Cargo.lock": {
+    "sha256": "7bb51104e198fa691c114c862dc17a59d6a2df41a0b43ca8f634d46d7a206804",
+    "mode": 420
+  },
+  "zvte/comparison/Cargo.lock": {
+    "sha256": "ea70f4e7a4e20f8ae295a6c286dd3c8eb44edee32943b247e4fff49c101e0a1d",
+    "mode": 420
+  },
+  "zgpui/Cargo.lock": {
+    "sha256": "252c9af25f71e4cfbe7f09e23a4f7e7a97597e8c66b8521eae08c4b118d83442",
+    "mode": 420
+  },
+  "zinput/Cargo.lock": {
+    "sha256": "4f5e7d6b9d72f55407e31539d498a1ee5abd984dc4ac461301c286c1416e330b",
+    "mode": 420
+  },
+  "ztype/Cargo.lock": {
+    "sha256": "03d49395fa4c1704186cafff483149a8ac562a7420499ef6845bb62c69400341",
+    "mode": 420
+  },
+  "ztype/vendor/zui/Cargo.lock": {
+    "sha256": "2d045cf4525a19e101ff01229f2e31aa8c605f31be5b58f0df2538685f3a85bc",
+    "mode": 420
+  },
+  "zfetch/Cargo.lock": {
+    "sha256": "7223a3a845a4c0cfcf04b527d1637d5b5845823d866e2c0cacc9e3f0b0cc14d6",
+    "mode": 420
+  },
+  "zmcl/Cargo.lock": {
+    "sha256": "25608fe61f1c76f8d65d4cd7934068efc024b320d84b69c95301da2a38887a09",
+    "mode": 420
+  },
+  "zmcl/vendor/zclap/Cargo.lock": {
+    "sha256": "d288486dd35d22286de6ed5081a35ce5da6c773effabb2eb0495dd26e5122c8d",
+    "mode": 420
+  },
+  "zmcl/vendor/zclap/comparison/Cargo.lock": {
+    "sha256": "98659cc30de3b6c04c8fba2fb84cafd7dd3948aec9ccb87717e6f3ac96479e15",
+    "mode": 420
+  },
+  "zmcl/vendor/zconv/Cargo.lock": {
+    "sha256": "e515decbc9cc3da2739824d646a1511e84afea955bb63a62e03f9a1757d2b59c",
+    "mode": 420
+  },
+  "zmcl/vendor/zconv/comparison/Cargo.lock": {
+    "sha256": "f92b4f690e693881a3bd1dc55dfb1ce99f8c9901b735ca52a9eb669f3e0b8d01",
+    "mode": 420
+  },
+  "zmcl/vendor/zconv/fuzz/Cargo.lock": {
+    "sha256": "c39f90135c09486ab9fa9e6374e67d3ad118fa56d28ca4147131dfd3a12c9e97",
+    "mode": 420
+  },
+  "zmcl/vendor/zui/Cargo.lock": {
+    "sha256": "2d045cf4525a19e101ff01229f2e31aa8c605f31be5b58f0df2538685f3a85bc",
+    "mode": 420
+  },
+  "zpty/Cargo.lock": {
+    "sha256": "124c6a49f4748f05a832d28dbd71e9c02067a596bdde78e12ffeaad3b95baf93",
+    "mode": 420
+  },
+  "zgraphics/Cargo.lock": {
+    "sha256": "1284cc4c284978b2ace3ccd2139502cd184a4508b6160d06db61cfa323d2b0a1",
+    "mode": 420
+  },
+  "zterm/Cargo.lock": {
+    "sha256": "bdf0b6e0cf0a3cc0186d9a507f12319076a58f3676af5d797f86fc6b6835100f",
+    "mode": 420
+  },
+  "OniMods/Cargo.lock": {
+    "sha256": "59958a035aa01435d1d160cbfa290be66acf901c3c6dd65ae44edbfb8fa5455a",
+    "mode": 420
+  },
+  "OniMods/mods/CycleTrim/OniSim/gpu/Cargo.lock": {
+    "sha256": "1253bd7cc1915c48caa4f63205302548960f996e850bada9e75d159e5fce3c8b",
+    "mode": 420
+  },
+  "OniMods/mods/CycleTrim/OniSim/lean-lab/harness/Cargo.lock": {
+    "sha256": "baea17ff3e69b36507b5d4c05181aba8cd1f18147fc143636878519647aa5cf5",
+    "mode": 420
+  },
+  "OniMods/mods/CycleTrim/OniSim/native/Cargo.lock": {
+    "sha256": "faf047dee9166c2686c20964b8bda6a7cebe134d2cebf937eaaf5135af3c1d92",
+    "mode": 420
+  },
+  "OniMods/mods/CycleTrim/OniSim/transport-lab/Cargo.lock": {
+    "sha256": "239654f504f2c14555b88405c477850275fbc48f01e2fda2597e9b84b07872e1",
+    "mode": 420
+  },
+  "mechrevo-drivers/console/Cargo.lock": {
+    "sha256": "2403f221925363f2a573c9cf8aedf6d88d768595f550d35c7e79d0f2682dfead",
+    "mode": 420
+  },
+  ".cargo/config.toml": {
+    "exists": false,
+    "sha256": null,
+    "mode": null
+  }
+}

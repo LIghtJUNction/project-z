@@ -114,3 +114,55 @@
 	path = lmm-api-source
 	url = https://github.com/TokenNotIncluded/lmm-api-source.git
 	branch = main
+[submodule "zgpui"]
+	path = zgpui
+	url = https://github.com/LIghtJUNction/zgpui.git
+	branch = main
+[submodule "zinput"]
+	path = zinput
+	url = https://github.com/LIghtJUNction/zinput
+	branch = main
+[submodule "ztype"]
+	path = ztype
+	url = https://github.com/LIghtJUNction/ztype
+	branch = main
+[submodule "zrc"]
+	path = zrc
+	url = https://github.com/LIghtJUNction/zrc.git
+	branch = main
+[submodule "zfetch"]
+	path = zfetch
+	url = https://github.com/LIghtJUNction/zfetch.git
+	branch = main
+[submodule "zdistro"]
+	path = zdistro
+	url = https://github.com/LIghtJUNction/zdistro.git
+	branch = main
+[submodule "zmcl"]
+	path = zmcl
+	url = https://github.com/LIghtJUNction/zmcl.git
+	branch = main
+[submodule "zpty"]
+	path = zpty
+	url = https://github.com/LIghtJUNction/zpty.git
+	branch = main
+[submodule "zgraphics"]
+	path = zgraphics
+	url = https://github.com/LIghtJUNction/zgraphics.git
+	branch = main
+[submodule "zterm"]
+	path = zterm
+	url = https://github.com/LIghtJUNction/zterm.git
+	branch = main
+[submodule "OniMods"]
+	path = OniMods
+	url = https://github.com/LIghtJUNction/OniMods.git
+	branch = main
+[submodule "zcall-omarchy"]
+	path = zcall-omarchy
+	url = https://github.com/LIghtJUNction/zcall-omarchy.git
+	branch = main
+[submodule "mechrevo-drivers"]
+	path = mechrevo-drivers
+	url = https://github.com/LIghtJUNction/mechrevo-drivers.git
+	branch = main

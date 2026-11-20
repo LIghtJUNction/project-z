@@ -1,0 +1,25 @@
+{
+  "at": "2026-11-20T01:36:10.261519+00:00",
+  "source": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+  "release_status": "candidate; platform builds passed; publication not yet verified",
+  "core_version": "0.2.0",
+  "links": {
+    "apps/zcall-gui": {
+      "canonical": "5dbc423eedd4d529a38b3e8e3adc3e6355a56b2b",
+      "nested": "5dbc423eedd4d529a38b3e8e3adc3e6355a56b2b",
+      "matches": true
+    },
+    "apps/zcall-omarchy": {
+      "canonical": "78282c3c3cfa6e9e65e2cbd654f38a96398c6e03",
+      "nested": "78282c3c3cfa6e9e65e2cbd654f38a96398c6e03",
+      "matches": true
+    },
+    "extensions/compat": {
+      "canonical": "008910901a3ef8ac5dd57b748a3210faa463c2b9",
+      "nested": "008910901a3ef8ac5dd57b748a3210faa463c2b9",
+      "matches": true
+    }
+  },
+  "primary_and_validation_copies_checked": 2,
+  "all_clean": true
+}
