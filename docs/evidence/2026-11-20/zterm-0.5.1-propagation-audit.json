@@ -1,0 +1,1238 @@
+{
+  "schema": "project-z.zterm-consumer-readonly-audit.v1",
+  "checked_at": "2026-11-20T02:42:53Z",
+  "scope": "只读官方 API、实际下载的 crate/source archive、固定源码 diff 和既有本地验收文件；本核查没有构建、测试、GUI、安装、发布或修改 root。",
+  "historical_root": {
+    "source": "46e98822e8357b25670cea52794af3009d66660f",
+    "zterm": "13d5e2c74571d35cccd920b1204798211b70c79f",
+    "ztty": "1a2f165983d7abff507c69b54c0c4ed225f49a45",
+    "preserved": true,
+    "url": "https://github.com/LIghtJUNction/project-z/commit/46e98822e8357b25670cea52794af3009d66660f"
+  },
+  "zterm": {
+    "version": "0.5.1",
+    "source": "a2074bac4c030cfd7c0b2514c852a89dcf54648f",
+    "tag": "v0.5.1",
+    "tag_object": "95e50a2653282836dec93832e4126554b9b63077",
+    "tag_source_matches": true,
+    "tag_api_verified": false,
+    "tag_api_reason": "unsigned",
+    "signature_verification_performed": false,
+    "official_release": {
+      "url": "https://github.com/LIghtJUNction/zterm/releases/tag/v0.5.1",
+      "published_at": "2026-11-20T02:18:36Z",
+      "draft": false,
+      "prerelease": false
+    },
+    "official_release_run": {
+      "id": 44659688289,
+      "url": "https://github.com/LIghtJUNction/zterm/actions/runs/44659688289",
+      "head_sha": "a2074bac4c030cfd7c0b2514c852a89dcf54648f",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_jobs": 8,
+      "observed_job_scopes": [
+        "candidate selection",
+        "fmt/Clippy/package/release-script validation",
+        "Linux library and doc tests",
+        "macOS library and doc tests",
+        "Windows library and doc tests",
+        "wasm32-unknown-unknown library check",
+        "x86_64-unknown-none library check",
+        "publication"
+      ],
+      "new_workflow_triggered_by_this_audit": false,
+      "test_counts_not_inferred_from_job_step_names": true
+    },
+    "actual_archive_verification": {
+      "checked_at": "2026-11-20T02:38:43.629196+00:00",
+      "api_url": "https://crates.io/api/v1/crates/zterm/0.5.1",
+      "crate_url": "https://static.crates.io/crates/zterm/zterm-0.5.1.crate",
+      "api_version": "0.5.1",
+      "api_yanked": false,
+      "api_created_at": "2026-11-20T02:18:31.760126Z",
+      "bytes": 78051,
+      "computed_sha256": "fc48bcaf9892a77d17ab235316448c3e235b0dccd00e5963b542586585c26c91",
+      "api_checksum_matches": true,
+      "github_asset_name": "zterm-0.5.1.crate",
+      "github_asset_api_bytes": 78051,
+      "github_asset_api_sha256": "fc48bcaf9892a77d17ab235316448c3e235b0dccd00e5963b542586585c26c91",
+      "github_asset_downloaded_by_this_audit": false,
+      "github_asset_metadata_matches_downloaded_registry_archive": true,
+      "source_archive_url": "https://codeload.github.com/LIghtJUNction/zterm/tar.gz/a2074bac4c030cfd7c0b2514c852a89dcf54648f",
+      "source_archive_bytes": 89578,
+      "source_archive_sha256": "d9fde3c276a283c840d6aa4394440d656499d580ec18768ee9dfd911d72edd21",
+      "cargo_vcs_info": {
+        "git": {
+          "sha1": "a2074bac4c030cfd7c0b2514c852a89dcf54648f"
+        },
+        "path_in_vcs": ""
+      },
+      "vcs_matches_source": true,
+      "packaged_files": 39,
+      "compared_files": 37,
+      "mismatches": [],
+      "missing_source_files": [],
+      "comparison_rule": "Cargo.toml.orig 与源码 Cargo.toml 比较；其余 36 个普通包文件按相对路径逐字比较。规范化 Cargo.toml 与 .cargo_vcs_info.json 不直接作源码字节等价断言，VCS 字段另行核对。",
+      "compared_file_hashes": [
+        {
+          "crate_path": "Cargo.lock",
+          "source_path": "Cargo.lock",
+          "sha256": "dab8d917bc8fa5ec0ad730859499fcfe2c97de7435ad2d92a6f27178c3d7b2e8"
+        },
+        {
+          "crate_path": "Cargo.toml.orig",
+          "source_path": "Cargo.toml",
+          "sha256": "3fea3f77e506f78dcc33d63af39e25ea25228a84ce2efc52abf94e78711ac3df"
+        },
+        {
+          "crate_path": "LICENSE",
+          "source_path": "LICENSE",
+          "sha256": "97016fcf641f0ebb5c3fb6a0eda2e2bec82aecd443f3acd24a536499d5fa28a4"
+        },
+        {
+          "crate_path": "README.md",
+          "source_path": "README.md",
+          "sha256": "2d3353500546ced832fe0b10d110bda1f0923354138cff08982d28ef819aade7"
+        },
+        {
+          "crate_path": "examples/benchmark.rs",
+          "source_path": "examples/benchmark.rs",
+          "sha256": "8551f815d1ca276154df9f2050a9039f0e9cd225da363137338d3c820ecc3624"
+        },
+        {
+          "crate_path": "examples/scroll_benchmark.rs",
+          "source_path": "examples/scroll_benchmark.rs",
+          "sha256": "441339f98b5a2051bf7080c5e03431f72c9388a7f2d83b98c4fc9a136c6d1883"
+        },
+        {
+          "crate_path": "examples/shell_probe.rs",
+          "source_path": "examples/shell_probe.rs",
+          "sha256": "2ff60541fd1c3aa561592339345f9d45333ac0e41ce7ad4388d04362e02d30f4"
+        },
+        {
+          "crate_path": "examples/sixel_probe.rs",
+          "source_path": "examples/sixel_probe.rs",
+          "sha256": "ce3a3f532388dc4302dca510dad2dff3e8e234a07a47746ddf004d2a10ca4b98"
+        },
+        {
+          "crate_path": "src/blink_tests.rs",
+          "source_path": "src/blink_tests.rs",
+          "sha256": "fc66930ca50c84bd0f7e21f5f988e9f235fa1935d0db8662b5d76705743ee10b"
+        },
+        {
+          "crate_path": "src/clipboard.rs",
+          "source_path": "src/clipboard.rs",
+          "sha256": "8bf611cb5a88d1b8a3ecd51c26b99c711ddb3298fd3abafb9bc99f2e12b9eb23"
+        },
+        {
+          "crate_path": "src/clipboard/tests.rs",
+          "source_path": "src/clipboard/tests.rs",
+          "sha256": "3a4bb345c7697f30355d7b2da202f54df03c883ccdcde48d1e9add5eeea2824e"
+        },
+        {
+          "crate_path": "src/grapheme.rs",
+          "source_path": "src/grapheme.rs",
+          "sha256": "f3bf258339ed14e6c2558dbd082f6ae5906788f6e3808df99fd37fc81e9847c1"
+        },
+        {
+          "crate_path": "src/grapheme_tests.rs",
+          "source_path": "src/grapheme_tests.rs",
+          "sha256": "41f82d780701467affb2d96d0c410b2682805b7b9a85007e84070ed38ad32f9f"
+        },
+        {
+          "crate_path": "src/lib.rs",
+          "source_path": "src/lib.rs",
+          "sha256": "0b6b57e16be46b7f76df5e7183f7ed51644fcac755d4912b6b88f8b8f02c4b15"
+        },
+        {
+          "crate_path": "src/reflow_tests.rs",
+          "source_path": "src/reflow_tests.rs",
+          "sha256": "3706487cf27ecc718f461b55cc3496c81c6d386c8efbc9cb26c3f0b090ebe1f7"
+        },
+        {
+          "crate_path": "src/screen.rs",
+          "source_path": "src/screen.rs",
+          "sha256": "ad42786f802a70159ae1e902f3833741e5d6e7b3fa45fa99274db6d4ce877685"
+        },
+        {
+          "crate_path": "src/shell.rs",
+          "source_path": "src/shell.rs",
+          "sha256": "6d36449a8fa943cc748d7d590d2c62aa5cc2284e4cb0f10100e9e3af255706eb"
+        },
+        {
+          "crate_path": "src/shell_tests.rs",
+          "source_path": "src/shell_tests.rs",
+          "sha256": "583dd2708c4874664ec3d1d7e93cac9aa27da25fdb65bc61878b475ee7bd6c3a"
+        },
+        {
+          "crate_path": "src/sixel_tests.rs",
+          "source_path": "src/sixel_tests.rs",
+          "sha256": "b550946f42830faf81cc88b6058f743ef3714860711b02d3145b964569cd7ddd"
+        },
+        {
+          "crate_path": "src/terminal.rs",
+          "source_path": "src/terminal.rs",
+          "sha256": "0700d43aab0cd6b39eadb336b6b97cc7f0e6b733efa8ff11d55dce78038e5b54"
+        },
+        {
+          "crate_path": "src/terminal/dispatch.rs",
+          "source_path": "src/terminal/dispatch.rs",
+          "sha256": "3b0e54eaa3433e4c464b9faf049526ed87ff365c6db673de25018efbe4226fc8"
+        },
+        {
+          "crate_path": "src/terminal/editing.rs",
+          "source_path": "src/terminal/editing.rs",
+          "sha256": "d3136d483f3b2c0d902732c514e80ff2a0cb4c7349547bdd47c6eb5e83c2b026"
+        },
+        {
+          "crate_path": "src/terminal/framing.rs",
+          "source_path": "src/terminal/framing.rs",
+          "sha256": "450a6d37cd09ad4f19d9cdb1fc16569711f67d6ebb502aab0a8cf5d972f8ad88"
+        },
+        {
+          "crate_path": "src/terminal/grapheme.rs",
+          "source_path": "src/terminal/grapheme.rs",
+          "sha256": "b5693233ed478df38c17a4b40bddc01edaf8f64b0703179a1c881ce422c25b5f"
+        },
+        {
+          "crate_path": "src/terminal/grapheme/append_boundary_tests.rs",
+          "source_path": "src/terminal/grapheme/append_boundary_tests.rs",
+          "sha256": "a90df7c9d51ea020f3916e4a3a621845718e36902aed8ab2eea1f56484214ca1"
+        },
+        {
+          "crate_path": "src/terminal/graphics.rs",
+          "source_path": "src/terminal/graphics.rs",
+          "sha256": "d6b3b1d0d24bf6af51e52182a45530357774b05169ceed8d3dad26e154c26486"
+        },
+        {
+          "crate_path": "src/terminal/image_cell_tests.rs",
+          "source_path": "src/terminal/image_cell_tests.rs",
+          "sha256": "ee50600ff81f627f667af1019100e9a6f9eb3cfa25a8672e5ab087aa2aeb3159"
+        },
+        {
+          "crate_path": "src/terminal/image_cells.rs",
+          "source_path": "src/terminal/image_cells.rs",
+          "sha256": "8de76b20b0b10afd70c75bb44c3a3ee0dbc92200a37e74ab77c12de32e388050"
+        },
+        {
+          "crate_path": "src/terminal/image_diacritics.rs",
+          "source_path": "src/terminal/image_diacritics.rs",
+          "sha256": "851c39c95ec2255a9c3c0a85ff36cde2098032b1c86223f54bc4200b61f980e1"
+        },
+        {
+          "crate_path": "src/terminal/modes.rs",
+          "source_path": "src/terminal/modes.rs",
+          "sha256": "8db8c0ebb6fe20237ef62c9ffb1824fc7798eb341b39c57175df556faa5ff956"
+        },
+        {
+          "crate_path": "src/terminal/reflow.rs",
+          "source_path": "src/terminal/reflow.rs",
+          "sha256": "cba6ec13669b463e787a0bd08b0e3db34752b108cea0f88b62b9eb598d99a4b7"
+        },
+        {
+          "crate_path": "src/terminal/style.rs",
+          "source_path": "src/terminal/style.rs",
+          "sha256": "e6823929174a28f113fc0d80dd123ef146c7a8ce9c5c466d363a33e9f0758f19"
+        },
+        {
+          "crate_path": "src/terminal/view.rs",
+          "source_path": "src/terminal/view.rs",
+          "sha256": "cdfb95776f24b921b4c98c6d0b8047e0ed310ae4f6ab80589afd5886af03550d"
+        },
+        {
+          "crate_path": "src/tests.rs",
+          "source_path": "src/tests.rs",
+          "sha256": "c34c95db7bbd2b826b746dfad7212909e3cb4f1cb5b0159457b8190ada20b63a"
+        },
+        {
+          "crate_path": "src/theme_tests.rs",
+          "source_path": "src/theme_tests.rs",
+          "sha256": "f2a68d8312eacfde218dea8d3981532c665aaf92bb81ed5519448a40e0160909"
+        },
+        {
+          "crate_path": "src/ui_tests.rs",
+          "source_path": "src/ui_tests.rs",
+          "sha256": "e76615a73fbd262bcdc5700ff759500f36207828bcd9cb871b63d55b840137b8"
+        },
+        {
+          "crate_path": "src/wrap_tests.rs",
+          "source_path": "src/wrap_tests.rs",
+          "sha256": "ef0f94de52c89ebb8f2f8d10a709879d8dba80dcbea567713f4b647d2a47cf77"
+        }
+      ],
+      "executed_or_built": false
+    },
+    "difference_from_root_pin": {
+      "base": "13d5e2c74571d35cccd920b1204798211b70c79f",
+      "head": "a2074bac4c030cfd7c0b2514c852a89dcf54648f",
+      "commits_ahead": 3,
+      "files": [
+        "Cargo.toml",
+        "Cargo.lock",
+        "src/terminal/grapheme.rs",
+        "src/terminal/grapheme/append_boundary_tests.rs"
+      ],
+      "mechanism": "限制追加标量的字素边界检查，已确认新边界时复用现有前缀；保留完整分段 fallback。添加完整分段 oracle、上下文、UTF-8 分片与字素长度上限回归。",
+      "contains_rejected_batch_experiment": false,
+      "source_url": "https://github.com/LIghtJUNction/zterm/compare/13d5e2c74571d35cccd920b1204798211b70c79f...a2074bac4c030cfd7c0b2514c852a89dcf54648f"
+    }
+  },
+  "ztty": {
+    "package_version": "0.5.0",
+    "source": "9f5a77a1299093d0ba609bfafa2cec3b0ba931dd",
+    "branch": "iter/resume-20261120",
+    "cargo_lock_sha256": "b86e3438a14ff8710a28b09bafa33ab1861f8cf116b722dc94be83133d4543b5",
+    "zterm_dependency": {
+      "path": "crates/zterm",
+      "version_requirement": "0.5.1",
+      "gitlink": "a2074bac4c030cfd7c0b2514c852a89dcf54648f"
+    },
+    "difference_from_root_pin": {
+      "base": "1a2f165983d7abff507c69b54c0c4ed225f49a45",
+      "head": "9f5a77a1299093d0ba609bfafa2cec3b0ba931dd",
+      "status": "ahead",
+      "commits_ahead": 13,
+      "files_changed": 88,
+      "runtime_src_files_changed": [],
+      "latest_commit_scope_only": [
+        "Cargo.toml",
+        "Cargo.lock",
+        "crates/zterm"
+      ],
+      "aggregate_scope_note": "最后一个提交只改 3 个依赖固定项；相对 root 的 1a2 基线则有 13 个提交、88 个文件差异，包含测试/夹具、工具和文档证据，不能把整个增量描述成只有 3 文件。",
+      "fixture_and_tool_changes": [
+        {
+          "path": "tests/daily_workflow.py",
+          "purpose": "按现有 reflow 行为验证 OSC 133 命令 ID、退出码、UTF-8 输出和导航复制保留。"
+        },
+        {
+          "path": "tests/fixtures/keypad-pc.xkb",
+          "purpose": "显式固定私有 Xvfb 小键盘四态映射。"
+        },
+        {
+          "path": "tests/input_gui.py",
+          "purpose": "装载固定 XKB 夹具并记录摘要。"
+        },
+        {
+          "path": "tests/linux_native.py",
+          "purpose": "进程标记消失后仍保留出生身份，确认回收完成，避免误处理复用 PID。"
+        },
+        {
+          "path": "tests/linux_native_test.py",
+          "purpose": "补身份消失与 PID 复用回归。"
+        },
+        {
+          "path": "tests/windows_workspace_native.py",
+          "purpose": "在几何夹具中清理 scrollback，隔离几何检查。"
+        },
+        {
+          "path": "tools/benchmark_throughput.py",
+          "purpose": "将实际 renderer helper 纳入源身份。"
+        },
+        {
+          "path": "tools/native_ui_acceptance.py",
+          "purpose": "遵循 CARGO_TARGET_DIR，并递归记录内置独立库的源码身份。"
+        }
+      ],
+      "files": [
+        {
+          "path": "Cargo.lock",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1
+        },
+        {
+          "path": "Cargo.toml",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1
+        },
+        {
+          "path": "crates/zterm",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1
+        },
+        {
+          "path": "crates/ztty-plugin-api/README.md",
+          "status": "modified",
+          "additions": 9,
+          "deletions": 1
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20.md",
+          "status": "added",
+          "additions": 323,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/after-core-build.json",
+          "status": "added",
+          "additions": 41,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/baseline.json",
+          "status": "added",
+          "additions": 143,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-paired-6053.json",
+          "status": "added",
+          "additions": 583,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-paired-initial-deferred.json",
+          "status": "added",
+          "additions": 47,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/1-candidate_0_5_1.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/1-candidate_0_5_1.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/1-legacy_0_4.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/1-legacy_0_4.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/1-published_0_5.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/1-published_0_5.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/2-candidate_0_5_1.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/2-candidate_0_5_1.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/2-legacy_0_4.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/2-legacy_0_4.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/2-published_0_5.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/2-published_0_5.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/3-candidate_0_5_1.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/3-candidate_0_5_1.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/3-legacy_0_4.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/3-legacy_0_4.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/3-published_0_5.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/3-published_0_5.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/candidate-build.json",
+          "status": "added",
+          "additions": 51,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/comparison.json",
+          "status": "added",
+          "additions": 1011,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/measurements.csv",
+          "status": "added",
+          "additions": 10,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/receipt.json",
+          "status": "added",
+          "additions": 90,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/redaction.json",
+          "status": "added",
+          "additions": 373,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/run-three-way.py",
+          "status": "added",
+          "additions": 89,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-0.5.1/verify-record.py",
+          "status": "added",
+          "additions": 106,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/1-candidate_0_5_1.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/1-candidate_0_5_1.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/1-legacy_0_4.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/1-legacy_0_4.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/1-published_0_5.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/1-published_0_5.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/2-candidate_0_5_1.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/2-candidate_0_5_1.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/2-legacy_0_4.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/2-legacy_0_4.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/2-published_0_5.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/2-published_0_5.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/3-candidate_0_5_1.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/3-candidate_0_5_1.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/3-legacy_0_4.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/3-legacy_0_4.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/3-published_0_5.stderr.log",
+          "status": "added",
+          "additions": 0,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/3-published_0_5.stdout.json",
+          "status": "added",
+          "additions": 14,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/README.md",
+          "status": "added",
+          "additions": 137,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/candidate-build.json",
+          "status": "added",
+          "additions": 58,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/cgroup-readback.json",
+          "status": "added",
+          "additions": 22,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/comparison.json",
+          "status": "added",
+          "additions": 1013,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/freeze.json",
+          "status": "added",
+          "additions": 18,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/measurements.csv",
+          "status": "added",
+          "additions": 10,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/native-launch.json",
+          "status": "added",
+          "additions": 20,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/receipt.json",
+          "status": "added",
+          "additions": 347,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/redaction.json",
+          "status": "added",
+          "additions": 570,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/run-three-way-borrowed.py",
+          "status": "added",
+          "additions": 99,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/verify-record.py",
+          "status": "added",
+          "additions": 109,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/redaction.json",
+          "status": "added",
+          "additions": 216,
+          "deletions": 0
+        },
+        {
+          "path": "docs/benchmarks/resume-2026-11-20/run-core-paired-6053.py",
+          "status": "added",
+          "additions": 44,
+          "deletions": 0
+        },
+        {
+          "path": "docs/releasing.md",
+          "status": "modified",
+          "additions": 50,
+          "deletions": 18
+        },
+        {
+          "path": "docs/reports/plugin-api-registry-20261120/README.md",
+          "status": "added",
+          "additions": 142,
+          "deletions": 0
+        },
+        {
+          "path": "docs/reports/plugin-api-registry-20261120/api-preflight.json",
+          "status": "added",
+          "additions": 92,
+          "deletions": 0
+        },
+        {
+          "path": "docs/reports/plugin-api-registry-20261120/api-preflight.log",
+          "status": "added",
+          "additions": 16,
+          "deletions": 0
+        },
+        {
+          "path": "docs/reports/plugin-api-registry-20261120/api-publish.json",
+          "status": "added",
+          "additions": 92,
+          "deletions": 0
+        },
+        {
+          "path": "docs/reports/plugin-api-registry-20261120/api-publish.log",
+          "status": "added",
+          "additions": 12,
+          "deletions": 0
+        },
+        {
+          "path": "docs/reports/plugin-api-registry-20261120/api-verify.json",
+          "status": "added",
+          "additions": 83,
+          "deletions": 0
+        },
+        {
+          "path": "docs/reports/plugin-api-registry-20261120/consumers-closure.json",
+          "status": "added",
+          "additions": 116,
+          "deletions": 0
+        },
+        {
+          "path": "docs/reports/plugin-api-registry-20261120/consumers-launch.json",
+          "status": "added",
+          "additions": 26,
+          "deletions": 0
+        },
+        {
+          "path": "docs/reports/plugin-api-registry-20261120/consumers-result.json",
+          "status": "added",
+          "additions": 816,
+          "deletions": 0
+        },
+        {
+          "path": "docs/reports/plugin-api-registry-20261120/consumers-run.log",
+          "status": "added",
+          "additions": 7,
+          "deletions": 0
+        },
+        {
+          "path": "docs/reports/plugin-api-registry-20261120/redaction.json",
+          "status": "added",
+          "additions": 295,
+          "deletions": 0
+        },
+        {
+          "path": "docs/reports/plugin-api-registry-20261120/registry-api.json",
+          "status": "added",
+          "additions": 68,
+          "deletions": 0
+        },
+        {
+          "path": "docs/reports/plugin-api-registry-20261120/registry-index-version.json",
+          "status": "added",
+          "additions": 22,
+          "deletions": 0
+        },
+        {
+          "path": "docs/reports/plugin-api-registry-20261120/verify-record.py",
+          "status": "added",
+          "additions": 131,
+          "deletions": 0
+        },
+        {
+          "path": "tests/daily_workflow.py",
+          "status": "modified",
+          "additions": 22,
+          "deletions": 7
+        },
+        {
+          "path": "tests/fixtures/keypad-pc.xkb",
+          "status": "added",
+          "additions": 32,
+          "deletions": 0
+        },
+        {
+          "path": "tests/input_gui.py",
+          "status": "modified",
+          "additions": 12,
+          "deletions": 10
+        },
+        {
+          "path": "tests/linux_native.py",
+          "status": "modified",
+          "additions": 12,
+          "deletions": 3
+        },
+        {
+          "path": "tests/linux_native_test.py",
+          "status": "modified",
+          "additions": 25,
+          "deletions": 0
+        },
+        {
+          "path": "tests/windows_workspace_native.py",
+          "status": "modified",
+          "additions": 2,
+          "deletions": 0
+        },
+        {
+          "path": "tools/benchmark_throughput.py",
+          "status": "modified",
+          "additions": 1,
+          "deletions": 1
+        },
+        {
+          "path": "tools/native_ui_acceptance.py",
+          "status": "modified",
+          "additions": 15,
+          "deletions": 3
+        }
+      ],
+      "url": "https://github.com/LIghtJUNction/ztty/compare/1a2f165983d7abff507c69b54c0c4ed225f49a45...9f5a77a1299093d0ba609bfafa2cec3b0ba931dd"
+    },
+    "completed_existing_local_gates": {
+      "observation": "以下为读取已完成记录并核对现有日志/二进制摘要；本核查没有重跑。",
+      "make_check": {
+        "source": "9f5a77a1299093d0ba609bfafa2cec3b0ba931dd",
+        "source_after": "9f5a77a1299093d0ba609bfafa2cec3b0ba931dd",
+        "dirty_after": "",
+        "receipt_path": "artifacts/integration-validation-zterm051-20261120/local-gate.json",
+        "receipt_sha256": "ce7f2aa4ac05f0f49f1b1488eef1c25fc4f435a45d2401ee0bade55efe1e815c",
+        "log_sha256": "85af8505e98f228033a41c5776df34430b062f1a1034584e85e0e8c6ab813bd7",
+        "actual_log_digest_matches": true,
+        "exit_code": 0,
+        "rust_passed": 472,
+        "rust_failed": 0,
+        "rust_ignored": 6,
+        "ignored_scope": "6 项 EGL/native-font 测试随后在独立记录中执行；不是本次 make check 无 skip。",
+        "features": [
+          "wayland"
+        ],
+        "bare_metal_required": true,
+        "memory_max_bytes": 805306368,
+        "memory_peak_bytes": 805306368,
+        "memory_max_events": 3326,
+        "oom_events": 0,
+        "oom_kill_events": 0,
+        "swap_peak_bytes": 0,
+        "elapsed_seconds": 70.405,
+        "frozen_wayland_elf": {
+          "bytes": 1237696,
+          "sha256": "c7935e9e76476a9cd7d0186f23f5806e3e2e2fc556a494b0e3741a2c893b3807",
+          "actual_bytes_digest_matches": true,
+          "executed_by_this_audit": false
+        }
+      },
+      "default_build_and_egl": {
+        "source": "9f5a77a1299093d0ba609bfafa2cec3b0ba931dd",
+        "default_build_exit_code": 0,
+        "egl_command_exit_code": 0,
+        "egl_passed": 6,
+        "egl_failed": 0,
+        "egl_ignored": 0,
+        "original_receipt_path": "artifacts/integration-validation-zterm051-20261120/default-egl/default-egl.json",
+        "original_receipt_sha256": "241772bcda2c547db919947a28fc3fbfff94b1cd4293f99bda2c0d54bf2f01a9",
+        "original_postprocessing_status": "failed",
+        "reason": "首个测试在名称与 ok 之间输出 OpenGL renderer，原单行解析器漏计该测试；原始命令 exit 0 且日志明确 6 passed。",
+        "corrected_receipt_path": "artifacts/integration-validation-zterm051-20261120/default-egl/default-egl-verified.json",
+        "corrected_receipt_sha256": "ade83d7a11cf5c4ee63eabea23196bba6234c71be7cdaed101e15cc6883dade6",
+        "correction_scope": "只重新核验既有六个测试块及汇总，未重新编译或执行。",
+        "egl_log_sha256": "026ad8a2a686b12c4053587b7ea20afb176643d08549070fc2d13e8e4a9c7dae",
+        "raw_egl_log_read_and_digest_matched": true,
+        "default_elf": {
+          "bytes": 1144288,
+          "sha256": "8ac2b30e72c33b68688234a180bd25e48f0fa64f8b54fac492fd597568bdeb46",
+          "actual_bytes_digest_matches": true,
+          "executed_by_this_audit": false
+        }
+      },
+      "registry_consumers": {
+        "source": "9f5a77a1299093d0ba609bfafa2cec3b0ba931dd",
+        "scope": "本次改变的图：一个独立 zterm 消费者和一个六库组合消费者，共 6 条 Cargo 命令；不重复历史 6 单库 + 1 组合的 21 命令记录。",
+        "result_path": "artifacts/registry-consumers-zterm051-9f5a77a-20261120/result.json",
+        "result_sha256": "424cab026a959bce33ae8caa771e5689e0b535e298079d92903944a83d42f94a",
+        "closure_path": "artifacts/registry-consumers-zterm051-9f5a77a-20261120/closure.json",
+        "closure_sha256": "435e8367dcb5999ac337d29445fcbc7c2ae333d1130998ba558e36ce43419562",
+        "result_digest_matches_closure": true,
+        "before": {
+          "source": "9f5a77a1299093d0ba609bfafa2cec3b0ba931dd",
+          "status": "",
+          "lock_sha256": "b86e3438a14ff8710a28b09bafa33ab1861f8cf116b722dc94be83133d4543b5",
+          "tool_sha256": "b1bae659a7f125309f8060e9cb3d8894a14665651770cbe3f5af18223925f51c"
+        },
+        "after": {
+          "source": "9f5a77a1299093d0ba609bfafa2cec3b0ba931dd",
+          "status": "",
+          "lock_sha256": "b86e3438a14ff8710a28b09bafa33ab1861f8cf116b722dc94be83133d4543b5",
+          "tool_sha256": "b1bae659a7f125309f8060e9cb3d8894a14665651770cbe3f5af18223925f51c"
+        },
+        "graphs": [
+          {
+            "name": "zterm",
+            "ok": true,
+            "selected": [
+              "zterm"
+            ],
+            "kind": "exact crates.io versions; no path or git dependencies",
+            "library_no_std": true,
+            "stages": [
+              {
+                "stage": "metadata",
+                "exit_code": 0,
+                "ok": true
+              },
+              {
+                "stage": "no_std_library_check",
+                "exit_code": 0,
+                "ok": true
+              },
+              {
+                "stage": "consumer_run",
+                "exit_code": 0,
+                "ok": true
+              }
+            ],
+            "packages": [
+              {
+                "name": "zgpui",
+                "version": "0.1.0",
+                "source": "registry+https://github.com/rust-lang/crates.io-index",
+                "checksum": "9943673fb607eade54661ff65243c4441a537f75188e361160a97344570bff90",
+                "vcs_sha": "1d796d1fc63808dc099ed7b10c92e75835ae2814"
+              },
+              {
+                "name": "zgraphics",
+                "version": "0.2.0",
+                "source": "registry+https://github.com/rust-lang/crates.io-index",
+                "checksum": "cc775cfedeae7a0563bb11e51e25b32e9d4a72757fb2935221ab7bc6f2c88e54",
+                "vcs_sha": "fe6357f98cf80fb6cc74739e45e8866ee17706ad"
+              },
+              {
+                "name": "zinput",
+                "version": "0.1.3",
+                "source": "registry+https://github.com/rust-lang/crates.io-index",
+                "checksum": "d854f1abbf3a1b2fe2ce8ac2e9ac9ccf05452e6561cf8e8fc70f9f252c0914bd",
+                "vcs_sha": "37617313dd7aaabcca9dd567344a76c4cbe03907"
+              },
+              {
+                "name": "zterm",
+                "version": "0.5.1",
+                "source": "registry+https://github.com/rust-lang/crates.io-index",
+                "checksum": "fc48bcaf9892a77d17ab235316448c3e235b0dccd00e5963b542586585c26c91",
+                "vcs_sha": "a2074bac4c030cfd7c0b2514c852a89dcf54648f"
+              }
+            ]
+          },
+          {
+            "name": "combined",
+            "ok": true,
+            "selected": [
+              "zinput",
+              "zgraphics",
+              "zpty",
+              "zgpui",
+              "ztty-plugin-api",
+              "zterm"
+            ],
+            "kind": "exact crates.io versions; no path or git dependencies",
+            "library_no_std": true,
+            "stages": [
+              {
+                "stage": "metadata",
+                "exit_code": 0,
+                "ok": true
+              },
+              {
+                "stage": "no_std_library_check",
+                "exit_code": 0,
+                "ok": true
+              },
+              {
+                "stage": "consumer_run",
+                "exit_code": 0,
+                "ok": true
+              }
+            ],
+            "packages": [
+              {
+                "name": "zgpui",
+                "version": "0.1.0",
+                "source": "registry+https://github.com/rust-lang/crates.io-index",
+                "checksum": "9943673fb607eade54661ff65243c4441a537f75188e361160a97344570bff90",
+                "vcs_sha": "1d796d1fc63808dc099ed7b10c92e75835ae2814"
+              },
+              {
+                "name": "zgraphics",
+                "version": "0.2.0",
+                "source": "registry+https://github.com/rust-lang/crates.io-index",
+                "checksum": "cc775cfedeae7a0563bb11e51e25b32e9d4a72757fb2935221ab7bc6f2c88e54",
+                "vcs_sha": "fe6357f98cf80fb6cc74739e45e8866ee17706ad"
+              },
+              {
+                "name": "zinput",
+                "version": "0.1.3",
+                "source": "registry+https://github.com/rust-lang/crates.io-index",
+                "checksum": "d854f1abbf3a1b2fe2ce8ac2e9ac9ccf05452e6561cf8e8fc70f9f252c0914bd",
+                "vcs_sha": "37617313dd7aaabcca9dd567344a76c4cbe03907"
+              },
+              {
+                "name": "zpty",
+                "version": "0.2.2",
+                "source": "registry+https://github.com/rust-lang/crates.io-index",
+                "checksum": "1d46215c9aaad115aa3637217dcd3d7752d4f511f05ca29729c83ae58c0dd955",
+                "vcs_sha": "66919bc6dcb7757e0437fe955bfa809fb1282b68"
+              },
+              {
+                "name": "zterm",
+                "version": "0.5.1",
+                "source": "registry+https://github.com/rust-lang/crates.io-index",
+                "checksum": "fc48bcaf9892a77d17ab235316448c3e235b0dccd00e5963b542586585c26c91",
+                "vcs_sha": "a2074bac4c030cfd7c0b2514c852a89dcf54648f"
+              },
+              {
+                "name": "ztty-plugin-api",
+                "version": "0.1.0",
+                "source": "registry+https://github.com/rust-lang/crates.io-index",
+                "checksum": "e00adc5df1eefa237ea1ccd8d837ceecabef1976141b78918901d95cb8e9d4a6",
+                "vcs_sha": "36b367ffda4cea9b3b3dfbf38dc6375567912323"
+              }
+            ]
+          }
+        ],
+        "raw_log_checks": [
+          {
+            "index": 1,
+            "exit_code": 0,
+            "stream_checks": {
+              "stdout": {
+                "bytes": 32668,
+                "sha256": "2d357a0fd21082ffd8c7a7ee50d3aec461b73c3c249a1916a8746ea920c88af0",
+                "matches_record": true
+              },
+              "stderr": {
+                "bytes": 148,
+                "sha256": "dc61e8646d78a5d5a66d05e786afbe0bbf89be23fa480c73327e2a14bb9ef5bf",
+                "matches_record": true
+              }
+            }
+          },
+          {
+            "index": 2,
+            "exit_code": 0,
+            "stream_checks": {
+              "stdout": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "matches_record": true
+              },
+              "stderr": {
+                "bytes": 596,
+                "sha256": "d9953c05ad514e31432085ac06cd0142d641eb521eca3330351ffde2e83bf7c8",
+                "matches_record": true
+              }
+            }
+          },
+          {
+            "index": 3,
+            "exit_code": 0,
+            "stream_checks": {
+              "stdout": {
+                "bytes": 25,
+                "sha256": "4786077f542ca5a2322624158a5db573564bb95f36daca8e6ad84340b9055307",
+                "matches_record": true
+              },
+              "stderr": {
+                "bytes": 773,
+                "sha256": "7980f819320d760c7764261f591c04ef26f7f3e9f992f01f058ccca2b64de40e",
+                "matches_record": true
+              }
+            }
+          },
+          {
+            "index": 4,
+            "exit_code": 0,
+            "stream_checks": {
+              "stdout": {
+                "bytes": 76551,
+                "sha256": "bd88556e17f270f2a39f97a4ce354025a681ff27188cac40b135411b6f218177",
+                "matches_record": true
+              },
+              "stderr": {
+                "bytes": 98,
+                "sha256": "7a6ecfa79de0b756752227c97d34e3522e22edaebfdd8e59ba10ed706acfedab",
+                "matches_record": true
+              }
+            }
+          },
+          {
+            "index": 5,
+            "exit_code": 0,
+            "stream_checks": {
+              "stdout": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "matches_record": true
+              },
+              "stderr": {
+                "bytes": 577,
+                "sha256": "b0fc90a160957ce54fbb2cbb06456419c1f5cef211a3f2463efa9a5b030ab2b8",
+                "matches_record": true
+              }
+            }
+          },
+          {
+            "index": 6,
+            "exit_code": 0,
+            "stream_checks": {
+              "stdout": {
+                "bytes": 25,
+                "sha256": "4786077f542ca5a2322624158a5db573564bb95f36daca8e6ad84340b9055307",
+                "matches_record": true
+              },
+              "stderr": {
+                "bytes": 641,
+                "sha256": "2e08a6db93dc70daf8392d66bae0b19326c15f454555b48d805d3c51b747953b",
+                "matches_record": true
+              }
+            }
+          }
+        ],
+        "prior_graph_repeated": false,
+        "closure_ok": true,
+        "owned_processes_remaining": 0,
+        "memory_peak_bytes": 358707200,
+        "swap_peak_bytes": 0,
+        "closure_correction": "既有 closure helper 曾把退出后的空 ControlGroup 错认成 root cgroup；只读断言先停止，未对 root PID 操作。后续使用预先记录的 owned cgroup 完成核对，原测试结果不变。"
+      },
+      "public_availability": "这些新增本地 gate 文件在本次检查的 9f5 GitHub tree 中未作为对应公开报告纳入；root/owner 可用上述摘要发布白名单证据，不能把本核查当重跑。"
+    },
+    "performance_boundary": {
+      "evidence_url": "https://github.com/LIghtJUNction/ztty/blob/9f5a77a1299093d0ba609bfafa2cec3b0ba931dd/docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/README.md",
+      "candidate_source": "a2074bac4c030cfd7c0b2514c852a89dcf54648f",
+      "scope": "解析器与屏幕模型；不含 PTY、窗口、渲染或按键到显示的延迟。",
+      "samples_per_cohort": 3,
+      "total_process_runs": 9,
+      "unicode_mib_s_medians": {
+        "legacy_0_4": 91.404,
+        "published_0_5": 19.33,
+        "candidate_0_5_1": 26.101
+      },
+      "ascii_mib_s_medians": {
+        "legacy_0_4": 243.684,
+        "published_0_5": 215.103,
+        "candidate_0_5_1": 203.772
+      },
+      "conclusion": "Unicode 相对 0.5.0 部分恢复约 35.03%，仍只有旧版约 28.56%；ASCII 相对 0.5.0 低约 5.27%。不支持“性能回退全部解决”或完整应用排名。",
+      "temporal_note": "该历史 benchmark README 在测试时称 0.5.1 未发布；正式发布时间后此用语应作为历史时点理解，不改写原始样本。"
+    },
+    "still_pending_in_this_audit": [
+      "最终 21 阶段 GUI 验收的 source-bound 完整结果",
+      "ztty 0.5.0 正式应用发布与可下载最终资产",
+      "oh-my-ztty 按最终 tag/资产更新 bundle 并完成真实消费者验收"
+    ],
+    "recommendation": {
+      "source_pair": {
+        "zterm": "a2074bac4c030cfd7c0b2514c852a89dcf54648f",
+        "ztty": "9f5a77a1299093d0ba609bfafa2cec3b0ba931dd"
+      },
+      "status": "可准备成对开发候选增量，依赖图与本地核心/EGL/registry 消费证据已具体绑定。",
+      "acceptance_limit": "在最终 GUI 与应用制品证据出现前，不标记完整应用验收或安装传播完成。若 owner 继续提交，使用其最终不可变 SHA 并核明与这组已验源码的差异。",
+      "preserve_old_snapshot": true
+    }
+  },
+  "public_sources": [
+    "https://crates.io/api/v1/crates/zterm/0.5.1",
+    "https://static.crates.io/crates/zterm/zterm-0.5.1.crate",
+    "https://codeload.github.com/LIghtJUNction/zterm/tar.gz/a2074bac4c030cfd7c0b2514c852a89dcf54648f",
+    "https://api.github.com/repos/LIghtJUNction/zterm/git/ref/tags/v0.5.1",
+    "https://api.github.com/repos/LIghtJUNction/zterm/git/tags/95e50a2653282836dec93832e4126554b9b63077",
+    "https://api.github.com/repos/LIghtJUNction/zterm/actions/runs/44659688289",
+    "https://api.github.com/repos/LIghtJUNction/zterm/actions/runs/44659688289/jobs?per_page=100",
+    "https://api.github.com/repos/LIghtJUNction/zterm/releases/tags/v0.5.1",
+    "https://github.com/LIghtJUNction/zterm/blob/a2074bac4c030cfd7c0b2514c852a89dcf54648f/Cargo.toml",
+    "https://github.com/LIghtJUNction/ztty/blob/9f5a77a1299093d0ba609bfafa2cec3b0ba931dd/Cargo.toml",
+    "https://api.github.com/repos/LIghtJUNction/ztty/compare/1a2f165983d7abff507c69b54c0c4ed225f49a45...9f5a77a1299093d0ba609bfafa2cec3b0ba931dd",
+    "https://github.com/LIghtJUNction/ztty/blob/9f5a77a1299093d0ba609bfafa2cec3b0ba931dd/docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/receipt.json",
+    "https://github.com/LIghtJUNction/ztty/blob/9f5a77a1299093d0ba609bfafa2cec3b0ba931dd/docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/freeze.json",
+    "https://github.com/LIghtJUNction/ztty/blob/9f5a77a1299093d0ba609bfafa2cec3b0ba931dd/docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/candidate-build.json",
+    "https://github.com/LIghtJUNction/ztty/blob/9f5a77a1299093d0ba609bfafa2cec3b0ba931dd/docs/benchmarks/resume-2026-11-20/core-three-way-a2074ba/README.md",
+    "https://api.github.com/repos/LIghtJUNction/project-z/git/trees/46e98822?recursive=1"
+  ]
+}

@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "audit_kind": "read_only_reuse_of_existing_local_evidence",
+  "recommendation": {
+    "decision": "adopt_source_snapshot",
+    "candidate": "14dba75a5752c3142039a8660ce37cdf57d7082a",
+    "requires_new_game_run_for_this_delta": false,
+    "reason": "Full baseline-to-candidate review and source-bound existing local checks cover the changed publishing, packaging and source-contract behavior. Runtime/gameplay code and build inputs are unchanged apart from unused using directives. This is source-snapshot acceptance, not a Steam publication or full gameplay/performance claim."
+  },
+  "sources": {
+    "repository": "https://github.com/LIghtJUNction/OniMods",
+    "baseline": "f0819fa207c52e98aa7dff8084620557669af7ea",
+    "candidate": "14dba75a5752c3142039a8660ce37cdf57d7082a",
+    "comparison": "https://github.com/LIghtJUNction/OniMods/compare/f0819fa207c52e98aa7dff8084620557669af7ea...14dba75a5752c3142039a8660ce37cdf57d7082a",
+    "intermediate_commits": [
+      "4bc0c7cce2c2b18c7be1ec76d08f400348eadb16",
+      "e16a08ba1a41f11514f0155eedddaf8e0969ad9b",
+      "d9ad44a78166375b35ca2665152c8cdd036f80a0"
+    ],
+    "jlib": {
+      "repository": "https://github.com/LIghtJUNction/Jlib",
+      "baseline": "ee2670a233b3b2be6babe75d1a5e351f40f784e2",
+      "candidate": "315a4806e52dabc3d32886cd7f458b3e43d4b4b9",
+      "changed_files": [
+        "Jlib.Tests/SourceContract.cs",
+        "Jlib/README.md"
+      ],
+      "runtime_changed": false
+    },
+    "oni_harness": {
+      "commit": "3618c90a6a300318186264b17d46f9d6ab44c5a0",
+      "changed": false
+    }
+  },
+  "full_range_review": {
+    "commits": 4,
+    "root_changed_paths": 22,
+    "insertions": 364,
+    "deletions": 76,
+    "build_and_dependency_manifest_blobs_compared": 57,
+    "manifest_changes": 0,
+    "cargo_lock_changed": false,
+    "gitmodules_changed": false,
+    "new_dependency_edges": 0,
+    "crate_version": "0.1.13",
+    "zhex_requirement": "=0.1.3",
+    "abi_assessment": "No runtime ABI or FFI signature changes were identified in the complete diff; the new Rust helper is pub(crate). Eight OniMcp C# paths only remove nine unused using directives.",
+    "changed_paths": [
+      ".agents/skills/oni-workshop-description/SKILL.md",
+      ".agents/skills/oni-workshop-description/scripts/generate_workshop_description.py",
+      ".agents/skills/oni-workshop-description/scripts/test_generate_workshop_description.py",
+      ".agents/skills/oni-workshop-publish/SKILL.md",
+      "docs/cycletrim-vulkan-readiness-20261120.json",
+      "mods/CycleTrim/README.md",
+      "mods/CycleTrim/README_EN.md",
+      "mods/CycleTrim/docs/steam-description-en.md",
+      "mods/CycleTrim/docs/steam-description-zh.md",
+      "mods/Jlib",
+      "mods/OniMcp/Server/McpHttpServerMethodValidation.cs",
+      "mods/OniMcp/Tools/Impl/Build/BuildingConfigTools.cs",
+      "mods/OniMcp/Tools/Impl/Build/FilterTreeWrite.cs",
+      "mods/OniMcp/Tools/Impl/Colony/ColonyNotesTools.cs",
+      "mods/OniMcp/Tools/Impl/Colony/ColonyPlumbingLogicDataCollector.cs",
+      "mods/OniMcp/Tools/Impl/Colony/ColonyStateDataCollector.cs",
+      "mods/OniMcp/Tools/Impl/Core/OniDynamicTaskRegistry.cs",
+      "mods/OniMcp/Tools/Impl/Notes/SaveNotesManager.cs",
+      "mods/OniOnline/mod.yaml",
+      "scripts/check_mods.py",
+      "src/publish.rs",
+      "src/workshop/package.rs"
+    ]
+  },
+  "changes": [
+    {
+      "scope": "Workshop metadata",
+      "behavior": "Primary VDF description uses nonblank English, then Chinese, then YAML fallback. Languages are no longer concatenated. Blank, NUL, and over-7999-byte descriptions are rejected; byte counts are UTF-8."
+    },
+    {
+      "scope": "Legacy package preview",
+      "behavior": "One byte through 10 MiB, regular-file requirements and actual read length are checked. The 10 MiB ceiling is this project's Legacy publishing policy, not a universal Steam API guarantee."
+    },
+    {
+      "scope": "SDK discovery",
+      "behavior": "Linux Plugins/AnyCPU/libsteam_api.so is recognized while prior legacy search priority is retained."
+    },
+    {
+      "scope": "Jlib source contract",
+      "behavior": "The old hardcoded 512-square preview expectation is replaced with PNG signature/IHDR/square/size contract assertions. Header validation is not full PNG pixel decoding. Library runtime and project manifests are unchanged."
+    },
+    {
+      "scope": "Python tooling",
+      "behavior": "Description limits use encoded UTF-8 byte counts; source discovery only schedules generator tests when present in the fixture."
+    },
+    {
+      "scope": "Documentation and metadata",
+      "behavior": "CycleTrim readiness text distinguishes menu/graphics readiness from loaded-save performance. The final commit removes an obsolete OniOnline development-version description."
+    }
+  ],
+  "existing_local_acceptance": [
+    {
+      "id": "onim_final_unit",
+      "status": "passed",
+      "passed": 71,
+      "failed": 0,
+      "ignored": 0,
+      "scope": "Production publishing/package Rust unit suite, including Linux AnyCPU SDK discovery; exact changed production file hashes match the candidate.",
+      "older_count_note": "An earlier 70-pass log predates the added AnyCPU regression. It is retained as history and is not the final gate.",
+      "receipt": "publish-primary-language/unit-final-validation.json",
+      "log": "publish-primary-language/unit-final.log"
+    },
+    {
+      "id": "canonical_four_package_plan_vdf",
+      "status": "passed",
+      "tests_passed": 1,
+      "real_packages": 4,
+      "filtered_tests": 71,
+      "scope": "One appended test-only harness drives four frozen real package Plan/VDF fixtures (CycleTrim, OniMcp, OniOnline, Jlib). Production publish.rs is an exact prefix and package.rs is unchanged. Steam API is not initialized.",
+      "steam_initialized": false,
+      "uploaded": false,
+      "receipt": "publish-primary-language/canonical-isolated-final-validation.json"
+    },
+    {
+      "id": "jlib_source_host",
+      "status": "passed",
+      "assertions": 2391,
+      "new_preview_contract_assertions": 36,
+      "new_accept_cases": 5,
+      "new_reject_cases": 31,
+      "scope": "Default standalone source/host contracts at the exact two changed Jlib files; no game execution.",
+      "receipt": "jlib-preview-contract/validation.json"
+    },
+    {
+      "id": "description_generator",
+      "status": "passed",
+      "tests_passed": 3,
+      "scope": "ASCII/CJK/emoji and byte-boundary behavior.",
+      "log": "publishing-rule-byte-limit/generator-tests.log"
+    },
+    {
+      "id": "discovery_fixture",
+      "status": "passed",
+      "tests_passed": 13,
+      "scope": "Python test-discovery fixture contracts.",
+      "log": "python-discovery-fixture-fix/test-plan.log"
+    },
+    {
+      "id": "final_14d_source_and_release_build",
+      "status": "passed",
+      "steps_passed": 4,
+      "scope": "Native bundle validation; locked offline release onim build; all four mods Release; OniHarness runtime Release. The onim build reused a valid cache, rather than being a fresh full compilation.",
+      "verified_tracked_blobs": 2685,
+      "verified_lfs_paths": 11,
+      "tracked_source_bytes": 65770599,
+      "game_reference_build": 763796,
+      "receipt": "release-14d-candidate/build-results.json",
+      "source_manifest": "release-14d-candidate/source-manifest.json",
+      "package_files": {
+        "Jlib": 11,
+        "CycleTrim": 119,
+        "OniMcp": 12,
+        "OniOnline": 30
+      }
+    },
+    {
+      "id": "three_unchanged_wrapper_dry_runs",
+      "status": "passed_reused",
+      "runs": 3,
+      "source": "d9ad44a78166375b35ca2665152c8cdd036f80a0",
+      "scope": "Jlib, OniMcp and CycleTrim actual formal-wrapper dry runs. Reused for 14d because only OniOnline/mod.yaml changes after d9ad; these were not rerun on 14d.",
+      "reuse_receipt": "release-gates-14d-sync.json",
+      "steam_upload_requested": false
+    },
+    {
+      "id": "final_14d_online_and_build_sequence",
+      "status": "passed",
+      "steps_passed": 4,
+      "source": "14dba75a5752c3142039a8660ce37cdf57d7082a",
+      "scope": "Verify frozen source, OniOnline metadata dry run, OniOnline Legacy VDF/ZIP validation, and final build.",
+      "steam_upload_requested": false,
+      "receipt": "release-14d-sequence/sequence.json"
+    }
+  ],
+  "partial_game_observations": {
+    "source": "14dba75a5752c3142039a8660ce37cdf57d7082a",
+    "status": "interrupted_after_partial_observations",
+    "observed_cases": 5,
+    "observations": [
+      "Browse lobby",
+      "Steam/LAN tab navigation",
+      "LAN Create navigation",
+      "Single host connected",
+      "Asteroids unsupported reason shown while room retained"
+    ],
+    "not_run_cases": [
+      "Peer chat",
+      "Two instances or cross-device connection",
+      "Smoke save load",
+      "Coordinate screenshot",
+      "Positive liquid-volume case",
+      "Native A-B-A performance comparison"
+    ],
+    "save_loaded": false,
+    "baseline_save_unchanged": true,
+    "game_exited_normally": true,
+    "not_full_gameplay_acceptance": true
+  },
+  "limitations": [
+    "This audit ran no compile, tests, game or CI workflow; it rehashed and reviewed retained evidence.",
+    "No Steam upload or crates.io/NuGet publication is established by this receipt. The publisher may have a separate ongoing release operation.",
+    "No loaded-save FPS improvement, native A-B-A performance result, Windows/macOS game runtime result, or full multiplayer acceptance is claimed.",
+    "Remote CI results are supplementary, not replacements for the local source-bound evidence.",
+    "An absent src/workshop/native.rs path produced an empty tree listing and is deliberately excluded from unchanged-runtime evidence.",
+    "Raw private receipts contain local environment/account details and must not be published wholesale."
+  ],
+  "existing_public_ci": [
+    {
+      "scope": "Mod quality",
+      "source": "14dba75a5752c3142039a8660ce37cdf57d7082a",
+      "status": "success",
+      "run_id": 44655187013,
+      "job_id": 136019547906,
+      "url": "https://github.com/LIghtJUNction/OniMods/actions/runs/44655187013"
+    },
+    {
+      "scope": "ONI reference compatibility",
+      "source": "14dba75a5752c3142039a8660ce37cdf57d7082a",
+      "status": "success",
+      "run_id": 44655187084,
+      "job_id": 136019548145,
+      "url": "https://github.com/LIghtJUNction/OniMods/actions/runs/44655187084",
+      "limit": "Pinned API-reference compilation and signature compatibility; not game execution."
+    }
+  ],
+  "publication_hygiene": {
+    "policy": "Explicit field whitelist",
+    "excluded": [
+      "credentials",
+      "Steam account/owner identifiers",
+      "private home paths",
+      "full command arguments",
+      "raw environment/session data",
+      "private game binaries"
+    ],
+    "intended_destination": "Public GitHub aggregate evidence; source files remain in their existing Git repositories."
+  },
+  "identity_checks": {
+    "changed_production_files": [
+      {
+        "path": "src/publish.rs",
+        "sha256": "c7fe5047eda2e4147e51d24496f984e257d8e21bd1653dd55b566d6c944c73e5",
+        "git_blob": "095412b056a726f43cbd4affe68b175e3e724fde",
+        "frozen_sha256_matches": true,
+        "frozen_git_blob_matches": true,
+        "unit_test_sha256_matches": true
+      },
+      {
+        "path": "src/workshop/package.rs",
+        "sha256": "05d6f562d932caad6309dc787b981abed28bcd1180d798e62acb7ddac80cda87",
+        "git_blob": "14f451385dffadc171839d741692b536a096ce66",
+        "frozen_sha256_matches": true,
+        "frozen_git_blob_matches": true,
+        "unit_test_sha256_matches": true
+      }
+    ],
+    "jlib_changed_files": [
+      {
+        "path": "Jlib.Tests/SourceContract.cs",
+        "sha256": "148c7992d26393677c967f5bcc20285f0517ae841623e611d0e80769068a0b82",
+        "git_blob": "a11db7e897609235bcf42b858304c3ff4417204f",
+        "frozen_sha256_matches": true,
+        "frozen_git_blob_matches": true
+      },
+      {
+        "path": "Jlib/README.md",
+        "sha256": "1b2538cda63537da8f5bf179064adefaf0df7bf1d9fd593c797f3a3cabe21beb",
+        "git_blob": "f969f9bcd0414891dfa882c508732e703fa4baf9",
+        "frozen_sha256_matches": true,
+        "frozen_git_blob_matches": true
+      }
+    ],
+    "canonical_harness": {
+      "exists": true,
+      "recorded_sha256_matches": true,
+      "begins_with_exact_production_file": true,
+      "appended_bytes": 5402,
+      "appendix_matches_ignoring_outer_whitespace": true,
+      "appended_test_only_module": true,
+      "package_exact_production": true
+    },
+    "existing_logs_rehashed": 14,
+    "all_log_hashes_match": true,
+    "nonempty_unchanged_runtime_trees": {
+      "mods/CycleTrim/OniSim": {
+        "entries": 550,
+        "before_listing_sha256": "d0579d82ec8affd6b4734cb1c1a09fe39b66460f8df8181299ab618e02bd5611",
+        "after_listing_sha256": "d0579d82ec8affd6b4734cb1c1a09fe39b66460f8df8181299ab618e02bd5611",
+        "identical": true,
+        "nonempty": true
+      },
+      "tools/OniMods.SteamPublisher": {
+        "entries": 31,
+        "before_listing_sha256": "14153829c3a1a7e0a628bc46e1142844fbd7b5df7f012651f6bb2c951d79f44a",
+        "after_listing_sha256": "14153829c3a1a7e0a628bc46e1142844fbd7b5df7f012651f6bb2c951d79f44a",
+        "identical": true,
+        "nonempty": true
+      }
+    }
+  },
+  "existing_log_hashes": [
+    {
+      "label": "publish-primary-language/unit-final.log",
+      "sha256": "a8f5cc2487b5162d68091cd3f923f9f9098080c7229d472b27fc84874e8a9c4d",
+      "matches": true
+    },
+    {
+      "label": "jlib-preview-contract/build.log",
+      "sha256": "c359e79e97e78e9cabba547394692e9962853b6e124efc12805df971b7ed8182",
+      "matches": true
+    },
+    {
+      "label": "jlib-preview-contract/host.log",
+      "sha256": "036ea6391c1884aa5d12ee3edf4b9504f74b7a19c727cc3f504fd9cf3027e219",
+      "matches": true
+    },
+    {
+      "label": "release-14d-candidate/native-bundle-validation.log",
+      "sha256": "797d3a6f3f768afd9aef59092ca13e83bdbddafd43dcf8f07a1b1bd0db51e829",
+      "matches": true
+    },
+    {
+      "label": "release-14d-candidate/onim-release-build.log",
+      "sha256": "15b61b4aa7d1571dbce8c7425aa6afcc46a5b9b951e108fc147f93415efc68c2",
+      "matches": true
+    },
+    {
+      "label": "release-14d-candidate/all-mods-release.log",
+      "sha256": "6e3ab9886312f3a15c98ed14815968c40b7daaca9d5b66b8a2302c1d17677633",
+      "matches": true
+    },
+    {
+      "label": "release-14d-candidate/harness-runtime-release.log",
+      "sha256": "41f5a70361354f0cdd2f086f1b29abd69cd0f9928446d49deb1ccf3620b8efd1",
+      "matches": true
+    },
+    {
+      "label": "release-14d-sequence/verify-source.log",
+      "sha256": "b8041ec5ffbf67a761775dd57503e786ce0186090b038cb9593b759a1b27df68",
+      "matches": true
+    },
+    {
+      "label": "release-14d-sequence/online-metadata-dry-run.log",
+      "sha256": "d1c97085dc69728d04104df1cde9cc5848085a1d94757f905d10d35cb9c5c942",
+      "matches": true
+    },
+    {
+      "label": "release-14d-sequence/online-vdf-validation.log",
+      "sha256": "7ef2ac5bbdb7ab1e8fbeba560495772929c969f4d06e5b582a265dcb8741e3e7",
+      "matches": true
+    },
+    {
+      "label": "release-14d-sequence/build-final.log",
+      "sha256": "771bdfd241a7c68b692b82680b59c1b87296b20182134e9f3f447fd1ca000e83",
+      "matches": true
+    },
+    {
+      "label": "workshop-final-offline/jlib-d9ad-dry-run.log",
+      "sha256": "42bcaa5932aa4fb39d08c75aae288493dae4a1b0676482dcb34f7a891645ff10",
+      "matches": true
+    },
+    {
+      "label": "workshop-final-offline/onimcp-d9ad-dry-run.log",
+      "sha256": "a4ac2e41352fba95aa94a329a45739b470a31d225a9a9443917a18eab6af4793",
+      "matches": true
+    },
+    {
+      "label": "workshop-final-offline/cycletrim-d9ad-dry-run.log",
+      "sha256": "42c544e091a37a3af309337da5a435304757e91d20647cf8981a2de900e20273",
+      "matches": true
+    }
+  ],
+  "audit_receipt_hashes": [
+    {
+      "label": "onimods-f081-to-14d-source-inventory.json",
+      "sha256": "3aa7ded278f25fd6dc6e472985ddd561c76d7bcdaa2ba137bcbf18f93fd5a573",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "onimods-f081-to-14d.patch",
+      "sha256": "4718c371c7ab98d5bbc161cfff8aa7154fe1ef2f9cfdd1985473614dad28624f",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "onimods-f081-to-14d-build-surface.json",
+      "sha256": "571cff4f89f2879b3b8471c13346c8705dc673832a01a2fbea25d190747c6bdc",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "onimods-f081-to-14d-secondary-diffs.json",
+      "sha256": "3e53d77d6d319d518d944a4030d2c1ffa91309419f4aa61a2be499fda61e4b7d",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "onimods-existing-local-evidence.json",
+      "sha256": "6d262b280103b8e96f177c2702cf35f5b1356777e60ea85f40c65eeb1f342696",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "onimods-final-local-gates.json",
+      "sha256": "cab0265a8e61623688e4d6c9871ed1f77906b774df1fe012425b1b13cbcb688d",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "onimods-f081-to-14d-identity-checks.json",
+      "sha256": "263104823d8c51d9b07fbae4fb81b00133cd7e7390816fe1f3b7534afc7ffaf5",
+      "public_copy_recommended": false
+    }
+  ],
+  "source_receipt_hashes": [
+    {
+      "label": "publish-primary-language/unit-final-validation.json",
+      "sha256": "625bd5c4c972c902a58e1912b7704a5899477315050fa763b324f82f12a64eec",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "publish-primary-language/canonical-isolated-final-validation.json",
+      "sha256": "43181091b33a6ffc84d906d49ff0a1146f2c4a396ad723bfbec92a3140720fae",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "publish-primary-language/frozen-manifest.json",
+      "sha256": "8806ed3a58760573d77c2a28b8b6989200f51f53ee704241314df169a3e2903e",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "publish-primary-language/validation-summary.json",
+      "sha256": "1e446f14bce63c0d1c51f26cc5a686a1f84d1258cad165ecba43c8d627f5aa8c",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "jlib-preview-contract/validation.json",
+      "sha256": "c6b2eba654f434deca57e5b50228e1948b147fdc1a303b03a4ba2f80ebad8848",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "jlib-preview-contract/frozen-manifest.json",
+      "sha256": "edfac0c80f1f0a977e063bdb2b8576409ef4d97cf98053515575abd3391d4b40",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "release-14d-candidate/source-manifest.json",
+      "sha256": "dff90a275aff690cd8affd437d43d99f82309226dfa4a4283a2d8842c6aa1a96",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "release-14d-candidate/build-results.json",
+      "sha256": "b259f2b14834a83bfc048a53a057f83c0811d99a87379f5481fb16231f7f6f11",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "release-gates-14d-sync.json",
+      "sha256": "6db35de2e3fd25d5c1cf31feb1310d060af6e8b6b950fb044f34c686941f9e9c",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "release-14d-sequence/sequence.json",
+      "sha256": "57c383100bc3ec1e7b78aa10648930c606304323a8f982df9baf73edc6ffd9fe",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "workshop-final-offline/jlib-d9ad-dry-run.json",
+      "sha256": "2a5d85efb1059b6ca7865da0ebac2be8abdb01ddf0cbd97e8ddcac732cc3b454",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "workshop-final-offline/onimcp-d9ad-dry-run.json",
+      "sha256": "4d76b6781a4e099e3125519765bc94ae00810974df11ef2df523189339a91038",
+      "public_copy_recommended": false
+    },
+    {
+      "label": "workshop-final-offline/cycletrim-d9ad-dry-run.json",
+      "sha256": "eb9f1f4ff77a4f65bfc6bbcdceddc302f9d85c3ccd8a0d9dbcc3e994347ce3af",
+      "public_copy_recommended": false
+    }
+  ],
+  "generated_at_utc": "2026-11-20T02:41:02.125658+00:00"
+}
