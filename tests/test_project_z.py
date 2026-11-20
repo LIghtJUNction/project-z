@@ -592,7 +592,7 @@ class GitSourceIntegrationTests(GitSourceFixture):
         source = checkout / "core/src/lib.rs"
         original = source.read_text()
         source.write_text("uncommitted work\n")
-        with self.assertRaisesRegex(pz.CoordinationError, "dirty source"):
+        with self.assertRaisesRegex(pz.CoordinationError, "not clean"):
             pz.sync_sources(self.root)
         self.assertEqual(source.read_text(), "uncommitted work\n")
         source.write_text(original)
