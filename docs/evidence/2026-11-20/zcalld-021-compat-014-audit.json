@@ -1,0 +1,1198 @@
+{
+  "schema": "project-z.zcalld-paired-source-release-audit.v1",
+  "checked_at": "2026-11-20T03:56:43.633247+00:00",
+  "outcome": "Paired aggregate source adoption recommended; real Responses generation remains blocked and live cutover was rolled back.",
+  "review_scope": {
+    "kind": "Read-only complete immutable source-range, dependency, ABI, existing release-gate and artifact-receipt audit.",
+    "new_builds_tests_ci_dispatches_installations_service_changes": false,
+    "core": {
+      "from": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+      "to": "b853e264eced9fbd25120d261eb188a3a8e3b1df",
+      "commits": [
+        {
+          "sha": "a30ab8b42339ea3e6ad946e0314fb0714c707baa",
+          "subject": "fix: synchronize privacy history safely during gateway cutover",
+          "url": "https://github.com/LIghtJUNction/zcalld/commit/a30ab8b42339ea3e6ad946e0314fb0714c707baa"
+        },
+        {
+          "sha": "86e9d39ddc608ead4677aaa73e1ef6528ba7f31e",
+          "subject": "feat: persist bounded privacy audits through native plugin lifecycle",
+          "url": "https://github.com/LIghtJUNction/zcalld/commit/86e9d39ddc608ead4677aaa73e1ef6528ba7f31e"
+        },
+        {
+          "sha": "1df022e4549a4519e1077d5a757ff699e219923d",
+          "subject": "fix: initialize generated builtin plugins without invoking helper exports",
+          "url": "https://github.com/LIghtJUNction/zcalld/commit/1df022e4549a4519e1077d5a757ff699e219923d"
+        },
+        {
+          "sha": "b853e264eced9fbd25120d261eb188a3a8e3b1df",
+          "subject": "chore: release v0.2.1",
+          "url": "https://github.com/LIghtJUNction/zcalld/commit/b853e264eced9fbd25120d261eb188a3a8e3b1df"
+        }
+      ],
+      "changed_paths": [
+        "CHANGELOG.md",
+        "Cargo.lock",
+        "Cargo.toml",
+        "README.md",
+        "docs/MIGRATION.md",
+        "docs/PLUGINS.md",
+        "extensions/compat",
+        "packaging/aur/zcalld-bin/.SRCINFO.in",
+        "packaging/aur/zcalld-bin/PKGBUILD.in",
+        "packaging/aur/zcalld/.SRCINFO.in",
+        "packaging/aur/zcalld/PKGBUILD.in",
+        "plugins/aliases/Cargo.toml",
+        "plugins/community/Cargo.toml",
+        "plugins/policy/Cargo.toml",
+        "plugins/redact/Cargo.toml",
+        "plugins/redact/src/lib.rs",
+        "plugins/routing/Cargo.toml",
+        "scripts/cutover.py",
+        "scripts/fixture_private.py",
+        "scripts/test-cutover.py",
+        "scripts/test-mcp.py",
+        "scripts/test-privacy-init.py",
+        "src/extensions.rs"
+      ]
+    },
+    "compat": {
+      "from": "008910901a3ef8ac5dd57b748a3210faa463c2b9",
+      "to": "7c782e9a6f431c7112112c04940c015adf2d76df",
+      "commits": [
+        {
+          "sha": "9ea86811b259170b09fd70e84c5072ebe6d9975a",
+          "subject": "Persist bounded privacy detection history and flush audit counters",
+          "url": "https://github.com/LIghtJUNction/zcalld-compat/commit/9ea86811b259170b09fd70e84c5072ebe6d9975a"
+        },
+        {
+          "sha": "59802d4286188ee95ae99c10c44ac51c8e895fdc",
+          "subject": "Release v0.1.3",
+          "url": "https://github.com/LIghtJUNction/zcalld-compat/commit/59802d4286188ee95ae99c10c44ac51c8e895fdc"
+        },
+        {
+          "sha": "68be328edd96a03b3b201158298d9811b536dda9",
+          "subject": "Fix builtin entrypoint exports in the community host",
+          "url": "https://github.com/LIghtJUNction/zcalld-compat/commit/68be328edd96a03b3b201158298d9811b536dda9"
+        },
+        {
+          "sha": "7c782e9a6f431c7112112c04940c015adf2d76df",
+          "subject": "Release v0.1.4",
+          "url": "https://github.com/LIghtJUNction/zcalld-compat/commit/7c782e9a6f431c7112112c04940c015adf2d76df"
+        }
+      ],
+      "changed_paths": [
+        "Makefile",
+        "NOTICE",
+        "README.md",
+        "UPSTREAM.json",
+        "VERSION",
+        "cmd/zcalld-privacy/main.go",
+        "cmd/zcalld-privacy/main_test.go",
+        "community/builtin/antigravity.mjs",
+        "community/builtin/codeassist-impl.mjs",
+        "community/builtin/codeassist.mjs",
+        "community/builtin/codex-impl.mjs",
+        "community/builtin/codex.mjs",
+        "community/builtin/copilot-impl.mjs",
+        "community/builtin/copilot.mjs",
+        "community/builtin/tests/entrypoints.test.mjs",
+        "community/builtin/tests/providers.test.mjs",
+        "community/import.go",
+        "packaging/aur/PKGBUILD.in",
+        "privacy/audit.go",
+        "privacy/audit_lock_unix.go",
+        "privacy/audit_lock_windows.go",
+        "privacy/audit_test.go",
+        "privacy/engine.go",
+        "privacy/engine_test.go"
+      ]
+    },
+    "comparison_urls": [
+      "https://github.com/LIghtJUNction/zcalld/compare/c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265...b853e264eced9fbd25120d261eb188a3a8e3b1df",
+      "https://github.com/LIghtJUNction/zcalld-compat/compare/008910901a3ef8ac5dd57b748a3210faa463c2b9...7c782e9a6f431c7112112c04940c015adf2d76df"
+    ]
+  },
+  "dependency_and_abi": {
+    "core_workspace": {
+      "from_version": "0.2.0",
+      "to_version": "0.2.1",
+      "packages_bumped": [
+        "zcalld",
+        "zcalld-compat-client",
+        "zcalld-plugin-aliases",
+        "zcalld-plugin-api",
+        "zcalld-plugin-community",
+        "zcalld-plugin-policy",
+        "zcalld-plugin-redact",
+        "zcalld-plugin-routing"
+      ],
+      "lock_package_count": 17,
+      "external_package_additions_removals_or_version_changes": [],
+      "lock_dependency_arrays_unchanged": true,
+      "lock_sha256": "baaeab027ee7fa2e78132ddd77fa6620b8eb3642aa9cf2aeaf00b0ae7b107c2f"
+    },
+    "go_module": {
+      "go_version": "1.26.8",
+      "go_mod_and_go_sum_unchanged_in_full_range": true,
+      "windows_lock_reuses_existing_dependency": "golang.org/x/sys/windows"
+    },
+    "core_direct_gitlinks": [
+      {
+        "path": "apps/zcall-gui",
+        "commit": "5dbc423eedd4d529a38b3e8e3adc3e6355a56b2b"
+      },
+      {
+        "path": "apps/zcall-omarchy",
+        "commit": "78282c3c3cfa6e9e65e2cbd654f38a96398c6e03"
+      },
+      {
+        "path": "extensions/compat",
+        "commit": "7c782e9a6f431c7112112c04940c015adf2d76df"
+      },
+      {
+        "path": "vendor/zcall",
+        "commit": "8fb84b812b8025e34399b28e27242605d68ea345"
+      },
+      {
+        "path": "vendor/zconv",
+        "commit": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1"
+      },
+      {
+        "path": "vendor/zplugin",
+        "commit": "00d566eedcff7b2932e90b9dfeb44910c783d305"
+      },
+      {
+        "path": "vendor/zsys",
+        "commit": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+      }
+    ],
+    "changed_gitlinks": [
+      {
+        "path": "extensions/compat",
+        "from": "008910901a3ef8ac5dd57b748a3210faa463c2b9",
+        "to": "7c782e9a6f431c7112112c04940c015adf2d76df"
+      }
+    ],
+    "additional_recursive_link": {
+      "path": "apps/zcall-gui/vendor/zui",
+      "commit": "5e37fcfb791eec9ac523fc19373e95d0a513112f"
+    },
+    "generated_native_abi": {
+      "source_unchanged": true,
+      "source": "https://github.com/LIghtJUNction/zcalld/blob/b853e264eced9fbd25120d261eb188a3a8e3b1df/crates/zcalld-plugin-api/src/lib.rs",
+      "interfaces": [
+        {
+          "id": "dev.zcalld.gateway",
+          "version": 1
+        },
+        {
+          "id": "dev.zcalld.response",
+          "version": 1
+        },
+        {
+          "id": "dev.zcalld.provider",
+          "version": 1
+        },
+        {
+          "id": "dev.zcalld.context",
+          "version": 1
+        },
+        {
+          "id": "dev.zcalld.retry",
+          "version": 1
+        },
+        {
+          "id": "dev.zcalld.http",
+          "version": 1
+        }
+      ],
+      "method_order_and_signatures_unchanged": true,
+      "descriptor_package_version": "0.2.1",
+      "descriptor_note": "Existing CARGO_PKG_VERSION-derived export metadata follows the workspace bump; it is distinct from the unchanged interface version 1.",
+      "zplugin_version": "0.3.1"
+    },
+    "worker_protocol_extension": "The new native privacy plugin supplies bounded request context/history_dir and explicitly flushes before shutdown. The new helper supports those optional fields and flush; pin core and compat together for the audited behavior.",
+    "registry_publication_boundary": "GitHub application releases and local path packages were verified. These release workflows do not establish publication of every Rust workspace crate to crates.io; this audit makes no such claim."
+  },
+  "production_review": {
+    "privacy_history": {
+      "sources": [
+        "https://github.com/LIghtJUNction/zcalld-compat/blob/7c782e9a6f431c7112112c04940c015adf2d76df/privacy/audit.go",
+        "https://github.com/LIghtJUNction/zcalld-compat/blob/7c782e9a6f431c7112112c04940c015adf2d76df/privacy/audit_lock_unix.go",
+        "https://github.com/LIghtJUNction/zcalld-compat/blob/7c782e9a6f431c7112112c04940c015adf2d76df/privacy/audit_lock_windows.go",
+        "https://github.com/LIghtJUNction/zcalld-compat/blob/7c782e9a6f431c7112112c04940c015adf2d76df/privacy/engine.go",
+        "https://github.com/LIghtJUNction/zcalld-compat/blob/7c782e9a6f431c7112112c04940c015adf2d76df/cmd/zcalld-privacy/main.go"
+      ],
+      "behavior": "Bounded audit records and daily counters use the existing private-file boundary, a stable sibling interprocess lock, retained daily files, atomic counter replacement, a five-second counter flush and explicit graceful-EOF flush.",
+      "content_boundary": "Records keep placeholder/category/source, bounded head/length/count/action and whitelisted context metadata. They do not persist the full original value, request body or restoration map; do not describe them as containing no information derived from input.",
+      "bounds": {
+        "record_bytes": 1048576,
+        "record_values": 4096,
+        "agents": 1024,
+        "counter_file_bytes": 1048576,
+        "retention_days": 30,
+        "retention_bytes": 104857600,
+        "lock_wait_ms": 250
+      },
+      "failure_semantics": "Audit failure is reported while masking remains active. Counter retries use committed state to avoid double-applying deltas; this is not a guarantee that every failed detection-record append is later replayed."
+    },
+    "native_context_and_shutdown": {
+      "sources": [
+        "https://github.com/LIghtJUNction/zcalld/blob/b853e264eced9fbd25120d261eb188a3a8e3b1df/plugins/redact/src/lib.rs",
+        "https://github.com/LIghtJUNction/zcalld/blob/b853e264eced9fbd25120d261eb188a3a8e3b1df/src/extensions.rs"
+      ],
+      "behavior": "Existing typed ContextPlugin supplies bounded agent/session/path metadata. Request drop closes response state and requests helper flush; audit warnings are surfaced through the host."
+    },
+    "history_cutover": {
+      "source": "https://github.com/LIghtJUNction/zcalld/blob/b853e264eced9fbd25120d261eb188a3a8e3b1df/scripts/cutover.py",
+      "behavior": "Drains the old/new owner before transfer; verifies key/binding/source/candidate identities; prepares a durable private whole-tree snapshot; journals intent before Linux renameat2 exchange/no-replace; refuses independent writer drift and preserves displaced recovery copies.",
+      "scope": "Linux desktop-user cutover with existing service/process/catalog/MCP verification. Cross-platform helper builds do not make this Linux service-migration script cross-platform.",
+      "new_test_definitions": [
+        "def test_privacy_prepare_accepts_only_untouched_candidate_and_bound_paths(self):",
+        "def test_privacy_keys_and_candidate_edits_fail_before_stopping_old(self):",
+        "def test_privacy_unsafe_nodes_are_rejected_without_following_them(self):",
+        "def test_privacy_active_writer_lock_is_refused_and_never_migrated(self):",
+        "def test_privacy_final_tail_and_checked_counters_are_copied_after_drain(self):",
+        "def test_privacy_atomic_exchange_retains_a_racing_candidate_writer(self):",
+        "def test_privacy_fallback_key_is_immutable_and_distinct_from_active_key(self):",
+        "def test_privacy_source_key_fallback_survives_history_exchange(self):",
+        "def test_privacy_day_clear_prune_and_checked_replacement_keep_recovery_copies(self):",
+        "def test_privacy_rollback_waits_for_final_audit_write_and_is_repeatable(self):",
+        "def test_privacy_rollback_refuses_a_different_original_writer(self):",
+        "def test_privacy_rollback_rejects_unfinished_records_without_printing_them(self):",
+        "def test_privacy_failed_start_preserves_new_audit_rows_in_automatic_rollback(self):",
+        "def test_privacy_crash_after_atomic_exchange_resumes_without_duplicate_rows(self):",
+        "def test_privacy_external_lock_serializes_old_waiter_and_post_exchange_writer(self):",
+        "def test_privacy_rollback_publishes_new_history_without_replacing_another_directory(self):",
+        "def test_privacy_crash_during_private_copy_can_retry_without_touching_original(self):"
+      ],
+      "test_boundary": "These 17 new transaction/failure regressions use FakeSystem for service operations. They exercise real temporary filesystem/locks plus controlled races/crash points, not a completed migration of the user desktop."
+    },
+    "builtin_entrypoints": {
+      "behavior": "Each legacy-host entry module exposes its initializer without also exposing helper functions that the host would mistake for additional initializers.",
+      "moved_implementations": [
+        {
+          "module": "codeassist",
+          "old_blob": "ecb09c107a0498b00a14ec42ebdf694196eb9b2c",
+          "new_impl_blob": "16eaa341d3e41d67d35689d48d5cece3106468ec",
+          "equal_after_removing_default_initializer_and_trailing_whitespace": true
+        },
+        {
+          "module": "codex",
+          "old_blob": "0c2f4bdb1d919492e879305938aa560d58add09a",
+          "new_impl_blob": "6a2030d2de36db0ab21767d47d89be34440c09c7",
+          "equal_after_removing_default_initializer_and_trailing_whitespace": true
+        },
+        {
+          "module": "copilot",
+          "old_blob": "576cd71b6b338a8496d01179db33ebb3703c97ad",
+          "new_impl_blob": "f8446d7194d0df5e2e7e02f202a59b3779b8bd08",
+          "equal_after_removing_default_initializer_and_trailing_whitespace": true
+        }
+      ],
+      "algorithm_change": "Codeassist, Codex and Copilot implementation text is identical after removing the old default entrypoint and trailing whitespace; entry modules import the separate implementation.",
+      "tests": "Real built-in initialization and empty MCP tool listing without credentials/network; legacy default/named initializer compatibility and alias deduplication. No live provider account success is implied."
+    },
+    "concrete_source_blockers_found": []
+  },
+  "existing_validation": {
+    "core_formal": {
+      "run_id": 44662882884,
+      "url": "https://github.com/LIghtJUNction/zcalld/actions/runs/44662882884",
+      "workflow_entry_head": "1df022e4549a4519e1077d5a757ff699e219923d",
+      "source_binding": "Prepare job performs the release bump/tag; reusable release jobs check out the emitted tag and verify-ref it. The run entry head is not the final package source; tag and source archive independently bind b853.",
+      "jobs": [
+        {
+          "id": 136045100384,
+          "name": "prepare",
+          "conclusion": "success",
+          "started_at": "2026-11-20T02:44:11Z",
+          "completed_at": "2026-11-20T02:44:31Z",
+          "url": "https://github.com/LIghtJUNction/zcalld/actions/runs/44662882884/job/136045100384",
+          "steps": [
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 136045243806,
+          "name": "release / build (windows-2025, x86_64-pc-windows-msvc)",
+          "conclusion": "success",
+          "started_at": "2026-11-20T02:44:33Z",
+          "completed_at": "2026-11-20T02:48:21Z",
+          "url": "https://github.com/LIghtJUNction/zcalld/actions/runs/44662882884/job/136045243806",
+          "steps": [
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install native toolchain",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out the pinned Windows transport build",
+              "conclusion": "success"
+            },
+            {
+              "name": "Build native optional helpers for acceptance",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify the immutable source",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run Linux release checks",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Check Windows and macOS native binaries",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify native privacy, routing and community MCP workers",
+              "conclusion": "success"
+            },
+            {
+              "name": "Assemble the native archive",
+              "conclusion": "success"
+            },
+            {
+              "name": "Assemble complete pinned sources",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 136045243825,
+          "name": "release / build (macos-15-intel, x86_64-apple-darwin)",
+          "conclusion": "success",
+          "started_at": "2026-11-20T02:44:36Z",
+          "completed_at": "2026-11-20T02:51:35Z",
+          "url": "https://github.com/LIghtJUNction/zcalld/actions/runs/44662882884/job/136045243825",
+          "steps": [
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install native toolchain",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out the pinned Windows transport build",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Build native optional helpers for acceptance",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify the immutable source",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run Linux release checks",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Check Windows and macOS native binaries",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify native privacy, routing and community MCP workers",
+              "conclusion": "success"
+            },
+            {
+              "name": "Assemble the native archive",
+              "conclusion": "success"
+            },
+            {
+              "name": "Assemble complete pinned sources",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 136045243838,
+          "name": "release / build (macos-15, aarch64-apple-darwin)",
+          "conclusion": "success",
+          "started_at": "2026-11-20T02:44:34Z",
+          "completed_at": "2026-11-20T02:46:27Z",
+          "url": "https://github.com/LIghtJUNction/zcalld/actions/runs/44662882884/job/136045243838",
+          "steps": [
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install native toolchain",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out the pinned Windows transport build",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Build native optional helpers for acceptance",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify the immutable source",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run Linux release checks",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Check Windows and macOS native binaries",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify native privacy, routing and community MCP workers",
+              "conclusion": "success"
+            },
+            {
+              "name": "Assemble the native archive",
+              "conclusion": "success"
+            },
+            {
+              "name": "Assemble complete pinned sources",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 136045243873,
+          "name": "release / build (ubuntu-24.04, x86_64-unknown-linux-gnu)",
+          "conclusion": "success",
+          "started_at": "2026-11-20T02:44:34Z",
+          "completed_at": "2026-11-20T02:46:29Z",
+          "url": "https://github.com/LIghtJUNction/zcalld/actions/runs/44662882884/job/136045243873",
+          "steps": [
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install native toolchain",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Check out the pinned Windows transport build",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Build native optional helpers for acceptance",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify the immutable source",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run Linux release checks",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check Windows and macOS native binaries",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Verify native privacy, routing and community MCP workers",
+              "conclusion": "success"
+            },
+            {
+              "name": "Assemble the native archive",
+              "conclusion": "success"
+            },
+            {
+              "name": "Assemble complete pinned sources",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 136045243933,
+          "name": "release / build (ubuntu-24.04-arm, aarch64-unknown-linux-gnu)",
+          "conclusion": "success",
+          "started_at": "2026-11-20T02:44:36Z",
+          "completed_at": "2026-11-20T02:46:24Z",
+          "url": "https://github.com/LIghtJUNction/zcalld/actions/runs/44662882884/job/136045243933",
+          "steps": [
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install native toolchain",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Check out the pinned Windows transport build",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Build native optional helpers for acceptance",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify the immutable source",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run Linux release checks",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check Windows and macOS native binaries",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Verify native privacy, routing and community MCP workers",
+              "conclusion": "success"
+            },
+            {
+              "name": "Assemble the native archive",
+              "conclusion": "success"
+            },
+            {
+              "name": "Assemble complete pinned sources",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 136047890476,
+          "name": "release / publish",
+          "conclusion": "success",
+          "started_at": "2026-11-20T02:51:38Z",
+          "completed_at": "2026-11-20T02:52:15Z",
+          "url": "https://github.com/LIghtJUNction/zcalld/actions/runs/44662882884/job/136047890476",
+          "steps": [
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "conclusion": "success"
+            },
+            {
+              "name": "Publish immutable release assets and SHA256SUMS",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 136048134657,
+          "name": "release / aur",
+          "conclusion": "success",
+          "started_at": "2026-11-20T02:52:17Z",
+          "completed_at": "2026-11-20T02:52:42Z",
+          "url": "https://github.com/LIghtJUNction/zcalld/actions/runs/44662882884/job/136048134657",
+          "steps": [
+            {
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+              "conclusion": "success"
+            },
+            {
+              "name": "Generate source and binary AUR packages from published files",
+              "conclusion": "success"
+            },
+            {
+              "name": "Update AUR package repositories",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ],
+      "native_platforms": [
+        "Linux x86_64",
+        "Linux aarch64",
+        "Windows x86_64",
+        "macOS aarch64",
+        "macOS x86_64"
+      ],
+      "all_five_native_compat_steps_passed": true,
+      "native_compat_entrypoint": "https://github.com/LIghtJUNction/zcalld/blob/b853e264eced9fbd25120d261eb188a3a8e3b1df/scripts/test-native-compat.py",
+      "native_compat_scope": [
+        "test-privacy-init.py",
+        "test-routing-advanced.py",
+        "test-mcp.py"
+      ],
+      "linux_additional_scope": "scripts/check.sh includes workspace gates and test-cutover.py; Windows/macOS use their native check step rather than the Linux cutover script.",
+      "counts_boundary": "Job/step conclusions and invoked immutable scripts were read; no unobserved per-case counts are inferred from a green workflow."
+    },
+    "compat_formal": {
+      "run_id": 44662141600,
+      "url": "https://github.com/LIghtJUNction/zcalld-compat/actions/runs/44662141600",
+      "source": "7c782e9a6f431c7112112c04940c015adf2d76df",
+      "jobs": [
+        {
+          "id": 136042659432,
+          "name": "build (macos-x86_64)",
+          "conclusion": "success",
+          "started_at": "2026-11-20T02:37:42Z",
+          "completed_at": "2026-11-20T02:38:18Z",
+          "url": "https://github.com/LIghtJUNction/zcalld-compat/actions/runs/44662141600/job/136042659432",
+          "steps": [
+            {
+              "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify immutable release source",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check release sources",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 136042659609,
+          "name": "build (windows-x86_64)",
+          "conclusion": "success",
+          "started_at": "2026-11-20T02:37:42Z",
+          "completed_at": "2026-11-20T02:38:13Z",
+          "url": "https://github.com/LIghtJUNction/zcalld-compat/actions/runs/44662141600/job/136042659609",
+          "steps": [
+            {
+              "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify immutable release source",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check release sources",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 136042659610,
+          "name": "build (macos-aarch64)",
+          "conclusion": "success",
+          "started_at": "2026-11-20T02:37:42Z",
+          "completed_at": "2026-11-20T02:38:17Z",
+          "url": "https://github.com/LIghtJUNction/zcalld-compat/actions/runs/44662141600/job/136042659610",
+          "steps": [
+            {
+              "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify immutable release source",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check release sources",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 136042659658,
+          "name": "build (linux-aarch64)",
+          "conclusion": "success",
+          "started_at": "2026-11-20T02:37:42Z",
+          "completed_at": "2026-11-20T02:38:14Z",
+          "url": "https://github.com/LIghtJUNction/zcalld-compat/actions/runs/44662141600/job/136042659658",
+          "steps": [
+            {
+              "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify immutable release source",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check release sources",
+              "conclusion": "skipped"
+            }
+          ]
+        },
+        {
+          "id": 136042659789,
+          "name": "build (linux-x86_64)",
+          "conclusion": "success",
+          "started_at": "2026-11-20T02:37:42Z",
+          "completed_at": "2026-11-20T02:38:13Z",
+          "url": "https://github.com/LIghtJUNction/zcalld-compat/actions/runs/44662141600/job/136042659789",
+          "steps": [
+            {
+              "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify immutable release source",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check release sources",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 136042911360,
+          "name": "publish",
+          "conclusion": "success",
+          "started_at": "2026-11-20T02:38:20Z",
+          "completed_at": "2026-11-20T02:38:45Z",
+          "url": "https://github.com/LIghtJUNction/zcalld-compat/actions/runs/44662141600/job/136042911360",
+          "steps": [
+            {
+              "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+              "conclusion": "success"
+            },
+            {
+              "name": "Stage source, AUR files, and checksums",
+              "conclusion": "success"
+            },
+            {
+              "name": "Publish all assets together",
+              "conclusion": "success"
+            },
+            {
+              "name": "Publish AUR package when configured",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ],
+      "all_build_jobs_runner": "ubuntu-24.04",
+      "make_check_target": "linux-x86_64",
+      "cross_built_targets": [
+        "linux-aarch64",
+        "windows-x86_64",
+        "macos-aarch64",
+        "macos-x86_64"
+      ],
+      "native_execution_boundary": "These five compat artifact jobs are not five native operating-system runs. Native execution of pinned helpers on all five targets is separately supported by the core release workflow.",
+      "new_audit_test_definitions": [
+        "func TestAuditMaskMetadataAndChecked(t *testing.T) {",
+        "func TestAuditOffAndEmptyPreflightDoNotWrite(t *testing.T) {",
+        "func TestAuditWarnAndBlockEvents(t *testing.T) {",
+        "func TestAuditFailureKeepsMaskAndCanFlushAfterRecovery(t *testing.T) {",
+        "func TestAuditContextAndOutputBounds(t *testing.T) {",
+        "func TestAuditEncodedRecordLimitReportsOmittedHits(t *testing.T) {",
+        "func TestAuditConcurrentStoresMergeCounters(t *testing.T) {",
+        "func TestAuditProcessHelper(t *testing.T) {",
+        "func TestAuditConcurrentProcesses(t *testing.T) {",
+        "func TestAuditLockHasDeadline(t *testing.T) {",
+        "func TestAuditDailyRetentionAndCheckedBudget(t *testing.T) {",
+        "func TestAuditCounterFailurePreservesFileAndRetriesOnce(t *testing.T) {",
+        "func TestAuditTimerFlushesWithoutShutdown(t *testing.T) {",
+        "func TestAuditRebuildsKeyAfterLockIsOmitted(t *testing.T) {",
+        "func TestAuditRejectsReplacedLockOrDirectoryIdentity(t *testing.T) {",
+        "func TestAuditRefusesSymlinkDestination(t *testing.T) {"
+      ]
+    },
+    "local_receipt_gap": "A separate immutable owner-local gate receipt was not provided to this audit. Existing official release jobs provide the source-bound validation above; no new broad rerun is requested."
+  },
+  "formal_releases": {
+    "core": {
+      "version": "v0.2.1",
+      "release_id": 452209223,
+      "url": "https://github.com/LIghtJUNction/zcalld/releases/tag/v0.2.1",
+      "published_at": "2026-11-20T02:52:11Z",
+      "draft": false,
+      "prerelease": false,
+      "tag_object": "f01150bd61f95f16dfdf23fb63b53ba4c5e8cc25",
+      "source_commit": "b853e264eced9fbd25120d261eb188a3a8e3b1df",
+      "tag_signature_verified": false,
+      "tag_signature_reason": "unsigned",
+      "assets": [
+        {
+          "name": "SHA256SUMS",
+          "size": 1149,
+          "digest": "sha256:30ad63b403668dbce39c47be3a40d6d9a97f4a1cc1802c399eea3970ef32dac5",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/SHA256SUMS"
+        },
+        {
+          "name": "zcalld-0.2.1-aarch64-apple-darwin",
+          "size": 1928288,
+          "digest": "sha256:4ab1d1c1f9b5e534e26a6cbd3bc8482fdc7ff773607c2e2876d8382f9559a346",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-aarch64-apple-darwin"
+        },
+        {
+          "name": "zcalld-0.2.1-aarch64-apple-darwin.tar.gz",
+          "size": 2334093,
+          "digest": "sha256:638d284e55a1ae031ce4a84a12c760d17419ed12e472f3a3c2b90464928e91fd",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-aarch64-apple-darwin.tar.gz"
+        },
+        {
+          "name": "zcalld-0.2.1-aarch64-unknown-linux-gnu",
+          "size": 1971136,
+          "digest": "sha256:e17350dc71be4722baf66930943096a9b7a96383d27aa86e2243c6de3e36cbf4",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-aarch64-unknown-linux-gnu"
+        },
+        {
+          "name": "zcalld-0.2.1-aarch64-unknown-linux-gnu.tar.gz",
+          "size": 2428021,
+          "digest": "sha256:54aa17c49b9e852fcc0f7a7d380504687cc1b2a6d1798249f5e0076d51bcd149",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-aarch64-unknown-linux-gnu.tar.gz"
+        },
+        {
+          "name": "zcalld-0.2.1-source.tar.gz",
+          "size": 3736562,
+          "digest": "sha256:7f2244455a769fe18398ea6fb70c5fdafa42aae9dddb345fee4ac6006a6da480",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-source.tar.gz"
+        },
+        {
+          "name": "zcalld-0.2.1-x86_64-apple-darwin",
+          "size": 2191912,
+          "digest": "sha256:bd71d9019d900ffe48b093c8949a21d7050ecdd23883395dec222ed12a968e84",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-x86_64-apple-darwin"
+        },
+        {
+          "name": "zcalld-0.2.1-x86_64-apple-darwin.tar.gz",
+          "size": 2486043,
+          "digest": "sha256:a09ee2ced338a0b0d6262d4f1b6dd55f174df6f5bc6703ee172870b02aee1eae",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-x86_64-apple-darwin.tar.gz"
+        },
+        {
+          "name": "zcalld-0.2.1-x86_64-pc-windows-msvc.exe",
+          "size": 2335744,
+          "digest": "sha256:16d30186c238eb0e038ccab52879caca72299e9cabfc5e756ec44d1e7a0c7d42",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-x86_64-pc-windows-msvc.exe"
+        },
+        {
+          "name": "zcalld-0.2.1-x86_64-pc-windows-msvc.zip",
+          "size": 2594080,
+          "digest": "sha256:9986f0067c90a5ef01af1253d091af925ac7642cfe4da90f01f96e1968397cd9",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-x86_64-pc-windows-msvc.zip"
+        },
+        {
+          "name": "zcalld-0.2.1-x86_64-unknown-linux-gnu",
+          "size": 2286200,
+          "digest": "sha256:40a455a1fa5b46ab2ce6c5a1765ce876c1dd898b28c66e4ea6be65d57be1fb2c",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-x86_64-unknown-linux-gnu"
+        },
+        {
+          "name": "zcalld-0.2.1-x86_64-unknown-linux-gnu.tar.gz",
+          "size": 2591886,
+          "digest": "sha256:fc05e22b9d568bb139c5edf0cf2a55916e153fde7b9da127011d07ac9bab0be7",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-x86_64-unknown-linux-gnu.tar.gz"
+        }
+      ]
+    },
+    "compat": {
+      "version": "v0.1.4",
+      "release_id": 452200603,
+      "url": "https://github.com/LIghtJUNction/zcalld-compat/releases/tag/v0.1.4",
+      "published_at": "2026-11-20T02:38:29Z",
+      "draft": false,
+      "prerelease": false,
+      "tag_object": "e9062833a4ea5ab5860411307ebc37e89e473c19",
+      "source_commit": "7c782e9a6f431c7112112c04940c015adf2d76df",
+      "tag_signature_verified": false,
+      "tag_signature_reason": "unsigned",
+      "assets": [
+        {
+          "name": "SHA256SUMS",
+          "size": 728,
+          "digest": "sha256:450fa0438a8b585beeb48258f731ccd86de84e14ccfbc30d2ca1e652654f484a",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld-compat/releases/download/v0.1.4/SHA256SUMS"
+        },
+        {
+          "name": "zcalld-compat-0.1.4-aur.tar.gz",
+          "size": 1211,
+          "digest": "sha256:acd903cb590f2ddd669ac0c8d65f318b1d254c7f6311e74c81b7603f8c06d5a1",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld-compat/releases/download/v0.1.4/zcalld-compat-0.1.4-aur.tar.gz"
+        },
+        {
+          "name": "zcalld-compat-0.1.4-linux-aarch64.tar.gz",
+          "size": 3633997,
+          "digest": "sha256:0c74a5bf1587bab363ea760fb66188f1cdbdfe3dd3ec88ce2629c8041a93046c",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld-compat/releases/download/v0.1.4/zcalld-compat-0.1.4-linux-aarch64.tar.gz"
+        },
+        {
+          "name": "zcalld-compat-0.1.4-linux-x86_64.tar.gz",
+          "size": 3976790,
+          "digest": "sha256:83cc9ca2401256f479209ad7d0d36894199a4f454f94ab271245506db52f489a",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld-compat/releases/download/v0.1.4/zcalld-compat-0.1.4-linux-x86_64.tar.gz"
+        },
+        {
+          "name": "zcalld-compat-0.1.4-macos-aarch64.tar.gz",
+          "size": 3696141,
+          "digest": "sha256:6efb97ed3f445d540255a814d872f641d531ed179a4337153efdeeb35cd130e3",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld-compat/releases/download/v0.1.4/zcalld-compat-0.1.4-macos-aarch64.tar.gz"
+        },
+        {
+          "name": "zcalld-compat-0.1.4-macos-x86_64.tar.gz",
+          "size": 3963900,
+          "digest": "sha256:f4a044ba5a6d01ab5380fc3d0f69c6668af3d8aef886ebd15dfdd59bc30b9c05",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld-compat/releases/download/v0.1.4/zcalld-compat-0.1.4-macos-x86_64.tar.gz"
+        },
+        {
+          "name": "zcalld-compat-0.1.4-source.tar.gz",
+          "size": 554829,
+          "digest": "sha256:07b605bfce4965d533e35d02bdc2f31b1abf65a6e650c7b3214f90fc765d9ab7",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld-compat/releases/download/v0.1.4/zcalld-compat-0.1.4-source.tar.gz"
+        },
+        {
+          "name": "zcalld-compat-0.1.4-windows-x86_64.zip",
+          "size": 4173785,
+          "digest": "sha256:87f11a414349a299f2e138d11eff89693837172568350f2a10145697da962c5f",
+          "browser_download_url": "https://github.com/LIghtJUNction/zcalld-compat/releases/download/v0.1.4/zcalld-compat-0.1.4-windows-x86_64.zip"
+        }
+      ]
+    },
+    "signature_boundary": "Both annotated tags are unsigned; matching hashes/source trees establish consistency, not a signature verification claim."
+  },
+  "downloaded_artifact_evidence": {
+    "receipt": {
+      "file": "download-verification.json",
+      "bytes": 10851,
+      "sha256": "23752ddb443c0d9d4eeacbbceef202643af41776381c210ca31d1be3d82312df"
+    },
+    "checked_at": "2026-11-20T03:31:45.620366+00:00",
+    "audit_activity": "Read and verified the coordinator-produced actual-download receipt; this reviewer did not repeat those downloads or execute the binaries.",
+    "source_binding": {
+      "repository": "LIghtJUNction/zcalld",
+      "commit": "b853e264eced9fbd25120d261eb188a3a8e3b1df",
+      "submodules": {
+        "apps/zcall-gui": "5dbc423eedd4d529a38b3e8e3adc3e6355a56b2b",
+        "apps/zcall-gui/vendor/zui": "5e37fcfb791eec9ac523fc19373e95d0a513112f",
+        "apps/zcall-omarchy": "78282c3c3cfa6e9e65e2cbd654f38a96398c6e03",
+        "extensions/compat": "7c782e9a6f431c7112112c04940c015adf2d76df",
+        "vendor/zcall": "8fb84b812b8025e34399b28e27242605d68ea345",
+        "vendor/zconv": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+        "vendor/zplugin": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+        "vendor/zsys": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+      }
+    },
+    "recursive_binding": {
+      "matched": true,
+      "git_blob_files": 819,
+      "archive_checked_files": 819,
+      "gitlinks": 8,
+      "missing": [],
+      "mismatches": [],
+      "allowed_generated_file": "SOURCE.json",
+      "source_trees": [
+        {
+          "repository": "LIghtJUNction/zcalld",
+          "commit": "b853e264eced9fbd25120d261eb188a3a8e3b1df",
+          "prefix": "",
+          "url": "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/b853e264eced9fbd25120d261eb188a3a8e3b1df?recursive=1"
+        },
+        {
+          "repository": "LIghtJUNction/zcall-gui",
+          "commit": "5dbc423eedd4d529a38b3e8e3adc3e6355a56b2b",
+          "prefix": "apps/zcall-gui",
+          "url": "https://api.github.com/repos/LIghtJUNction/zcall-gui/git/trees/5dbc423eedd4d529a38b3e8e3adc3e6355a56b2b?recursive=1"
+        },
+        {
+          "repository": "LIghtJUNction/zui",
+          "commit": "5e37fcfb791eec9ac523fc19373e95d0a513112f",
+          "prefix": "apps/zcall-gui/vendor/zui",
+          "url": "https://api.github.com/repos/LIghtJUNction/zui/git/trees/5e37fcfb791eec9ac523fc19373e95d0a513112f?recursive=1"
+        },
+        {
+          "repository": "LIghtJUNction/zcall-omarchy",
+          "commit": "78282c3c3cfa6e9e65e2cbd654f38a96398c6e03",
+          "prefix": "apps/zcall-omarchy",
+          "url": "https://api.github.com/repos/LIghtJUNction/zcall-omarchy/git/trees/78282c3c3cfa6e9e65e2cbd654f38a96398c6e03?recursive=1"
+        },
+        {
+          "repository": "LIghtJUNction/zcalld-compat",
+          "commit": "7c782e9a6f431c7112112c04940c015adf2d76df",
+          "prefix": "extensions/compat",
+          "url": "https://api.github.com/repos/LIghtJUNction/zcalld-compat/git/trees/7c782e9a6f431c7112112c04940c015adf2d76df?recursive=1"
+        },
+        {
+          "repository": "LIghtJUNction/zcall",
+          "commit": "8fb84b812b8025e34399b28e27242605d68ea345",
+          "prefix": "vendor/zcall",
+          "url": "https://api.github.com/repos/LIghtJUNction/zcall/git/trees/8fb84b812b8025e34399b28e27242605d68ea345?recursive=1"
+        },
+        {
+          "repository": "LIghtJUNction/zconv",
+          "commit": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+          "prefix": "vendor/zconv",
+          "url": "https://api.github.com/repos/LIghtJUNction/zconv/git/trees/0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1?recursive=1"
+        },
+        {
+          "repository": "LIghtJUNction/zplugin",
+          "commit": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+          "prefix": "vendor/zplugin",
+          "url": "https://api.github.com/repos/LIghtJUNction/zplugin/git/trees/00d566eedcff7b2932e90b9dfeb44910c783d305?recursive=1"
+        },
+        {
+          "repository": "LIghtJUNction/zsys",
+          "commit": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+          "prefix": "vendor/zsys",
+          "url": "https://api.github.com/repos/LIghtJUNction/zsys/git/trees/808fcfdb73584ca7ca122e20b76f0209f56ab0f7?recursive=1"
+        }
+      ],
+      "method": "Compare Git SHA-1 blob identity and executable/symlink modes of every archived source file against exact GitHub recursive trees; also require all nested Gitlink commits equal SOURCE.json."
+    },
+    "assets": [
+      {
+        "name": "SHA256SUMS",
+        "url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/SHA256SUMS",
+        "actual_bytes": 1149,
+        "actual_sha256": "30ad63b403668dbce39c47be3a40d6d9a97f4a1cc1802c399eea3970ef32dac5",
+        "matched_release_api": true
+      },
+      {
+        "name": "zcalld-0.2.1-source.tar.gz",
+        "url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-source.tar.gz",
+        "actual_bytes": 3736562,
+        "actual_sha256": "7f2244455a769fe18398ea6fb70c5fdafa42aae9dddb345fee4ac6006a6da480",
+        "matched_release_api": true
+      },
+      {
+        "name": "zcalld-0.2.1-x86_64-unknown-linux-gnu.tar.gz",
+        "url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-x86_64-unknown-linux-gnu.tar.gz",
+        "actual_bytes": 2591886,
+        "actual_sha256": "fc05e22b9d568bb139c5edf0cf2a55916e153fde7b9da127011d07ac9bab0be7",
+        "matched_release_api": true
+      },
+      {
+        "name": "zcalld-0.2.1-x86_64-pc-windows-msvc.zip",
+        "url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-x86_64-pc-windows-msvc.zip",
+        "actual_bytes": 2594080,
+        "actual_sha256": "9986f0067c90a5ef01af1253d091af925ac7642cfe4da90f01f96e1968397cd9",
+        "matched_release_api": true
+      }
+    ],
+    "packaged_binaries": [
+      {
+        "platform": "Linux x86_64",
+        "binary_bytes": 2286200,
+        "binary_sha256": "40a455a1fa5b46ab2ce6c5a1765ce876c1dd898b28c66e4ea6be65d57be1fb2c",
+        "expected_sha256": "40a455a1fa5b46ab2ce6c5a1765ce876c1dd898b28c66e4ea6be65d57be1fb2c"
+      },
+      {
+        "platform": "Windows x86_64",
+        "binary_bytes": 2335744,
+        "binary_sha256": "16d30186c238eb0e038ccab52879caca72299e9cabfc5e756ec44d1e7a0c7d42",
+        "expected_sha256": "16d30186c238eb0e038ccab52879caca72299e9cabfc5e756ec44d1e7a0c7d42"
+      }
+    ],
+    "coverage": "Complete source archive plus Linux x86_64 and Windows x86_64 archives/binary hashes. Do not generalize the local download verification to every compat/macOS/ARM asset."
+  },
+  "host_deployment": {
+    "last_observation_at": "2026-11-20T03:32:14Z",
+    "observation_origin": "Coordinator read-only host observation; not re-probed by this source review.",
+    "installed_packages": [
+      "zcalld 0.2.1-1",
+      "zcalld-compat 0.1.4-1"
+    ],
+    "service_state": {
+      "load": "loaded",
+      "active": "inactive",
+      "sub": "dead",
+      "unit_file": "disabled after rollback, according to deployment-owner status"
+    },
+    "old_gateway_observed_running": true,
+    "completed_cutover_verified": false,
+    "boundary": "Published, source-verified and installed are separate from successful live service handover.",
+    "rolled_back_after_generation_failure": true
+  },
+  "recommendation": {
+    "paired_sources": {
+      "zcalld": "b853e264eced9fbd25120d261eb188a3a8e3b1df",
+      "zcalld-compat": "7c782e9a6f431c7112112c04940c015adf2d76df"
+    },
+    "adopt_as": "A separate aggregate dependency/source increment after the terminal/Oni checkpoint.",
+    "required_next_scope": [
+      "Update both aggregate pins and preserve the nested extensions/compat equality.",
+      "Regenerate inventory and run affected coordinator source/version/resolution checks; the old c72/008 full-resolution receipt remains historical.",
+      "Keep the previous gateway serving. Require the existing owner’s immutable fix plus successful real Responses-generation and cutover/journal/health/catalog/MCP receipts before reporting the application as a daily-service replacement."
+    ],
+    "not_required_by_this_review": [
+      "Repeating every native release build",
+      "New CI dispatch",
+      "Re-running unrelated application suites",
+      "Changing the SSMCP runtime cohort"
+    ],
+    "services_or_owner_worktrees_changed_by_this_audit": false
+  },
+  "verified_source_records": [
+    {
+      "key": "coreApi",
+      "git_blob": "941a9ea0f029a71a91141f7d5c917784586b7285",
+      "bytes": 7990,
+      "sha256": "cb743ce2acc9a6dea4a98d36dc0a89790749bf7a6465722b66bbfe900cbc469e",
+      "url": "https://github.com/LIghtJUNction/zcalld/blob/b853e264eced9fbd25120d261eb188a3a8e3b1df/crates/zcalld-plugin-api/src/lib.rs"
+    },
+    {
+      "key": "coreNativeCompat",
+      "git_blob": "fefe69bc2dfa7d9f5379bdd00f0614facd367157",
+      "bytes": 2294,
+      "sha256": "3ee989ebbc2b5d8764706de6150284cc921654bf505d5dca0da96ef00c3001f8",
+      "url": "https://github.com/LIghtJUNction/zcalld/blob/b853e264eced9fbd25120d261eb188a3a8e3b1df/scripts/test-native-compat.py"
+    },
+    {
+      "key": "coreBump",
+      "git_blob": "90f8151738d19aef73185b841aafdd27d53f6d14",
+      "bytes": 2067,
+      "sha256": "e3c00e66889fd2c94865c6d830df3c49204acb7988fbb26bb267caf105cbc1a4",
+      "url": "https://github.com/LIghtJUNction/zcalld/blob/b853e264eced9fbd25120d261eb188a3a8e3b1df/.github/workflows/bump.yml"
+    },
+    {
+      "key": "coreWorkflow",
+      "git_blob": "df7f91266afea2f8acff6c5a078ed464ae76d8ed",
+      "bytes": 7881,
+      "sha256": "4bb6f1d22d34535997e6823b2f7d589b63b171ada65b9bd3e733a4c58e188f04",
+      "url": "https://github.com/LIghtJUNction/zcalld/blob/b853e264eced9fbd25120d261eb188a3a8e3b1df/.github/workflows/release.yml"
+    },
+    {
+      "key": "coreCheck",
+      "git_blob": "a4909e8a1a310ad491a58ac183d5d07e791427fa",
+      "bytes": 784,
+      "sha256": "9794eb56e995cc8afef4cfe95404870d0952288eed117e41adb4129b2e6e52e8",
+      "url": "https://github.com/LIghtJUNction/zcalld/blob/b853e264eced9fbd25120d261eb188a3a8e3b1df/scripts/check.sh"
+    },
+    {
+      "key": "compatWorkflow",
+      "git_blob": "2161bda27053effe6425aaecd22dd0842f0f4916",
+      "bytes": 3293,
+      "sha256": "50434356e203d7b41f409565cf597fff291b2da37de3c3f06e8bf3f7a95388ac",
+      "url": "https://github.com/LIghtJUNction/zcalld-compat/blob/7c782e9a6f431c7112112c04940c015adf2d76df/.github/workflows/release.yml"
+    },
+    {
+      "key": "compatGoMod",
+      "git_blob": "54ddd26ec541baef1521260da0df6758fd60d616",
+      "bytes": 250,
+      "sha256": "0225d413eb1c8cae79ff693480e135531bf3c788d08da4a78f04eabc0253ab47",
+      "url": "https://github.com/LIghtJUNction/zcalld-compat/blob/7c782e9a6f431c7112112c04940c015adf2d76df/go.mod"
+    }
+  ],
+  "supersedes_for_current_status": {
+    "file": "zcalld-0.2.1-compat-0.1.4-paired-audit-20261120.json",
+    "sha256": "bafe19bea1f05b1d2e9d44d9f69b340a8814957c3dd32dbc61b4f18f96630500",
+    "old_file_preserved": true
+  },
+  "known_application_acceptance_blocker": {
+    "evidence_origin": "Coordinator read the existing deployment-owner status; not a new test by this reviewer.",
+    "activated_at": "2026-11-20T03:04:14Z",
+    "passed_before_rollback": [
+      "TCP and Unix health/catalog/MCP verification",
+      "99-model metadata consistency",
+      "eight configuration entries",
+      "four Codex identity checks",
+      "privacy acceptance"
+    ],
+    "real_responses_requests": 2,
+    "real_responses_outcome": {
+      "http_status": 502,
+      "error": "invalid provider response metadata"
+    },
+    "rollback_at": "2026-11-20T03:09:57Z",
+    "recovery": "Frozen recovery script restored the previous gateway; zcalld inactive and disabled.",
+    "owner_investigation": "The existing owner is investigating the builtin-to-host.fetch path; a formal fix and successful real-generation receipt were not available to this audit.",
+    "product_conclusion": "Metadata/identity/privacy success and formal release gates do not establish successful real generation or readiness to replace the daily service."
+  }
+}
