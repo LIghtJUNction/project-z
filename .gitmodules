@@ -1,172 +1,132 @@
 [submodule "z58"]
 	path = z58
 	url = https://github.com/LIghtJUNction/z58.git
-	branch = main
 [submodule "z64"]
 	path = z64
 	url = https://github.com/LIghtJUNction/z64.git
-	branch = main
 [submodule "zcall"]
 	path = zcall
 	url = https://github.com/LIghtJUNction/zcall.git
-	branch = main
 [submodule "zclap"]
 	path = zclap
 	url = https://github.com/LIghtJUNction/zclap.git
-	branch = main
 [submodule "zclick"]
 	path = zclick
 	url = https://github.com/LIghtJUNction/zclick.git
-	branch = main
 [submodule "zconv"]
 	path = zconv
 	url = https://github.com/LIghtJUNction/zconv.git
-	branch = main
 [submodule "zdwire"]
 	path = zdwire
 	url = https://github.com/LIghtJUNction/zdwire.git
-	branch = main
 [submodule "zharness"]
 	path = zharness
 	url = https://github.com/LIghtJUNction/zharness.git
-	branch = main
 [submodule "zhex"]
 	path = zhex
 	url = https://github.com/LIghtJUNction/zhex.git
-	branch = main
 [submodule "zldap"]
 	path = zldap
 	url = https://github.com/LIghtJUNction/zldap.git
-	branch = main
 [submodule "zmcpio"]
 	path = zmcpio
 	url = https://github.com/LIghtJUNction/zmcpio.git
-	branch = main
 [submodule "zmime"]
 	path = zmime
 	url = https://github.com/LIghtJUNction/zmime.git
-	branch = main
 [submodule "zplugin"]
 	path = zplugin
 	url = https://github.com/LIghtJUNction/zplugin.git
-	branch = main
 [submodule "zscan"]
 	path = zscan
 	url = https://github.com/LIghtJUNction/zscan.git
-	branch = main
 [submodule "zsyn"]
 	path = zsyn
 	url = https://github.com/LIghtJUNction/zsyn.git
-	branch = main
 [submodule "zsys"]
 	path = zsys
 	url = https://github.com/LIghtJUNction/zsys.git
-	branch = main
 [submodule "ztty"]
 	path = ztty
 	url = https://github.com/LIghtJUNction/ztty.git
-	branch = main
 [submodule "ztuio"]
 	path = ztuio
 	url = https://github.com/LIghtJUNction/ztuio.git
-	branch = main
 [submodule "zvte"]
 	path = zvte
 	url = https://github.com/LIghtJUNction/zvte.git
-	branch = main
 [submodule "zuse"]
 	path = zuse
 	url = https://github.com/LIghtJUNction/zuse.git
-	branch = main
 [submodule "zcalld"]
 	path = zcalld
 	url = https://github.com/LIghtJUNction/zcalld.git
-	branch = main
 [submodule "zcalld-compat"]
 	path = zcalld-compat
 	url = https://github.com/LIghtJUNction/zcalld-compat.git
-	branch = main
 [submodule "zshard"]
 	path = zshard
 	url = https://github.com/LIghtJUNction/zshard.git
-	branch = main
 [submodule "zdot"]
 	path = zdot
 	url = https://github.com/LIghtJUNction/zdot.git
-	branch = main
 [submodule "ssmcp"]
 	path = ssmcp
 	url = https://github.com/LIghtJUNction/ssmcp.git
-	branch = main
 [submodule "oh-my-ztty"]
 	path = oh-my-ztty
 	url = https://github.com/LIghtJUNction/oh-my-ztty.git
-	branch = main
 [submodule "zcall-gui"]
 	path = zcall-gui
 	url = https://github.com/LIghtJUNction/zcall-gui.git
-	branch = main
 [submodule "lmm-api-source"]
 	path = lmm-api-source
 	url = https://github.com/TokenNotIncluded/lmm-api-source.git
-	branch = main
 [submodule "zgpui"]
 	path = zgpui
 	url = https://github.com/LIghtJUNction/zgpui.git
-	branch = main
 [submodule "zinput"]
 	path = zinput
-	url = https://github.com/LIghtJUNction/zinput
-	branch = main
+	url = https://github.com/LIghtJUNction/zinput.git
 [submodule "ztype"]
 	path = ztype
-	url = https://github.com/LIghtJUNction/ztype
-	branch = main
+	url = https://github.com/LIghtJUNction/ztype.git
 [submodule "zrc"]
 	path = zrc
 	url = https://github.com/LIghtJUNction/zrc.git
-	branch = main
 [submodule "zfetch"]
 	path = zfetch
 	url = https://github.com/LIghtJUNction/zfetch.git
-	branch = main
 [submodule "zdistro"]
 	path = zdistro
 	url = https://github.com/LIghtJUNction/zdistro.git
-	branch = main
 [submodule "zmcl"]
 	path = zmcl
 	url = https://github.com/LIghtJUNction/zmcl.git
-	branch = main
 [submodule "zpty"]
 	path = zpty
 	url = https://github.com/LIghtJUNction/zpty.git
-	branch = main
 [submodule "zgraphics"]
 	path = zgraphics
 	url = https://github.com/LIghtJUNction/zgraphics.git
-	branch = main
 [submodule "zterm"]
 	path = zterm
 	url = https://github.com/LIghtJUNction/zterm.git
-	branch = main
 [submodule "OniMods"]
 	path = OniMods
 	url = https://github.com/LIghtJUNction/OniMods.git
-	branch = main
 [submodule "zcall-omarchy"]
 	path = zcall-omarchy
 	url = https://github.com/LIghtJUNction/zcall-omarchy.git
-	branch = main
 [submodule "mechrevo-drivers"]
 	path = mechrevo-drivers
 	url = https://github.com/LIghtJUNction/mechrevo-drivers.git
-	branch = main
 [submodule "zi18n"]
 	path = zi18n
 	url = https://github.com/LIghtJUNction/zi18n.git
-	branch = main
 [submodule "zguard"]
 	path = zguard
 	url = https://github.com/LIghtJUNction/zguard.git
-	branch = main
+[submodule "lmm"]
+	path = lmm
+	url = https://github.com/TokenNotIncluded/lmm.git

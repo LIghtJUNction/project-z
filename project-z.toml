@@ -43,7 +43,11 @@ requires = ["zcalld", "zgpui"]
 
 [repositories.lmm-api-source]
 role = "application"
-manifests = ["services/core/Cargo.toml", "apps/cli/Cargo.toml"]
+manifests = ["services/core/Cargo.toml"]
+source_links = { "apps/cli" = "lmm" }
+
+[repositories.lmm]
+role = "application"
 
 [repositories.ztype]
 role = "application"

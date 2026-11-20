@@ -251,7 +251,7 @@ class IsolatedApply(unittest.TestCase):
         git(self.upstream, "commit", "-am", "advance after audit")
         result = maintenance.apply_snapshot(self.root, self.report, self.destination)
         self.assertEqual(result["status"], "blocked")
-        self.assertIn("upstream moved", result["error"])
+        self.assertIn("moved after audit", result["error"])
         self.assertEqual(git(self.destination, "rev-parse", "HEAD"), self.root_head)
         self.unchanged_source()
 
@@ -351,142 +351,77 @@ class IsolatedApply(unittest.TestCase):
 
 
 
+import test_project_z as source_fixtures
+
+
 @unittest.skipUnless(shutil.which("git") and shutil.which("cargo"), "offline resolution fixtures require Git and Cargo")
-class OfflineResolutionApply(unittest.TestCase):
+class OfflineResolutionApply(source_fixtures.GitSourceFixture):
     def setUp(self):
-        temporary = tempfile.TemporaryDirectory(prefix="project-z-resolution-tests-")
-        self.addCleanup(temporary.cleanup)
-        self.base = Path(temporary.name)
-        self.root = self.base / "root"
-        self.upstream = self.base / "upstream"
-        self.destination = self.base / "snapshot"
-        environment = patch.dict(os.environ, {
-            "GIT_ALLOW_PROTOCOL": "file",
-            "CARGO_NET_OFFLINE": "true",
-            "PYTHONDONTWRITEBYTECODE": "1",
-        })
-        environment.start()
-        self.addCleanup(environment.stop)
-        for repository in (self.root, self.upstream):
-            repository.mkdir()
-            git(repository, "init", "-b", "main")
-            git(repository, "config", "user.name", "Project Z test")
-            git(repository, "config", "user.email", "project-z-test@example.invalid")
-        (self.upstream / "Cargo.toml").write_text(
-            '[workspace]\nmembers = ["core", "app"]\nresolver = "2"\n')
-        for name in ("core", "app"):
-            directory = self.upstream / name
-            (directory / "src").mkdir(parents=True)
-            (directory / "src" / ("lib.rs" if name == "core" else "main.rs")).write_text(
-                "" if name == "core" else "fn main() {}\n")
-            manifest = f'[package]\nname = "fixture-{name}"\nversion = "1.0.0"\nedition = "2021"\n'
-            manifest += ('[features]\nallowed = []\n' if name == "core" else
-                         'publish = false\n[dependencies]\nfixture-core = { path = "../core", version = "=1.0.0" }\n')
-            (directory / "Cargo.toml").write_text(manifest)
-        git(self.upstream, "add", ".")
-        git(self.upstream, "commit", "-m", "initial workspace")
-        self.old = git(self.upstream, "rev-parse", "HEAD")
-        git(self.root, "submodule", "add", "-b", "main", str(self.upstream), "fixture")
-        (self.root / "scripts").mkdir()
+        super().setUp()
         source = Path(__file__).resolve().parents[1] / "scripts"
+        (self.root / "scripts").mkdir()
         for name in ("project_z.py", "cargo_versions.py", "catalog_docs.py"):
             shutil.copy2(source / name, self.root / "scripts" / name)
-        # An application must participate even though default resolve selects libraries.
-        (self.root / "project-z.toml").write_text('[repositories.fixture]\nrole = "application"\n')
-        maintenance.coordinate(self.root)
-        git(self.root, "add", ".")
-        git(self.root, "commit", "-m", "pin initial application")
-        self.root_head = git(self.root, "rev-parse", "HEAD")
+        self.root_head = self.commit(self.root, "include coordinator")
+        self.destination = self.base / "snapshot"
 
-    def update(self, feature):
-        manifest = self.upstream / "app/Cargo.toml"
-        manifest.write_text(manifest.read_text().replace(
-            'version = "=1.0.0" }', f'version = "=1.0.0", features = ["{feature}"] }}'))
-        git(self.upstream, "commit", "-am", "update application features")
-        self.new = git(self.upstream, "rev-parse", "HEAD")
-        return {"root_head": self.root_head, "errors": [], "upstreams": [{
-            "path": "fixture", "url": str(self.upstream), "branch": "main",
-            "pinned": self.old, "upstream": self.new, "changed": True,
-        }]}
+    def report(self):
+        rows = []
+        for repo in self.data["repositories"]:
+            head = source_fixtures.pz.default_head(repo["url"], self.root)
+            rows.append({"path": repo["path"], "url": repo["url"], "branch": head["branch"],
+                         "pinned": repo["commit"], "upstream": head["commit"],
+                         "changed": repo["commit"] != head["commit"] or repo["branch"] != head["branch"]})
+        return {"root_head": self.root_head, "errors": [], "upstreams": rows}
 
     def unchanged_source(self):
         self.assertEqual(git(self.root, "rev-parse", "HEAD"), self.root_head)
-        self.assertEqual(git(self.root / "fixture", "rev-parse", "HEAD"), self.old)
         self.assertEqual(git(self.root, "status", "--porcelain"), "")
+        self.assertEqual(git(self.root / "shared", "rev-parse", "HEAD"), self.shared_initial)
+        self.assertEqual(git(self.root / "app", "rev-parse", "HEAD"), self.app_initial)
         self.assertFalse((self.root / ".cargo/config.toml").exists())
-        self.assertFalse((self.root / "fixture/Cargo.lock").exists())
 
     def test_application_feature_resolution_failure_cannot_create_ready_snapshot(self):
-        result = maintenance.apply_snapshot(
-            self.root, self.update("absent"), self.destination, repositories=["fixture"])
+        manifest = self.app / "Cargo.toml"
+        manifest.write_text(manifest.read_text().replace('version = "1.0.0" }', 'version = "1.0.0", features = ["absent"] }'))
+        new = self.commit(self.app, "request missing upstream feature")
+        result = maintenance.apply_snapshot(self.root, self.report(), self.destination)
         self.assertEqual(result["status"], "blocked", result)
         self.assertIn("does not have that feature", result["error"])
         self.assertNotIn("commit", result)
-        self.assertEqual(git(self.destination, "rev-parse", "HEAD"), self.root_head)
-        self.assertEqual(git(self.destination / "fixture", "rev-parse", "HEAD"), self.new)
-        # Declaration checks alone pass: only the real Cargo resolver detects this mismatch.
-        for action in ("sync", "check"):
-            maintenance.run([sys.executable, self.destination / "scripts/project_z.py",
-                             "--root", self.destination, action], self.destination)
-        self.assertFalse((self.destination / ".cargo/config.toml").exists())
-        self.assertFalse((self.destination / "fixture/Cargo.lock").exists())
+        self.assertEqual(git(self.destination / "app", "rev-parse", "HEAD"), new)
         self.unchanged_source()
 
-    def test_selected_library_update_still_resolves_unselected_consumer(self):
-        consumer = self.base / "consumer-upstream"
-        (consumer / "src").mkdir(parents=True)
-        git(consumer, "init", "-b", "main")
-        git(consumer, "config", "user.name", "Project Z test")
-        git(consumer, "config", "user.email", "project-z-test@example.invalid")
-        (consumer / "src/main.rs").write_text("fn main() {}\n")
-        (consumer / "Cargo.toml").write_text(
-            '[package]\nname = "fixture-consumer"\nversion = "1.0.0"\n'
-            'edition = "2021"\npublish = false\n[dependencies]\n'
-            'fixture-core = { version = "=1.0.0", features = ["allowed"] }\n')
-        git(consumer, "add", ".")
-        git(consumer, "commit", "-m", "consumer requires existing library feature")
-        consumer_pin = git(consumer, "rev-parse", "HEAD")
-        git(self.root, "submodule", "add", "-b", "main", str(consumer), "consumer")
-        policy = self.root / "project-z.toml"
-        policy.write_text(policy.read_text() + '[repositories.consumer]\nrole = "application"\n')
-        maintenance.coordinate(self.root)
-        git(self.root, "add", ".")
-        git(self.root, "commit", "-m", "register independent consumer")
-        self.root_head = git(self.root, "rev-parse", "HEAD")
-
-        manifest = self.upstream / "core/Cargo.toml"
-        manifest.write_text(manifest.read_text().replace("allowed = []\n", ""))
-        git(self.upstream, "commit", "-am", "remove feature used by separate consumer")
-        self.new = git(self.upstream, "rev-parse", "HEAD")
-        report = {"root_head": self.root_head, "errors": [], "upstreams": [
-            {"path": "fixture", "url": str(self.upstream), "branch": "main",
-             "pinned": self.old, "upstream": self.new, "changed": True},
-            {"path": "consumer", "url": str(consumer), "branch": "main",
-             "pinned": consumer_pin, "upstream": consumer_pin, "changed": False},
-        ]}
-        result = maintenance.apply_snapshot(
-            self.root, report, self.destination, repositories=["fixture"])
+    def test_latest_library_with_unmigrated_consumer_lock_is_blocked(self):
+        new = self.advance_shared()
+        original = (self.root / "app/Cargo.lock").read_bytes()
+        result = maintenance.apply_snapshot(self.root, self.report(), self.destination, repositories=["shared"])
         self.assertEqual(result["status"], "blocked", result)
-        self.assertIn("does not have that feature", result["error"])
-        self.assertEqual(result["selected"], ["fixture"])
-        self.assertEqual(result["deferred"], [])
+        self.assertIn("stale internal", result["error"])
+        self.assertIn(new, result["error"])
+        self.assertEqual((self.destination / "app/Cargo.lock").read_bytes(), original)
         self.assertNotIn("commit", result)
-        self.assertEqual(git(self.destination, "rev-parse", "HEAD"), self.root_head)
-        self.assertEqual(git(self.destination / "consumer", "rev-parse", "HEAD"), consumer_pin)
-        self.assertFalse((self.destination / "consumer/Cargo.lock").exists())
         self.unchanged_source()
 
-    def test_resolved_application_snapshot_is_committed_with_resolution_evidence(self):
-        result = maintenance.apply_snapshot(self.root, self.update("allowed"), self.destination)
+    def test_updated_consumer_and_library_are_committed_with_actual_locked_resolution(self):
+        self.advance_shared()
+        self.cargo(self.app, "update", "-p", "tiny-core")
+        new = self.commit(self.app, "refresh internal Git lock")
+        result = maintenance.apply_snapshot(self.root, self.report(), self.destination)
         self.assertEqual(result["status"], "ready", result)
-        self.assertIn("resolve", result["validation"])
-        self.assertIn("1 repositories", result["validation"]["resolve"])
-        self.assertNotEqual(result["commit"], self.root_head)
-        self.assertEqual(git(self.destination, "rev-parse", "HEAD"), result["commit"])
-        self.assertEqual(git(self.destination, "rev-parse", "HEAD:fixture"), self.new)
+        self.assertIn("locked Git sources resolved in 2 repositories", result["validation"]["resolve"])
+        self.assertEqual(git(self.destination / "app", "rev-parse", "HEAD"), new)
         self.assertEqual(git(self.destination, "status", "--porcelain"), "")
-        self.assertFalse((self.destination / ".cargo/config.toml").exists())
-        self.assertFalse((self.destination / "fixture/Cargo.lock").exists())
+        self.unchanged_source()
+
+    def test_default_branch_rename_is_recorded_without_editing_source(self):
+        self.git(self.shared, "branch", "-m", "main", "development")
+        result = maintenance.apply_snapshot(self.root, self.report(), self.destination)
+        self.assertEqual(result["status"], "ready", result)
+        current = json.loads((self.destination / "catalog.json").read_text())
+        repo = next(item for item in current["repositories"] if item["name"] == "shared")
+        self.assertEqual(repo["branch"], "development")
+        self.assertEqual(repo["commit"], self.shared_initial)
         self.unchanged_source()
 
 

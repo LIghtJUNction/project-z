@@ -19,8 +19,10 @@ from urllib.parse import quote
 from urllib.request import Request, urlopen
 import uuid
 
+from project_z import CoordinationError, default_head
+
 ROOT = Path(__file__).resolve().parents[1]
-GENERATED = ("catalog.json", ".cargo/project-z.toml", "docs/PROJECTS.md")
+GENERATED = ("catalog.json", "docs/PROJECTS.md")
 
 
 class MaintenanceError(RuntimeError):
@@ -107,12 +109,12 @@ def load_catalog(root, required=False):
 
 def upstream_status(root, module, timeout):
     pinned = pinned_commit(root, module["path"])
-    ref = f"refs/heads/{module['branch']}"
-    lines = run(["git", "ls-remote", "--refs", "--", module["url"], ref], root, timeout).splitlines()
-    heads = [line.split()[0] for line in lines if line.split()[-1] == ref]
-    if len(heads) != 1 or not re.fullmatch(r"[0-9a-f]{40,64}", heads[0]):
-        raise MaintenanceError(f"{module['path']}: upstream branch not found: {ref}")
-    return {**module, "pinned": pinned, "upstream": heads[0], "changed": pinned != heads[0]}
+    try:
+        head = default_head(module["url"], root, timeout)
+    except (CoordinationError, OSError, subprocess.TimeoutExpired) as error:
+        raise MaintenanceError(str(error)) from error
+    return {**module, "branch": head["branch"], "pinned": pinned,
+            "upstream": head["commit"], "changed": pinned != head["commit"]}
 
 
 def registry_status(package, timeout=30):
@@ -172,7 +174,7 @@ def audit(root, owner=None, workers=4, timeout=30, require_catalog=False):
               "root_head": run(["git", "rev-parse", "HEAD"], root),
               "source_dirty": bool(run(["git", "status", "--porcelain", "--untracked-files=normal",
                                          "--ignore-submodules=none"], root)),
-              "upstreams": [], "registry": [], "candidates": [], "errors": []}
+              "upstreams": [], "registry": [], "candidates": [], "errors": [], "warnings": []}
     known = modules(root)
     catalog = None
     try:
@@ -190,9 +192,10 @@ def audit(root, owner=None, workers=4, timeout=30, require_catalog=False):
                 report["upstreams"].append(row)
                 if catalog is not None:
                     entry = catalog_repos.get(module["path"])
-                    if (entry is None or entry.get("commit") != row["pinned"] or entry.get("url") != row["url"]
-                            or entry.get("branch", "main") != row["branch"]):
+                    if entry is None or entry.get("commit") != row["pinned"] or entry.get("url") != row["url"]:
                         report["errors"].append(f"{module['path']}: catalog differs from committed gitlink/source")
+                    elif entry.get("branch") != row["branch"]:
+                        row["changed"] = True
             except MaintenanceError as error:
                 report["errors"].append(str(error))
         packages = {(row["name"], row["version"]): row for row in catalog.get("packages", [])
@@ -202,7 +205,7 @@ def audit(root, owner=None, workers=4, timeout=30, require_catalog=False):
             try:
                 report["registry"].append(job.result())
             except MaintenanceError as error:
-                report["errors"].append(str(error))
+                report["warnings"].append(f"external registry publication status: {error}")
     try:
         if owner is None:
             origin = github_identity(run(["git", "remote", "get-url", "origin"], root))
@@ -280,7 +283,7 @@ def isolated_destination(root, destination, known):
 
 def coordinate(root):
     output = {}
-    for action in (("sync",), ("check",), ("resolve", "--all")):
+    for action in (("sync", "--record"), ("check",), ("resolve", "--all")):
         output[action[0]] = run([sys.executable, root / "scripts/project_z.py", "--root", root, *action], root, 600)
     return output
 
@@ -301,7 +304,7 @@ def apply_snapshot(root, report, destination=None, *, repositories=None):
         raise MaintenanceError("unknown repository selection: " + ", ".join(repr(path) for path in sorted(unknown)))
     all_updates = [row for row in report["upstreams"] if row["changed"]]
     for row in all_updates:
-        if row["path"] not in known or any(row[key] != known[row["path"]][key] for key in ("url", "branch")):
+        if row["path"] not in known or row["url"] != known[row["path"]]["url"]:
             raise MaintenanceError("apply plan contains a repository outside .gitmodules")
         if pinned_commit(root, row["path"]) != row["pinned"]:
             raise MaintenanceError("pinned gitlink changed during audit; rerun")
@@ -321,7 +324,11 @@ def apply_snapshot(root, report, destination=None, *, repositories=None):
         for row in updates:
             repository = destination / row["path"]
             require_clean(repository)
-            run(["git", "fetch", "--no-tags", "origin", f"refs/heads/{row['branch']}"], repository, 120)
+            current = upstream_status(root, known[row["path"]], 90)
+            if any(current[key] != row[key] for key in ("branch", "upstream")):
+                raise MaintenanceError(f"{row['path']}: default branch moved after audit; rerun in a new worktree")
+            remote_ref = f"refs/remotes/origin/{row['branch']}"
+            run(["git", "fetch", "--no-tags", "--no-recurse-submodules", "origin", f"+refs/heads/{row['branch']}:{remote_ref}"], repository, 120)
             if run(["git", "rev-parse", "FETCH_HEAD"], repository) != row["upstream"]:
                 raise MaintenanceError(f"{row['path']}: upstream moved after audit; rerun in a new worktree")
             try:
@@ -329,6 +336,7 @@ def apply_snapshot(root, report, destination=None, *, repositories=None):
             except MaintenanceError as error:
                 raise MaintenanceError(f"{row['path']}: upstream is not a fast-forward; review the divergence") from error
             run(["git", "-c", "submodule.recurse=false", "checkout", "--detach", row["upstream"]], repository)
+            run(["git", "symbolic-ref", "refs/remotes/origin/HEAD", remote_ref], repository)
         # Populate nested trees only after their parent reaches its final pin.
         # Root update would reset new pins; old nested trees may have been removed.
         for path in known:
@@ -343,6 +351,8 @@ def apply_snapshot(root, report, destination=None, *, repositories=None):
             if run(["git", "rev-parse", "HEAD"], destination / row["path"]) != row["upstream"]:
                 raise MaintenanceError("an updated gitlink changed during validation")
         allowed = {row["path"] for row in updates} | set(GENERATED)
+        if run(["git", "ls-files", "--", ".cargo/project-z.toml"], destination):
+            allowed.add(".cargo/project-z.toml")
         changed = set(run(["git", "diff", "--name-only"], destination).splitlines())
         untracked = set(run(["git", "ls-files", "--others", "--exclude-standard"], destination).splitlines())
         if not (changed | untracked) <= allowed:
