@@ -6,7 +6,7 @@
       "path": "extore",
       "url": "https://github.com/TokenNotIncluded/extore.git",
       "branch": "feat/lmm-zplugin",
-      "commit": "1c29a9a0bfa7e64c938581e5c5e5fcb1e6832f04",
+      "commit": "8e3063690cf5595884b1e639535869fd593e0296",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -18,7 +18,7 @@
       "path": "lmm-api-source",
       "url": "https://github.com/TokenNotIncluded/lmm-api-source.git",
       "branch": "feature/extore-zplugin",
-      "commit": "44bae83fa2181bbfa49467a2140106b3fec9ff45",
+      "commit": "120e0401555c35b7e42eae89d44bab77b2b38087",
       "role": "application",
       "manifests": [
         "services/core/Cargo.toml",
