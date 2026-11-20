@@ -1,0 +1,156 @@
+{
+  "schema": "project-z.native-post-merge-verification.v1",
+  "observed_at_utc": "2026-11-20T04:32:59.328643+00:00",
+  "source_commit": "8e7416ede0753d8758153d944ef7a9d17e4a3f2a",
+  "branch": "main",
+  "pull_request": "https://github.com/LIghtJUNction/project-z/pull/4",
+  "status": "passed",
+  "changed_gitlinks": [
+    {
+      "path": "OniMods",
+      "old": "f0819fa207c52e98aa7dff8084620557669af7ea",
+      "new": "14dba75a5752c3142039a8660ce37cdf57d7082a"
+    },
+    {
+      "path": "oh-my-ztty",
+      "old": "7b69b751772a839f090e408228d94f810fd96d1e",
+      "new": "0fdc87873c53e7c87d18952f83a7b94fc4149de5"
+    },
+    {
+      "path": "ssmcp",
+      "old": "ecc450f17012f8120d7d49470ce9599ada65456f",
+      "new": "785e6b00440b048d00d9da626a33defa99108afe"
+    },
+    {
+      "path": "zcalld",
+      "old": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+      "new": "b853e264eced9fbd25120d261eb188a3a8e3b1df"
+    },
+    {
+      "path": "zcalld-compat",
+      "old": "008910901a3ef8ac5dd57b748a3210faa463c2b9",
+      "new": "7c782e9a6f431c7112112c04940c015adf2d76df"
+    },
+    {
+      "path": "zterm",
+      "old": "13d5e2c74571d35cccd920b1204798211b70c79f",
+      "new": "a2074bac4c030cfd7c0b2514c852a89dcf54648f"
+    },
+    {
+      "path": "ztty",
+      "old": "1a2f165983d7abff507c69b54c0c4ed225f49a45",
+      "new": "c4f8f48c9598284a589e609f25242b49ceabfea8"
+    }
+  ],
+  "repositories": 42,
+  "cargo_packages": 60,
+  "recursive_source_worktrees": 99,
+  "root_and_recursive_heads_clean": true,
+  "catalog_sha256": "812933e1fb929cbaf1fd7684fcf61c7f53c2ed4c62edcbf9d20f21a5b15f2f75",
+  "actual_checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/project_z.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.792,
+      "peak_observed_child_group_rss_bytes": 38031360,
+      "minimum_available_bytes": 3583975424,
+      "stop_reason": null,
+      "log_sha256": "37e0b4f4a25fec7e71ad451e2f8d735ccb2b861f1cf0945cb8cc479d5c78e15d",
+      "log_bytes": 59
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/project_z.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.8,
+      "peak_observed_child_group_rss_bytes": 87048192,
+      "minimum_available_bytes": 3499704320,
+      "stop_reason": null,
+      "log_sha256": "37e0b4f4a25fec7e71ad451e2f8d735ccb2b861f1cf0945cb8cc479d5c78e15d",
+      "log_bytes": 59
+    }
+  ],
+  "lock_config": {
+    "count": 141,
+    "cargo_lock_files": 136,
+    "config_entries": [
+      {
+        "path": ".cargo/config",
+        "exists": false
+      },
+      {
+        "path": ".cargo/config.toml",
+        "exists": false
+      },
+      {
+        "path": ".cargo/project-z.toml",
+        "exists": true,
+        "kind": "file",
+        "mode": 420,
+        "sha256": "79f62559d8f5fe9a313ca3d6d5b8ab0ddaf39d47b0afe06b8a24a783c2c75d99",
+        "bytes": 1681
+      },
+      {
+        "path": "zcall-gui/.cargo/config.toml",
+        "exists": true,
+        "kind": "file",
+        "mode": 420,
+        "sha256": "53329a3ce3b81a3bcb1c083a46a8d47a09a459b457c8f2f5441fd13d9445d8b3",
+        "bytes": 81
+      },
+      {
+        "path": "zcalld/apps/zcall-gui/.cargo/config.toml",
+        "exists": true,
+        "kind": "file",
+        "mode": 420,
+        "sha256": "53329a3ce3b81a3bcb1c083a46a8d47a09a459b457c8f2f5441fd13d9445d8b3",
+        "bytes": 81
+      }
+    ],
+    "scope": "Tracked recursive Cargo.lock and Cargo configs, canonical patch config, and both root modern and legacy config existence slots",
+    "unchanged_before_after_check": true,
+    "current_snapshot_still_matches": true,
+    "normalized_snapshot_sha256": "f04c289b802188485e36e349e9db7d86d4fbefd78fe70746509bc8b3dcf61571",
+    "snapshot_file_sha256": "5fb043714d1aff7054c0d2c149cb1c43d4aa5d6bce69c2a78ae5877400aa3989"
+  },
+  "source_update_resource": {
+    "guard": "userspace process-group RSS sampling; not a kernel cgroup limit",
+    "rss_limit_bytes": 100663296,
+    "system_available_floor_bytes": 3221225472,
+    "peak_observed_rss_bytes": 65474560,
+    "minimum_available_bytes": 3533447168
+  },
+  "initialization_resource": {
+    "peak_observed_rss_bytes": 87048192,
+    "minimum_available_bytes": 3494400000
+  },
+  "retained_attempts": [
+    {
+      "status": "resource_not_started",
+      "fresh_available_bytes": 3374338048,
+      "admission_bytes": 3758096384,
+      "mutations_started": false
+    },
+    {
+      "status": "source_update_and_check_passed_then_recursive_initialization_assertion_failed",
+      "cause": "18 historical empty LMM child submodules and exact but unregistered ztuio worktree; subsequently initialized without changing pinned commits",
+      "all_earlier_steps_exit0": true
+    }
+  ],
+  "original_final_receipt_sha256": "c725d99b073e38187aa53c19664d9ffe3e2c4cb25990e6e4645743ffc45d9bfe",
+  "not_performed": [
+    "compilation",
+    "full Cargo dependency resolution",
+    "system installation",
+    "service cutover",
+    "ordinary CI or CodeQL"
+  ],
+  "count_scope_note": "The cloud source gate counted 138 lock/config objects. This native check additionally covers tracked nested Cargo configuration files and both root modern/legacy config existence slots; counts are not added together."
+}
