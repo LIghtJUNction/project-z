@@ -1,0 +1,741 @@
+{
+  "schema": "project-z.suite-ztty-consumer-source-and-validation.v1",
+  "checked_at": "2026-11-20T04:16:33.018584+00:00",
+  "decision": "Adopt the source-verified ztty 0.5.0 suite consumer candidate. This is not a new formal suite release, user installation, SSMCP 785 propagation or an AI connection acceptance.",
+  "source_range": {
+    "repository": "LIghtJUNction/oh-my-ztty",
+    "from": "7b69b751772a839f090e408228d94f810fd96d1e",
+    "to": "0fdc87873c53e7c87d18952f83a7b94fc4149de5",
+    "production_source": "5a99afc170dc51455beb1491e04ab76cf18f4564",
+    "tree": "6e0c5090a02e354c0a0780f83b6f6ecc0f9d8a66",
+    "commits": [
+      {
+        "sha": "740b82f3a1628d0c14b0405bfb36c76832fedfec",
+        "subject": "docs: record workstation migration and real desktop recovery",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/commit/740b82f3a1628d0c14b0405bfb36c76832fedfec"
+      },
+      {
+        "sha": "86bbbe3a54b62a1beffbc3f4596a9338b8ef7530",
+        "subject": "fix: preserve preset shell for ztty backend and plugin options",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/commit/86bbbe3a54b62a1beffbc3f4596a9338b8ef7530"
+      },
+      {
+        "sha": "5a99afc170dc51455beb1491e04ab76cf18f4564",
+        "subject": "chore: consume official ztty v0.5.0 assets",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/commit/5a99afc170dc51455beb1491e04ab76cf18f4564"
+      },
+      {
+        "sha": "0fdc87873c53e7c87d18952f83a7b94fc4149de5",
+        "subject": "docs: record actual ztty v0.5.0 suite acceptance",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/commit/0fdc87873c53e7c87d18952f83a7b94fc4149de5"
+      }
+    ],
+    "changed_files": 34,
+    "changed_paths": [
+      "README.md",
+      "README.zh-CN.md",
+      "bin/omztty",
+      "components/ztty",
+      "dependencies.lock.json",
+      "docs/performance.md",
+      "docs/reports/workspace-0.2.1.md",
+      "docs/reports/workspace-0.2.1/actual-desktop.json",
+      "docs/reports/workspace-0.2.1/desktop-protocol.json",
+      "docs/reports/workspace-0.2.1/local-graphical.json",
+      "docs/reports/workspace-0.2.1/maintenance-summary.json",
+      "docs/reports/workspace-0.2.1/nvim-code.jpg",
+      "docs/reports/workspace-0.2.1/nvim-home.jpg",
+      "docs/reports/workspace-0.2.1/release-audit.json",
+      "docs/reports/workspace-0.2.1/startup.json",
+      "docs/reports/workspace-0.2.1/terminal-zfetch.jpg",
+      "docs/reports/workspace-0.2.1/workstation-acceptance.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120.md",
+      "docs/reports/ztty-0.5.0-consumer-20261120/acceptance.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/adapter.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/closure.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/files.sha256.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/graphical.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/harness/bin/Xvfb",
+      "docs/reports/ztty-0.5.0-consumer-20261120/harness/isolated_xvfb.py",
+      "docs/reports/ztty-0.5.0-consumer-20261120/harness/run-acceptance-v050.py",
+      "docs/reports/ztty-0.5.0-consumer-20261120/harness/run_graphical.py",
+      "docs/reports/ztty-0.5.0-consumer-20261120/linux-x86_64-terminal.png",
+      "docs/reports/ztty-0.5.0-consumer-20261120/local-check.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/local-check.log",
+      "docs/reports/ztty-0.5.0-consumer-20261120/ownership.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/pin.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/smoke.log",
+      "tests/test_terminal_exec.py"
+    ],
+    "comparison_url": "https://github.com/LIghtJUNction/oh-my-ztty/compare/7b69b751772a839f090e408228d94f810fd96d1e...0fdc87873c53e7c87d18952f83a7b94fc4149de5",
+    "production_to_final_docs_only": true,
+    "production_to_final_document_paths": [
+      "docs/reports/ztty-0.5.0-consumer-20261120.md",
+      "docs/reports/ztty-0.5.0-consumer-20261120/acceptance.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/adapter.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/closure.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/files.sha256.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/graphical.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/harness/bin/Xvfb",
+      "docs/reports/ztty-0.5.0-consumer-20261120/harness/isolated_xvfb.py",
+      "docs/reports/ztty-0.5.0-consumer-20261120/harness/run-acceptance-v050.py",
+      "docs/reports/ztty-0.5.0-consumer-20261120/harness/run_graphical.py",
+      "docs/reports/ztty-0.5.0-consumer-20261120/linux-x86_64-terminal.png",
+      "docs/reports/ztty-0.5.0-consumer-20261120/local-check.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/local-check.log",
+      "docs/reports/ztty-0.5.0-consumer-20261120/ownership.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/pin.json",
+      "docs/reports/ztty-0.5.0-consumer-20261120/smoke.log"
+    ],
+    "pull_request": {
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/pull/1",
+      "number": 1,
+      "state_at_check": "open",
+      "merged_at_check": false,
+      "head": "0fdc87873c53e7c87d18952f83a7b94fc4149de5"
+    },
+    "version": "0.2.1",
+    "version_file_unchanged": true,
+    "source_review": "Only launcher production code changes: two new value-taking terminal options are recognized before appending the existing preset shell. The component gitlink and two-architecture lock move ztty from 0.4.1 to formal 0.5.0. Other changes are tests and documentation, including separately identified historical workstation records."
+  },
+  "locked_components": {
+    "dependencies_lock_sha256": "8a547dade3a73ce7cac9840d44be910be90adb3e9388f6e95c25116206ad794c",
+    "component_gitlinks": {
+      "components/ssmcp": "52a531a59e9ec9236a76eafc0f4f068799e44b15",
+      "components/zdot": "e6b5feb98b05c59e0986624c0742dfe4a9187a2a",
+      "components/zfetch": "f19b278676206d76626dd01e4b89f7ad9ce9318f",
+      "components/zrc": "ef8bd9571e206c8086e38b9dcbdc760a466b5133",
+      "components/zshard": "1cfa1a1eb761d14e2ccfd5381282b6ccd1491cff",
+      "components/ztty": "c4f8f48c9598284a589e609f25242b49ceabfea8"
+    },
+    "official_release_metadata": {
+      "ztty": {
+        "tag": "v0.5.0",
+        "release_id": 452238617,
+        "published_at": "2026-11-20T03:41:44Z",
+        "url": "https://github.com/LIghtJUNction/ztty/releases/tag/v0.5.0",
+        "assets": [
+          {
+            "arch": "x86_64",
+            "name": "ztty-linux-x86_64.tar.gz",
+            "id": 770323268,
+            "bytes": 584351,
+            "sha256": "4b79ded489c37325ac049e4962e75c7ff773c2c5d073d8fbad154bb47dfed6b2",
+            "url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-linux-x86_64.tar.gz",
+            "api_digest_matches_lock": true
+          },
+          {
+            "arch": "aarch64",
+            "name": "ztty-linux-aarch64.tar.gz",
+            "id": 770322681,
+            "bytes": 552407,
+            "sha256": "f86ddc20d6359c8301e7198adf80359c067ea02c28228139e2a39705a5ddd09d",
+            "url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.5.0/ztty-linux-aarch64.tar.gz",
+            "api_digest_matches_lock": true
+          }
+        ]
+      },
+      "ssmcp": {
+        "tag": "v0.10.10",
+        "release_id": 451335066,
+        "published_at": "2026-11-19T12:46:47Z",
+        "url": "https://github.com/LIghtJUNction/ssmcp/releases/tag/v0.10.10",
+        "assets": [
+          {
+            "arch": "x86_64",
+            "name": "ssmcp-x86_64-unknown-linux-gnu.tar.gz",
+            "id": 767668805,
+            "bytes": 8096043,
+            "sha256": "42c22dabfe41d4fc2fecbabaaf222c9d35bb9b77b4550c4daccada4290530920",
+            "url": "https://github.com/LIghtJUNction/ssmcp/releases/download/v0.10.10/ssmcp-x86_64-unknown-linux-gnu.tar.gz",
+            "api_digest_matches_lock": true
+          },
+          {
+            "arch": "aarch64",
+            "name": "ssmcp-aarch64-unknown-linux-gnu.tar.gz",
+            "id": 767668307,
+            "bytes": 7835073,
+            "sha256": "4065ded7d71f5d7cb1ee33f32c5f306402f3825825aa68fa549bf9c998c080ce",
+            "url": "https://github.com/LIghtJUNction/ssmcp/releases/download/v0.10.10/ssmcp-aarch64-unknown-linux-gnu.tar.gz",
+            "api_digest_matches_lock": true
+          }
+        ]
+      }
+    },
+    "ssmcp_unchanged": {
+      "tag": "v0.10.10",
+      "source": "52a531a59e9ec9236a76eafc0f4f068799e44b15",
+      "tag_object": "0ef1f4356e871d942faaf4b401b72d46f3960ffb",
+      "tag_signed": false,
+      "tag_signature_reason": "unsigned",
+      "not_the_new_source": "785e6b00440b048d00d9da626a33defa99108afe"
+    },
+    "asset_verification_scope": "This audit independently checks official API digests against the exact source lock and checks public owner receipt bytes against their Git blobs. Owner records verify actual input archives, candidate bundle manifests and exact ztty ELF hashes. The reviewing agent did not download or execute those private candidate bundles again, and makes no signature-verification claim."
+  },
+  "existing_owner_acceptance": {
+    "source": "5a99afc170dc51455beb1491e04ab76cf18f4564",
+    "receipt_source": "0fdc87873c53e7c87d18952f83a7b94fc4149de5",
+    "public_report_url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120.md",
+    "public_file_hashes_verified": [
+      {
+        "path": "docs/reports/ztty-0.5.0-consumer-20261120/acceptance.json",
+        "bytes": 8488,
+        "sha256": "b8f128f73e4c336abbfbe98191ee24b6ed791ad2da3ffd75a06d553c5fc6223f",
+        "git_blob": "ef4bc5e68299155779f8fae8a3670f76912b7401",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120/acceptance.json"
+      },
+      {
+        "path": "docs/reports/ztty-0.5.0-consumer-20261120/graphical.json",
+        "bytes": 4010,
+        "sha256": "ebb15e15168b74809f305e1576aad9d7fca3b06bc7d330410ab6cd92360c47b3",
+        "git_blob": "c6e53a04e4db362056db710137966ec5ed957806",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120/graphical.json"
+      },
+      {
+        "path": "docs/reports/ztty-0.5.0-consumer-20261120/adapter.json",
+        "bytes": 1428,
+        "sha256": "5ec5dbc1f63fbc8a4c2df5e70c3cd57c39d1c9615d4a5f5dae2cb2a21848282c",
+        "git_blob": "13f8625e2d204228c050239ae2df05d18f816ba5",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120/adapter.json"
+      },
+      {
+        "path": "docs/reports/ztty-0.5.0-consumer-20261120/closure.json",
+        "bytes": 1301,
+        "sha256": "fad825224f27c0348a0aa16c36b06048289154d00989e4eb7a52298ff78411cf",
+        "git_blob": "5a07ea2c1be7f3f3428a90359b8251b58812ecf2",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120/closure.json"
+      },
+      {
+        "path": "docs/reports/ztty-0.5.0-consumer-20261120/smoke.log",
+        "bytes": 7617,
+        "sha256": "5aa78e2005b663205cf250f1e44bf1f56f607e074d875bfbdadb5e84b66aa46b",
+        "git_blob": "01a69f9497dc91614ed11b4bbe922cca35a08578",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120/smoke.log"
+      },
+      {
+        "path": "docs/reports/ztty-0.5.0-consumer-20261120/local-check.json",
+        "bytes": 2381,
+        "sha256": "ef517aea9da0a9d50173fb7e51e2c6ee9a6ce138924254434e0395aca82c76c0",
+        "git_blob": "649d624c1591e919c33c310e6732bdac5ae85a21",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120/local-check.json"
+      },
+      {
+        "path": "docs/reports/ztty-0.5.0-consumer-20261120/local-check.log",
+        "bytes": 6304,
+        "sha256": "909eb2a9692cf69a4ca6833e4e20a33be1c547a80d1960233aae91c3e3fb252f",
+        "git_blob": "94707b8f2bfe23a5fb4657560f869f02ff99cad9",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120/local-check.log"
+      },
+      {
+        "path": "docs/reports/ztty-0.5.0-consumer-20261120/pin.json",
+        "bytes": 4567,
+        "sha256": "ecd94e39460f98858adcf97726fe7552936efc507db99fc3b5c47cbac052055d",
+        "git_blob": "9163a6eb8229dcd1c549b20eef27792430d5ac25",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120/pin.json"
+      },
+      {
+        "path": "docs/reports/ztty-0.5.0-consumer-20261120/linux-x86_64-terminal.png",
+        "bytes": 23904,
+        "sha256": "8be778056fef776edbb353dbc7da97724f3ef104db69b12f720302adb6e00bf0",
+        "git_blob": "0db75e3b897dbc5f567cb777522013714d7096b2",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120/linux-x86_64-terminal.png"
+      },
+      {
+        "path": "docs/reports/ztty-0.5.0-consumer-20261120/harness/run-acceptance-v050.py",
+        "bytes": 7648,
+        "sha256": "19a1c6312dad8490f99cac9d7fd7e09f442b28193af6752f40472950673420c4",
+        "git_blob": "f4bd74bfe0115a9b36a5b3206c7b9f0ff08fff9a",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120/harness/run-acceptance-v050.py"
+      },
+      {
+        "path": "docs/reports/ztty-0.5.0-consumer-20261120/harness/run_graphical.py",
+        "bytes": 4811,
+        "sha256": "581ad558218fa622558524dcda41758e53661997336e2f3467e2e9c80d425071",
+        "git_blob": "5e34ef830d80468fbd8a9d739b215e638f3bfb06",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120/harness/run_graphical.py"
+      },
+      {
+        "path": "docs/reports/ztty-0.5.0-consumer-20261120/harness/isolated_xvfb.py",
+        "bytes": 8501,
+        "sha256": "9baf8e2d731be49ed57eefbaa48e15ba30fe581839d0ad1738a5cc4a19ceeb0a",
+        "git_blob": "013911d176bc3004dccc43e29d3aaaba323ee76c",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120/harness/isolated_xvfb.py"
+      },
+      {
+        "path": "docs/reports/ztty-0.5.0-consumer-20261120/harness/bin/Xvfb",
+        "bytes": 2315,
+        "sha256": "14831e7e1c44bbc8351265cac945f43baf6b37cb21a8473423638990ab2c7187",
+        "git_blob": "794114cd223e86035e7f5195a18bdb88376e1620",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120/harness/bin/Xvfb"
+      },
+      {
+        "path": "docs/reports/ztty-0.5.0-consumer-20261120/ownership.json",
+        "bytes": 1354,
+        "sha256": "62405835b956453a948ae0e49590c9ccb81a6cd8b56dbfad5a247d0b734448a7",
+        "git_blob": "84112c8acfde91729a31ad144ee389f2b2fe206e",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/docs/reports/ztty-0.5.0-consumer-20261120/ownership.json"
+      }
+    ],
+    "local_check": {
+      "tests_passed": 42,
+      "source_identity": "The recorded launcher and test file hashes match the final candidate; this earlier gate used the pre-pin ztty source and stub argv receiver.",
+      "actual_new_ztty_plugin_or_wayland_execution": false
+    },
+    "stages": [
+      {
+        "name": "bundle-x86_64",
+        "exit_code": 0,
+        "seconds": 3.9230909629986854
+      },
+      {
+        "name": "bundle-aarch64",
+        "exit_code": 0,
+        "seconds": 14.296448977009277
+      },
+      {
+        "name": "smoke-x86_64",
+        "exit_code": 0,
+        "seconds": 1.6172979499970097
+      },
+      {
+        "name": "graphical-x86_64",
+        "exit_code": 0,
+        "seconds": 2.971254518997739
+      }
+    ],
+    "elapsed_seconds": 23.23626402199443,
+    "private_candidate_archives": {
+      "x86_64": {
+        "sha256": "870c49759625a918ea0b36572beb05c2110c73e497c13a5b1f2c61f3415da476",
+        "bytes": 5471368,
+        "manifest_files_verified": 84,
+        "BUILD": {
+          "platform": "linux-x86_64",
+          "schema": 1,
+          "source_commits": {
+            "ssmcp": "52a531a59e9ec9236a76eafc0f4f068799e44b15",
+            "zdot": "e6b5feb98b05c59e0986624c0742dfe4a9187a2a",
+            "zfetch": "f19b278676206d76626dd01e4b89f7ad9ce9318f",
+            "zrc": "ef8bd9571e206c8086e38b9dcbdc760a466b5133",
+            "zshard": "1cfa1a1eb761d14e2ccfd5381282b6ccd1491cff",
+            "ztty": "c4f8f48c9598284a589e609f25242b49ceabfea8"
+          },
+          "suite_version": "0.2.1"
+        },
+        "ztty_elf_sha256": "3ed8cead1c4ca20aedd4aa262de8fe992bcf9639546d95f89f7a782eeef7a491",
+        "changed_members_from_official_suite_0_2_1": [
+          "BUILD.json",
+          "bin/omztty",
+          "bin/ztty",
+          "dependencies.lock.json"
+        ]
+      },
+      "aarch64": {
+        "sha256": "bc957976e1e23850ec8a726094bfa1a4f9342551d50fb9d3209fdb4f005d75c8",
+        "bytes": 5246367,
+        "manifest_files_verified": 84,
+        "BUILD": {
+          "platform": "linux-aarch64",
+          "schema": 1,
+          "source_commits": {
+            "ssmcp": "52a531a59e9ec9236a76eafc0f4f068799e44b15",
+            "zdot": "e6b5feb98b05c59e0986624c0742dfe4a9187a2a",
+            "zfetch": "f19b278676206d76626dd01e4b89f7ad9ce9318f",
+            "zrc": "ef8bd9571e206c8086e38b9dcbdc760a466b5133",
+            "zshard": "1cfa1a1eb761d14e2ccfd5381282b6ccd1491cff",
+            "ztty": "c4f8f48c9598284a589e609f25242b49ceabfea8"
+          },
+          "suite_version": "0.2.1"
+        },
+        "ztty_elf_sha256": "39ced58ddb1f3fd2abb2558d33949a24dc6bf8801e3809cbbda187090c10057d",
+        "changed_members_from_official_suite_0_2_1": [
+          "BUILD.json",
+          "bin/omztty",
+          "bin/ztty",
+          "dependencies.lock.json"
+        ]
+      }
+    },
+    "x86_64_runtime_scope": [
+      "Real temporary-home install/reinstall, doctor and component commands",
+      "Actual preset zsh, local AI context, config adoption/conflict/backup/restore and uninstall",
+      "visible window",
+      "keyboard command executed in preset zsh",
+      "first completion returned to a usable shell",
+      "actual component versions verified"
+    ],
+    "graphical": {
+      "platform": "Linux x86_64 X11 software on an owned private Xvfb",
+      "checks_passed": 4,
+      "geometry": {
+        "cols": 100,
+        "rows": 28
+      },
+      "component_versions": [
+        "ztty 0.5.0",
+        "zdot 0.2.0",
+        "ssmcp 0.10.10"
+      ],
+      "completion_cache_reused": true,
+      "adapter_backend": "x11",
+      "private_shell_input": "/bin/sh",
+      "actual_shell_executable": "/usr/bin/zsh",
+      "renderer": "software",
+      "original_fixture_unchanged": true,
+      "single_startup_sample_is_not_performance_evidence": true
+    },
+    "arm64_scope": "Bundle assembly, ELF and manifest verification only; no ARM64 process or graphical execution.",
+    "text_plugin_scope": "Stub argv forwarding, quoting, repeat options, explicit command boundaries and missing values only; no plugin execution.",
+    "wayland_graphical_tested": false,
+    "real_ai_connection_tested": false,
+    "resources": {
+      "owner_cgroup_memory_max_bytes": 805306368,
+      "owner_cgroup_swap_max_bytes": 0,
+      "owner_cpu_max": "100000 100000",
+      "owner_nice": 10,
+      "memory_peak_bytes": 456372224,
+      "swap_peak_bytes": 0,
+      "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0"
+    },
+    "cleanup": {
+      "installed_anchors_unchanged": true,
+      "original_main_unchanged": "740b82f3a1628d0c14b0405bfb36c76832fedfec",
+      "owned_units_inactive_dead": true,
+      "owned_cgroup_absent": true,
+      "adopted_children_remaining": 0,
+      "xvfb_cleanup": true,
+      "host_display_endpoints_unchanged": true
+    }
+  },
+  "launcher_and_zrc_contract": {
+    "terminal": "Both --backend and --text-plugin consume one following argv. The existing shell suffix is appended only to complete option-only calls; explicit -e/-- commands and original argv are retained. The native acceptance covers backend x11 and actual preset zsh only.",
+    "ai_context": "omztty ai context produces local JSON.",
+    "ai_ask": "omztty ai ask delegates to zai ask under the bundled shell. zshard sends context plus request text on stdin to the explicitly configured ZSHARD_AI_COMMAND; that provider is not automatically SSMCP.",
+    "ai_connect": "omztty ai connect directly execs the bundled ssmcp with the supplied arguments. Standalone zai connect looks up ssmcp through PATH.",
+    "zrc": "The fixed zrc context.lua checks executable(ssmcp) and starts that PATH command in a terminal job. It does not pin an ELF or version. The suite shell places its bundled bin first on PATH, so its new candidate still selects bundled SSMCP 0.10.10.",
+    "test_boundary": "test_ai.py uses inert provider and argv-printing fake SSMCP; real smoke and graphical fixtures use --help/--version and explicitly exclude AI connection. These do not establish a successful live connection.",
+    "sources": [
+      "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/bin/omztty",
+      "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/config/zsh/.zshrc",
+      "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/tests/test_ai.py",
+      "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/scripts/smoke_bundle.py",
+      "https://github.com/LIghtJUNction/oh-my-ztty/blob/0fdc87873c53e7c87d18952f83a7b94fc4149de5/scripts/verify_graphical.py",
+      "https://github.com/LIghtJUNction/zshard/blob/1cfa1a1eb761d14e2ccfd5381282b6ccd1491cff/lib/ai.zsh",
+      "https://github.com/LIghtJUNction/zrc/blob/ef8bd9571e206c8086e38b9dcbdc760a466b5133/profiles/ink/files/.config/nvim/lua/zrc/context.lua"
+    ]
+  },
+  "isolated_aggregate_validation": {
+    "base_aggregate_source": "46e98822e8357b25670cea52794af3009d66660f",
+    "predecessor_catalog_sha256": "1088536d719a7000d8a050c4eeee0d9479d541756c8df2797af4bec8f014639e",
+    "effective_predecessor": "The already verified Oni14, zterma207, zttyc4, zcalld/compat pair and SSMCP785 increments; historical receipts remain unchanged.",
+    "source_verification": {
+      "before": "7b69b751772a839f090e408228d94f810fd96d1e",
+      "after": "0fdc87873c53e7c87d18952f83a7b94fc4149de5",
+      "tree": "6e0c5090a02e354c0a0780f83b6f6ecc0f9d8a66",
+      "complete_git_tree_matches_api": true,
+      "fsck_passed": true,
+      "changed_paths": [
+        "README.md",
+        "README.zh-CN.md",
+        "bin/omztty",
+        "components/ztty",
+        "dependencies.lock.json",
+        "docs/performance.md",
+        "docs/reports/workspace-0.2.1.md",
+        "docs/reports/workspace-0.2.1/actual-desktop.json",
+        "docs/reports/workspace-0.2.1/desktop-protocol.json",
+        "docs/reports/workspace-0.2.1/local-graphical.json",
+        "docs/reports/workspace-0.2.1/maintenance-summary.json",
+        "docs/reports/workspace-0.2.1/nvim-code.jpg",
+        "docs/reports/workspace-0.2.1/nvim-home.jpg",
+        "docs/reports/workspace-0.2.1/release-audit.json",
+        "docs/reports/workspace-0.2.1/startup.json",
+        "docs/reports/workspace-0.2.1/terminal-zfetch.jpg",
+        "docs/reports/workspace-0.2.1/workstation-acceptance.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120.md",
+        "docs/reports/ztty-0.5.0-consumer-20261120/acceptance.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/adapter.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/closure.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/files.sha256.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/graphical.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/harness/bin/Xvfb",
+        "docs/reports/ztty-0.5.0-consumer-20261120/harness/isolated_xvfb.py",
+        "docs/reports/ztty-0.5.0-consumer-20261120/harness/run-acceptance-v050.py",
+        "docs/reports/ztty-0.5.0-consumer-20261120/harness/run_graphical.py",
+        "docs/reports/ztty-0.5.0-consumer-20261120/linux-x86_64-terminal.png",
+        "docs/reports/ztty-0.5.0-consumer-20261120/local-check.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/local-check.log",
+        "docs/reports/ztty-0.5.0-consumer-20261120/ownership.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/pin.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/smoke.log",
+        "tests/test_terminal_exec.py"
+      ],
+      "all_source_worktree_count": 99,
+      "all_source_worktrees_clean": true,
+      "unchanged_existing_source_heads": 92,
+      "changed_existing_source_paths": [
+        "oh-my-ztty",
+        "oh-my-ztty/components/ztty"
+      ],
+      "added_nested_sources": {
+        "oh-my-ztty/components/ztty/crates/zgpui": {
+          "commit": "1d796d1fc63808dc099ed7b10c92e75835ae2814",
+          "tree": "b9903103d9b21ec84085ce4c74569f216fc4c130",
+          "url": "https://github.com/LIghtJUNction/zgpui.git",
+          "canonical_tree_equal": true
+        },
+        "oh-my-ztty/components/ztty/crates/zgraphics": {
+          "commit": "fe6357f98cf80fb6cc74739e45e8866ee17706ad",
+          "tree": "a2d1597da98485d12a937d8b6042705795062609",
+          "url": "https://github.com/LIghtJUNction/zgraphics.git",
+          "canonical_tree_equal": true
+        },
+        "oh-my-ztty/components/ztty/crates/zinput": {
+          "commit": "37617313dd7aaabcca9dd567344a76c4cbe03907",
+          "tree": "a13ea659e367d40e4928858dae2ccc54d6cf7683",
+          "url": "https://github.com/LIghtJUNction/zinput.git",
+          "canonical_tree_equal": true
+        },
+        "oh-my-ztty/components/ztty/crates/zpty": {
+          "commit": "66919bc6dcb7757e0437fe955bfa809fb1282b68",
+          "tree": "4ee4b7ba35dcf69b5ce161b8875998ada479f7ea",
+          "url": "https://github.com/LIghtJUNction/zpty.git",
+          "canonical_tree_equal": true
+        },
+        "oh-my-ztty/components/ztty/crates/zterm": {
+          "commit": "a2074bac4c030cfd7c0b2514c852a89dcf54648f",
+          "tree": "469d8c0170fe525ae09ded450ee881aa8bf1e10d",
+          "url": "https://github.com/LIghtJUNction/zterm.git",
+          "canonical_tree_equal": true
+        }
+      },
+      "component_gitlinks": {
+        "components/ssmcp": "52a531a59e9ec9236a76eafc0f4f068799e44b15",
+        "components/zdot": "e6b5feb98b05c59e0986624c0742dfe4a9187a2a",
+        "components/zfetch": "f19b278676206d76626dd01e4b89f7ad9ce9318f",
+        "components/zrc": "ef8bd9571e206c8086e38b9dcbdc760a466b5133",
+        "components/zshard": "1cfa1a1eb761d14e2ccfd5381282b6ccd1491cff",
+        "components/ztty": "c4f8f48c9598284a589e609f25242b49ceabfea8"
+      },
+      "ssmcp_lock_and_source_unchanged": true,
+      "dependencies_lock_sha256": "8a547dade3a73ce7cac9840d44be910be90adb3e9388f6e95c25116206ad794c",
+      "suite_version": "0.2.1",
+      "production_to_final_docs_only": true,
+      "production_to_final_changed_paths": [
+        "docs/reports/ztty-0.5.0-consumer-20261120.md",
+        "docs/reports/ztty-0.5.0-consumer-20261120/acceptance.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/adapter.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/closure.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/files.sha256.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/graphical.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/harness/bin/Xvfb",
+        "docs/reports/ztty-0.5.0-consumer-20261120/harness/isolated_xvfb.py",
+        "docs/reports/ztty-0.5.0-consumer-20261120/harness/run-acceptance-v050.py",
+        "docs/reports/ztty-0.5.0-consumer-20261120/harness/run_graphical.py",
+        "docs/reports/ztty-0.5.0-consumer-20261120/linux-x86_64-terminal.png",
+        "docs/reports/ztty-0.5.0-consumer-20261120/local-check.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/local-check.log",
+        "docs/reports/ztty-0.5.0-consumer-20261120/ownership.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/pin.json",
+        "docs/reports/ztty-0.5.0-consumer-20261120/smoke.log"
+      ],
+      "source_lock_config_changes": [
+        "oh-my-ztty/components/ztty/Cargo.lock",
+        "oh-my-ztty/components/ztty/crates/zgpui/Cargo.lock",
+        "oh-my-ztty/components/ztty/crates/zgraphics/Cargo.lock",
+        "oh-my-ztty/components/ztty/crates/zinput/Cargo.lock",
+        "oh-my-ztty/components/ztty/crates/zpty/Cargo.lock",
+        "oh-my-ztty/components/ztty/crates/zterm/Cargo.lock",
+        "oh-my-ztty/components/ztty/docs/reports/host-9f5a77a-20261120/registry/consumers/combined/Cargo.lock",
+        "oh-my-ztty/components/ztty/docs/reports/host-9f5a77a-20261120/registry/consumers/zterm/Cargo.lock",
+        "oh-my-ztty/components/ztty/docs/reports/host-9f5a77a-20261120/source/Cargo.lock",
+        "oh-my-ztty/components/ztty/examples/dedent-plugin/Cargo.lock",
+        "oh-my-ztty/components/ztty/tests/fixtures/text-plugin/Cargo.lock"
+      ],
+      "source_method": "normal HTTPS Git; exact SHA shallow fetch (suite depth 2 for production-to-doc equivalence, other sources depth 1), blob filter, LFS smudge disabled; five new nested sources compared to existing canonical Git trees",
+      "initial_source_failure_preserved": true,
+      "resume_reason": "Git lazy-fetch index-pack could not create default threads under the inherited per-process address-space limit; source retry applies pack/index/checkout single-thread settings to every Git command, retaining all fetched objects",
+      "resumed_checkout_paths": [
+        "oh-my-ztty/components/ztty/crates/zgraphics",
+        "oh-my-ztty/components/ztty/crates/zinput",
+        "oh-my-ztty/components/ztty/crates/zpty",
+        "oh-my-ztty/components/ztty/crates/zterm"
+      ],
+      "metadata_commands": [
+        [
+          "python3",
+          "scripts/project_z.py",
+          "sync"
+        ],
+        [
+          "python3",
+          "scripts/project_z.py",
+          "check"
+        ]
+      ],
+      "full_resolution_requested": false,
+      "compilation_requested": false
+    },
+    "gates": {
+      "source": {
+        "status": "failed",
+        "started_at": "2026-11-20T04:10:07.336801+00:00",
+        "finished_at": "2026-11-20T04:11:04.353578+00:00",
+        "exit_code": 1,
+        "elapsed_seconds": 57.016,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9401237504,
+        "minimum_available_bytes": 9366417408,
+        "minimum_startup_bytes": 4294967296,
+        "peak_task_rss_bytes": 47988736,
+        "samples": 553,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt_sha256": "c5f9ced55d198efc52ea660e33757906c9810ae3865163113e352adced6c9341",
+        "stdout_sha256": "c011e3c8c9e9f1e54ba860bb0937b4a67cdf15197782e229f300d2daefd83bce",
+        "stderr_sha256": "9c145334d338f59ea37e59e2b7e2e386ff3529958333daa7aa81304d817901d1"
+      },
+      "source-resume": {
+        "status": "passed",
+        "started_at": "2026-11-20T04:12:20.342097+00:00",
+        "finished_at": "2026-11-20T04:13:01.562333+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 41.219,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9394319360,
+        "minimum_available_bytes": 9343643648,
+        "minimum_startup_bytes": 4294967296,
+        "peak_task_rss_bytes": 44929024,
+        "samples": 402,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt_sha256": "a0f585d17b6a1362ad3063f034935bd7f3b54d33b89778252d1a4b93570bff77",
+        "stdout_sha256": "c715b1c5e2b2fab185ef7d47bee247f7eaf522d01d3f497705f0ca888d06f777",
+        "stderr_sha256": "8304f286e4e364652ad0e929db8694c8aedfafb6526fb3c7b0fb751107e1b8a8"
+      },
+      "sync": {
+        "status": "passed",
+        "started_at": "2026-11-20T04:13:09.717159+00:00",
+        "finished_at": "2026-11-20T04:13:12.203760+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 2.485,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9377521664,
+        "minimum_available_bytes": 9339392000,
+        "minimum_startup_bytes": 4294967296,
+        "peak_task_rss_bytes": 48238592,
+        "samples": 23,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt_sha256": "c60223875af0e12c4940ef1c0b709788afbe1272d48f052ee55de8a424a17a3d",
+        "stdout_sha256": "f0da76fff12e199a4f53a8d8a79243c8a232cefc7c21f06827333c699868aba5",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "check": {
+        "status": "passed",
+        "started_at": "2026-11-20T04:13:12.612406+00:00",
+        "finished_at": "2026-11-20T04:13:14.479121+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 1.866,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9366638592,
+        "minimum_available_bytes": 9330233344,
+        "minimum_startup_bytes": 4294967296,
+        "peak_task_rss_bytes": 49418240,
+        "samples": 18,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt_sha256": "79ef2ff7efa975c2c3a3a8ae9a62f5ee5833bb2106ab636ec92a74fce02f2cf2",
+        "stdout_sha256": "37e0b4f4a25fec7e71ad451e2f8d735ccb2b861f1cf0945cb8cc479d5c78e15d",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "initial_failure": {
+      "status": "retained",
+      "message": "fatal: unable to create thread: Resource temporarily unavailable; index-pack failed during zgraphics promisor lazy fetch",
+      "not_a_dependency_error_or_rss_guard": true,
+      "scope": "Initial source preparation only; no Cargo command had started.",
+      "recovery": "Applied single-thread pack/index/checkout configuration to every Git invocation and resumed only incomplete nested checkouts without discarding fetched objects or raising the resource budget."
+    },
+    "coordinator_commands": [
+      [
+        "python3",
+        "scripts/project_z.py",
+        "sync"
+      ],
+      [
+        "python3",
+        "scripts/project_z.py",
+        "check"
+      ]
+    ],
+    "result": {
+      "repositories": 42,
+      "packages": 60,
+      "non_cargo_suite_manifests": [],
+      "full_resolution_performed": false,
+      "compilation_performed": false,
+      "tests_rerun": false
+    },
+    "metadata_logging_boundary": "Bounded command receipts and coordinator stdout record the successful sync/check. Optional per-Cargo argv tracing was unavailable because its output directories were absent; no per-invocation trace or exact call count is claimed. The existing flock still serialized actual Cargo invocations.",
+    "preservation": {
+      "source_worktrees": 99,
+      "source_worktrees_clean": true,
+      "old_unrelated_heads_unchanged": 92,
+      "new_nested_source_worktrees": 5,
+      "lock_config_records": 138,
+      "all_bytes_modes_existence_unchanged_during_validation": true,
+      "before_sha256": "1db64790ec5359765d9b8c913fb9856f42b2e27346a2649655f59eb51a860153",
+      "after_sha256": "1db64790ec5359765d9b8c913fb9856f42b2e27346a2649655f59eb51a860153",
+      "temporary_root_config_absent": true
+    },
+    "graph": {
+      "only_suite_repository_commit_changes_in_catalog": true,
+      "all_package_records_and_declared_dependency_edges_unchanged": true,
+      "all_direct_package_edges": 226,
+      "internal_package_edges": 84,
+      "repository_edges": 56,
+      "normalized_graph_sha256": "b467cda8ef50f8d6ac9555d00ac5ca69d14eb9b28953201fb9f27527efa4446f",
+      "equivalence_basis": "Entire final catalog equals predecessor after replacing only the suite repository commit; prior normalized graph fingerprint therefore remains identical."
+    }
+  },
+  "generated_files": [
+    {
+      "path": "catalog.json",
+      "bytes": 126810,
+      "sha256": "812933e1fb929cbaf1fd7684fcf61c7f53c2ed4c62edcbf9d20f21a5b15f2f75"
+    },
+    {
+      "path": "docs/PROJECTS.md",
+      "bytes": 16637,
+      "sha256": "bb52f0713cd76f95e52ed03f5e976f37db0e8cb20e0591550f2dc62762302fbf"
+    },
+    {
+      "path": ".cargo/project-z.toml",
+      "bytes": 1681,
+      "sha256": "79f62559d8f5fe9a313ca3d6d5b8ab0ddaf39d47b0afe06b8a24a783c2c75d99"
+    }
+  ],
+  "remaining_actions": [
+    "Existing suite owner reviews/merges PR1 and chooses a new formal release identity; do not overwrite existing 0.2.1 assets with these different private candidate bytes.",
+    "Existing SSMCP publisher must supply formal artifacts that contain the verified 785 production fixes (or a separately verified later release source). Then update both suite architecture locks and the nested SSMCP source, assemble and validate that new combination.",
+    "After a new suite release, verify actual installation paths/ELF identities and a real zrc/bridge connection. The current version-based broker identity and isolated socket acceptance are not an in-place upgrade or old-broker compatibility test."
+  ],
+  "not_executed_by_this_audit": [
+    "Rust or application compilation",
+    "Application or GUI tests",
+    "CI dispatch or repeated release workflow",
+    "Installation, default terminal changes or service operations",
+    "AI connection or provider requests",
+    "Private candidate bundle redownload",
+    "Whole aggregate dependency resolution"
+  ]
+}

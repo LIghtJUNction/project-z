@@ -1,0 +1,1927 @@
+{
+  "schema": "project-z.three-source-delta-validation.v1",
+  "checked_at": "2026-11-20T03:33:45.039766+00:00",
+  "status": "source_sync_check_and_all_workspace_resolution_passed",
+  "baseline": {
+    "repository": "https://github.com/LIghtJUNction/project-z",
+    "commit": "46e98822e8357b25670cea52794af3009d66660f",
+    "bundle_bytes": 116720,
+    "bundle_sha256": "9a03fde6e85f0084a52b2a07ff4266a1d5fb5b83372ec9e001c3abd26b702617",
+    "import": "Authorized real Git bundle; bundle verify, exact HEAD and git fsck succeeded. No API-file reconstruction.",
+    "historical_receipts_overwritten": false
+  },
+  "deltas": [
+    {
+      "repository": "OniMods",
+      "url": "https://github.com/LIghtJUNction/OniMods.git",
+      "from_commit": "f0819fa207c52e98aa7dff8084620557669af7ea",
+      "to_commit": "14dba75a5752c3142039a8660ce37cdf57d7082a",
+      "tree": "f9f05ae284207480e5d146990c1539345e7197e3",
+      "clean_after_resolution": true
+    },
+    {
+      "repository": "zterm",
+      "url": "https://github.com/LIghtJUNction/zterm.git",
+      "from_commit": "13d5e2c74571d35cccd920b1204798211b70c79f",
+      "to_commit": "a2074bac4c030cfd7c0b2514c852a89dcf54648f",
+      "tree": "469d8c0170fe525ae09ded450ee881aa8bf1e10d",
+      "clean_after_resolution": true
+    },
+    {
+      "repository": "ztty",
+      "url": "https://github.com/LIghtJUNction/ztty.git",
+      "from_commit": "1a2f165983d7abff507c69b54c0c4ed225f49a45",
+      "to_commit": "9f5a77a1299093d0ba609bfafa2cec3b0ba931dd",
+      "tree": "42e8396aa5f5110dd44495a697ebb3427c6b4eca",
+      "clean_after_resolution": true
+    }
+  ],
+  "frozen_other_sources": {
+    "ssmcp": "ecc450f17012f8120d7d49470ce9599ada65456f",
+    "zcalld": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+    "all_other_top_level_gitlinks_unchanged": true
+  },
+  "source_scope": {
+    "top_level_repositories": 42,
+    "nested_git_worktrees": 52,
+    "verified_source_worktrees": 94,
+    "all_clean_after_resolution": true,
+    "integrity": "Exact commit/tree, clean worktree and git fsck --strict --no-reflogs for every source.",
+    "omissions": [
+      "History beyond each depth-1 boundary was not downloaded.",
+      "Git LFS smudging was disabled; this is metadata/source-graph validation, not LFS payload or runtime validation."
+    ],
+    "records": [
+      {
+        "path": "OniMods",
+        "url": "https://github.com/LIghtJUNction/OniMods.git",
+        "commit": "14dba75a5752c3142039a8660ce37cdf57d7082a",
+        "tree": "f9f05ae284207480e5d146990c1539345e7197e3",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "OniMods/mods/Jlib",
+        "url": "https://github.com/LIghtJUNction/Jlib.git",
+        "commit": "315a4806e52dabc3d32886cd7f458b3e43d4b4b9",
+        "tree": "e0f3fb163251a77e5bc3e647ed8c1953651eac23",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "OniMods/tools/OniHarness",
+        "url": "https://github.com/LIghtJUNction/OniHarness.git",
+        "commit": "3618c90a6a300318186264b17d46f9d6ab44c5a0",
+        "tree": "63b4aca7721f7749c913c1cbbbd2e77c6ada253b",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source",
+        "url": "https://github.com/TokenNotIncluded/lmm-api-source.git",
+        "commit": "4571b477d490b86d477f44f1c6768cc5f3b409d1",
+        "tree": "2b4f4a8ec11bd629c2bbe1863bac86895c504eaa",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/.agents/skills/add-dependency",
+        "url": "https://github.com/recipkg/add-dependency.git",
+        "commit": "372ccd8bb4c6e5b35ebefbad41a513e8217527c6",
+        "tree": "14584579c9f46a837b56c3393847cefd5e718c74",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/.agents/skills/build-software-package",
+        "url": "https://github.com/recipkg/build-software-package.git",
+        "commit": "ae331d94efddfb3c3caec9761785bbfa5606b3cd",
+        "tree": "29ba8a2d6effff7bc6300bdd50a54cb3b294679b",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/.agents/skills/discover-dependencies",
+        "url": "https://github.com/recipkg/discover-dependencies.git",
+        "commit": "7585382f70af7da165d5c0163e356d74cb27fbb1",
+        "tree": "e7921a054e16bcc607bce0dde07a5adfba56404c",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/.agents/skills/manage-git-repository",
+        "url": "https://github.com/recipkg/manage-git-repository.git",
+        "commit": "96cd5fa8240b193cf077e778e97e8b7323e6e4ff",
+        "tree": "17ed1b8b854ebc885b9b17db6e4ace79d3c63735",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/.agents/skills/migrate-to-recipkg",
+        "url": "https://github.com/recipkg/migrate-to-recipkg.git",
+        "commit": "cd061fdcec8502cb3a1d6b0825666b6962433378",
+        "tree": "f53a2f1ab0080a7a9ad35caece110475a4ac08ca",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/.agents/skills/prompt-to-software",
+        "url": "https://github.com/recipkg/prompt-to-software.git",
+        "commit": "5023d7c086632d9d51bc209f5fc73ad7777cbab2",
+        "tree": "84512162f44624b769689879f28d70ba2eb48d5a",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/.agents/skills/rewrite-software",
+        "url": "https://github.com/recipkg/rewrite-software.git",
+        "commit": "55606d6e5d0c5b57b581f98fee079c5749499b6e",
+        "tree": "2224879669e170e8dfb665001e842d871ed6c1c5",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/.agents/skills/rewrite-to-recipkg",
+        "url": "https://github.com/recipkg/rewrite-to-recipkg.git",
+        "commit": "3c5ab1f3b6f902e6d37cd51480f0ce1a7c3e344d",
+        "tree": "9ca9bff87132f716ad1111def9f168571cd84bd2",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/.agents/skills/software-to-prompt",
+        "url": "https://github.com/recipkg/software-to-prompt.git",
+        "commit": "f7b1bcb53f179a5481e9bc456a8693c142a3eb5c",
+        "tree": "c95634eaacfb81dc11c078d76b4ede3f3009d1a4",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/.agents/skills/test-feedback",
+        "url": "https://github.com/recipkg/test-feedback.git",
+        "commit": "603cc158ca11154557bc7f9db607bb1561625449",
+        "tree": "4b4d6f9dec85a0fe749be660f5ae7d375cdadcbc",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/.agents/skills/update-recipkg-in-project",
+        "url": "https://github.com/recipkg/update-recipkg-in-project.git",
+        "commit": "334b30935f2a4caa7745d4d1b75824b134203c04",
+        "tree": "74cbffce7d19b8e2f996f5dbfdad78d105fae14e",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/apps/cli",
+        "url": "https://github.com/TokenNotIncluded/lmm.git",
+        "commit": "c21b8b6f2bf9ad123b3ff164b3e7a60b37f90bed",
+        "tree": "26931d138bbb41c2806e836a228c6c05c4848ef6",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/packages/codewhale-lmm-provider",
+        "url": "https://github.com/TokenNotIncluded/codewhale-lmm-provider.git",
+        "commit": "2b0d6b22af069ac8685dd677d99dbbfd2340514e",
+        "tree": "a775a755583dbac36b3cc2e6796ff343010cd6af",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/packages/dsh-lmm-provider",
+        "url": "https://github.com/TokenNotIncluded/dsh-lmm-provider.git",
+        "commit": "301bea41f302a3707d517a792c0322dc28b3f057",
+        "tree": "808dc1f3f03b1e2e527a3c162145e0ecbfbd5eaa",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/packages/dsh-lmm-provider/vendor/pi-lmm-provider",
+        "url": "https://github.com/TokenNotIncluded/pi-lmm-provider.git",
+        "commit": "472b57f694c557aeebfb80074bf81905b3502537",
+        "tree": "54c98543e81918e6dfc23bae9e91aad09800de67",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "lmm-api-source/packages/pi-lmm-provider"
+      },
+      {
+        "path": "lmm-api-source/packages/lmm-scripts",
+        "url": "https://github.com/TokenNotIncluded/lmm-scripts.git",
+        "commit": "a19299e8cf8c3ab87361d792731156950452dc8b",
+        "tree": "2250e829a62223e05cc421915329953604a53fd1",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/packages/opencode-lmm-auth",
+        "url": "https://github.com/TokenNotIncluded/opencode-lmm-auth.git",
+        "commit": "26b3a60df95d13580e03a56e8d784ae06aa89cdb",
+        "tree": "7ceaaa540244f8755de46aa02a7240d16cc6be0e",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/packages/pi-lmm-provider",
+        "url": "https://github.com/TokenNotIncluded/pi-lmm-provider.git",
+        "commit": "472b57f694c557aeebfb80074bf81905b3502537",
+        "tree": "54c98543e81918e6dfc23bae9e91aad09800de67",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/packages/vscode-lmm-provider",
+        "url": "https://github.com/TokenNotIncluded/vscode-lmm-provider.git",
+        "commit": "23a278af3743afdd09dad7f98daa666b5188efd8",
+        "tree": "83a285147bb4f87cc46127f115beb533e0f3cdf7",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "lmm-api-source/packages/zed-lmm-provider",
+        "url": "https://github.com/TokenNotIncluded/zed-lmm-provider.git",
+        "commit": "f18268100b0b11b9d30d2dde010948db7c2934f4",
+        "tree": "68b7011e073761b77f6b292736db3d01623e69ef",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "mechrevo-drivers",
+        "url": "https://github.com/LIghtJUNction/mechrevo-drivers.git",
+        "commit": "4599a3825dac3c85efeeb490cb4eebe1c1b6dff0",
+        "tree": "74ebb164fb64b9c2bfcf666b0644546dcbd88615",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "oh-my-ztty",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
+        "commit": "7b69b751772a839f090e408228d94f810fd96d1e",
+        "tree": "43f9726a970d97b4c42e026e9d90d16acb7b8e80",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "oh-my-ztty/components/ssmcp",
+        "url": "https://github.com/LIghtJUNction/ssmcp.git",
+        "commit": "52a531a59e9ec9236a76eafc0f4f068799e44b15",
+        "tree": "17dff7b6dddbe1169d9211dc05f686fc44d2fc21",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "oh-my-ztty/components/ssmcp/crates/zharness",
+        "url": "https://github.com/LIghtJUNction/zharness.git",
+        "commit": "84e370450f1d047d43119bf81caf73f742ba6b0a",
+        "tree": "6bd5dda6748e3677106bceb353a2ea60c1bff52e",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "oh-my-ztty/components/ssmcp/crates/zplugin",
+        "url": "https://github.com/LIghtJUNction/zplugin.git",
+        "commit": "3e758b5c21af1bad1cfaf10264b43fe15440e69c",
+        "tree": "c40d5b987c7ce2b69911bc633e693e928da25829",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "oh-my-ztty/components/zdot",
+        "url": "https://github.com/LIghtJUNction/zdot.git",
+        "commit": "e6b5feb98b05c59e0986624c0742dfe4a9187a2a",
+        "tree": "d04b1b92aa2e5791cd9e9be837f6bb6ac86b6bee",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zdot"
+      },
+      {
+        "path": "oh-my-ztty/components/zfetch",
+        "url": "https://github.com/LIghtJUNction/zfetch.git",
+        "commit": "f19b278676206d76626dd01e4b89f7ad9ce9318f",
+        "tree": "1566a18169bee57796755010c8d5e41ee5acc6cc",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "oh-my-ztty/components/zrc",
+        "url": "https://github.com/LIghtJUNction/zrc.git",
+        "commit": "ef8bd9571e206c8086e38b9dcbdc760a466b5133",
+        "tree": "cca36a733355e752fc1c11ca011ba603e395ed2e",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "oh-my-ztty/components/zshard",
+        "url": "https://github.com/LIghtJUNction/zshard.git",
+        "commit": "1cfa1a1eb761d14e2ccfd5381282b6ccd1491cff",
+        "tree": "c72e72e0cc74bed47f4be907bfff3e873bab74aa",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zshard"
+      },
+      {
+        "path": "oh-my-ztty/components/ztty",
+        "url": "https://github.com/LIghtJUNction/ztty.git",
+        "commit": "6b91e29e923aaee0207953f2b04393087f19e0d8",
+        "tree": "58979bd10bb13b8ff0cdb08dfb4104094c3e0e54",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "ssmcp",
+        "url": "https://github.com/LIghtJUNction/ssmcp.git",
+        "commit": "ecc450f17012f8120d7d49470ce9599ada65456f",
+        "tree": "3b9330279ac03208140a8dc95a90e166e5ae1738",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "ssmcp/crates/zharness",
+        "url": "https://github.com/LIghtJUNction/zharness.git",
+        "commit": "e3580c01c7252da090d04e59b59762bc561777d1",
+        "tree": "2ad233c0b016be315dd47650a0080a5a81989aa5",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zharness"
+      },
+      {
+        "path": "ssmcp/crates/zplugin",
+        "url": "https://github.com/LIghtJUNction/zplugin.git",
+        "commit": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+        "tree": "0d1d9c5eca387e80963b4689b07aa2e41655f7e4",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zplugin"
+      },
+      {
+        "path": "ssmcp/crates/ztuio",
+        "url": "https://github.com/LIghtJUNction/ztuio.git",
+        "commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+        "tree": "d16a5b9a87370e766b7cfeb9593d9b2b20c8fa60",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "ztuio"
+      },
+      {
+        "path": "ssmcp/crates/zuse",
+        "url": "https://github.com/LIghtJUNction/zuse.git",
+        "commit": "d930769005d307c42639e8abedc81ab039427e40",
+        "tree": "a2831328012de9b6c3f11ada539deb09c8d24cb3",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zuse"
+      },
+      {
+        "path": "z58",
+        "url": "https://github.com/LIghtJUNction/z58.git",
+        "commit": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+        "tree": "95c901f7e399f72314e2e8c1e8a0743fef6dc8e1",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "z64",
+        "url": "https://github.com/LIghtJUNction/z64.git",
+        "commit": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+        "tree": "c33efa40e9b132568fb164c3e886ed500c02f0de",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zcall",
+        "url": "https://github.com/LIghtJUNction/zcall.git",
+        "commit": "8fb84b812b8025e34399b28e27242605d68ea345",
+        "tree": "1e586fed22294ca11457c16ec57fb8b23b2575b0",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zcall-gui",
+        "url": "https://github.com/LIghtJUNction/zcall-gui.git",
+        "commit": "5dbc423eedd4d529a38b3e8e3adc3e6355a56b2b",
+        "tree": "59c2984337d6dd4a14c6ecdb8a1939e018d0623d",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zcalld/apps/zcall-gui"
+      },
+      {
+        "path": "zcall-gui/vendor/zui",
+        "url": "https://github.com/LIghtJUNction/zui.git",
+        "commit": "5e37fcfb791eec9ac523fc19373e95d0a513112f",
+        "tree": "05100b1d7f83a9e5066d077065b58398627597de",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zui"
+      },
+      {
+        "path": "zcall-omarchy",
+        "url": "https://github.com/LIghtJUNction/zcall-omarchy.git",
+        "commit": "78282c3c3cfa6e9e65e2cbd654f38a96398c6e03",
+        "tree": "5c996a0bba08e8ea566eef6e8c7d669a51a5af85",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zcalld/apps/zcall-omarchy"
+      },
+      {
+        "path": "zcalld",
+        "url": "https://github.com/LIghtJUNction/zcalld.git",
+        "commit": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+        "tree": "8e40d145876561dcb63457a149f10f5ed37809e6",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zcalld-compat",
+        "url": "https://github.com/LIghtJUNction/zcalld-compat.git",
+        "commit": "008910901a3ef8ac5dd57b748a3210faa463c2b9",
+        "tree": "e1d941083205832939200acd2018bc8cc2c7d1b7",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zcalld/extensions/compat"
+      },
+      {
+        "path": "zcalld/apps/zcall-gui",
+        "url": "https://github.com/LIghtJUNction/zcall-gui.git",
+        "commit": "5dbc423eedd4d529a38b3e8e3adc3e6355a56b2b",
+        "tree": "59c2984337d6dd4a14c6ecdb8a1939e018d0623d",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zcalld/apps/zcall-gui/vendor/zui",
+        "url": "https://github.com/LIghtJUNction/zui.git",
+        "commit": "5e37fcfb791eec9ac523fc19373e95d0a513112f",
+        "tree": "05100b1d7f83a9e5066d077065b58398627597de",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zui"
+      },
+      {
+        "path": "zcalld/apps/zcall-omarchy",
+        "url": "https://github.com/LIghtJUNction/zcall-omarchy.git",
+        "commit": "78282c3c3cfa6e9e65e2cbd654f38a96398c6e03",
+        "tree": "5c996a0bba08e8ea566eef6e8c7d669a51a5af85",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zcalld/extensions/compat",
+        "url": "https://github.com/LIghtJUNction/zcalld-compat.git",
+        "commit": "008910901a3ef8ac5dd57b748a3210faa463c2b9",
+        "tree": "e1d941083205832939200acd2018bc8cc2c7d1b7",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zcalld/vendor/zcall",
+        "url": "https://github.com/LIghtJUNction/zcall.git",
+        "commit": "8fb84b812b8025e34399b28e27242605d68ea345",
+        "tree": "1e586fed22294ca11457c16ec57fb8b23b2575b0",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zcall"
+      },
+      {
+        "path": "zcalld/vendor/zconv",
+        "url": "https://github.com/LIghtJUNction/zconv.git",
+        "commit": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+        "tree": "1a175b3d2244bcf44aad7d86981b044c7bdf64de",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zconv"
+      },
+      {
+        "path": "zcalld/vendor/zplugin",
+        "url": "https://github.com/LIghtJUNction/zplugin.git",
+        "commit": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+        "tree": "0d1d9c5eca387e80963b4689b07aa2e41655f7e4",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zplugin"
+      },
+      {
+        "path": "zcalld/vendor/zsys",
+        "url": "https://github.com/LIghtJUNction/zsys.git",
+        "commit": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+        "tree": "d2be92c61823fda996ae43c2dc54f0680272c601",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zsys"
+      },
+      {
+        "path": "zclap",
+        "url": "https://github.com/LIghtJUNction/zclap.git",
+        "commit": "4d87f3ae3743e81509d5ac5500909955667c860f",
+        "tree": "ad4773af1a2ff1cbfbf83d3fabac35bb44d9ec60",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zclick",
+        "url": "https://github.com/LIghtJUNction/zclick.git",
+        "commit": "530e2f347d2950605ee579a396d5760ebad034bd",
+        "tree": "f93f5a1e31794d045c82012dd8e70cf39cff8a2a",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zconv",
+        "url": "https://github.com/LIghtJUNction/zconv.git",
+        "commit": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+        "tree": "1a175b3d2244bcf44aad7d86981b044c7bdf64de",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zdistro",
+        "url": "https://github.com/LIghtJUNction/zdistro.git",
+        "commit": "6a54a137fc697d372b54ef85105315f2ce522b3d",
+        "tree": "41b40af6a572bb9c703cda9149264ce4378336ba",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zdot",
+        "url": "https://github.com/LIghtJUNction/zdot.git",
+        "commit": "e6b5feb98b05c59e0986624c0742dfe4a9187a2a",
+        "tree": "d04b1b92aa2e5791cd9e9be837f6bb6ac86b6bee",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zdwire",
+        "url": "https://github.com/LIghtJUNction/zdwire.git",
+        "commit": "c046e3182b0adf15d43500400a427b7dd7389525",
+        "tree": "1462d2803e97a038606202e5710357fe02c7e348",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zfetch",
+        "url": "https://github.com/LIghtJUNction/zfetch.git",
+        "commit": "f19b278676206d76626dd01e4b89f7ad9ce9318f",
+        "tree": "1566a18169bee57796755010c8d5e41ee5acc6cc",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "oh-my-ztty/components/zfetch"
+      },
+      {
+        "path": "zgpui",
+        "url": "https://github.com/LIghtJUNction/zgpui.git",
+        "commit": "1d796d1fc63808dc099ed7b10c92e75835ae2814",
+        "tree": "b9903103d9b21ec84085ce4c74569f216fc4c130",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "ztty/crates/zgpui"
+      },
+      {
+        "path": "zgraphics",
+        "url": "https://github.com/LIghtJUNction/zgraphics.git",
+        "commit": "fe6357f98cf80fb6cc74739e45e8866ee17706ad",
+        "tree": "a2d1597da98485d12a937d8b6042705795062609",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "ztty/crates/zgraphics"
+      },
+      {
+        "path": "zharness",
+        "url": "https://github.com/LIghtJUNction/zharness.git",
+        "commit": "e3580c01c7252da090d04e59b59762bc561777d1",
+        "tree": "2ad233c0b016be315dd47650a0080a5a81989aa5",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zhex",
+        "url": "https://github.com/LIghtJUNction/zhex.git",
+        "commit": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+        "tree": "8d8aa0aeb5045554477ad08c31fd2bf327cfb9f7",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zinput",
+        "url": "https://github.com/LIghtJUNction/zinput",
+        "commit": "37617313dd7aaabcca9dd567344a76c4cbe03907",
+        "tree": "a13ea659e367d40e4928858dae2ccc54d6cf7683",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "ztty/crates/zinput"
+      },
+      {
+        "path": "zldap",
+        "url": "https://github.com/LIghtJUNction/zldap.git",
+        "commit": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+        "tree": "e8e4d0263b512e0b724183c8f97eff1fddfb5ec2",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zmcl",
+        "url": "https://github.com/LIghtJUNction/zmcl.git",
+        "commit": "3659cf144c69356268f9a185d9ea80eecb50cc7c",
+        "tree": "efe098b9ae3b90daaafdbb2e054113576ed461b7",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zmcl/vendor/zclap",
+        "url": "https://github.com/LIghtJUNction/zclap.git",
+        "commit": "4d87f3ae3743e81509d5ac5500909955667c860f",
+        "tree": "ad4773af1a2ff1cbfbf83d3fabac35bb44d9ec60",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zclap"
+      },
+      {
+        "path": "zmcl/vendor/zconv",
+        "url": "https://github.com/LIghtJUNction/zconv.git",
+        "commit": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+        "tree": "1a175b3d2244bcf44aad7d86981b044c7bdf64de",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zconv"
+      },
+      {
+        "path": "zmcl/vendor/zui",
+        "url": "https://github.com/LIghtJUNction/zui.git",
+        "commit": "5e37fcfb791eec9ac523fc19373e95d0a513112f",
+        "tree": "05100b1d7f83a9e5066d077065b58398627597de",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zui"
+      },
+      {
+        "path": "zmcpio",
+        "url": "https://github.com/LIghtJUNction/zmcpio.git",
+        "commit": "bc89d7fa3b0249b3a9037748e2113b31615e8c89",
+        "tree": "4c7da6b984820c319fcf71abd36aae98b135246a",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zmime",
+        "url": "https://github.com/LIghtJUNction/zmime.git",
+        "commit": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+        "tree": "e85b797b27337ec015445b127a07c9e1d5e7a8c2",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zplugin",
+        "url": "https://github.com/LIghtJUNction/zplugin.git",
+        "commit": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+        "tree": "0d1d9c5eca387e80963b4689b07aa2e41655f7e4",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zpty",
+        "url": "https://github.com/LIghtJUNction/zpty.git",
+        "commit": "66919bc6dcb7757e0437fe955bfa809fb1282b68",
+        "tree": "4ee4b7ba35dcf69b5ce161b8875998ada479f7ea",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "ztty/crates/zpty"
+      },
+      {
+        "path": "zrc",
+        "url": "https://github.com/LIghtJUNction/zrc.git",
+        "commit": "ef8bd9571e206c8086e38b9dcbdc760a466b5133",
+        "tree": "cca36a733355e752fc1c11ca011ba603e395ed2e",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "oh-my-ztty/components/zrc"
+      },
+      {
+        "path": "zscan",
+        "url": "https://github.com/LIghtJUNction/zscan.git",
+        "commit": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+        "tree": "0fdb43042fc417b1e37427926d2000d10f108cbe",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zshard",
+        "url": "https://github.com/LIghtJUNction/zshard.git",
+        "commit": "1cfa1a1eb761d14e2ccfd5381282b6ccd1491cff",
+        "tree": "c72e72e0cc74bed47f4be907bfff3e873bab74aa",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zsyn",
+        "url": "https://github.com/LIghtJUNction/zsyn.git",
+        "commit": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+        "tree": "5c1e5e6ac542dbb29b1e5e98957eaad1f6cd1c6e",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zsys",
+        "url": "https://github.com/LIghtJUNction/zsys.git",
+        "commit": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+        "tree": "d2be92c61823fda996ae43c2dc54f0680272c601",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zterm",
+        "url": "https://github.com/LIghtJUNction/zterm.git",
+        "commit": "a2074bac4c030cfd7c0b2514c852a89dcf54648f",
+        "tree": "469d8c0170fe525ae09ded450ee881aa8bf1e10d",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "ztty",
+        "url": "https://github.com/LIghtJUNction/ztty.git",
+        "commit": "9f5a77a1299093d0ba609bfafa2cec3b0ba931dd",
+        "tree": "42e8396aa5f5110dd44495a697ebb3427c6b4eca",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "ztty/crates/zgpui",
+        "url": "https://github.com/LIghtJUNction/zgpui.git",
+        "commit": "1d796d1fc63808dc099ed7b10c92e75835ae2814",
+        "tree": "b9903103d9b21ec84085ce4c74569f216fc4c130",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "ztty/crates/zgraphics",
+        "url": "https://github.com/LIghtJUNction/zgraphics.git",
+        "commit": "fe6357f98cf80fb6cc74739e45e8866ee17706ad",
+        "tree": "a2d1597da98485d12a937d8b6042705795062609",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "ztty/crates/zinput",
+        "url": "https://github.com/LIghtJUNction/zinput.git",
+        "commit": "37617313dd7aaabcca9dd567344a76c4cbe03907",
+        "tree": "a13ea659e367d40e4928858dae2ccc54d6cf7683",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "ztty/crates/zpty",
+        "url": "https://github.com/LIghtJUNction/zpty.git",
+        "commit": "66919bc6dcb7757e0437fe955bfa809fb1282b68",
+        "tree": "4ee4b7ba35dcf69b5ce161b8875998ada479f7ea",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "ztty/crates/zterm",
+        "url": "https://github.com/LIghtJUNction/zterm.git",
+        "commit": "a2074bac4c030cfd7c0b2514c852a89dcf54648f",
+        "tree": "469d8c0170fe525ae09ded450ee881aa8bf1e10d",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zterm"
+      },
+      {
+        "path": "ztuio",
+        "url": "https://github.com/LIghtJUNction/ztuio.git",
+        "commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+        "tree": "d16a5b9a87370e766b7cfeb9593d9b2b20c8fa60",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "ztype",
+        "url": "https://github.com/LIghtJUNction/ztype",
+        "commit": "037de9972e169942ca6258d6aee6ba53711204f6",
+        "tree": "e315aba075375cc1989e1da55b454b72f7ec13db",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "ztype/vendor/zui",
+        "url": "https://github.com/LIghtJUNction/zui.git",
+        "commit": "5e37fcfb791eec9ac523fc19373e95d0a513112f",
+        "tree": "05100b1d7f83a9e5066d077065b58398627597de",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "verified local Git objects",
+        "local_git_source": "zui"
+      },
+      {
+        "path": "zui",
+        "url": "https://github.com/LIghtJUNction/zui.git",
+        "commit": "5e37fcfb791eec9ac523fc19373e95d0a513112f",
+        "tree": "05100b1d7f83a9e5066d077065b58398627597de",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zuse",
+        "url": "https://github.com/LIghtJUNction/zuse.git",
+        "commit": "d930769005d307c42639e8abedc81ab039427e40",
+        "tree": "a2831328012de9b6c3f11ada539deb09c8d24cb3",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      },
+      {
+        "path": "zvte",
+        "url": "https://github.com/LIghtJUNction/zvte.git",
+        "commit": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+        "tree": "68ffef621a99023dc1cac6c9ea80c98768fdc843",
+        "clean_after_resolution": true,
+        "shallow": true,
+        "method": "normal HTTPS Git",
+        "local_git_source": null
+      }
+    ]
+  },
+  "coordinator": {
+    "source_sha256": "1f0080ab142002d5dba2f43627178b0699afe883e31e07ef4c5b53a3873fb8a6",
+    "semver_source_sha256": "e8a39156886eee6279c7437fd6005bcea8483febf6aa8a4822716a3cbc201986",
+    "production_files_changed": false,
+    "cargo_version": "1.100.0 (3acc79c0c 2026-11-05)",
+    "python_version": "3.12.14",
+    "git_version": "git version 2.52.0"
+  },
+  "results": {
+    "repositories": 42,
+    "packages": 60,
+    "resolved_rust_repositories": 36,
+    "resolved_workspace_manifests": 37,
+    "cargo_metadata_invocations_in_successful_run": 74,
+    "cargo_execution": "One exclusive flock held throughout each Cargo invocation; private Cargo cache/target; nice 19; no compilation.",
+    "gates": {
+      "root-import": {
+        "status": "passed",
+        "started_at": "2026-11-20T03:05:13.903617+00:00",
+        "finished_at": "2026-11-20T03:05:14.108893+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 0.205,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 8991768576,
+        "minimum_available_bytes": 8984875008,
+        "peak_task_rss_bytes": 22806528,
+        "samples": 2,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt": {
+          "path": "root-import/exit.json",
+          "bytes": 5183,
+          "sha256": "1d6b6e7bb5d8b985ddcd945973bdb9aff58faecece9079fe3c513f7a1d49407c"
+        },
+        "stdout": {
+          "path": "root-import/stdout.log",
+          "bytes": 8185,
+          "sha256": "62fcb129e76d1c7b4f574a6b5203bf055a8390fd0ed109aa52ea308e503751c1"
+        },
+        "stderr": {
+          "path": "root-import/stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "fetch-zterm": {
+        "status": "passed",
+        "started_at": "2026-11-20T03:06:51.758082+00:00",
+        "finished_at": "2026-11-20T03:07:06.405708+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 14.647,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9101705216,
+        "minimum_available_bytes": 9066332160,
+        "peak_task_rss_bytes": 36831232,
+        "samples": 144,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt": {
+          "path": "fetch-zterm/exit.json",
+          "bytes": 1200,
+          "sha256": "c772e3e5802baf3557f7b9a0236ad4f7811ce1beb2aac6e719969f8dfd125ce2"
+        },
+        "stdout": {
+          "path": "fetch-zterm/stdout.log",
+          "bytes": 188,
+          "sha256": "34bb0f37ccec4cb8fee705678ee7a5f44e612fdb84c57dbb9edd6e7f228acb28"
+        },
+        "stderr": {
+          "path": "fetch-zterm/stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "fetch-all": {
+        "status": "failed",
+        "started_at": "2026-11-20T03:07:33.975024+00:00",
+        "finished_at": "2026-11-20T03:22:13.008528+00:00",
+        "exit_code": 1,
+        "elapsed_seconds": 879.032,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9410281472,
+        "minimum_available_bytes": 7883653120,
+        "peak_task_rss_bytes": 53850112,
+        "samples": 7403,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt": {
+          "path": "fetch-all/exit.json",
+          "bytes": 5677,
+          "sha256": "8f3feafbc71a30062fac0d7d34096f7a292aef15950a2e92b9d7743de74b45d9"
+        },
+        "stdout": {
+          "path": "fetch-all/stdout.log",
+          "bytes": 17040,
+          "sha256": "7f15025180901e3c262b36588ed0fe4e56207c5074224758aa8efb557bcec20d"
+        },
+        "stderr": {
+          "path": "fetch-all/stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "finish-sources": {
+        "status": "passed",
+        "started_at": "2026-11-20T03:22:37.606688+00:00",
+        "finished_at": "2026-11-20T03:22:43.505337+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 5.898,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 8950530048,
+        "minimum_available_bytes": 8837619712,
+        "peak_task_rss_bytes": 50728960,
+        "samples": 58,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt": {
+          "path": "finish-sources/exit.json",
+          "bytes": 5224,
+          "sha256": "7ed547efd14f7001efffb35733bf3f244eceed214144e1c4038a0b2a1b07eeaf"
+        },
+        "stdout": {
+          "path": "finish-sources/stdout.log",
+          "bytes": 109,
+          "sha256": "6c509dc51c2487da7de576adc66465b59eca8a7d998099a0d54118bffeb00ac5"
+        },
+        "stderr": {
+          "path": "finish-sources/stderr.log",
+          "bytes": 6982,
+          "sha256": "3f07c6c639902d445aca04215557c1ef173c39b589ef798e47ea97a2fc4094dc"
+        }
+      },
+      "sync": {
+        "status": "passed",
+        "started_at": "2026-11-20T03:23:14.672760+00:00",
+        "finished_at": "2026-11-20T03:23:16.016166+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 1.343,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9090355200,
+        "minimum_available_bytes": 9071427584,
+        "peak_task_rss_bytes": 45281280,
+        "samples": 13,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt": {
+          "path": "sync/exit.json",
+          "bytes": 983,
+          "sha256": "e5f8c4397326ad3366de83d0b980bea45433c6146ac6534d294de19ebc942121"
+        },
+        "stdout": {
+          "path": "sync/stdout.log",
+          "bytes": 40,
+          "sha256": "f0da76fff12e199a4f53a8d8a79243c8a232cefc7c21f06827333c699868aba5"
+        },
+        "stderr": {
+          "path": "sync/stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "check": {
+        "status": "passed",
+        "started_at": "2026-11-20T03:23:24.114556+00:00",
+        "finished_at": "2026-11-20T03:23:26.575681+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 2.46,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9140109312,
+        "minimum_available_bytes": 9101148160,
+        "peak_task_rss_bytes": 40230912,
+        "samples": 24,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt": {
+          "path": "check/exit.json",
+          "bytes": 1002,
+          "sha256": "2397f50c051fc7d3432b655e124b47c465c614b0d6237e0473b7c64620fb50d4"
+        },
+        "stdout": {
+          "path": "check/stdout.log",
+          "bytes": 59,
+          "sha256": "37e0b4f4a25fec7e71ad451e2f8d735ccb2b861f1cf0945cb8cc479d5c78e15d"
+        },
+        "stderr": {
+          "path": "check/stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "resolve-all": {
+        "status": "failed",
+        "started_at": "2026-11-20T03:23:26.959197+00:00",
+        "finished_at": "2026-11-20T03:24:33.902772+00:00",
+        "exit_code": -15,
+        "elapsed_seconds": 66.943,
+        "reason": "task RSS budget guard",
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9131155456,
+        "minimum_available_bytes": 9089904640,
+        "peak_task_rss_bytes": 268873728,
+        "samples": 476,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt": {
+          "path": "resolve-all/exit.json",
+          "bytes": 999,
+          "sha256": "b491d780cec4f9abe2b435440db7899c097653db3666879bbecbcc4c4006bfb5"
+        },
+        "stdout": {
+          "path": "resolve-all/stdout.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "path": "resolve-all/stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "resolve-all-512": {
+        "status": "passed",
+        "started_at": "2026-11-20T03:27:08.439899+00:00",
+        "finished_at": "2026-11-20T03:28:49.983637+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 101.543,
+        "rss_budget_bytes": 536870912,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9391312896,
+        "minimum_available_bytes": 8618934272,
+        "minimum_startup_bytes": 4294967296,
+        "peak_task_rss_bytes": 278413312,
+        "samples": 917,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt": {
+          "path": "resolve-all-512/exit.json",
+          "bytes": 2137,
+          "sha256": "f91ca43367af9e0fa0b10576668778cbbf7a275d3f86b08ce2db66ed0109b840"
+        },
+        "stdout": {
+          "path": "resolve-all-512/stdout.log",
+          "bytes": 51,
+          "sha256": "5418d735bdbbd68c06d5dc7323b1920a5bafc0c39c8b16cd274415abdb43f5ff"
+        },
+        "stderr": {
+          "path": "resolve-all-512/stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "check-final": {
+        "status": "passed",
+        "started_at": "2026-11-20T03:33:40.956750+00:00",
+        "finished_at": "2026-11-20T03:33:42.785435+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 1.828,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9371590656,
+        "minimum_available_bytes": 9311268864,
+        "minimum_startup_bytes": 3556769792,
+        "peak_task_rss_bytes": 45862912,
+        "samples": 18,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt": {
+          "path": "check-final/exit.json",
+          "bytes": 3277,
+          "sha256": "b7de6fb464ab4d1c4023d9d186b39be10f768e4183b2da486380113a169a31e5"
+        },
+        "stdout": {
+          "path": "check-final/stdout.log",
+          "bytes": 59,
+          "sha256": "37e0b4f4a25fec7e71ad451e2f8d735ccb2b861f1cf0945cb8cc479d5c78e15d"
+        },
+        "stderr": {
+          "path": "check-final/stderr.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    "successful_resolution_peak_processes": [
+      {
+        "role": "resource supervisor",
+        "rss_bytes": 10354688,
+        "manifest": null
+      },
+      {
+        "role": "coordinator",
+        "rss_bytes": 18006016,
+        "manifest": null
+      },
+      {
+        "role": "Cargo serialization wrapper",
+        "rss_bytes": 1835008,
+        "manifest": "lmm-api-source/services/core/Cargo.toml"
+      },
+      {
+        "role": "Cargo metadata",
+        "rss_bytes": 248217600,
+        "manifest": "lmm-api-source/services/core/Cargo.toml"
+      }
+    ],
+    "metadata_commands": [
+      {
+        "manifest": "OniMods/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:08Z",
+        "finished_at": "2026-11-20T03:27:08Z"
+      },
+      {
+        "manifest": "lmm-api-source/apps/cli/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:08Z",
+        "finished_at": "2026-11-20T03:27:08Z"
+      },
+      {
+        "manifest": "lmm-api-source/services/core/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:08Z",
+        "finished_at": "2026-11-20T03:27:08Z"
+      },
+      {
+        "manifest": "mechrevo-drivers/console/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:08Z",
+        "finished_at": "2026-11-20T03:27:08Z"
+      },
+      {
+        "manifest": "ssmcp/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:08Z",
+        "finished_at": "2026-11-20T03:27:08Z"
+      },
+      {
+        "manifest": "z58/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:08Z",
+        "finished_at": "2026-11-20T03:27:08Z"
+      },
+      {
+        "manifest": "z64/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:08Z",
+        "finished_at": "2026-11-20T03:27:08Z"
+      },
+      {
+        "manifest": "zcall-gui/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zcall/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zcalld/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zclap/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zclick/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zconv/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zdot/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zdwire/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zfetch/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zgpui/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zgraphics/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zharness/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zhex/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zinput/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zldap/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zmcl/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zmcpio/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zmime/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zplugin/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zpty/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zscan/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zsyn/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zsys/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zterm/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "ztty/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "ztuio/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "ztype/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zui/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zuse/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "zvte/Cargo.toml",
+        "mode": "inventory",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:09Z",
+        "finished_at": "2026-11-20T03:27:09Z"
+      },
+      {
+        "manifest": "OniMods/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:54Z",
+        "finished_at": "2026-11-20T03:28:06Z"
+      },
+      {
+        "manifest": "lmm-api-source/apps/cli/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:29Z",
+        "finished_at": "2026-11-20T03:27:42Z"
+      },
+      {
+        "manifest": "lmm-api-source/services/core/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:11Z",
+        "finished_at": "2026-11-20T03:27:29Z"
+      },
+      {
+        "manifest": "mechrevo-drivers/console/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:42Z",
+        "finished_at": "2026-11-20T03:27:54Z"
+      },
+      {
+        "manifest": "ssmcp/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:28:36Z",
+        "finished_at": "2026-11-20T03:28:49Z"
+      },
+      {
+        "manifest": "z58/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:10Z",
+        "finished_at": "2026-11-20T03:27:10Z"
+      },
+      {
+        "manifest": "z64/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:10Z",
+        "finished_at": "2026-11-20T03:27:10Z"
+      },
+      {
+        "manifest": "zcall-gui/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:28:07Z",
+        "finished_at": "2026-11-20T03:28:07Z"
+      },
+      {
+        "manifest": "zcall/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:28:06Z",
+        "finished_at": "2026-11-20T03:28:06Z"
+      },
+      {
+        "manifest": "zcalld/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:28:07Z",
+        "finished_at": "2026-11-20T03:28:12Z"
+      },
+      {
+        "manifest": "zclap/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:10Z",
+        "finished_at": "2026-11-20T03:27:10Z"
+      },
+      {
+        "manifest": "zclick/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:28:12Z",
+        "finished_at": "2026-11-20T03:28:26Z"
+      },
+      {
+        "manifest": "zconv/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:10Z",
+        "finished_at": "2026-11-20T03:27:10Z"
+      },
+      {
+        "manifest": "zdot/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:28:26Z",
+        "finished_at": "2026-11-20T03:28:26Z"
+      },
+      {
+        "manifest": "zdwire/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:10Z",
+        "finished_at": "2026-11-20T03:27:10Z"
+      },
+      {
+        "manifest": "zfetch/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:10Z",
+        "finished_at": "2026-11-20T03:27:10Z"
+      },
+      {
+        "manifest": "zgpui/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:10Z",
+        "finished_at": "2026-11-20T03:27:10Z"
+      },
+      {
+        "manifest": "zgraphics/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:10Z",
+        "finished_at": "2026-11-20T03:27:10Z"
+      },
+      {
+        "manifest": "zharness/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:28:26Z",
+        "finished_at": "2026-11-20T03:28:26Z"
+      },
+      {
+        "manifest": "zhex/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:10Z",
+        "finished_at": "2026-11-20T03:27:10Z"
+      },
+      {
+        "manifest": "zinput/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:28:26Z",
+        "finished_at": "2026-11-20T03:28:26Z"
+      },
+      {
+        "manifest": "zldap/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:10Z",
+        "finished_at": "2026-11-20T03:27:11Z"
+      },
+      {
+        "manifest": "zmcl/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:28:26Z",
+        "finished_at": "2026-11-20T03:28:26Z"
+      },
+      {
+        "manifest": "zmcpio/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:28:26Z",
+        "finished_at": "2026-11-20T03:28:26Z"
+      },
+      {
+        "manifest": "zmime/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:11Z",
+        "finished_at": "2026-11-20T03:27:11Z"
+      },
+      {
+        "manifest": "zplugin/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:11Z",
+        "finished_at": "2026-11-20T03:27:11Z"
+      },
+      {
+        "manifest": "zpty/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:11Z",
+        "finished_at": "2026-11-20T03:27:11Z"
+      },
+      {
+        "manifest": "zscan/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:11Z",
+        "finished_at": "2026-11-20T03:27:11Z"
+      },
+      {
+        "manifest": "zsyn/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:11Z",
+        "finished_at": "2026-11-20T03:27:11Z"
+      },
+      {
+        "manifest": "zsys/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:11Z",
+        "finished_at": "2026-11-20T03:27:11Z"
+      },
+      {
+        "manifest": "zterm/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:28:35Z",
+        "finished_at": "2026-11-20T03:28:35Z"
+      },
+      {
+        "manifest": "ztty/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:28:27Z",
+        "finished_at": "2026-11-20T03:28:35Z"
+      },
+      {
+        "manifest": "ztuio/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:11Z",
+        "finished_at": "2026-11-20T03:27:11Z"
+      },
+      {
+        "manifest": "ztype/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:28:49Z",
+        "finished_at": "2026-11-20T03:28:49Z"
+      },
+      {
+        "manifest": "zui/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:11Z",
+        "finished_at": "2026-11-20T03:27:11Z"
+      },
+      {
+        "manifest": "zuse/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:28:35Z",
+        "finished_at": "2026-11-20T03:28:35Z"
+      },
+      {
+        "manifest": "zvte/Cargo.toml",
+        "mode": "resolved",
+        "exit_code": 0,
+        "started_at": "2026-11-20T03:27:11Z",
+        "finished_at": "2026-11-20T03:27:11Z"
+      }
+    ]
+  },
+  "preservation": {
+    "snapshot_entries": 125,
+    "cargo_lockfiles": 123,
+    "preexisting_cargo_config_files": 2,
+    "all_bytes_modes_and_existence_restored_after_success": true,
+    "root_temporary_config_absent": true,
+    "normalized_snapshot_sha256_before": "90c323b746bc0f8eda2eff8ac1bed186cdc53837746be19564c6917e7b588639",
+    "normalized_snapshot_sha256_after": "90c323b746bc0f8eda2eff8ac1bed186cdc53837746be19564c6917e7b588639",
+    "all_source_worktrees_clean_after_success": true,
+    "initial_256_mib_guard": {
+      "kept_unchanged": true,
+      "temporary_side_effects": [
+        "root .cargo/config.toml created",
+        "lmm-api-source/services/core/Cargo.lock changed"
+      ],
+      "restoration": "All 125 entries were restored and verified before the 512 MiB retry; original lock bytes came from the pinned Git object.",
+      "restoration_receipt_sha256": "dcdd1459d3b4482d8a504672445be75dc96e51306eb77300bdb0005f5b816a43",
+      "retry_plan_sha256": "624755eda78ac5f70dabc5e569ffe84206ae9286e3105692b31f76264cf3b04f",
+      "original_256_mib_supervisor_sha256": "5ba7cd87dffb3fb0d6d21a9850e3cd389998a061c09a0e78a478da363408b5fc",
+      "historical_process_composition": "Not sampled by the first supervisor; do not retroactively treat the later per-process peak as an observation of that failed attempt."
+    },
+    "git_status_retry": "lmm-api-source initially failed threaded lstat under the same small address-space limit. Disabling private index preload and limiting index threads to one passed without refetch or a larger budget; the original failed receipt is retained."
+  },
+  "edge_comparison": {
+    "comparison": "dependent endpoint, dependency endpoint, kind; deduplicated; all normal/build/dev edges retained; repository requires edges use declared_requires",
+    "ignored_fields": [
+      "commit",
+      "version",
+      "version requirement"
+    ],
+    "package_owners_equal": true,
+    "repository_endpoints_equal": true,
+    "all_direct_package_edges_equal": true,
+    "internal_package_edges_equal": true,
+    "repository_edges_equal": true,
+    "all_catalog_fields_other_than_commit_version_requirement_equal": true,
+    "old_catalog_sha256": "9f5b8fb11b85c71458d4dfff3bed9aa8fa768454bfd7a0f1769bbce903e30837",
+    "new_catalog_sha256": "b1ba57fdc052e407ebd66541de29aba80e6ae23d7c4fefbf1d5cde01f218ec09",
+    "normalized_graph_sha256_before": "b467cda8ef50f8d6ac9555d00ac5ca69d14eb9b28953201fb9f27527efa4446f",
+    "normalized_graph_sha256_after": "b467cda8ef50f8d6ac9555d00ac5ca69d14eb9b28953201fb9f27527efa4446f",
+    "all_direct_package_edge_count": 226,
+    "internal_package_edge_count": 84,
+    "repository_edge_count": 56,
+    "added_edges": [],
+    "removed_edges": [],
+    "impact_scope": "The previous impact matrix remains applicable to reachability among these same 42 repository and 60 package nodes, including dev and declared runtime/installer requirements. This does not carry over version compatibility, runtime behavior, performance measurements, test results, or release status."
+  },
+  "generated_files": [
+    {
+      "path": "catalog.json",
+      "bytes": 126810,
+      "sha256": "b1ba57fdc052e407ebd66541de29aba80e6ae23d7c4fefbf1d5cde01f218ec09",
+      "baseline_sha256": "9f5b8fb11b85c71458d4dfff3bed9aa8fa768454bfd7a0f1769bbce903e30837",
+      "changed": true
+    },
+    {
+      "path": "docs/PROJECTS.md",
+      "bytes": 16637,
+      "sha256": "348f733e1c05601279fae9e2fc51eac254eeb5515176997e01b50c56ee971225",
+      "baseline_sha256": "32cabc98e2b479d53850023fc57995228743b7ac7b056f1fa1f4228bd85750ab",
+      "changed": true
+    },
+    {
+      "path": ".cargo/project-z.toml",
+      "bytes": 1681,
+      "sha256": "79f62559d8f5fe9a313ca3d6d5b8ab0ddaf39d47b0afe06b8a24a783c2c75d99",
+      "baseline_sha256": "79f62559d8f5fe9a313ca3d6d5b8ab0ddaf39d47b0afe06b8a24a783c2c75d99",
+      "changed": false
+    }
+  ],
+  "patch": {
+    "path": "three-source-delta.patch",
+    "bytes": 7587,
+    "sha256": "6e5edb09d6f6194c86c36752a4acae3d0a8e2009abe1a5dbd6256c3cfc036bda"
+  },
+  "raw_receipt_paths": "Relative paths identify original local evidence entries, not published repository URLs. This task has not published those raw files; their hashes and whitelisted observations are included here.",
+  "scope_limits": [
+    "No unit tests, compilation, GUI/native runtime tests, CI runs, installations or releases were started by this validation.",
+    "The earlier 80 coordinator tests and 20-library gates were not rerun or overwritten.",
+    "This receipt validates source synchronization and Cargo dependency resolution, not new application release assets, runtime delivery, performance, or suite installation propagation.",
+    "The native primary checkout was not modified by this cloud validation."
+  ],
+  "public_sources": [
+    "https://github.com/LIghtJUNction/project-z/commit/46e98822e8357b25670cea52794af3009d66660f",
+    "https://github.com/LIghtJUNction/OniMods/commit/14dba75a5752c3142039a8660ce37cdf57d7082a",
+    "https://github.com/LIghtJUNction/zterm/commit/a2074bac4c030cfd7c0b2514c852a89dcf54648f",
+    "https://github.com/LIghtJUNction/ztty/commit/9f5a77a1299093d0ba609bfafa2cec3b0ba931dd"
+  ]
+}

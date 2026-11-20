@@ -6,7 +6,7 @@
       "path": "OniMods",
       "url": "https://github.com/LIghtJUNction/OniMods.git",
       "branch": "main",
-      "commit": "f0819fa207c52e98aa7dff8084620557669af7ea",
+      "commit": "14dba75a5752c3142039a8660ce37cdf57d7082a",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -43,7 +43,7 @@
       "path": "oh-my-ztty",
       "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
       "branch": "main",
-      "commit": "7b69b751772a839f090e408228d94f810fd96d1e",
+      "commit": "0fdc87873c53e7c87d18952f83a7b94fc4149de5",
       "role": "suite",
       "manifests": [],
       "requires": [
@@ -60,7 +60,7 @@
       "path": "ssmcp",
       "url": "https://github.com/LIghtJUNction/ssmcp.git",
       "branch": "main",
-      "commit": "ecc450f17012f8120d7d49470ce9599ada65456f",
+      "commit": "785e6b00440b048d00d9da626a33defa99108afe",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -135,7 +135,7 @@
       "path": "zcalld",
       "url": "https://github.com/LIghtJUNction/zcalld.git",
       "branch": "main",
-      "commit": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+      "commit": "b853e264eced9fbd25120d261eb188a3a8e3b1df",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -151,7 +151,7 @@
       "path": "zcalld-compat",
       "url": "https://github.com/LIghtJUNction/zcalld-compat.git",
       "branch": "main",
-      "commit": "008910901a3ef8ac5dd57b748a3210faa463c2b9",
+      "commit": "7c782e9a6f431c7112112c04940c015adf2d76df",
       "role": "extension",
       "manifests": [],
       "requires": [
@@ -436,7 +436,7 @@
       "path": "zterm",
       "url": "https://github.com/LIghtJUNction/zterm.git",
       "branch": "main",
-      "commit": "13d5e2c74571d35cccd920b1204798211b70c79f",
+      "commit": "a2074bac4c030cfd7c0b2514c852a89dcf54648f",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -448,7 +448,7 @@
       "path": "ztty",
       "url": "https://github.com/LIghtJUNction/ztty.git",
       "branch": "main",
-      "commit": "1a2f165983d7abff507c69b54c0c4ed225f49a45",
+      "commit": "c4f8f48c9598284a589e609f25242b49ceabfea8",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -3010,7 +3010,7 @@
     },
     {
       "name": "zcalld",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "repository": "zcalld",
       "manifest": "zcalld/Cargo.toml",
       "workspace": "zcalld",
@@ -3035,7 +3035,7 @@
         {
           "name": "zcalld-plugin-api",
           "alias": null,
-          "requirement": "=0.2.0",
+          "requirement": "=0.2.1",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3077,7 +3077,7 @@
     },
     {
       "name": "zcalld-compat-client",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "repository": "zcalld",
       "manifest": "zcalld/crates/zcalld-compat-client/Cargo.toml",
       "workspace": "zcalld",
@@ -3103,7 +3103,7 @@
     },
     {
       "name": "zcalld-plugin-aliases",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "repository": "zcalld",
       "manifest": "zcalld/plugins/aliases/Cargo.toml",
       "workspace": "zcalld",
@@ -3115,7 +3115,7 @@
         {
           "name": "zcalld-plugin-api",
           "alias": null,
-          "requirement": "=0.2.0",
+          "requirement": "=0.2.1",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3145,7 +3145,7 @@
     },
     {
       "name": "zcalld-plugin-api",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "repository": "zcalld",
       "manifest": "zcalld/crates/zcalld-plugin-api/Cargo.toml",
       "workspace": "zcalld",
@@ -3188,7 +3188,7 @@
     },
     {
       "name": "zcalld-plugin-community",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "repository": "zcalld",
       "manifest": "zcalld/plugins/community/Cargo.toml",
       "workspace": "zcalld",
@@ -3200,7 +3200,7 @@
         {
           "name": "zcalld-compat-client",
           "alias": null,
-          "requirement": "=0.2.0",
+          "requirement": "=0.2.1",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3213,7 +3213,7 @@
         {
           "name": "zcalld-plugin-api",
           "alias": null,
-          "requirement": "=0.2.0",
+          "requirement": "=0.2.1",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3242,7 +3242,7 @@
     },
     {
       "name": "zcalld-plugin-policy",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "repository": "zcalld",
       "manifest": "zcalld/plugins/policy/Cargo.toml",
       "workspace": "zcalld",
@@ -3254,7 +3254,7 @@
         {
           "name": "zcalld-plugin-api",
           "alias": null,
-          "requirement": "=0.2.0",
+          "requirement": "=0.2.1",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3284,7 +3284,7 @@
     },
     {
       "name": "zcalld-plugin-redact",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "repository": "zcalld",
       "manifest": "zcalld/plugins/redact/Cargo.toml",
       "workspace": "zcalld",
@@ -3296,7 +3296,7 @@
         {
           "name": "zcalld-compat-client",
           "alias": null,
-          "requirement": "=0.2.0",
+          "requirement": "=0.2.1",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3309,7 +3309,7 @@
         {
           "name": "zcalld-plugin-api",
           "alias": null,
-          "requirement": "=0.2.0",
+          "requirement": "=0.2.1",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3338,7 +3338,7 @@
     },
     {
       "name": "zcalld-plugin-routing",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "repository": "zcalld",
       "manifest": "zcalld/plugins/routing/Cargo.toml",
       "workspace": "zcalld",
@@ -3350,7 +3350,7 @@
         {
           "name": "zcalld-compat-client",
           "alias": null,
-          "requirement": "=0.2.0",
+          "requirement": "=0.2.1",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3363,7 +3363,7 @@
         {
           "name": "zcalld-plugin-api",
           "alias": null,
-          "requirement": "=0.2.0",
+          "requirement": "=0.2.1",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -4227,7 +4227,7 @@
     },
     {
       "name": "zterm",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "repository": "zterm",
       "manifest": "zterm/Cargo.toml",
       "workspace": "zterm",
@@ -4385,7 +4385,7 @@
         {
           "name": "zterm",
           "alias": null,
-          "requirement": "^0.5.0",
+          "requirement": "^0.5.1",
           "explicit_version": true,
           "kind": "normal",
           "target": null,

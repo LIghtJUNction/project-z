@@ -1,0 +1,674 @@
+{
+  "schema": "project-z.installation-propagation-audit.v1",
+  "checked_at": "2026-11-20T02:22:15Z",
+  "language": "zh-CN",
+  "snapshot_semantics": "这是截至 checked_at 的只读核查快照，不表示之后发布状态持续不变。",
+  "scope": {
+    "purpose": "记录 SSMCP → oh-my-ztty → zrc 的公开版本、源码、安装包元数据和调用契约，为后续安装传播闭环提供依据。",
+    "performed": [
+      "读取公开 GitHub release、tag、branch、commit/tree 和固定源码文件。",
+      "实际下载 SSMCP v0.10.13 的 release-manifest.json 与 SHA256SUMS，并计算这两个小文件的 SHA-256。",
+      "交叉核对两种 Linux 安装包的 API 名称、大小、digest 与已下载 manifest/checksum 文件中的记录。",
+      "读取套件的既有公开 release audit，并与当前公开资产元数据、组件 gitlink 和依赖锁对应。"
+    ],
+    "not_performed": [
+      "未下载或执行完整 SSMCP 或 oh-my-ztty tar 包。",
+      "未运行构建、CI、GUI、原生输入测试或安装。",
+      "未进行密码学签名验真或完整供应链证明验证。",
+      "未生成或验收包含新 SSMCP 依赖组合的 suite bundle。",
+      "未通过真实 Neovim 启动新组合，也未验收该组合的 zrc 终端交互。",
+      "未修改任何工作树、release、tag、安装路径或运行中的应用。"
+    ],
+    "publication_filter": "仅包含公开仓库定位符、源码/版本/资产摘要、调用契约和后续动作；不包含客户端或会话标识、用户绝对路径、原始协调历史或工具回执。"
+  },
+  "conclusion": {
+    "state": "new_cohort_installation_propagation_pending",
+    "statement": "截至核查时间，SSMCP 最新公开正式版本为 v0.10.13；oh-my-ztty v0.2.1 的锁和 bundle 仍对应 SSMCP v0.10.10。新共享依赖组合 c44c2cf 尚不能由旧 release、旧 suite audit 或 zrc mock 测试证明已完成安装传播。",
+    "source_refs": [
+      "ssmcp_latest_release",
+      "ssmcp_v14_release_absence",
+      "ssmcp_v14_tag_absence",
+      "suite_lock",
+      "suite_public_audit",
+      "zrc_test_source"
+    ]
+  },
+  "ssmcp": {
+    "repository": "LIghtJUNction/ssmcp",
+    "latest_public_release": {
+      "tag": "v0.10.13",
+      "package_version": "0.10.13",
+      "published_at": "2026-11-19T20:51:25Z",
+      "draft": false,
+      "prerelease": false,
+      "release_url": "https://github.com/LIghtJUNction/ssmcp/releases/tag/v0.10.13",
+      "annotated_tag_object": "0c45ca98a9c4f389ddbff1b58797aed235fee422",
+      "source_commit": "4e3132d60600dca5053af81cdefa6962c3058ac4",
+      "tag_and_downloaded_manifest_source_match": true,
+      "dependency_scope": "该正式源码使用 ztui-core 0.1.2，Cargo manifest 不含 zuse-computer 依赖；不能用于验收新 zuse 0.2.1 消费组合。",
+      "manifest_submodules": [
+        {
+          "path": "crates/zharness",
+          "commit": "84e370450f1d047d43119bf81caf73f742ba6b0a"
+        },
+        {
+          "path": "crates/zplugin",
+          "commit": "3e758b5c21af1bad1cfaf10264b43fe15440e69c"
+        }
+      ],
+      "source_refs": [
+        "ssmcp_latest_release",
+        "ssmcp_recent_releases",
+        "ssmcp_v13_tag_ref",
+        "ssmcp_v13_tag_object",
+        "ssmcp_v13_manifest",
+        "ssmcp_v13_cargo"
+      ]
+    },
+    "v0_10_14_publication": {
+      "release_lookup_http_status": 404,
+      "tag_lookup_http_status": 404,
+      "state": "not_publicly_found_at_checked_at",
+      "source_refs": [
+        "ssmcp_v14_release_absence",
+        "ssmcp_v14_tag_absence"
+      ]
+    },
+    "signing_observations": {
+      "tag_api_verified": false,
+      "tag_api_reason": "unsigned",
+      "separate_signature_asset_in_inspected_release_listing": false,
+      "listing_scope": "检查了列出的资产名，未见 .sig、.asc、.minisig 或显式 attestation 资产；此结果不证明其他位置不存在证明。",
+      "cryptographic_signature_verification_performed": false,
+      "sha256_interpretation": "digest 一致只支持已注明范围的字节/元数据一致性，不等于发布者身份或签名验真。",
+      "source_refs": [
+        "ssmcp_latest_release",
+        "ssmcp_v13_tag_object"
+      ]
+    },
+    "downloaded_metadata_files": [
+      {
+        "name": "release-manifest.json",
+        "url": "https://github.com/LIghtJUNction/ssmcp/releases/download/v0.10.13/release-manifest.json",
+        "bytes": 1798,
+        "computed_sha256": "18c21b28dd523bf5ce0e4c8c5758a95fe68947bc09a68fa01320bdc7c6c82d33",
+        "computed_digest_matches_api": true,
+        "actually_downloaded": true,
+        "source_refs": [
+          "ssmcp_latest_release",
+          "ssmcp_v13_manifest"
+        ]
+      },
+      {
+        "name": "SHA256SUMS",
+        "url": "https://github.com/LIghtJUNction/ssmcp/releases/download/v0.10.13/SHA256SUMS",
+        "bytes": 762,
+        "computed_sha256": "55ca4ce146962f7f0dd84bbaa8f573eedc74d71df7d1d6671983d2ad1515a0bd",
+        "computed_digest_matches_api": true,
+        "actually_downloaded": true,
+        "source_refs": [
+          "ssmcp_latest_release",
+          "ssmcp_v13_sums"
+        ]
+      }
+    ],
+    "linux_assets": [
+      {
+        "architecture": "x86_64",
+        "name": "ssmcp-x86_64-unknown-linux-gnu.tar.gz",
+        "url": "https://github.com/LIghtJUNction/ssmcp/releases/download/v0.10.13/ssmcp-x86_64-unknown-linux-gnu.tar.gz",
+        "state": "uploaded",
+        "bytes": 9529375,
+        "reported_sha256": "b5042d0125a70356f83b2995453d377ae4ffcbb079aaade53abe896133fbf12b",
+        "api_name_size_digest_match_manifest": true,
+        "api_name_digest_match_sha256sums": true,
+        "archive_downloaded_by_this_audit": false,
+        "archive_digest_recomputed_by_this_audit": false,
+        "archive_executed_by_this_audit": false
+      },
+      {
+        "architecture": "aarch64",
+        "name": "ssmcp-aarch64-unknown-linux-gnu.tar.gz",
+        "url": "https://github.com/LIghtJUNction/ssmcp/releases/download/v0.10.13/ssmcp-aarch64-unknown-linux-gnu.tar.gz",
+        "state": "uploaded",
+        "bytes": 9217874,
+        "reported_sha256": "d188e807d3e8e8e6e892e90f0f962052a3747ed0def7a2a005fa988e1aad6c48",
+        "api_name_size_digest_match_manifest": true,
+        "api_name_digest_match_sha256sums": true,
+        "archive_downloaded_by_this_audit": false,
+        "archive_digest_recomputed_by_this_audit": false,
+        "archive_executed_by_this_audit": false
+      }
+    ],
+    "linux_asset_source_refs": [
+      "ssmcp_latest_release",
+      "ssmcp_v13_manifest",
+      "ssmcp_v13_sums"
+    ],
+    "candidates": [
+      {
+        "id": "main_old_dependency_cohort",
+        "branch": "main",
+        "source_commit": "19458a18e320e4045281fc9228039e6c1edbd300",
+        "package_version": "0.10.14",
+        "manifest_git_blob": "4de59a0c5076810a50090063974eac0c391544b6",
+        "dependency_requirements": {
+          "zuse-computer": "=0.1.0",
+          "zharness": "=0.5.0",
+          "zplugin": "=0.3.0",
+          "ztuio": "=0.1.0"
+        },
+        "formal_release": false,
+        "source_refs": [
+          "ssmcp_main",
+          "ssmcp_main_cargo"
+        ]
+      },
+      {
+        "id": "publisher_old_dependency_candidate",
+        "pr_number": 107,
+        "pr_url": "https://github.com/LIghtJUNction/ssmcp/pull/107",
+        "branch": "fix/private-display-release-20261120",
+        "pr_state": "open",
+        "pr_draft": true,
+        "source_commit": "0a6615d0c325dfb364c9005c01a4a63fefa5fad7",
+        "earlier_frozen_source_commit": "3298bfb98497e5d47661d94bcfec2ea39f006dbb",
+        "package_version": "0.10.14",
+        "manifest_git_blob": "4de59a0c5076810a50090063974eac0c391544b6",
+        "dependency_requirements": {
+          "zuse-computer": "=0.1.0",
+          "zharness": "=0.5.0",
+          "zplugin": "=0.3.0",
+          "ztuio": "=0.1.0"
+        },
+        "formal_release": false,
+        "source_refs": [
+          "ssmcp_old_candidate_pr",
+          "ssmcp_old_candidate_cargo",
+          "ssmcp_old_frozen_cargo"
+        ]
+      },
+      {
+        "id": "project_z_new_shared_dependency_cohort",
+        "source_commit": "c44c2cfecb6ba5dae3a63d67a3af08c77eb7b2cc",
+        "package_version": "0.10.14",
+        "manifest_git_blob": "4a739b6f8466fd4898a9298d7987ae5e1ad39960",
+        "lock_git_blob": "98179e20dc89aa59c57cb8ca21d21e37d5eec4a5",
+        "dependency_versions": {
+          "zuse-computer": "0.2.1",
+          "zharness": "0.5.1",
+          "zplugin": "0.3.1",
+          "ztuio": "0.1.0"
+        },
+        "gitlinks": [
+          {
+            "path": "crates/zuse",
+            "commit": "d930769005d307c42639e8abedc81ab039427e40"
+          },
+          {
+            "path": "crates/zharness",
+            "commit": "e3580c01c7252da090d04e59b59762bc561777d1"
+          },
+          {
+            "path": "crates/zplugin",
+            "commit": "00d566eedcff7b2932e90b9dfeb44910c783d305"
+          },
+          {
+            "path": "crates/ztuio",
+            "commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e"
+          }
+        ],
+        "formal_release": false,
+        "native_runtime_acceptance_established_by_this_audit": false,
+        "source_refs": [
+          "ssmcp_new_candidate_cargo",
+          "ssmcp_new_candidate_lock",
+          "ssmcp_new_candidate_tree"
+        ]
+      }
+    ],
+    "version_identity_rule": {
+      "same_declared_version_different_sources": true,
+      "explanation": "旧依赖候选与 c44 新依赖候选均声明 0.10.14，但源码、lock 和内置依赖不同。版本字符串或旧候选测试结果不能替代新组合验收。",
+      "required_identity": [
+        "release tag",
+        "resolved source commit",
+        "dependency lock and gitlinks",
+        "per-architecture artifact name and SHA-256"
+      ],
+      "future_release_rule": "正式 tag 或资产一旦发布，不得将其覆盖后改指另一组合。若旧依赖组合先发布为 v0.10.14，后续新依赖组合必须使用新的正式版本。"
+    }
+  },
+  "suite": {
+    "repository": "LIghtJUNction/oh-my-ztty",
+    "current_main_commit": "740b82f3a1628d0c14b0405bfb36c76832fedfec",
+    "formal_release": {
+      "tag": "v0.2.1",
+      "version": "0.2.1",
+      "source_commit": "7b69b751772a839f090e408228d94f810fd96d1e",
+      "published_at": "2026-11-19T23:29:52Z",
+      "release_url": "https://github.com/LIghtJUNction/oh-my-ztty/releases/tag/v0.2.1",
+      "source_refs": [
+        "suite_release",
+        "suite_public_audit"
+      ]
+    },
+    "dependency_lock": {
+      "path": "dependencies.lock.json",
+      "source_commit": "740b82f3a1628d0c14b0405bfb36c76832fedfec",
+      "components": {
+        "ssmcp": {
+          "repository": "LIghtJUNction/ssmcp",
+          "tag": "v0.10.10",
+          "assets": {
+            "x86_64": {
+              "url": "https://github.com/LIghtJUNction/ssmcp/releases/download/v0.10.10/ssmcp-x86_64-unknown-linux-gnu.tar.gz",
+              "sha256": "42c22dabfe41d4fc2fecbabaaf222c9d35bb9b77b4550c4daccada4290530920"
+            },
+            "aarch64": {
+              "url": "https://github.com/LIghtJUNction/ssmcp/releases/download/v0.10.10/ssmcp-aarch64-unknown-linux-gnu.tar.gz",
+              "sha256": "4065ded7d71f5d7cb1ee33f32c5f306402f3825825aa68fa549bf9c998c080ce"
+            }
+          }
+        },
+        "ztty": {
+          "repository": "LIghtJUNction/ztty",
+          "tag": "v0.4.1",
+          "assets": {
+            "x86_64": {
+              "url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.4.1/ztty-linux-x86_64.tar.gz",
+              "sha256": "8a65f736f13c1c7a415997a38853f1eb876a3a9edea5fa7c7880178a2b9a289c"
+            },
+            "aarch64": {
+              "url": "https://github.com/LIghtJUNction/ztty/releases/download/v0.4.1/ztty-linux-aarch64.tar.gz",
+              "sha256": "c40eed517d36703f76e76bf907ef1e49d02ec67d9ed0cc7fd044d254f942974f"
+            }
+          }
+        }
+      },
+      "source_refs": [
+        "suite_lock"
+      ]
+    },
+    "gitlinks": [
+      {
+        "path": "components/ssmcp",
+        "repository": "LIghtJUNction/ssmcp",
+        "commit": "52a531a59e9ec9236a76eafc0f4f068799e44b15",
+        "locked_tag": "v0.10.10"
+      },
+      {
+        "path": "components/ztty",
+        "repository": "LIghtJUNction/ztty",
+        "commit": "6b91e29e923aaee0207953f2b04393087f19e0d8",
+        "locked_tag": "v0.4.1"
+      },
+      {
+        "path": "components/zdot",
+        "repository": "LIghtJUNction/zdot",
+        "commit": "e6b5feb98b05c59e0986624c0742dfe4a9187a2a",
+        "locked_tag": null
+      },
+      {
+        "path": "components/zfetch",
+        "repository": "LIghtJUNction/zfetch",
+        "commit": "f19b278676206d76626dd01e4b89f7ad9ce9318f",
+        "locked_tag": null
+      },
+      {
+        "path": "components/zrc",
+        "repository": "LIghtJUNction/zrc",
+        "commit": "ef8bd9571e206c8086e38b9dcbdc760a466b5133",
+        "locked_tag": null
+      },
+      {
+        "path": "components/zshard",
+        "repository": "LIghtJUNction/zshard",
+        "commit": "1cfa1a1eb761d14e2ccfd5381282b6ccd1491cff",
+        "locked_tag": null
+      }
+    ],
+    "gitlink_source_refs": [
+      "suite_tree",
+      "suite_public_audit"
+    ],
+    "linux_bundle_assets": [
+      {
+        "architecture": "x86_64",
+        "name": "oh-my-ztty-0.2.1-linux-x86_64.tar.gz",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/releases/download/v0.2.1/oh-my-ztty-0.2.1-linux-x86_64.tar.gz",
+        "state": "uploaded",
+        "bytes": 5291545,
+        "reported_sha256": "2e3f86191a3d461d9ad2a330a9b323fd261696bf273622cd9d31de9c90a64861",
+        "api_metadata_matches_existing_public_audit": true,
+        "downloaded_by_this_audit": false,
+        "executed_by_this_audit": false
+      },
+      {
+        "architecture": "aarch64",
+        "name": "oh-my-ztty-0.2.1-linux-aarch64.tar.gz",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty/releases/download/v0.2.1/oh-my-ztty-0.2.1-linux-aarch64.tar.gz",
+        "state": "uploaded",
+        "bytes": 5100813,
+        "reported_sha256": "0ccf5494e0fd09341884c2372fe77be4b56425a4a8a2aa1815928f49ee2a1b0c",
+        "api_metadata_matches_existing_public_audit": true,
+        "downloaded_by_this_audit": false,
+        "executed_by_this_audit": false
+      }
+    ],
+    "linux_bundle_source_refs": [
+      "suite_release",
+      "suite_public_audit"
+    ],
+    "historical_public_audit": {
+      "path": "docs/reports/workspace-0.2.1/release-audit.json",
+      "provenance": "以下结果来自已存在的公开报告，本次只读核对；没有重新执行。",
+      "report_schema": "omztty.public-release-audit.v1",
+      "report_source_commit": "7b69b751772a839f090e408228d94f810fd96d1e",
+      "report_build_source_commits_match_current_gitlinks": true,
+      "reported_architectures": {
+        "x86_64": {
+          "verified_files": 84,
+          "elf_architecture": "pass"
+        },
+        "aarch64": {
+          "verified_files": 84,
+          "elf_architecture": "pass"
+        }
+      },
+      "reported_downloaded_x86_64_lifecycle": "pass",
+      "rerun_by_this_audit": false,
+      "validates_new_ssmcp_cohort": false,
+      "source_refs": [
+        "suite_public_audit",
+        "suite_tree"
+      ]
+    },
+    "source_contract": {
+      "pin_command_argv": [
+        "python3",
+        "scripts/workspace.py",
+        "pin",
+        "ssmcp",
+        "<formal-release-tag>"
+      ],
+      "ssmcp_and_ztty_pin_requires_release_tag": true,
+      "raw_source_sha_is_not_an_accepted_replacement_for_that_tag": true,
+      "pin_updates_source_and_dependency_lock_together": true,
+      "bundle_requires_source_gitlink_equal_locked_tag_commit": true,
+      "bundle_downloads_locked_architecture_url_and_checks_sha256": true,
+      "bundle_records": [
+        "BUILD.json",
+        "MANIFEST.sha256"
+      ],
+      "source_refs": [
+        "suite_pin_source",
+        "suite_bundle_source"
+      ]
+    },
+    "propagation_status": "suite_lock_and_bundle_do_not_yet_contain_the_new_ssmcp_cohort",
+    "boundary": "聚合源码图或 suite 单独 gitlink 前进，不会自动改变已发布 bundle、安装内容或 Neovim 实际从 PATH 解析的程序。"
+  },
+  "zrc": {
+    "repository": "LIghtJUNction/zrc",
+    "source_commit": "ef8bd9571e206c8086e38b9dcbdc760a466b5133",
+    "actual_call_contract": {
+      "command": ":ZrcConnect",
+      "normal_mode_mapping": "<leader>as",
+      "executable_check": "vim.fn.executable(\"ssmcp\")",
+      "terminal_spawn": "vim.fn.jobstart({ \"ssmcp\" }, { term = true })",
+      "executable_argv": [
+        "ssmcp"
+      ],
+      "version_argument": null,
+      "terminal_behavior": [
+        "底部分割窗口",
+        "高度设置为 14 行",
+        "启动后进入插入模式"
+      ],
+      "missing_executable_behavior": "提示找不到 ssmcp 并返回。",
+      "rust_abi_dependency": false,
+      "source_refs": [
+        "zrc_connect_source",
+        "zrc_command_source"
+      ]
+    },
+    "context_contract": {
+      "collect_schema": "zrc.context.v1",
+      "show_behavior": "展示本地 JSON buffer。",
+      "connect_sends_collected_context": false,
+      "source_refs": [
+        "zrc_connect_source"
+      ]
+    },
+    "existing_test_scope": {
+      "source_path": "tests/nvim.lua",
+      "mocks": [
+        "vim.fn.executable",
+        "vim.fn.jobstart"
+      ],
+      "proves": "Lua 命令分派及预期调用参数。",
+      "does_not_prove": [
+        "真实 SSMCP 二进制兼容性",
+        "当前 PATH 命中的程序身份",
+        "新依赖组合的终端启动或交互",
+        "新 suite 安装后的消费闭环"
+      ],
+      "executed_by_this_audit": false,
+      "source_refs": [
+        "zrc_test_source"
+      ]
+    },
+    "executable_resolution": {
+      "zrc_resolves_bare_name_from_environment_path": true,
+      "omztty_ai_connect_uses_exact_bundle_binary": true,
+      "omztty_ssmcp_uses_exact_bundle_binary": true,
+      "omztty_shell_and_terminal_prepend_bundle_bin_to_path": true,
+      "installer_preserves_preexisting_ssmcp_not_owned_by_suite": true,
+      "implication": "从套件环境以外启动的 Neovim 可能解析到其他 SSMCP；不能仅凭套件安装或 :ZrcConnect mock 通过判定其已升级。",
+      "source_refs": [
+        "suite_cli_source",
+        "suite_installer_source",
+        "zrc_connect_source"
+      ]
+    },
+    "acceptance_evidence_still_needed": [
+      "真实 Neovim 的 exepath(\"ssmcp\") 与实际可执行文件 SHA-256、版本。",
+      "该文件与正式 release 的 tag、source、架构资产对应关系。",
+      "实际 :ZrcConnect / <leader>as 的终端启动与必要交互结果。",
+      "保持现有命令契约时无需为证明传播而强行修改 zrc 源码；仍须记录真实消费者证据。"
+    ]
+  },
+  "next_actions": [
+    {
+      "id": "publish_new_ssmcp_cohort",
+      "owner_role": "SSMCP 唯一正式发布者",
+      "state": "pending",
+      "action": "完成最终选定源码组合的应用级验收后，提供正式 tag、resolved source commit、依赖 lock/gitlinks 和两种 Linux 资产的名称、大小、SHA-256。旧组合的 release 或测试结果不可替代新组合。",
+      "requires_new_version_if_old_v0_10_14_is_already_published": true
+    },
+    {
+      "id": "advance_suite_as_one_cohort",
+      "owner_role": "oh-my-ztty 维护者",
+      "state": "pending_upstream_formal_artifacts",
+      "action": "用正式 release tag 更新 SSMCP gitlink 与 dependencies.lock.json；检查 source/tag 一致性，重新生成并验收对应架构 bundle。ztty 资产若同时变化，也按其实际正式 tag 单独核对。",
+      "do_not_claim": "仅源码 gitlink 前进即表示 bundle 或安装已经升级。"
+    },
+    {
+      "id": "verify_actual_zrc_consumer",
+      "owner_role": "oh-my-ztty / zrc 维护者",
+      "state": "pending_new_bundle",
+      "action": "在获授权的真实安装环境记录 Neovim 解析的 SSMCP 路径、二进制摘要和版本，再验收 :ZrcConnect / <leader>as 的真实终端行为；保留缺少程序的提示行为。",
+      "do_not_claim": "mock 测试等于真实二进制验收。"
+    },
+    {
+      "id": "record_graph_propagation",
+      "owner_role": "Project Z 协调者",
+      "state": "pending_consumer_evidence",
+      "action": "按已验收的不可变源码更新聚合固定项和报告，把源码集成、正式制品、suite bundle、安装与消费者验收分别记录。"
+    },
+    {
+      "id": "separate_publication_and_deployment",
+      "owner_role": "发布者与部署维护者",
+      "state": "ongoing_boundary",
+      "action": "正式资产发布与正在运行的生产实例切换分别记录；本核查未批准或执行部署重启，也不宣称既有任务已迁移。"
+    }
+  ],
+  "public_sources": [
+    {
+      "id": "ssmcp_latest_release",
+      "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/releases/latest",
+      "observed_content": "GitHub latest release response"
+    },
+    {
+      "id": "ssmcp_recent_releases",
+      "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/releases?per_page=5",
+      "observed_content": "GitHub recent releases response"
+    },
+    {
+      "id": "ssmcp_v14_release_absence",
+      "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/releases/tags/v0.10.14",
+      "observed_content": "HTTP 404 observed at audit cutoff"
+    },
+    {
+      "id": "ssmcp_v14_tag_absence",
+      "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/ref/tags/v0.10.14",
+      "observed_content": "HTTP 404 observed at audit cutoff"
+    },
+    {
+      "id": "ssmcp_v13_tag_ref",
+      "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/ref/tags/v0.10.13",
+      "observed_content": "Annotated tag reference"
+    },
+    {
+      "id": "ssmcp_v13_tag_object",
+      "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/tags/0c45ca98a9c4f389ddbff1b58797aed235fee422",
+      "observed_content": "Tag target and verification metadata"
+    },
+    {
+      "id": "ssmcp_v13_manifest",
+      "url": "https://github.com/LIghtJUNction/ssmcp/releases/download/v0.10.13/release-manifest.json",
+      "observed_content": "Small public file actually downloaded and SHA-256 computed"
+    },
+    {
+      "id": "ssmcp_v13_sums",
+      "url": "https://github.com/LIghtJUNction/ssmcp/releases/download/v0.10.13/SHA256SUMS",
+      "observed_content": "Small public file actually downloaded and SHA-256 computed"
+    },
+    {
+      "id": "ssmcp_v13_cargo",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/4e3132d60600dca5053af81cdefa6962c3058ac4/Cargo.toml",
+      "observed_content": "Immutable Cargo manifest"
+    },
+    {
+      "id": "ssmcp_main",
+      "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/branches/main",
+      "observed_content": "Main branch response at audit cutoff"
+    },
+    {
+      "id": "ssmcp_main_cargo",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/19458a18e320e4045281fc9228039e6c1edbd300/Cargo.toml",
+      "observed_content": "Immutable main manifest"
+    },
+    {
+      "id": "ssmcp_old_candidate_pr",
+      "url": "https://github.com/LIghtJUNction/ssmcp/pull/107",
+      "observed_content": "Open draft PR metadata"
+    },
+    {
+      "id": "ssmcp_old_candidate_cargo",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/0a6615d0c325dfb364c9005c01a4a63fefa5fad7/Cargo.toml",
+      "observed_content": "Immutable PR head manifest"
+    },
+    {
+      "id": "ssmcp_old_frozen_cargo",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/3298bfb/Cargo.toml",
+      "observed_content": "Frozen baseline manifest; full commit is recorded separately"
+    },
+    {
+      "id": "ssmcp_new_candidate_cargo",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/c44c2cfecb6ba5dae3a63d67a3af08c77eb7b2cc/Cargo.toml",
+      "observed_content": "Immutable new cohort manifest"
+    },
+    {
+      "id": "ssmcp_new_candidate_lock",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/c44c2cfecb6ba5dae3a63d67a3af08c77eb7b2cc/Cargo.lock",
+      "observed_content": "Immutable new cohort lock file"
+    },
+    {
+      "id": "ssmcp_new_candidate_tree",
+      "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/trees/c44c2cfecb6ba5dae3a63d67a3af08c77eb7b2cc?recursive=1",
+      "observed_content": "New cohort submodule gitlinks"
+    },
+    {
+      "id": "suite_main",
+      "url": "https://api.github.com/repos/LIghtJUNction/oh-my-ztty/branches/main",
+      "observed_content": "Main branch response at audit cutoff"
+    },
+    {
+      "id": "suite_tree",
+      "url": "https://api.github.com/repos/LIghtJUNction/oh-my-ztty/git/trees/740b82f3a1628d0c14b0405bfb36c76832fedfec?recursive=1",
+      "observed_content": "Current suite component gitlinks"
+    },
+    {
+      "id": "suite_lock",
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/740b82f3a1628d0c14b0405bfb36c76832fedfec/dependencies.lock.json",
+      "observed_content": "Current release tag and per-architecture asset pins"
+    },
+    {
+      "id": "suite_release",
+      "url": "https://api.github.com/repos/LIghtJUNction/oh-my-ztty/releases/tags/v0.2.1",
+      "observed_content": "Formal suite release and asset API metadata"
+    },
+    {
+      "id": "suite_public_audit",
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/740b82f3a1628d0c14b0405bfb36c76832fedfec/docs/reports/workspace-0.2.1/release-audit.json",
+      "observed_content": "Existing public release audit; read but not rerun"
+    },
+    {
+      "id": "suite_pin_source",
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/740b82f3a1628d0c14b0405bfb36c76832fedfec/scripts/workspace.py",
+      "observed_content": "Release-tag pinning behavior"
+    },
+    {
+      "id": "suite_bundle_source",
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/740b82f3a1628d0c14b0405bfb36c76832fedfec/scripts/build_bundle.py",
+      "observed_content": "Bundle source/tag and digest checks"
+    },
+    {
+      "id": "suite_cli_source",
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/740b82f3a1628d0c14b0405bfb36c76832fedfec/bin/omztty",
+      "observed_content": "CLI dispatch and PATH behavior"
+    },
+    {
+      "id": "suite_installer_source",
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/740b82f3a1628d0c14b0405bfb36c76832fedfec/install.sh",
+      "observed_content": "Existing command preservation behavior"
+    },
+    {
+      "id": "zrc_main",
+      "url": "https://api.github.com/repos/LIghtJUNction/zrc/branches/main",
+      "observed_content": "Main branch response at audit cutoff"
+    },
+    {
+      "id": "zrc_connect_source",
+      "url": "https://github.com/LIghtJUNction/zrc/blob/ef8bd9571e206c8086e38b9dcbdc760a466b5133/profiles/ink/files/.config/nvim/lua/zrc/context.lua",
+      "observed_content": "Actual Neovim executable and terminal invocation"
+    },
+    {
+      "id": "zrc_command_source",
+      "url": "https://github.com/LIghtJUNction/zrc/blob/ef8bd9571e206c8086e38b9dcbdc760a466b5133/profiles/ink/files/.config/nvim/lua/zrc/init.lua",
+      "observed_content": "Command and key mapping"
+    },
+    {
+      "id": "zrc_test_source",
+      "url": "https://github.com/LIghtJUNction/zrc/blob/ef8bd9571e206c8086e38b9dcbdc760a466b5133/tests/nvim.lua",
+      "observed_content": "Mocked executable/jobstart tests"
+    },
+    {
+      "id": "zrc_shell_source",
+      "url": "https://github.com/LIghtJUNction/zrc/blob/ef8bd9571e206c8086e38b9dcbdc760a466b5133/profiles/ink/files/.config/zrc/shell.zsh",
+      "observed_content": "Shell integration source"
+    }
+  ]
+}

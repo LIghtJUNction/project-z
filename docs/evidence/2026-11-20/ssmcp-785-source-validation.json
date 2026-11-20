@@ -1,0 +1,1079 @@
+{
+  "schema": "project-z.ssmcp-verified-cohort-source-increment.v1",
+  "checked_at": "2026-11-20T04:01:51.143002+00:00",
+  "status": "source_sync_check_and_affected_workspace_resolution_passed",
+  "baseline": {
+    "aggregate_git_object": "46e98822e8357b25670cea52794af3009d66660f",
+    "effective_predecessor": "Oni14d, zterm a207, ztty c4, zcalld b853, compat7c already verified; this increment changes only SSMCP.",
+    "previous_receipt": {
+      "path": "zcalld-paired-local-validation-20261120.json",
+      "bytes": 24033,
+      "sha256": "1feb8f6df9bae04285468fd0c71f972b5a2f4475605b9c923dd91f27d073d340"
+    },
+    "previous_catalog_sha256": "898a640bc891f4ca593c1a22fb02561c4d47badb2478009fe1bc2f02ae6a4a06"
+  },
+  "source_verification": {
+    "before": "ecc450f17012f8120d7d49470ce9599ada65456f",
+    "after": "785e6b00440b048d00d9da626a33defa99108afe",
+    "tree": "b910d88ca479ee65ecc0ce7f0fca4457abd7d556",
+    "complete_git_tree_matches_api": true,
+    "fsck_passed": true,
+    "all_94_source_worktrees_clean": true,
+    "unrelated_93_source_heads_unchanged": true,
+    "changed_paths": [
+      "Cargo.toml",
+      "docs/commands.md",
+      "docs/configuration.md",
+      "docs/deployment.md",
+      "docs/onboarding.md",
+      "docs/releases.md",
+      "docs/reports/native-plugin-validation-20261120/README.zh-CN.md",
+      "docs/reports/native-plugin-validation-20261120/evidence.json",
+      "docs/reports/release-e2e-catalog-20261120/README.md",
+      "docs/reports/release-e2e-catalog-20261120/agents.json",
+      "docs/reports/release-e2e-catalog-20261120/base.json",
+      "docs/reports/release-e2e-catalog-20261120/daemon.json",
+      "docs/reports/release-e2e-catalog-20261120/unified.json",
+      "docs/reports/release-e2e-catalog-20261120/validation.json",
+      "docs/reports/shared-cohort-20261120/cloud-validation.json",
+      "docs/reports/shared-cohort-20261120/local-preflight.json",
+      "docs/reports/shared-cohort-application-20261120/README.zh-CN.md",
+      "docs/reports/user-wait-sleep-20261120/README.md",
+      "docs/reports/user-wait-sleep-20261120/decoder-source-equivalence.json",
+      "docs/reports/user-wait-sleep-20261120/frame-awake-120.png",
+      "docs/reports/user-wait-sleep-20261120/frame-awake-48.png",
+      "docs/reports/user-wait-sleep-20261120/frame-sleep-120.png",
+      "docs/reports/user-wait-sleep-20261120/frame-sleep-48.png",
+      "docs/reports/user-wait-sleep-20261120/preview-initial-font.json",
+      "docs/reports/user-wait-sleep-20261120/pty-mouse-awake-120.png",
+      "docs/reports/user-wait-sleep-20261120/pty-sleep-120.png",
+      "docs/reports/user-wait-sleep-20261120/pty-sleep-48.png",
+      "docs/reports/user-wait-sleep-20261120/terminal-targeted.txt",
+      "docs/reports/user-wait-sleep-20261120/user-wait-e2e.json",
+      "docs/reports/user-wait-sleep-20261120/validation.json",
+      "docs/reports/ztuio-integration-20261120/README.md",
+      "docs/reports/ztuio-integration-20261120/consumer-package.json",
+      "docs/reports/ztuio-integration-20261120/consumer-package.txt",
+      "docs/reports/ztuio-integration-20261120/core-clippy.txt",
+      "docs/reports/ztuio-integration-20261120/core-contracts.txt",
+      "docs/reports/ztuio-integration-20261120/core-format.txt",
+      "docs/reports/ztuio-integration-20261120/core-package.txt",
+      "docs/reports/ztuio-integration-20261120/core-validation.json",
+      "docs/reports/ztuio-integration-20261120/package-contents.json",
+      "docs/reports/zuse-integration-20261120/frozen-build.json",
+      "docs/reports/zuse-integration-20261120/library-gate.json",
+      "docs/reports/zuse-integration-20261120/native-desktop.jpg",
+      "docs/reports/zuse-integration-20261120/native-worker-cli.json",
+      "docs/reports/zuse-integration-20261120/native-worker-daemon.json",
+      "docs/reports/zuse-integration-20261120/private-desktop-mcp.jpg",
+      "docs/reports/zuse-integration-20261120/private-desktop-mcp.json",
+      "docs/reports/zuse-integration-20261120/product-source-equivalence.json",
+      "docs/reports/zuse-integration-20261120/registry-desktop-compatibility.json",
+      "docs/reports/zuse-integration-20261120/test-only-source.diff",
+      "docs/reports/zuse-integration-20261120/validation.json",
+      "scripts/e2e.py",
+      "scripts/e2e_account_relay.py",
+      "scripts/e2e_agents.py",
+      "scripts/e2e_daemon.py",
+      "scripts/e2e_private_desktop.py",
+      "scripts/e2e_unified.py",
+      "scripts/e2e_user_wait.py",
+      "scripts/e2e_x11_text.py",
+      "scripts/e2e_zuse_worker.py",
+      "scripts/private_xvfb.py",
+      "src/client.rs",
+      "src/client/terminal.rs",
+      "src/client/terminal/events.rs",
+      "src/computer/isolated.rs",
+      "src/computer/isolated/display.rs",
+      "src/computer/isolated/display/tests.rs",
+      "src/computer/zuse_backend.rs",
+      "src/computer/zuse_backend/wayland_tests.rs",
+      "src/device.rs"
+    ],
+    "gitlinks_unchanged": [
+      {
+        "path": "crates/zharness",
+        "commit": "e3580c01c7252da090d04e59b59762bc561777d1"
+      },
+      {
+        "path": "crates/zplugin",
+        "commit": "00d566eedcff7b2932e90b9dfeb44910c783d305"
+      },
+      {
+        "path": "crates/ztuio",
+        "commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e"
+      },
+      {
+        "path": "crates/zuse",
+        "commit": "d930769005d307c42639e8abedc81ab039427e40"
+      }
+    ],
+    "cargo_lock_sha256": "27556db8b55f570c5e5c46e8771faf90795a2dee55d773a2d5459f4a19fa62ba",
+    "all_dependency_manifest_fields_unchanged": true,
+    "package_include_additions": [
+      "/scripts/e2e_x11_text.py",
+      "/scripts/private_xvfb.py"
+    ],
+    "all_lock_config_bytes_modes_existence_unchanged_after_source_update": true,
+    "source_method": "normal HTTPS Git; depth 1, blob filter, LFS smudge disabled",
+    "metadata_command": [
+      "python3",
+      "scripts/project_z.py",
+      "resolve",
+      "ssmcp"
+    ]
+  },
+  "source_review": {
+    "from": "ecc450f17012f8120d7d49470ce9599ada65456f",
+    "to": "785e6b00440b048d00d9da626a33defa99108afe",
+    "compare_url": "https://github.com/LIghtJUNction/ssmcp/compare/ecc450f17012f8120d7d49470ce9599ada65456f...785e6b00440b048d00d9da626a33defa99108afe",
+    "commit_count": 44,
+    "changed_file_count": 69,
+    "commits": [
+      {
+        "sha": "ddad4e3039b2df569d1e3c3601df7924657f3e57",
+        "subject": "docs: record canonical ztuio verification and package evidence [skip ci]"
+      },
+      {
+        "sha": "56dd264c9287076d2d413f9a5c8554870cde2d87",
+        "subject": "docs: attach sanitized terminal library validation logs [skip ci]"
+      },
+      {
+        "sha": "4fe89cadc65bd46a3a218fe558216b98924db963",
+        "subject": "docs: align onboarding and install examples with account access"
+      },
+      {
+        "sha": "33c969314bdf89ef5a2e0690bd4b38bc3715c463",
+        "subject": "docs: align setup with current account access (#105) [skip ci]"
+      },
+      {
+        "sha": "6ccf782093d90a58cc01f8e2f22d49654b2f909a",
+        "subject": "test: align local status and bound sleep UI projections [skip ci]"
+      },
+      {
+        "sha": "cc6d5cff6979e35131933a1a1f771b36d1e33149",
+        "subject": "test: require observed Unicode cancellation in native worker checks [skip ci]"
+      },
+      {
+        "sha": "560cd81fd8ba30bb0f975a5cdabe099bc65451b9",
+        "subject": "merge: align frozen UI fixture expectations with local sessions [skip ci]"
+      },
+      {
+        "sha": "19fd081b7a9bcddc8a125c6bf799ea0ae451c3e6",
+        "subject": "docs: record frozen native plugin validation for v0.10.14 [skip ci]"
+      },
+      {
+        "sha": "aae048c351e4b620cae62131434cc434e7900f2f",
+        "subject": "test: preserve account and legacy session argument contracts [skip ci]"
+      },
+      {
+        "sha": "9bfd4de8ee55bc66e2414f20f2e4bb6f4b5fbe9e",
+        "subject": "test: open compact image previews before native placement checks [skip ci]"
+      },
+      {
+        "sha": "04ea6ee23d94126117983180f60c67ae46db4fdc",
+        "subject": "test: answer thread scope probe in attribution WebSocket fixture [skip ci]"
+      },
+      {
+        "sha": "0be5a08320cbf39e51404a224f40102ec4c0a664",
+        "subject": "docs: record frozen zuse native and authenticated MCP evidence [skip ci]"
+      },
+      {
+        "sha": "bf42169067c8c455c614c0981d864aeed4683308",
+        "subject": "docs: record frozen sleep UI and authenticated PTY acceptance [skip ci]"
+      },
+      {
+        "sha": "bb1e1df9895bb21b3ab4bd38998431af0c3a41ea",
+        "subject": "merge: align account inheritance test fixtures [skip ci]"
+      },
+      {
+        "sha": "8971da4b9c52f986cb464c910d53c86851233ccc",
+        "subject": "merge: align image expansion test fixtures [skip ci]"
+      },
+      {
+        "sha": "fab35e11425cdd147434de6d2eaa20510bf6db1e",
+        "subject": "merge: model capability discovery in attribution fixture [skip ci]"
+      },
+      {
+        "sha": "bfb7946b746bf6055e087b2154fff3c08b1ec878",
+        "subject": "merge: include current access documentation [skip ci]"
+      },
+      {
+        "sha": "5cd304b3a328549abca7a3d804002346686b37df",
+        "subject": "merge: include published ztuio evidence [skip ci]"
+      },
+      {
+        "sha": "666d0e74142d0ef8e0e4a5ffb5a0f57d68146cad",
+        "subject": "merge: include sleep and PTY evidence [skip ci]"
+      },
+      {
+        "sha": "9d197026112b24b32e39466d4e9cd0425e34702e",
+        "subject": "merge: include native plugin evidence [skip ci]"
+      },
+      {
+        "sha": "4aa018b84973044420547c03c241f237dcdd77e6",
+        "subject": "test: align release E2E catalogs with retired invite tool [skip ci]"
+      },
+      {
+        "sha": "541426e41626648f0e609c11f11e122088f75f41",
+        "subject": "docs: record full library gate and unchanged product inputs [skip ci]"
+      },
+      {
+        "sha": "721847874f643ea8c1aa4a4b5cb5ecb5058a138d",
+        "subject": "test: migrate account relay lifecycle to explicit account allow [skip ci]"
+      },
+      {
+        "sha": "8df69551a4fdc908892946989d8af15a93e9c60e",
+        "subject": "docs: record passing current-catalog release E2E checks [skip ci]"
+      },
+      {
+        "sha": "0c06583b366bba38b81051911094a1107d8f9f14",
+        "subject": "test: answer current relay access snapshots in lifecycle fixture [skip ci]"
+      },
+      {
+        "sha": "ce0abe65d9e1281553ef09680d2ecb0ca1926ab0",
+        "subject": "test: decline fresh authorization after logout in relay fixture [skip ci]"
+      },
+      {
+        "sha": "e7f5711a3474275b9d5308a809c726636366d78a",
+        "subject": "fix(client): preserve final rejection for unsigned relay startup [skip ci]"
+      },
+      {
+        "sha": "356ccaf1b8034279829bfcd14e9e66ab83f33c1d",
+        "subject": "merge: preserve account revocation on unsigned allow transports [skip ci]"
+      },
+      {
+        "sha": "78442aa0849cc1a168db039ff7427ea076594409",
+        "subject": "merge: validate current public tool catalog in release fixtures [skip ci]"
+      },
+      {
+        "sha": "7acbcfcf4939929d0ec4fda8ee977cde02b1eb8a",
+        "subject": "merge: consume shared cohort on validated application base [skip ci]"
+      },
+      {
+        "sha": "2b81e41c09a55f70011279385405c18280ff824e",
+        "subject": "fix: preserve Wayland preflight recovery in shared cohort [skip ci]"
+      },
+      {
+        "sha": "66a1fbd4905b8cc26ff43dc09454764a6465cdd2",
+        "subject": "merge: combine published Z cohort with application fixes [skip ci]"
+      },
+      {
+        "sha": "78d3e6ddbba0738fd7e697aaecd2810001698b61",
+        "subject": "fix(computer): allocate and verify high private displays [skip ci]"
+      },
+      {
+        "sha": "bd6492427315bd13416266a0c65ad6f6fb26f983",
+        "subject": "fix(computer): reject partial display binds and inherited Wayland sockets [skip ci]"
+      },
+      {
+        "sha": "f7e74e259ce9c3fa47e946ec4c67997f9c3d5b72",
+        "subject": "fix(computer): initialize startup cleanup ownership explicitly [skip ci]"
+      },
+      {
+        "sha": "964beffa0c06668cdb98fbe8c05871e232de1088",
+        "subject": "test(computer): isolate Xvfb fixtures in verified high displays [skip ci]"
+      },
+      {
+        "sha": "ec718237892354cd7d45f8fdf181fd2b8981c7a5",
+        "subject": "fix: preserve shared X11 text preflight and cancellation [skip ci]"
+      },
+      {
+        "sha": "c44c2cfecb6ba5dae3a63d67a3af08c77eb7b2cc",
+        "subject": "fix: isolate accessibility discovery and verify complete text delivery [skip ci]"
+      },
+      {
+        "sha": "2e1fee53fde40bac7fc6ace71415eca35e1a3638",
+        "subject": "docs: publish exact cohort preflight and resource stop [skip ci]"
+      },
+      {
+        "sha": "be64c61bc6baf296fd18daaf7624362a03eef955",
+        "subject": "docs: record cloud validation and verified native cohort handoff [skip ci]"
+      },
+      {
+        "sha": "ddaf62a5276c658a4358cbfebb3f6bf3a7644516",
+        "subject": "test: normalize GTK fixture window IDs before native focus [skip ci]"
+      },
+      {
+        "sha": "32bf2cf6c0eb319a4a5f38ddb21907bd45fc72f5",
+        "subject": "test: retain the owned accessibility registration response [skip ci]"
+      },
+      {
+        "sha": "9cb44c7c56447334e23f36645a26916e84733dc8",
+        "subject": "test: inspect expected native refusals through the MCP response [skip ci]"
+      },
+      {
+        "sha": "785e6b00440b048d00d9da626a33defa99108afe",
+        "subject": "fix: keep private desktop accessibility services locally owned [skip ci]"
+      }
+    ],
+    "production_changes": [
+      {
+        "path": "src/client.rs",
+        "behavior": "Account relay transports, including explicit allow without an account token, retain a final authorization rejection when the child exits first; this does not grant new access."
+      },
+      {
+        "path": "src/computer/isolated.rs",
+        "behavior": "Own startup cleanup and isolate child environment. Private commands prefer the supported AT-SPI dbus-daemon path and disable only GVfs FUSE, while preserving GIO_USE_VFS and leaving parent environment unchanged."
+      },
+      {
+        "path": "src/computer/isolated/display.rs",
+        "behavior": "Allocate explicit high private displays with owned lease, private authentication and verified readiness; reject partial transport binding and retain cleanup ownership."
+      },
+      {
+        "path": "src/computer/zuse_backend.rs",
+        "behavior": "Dispatch X11 text as one whole string through zuse 0.2.1; preflight Wayland text before splitting; only exact before-effect error envelopes permit clean refusal recovery. Cancellation after X11 dispatch is uncertain and must not be retried."
+      }
+    ],
+    "test_only_source_files": [
+      "src/client/terminal.rs",
+      "src/client/terminal/events.rs",
+      "src/device.rs",
+      "src/computer/isolated/display/tests.rs",
+      "src/computer/zuse_backend/wayland_tests.rs"
+    ],
+    "test_and_documentation_boundary": "The other changed scripts and docs update or preserve evidence and fixtures. Historical frozen-source reports retain their original source, including failed attempts; their presence in this tree does not make them new-source executions.",
+    "manifest_boundary": "Cargo.toml changes only package.include to ship two real regression helpers. All dependency fields, lock contents, Gitlinks and cargo config are unchanged."
+  },
+  "results": {
+    "repositories": 42,
+    "packages": 60,
+    "full_resolution_command": [
+      "python3",
+      "scripts/project_z.py",
+      "resolve",
+      "ssmcp"
+    ],
+    "full_resolved_rust_repositories": 1,
+    "full_resolved_workspace_manifests": [
+      "ssmcp/Cargo.toml"
+    ],
+    "selection": "SSMCP is the sole Rust package in its workspace, with no external Rust package consumers in the catalog. Suite/zrc runtime propagation is separate.",
+    "gates": {
+      "source": {
+        "status": "passed",
+        "started_at": "2026-11-20T03:59:50.646830+00:00",
+        "finished_at": "2026-11-20T04:00:10.364838+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 19.717,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9403977728,
+        "minimum_available_bytes": 9363832832,
+        "minimum_startup_bytes": 4294967296,
+        "peak_task_rss_bytes": 49328128,
+        "samples": 193,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt_sha256": "5e2a1c9150744f44dd620327741b4fc76f4b5d19135a02e9bab5cd594a91df9e",
+        "stdout_sha256": "cd0ca70ec43e9e53fe5cf4c55cf142ef2aecd3279baa1547afc9ff901e232828",
+        "stderr_sha256": "2251fc820557ae135570613167951f180afeb0750cea80e6e6f14ab536558baf"
+      },
+      "sync": {
+        "status": "passed",
+        "started_at": "2026-11-20T04:00:32.030470+00:00",
+        "finished_at": "2026-11-20T04:00:33.452857+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 1.422,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9402302464,
+        "minimum_available_bytes": 9326399488,
+        "minimum_startup_bytes": 4294967296,
+        "peak_task_rss_bytes": 46288896,
+        "samples": 14,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt_sha256": "5a78da1b11a432a980bd18690f163455aa54ab1d52cae3a4bcd1d0d9f35f1a23",
+        "stdout_sha256": "f0da76fff12e199a4f53a8d8a79243c8a232cefc7c21f06827333c699868aba5",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "check": {
+        "status": "passed",
+        "started_at": "2026-11-20T04:00:33.837855+00:00",
+        "finished_at": "2026-11-20T04:00:35.259202+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 1.421,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9370931200,
+        "minimum_available_bytes": 9330040832,
+        "minimum_startup_bytes": 4294967296,
+        "peak_task_rss_bytes": 45166592,
+        "samples": 14,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt_sha256": "16b83aff1b53a09f00d365d219a5b7906e158bd530076dacb35e42bc3330bc81",
+        "stdout_sha256": "37e0b4f4a25fec7e71ad451e2f8d735ccb2b861f1cf0945cb8cc479d5c78e15d",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "resolve": {
+        "status": "passed",
+        "started_at": "2026-11-20T04:00:35.624129+00:00",
+        "finished_at": "2026-11-20T04:00:38.071311+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 2.447,
+        "rss_budget_bytes": 268435456,
+        "host_reserve_bytes": 3221225472,
+        "initial_available_bytes": 9358405632,
+        "minimum_available_bytes": 9301401600,
+        "minimum_startup_bytes": 4294967296,
+        "peak_task_rss_bytes": 96911360,
+        "samples": 24,
+        "nice": 19,
+        "cargo_jobs": 1,
+        "resource_mechanism": "process-group plus supervisor RSS polling; optional inherited per-process address-space limit; no cgroup hard limit",
+        "raw_receipt_sha256": "a4c9d2403e587a00baa6bf451441e1de27279a8ec1febf27c417c203025a4da4",
+        "stdout_sha256": "e75b72cea2c6c9f2d6f4a21aa324f86c0b4bde364ed43b116f7c84036ad8bd5b",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "metadata_commands": {
+      "sync": [
+        {
+          "manifest": "OniMods/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "lmm-api-source/apps/cli/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "lmm-api-source/services/core/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "mechrevo-drivers/console/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "ssmcp/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "z58/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "z64/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zcall-gui/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zcall/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zcalld/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zclap/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zclick/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zconv/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zdot/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zdwire/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zfetch/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zgpui/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zgraphics/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zharness/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zhex/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zinput/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zldap/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zmcl/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zmcpio/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zmime/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zplugin/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zpty/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zscan/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zsyn/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zsys/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zterm/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "ztty/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "ztuio/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "ztype/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zui/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zuse/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zvte/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        }
+      ],
+      "check": [
+        {
+          "manifest": "OniMods/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "lmm-api-source/apps/cli/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "lmm-api-source/services/core/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "mechrevo-drivers/console/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "ssmcp/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "z58/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "z64/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zcall-gui/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zcall/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zcalld/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zclap/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zclick/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zconv/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zdot/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zdwire/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zfetch/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zgpui/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zgraphics/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zharness/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zhex/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zinput/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zldap/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zmcl/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zmcpio/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zmime/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zplugin/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zpty/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zscan/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zsyn/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zsys/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zterm/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "ztty/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "ztuio/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "ztype/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zui/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zuse/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zvte/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        }
+      ],
+      "resolve": [
+        {
+          "manifest": "OniMods/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "lmm-api-source/apps/cli/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "lmm-api-source/services/core/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "mechrevo-drivers/console/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "ssmcp/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "z58/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "z64/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zcall-gui/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zcall/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zcalld/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zclap/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zclick/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zconv/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zdot/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zdwire/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zfetch/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zgpui/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zgraphics/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zharness/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zhex/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zinput/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zldap/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zmcl/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zmcpio/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zmime/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zplugin/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zpty/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zscan/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zsyn/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zsys/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zterm/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "ztty/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "ztuio/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "ztype/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zui/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zuse/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "zvte/Cargo.toml",
+          "mode": "inventory",
+          "exit_code": 0
+        },
+        {
+          "manifest": "ssmcp/Cargo.toml",
+          "mode": "resolved",
+          "exit_code": 0
+        }
+      ]
+    },
+    "compilation_performed": false
+  },
+  "preservation": {
+    "snapshot_entries": 128,
+    "all_lock_config_bytes_modes_existence_restored": true,
+    "normalized_snapshot_sha256_before": "9aa4fa56e17878f2054a7543ce7b02fab8f87e673f2c2b4301485bd907334305",
+    "normalized_snapshot_sha256_after": "9aa4fa56e17878f2054a7543ce7b02fab8f87e673f2c2b4301485bd907334305",
+    "temporary_root_config_absent": true,
+    "unrelated_93_source_heads_unchanged": true,
+    "all_94_source_worktrees_clean": true,
+    "suite_nested_sources_untouched": true,
+    "historical_receipts_untouched": true
+  },
+  "graph": {
+    "only_ssmcp_repository_commit_changes_in_catalog": true,
+    "all_package_versions_dependencies_and_requirements_unchanged": true,
+    "all_direct_package_edges": 226,
+    "internal_package_edges": 84,
+    "repository_edges": 56,
+    "normalized_graph_sha256": "b467cda8ef50f8d6ac9555d00ac5ca69d14eb9b28953201fb9f27527efa4446f",
+    "final_catalog_sha256": "1088536d719a7000d8a050c4eeee0d9479d541756c8df2797af4bec8f014639e"
+  },
+  "application_validation_boundary": {
+    "executed_by_this_increment": false,
+    "validation_owner_source": "785e6b00440b048d00d9da626a33defa99108afe",
+    "reported_new_source_scope": [
+      "fmt/Clippy/build",
+      "one exact-environment unit test",
+      "two native library cases, one assertion suite each",
+      "35 private-desktop MCP checks with same-Computer refusal/recovery and complete cleanup"
+    ],
+    "reported_new_ssmcp_elf_sha256": "59ca27630c17fd73f027f271c1f752fcc7bacb60125de84aed276e39e1141e19",
+    "reported_new_libtest_sha256": "d7cb9c11715cbc5b61d33de51daedd1122d8b5a2f10de7a563d28b456650a0b4",
+    "evidence_status": "The independent validation owner reported source-bound success to the coordinator. Its final public receipt is a separate deliverable; this metadata audit does not claim to have rerun or independently reread that not-yet-delivered artifact.",
+    "historical_c44_reuse_not_new_785_execution": [
+      "44 cloud cases plus two native socket cases",
+      "four PTY checks",
+      "125 base MCP checks",
+      "client and daemon six GTK checks each",
+      "display allocator coverage"
+    ]
+  },
+  "release_and_downstream": {
+    "cargo_package_version": "0.10.14",
+    "formal_release_of_this_exact_source_verified_here": false,
+    "same_version_is_not_source_equivalence": true,
+    "tag_policy": "Do not overwrite an existing formal tag to replace another source with this candidate.",
+    "suite_and_zrc_updated_here": false,
+    "next_scope": "Existing sole publisher must bind a new immutable application release to the verified source; suite then consumes actual matching assets/bundle, and zrc exercises that installed command contract."
+  },
+  "known_other_application_blocker": "The prior zcalld pair still has its separately documented real Responses 502/rolled-back cutover; SSMCP metadata success does not clear it.",
+  "generated_files": [
+    {
+      "path": "catalog.json",
+      "bytes": 126810,
+      "sha256": "1088536d719a7000d8a050c4eeee0d9479d541756c8df2797af4bec8f014639e"
+    },
+    {
+      "path": "docs/PROJECTS.md",
+      "bytes": 16637,
+      "sha256": "c5dcc64c930ea8bc44fbd4b52eaa1b81c60d78d990e615fe591e54b6bf70db49"
+    },
+    {
+      "path": ".cargo/project-z.toml",
+      "bytes": 1681,
+      "sha256": "79f62559d8f5fe9a313ca3d6d5b8ab0ddaf39d47b0afe06b8a24a783c2c75d99"
+    }
+  ],
+  "not_executed": [
+    "build",
+    "unit/native/GUI tests",
+    "CI dispatch",
+    "installation",
+    "service changes",
+    "unrelated full workspace resolution"
+  ]
+}
