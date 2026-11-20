@@ -1,0 +1,209 @@
+{
+  "schema": "project-z.public-site-publication.v1",
+  "status": "published_live_verified",
+  "recorded_at_utc": "2026-11-20T10:58:49.518829+00:00",
+  "source_candidate": "7c164bc9fb7c95f918b6c7734f8b25bf8cfeb615",
+  "source_data_commit": "3ea9cf3af9293561f2c0d871a97ca2c658c2b4bd",
+  "final_aggregate_commit": "522bc7c9da008f05e9f715c1c1eda91b13ca89ec",
+  "final_aggregate_tree": "eb2dfc60e3ab31f96c6fb29c458573f8500a2ac6",
+  "root_main_receipt_commit": "78fc357f778a0dbff12f9320da82f324cb427410",
+  "source_scope": "Accepted zgpui 0.1.2 aggregate cohort with the final oh-my-ztty 0.2.6 source pin. Current public registry releases describe their own versions and acceptance.",
+  "github_visibility_captured_at_utc": "2026-11-20T10:41:56+00:00",
+  "exact_registry_verification_completed_at_utc": "2026-11-20T10:48:11.784503+00:00",
+  "public_repository": "LIghtJUNction/project-z-site",
+  "public_base": "668080bced1eb4c9941e324abc09e645d6e881f3",
+  "public_commit": "5bdd99dc749de86482f1bafb525693c2acc66b85",
+  "public_url": "https://lightjunction.github.io/project-z-site/",
+  "public_pushed_at_utc": "2026-11-20T10:56:32.168529+00:00",
+  "public_changed_files": [
+    "index.html",
+    "projects.json"
+  ],
+  "public_tracked_files": [
+    ".nojekyll",
+    "README.md",
+    "app.js",
+    "favicon.svg",
+    "index.html",
+    "projects.json",
+    "style.css"
+  ],
+  "readme_sha256_unchanged": "aef0d08fd4d8d8502d034f974352b5b5107b44383ed0ab4d98390b55f9cae32b",
+  "bundle_manifest": {
+    "source_commit": "7c164bc9fb7c95f918b6c7734f8b25bf8cfeb615",
+    "aggregate_commit": "522bc7c9da008f05e9f715c1c1eda91b13ca89ec",
+    "built_at_utc": "2026-11-20T10:55:50.966158+00:00",
+    "public_manifest_sha256": "35a991384487df07f36e820d83d3f8ccf10b121c27efdc7a58ca5b2feac5234d",
+    "schema": "project-z.public-bundle.v1",
+    "source_base": "3ea9cf3af9293561f2c0d871a97ca2c658c2b4bd",
+    "files": [
+      {
+        "path": ".nojekyll",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "app.js",
+        "bytes": 4203,
+        "sha256": "93657999854f6d21d378fa387a0346c50528d8356a0a65b9a726662bd7672362"
+      },
+      {
+        "path": "favicon.svg",
+        "bytes": 321,
+        "sha256": "46b2270683a9f0443180adefa46d1e20c67792e6a4aac4a7ce7ae52eacfe00c8"
+      },
+      {
+        "path": "index.html",
+        "bytes": 46048,
+        "sha256": "d5b2a01eb79b0dd69d113cc0c190b2e729d16b36d9497c704e1d7a7baf61b385"
+      },
+      {
+        "path": "projects.json",
+        "bytes": 56813,
+        "sha256": "35a991384487df07f36e820d83d3f8ccf10b121c27efdc7a58ca5b2feac5234d"
+      },
+      {
+        "path": "style.css",
+        "bytes": 14560,
+        "sha256": "dd39394ef7d3ca8eba8bc652670ea5e7c770ea0d84116efd7433fa4fbd5743a1"
+      }
+    ],
+    "bytes": 121945,
+    "projects": 39,
+    "verified_crates": 29
+  },
+  "pages_verification": {
+    "run": {
+      "id": 44723433069,
+      "name": "pages build and deployment",
+      "html_url": "https://github.com/LIghtJUNction/project-z-site/actions/runs/44723433069",
+      "event": "dynamic",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "5bdd99dc749de86482f1bafb525693c2acc66b85",
+      "head_branch": "main",
+      "created_at": "2026-11-20T10:56:33Z",
+      "updated_at": "2026-11-20T10:57:10Z"
+    },
+    "list_endpoint": "https://api.github.com/repos/LIghtJUNction/project-z-site/actions/runs?head_sha=5bdd99dc749de86482f1bafb525693c2acc66b85&branch=main&per_page=10",
+    "jobs_endpoint": "https://api.github.com/repos/LIghtJUNction/project-z-site/actions/runs/44723433069/jobs?per_page=30",
+    "jobs": [
+      {
+        "id": 136244741812,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/LIghtJUNction/project-z-site/actions/runs/44723433069/job/136244741812",
+        "started_at": "2026-11-20T10:56:37Z",
+        "completed_at": "2026-11-20T10:56:50Z"
+      },
+      {
+        "id": 136244868686,
+        "name": "deploy",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/LIghtJUNction/project-z-site/actions/runs/44723433069/job/136244868686",
+        "started_at": "2026-11-20T10:56:55Z",
+        "completed_at": "2026-11-20T10:57:09Z"
+      },
+      {
+        "id": 136244868710,
+        "name": "report-build-status",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/LIghtJUNction/project-z-site/actions/runs/44723433069/job/136244868710",
+        "started_at": "2026-11-20T10:56:53Z",
+        "completed_at": "2026-11-20T10:56:56Z"
+      }
+    ],
+    "verified_at_utc": "2026-11-20T10:57:42.213629+00:00"
+  },
+  "live_verification": {
+    "status": "passed",
+    "verified_at_utc": "2026-11-20T10:57:45.516128+00:00",
+    "poll_rounds": 1,
+    "public_url": "https://lightjunction.github.io/project-z-site/",
+    "public_commit": "5bdd99dc749de86482f1bafb525693c2acc66b85",
+    "pages_run_id": 44723433069,
+    "http_checks": [
+      {
+        "path": "/",
+        "url": "https://lightjunction.github.io/project-z-site/",
+        "http_status": 200,
+        "bytes": 46048,
+        "sha256": "d5b2a01eb79b0dd69d113cc0c190b2e729d16b36d9497c704e1d7a7baf61b385",
+        "checked_at_utc": "2026-11-20T10:57:42.759408+00:00",
+        "matches_artifact": true
+      },
+      {
+        "path": ".nojekyll",
+        "url": "https://lightjunction.github.io/project-z-site/.nojekyll",
+        "http_status": 200,
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "checked_at_utc": "2026-11-20T10:57:43.167493+00:00",
+        "matches_artifact": true
+      },
+      {
+        "path": "app.js",
+        "url": "https://lightjunction.github.io/project-z-site/app.js",
+        "http_status": 200,
+        "bytes": 4203,
+        "sha256": "93657999854f6d21d378fa387a0346c50528d8356a0a65b9a726662bd7672362",
+        "checked_at_utc": "2026-11-20T10:57:43.584691+00:00",
+        "matches_artifact": true
+      },
+      {
+        "path": "favicon.svg",
+        "url": "https://lightjunction.github.io/project-z-site/favicon.svg",
+        "http_status": 200,
+        "bytes": 321,
+        "sha256": "46b2270683a9f0443180adefa46d1e20c67792e6a4aac4a7ce7ae52eacfe00c8",
+        "checked_at_utc": "2026-11-20T10:57:44.023973+00:00",
+        "matches_artifact": true
+      },
+      {
+        "path": "index.html",
+        "url": "https://lightjunction.github.io/project-z-site/index.html",
+        "http_status": 200,
+        "bytes": 46048,
+        "sha256": "d5b2a01eb79b0dd69d113cc0c190b2e729d16b36d9497c704e1d7a7baf61b385",
+        "checked_at_utc": "2026-11-20T10:57:44.556184+00:00",
+        "matches_artifact": true
+      },
+      {
+        "path": "projects.json",
+        "url": "https://lightjunction.github.io/project-z-site/projects.json",
+        "http_status": 200,
+        "bytes": 56813,
+        "sha256": "35a991384487df07f36e820d83d3f8ccf10b121c27efdc7a58ca5b2feac5234d",
+        "checked_at_utc": "2026-11-20T10:57:45.085722+00:00",
+        "matches_artifact": true
+      },
+      {
+        "path": "style.css",
+        "url": "https://lightjunction.github.io/project-z-site/style.css",
+        "http_status": 200,
+        "bytes": 14560,
+        "sha256": "dd39394ef7d3ca8eba8bc652670ea5e7c770ea0d84116efd7433fa4fbd5743a1",
+        "checked_at_utc": "2026-11-20T10:57:45.516017+00:00",
+        "matches_artifact": true
+      }
+    ],
+    "projects": 39,
+    "verified_crates": 29,
+    "public_manifest_sha256": "35a991384487df07f36e820d83d3f8ccf10b121c27efdc7a58ca5b2feac5234d",
+    "published_crate_versions": {
+      "zi18n": "0.1.0",
+      "zguard": "0.1.0",
+      "ztty": "0.5.2",
+      "zgpui": "0.1.5",
+      "zharness": "0.6.0",
+      "zcall": "0.4.0"
+    },
+    "oh_my_ztty_source_version": {
+      "version": "0.2.6",
+      "source": "https://raw.githubusercontent.com/LIghtJUNction/oh-my-ztty/main/VERSION"
+    }
+  }
+}

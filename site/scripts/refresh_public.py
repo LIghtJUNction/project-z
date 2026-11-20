@@ -149,21 +149,28 @@ def main():
     from build import validate
     curation = json.loads((SITE / "curation.json").read_text())
     data = json.loads((SITE / "projects.json").read_text())
-    validate(data, curation)
+    if args.verify_only and args.only:
+        parser.error("--only cannot be combined with --verify-only")
+    validate(data, curation, allow_missing_projects=not args.verify_only)
     if args.verify_only:
-        if args.only:
-            parser.error("--only cannot be combined with --verify-only")
         with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
             verified = list(pool.map(verify, data["projects"]))
         print(json.dumps({"verified_public_projects": len(verified)}))
         return
-    names = set(args.only or [item["id"] for item in curation["projects"]])
-    if names - {item["id"] for item in curation["projects"]}:
+    reviewed = {item["id"]: item for item in curation["projects"]}
+    names = set(args.only) if args.only else reviewed.keys()
+    if names - reviewed.keys():
         parser.error("unknown project; review curation before adding a repository")
-    selected = [item for item in curation["projects"] if item["id"] in names]
+    projects = {project["id"]: project for project in data["projects"]}
+    omitted = reviewed.keys() - projects.keys() - names
+    if omitted:
+        parser.error("refresh must include all newly reviewed projects: " + ", ".join(sorted(omitted)))
+    selected = [item for name, item in reviewed.items() if name in names]
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         refreshed = {project["id"]: project for project in pool.map(refresh, selected)}
-    data["projects"] = [refreshed.get(project["id"], project) for project in data["projects"]]
+    # Updating a dict keeps existing positions and appends new projects in curation order.
+    projects.update(refreshed)
+    data["projects"] = list(projects.values())
     data["generated_at"] = datetime.now(timezone.utc).isoformat()
     validate(data, curation)
     # All requests and checks finish before replacing the reviewed snapshot.

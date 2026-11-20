@@ -27,7 +27,7 @@ def read_regular(path):
     return path.read_text()
 
 
-def validate(data, curation):
+def validate(data, curation, *, allow_missing_projects=False):
     if set(data) != {"schema_version", "generated_at", "categories", "projects"} or data["schema_version"] != 1:
         raise ValueError("unsupported public snapshot schema")
     datetime.fromisoformat(data["generated_at"])
@@ -37,20 +37,26 @@ def validate(data, curation):
     if len(reviewed) != len(curation["projects"]):
         raise ValueError("duplicate curated project")
     projects = data["projects"]
-    if {item["id"] for item in projects} != set(reviewed) or len(projects) != len(reviewed):
+    project_ids = {item["id"] for item in projects}
+    if len(project_ids) != len(projects) or project_ids - reviewed.keys():
+        raise ValueError("public snapshot contains duplicate or unreviewed projects")
+    if not allow_missing_projects and project_ids != reviewed.keys():
         raise ValueError("public snapshot must contain exactly the reviewed projects")
     categories = {item["id"] for item in data["categories"]}
+    for name, item in reviewed.items():
+        if not re.fullmatch(r"(?:z[a-z0-9-]+|oh-my-ztty)", name) or name in {"zui", "zui-native"}:
+            raise ValueError("retired or unrelated project entry")
+        if item["category"] not in categories or item["kind"] not in KINDS:
+            raise ValueError("unknown project category or kind")
+        if not re.fullmatch(r"[A-Za-z0-9_-]+", item["package"]):
+            raise ValueError("invalid reviewed Cargo package name")
     for project in projects:
         if set(project) != {"id", "summary", "category", "kind", "repository", "documentation", "source_version", "crate", "crate_lookup"}:
             raise ValueError("unexpected public project fields")
         name = project["id"]
-        if not re.fullmatch(r"(?:z[a-z0-9-]+|oh-my-ztty)", name) or name in {"zui", "zui-native"}:
-            raise ValueError("retired or unrelated project entry")
         for field in ("summary", "category", "kind"):
             if project[field] != reviewed[name][field]:
                 raise ValueError("project text differs from reviewed public curation")
-        if project["category"] not in categories or project["kind"] not in KINDS:
-            raise ValueError("unknown project category or kind")
         repo = project["repository"]
         expected = "https://github.com/" + OWNER + "/" + name
         if set(repo) != {"name", "url", "default_branch", "visibility", "verified_at", "source"}:

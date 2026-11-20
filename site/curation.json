@@ -291,6 +291,20 @@
       "kind": "tool",
       "summary": "基于 Project Z 的原生 Minecraft 启动器。",
       "package": "zmcl"
+    },
+    {
+      "id": "zi18n",
+      "category": "data",
+      "kind": "library",
+      "summary": "本地化消息目录、显式语言回退与命名模板格式化。",
+      "package": "zi18n"
+    },
+    {
+      "id": "zguard",
+      "category": "system",
+      "kind": "library",
+      "summary": "工具执行前的策略、能力与审批检查，提供有界审计接口。",
+      "package": "zguard"
     }
   ]
 }

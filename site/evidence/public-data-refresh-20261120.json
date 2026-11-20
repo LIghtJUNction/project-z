@@ -1,0 +1,435 @@
+{
+  "schema": "project-z.public-site-candidate.v1",
+  "recorded_at_utc": "2026-11-20T10:49:14.194353+00:00",
+  "status": "published_live_verified",
+  "aggregate_input": {
+    "commit": "b54f083e2b7900c2f5c93ec93e26366526645095",
+    "tree": "5fdb8f3dc5d882e07a155978fa103aee04fdb990",
+    "scope": "Accepted zgpui 0.1.2 source cohort. Verified the scoped gitlinks for 39 reviewed site IDs.",
+    "selected_public_source_pins": {
+      "oh-my-ztty": "0fdc87873c53e7c87d18952f83a7b94fc4149de5",
+      "zcall": "8fb84b812b8025e34399b28e27242605d68ea345",
+      "zgpui": "5b268da910639abd2fb8e581acb4f6eed50b7516",
+      "zguard": "5cdd637edbb075f6611f88f8566e15de4b360cca",
+      "zharness": "e3580c01c7252da090d04e59b59762bc561777d1",
+      "zi18n": "b90984b48465a764bcb699ad2bb3251fa7020024",
+      "zmcl": "2b1218f70cf89fb042fd725d4ef92dcb4e67dfe9",
+      "ztty": "6e2ce246b0b50e6b82da99756832feae6e966f21"
+    }
+  },
+  "source_candidate": {
+    "private_branch": "coord/public-data-refresh-20261120",
+    "generator_correction": "17c3819cee0a0dc9bd057dd529d2a48437b749e2",
+    "data_commit_changed_paths": [
+      "site/VALIDATION.md",
+      "site/curation.json",
+      "site/evidence/public-data-refresh-20261120.json",
+      "site/projects.json"
+    ]
+  },
+  "github_visibility": {
+    "provenance": "Official GitHub repository metadata independently captured by the coordinator using the GitHub plugin.",
+    "capture_at_utc": "2026-11-20T10:41:56+00:00",
+    "input_sha256": "108f9c9edfc5e3ae930a6056c0e6b6e3108e84d1bd13e0f77a00d3ffab7a4f12",
+    "input_bytes": 15806,
+    "verified_active_public_repositories": 39,
+    "verification": "All records match the reviewed repository identity and are public, active and unarchived. Snapshot visibility times use the capture time. Full input and adapter are retained in private task evidence."
+  },
+  "refreshed_at_utc": "2026-11-20T10:48:07.254443+00:00",
+  "exact_registry_checks_completed_at_utc": "2026-11-20T10:48:11.784503+00:00",
+  "version_provenance": {
+    "source_version": "Observed public default-branch Cargo.toml or VERSION, per existing schema.",
+    "crate_version": "Owned crates.io package version, verified against exact version metadata, SHA-256 checksum and non-yanked state.",
+    "cohort": "The shipped source records are distinct from this private aggregate pin. The later zharness 0.6.0, zgpui 0.1.5 and zcall 0.4.0 publications do not establish acceptance or propagation in the frozen cohort.",
+    "coordinator_confirmed_releases": {
+      "zharness": {
+        "version": "0.6.0",
+        "source_commit": "db4206d3b74e37d57ff052948962f55514081d4b",
+        "release_api": "https://api.github.com/repos/LIghtJUNction/zharness/releases/452544982",
+        "workflow_url": "https://github.com/LIghtJUNction/zharness/actions/runs/44716889702"
+      },
+      "oh-my-ztty": {
+        "version": "0.2.6",
+        "source_commit": "1e3ce8d3e5a141d09e450fd3f635f987a5732be4",
+        "release_api": "https://api.github.com/repos/LIghtJUNction/oh-my-ztty/releases/452554850",
+        "workflow_url": "https://github.com/LIghtJUNction/oh-my-ztty/actions/runs/44719594477",
+        "managed_installation": "The release establishes public availability. The installed version is outside this site verification."
+      }
+    }
+  },
+  "version_changes": {
+    "zgpui": {
+      "source_version": {
+        "previous": "0.1.2",
+        "current": "0.1.5"
+      },
+      "crate": {
+        "previous": "0.1.2",
+        "current": "0.1.5"
+      }
+    },
+    "zcall": {
+      "source_version": {
+        "previous": "0.3.0",
+        "current": "0.4.0"
+      },
+      "crate": {
+        "previous": "0.3.0",
+        "current": "0.4.0"
+      }
+    },
+    "zharness": {
+      "source_version": {
+        "previous": "0.5.1",
+        "current": "0.6.0"
+      },
+      "crate": {
+        "previous": "0.5.1",
+        "current": "0.6.0"
+      }
+    },
+    "ztty": {
+      "source_version": {
+        "previous": "0.5.0",
+        "current": "0.5.2"
+      },
+      "crate": {
+        "previous": "0.4.1",
+        "current": "0.5.2"
+      }
+    },
+    "ztype": {
+      "source_version": {
+        "previous": "0.1.0",
+        "current": "0.2.1"
+      }
+    },
+    "zshard": {
+      "source_version": {
+        "previous": "0.2.0",
+        "current": "0.2.1"
+      }
+    },
+    "oh-my-ztty": {
+      "source_version": {
+        "previous": "0.2.4",
+        "current": "0.2.6"
+      }
+    },
+    "zcalld": {
+      "source_version": {
+        "previous": "0.2.4",
+        "current": "0.3.1"
+      }
+    },
+    "zcall-gui": {
+      "source_version": {
+        "previous": "0.1.0",
+        "current": "0.1.2"
+      }
+    },
+    "zcall-omarchy": {
+      "source_version": {
+        "previous": "0.2.1",
+        "current": "0.2.2"
+      }
+    },
+    "zmcl": {
+      "source_version": {
+        "previous": "0.1.0",
+        "current": "0.1.2"
+      }
+    },
+    "zi18n": {
+      "new_reviewed_project": true,
+      "source_version": {
+        "previous": null,
+        "current": "0.1.0"
+      },
+      "crate": {
+        "previous": null,
+        "current": "0.1.0"
+      }
+    },
+    "zguard": {
+      "new_reviewed_project": true,
+      "source_version": {
+        "previous": null,
+        "current": "0.1.0"
+      },
+      "crate": {
+        "previous": null,
+        "current": "0.1.0"
+      }
+    }
+  },
+  "selected_public_versions": {
+    "zi18n": {
+      "source_version": {
+        "version": "0.1.0",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zi18n/main/Cargo.toml"
+      },
+      "crate": {
+        "name": "zi18n",
+        "version": "0.1.0",
+        "url": "https://crates.io/crates/zi18n/0.1.0",
+        "source": "https://crates.io/api/v1/crates/zi18n/0.1.0",
+        "checksum": "eeb0c6eefa7e2dee454cd727e5cacbe89bacf4c461742ca7316a486a32dfaed2",
+        "repository": "https://github.com/LIghtJUNction/zi18n",
+        "verified_at": "2026-11-20T10:48:07.117461+00:00"
+      },
+      "crate_lookup_status": "published",
+      "exact_registry_version_evidence": {
+        "crate": "zi18n",
+        "num": "0.1.0",
+        "checksum": "eeb0c6eefa7e2dee454cd727e5cacbe89bacf4c461742ca7316a486a32dfaed2",
+        "yanked": false,
+        "crate_size": 17045
+      }
+    },
+    "zguard": {
+      "source_version": {
+        "version": "0.1.0",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zguard/main/Cargo.toml"
+      },
+      "crate": {
+        "name": "zguard",
+        "version": "0.1.0",
+        "url": "https://crates.io/crates/zguard/0.1.0",
+        "source": "https://crates.io/api/v1/crates/zguard/0.1.0",
+        "checksum": "641d20929078aba7e9eb6ae9c33ae89d9b23d3a0f12f0eebb8fd05dacc93eb40",
+        "repository": "https://github.com/LIghtJUNction/zguard",
+        "verified_at": "2026-11-20T10:48:07.253973+00:00"
+      },
+      "crate_lookup_status": "published",
+      "exact_registry_version_evidence": {
+        "crate": "zguard",
+        "num": "0.1.0",
+        "checksum": "641d20929078aba7e9eb6ae9c33ae89d9b23d3a0f12f0eebb8fd05dacc93eb40",
+        "yanked": false,
+        "crate_size": 20455
+      }
+    },
+    "ztty": {
+      "source_version": {
+        "version": "0.5.2",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/ztty/main/Cargo.toml"
+      },
+      "crate": {
+        "name": "ztty",
+        "version": "0.5.2",
+        "url": "https://crates.io/crates/ztty/0.5.2",
+        "source": "https://crates.io/api/v1/crates/ztty/0.5.2",
+        "checksum": "75e3c82bbd2ca39334f554169027ae9a16c12f326af225faec7907d8cb664025",
+        "repository": "https://github.com/LIghtJUNction/ztty",
+        "verified_at": "2026-11-20T10:48:00.792341+00:00"
+      },
+      "crate_lookup_status": "published",
+      "exact_registry_version_evidence": {
+        "crate": "ztty",
+        "num": "0.5.2",
+        "checksum": "75e3c82bbd2ca39334f554169027ae9a16c12f326af225faec7907d8cb664025",
+        "yanked": false,
+        "crate_size": 7791804
+      }
+    },
+    "zgpui": {
+      "source_version": {
+        "version": "0.1.5",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zgpui/main/Cargo.toml"
+      },
+      "crate": {
+        "name": "zgpui",
+        "version": "0.1.5",
+        "url": "https://crates.io/crates/zgpui/0.1.5",
+        "source": "https://crates.io/api/v1/crates/zgpui/0.1.5",
+        "checksum": "7a5597b9018e724bcab318e8e52de11f70e1686262692d32d84b1fce30044300",
+        "repository": "https://github.com/LIghtJUNction/zgpui",
+        "verified_at": "2026-11-20T10:47:49.905534+00:00"
+      },
+      "crate_lookup_status": "published",
+      "exact_registry_version_evidence": {
+        "crate": "zgpui",
+        "num": "0.1.5",
+        "checksum": "7a5597b9018e724bcab318e8e52de11f70e1686262692d32d84b1fce30044300",
+        "yanked": false,
+        "crate_size": 88287
+      }
+    },
+    "zcall": {
+      "source_version": {
+        "version": "0.4.0",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zcall/main/Cargo.toml"
+      },
+      "crate": {
+        "name": "zcall",
+        "version": "0.4.0",
+        "url": "https://crates.io/crates/zcall/0.4.0",
+        "source": "https://crates.io/api/v1/crates/zcall/0.4.0",
+        "checksum": "f0305d70ee61611091b725c7e8e0571d580ed251d908c644e24ca60fb97b4b18",
+        "repository": "https://github.com/LIghtJUNction/zcall",
+        "verified_at": "2026-11-20T10:47:56.031686+00:00"
+      },
+      "crate_lookup_status": "published",
+      "exact_registry_version_evidence": {
+        "crate": "zcall",
+        "num": "0.4.0",
+        "checksum": "f0305d70ee61611091b725c7e8e0571d580ed251d908c644e24ca60fb97b4b18",
+        "yanked": false,
+        "crate_size": 192810
+      }
+    },
+    "zharness": {
+      "source_version": {
+        "version": "0.6.0",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/zharness/main/Cargo.toml"
+      },
+      "crate": {
+        "name": "zharness",
+        "version": "0.6.0",
+        "url": "https://crates.io/crates/zharness/0.6.0",
+        "source": "https://crates.io/api/v1/crates/zharness/0.6.0",
+        "checksum": "4a4aff31bc0430ef21ac873c24985ecaa5dbe559aa1090e0339bea82cd1b31ef",
+        "repository": "https://github.com/LIghtJUNction/zharness",
+        "verified_at": "2026-11-20T10:47:57.182558+00:00"
+      },
+      "crate_lookup_status": "published",
+      "exact_registry_version_evidence": {
+        "crate": "zharness",
+        "num": "0.6.0",
+        "checksum": "4a4aff31bc0430ef21ac873c24985ecaa5dbe559aa1090e0339bea82cd1b31ef",
+        "yanked": false,
+        "crate_size": 207692
+      }
+    },
+    "oh-my-ztty": {
+      "source_version": {
+        "version": "0.2.6",
+        "source": "https://raw.githubusercontent.com/LIghtJUNction/oh-my-ztty/main/VERSION"
+      },
+      "crate": null,
+      "crate_lookup_status": "not_found"
+    }
+  },
+  "counts": {
+    "projects": 39,
+    "verified_crates": 29,
+    "categories": 6,
+    "lookup_statuses": {
+      "published": 29,
+      "not_found": 10
+    }
+  },
+  "bundle": {
+    "schema": "project-z.public-bundle.v1",
+    "files": [
+      {
+        "path": ".nojekyll",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "app.js",
+        "bytes": 4203,
+        "sha256": "93657999854f6d21d378fa387a0346c50528d8356a0a65b9a726662bd7672362"
+      },
+      {
+        "path": "favicon.svg",
+        "bytes": 321,
+        "sha256": "46b2270683a9f0443180adefa46d1e20c67792e6a4aac4a7ce7ae52eacfe00c8"
+      },
+      {
+        "path": "index.html",
+        "bytes": 46048,
+        "sha256": "d5b2a01eb79b0dd69d113cc0c190b2e729d16b36d9497c704e1d7a7baf61b385"
+      },
+      {
+        "path": "projects.json",
+        "bytes": 56813,
+        "sha256": "35a991384487df07f36e820d83d3f8ccf10b121c27efdc7a58ca5b2feac5234d"
+      },
+      {
+        "path": "style.css",
+        "bytes": 14560,
+        "sha256": "dd39394ef7d3ca8eba8bc652670ea5e7c770ea0d84116efd7433fa4fbd5743a1"
+      }
+    ],
+    "bytes": 121945,
+    "public_manifest_sha256": "35a991384487df07f36e820d83d3f8ccf10b121c27efdc7a58ca5b2feac5234d",
+    "changed_from_published": [
+      "index.html",
+      "projects.json"
+    ]
+  },
+  "gates": {
+    "focused_refresh_tests": "8 passed",
+    "static_check": "passed",
+    "exact_six_file_build": "passed",
+    "exact_regular_file_allowlist_and_forbidden_material_check": "passed",
+    "immutability_of_template_and_assets": "passed",
+    "design_source_sha256": {
+      "templates/index.html": "a22a1c15159f32be60a0716a68f2de4c6ed1165285e64e8879c056b45175b93e",
+      "assets/style.css": "dd39394ef7d3ca8eba8bc652670ea5e7c770ea0d84116efd7433fa4fbd5743a1",
+      "assets/app.js": "93657999854f6d21d378fa387a0346c50528d8356a0a65b9a726662bd7672362",
+      "assets/favicon.svg": "46b2270683a9f0443180adefa46d1e20c67792e6a4aac4a7ce7ae52eacfe00c8"
+    },
+    "verify_only_with_explicit_repository_inputs": "passed",
+    "browser": "Historical acceptance retained for the identical template and assets."
+  },
+  "final_aggregate_binding": {
+    "bound_at_utc": "2026-11-20T10:55:11.187850+00:00",
+    "commit": "522bc7c9da008f05e9f715c1c1eda91b13ca89ec",
+    "tree": "eb2dfc60e3ab31f96c6fb29c458573f8500a2ac6",
+    "root_main_receipt_commit": "78fc357f778a0dbff12f9320da82f324cb427410",
+    "root_main_receipt_tree": "eadf86b7ccade6e68a7075b5cfa222cda85227cd",
+    "root_main_receipt_parent": "522bc7c9da008f05e9f715c1c1eda91b13ca89ec",
+    "root_main_receipt_changes": [
+      "docs/reports/ui-unification-20261120/checkpoint.json",
+      "docs/reports/ui-unification-20261120/final-validation.json",
+      "docs/reports/ui-unification-20261120/final-validation.md"
+    ],
+    "root_validation": "Coordinator confirmed check and resolve --all passed. The site worker verified root main and the receipt tree and reused the root results.",
+    "comparison_base": "b54f083e2b7900c2f5c93ec93e26366526645095",
+    "reviewed_repository_identities_and_gitlinks": 39,
+    "scoped_pin_changes": [
+      {
+        "id": "oh-my-ztty",
+        "before": "0fdc87873c53e7c87d18952f83a7b94fc4149de5",
+        "after": "1e3ce8d3e5a141d09e450fd3f635f987a5732be4"
+      }
+    ],
+    "oh_my_ztty_default_branch": {
+      "ref": "refs/heads/main",
+      "commit": "1e3ce8d3e5a141d09e450fd3f635f987a5732be4",
+      "verified_with": "git ls-remote --symref",
+      "version_reads": [
+        {
+          "url": "https://raw.githubusercontent.com/LIghtJUNction/oh-my-ztty/main/VERSION",
+          "status": 200,
+          "version": "0.2.6",
+          "sha256": "be3c6d2c6c406a64d44f0b6464a887e290416dd90c524094485b1be00936d6d7",
+          "verified_at_utc": "2026-11-20T10:53:42.712791+00:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/LIghtJUNction/oh-my-ztty/1e3ce8d3e5a141d09e450fd3f635f987a5732be4/VERSION",
+          "status": 200,
+          "version": "0.2.6",
+          "sha256": "be3c6d2c6c406a64d44f0b6464a887e290416dd90c524094485b1be00936d6d7",
+          "verified_at_utc": "2026-11-20T10:53:43.225378+00:00"
+        }
+      ]
+    },
+    "site_data_source_commit": "3ea9cf3af9293561f2c0d871a97ca2c658c2b4bd",
+    "version_scope": "The final aggregate is the accepted zgpui 0.1.2 source cohort. Newer separately verified public versions such as zgpui 0.1.5, zharness 0.6.0 and zcall 0.4.0 describe their own publications."
+  },
+  "publication": {
+    "status": "published_live_verified",
+    "public_baseline_commit": "668080bced1eb4c9941e324abc09e645d6e881f3",
+    "public_commit": "5bdd99dc749de86482f1bafb525693c2acc66b85",
+    "public_url": "https://lightjunction.github.io/project-z-site/",
+    "pages_run_id": 44723433069,
+    "pages_run_url": "https://github.com/LIghtJUNction/project-z-site/actions/runs/44723433069",
+    "live_verified_at_utc": "2026-11-20T10:57:45.516128+00:00",
+    "receipt": "site/evidence/publication-20261120.json"
+  }
+}
