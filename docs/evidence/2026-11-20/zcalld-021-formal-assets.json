@@ -1,0 +1,201 @@
+{
+  "schema": 1,
+  "checked_at": "2026-11-20T03:31:45.620366+00:00",
+  "release_url": "https://github.com/LIghtJUNction/zcalld/releases/tag/v0.2.1",
+  "tag_source": "b853e264eced9fbd25120d261eb188a3a8e3b1df",
+  "activity": "Downloaded selected formal assets and checked actual bytes; no application execution or installation.",
+  "assets": [
+    {
+      "name": "SHA256SUMS",
+      "url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/SHA256SUMS",
+      "bytes": 1149,
+      "sha256": "30ad63b403668dbce39c47be3a40d6d9a97f4a1cc1802c399eea3970ef32dac5",
+      "actual_bytes": 1149,
+      "actual_sha256": "30ad63b403668dbce39c47be3a40d6d9a97f4a1cc1802c399eea3970ef32dac5",
+      "matched_release_api": true,
+      "text": "7f2244455a769fe18398ea6fb70c5fdafa42aae9dddb345fee4ac6006a6da480  zcalld-0.2.1-source.tar.gz\nfc05e22b9d568bb139c5edf0cf2a55916e153fde7b9da127011d07ac9bab0be7  zcalld-0.2.1-x86_64-unknown-linux-gnu.tar.gz\n40a455a1fa5b46ab2ce6c5a1765ce876c1dd898b28c66e4ea6be65d57be1fb2c  zcalld-0.2.1-x86_64-unknown-linux-gnu\n54aa17c49b9e852fcc0f7a7d380504687cc1b2a6d1798249f5e0076d51bcd149  zcalld-0.2.1-aarch64-unknown-linux-gnu.tar.gz\ne17350dc71be4722baf66930943096a9b7a96383d27aa86e2243c6de3e36cbf4  zcalld-0.2.1-aarch64-unknown-linux-gnu\n9986f0067c90a5ef01af1253d091af925ac7642cfe4da90f01f96e1968397cd9  zcalld-0.2.1-x86_64-pc-windows-msvc.zip\n16d30186c238eb0e038ccab52879caca72299e9cabfc5e756ec44d1e7a0c7d42  zcalld-0.2.1-x86_64-pc-windows-msvc.exe\n638d284e55a1ae031ce4a84a12c760d17419ed12e472f3a3c2b90464928e91fd  zcalld-0.2.1-aarch64-apple-darwin.tar.gz\n4ab1d1c1f9b5e534e26a6cbd3bc8482fdc7ff773607c2e2876d8382f9559a346  zcalld-0.2.1-aarch64-apple-darwin\na09ee2ced338a0b0d6262d4f1b6dd55f174df6f5bc6703ee172870b02aee1eae  zcalld-0.2.1-x86_64-apple-darwin.tar.gz\nbd71d9019d900ffe48b093c8949a21d7050ecdd23883395dec222ed12a968e84  zcalld-0.2.1-x86_64-apple-darwin\n"
+    },
+    {
+      "name": "zcalld-0.2.1-source.tar.gz",
+      "url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-source.tar.gz",
+      "bytes": 3736562,
+      "sha256": "7f2244455a769fe18398ea6fb70c5fdafa42aae9dddb345fee4ac6006a6da480",
+      "actual_bytes": 3736562,
+      "actual_sha256": "7f2244455a769fe18398ea6fb70c5fdafa42aae9dddb345fee4ac6006a6da480",
+      "matched_release_api": true,
+      "entries": 1021,
+      "provenance_candidates": [
+        "zcalld-0.2.1/apps/zcall-omarchy/manifest.json"
+      ],
+      "first_entries": [
+        "zcalld-0.2.1/.editorconfig",
+        "zcalld-0.2.1/.github",
+        "zcalld-0.2.1/.github/workflows",
+        "zcalld-0.2.1/.github/workflows/bump.yml",
+        "zcalld-0.2.1/.github/workflows/check.yml",
+        "zcalld-0.2.1/.github/workflows/release.yml",
+        "zcalld-0.2.1/.gitignore",
+        "zcalld-0.2.1/.gitmodules",
+        "zcalld-0.2.1/CHANGELOG.md",
+        "zcalld-0.2.1/Cargo.lock",
+        "zcalld-0.2.1/Cargo.toml",
+        "zcalld-0.2.1/LICENSE",
+        "zcalld-0.2.1/Makefile",
+        "zcalld-0.2.1/README.md",
+        "zcalld-0.2.1/SOURCE.json"
+      ],
+      "matched_published_checksum_file": true
+    },
+    {
+      "name": "zcalld-0.2.1-x86_64-unknown-linux-gnu.tar.gz",
+      "url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-x86_64-unknown-linux-gnu.tar.gz",
+      "bytes": 2591886,
+      "sha256": "fc05e22b9d568bb139c5edf0cf2a55916e153fde7b9da127011d07ac9bab0be7",
+      "actual_bytes": 2591886,
+      "actual_sha256": "fc05e22b9d568bb139c5edf0cf2a55916e153fde7b9da127011d07ac9bab0be7",
+      "matched_release_api": true,
+      "entries": 69,
+      "provenance_candidates": [],
+      "first_entries": [
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/bin",
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/bin/zcalld",
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/etc",
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/etc/zcalld",
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/etc/zcalld/config.conf",
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/install.sh",
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/lib",
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/lib/systemd",
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/lib/systemd/system",
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/lib/systemd/system/zcalld.service",
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/lib/systemd/user",
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/lib/systemd/user/zcalld.service",
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/lib/sysusers.d",
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/lib/sysusers.d/zcalld.conf",
+        "zcalld-0.2.1-x86_64-unknown-linux-gnu/lib/tmpfiles.d"
+      ],
+      "matched_published_checksum_file": true
+    },
+    {
+      "name": "zcalld-0.2.1-x86_64-pc-windows-msvc.zip",
+      "url": "https://github.com/LIghtJUNction/zcalld/releases/download/v0.2.1/zcalld-0.2.1-x86_64-pc-windows-msvc.zip",
+      "bytes": 2594080,
+      "sha256": "9986f0067c90a5ef01af1253d091af925ac7642cfe4da90f01f96e1968397cd9",
+      "actual_bytes": 2594080,
+      "actual_sha256": "9986f0067c90a5ef01af1253d091af925ac7642cfe4da90f01f96e1968397cd9",
+      "matched_release_api": true,
+      "entries": 48,
+      "first_entries": [
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/bin/libcurl.dll",
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/bin/libz.dll",
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/bin/zcalld.exe",
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/etc/zcalld/config.conf",
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/lib/zcalld/plugins/zcalld_aliases.dll",
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/lib/zcalld/plugins/zcalld_community.dll",
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/lib/zcalld/plugins/zcalld_plugin_routing.dll",
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/lib/zcalld/plugins/zcalld_policy.dll",
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/lib/zcalld/plugins/zcalld_redact.dll",
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/share/doc/zcalld/config.conf",
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/share/doc/zcalld/docs/ARCHITECTURE.md",
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/share/doc/zcalld/docs/benchmarks/baseline-1.json",
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/share/doc/zcalld/docs/benchmarks/baseline-2.json",
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/share/doc/zcalld/docs/benchmarks/baseline-3.json",
+        "zcalld-0.2.1-x86_64-pc-windows-msvc/share/doc/zcalld/docs/benchmarks/plugins-1.json"
+      ],
+      "matched_published_checksum_file": true
+    }
+  ],
+  "source_archive_record": {
+    "repository": "LIghtJUNction/zcalld",
+    "commit": "b853e264eced9fbd25120d261eb188a3a8e3b1df",
+    "submodules": {
+      "apps/zcall-gui": "5dbc423eedd4d529a38b3e8e3adc3e6355a56b2b",
+      "apps/zcall-gui/vendor/zui": "5e37fcfb791eec9ac523fc19373e95d0a513112f",
+      "apps/zcall-omarchy": "78282c3c3cfa6e9e65e2cbd654f38a96398c6e03",
+      "extensions/compat": "7c782e9a6f431c7112112c04940c015adf2d76df",
+      "vendor/zcall": "8fb84b812b8025e34399b28e27242605d68ea345",
+      "vendor/zconv": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+      "vendor/zplugin": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+      "vendor/zsys": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+    }
+  },
+  "packaged_binaries": [
+    {
+      "platform": "Linux x86_64",
+      "binary_bytes": 2286200,
+      "binary_sha256": "40a455a1fa5b46ab2ce6c5a1765ce876c1dd898b28c66e4ea6be65d57be1fb2c",
+      "expected_sha256": "40a455a1fa5b46ab2ce6c5a1765ce876c1dd898b28c66e4ea6be65d57be1fb2c"
+    },
+    {
+      "platform": "Windows x86_64",
+      "binary_bytes": 2335744,
+      "binary_sha256": "16d30186c238eb0e038ccab52879caca72299e9cabfc5e756ec44d1e7a0c7d42",
+      "expected_sha256": "16d30186c238eb0e038ccab52879caca72299e9cabfc5e756ec44d1e7a0c7d42"
+    }
+  ],
+  "recursive_source_binding": {
+    "matched": true,
+    "git_blob_files": 819,
+    "archive_checked_files": 819,
+    "gitlinks": 8,
+    "missing": [],
+    "mismatches": [],
+    "allowed_generated_file": "SOURCE.json",
+    "source_trees": [
+      {
+        "repository": "LIghtJUNction/zcalld",
+        "commit": "b853e264eced9fbd25120d261eb188a3a8e3b1df",
+        "prefix": "",
+        "url": "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/b853e264eced9fbd25120d261eb188a3a8e3b1df?recursive=1"
+      },
+      {
+        "repository": "LIghtJUNction/zcall-gui",
+        "commit": "5dbc423eedd4d529a38b3e8e3adc3e6355a56b2b",
+        "prefix": "apps/zcall-gui",
+        "url": "https://api.github.com/repos/LIghtJUNction/zcall-gui/git/trees/5dbc423eedd4d529a38b3e8e3adc3e6355a56b2b?recursive=1"
+      },
+      {
+        "repository": "LIghtJUNction/zui",
+        "commit": "5e37fcfb791eec9ac523fc19373e95d0a513112f",
+        "prefix": "apps/zcall-gui/vendor/zui",
+        "url": "https://api.github.com/repos/LIghtJUNction/zui/git/trees/5e37fcfb791eec9ac523fc19373e95d0a513112f?recursive=1"
+      },
+      {
+        "repository": "LIghtJUNction/zcall-omarchy",
+        "commit": "78282c3c3cfa6e9e65e2cbd654f38a96398c6e03",
+        "prefix": "apps/zcall-omarchy",
+        "url": "https://api.github.com/repos/LIghtJUNction/zcall-omarchy/git/trees/78282c3c3cfa6e9e65e2cbd654f38a96398c6e03?recursive=1"
+      },
+      {
+        "repository": "LIghtJUNction/zcalld-compat",
+        "commit": "7c782e9a6f431c7112112c04940c015adf2d76df",
+        "prefix": "extensions/compat",
+        "url": "https://api.github.com/repos/LIghtJUNction/zcalld-compat/git/trees/7c782e9a6f431c7112112c04940c015adf2d76df?recursive=1"
+      },
+      {
+        "repository": "LIghtJUNction/zcall",
+        "commit": "8fb84b812b8025e34399b28e27242605d68ea345",
+        "prefix": "vendor/zcall",
+        "url": "https://api.github.com/repos/LIghtJUNction/zcall/git/trees/8fb84b812b8025e34399b28e27242605d68ea345?recursive=1"
+      },
+      {
+        "repository": "LIghtJUNction/zconv",
+        "commit": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+        "prefix": "vendor/zconv",
+        "url": "https://api.github.com/repos/LIghtJUNction/zconv/git/trees/0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1?recursive=1"
+      },
+      {
+        "repository": "LIghtJUNction/zplugin",
+        "commit": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+        "prefix": "vendor/zplugin",
+        "url": "https://api.github.com/repos/LIghtJUNction/zplugin/git/trees/00d566eedcff7b2932e90b9dfeb44910c783d305?recursive=1"
+      },
+      {
+        "repository": "LIghtJUNction/zsys",
+        "commit": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+        "prefix": "vendor/zsys",
+        "url": "https://api.github.com/repos/LIghtJUNction/zsys/git/trees/808fcfdb73584ca7ca122e20b76f0209f56ab0f7?recursive=1"
+      }
+    ],
+    "method": "Compare Git SHA-1 blob identity and executable/symlink modes of every archived source file against exact GitHub recursive trees; also require all nested Gitlink commits equal SOURCE.json."
+  }
+}
