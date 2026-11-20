@@ -39,4 +39,9 @@ requires = ["zcalld"]
 
 [repositories.lmm-api-source]
 role = "application"
-manifests = ["services/core/Cargo.toml", "apps/cli/Cargo.toml"]
+manifests = ["services/core/Cargo.toml", "apps/cli/Cargo.toml", "services/extensions/extore-host/Cargo.toml"]
+requires = ["extore"]
+
+[repositories.extore]
+role = "application"
+manifests = ["Cargo.toml"]

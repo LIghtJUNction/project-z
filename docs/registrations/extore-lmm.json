@@ -1,0 +1,220 @@
+{
+  "schema": "project-z.consumer-registration.v1",
+  "status": "blocked",
+  "ready_to_merge": false,
+  "base_commit": "32e5e82685e107b5b1f85a32d054922a0b8cbfa6",
+  "coordinator_branch": "coord/shared-libraries",
+  "coordinator_head_at_review": "427eef87a0a2c73a82a214de39eefbd5733084b5",
+  "coordinator_relation": "The registration base is an ancestor of this published coordination branch. Its later coordinator changes have not changed the consumer gitlinks that produce the blockers below. No active aggregate worktree was modified.",
+  "registration": {
+    "extore": {
+      "commit": "818400958a8660e5e72b1eefb4815dbb34452098",
+      "role": "application",
+      "manifests": [
+        "Cargo.toml"
+      ]
+    },
+    "lmm-api-source": {
+      "commit": "04c234b259596b8a4a9ff5665c61ff17f1955111",
+      "role": "application",
+      "manifests": [
+        "services/core/Cargo.toml",
+        "apps/cli/Cargo.toml",
+        "services/extensions/extore-host/Cargo.toml"
+      ],
+      "requires": [
+        "extore"
+      ]
+    },
+    "zplugin": {
+      "commit": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+      "version": "0.3.1",
+      "reason": "Exact version consumed by the independently built Extore plugin and LMM host."
+    }
+  },
+  "runtime_dependency": "LMM Go extension starts its local Rust host; that host loads the fixed Extore cdylib for authorized catalogue reads. repositories.lmm-api-source.requires includes extore in addition to the Cargo extore-plugin-api path edge.",
+  "source_contract": {
+    "validator_blob": "efe69018198178c6a90d03ac8dd22e19dfc20d7d",
+    "validator_changed": false,
+    "canonical_extore_commit": "818400958a8660e5e72b1eefb4815dbb34452098",
+    "nested_extore_commit": "818400958a8660e5e72b1eefb4815dbb34452098",
+    "api_package_relative_path": "crates/extore-plugin-api",
+    "both_worktrees_clean": true,
+    "existing_equivalent_source_result": true,
+    "canonical_git_sources_allowed": false
+  },
+  "checks": [
+    {
+      "command": "python3 scripts/project_z.py sync",
+      "exit_code": 0,
+      "result": "30 repositories, 52 packages"
+    },
+    {
+      "command": "python3 scripts/project_z.py check",
+      "exit_code": 1,
+      "result": "14 diagnostics listed below"
+    },
+    {
+      "command": "python3 scripts/project_z.py resolve extore lmm-api-source",
+      "exit_code": 1,
+      "result": "Stopped at unchanged full-graph validation; actual Cargo dependency resolution did not run"
+    },
+    {
+      "command": "python3 scripts/project_z.py impact --repositories extore",
+      "exit_code": 0,
+      "repositories": [
+        "extore",
+        "lmm-api-source"
+      ]
+    },
+    {
+      "command": "python3 scripts/project_z.py impact --repositories zplugin",
+      "exit_code": 0,
+      "repositories": [
+        "extore",
+        "lmm-api-source",
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall-gui",
+        "zcalld",
+        "zcalld-compat",
+        "zharness",
+        "zplugin"
+      ]
+    }
+  ],
+  "failure_classification": {
+    "existing_consumer_source_or_retired_name": 7,
+    "required_zplugin_0_3_1_propagation": 7,
+    "method": "Seven noncanonical/retired-name diagnostics concern unchanged base consumer pins. Seven exact-version diagnostics are exposed by the required canonical zplugin upgrade from 0.3.0 to 0.3.1. Baseline check did not reach graph validation because nested CLI was not initially initialized; no claim that baseline full graph passed.",
+    "initial_cli_preflight": "Initial missing apps/cli/Cargo.toml was checkout initialization, not missing product source. Both old/new LMM pins use real CLI gitlink c21b8b6f2bf9ad123b3ff164b3e7a60b37f90bed; initialized without changing its pin."
+  },
+  "blockers": [
+    {
+      "id": "PZ-01",
+      "owner_repository": "ssmcp",
+      "current_pin": "4e3132d60600dca5053af81cdefa6962c3058ac4",
+      "category": "existing-consumer-source-or-retired-name",
+      "checker_error": "ssmcp -> zharness: noncanonical path ssmcp/crates/zharness (expected zharness)",
+      "closure_condition": "Consumer publishes compatible source/lockfiles, coordinator adopts immutable pin, unchanged full-graph check and resolve succeed."
+    },
+    {
+      "id": "PZ-02",
+      "owner_repository": "ssmcp",
+      "current_pin": "4e3132d60600dca5053af81cdefa6962c3058ac4",
+      "category": "required-zplugin-0.3.1-propagation",
+      "checker_error": "ssmcp requires zplugin =0.3.0, snapshot has 0.3.1",
+      "closure_condition": "Consumer publishes compatible source/lockfiles, coordinator adopts immutable pin, unchanged full-graph check and resolve succeed."
+    },
+    {
+      "id": "PZ-03",
+      "owner_repository": "ssmcp",
+      "current_pin": "4e3132d60600dca5053af81cdefa6962c3058ac4",
+      "category": "existing-consumer-source-or-retired-name",
+      "checker_error": "ssmcp -> zplugin: noncanonical path ssmcp/crates/zplugin (expected zplugin)",
+      "closure_condition": "Consumer publishes compatible source/lockfiles, coordinator adopts immutable pin, unchanged full-graph check and resolve succeed."
+    },
+    {
+      "id": "PZ-04",
+      "owner_repository": "ssmcp",
+      "current_pin": "4e3132d60600dca5053af81cdefa6962c3058ac4",
+      "category": "existing-consumer-source-or-retired-name",
+      "checker_error": "ssmcp/Cargo.toml: retired dependency ztui-core",
+      "closure_condition": "Consumer publishes compatible source/lockfiles, coordinator adopts immutable pin, unchanged full-graph check and resolve succeed."
+    },
+    {
+      "id": "PZ-05",
+      "owner_repository": "zcall-gui",
+      "current_pin": "8c59dc44b06de0eda53c8955683d7b553d7733e8",
+      "category": "existing-consumer-source-or-retired-name",
+      "checker_error": "zcall-gui -> zui: noncanonical path zcall-gui/vendor/zui (expected zui)",
+      "closure_condition": "Consumer publishes compatible source/lockfiles, coordinator adopts immutable pin, unchanged full-graph check and resolve succeed."
+    },
+    {
+      "id": "PZ-06",
+      "owner_repository": "zcalld",
+      "current_pin": "eb4b857d4f3b98867f762389d100fb982630a116",
+      "category": "required-zplugin-0.3.1-propagation",
+      "checker_error": "zcalld requires zplugin =0.3.0, snapshot has 0.3.1",
+      "closure_condition": "Consumer publishes compatible source/lockfiles, coordinator adopts immutable pin, unchanged full-graph check and resolve succeed."
+    },
+    {
+      "id": "PZ-07",
+      "owner_repository": "zcalld",
+      "current_pin": "eb4b857d4f3b98867f762389d100fb982630a116",
+      "category": "required-zplugin-0.3.1-propagation",
+      "checker_error": "zcalld-plugin-aliases requires zplugin =0.3.0, snapshot has 0.3.1",
+      "closure_condition": "Consumer publishes compatible source/lockfiles, coordinator adopts immutable pin, unchanged full-graph check and resolve succeed."
+    },
+    {
+      "id": "PZ-08",
+      "owner_repository": "zcalld",
+      "current_pin": "eb4b857d4f3b98867f762389d100fb982630a116",
+      "category": "required-zplugin-0.3.1-propagation",
+      "checker_error": "zcalld-plugin-api requires zplugin =0.3.0, snapshot has 0.3.1",
+      "closure_condition": "Consumer publishes compatible source/lockfiles, coordinator adopts immutable pin, unchanged full-graph check and resolve succeed."
+    },
+    {
+      "id": "PZ-09",
+      "owner_repository": "zcalld",
+      "current_pin": "eb4b857d4f3b98867f762389d100fb982630a116",
+      "category": "required-zplugin-0.3.1-propagation",
+      "checker_error": "zcalld-plugin-api requires zplugin =0.3.0, snapshot has 0.3.1",
+      "closure_condition": "Consumer publishes compatible source/lockfiles, coordinator adopts immutable pin, unchanged full-graph check and resolve succeed."
+    },
+    {
+      "id": "PZ-10",
+      "owner_repository": "zcalld",
+      "current_pin": "eb4b857d4f3b98867f762389d100fb982630a116",
+      "category": "required-zplugin-0.3.1-propagation",
+      "checker_error": "zcalld-plugin-policy requires zplugin =0.3.0, snapshot has 0.3.1",
+      "closure_condition": "Consumer publishes compatible source/lockfiles, coordinator adopts immutable pin, unchanged full-graph check and resolve succeed."
+    },
+    {
+      "id": "PZ-11",
+      "owner_repository": "zharness",
+      "current_pin": "84e370450f1d047d43119bf81caf73f742ba6b0a",
+      "category": "required-zplugin-0.3.1-propagation",
+      "checker_error": "zharness requires zplugin =0.3.0, snapshot has 0.3.1",
+      "closure_condition": "Consumer publishes compatible source/lockfiles, coordinator adopts immutable pin, unchanged full-graph check and resolve succeed."
+    },
+    {
+      "id": "PZ-12",
+      "owner_repository": "ztty",
+      "current_pin": "3091db75c1f77174c30b2072c8ba3551ed143f4e",
+      "category": "existing-consumer-source-or-retired-name",
+      "checker_error": "ztty/crates/zterm/Cargo.toml: retired dependency ztty-ui",
+      "closure_condition": "Consumer publishes compatible source/lockfiles, coordinator adopts immutable pin, unchanged full-graph check and resolve succeed."
+    },
+    {
+      "id": "PZ-13",
+      "owner_repository": "ztty",
+      "current_pin": "3091db75c1f77174c30b2072c8ba3551ed143f4e",
+      "category": "existing-consumer-source-or-retired-name",
+      "checker_error": "ztty/crates/ztty-ui/Cargo.toml: retired package name ztty-ui",
+      "closure_condition": "Consumer publishes compatible source/lockfiles, coordinator adopts immutable pin, unchanged full-graph check and resolve succeed."
+    },
+    {
+      "id": "PZ-14",
+      "owner_repository": "ssmcp",
+      "current_pin": "4e3132d60600dca5053af81cdefa6962c3058ac4",
+      "category": "existing-consumer-source-or-retired-name",
+      "checker_error": "ssmcp/crates/ztui/Cargo.toml: retired package name ztui-core",
+      "closure_condition": "Consumer publishes compatible source/lockfiles, coordinator adopts immutable pin, unchanged full-graph check and resolve succeed."
+    }
+  ],
+  "closure": {
+    "owner": "Active Project Z coordinator and maintainers of ssmcp, zcall-gui, zcalld, zharness, ztty; no coordinator acknowledgement recorded.",
+    "actions": [
+      "Apply/rebase this registration onto the active coordinator compatible snapshot without changing source-equivalence policy.",
+      "Retain immutable Extore/LMM pins and the runtime requires edge.",
+      "Adopt reviewed compatible pins for the five responsible repositories and any actual transitive requirements.",
+      "Run existing sync, check, resolve extore lmm-api-source, and impact --repositories extore / zplugin.",
+      "Close these blockers only after full check and actual Cargo resolution pass; independent product browser acceptance remains separately owned."
+    ],
+    "no_policy_relaxation": true,
+    "product_builds_repeated": false,
+    "deployment_performed": false,
+    "product_acceptance": "This registration check is separate from LMM/Extore native or browser acceptance."
+  }
+}

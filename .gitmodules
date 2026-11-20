@@ -113,4 +113,8 @@
 [submodule "lmm-api-source"]
 	path = lmm-api-source
 	url = https://github.com/TokenNotIncluded/lmm-api-source.git
-	branch = main
+	branch = feature/extore-zplugin
+[submodule "extore"]
+	path = extore
+	url = https://github.com/TokenNotIncluded/extore.git
+	branch = feat/lmm-zplugin

@@ -1,0 +1,4424 @@
+{
+  "schema_version": 1,
+  "repositories": [
+    {
+      "name": "extore",
+      "path": "extore",
+      "url": "https://github.com/TokenNotIncluded/extore.git",
+      "branch": "feat/lmm-zplugin",
+      "commit": "818400958a8660e5e72b1eefb4815dbb34452098",
+      "role": "application",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "lmm-api-source",
+      "path": "lmm-api-source",
+      "url": "https://github.com/TokenNotIncluded/lmm-api-source.git",
+      "branch": "feature/extore-zplugin",
+      "commit": "04c234b259596b8a4a9ff5665c61ff17f1955111",
+      "role": "application",
+      "manifests": [
+        "services/core/Cargo.toml",
+        "apps/cli/Cargo.toml",
+        "services/extensions/extore-host/Cargo.toml"
+      ],
+      "requires": [
+        "extore"
+      ]
+    },
+    {
+      "name": "oh-my-ztty",
+      "path": "oh-my-ztty",
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
+      "branch": "main",
+      "commit": "bb1d990592bd1c8ec68e9a4f15a4b1e68a91a10a",
+      "role": "suite",
+      "manifests": [],
+      "requires": [
+        "ssmcp",
+        "zdot",
+        "zshard",
+        "ztty"
+      ]
+    },
+    {
+      "name": "ssmcp",
+      "path": "ssmcp",
+      "url": "https://github.com/LIghtJUNction/ssmcp.git",
+      "branch": "main",
+      "commit": "4e3132d60600dca5053af81cdefa6962c3058ac4",
+      "role": "application",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "z58",
+      "path": "z58",
+      "url": "https://github.com/LIghtJUNction/z58.git",
+      "branch": "main",
+      "commit": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "z64",
+      "path": "z64",
+      "url": "https://github.com/LIghtJUNction/z64.git",
+      "branch": "main",
+      "commit": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zcall",
+      "path": "zcall",
+      "url": "https://github.com/LIghtJUNction/zcall.git",
+      "branch": "main",
+      "commit": "8fb84b812b8025e34399b28e27242605d68ea345",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zcall-gui",
+      "path": "zcall-gui",
+      "url": "https://github.com/LIghtJUNction/zcall-gui.git",
+      "branch": "main",
+      "commit": "8c59dc44b06de0eda53c8955683d7b553d7733e8",
+      "role": "application",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": [
+        "zcalld"
+      ]
+    },
+    {
+      "name": "zcalld",
+      "path": "zcalld",
+      "url": "https://github.com/LIghtJUNction/zcalld.git",
+      "branch": "main",
+      "commit": "eb4b857d4f3b98867f762389d100fb982630a116",
+      "role": "application",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zcalld-compat",
+      "path": "zcalld-compat",
+      "url": "https://github.com/LIghtJUNction/zcalld-compat.git",
+      "branch": "main",
+      "commit": "b2a141e9435b5a8363d58472d94d781dcce98ce1",
+      "role": "extension",
+      "manifests": [],
+      "requires": [
+        "zcalld"
+      ]
+    },
+    {
+      "name": "zclap",
+      "path": "zclap",
+      "url": "https://github.com/LIghtJUNction/zclap.git",
+      "branch": "main",
+      "commit": "4d87f3ae3743e81509d5ac5500909955667c860f",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zclick",
+      "path": "zclick",
+      "url": "https://github.com/LIghtJUNction/zclick.git",
+      "branch": "main",
+      "commit": "530e2f347d2950605ee579a396d5760ebad034bd",
+      "role": "bindings",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zconv",
+      "path": "zconv",
+      "url": "https://github.com/LIghtJUNction/zconv.git",
+      "branch": "main",
+      "commit": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zdot",
+      "path": "zdot",
+      "url": "https://github.com/LIghtJUNction/zdot.git",
+      "branch": "main",
+      "commit": "43cc523c0fd4331402d2393280509ac2c672a262",
+      "role": "application",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zdwire",
+      "path": "zdwire",
+      "url": "https://github.com/LIghtJUNction/zdwire.git",
+      "branch": "main",
+      "commit": "c046e3182b0adf15d43500400a427b7dd7389525",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zharness",
+      "path": "zharness",
+      "url": "https://github.com/LIghtJUNction/zharness.git",
+      "branch": "main",
+      "commit": "84e370450f1d047d43119bf81caf73f742ba6b0a",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zhex",
+      "path": "zhex",
+      "url": "https://github.com/LIghtJUNction/zhex.git",
+      "branch": "main",
+      "commit": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zldap",
+      "path": "zldap",
+      "url": "https://github.com/LIghtJUNction/zldap.git",
+      "branch": "main",
+      "commit": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zmcpio",
+      "path": "zmcpio",
+      "url": "https://github.com/LIghtJUNction/zmcpio.git",
+      "branch": "main",
+      "commit": "bc89d7fa3b0249b3a9037748e2113b31615e8c89",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zmime",
+      "path": "zmime",
+      "url": "https://github.com/LIghtJUNction/zmime.git",
+      "branch": "main",
+      "commit": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zplugin",
+      "path": "zplugin",
+      "url": "https://github.com/LIghtJUNction/zplugin.git",
+      "branch": "main",
+      "commit": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zscan",
+      "path": "zscan",
+      "url": "https://github.com/LIghtJUNction/zscan.git",
+      "branch": "main",
+      "commit": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zshard",
+      "path": "zshard",
+      "url": "https://github.com/LIghtJUNction/zshard.git",
+      "branch": "main",
+      "commit": "a2dd935ede92fb96a0dc0556ce16e5f7494a0448",
+      "role": "shell",
+      "manifests": [],
+      "requires": []
+    },
+    {
+      "name": "zsyn",
+      "path": "zsyn",
+      "url": "https://github.com/LIghtJUNction/zsyn.git",
+      "branch": "main",
+      "commit": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zsys",
+      "path": "zsys",
+      "url": "https://github.com/LIghtJUNction/zsys.git",
+      "branch": "main",
+      "commit": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "ztty",
+      "path": "ztty",
+      "url": "https://github.com/LIghtJUNction/ztty.git",
+      "branch": "main",
+      "commit": "3091db75c1f77174c30b2072c8ba3551ed143f4e",
+      "role": "application",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "ztuio",
+      "path": "ztuio",
+      "url": "https://github.com/LIghtJUNction/ztuio.git",
+      "branch": "main",
+      "commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zui",
+      "path": "zui",
+      "url": "https://github.com/LIghtJUNction/zui.git",
+      "branch": "main",
+      "commit": "59f928e2826398b62868283e430db974edf382fb",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zuse",
+      "path": "zuse",
+      "url": "https://github.com/LIghtJUNction/zuse.git",
+      "branch": "main",
+      "commit": "5413e97788b2d688e66157ccb21a1165133082ef",
+      "role": "application",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
+      "name": "zvte",
+      "path": "zvte",
+      "url": "https://github.com/LIghtJUNction/zvte.git",
+      "branch": "main",
+      "commit": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    }
+  ],
+  "packages": [
+    {
+      "name": "async-host",
+      "version": "0.3.1",
+      "repository": "zplugin",
+      "manifest": "zplugin/examples/async/host/Cargo.toml",
+      "workspace": "zplugin",
+      "publish": false,
+      "rust_version": "1.95",
+      "library": false,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "async-interface",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zplugin/examples/async/interface"
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "hot-reload",
+            "std"
+          ],
+          "source": null,
+          "path": "zplugin"
+        }
+      ]
+    },
+    {
+      "name": "async-interface",
+      "version": "0.3.1",
+      "repository": "zplugin",
+      "manifest": "zplugin/examples/async/interface/Cargo.toml",
+      "workspace": "zplugin",
+      "publish": false,
+      "rust_version": "1.95",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "macros"
+          ],
+          "source": null,
+          "path": "zplugin"
+        }
+      ]
+    },
+    {
+      "name": "async-plugin",
+      "version": "0.3.1",
+      "repository": "zplugin",
+      "manifest": "zplugin/examples/async/plugin/Cargo.toml",
+      "workspace": "zplugin",
+      "publish": false,
+      "rust_version": "1.95",
+      "library": true,
+      "features": {
+        "instrument": [],
+        "v2": []
+      },
+      "dependencies": [
+        {
+          "name": "async-interface",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zplugin/examples/async/interface"
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "macros",
+            "std"
+          ],
+          "source": null,
+          "path": "zplugin"
+        }
+      ]
+    },
+    {
+      "name": "demo-host",
+      "version": "0.3.1",
+      "repository": "zplugin",
+      "manifest": "zplugin/examples/host/Cargo.toml",
+      "workspace": "zplugin",
+      "publish": false,
+      "rust_version": "1.95",
+      "library": false,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "demo-interface",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zplugin/examples/interface"
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "hot-reload",
+            "macros",
+            "std"
+          ],
+          "source": null,
+          "path": "zplugin"
+        }
+      ]
+    },
+    {
+      "name": "demo-interface",
+      "version": "0.3.1",
+      "repository": "zplugin",
+      "manifest": "zplugin/examples/interface/Cargo.toml",
+      "workspace": "zplugin",
+      "publish": false,
+      "rust_version": "1.95",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "macros"
+          ],
+          "source": null,
+          "path": "zplugin"
+        }
+      ]
+    },
+    {
+      "name": "demo-plugin",
+      "version": "0.3.1",
+      "repository": "zplugin",
+      "manifest": "zplugin/examples/plugin/Cargo.toml",
+      "workspace": "zplugin",
+      "publish": false,
+      "rust_version": "1.95",
+      "library": true,
+      "features": {
+        "fail-init": [],
+        "instrument": [],
+        "v2": []
+      },
+      "dependencies": [
+        {
+          "name": "demo-interface",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zplugin/examples/interface"
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "macros",
+            "std"
+          ],
+          "source": null,
+          "path": "zplugin"
+        }
+      ]
+    },
+    {
+      "name": "extore",
+      "version": "1.0.0",
+      "repository": "extore",
+      "manifest": "extore/Cargo.toml",
+      "workspace": "extore",
+      "publish": true,
+      "rust_version": null,
+      "library": true,
+      "features": {
+        "plugin": [
+          "dep:extore-plugin-api"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "aes-gcm",
+          "alias": null,
+          "requirement": "^0.10",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "argon2",
+          "alias": null,
+          "requirement": "^0.5",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "axum",
+          "alias": null,
+          "requirement": "^0.8.9",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "multipart"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "base64",
+          "alias": null,
+          "requirement": "^0.22",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "ciborium",
+          "alias": null,
+          "requirement": "^0.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "data-encoding",
+          "alias": null,
+          "requirement": "^2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "ed25519-dalek",
+          "alias": null,
+          "requirement": "^2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "rand_core"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "extore-plugin-api",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "extore/crates/extore-plugin-api"
+        },
+        {
+          "name": "fernet",
+          "alias": null,
+          "requirement": "^0.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "fs2",
+          "alias": null,
+          "requirement": "^0.4",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "futures-util",
+          "alias": null,
+          "requirement": "^0.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "hkdf",
+          "alias": null,
+          "requirement": "^0.12",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "hmac",
+          "alias": null,
+          "requirement": "^0.12",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "image",
+          "alias": null,
+          "requirement": "^0.25",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "jpeg",
+            "png",
+            "webp"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "lettre",
+          "alias": null,
+          "requirement": "^0.11",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "builder",
+            "rustls-tls",
+            "smtp-transport"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "libc",
+          "alias": null,
+          "requirement": "^0.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "mime_guess",
+          "alias": null,
+          "requirement": "^2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "multer",
+          "alias": null,
+          "requirement": "^3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "p256",
+          "alias": null,
+          "requirement": "^0.13",
+          "explicit_version": true,
+          "kind": "dev",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "ecdsa"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "rand",
+          "alias": null,
+          "requirement": "^0.8",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "reqwest",
+          "alias": null,
+          "requirement": "^0.12",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "blocking",
+            "json",
+            "rustls-tls"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "rusqlite",
+          "alias": null,
+          "requirement": "^0.43",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "bundled"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "derive"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde_cbor_2",
+          "alias": null,
+          "requirement": "^0.13",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde_json",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "float_roundtrip"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "sha1",
+          "alias": null,
+          "requirement": "^0.10",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "sha2",
+          "alias": null,
+          "requirement": "^0.10",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "subtle",
+          "alias": null,
+          "requirement": "^2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tempfile",
+          "alias": null,
+          "requirement": "^3",
+          "explicit_version": true,
+          "kind": "dev",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tokio",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "full"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tower",
+          "alias": null,
+          "requirement": "^0.5",
+          "explicit_version": true,
+          "kind": "dev",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "util"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tracing",
+          "alias": null,
+          "requirement": "^0.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tracing-subscriber",
+          "alias": null,
+          "requirement": "^0.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "env-filter"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "unicode-general-category",
+          "alias": null,
+          "requirement": "^1.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "url",
+          "alias": null,
+          "requirement": "^2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "uuid",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "v4"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "webauthn-rs-core",
+          "alias": null,
+          "requirement": "^0.5.5",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "extore-plugin-api",
+      "version": "0.1.0",
+      "repository": "extore",
+      "manifest": "extore/crates/extore-plugin-api/Cargo.toml",
+      "workspace": "extore",
+      "publish": true,
+      "rust_version": null,
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "serde",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "derive"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde_json",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "float_roundtrip"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "=0.3.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "macros",
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "extore-zplugin",
+      "version": "0.1.0",
+      "repository": "extore",
+      "manifest": "extore/crates/extore-zplugin/Cargo.toml",
+      "workspace": "extore",
+      "publish": true,
+      "rust_version": "1.95",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "extore",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "plugin"
+          ],
+          "source": null,
+          "path": "extore"
+        },
+        {
+          "name": "extore-plugin-api",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "extore/crates/extore-plugin-api"
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "=0.3.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "macros",
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "foreign-interface",
+      "version": "0.3.1",
+      "repository": "zplugin",
+      "manifest": "zplugin/examples/foreign/interface/Cargo.toml",
+      "workspace": "zplugin",
+      "publish": false,
+      "rust_version": "1.95",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "macros"
+          ],
+          "source": null,
+          "path": "zplugin"
+        }
+      ]
+    },
+    {
+      "name": "lmm-cli",
+      "version": "0.1.0",
+      "repository": "lmm-api-source",
+      "manifest": "lmm-api-source/apps/cli/Cargo.toml",
+      "workspace": "lmm-api-source/apps/cli",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "base64",
+          "alias": null,
+          "requirement": "^0.23.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "clap",
+          "alias": null,
+          "requirement": "^4.6.7",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "derive"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "fs2",
+          "alias": null,
+          "requirement": "^0.4.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "httparse",
+          "alias": null,
+          "requirement": "^1.10.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "keyring",
+          "alias": null,
+          "requirement": "^4.2.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "v1"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "open",
+          "alias": null,
+          "requirement": "^5.4.5",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "percent-encoding",
+          "alias": null,
+          "requirement": "^2.3.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "rand",
+          "alias": null,
+          "requirement": "^0.10.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "reqwest",
+          "alias": null,
+          "requirement": "^0.13.5",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "blocking",
+            "form",
+            "json",
+            "rustls"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "rusqlite",
+          "alias": null,
+          "requirement": "^0.42.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "bundled"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "rustix",
+          "alias": null,
+          "requirement": "^1.1.6",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": "cfg(target_os = \"linux\")",
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "fs"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde",
+          "alias": null,
+          "requirement": "^1.0.229",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "derive"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde_json",
+          "alias": null,
+          "requirement": "^1.0.154",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "sha2",
+          "alias": null,
+          "requirement": "^0.11.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tempfile",
+          "alias": null,
+          "requirement": "^3.27.0",
+          "explicit_version": true,
+          "kind": "dev",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "thiserror",
+          "alias": null,
+          "requirement": "^2.0.21",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "toml",
+          "alias": null,
+          "requirement": "=1.2.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "parse",
+            "serde",
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "url",
+          "alias": null,
+          "requirement": "^2.5.8",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "webpki-root-certs",
+          "alias": null,
+          "requirement": "^1.0.12",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zeroize",
+          "alias": null,
+          "requirement": "^1.9.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "derive"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zhex",
+          "alias": null,
+          "requirement": "^0.1.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "lmm-core",
+      "version": "0.1.0",
+      "repository": "lmm-api-source",
+      "manifest": "lmm-api-source/services/core/Cargo.toml",
+      "workspace": "lmm-api-source/services/core",
+      "publish": false,
+      "rust_version": "1.100.0",
+      "library": true,
+      "features": {
+        "resource-acceptance": []
+      },
+      "dependencies": [
+        {
+          "name": "aes-gcm",
+          "alias": null,
+          "requirement": "=0.11.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "aes",
+            "alloc"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "argon2",
+          "alias": null,
+          "requirement": "=0.6.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "axum",
+          "alias": null,
+          "requirement": "=0.8.9",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "multipart",
+            "ws"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "base64",
+          "alias": null,
+          "requirement": "=0.23.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "bcrypt",
+          "alias": null,
+          "requirement": "=0.19.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "chrono",
+          "alias": null,
+          "requirement": "=0.4.45",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "clock",
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "csv",
+          "alias": null,
+          "requirement": "=1.4.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "fancy-regex",
+          "alias": null,
+          "requirement": "=0.20.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "flate2",
+          "alias": null,
+          "requirement": "=1.1.11",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "rust_backend"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "form_urlencoded",
+          "alias": null,
+          "requirement": "=1.2.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "futures-util",
+          "alias": null,
+          "requirement": "=0.3.34",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "sink",
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "gjson",
+          "alias": null,
+          "requirement": "=0.8.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "hkdf",
+          "alias": null,
+          "requirement": "=0.13.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "hmac",
+          "alias": null,
+          "requirement": "=0.13.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "html-escape",
+          "alias": null,
+          "requirement": "=0.3.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "http-body",
+          "alias": null,
+          "requirement": "=1.1.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "http-body-util",
+          "alias": null,
+          "requirement": "=0.1.5",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "hyper",
+          "alias": null,
+          "requirement": "=1.12.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "http1",
+            "http2",
+            "server"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "hyper-util",
+          "alias": null,
+          "requirement": "=0.1.21",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "server-auto",
+            "server-graceful",
+            "service",
+            "tokio"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "ipnet",
+          "alias": null,
+          "requirement": "=2.12.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "jsonschema",
+          "alias": null,
+          "requirement": "=0.61.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "arbitrary-precision"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "jsonwebtoken",
+          "alias": null,
+          "requirement": "=12.0.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "aws_lc_rs"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "lettre",
+          "alias": null,
+          "requirement": "=0.11.23",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "builder",
+            "ring",
+            "smtp-transport",
+            "tokio1-rustls",
+            "webpki-roots"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "maxminddb",
+          "alias": null,
+          "requirement": "=0.33.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "md-5",
+          "alias": null,
+          "requirement": "=0.11.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "num-bigint",
+          "alias": null,
+          "requirement": "=0.5.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "num-rational",
+          "alias": null,
+          "requirement": "=0.4.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "openssl",
+          "alias": null,
+          "requirement": "=0.10.82",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": "cfg(target_env = \"musl\")",
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "vendored"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "oxide-auth",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "git+https://github.com/197g/oxide-auth?rev=0e3ef86d924aa5546dc3275d1d7269ea63edfaf1",
+          "path": null
+        },
+        {
+          "name": "percent-encoding",
+          "alias": null,
+          "requirement": "=2.3.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "prost",
+          "alias": null,
+          "requirement": "=0.14.6",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "protoc-bin-vendored",
+          "alias": null,
+          "requirement": "=3.3.0",
+          "explicit_version": true,
+          "kind": "build",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "psl",
+          "alias": null,
+          "requirement": "=2.1.256",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "rand",
+          "alias": null,
+          "requirement": "=0.10.4",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "regex",
+          "alias": null,
+          "requirement": "=1.13.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "reqwest",
+          "alias": null,
+          "requirement": "=0.13.5",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "form",
+            "http2",
+            "json",
+            "multipart",
+            "query",
+            "rustls",
+            "stream"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "ring",
+          "alias": null,
+          "requirement": "=0.17.14",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "rsa",
+          "alias": null,
+          "requirement": "=0.10.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "pkcs1v15"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde",
+          "alias": null,
+          "requirement": "^1.0.229",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "derive"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde_json",
+          "alias": null,
+          "requirement": "^1.0.154",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "arbitrary_precision",
+            "raw_value"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "sha2",
+          "alias": null,
+          "requirement": "=0.11.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "oid"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "sqlx",
+          "alias": null,
+          "requirement": "=0.9.0",
+          "explicit_version": true,
+          "kind": "dev",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "migrate"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "sqlx",
+          "alias": null,
+          "requirement": "=0.9.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "chrono",
+            "json",
+            "macros",
+            "postgres",
+            "runtime-tokio",
+            "tls-rustls-ring-webpki"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "subtle",
+          "alias": null,
+          "requirement": "=2.6.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "sysinfo",
+          "alias": null,
+          "requirement": "=0.40.4",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "system"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tiktoken-rs",
+          "alias": null,
+          "requirement": "=0.12.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tokio",
+          "alias": null,
+          "requirement": "^1.54.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "io-util",
+            "macros",
+            "net",
+            "rt-multi-thread",
+            "signal",
+            "sync",
+            "time"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tokio-stream",
+          "alias": null,
+          "requirement": "=0.1.19",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "net"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tokio-tungstenite",
+          "alias": null,
+          "requirement": "=0.30.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "handshake"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tokio-util",
+          "alias": null,
+          "requirement": "=0.7.20",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "rt"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "toml",
+          "alias": null,
+          "requirement": "=1.2.1",
+          "explicit_version": true,
+          "kind": "dev",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "display"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "toml",
+          "alias": null,
+          "requirement": "=1.2.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "parse",
+            "serde",
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tonic",
+          "alias": null,
+          "requirement": "=0.14.9",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tonic-prost",
+          "alias": null,
+          "requirement": "=0.14.9",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tonic-prost-build",
+          "alias": null,
+          "requirement": "=0.14.9",
+          "explicit_version": true,
+          "kind": "build",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "totp-rs",
+          "alias": null,
+          "requirement": "=6.0.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "otpauth",
+            "std",
+            "zeroize"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tower",
+          "alias": null,
+          "requirement": "=0.5.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "util"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "webauthn-authenticator-rs",
+          "alias": null,
+          "requirement": "=0.5.5",
+          "explicit_version": true,
+          "kind": "dev",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "softpasskey"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "webauthn-rs",
+          "alias": null,
+          "requirement": "=0.5.5",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "conditional-ui",
+            "danger-allow-state-serialisation"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "webauthn-rs-core",
+          "alias": null,
+          "requirement": "=0.5.5",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "webpki-root-certs",
+          "alias": null,
+          "requirement": "=1.0.12",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zclap",
+          "alias": null,
+          "requirement": "=0.1.4",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zconv",
+          "alias": null,
+          "requirement": "=0.4.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zeroize",
+          "alias": null,
+          "requirement": "=1.9.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "alloc"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zhex",
+          "alias": null,
+          "requirement": "=0.1.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zstd",
+          "alias": null,
+          "requirement": "=0.14.4",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "lmm-extore-host",
+      "version": "0.1.0",
+      "repository": "lmm-api-source",
+      "manifest": "lmm-api-source/services/extensions/extore-host/Cargo.toml",
+      "workspace": "lmm-api-source/services/extensions/extore-host",
+      "publish": false,
+      "rust_version": "1.100.0",
+      "library": false,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "extore-plugin-api",
+          "alias": null,
+          "requirement": "=0.1.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "lmm-api-source/third_party/extore/crates/extore-plugin-api"
+        },
+        {
+          "name": "http-body-util",
+          "alias": null,
+          "requirement": "=0.1.5",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "hyper",
+          "alias": null,
+          "requirement": "=1.12.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "http1",
+            "server"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "hyper-util",
+          "alias": null,
+          "requirement": "=0.1.21",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "tokio"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde_json",
+          "alias": null,
+          "requirement": "=1.0.154",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "sha2",
+          "alias": null,
+          "requirement": "=0.11.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tokio",
+          "alias": null,
+          "requirement": "=1.54.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "macros",
+            "net",
+            "rt",
+            "signal",
+            "time"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zclap",
+          "alias": null,
+          "requirement": "=0.1.4",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zhex",
+          "alias": null,
+          "requirement": "=0.1.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "=0.3.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "ssmcp",
+      "version": "0.10.13",
+      "repository": "ssmcp",
+      "manifest": "ssmcp/Cargo.toml",
+      "workspace": "ssmcp",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "axum",
+          "alias": null,
+          "requirement": "^0.8",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "form",
+            "http1",
+            "json",
+            "query",
+            "tokio",
+            "ws"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "base64",
+          "alias": null,
+          "requirement": "^0.22",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "cap-fs-ext",
+          "alias": null,
+          "requirement": "^4.0.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": "cfg(not(target_os = \"linux\"))",
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "cap-std",
+          "alias": null,
+          "requirement": "^4.0.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": "cfg(not(target_os = \"linux\"))",
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "futures-util",
+          "alias": null,
+          "requirement": "^0.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "sink",
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "getrandom",
+          "alias": null,
+          "requirement": "^0.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "image",
+          "alias": null,
+          "requirement": "^0.25.10",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "gif",
+            "jpeg",
+            "png",
+            "webp"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "libc",
+          "alias": null,
+          "requirement": "^0.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "miniz_oxide",
+          "alias": null,
+          "requirement": "^0.9.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "png",
+          "alias": null,
+          "requirement": "^0.18",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "portable-pty",
+          "alias": null,
+          "requirement": "^0.9",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": "cfg(not(target_os = \"linux\"))",
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "qrcodegen",
+          "alias": null,
+          "requirement": "^1.8.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "reqwest",
+          "alias": null,
+          "requirement": "^0.12",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "json",
+            "rustls-tls"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "rustls",
+          "alias": null,
+          "requirement": "^0.23",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "ring",
+            "std",
+            "tls12"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "rustls-webpki",
+          "alias": "webpki",
+          "requirement": "^0.103",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "ring",
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "derive"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde_json",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "raw_value"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde_urlencoded",
+          "alias": null,
+          "requirement": "^0.7",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "sha2",
+          "alias": null,
+          "requirement": "^0.10",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "subtle",
+          "alias": null,
+          "requirement": "^2.6",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tokio",
+          "alias": null,
+          "requirement": "^1.54",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "fs",
+            "io-std",
+            "io-util",
+            "macros",
+            "net",
+            "process",
+            "rt-multi-thread",
+            "signal",
+            "sync",
+            "time"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tokio-rustls",
+          "alias": null,
+          "requirement": "^0.26",
+          "explicit_version": true,
+          "kind": "dev",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "ring",
+            "tls12"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tokio-tungstenite",
+          "alias": null,
+          "requirement": "^0.29",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "connect",
+            "rustls-tls-webpki-roots"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "toml",
+          "alias": null,
+          "requirement": "^0.8",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "toml_edit",
+          "alias": null,
+          "requirement": "^0.22",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "unicode-width",
+          "alias": null,
+          "requirement": "^0.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "vt100",
+          "alias": null,
+          "requirement": "^0.18.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "webpki-roots",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "windows-sys",
+          "alias": null,
+          "requirement": "^0.61",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": "cfg(windows)",
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "Win32_Foundation",
+            "Win32_Graphics_Gdi",
+            "Win32_Graphics_GdiPlus",
+            "Win32_Security",
+            "Win32_Security_Authorization",
+            "Win32_Storage_FileSystem",
+            "Win32_System_Com",
+            "Win32_System_Com_StructuredStorage",
+            "Win32_System_Console",
+            "Win32_System_Diagnostics_ToolHelp",
+            "Win32_System_IO",
+            "Win32_System_JobObjects",
+            "Win32_System_Memory",
+            "Win32_System_Services",
+            "Win32_System_StationsAndDesktops",
+            "Win32_System_Threading",
+            "Win32_UI_HiDpi",
+            "Win32_UI_Input_KeyboardAndMouse",
+            "Win32_UI_WindowsAndMessaging"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zharness",
+          "alias": null,
+          "requirement": "=0.5.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "std"
+          ],
+          "source": null,
+          "path": "ssmcp/crates/zharness"
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "=0.3.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "macros",
+            "std"
+          ],
+          "source": null,
+          "path": "ssmcp/crates/zplugin"
+        },
+        {
+          "name": "ztui-core",
+          "alias": "ztui",
+          "requirement": "=0.1.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "ssmcp/crates/ztui"
+        }
+      ]
+    },
+    {
+      "name": "z58",
+      "version": "0.1.6",
+      "repository": "z58",
+      "manifest": "z58/Cargo.toml",
+      "workspace": "z58",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {},
+      "dependencies": []
+    },
+    {
+      "name": "z64",
+      "version": "0.1.2",
+      "repository": "z64",
+      "manifest": "z64/Cargo.toml",
+      "workspace": "z64",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {
+        "default": [],
+        "force-scalar": [],
+        "no-avx512": [],
+        "no-runtime-detect": [],
+        "no-short-path": [],
+        "reference": [
+          "force-scalar"
+        ]
+      },
+      "dependencies": []
+    },
+    {
+      "name": "zcall",
+      "version": "0.3.0",
+      "repository": "zcall",
+      "manifest": "zcall/Cargo.toml",
+      "workspace": "zcall",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {
+        "default": []
+      },
+      "dependencies": [
+        {
+          "name": "zconv",
+          "alias": null,
+          "requirement": "=0.4.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zcall-gui",
+      "version": "0.1.0",
+      "repository": "zcall-gui",
+      "manifest": "zcall-gui/Cargo.toml",
+      "workspace": "zcall-gui",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": false,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zui",
+          "alias": null,
+          "requirement": "=0.1.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zcall-gui/vendor/zui"
+        }
+      ]
+    },
+    {
+      "name": "zcalld",
+      "version": "0.1.1",
+      "repository": "zcalld",
+      "manifest": "zcalld/Cargo.toml",
+      "workspace": "zcalld",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": false,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zcall",
+          "alias": null,
+          "requirement": "=0.3.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zcalld-plugin-api",
+          "alias": null,
+          "requirement": "=0.1.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zcalld/crates/zcalld-plugin-api"
+        },
+        {
+          "name": "zconv",
+          "alias": null,
+          "requirement": "=0.4.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "=0.3.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zcalld-plugin-aliases",
+      "version": "0.1.1",
+      "repository": "zcalld",
+      "manifest": "zcalld/plugins/aliases/Cargo.toml",
+      "workspace": "zcalld",
+      "publish": false,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zcalld-plugin-api",
+          "alias": null,
+          "requirement": "=0.1.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zcalld/crates/zcalld-plugin-api"
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "=0.3.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "macros",
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zcalld-plugin-api",
+      "version": "0.1.1",
+      "repository": "zcalld",
+      "manifest": "zcalld/crates/zcalld-plugin-api/Cargo.toml",
+      "workspace": "zcalld",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "=0.3.0",
+          "explicit_version": true,
+          "kind": "dev",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "=0.3.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "macros"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zcalld-plugin-policy",
+      "version": "0.1.1",
+      "repository": "zcalld",
+      "manifest": "zcalld/plugins/policy/Cargo.toml",
+      "workspace": "zcalld",
+      "publish": false,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zcalld-plugin-api",
+          "alias": null,
+          "requirement": "=0.1.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zcalld/crates/zcalld-plugin-api"
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "=0.3.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "macros",
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zclap",
+      "version": "0.1.4",
+      "repository": "zclap",
+      "manifest": "zclap/Cargo.toml",
+      "workspace": "zclap",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {
+        "default": [
+          "std"
+        ],
+        "std": []
+      },
+      "dependencies": []
+    },
+    {
+      "name": "zclick-core",
+      "version": "0.1.1-alpha.3",
+      "repository": "zclick",
+      "manifest": "zclick/crates/zclick-core/Cargo.toml",
+      "workspace": "zclick",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zclap",
+          "alias": null,
+          "requirement": "=0.1.4",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zclick-python",
+      "version": "0.1.1-alpha.3",
+      "repository": "zclick",
+      "manifest": "zclick/crates/zclick-python/Cargo.toml",
+      "workspace": "zclick",
+      "publish": false,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {
+        "abi3": [
+          "pyo3/abi3-py310"
+        ],
+        "default": [
+          "abi3"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "pyo3",
+          "alias": null,
+          "requirement": "=0.30.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "extension-module"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "pyo3-build-config",
+          "alias": null,
+          "requirement": "=0.30.1",
+          "explicit_version": true,
+          "kind": "build",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zclick-core",
+          "alias": null,
+          "requirement": "=0.1.1-alpha.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zclick/crates/zclick-core"
+        }
+      ]
+    },
+    {
+      "name": "zconv",
+      "version": "0.4.0",
+      "repository": "zconv",
+      "manifest": "zconv/Cargo.toml",
+      "workspace": "zconv",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {
+        "default": []
+      },
+      "dependencies": []
+    },
+    {
+      "name": "zdot",
+      "version": "0.1.1",
+      "repository": "zdot",
+      "manifest": "zdot/Cargo.toml",
+      "workspace": "zdot",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zclap",
+          "alias": null,
+          "requirement": "=0.1.4",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zdwire",
+      "version": "0.1.4",
+      "repository": "zdwire",
+      "manifest": "zdwire/Cargo.toml",
+      "workspace": "zdwire",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {},
+      "dependencies": []
+    },
+    {
+      "name": "zgraphics",
+      "version": "0.1.1",
+      "repository": "ztty",
+      "manifest": "ztty/crates/zgraphics/Cargo.toml",
+      "workspace": "ztty",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zune-core",
+          "alias": null,
+          "requirement": "=0.5.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zune-inflate",
+          "alias": null,
+          "requirement": "=0.2.54",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "zlib"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zune-png",
+          "alias": null,
+          "requirement": "=0.5.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zharness",
+      "version": "0.5.0",
+      "repository": "zharness",
+      "manifest": "zharness/Cargo.toml",
+      "workspace": "zharness",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {
+        "default": [
+          "std"
+        ],
+        "std": [
+          "zplugin/std"
+        ],
+        "wasm": [
+          "zplugin/wasm"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "zcall",
+          "alias": null,
+          "requirement": "=0.3.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "=0.3.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "macros"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zhex",
+      "version": "0.1.3",
+      "repository": "zhex",
+      "manifest": "zhex/Cargo.toml",
+      "workspace": "zhex",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {
+        "default": [],
+        "force-scalar": []
+      },
+      "dependencies": []
+    },
+    {
+      "name": "zinput",
+      "version": "0.1.2",
+      "repository": "ztty",
+      "manifest": "ztty/crates/zinput/Cargo.toml",
+      "workspace": "ztty",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": []
+    },
+    {
+      "name": "zldap",
+      "version": "0.1.3",
+      "repository": "zldap",
+      "manifest": "zldap/Cargo.toml",
+      "workspace": "zldap",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {
+        "default": []
+      },
+      "dependencies": []
+    },
+    {
+      "name": "zmcpio",
+      "version": "0.4.0",
+      "repository": "zmcpio",
+      "manifest": "zmcpio/Cargo.toml",
+      "workspace": "zmcpio",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {
+        "default": [],
+        "std": []
+      },
+      "dependencies": [
+        {
+          "name": "zcall",
+          "alias": null,
+          "requirement": "=0.3.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zmime",
+      "version": "0.1.2",
+      "repository": "zmime",
+      "manifest": "zmime/Cargo.toml",
+      "workspace": "zmime",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {
+        "default": [
+          "simd"
+        ],
+        "simd": []
+      },
+      "dependencies": []
+    },
+    {
+      "name": "zplugin",
+      "version": "0.3.1",
+      "repository": "zplugin",
+      "manifest": "zplugin/Cargo.toml",
+      "workspace": "zplugin",
+      "publish": true,
+      "rust_version": "1.95",
+      "library": true,
+      "features": {
+        "alloc": [],
+        "default": [],
+        "hot-reload": [
+          "alloc"
+        ],
+        "macros": [
+          "dep:zplugin-macros"
+        ],
+        "std": [
+          "alloc"
+        ],
+        "wasm": [
+          "alloc",
+          "dep:wasmi"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "wasmi",
+          "alias": null,
+          "requirement": "=2.0.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": false,
+          "features": [
+            "libm",
+            "portable-dispatch",
+            "stable",
+            "validate"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zplugin-macros",
+          "alias": null,
+          "requirement": "=0.3.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zplugin/crates/zplugin-macros"
+        },
+        {
+          "name": "zsys",
+          "alias": null,
+          "requirement": "=0.1.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "dylib"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zplugin-bench",
+      "version": "0.3.1",
+      "repository": "zplugin",
+      "manifest": "zplugin/tools/bench/Cargo.toml",
+      "workspace": "zplugin",
+      "publish": false,
+      "rust_version": "1.95",
+      "library": false,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "async-interface",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zplugin/examples/async/interface"
+        },
+        {
+          "name": "demo-interface",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zplugin/examples/interface"
+        },
+        {
+          "name": "libloading",
+          "alias": null,
+          "requirement": "^0.8.9",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "hot-reload",
+            "macros",
+            "std"
+          ],
+          "source": null,
+          "path": "zplugin"
+        }
+      ]
+    },
+    {
+      "name": "zplugin-contract-tests",
+      "version": "0.3.1",
+      "repository": "zplugin",
+      "manifest": "zplugin/tools/contract-tests/Cargo.toml",
+      "workspace": "zplugin",
+      "publish": false,
+      "rust_version": "1.95",
+      "library": false,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "demo-interface",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zplugin/examples/interface"
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "hot-reload",
+            "macros",
+            "std"
+          ],
+          "source": null,
+          "path": "zplugin"
+        }
+      ]
+    },
+    {
+      "name": "zplugin-foreign-tests",
+      "version": "0.3.1",
+      "repository": "zplugin",
+      "manifest": "zplugin/tools/foreign-tests/Cargo.toml",
+      "workspace": "zplugin",
+      "publish": false,
+      "rust_version": "1.95",
+      "library": false,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "foreign-interface",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zplugin/examples/foreign/interface"
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "macros",
+            "std"
+          ],
+          "source": null,
+          "path": "zplugin"
+        }
+      ]
+    },
+    {
+      "name": "zplugin-macros",
+      "version": "0.3.1",
+      "repository": "zplugin",
+      "manifest": "zplugin/crates/zplugin-macros/Cargo.toml",
+      "workspace": "zplugin",
+      "publish": true,
+      "rust_version": "1.95",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "proc-macro2",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "quote",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "syn",
+          "alias": null,
+          "requirement": "^2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "full"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zpty",
+      "version": "0.2.1",
+      "repository": "ztty",
+      "manifest": "ztty/crates/zpty/Cargo.toml",
+      "workspace": "ztty",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": []
+    },
+    {
+      "name": "zscan",
+      "version": "0.1.3",
+      "repository": "zscan",
+      "manifest": "zscan/Cargo.toml",
+      "workspace": "zscan",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {},
+      "dependencies": []
+    },
+    {
+      "name": "zsyn",
+      "version": "0.1.3",
+      "repository": "zsyn",
+      "manifest": "zsyn/Cargo.toml",
+      "workspace": "zsyn",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {
+        "alloc": [],
+        "default": []
+      },
+      "dependencies": []
+    },
+    {
+      "name": "zsys",
+      "version": "0.1.1",
+      "repository": "zsys",
+      "manifest": "zsys/Cargo.toml",
+      "workspace": "zsys",
+      "publish": true,
+      "rust_version": "1.95",
+      "library": true,
+      "features": {
+        "alloc": [],
+        "default": [
+          "std"
+        ],
+        "dylib": [],
+        "std": [
+          "alloc"
+        ]
+      },
+      "dependencies": []
+    },
+    {
+      "name": "zterm",
+      "version": "0.4.0",
+      "repository": "ztty",
+      "manifest": "ztty/crates/zterm/Cargo.toml",
+      "workspace": "ztty",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "unicode-width",
+          "alias": null,
+          "requirement": "=0.2.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zgraphics",
+          "alias": null,
+          "requirement": "^0.1.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": null,
+          "path": "ztty/crates/zgraphics"
+        },
+        {
+          "name": "zinput",
+          "alias": null,
+          "requirement": "^0.1.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": null,
+          "path": "ztty/crates/zinput"
+        },
+        {
+          "name": "ztty-ui",
+          "alias": null,
+          "requirement": "^0.1.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "ztty/crates/ztty-ui"
+        },
+        {
+          "name": "zvte",
+          "alias": null,
+          "requirement": "=0.1.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "ztty",
+      "version": "0.4.1",
+      "repository": "ztty",
+      "manifest": "ztty/Cargo.toml",
+      "workspace": "ztty",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zpty",
+          "alias": null,
+          "requirement": "^0.2.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": null,
+          "path": "ztty/crates/zpty"
+        },
+        {
+          "name": "zterm",
+          "alias": null,
+          "requirement": "^0.4.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": null,
+          "path": "ztty/crates/zterm"
+        }
+      ]
+    },
+    {
+      "name": "ztty-ui",
+      "version": "0.1.0",
+      "repository": "ztty",
+      "manifest": "ztty/crates/ztty-ui/Cargo.toml",
+      "workspace": "ztty",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": []
+    },
+    {
+      "name": "ztui-core",
+      "version": "0.1.2",
+      "repository": "ssmcp",
+      "manifest": "ssmcp/crates/ztui/Cargo.toml",
+      "workspace": "ssmcp",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": []
+    },
+    {
+      "name": "ztuio",
+      "version": "0.1.0",
+      "repository": "ztuio",
+      "manifest": "ztuio/Cargo.toml",
+      "workspace": "ztuio",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": []
+    },
+    {
+      "name": "zui",
+      "version": "0.1.0",
+      "repository": "zui",
+      "manifest": "zui/Cargo.toml",
+      "workspace": "zui",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": []
+    },
+    {
+      "name": "zuse-computer",
+      "version": "0.1.0",
+      "repository": "zuse",
+      "manifest": "zuse/Cargo.toml",
+      "workspace": "zuse",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {
+        "default": [
+          "std"
+        ],
+        "std": [
+          "dep:zmcpio",
+          "dep:zclap",
+          "dep:z64"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "z64",
+          "alias": null,
+          "requirement": "=0.1.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zclap",
+          "alias": null,
+          "requirement": "=0.1.4",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zmcpio",
+          "alias": null,
+          "requirement": "=0.4.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": false,
+          "features": [
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zvte",
+      "version": "0.1.3",
+      "repository": "zvte",
+      "manifest": "zvte/Cargo.toml",
+      "workspace": "zvte",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {},
+      "dependencies": []
+    }
+  ]
+}
