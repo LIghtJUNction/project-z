@@ -1,7 +1,7 @@
 {
   "schema": "project-z.public-site-candidate.v1",
   "recorded_at_utc": "2026-11-20T10:49:14.194353+00:00",
-  "status": "verified_private_candidate_publication_on_hold",
+  "status": "final_aggregate_bound_publication_pending",
   "aggregate_input": {
     "commit": "b54f083e2b7900c2f5c93ec93e26366526645095",
     "tree": "5fdb8f3dc5d882e07a155978fa103aee04fdb990",
@@ -376,12 +376,54 @@
     "verify_only_with_explicit_repository_inputs": "passed",
     "browser": "Historical acceptance retained for the identical template and assets."
   },
-  "publication_hold": {
-    "public_baseline_commit": "668080bced1eb4c9941e324abc09e645d6e881f3",
-    "pending": [
-      "final root aggregate snapshot",
-      "explicit public authorization",
-      "public commit and Pages checks"
-    ]
+  "final_aggregate_binding": {
+    "bound_at_utc": "2026-11-20T10:55:11.187850+00:00",
+    "commit": "522bc7c9da008f05e9f715c1c1eda91b13ca89ec",
+    "tree": "eb2dfc60e3ab31f96c6fb29c458573f8500a2ac6",
+    "root_main_receipt_commit": "78fc357f778a0dbff12f9320da82f324cb427410",
+    "root_main_receipt_tree": "eadf86b7ccade6e68a7075b5cfa222cda85227cd",
+    "root_main_receipt_parent": "522bc7c9da008f05e9f715c1c1eda91b13ca89ec",
+    "root_main_receipt_changes": [
+      "docs/reports/ui-unification-20261120/checkpoint.json",
+      "docs/reports/ui-unification-20261120/final-validation.json",
+      "docs/reports/ui-unification-20261120/final-validation.md"
+    ],
+    "root_validation": "Coordinator confirmed check and resolve --all passed. The site worker verified root main and the receipt tree and reused the root results.",
+    "comparison_base": "b54f083e2b7900c2f5c93ec93e26366526645095",
+    "reviewed_repository_identities_and_gitlinks": 39,
+    "scoped_pin_changes": [
+      {
+        "id": "oh-my-ztty",
+        "before": "0fdc87873c53e7c87d18952f83a7b94fc4149de5",
+        "after": "1e3ce8d3e5a141d09e450fd3f635f987a5732be4"
+      }
+    ],
+    "oh_my_ztty_default_branch": {
+      "ref": "refs/heads/main",
+      "commit": "1e3ce8d3e5a141d09e450fd3f635f987a5732be4",
+      "verified_with": "git ls-remote --symref",
+      "version_reads": [
+        {
+          "url": "https://raw.githubusercontent.com/LIghtJUNction/oh-my-ztty/main/VERSION",
+          "status": 200,
+          "version": "0.2.6",
+          "sha256": "be3c6d2c6c406a64d44f0b6464a887e290416dd90c524094485b1be00936d6d7",
+          "verified_at_utc": "2026-11-20T10:53:42.712791+00:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/LIghtJUNction/oh-my-ztty/1e3ce8d3e5a141d09e450fd3f635f987a5732be4/VERSION",
+          "status": 200,
+          "version": "0.2.6",
+          "sha256": "be3c6d2c6c406a64d44f0b6464a887e290416dd90c524094485b1be00936d6d7",
+          "verified_at_utc": "2026-11-20T10:53:43.225378+00:00"
+        }
+      ]
+    },
+    "site_data_source_commit": "3ea9cf3af9293561f2c0d871a97ca2c658c2b4bd",
+    "version_scope": "The final aggregate is the accepted zgpui 0.1.2 source cohort. Newer separately verified public versions such as zgpui 0.1.5, zharness 0.6.0 and zcall 0.4.0 describe their own publications."
+  },
+  "publication": {
+    "status": "authorized_pending",
+    "public_baseline_commit": "668080bced1eb4c9941e324abc09e645d6e881f3"
   }
 }
