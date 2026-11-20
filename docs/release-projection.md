@@ -47,3 +47,32 @@ with the same name and version was produced from the locked Git SHA. Verify
 registry source provenance and checksum, publish prerequisites in dependency
 order, and ensure exact registry versions are available before enabling a release
 workflow. This tool is not wired into CI or the GitHub release workflow.
+
+## Verify upstream registry receipts
+
+Use this separate read-only check before treating the staged dependency pins as
+release candidates. It recomputes the plan from the specified commit and lock,
+not from an editable staging report. Use the same workspace/member flags as in
+staging. The archive directory holds files named PACKAGE-VERSION.crate.
+
+    python3 scripts/release_receipts.py \
+      --repo "$SOURCE_REPO" --commit "$SOURCE_SHA" \
+      --receipts "$RECEIPTS_JSON" --trusted-receipts-sha256 "$TRUSTED_PIN" \
+      --archives "$LOCAL_CRATE_ARCHIVES"
+
+Receipt schema v1 is a JSON object with schema_version: 1 and a receipts
+array. Each record contains only package, version, github, git_sha, and
+archive_sha256. The release authority must independently establish the mapping
+from the exact source commit to the specific archive bytes and send the SHA-256
+of the receipt file through an authenticated channel. Do not derive the trusted
+pin from the same untrusted delivery as the receipts/archives. Cargo's VCS
+metadata is a cross-check, not an attestation by itself.
+
+The gate checks package, version, canonical repository URL, exact Git commit,
+and archive SHA-256 against those receipts. It rejects missing/malformed or dirty
+archive provenance and never accepts an allegedly equivalent alternate commit.
+For example, a lock pointing to zuse-computer 0.2.2 at a1bb8fd2 cannot use an
+existing 0.2.2 archive from 94c83755, even though its name, version and repository
+match. No upload or network call is made. This check does not verify registry
+availability, yank state, the complete transitive graph, or validate/install
+the staged package. It does not change the staging-only label or enable CI.
