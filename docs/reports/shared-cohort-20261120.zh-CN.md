@@ -1,10 +1,10 @@
 # Project Z：共享库、应用与安装套件协同维护
 
-更新时间：2026-11-20T01:47:46.568707+00:00。本报告对应固定源码快照，仓库与提交清单见文末；发布制品、应用运行验收和用户机器上的安装状态分别记录。
+更新时间：2026-11-20T02:15:39.624943+00:00。本报告对应固定源码快照，仓库与提交清单见文末；发布制品、应用运行验收和用户机器上的安装状态分别记录。
 
 ## 已完成的协调层
 
-Project Z 已从原来的 29 个仓库扩充为 **42 个仓库、60 个 Cargo package**。新增登记 zgpui、zinput、ztype、zrc、zfetch、zdistro、zmcl、zpty、zgraphics、zterm、OniMods、zcall-omarchy、mechrevo-drivers，共 13 个仓库。
+Project Z 当前统一固定 **42 个仓库、60 个 Cargo package**。相对先前 29 仓库协调快照，本批新增登记 zgpui、zinput、ztype、zrc、zfetch、zdistro、zmcl、zpty、zgraphics、zterm、OniMods、zcall-omarchy、mechrevo-drivers，共 13 个仓库。相对 PR #3 的 main 基线 `9d72d19`，本 PR 净增加 15 个仓库（另包含先前接入的 lmm-api-source、zcall-gui），并将旧 ztui 名称迁移到 ztuio；两种计数使用不同的比较基线。
 
 统一清单记录真实工作区、包名、版本、来源提交、Cargo 依赖，以及运行时、安装和源码分发关系。生成文件包括 `catalog.json`、`.cargo/project-z.toml`、`docs/PROJECTS.md`，政策入口为 `project-z.toml`。各仓库继续独立开发和发布，聚合仓库固定一次可以一起检查的源码组合。
 

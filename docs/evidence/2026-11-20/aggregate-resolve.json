@@ -27,5 +27,16 @@
   "before_sha256": "830fc0a5e8666fef77f06fa7044dc87fbb8dab8792f952d073db0e4b561d2482",
   "after_sha256": "830fc0a5e8666fef77f06fa7044dc87fbb8dab8792f952d073db0e4b561d2482",
   "postcheck_exit_code": 0,
-  "log_sha256": "5418d735bdbbd68c06d5dc7323b1920a5bafc0c39c8b16cd274415abdb43f5ff"
+  "log_sha256": "5418d735bdbbd68c06d5dc7323b1920a5bafc0c39c8b16cd274415abdb43f5ff",
+  "publication": {
+    "original_receipt_sha256": "985a1d9330370d790759bfbd1b2190f080d6a071ca03b1dcc08cf8a7c2658fdc",
+    "original_names_preserved": true,
+    "published_files": {
+      "before_file": "aggregate-locks-before.json",
+      "after_file": "aggregate-locks-after.json",
+      "log_file": "aggregate-resolve.log",
+      "postcheck_file": "aggregate-postcheck.log"
+    },
+    "note": "The before_file and after_file fields retain original receipt names. Use this mapping for the committed public copies; payload SHA-256 values are unchanged."
+  }
 }
