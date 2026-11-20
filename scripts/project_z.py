@@ -129,11 +129,12 @@ def repositories(root=ROOT):
 def sync_sources(root=ROOT):
     """Advance only clean isolated submodule checkouts; never edit consumers."""
     repos = repositories(root)
+    errors = checkout_errors({"repositories": repos}, root, allow_uninitialized=True)
+    if errors:
+        raise CoordinationError("\n".join(errors))
     heads = latest_heads(repos, root)
     for repo in repos:
         source = root / repo["path"]
-        if command(["git", "status", "--porcelain", "--untracked-files=normal", "--ignore-submodules=none"], source):
-            raise CoordinationError(f"{repo['name']}: dirty source checkout; preserve it and use an isolated checkout")
         if repo["commit"] != heads[repo["name"]]["commit"]:
             if command(["git", "rev-parse", "--abbrev-ref", "HEAD"], source).strip() != "HEAD":
                 raise CoordinationError(f"{repo['name']}: active branch; use a detached isolated checkout before sync")
@@ -305,9 +306,44 @@ def repository_impact(data, changed):
         affected = expanded
 
 
+def verify_source_checkout(checkout, wanted, root=ROOT, *, checked=None, allow_uninitialized=False):
+    """Check every recorded gitlink directly; parent status can hide descendants."""
+    source = Path(checkout)
+    checkout = source.resolve()
+    label = relative(checkout, root)
+    checked = set() if checked is None else checked
+    if (checkout, wanted) in checked:
+        return
+    if not (checkout / ".git").exists():
+        if allow_uninitialized and not source.is_symlink() and (
+                not source.exists() or (source.is_dir() and not any(source.iterdir()))):
+            return
+        raise CoordinationError(f"{label}: initialize the source repository first; preserve any local files")
+    actual_root = Path(command(["git", "rev-parse", "--show-toplevel"], checkout).strip()).resolve()
+    if actual_root != checkout:
+        raise CoordinationError(f"{label}: source path is not its own repository")
+    if command(["git", "rev-parse", "HEAD"], checkout).strip() != wanted:
+        raise CoordinationError(f"{label}: checkout differs from its recorded source")
+    entries = command(["git", "ls-tree", "-r", "-z", "HEAD"], checkout)
+    for entry in filter(None, entries.split("\0")):
+        identity, path = entry.split("\t", 1)
+        mode, kind, pinned = identity.split()
+        if mode != "160000":
+            continue
+        nested = checkout / path
+        relative(nested, checkout)
+        if nested.resolve() == checkout or kind != "commit":
+            raise CoordinationError(f"{label}/{path}: invalid nested source repository")
+        verify_source_checkout(nested, pinned, root, checked=checked, allow_uninitialized=allow_uninitialized)
+    if command(["git", "status", "--porcelain", "--untracked-files=normal", "--ignore-submodules=none"], checkout):
+        raise CoordinationError(f"{label}: source checkout is not clean")
+    checked.add((checkout, wanted))
+
+
 def source_link_errors(data, rules, root=ROOT, *, check_checkouts=True):
     """Verify every registered cross-repository gitlink, including excluded apps."""
     errors = []
+    checked = set()
     repos = {repo["name"]: repo for repo in data["repositories"]}
     identities = {github_identity(repo["url"]): repo["name"] for repo in repos.values()
                   if repo.get("url") and github_identity(repo["url"])}
@@ -366,15 +402,7 @@ def source_link_errors(data, rules, root=ROOT, *, check_checkouts=True):
                 if not check_checkouts:
                     continue
                 for checkout, wanted in [(consumer, repos[owner]["commit"]), (nested, pinned), (canonical, expected)]:
-                    if not (checkout / ".git").exists():
-                        raise CoordinationError(f"{relative(checkout, root)}: initialize the source repository first")
-                    actual_root = Path(command(["git", "rev-parse", "--show-toplevel"], checkout).strip()).resolve()
-                    if actual_root != checkout:
-                        raise CoordinationError(f"{relative(checkout, root)}: source path is not its own repository")
-                    if command(["git", "rev-parse", "HEAD"], checkout).strip() != wanted:
-                        raise CoordinationError(f"{relative(checkout, root)}: checkout differs from its recorded source")
-                    if command(["git", "status", "--porcelain", "--untracked-files=normal", "--ignore-submodules=none"], checkout):
-                        raise CoordinationError(f"{relative(checkout, root)}: source checkout is not clean")
+                    verify_source_checkout(checkout, wanted, root, checked=checked)
             except (CoordinationError, ValueError) as error:
                 errors.append(f"{label}: {error}")
     return errors
@@ -466,12 +494,15 @@ def stale_generated(data, root=ROOT):
             if not (root / path).exists() or (root / path).read_text() != content]
 
 
-def checkout_errors(data, root=ROOT):
+def checkout_errors(data, root=ROOT, *, allow_uninitialized=False):
     errors = []
+    checked = set()
     for repo in data["repositories"]:
-        source = root / repo["path"]
-        if command(["git", "status", "--porcelain", "--untracked-files=normal", "--ignore-submodules=none"], source):
-            errors.append(f"{repo['name']}: source checkout is not clean; commit consumer updates before recording the snapshot")
+        try:
+            verify_source_checkout(root / repo["path"], repo["commit"], root,
+                                   checked=checked, allow_uninitialized=allow_uninitialized)
+        except (CoordinationError, ValueError) as error:
+            errors.append(str(error))
     return errors
 
 
