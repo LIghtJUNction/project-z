@@ -43,7 +43,7 @@
       "path": "oh-my-ztty",
       "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
       "branch": "main",
-      "commit": "1e3ce8d3e5a141d09e450fd3f635f987a5732be4",
+      "commit": "a16ba860108921b81f5fb4424d648bbd83f11415",
       "role": "suite",
       "manifests": [],
       "requires": [
@@ -108,7 +108,7 @@
       "path": "zcall-gui",
       "url": "https://github.com/LIghtJUNction/zcall-gui.git",
       "branch": "main",
-      "commit": "e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74",
+      "commit": "b1208c695b6c3d17687f055f4ec52651fd7d3984",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -136,7 +136,7 @@
       "path": "zcalld",
       "url": "https://github.com/LIghtJUNction/zcalld.git",
       "branch": "main",
-      "commit": "ab2b3b6726fa7c7c6ee092607f95861d2097e332",
+      "commit": "25fb5c64a34f17bc2378910e2dc12b04f8390329",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -246,7 +246,7 @@
       "path": "zgpui",
       "url": "https://github.com/LIghtJUNction/zgpui.git",
       "branch": "main",
-      "commit": "5b268da910639abd2fb8e581acb4f6eed50b7516",
+      "commit": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -318,7 +318,7 @@
       "path": "zinput",
       "url": "https://github.com/LIghtJUNction/zinput",
       "branch": "main",
-      "commit": "37617313dd7aaabcca9dd567344a76c4cbe03907",
+      "commit": "f5d15e07d7ed233539e1cad87cfc0edb787bf34e",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -342,7 +342,7 @@
       "path": "zmcl",
       "url": "https://github.com/LIghtJUNction/zmcl.git",
       "branch": "main",
-      "commit": "2b1218f70cf89fb042fd725d4ef92dcb4e67dfe9",
+      "commit": "7dc09fff213d659d99f98e61ebb2706654c0160b",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -468,7 +468,7 @@
       "path": "zterm",
       "url": "https://github.com/LIghtJUNction/zterm.git",
       "branch": "main",
-      "commit": "b5adc3dbc5ca5f28a3ea7e45650a45245be9dc2d",
+      "commit": "0c520c3da70b8ce83259aa0d8420589a79d7e03e",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -480,7 +480,7 @@
       "path": "ztty",
       "url": "https://github.com/LIghtJUNction/ztty.git",
       "branch": "main",
-      "commit": "6e2ce246b0b50e6b82da99756832feae6e966f21",
+      "commit": "17238bed6484317e014b57389d4c72464f910b5f",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -504,7 +504,7 @@
       "path": "ztype",
       "url": "https://github.com/LIghtJUNction/ztype",
       "branch": "main",
-      "commit": "9dd67a54ac536b22ab0fe4bd008d6b5cdd95c369",
+      "commit": "45a8c3ee30341fb95582838735aeb9dc9f2e2e60",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -3018,7 +3018,7 @@
         {
           "name": "zgpui",
           "alias": null,
-          "requirement": "=0.1.2",
+          "requirement": "=0.1.5",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3610,7 +3610,7 @@
     },
     {
       "name": "zgpui",
-      "version": "0.1.2",
+      "version": "0.1.5",
       "repository": "zgpui",
       "manifest": "zgpui/Cargo.toml",
       "workspace": "zgpui",
@@ -3623,6 +3623,26 @@
           "native"
         ],
         "native": [
+          "std"
+        ],
+        "std": []
+      },
+      "dependencies": []
+    },
+    {
+      "name": "zgpui-raster",
+      "version": "0.1.0",
+      "repository": "zgpui",
+      "manifest": "zgpui/raster/Cargo.toml",
+      "workspace": "zgpui",
+      "publish": false,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {
+        "default": [
+          "font"
+        ],
+        "font": [
           "std"
         ],
         "std": []
@@ -3816,6 +3836,46 @@
       ]
     },
     {
+      "name": "zinput-wayland",
+      "version": "0.1.0",
+      "repository": "zinput",
+      "manifest": "zinput/native/wayland/Cargo.toml",
+      "workspace": "zinput",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "zsys",
+          "alias": null,
+          "requirement": "^0.1.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "dylib"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zinput-x11",
+      "version": "0.1.0",
+      "repository": "zinput",
+      "manifest": "zinput/native/x11/Cargo.toml",
+      "workspace": "zinput",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": []
+    },
+    {
       "name": "zldap",
       "version": "0.1.3",
       "repository": "zldap",
@@ -3831,7 +3891,7 @@
     },
     {
       "name": "zmcl",
-      "version": "0.1.1",
+      "version": "0.1.3",
       "repository": "zmcl",
       "manifest": "zmcl/Cargo.toml",
       "workspace": "zmcl",
@@ -3864,7 +3924,7 @@
         {
           "name": "zgpui",
           "alias": null,
-          "requirement": "=0.1.2",
+          "requirement": "=0.1.5",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -4480,7 +4540,7 @@
         {
           "name": "zgpui",
           "alias": null,
-          "requirement": "=0.1.2",
+          "requirement": "=0.1.5",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -4612,7 +4672,7 @@
     },
     {
       "name": "ztype",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "repository": "ztype",
       "manifest": "ztype/Cargo.toml",
       "workspace": "ztype",
@@ -4620,10 +4680,15 @@
       "rust_version": "1.100",
       "library": true,
       "features": {
+        "candidate-ui": [
+          "dep:zgpui-raster"
+        ],
         "default": [
           "desktop",
           "gui",
-          "plugins"
+          "plugins",
+          "wayland-popup",
+          "x11"
         ],
         "desktop": [
           "dep:zuse"
@@ -4635,13 +4700,24 @@
         "plugins": [
           "zinput/plugins",
           "dep:zplugin"
+        ],
+        "wayland": [
+          "dep:zinput-wayland"
+        ],
+        "wayland-popup": [
+          "wayland",
+          "candidate-ui"
+        ],
+        "x11": [
+          "dep:zinput-x11",
+          "candidate-ui"
         ]
       },
       "dependencies": [
         {
           "name": "zgpui",
           "alias": null,
-          "requirement": "=0.1.2",
+          "requirement": "=0.1.5",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -4652,6 +4728,19 @@
           ],
           "source": null,
           "path": "ztype/vendor/zgpui"
+        },
+        {
+          "name": "zgpui-raster",
+          "alias": null,
+          "requirement": "=0.1.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": "cfg(target_os = \"linux\")",
+          "optional": true,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "ztype/vendor/zgpui/raster"
         },
         {
           "name": "zinput",
@@ -4665,6 +4754,32 @@
           "features": [],
           "source": "registry+https://github.com/rust-lang/crates.io-index",
           "path": null
+        },
+        {
+          "name": "zinput-wayland",
+          "alias": null,
+          "requirement": "=0.1.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": "cfg(target_os = \"linux\")",
+          "optional": true,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "ztype/vendor/zinput/native/wayland"
+        },
+        {
+          "name": "zinput-x11",
+          "alias": null,
+          "requirement": "=0.1.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": "cfg(target_os = \"linux\")",
+          "optional": true,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "ztype/vendor/zinput/native/x11"
         },
         {
           "name": "zplugin",

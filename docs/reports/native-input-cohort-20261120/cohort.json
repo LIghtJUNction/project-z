@@ -1,0 +1,703 @@
+{
+  "schema_version": 1,
+  "status": "blocked_by_external_source_pin",
+  "accepted": false,
+  "aggregate_main_updated": false,
+  "base_accepted_aggregate": "76dd114c11685d430dd55bb0d78b064a7349af73",
+  "candidate_branch": "coord/ztype-native-services-20261120",
+  "fixed_inputs": {
+    "zinput": "f5d15e07d7ed233539e1cad87cfc0edb787bf34e",
+    "zgpui": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+    "ztype": "45a8c3ee30341fb95582838735aeb9dc9f2e2e60"
+  },
+  "repositories": 43,
+  "packages": 65,
+  "registered_companions": [
+    {
+      "name": "zgpui-raster",
+      "version": "0.1.0",
+      "manifest": "zgpui/raster/Cargo.toml",
+      "publish": false
+    },
+    {
+      "name": "zinput-wayland",
+      "version": "0.1.0",
+      "manifest": "zinput/native/wayland/Cargo.toml",
+      "publish": true
+    },
+    {
+      "name": "zinput-x11",
+      "version": "0.1.0",
+      "manifest": "zinput/native/x11/Cargo.toml",
+      "publish": true
+    }
+  ],
+  "reverse_impact": {
+    "zinput": [
+      "oh-my-ztty",
+      "zinput",
+      "zterm",
+      "ztty",
+      "ztype"
+    ],
+    "zgpui": [
+      "oh-my-ztty",
+      "zcall-gui",
+      "zcall-omarchy",
+      "zcalld",
+      "zcalld-compat",
+      "zgpui",
+      "zmcl",
+      "zterm",
+      "ztty",
+      "ztype"
+    ]
+  },
+  "consumer_commits": [
+    {
+      "repository": "zterm",
+      "base": "b5adc3dbc5ca5f28a3ea7e45650a45245be9dc2d",
+      "commit": "0c520c3da70b8ce83259aa0d8420589a79d7e03e",
+      "url": "https://github.com/LIghtJUNction/zterm/commit/0c520c3da70b8ce83259aa0d8420589a79d7e03e",
+      "changed_paths": [
+        "Cargo.lock"
+      ],
+      "branch": "coord/ztype-native-services-20261120",
+      "github_readback_verified": true
+    },
+    {
+      "repository": "zcall-gui",
+      "base": "e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74",
+      "commit": "b1208c695b6c3d17687f055f4ec52651fd7d3984",
+      "url": "https://github.com/LIghtJUNction/zcall-gui/commit/b1208c695b6c3d17687f055f4ec52651fd7d3984",
+      "changed_paths": [
+        "Cargo.lock",
+        "Cargo.toml",
+        "vendor/zgpui"
+      ],
+      "branch": "coord/ztype-native-services-20261120",
+      "github_readback_verified": true
+    },
+    {
+      "repository": "ztty",
+      "base": "6e2ce246b0b50e6b82da99756832feae6e966f21",
+      "commit": "17238bed6484317e014b57389d4c72464f910b5f",
+      "url": "https://github.com/LIghtJUNction/ztty/commit/17238bed6484317e014b57389d4c72464f910b5f",
+      "changed_paths": [
+        "Cargo.lock",
+        "Cargo.toml",
+        "crates/zgpui",
+        "crates/zinput",
+        "crates/zterm"
+      ],
+      "branch": "coord/ztype-native-services-20261120",
+      "github_readback_verified": true
+    },
+    {
+      "repository": "zcalld",
+      "base": "ab2b3b6726fa7c7c6ee092607f95861d2097e332",
+      "commit": "25fb5c64a34f17bc2378910e2dc12b04f8390329",
+      "url": "https://github.com/LIghtJUNction/zcalld/commit/25fb5c64a34f17bc2378910e2dc12b04f8390329",
+      "changed_paths": [
+        "apps/zcall-gui"
+      ],
+      "branch": "coord/ztype-native-services-20261120",
+      "github_readback_verified": true
+    },
+    {
+      "repository": "oh-my-ztty",
+      "base": "1e3ce8d3e5a141d09e450fd3f635f987a5732be4",
+      "commit": "a16ba860108921b81f5fb4424d648bbd83f11415",
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/commit/a16ba860108921b81f5fb4424d648bbd83f11415",
+      "changed_paths": [
+        "components/ztty"
+      ],
+      "branch": "coord/ztype-native-services-20261120",
+      "github_readback_verified": true
+    }
+  ],
+  "direct_consumer_checks": [
+    {
+      "repository": "zterm",
+      "command": [
+        "cargo",
+        "check",
+        "--all-targets",
+        "--locked"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 29.979,
+      "log": "zterm-check.log"
+    },
+    {
+      "repository": "zcall-gui",
+      "command": [
+        "cargo",
+        "check",
+        "--all-targets",
+        "--locked"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.802,
+      "log": "zcall-gui-check.log"
+    },
+    {
+      "repository": "ztty",
+      "command": [
+        "cargo",
+        "check",
+        "--all-targets",
+        "--locked"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 529.744,
+      "log": "ztty-check.log"
+    }
+  ],
+  "aggregate_gates": [
+    {
+      "label": "sync-final",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "sync"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.63,
+      "log": "sync-final.log"
+    },
+    {
+      "label": "check-final",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "check"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 1.033,
+      "log": "check-final.log"
+    },
+    {
+      "label": "resolve-all-blocked",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "resolve",
+        "--all"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 0.94,
+      "log": "resolve-all-blocked.log"
+    },
+    {
+      "label": "resolve-available",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "resolve",
+        "OniMods",
+        "lmm-api-source",
+        "mechrevo-drivers",
+        "ssmcp",
+        "z58",
+        "z64",
+        "zcall",
+        "zcall-gui",
+        "zcalld",
+        "zclap",
+        "zclick",
+        "zconv",
+        "zdot",
+        "zdwire",
+        "zfetch",
+        "zgpui",
+        "zgraphics",
+        "zguard",
+        "zharness",
+        "zhex",
+        "zi18n",
+        "zinput",
+        "zldap",
+        "zmcpio",
+        "zmime",
+        "zplugin",
+        "zpty",
+        "zrc",
+        "zscan",
+        "zsyn",
+        "zsys",
+        "zterm",
+        "ztty",
+        "ztuio",
+        "ztype",
+        "zuse",
+        "zvte"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 1.342,
+      "log": "resolve-available.log"
+    }
+  ],
+  "resolved_repository_count_verified": 0,
+  "resolution_note": "The coordinator validates all snapshot sources before a scoped resolve; selecting the other 37 repositories still returned the same zmcl source error.",
+  "source_equivalence": [
+    {
+      "path": "ztype/vendor/zgpui",
+      "canonical": "zgpui",
+      "head": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "expected": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "parent_recorded": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "clean": true,
+      "equivalent": true
+    },
+    {
+      "path": "ztype/vendor/zinput",
+      "canonical": "zinput",
+      "head": "f5d15e07d7ed233539e1cad87cfc0edb787bf34e",
+      "expected": "f5d15e07d7ed233539e1cad87cfc0edb787bf34e",
+      "parent_recorded": "f5d15e07d7ed233539e1cad87cfc0edb787bf34e",
+      "clean": true,
+      "equivalent": true
+    },
+    {
+      "path": "zcall-gui/vendor/zgpui",
+      "canonical": "zgpui",
+      "head": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "expected": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "parent_recorded": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "clean": true,
+      "equivalent": true
+    },
+    {
+      "path": "zcalld/apps/zcall-gui",
+      "canonical": "zcall-gui",
+      "head": "b1208c695b6c3d17687f055f4ec52651fd7d3984",
+      "expected": "b1208c695b6c3d17687f055f4ec52651fd7d3984",
+      "parent_recorded": "b1208c695b6c3d17687f055f4ec52651fd7d3984",
+      "clean": true,
+      "equivalent": true
+    },
+    {
+      "path": "zcalld/apps/zcall-gui/vendor/zgpui",
+      "canonical": "zgpui",
+      "head": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "expected": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "parent_recorded": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "clean": true,
+      "equivalent": true
+    },
+    {
+      "path": "ztty/crates/zgpui",
+      "canonical": "zgpui",
+      "head": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "expected": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "parent_recorded": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "clean": true,
+      "equivalent": true
+    },
+    {
+      "path": "ztty/crates/zinput",
+      "canonical": "zinput",
+      "head": "f5d15e07d7ed233539e1cad87cfc0edb787bf34e",
+      "expected": "f5d15e07d7ed233539e1cad87cfc0edb787bf34e",
+      "parent_recorded": "f5d15e07d7ed233539e1cad87cfc0edb787bf34e",
+      "clean": true,
+      "equivalent": true
+    },
+    {
+      "path": "ztty/crates/zterm",
+      "canonical": "zterm",
+      "head": "0c520c3da70b8ce83259aa0d8420589a79d7e03e",
+      "expected": "0c520c3da70b8ce83259aa0d8420589a79d7e03e",
+      "parent_recorded": "0c520c3da70b8ce83259aa0d8420589a79d7e03e",
+      "clean": true,
+      "equivalent": true
+    },
+    {
+      "path": "oh-my-ztty/components/ztty",
+      "canonical": "ztty",
+      "head": "17238bed6484317e014b57389d4c72464f910b5f",
+      "expected": "17238bed6484317e014b57389d4c72464f910b5f",
+      "parent_recorded": "17238bed6484317e014b57389d4c72464f910b5f",
+      "clean": true,
+      "equivalent": true
+    },
+    {
+      "path": "oh-my-ztty/components/ztty/crates/zgpui",
+      "canonical": "zgpui",
+      "head": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "expected": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "parent_recorded": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "clean": true,
+      "equivalent": true
+    },
+    {
+      "path": "oh-my-ztty/components/ztty/crates/zinput",
+      "canonical": "zinput",
+      "head": "f5d15e07d7ed233539e1cad87cfc0edb787bf34e",
+      "expected": "f5d15e07d7ed233539e1cad87cfc0edb787bf34e",
+      "parent_recorded": "f5d15e07d7ed233539e1cad87cfc0edb787bf34e",
+      "clean": true,
+      "equivalent": true
+    },
+    {
+      "path": "oh-my-ztty/components/ztty/crates/zterm",
+      "canonical": "zterm",
+      "head": "0c520c3da70b8ce83259aa0d8420589a79d7e03e",
+      "expected": "0c520c3da70b8ce83259aa0d8420589a79d7e03e",
+      "parent_recorded": "0c520c3da70b8ce83259aa0d8420589a79d7e03e",
+      "clean": true,
+      "equivalent": true
+    },
+    {
+      "path": "zmcl/vendor/zgpui",
+      "canonical": "zgpui",
+      "head": "4aba3ba83815253fb7e4013baa8bcf894439d32d",
+      "expected": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "parent_recorded": "4aba3ba83815253fb7e4013baa8bcf894439d32d",
+      "clean": true,
+      "equivalent": false
+    }
+  ],
+  "top_level_source_status": [
+    {
+      "repository": "OniMods",
+      "head": "14dba75a5752c3142039a8660ce37cdf57d7082a",
+      "clean": true
+    },
+    {
+      "repository": "lmm-api-source",
+      "head": "4571b477d490b86d477f44f1c6768cc5f3b409d1",
+      "clean": true
+    },
+    {
+      "repository": "mechrevo-drivers",
+      "head": "4599a3825dac3c85efeeb490cb4eebe1c1b6dff0",
+      "clean": true
+    },
+    {
+      "repository": "oh-my-ztty",
+      "head": "a16ba860108921b81f5fb4424d648bbd83f11415",
+      "clean": true
+    },
+    {
+      "repository": "ssmcp",
+      "head": "bfe5f25ffab718f100b11d2ce55c8dc839cbad71",
+      "clean": true
+    },
+    {
+      "repository": "z58",
+      "head": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+      "clean": true
+    },
+    {
+      "repository": "z64",
+      "head": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+      "clean": true
+    },
+    {
+      "repository": "zcall",
+      "head": "8fb84b812b8025e34399b28e27242605d68ea345",
+      "clean": true
+    },
+    {
+      "repository": "zcall-gui",
+      "head": "b1208c695b6c3d17687f055f4ec52651fd7d3984",
+      "clean": true
+    },
+    {
+      "repository": "zcall-omarchy",
+      "head": "78282c3c3cfa6e9e65e2cbd654f38a96398c6e03",
+      "clean": true
+    },
+    {
+      "repository": "zcalld",
+      "head": "25fb5c64a34f17bc2378910e2dc12b04f8390329",
+      "clean": true
+    },
+    {
+      "repository": "zcalld-compat",
+      "head": "7c782e9a6f431c7112112c04940c015adf2d76df",
+      "clean": true
+    },
+    {
+      "repository": "zclap",
+      "head": "4d87f3ae3743e81509d5ac5500909955667c860f",
+      "clean": true
+    },
+    {
+      "repository": "zclick",
+      "head": "21ac28b045447dec96a2de85d7aa6db0580081ab",
+      "clean": true
+    },
+    {
+      "repository": "zconv",
+      "head": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+      "clean": true
+    },
+    {
+      "repository": "zdistro",
+      "head": "6a54a137fc697d372b54ef85105315f2ce522b3d",
+      "clean": true
+    },
+    {
+      "repository": "zdot",
+      "head": "e6b5feb98b05c59e0986624c0742dfe4a9187a2a",
+      "clean": true
+    },
+    {
+      "repository": "zdwire",
+      "head": "c046e3182b0adf15d43500400a427b7dd7389525",
+      "clean": true
+    },
+    {
+      "repository": "zfetch",
+      "head": "5006d7a9e2a2d3f292f677df94395e27a794b9c7",
+      "clean": true
+    },
+    {
+      "repository": "zgpui",
+      "head": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "clean": true
+    },
+    {
+      "repository": "zgraphics",
+      "head": "fe6357f98cf80fb6cc74739e45e8866ee17706ad",
+      "clean": true
+    },
+    {
+      "repository": "zguard",
+      "head": "5cdd637edbb075f6611f88f8566e15de4b360cca",
+      "clean": true
+    },
+    {
+      "repository": "zharness",
+      "head": "e3580c01c7252da090d04e59b59762bc561777d1",
+      "clean": true
+    },
+    {
+      "repository": "zhex",
+      "head": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+      "clean": true
+    },
+    {
+      "repository": "zi18n",
+      "head": "b90984b48465a764bcb699ad2bb3251fa7020024",
+      "clean": true
+    },
+    {
+      "repository": "zinput",
+      "head": "f5d15e07d7ed233539e1cad87cfc0edb787bf34e",
+      "clean": true
+    },
+    {
+      "repository": "zldap",
+      "head": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+      "clean": true
+    },
+    {
+      "repository": "zmcl",
+      "head": "7dc09fff213d659d99f98e61ebb2706654c0160b",
+      "clean": true
+    },
+    {
+      "repository": "zmcpio",
+      "head": "bc89d7fa3b0249b3a9037748e2113b31615e8c89",
+      "clean": true
+    },
+    {
+      "repository": "zmime",
+      "head": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+      "clean": true
+    },
+    {
+      "repository": "zplugin",
+      "head": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+      "clean": true
+    },
+    {
+      "repository": "zpty",
+      "head": "d263f9a8f0881d259e46c51a7b6753c61ab9be59",
+      "clean": true
+    },
+    {
+      "repository": "zrc",
+      "head": "6311bf3377643fff0cff5a45a70b2256e22cc51f",
+      "clean": true
+    },
+    {
+      "repository": "zscan",
+      "head": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+      "clean": true
+    },
+    {
+      "repository": "zshard",
+      "head": "1cfa1a1eb761d14e2ccfd5381282b6ccd1491cff",
+      "clean": true
+    },
+    {
+      "repository": "zsyn",
+      "head": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+      "clean": true
+    },
+    {
+      "repository": "zsys",
+      "head": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+      "clean": true
+    },
+    {
+      "repository": "zterm",
+      "head": "0c520c3da70b8ce83259aa0d8420589a79d7e03e",
+      "clean": true
+    },
+    {
+      "repository": "ztty",
+      "head": "17238bed6484317e014b57389d4c72464f910b5f",
+      "clean": true
+    },
+    {
+      "repository": "ztuio",
+      "head": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+      "clean": true
+    },
+    {
+      "repository": "ztype",
+      "head": "45a8c3ee30341fb95582838735aeb9dc9f2e2e60",
+      "clean": true
+    },
+    {
+      "repository": "zuse",
+      "head": "94c837551a7a2fd8ec9f577a3e2f57309bd5ce5a",
+      "clean": true
+    },
+    {
+      "repository": "zvte",
+      "head": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+      "clean": true
+    }
+  ],
+  "core_boundaries": {
+    "zinput": {
+      "repository": "zinput",
+      "baseline": "37617313dd7aaabcca9dd567344a76c4cbe03907",
+      "candidate": "f5d15e07d7ed233539e1cad87cfc0edb787bf34e",
+      "same_root_src": true,
+      "same_root_package": true,
+      "same_root_features": true,
+      "same_root_dependencies": true,
+      "changed_paths": [
+        "Cargo.lock",
+        "Cargo.toml",
+        "README.md",
+        "native/wayland/Cargo.toml",
+        "native/wayland/LICENSE",
+        "native/wayland/README.md",
+        "native/wayland/examples/probe.rs",
+        "native/wayland/src/lib.rs",
+        "native/wayland/src/loader.rs",
+        "native/wayland/src/popup.rs",
+        "native/wayland/src/protocol.rs",
+        "native/wayland/src/xkb.rs",
+        "native/x11/Cargo.toml",
+        "native/x11/LICENSE",
+        "native/x11/README.md",
+        "native/x11/build.rs",
+        "native/x11/examples/protocol_probe.rs",
+        "native/x11/native/x11.c",
+        "native/x11/native/x11.h",
+        "native/x11/src/lib.rs",
+        "native/x11/tests/check_xim.py",
+        "native/x11/tests/client.c",
+        "native/x11/tests/popup_failure.c"
+      ]
+    },
+    "zgpui": {
+      "repository": "zgpui",
+      "baseline": "4aba3ba83815253fb7e4013baa8bcf894439d32d",
+      "candidate": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+      "same_root_src": true,
+      "same_root_package": true,
+      "same_root_features": true,
+      "same_root_dependencies": true,
+      "changed_paths": [
+        "Cargo.lock",
+        "Cargo.toml",
+        "README.md",
+        "native/font_linux.h",
+        "native/linux.c",
+        "raster/Cargo.toml",
+        "raster/README.md",
+        "raster/build.rs",
+        "raster/examples/headless.rs",
+        "raster/native.c",
+        "raster/src/font.rs",
+        "raster/src/lib.rs",
+        "raster/src/tests.rs",
+        "scripts/test_fonts.py"
+      ]
+    }
+  },
+  "coordinator_implementation_unchanged": true,
+  "temporary_cargo_config_absent": true,
+  "suite_source_and_asset_lock": {
+    "components": [
+      {
+        "component": "ztty",
+        "initialized": true,
+        "head": "17238bed6484317e014b57389d4c72464f910b5f",
+        "recorded": "17238bed6484317e014b57389d4c72464f910b5f",
+        "dirty": false
+      },
+      {
+        "component": "ssmcp",
+        "initialized": true,
+        "head": "4f4dd88275c205e0e61a7601b4e0d11f56038769",
+        "recorded": "4f4dd88275c205e0e61a7601b4e0d11f56038769",
+        "dirty": false
+      },
+      {
+        "component": "zshard",
+        "initialized": true,
+        "head": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+        "recorded": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+        "dirty": false
+      },
+      {
+        "component": "zdot",
+        "initialized": true,
+        "head": "e6b5feb98b05c59e0986624c0742dfe4a9187a2a",
+        "recorded": "e6b5feb98b05c59e0986624c0742dfe4a9187a2a",
+        "dirty": false
+      },
+      {
+        "component": "zrc",
+        "initialized": true,
+        "head": "e6e6a7d4a07bc74ae95b5ec1f0391ad4e5155d86",
+        "recorded": "e6e6a7d4a07bc74ae95b5ec1f0391ad4e5155d86",
+        "dirty": false
+      },
+      {
+        "component": "zfetch",
+        "initialized": true,
+        "head": "154c9b826a794e22135eda2d77a03b7214f8e427",
+        "recorded": "154c9b826a794e22135eda2d77a03b7214f8e427",
+        "dirty": false
+      }
+    ],
+    "published_binary_lock_unchanged": "e9e94a68633795fc247d60a6dfce4323da71b0e6e1ab6401e169036a9e090ded",
+    "published_binary_tag": "v0.5.2",
+    "new_release_created": false
+  },
+  "owner_handoff": {
+    "repository": "zmcl",
+    "owner": "existing main writer",
+    "base": "7dc09fff213d659d99f98e61ebb2706654c0160b",
+    "current_vendor": "4aba3ba83815253fb7e4013baa8bcf894439d32d",
+    "requested_vendor": "b09f3ded0928df5a35bad32dcd5539560b8617e6",
+    "patch": "zmcl-vendor-raster-owner.patch",
+    "patch_apply_check_passed": true,
+    "lockfile_change_required": false,
+    "new_owner_commit_or_ref_created": false
+  },
+  "acceptance_scope": "Dependency/source preparation. Native input and installation acceptance is owned by the corresponding product evidence."
+}

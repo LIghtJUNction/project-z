@@ -9,6 +9,8 @@ role = "application"
 
 [repositories.ztty]
 role = "application"
+# Registry patches must also match the source archived with this consumer.
+source_links = { "crates/zgpui" = "zgpui", "crates/zinput" = "zinput", "crates/zterm" = "zterm" }
 
 [repositories.zcalld]
 role = "application"
@@ -36,6 +38,8 @@ role = "shell"
 [repositories.oh-my-ztty]
 role = "suite"
 requires = ["ztty", "ssmcp", "zshard", "zdot", "zrc", "zfetch"]
+# Keep the affected terminal source copy identical to the canonical pin.
+source_links = { "components/ztty" = "ztty" }
 
 [repositories.zcall-gui]
 role = "application"
