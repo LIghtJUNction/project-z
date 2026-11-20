@@ -1,0 +1,271 @@
+{
+  "schema": "project-z-zuse-356-portable-independent-review-v1",
+  "reviewed_at_utc": "2026-11-20T23:51:35.259709+00:00",
+  "scope": "Independent read-only review of existing original text archive and receipts; no product command/build/test/GUI executed.",
+  "result": "no_material_inconsistency_found",
+  "issues": [],
+  "source": {
+    "head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "before_after_clean_identical": true,
+    "cargo_lock": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/Cargo.lock",
+      "bytes": 1138,
+      "sha256": "cffb29f3aa454c065523c6fc62ebf33721694df88af94e0aff2feea5d17855e0"
+    },
+    "driver_sha256": "8712f55de634c6cf47d13ac5b88984c4536317ad01fa064db3c8d4679eaaa231"
+  },
+  "archive": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-portable-text-evidence.zip",
+    "bytes": 101079,
+    "sha256": "e26e2957ef444bc4407095d197c55c69ee8df28350260510f839050e6afff299",
+    "provided_drive_readback_byte_identical": true,
+    "member_count": 40,
+    "payload_count_excluding_manifest": 39,
+    "all_payload_hashes_and_sizes_match": true,
+    "manifest_sha256": "80bb82f9d1de95bbbb6b41efcd295c3959fd18d39d29e74caae22821bbc18f7e",
+    "crc_valid": true,
+    "binary_bytes_included": false,
+    "drive_id": "1I_8ldn-U5A1yb-22o4nEYYldTotgfdf8",
+    "new_drive_download_by_reviewer": false
+  },
+  "counts": {
+    "default": {
+      "summary_count": 22,
+      "totals": {
+        "passed": 289,
+        "failed": 0,
+        "ignored": 5,
+        "measured": 0,
+        "filtered_out": 0
+      },
+      "individual_ok_line_count": 289,
+      "ignored_entries": [
+        "test script::interrupt::platform::tests::signal_fixture ... ignored, process-global signals; invoked only by the subprocess test",
+        "test native_atspi_observe_edit_action_and_redaction ... ignored, run through python3 tests/run_accessibility_native.py for an isolated fixture",
+        "test native_chromium_isolated_profile ... ignored, requires a local sandboxed Chromium; run explicitly with --ignored",
+        "test native_selection_preserves_document_and_input ... ignored, requires a local sandboxed Chromium; run explicitly with --ignored",
+        "test input ... ignored, run python3 tests/native_x11_utf8.py"
+      ],
+      "known_private_x11_early_return_entries": [
+        "test platform::pointer_x11::tests::private_x11_pointer_lifetime_events_and_cursor_isolation ... ok",
+        "test platform::pointer_x11::tests::private_x11_script_parallel_scopes_errors_and_cancellation ... ok"
+      ],
+      "doc_phase_observed": true,
+      "doc_passed": 0
+    },
+    "no_std": {
+      "summary_count": 21,
+      "totals": {
+        "passed": 20,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered_out": 0
+      },
+      "individual_ok_line_count": 20,
+      "ignored_entries": [],
+      "known_private_x11_early_return_entries": [],
+      "doc_phase_observed": true,
+      "doc_passed": 0
+    },
+    "no_std_target_counts": {
+      "core": 17,
+      "functional_motion": 3
+    },
+    "prior_focused_overlap": {
+      "scheduler": 10,
+      "script_entrypoints": 6,
+      "added_to_default_total": false
+    },
+    "no_std_added_as_distinct_tests": false,
+    "known_private_x11_native_acceptance": false,
+    "private_native_not_covered_by_this_receipt": [
+      "Authenticated private Xvfb MPX two real tests",
+      "Private X11 scoped mice CLI fixture",
+      "Private D-Bus/Xvfb AT-SPI fixture",
+      "Private Cage/Hyprland state tests",
+      "Private PTY serial fixture",
+      "Synthetic libusb fixture"
+    ]
+  },
+  "clippy": {
+    "command_exit": 0,
+    "actual_recorded_cargo_invocation": {
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "argv": [
+        "/home/lightjunction/.cargo/bin/cargo",
+        "clippy",
+        "--offline",
+        "--locked",
+        "--all-targets",
+        "--message-format=json-render-diagnostics",
+        "-vv",
+        "--",
+        "-D",
+        "warnings",
+        "-Cmetadata=zuse_full_3566474"
+      ]
+    },
+    "root_clippy_driver_running_lines": 25,
+    "root_compiler_artifacts_fresh_false": 25,
+    "distinct_source_paths": 23,
+    "literal_child_line_metadata_flags": 0,
+    "literal_child_line_deny_warnings_flags": 0,
+    "interpretation": "25 actual root invocation/artifact instances, including profile variants, not 25 distinct files. Strict flags are evidenced by actual Cargo invocation; not claimed to appear literally in every -vv child line. The two false literal probes are not failed lint gates."
+  },
+  "commands": [
+    {
+      "name": "rustc-version",
+      "exit": 0,
+      "seconds": 0.368
+    },
+    {
+      "name": "cargo-version",
+      "exit": 0,
+      "seconds": 0.114
+    },
+    {
+      "name": "default-tests",
+      "exit": 0,
+      "seconds": 24.915
+    },
+    {
+      "name": "no-std-tests",
+      "exit": 0,
+      "seconds": 3.822
+    },
+    {
+      "name": "native-no-std-check",
+      "exit": 0,
+      "seconds": 0.265
+    },
+    {
+      "name": "wasm-no-std-check",
+      "exit": 0,
+      "seconds": 0.365
+    },
+    {
+      "name": "check-x86_64-pc-windows-gnu",
+      "exit": 0,
+      "seconds": 4.624
+    },
+    {
+      "name": "check-x86_64-apple-darwin",
+      "exit": 0,
+      "seconds": 4.526
+    },
+    {
+      "name": "check-aarch64-apple-darwin",
+      "exit": 0,
+      "seconds": 4.977
+    },
+    {
+      "name": "install-aarch64-unknown-linux-gnu",
+      "exit": 0,
+      "seconds": 4.673
+    },
+    {
+      "name": "check-aarch64-unknown-linux-gnu",
+      "exit": 0,
+      "seconds": 6.479
+    },
+    {
+      "name": "all-targets-clippy",
+      "exit": 0,
+      "seconds": 5.427
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "cli",
+      "bytes": 17454624,
+      "sha256": "7a6a6d995b3a1b77e2cd5d4ea585e72e5c170e338e333d85684ec2dbca9b864b",
+      "source_file": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/src/main.rs",
+      "profile_test": false,
+      "fresh": false,
+      "features": [
+        "default",
+        "std"
+      ],
+      "actual_compiler_record_matches": true,
+      "shared_and_owned_hash_equal": true,
+      "owned_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/cli-7a6a6d995b3a1b77",
+      "postflight_matches": true,
+      "mode": "0500"
+    },
+    {
+      "name": "accessibility_test",
+      "bytes": 19457200,
+      "sha256": "d6e9f46a49db84ce90acd6b16b60fe6785ed73b3fc91c15755d385511b67d58c",
+      "source_file": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/tests/accessibility_native.rs",
+      "profile_test": true,
+      "fresh": false,
+      "features": [
+        "default",
+        "std"
+      ],
+      "actual_compiler_record_matches": true,
+      "shared_and_owned_hash_equal": true,
+      "owned_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/accessibility_test-d6e9f46a49db84ce",
+      "postflight_matches": true,
+      "mode": "0500"
+    },
+    {
+      "name": "lib_test",
+      "bytes": 21480832,
+      "sha256": "e36daa4146c197cdbf7822d06220561543dd8d168c4f8810e5966c202568e4fb",
+      "source_file": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/src/lib.rs",
+      "profile_test": true,
+      "fresh": false,
+      "features": [
+        "default",
+        "std"
+      ],
+      "actual_compiler_record_matches": true,
+      "shared_and_owned_hash_equal": true,
+      "owned_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/lib_test-e36daa4146c197cd",
+      "postflight_matches": true,
+      "mode": "0500"
+    }
+  ],
+  "cleanup": {
+    "job": "26c4545eae1eab8d27485f4a48077d3c-6dc",
+    "job_exit": 0,
+    "duration_ms": 61129,
+    "streams_eof": true,
+    "scope": "zuse-356-portable-20261120.scope",
+    "observed_at": "2026-11-20T23:40:47.600187+00:00",
+    "scope_inactive_dead": true,
+    "control_group_empty": true,
+    "scope_result": "success",
+    "lock_device": 34,
+    "lock_inode": 63537699,
+    "acquired_flock_pid": 2585341,
+    "original_flock_and_supervisor_gone": true,
+    "no_holder_or_waiter_at_recorded_postflight": true,
+    "new_current_lock_probe": false,
+    "resource_limits_not_peak": true
+  },
+  "limitations": [
+    "289 is the default harness passed-entry total; two named private_x11 tests returned through the guarded portable path. They are not MPX/native proof.",
+    "Five ignored entries remain ignored. Both doc-test phases ran with zero doc tests; no additional doc-test count is invented.",
+    "No_std 20 is the second feature configuration (17 core + 3 functional_motion); the prior focused 16 overlap default and are not added.",
+    "Windows GNU, macOS x86/ARM and Linux ARM results are compile checks only. Linux ARM target installation and subsequent check each recorded exit 0.",
+    "Owned ELF hashes are bound by actual compiler records, copy fingerprints and native postflight readback; this text-only independent review did not rehash binary bytes.",
+    "Resource settings are 2 GiB RAM/2 GiB swap/CPU100%/jobs1 limits, not observed peaks; the transient scope has already been reaped.",
+    "The supplied ZIP and supplied Drive-download ZIP were compared byte-for-byte; no new upload/download or product gate was performed by this reviewer.",
+    "The historical PR2 286/no_std20/17d0 claims are not used as proof for this candidate. Private native phases, downstream changes, merge and release remain outside this evidence."
+  ],
+  "evidence": {
+    "handoff_json": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-portable-handoff.json",
+    "raw_result": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-evidence/portable/result.json",
+    "default_log_member": "portable/default-tests.log",
+    "no_std_log_member": "portable/no-std-tests.log",
+    "clippy_log_member": "portable/all-targets-clippy.log",
+    "actual_cargo_calls_member": "portable/cargo-invocations.jsonl",
+    "source_compiler_artifact_member": "portable/default-tests-compiler-artifacts.json",
+    "postflight_member": "portable-postflight.json",
+    "interpretation_member": "portable-identity-interpretation-v2.json"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "observed_at": "2026-11-20T23:31:50.624Z",
+  "tag_ref": "refs/tags/v0.10.21",
+  "tag_object": {
+    "sha": "30cd49492f2dcf6a1fbd15c216c9865084b863c2",
+    "type": "tag",
+    "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/tags/30cd49492f2dcf6a1fbd15c216c9865084b863c2"
+  },
+  "tagger": {
+    "name": "github-actions[bot]",
+    "email": "41898282+github-actions[bot]@users.noreply.github.com",
+    "date": "2026-11-20T22:53:21Z"
+  },
+  "tag_target": {
+    "sha": "147dae309cf37af578c0ac1d3aff2cb6008b0f48",
+    "type": "commit",
+    "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/commits/147dae309cf37af578c0ac1d3aff2cb6008b0f48"
+  },
+  "tag_message": "ssmcp v0.10.21\n",
+  "tag_commit": {
+    "sha": "147dae309cf37af578c0ac1d3aff2cb6008b0f48",
+    "tree": "cbd78dcb3cabfd0404270dcbff1026c594bc1cba",
+    "parents": [
+      "0960da84b807a5dad9c2735aa065a65cc92dec34"
+    ],
+    "message": "chore: refresh observed zcall head and narrow paste evidence [skip ci]\n\nFreeze the latest default-branch zcall source observed at 2026-11-20 22:37:49 UTC. Upstream changes only its release scripts; preserve all other locked packages. Match the real error prefix at both terminal widths while retaining the full byte/cursor/recipient recovery assertions."
+  },
+  "latest_release": {
+    "tag": "v0.10.20",
+    "published_at": "2026-11-20T09:43:48Z",
+    "url": "https://github.com/LIghtJUNction/ssmcp/releases/tag/v0.10.20"
+  },
+  "current_main": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+  "candidate": {
+    "pr": 159,
+    "head": "781b87df1d364137b6885f17f631a3e9e991bd58",
+    "base": "cf0ab581700918a37fcccbebb93de2e0cab02841",
+    "draft": true,
+    "merged": false
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "schema": "project-z-third-baseline-root-observation-v1",
+  "observed_via_job": "26c4545eae1eab8d27485f4a48077d3c-68e",
+  "read_exit_code": 0,
+  "source_revision": "781b87df1d364137b6885f17f631a3e9e991bd58",
+  "receipts": [
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-queue-run/execution-receipt.json",
+      "bytes": 23389,
+      "sha256": "1e3428e06d9e4c178a13303aff02a59b912731c563283ea3aa84a55cd105bb17",
+      "keys": [
+        "build_receipt_scope",
+        "cargo_executed",
+        "cohort",
+        "finished_at",
+        "first_error",
+        "inputs_after",
+        "inputs_before",
+        "inputs_unchanged",
+        "phase",
+        "quiet_lock",
+        "release_gate_executed",
+        "schema",
+        "scope",
+        "scratch",
+        "source_revision",
+        "source_tree",
+        "started_at",
+        "status",
+        "steps"
+      ],
+      "status": "failed",
+      "first_error": "RuntimeError: six-cases exited 1; retain /home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-queue-run/logs/six-cases.stdout and /home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-queue-run/logs/six-cases.stderr",
+      "error": null,
+      "quiet_lock": {
+        "acquired_at": 1795216827.157791,
+        "device": 34,
+        "held_for_entire_execution": true,
+        "inode": 63537699,
+        "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "released_at": 1795216853.8989468,
+        "wait_seconds": 140.01931640398107,
+        "waiting_since": 1795216687.1384823
+      },
+      "samples_count": 0,
+      "frames_count": 0
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-queue-run/six-cases/report.json",
+      "bytes": 18666,
+      "sha256": "ec4cdf40b88f80d2179922c20e5e20601f8a2c330087159c18eb965a02981adb",
+      "keys": [
+        "status",
+        "error",
+        "label",
+        "source_revision",
+        "source_revision_provenance",
+        "build_receipt_sha256",
+        "build_receipt_sha256_before",
+        "build_receipt_sha256_after",
+        "elapsed_seconds",
+        "binaries_sha256_before",
+        "binaries_sha256_after",
+        "source_before",
+        "source_after",
+        "inputs_unchanged",
+        "checks",
+        "passed_checks",
+        "samples",
+        "frames",
+        "timing_contract"
+      ],
+      "status": "failed",
+      "first_error": null,
+      "error": "AssertionError: timed out waiting for real native command output arrives before the busy sample\nclient pid=9 returncode=None stdout_bytes=0 pty_bytes=55075\nOwned terminal snapshot:\n  ssmcp  /  workspace                                                                                     conversation\n  • Running python3 -c <script>\n    └ bbbbbb\n        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\n      +2371 lines · Show details · Enter · partial\n  Edit · To Next caller───────────────────────Local relayfixture · Max 1 GB · Reset 12-01 · 电脑控制：关闭（状态异常）\n❯ Message the agent\n Input cleared · queued requests kept · Ctrl+C for exit reminder                     connected · http://127.0.0.1:34559\nOwned terminal tail:\n2026l      +1764 lines · Show details · Enter                                                                                      +1824 lines · Show details · Enter                                                                                      +1881 lines · Show details · Enter                                                                                      +1941 lines · Show details · Enter                                                                                      +2001 lines · Show details · Enter                                                                                      +2061 lines · Show details · Enter                                                                                      +2121 lines · Show details · Enter                                                                                      +2181 lines · Show details · Enter                                                                                      +2241 lines · Show details · Enter                                                                                      +2301 lines · Show details · Enter                                                                                      +2361 lines · Show details · Enter                                                                                      +2371 lines · Show details · Enter · partial                                                                            +2370 lines · Show details · Enter · partial                                                                            +2371 lines · Show details · Enter · partial                                                                      ",
+      "quiet_lock": null,
+      "samples_count": 5,
+      "frames_count": 5,
+      "sample_summaries": [
+        {
+          "name": "multiline-2738",
+          "status": "passed",
+          "visible_ms": 2.035849,
+          "ready_ms": 36.566738
+        },
+        {
+          "name": "multiline-64k",
+          "status": "passed",
+          "visible_ms": 15.036622,
+          "ready_ms": 15.036622
+        },
+        {
+          "name": "multiline-4m-exact",
+          "status": "passed",
+          "visible_ms": 369.861679,
+          "ready_ms": 404.560857
+        },
+        {
+          "name": "multiline-4m-plus-one",
+          "status": "passed",
+          "visible_ms": 429.132984,
+          "ready_ms": 429.132984
+        },
+        {
+          "name": "ordinary-16k",
+          "status": "passed",
+          "visible_ms": 650.56025,
+          "ready_ms": 2580.253876
+        }
+      ]
+    }
+  ],
+  "raw_logs": [
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-queue-run/logs/six-cases.stdout",
+      "bytes": 4695,
+      "sha256": "363d7c7cff4b7ef09cefde0dd4b87a57926733a2b84a0c58ecd29e95be2fe16b"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-queue-run/logs/six-cases.stderr",
+      "bytes": 49,
+      "sha256": "b6520c4baa73b7a53cb375b795a2a5266cb6748ac7956b6361f089166c328f53"
+    }
+  ],
+  "scope": "Read-only original third run; five samples passed, busy setup physical-output readiness failed before sixth sample; Ctrl+V not executed. No complete baseline or performance claim."
+}

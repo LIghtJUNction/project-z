@@ -1,0 +1,305 @@
+{
+  "source_report_commit": "a9ed909e3c76e830bbcacd299929544cd51207a3",
+  "scope": "Unmodified previous current-status objects retained as historical snapshot; new report replaces current labels only.",
+  "ssmcp_release": {
+    "status": "source781_five_artifacts_built_second_baseline_partial_queue_fixture_successor_pending",
+    "main_verified": "cf0ab581700918a37fcccbebb93de2e0cab02841",
+    "candidate": "781b87df1d364137b6885f17f631a3e9e991bd58",
+    "new_formal_release": false,
+    "current_public_tree": "bd2bcce33baffa69b82d69d9cff3abdb85baa0fb",
+    "scope_note": "All five fixed781/r4 artifacts built fresh=false; three build commands exit0. Root independently read the full receipt and rehashed all five files. First runtime stopped at old Next-caller assertion. Source owner reports second60e passed four samples, then ordinary16k postcheck stopped after queue response spill; busy/CtrlV not run. Exact queue projection successor prepared; full baseline/runtime/Gate10/P1 pending. Prior441 CI retains441 identity.",
+    "previous_final_gate_plan_text": "pending on final fixed SSMCP cohort plus zcalld97d; original build commits and evidence stay separate",
+    "current_final_gate_plan": {
+      "status": "pending_corrected781_six_case_baseline_then_runtime_and_d531_gate10_p1",
+      "plan": "Original owner reuses the five verified781 artifacts for the corrected same six-case baseline/Control-V, then completes fixed runtime and zcalld d531 Gate10/P1.",
+      "original_32_scope": "The historical32 set included five shared-library checks, two Go checks and package/install work outside this P1 path. Those unrelated checks are not rerun or reported as new32 passes.",
+      "merge_owner": "Project Z root, after native final acceptance and fresh main/candidate tree verification",
+      "draft": true,
+      "local_evidence": "evidence/zcalld-listener-d531-20261121.json"
+    },
+    "path_loss_observation": {
+      "observed_window_utc": "2026-11-20T19:32:00Z/2026-11-20T19:34:00Z",
+      "observation": "Multiple existing native owners confirmed that several top-level GITHUB/ssmcp-* source/evidence directories no longer existed. Root also received ENOENT for the previously recorded current-status.json. Primary ssmcp Git source, the isolated Project Z context worktree and zcalld97d handoff survived.",
+      "cause": "Not established. Project Z root/Core/Org/Personal report no deletion or move of these paths; their exact receipted cache deletions were the129+3LMM+4WGT batches.",
+      "recovery_owner": "Existing sole native SSMCP source/release owner",
+      "recovery_status": "Recovering source patch and retained evidence from existing copies. Missing five baseline binaries require real rebuilds. No previous runtime receipt will be relabelled as a new build.",
+      "new_recovery_archive_root": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/archives/"
+    },
+    "controls_publication": {
+      "pr": 156,
+      "merge": "90c497007f6d6f16c3dd2da6a4599c48787e5ee1",
+      "tree": "b66c011c488b79972760848abee8427b4bbfe706",
+      "owner_reported_scope": "178 unit /14 CLI/10 isolated PTY passed;10 helper fixtures ignored; no root rerun"
+    },
+    "main_observation_scope": "main_verified remains the previously observed public main. The current unmerged PR159 head is781; do not relabel a PR head as public main or inherit earlier context acceptance.",
+    "candidate_tree": "6bf7beb143cfdce3878df856c27785164695430f",
+    "prior_source_audit_and_python_counts": {
+      "path": "evidence/input-ui-prior-status-c2c-20261121.json",
+      "bytes": 8683,
+      "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
+    },
+    "current_progress": {
+      "status": "five_fixed_artifacts_complete_second_runtime_partial_queue_projection_successor_prepared",
+      "source": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "tree": "6bf7beb143cfdce3878df856c27785164695430f",
+      "product_tests_executed_by_build": 0,
+      "second_runtime_owner_progress": {
+        "path": "evidence/ssmcp-781-second-baseline-progress-20261121.json",
+        "bytes": 1223,
+        "sha256": "8233daea639e602eac17018d524d0bc4a7903098b1da2c4ca856b075f2b738c6"
+      }
+    },
+    "current_native_observation": {
+      "path": "evidence/ssmcp-781-preserved-artifacts-20261121.json",
+      "bytes": 4442,
+      "sha256": "1a3a1ff057228a7b7b8bc92dbd911622bc815aaecd957254fd48df063f9713ad"
+    },
+    "prior_status_794": {
+      "path": "evidence/runtime-followup-prior-status-794-20261121.json",
+      "bytes": 13850,
+      "sha256": "a22bd6eaf613255bb81e5b6ce03201949819e1091b7cc4ef81b9be9cc0f4b901"
+    },
+    "build_receipt": {
+      "path": "evidence/ssmcp-781-baseline-build-20261121.json",
+      "bytes": 79446,
+      "sha256": "d2204375614807af510f6c7fd08ec657d212a98f18f504cb21376c63f47ea7c0"
+    },
+    "build_independent_review": {
+      "path": "evidence/ssmcp-781-baseline-independent-review-20261121.json",
+      "bytes": 11032,
+      "sha256": "b3af65610a8b9f78077ef89c2e857a0ab8df7a6a04f59e2957f5f582cd63955a"
+    },
+    "preserved_artifact_readback": {
+      "path": "evidence/ssmcp-781-preserved-artifacts-20261121.json",
+      "bytes": 4442,
+      "sha256": "1a3a1ff057228a7b7b8bc92dbd911622bc815aaecd957254fd48df063f9713ad"
+    },
+    "first_runtime_attempt": {
+      "job": "26c4545eae1eab8d27485f4a48077d3c-5e0",
+      "exit_code": 1,
+      "receipt_bytes": 23288,
+      "receipt_sha256": "23cf70065f3b4aa72beaeb45fefe0a6006da6fa5d5d1b4667249081db1348cb4",
+      "inputs_unchanged": true,
+      "samples": 0,
+      "frames": 0,
+      "ctrlv_executed": false,
+      "owner_diagnosis": "Explicit member:next sets target==next and leaves native_recipient null; old route-ready fixture assertion must follow that exact contract.",
+      "narrow_correction_owner": "Existing native source/release and original review_chat_followups owner; no second writer or artifact rebuild."
+    },
+    "second_runtime_attempt": {
+      "source": "authenticated native collab source owner feaba",
+      "seq": 332,
+      "sent_at_ms": 1795216580787,
+      "source_revision": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-60e",
+      "exit_code": 1,
+      "both_eof": true,
+      "inputs_unchanged": true,
+      "completed_samples": [
+        "2738",
+        "64k",
+        "4MiB",
+        "4MiB+1 rejection"
+      ],
+      "ordinary16k": "Reached physical ready; ui.queue response spilled at33730 bytes, then postcheck failed",
+      "busy_executed": false,
+      "ctrlv_executed": false,
+      "full_baseline_passed": false,
+      "successor": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/handoffs/paste-readiness-r2",
+        "scope": "Exact /steering/queue projection retains full array equality and rejects partial data; fixed original case bytes/timeouts; reuse same five artifacts; no product source change",
+        "reported_driver_sha256_prefix": "4d104705",
+        "reported_ctrlv_sha256_prefix": "25f200a6",
+        "reported_consumer_sha256_prefix": "eb062bf2"
+      },
+      "verification_scope": "Owner progress handoff; raw second execution receipt and successor full hashes requested, not yet independently read by Project Z root."
+    }
+  },
+  "ssmcp_input_requirement": {
+    "status": "source781_five_artifacts_built_second_baseline_partial_queue_fixture_successor_pending",
+    "effective_name": "--input",
+    "terminal": "Default input source",
+    "web": "Input host/port explicit",
+    "mcp": [
+      "stdio",
+      "http"
+    ],
+    "superseded_name": "--watch",
+    "source_message_ids": [
+      "55753a3ee2edf2279d6cd787f1ec7c2b",
+      "53b2d1daf70333ef7bd05ee9f273b572",
+      "5dc97d5cef07e2ee4822303e19bd80e1",
+      "92cd69fcda5696c807ec3582c9696c77",
+      "8a1e4b8dd7f95a0120882ce12554cf87",
+      "afc50b750e3e865426123b9a85a63e61"
+    ],
+    "semantics": "--input selects input source; --agent independently selects chat-message processor",
+    "pipeline_support": true,
+    "prior_fragment_interpretation_invalidated_at_commit": "45b60092829d9336bfe512793d8d3d8d021c3f5a",
+    "sock": "Listen to default or custom Unix socket path",
+    "agent": {
+      "default": "next-caller",
+      "behavior": "Deliver the pending chat message in the next eligible tool response",
+      "targets": [
+        "Codex",
+        "Claude Code",
+        "other coding agent",
+        "another SSMCP"
+      ]
+    },
+    "source_history": {
+      "conversation": "conversation_09b7546f6963bcd87be570feaa9bc3ee",
+      "offset": 20,
+      "last_index": 50,
+      "total": 51,
+      "next_offset": null,
+      "truncated_messages": 0,
+      "latest_user_default_correction_index": 48
+    },
+    "implementation_owner": "Existing native SSMCP source/release owner and original CLI implementation thread; Project Z has no parallel source writer",
+    "input_default": "terminal",
+    "explicit_none": "Disable the chat composer when --input none is explicitly selected; input default remains terminal and agent default remains next-caller.",
+    "latest_supplement": {
+      "message_id": "fbc265b0131638b26cee28102f5e1288",
+      "revision": 2,
+      "source": "Authenticated client_user envelope forwarded by the existing native source owner."
+    },
+    "architecture_review": {
+      "path": "evidence/ssmcp-input-agent-contract-20261121.md",
+      "sha256": "989ff14390ce0b5c8da72478b7d53e0467ccf83df7af58a77d451c3ecb1196a2",
+      "source": "90c497007f6d6f16c3dd2da6a4599c48787e5ee1",
+      "scope": "Read-only routing and persistence review with eight proposed narrow acceptance groups, not executed acceptance results."
+    },
+    "publication": {
+      "url": "https://github.com/LIghtJUNction/ssmcp/pull/159",
+      "draft": true,
+      "head": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "tree": "6bf7beb143cfdce3878df856c27785164695430f",
+      "source_published": true,
+      "runtime_pass_claimed": false,
+      "final_five_artifact_build": "Completed r4 job581: library-test fixture, ssmcp, ssmcp-frontend, ssmcpd and vt_snapshot, all fresh=false with source-bound link/public/preserved bytes equal.",
+      "progress": {
+        "status": "five_fixed_artifacts_complete_second_runtime_partial_queue_projection_successor_prepared",
+        "source": "781b87df1d364137b6885f17f631a3e9e991bd58",
+        "tree": "6bf7beb143cfdce3878df856c27785164695430f",
+        "product_tests_executed_by_build": 0,
+        "second_runtime_owner_progress": {
+          "path": "evidence/ssmcp-781-second-baseline-progress-20261121.json",
+          "bytes": 1223,
+          "sha256": "8233daea639e602eac17018d524d0bc4a7903098b1da2c4ca856b075f2b738c6"
+        }
+      },
+      "previous441_ci_metadata": {
+        "path": "evidence/ssmcp-441-progress-before-producer-failure-20261121.json",
+        "bytes": 1070,
+        "sha256": "652392118a44943074d275b8892497a4a4540d141bf6c0bf70a15f9a1b33f679"
+      },
+      "previous_lock_transition": {
+        "path": "evidence/ssmcp-shared-lock-diagnosis-20261121.json",
+        "bytes": 10758,
+        "sha256": "ee67d031ae035e27baee1dc32c276d9105d5a25ee38fa5bdaca28a887523a28a"
+      },
+      "historical_status": {
+        "path": "evidence/input-ui-prior-status-c2c-20261121.json",
+        "bytes": 8683,
+        "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
+      },
+      "followup_status": {
+        "path": "evidence/input-ui-followups-20261121.json",
+        "bytes": 8733,
+        "sha256": "88cc0d3ce36ae6408261a7e724661442e5b45117c73067d809d156d4d7a846f5"
+      },
+      "current_native_observation": {
+        "path": "evidence/ssmcp-781-preserved-artifacts-20261121.json",
+        "bytes": 4442,
+        "sha256": "1a3a1ff057228a7b7b8bc92dbd911622bc815aaecd957254fd48df063f9713ad"
+      },
+      "build_receipt": {
+        "path": "evidence/ssmcp-781-baseline-build-20261121.json",
+        "bytes": 79446,
+        "sha256": "d2204375614807af510f6c7fd08ec657d212a98f18f504cb21376c63f47ea7c0"
+      },
+      "prior_status_794": {
+        "path": "evidence/runtime-followup-prior-status-794-20261121.json",
+        "bytes": 13850,
+        "sha256": "a22bd6eaf613255bb81e5b6ce03201949819e1091b7cc4ef81b9be9cc0f4b901"
+      }
+    },
+    "source_implementation_published": true,
+    "native_current_combination_runtime_pass_claimed": false
+  },
+  "report_preparation": {
+    "source_report_commit": "794075f187cb3ebaac8dc3de0a4d5dbba26403b8",
+    "source_report_tree": "f723367846a7665afaaa1df6b244b503ed75cc42",
+    "prepared_at_utc": "2026-11-20T23:20:13.349811+00:00",
+    "prepared_at_taipei": "2026-11-21T07:20:13.349811+08:00",
+    "snapshot_recorded_before_publication": true,
+    "report_only": true,
+    "prior_status": {
+      "path": "evidence/runtime-followup-prior-status-794-20261121.json",
+      "bytes": 13850,
+      "sha256": "a22bd6eaf613255bb81e5b6ce03201949819e1091b7cc4ef81b9be9cc0f4b901"
+    }
+  },
+  "coordination_ssmcp_owner_status": {
+    "source": "407084c4fcc582f5fef01b772de838f04e2d5484",
+    "library_private": {
+      "passed": 1880,
+      "failed": 5,
+      "ignored": 22,
+      "filtered": 4
+    },
+    "native_p1_final": "not_run_due_failed_gate",
+    "newer_main": "ccb91955c25969f4779588d4cebb09b72c00f829",
+    "current_source_owner_active": true,
+    "no_formal_release_v21": true,
+    "latest_release_requested": true,
+    "final_current_source_gates_pending": true,
+    "historical_test_scope": "407084c4 only; does not qualify the current integration",
+    "current_release": {
+      "status": "source781_r4_baseline_actual_compilation_in_progress",
+      "candidate": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "tree": "6bf7beb143cfdce3878df856c27785164695430f",
+      "new_formal_release": false,
+      "progress": {
+        "path": "evidence/ssmcp-781-progress-20261121.json",
+        "bytes": 5162,
+        "sha256": "c48fd16e8011c44bfddec3b58118aca4f25d1430fedbd5a499200ead69755686"
+      },
+      "current_native_observation": {
+        "path": "evidence/ssmcp-781-shared-lock-observation-20261121.json",
+        "bytes": 8508,
+        "sha256": "af4d5e4ede01a6cf47bbf016f56e35305f479b4f9b3cb9ed59c896e63fa6f619"
+      }
+    },
+    "named_context_followup": {
+      "status": "PR153_and_PR155_merged_source_specific_validation_retained",
+      "implemented": true,
+      "current_evidence": "current_maintenance.context_request",
+      "historical_architecture_review": {
+        "path": "evidence/input-ui-prior-status-c2c-20261121.json",
+        "bytes": 8683,
+        "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
+      }
+    },
+    "scope": "Historical source-specific observations are retained. Current PR159 status is linked below; old407/b156/91a results do not validate781.",
+    "prior_current_release_and_context_status": {
+      "path": "evidence/input-ui-prior-status-c2c-20261121.json",
+      "bytes": 8683,
+      "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
+    }
+  },
+  "latest_upstream_ztty": {
+    "main": "01e8b573bc787e982f96db2b1e6ec9151d321284",
+    "tree": "a7a99b41c9bfef6f4f617914b6c67466f5d3a7c8",
+    "tested_head": "076bc6ac8ff9ca17effe25decac7a4dbc4ec0c43",
+    "merge_tree_equals_tested_tree": true,
+    "publication": {
+      "path": "evidence/ztty-ime-publication-20261121.json",
+      "bytes": 10598,
+      "sha256": "3e603ae76e3537caedcac8e2adfa9b72e9db8ef790d7bb31bbf66058f6e4393f"
+    },
+    "oh_my_ztty_and_final44_propagation": "pending"
+  },
+  "current_snapshot_scope": "Current maintenance includes merged PR24 exact16-check tree,781 five-artifact build and first route-fixture failure, and isolated zusePR3 RED/GREEN. Prior441 CI, PR23 paired input, PR22memory and old source graphs retain immutable cohorts. Full44 and finalP1 remain pending."
+}

@@ -1,0 +1,680 @@
+{
+  "schema": 1,
+  "purpose": "Read-only bounded upstream preflight for final Project Z 44-repository synchronization",
+  "observed_at_utc": "2026-11-20 23:43:44 UTC",
+  "observation_finished_at_utc": "2026-11-20 23:43:44 UTC",
+  "immutable_compares_finished_at_utc": "2026-11-20 23:44:07 UTC",
+  "saved_at_utc": "2026-11-20 23:47:12 UTC",
+  "scope": {
+    "repositories": [
+      "LIghtJUNction/zcalld",
+      "LIghtJUNction/oh-my-ztty"
+    ],
+    "operations": [
+      "GitHub GET commit/PR/compare/tree/file",
+      "local evidence serialization"
+    ],
+    "source_changes": false,
+    "ref_changes": false,
+    "consumer_refresh": false,
+    "tests_or_builds": false,
+    "aggregate_graph_run": false
+  },
+  "conclusion": {
+    "zcalld": "New main runtime/source drift detected while saving; listener PR1 must preserve and integrate the new main before a new final P1 candidate is declared.",
+    "oh_my_ztty": "Main f04 and draft a8 are unchanged in the timestamped guard but already diverged. Replacing main with the draft tree would lose the newer SSMCP pin and validation document.",
+    "final_44_ready": false
+  },
+  "zcalld": {
+    "repository": "https://github.com/LIghtJUNction/zcalld",
+    "earlier_observation": {
+      "recorded_clock": null,
+      "note": "Earlier in-session read; no exact wall-clock was retained. Superseded by the timestamped guard above.",
+      "main": {
+        "commit": "c4b4bbabe0c718430ffe2f46936408e9bdef4885",
+        "tree": "bbf870d95990cdd44523aaa4cc046899048e04ce",
+        "parents": [
+          "bb0c65461bd7abcc30ae7e418e603e31fd3e748a"
+        ],
+        "commit_time": "2026-11-20T19:51:15Z",
+        "url": "https://github.com/LIghtJUNction/zcalld/commit/c4b4bbabe0c718430ffe2f46936408e9bdef4885"
+      }
+    },
+    "main": {
+      "commit": "0a0a62cdca25bbdf289a17f03dfeed1acc945595",
+      "tree": "69f60a24c0924b58d33cce4354fc3dc6a82210ed",
+      "parents": [
+        "0149a315c60efacf465cd83ad14ebaa0c1197136"
+      ],
+      "commit_time": "2026-11-20T23:26:56Z",
+      "url": "https://github.com/LIghtJUNction/zcalld/commit/0a0a62cdca25bbdf289a17f03dfeed1acc945595"
+    },
+    "listener_pr": {
+      "number": 1,
+      "url": "https://github.com/LIghtJUNction/zcalld/pull/1",
+      "state": "open",
+      "draft": true,
+      "head": {
+        "branch": "feat/ssmcp-listener-p1-20261120",
+        "commit": "d5314fe930b0932bbce076ff578474d3ef084695",
+        "tree": "06826bbb2eb2857ea1f0e9cc834abe9b149d3625"
+      },
+      "api_reported_base": {
+        "branch": "main",
+        "commit": "c4b4bbabe0c718430ffe2f46936408e9bdef4885"
+      },
+      "mergeable": false,
+      "mergeable_state": "dirty",
+      "updated_at": "2026-11-20T20:23:55Z"
+    },
+    "tested_candidate_base": {
+      "commit": "c4b4bbabe0c718430ffe2f46936408e9bdef4885",
+      "tree": "bbf870d95990cdd44523aaa4cc046899048e04ce"
+    },
+    "unchanged_listener_candidate": {
+      "commit": "d5314fe930b0932bbce076ff578474d3ef084695",
+      "tree": "06826bbb2eb2857ea1f0e9cc834abe9b149d3625",
+      "parents": [
+        "97d97e39c31dc08ce85fae871c95389165c6ddf7",
+        "c4b4bbabe0c718430ffe2f46936408e9bdef4885"
+      ],
+      "prior_receipt_scope": "Existing d531 receipt only; this audit ran no tests and does not extend that receipt to main 0a0 or a future merge."
+    },
+    "main_since_candidate_base": {
+      "url": "https://github.com/LIghtJUNction/zcalld/compare/c4b4bbabe0c718430ffe2f46936408e9bdef4885...0a0a62cdca25bbdf289a17f03dfeed1acc945595",
+      "status": "ahead",
+      "ahead": 11,
+      "behind": 0,
+      "merge_base": "c4b4bbabe0c718430ffe2f46936408e9bdef4885",
+      "commits": [
+        {
+          "commit": "7cd6601882f776643cf93a0d64c56aa47e189eb4",
+          "subject": "fix(windows): prepare v0.4.4 reset cancellation correction [skip ci]"
+        },
+        {
+          "commit": "6e2253faf898985541765d457c2b096be79a09b6",
+          "subject": "test: pin deterministic Windows sign-in fixture for v0.4.4 [skip ci]"
+        },
+        {
+          "commit": "d8b87f7ecb114e288f0b22e06aa8e9fd53ce0181",
+          "subject": "test: pin byte-exact Windows helper acknowledgement [skip ci]"
+        },
+        {
+          "commit": "62241b8405d2c97b73a1be9a2e4f5f86927604d9",
+          "subject": "test: pin the isolated Windows provider runtime fixture [skip ci]"
+        },
+        {
+          "commit": "ebc8dc7d0484bf8a51a98a06b0b8d8389a976643",
+          "subject": "fix(windows): preserve private child access when protecting directories [skip ci]"
+        },
+        {
+          "commit": "2b71b13c975c757a201f9328605eb52e089dc6e4",
+          "subject": "test(windows): validate stored ACLs and actual inherited children [skip ci]"
+        },
+        {
+          "commit": "b5dd477306cd9ca5164b69b2478280000ecaeeb7",
+          "subject": "build: pin compatible GUI recovery and reproducible library release preparation [skip ci]"
+        },
+        {
+          "commit": "ea87f4a979465c3a32122671d6fd61ebe194ecf0",
+          "subject": "test(windows): inherit the helper private ACL in weekly fixtures [skip ci]"
+        },
+        {
+          "commit": "390220217fe538b045e86a4e3eb029ed3334e1a9",
+          "subject": "test: await local host readiness before in-flight deadline assertions [skip ci]"
+        },
+        {
+          "commit": "0149a315c60efacf465cd83ad14ebaa0c1197136",
+          "subject": "fix: isolate Windows deferred installer process handles [skip ci]"
+        },
+        {
+          "commit": "0a0a62cdca25bbdf289a17f03dfeed1acc945595",
+          "subject": "fix: read installer journals through validated file snapshots [skip ci]"
+        }
+      ],
+      "changed_paths": [
+        {
+          "path": ".github/workflows/release.yml",
+          "status": "modified",
+          "blob_or_gitlink": "e03f3bf93ebcdbb829a412ff4228e85648957118"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "status": "modified",
+          "blob_or_gitlink": "cff5c02bb979516d142ffda970af7622694bc987"
+        },
+        {
+          "path": "Cargo.lock",
+          "status": "modified",
+          "blob_or_gitlink": "533c2a374b6a833d6637dff69a2cea7f76dedc18"
+        },
+        {
+          "path": "Cargo.toml",
+          "status": "modified",
+          "blob_or_gitlink": "8d30c76381b9f6ad72382f06a87bb8aa7a5f2970"
+        },
+        {
+          "path": "README.md",
+          "status": "modified",
+          "blob_or_gitlink": "c7d6949e21e21475c39d04a79cb432348ae11f71"
+        },
+        {
+          "path": "apps/zcall-gui",
+          "status": "modified",
+          "blob_or_gitlink": "ca35a306088a85e49e9e851aab24329deed20056"
+        },
+        {
+          "path": "crates/zcalld-installer/src/private.rs",
+          "status": "modified",
+          "blob_or_gitlink": "452c758e44c65048bd0aa1977dc8bd9736460e20"
+        },
+        {
+          "path": "crates/zcalld-installer/src/process.rs",
+          "status": "modified",
+          "blob_or_gitlink": "34432d8513b23c7e00a9efe54d6014f4cf59c0d5"
+        },
+        {
+          "path": "crates/zcalld-installer/src/process_windows.rs",
+          "status": "added",
+          "blob_or_gitlink": "bd9478666262c53ad606b7dfc3e63b926f7d6d7f"
+        },
+        {
+          "path": "crates/zcalld-installer/src/transaction.rs",
+          "status": "modified",
+          "blob_or_gitlink": "ce571fc9c1ba302351519cb89d82553e0b3a0ca1"
+        },
+        {
+          "path": "extensions/compat",
+          "status": "modified",
+          "blob_or_gitlink": "c521d1fb1ce8eac173ea2bb481816d3cd1df82d3"
+        },
+        {
+          "path": "plugins/aliases/Cargo.toml",
+          "status": "modified",
+          "blob_or_gitlink": "b4d2194e994895f5e31b70609efef5d9de8a854e"
+        },
+        {
+          "path": "plugins/community/Cargo.toml",
+          "status": "modified",
+          "blob_or_gitlink": "24dd31a5bd741652fe8eb064361d10b826e7d62a"
+        },
+        {
+          "path": "plugins/desktop/Cargo.toml",
+          "status": "modified",
+          "blob_or_gitlink": "2c69d0e3d21a5b5797c4542f24cfcd369213dd3f"
+        },
+        {
+          "path": "plugins/policy/Cargo.toml",
+          "status": "modified",
+          "blob_or_gitlink": "5658a4e6317786195d2217976cb0b6d51795cd21"
+        },
+        {
+          "path": "plugins/redact/Cargo.toml",
+          "status": "modified",
+          "blob_or_gitlink": "d2dbc80bbc01eb07a6a5a7046d739f8f0f31c0fd"
+        },
+        {
+          "path": "plugins/routing/Cargo.toml",
+          "status": "modified",
+          "blob_or_gitlink": "5f8fa964271f6ced4b66fb94d3ce488c3a6c7024"
+        },
+        {
+          "path": "scripts/test-builtin-fetch.py",
+          "status": "modified",
+          "blob_or_gitlink": "1dd4c0a3acfe3afd57848076b5c00f390f4bc88a"
+        },
+        {
+          "path": "scripts/test-codex-metadata.py",
+          "status": "modified",
+          "blob_or_gitlink": "03f1b92d31bb64a1524cc0d16aaceb5d489d0dd2"
+        },
+        {
+          "path": "scripts/test-codex-policy.py",
+          "status": "modified",
+          "blob_or_gitlink": "4ae1fa8be3cdca01fbf0131c1e9dc6112a13a7d0"
+        },
+        {
+          "path": "scripts/test-weekly-maintenance.py",
+          "status": "modified",
+          "blob_or_gitlink": "6ee8818c0019f16d55b88e0a73831390ccbc8a12"
+        },
+        {
+          "path": "src/privacy_windows.rs",
+          "status": "modified",
+          "blob_or_gitlink": "38cfd9d2beb7229b1f594cba876b1c871eda6261"
+        },
+        {
+          "path": "src/system.rs",
+          "status": "modified",
+          "blob_or_gitlink": "1f6dc17a0005c4218997e48013309e4c46fc0482"
+        },
+        {
+          "path": "src/transport.rs",
+          "status": "modified",
+          "blob_or_gitlink": "79c3056d8d6c7c8a8d44312e4ef8c058c3c01a35"
+        },
+        {
+          "path": "vendor/zcall",
+          "status": "modified",
+          "blob_or_gitlink": "317c52f101f112c6af671a629d8406305a168e4a"
+        }
+      ],
+      "runtime_changes_present": true,
+      "runtime_areas": [
+        "Windows TCP terminal-read/reset observation",
+        "Windows private-directory ACL inheritance and checking",
+        "Windows deferred installer process handles",
+        "Installer journal snapshot reads with held-file validation"
+      ],
+      "other_changes": [
+        "Workspace/package version metadata 0.4.3 to 0.4.4",
+        "Native Windows test fixtures and release preparation",
+        "GUI, compat and zcall source updates"
+      ],
+      "cargo_lock": {
+        "prior_base_blob": "7d7e663cf64c652720e6ff8afe09a003112a63cc",
+        "listener_candidate_blob": "7d7e663cf64c652720e6ff8afe09a003112a63cc",
+        "current_main_blob": "533c2a374b6a833d6637dff69a2cea7f76dedc18",
+        "zcall_previous": "564ede15db66530a6dbb78e8b1f4a85998b6f0d8",
+        "zcall_current": "317c52f101f112c6af671a629d8406305a168e4a",
+        "source_url": "git+https://github.com/LIghtJUNction/zcall.git",
+        "workspace_version_previous": "0.4.3",
+        "workspace_version_current": "0.4.4"
+      },
+      "changed_gitlinks": [
+        {
+          "path": "apps/zcall-gui",
+          "prior_base": "9a7eab6fa969bd197e54dc87fd6e9f9927281780",
+          "listener_candidate": "d357d39b24bdef0cba48ee4a8cc367ded1b2b45d",
+          "current_main": "ca35a306088a85e49e9e851aab24329deed20056"
+        },
+        {
+          "path": "extensions/compat",
+          "prior_base": "4ccb15406eca7bf8075e85841412c2f33438a4bd",
+          "listener_candidate": "4ccb15406eca7bf8075e85841412c2f33438a4bd",
+          "current_main": "c521d1fb1ce8eac173ea2bb481816d3cd1df82d3"
+        },
+        {
+          "path": "vendor/zcall",
+          "prior_base": "564ede15db66530a6dbb78e8b1f4a85998b6f0d8",
+          "listener_candidate": "564ede15db66530a6dbb78e8b1f4a85998b6f0d8",
+          "current_main": "317c52f101f112c6af671a629d8406305a168e4a"
+        }
+      ]
+    },
+    "current_main_vs_pr": {
+      "url": "https://github.com/LIghtJUNction/zcalld/compare/0a0a62cdca25bbdf289a17f03dfeed1acc945595...d5314fe930b0932bbce076ff578474d3ef084695",
+      "status": "diverged",
+      "pr_ahead": 11,
+      "pr_behind": 11,
+      "merge_base": "c4b4bbabe0c718430ffe2f46936408e9bdef4885",
+      "compare_file_semantics": "GitHub compare files are merge-base-to-head; they do not enumerate all main-to-head tree differences."
+    },
+    "original_listener_delta": {
+      "url": "https://github.com/LIghtJUNction/zcalld/compare/c4b4bbabe0c718430ffe2f46936408e9bdef4885...d5314fe930b0932bbce076ff578474d3ef084695",
+      "changed_paths": [
+        {
+          "path": "apps/zcall-gui",
+          "status": "modified",
+          "blob_or_gitlink": "d357d39b24bdef0cba48ee4a8cc367ded1b2b45d"
+        },
+        {
+          "path": "src/curl.rs",
+          "status": "modified",
+          "blob_or_gitlink": "9365406b23b9744bba9b21dae999e82d19683357"
+        },
+        {
+          "path": "src/listener.rs",
+          "status": "added",
+          "blob_or_gitlink": "8451bacea5c3c297ee49819fefbf505fc45fdfc8"
+        },
+        {
+          "path": "src/listener/local.rs",
+          "status": "added",
+          "blob_or_gitlink": "3a88768ec95e5b0dbad07db72d65c4e7d9ba97c5"
+        },
+        {
+          "path": "src/listener/local/generation.rs",
+          "status": "added",
+          "blob_or_gitlink": "80ee8557e5e7291794e953bf695ddc884b4b21ca"
+        },
+        {
+          "path": "src/main.rs",
+          "status": "modified",
+          "blob_or_gitlink": "efae67a5b9ee61bfeb36052aa286b63d9201db64"
+        }
+      ],
+      "gui_only_subdelta": {
+        "url": "https://github.com/LIghtJUNction/zcall-gui/compare/9a7eab6fa969bd197e54dc87fd6e9f9927281780...d357d39b24bdef0cba48ee4a8cc367ded1b2b45d",
+        "from": "9a7eab6fa969bd197e54dc87fd6e9f9927281780",
+        "to": "d357d39b24bdef0cba48ee4a8cc367ded1b2b45d",
+        "changed_paths": [
+          "README.md"
+        ],
+        "classification": "documentation only for this fixed GUI subdelta; not a classification of new main ca35"
+      }
+    },
+    "required_owner_action": "Integrate current main's real runtime, dependency and fixture changes into the listener candidate with conflict review; retain d531 evidence at its original identity and validate the new exact candidate as required before final P1/final44."
+  },
+  "oh_my_ztty": {
+    "repository": "https://github.com/LIghtJUNction/oh-my-ztty",
+    "main": {
+      "commit": "f04f6ea8ae909e121edabbd766ee725a472f8146",
+      "tree": "279a0254c9059156081892c008247e08fa608384",
+      "parents": [
+        "d671295f63e5d72e8e8b683fd0c75dc0b1395072"
+      ],
+      "commit_time": "2026-11-20T19:53:53Z",
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/commit/f04f6ea8ae909e121edabbd766ee725a472f8146"
+    },
+    "pr": {
+      "number": 7,
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/pull/7",
+      "state": "open",
+      "draft": true,
+      "head": {
+        "branch": "coord/ztty-shared-target-source-20261120",
+        "commit": "a8c97dda48b2506cf2617c9a21fe39ab0e4b779a",
+        "tree": "4744d41a6e744eac16840c368aecb2b3365ca823"
+      },
+      "api_reported_base": {
+        "branch": "main",
+        "commit": "d671295f63e5d72e8e8b683fd0c75dc0b1395072"
+      },
+      "mergeable": false,
+      "mergeable_state": "dirty",
+      "updated_at": "2026-11-20T19:50:10Z"
+    },
+    "common_base": {
+      "commit": "d671295f63e5d72e8e8b683fd0c75dc0b1395072",
+      "tree": "a2758f924b3cfe691336fd38564ef019b8bd9191"
+    },
+    "relation": {
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/compare/f04f6ea8ae909e121edabbd766ee725a472f8146...a8c97dda48b2506cf2617c9a21fe39ab0e4b779a",
+      "status": "diverged",
+      "pr_ahead": 1,
+      "pr_behind": 1,
+      "changed_paths_from_merge_base": [
+        {
+          "path": "components/ztty",
+          "status": "modified",
+          "blob_or_gitlink": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25"
+        },
+        {
+          "path": "dependencies.lock.json",
+          "status": "modified",
+          "blob_or_gitlink": "42d8c941747dc54af05e2956545cc0314370623d"
+        }
+      ]
+    },
+    "main_since_common_base": {
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/compare/d671295f63e5d72e8e8b683fd0c75dc0b1395072...f04f6ea8ae909e121edabbd766ee725a472f8146",
+      "changed_paths": [
+        {
+          "path": "components/ssmcp",
+          "status": "modified",
+          "blob_or_gitlink": "4237eea2cab8253b8dff84d81861ba1e1adf4246"
+        },
+        {
+          "path": "dependencies.lock.json",
+          "status": "modified",
+          "blob_or_gitlink": "0b39797093c3d80c74ffbfdcde592448bd70e6ca"
+        },
+        {
+          "path": "docs/validation-zuse-target-motion-20261121.md",
+          "status": "added",
+          "blob_or_gitlink": "68a46689d73876a87aafdb0028d7462f5df5489e"
+        }
+      ],
+      "suite_runtime_files_changed": false,
+      "consumed_source_changed": true,
+      "meaning": "The SSMCP source pin advanced; this is more than a docs-only change, although no own suite runtime file changed."
+    },
+    "main_gitlinks": [
+      {
+        "path": "components/ssmcp",
+        "commit": "4237eea2cab8253b8dff84d81861ba1e1adf4246",
+        "mode": "160000"
+      },
+      {
+        "path": "components/zdot",
+        "commit": "a3c6a75b1e66747822b9b69d9e046d2aac249210",
+        "mode": "160000"
+      },
+      {
+        "path": "components/zfetch",
+        "commit": "f0614f3b76eca222f4b3880f8dd1707d1308f098",
+        "mode": "160000"
+      },
+      {
+        "path": "components/zrc",
+        "commit": "2f10ea8dcfbef2db1204ed46dd21ff98c61ed8ee",
+        "mode": "160000"
+      },
+      {
+        "path": "components/zshard",
+        "commit": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+        "mode": "160000"
+      },
+      {
+        "path": "components/ztty",
+        "commit": "be29c6763d3f63832f77c21746d7d62aa70e7d62",
+        "mode": "160000"
+      }
+    ],
+    "pr_gitlinks": [
+      {
+        "path": "components/ssmcp",
+        "commit": "cbe3d0ef1f7fbe1a26ebe367edc646cd8ef429c3",
+        "mode": "160000"
+      },
+      {
+        "path": "components/zdot",
+        "commit": "a3c6a75b1e66747822b9b69d9e046d2aac249210",
+        "mode": "160000"
+      },
+      {
+        "path": "components/zfetch",
+        "commit": "f0614f3b76eca222f4b3880f8dd1707d1308f098",
+        "mode": "160000"
+      },
+      {
+        "path": "components/zrc",
+        "commit": "2f10ea8dcfbef2db1204ed46dd21ff98c61ed8ee",
+        "mode": "160000"
+      },
+      {
+        "path": "components/zshard",
+        "commit": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+        "mode": "160000"
+      },
+      {
+        "path": "components/ztty",
+        "commit": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25",
+        "mode": "160000"
+      }
+    ],
+    "main_lock": {
+      "path": "dependencies.lock.json",
+      "blob": "0b39797093c3d80c74ffbfdcde592448bd70e6ca",
+      "content": {
+        "schema": 2,
+        "updated_at": "2026-11-20T19:50:10+00:00",
+        "components": {
+          "ztty": {
+            "repository": "https://github.com/LIghtJUNction/ztty.git",
+            "branch": "main",
+            "commit": "be29c6763d3f63832f77c21746d7d62aa70e7d62",
+            "observed_at": "2026-11-20T19:18:38+00:00"
+          },
+          "ssmcp": {
+            "repository": "https://github.com/LIghtJUNction/ssmcp.git",
+            "branch": "main",
+            "commit": "4237eea2cab8253b8dff84d81861ba1e1adf4246",
+            "observed_at": "2026-11-20T19:50:07+00:00"
+          },
+          "zshard": {
+            "repository": "https://github.com/LIghtJUNction/zshard.git",
+            "branch": "main",
+            "commit": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+            "observed_at": "2026-11-20T19:18:42+00:00"
+          },
+          "zdot": {
+            "repository": "https://github.com/LIghtJUNction/zdot.git",
+            "branch": "main",
+            "commit": "a3c6a75b1e66747822b9b69d9e046d2aac249210",
+            "observed_at": "2026-11-20T19:18:43+00:00"
+          },
+          "zrc": {
+            "repository": "https://github.com/LIghtJUNction/zrc.git",
+            "branch": "main",
+            "commit": "2f10ea8dcfbef2db1204ed46dd21ff98c61ed8ee",
+            "observed_at": "2026-11-20T19:18:45+00:00"
+          },
+          "zfetch": {
+            "repository": "https://github.com/LIghtJUNction/zfetch.git",
+            "branch": "main",
+            "commit": "f0614f3b76eca222f4b3880f8dd1707d1308f098",
+            "observed_at": "2026-11-20T19:18:46+00:00"
+          }
+        }
+      }
+    },
+    "pr_lock": {
+      "path": "dependencies.lock.json",
+      "blob": "42d8c941747dc54af05e2956545cc0314370623d",
+      "content": {
+        "schema": 2,
+        "updated_at": "2026-11-20T19:47:51+00:00",
+        "components": {
+          "ztty": {
+            "repository": "https://github.com/LIghtJUNction/ztty.git",
+            "branch": "main",
+            "commit": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25",
+            "observed_at": "2026-11-20T19:47:50+00:00"
+          },
+          "ssmcp": {
+            "repository": "https://github.com/LIghtJUNction/ssmcp.git",
+            "branch": "main",
+            "commit": "cbe3d0ef1f7fbe1a26ebe367edc646cd8ef429c3",
+            "observed_at": "2026-11-20T19:18:40+00:00"
+          },
+          "zshard": {
+            "repository": "https://github.com/LIghtJUNction/zshard.git",
+            "branch": "main",
+            "commit": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+            "observed_at": "2026-11-20T19:18:42+00:00"
+          },
+          "zdot": {
+            "repository": "https://github.com/LIghtJUNction/zdot.git",
+            "branch": "main",
+            "commit": "a3c6a75b1e66747822b9b69d9e046d2aac249210",
+            "observed_at": "2026-11-20T19:18:43+00:00"
+          },
+          "zrc": {
+            "repository": "https://github.com/LIghtJUNction/zrc.git",
+            "branch": "main",
+            "commit": "2f10ea8dcfbef2db1204ed46dd21ff98c61ed8ee",
+            "observed_at": "2026-11-20T19:18:45+00:00"
+          },
+          "zfetch": {
+            "repository": "https://github.com/LIghtJUNction/zfetch.git",
+            "branch": "main",
+            "commit": "f0614f3b76eca222f4b3880f8dd1707d1308f098",
+            "observed_at": "2026-11-20T19:18:46+00:00"
+          }
+        }
+      }
+    },
+    "checks": {
+      "trees_not_truncated": true,
+      "main_gitlinks": 6,
+      "pr_gitlinks": 6,
+      "main_lock_matches_all_gitlinks": true,
+      "pr_lock_matches_all_gitlinks": true,
+      "direct_leaf_difference_count": 4
+    },
+    "direct_main_vs_pr_leaf_differences": [
+      {
+        "path": "components/ssmcp",
+        "main": {
+          "sha": "4237eea2cab8253b8dff84d81861ba1e1adf4246",
+          "mode": "160000"
+        },
+        "pr_head": {
+          "sha": "cbe3d0ef1f7fbe1a26ebe367edc646cd8ef429c3",
+          "mode": "160000"
+        }
+      },
+      {
+        "path": "components/ztty",
+        "main": {
+          "sha": "be29c6763d3f63832f77c21746d7d62aa70e7d62",
+          "mode": "160000"
+        },
+        "pr_head": {
+          "sha": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25",
+          "mode": "160000"
+        }
+      },
+      {
+        "path": "dependencies.lock.json",
+        "main": {
+          "sha": "0b39797093c3d80c74ffbfdcde592448bd70e6ca",
+          "mode": "100644"
+        },
+        "pr_head": {
+          "sha": "42d8c941747dc54af05e2956545cc0314370623d",
+          "mode": "100644"
+        }
+      },
+      {
+        "path": "docs/validation-zuse-target-motion-20261121.md",
+        "main": {
+          "sha": "68a46689d73876a87aafdb0028d7462f5df5489e",
+          "mode": "100644"
+        },
+        "pr_head": null
+      }
+    ],
+    "must_preserve_validation_document": {
+      "path": "docs/validation-zuse-target-motion-20261121.md",
+      "blob": "68a46689d73876a87aafdb0028d7462f5df5489e",
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/blob/f04f6ea8ae909e121edabbd766ee725a472f8146/docs/validation-zuse-target-motion-20261121.md",
+      "preservation": "Keep this historical validation record unchanged; add separately scoped evidence for later source updates."
+    }
+  },
+  "final_44_plan_not_executed": [
+    "Wait for the sole SSMCP/release and listener owners to publish their final source identities; do not treat PR159's current frozen candidate as a final published cohort.",
+    "Fresh-read default branches and coordinate oh-my-ztty ownership; start its ordinary source update from f04 or its legitimate successor, preserving all subsequent main changes.",
+    "Integrate the intent of draft PR7 instead of copying its old tree. Preserve main's SSMCP4237 source advance and validation document; any later SSMCP pin must be the validated final default-branch source, never a downgrade to the draft's cbe3.",
+    "Resolve the final verified ztty default-branch head at that window (PR24 merged 99ef is a known earlier accepted identity, not a freshness assertion here). Update its gitlink and the matching entry in dependencies.lock.json together.",
+    "Keep all six gitlinks and lock entries coherent using the repository's existing sync process. Preserve the other four component sources unless a fresh, explicit final-map change requires advancing them. Keep formal release assets and installation contracts intact.",
+    "Validate the actual resulting suite/source delta using the applicable existing gates; retain old a8's 112-suite receipt at its own identity rather than relabeling it as a new-tree result.",
+    "After all consumers publish, record exact final default heads, run the one authorized final44 sync/check/resolve --all and impact under the shared outer Cargo lock, and recheck freshness before publication. This report does not execute that plan."
+  ],
+  "sources": {
+    "timestamped_gets": [
+      "https://api.github.com/repos/LIghtJUNction/zcalld/commits/main",
+      "https://api.github.com/repos/LIghtJUNction/zcalld/pulls/1",
+      "https://api.github.com/repos/LIghtJUNction/oh-my-ztty/commits/main",
+      "https://api.github.com/repos/LIghtJUNction/oh-my-ztty/pulls/7"
+    ],
+    "immutable_compares": [
+      "https://api.github.com/repos/LIghtJUNction/zcalld/compare/c4b4bbabe0c718430ffe2f46936408e9bdef4885...0a0a62cdca25bbdf289a17f03dfeed1acc945595",
+      "https://api.github.com/repos/LIghtJUNction/zcalld/compare/0a0a62cdca25bbdf289a17f03dfeed1acc945595...d5314fe930b0932bbce076ff578474d3ef084695",
+      "https://api.github.com/repos/LIghtJUNction/zcalld/compare/c4b4bbabe0c718430ffe2f46936408e9bdef4885...d5314fe930b0932bbce076ff578474d3ef084695",
+      "https://api.github.com/repos/LIghtJUNction/oh-my-ztty/compare/f04f6ea8ae909e121edabbd766ee725a472f8146...a8c97dda48b2506cf2617c9a21fe39ab0e4b779a",
+      "https://api.github.com/repos/LIghtJUNction/oh-my-ztty/compare/d671295f63e5d72e8e8b683fd0c75dc0b1395072...f04f6ea8ae909e121edabbd766ee725a472f8146",
+      "https://api.github.com/repos/LIghtJUNction/zcall-gui/compare/9a7eab6fa969bd197e54dc87fd6e9f9927281780...d357d39b24bdef0cba48ee4a8cc367ded1b2b45d"
+    ],
+    "immutable_trees": [
+      "https://api.github.com/repos/LIghtJUNction/oh-my-ztty/git/trees/279a0254c9059156081892c008247e08fa608384?recursive=1",
+      "https://api.github.com/repos/LIghtJUNction/oh-my-ztty/git/trees/4744d41a6e744eac16840c368aecb2b3365ca823?recursive=1"
+    ],
+    "immutable_locks": [
+      "https://github.com/LIghtJUNction/oh-my-ztty/blob/f04f6ea8ae909e121edabbd766ee725a472f8146/dependencies.lock.json",
+      "https://github.com/LIghtJUNction/oh-my-ztty/blob/a8c97dda48b2506cf2617c9a21fe39ab0e4b779a/dependencies.lock.json"
+    ]
+  }
+}

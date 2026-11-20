@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T07:20:13.349811+08:00",
+  "generated_at": "2026-11-20T23:52:48.676829+00:00",
   "timezone": "Asia/Taipei",
   "scope": "Initial 85 PRs, latest GitHub default-branch dependency migration, generated-binary history cleanup, development-machine cache cleanup, release integration and the requested named local/remote contexts",
   "batch_status": "in_progress",
@@ -1362,35 +1362,34 @@
       "repositories_completed": 13
     },
     "ssmcp_owner_status": {
-      "source": "407084c4fcc582f5fef01b772de838f04e2d5484",
-      "library_private": {
-        "passed": 1880,
-        "failed": 5,
-        "ignored": 22,
-        "filtered": 4
+      "scope": "Current candidate and historical source observations are separated by explicit evidence references.",
+      "historical_source_observation": {
+        "path": "evidence/baseline-followup-prior-status-a9ed-20261121.json",
+        "bytes": 15887,
+        "sha256": "378bcd8b0d8e0dfa7537a0293a0a105ad93e96bec39163854494918c8b93b427"
       },
-      "native_p1_final": "not_run_due_failed_gate",
-      "newer_main": "ccb91955c25969f4779588d4cebb09b72c00f829",
       "current_source_owner_active": true,
-      "no_formal_release_v21": true,
-      "latest_release_requested": true,
-      "final_current_source_gates_pending": true,
-      "historical_test_scope": "407084c4 only; does not qualify the current integration",
       "current_release": {
-        "status": "source781_r4_baseline_actual_compilation_in_progress",
-        "candidate": "781b87df1d364137b6885f17f631a3e9e991bd58",
-        "tree": "6bf7beb143cfdce3878df856c27785164695430f",
-        "new_formal_release": false,
-        "progress": {
-          "path": "evidence/ssmcp-781-progress-20261121.json",
-          "bytes": 5162,
-          "sha256": "c48fd16e8011c44bfddec3b58118aca4f25d1430fedbd5a499200ead69755686"
+        "status": "fixed_781_complete_baseline_passed_performance_and_main_reconciliation_pending",
+        "candidate": "fc06728a36d0b4d2920e1e2bc29885721ced5780",
+        "tree": "088fe1cde36fe63a33df1f9b7cfb619ae5f8ee35",
+        "source": {
+          "path": "evidence/ssmcp-fc-source-observation-20261121.json",
+          "bytes": 2079,
+          "sha256": "cda65fcdee12c23b804275340dab009db47d363664f8b2a2f059b055e8838963"
         },
-        "current_native_observation": {
-          "path": "evidence/ssmcp-781-shared-lock-observation-20261121.json",
-          "bytes": 8508,
-          "sha256": "af4d5e4ede01a6cf47bbf016f56e35305f479b4f9b3cb9ed59c896e63fa6f619"
-        }
+        "baseline_781": {
+          "path": "evidence/ssmcp-781-complete-independent-review-20261121.json",
+          "bytes": 14968,
+          "sha256": "633740c4eb75668806c36e6c32244b94c037afd4a7ef591ee514b6aa293ff07c"
+        },
+        "main_reconciliation": {
+          "path": "evidence/ssmcp-three-way-summary-20261121.json",
+          "bytes": 7982,
+          "sha256": "1ee8bf32684177c4b9768983b7b1b212f19cd537d0390d266e8dcc1de8ea7b09"
+        },
+        "final_current_source_gates_pending": true,
+        "new_formal_release_for_current_candidate": false
       },
       "named_context_followup": {
         "status": "PR153_and_PR155_merged_source_specific_validation_retained",
@@ -1401,12 +1400,6 @@
           "bytes": 8683,
           "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
         }
-      },
-      "scope": "Historical source-specific observations are retained. Current PR159 status is linked below; old407/b156/91a results do not validate781.",
-      "prior_current_release_and_context_status": {
-        "path": "evidence/input-ui-prior-status-c2c-20261121.json",
-        "bytes": 8683,
-        "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
       }
     },
     "previous_aggregate_pr": {
@@ -1470,7 +1463,7 @@
     "tree": "df3e6ed3c4e9d950e6277bec472ea4c8406a94dc",
     "status": "draft_final_components_and_complete_44_repository_graph_pending",
     "base": "d2a6616c85b7e47c3faa32bd5728db49cdd9c142",
-    "source_snapshot_note": "The recorded9d head identifies the cited recursive-checker merge. This report is prepared from794075f documentation; it changes no aggregate gitlink/catalog and claims no final44 gate. Publication head and exact file hashes are recorded separately after the guarded update."
+    "source_snapshot_note": "Report-only increment based on a9ed909; source graph, gitlinks, original85 counts and historical exact-cohort gates preserved. Final44 remains pending."
   },
   "dependency_snapshot": {
     "status": "19_repository_migrations_published_recursive_checker_merged_final_44_graph_pending",
@@ -10945,10 +10938,155 @@
         "bytes": 13850,
         "sha256": "a22bd6eaf613255bb81e5b6ce03201949819e1091b7cc4ef81b9be9cc0f4b901"
       }
+    },
+    "baseline-followup-prior-status-a9ed-20261121.json": {
+      "path": "evidence/baseline-followup-prior-status-a9ed-20261121.json",
+      "bytes": 15887,
+      "sha256": "378bcd8b0d8e0dfa7537a0293a0a105ad93e96bec39163854494918c8b93b427"
+    },
+    "ssmcp-781-complete-archive-manifest-20261121.json": {
+      "path": "evidence/ssmcp-781-complete-archive-manifest-20261121.json",
+      "bytes": 1246,
+      "sha256": "b71d834e494bcaf8eb0e44412b8d984a7778f09fa9e8f8bad378c890186c1c0f"
+    },
+    "ssmcp-781-complete-independent-review-20261121.json": {
+      "path": "evidence/ssmcp-781-complete-independent-review-20261121.json",
+      "bytes": 14968,
+      "sha256": "633740c4eb75668806c36e6c32244b94c037afd4a7ef591ee514b6aa293ff07c"
+    },
+    "ssmcp-781-complete-independent-review-20261121.md": {
+      "path": "evidence/ssmcp-781-complete-independent-review-20261121.md",
+      "bytes": 6005,
+      "sha256": "66fa1c3031238b677545fbb0b432d596f1577c2fdb54da568ba45b44c516c33e"
+    },
+    "ssmcp-781-third-baseline-observation-20261121.json": {
+      "path": "evidence/ssmcp-781-third-baseline-observation-20261121.json",
+      "bytes": 6862,
+      "sha256": "83240f63ac52d8d1490457e35fabce311a49ffa6fc9f2caece39c77fe1ebf692"
+    },
+    "ssmcp-main-f208-observation-20261121.json": {
+      "path": "evidence/ssmcp-main-f208-observation-20261121.json",
+      "bytes": 24465,
+      "sha256": "b6cc2be91ef5118c084c6592238ebb153aaa03ea22d23189b838e6d2a4336f1d"
+    },
+    "ssmcp-three-way-focused-patches-20261121.json": {
+      "path": "evidence/ssmcp-three-way-focused-patches-20261121.json",
+      "bytes": 401680,
+      "sha256": "76d7f44b780e0af84250e0b3e24b03371244ea99dab08ceea8c0ab2d61fc0cab"
+    },
+    "ssmcp-three-way-inventory-20261121.json": {
+      "path": "evidence/ssmcp-three-way-inventory-20261121.json",
+      "bytes": 114882,
+      "sha256": "83a3a26902be6a7bfbda6b979b3d3c0744f7578efb7544d439629e0d8c77e1e0"
+    },
+    "ssmcp-three-way-review-20261121.json": {
+      "path": "evidence/ssmcp-three-way-review-20261121.json",
+      "bytes": 36999,
+      "sha256": "88ca2f015c481ce502161c486b2d94774233cd33afc5252093cec46f7eb62ebf"
+    },
+    "ssmcp-three-way-review-20261121.md": {
+      "path": "evidence/ssmcp-three-way-review-20261121.md",
+      "bytes": 7678,
+      "sha256": "7d628b116952389116075b45b4121ee3363f9a201a191595ccf3e8a2fdfbb09f"
+    },
+    "ssmcp-three-way-summary-20261121.json": {
+      "path": "evidence/ssmcp-three-way-summary-20261121.json",
+      "bytes": 7982,
+      "sha256": "1ee8bf32684177c4b9768983b7b1b212f19cd537d0390d266e8dcc1de8ea7b09"
+    },
+    "ssmcp-v21-tag-observation-20261121.json": {
+      "path": "evidence/ssmcp-v21-tag-observation-20261121.json",
+      "bytes": 1701,
+      "sha256": "0575deb5a36fafed901ce599544713e92e6e35ba4f78bbd821de3595f4ea5a65"
+    },
+    "ssmcp-v22-run-observation-20261121.json": {
+      "path": "evidence/ssmcp-v22-run-observation-20261121.json",
+      "bytes": 6378,
+      "sha256": "47677cfdc70f8c6e8c3b070fa12a7a0c1be00bf6b89f9e726e0340f4a08753e1"
+    },
+    "zcalld-ohmy-upstream-observation-20261121.json": {
+      "path": "evidence/zcalld-ohmy-upstream-observation-20261121.json",
+      "bytes": 27688,
+      "sha256": "2fb0980cac9ca030d963b8439329c4fd49ca98bc3b186a29206637414cf4b3d9"
+    },
+    "zuse-356-minimum-validation-plan-20261121.json": {
+      "path": "evidence/zuse-356-minimum-validation-plan-20261121.json",
+      "bytes": 19007,
+      "sha256": "e21b5560794b26ba843c71fb8814cee1927ce832dcc4a5246bb5539b54c7d414"
+    },
+    "zuse-356-portable-handoff-20261121.json": {
+      "path": "evidence/zuse-356-portable-handoff-20261121.json",
+      "bytes": 26848,
+      "sha256": "3005b2d3abddcb09ee9d9ab836f21196e202377f881536a8ed4b4c7e2c52e0df"
+    },
+    "zuse-356-portable-handoff-20261121.md": {
+      "path": "evidence/zuse-356-portable-handoff-20261121.md",
+      "bytes": 2786,
+      "sha256": "d4a2bf29b89a4fa8b1cdc5f6319b6081749cec3639071e92f595f8a6bfada752"
+    },
+    "zuse-356-portable-postflight-20261121.json": {
+      "path": "evidence/zuse-356-portable-postflight-20261121.json",
+      "bytes": 3451,
+      "sha256": "7cc88e58df969b02dde4cd0af9c135704f7202921b9d9771ef8ca9926969d7ea"
+    },
+    "zuse-356-portable-publication-20261121.json": {
+      "path": "evidence/zuse-356-portable-publication-20261121.json",
+      "bytes": 1670,
+      "sha256": "cf3246001e284519c5654382fd6123c15bfb4af20d4dd9438bb9b3d72e7402c9"
+    },
+    "zuse-356-portable-result-20261121.json": {
+      "path": "evidence/zuse-356-portable-result-20261121.json",
+      "bytes": 24696,
+      "sha256": "53eda19a7a10de808b81ef99f56b454e2cf82bef6b468ee13f2f89222d5f7456"
+    },
+    "zuse-356-portable-start-20261121.json": {
+      "path": "evidence/zuse-356-portable-start-20261121.json",
+      "bytes": 2475,
+      "sha256": "c4e9d2dc5189bffca3cb172f0d1cb3c24a1a1d902283186b1eecd2b2fc1c3263"
+    },
+    "zuse-356-portable-status-20261121.json": {
+      "path": "evidence/zuse-356-portable-status-20261121.json",
+      "bytes": 1344,
+      "sha256": "0416013776b1f3c869de235ac94ef493822908009fb904e28d88d1e2ea4da116"
+    },
+    "zuse-pr2-provenance-356-plan-delivery-20261121.json": {
+      "path": "evidence/zuse-pr2-provenance-356-plan-delivery-20261121.json",
+      "bytes": 3519,
+      "sha256": "fd1abce177ddf29a808c4fbd5cfdb3b0a6bec1cad3a92b3cbe16354b5046aa3f"
+    },
+    "ssmcp-781-complete-baseline/execution-receipt.json": {
+      "path": "evidence/ssmcp-781-complete-baseline/execution-receipt.json",
+      "bytes": 29263,
+      "sha256": "aefc6b8a20c8bec808057acae758c60fb44630c5912cb1851cced2a7dc2eef63"
+    },
+    "ssmcp-781-complete-baseline/six-cases-report.json": {
+      "path": "evidence/ssmcp-781-complete-baseline/six-cases-report.json",
+      "bytes": 19660,
+      "sha256": "7b7c9081616aca563d74efe883cd716e6be8da594e2671e283c904a7b096c64c"
+    },
+    "ssmcp-781-complete-baseline/ctrlv-report.json": {
+      "path": "evidence/ssmcp-781-complete-baseline/ctrlv-report.json",
+      "bytes": 13333,
+      "sha256": "df1d570ed1bbcf8e47d6a4e99c94d06357319ebc0ca22a9c5e9d3d82b05498d4"
+    },
+    "ssmcp-fc-source-observation-20261121.json": {
+      "path": "evidence/ssmcp-fc-source-observation-20261121.json",
+      "bytes": 2079,
+      "sha256": "cda65fcdee12c23b804275340dab009db47d363664f8b2a2f059b055e8838963"
+    },
+    "zcalld-d531-main0a-cross-review-20261121.json": {
+      "path": "evidence/zcalld-d531-main0a-cross-review-20261121.json",
+      "bytes": 11136,
+      "sha256": "a3193c38276efed990f1a1b0ea96a751824ad365bf0cdc4d10b0fd25705434cf"
+    },
+    "zuse-356-portable-independent-review-20261121.json": {
+      "path": "evidence/zuse-356-portable-independent-review-20261121.json",
+      "bytes": 10412,
+      "sha256": "ba8a4ed048b4d8a6cb681a989ab1cb5f96aa48c0563e4be5671902efe2a11511"
     }
   },
   "current_maintenance": {
-    "generated_at": "2026-11-21T07:20:13.349811+08:00",
+    "generated_at": "2026-11-20T23:52:48.676829+00:00",
     "root_consumers": {
       "zcall-gui": {
         "status": "merged_and_main_tree_read_back",
@@ -15710,20 +15848,21 @@
       }
     },
     "ssmcp_release": {
-      "status": "source781_five_artifacts_built_second_baseline_partial_queue_fixture_successor_pending",
-      "main_verified": "cf0ab581700918a37fcccbebb93de2e0cab02841",
-      "candidate": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "status": "fixed_781_complete_baseline_passed_performance_and_main_reconciliation_pending",
+      "main_verified": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "candidate": "fc06728a36d0b4d2920e1e2bc29885721ced5780",
       "new_formal_release": false,
-      "current_public_tree": "bd2bcce33baffa69b82d69d9cff3abdb85baa0fb",
-      "scope_note": "All five fixed781/r4 artifacts built fresh=false; three build commands exit0. Root independently read the full receipt and rehashed all five files. First runtime stopped at old Next-caller assertion. Source owner reports second60e passed four samples, then ordinary16k postcheck stopped after queue response spill; busy/CtrlV not run. Exact queue projection successor prepared; full baseline/runtime/Gate10/P1 pending. Prior441 CI retains441 identity.",
+      "current_public_tree": "7eeb434be1d24e14b453488f5fbca90d933e12b9",
+      "scope_note": "Five artifacts built and independently read back. Complete6c1 baseline passed six cases plus private fake-wl-paste CtrlV; runtime reports explicitly rehash four used artifacts, not frontend. 80+31 fixture checks are not Rust unit tests. 16KiB raw ready2439.160607ms is baseline only. No final A/B, integrated runtime/P1 or new-cohort release acceptance.",
       "previous_final_gate_plan_text": "pending on final fixed SSMCP cohort plus zcalld97d; original build commits and evidence stay separate",
       "current_final_gate_plan": {
-        "status": "pending_corrected781_six_case_baseline_then_runtime_and_d531_gate10_p1",
-        "plan": "Original owner reuses the five verified781 artifacts for the corrected same six-case baseline/Control-V, then completes fixed runtime and zcalld d531 Gate10/P1.",
+        "status": "781_baseline_complete_FC_AB_then_freshmain_and_zcalld_successor_runtime_p1_pending",
+        "plan": "Existing owner completes FC same-method build/A-B, reconciles latest main semantics/fixes, then freezes final source/artifacts for runtime/Gate10/P1 with separately integrated zcalld successor.",
         "original_32_scope": "The historical32 set included five shared-library checks, two Go checks and package/install work outside this P1 path. Those unrelated checks are not rerun or reported as new32 passes.",
         "merge_owner": "Project Z root, after native final acceptance and fresh main/candidate tree verification",
         "draft": true,
-        "local_evidence": "evidence/zcalld-listener-d531-20261121.json"
+        "historical_d531_evidence": "evidence/zcalld-listener-d531-20261121.json",
+        "source_writers": "SSMCP existing native owner; zcalld successor delegated by root to original builtin Core; root remains PR1 merge owner."
       },
       "path_loss_observation": {
         "observed_window_utc": "2026-11-20T19:32:00Z/2026-11-20T19:34:00Z",
@@ -15739,28 +15878,22 @@
         "tree": "b66c011c488b79972760848abee8427b4bbfe706",
         "owner_reported_scope": "178 unit /14 CLI/10 isolated PTY passed;10 helper fixtures ignored; no root rerun"
       },
-      "main_observation_scope": "main_verified remains the previously observed public main. The current unmerged PR159 head is781; do not relabel a PR head as public main or inherit earlier context acceptance.",
-      "candidate_tree": "6bf7beb143cfdce3878df856c27785164695430f",
+      "main_observation_scope": "GitHub fixed mainf208 snapshot. Three-way review compares historical781 with f208; current successorFC is published but still divergent. No former gate is promoted to the combined source.",
+      "candidate_tree": "088fe1cde36fe63a33df1f9b7cfb619ae5f8ee35",
       "prior_source_audit_and_python_counts": {
         "path": "evidence/input-ui-prior-status-c2c-20261121.json",
         "bytes": 8683,
         "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
       },
       "current_progress": {
-        "status": "five_fixed_artifacts_complete_second_runtime_partial_queue_projection_successor_prepared",
-        "source": "781b87df1d364137b6885f17f631a3e9e991bd58",
-        "tree": "6bf7beb143cfdce3878df856c27785164695430f",
-        "product_tests_executed_by_build": 0,
-        "second_runtime_owner_progress": {
-          "path": "evidence/ssmcp-781-second-baseline-progress-20261121.json",
-          "bytes": 1223,
-          "sha256": "8233daea639e602eac17018d524d0bc4a7903098b1da2c4ca856b075f2b738c6"
-        }
+        "source_owner": "existing native source/release owner and original CLI author",
+        "phase": "FC four-path performance source published; original owner starts same-r4 producer and same-r3 A/B. Current-main reconciliation follows; private native356 and other heavy work held.",
+        "parallel_product_writer_created": false
       },
       "current_native_observation": {
-        "path": "evidence/ssmcp-781-preserved-artifacts-20261121.json",
-        "bytes": 4442,
-        "sha256": "1a3a1ff057228a7b7b8bc92dbd911622bc815aaecd957254fd48df063f9713ad"
+        "path": "evidence/ssmcp-781-complete-independent-review-20261121.json",
+        "bytes": 14968,
+        "sha256": "633740c4eb75668806c36e6c32244b94c037afd4a7ef591ee514b6aa293ff07c"
       },
       "prior_status_794": {
         "path": "evidence/runtime-followup-prior-status-794-20261121.json",
@@ -15821,6 +15954,92 @@
           "reported_consumer_sha256_prefix": "eb062bf2"
         },
         "verification_scope": "Owner progress handoff; raw second execution receipt and successor full hashes requested, not yet independently read by Project Z root."
+      },
+      "prior_status_a9ed": {
+        "path": "evidence/baseline-followup-prior-status-a9ed-20261121.json",
+        "bytes": 15887,
+        "sha256": "378bcd8b0d8e0dfa7537a0293a0a105ad93e96bec39163854494918c8b93b427"
+      },
+      "third_runtime_attempt": {
+        "path": "evidence/ssmcp-781-third-baseline-observation-20261121.json",
+        "bytes": 6862,
+        "sha256": "83240f63ac52d8d1490457e35fabce311a49ffa6fc9f2caece39c77fe1ebf692"
+      },
+      "complete_baseline": {
+        "job_id": "26c4545eae1eab8d27485f4a48077d3c-6c1",
+        "exit_code": 0,
+        "source": "781b87df1d364137b6885f17f631a3e9e991bd58",
+        "tree": "6bf7beb143cfdce3878df856c27785164695430f",
+        "six_samples": 6,
+        "six_fixture_checks": 80,
+        "ctrlv_fixture_checks": 31,
+        "ordinary_16k_ready_ms": 2439.160607,
+        "ctrlv_ready_ms": 50.066292,
+        "clipboard_provider": "private owned fake wl-paste, not real OS clipboard",
+        "busy_tick_boundary": "20 recorded producer ticks; post-ready observation748.808433ms, not20ticks/43ms throughput",
+        "execution": {
+          "path": "evidence/ssmcp-781-complete-baseline/execution-receipt.json",
+          "bytes": 29263,
+          "sha256": "aefc6b8a20c8bec808057acae758c60fb44630c5912cb1851cced2a7dc2eef63"
+        },
+        "six_cases": {
+          "path": "evidence/ssmcp-781-complete-baseline/six-cases-report.json",
+          "bytes": 19660,
+          "sha256": "7b7c9081616aca563d74efe883cd716e6be8da594e2671e283c904a7b096c64c"
+        },
+        "ctrlv": {
+          "path": "evidence/ssmcp-781-complete-baseline/ctrlv-report.json",
+          "bytes": 13333,
+          "sha256": "df1d570ed1bbcf8e47d6a4e99c94d06357319ebc0ca22a9c5e9d3d82b05498d4"
+        },
+        "archive_manifest": {
+          "path": "evidence/ssmcp-781-complete-archive-manifest-20261121.json",
+          "bytes": 1246,
+          "sha256": "b71d834e494bcaf8eb0e44412b8d984a7778f09fa9e8f8bad378c890186c1c0f"
+        },
+        "independent_review": {
+          "path": "evidence/ssmcp-781-complete-independent-review-20261121.json",
+          "bytes": 14968,
+          "sha256": "633740c4eb75668806c36e6c32244b94c037afd4a7ef591ee514b6aa293ff07c"
+        },
+        "performance_improvement_claimed": false
+      },
+      "main_reconciliation": {
+        "actual_merge_base": "a19ac040b1c7e9daa6a2144db79cfaa1bee09954",
+        "summary": {
+          "path": "evidence/ssmcp-three-way-summary-20261121.json",
+          "bytes": 7982,
+          "sha256": "1ee8bf32684177c4b9768983b7b1b212f19cd537d0390d266e8dcc1de8ea7b09"
+        },
+        "review": {
+          "path": "evidence/ssmcp-three-way-review-20261121.md",
+          "bytes": 7678,
+          "sha256": "7d628b116952389116075b45b4121ee3363f9a201a191595ccf3e8a2fdfbb09f"
+        },
+        "boundary": "110 paths from actual merge-base:1 sameblob/21candidate-only/64main-only/24both-different; not textual conflict count. Reconcile chat-recipient --agent/default next-caller with main bootstrap semantics, none lifecycle, retired hooks, typed time/peer, Cargo0.10.22 and zcall317.",
+        "main_observation": {
+          "path": "evidence/ssmcp-main-f208-observation-20261121.json",
+          "bytes": 24465,
+          "sha256": "b6cc2be91ef5118c084c6592238ebb153aaa03ea22d23189b838e6d2a4336f1d"
+        },
+        "tag_v21_observation": {
+          "path": "evidence/ssmcp-v21-tag-observation-20261121.json",
+          "bytes": 1701,
+          "sha256": "0575deb5a36fafed901ce599544713e92e6e35ba4f78bbd821de3595f4ea5a65"
+        },
+        "other_v22_run": {
+          "path": "evidence/ssmcp-v22-run-observation-20261121.json",
+          "bytes": 6378,
+          "sha256": "47677cfdc70f8c6e8c3b070fa12a7a0c1be00bf6b89f9e726e0340f4a08753e1"
+        },
+        "other_native_worktree_observed": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release-0-10-23-integration-20261120",
+        "other_worktree_scope": "Native owner checkpoint23:35:36 reports Windows state-locking/accountE2E work; no ownership takeover, build, ref/tag edit or production change by root."
+      },
+      "build_receipt_scope": "Existing d220 build receipt and five binaries are fixed781 baseline only; no FC product build or A/B acceptance claimed here.",
+      "performance_successor_source": {
+        "path": "evidence/ssmcp-fc-source-observation-20261121.json",
+        "bytes": 2079,
+        "sha256": "cda65fcdee12c23b804275340dab009db47d363664f8b2a2f059b055e8838963"
       }
     },
     "context_request": {
@@ -17082,16 +17301,22 @@
         "remaining": "Integrate draft zttyc7 pin and final SSMCP source without losing either source update; no new final bundle claim."
       },
       "ztty": {
-        "main": "01e8b573bc787e982f96db2b1e6ec9151d321284",
-        "tree": "a7a99b41c9bfef6f4f617914b6c67466f5d3a7c8",
-        "tested_head": "076bc6ac8ff9ca17effe25decac7a4dbc4ec0c43",
+        "main": "99ef7a0f02dfb643a426b4b5f8daf0bc009d9752",
+        "tree": "79b48dbf7560bd8a62e34c7073c416f84abba2c7",
+        "tested_head": "9eaed366b285dc9c6c5a74032e850bd6af8c0476",
+        "runtime_source": "49c8024b94b055f43eee46a9ac8f671ad6b7f5a4",
         "merge_tree_equals_tested_tree": true,
         "publication": {
-          "path": "evidence/ztty-ime-publication-20261121.json",
-          "bytes": 10598,
-          "sha256": "3e603ae76e3537caedcac8e2adfa9b72e9db8ef790d7bb31bbf66058f6e4393f"
+          "path": "evidence/ztty-pr24-publication-20261121.json",
+          "bytes": 9637,
+          "sha256": "cfdcc98898fa85e7085d49146a9c8c2e575ab5ce698a15967ad2ef3cc8fa3f16"
         },
-        "oh_my_ztty_and_final44_propagation": "pending"
+        "prior_PR23_snapshot": {
+          "path": "evidence/baseline-followup-prior-status-a9ed-20261121.json",
+          "bytes": 15887,
+          "sha256": "378bcd8b0d8e0dfa7537a0293a0a105ad93e96bec39163854494918c8b93b427"
+        },
+        "oh_my_ztty_and_final44_propagation": "pending final component cohort"
       },
       "bounded_reverse_impact": {
         "result": [
@@ -17308,7 +17533,7 @@
       "scope_note": "PR22 memory acceptance stays bound to bfee/ca160 and its ELF. PR23 input acceptance and PR24 caret acceptance are separate; the66 memory stages were not rerun."
     },
     "ssmcp_input_requirement": {
-      "status": "source781_five_artifacts_built_second_baseline_partial_queue_fixture_successor_pending",
+      "status": "fixed_781_complete_baseline_passed_performance_and_main_reconciliation_pending",
       "effective_name": "--input",
       "terminal": "Default input source",
       "web": "Input host/port explicit",
@@ -17365,21 +17590,23 @@
       "publication": {
         "url": "https://github.com/LIghtJUNction/ssmcp/pull/159",
         "draft": true,
-        "head": "781b87df1d364137b6885f17f631a3e9e991bd58",
-        "tree": "6bf7beb143cfdce3878df856c27785164695430f",
+        "head": "fc06728a36d0b4d2920e1e2bc29885721ced5780",
+        "tree": "088fe1cde36fe63a33df1f9b7cfb619ae5f8ee35",
         "source_published": true,
         "runtime_pass_claimed": false,
-        "final_five_artifact_build": "Completed r4 job581: library-test fixture, ssmcp, ssmcp-frontend, ssmcpd and vt_snapshot, all fresh=false with source-bound link/public/preserved bytes equal.",
         "progress": {
-          "status": "five_fixed_artifacts_complete_second_runtime_partial_queue_projection_successor_prepared",
-          "source": "781b87df1d364137b6885f17f631a3e9e991bd58",
-          "tree": "6bf7beb143cfdce3878df856c27785164695430f",
-          "product_tests_executed_by_build": 0,
-          "second_runtime_owner_progress": {
-            "path": "evidence/ssmcp-781-second-baseline-progress-20261121.json",
-            "bytes": 1223,
-            "sha256": "8233daea639e602eac17018d524d0bc4a7903098b1da2c4ca856b075f2b738c6"
-          }
+          "status": "781_complete_baseline_passed_FC_performance_candidate_source_published_waiting_own_build_AB",
+          "baseline": {
+            "path": "evidence/ssmcp-781-complete-independent-review-20261121.json",
+            "bytes": 14968,
+            "sha256": "633740c4eb75668806c36e6c32244b94c037afd4a7ef591ee514b6aa293ff07c"
+          },
+          "current_candidate": {
+            "path": "evidence/ssmcp-fc-source-observation-20261121.json",
+            "bytes": 2079,
+            "sha256": "cda65fcdee12c23b804275340dab009db47d363664f8b2a2f059b055e8838963"
+          },
+          "final_integrated_runtime_claimed": false
         },
         "previous441_ci_metadata": {
           "path": "evidence/ssmcp-441-progress-before-producer-failure-20261121.json",
@@ -17402,9 +17629,9 @@
           "sha256": "88cc0d3ce36ae6408261a7e724661442e5b45117c73067d809d156d4d7a846f5"
         },
         "current_native_observation": {
-          "path": "evidence/ssmcp-781-preserved-artifacts-20261121.json",
-          "bytes": 4442,
-          "sha256": "1a3a1ff057228a7b7b8bc92dbd911622bc815aaecd957254fd48df063f9713ad"
+          "path": "evidence/ssmcp-781-complete-independent-review-20261121.json",
+          "bytes": 14968,
+          "sha256": "633740c4eb75668806c36e6c32244b94c037afd4a7ef591ee514b6aa293ff07c"
         },
         "build_receipt": {
           "path": "evidence/ssmcp-781-baseline-build-20261121.json",
@@ -17415,7 +17642,8 @@
           "path": "evidence/runtime-followup-prior-status-794-20261121.json",
           "bytes": 13850,
           "sha256": "a22bd6eaf613255bb81e5b6ce03201949819e1091b7cc4ef81b9be9cc0f4b901"
-        }
+        },
+        "baseline_781_five_artifact_build": "Completed r4 job581: library-test fixture, ssmcp, ssmcp-frontend, ssmcpd and vt_snapshot, all fresh=false with source-bound link/public/preserved bytes equal."
       },
       "source_implementation_published": true,
       "native_current_combination_runtime_pass_claimed": false
@@ -17630,6 +17858,70 @@
           }
         }
       }
+    },
+    "current_validation_update": {
+      "recorded_at": "2026-11-20T23:49:58.177604+00:00",
+      "zuse_356_portable": {
+        "source": "35664746549c482c99082e6180419b2c0f5ff532",
+        "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+        "job_id": "26c4545eae1eab8d27485f4a48077d3c-6dc",
+        "exit_code": 0,
+        "elapsed_seconds": 61.129,
+        "default_harness_passed": 289,
+        "default_ignored": 5,
+        "private_x11_early_returns_with_env_unset": 2,
+        "no_std_passed": 20,
+        "narrow_16_overlap_do_not_add": true,
+        "cross_checks": "native+wasm no_std; WindowsGNU, macOSx86/ARM, LinuxARM all-targets; strict all-targets Clippy25 actual candidate-root invocations",
+        "handoff": {
+          "path": "evidence/zuse-356-portable-handoff-20261121.json",
+          "bytes": 26848,
+          "sha256": "3005b2d3abddcb09ee9d9ab836f21196e202377f881536a8ed4b4c7e2c52e0df"
+        },
+        "raw_result": {
+          "path": "evidence/zuse-356-portable-result-20261121.json",
+          "bytes": 24696,
+          "sha256": "53eda19a7a10de808b81ef99f56b454e2cf82bef6b468ee13f2f89222d5f7456"
+        },
+        "publication": {
+          "path": "evidence/zuse-356-portable-publication-20261121.json",
+          "bytes": 1670,
+          "sha256": "cf3246001e284519c5654382fd6123c15bfb4af20d4dd9438bb9b3d72e7402c9"
+        },
+        "drive": "https://drive.google.com/file/d/1I_8ldn-U5A1yb-22o4nEYYldTotgfdf8/view",
+        "private_native": "not_started; hold while existing SSMCP owner performs FC build/A-B; explicit private X11 env required",
+        "original_pr2_main_a1_unchanged": true,
+        "independent_review": {
+          "path": "evidence/zuse-356-portable-independent-review-20261121.json",
+          "bytes": 10412,
+          "sha256": "ba8a4ed048b4d8a6cb681a989ab1cb5f96aa48c0563e4be5671902efe2a11511"
+        },
+        "archive_members": {
+          "payloads": 39,
+          "manifest": 1,
+          "total": 40
+        },
+        "clippy_distinct_sourcepaths": 23
+      },
+      "zcalld_ohmy_upstream": {
+        "path": "evidence/zcalld-ohmy-upstream-observation-20261121.json",
+        "bytes": 27688,
+        "sha256": "2fb0980cac9ca030d963b8439329c4fd49ca98bc3b186a29206637414cf4b3d9"
+      },
+      "zcalld_boundary": "At23:43:44 main0a0a/tree69f6 differs from d531 by11commits each; PR1mergeablefalse. Newmain installer/Windowsruntime/0.4.4/locks require owner integration before finalP1. Prior179+8 remains d531 only.",
+      "ohmy_boundary": "Mainf04 and draftPR7a8 eachoneahead; preserve mainSSMCP4237 and validation document, then update final components. Neither currently pins ztty99ef or candidateSSMCP781. Old112checks remaina8 only.",
+      "original_pr2_provenance_plan_archive": {
+        "path": "evidence/zuse-pr2-provenance-356-plan-delivery-20261121.json",
+        "bytes": 3519,
+        "sha256": "fd1abce177ddf29a808c4fbd5cfdb3b0a6bec1cad3a92b3cbe16354b5046aa3f"
+      },
+      "full44_executed": false,
+      "zcalld_static_cross_review": {
+        "path": "evidence/zcalld-d531-main0a-cross-review-20261121.json",
+        "bytes": 11136,
+        "sha256": "a3193c38276efed990f1a1b0ea96a751824ad365bf0cdc4d10b0fd25705434cf"
+      },
+      "zcalld_writer": "Root delegated sole successor source writer to existing builtin pr_core_repos; preserve newmain0a and ca35, carry only five d531 Rust blobs; no new gate or PR merge yet."
     }
   },
   "core_git_source_migrations": {
@@ -22308,18 +22600,20 @@
     },
     "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-git-sources-20261120/pr-cleanup-mechrevo-git-source.json"
   },
-  "current_snapshot_scope": "Current maintenance includes merged PR24 exact16-check tree,781 five-artifact build and first route-fixture failure, and isolated zusePR3 RED/GREEN. Prior441 CI, PR23 paired input, PR22memory and old source graphs retain immutable cohorts. Full44 and finalP1 remain pending.",
+  "current_snapshot_scope": "Current snapshot includes merged PR24 exact16-check tree; complete fixed781 six-case/privateCtrlV baseline; source-only performance successorFC awaiting own build/A-B and main reconciliation; current356 portable result plus prior isolated RED/GREEN. Old441CI, PR23pairedinput, PR22memory and old graphs retain exact cohorts. Fresh zcalld main0a requires successor integration. Private native356, finalP1 and full44 remain pending.",
   "report_preparation": {
-    "source_report_commit": "794075f187cb3ebaac8dc3de0a4d5dbba26403b8",
-    "source_report_tree": "f723367846a7665afaaa1df6b244b503ed75cc42",
-    "prepared_at_utc": "2026-11-20T23:20:13.349811+00:00",
-    "prepared_at_taipei": "2026-11-21T07:20:13.349811+08:00",
+    "source_report_commit": "a9ed909e3c76e830bbcacd299929544cd51207a3",
+    "source_report_tree": "0579edd68784167e86a12577c69ed8e24e2c0712",
+    "prepared_at_utc": "2026-11-20T23:49:58.177604+00:00",
+    "prepared_at_taipei": "2026-11-21T07:49:58.177604+08:00",
     "snapshot_recorded_before_publication": true,
     "report_only": true,
     "prior_status": {
-      "path": "evidence/runtime-followup-prior-status-794-20261121.json",
-      "bytes": 13850,
-      "sha256": "a22bd6eaf613255bb81e5b6ce03201949819e1091b7cc4ef81b9be9cc0f4b901"
-    }
+      "path": "evidence/baseline-followup-prior-status-a9ed-20261121.json",
+      "bytes": 15887,
+      "sha256": "378bcd8b0d8e0dfa7537a0293a0a105ad93e96bec39163854494918c8b93b427"
+    },
+    "amended_at_utc": "2026-11-20T23:52:48.676829+00:00",
+    "review_corrections_at_utc": "2026-11-20T23:54:42.923504+00:00"
   }
 }

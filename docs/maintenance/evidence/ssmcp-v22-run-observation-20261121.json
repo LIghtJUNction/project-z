@@ -1,0 +1,181 @@
+{
+  "schema": 1,
+  "observed_at": "2026-11-20 23:48:21 UTC",
+  "source": "GitHub plugin exact run and jobs APIs",
+  "run": {
+    "id": 44836598784,
+    "head_sha": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+    "status": "in_progress",
+    "conclusion": null,
+    "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784",
+    "updated_at": "2026-11-20T23:35:38Z"
+  },
+  "jobs": [
+    {
+      "id": 136634431636,
+      "name": "validate",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-20T23:24:47Z",
+      "completed_at": "2026-11-20T23:25:19Z",
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136634431636",
+      "failed_steps": []
+    },
+    {
+      "id": 136634679526,
+      "name": "Build aarch64-unknown-linux-gnu",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-20T23:25:24Z",
+      "completed_at": "2026-11-20T23:30:01Z",
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136634679526",
+      "failed_steps": []
+    },
+    {
+      "id": 136634679603,
+      "name": "Build x86_64-apple-darwin",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-20T23:25:23Z",
+      "completed_at": "2026-11-20T23:35:33Z",
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136634679603",
+      "failed_steps": []
+    },
+    {
+      "id": 136634679627,
+      "name": "Build aarch64-apple-darwin",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-20T23:25:23Z",
+      "completed_at": "2026-11-20T23:31:31Z",
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136634679627",
+      "failed_steps": []
+    },
+    {
+      "id": 136634679632,
+      "name": "Build aarch64-pc-windows-msvc",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-20T23:25:22Z",
+      "completed_at": "2026-11-20T23:33:27Z",
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136634679632",
+      "failed_steps": []
+    },
+    {
+      "id": 136634679655,
+      "name": "Build x86_64-pc-windows-msvc",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-20T23:25:22Z",
+      "completed_at": "2026-11-20T23:30:19Z",
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136634679655",
+      "failed_steps": []
+    },
+    {
+      "id": 136634679785,
+      "name": "Build x86_64-unknown-linux-gnu",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-20T23:25:23Z",
+      "completed_at": "2026-11-20T23:30:15Z",
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136634679785",
+      "failed_steps": []
+    },
+    {
+      "id": 136634680137,
+      "name": "checks / Client (macos-15-intel)",
+      "status": "in_progress",
+      "conclusion": null,
+      "started_at": "2026-11-20T23:25:23Z",
+      "completed_at": null,
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136634680137",
+      "failed_steps": []
+    },
+    {
+      "id": 136634680152,
+      "name": "checks / linux (ubuntu-24.04-arm)",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-11-20T23:25:25Z",
+      "completed_at": "2026-11-20T23:30:48Z",
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136634680152",
+      "failed_steps": [
+        {
+          "name": "Exercise account WebSocket, OAuth, HTTP and PTY",
+          "conclusion": "failure"
+        }
+      ]
+    },
+    {
+      "id": 136634680169,
+      "name": "checks / Client (windows-11-arm)",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-11-20T23:25:22Z",
+      "completed_at": "2026-11-20T23:31:12Z",
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136634680169",
+      "failed_steps": [
+        {
+          "name": "Run cargo test --locked --lib --bin ssmcp --test release_client",
+          "conclusion": "failure"
+        }
+      ]
+    },
+    {
+      "id": 136634680253,
+      "name": "checks / Client (macos-15)",
+      "status": "in_progress",
+      "conclusion": null,
+      "started_at": "2026-11-20T23:25:24Z",
+      "completed_at": null,
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136634680253",
+      "failed_steps": []
+    },
+    {
+      "id": 136634680317,
+      "name": "checks / Client (windows-2025)",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-20T23:25:23Z",
+      "completed_at": "2026-11-20T23:32:36Z",
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136634680317",
+      "failed_steps": []
+    },
+    {
+      "id": 136634680391,
+      "name": "checks / linux (ubuntu-24.04)",
+      "status": "completed",
+      "conclusion": "failure",
+      "started_at": "2026-11-20T23:25:23Z",
+      "completed_at": "2026-11-20T23:30:52Z",
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136634680391",
+      "failed_steps": [
+        {
+          "name": "Exercise account WebSocket, OAuth, HTTP and PTY",
+          "conclusion": "failure"
+        }
+      ]
+    },
+    {
+      "id": 136638851317,
+      "name": "Verify installed server x86_64-unknown-linux-gnu",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-20T23:35:36Z",
+      "completed_at": "2026-11-20T23:36:16Z",
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136638851317",
+      "failed_steps": []
+    },
+    {
+      "id": 136638851404,
+      "name": "Verify installed server aarch64-unknown-linux-gnu",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-20T23:35:38Z",
+      "completed_at": "2026-11-20T23:36:01Z",
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44836598784/job/136638851404",
+      "failed_steps": []
+    }
+  ],
+  "boundary": "Snapshot of the other f208/v0.10.22 release chain, not 781 baseline. Individual failed jobs do not turn the still-in-progress overall run into completed. No workflows, tags or production actions changed."
+}

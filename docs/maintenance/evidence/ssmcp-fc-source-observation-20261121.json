@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "observed_at": "2026-11-20 23:52:05 UTC",
+  "source": "GitHub plugin PR159, immutable Git commit, and compare APIs",
+  "pull_request": {
+    "url": "https://github.com/LIghtJUNction/ssmcp/pull/159",
+    "head": "fc06728a36d0b4d2920e1e2bc29885721ced5780",
+    "head_ref": "work/release21-recovery-20261121",
+    "base_ref": "main",
+    "draft": true,
+    "state": "open",
+    "mergeable": false
+  },
+  "commit": {
+    "sha": "fc06728a36d0b4d2920e1e2bc29885721ced5780",
+    "tree": "088fe1cde36fe63a33df1f9b7cfb619ae5f8ee35",
+    "parents": [
+      "781b87df1d364137b6885f17f631a3e9e991bd58"
+    ],
+    "message": "perf: batch terminal paste and completion work"
+  },
+  "compare": {
+    "url": "https://github.com/LIghtJUNction/ssmcp/compare/781b87df1d364137b6885f17f631a3e9e991bd58...fc06728a36d0b4d2920e1e2bc29885721ced5780",
+    "base": "781b87df1d364137b6885f17f631a3e9e991bd58",
+    "status": "ahead",
+    "ahead": 1,
+    "behind": 0,
+    "files": [
+      {
+        "filename": "scripts/e2e_paste_performance.py",
+        "status": "added",
+        "sha": "0568b0d7130186c64a148ca6f7fbf23872786b1e",
+        "additions": 617,
+        "deletions": 0
+      },
+      {
+        "filename": "src/client/terminal.rs",
+        "status": "modified",
+        "sha": "70117841cd292569c40de6557d84265d4443ddc5",
+        "additions": 17,
+        "deletions": 0
+      },
+      {
+        "filename": "src/client/terminal/conversation.rs",
+        "status": "modified",
+        "sha": "3eb74183a9965d69834e4802fd71e3490f1995f2",
+        "additions": 56,
+        "deletions": 7
+      },
+      {
+        "filename": "src/client/terminal/conversation/tests/paste_batch.rs",
+        "status": "added",
+        "sha": "7008d284bea2324a7e9699fd4993b00a2bedcc3b",
+        "additions": 217,
+        "deletions": 0
+      }
+    ]
+  },
+  "boundary": "Four-path successor FC is not the already-tested781 binary cohort. This is source-identity readback only. Existing owner begins same-producer build and same-r3 A/B; no candidate performance result or main reconciliation claimed."
+}

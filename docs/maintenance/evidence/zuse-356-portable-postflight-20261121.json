@@ -1,0 +1,156 @@
+{
+  "observed_at": "2026-11-20T23:40:47.600187+00:00",
+  "scope_argv": [
+    "systemctl",
+    "--user",
+    "show",
+    "zuse-356-portable-20261120.scope",
+    "--property=LoadState,ActiveState,SubState,Result,ControlGroup,MemoryPeak,CPUUsageNSec"
+  ],
+  "scope_exit": 0,
+  "scope_stdout": "LoadState=not-found\nActiveState=inactive\nSubState=dead\nResult=success\nControlGroup=\nMemoryPeak=[not set]\nCPUUsageNSec=[not set]\n",
+  "scope_stderr": "",
+  "outer_lock_path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+  "device": 34,
+  "inode": 63537699,
+  "current_lock_rows": [],
+  "original_flock_pid_exists": false,
+  "original_supervisor_pid_exists": false,
+  "raw_evidence_integrity": [
+    {
+      "name": "rustc-version",
+      "kind": "log",
+      "matches": true
+    },
+    {
+      "name": "rustc-version",
+      "kind": "compiler_artifacts",
+      "matches": true
+    },
+    {
+      "name": "cargo-version",
+      "kind": "log",
+      "matches": true
+    },
+    {
+      "name": "cargo-version",
+      "kind": "compiler_artifacts",
+      "matches": true
+    },
+    {
+      "name": "default-tests",
+      "kind": "log",
+      "matches": true
+    },
+    {
+      "name": "default-tests",
+      "kind": "compiler_artifacts",
+      "matches": true
+    },
+    {
+      "name": "no-std-tests",
+      "kind": "log",
+      "matches": true
+    },
+    {
+      "name": "no-std-tests",
+      "kind": "compiler_artifacts",
+      "matches": true
+    },
+    {
+      "name": "native-no-std-check",
+      "kind": "log",
+      "matches": true
+    },
+    {
+      "name": "native-no-std-check",
+      "kind": "compiler_artifacts",
+      "matches": true
+    },
+    {
+      "name": "wasm-no-std-check",
+      "kind": "log",
+      "matches": true
+    },
+    {
+      "name": "wasm-no-std-check",
+      "kind": "compiler_artifacts",
+      "matches": true
+    },
+    {
+      "name": "check-x86_64-pc-windows-gnu",
+      "kind": "log",
+      "matches": true
+    },
+    {
+      "name": "check-x86_64-pc-windows-gnu",
+      "kind": "compiler_artifacts",
+      "matches": true
+    },
+    {
+      "name": "check-x86_64-apple-darwin",
+      "kind": "log",
+      "matches": true
+    },
+    {
+      "name": "check-x86_64-apple-darwin",
+      "kind": "compiler_artifacts",
+      "matches": true
+    },
+    {
+      "name": "check-aarch64-apple-darwin",
+      "kind": "log",
+      "matches": true
+    },
+    {
+      "name": "check-aarch64-apple-darwin",
+      "kind": "compiler_artifacts",
+      "matches": true
+    },
+    {
+      "name": "install-aarch64-unknown-linux-gnu",
+      "kind": "log",
+      "matches": true
+    },
+    {
+      "name": "install-aarch64-unknown-linux-gnu",
+      "kind": "compiler_artifacts",
+      "matches": true
+    },
+    {
+      "name": "check-aarch64-unknown-linux-gnu",
+      "kind": "log",
+      "matches": true
+    },
+    {
+      "name": "check-aarch64-unknown-linux-gnu",
+      "kind": "compiler_artifacts",
+      "matches": true
+    },
+    {
+      "name": "all-targets-clippy",
+      "kind": "log",
+      "matches": true
+    },
+    {
+      "name": "all-targets-clippy",
+      "kind": "compiler_artifacts",
+      "matches": true
+    }
+  ],
+  "owned_artifact_integrity": {
+    "cli": {
+      "matches": true,
+      "mode": "0o500"
+    },
+    "accessibility_test": {
+      "matches": true,
+      "mode": "0o500"
+    },
+    "lib_test": {
+      "matches": true,
+      "mode": "0o500"
+    }
+  },
+  "private_native_started": false
+}

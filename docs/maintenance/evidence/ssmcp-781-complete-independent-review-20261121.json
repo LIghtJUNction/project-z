@@ -1,0 +1,367 @@
+{
+  "schema": "project-z-ssmcp-781-complete-baseline-independent-review-v1",
+  "reviewed_at_utc": "2026-11-20T23:46:35.966835+00:00",
+  "reviewer": "org independent reviewer",
+  "review_scope": "Read and hash archived raw JSON/ZIP plus existing build receipt and independent native artifact readback; no runtime/build/test executed by this reviewer.",
+  "result": "consistent_with_reported_passed_baseline",
+  "issues": [],
+  "source_revision": "781b87df1d364137b6885f17f631a3e9e991bd58",
+  "source_tree": "6bf7beb143cfdce3878df856c27785164695430f",
+  "archive": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline/original-receipts.zip",
+    "bytes": 13644,
+    "sha256": "2bd9cbcd765399c4f782e97cc9b47351f03fbe3f650685e16b0e8e29b92998f2",
+    "crc_valid": true,
+    "member_count": 4,
+    "raw_payload_count": 3,
+    "manifest_byte_identical": true,
+    "payloads": [
+      {
+        "name": "execution-receipt.json",
+        "bytes": 29263,
+        "sha256": "aefc6b8a20c8bec808057acae758c60fb44630c5912cb1851cced2a7dc2eef63",
+        "archive_local_manifest_equal": true,
+        "native_source": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-busy-run/execution-receipt.json"
+      },
+      {
+        "name": "six-cases-report.json",
+        "bytes": 19660,
+        "sha256": "7b7c9081616aca563d74efe883cd716e6be8da594e2671e283c904a7b096c64c",
+        "archive_local_manifest_equal": true,
+        "native_source": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-busy-run/six-cases/report.json"
+      },
+      {
+        "name": "ctrlv-report.json",
+        "bytes": 13333,
+        "sha256": "df1d570ed1bbcf8e47d6a4e99c94d06357319ebc0ca22a9c5e9d3d82b05498d4",
+        "archive_local_manifest_equal": true,
+        "native_source": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-busy-run/ctrlv/report.json"
+      }
+    ]
+  },
+  "build_receipt": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-baseline-build-receipt.json",
+    "bytes": 79446,
+    "sha256": "d2204375614807af510f6c7fd08ec657d212a98f18f504cb21376c63f47ea7c0",
+    "status": "build_completed",
+    "scope": "build_only",
+    "unit_tests_executed_during_build": 0,
+    "prior_native_readback_at": "2026-11-20T23:07:48.491825+00:00"
+  },
+  "identity_checks": {
+    "receipt_source_equal": true,
+    "execution_build_tree_equal": true,
+    "six_build_hash_before_after_equal": true,
+    "ctrlv_build_hash_before_after_equal": true,
+    "prior_review_build_hash_equal": true,
+    "run_input_snapshot_hash_bytes_equal": true,
+    "six_sources_equal": true,
+    "six_binaries_equal": true,
+    "ctrlv_identity_equal": true,
+    "two_runtime_reports_same_product_and_binaries": true,
+    "producer_unchanged_flags_true": true,
+    "nine_frozen_helpers_match_cohort": true,
+    "ctrlv_helper_bindings_match_cohort": true,
+    "execution_lock_matches_build_lock": true,
+    "execution_gitlinks_match_build": true
+  },
+  "input_snapshots": {
+    "before": {
+      "bytes": 360244,
+      "mode": 384,
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-busy-run/inputs-before.json",
+      "sha256": "c651e2462799aceb4945cc13664896034e62fb8fc045e059131410c805c29321"
+    },
+    "after": {
+      "bytes": 360244,
+      "mode": 384,
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-busy-run/inputs-after.json",
+      "sha256": "c651e2462799aceb4945cc13664896034e62fb8fc045e059131410c805c29321"
+    },
+    "scope": "Native producer fingerprints compared here; 360244-byte raw input snapshots are not in this four-member ZIP."
+  },
+  "product_source": {
+    "runtime_files": 800,
+    "runtime_sha256": "974ec9c112928f0e42a414e4dc4a65569760391d3ba7f9a37801c1aa22a094e2",
+    "source_revision_field_is_caller_declared": true,
+    "binding": "Immutable d220 build receipt + source/tree guards + matching preserved compiler artifacts; declaration alone is not proof."
+  },
+  "artifacts": [
+    {
+      "name": "library-test-fixture",
+      "bytes": 165519472,
+      "sha256": "edea75a764a08d6b4ed76d49d16160ce3750dc9f333cce41e574c46562ac9c81",
+      "fresh": false,
+      "source_arguments": [
+        "src/lib.rs"
+      ],
+      "build_link_target_preserved_prior_readback_equal": true,
+      "runtime_reported_before_after": true,
+      "runtime_before_after_match": true
+    },
+    {
+      "name": "ssmcp",
+      "bytes": 15754224,
+      "sha256": "09c7219a0863ebfc97f51246e569b65dd4963493b9e8b7f0885672b6b95c5ac2",
+      "fresh": false,
+      "source_arguments": [
+        "src/bin/ssmcp.rs"
+      ],
+      "build_link_target_preserved_prior_readback_equal": true,
+      "runtime_reported_before_after": true,
+      "runtime_before_after_match": true
+    },
+    {
+      "name": "ssmcp-frontend",
+      "bytes": 1386576,
+      "sha256": "229e65b1f52098b7292d9e387e9442d24c9411ab2e34a55fcbe4a6171e0398b5",
+      "fresh": false,
+      "source_arguments": [
+        "src/bin/ssmcp-frontend.rs"
+      ],
+      "build_link_target_preserved_prior_readback_equal": true,
+      "runtime_reported_before_after": false,
+      "runtime_before_after_match": null
+    },
+    {
+      "name": "ssmcpd",
+      "bytes": 8252208,
+      "sha256": "909133cae9bfc0d9bcefdf4af4740a9bc3c50a1097025a3178bc8e04daa62e86",
+      "fresh": false,
+      "source_arguments": [
+        "src/bin/ssmcpd.rs"
+      ],
+      "build_link_target_preserved_prior_readback_equal": true,
+      "runtime_reported_before_after": true,
+      "runtime_before_after_match": true
+    },
+    {
+      "name": "vt_snapshot",
+      "bytes": 440984,
+      "sha256": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f",
+      "fresh": false,
+      "source_arguments": [
+        "examples/vt_snapshot.rs"
+      ],
+      "build_link_target_preserved_prior_readback_equal": true,
+      "runtime_reported_before_after": true,
+      "runtime_before_after_match": true
+    }
+  ],
+  "runtime": {
+    "phase": "baseline",
+    "scope": "frozen_six_case_and_ctrlv_execution",
+    "steps": [
+      {
+        "name": "six-cases",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 21.94306516647339,
+        "stderr_bytes": 0
+      },
+      {
+        "name": "ctrlv",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 3.9751644134521484,
+        "stderr_bytes": 0
+      }
+    ],
+    "samples": 6,
+    "ctrlv_samples": 1,
+    "recorded_six_case_check_entries": 80,
+    "recorded_ctrlv_check_entries": 31,
+    "counts_are": "Assertion/check entries in two runtime fixtures, including shared setup and repeated route checks; not 111 Rust unit tests.",
+    "cargo_executed": false,
+    "release_gate_executed": false,
+    "six_report_elapsed_seconds": 21.535,
+    "ctrlv_report_elapsed_seconds": 3.582,
+    "execution_elapsed_seconds": 27.383456468582153
+  },
+  "sample_timings": [
+    {
+      "report": "six-cases",
+      "name": "multiline-2738",
+      "bytes": 2738,
+      "bracketed": true,
+      "expected": "reference",
+      "status": "passed",
+      "pty_input_bytes": 2750,
+      "accepted_wire_byte_count_matches": true,
+      "timing_from_monotonic_ns": {
+        "ready_ms": 67.904495,
+        "pty_write_ms": 0.007923,
+        "visible_ms": 33.536642,
+        "after_pty_last_write_ready_ms": 67.896572
+      },
+      "arithmetic_matches_report": true
+    },
+    {
+      "report": "six-cases",
+      "name": "multiline-64k",
+      "bytes": 65536,
+      "bracketed": true,
+      "expected": "reference",
+      "status": "passed",
+      "pty_input_bytes": 65548,
+      "accepted_wire_byte_count_matches": true,
+      "timing_from_monotonic_ns": {
+        "ready_ms": 34.839222,
+        "pty_write_ms": 3.789682,
+        "visible_ms": 34.839222,
+        "after_pty_last_write_ready_ms": 31.04954
+      },
+      "arithmetic_matches_report": true
+    },
+    {
+      "report": "six-cases",
+      "name": "multiline-4m-exact",
+      "bytes": 4194304,
+      "bracketed": true,
+      "expected": "reference",
+      "status": "passed",
+      "pty_input_bytes": 4194316,
+      "accepted_wire_byte_count_matches": true,
+      "timing_from_monotonic_ns": {
+        "ready_ms": 370.222459,
+        "pty_write_ms": 330.458831,
+        "visible_ms": 335.33393,
+        "after_pty_last_write_ready_ms": 39.763628
+      },
+      "arithmetic_matches_report": true
+    },
+    {
+      "report": "six-cases",
+      "name": "multiline-4m-plus-one",
+      "bytes": 4194305,
+      "bracketed": true,
+      "expected": "rejected",
+      "status": "passed",
+      "pty_input_bytes": 4194317,
+      "accepted_wire_byte_count_matches": true,
+      "timing_from_monotonic_ns": {
+        "ready_ms": 337.795869,
+        "pty_write_ms": 328.006441,
+        "visible_ms": 337.795869,
+        "after_pty_last_write_ready_ms": 9.789428
+      },
+      "arithmetic_matches_report": true
+    },
+    {
+      "report": "six-cases",
+      "name": "ordinary-16k",
+      "bytes": 16384,
+      "bracketed": false,
+      "expected": "inline",
+      "status": "passed",
+      "pty_input_bytes": 16384,
+      "accepted_wire_byte_count_matches": true,
+      "timing_from_monotonic_ns": {
+        "ready_ms": 2439.160607,
+        "pty_write_ms": 0.023443,
+        "visible_ms": 2439.160607,
+        "after_pty_last_write_ready_ms": 2439.137164
+      },
+      "arithmetic_matches_report": true
+    },
+    {
+      "report": "six-cases",
+      "name": "busy-multiline-2738",
+      "bytes": 2738,
+      "bracketed": true,
+      "expected": "reference",
+      "status": "passed",
+      "pty_input_bytes": 2750,
+      "accepted_wire_byte_count_matches": true,
+      "timing_from_monotonic_ns": {
+        "ready_ms": 43.186361,
+        "pty_write_ms": 0.007733,
+        "visible_ms": 5.377071,
+        "after_pty_last_write_ready_ms": 43.178628
+      },
+      "arithmetic_matches_report": true
+    },
+    {
+      "report": "ctrlv",
+      "name": "ctrl-v-multiline-2738",
+      "bytes": 2738,
+      "bracketed": false,
+      "expected": "reference",
+      "status": "passed",
+      "pty_input_bytes": 1,
+      "accepted_wire_byte_count_matches": true,
+      "timing_from_monotonic_ns": {
+        "ready_ms": 50.066292,
+        "after_trigger_write_ready_ms": 50.059631
+      },
+      "arithmetic_matches_report": true
+    }
+  ],
+  "timing_contract": {
+    "pty_last_write": "last byte accepted by PTY; not client read completion or disk fsync",
+    "first_visible": "first decoded paste-specific input/notice frame",
+    "preparing_visible": "first observed Preparing local input frame, or null if superseded",
+    "ready": "physical complete reference/inline/rejection frame before correctness RPCs",
+    "observation": "VT decode cost included; no extra key, resize or UI RPC during timing",
+    "performance_gate": "descriptive comparison only; bounded liveness and correctness asserted"
+  },
+  "busy_liveness": {
+    "busy_output_ticks_during_input": 20,
+    "busy_output_during_input": "observed",
+    "busy_running_before": true,
+    "busy_running_after": true,
+    "busy_last_output_before_at": 153428314345404,
+    "busy_first_output_after_at": 153428944673152,
+    "busy_observed_until_at": 153429692896981,
+    "last_before_precedes_first_write": true,
+    "first_after_follows_ready": true,
+    "post_ready_observation_ms": 748.808433,
+    "first_post_ready_output_delay_ms": 0.584604,
+    "rate_claim_made": false
+  },
+  "clipboard_scope": {
+    "trigger": "one PTY byte 0x16",
+    "payload_bytes": 2738,
+    "provider": "private PATH fake wl-paste; no OS clipboard",
+    "provider_sha256": "bc9b3f87359ec3e02b95b9fb334c007735cb8e5df7a6d51bd9f4af99c80f3951",
+    "contract": "one PTY Ctrl+V byte to physical complete reference; includes adapter and storage; no timed RPC/key; not OS clipboard performance",
+    "production_adapter_path_check_recorded": true,
+    "os_clipboard_exercised": false,
+    "physical_wayland_or_x11_clipboard_latency_claim": false
+  },
+  "isolation": {
+    "transport": "private production account router, real client PTY, independent VT decoder",
+    "synthetic_payloads_only": true,
+    "models_started": false,
+    "real_user_credentials_used": false,
+    "existing_services_touched": false
+  },
+  "quiet_lock": {
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "device": 34,
+    "inode": 63537699,
+    "acquired_utc": "2026-11-20T23:34:02.929762+00:00",
+    "released_utc": "2026-11-20T23:34:30.313629+00:00",
+    "recorded_entire_interval_covered": true,
+    "held_seconds": 27.383867502212524,
+    "fresh_current_lock_probe_performed": false
+  },
+  "limitations": [
+    "The reviewer independently checked archive bytes and internal/cross-receipt consistency, not raw live runtime or GUI behavior.",
+    "Only four binaries appear explicitly in runtime before/after maps. The fifth ssmcp-frontend is bound by the build and prior independent native readback; no claim that this suite executed it.",
+    "Input/source unchanged assertions and lock release are recorded native producer evidence; the full before/after input manifests, raw VT streams and frame artifacts are not included in this small ZIP.",
+    "busy_output_ticks_during_input=20 is preserved as the producer-reported field; the report also has a 748.808433ms post-ready observation interval. No 20-ticks-per-43ms rate or per-tick timing claim is made.",
+    "This is the 781 baseline with no candidate comparison. ordinary-16k ready=2439.160607ms is not an optimization result or a latency threshold pass.",
+    "Ctrl+V uses an owned fake wl-paste through the production adapter; it is not an OS clipboard or physical GPU/desktop benchmark.",
+    "No claim of full unit suite, runtime-18, final P1, release gates, or acceptance of f208/newly merged source follows from these receipts.",
+    "Earlier failed attempts and build-only review limitations remain historical facts; this later successful runtime receipt adds evidence rather than rewriting those originals."
+  ],
+  "raw_references": {
+    "execution": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline/execution-receipt.json",
+    "six_cases": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline/six-cases-report.json",
+    "ctrlv": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline/ctrlv-report.json",
+    "build": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-baseline-build-receipt.json",
+    "prior_build_review": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-baseline-build-independent-review.json",
+    "prior_artifact_readback": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-preserved-artifact-readback.json"
+  }
+}

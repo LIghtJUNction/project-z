@@ -1,0 +1,847 @@
+{
+  "observed_at": "2026-11-20T23:32:58.155Z",
+  "base": "cf0ab581700918a37fcccbebb93de2e0cab02841",
+  "main": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+  "tree": "7eeb434be1d24e14b453488f5fbca90d933e12b9",
+  "parents": [
+    "056b7f28e95f0765710f172740db3bfef7518a46",
+    "57d3f36748f22996d3b161d7a0adf4757e0e4a4c"
+  ],
+  "main_message": "Merge portable peer release correction 0.10.22 (#161) [skip ci]\n\nPreserve legacy resource validation, align isolated terminal regression fixtures, and defer production relay deployment. Local strict Clippy, full library suite, 27 CLI integration checks, 8 real CLI groups and private worker/GTK acceptance passed on 57d3f36748f22996d3b161d7a0adf4757e0e4a4c.",
+  "compare_status": "ahead",
+  "ahead_by": 32,
+  "behind_by": 0,
+  "changed_files": [
+    {
+      "path": ".github/workflows/release.yml",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "blob": "3129dee8fff0e26b451be5bd5ad436c3b709efe7"
+    },
+    {
+      "path": "Cargo.lock",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "blob": "d300697d38f26b66d24787e2ca62ab71ba7b3eab"
+    },
+    {
+      "path": "Cargo.toml",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 1,
+      "blob": "c98818fb86a74041379050b741cbb233326f794a"
+    },
+    {
+      "path": "README.md",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "blob": "7e08bb3e8730288d3a131310703eae2b7a34e14d"
+    },
+    {
+      "path": "docs/agent-collaboration.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "blob": "c316b1724cfb0ffdbfe913094bf14267d4f22e54"
+    },
+    {
+      "path": "docs/agent-entry.md",
+      "status": "added",
+      "additions": 96,
+      "deletions": 0,
+      "blob": "43412506795ce436f45aeb95129ab27780d9465e"
+    },
+    {
+      "path": "docs/await.md",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 9,
+      "blob": "99fd41586ae74fe119f75c48eeb63f01c7b7a79f"
+    },
+    {
+      "path": "docs/backends.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "blob": "d535e7e3eae20426db16ce50644262934ed794d4"
+    },
+    {
+      "path": "docs/client-input.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "blob": "3866bbb5da4c6aa23c3a59e860b1f431b3ea90f3"
+    },
+    {
+      "path": "docs/code-mode.md",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 5,
+      "blob": "01ca2f6c89cf054edad872fee998b748b75bd4a9"
+    },
+    {
+      "path": "docs/finish-and-questions.md",
+      "status": "modified",
+      "additions": 21,
+      "deletions": 51,
+      "blob": "cbdb6100b7c155015d5eb93d99f16cfbf6e808bd"
+    },
+    {
+      "path": "docs/local-mode.md",
+      "status": "modified",
+      "additions": 41,
+      "deletions": 0,
+      "blob": "fb32d6a885f654dbba279893bcf913611680f7a1"
+    },
+    {
+      "path": "docs/optional-harnesses.md",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 2,
+      "blob": "2b8611f91ef87393522ab8934485e0df5d68e3c1"
+    },
+    {
+      "path": "docs/release-notes-0.10.21.md",
+      "status": "modified",
+      "additions": 16,
+      "deletions": 6,
+      "blob": "70cdf7dc965cef55a5bf011f59bfd37ad37922e9"
+    },
+    {
+      "path": "docs/release-notes-0.10.22.md",
+      "status": "added",
+      "additions": 63,
+      "deletions": 0,
+      "blob": "d58a338db19657aede5983fe8bc70510c7deb441"
+    },
+    {
+      "path": "docs/releases.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "blob": "c4193f42265dcfa2d45ed6e6317ad30bc676d359"
+    },
+    {
+      "path": "docs/thread-listeners.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "blob": "48fc5c3b4a0a7f63b5ac0f49a8ddee1b16898f40"
+    },
+    {
+      "path": "docs/time-primitives.md",
+      "status": "added",
+      "additions": 92,
+      "deletions": 0,
+      "blob": "bbc9e1e45c8002f2526806d7907b8945a8b84521"
+    },
+    {
+      "path": "docs/user-wait.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "blob": "68c3075434467d1631933e06e205646ffcc551cf"
+    },
+    {
+      "path": "docs/zcalld-listener.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "blob": "b1090f05b434676b3bd5354d5e391d8c6a69df4c"
+    },
+    {
+      "path": "scripts/benchmark_client_memory.py",
+      "status": "modified",
+      "additions": 276,
+      "deletions": 56,
+      "blob": "5eb790f5b14444166f5a496e0ca1593745497d5e"
+    },
+    {
+      "path": "scripts/e2e.py",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 4,
+      "blob": "4acd09b781a82503eb1e2ad8f4775a3de80f33c0"
+    },
+    {
+      "path": "scripts/e2e_account_relay.py",
+      "status": "modified",
+      "additions": 13,
+      "deletions": 7,
+      "blob": "27d03da95168b377dee81796aca032a7d3053c92"
+    },
+    {
+      "path": "scripts/e2e_agent_entry.py",
+      "status": "added",
+      "additions": 299,
+      "deletions": 0,
+      "blob": "8a1d624886d7415bb3a92f47e6024c4e72323f07"
+    },
+    {
+      "path": "scripts/e2e_agents.py",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 5,
+      "blob": "c661d1e6e73441998495a265c776f58635941e65"
+    },
+    {
+      "path": "scripts/e2e_computer_controls.py",
+      "status": "modified",
+      "additions": 7,
+      "deletions": 4,
+      "blob": "57fa5495a145adc019733259d731ade83fb0cd58"
+    },
+    {
+      "path": "scripts/e2e_connection_context_reload.py",
+      "status": "modified",
+      "additions": 90,
+      "deletions": 5,
+      "blob": "f0fe1f46f9324c8d3b54a1508716d74a10623109"
+    },
+    {
+      "path": "scripts/e2e_daemon.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "blob": "72884efe93784a7cb2d697c8c082ab9c1f4af9c9"
+    },
+    {
+      "path": "scripts/e2e_human_finish.py",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 444,
+      "blob": "d0e358a892dc0841bc3d4441f5ac83e2dc2a6ba2"
+    },
+    {
+      "path": "scripts/e2e_input_history.py",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 3,
+      "blob": "e3ccf6c5bb31c1d6f81af3fc9a4c54ebcaccdf21"
+    },
+    {
+      "path": "scripts/e2e_interactions.py",
+      "status": "modified",
+      "additions": 43,
+      "deletions": 119,
+      "blob": "0f92d17d50efc5b9409057e4aa7a77fabfd8f605"
+    },
+    {
+      "path": "scripts/e2e_local.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "blob": "27ff8476e38c75324dbf7d00ba90db6be657f008"
+    },
+    {
+      "path": "scripts/e2e_local_socket.py",
+      "status": "added",
+      "additions": 181,
+      "deletions": 0,
+      "blob": "2fd4ebeb84f3c17cc801708290bb0fb8d083853f"
+    },
+    {
+      "path": "scripts/e2e_presentations.py",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 43,
+      "blob": "0eefbfbe2a4e341af5eab491e2c72b1ca852f1b5"
+    },
+    {
+      "path": "scripts/e2e_time_primitives.py",
+      "status": "added",
+      "additions": 315,
+      "deletions": 0,
+      "blob": "b780794d0d01ffe3deedf3f2e77dbab877bc179e"
+    },
+    {
+      "path": "scripts/e2e_unified.py",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 5,
+      "blob": "5dcc59f34938455203985f1d0816af339cd86801"
+    },
+    {
+      "path": "scripts/e2e_user_wait.py",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 5,
+      "blob": "252d16a53d6972deb641ad4f997ef71d0411b366"
+    },
+    {
+      "path": "scripts/test_release.py",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "blob": "bfb3b46b8c3a7020a452f788dffaebe3f3334789"
+    },
+    {
+      "path": "src/backend.rs",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "blob": "ca65c92b462a5fa75e3cfaac7bbcf0c5996fae0a"
+    },
+    {
+      "path": "src/backend/events.rs",
+      "status": "modified",
+      "additions": 24,
+      "deletions": 4,
+      "blob": "2a78fc26ddd24ae6e9899720c560308a97e18d1c"
+    },
+    {
+      "path": "src/backend/peer.rs",
+      "status": "added",
+      "additions": 947,
+      "deletions": 0,
+      "blob": "cfc586ba0932ea08741d7742f918e9fc41bbcd54"
+    },
+    {
+      "path": "src/backend/shell.rs",
+      "status": "modified",
+      "additions": 17,
+      "deletions": 9,
+      "blob": "933e96de2a51d0ac9e75761f54b63d5751517e7f"
+    },
+    {
+      "path": "src/broker.rs",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 27,
+      "blob": "0e651ca55d2aae8067739bfc8e0d5e55b730b6ca"
+    },
+    {
+      "path": "src/broker/session_io.rs",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "blob": "d442aefb7eeaf721c1c8f82864af8d5d38c0ceed"
+    },
+    {
+      "path": "src/client.rs",
+      "status": "modified",
+      "additions": 180,
+      "deletions": 15,
+      "blob": "bc83224f61a0489546a3a19dfcd433a202ea1ee3"
+    },
+    {
+      "path": "src/client/account/send.rs",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 4,
+      "blob": "623ed77bf57684b75cbdbbea6fc4f42b90a9269e"
+    },
+    {
+      "path": "src/client/activity.rs",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 0,
+      "blob": "e30613d87ea8ccd63e5e99c821b28294e4ae6bd3"
+    },
+    {
+      "path": "src/client/agent.rs",
+      "status": "added",
+      "additions": 271,
+      "deletions": 0,
+      "blob": "826b15240d9b4fc54c64d9fd25fb56615b24b274"
+    },
+    {
+      "path": "src/client/composer.rs",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "blob": "1aaf0b0ef3e497489c667a485d8a9a518688f81d"
+    },
+    {
+      "path": "src/client/computer_control.rs",
+      "status": "modified",
+      "additions": 7,
+      "deletions": 7,
+      "blob": "1ef9a23c80273de046f22f6fb37eff977bdeac77"
+    },
+    {
+      "path": "src/client/interface.rs",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 6,
+      "blob": "3f4224f5bf1ace7e7dfb14abc225b0c5b22fa383"
+    },
+    {
+      "path": "src/client/interface/computer.rs",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 8,
+      "blob": "536ca7413ac474860132ca8d46b346c62818e39e"
+    },
+    {
+      "path": "src/client/interface/listener.rs",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "blob": "95115b6df9b7016e5a13c0994dbaf65c8f21b9c5"
+    },
+    {
+      "path": "src/client/interface/messages.rs",
+      "status": "modified",
+      "additions": 62,
+      "deletions": 12,
+      "blob": "60c639d0739451104e6e889e9ab7f5653f4523d1"
+    },
+    {
+      "path": "src/client/interface/questions.rs",
+      "status": "modified",
+      "additions": 15,
+      "deletions": 15,
+      "blob": "f218115c9a57c169e71d1c718398f1abfd5cb33d"
+    },
+    {
+      "path": "src/client/interface/questions/requests.rs",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 0,
+      "blob": "34fa89e4f97aa196077f35442a586ec271408e30"
+    },
+    {
+      "path": "src/client/interface/questions/workflow.rs",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 555,
+      "blob": "0c0a8c8b7f3f59962165f46e67ca23eacab9b32e"
+    },
+    {
+      "path": "src/client/interface/reply.rs",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "blob": "f5ffba244d54b88e22ce3e277c4b2ab2353ee463"
+    },
+    {
+      "path": "src/client/interface/user_wait.rs",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 4,
+      "blob": "ffda3d0251407a47ed2b0e6717c74fa58b1ea63d"
+    },
+    {
+      "path": "src/client/local.rs",
+      "status": "modified",
+      "additions": 54,
+      "deletions": 2,
+      "blob": "fa610a268cfcf30b824d6fcc7ca543fa23c48ce9"
+    },
+    {
+      "path": "src/client/local/socket.rs",
+      "status": "added",
+      "additions": 153,
+      "deletions": 0,
+      "blob": "da6851e0401fd9371580f0d87e4e252b34972f76"
+    },
+    {
+      "path": "src/client/local/socket/tests.rs",
+      "status": "added",
+      "additions": 235,
+      "deletions": 0,
+      "blob": "c111f324859c448619f59e774ce44a23a25fa316"
+    },
+    {
+      "path": "src/client/panel.rs",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "blob": "f5149ee3a320c9a4abbdaaa008741d4c37249e93"
+    },
+    {
+      "path": "src/client/reload.rs",
+      "status": "modified",
+      "additions": 99,
+      "deletions": 0,
+      "blob": "bc6a6ecd0f27d46c0db0ae916f7a0b4d26752322"
+    },
+    {
+      "path": "src/client/render.rs",
+      "status": "modified",
+      "additions": 70,
+      "deletions": 1,
+      "blob": "5f800394c07f1125579f2b2dfffb33e2a5410050"
+    },
+    {
+      "path": "src/client/terminal.rs",
+      "status": "modified",
+      "additions": 41,
+      "deletions": 23,
+      "blob": "779946462185665af8f5aa08dda89b326b79371a"
+    },
+    {
+      "path": "src/client/terminal/computer.rs",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 15,
+      "blob": "ef22a7b061c3e4d615bd42808f2926b7d01d3aa6"
+    },
+    {
+      "path": "src/client/terminal/conversation.rs",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 3,
+      "blob": "eb3794d930a009dfad69ce6445b508a268d458e8"
+    },
+    {
+      "path": "src/client/terminal/conversation/history.rs",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "blob": "2fa9c99110440b09f32de63b4c96e3634fc9c9a6"
+    },
+    {
+      "path": "src/client/terminal/conversation/timing.rs",
+      "status": "modified",
+      "additions": 136,
+      "deletions": 62,
+      "blob": "b38845f0134b4d4ea10fa3d63a1af8f8647a3d4f"
+    },
+    {
+      "path": "src/client/terminal/conversation/timing/tests.rs",
+      "status": "modified",
+      "additions": 125,
+      "deletions": 8,
+      "blob": "ff4e7fe86085ff4ce3e4c1e86e95f20ddcdd2f7e"
+    },
+    {
+      "path": "src/client/terminal/conversation/user_wait.rs",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 33,
+      "blob": "d114bbe21361b778a0191d5ef0732002e50a7111"
+    },
+    {
+      "path": "src/code_mode.rs",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 26,
+      "blob": "5c209e1d4a904adaee17cb59776328441494f8db"
+    },
+    {
+      "path": "src/code_mode/reminders.rs",
+      "status": "removed",
+      "additions": 0,
+      "deletions": 449,
+      "blob": "428dcbc6ef4672a518f2182ded8ef1d911c59f29"
+    },
+    {
+      "path": "src/code_mode/user_wait.rs",
+      "status": "modified",
+      "additions": 35,
+      "deletions": 96,
+      "blob": "9762e440f27311ad59be6ef91444750b0965b4f9"
+    },
+    {
+      "path": "src/http.rs",
+      "status": "modified",
+      "additions": 49,
+      "deletions": 155,
+      "blob": "3aeea065a292384ba9aac690b031f0a725b7a0ec"
+    },
+    {
+      "path": "src/http/await_tool.rs",
+      "status": "modified",
+      "additions": 14,
+      "deletions": 37,
+      "blob": "19aaeff78861cd799a00112f04a5089e665ce054"
+    },
+    {
+      "path": "src/http/await_tool/tests.rs",
+      "status": "modified",
+      "additions": 32,
+      "deletions": 21,
+      "blob": "beb01a38bcee21ea3bb2c325c3b181015bb0488b"
+    },
+    {
+      "path": "src/http/finish_request.rs",
+      "status": "removed",
+      "additions": 0,
+      "deletions": 424,
+      "blob": "807115d8203c0de40c155b2177436613ef193b24"
+    },
+    {
+      "path": "src/http/question_delivery_tests.rs",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "blob": "dec92b128fc258337b4b443dbc5d86d3f5e37f11"
+    },
+    {
+      "path": "src/http/question_delivery_tests/finish_receipts.rs",
+      "status": "removed",
+      "additions": 0,
+      "deletions": 147,
+      "blob": "bbcf1e3966299a6d77fd43372a32b1d80d1ddde5"
+    },
+    {
+      "path": "src/http/question_delivery_tests/retired_hooks.rs",
+      "status": "added",
+      "additions": 105,
+      "deletions": 0,
+      "blob": "0259b79cdefc9defc42b618edc4bfbc59f95d573"
+    },
+    {
+      "path": "src/http/user_wait.rs",
+      "status": "modified",
+      "additions": 14,
+      "deletions": 18,
+      "blob": "4af935b4985cd3dc43b4bb008d414c14957e53d4"
+    },
+    {
+      "path": "src/registry.rs",
+      "status": "modified",
+      "additions": 17,
+      "deletions": 2,
+      "blob": "c0d5e03c089e4a57b839d0c23b8b7b3c6e18abd4"
+    },
+    {
+      "path": "src/resources.rs",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 11,
+      "blob": "9395236a970f8222d8a254dee1547dcf01156b05"
+    },
+    {
+      "path": "src/runtime/capabilities.rs",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "blob": "aa1f28fc5317fbd390e601b7a7ef65ba4bc9f5ed"
+    },
+    {
+      "path": "src/runtime/native_plugins/process.rs",
+      "status": "modified",
+      "additions": 105,
+      "deletions": 5,
+      "blob": "54dd94c99e24c0dec7582ae2a5211a9276f97352"
+    },
+    {
+      "path": "src/runtime/native_plugins/process/lazy.rs",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 12,
+      "blob": "9d842833ccd4ff7226647470ec1187151694debc"
+    },
+    {
+      "path": "src/runtime/time.rs",
+      "status": "modified",
+      "additions": 143,
+      "deletions": 21,
+      "blob": "8052f097aa481c9904b7b78adafab5312f3c5937"
+    },
+    {
+      "path": "src/runtime/time/civil.rs",
+      "status": "added",
+      "additions": 292,
+      "deletions": 0,
+      "blob": "4ad88d33e2cce05585d8d0f1b80735ad48b5cc1a"
+    },
+    {
+      "path": "src/runtime/time/execution.rs",
+      "status": "added",
+      "additions": 56,
+      "deletions": 0,
+      "blob": "0ac861ee1b87d36622ad8c946a7c7fbad73817cb"
+    },
+    {
+      "path": "src/runtime/time/relay.rs",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 1,
+      "blob": "13edb3969a98f83a254b0ab0771044782f7454eb"
+    },
+    {
+      "path": "src/runtime/time/tests.rs",
+      "status": "modified",
+      "additions": 133,
+      "deletions": 0,
+      "blob": "d49cb42407ea4a5f5aacfbb2581a44c5aff45a1f"
+    },
+    {
+      "path": "src/steering.rs",
+      "status": "modified",
+      "additions": 20,
+      "deletions": 22,
+      "blob": "fadeb40c53fb46c7284faa6dadcb4e277afd929f"
+    },
+    {
+      "path": "src/steering/waiting.rs",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 18,
+      "blob": "8d3a6dd0e207c50e44b1f4a47befdc66a2a98593"
+    },
+    {
+      "path": "src/username.rs",
+      "status": "modified",
+      "additions": 13,
+      "deletions": 1,
+      "blob": "b8927c206713045c516546ec555764ba8b7d25e2"
+    },
+    {
+      "path": "src/wire.rs",
+      "status": "modified",
+      "additions": 51,
+      "deletions": 0,
+      "blob": "e912b5afc0b3297018cfd6b779e3789906db3d40"
+    },
+    {
+      "path": "tests/connection_context.rs",
+      "status": "modified",
+      "additions": 29,
+      "deletions": 0,
+      "blob": "3307573cc4b1a33f847abd67be362e983ea44f6c"
+    },
+    {
+      "path": "tests/resources.rs",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 19,
+      "blob": "1fa32688f62326212fac37d4047870d88e524b56"
+    },
+    {
+      "path": "tests/two_tools.rs",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 11,
+      "blob": "1b96821e08e74b1d8aa9302a87a994fb13c17881"
+    }
+  ],
+  "commits": [
+    {
+      "sha": "399b5b1f15277bd012dae6354f731b0b38f3577b",
+      "message": "feat: add scoped process and thread chat IO [skip ci]"
+    },
+    {
+      "sha": "60173701692b1abd603448423b9d880e478f42f6",
+      "message": "Merge current controls integration base for thread IO [skip ci]"
+    },
+    {
+      "sha": "71fa6933c842c6394d782ba970b55d0c28c7edba",
+      "message": "Fix benchmark transport and verify real dashboard measurements [skip ci]"
+    },
+    {
+      "sha": "974e7b68a0d320b9a9c62855482cb6ec2f72b674",
+      "message": "fix: preserve streaming chat input and isolated transport tests [skip ci]"
+    },
+    {
+      "sha": "4d31ff0ff49248a4080c3422b3736465778ce2ff",
+      "message": "ui: explain computer control in plain language [skip ci]"
+    },
+    {
+      "sha": "1b589ba3cf7ec0201bc1832daf3f7dc9165654c6",
+      "message": "feat: serve local MCP over a private Unix socket [skip ci]"
+    },
+    {
+      "sha": "a89ebe50fba618a22c74dc23344d2d5632c1c17b",
+      "message": "Merge validated private Unix MCP listener [skip ci]"
+    },
+    {
+      "sha": "60a1f664dcf8b723e27f76ae027c543f41f3e615",
+      "message": "Merge plain computer-control wording [skip ci]"
+    },
+    {
+      "sha": "67eac7ccecbbbafaf7c35d7c959abb2d727a101d",
+      "message": "Merge real dashboard benchmark fixture [skip ci]"
+    },
+    {
+      "sha": "a19ac040b1c7e9daa6a2144db79cfaa1bee09954",
+      "message": "fix: preserve native agent argument boundary during reload [skip ci]"
+    },
+    {
+      "sha": "039c20e4eb538b5b4bea23b447f22a656ea209c2",
+      "message": "feat: add explicit agent protocols and authenticated MCP peers [skip ci]"
+    },
+    {
+      "sha": "3e4d794509b7400907ddc841fa89d25cce9ca8a0",
+      "message": "feat: integrate explicit agent protocol entry points [skip ci]"
+    },
+    {
+      "sha": "926a9af05e83627f8727ba06a34934d5006f444b",
+      "message": "Extend native time queries and live dashboard clocks [skip ci]"
+    },
+    {
+      "sha": "93302244d68618743c185fa7f0fa248809ca34fe",
+      "message": "feat: integrate native time primitives and live terminal timing [skip ci]"
+    },
+    {
+      "sha": "bc744207bf6d5380e6a23bb587f556c8ab3c88c4",
+      "message": "test: cover agent socket and reload argument boundaries [skip ci]"
+    },
+    {
+      "sha": "ca2de94f807f09632712f9c932c57561ce64f6e2",
+      "message": "test: cover combined agent socket and reload boundaries [skip ci]"
+    },
+    {
+      "sha": "6451d74c0e5411e9889a529239e84b348373e408",
+      "message": "Document native time queries and exact retention limits [skip ci]"
+    },
+    {
+      "sha": "628ac7c89ff1fc19cd94b80c651bb0c217f7e861",
+      "message": "docs: explain time queries timers and terminal countdowns [skip ci]"
+    },
+    {
+      "sha": "a4fba12f3d4d4596ec0b5fb95cc1b3ff2739b1d7",
+      "message": "refactor: retire forced continuation and completion hooks [skip ci]"
+    },
+    {
+      "sha": "ee2eaf3b5c23ce624e2aac1377fab55c20ad4917",
+      "message": "docs: align iteration entry points and unreleased behavior [skip ci]"
+    },
+    {
+      "sha": "4c6903b1fda5fd058675e7d3e4d12a0dfe956728",
+      "message": "feat: integrate retired answer hooks and preserve thread results [skip ci]"
+    },
+    {
+      "sha": "7d33018d9e5d53ff0fc14e2d061f037834ba7d60",
+      "message": "fix: retain borrowed chat outputs without reference cloning [skip ci]"
+    },
+    {
+      "sha": "14f915747b94bd168282ab8c6c083b66c67bd2d7",
+      "message": "fix: remove retired workflow and align interaction regressions [skip ci]"
+    },
+    {
+      "sha": "88aba04e2f661fe27a90dc0fdbf6793edaea0dca",
+      "message": "fix: remove unreachable completion flow and update retained behavior checks [skip ci]"
+    },
+    {
+      "sha": "91a195570ceda864877de6e68c71ffdf8ab41720",
+      "message": "fix: satisfy release lint checks for integrated entry points [skip ci]"
+    },
+    {
+      "sha": "0960da84b807a5dad9c2735aa065a65cc92dec34",
+      "message": "test: align private terminal fixtures with bounded live state [skip ci]"
+    },
+    {
+      "sha": "147dae309cf37af578c0ac1d3aff2cb6008b0f48",
+      "message": "chore: refresh observed zcall head and narrow paste evidence [skip ci]"
+    },
+    {
+      "sha": "056b7f28e95f0765710f172740db3bfef7518a46",
+      "message": "Merge validated local sockets, agent entry and live timing (#160) [skip ci]"
+    },
+    {
+      "sha": "9b7700a3a6fcb2065befa8224d3457adeb2f9852",
+      "message": "test: align terminal fixtures with live controls and thread history [skip ci]"
+    },
+    {
+      "sha": "a0a3464ead544c7981f865e6b7cc49693d88a0b8",
+      "message": "Fix portable MCP peer account validation [skip ci]"
+    },
+    {
+      "sha": "57d3f36748f22996d3b161d7a0adf4757e0e4a4c",
+      "message": "Release 0.10.22 with deferred relay deployment [skip ci]"
+    },
+    {
+      "sha": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "message": "Merge portable peer release correction 0.10.22 (#161) [skip ci]"
+    }
+  ],
+  "scope": "Read-only current main movement; not merged into PR159781 or accepted as its runtime evidence."
+}
