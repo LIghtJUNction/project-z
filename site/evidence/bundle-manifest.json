@@ -1,6 +1,6 @@
 {
   "schema": "project-z.public-bundle.v1",
-  "source_base": "142dbe043bffd8fa1cf8aa9b1d55fe7422f08127",
+  "source_base": "ad1c9e21c9a35ebb2f4059529409b4ad3f2960fd",
   "files": [
     {
       "path": ".nojekyll",
@@ -19,13 +19,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 43875,
-      "sha256": "956db3ae93d1a450690752d852d22d1687a6975e6a2ae3e7728c9e4185297e6a"
+      "bytes": 44035,
+      "sha256": "5dda10db37b11ea6079ae2ffeb9027cb77f13d35943efcfbbc4e96868db243f6"
     },
     {
       "path": "projects.json",
-      "bytes": 53574,
-      "sha256": "227cf3d7ebbccad0d82aeb093a7060a159b0827ee10589007bdbaaaa65eda4f2"
+      "bytes": 53966,
+      "sha256": "e601996622f7af72171374f0f2203f4ee68bc8d640f301ac7a738485f7891254"
     },
     {
       "path": "style.css",
@@ -33,7 +33,7 @@
       "sha256": "dd39394ef7d3ca8eba8bc652670ea5e7c770ea0d84116efd7433fa4fbd5743a1"
     }
   ],
-  "bytes": 116533,
+  "bytes": 117085,
   "projects": 37,
-  "verified_crates": 26
+  "verified_crates": 27
 }

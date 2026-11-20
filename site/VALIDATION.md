@@ -1,6 +1,6 @@
 # Project Z page validation — 2026-11-20
 
-The public page contains 37 reviewed repositories and 26 verified crate entries. The counts come from the snapshot in [projects.json](projects.json), which records public source URLs, visibility evidence, versions and registry checksums. The build does not read the aggregate catalog.
+The initial visual acceptance snapshot contained 37 reviewed repositories and 26 verified crate entries. The counts come from the snapshot in [projects.json](projects.json), which records public source URLs, visibility evidence, versions and registry checksums. The build does not read the aggregate catalog.
 
 ## Visual review
 
@@ -47,4 +47,10 @@ The builder produced exactly six regular files: `index.html`, `style.css`, `app.
 
 The intended public destination is the separate `LIghtJUNction/project-z-site` repository. Only those six files belong in its site payload. The aggregate repository, catalog, history, local browser profiles and validation files are not part of that payload. Every asset URL is relative, so the page works under `https://lightjunction.github.io/project-z-site/`.
 
-These are local acceptance results; deployment is a separate maintainer action.
+These are the original local acceptance results. Subsequent data and publication checks are recorded separately below.
+
+## Published package data refresh
+
+The [release refresh record](evidence/release-refresh-20261120.json) records the current public-source and registry checks for zfetch 0.1.1, zgpui 0.1.2, zpty 0.2.3, zterm 0.5.2 and zrc 0.1.2. All 37 repositories were rechecked for active public visibility, and every displayed crate version was checked against its registry checksum. The updated page contains 27 verified crate entries.
+
+The CSS, JavaScript, favicon and no-Jekyll marker are unchanged. The existing static checks and six-file build boundary passed again; the original visual acceptance images remain the evidence for the unchanged design. The current file hashes are in [bundle-manifest.json](evidence/bundle-manifest.json). Publication is recorded in the refresh record after the live files have been checked.
