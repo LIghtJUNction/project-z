@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-20",
+  "timezone": "Asia/Taipei",
+  "project_z": {
+    "pull_request": 5,
+    "merged": true,
+    "merge_commit": "0d638519117e375410743e61013114a6187b7f96",
+    "tested_source": "c96e4cdbf4bcb08019975bff7e738b5fe62475b3",
+    "regressions_passed": 96,
+    "stable_component_baseline": "76dd114c11685d430dd55bb0d78b064a7349af73",
+    "repositories": 43,
+    "cargo_packages": 62,
+    "component_pins_changed": false
+  },
+  "zmcpio": {
+    "pull_request": 2,
+    "merged": true,
+    "merge_commit": "a88d2accf0fa642eded27c844aaf7d7bb6dd3501",
+    "tested_source": "ec43faa5347962517807bdf3a2ff4d667e0a8fe2",
+    "validation_report_source": "61dfc3212ff3abd632eeed9b32718efbf54fd251",
+    "zcall_dependency": "0.4.0",
+    "all_features_passed": 209,
+    "subprocess_entrypoints_marked_ignored": 2,
+    "no_default_features_passed": 170,
+    "package_verified": true,
+    "status": "merged_unreleased",
+    "latest_formal_release": "v0.4.0",
+    "next_release_target": "0.5.0"
+  },
+  "zuse": {
+    "source": "94c837551a7a2fd8ec9f577a3e2f57309bd5ce5a",
+    "version": "0.2.2",
+    "library_tests_passed": 110,
+    "real_transport_checks_passed": 12,
+    "temporary_patch_only": true,
+    "original_lock_restored": true
+  },
+  "review": {
+    "schema_version": 1,
+    "source_commit": "c96e4cdbf4bcb08019975bff7e738b5fe62475b3",
+    "scope": "Independent static review of scoped maintenance; executed tests are recorded separately",
+    "internal_review": {
+      "result": "no remaining blocking findings",
+      "files": [
+        "scripts/maintenance.py",
+        "tests/test_maintenance.py",
+        "docs/automation.md"
+      ]
+    },
+    "agy": {
+      "user_authorized": true,
+      "mode": "plan",
+      "sandbox_requested": true,
+      "output_format": "json",
+      "main_review": {
+        "exit_code": 0,
+        "status": "SUCCESS",
+        "complete": true
+      },
+      "targeted_followup": {
+        "exit_code": 0,
+        "status": "SUCCESS",
+        "complete": true,
+        "scope": "Committed test file lines 155-240"
+      },
+      "result": "no blocking findings",
+      "tests_executed": false,
+      "files_modified": false,
+      "remaining_owned_jobs": 0,
+      "git_metadata_read": "AGY reported read-only git show outside the worktree sandbox for the external worktree gitdir"
+    }
+  },
+  "upstream_observation": {
+    "created_at": "2026-11-20T11:55:51.390764+00:00",
+    "root_head": "76dd114c11685d430dd55bb0d78b064a7349af73",
+    "repositories": 43,
+    "changed_upstreams": 22,
+    "catalog_package_versions_checked": 44,
+    "unavailable_versions": 11,
+    "candidates": 0,
+    "errors": [],
+    "record": "upstream-audit.json",
+    "note": "Committed catalog audited while the scoped-maintenance change was in progress; source_dirty describes that owned working copy."
+  },
+  "next_cohort_owners": [
+    {
+      "scope": "zmcpio 0.5 and zuse exact dependency",
+      "owner": "Library release and zuse maintainers"
+    },
+    {
+      "scope": "SSMCP, zrc, ztype and installer propagation",
+      "owner": "Existing application maintainers and Project Z coordinator"
+    },
+    {
+      "scope": "Full compatible aggregate acceptance",
+      "owner": "Project Z coordinator"
+    }
+  ]
+}

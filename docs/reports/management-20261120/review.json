@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "source_commit": "c96e4cdbf4bcb08019975bff7e738b5fe62475b3",
+  "scope": "Independent static review of scoped maintenance; executed tests are recorded separately",
+  "internal_review": {
+    "result": "no remaining blocking findings",
+    "files": [
+      "scripts/maintenance.py",
+      "tests/test_maintenance.py",
+      "docs/automation.md"
+    ]
+  },
+  "agy": {
+    "user_authorized": true,
+    "mode": "plan",
+    "sandbox_requested": true,
+    "output_format": "json",
+    "main_review": {
+      "exit_code": 0,
+      "status": "SUCCESS",
+      "complete": true
+    },
+    "targeted_followup": {
+      "exit_code": 0,
+      "status": "SUCCESS",
+      "complete": true,
+      "scope": "Committed test file lines 155-240"
+    },
+    "result": "no blocking findings",
+    "tests_executed": false,
+    "files_modified": false,
+    "remaining_owned_jobs": 0,
+    "git_metadata_read": "AGY reported read-only git show outside the worktree sandbox for the external worktree gitdir"
+  }
+}
