@@ -1,7 +1,7 @@
 {
   "schema": "project-z.public-site-candidate.v1",
   "recorded_at_utc": "2026-11-20T10:49:14.194353+00:00",
-  "status": "final_aggregate_bound_publication_pending",
+  "status": "published_live_verified",
   "aggregate_input": {
     "commit": "b54f083e2b7900c2f5c93ec93e26366526645095",
     "tree": "5fdb8f3dc5d882e07a155978fa103aee04fdb990",
@@ -423,7 +423,13 @@
     "version_scope": "The final aggregate is the accepted zgpui 0.1.2 source cohort. Newer separately verified public versions such as zgpui 0.1.5, zharness 0.6.0 and zcall 0.4.0 describe their own publications."
   },
   "publication": {
-    "status": "authorized_pending",
-    "public_baseline_commit": "668080bced1eb4c9941e324abc09e645d6e881f3"
+    "status": "published_live_verified",
+    "public_baseline_commit": "668080bced1eb4c9941e324abc09e645d6e881f3",
+    "public_commit": "5bdd99dc749de86482f1bafb525693c2acc66b85",
+    "public_url": "https://lightjunction.github.io/project-z-site/",
+    "pages_run_id": 44723433069,
+    "pages_run_url": "https://github.com/LIghtJUNction/project-z-site/actions/runs/44723433069",
+    "live_verified_at_utc": "2026-11-20T10:57:45.516128+00:00",
+    "receipt": "site/evidence/publication-20261120.json"
   }
 }
