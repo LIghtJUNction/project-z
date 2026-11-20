@@ -266,6 +266,18 @@
       "requires": []
     },
     {
+      "name": "zguard",
+      "path": "zguard",
+      "url": "https://github.com/LIghtJUNction/zguard.git",
+      "branch": "main",
+      "commit": "5cdd637edbb075f6611f88f8566e15de4b360cca",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
       "name": "zharness",
       "path": "zharness",
       "url": "https://github.com/LIghtJUNction/zharness.git",
@@ -330,7 +342,7 @@
       "path": "zmcl",
       "url": "https://github.com/LIghtJUNction/zmcl.git",
       "branch": "main",
-      "commit": "35eb8a3242a6ba637266ba1480354138389c9cb0",
+      "commit": "2b1218f70cf89fb042fd725d4ef92dcb4e67dfe9",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -338,7 +350,8 @@
       "requires": [
         "zclap",
         "zconv",
-        "zgpui"
+        "zgpui",
+        "zi18n"
       ]
     },
     {
@@ -467,7 +480,7 @@
       "path": "ztty",
       "url": "https://github.com/LIghtJUNction/ztty.git",
       "branch": "main",
-      "commit": "1631db8a02e8627d5d35ac0e1d4bef93475f45dc",
+      "commit": "6e2ce246b0b50e6b82da99756832feae6e966f21",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -3671,6 +3684,20 @@
       ]
     },
     {
+      "name": "zguard",
+      "version": "0.1.0",
+      "repository": "zguard",
+      "manifest": "zguard/Cargo.toml",
+      "workspace": "zguard",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": true,
+      "features": {
+        "default": []
+      },
+      "dependencies": []
+    },
+    {
       "name": "zharness",
       "version": "0.5.1",
       "repository": "zharness",
@@ -3816,7 +3843,8 @@
           "gui"
         ],
         "gui": [
-          "dep:zgpui"
+          "dep:zgpui",
+          "dep:zi18n"
         ]
       },
       "dependencies": [
@@ -3848,6 +3876,19 @@
           ],
           "source": null,
           "path": "zmcl/vendor/zgpui"
+        },
+        {
+          "name": "zi18n",
+          "alias": null,
+          "requirement": "=0.1.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": false,
+          "features": [],
+          "source": null,
+          "path": "zmcl/vendor/zi18n"
         },
         {
           "name": "zmcl-core",
@@ -4398,7 +4439,7 @@
     },
     {
       "name": "ztty",
-      "version": "0.5.1",
+      "version": "0.5.2",
       "repository": "ztty",
       "manifest": "ztty/Cargo.toml",
       "workspace": "ztty",
@@ -4437,6 +4478,45 @@
           "path": null
         },
         {
+          "name": "zgpui",
+          "alias": null,
+          "requirement": "=0.1.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zgraphics",
+          "alias": null,
+          "requirement": "=0.2.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zinput",
+          "alias": null,
+          "requirement": "=0.1.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
           "name": "zplugin",
           "alias": null,
           "requirement": "=0.3.1",
@@ -4452,7 +4532,7 @@
         {
           "name": "zpty",
           "alias": null,
-          "requirement": "^0.2.3",
+          "requirement": "=0.2.3",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -4465,7 +4545,7 @@
         {
           "name": "zterm",
           "alias": null,
-          "requirement": "^0.5.2",
+          "requirement": "=0.5.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -4478,7 +4558,7 @@
         {
           "name": "ztty-plugin-api",
           "alias": null,
-          "requirement": "^0.1.0",
+          "requirement": "=0.1.0",
           "explicit_version": true,
           "kind": "normal",
           "target": "cfg(target_os = \"linux\")",

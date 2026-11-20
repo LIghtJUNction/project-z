@@ -1,7 +1,8 @@
 {
   "schema": "project-z.ui-migration-checkpoint.v1",
-  "recorded_at": "2026-11-20T09:00:21.939780+00:00",
-  "status": "stage-1-metadata-check-passed",
+  "recorded_at": "2026-11-20T10:10:14.091884+00:00",
+  "initial_recorded_at": "2026-11-20T09:00:21.939780+00:00",
+  "status": "accepted-component-pins-check-passed",
   "base": "ad1c9e21c9a35ebb2f4059529409b4ad3f2960fd",
   "sync": "Updated 41 repositories and 60 packages",
   "check": {
@@ -22,11 +23,11 @@
     "ztype"
   ],
   "remaining_owners": {
-    "ztty": "The release owner is validating 0.5.2 artifacts for 6e2ce246b0b50e6b82da99756832feae6e966f21. The aggregate pin is 1631db8a02e8627d5d35ac0e1d4bef93475f45dc.",
-    "oh-my-ztty": "The suite owner is assembling 0.2.6 and will validate the bundle against successfully published component artifacts.",
-    "ssmcp": "The single feature release owner is preparing SSMCP 21. The aggregate pin is bfe5f25ffab718f100b11d2ce55c8dc839cbad71.",
-    "zgpui_consumers": "The respective consumer owners are preparing sources for the 0.1.4 and 0.1.5 wave.",
-    "zmcl": "The zmcl owner is preparing the zi18n consumer. Acceptance requires the exact consumer commit and its manifest and lockfile."
+    "oh-my-ztty": "The sole 0.2.6 owner will supply the verified immutable suite source and component artifact lock. The aggregate pin is 0fdc87873c53e7c87d18952f83a7b94fc4149de5.",
+    "ssmcp": "The single owner is preparing the full SSMCP 21 feature release. The aggregate pin is bfe5f25ffab718f100b11d2ce55c8dc839cbad71.",
+    "zgpui_consumers": "The respective consumer owners are preparing exact sources for the zgpui 0.1.4 and 0.1.5 wave.",
+    "zmcl": "The accepted zi18n consumer is zmcl 0.1.1 at 2b1218f70cf89fb042fd725d4ef92dcb4e67dfe9. The later native GUI release has its own owner and acceptance.",
+    "zcall_zharness": "The zcall 0.4 and zharness 0.6.0 wave, including any zharness consumption of zguard, requires separate exact-source and dependency acceptance."
   },
   "main_acceptance": "Pending check and resolve --all on the final coherent pins, plus independent verification of nested excluded applications and actual source archives.",
   "merged_main": "f0659de7c732163b5ebb02c76516dd11b264d21c",
@@ -34,7 +35,7 @@
   "accepted_gui_source": "e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74",
   "source_links_validation": "source-links-validation.json",
   "accepted_outer_gui_source": "ab2b3b6726fa7c7c6ee092607f95861d2097e332",
-  "resolve_all": "Independent validation passed for prior source 046bb4b0b73f82e0943c92d7c81facb9968b8520 (independent-validation-046bb4b.json). Final stage 2 pins still require resolve --all.",
+  "resolve_all": "Independent validation passed for prior source 046bb4b0b73f82e0943c92d7c81facb9968b8520 (independent-validation-046bb4b.json). Full resolution is pending acceptance of the final oh-my-ztty 0.2.6 pins.",
   "independent_validation": "independent-validation-046bb4b.json",
   "stage_1": {
     "base": "046bb4b0b73f82e0943c92d7c81facb9968b8520",
@@ -43,6 +44,17 @@
     "check": {
       "exit_code": 0,
       "stdout": "OK: 42 repositories, 61 packages; versions and graph agree\n",
+      "stderr": ""
+    },
+    "source": "8c789ef69297ca344f667cbe1bcdf223d79babf2"
+  },
+  "component_pins": {
+    "base": "8c789ef69297ca344f667cbe1bcdf223d79babf2",
+    "acceptance_receipt": "accepted-component-pins.md",
+    "sync": "Updated 43 repositories and 62 packages",
+    "check": {
+      "exit_code": 0,
+      "stdout": "OK: 43 repositories, 62 packages; versions and graph agree\n",
       "stderr": ""
     }
   }

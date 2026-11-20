@@ -62,7 +62,7 @@ role = "application"
 
 [repositories.zmcl]
 role = "application"
-requires = ["zconv", "zclap", "zgpui"]
+requires = ["zconv", "zclap", "zgpui", "zi18n"]
 
 [repositories.OniMods]
 role = "application"

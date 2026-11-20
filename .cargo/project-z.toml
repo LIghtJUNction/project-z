@@ -21,6 +21,7 @@
 "zfetch" = { path = "zfetch" }
 "zgpui" = { path = "zgpui" }
 "zgraphics" = { path = "zgraphics" }
+"zguard" = { path = "zguard" }
 "zharness" = { path = "zharness" }
 "zhex" = { path = "zhex" }
 "zi18n" = { path = "zi18n" }

@@ -166,3 +166,7 @@
 	path = zi18n
 	url = https://github.com/LIghtJUNction/zi18n.git
 	branch = main
+[submodule "zguard"]
+	path = zguard
+	url = https://github.com/LIghtJUNction/zguard.git
+	branch = main
