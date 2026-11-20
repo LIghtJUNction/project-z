@@ -135,7 +135,7 @@
       "path": "zcalld",
       "url": "https://github.com/LIghtJUNction/zcalld.git",
       "branch": "main",
-      "commit": "5b5e55af715f67562120873f170891ebd777a230",
+      "commit": "ab2b3b6726fa7c7c6ee092607f95861d2097e332",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -450,7 +450,7 @@
       "path": "ztty",
       "url": "https://github.com/LIghtJUNction/ztty.git",
       "branch": "main",
-      "commit": "c4f8f48c9598284a589e609f25242b49ceabfea8",
+      "commit": "1631db8a02e8627d5d35ac0e1d4bef93475f45dc",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -4361,7 +4361,7 @@
     },
     {
       "name": "ztty",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "repository": "ztty",
       "manifest": "ztty/Cargo.toml",
       "workspace": "ztty",
@@ -4415,7 +4415,7 @@
         {
           "name": "zpty",
           "alias": null,
-          "requirement": "^0.2.2",
+          "requirement": "^0.2.3",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -4428,7 +4428,7 @@
         {
           "name": "zterm",
           "alias": null,
-          "requirement": "^0.5.1",
+          "requirement": "^0.5.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,

@@ -248,9 +248,61 @@ def equivalent_source(path, package, data, root=ROOT):
         return False
 
 
+def source_link_errors(data, rules, root=ROOT):
+    """Verify explicitly shared source archives, including Cargo-excluded apps."""
+    errors = []
+    repos = {repo["name"]: repo for repo in data["repositories"]}
+    for owner, options in rules.get("repositories", {}).items():
+        links = options.get("source_links", {})
+        if not isinstance(links, dict):
+            errors.append(f"{owner}: source_links must map relative gitlink paths to repository names")
+            continue
+        for path, target_name in links.items():
+            label = f"{owner}/{path!r} -> {target_name!r}"
+            if (not isinstance(path, str) or not path or Path(path).is_absolute()
+                    or "\\" in path or any(ord(c) < 32 or ord(c) == 127 for c in path)
+                    or any(part in {"", ".", ".."} or part.lower() == ".git" for part in path.split("/"))):
+                errors.append(f"{label}: invalid source link path")
+                continue
+            if owner not in repos or not isinstance(target_name, str) or target_name not in repos:
+                errors.append(f"{label}: unknown source link repository")
+                continue
+            try:
+                consumer = (root / repos[owner]["path"]).resolve()
+                canonical = (root / repos[target_name]["path"]).resolve()
+                relative(consumer, root)
+                relative(canonical, root)
+                nested = (consumer / path).resolve()
+                relative(nested, consumer)
+                entries = command(["git", "--literal-pathspecs", "ls-tree", "-z", "HEAD", "--", path], consumer)
+                entries = entries.rstrip("\0").split("\0") if entries else []
+                if len(entries) != 1:
+                    raise CoordinationError("declared source link is missing from consumer HEAD")
+                identity, recorded_path = entries[0].split("\t", 1)
+                mode, kind, pinned = identity.split()
+                if mode != "160000" or kind != "commit" or recorded_path != path:
+                    raise CoordinationError("declared source link is not an exact gitlink in consumer HEAD")
+                expected = repos[target_name]["commit"]
+                if pinned != expected:
+                    raise CoordinationError(f"pinned source {pinned} differs from snapshot {expected}")
+                for checkout, wanted in [(consumer, repos[owner]["commit"]), (nested, pinned), (canonical, expected)]:
+                    if not (checkout / ".git").exists():
+                        raise CoordinationError(f"{relative(checkout, root)}: initialize the source repository first")
+                    actual_root = Path(command(["git", "rev-parse", "--show-toplevel"], checkout).strip()).resolve()
+                    if actual_root != checkout:
+                        raise CoordinationError(f"{relative(checkout, root)}: source path is not its own repository")
+                    if command(["git", "rev-parse", "HEAD"], checkout).strip() != wanted:
+                        raise CoordinationError(f"{relative(checkout, root)}: checkout differs from its recorded source")
+                    if command(["git", "status", "--porcelain", "--untracked-files=normal", "--ignore-submodules=none"], checkout):
+                        raise CoordinationError(f"{relative(checkout, root)}: source checkout is not clean")
+            except (CoordinationError, ValueError) as error:
+                errors.append(f"{label}: {error}")
+    return errors
+
+
 def validate(data, rules, root=ROOT):
     packages = package_map(data)
-    errors = []
+    errors = source_link_errors(data, rules, root)
     forbidden = set(rules.get("policy", {}).get("forbidden_packages", []))
     repo_names = {repo["name"] for repo in data["repositories"]}
     for repo in data["repositories"]:

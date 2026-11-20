@@ -1,0 +1,34 @@
+{
+  "schema": "project-z.declared-source-link-validation.v1",
+  "recorded_at": "2026-11-20T09:00:21.939780+00:00",
+  "base_commit": "b84f610364b0e79124aceb7665100296187c43fb",
+  "scope": "Explicit source_links only; Cargo requires and independent release pins keep their existing contracts.",
+  "declared_link": {
+    "consumer": "zcalld",
+    "path": "apps/zcall-gui",
+    "canonical": "zcall-gui"
+  },
+  "implementation_sha256": "566a2a18766f03296573fe0985bc1d32c1889d0f86833a10b3f381c3ed33cc81",
+  "tests": {
+    "count": 91,
+    "seconds": 37.139,
+    "exit_code": 0,
+    "log_sha256": "3885e309ecd1e0e488dd21d908bc3037501f17ff1759743dc9cf60e1648d8433"
+  },
+  "real_negative": {
+    "consumer": "5b5e55af715f67562120873f170891ebd777a230",
+    "nested": "a28eba7c5c630d94d242732bb6136c2cdbcef43c",
+    "canonical": "e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74",
+    "exit_code": 1,
+    "diagnostic": "project-z: zcalld/'apps/zcall-gui' -> 'zcall-gui': pinned source a28eba7c5c630d94d242732bb6136c2cdbcef43c differs from snapshot e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74"
+  },
+  "real_positive": {
+    "consumer": "ab2b3b6726fa7c7c6ee092607f95861d2097e332",
+    "nested_and_canonical": "e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74",
+    "zgpui": "5b268da910639abd2fb8e581acb4f6eed50b7516",
+    "ztty": "1631db8a02e8627d5d35ac0e1d4bef93475f45dc",
+    "exit_code": 0,
+    "stdout": "OK: 41 repositories, 60 packages; versions and graph agree\n"
+  },
+  "review": "Independent read-only review found no blocking issue; three clean repositories, exact gitlinks, path boundaries and CLI entry-point coverage verified."
+}

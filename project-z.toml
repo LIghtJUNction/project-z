@@ -14,6 +14,8 @@ role = "application"
 role = "application"
 # Optional frontend and helper sources are part of release/source distribution.
 requires = ["zcall-gui", "zcall-omarchy", "zcalld-compat"]
+# This excluded app must match the source distributed by the aggregate.
+source_links = { "apps/zcall-gui" = "zcall-gui" }
 
 [repositories.zuse]
 role = "application"

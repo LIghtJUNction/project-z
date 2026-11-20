@@ -913,5 +913,117 @@ class EquivalentSourceTests(FilesystemFixture):
         self.assertFalse(self.equivalent())
 
 
+
+class SourceLinkTests(FilesystemFixture):
+    """A source-distributed app must be checked even when Cargo excludes it."""
+
+    def git(self, *args, cwd):
+        return pz.command(["git", *args], cwd).strip()
+
+    def commit(self, checkout, message):
+        self.git("add", "-A", cwd=checkout)
+        self.git("-c", "user.name=Project Z tests", "-c", "user.email=tests@example.invalid",
+                 "commit", "-qm", message, cwd=checkout)
+        return self.git("rev-parse", "HEAD", cwd=checkout)
+
+    def setUp(self):
+        super().setUp()
+        self.gui = self.root / "gui"
+        self.write("gui/source.txt", "original\n")
+        self.git("init", "-q", cwd=self.gui)
+        self.old = self.commit(self.gui, "Initial GUI")
+        self.consumer = self.root / "daemon"
+        self.write("daemon/Cargo.toml", '[workspace]\nexclude = ["apps/gui"]\n')
+        self.write("daemon/.gitmodules", '[submodule "apps/gui"]\npath = apps/gui\nurl = https://example.invalid/gui.git\n')
+        self.git("init", "-q", cwd=self.consumer)
+        self.nested = self.consumer / "apps/gui"
+        self.nested.parent.mkdir(parents=True)
+        self.git("clone", "-q", "--no-hardlinks", str(self.gui), str(self.nested), cwd=self.root)
+        self.commit(self.consumer, "Distribute the excluded GUI")
+        self.data = catalog(package("daemon"), package("gui", publish=False))
+        self.refresh()
+        self.rules = {"repositories": {"daemon": {"source_links": {"apps/gui": "gui"}}}}
+        self.write("project-z.toml", '[repositories.daemon]\nsource_links = { "apps/gui" = "gui" }\n')
+
+    def refresh(self):
+        for repo in self.data["repositories"]:
+            repo["commit"] = self.git("rev-parse", "HEAD", cwd=self.root / repo["path"])
+
+    def errors(self):
+        return pz.validate(self.data, self.rules, self.root)
+
+    def advance_gui(self):
+        (self.gui / "source.txt").write_text("new GUI source\n")
+        result = self.commit(self.gui, "Update GUI")
+        self.refresh()
+        return result
+
+    def test_exact_clean_excluded_source_is_accepted(self):
+        self.assertEqual(self.errors(), [])
+
+    def test_check_and_resolve_reject_stale_excluded_app_before_cargo(self):
+        self.advance_gui()
+        self.generated(self.data)
+        with patch.object(pz, "inventory", return_value=self.data), patch.object(pz, "resolved_paths") as resolve:
+            for action in [["check"], ["resolve", "--all"]]:
+                with self.subTest(action=action), redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()) as err:
+                    self.assertEqual(pz.main(["--root", str(self.root), *action]), 1)
+                    self.assertIn("pinned source", err.getvalue())
+            resolve.assert_not_called()
+
+    def test_checkout_drift_is_rejected_even_when_recorded_pins_match(self):
+        new = self.advance_gui()
+        self.git("fetch", "-q", str(self.gui), new, cwd=self.nested)
+        self.git("checkout", "-q", new, cwd=self.nested)
+        self.git("checkout", "-q", self.old, cwd=self.gui)
+        self.refresh()
+        self.assertTrue(any("not clean" in error or "checkout differs" in error for error in self.errors()))
+
+    def test_staged_gitlink_drift_cannot_hide_behind_old_head(self):
+        new = self.advance_gui()
+        self.git("checkout", "-q", self.old, cwd=self.gui)
+        self.refresh()
+        self.git("update-index", "--cacheinfo", f"160000,{new},apps/gui", cwd=self.consumer)
+        self.assertTrue(any("not clean" in error for error in self.errors()))
+
+    def test_dirty_nested_and_canonical_sources_are_rejected(self):
+        for checkout in [self.nested, self.gui]:
+            with self.subTest(checkout=checkout):
+                original = (checkout / "source.txt").read_bytes()
+                (checkout / "source.txt").write_text("uncommitted change\n")
+                self.assertTrue(any("not clean" in error for error in self.errors()))
+                (checkout / "source.txt").write_bytes(original)
+        self.assertEqual(self.errors(), [])
+
+    def test_missing_gitlink_and_unknown_target_are_rejected(self):
+        for links, message in [({"apps/missing": "gui"}, "missing from consumer HEAD"),
+                               ({"Cargo.toml": "gui"}, "not an exact gitlink"),
+                               ({"apps/gui": "unknown"}, "unknown source link repository")]:
+            with self.subTest(links=links):
+                self.rules["repositories"]["daemon"]["source_links"] = links
+                self.assertTrue(any(message in error for error in self.errors()))
+
+    def test_invalid_source_paths_fail_without_git(self):
+        for path in ["", ".", "../gui", "/tmp/gui", ".git", "apps/.git/objects", "apps/../gui",
+                     "apps//gui", "apps\\gui", "apps/\x1b"]:
+            with self.subTest(path=path):
+                self.rules["repositories"]["daemon"]["source_links"] = {path: "gui"}
+                with patch.object(pz, "command") as command:
+                    self.assertTrue(any("invalid source link path" in error for error in self.errors()))
+                    command.assert_not_called()
+
+    def test_symlink_outside_consumer_is_rejected(self):
+        outside = self.root / "outside"
+        outside.mkdir()
+        link = self.consumer / "apps/outside"
+        link.symlink_to(outside, target_is_directory=True)
+        self.rules["repositories"]["daemon"]["source_links"] = {"apps/outside": "gui"}
+        self.assertTrue(any("escapes coordination checkout" in error for error in self.errors()))
+
+    def test_undeclared_independent_pins_keep_their_existing_contract(self):
+        self.advance_gui()
+        self.assertEqual(pz.validate(self.data, {}, self.root), [])
+
+
 if __name__ == "__main__":
     unittest.main()

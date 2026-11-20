@@ -15,7 +15,7 @@ python3 scripts/project_z.py check
 python3 scripts/project_z.py resolve --all
 ```
 
-`check` 核对版本约束、Cargo 依赖环、退役包名、源码归属和生成文件。`resolve` 进一步调用 Cargo，确认选中的 Project Z 依赖确实来自本次检出的源码；`--all` 包含应用在内的所有 Rust 工作区。只有版本号一致还不够：同名同版本的旧注册表包，不能冒充正在修改的本地库。
+`check` 核对版本约束、Cargo 依赖环、退役包名、源码归属和生成文件。`resolve` 进一步调用 Cargo，确认选中的 Project Z 依赖确实来自本次检出的源码；`--all` 包含应用在内的所有 Rust 工作区。只有版本号一致还不够：同名同版本的旧注册表包，不能冒充正在修改的本地库。 对源码包内嵌、但不属于 Cargo 工作区的应用，使用明确的 `source_links` 约束：外层提交记录的 gitlink、实际嵌套检出与聚合选定提交必须一致，参与校验的源码必须干净。这个约束独立于 `requires` 的影响分析；未声明的独立发行标签仍遵守各项目自己的发布约定。
 
 运行指定消费者，或者运行某个库的所有 Rust 下游：
 

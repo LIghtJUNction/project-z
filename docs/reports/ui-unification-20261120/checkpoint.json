@@ -1,12 +1,13 @@
 {
   "schema": "project-z.ui-migration-checkpoint.v1",
-  "recorded_at": "2026-11-20T08:41:00.745002+00:00",
-  "status": "candidate-not-accepted",
+  "recorded_at": "2026-11-20T09:00:21.939780+00:00",
+  "status": "candidate-local-check-passed",
   "base": "ad1c9e21c9a35ebb2f4059529409b4ad3f2960fd",
   "sync": "Updated 41 repositories and 60 packages",
   "check": {
-    "exit_code": 1,
-    "stderr": "project-z: ztty -> zpty: noncanonical path ztty/crates/zpty (expected zpty)\nproject-z: ztty -> zterm: noncanonical path ztty/crates/zterm (expected zterm)\n"
+    "exit_code": 0,
+    "stdout": "OK: 41 repositories, 60 packages; versions and graph agree\n",
+    "stderr": ""
   },
   "actual_ui_impact": [
     "oh-my-ztty",
@@ -21,13 +22,15 @@
     "ztype"
   ],
   "remaining_owners": {
-    "ztty": "Current ztty release owner: finish the frozen 1631db8 dependency/package/install checks and the full formal 0.5.1 release.",
-    "zcalld": "Current cohort auditor: validate the outer source archive and the old 0.2.5 runtime paired with GUI e6ed24b; preserve the separate 0.3.x development history.",
-    "oh-my-ztty": "Current suite owner: preserve released 0.2.4 features and validate the 0.2.5 bundle against actual successful dependency releases.",
-    "ssmcp": "Existing feature owner retains the new dependency cohort; emergency release repair and its failed immutable tags must not downgrade aggregate dependencies."
+    "ztty": "Frozen 1631db8 passed 17 local gates. Formal run44706305817 has Linux toolchain/UI failures under investigation; no official publication is claimed.",
+    "oh-my-ztty": "Current suite owner: preserve 0.2.4 features and validate the 0.2.5 bundle against actual successful dependency releases.",
+    "ssmcp": "Emergency17 awaits complete UI and formal release gates. Existing feature18 owners are converging their branches; the aggregate keeps its compatible bfe5f25 dependency cohort."
   },
   "main_acceptance": "Requires check and resolve --all passing on the final coherent pins, plus independent verification of nested excluded applications and actual source archives. This checkpoint is not accepted as main.",
   "merged_main": "f0659de7c732163b5ebb02c76516dd11b264d21c",
-  "previous_checkpoint": "a8fd98f70dff860e1c303bb394a1a76cb3f5c6e7",
-  "accepted_gui_source": "e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74"
+  "previous_checkpoint": "b84f610364b0e79124aceb7665100296187c43fb",
+  "accepted_gui_source": "e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74",
+  "source_links_validation": "source-links-validation.json",
+  "accepted_outer_gui_source": "ab2b3b6726fa7c7c6ee092607f95861d2097e332",
+  "resolve_all": "Pending on this frozen candidate."
 }
