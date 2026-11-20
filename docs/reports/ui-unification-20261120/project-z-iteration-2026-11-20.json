@@ -1,0 +1,936 @@
+{
+  "schema": "project-z.iteration-handoff.sanitized.v1",
+  "title": "Project Z 本轮迭代报告：主线验收、套件安装与项目页更新已完成",
+  "status": "stable_cohort_completed",
+  "drafting_scope": "固定证据快照；保留源码、测试、安装与公开部署的分别归属。",
+  "repository": "LIghtJUNction/project-z",
+  "privacy": {
+    "sanitized": true,
+    "omitted": [
+      "credentials",
+      "private collaboration tokens",
+      "live client identifiers",
+      "private thread identifiers",
+      "host PIDs",
+      "authentication material"
+    ],
+    "operations_represented_by": "role and relative receipt names"
+  },
+  "aggregate": {
+    "remote_readback": "main ref independently confirmed via GitHub connector",
+    "repositories": 43,
+    "packages": 62,
+    "nested_checkouts": 103,
+    "sync_exit_code": 0,
+    "check_exit_code": 0,
+    "nested_clean_and_pinned": {
+      "value": true,
+      "evidence": [
+        "fixed accepted-component-pins receipt",
+        "coordinator preservation receipt"
+      ]
+    },
+    "final_resolve_after_026": {
+      "exit_code": 0,
+      "seconds": 8.639,
+      "rust_repositories_resolved": 38
+    },
+    "final_preservation_after_026": {
+      "recursive_submodule_checkouts": 103,
+      "repository_checkouts_including_root": 104,
+      "cargo_lock_candidate_paths": 233,
+      "existing_cargo_lock_files": 142,
+      "worktree_cargo_config_candidate_paths": 209,
+      "existing_worktree_cargo_config_files": 3,
+      "external_cargo_configs_unchanged": true,
+      "clean_and_pinned_before": true,
+      "clean_and_pinned_after": true,
+      "preservation_changes": []
+    },
+    "merged_to_main": true,
+    "source_refs": [
+      "https://github.com/LIghtJUNction/project-z/blob/78fc357f778a0dbff12f9320da82f324cb427410/docs/reports/ui-unification-20261120/final-validation.json",
+      "https://github.com/LIghtJUNction/project-z/blob/78fc357f778a0dbff12f9320da82f324cb427410/docs/reports/ui-unification-20261120/source-links-validation.json",
+      "https://github.com/LIghtJUNction/project-z/blob/b54f083e2b7900c2f5c93ec93e26366526645095/docs/reports/ui-unification-20261120/accepted-component-pins.md"
+    ],
+    "current_pins": {
+      "ztty": "6e2ce246b0b50e6b82da99756832feae6e966f21",
+      "zmcl": "2b1218f70cf89fb042fd725d4ef92dcb4e67dfe9",
+      "zguard": "5cdd637edbb075f6611f88f8566e15de4b360cca",
+      "zi18n": "b90984b48465a764bcb699ad2bb3251fa7020024",
+      "zgpui": "5b268da910639abd2fb8e581acb4f6eed50b7516",
+      "ssmcp": "bfe5f25ffab718f100b11d2ce55c8dc839cbad71",
+      "zharness": "e3580c01c7252da090d04e59b59762bc561777d1",
+      "zcalld": "ab2b3b6726fa7c7c6ee092607f95861d2097e332",
+      "zcall_gui": "e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74",
+      "oh_my_ztty": "1e3ce8d3e5a141d09e450fd3f635f987a5732be4"
+    },
+    "historical_validation": {
+      "source": "046bb4b0b73f82e0943c92d7c81facb9968b8520",
+      "scope": "仅此旧固定源码，不覆盖后续 b54 或最终套件 0.2.6 聚合来源。",
+      "check_exit_code": 0,
+      "resolve_all_exit_code": 0,
+      "rust_repositories_resolved": 36,
+      "preservation": {
+        "checkouts_including_root": 99,
+        "clean_and_pinned": true,
+        "protected_candidate_paths": 371,
+        "protected_existing_files": 138,
+        "changes": [],
+        "global_cargo_config_unchanged": true
+      },
+      "source_ref": "https://github.com/LIghtJUNction/project-z/blob/b54f083e2b7900c2f5c93ec93e26366526645095/docs/reports/ui-unification-20261120/independent-validation-046bb4b.json"
+    },
+    "accepted_component_stage": {
+      "source": "b54f083e2b7900c2f5c93ec93e26366526645095",
+      "tree": "5fdb8f3dc5d882e07a155978fa103aee04fdb990",
+      "branch": "coord/zgpui-propagation-20261120",
+      "repositories": 43,
+      "packages": 62,
+      "nested_checkouts": 101,
+      "check_exit_code": 0,
+      "source_refs": [
+        "https://github.com/LIghtJUNction/project-z/blob/b54f083e2b7900c2f5c93ec93e26366526645095/docs/reports/ui-unification-20261120/accepted-component-pins.md",
+        "https://github.com/LIghtJUNction/project-z/blob/b54f083e2b7900c2f5c93ec93e26366526645095/docs/reports/ui-unification-20261120/checkpoint.json"
+      ]
+    },
+    "validated_source": "522bc7c9da008f05e9f715c1c1eda91b13ca89ec",
+    "validated_tree": "eb2dfc60e3ab31f96c6fb29c458573f8500a2ac6",
+    "receipt_commit_changes": "3 documentation files only; tested source and recursive pins unchanged",
+    "checkouts_including_root": 104,
+    "final_check": {
+      "exit_code": 0,
+      "seconds": 0.997,
+      "repositories": 43,
+      "packages": 62
+    },
+    "source_link_validation": {
+      "base_commit": "b84f610364b0e79124aceb7665100296187c43fb",
+      "implementation_sha256": "566a2a18766f03296573fe0985bc1d32c1889d0f86833a10b3f381c3ed33cc81",
+      "scope": "Explicit source_links; existing Cargo requires and independent release-pin contracts preserved.",
+      "declared_link": {
+        "consumer": "zcalld",
+        "path": "apps/zcall-gui",
+        "canonical": "zcall-gui"
+      },
+      "entry_points": [
+        "check",
+        "resolve",
+        "run"
+      ],
+      "tests": {
+        "count": 91,
+        "seconds": 37.139,
+        "exit_code": 0,
+        "log_sha256": "3885e309ecd1e0e488dd21d908bc3037501f17ff1759743dc9cf60e1648d8433"
+      },
+      "real_negative": {
+        "old_nested_gui": "a28eba7c5c630d94d242732bb6136c2cdbcef43c",
+        "expected_gui": "e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74",
+        "exit_code": 1
+      },
+      "real_positive": {
+        "consumer": "ab2b3b6726fa7c7c6ee092607f95861d2097e332",
+        "nested_and_canonical_gui": "e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74",
+        "exit_code": 0
+      },
+      "source_binding_note": "91 tests are bound to this receipt's base+implementation hash, not to046.",
+      "source_ref": "https://github.com/LIghtJUNction/project-z/blob/78fc357f778a0dbff12f9320da82f324cb427410/docs/reports/ui-unification-20261120/source-links-validation.json"
+    },
+    "main_acceptance_commit": "78fc357f778a0dbff12f9320da82f324cb427410",
+    "main_acceptance_tree": "eadf86b7ccade6e68a7075b5cfa222cda85227cd",
+    "main_acceptance_note": "Historical acceptance commit; later site/report documentation merges may produce a newer head without changing this accepted Cargo graph."
+  },
+  "releases": {
+    "zi18n_010": {
+      "status": "published_and_registry_consumer_verified",
+      "source": "b90984b48465a764bcb699ad2bb3251fa7020024",
+      "release_id": 452503651,
+      "published_at": "2026-11-20T09:40:18Z",
+      "crate": {
+        "bytes": 17045,
+        "sha256": "eeb0c6eefa7e2dee454cd727e5cacbe89bacf4c461742ca7316a486a32dfaed2"
+      },
+      "actual_first_consumer": "zmcl2b within zgpui012 aggregate batch",
+      "evidence": [
+        "https://github.com/LIghtJUNction/zi18n/blob/cdff8dea19e97268d296afa827767ea689420591/docs/releases/0.1.0.md",
+        "https://drive.google.com/file/d/17JnwPZtiGOS4IxP9MJOwU14oIiHWK4cT/view"
+      ]
+    },
+    "ztty_052": {
+      "status": "published_and_interactive_install_verified",
+      "source": "6e2ce246b0b50e6b82da99756832feae6e966f21",
+      "tree": "57c38b1e962578a29dae65c4e54adab65fd6b1bf",
+      "annotated_tag": "8b2fd0c22b3d53f630f0377ca5a9d225df1a089b",
+      "run_id": 44712216777,
+      "release_id": 452506520,
+      "release_assets": 47,
+      "aur_version": "0.5.2-1",
+      "aur_commit": "1bcb8f01463f29210beb3080ee557758db027080",
+      "installed_scope": "login interactive Zsh uses Cargo registry0.5.2; other PATH may still use system package",
+      "installed_elf_sha256": "0d697554c280ddc51631874d67a4ce729c709cce861d400e052e00e9f95b174a",
+      "crate": {
+        "bytes": 7791804,
+        "sha256": "75e3c82bbd2ca39334f554169027ae9a16c12f326af225faec7907d8cb664025"
+      },
+      "no_forced_existing_session_reload": true,
+      "evidence": [
+        "https://github.com/LIghtJUNction/ztty/blob/76fa2cfd13b776c027d5a86fadafde8e035f88f2/docs/releases/0.5.2/report.zh-CN.md",
+        "https://drive.google.com/file/d/1f8AvfqWjI3OLNdVXdn2v7lC8JZs6hVmI/view"
+      ],
+      "binary_provenance": {
+        "cargo_registry_local_build": {
+          "bytes": 1367376,
+          "sha256": "0d697554c280ddc51631874d67a4ce729c709cce861d400e052e00e9f95b174a",
+          "features": [
+            "wayland"
+          ],
+          "profile": "release",
+          "version": "0.5.2"
+        },
+        "suite_official_release_elf": {
+          "bytes": 1365456,
+          "sha256": "9e8f1c084376df913087c10d4b10d11e2c0172a2eb63a31e64813742067dab19",
+          "version": "0.5.2",
+          "supply": "extracted unchanged from official release archive; bundle script does not strip"
+        },
+        "limitation": "Same source version does not imply byte-identical local registry and release builds. Each artifact retains its own provenance."
+      }
+    },
+    "ssmcp_020": {
+      "status": "official_release_and_interactive_install_verified",
+      "source": "4f4dd88275c205e0e61a7601b4e0d11f56038769",
+      "annotated_tag": "ae483355fd85e40ecb3e0f04ff64338b17a9ffc9",
+      "run_id": 44710769033,
+      "release_id": 452506742,
+      "published_at": "2026-11-20T09:43:48Z",
+      "release_assets": 16,
+      "archive": {
+        "architecture": "x86_64-unknown-linux-gnu",
+        "bytes": 10141793,
+        "sha256": "33ab32051b99fa36c11935dd8438d0987c073bcb64317bec11a227d29eacb2cc"
+      },
+      "interactive_version": "0.10.20",
+      "native_path_version_at_install_receipt": "0.10.10",
+      "systemd_shim_version_at_install_receipt": "0.10.10",
+      "zero_argument_probe": {
+        "native_printf_exit_code": 0,
+        "stdout_bytes": 30,
+        "stderr_bytes": 0,
+        "owned_probe_cleanup": "completed"
+      },
+      "production_deploy": "skipped",
+      "production_switch_last_readonly_result": "blocked_active_sessions; switch_permitted=false; no verified admission fence",
+      "preservation_note": "No signals were sent to existing processes. Final readback reported two absent other candidates with unknown attribution; do not claim that every unrelated process was independently proven present.",
+      "registry_metadata_limitation": "Actual crate downloaded and VCS source checked; version metadata endpoint returned403 in installation receipt, so independent checksum-field readback was unavailable there.",
+      "evidence": [
+        "https://github.com/LIghtJUNction/ssmcp/blob/f8a40bb741fc5921c9ae5a1d447eac7dba2fd251/docs/reports/client-install-0.10.20-20261120/README.md",
+        "https://drive.google.com/file/d/1hoScdqhU49-odsmwvWuBFJ1nmrIKCgLL/view"
+      ],
+      "latest_command_environment_readback": {
+        "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0b60eb7d6e35d06a137278ffe0b3f1139c722fe6/docs/reports/0.2.6/actual-install.json",
+        "interactive_login": "0.10.20",
+        "execution_snapshot": "0.10.20",
+        "user_manager_snapshot": "0.10.20",
+        "manager_delegated_binary_known": false,
+        "earlier010_path_observations": "historical, superseded for latest version readback; retained as dated installation evidence"
+      }
+    },
+    "oh_my_ztty_026": {
+      "status": "official_release_download_install_and_readbacks_verified",
+      "source": "1e3ce8d3e5a141d09e450fd3f635f987a5732be4",
+      "annotated_tag": "5a5f45dcc37c443876aee5d29ed280bcf6c6058d",
+      "run": {
+        "id": 44719594477,
+        "status": "completed",
+        "conclusion": "success",
+        "completed_at": "2026-11-20T10:31:12Z",
+        "jobs": 3,
+        "jobs_summary": [
+          "aarch64 bundle success",
+          "x86_64 bundle success",
+          "publish success"
+        ]
+      },
+      "release": {
+        "id": 452554850,
+        "published_at": "2026-11-20T10:31:09Z",
+        "assets": 6
+      },
+      "assets": [
+        {
+          "name": "oh-my-ztty-0.2.6-linux-x86_64.tar.gz",
+          "bytes": 7273546,
+          "sha256": "94a22ce1300a337e741ef0c2a336e29e90696b621fbdfa05c0b66673ce10dc20"
+        },
+        {
+          "name": "oh-my-ztty-0.2.6-linux-aarch64.tar.gz",
+          "bytes": 7011427,
+          "sha256": "b035c460e3444e7b33dda4e5dd25bceecf0757af40b095950adb8d0ad001637b"
+        }
+      ],
+      "formal_gates": [
+        "complete recursive checkout",
+        "both-architecture suite construction",
+        "installer lifecycle",
+        "isolated HOME program smoke",
+        "actual terminal window",
+        "keyboard",
+        "completion",
+        "cleanup",
+        "publish"
+      ],
+      "local_receipts": {
+        "tests": 90,
+        "both_arch_bundles": true,
+        "x64_smoke": true,
+        "lifecycle_025_026_and_personal_configuration": true,
+        "site_links": 493,
+        "gui": "not_verified_locally_due_to_AF_UNIX_EPERM"
+      },
+      "evidence_scope": "Formal original CI GUI gates passed; this does not rewrite the local AF_UNIX failure as local success.",
+      "official_url_independent_machine_download": {
+        "status": "passed",
+        "files": 6,
+        "seconds": 9.836,
+        "api_asset_digests_match": true,
+        "sidecar_checksum_files_matched": 3,
+        "evidence_class": "coordinator actual download receipt"
+      },
+      "managed_install": {
+        "status": "installed_and_verified",
+        "report_commit": "0b60eb7d6e35d06a137278ffe0b3f1139c722fe6",
+        "actual_install_receipt_sha256": "b2d761570da1f1b1e130494bec367832310d18e834f12e95abd39bf819a4eeed",
+        "current_version": "0.2.6",
+        "installer_runs": [
+          {
+            "exit_code": 0,
+            "seconds": 1.173325
+          },
+          {
+            "exit_code": 0,
+            "seconds": 0.623532
+          }
+        ],
+        "repeated_install_same_link_inode_and_target": true,
+        "new_manifest_entries": 126,
+        "old_manifest_entries": 119,
+        "protected_configuration_links_cargo_fingerprints_unchanged": true,
+        "login_zsh": {
+          "original_startup_files": true,
+          "exit_code": 0,
+          "seconds": 0.3759
+        },
+        "environments": {
+          "interactive_login_zsh": {
+            "suite": "0.2.6",
+            "ztty": "0.5.2",
+            "ssmcp": "0.10.20",
+            "binary_hashes_known": true
+          },
+          "execution_path_snapshot_replay": {
+            "suite": "0.2.6",
+            "ztty": "0.5.2",
+            "ssmcp": "0.10.20",
+            "binary_hashes_known": true,
+            "no_service_started": true
+          },
+          "user_manager_path_snapshot_replay": {
+            "suite": "0.2.6",
+            "ztty": "0.5.0",
+            "ssmcp": "0.10.20",
+            "bare_version_exit_codes": [
+              0,
+              0
+            ],
+            "final_delegated_binary_known": false,
+            "final_delegated_sha256": null,
+            "trace_blocked_by": "ptrace permission denial",
+            "mise_which_failure_is_not_command_failure": true,
+            "no_service_started": true
+          }
+        },
+        "independent_package_record": "oh-my-ztty-bin 0.2.5-1",
+        "protected_external_ztty": "external link remains system ztty0.5.0",
+        "existing_processes_or_connections_stopped": false,
+        "existing_connection_liveness_measured": false,
+        "evidence": [
+          "https://github.com/LIghtJUNction/oh-my-ztty/blob/0b60eb7d6e35d06a137278ffe0b3f1139c722fe6/docs/reports/0.2.6/release.zh-CN.md",
+          "https://github.com/LIghtJUNction/oh-my-ztty/blob/0b60eb7d6e35d06a137278ffe0b3f1139c722fe6/docs/reports/0.2.6/actual-install.json"
+        ]
+      },
+      "aggregate_pin": {
+        "status": "merged",
+        "source": "1e3ce8d3e5a141d09e450fd3f635f987a5732be4",
+        "main_acceptance_commit": "78fc357f778a0dbff12f9320da82f324cb427410"
+      },
+      "evidence": [
+        "https://github.com/LIghtJUNction/oh-my-ztty/actions/runs/44719594477",
+        "https://github.com/LIghtJUNction/oh-my-ztty/releases/tag/v0.2.6",
+        "https://drive.google.com/file/d/15c79p02J6VqnXF2qnSYacMJOj7hp4-6E/view",
+        "https://github.com/LIghtJUNction/oh-my-ztty/blob/0b60eb7d6e35d06a137278ffe0b3f1139c722fe6/docs/reports/0.2.6/release.zh-CN.md",
+        "https://github.com/LIghtJUNction/oh-my-ztty/blob/0b60eb7d6e35d06a137278ffe0b3f1139c722fe6/docs/reports/0.2.6/actual-install.json"
+      ],
+      "component_supply": {
+        "ztty": "official precompiled release asset",
+        "ssmcp": "official precompiled release asset",
+        "all_components_recompiled": false
+      },
+      "drive_final_evidence": {
+        "file_id": "15c79p02J6VqnXF2qnSYacMJOj7hp4-6E",
+        "bytes": 59342,
+        "sha256": "feebef469d1cda2e7c50d8c32592b03e3f1490eaec1e277f9dc9b0c8e0d7c892"
+      }
+    },
+    "zguard_010": {
+      "status": "published_and_merged_in_accepted_aggregate",
+      "source": "5cdd637edbb075f6611f88f8566e15de4b360cca",
+      "crate": {
+        "bytes": 20455,
+        "sha256": "641d20929078aba7e9eb6ae9c33ae89d9b23d3a0f12f0eebb8fd05dacc93eb40"
+      },
+      "release_history": "Initial run completed native validation and Cargo publication, failed GitHub attachment step; same immutable tag and matching archive later published to GitHub. Historical failure retained.",
+      "evidence": [
+        "https://github.com/LIghtJUNction/zguard/blob/6772b932a65e18f64e13591dee6edb2f6b099406/docs/INTEGRATION-2026-11-20.md",
+        "https://drive.google.com/file/d/1hFQ6Xwzz9UXpuHY0WTYCOI9a-J8ZSfhp/view"
+      ]
+    },
+    "zharness_060": {
+      "status": "formally_published_future_aggregate_consumer_batch",
+      "supersedes_earlier_preview_only_assessment": true,
+      "source": "db4206d3b74e37d57ff052948962f55514081d4b",
+      "run": {
+        "id": 44716889702,
+        "conclusion": "success"
+      },
+      "release": {
+        "id": 452544982,
+        "published_at": "2026-11-20T10:20:58Z"
+      },
+      "crate": {
+        "bytes": 207692,
+        "sha256": "4a4aff31bc0430ef21ac873c24985ecaa5dbe559aa1090e0339bea82cd1b31ef"
+      },
+      "exact_dependencies": {
+        "zguard": "0.1.0",
+        "zcall": "0.4.0",
+        "zplugin": "0.3.1"
+      },
+      "local_checks": {
+        "runtime_tests": 133,
+        "guard_integration_included": 17,
+        "doctests": 15
+      },
+      "runtime_boundary": "Guard applies through explicit guarded entry points. Raw call_text and previous execute entry points do not automatically gain guard enforcement.",
+      "aggregate_still_051": true,
+      "evidence": [
+        "https://github.com/LIghtJUNction/zguard/blob/6772b932a65e18f64e13591dee6edb2f6b099406/docs/INTEGRATION-2026-11-20.md",
+        "https://drive.google.com/file/d/1hFQ6Xwzz9UXpuHY0WTYCOI9a-J8ZSfhp/view",
+        "https://github.com/LIghtJUNction/zharness/actions/runs/44716889702",
+        "https://github.com/LIghtJUNction/zharness/blob/db4206d3b74e37d57ff052948962f55514081d4b/Cargo.toml"
+      ]
+    },
+    "zmcl_012": {
+      "status": "github_aur_and_system_install_verified_future_ui_cohort",
+      "source": "e86b5841532ef04cc74cea5585ae396150452408",
+      "release": {
+        "id": 452547223,
+        "published_at": "2026-11-20T10:24:37Z"
+      },
+      "linux_x64_archive": {
+        "bytes": 679358,
+        "sha256": "5cb7945cb5888d1ec02d84e55a4b91576161ddb6fe6c3a6be2644c8f058fb3c4"
+      },
+      "aggregate_still_2b_with_zgpui_012_and_zi18n_010": true,
+      "evidence": [
+        "https://github.com/LIghtJUNction/zmcl/releases/tag/v0.1.2",
+        "https://github.com/LIghtJUNction/zmcl/blob/2287ca81de9ec5ba200ba0d1792dcda7d2742488/docs/reports/2026-11-20-gui-iteration.md"
+      ],
+      "aur": {
+        "commit": "16b688237f8c54b47085a16279535db8f6c5c553",
+        "version": "0.1.2-1",
+        "previous_installed_version": "0.1.1-1"
+      },
+      "installed_validation": {
+        "manifest_entries": 19,
+        "altered_entries": 0,
+        "installed_gui_creation_groups_passed": 4
+      },
+      "final_report_commit": "2287ca81de9ec5ba200ba0d1792dcda7d2742488"
+    }
+  },
+  "future_work": {
+    "ssmcp_021": {
+      "latest_frozen_source": "8c354a0e0ef8ad5d4586776e645953d0d35b7d8d",
+      "source_tree": "8fa2b3224ee5a8ec61ce25787ea685a2d91292da",
+      "evidence_class": "latest coordinator handoff; GitHub Release404 independently read by coordinator",
+      "gate_attempt": 5,
+      "planned_stages": 30,
+      "status": "complete_gate_running",
+      "all_gates_passed": false,
+      "tag_created": false,
+      "release_created": false,
+      "release_lookup_http_status": 404,
+      "previous_gate": {
+        "source": "fd8ae13b96b2f93753d3028a2c6074028b804d24",
+        "attempt": 4,
+        "library_passed": 1759,
+        "library_ignored": 22,
+        "linux_clippy": "passed",
+        "windows_gnu_clippy": "six test-helper dead_code failures"
+      },
+      "new_candidate_change": "Authorized existing worker fixed cfg; complete new gate not yet finished.",
+      "owner": "sole SSMCP0.10.21 integration owner",
+      "current_stable_cohort_waits_for_this": false
+    },
+    "native_p1": {
+      "baseline_core_has_listen": false,
+      "baseline_core": "ab2b3b6726fa7c7c6ee092607f95861d2097e332",
+      "contract": "Explicit capable local listen binary and reply opt-in; normal Enter unchanged; absent listener fails and preserves draft.",
+      "existing_verified_development_pair": {
+        "zcalld": "d722eb3732f6efb476184a1211e05fb8c8bc5e4a",
+        "ssmcp": "ed2c6e665c13f4310fc626f01f360ff7056a52ac",
+        "p1_passed": 94,
+        "source_binding_sha256": "59e8c36fc6d2cec5a9a441c810f3ba39a4ed8d0c6cacc3156ce95a6267fa9401",
+        "report_sha256": "6b5d604a03ea0301b104f4c51ea5b3494a61b68f1d2e5c2f5f99c95f2fa2ab0e",
+        "core_binary_sha256": "8cfc075b16c3ce40e83ae95127a2f66767a56bb15cc84ae5872ec42dea25b4a5"
+      },
+      "limitation": "Development-pair proof only, not current aggregate ab2 and not final21."
+    },
+    "core_040_compat_020": {
+      "publisher_role": "original zcalld owner",
+      "bridge_role": "existing bridge maintainer",
+      "includes_template_fix_prefix": "3dd",
+      "candidate_is_formal_pin": false,
+      "pending": "Final immutable core/compat pair, publication and actual protocol acceptance.",
+      "compat_candidate": "4d19a421b45010a1ac5e52d8bcc93a5c006e8f4b",
+      "pr": {
+        "number": 2,
+        "url": "https://github.com/LIghtJUNction/zcalld-compat/pull/2",
+        "state": "open",
+        "head": "4d19a421b45010a1ac5e52d8bcc93a5c006e8f4b"
+      },
+      "build_stage": "completed_per_owner_receipt",
+      "candidate_scope": "Prepared packaging candidate and PR evidence. The sole publisher must integrate it with latest identity/privacy fixes and retain concurrent valid changes before freezing a release."
+    },
+    "ui_015": {
+      "current_aggregate_framework": "0.1.2",
+      "published_gui_version": "0.1.2",
+      "published_gui_framework_requirement": "=0.1.4",
+      "next_015_consumers": "not all accepted",
+      "pending": "Exact compatible zmcl/ztype/ztty/GUI sources, vendor pointers, matching outer core GUI gitlink and final runtime tests."
+    },
+    "call_chain": {
+      "pending": "Coherent zcall0.4/core0.4/zharness0.6/zmcpio batch, propagating real exact-version changes into zuse/SSMCP/ztype as needed.",
+      "current_batch_not_blocked_by_future_wave": true
+    }
+  },
+  "connectivity": {
+    "current_state": "authorized_native_execution_restored",
+    "current_state_at_utc": "2026-11-20T10:38:24Z",
+    "evidence_class": "coordinator_actual_native_exec_receipt",
+    "historical_events": [
+      {
+        "event": "external live list briefly empty, then only007 management visible",
+        "exec_available": false
+      },
+      {
+        "event": "saved work-maintainer marked connected but external calls unavailable",
+        "interpretation": "saved status is not external tool-call proof"
+      },
+      {
+        "event": "task-owned recovery connection creation failed",
+        "error": "No space left on device",
+        "errno": 28
+      },
+      {
+        "event": "existing authorized execution path restored",
+        "at_utc": "2026-11-20T10:38:24Z",
+        "native_exec_passed": true
+      }
+    ],
+    "recovery_method": "idempotent reuse of existing management scope; no manager restart",
+    "home_available_space": {
+      "value": 5.339,
+      "unit": "GB",
+      "measurement_at_utc": "2026-11-20T10:38:24Z",
+      "source": "coordinator receipt"
+    },
+    "reason_space_became_available": "unverified",
+    "no_unverified_cleanup_attribution": true,
+    "stopped_or_reloaded_existing_clients_or_server": false,
+    "new_model_started": false,
+    "user_intervention_currently_required": false,
+    "conditional_user_action": "Only if execution is lost again and cannot be restored: ask user to verify writable local space and restore the existing authorized shell connection."
+  },
+  "site": {
+    "status": "published_live_verified",
+    "script_fix_commit": "17c3819cee0a0dc9bd057dd529d2a48437b749e2",
+    "private_receipt_commit": "3ca312cad4e8866caccb034e52a47596ce3441bd",
+    "private_branch": "coord/public-data-refresh-20261120",
+    "source_candidate": "7c164bc9fb7c95f918b6c7734f8b25bf8cfeb615",
+    "source_data_commit": "3ea9cf3af9293561f2c0d871a97ca2c658c2b4bd",
+    "aggregate_source_binding": "522bc7c9da008f05e9f715c1c1eda91b13ca89ec",
+    "aggregate_tree": "eb2dfc60e3ab31f96c6fb29c458573f8500a2ac6",
+    "main_acceptance_commit": "78fc357f778a0dbff12f9320da82f324cb427410",
+    "public_repository": "LIghtJUNction/project-z-site",
+    "public_commit": "5bdd99dc749de86482f1bafb525693c2acc66b85",
+    "public_parent": "668080bced1eb4c9941e324abc09e645d6e881f3",
+    "public_url": "https://lightjunction.github.io/project-z-site/",
+    "public_changed_files": [
+      "index.html",
+      "projects.json"
+    ],
+    "public_tracked_files": [
+      ".nojekyll",
+      "README.md",
+      "app.js",
+      "favicon.svg",
+      "index.html",
+      "projects.json",
+      "style.css"
+    ],
+    "private_catalog_published": false,
+    "files": [
+      {
+        "path": ".nojekyll",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "app.js",
+        "bytes": 4203,
+        "sha256": "93657999854f6d21d378fa387a0346c50528d8356a0a65b9a726662bd7672362"
+      },
+      {
+        "path": "favicon.svg",
+        "bytes": 321,
+        "sha256": "46b2270683a9f0443180adefa46d1e20c67792e6a4aac4a7ce7ae52eacfe00c8"
+      },
+      {
+        "path": "index.html",
+        "bytes": 46048,
+        "sha256": "d5b2a01eb79b0dd69d113cc0c190b2e729d16b36d9497c704e1d7a7baf61b385"
+      },
+      {
+        "path": "projects.json",
+        "bytes": 56813,
+        "sha256": "35a991384487df07f36e820d83d3f8ccf10b121c27efdc7a58ca5b2feac5234d"
+      },
+      {
+        "path": "style.css",
+        "bytes": 14560,
+        "sha256": "dd39394ef7d3ca8eba8bc652670ea5e7c770ea0d84116efd7433fa4fbd5743a1"
+      }
+    ],
+    "bundle_bytes": 121945,
+    "public_repositories": 39,
+    "verified_crates": 29,
+    "public_manifest_sha256": "35a991384487df07f36e820d83d3f8ccf10b121c27efdc7a58ca5b2feac5234d",
+    "script_tests": 8,
+    "old_snapshot_build_unchanged": {
+      "public_repositories": 37,
+      "crates": 27
+    },
+    "behavior": "Foreign crate mismatch keeps verified source-only entry with repository_mismatch and no crate link.",
+    "pages_run": {
+      "id": 44723433069,
+      "conclusion": "success",
+      "completed_at_utc": "2026-11-20T10:57:10Z",
+      "head_sha": "5bdd99dc749de86482f1bafb525693c2acc66b85",
+      "url": "https://github.com/LIghtJUNction/project-z-site/actions/runs/44723433069"
+    },
+    "live_verification": {
+      "status": "passed",
+      "verified_at_utc": "2026-11-20T10:57:45.516128+00:00",
+      "poll_rounds": 1,
+      "http_checks": [
+        {
+          "path": "/",
+          "url": "https://lightjunction.github.io/project-z-site/",
+          "http_status": 200,
+          "bytes": 46048,
+          "sha256": "d5b2a01eb79b0dd69d113cc0c190b2e729d16b36d9497c704e1d7a7baf61b385",
+          "checked_at_utc": "2026-11-20T10:57:42.759408+00:00",
+          "matches_artifact": true
+        },
+        {
+          "path": ".nojekyll",
+          "url": "https://lightjunction.github.io/project-z-site/.nojekyll",
+          "http_status": 200,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "checked_at_utc": "2026-11-20T10:57:43.167493+00:00",
+          "matches_artifact": true
+        },
+        {
+          "path": "app.js",
+          "url": "https://lightjunction.github.io/project-z-site/app.js",
+          "http_status": 200,
+          "bytes": 4203,
+          "sha256": "93657999854f6d21d378fa387a0346c50528d8356a0a65b9a726662bd7672362",
+          "checked_at_utc": "2026-11-20T10:57:43.584691+00:00",
+          "matches_artifact": true
+        },
+        {
+          "path": "favicon.svg",
+          "url": "https://lightjunction.github.io/project-z-site/favicon.svg",
+          "http_status": 200,
+          "bytes": 321,
+          "sha256": "46b2270683a9f0443180adefa46d1e20c67792e6a4aac4a7ce7ae52eacfe00c8",
+          "checked_at_utc": "2026-11-20T10:57:44.023973+00:00",
+          "matches_artifact": true
+        },
+        {
+          "path": "index.html",
+          "url": "https://lightjunction.github.io/project-z-site/index.html",
+          "http_status": 200,
+          "bytes": 46048,
+          "sha256": "d5b2a01eb79b0dd69d113cc0c190b2e729d16b36d9497c704e1d7a7baf61b385",
+          "checked_at_utc": "2026-11-20T10:57:44.556184+00:00",
+          "matches_artifact": true
+        },
+        {
+          "path": "projects.json",
+          "url": "https://lightjunction.github.io/project-z-site/projects.json",
+          "http_status": 200,
+          "bytes": 56813,
+          "sha256": "35a991384487df07f36e820d83d3f8ccf10b121c27efdc7a58ca5b2feac5234d",
+          "checked_at_utc": "2026-11-20T10:57:45.085722+00:00",
+          "matches_artifact": true
+        },
+        {
+          "path": "style.css",
+          "url": "https://lightjunction.github.io/project-z-site/style.css",
+          "http_status": 200,
+          "bytes": 14560,
+          "sha256": "dd39394ef7d3ca8eba8bc652670ea5e7c770ea0d84116efd7433fa4fbd5743a1",
+          "checked_at_utc": "2026-11-20T10:57:45.516017+00:00",
+          "matches_artifact": true
+        }
+      ],
+      "all_sizes_and_sha256_match": true
+    },
+    "source_and_public_trees_clean": true,
+    "owner_work_completed_at_utc": "2026-11-20T10:59:17Z",
+    "owner_exit_code": 0,
+    "evidence": [
+      "https://github.com/LIghtJUNction/project-z/commit/17c3819cee0a0dc9bd057dd529d2a48437b749e2",
+      "https://github.com/LIghtJUNction/project-z/blob/3ca312cad4e8866caccb034e52a47596ce3441bd/site/evidence/publication-20261120.json",
+      "https://github.com/LIghtJUNction/project-z-site/actions/runs/44723433069",
+      "https://drive.google.com/file/d/1zXlCIfplSFiBxLHOpqNy31Fbn2e2HgDX/view"
+    ],
+    "drive_receipt": {
+      "file_id": "1zXlCIfplSFiBxLHOpqNy31Fbn2e2HgDX",
+      "bytes": 9495,
+      "sha256": "357f7eda706c08a74453e37cb4c5c4a65ead44cb52acfff1f6f51d4d6852cb19"
+    }
+  },
+  "next_steps": [
+    {
+      "owner": "sole SSMCP0.10.21 owner",
+      "scope": "future release",
+      "action": "Finish full gate for frozen8c354 source, preserve previous failures and publish only after all gates pass."
+    },
+    {
+      "owner": "zgpui/zmcl and consumer owners",
+      "scope": "futureUI0.1.5cohort",
+      "action": "Collect exact consumer sources/vendor links and real GUI/terminal acceptance."
+    },
+    {
+      "owner": "original zcalld publisher and bridge maintainer",
+      "scope": "futurecore0.4.0/compat0.2.0",
+      "action": "Complete PR2 pairing, immutable release and protocol acceptance."
+    },
+    {
+      "owner": "shared-library and application owners",
+      "scope": "newzcall/zharnessconsumers",
+      "action": "Update exact dependency chain and exercise guarded entry points."
+    },
+    {
+      "owner": "aggregate coordinator",
+      "scope": "futurecohort",
+      "action": "Validate fixed sources/check/resolve/preservation for each future batch; retain this stable acceptance."
+    }
+  ],
+  "ownership": [
+    {
+      "area": "aggregate and main",
+      "role": "root sole writer and same existing Codex thread"
+    },
+    {
+      "area": "suite026 managed install",
+      "role": "existing suite installation owner"
+    },
+    {
+      "area": "SSMCP21",
+      "role": "sole SSMCP21 integration owner"
+    },
+    {
+      "area": "core04/compat02 publishing",
+      "role": "original zcalld owner; bridge maintainer coordinates"
+    },
+    {
+      "area": "zgpui015/zmcl",
+      "role": "existing zmcl GUI owner"
+    },
+    {
+      "area": "zguard/zharness",
+      "role": "existing zguard-zharness owner"
+    },
+    {
+      "area": "ztty",
+      "role": "existing ztty release owner"
+    }
+  ],
+  "claim_evidence": [
+    {
+      "claim": "Stable aggregate accepted on tested522bc with main acceptance78fc",
+      "status": "supported",
+      "sources": [
+        "https://github.com/LIghtJUNction/project-z/blob/78fc357f778a0dbff12f9320da82f324cb427410/docs/reports/ui-unification-20261120/final-validation.json",
+        "independent GitHub main ref readback"
+      ]
+    },
+    {
+      "claim": "91source-link tests are tied to baseb84 plus implementation hash, not046",
+      "status": "supported",
+      "sources": [
+        "https://github.com/LIghtJUNction/project-z/blob/78fc357f778a0dbff12f9320da82f324cb427410/docs/reports/ui-unification-20261120/source-links-validation.json",
+        "https://github.com/LIghtJUNction/project-z/blob/b54f083e2b7900c2f5c93ec93e26366526645095/docs/reports/ui-unification-20261120/independent-validation-046bb4b.json"
+      ]
+    },
+    {
+      "claim": "Official026 release, exact downloads, installation and final environment readbacks passed",
+      "status": "supported",
+      "sources": [
+        "https://github.com/LIghtJUNction/oh-my-ztty/actions/runs/44719594477",
+        "https://github.com/LIghtJUNction/oh-my-ztty/blob/0b60eb7d6e35d06a137278ffe0b3f1139c722fe6/docs/reports/0.2.6/release.zh-CN.md",
+        "https://github.com/LIghtJUNction/oh-my-ztty/blob/0b60eb7d6e35d06a137278ffe0b3f1139c722fe6/docs/reports/0.2.6/actual-install.json"
+      ]
+    },
+    {
+      "claim": "Every suite component was rebuilt locally from source",
+      "status": "false",
+      "sources": [
+        "https://github.com/LIghtJUNction/oh-my-ztty/blob/0b60eb7d6e35d06a137278ffe0b3f1139c722fe6/docs/reports/0.2.6/release.zh-CN.md"
+      ]
+    },
+    {
+      "claim": "All existing connections were measured continuously alive through installation",
+      "status": "not_claimed",
+      "sources": [
+        "https://github.com/LIghtJUNction/oh-my-ztty/blob/0b60eb7d6e35d06a137278ffe0b3f1139c722fe6/docs/reports/0.2.6/actual-install.json"
+      ]
+    },
+    {
+      "claim": "zharness0.6.0 is published",
+      "status": "supported",
+      "sources": [
+        "https://github.com/LIghtJUNction/zguard/blob/6772b932a65e18f64e13591dee6edb2f6b099406/docs/INTEGRATION-2026-11-20.md",
+        "https://github.com/LIghtJUNction/zharness/actions/runs/44716889702"
+      ]
+    },
+    {
+      "claim": "Rawcall_text is automatically guarded",
+      "status": "false",
+      "sources": [
+        "https://github.com/LIghtJUNction/zguard/blob/6772b932a65e18f64e13591dee6edb2f6b099406/docs/INTEGRATION-2026-11-20.md"
+      ]
+    },
+    {
+      "claim": "SSMCP0.10.21 is already released",
+      "status": "false_at_handoff",
+      "sources": [
+        "coordinator release404 and latest8c354 full gate still running"
+      ]
+    },
+    {
+      "claim": "zmcl0.1.2 AUR and installed GUI acceptance completed",
+      "status": "supported_by_fixed_report_read_by_coordinator",
+      "sources": [
+        "https://github.com/LIghtJUNction/zmcl/blob/2287ca81de9ec5ba200ba0d1792dcda7d2742488/docs/reports/2026-11-20-gui-iteration.md"
+      ]
+    },
+    {
+      "claim": "Public39-repository29-crate site deployed and sevenHTTP checks matched build",
+      "status": "supported",
+      "sources": [
+        "https://github.com/LIghtJUNction/project-z/blob/3ca312cad4e8866caccb034e52a47596ce3441bd/site/evidence/publication-20261120.json",
+        "https://github.com/LIghtJUNction/project-z-site/actions/runs/44723433069"
+      ]
+    }
+  ],
+  "references": {
+    "aggregate": "https://github.com/LIghtJUNction/project-z/blob/b54f083e2b7900c2f5c93ec93e26366526645095/docs/reports/ui-unification-20261120/accepted-component-pins.md",
+    "checkpoint": "https://github.com/LIghtJUNction/project-z/blob/b54f083e2b7900c2f5c93ec93e26366526645095/docs/reports/ui-unification-20261120/checkpoint.json",
+    "old_validation": "https://github.com/LIghtJUNction/project-z/blob/b54f083e2b7900c2f5c93ec93e26366526645095/docs/reports/ui-unification-20261120/independent-validation-046bb4b.json",
+    "zi18n": "https://github.com/LIghtJUNction/zi18n/blob/cdff8dea19e97268d296afa827767ea689420591/docs/releases/0.1.0.md",
+    "ztty": "https://github.com/LIghtJUNction/ztty/blob/76fa2cfd13b776c027d5a86fadafde8e035f88f2/docs/releases/0.5.2/report.zh-CN.md",
+    "ssmcp20": "https://github.com/LIghtJUNction/ssmcp/blob/f8a40bb741fc5921c9ae5a1d447eac7dba2fd251/docs/reports/client-install-0.10.20-20261120/README.md",
+    "suite_ci": "https://github.com/LIghtJUNction/oh-my-ztty/actions/runs/44719594477",
+    "suite_release": "https://github.com/LIghtJUNction/oh-my-ztty/releases/tag/v0.2.6",
+    "guard": "https://github.com/LIghtJUNction/zguard/blob/6772b932a65e18f64e13591dee6edb2f6b099406/docs/INTEGRATION-2026-11-20.md",
+    "harness_run": "https://github.com/LIghtJUNction/zharness/actions/runs/44716889702",
+    "harness_manifest": "https://github.com/LIghtJUNction/zharness/blob/db4206d3b74e37d57ff052948962f55514081d4b/Cargo.toml",
+    "zmcl": "https://github.com/LIghtJUNction/zmcl/releases/tag/v0.1.2",
+    "site": "https://github.com/LIghtJUNction/project-z/commit/17c3819cee0a0dc9bd057dd529d2a48437b749e2",
+    "suite_drive": "https://drive.google.com/file/d/15c79p02J6VqnXF2qnSYacMJOj7hp4-6E/view",
+    "guard_drive": "https://drive.google.com/file/d/1hFQ6Xwzz9UXpuHY0WTYCOI9a-J8ZSfhp/view",
+    "ssmcp_drive": "https://drive.google.com/file/d/1hoScdqhU49-odsmwvWuBFJ1nmrIKCgLL/view",
+    "zi18n_drive": "https://drive.google.com/file/d/17JnwPZtiGOS4IxP9MJOwU14oIiHWK4cT/view",
+    "ztty_drive": "https://drive.google.com/file/d/1f8AvfqWjI3OLNdVXdn2v7lC8JZs6hVmI/view",
+    "final_validation": "https://github.com/LIghtJUNction/project-z/blob/78fc357f778a0dbff12f9320da82f324cb427410/docs/reports/ui-unification-20261120/final-validation.json",
+    "source_links": "https://github.com/LIghtJUNction/project-z/blob/78fc357f778a0dbff12f9320da82f324cb427410/docs/reports/ui-unification-20261120/source-links-validation.json",
+    "compat": "https://github.com/LIghtJUNction/zcalld-compat/pull/2",
+    "suite_report": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0b60eb7d6e35d06a137278ffe0b3f1139c722fe6/docs/reports/0.2.6/release.zh-CN.md",
+    "suite_install": "https://github.com/LIghtJUNction/oh-my-ztty/blob/0b60eb7d6e35d06a137278ffe0b3f1139c722fe6/docs/reports/0.2.6/actual-install.json",
+    "site_publication": "https://github.com/LIghtJUNction/project-z/blob/3ca312cad4e8866caccb034e52a47596ce3441bd/site/evidence/publication-20261120.json",
+    "site_run": "https://github.com/LIghtJUNction/project-z-site/actions/runs/44723433069",
+    "site_live": "https://lightjunction.github.io/project-z-site/",
+    "page_drive": "https://drive.google.com/file/d/1zXlCIfplSFiBxLHOpqNy31Fbn2e2HgDX/view",
+    "zmcl_final": "https://github.com/LIghtJUNction/zmcl/blob/2287ca81de9ec5ba200ba0d1792dcda7d2742488/docs/reports/2026-11-20-gui-iteration.md"
+  },
+  "human_report_timezone": "Asia/Taipei",
+  "status_date": "2026-11-20",
+  "stable_cohort_acceptance_complete": true,
+  "future_cohorts_open": true,
+  "final_coordination_readback_utc": "2026-11-20T11:04:50Z",
+  "status_time_note": "Each receipt retains its actualUTC timestamp. Future-version updates are coordinator handoff observations.",
+  "aggregate_validation_work": {
+    "role": "same existing root Codex thread",
+    "stage": "stage3b",
+    "relative_receipt": "stage3b-state.json",
+    "started_at_utc": "2026-11-20T10:44:39Z",
+    "completed_at_utc": "2026-11-20T10:48:12Z",
+    "status": "completed",
+    "exit_code": 0,
+    "observed_progress": {
+      "at_utc": "2026-11-20T10:47:08Z",
+      "actual_commands_completed": 20,
+      "errors": 0
+    },
+    "duplicate_launch": false,
+    "concurrent_writer": false,
+    "previous_stage3a": {
+      "relative_receipt": "stage3a-state.json",
+      "started_at_utc": "2026-11-20T10:29:15Z",
+      "completed_at_utc": "2026-11-20T10:42:33Z",
+      "exit_code": 1,
+      "recorded_request_timeouts": 2,
+      "tree_clean": true,
+      "tracked_files_modified": false,
+      "shutdown": "SIGINT sent only to identity-verified task-owned Codex process"
+    },
+    "final_output_readback": "passed; final source/check/resolve/preservation receipts published"
+  },
+  "report_files": {
+    "directory": "docs/reports/ui-unification-20261120",
+    "filenames": [
+      "project-z-iteration-2026-11-20.md",
+      "project-z-iteration-2026-11-20.json"
+    ],
+    "relative_json_link_preserved": true,
+    "identity_note": "The containing Git commit identifies this immutable report snapshot. Final repository and Google Drive links are supplied in the delivery response; no self-referential commit ID is embedded."
+  }
+}
