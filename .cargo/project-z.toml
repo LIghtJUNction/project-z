@@ -26,6 +26,8 @@
 "zhex" = { path = "zhex" }
 "zi18n" = { path = "zi18n" }
 "zinput" = { path = "zinput" }
+"zinput-wayland" = { path = "zinput/native/wayland" }
+"zinput-x11" = { path = "zinput/native/x11" }
 "zldap" = { path = "zldap" }
 "zmcl" = { path = "zmcl" }
 "zmcl-core" = { path = "zmcl/crates/zmcl-core" }
