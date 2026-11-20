@@ -392,6 +392,41 @@ class GitPolicyTests(FilesystemFixture):
         dep["source"] = "git+https://github.com/ProjectZTests/core.git"
         self.assertTrue(any("missing from the catalog" in error for error in pz.validate(self.data(dep), {}, self.root)))
 
+    def test_publishable_git_dependencies_keep_version_metadata(self):
+        for kind in ("normal", "build"):
+            with self.subTest(kind=kind):
+                data = self.data(dependency("core", kind=kind, explicit=False))
+                self.assertTrue(any("version metadata" in error for error in pz.validate(data, {}, self.root)))
+                data["packages"][1]["publish"] = False
+                self.assertEqual(pz.validate(data, {}, self.root), [])
+        self.assertEqual(pz.validate(self.data(dependency("core", kind="dev", explicit=False)), {}, self.root), [])
+
+    def test_unknown_internal_package_cannot_hide_behind_alternate_github_spelling(self):
+        for source in ("git+https://github.com/ProjectZTests/core",
+                       "git+https://GITHUB.COM/projectztests/CORE.git?branch=main",
+                       "git+ssh://git@github.com/projectztests/core.git#" + "1" * 40):
+            with self.subTest(source=source):
+                dep = dependency("new-companion")
+                dep["source"] = source
+                data = self.data(dep)
+                self.assertTrue(any("missing from the catalog" in error for error in pz.validate(data, {}, self.root)))
+                self.write("app/Cargo.lock", 'version = 4\n[[package]]\nname = "new-companion"\nversion = "1.0.0"\nsource = ' + json.dumps(source) + '\n')
+                app = next(repo for repo in data["repositories"] if repo["name"] == "app")
+                self.assertTrue(any("missing from the catalog" in error for error in pz.locked_source_errors(data, [app], self.root)))
+                resolved = {"packages": [{"name": "new-companion", "version": "1.0.0", "source": source}]}
+                with patch.object(pz, "locked_source_errors", return_value=[]), patch.object(pz, "metadata", return_value=resolved):
+                    self.assertTrue(any("missing from the catalog" in error for error in pz.resolved_paths(data, [app], self.root)))
+
+    def test_unknown_external_git_packages_remain_allowed(self):
+        data = self.data()
+        source = "git+https://github.com/OtherOwner/core.git#" + "1" * 40
+        self.write("app/Cargo.lock", 'version = 4\n[[package]]\nname = "external-companion"\nversion = "1.0.0"\nsource = ' + json.dumps(source) + '\n')
+        app = next(repo for repo in data["repositories"] if repo["name"] == "app")
+        self.assertEqual(pz.locked_source_errors(data, [app], self.root), [])
+        resolved = {"packages": [{"name": "external-companion", "version": "1.0.0", "source": source}]}
+        with patch.object(pz, "metadata", return_value=resolved):
+            self.assertEqual(pz.resolved_paths(data, [app], self.root), [])
+
     def test_internal_patch_in_manifest_or_configuration_is_rejected_without_deleting_it(self):
         for location in ["app/Cargo.toml", "app/.cargo/config.toml", ".cargo/config.toml"]:
             path = self.write(location, '[patch."https://github.com/ProjectZTests/core.git"]\ncore = { path = "replacement" }\n')

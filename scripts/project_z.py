@@ -54,8 +54,14 @@ def github_url(url):
 
 def github_identity(url):
     match = re.fullmatch(r"(?:https://github\.com/|git@github\.com:|ssh://git@github\.com/)"
-                        r"([A-Za-z0-9-]+)/([A-Za-z0-9_.-]+?)(?:\.git)?/?", url)
+                        r"([A-Za-z0-9-]+)/([A-Za-z0-9_.-]+?)(?:\.git)?/?", url, re.IGNORECASE)
     return tuple(value.lower() for value in match.groups()) if match else None
+
+
+def git_source_identity(source):
+    if not source or not source.startswith("git+"):
+        return None
+    return github_identity(source[4:].split("#", 1)[0].split("?", 1)[0])
 
 
 def default_head(url, root=ROOT, timeout=90):
@@ -380,6 +386,7 @@ def validate(data, rules, root=ROOT):
     forbidden = set(rules.get("policy", {}).get("forbidden_packages", []))
     repo_names = {repo["name"] for repo in data["repositories"]}
     repos = {repo["name"]: repo for repo in data["repositories"]}
+    identities = {github_identity(repo.get("url", "")) for repo in repos.values()} - {None}
     for repo in data["repositories"]:
         if repo.get("url"):
             try:
@@ -397,7 +404,7 @@ def validate(data, rules, root=ROOT):
             if dep["name"] in forbidden:
                 errors.append(f"{package['manifest']}: retired dependency {dep['name']}")
             if target is None:
-                if dep["source"] and any(dep["source"].split("?", 1)[0] == "git+" + repo.get("url", "") for repo in repos.values()):
+                if git_source_identity(dep["source"]) in identities:
                     errors.append(f"{name} -> {dep['name']}: package from a registered repository is missing from the catalog")
                 continue
             if dep["explicit_version"]:
@@ -416,6 +423,8 @@ def validate(data, rules, root=ROOT):
                 expected_source = "git+" + repos[target["repository"]]["url"]
                 if dep["source"] != expected_source or dep["path"]:
                     errors.append(f"{name} -> {dep['name']}: use {expected_source} at its default branch, without path, branch, tag or rev")
+                if package["publish"] and dep["kind"] != "dev" and not dep["explicit_version"]:
+                    errors.append(f"{name} -> {dep['name']}: keep version metadata beside Git for a publishable normal/build dependency")
     errors.extend(internal_override_errors(data, root))
     try:
         ordered(dependency_graph(data))
@@ -537,6 +546,7 @@ def selected_repositories(data, names, downstream=False):
 def locked_source_errors(data, repos, root=ROOT):
     canonical = package_map(data)
     sources = {repo["name"]: repo for repo in data["repositories"]}
+    identities = {github_identity(repo.get("url", "")) for repo in sources.values()} - {None}
     errors = []
     for repo in repos:
         workspaces = {package["workspace"] for package in data["packages"] if package["repository"] == repo["name"]}
@@ -550,6 +560,8 @@ def locked_source_errors(data, repos, root=ROOT):
             for package in [*document.get("package", []), *document.get("patch", {}).get("unused", [])]:
                 expected = canonical.get(package["name"])
                 if not expected:
+                    if git_source_identity(package.get("source")) in identities:
+                        errors.append(f"{workspace}/Cargo.lock: internal package {package['name']} is missing from the catalog")
                     continue
                 owner = sources[expected["repository"]]
                 source = None if owner["name"] == repo["name"] else f"git+{owner['url']}#{owner['commit']}"
@@ -562,6 +574,7 @@ def locked_source_errors(data, repos, root=ROOT):
 def resolved_paths(data, repos, root=ROOT, options=()):
     canonical = package_map(data)
     sources = {repo["name"]: repo for repo in data["repositories"]}
+    identities = {github_identity(repo.get("url", "")) for repo in sources.values()} - {None}
     errors = locked_source_errors(data, repos, root)
     if errors:
         return errors
@@ -583,7 +596,7 @@ def resolved_paths(data, repos, root=ROOT, options=()):
                     if not matches or package["version"] != expected["version"]:
                         errors.append(f"{repo['name']}: Cargo resolved {package['name']} {package['version']} from "
                                       f"{package.get('source')!r}, outside the recorded Git source")
-                elif any((package.get("source") or "").split("#", 1)[0].split("?", 1)[0] == "git+" + owner.get("url", "") for owner in sources.values()):
+                elif git_source_identity(package.get("source")) in identities:
                     errors.append(f"{repo['name']}: resolved internal package {package['name']} is missing from the catalog")
     return errors
 

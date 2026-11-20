@@ -6,7 +6,7 @@ Read README, CONTRIBUTING and the target repository's AGENTS.md. Work in isolate
 
 - Cross-repository Project Z Cargo dependencies use `git = "https://github.com/<owner>/<repo>.git"` and the latest default branch. Do not use a registry-only declaration, cross-repository path, fixed branch, tag or rev.
 - Keep same-repository workspace/path dependencies. Preserve external dependency sources and feature boundaries.
-- Publishable crates may keep `version` beside `git`. Keep it compatible with the current source version; Cargo uses Git internally and normalizes the dependency to a registry version for external publication.
+- Keep `version` beside `git` for publishable crates' normal and build dependencies. Keep it compatible with the current source version; Cargo uses Git internally and normalizes the dependency to a registry version for external publication. Private crates and development-only dependencies may omit this publication metadata.
 - Update consumers in dependency order: compatibility code, Git declarations, Cargo.lock and nested source gitlinks. Commit and push those changes before recording aggregate gitlinks. A lock records one verified update; it must not keep an older source on the next synchronization.
 - `python3 scripts/project_z.py sync` fetches default branches into clean, detached submodule checkouts. It records exact commits and regenerates catalog.json and docs/PROJECTS.md. It does not repair consumer source or overwrite active branches.
 - `check` verifies remote freshness and internal source identities. `resolve --all` uses real Cargo `--locked` resolution without local registry/path patches. A compatibility failure must be fixed or reported with its exact consumer and source; never hide it by retaining an old internal release.
