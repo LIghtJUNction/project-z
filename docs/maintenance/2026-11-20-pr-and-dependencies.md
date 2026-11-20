@@ -1,6 +1,6 @@
 # Project Z 维护进展
 
-更新：2026-11-21 04:39（Asia/Taipei）。
+更新：2026-11-21 04:44（Asia/Taipei）。
 
 ## 当前结果
 
@@ -99,7 +99,7 @@ WGT 的 4 个精确 Cargo 缓存目录已全部删除并逐项验证。执行前
 
 **最新上游传播**：zuse [a1bb8fd2](https://github.com/LIghtJUNction/zuse/commit/a1bb8fd2cbce0a9d85134999883c578358065242) 已被 ztype [da6feb1a](https://github.com/LIghtJUNction/ztype/commit/da6feb1a3c5488f3854c63d5e5db173ca250dba4) 和 SSMCP [4237eea2](https://github.com/LIghtJUNction/ssmcp/commit/4237eea2cab8253b8dff84d81861ba1e1adf4246) 消费。ztype 的维护者记录 72 项通过、1 项可选词典测试忽略；SSMCP 的锁文件来源已独立核对。oh-my-ztty [f04f6ea8](https://github.com/LIghtJUNction/oh-my-ztty/commit/f04f6ea8ae909e121edabbd766ee725a472f8146) 又消费了 SSMCP 4237，原维护者记录 112 项检查。其 ztty c7 草稿与 SSMCP 后续 context／当前功能提交仍需在同一维护链合流，最终 44 仓实际 sync/check/resolve 尚未完成。
 
-**SSMCP 消息处理目标**：开发机上的连续需求已按最后更正统一为 `--input`，用于指定聊天框发出的消息交给谁处理。默认 `terminal`，web 需要 host／port，MCP 支持 stdio／HTTP，并支持管道。原始消息修订和更正关系已保存并交给现有主线负责人；本页只记录需求和源码检查，不宣称实现或运行验收完成。
+**SSMCP 输入与消息处理**：完整原始记录确认这是两个独立参数。`--input` 选择输入来源，默认 `terminal`，并支持 web 的 host／port、MCP 的 stdio／HTTP、默认或自定义 sock 路径及管道输入；`--agent` 指定聊天框消息的处理者，支持 Codex、Claude Code、其他 coding agent 或另一个 SSMCP，默认名称最终更正为 `next-caller`，表示交付到下一次符合条件的工具调用结果。当前源码负责人及原 CLI 线程统一实现。前一版报告根据分散消息把 input 当作处理目标的解释已纠正；尚未据此修改源码或宣称验收完成。
 
 ## 仍需闭合的初始 PR
 

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T20:39:54.429819+00:00",
+  "generated_at": "2026-11-20T20:44:09.232470+00:00",
   "timezone": "Asia/Taipei",
   "scope": "Initial 85 PRs, latest GitHub default-branch dependency migration, generated-binary history cleanup, development-machine cache cleanup, release integration and the requested named local/remote contexts",
   "batch_status": "in_progress",
@@ -1042,13 +1042,13 @@
       "cargo_metadata_locked": "passed",
       "binary_installation": false
     },
-    "updated_at": "2026-11-20T20:39:54.429819+00:00",
+    "updated_at": "2026-11-20T20:44:09.232470+00:00",
     "aggregate_pr": {
       "url": "https://github.com/LIghtJUNction/project-z/pull/7",
       "number": 7,
       "branch": "coord/git-source-policy-20261120",
-      "head": "2665d4d0e3df502b6f036870c9432b4942face7b",
-      "tree": "c383f840c5074f9b48166a7f4311a61d8402b5ab",
+      "head": "45b60092829d9336bfe512793d8d3d8d021c3f5a",
+      "tree": "5d355457e845e198915ff6cfe5e214d26875a182",
       "status": "draft_component_migrations_and_complete_44_repository_graph_pending",
       "base": "d2a6616c85b7e47c3faa32bd5728db49cdd9c142",
       "source_snapshot_note": "Head observed immediately before this report-only commit; subsequent graph publication must refresh actual component heads."
@@ -1459,8 +1459,8 @@
     "url": "https://github.com/LIghtJUNction/project-z/pull/7",
     "number": 7,
     "branch": "coord/git-source-policy-20261120",
-    "head": "2665d4d0e3df502b6f036870c9432b4942face7b",
-    "tree": "c383f840c5074f9b48166a7f4311a61d8402b5ab",
+    "head": "45b60092829d9336bfe512793d8d3d8d021c3f5a",
+    "tree": "5d355457e845e198915ff6cfe5e214d26875a182",
     "status": "draft_component_migrations_and_complete_44_repository_graph_pending",
     "base": "d2a6616c85b7e47c3faa32bd5728db49cdd9c142",
     "source_snapshot_note": "Head observed immediately before this report-only commit; subsequent graph publication must refresh actual component heads."
@@ -10809,7 +10809,7 @@
     }
   },
   "current_maintenance": {
-    "generated_at": "2026-11-20T20:39:54.429819+00:00",
+    "generated_at": "2026-11-20T20:44:09.232470+00:00",
     "root_consumers": {
       "zcall-gui": {
         "status": "merged_and_main_tree_read_back",
@@ -15572,7 +15572,7 @@
     },
     "ssmcp_release": {
       "status": "existing_native_owner_main_integration_build_and_final_acceptance_in_progress",
-      "main_verified": "31e4d0431a5da4dc5e298a0a9f06e8813b814e77",
+      "main_verified": "90c497007f6d6f16c3dd2da6a4599c48787e5ee1",
       "candidate": "b156254b45c015a3994b8be1475b423167ac980f",
       "candidate_actual_source_audit": {
         "total_packages": 277,
@@ -15582,7 +15582,7 @@
       },
       "python_tests_passed": 100,
       "new_formal_release": false,
-      "current_public_tree": "ffdb0c658b484085199f008d1c2a1792ed272f2e",
+      "current_public_tree": "b66c011c488b79972760848abee8427b4bbfe706",
       "scope_note": "Earlier source-audit and Python test counts retain their original frozen-candidate scope; not relabelled as complete validation of the latest public main.",
       "previous_final_gate_plan_text": "pending on final fixed SSMCP cohort plus zcalld97d; original build commits and evidence stay separate",
       "current_final_gate_plan": {
@@ -15600,6 +15600,12 @@
         "recovery_owner": "Existing sole native SSMCP source/release owner",
         "recovery_status": "Recovering source patch and retained evidence from existing copies. Missing five baseline binaries require real rebuilds. No previous runtime receipt will be relabelled as a new build.",
         "new_recovery_archive_root": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/archives/"
+      },
+      "controls_publication": {
+        "pr": 156,
+        "merge": "90c497007f6d6f16c3dd2da6a4599c48787e5ee1",
+        "tree": "b66c011c488b79972760848abee8427b4bbfe706",
+        "owner_reported_scope": "178 unit /14 CLI/10 isolated PTY passed;10 helper fixtures ignored; no root rerun"
       }
     },
     "context_request": {
@@ -15724,6 +15730,13 @@
           "receipt_bytes": 26391,
           "receipt_sha256": "6d2981c3d266f446ab60112bb0ce723af1db4e8519f6ef59604aa222954a005f"
         }
+      },
+      "pr_status_readback": {
+        "number": 155,
+        "state": "open",
+        "merged": false,
+        "head": "5ca8fb78876c9270876b4240cda32c0e191ebe84",
+        "note": "Native724 integration is not the GitHub main PR merge; exact fresh PR/main state verified independently."
       }
     },
     "zgraphics_followup": {
@@ -16747,11 +16760,10 @@
       "owner": "builtin pr_personal_repos"
     },
     "ssmcp_input_requirement": {
-      "status": "authenticated_requirement_recorded_and_forwarded_existing_native_source_owner",
+      "status": "complete_original_history_read_owner_confirmed",
       "effective_name": "--input",
-      "default": "terminal",
-      "terminal": "Default terminal handler",
-      "web": "Explicit host/port",
+      "terminal": "Default input source",
+      "web": "Input host/port explicit",
       "mcp": [
         "stdio",
         "http"
@@ -16766,8 +16778,31 @@
         "afc50b750e3e865426123b9a85a63e61"
       ],
       "source_implementation_or_runtime_pass_claimed": false,
-      "semantics": "Select who handles messages sent FROM the chat box; destination/processing routing",
-      "pipeline_support": true
+      "semantics": "--input selects input source; --agent independently selects chat-message processor",
+      "pipeline_support": true,
+      "prior_fragment_interpretation_invalidated_at_commit": "45b60092829d9336bfe512793d8d3d8d021c3f5a",
+      "sock": "Listen to default or custom Unix socket path",
+      "agent": {
+        "default": "next-caller",
+        "behavior": "Deliver the pending chat message in the next eligible tool response",
+        "targets": [
+          "Codex",
+          "Claude Code",
+          "other coding agent",
+          "another SSMCP"
+        ]
+      },
+      "source_history": {
+        "conversation": "conversation_09b7546f6963bcd87be570feaa9bc3ee",
+        "offset": 20,
+        "last_index": 50,
+        "total": 51,
+        "next_offset": null,
+        "truncated_messages": 0,
+        "latest_user_default_correction_index": 48
+      },
+      "implementation_owner": "Existing native SSMCP source/release owner and original CLI implementation thread; Project Z has no parallel source writer",
+      "input_default": "terminal"
     },
     "org_final_archive": {
       "folder_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
