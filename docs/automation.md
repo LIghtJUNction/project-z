@@ -44,6 +44,23 @@ errors so a failed network request cannot look like an up-to-date project.
 python3 scripts/maintenance.py --apply
 ```
 
+To advance a reviewed group while other repositories are still being developed,
+repeat `--repo` with exact registered paths from `.gitmodules`:
+
+```sh
+python3 scripts/maintenance.py --apply --repo zcall --repo zharness --repo zmcpio
+```
+
+The audit still covers every repository and published package. Only changed
+gitlinks in the selected group advance; other upstream changes remain listed
+under `snapshot.deferred` in JSON and in the Markdown report. The group above
+illustrates selection syntax; its consumers must pass the full dependency gates
+before it can produce a ready snapshot. An unknown or empty selection is rejected
+before a worktree is created. Selecting repositories that already match their
+upstream returns `no_changes` and retains the deferred work list.
+`--repo` requires `--apply`; omitting it preserves the default of considering
+all known upstream updates. It does not select a smaller validation scope.
+
 `--apply` requires a clean source checkout and creates a separate Git worktree
 under `dist/maintenance/worktrees/`. A custom `--worktree PATH` must name a new
 directory outside existing repositories, or inside ignored staging under the
@@ -102,7 +119,8 @@ python3 -m unittest discover -s tests -p test_maintenance.py -v
 ```
 
 Tests use real temporary Git repositories and worktrees to verify exact gitlink
-updates, unchanged source checkouts, rejection of dirty trees and unknown plans,
+updates, scoped updates with deferred gitlinks, unchanged source checkouts,
+rejection of dirty trees and unknown or empty selections,
 nested URL replacement and removal, isolated destination paths, shallow CI
 audit without initialized sources, and preserved work after a failed dependency
 gate. Real offline Cargo workspaces exercise both a resolvable update and an

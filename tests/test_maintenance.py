@@ -1,5 +1,6 @@
 """Maintenance uses real isolated Git fixtures; network boundaries are mocked."""
 
+from contextlib import redirect_stdout
 from copy import deepcopy
 import io
 import json
@@ -93,7 +94,8 @@ class IsolatedApply(unittest.TestCase):
         git(self.upstream, "commit", "-am", "update library")
         self.new = git(self.upstream, "rev-parse", "HEAD")
         self.report = {"root_head": self.root_head, "errors": [],
-                       "candidates": [{"repository": "owner/zunknown"}],
+                       "candidates": [{"repository": "owner/zunknown", "language": "Rust",
+                                       "description": "Unregistered candidate"}],
                        "upstreams": [{"path": "zfixture", "url": str(self.upstream), "branch": "main",
                                       "pinned": self.old, "upstream": self.new, "changed": True}]}
         env = patch.dict(os.environ, {"GIT_ALLOW_PROTOCOL": "file"})
@@ -109,6 +111,105 @@ class IsolatedApply(unittest.TestCase):
     def unchanged_source(self):
         self.assertEqual(git(self.root, "rev-parse", "HEAD"), self.root_head)
         self.assertEqual(git(self.root / "zfixture", "rev-parse", "HEAD"), self.old)
+
+    def add_repository(self, name, *, changed=True):
+        upstream = self.base / (name + "-upstream")
+        upstream.mkdir()
+        git(upstream, "init", "-b", "main")
+        git(upstream, "config", "user.name", "Project Z test")
+        git(upstream, "config", "user.email", "project-z-test@example.invalid")
+        (upstream / "value").write_text("old\n")
+        git(upstream, "add", ".")
+        git(upstream, "commit", "-m", "initial independent repository")
+        old = git(upstream, "rev-parse", "HEAD")
+        git(self.root, "submodule", "add", "-b", "main", str(upstream), name)
+        git(self.root, "commit", "-am", "pin independent repository")
+        self.root_head = git(self.root, "rev-parse", "HEAD")
+        self.report["root_head"] = self.root_head
+        if changed:
+            (upstream / "value").write_text("new\n")
+            git(upstream, "commit", "-am", "update independent repository")
+        new = git(upstream, "rev-parse", "HEAD")
+        self.report["upstreams"].append({
+            "path": name, "url": str(upstream), "branch": "main",
+            "pinned": old, "upstream": new, "changed": changed,
+        })
+        return old, new
+
+    def test_selected_update_defers_other_changes_and_default_still_updates_all(self):
+        old, new = self.add_repository("zdeferred")
+        before = deepcopy(self.report)
+        with patch.object(maintenance, "coordinate", side_effect=self.coordinate):
+            result = maintenance.apply_snapshot(
+                self.root, self.report, self.destination, repositories=["zfixture"])
+        self.assertEqual(result["status"], "ready", result)
+        self.assertEqual(result["selected"], ["zfixture"])
+        self.assertEqual(result["updated"], ["zfixture"])
+        self.assertEqual(result["deferred"], ["zdeferred"])
+        self.assertEqual(git(self.destination, "rev-parse", "HEAD:zfixture"), self.new)
+        self.assertEqual(git(self.destination, "rev-parse", "HEAD:zdeferred"), old)
+        self.assertEqual(self.report, before)
+        self.unchanged_source()
+        self.assertEqual(git(self.root / "zdeferred", "rev-parse", "HEAD"), old)
+        self.assertEqual(git(self.root, "status", "--porcelain"), "")
+        full = self.base / "full-snapshot"
+        with patch.object(maintenance, "coordinate", side_effect=self.coordinate):
+            result = maintenance.apply_snapshot(self.root, self.report, full)
+        self.assertEqual(result["status"], "ready", result)
+        self.assertEqual(set(result["updated"]), {"zfixture", "zdeferred"})
+        self.assertEqual(result["deferred"], [])
+        self.assertEqual(git(full, "rev-parse", "HEAD:zdeferred"), new)
+        self.unchanged_source()
+
+    def test_invalid_selection_is_rejected_even_without_upstream_changes(self):
+        self.report["upstreams"][0]["changed"] = False
+        for selected in ([], [""], ["zunknown"]):
+            with self.subTest(selected=selected):
+                with self.assertRaisesRegex(maintenance.MaintenanceError, "selection"):
+                    maintenance.apply_snapshot(
+                        self.root, self.report, self.destination, repositories=selected)
+                self.assertFalse(self.destination.exists())
+        self.unchanged_source()
+
+    def test_selection_without_changes_keeps_deferred_work_visible(self):
+        self.add_repository("zstable", changed=False)
+        result = maintenance.apply_snapshot(
+            self.root, self.report, self.destination, repositories=["zstable"])
+        self.assertEqual(result, {"status": "no_changes", "selected": ["zstable"],
+                                  "deferred": ["zfixture"]})
+        self.assertFalse(self.destination.exists())
+        report = {**self.report, "created_at": "2026-11-20T00:00:00Z", "snapshot": result}
+        text = maintenance.markdown(report)
+        self.assertIn("Selected repositories: `zstable`", text)
+        self.assertIn("Deferred upstream updates: `zfixture`", text)
+        self.assertIn("Upstream updates: **1**", text)
+        self.unchanged_source()
+
+    def test_cli_repeated_repository_selection_and_audit_only_rejection(self):
+        old, new = self.add_repository("zsecond")
+        report = {**self.report, "created_at": "2026-11-20T00:00:00Z",
+                  "needs_maintenance": True}
+        output = self.base / "audit.json"
+        summary = self.base / "summary.md"
+        args = ["--root", str(self.root), "--output", str(output), "--report", str(summary)]
+        with patch.object(maintenance, "audit", return_value=report) as audit:
+            with redirect_stdout(io.StringIO()):
+                code = maintenance.main([*args, "--repo", "zfixture"])
+            self.assertEqual(code, 2)
+            audit.assert_not_called()
+            self.assertIn("--repo requires --apply", output.read_text())
+            with patch.object(maintenance, "coordinate", side_effect=self.coordinate):
+                with redirect_stdout(io.StringIO()):
+                    code = maintenance.main([
+                        *args, "--apply", "--worktree", str(self.destination),
+                        "--repo", "zsecond", "--repo", "zfixture", "--repo", "zfixture"])
+        self.assertEqual(code, 0)
+        result = json.loads(output.read_text())
+        self.assertEqual(result["snapshot"]["selected"], ["zfixture", "zsecond"])
+        self.assertEqual(result["snapshot"]["deferred"], [])
+        self.assertTrue(result["needs_maintenance"])
+        self.assertEqual(git(self.destination, "rev-parse", "HEAD:zsecond"), new)
+        self.unchanged_source()
 
     def test_apply_pins_exact_upstream_only_in_new_worktree(self):
         original_modules = (self.root / ".gitmodules").read_bytes()
@@ -316,7 +417,8 @@ class OfflineResolutionApply(unittest.TestCase):
         self.assertFalse((self.root / "fixture/Cargo.lock").exists())
 
     def test_application_feature_resolution_failure_cannot_create_ready_snapshot(self):
-        result = maintenance.apply_snapshot(self.root, self.update("absent"), self.destination)
+        result = maintenance.apply_snapshot(
+            self.root, self.update("absent"), self.destination, repositories=["fixture"])
         self.assertEqual(result["status"], "blocked", result)
         self.assertIn("does not have that feature", result["error"])
         self.assertNotIn("commit", result)
@@ -328,6 +430,50 @@ class OfflineResolutionApply(unittest.TestCase):
                              "--root", self.destination, action], self.destination)
         self.assertFalse((self.destination / ".cargo/config.toml").exists())
         self.assertFalse((self.destination / "fixture/Cargo.lock").exists())
+        self.unchanged_source()
+
+    def test_selected_library_update_still_resolves_unselected_consumer(self):
+        consumer = self.base / "consumer-upstream"
+        (consumer / "src").mkdir(parents=True)
+        git(consumer, "init", "-b", "main")
+        git(consumer, "config", "user.name", "Project Z test")
+        git(consumer, "config", "user.email", "project-z-test@example.invalid")
+        (consumer / "src/main.rs").write_text("fn main() {}\n")
+        (consumer / "Cargo.toml").write_text(
+            '[package]\nname = "fixture-consumer"\nversion = "1.0.0"\n'
+            'edition = "2021"\npublish = false\n[dependencies]\n'
+            'fixture-core = { version = "=1.0.0", features = ["allowed"] }\n')
+        git(consumer, "add", ".")
+        git(consumer, "commit", "-m", "consumer requires existing library feature")
+        consumer_pin = git(consumer, "rev-parse", "HEAD")
+        git(self.root, "submodule", "add", "-b", "main", str(consumer), "consumer")
+        policy = self.root / "project-z.toml"
+        policy.write_text(policy.read_text() + '[repositories.consumer]\nrole = "application"\n')
+        maintenance.coordinate(self.root)
+        git(self.root, "add", ".")
+        git(self.root, "commit", "-m", "register independent consumer")
+        self.root_head = git(self.root, "rev-parse", "HEAD")
+
+        manifest = self.upstream / "core/Cargo.toml"
+        manifest.write_text(manifest.read_text().replace("allowed = []\n", ""))
+        git(self.upstream, "commit", "-am", "remove feature used by separate consumer")
+        self.new = git(self.upstream, "rev-parse", "HEAD")
+        report = {"root_head": self.root_head, "errors": [], "upstreams": [
+            {"path": "fixture", "url": str(self.upstream), "branch": "main",
+             "pinned": self.old, "upstream": self.new, "changed": True},
+            {"path": "consumer", "url": str(consumer), "branch": "main",
+             "pinned": consumer_pin, "upstream": consumer_pin, "changed": False},
+        ]}
+        result = maintenance.apply_snapshot(
+            self.root, report, self.destination, repositories=["fixture"])
+        self.assertEqual(result["status"], "blocked", result)
+        self.assertIn("does not have that feature", result["error"])
+        self.assertEqual(result["selected"], ["fixture"])
+        self.assertEqual(result["deferred"], [])
+        self.assertNotIn("commit", result)
+        self.assertEqual(git(self.destination, "rev-parse", "HEAD"), self.root_head)
+        self.assertEqual(git(self.destination / "consumer", "rev-parse", "HEAD"), consumer_pin)
+        self.assertFalse((self.destination / "consumer/Cargo.lock").exists())
         self.unchanged_source()
 
     def test_resolved_application_snapshot_is_committed_with_resolution_evidence(self):
