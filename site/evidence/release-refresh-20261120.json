@@ -224,9 +224,144 @@
   ],
   "browser_validation": "Original 15-check acceptance retained; this refresh changes project metadata and rendered version links only.",
   "publication": {
-    "status": "ready",
-    "repository": "LIghtJUNction/project-z-site",
-    "url": "https://lightjunction.github.io/project-z-site/"
+    "schema": "project-z.public-site-publication.v1",
+    "source_candidate": "859e2e8be795323bab099d95ca1bdc95ab721930",
+    "public_repository": "LIghtJUNction/project-z-site",
+    "public_base": "afba5faa2ab28098e39c8f52984059e4e4fdc302",
+    "public_commit": "668080bced1eb4c9941e324abc09e645d6e881f3",
+    "public_url": "https://lightjunction.github.io/project-z-site/",
+    "changed_files": [
+      "index.html",
+      "projects.json"
+    ],
+    "public_tracked_files": [
+      ".nojekyll",
+      "README.md",
+      "app.js",
+      "favicon.svg",
+      "index.html",
+      "projects.json",
+      "style.css"
+    ],
+    "readme_sha256_unchanged": "aef0d08fd4d8d8502d034f974352b5b5107b44383ed0ab4d98390b55f9cae32b",
+    "bundle_manifest": {
+      "schema": "project-z.public-bundle.v1",
+      "source_base": "ad1c9e21c9a35ebb2f4059529409b4ad3f2960fd",
+      "files": [
+        {
+          "path": ".nojekyll",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "app.js",
+          "bytes": 4203,
+          "sha256": "93657999854f6d21d378fa387a0346c50528d8356a0a65b9a726662bd7672362"
+        },
+        {
+          "path": "favicon.svg",
+          "bytes": 321,
+          "sha256": "46b2270683a9f0443180adefa46d1e20c67792e6a4aac4a7ce7ae52eacfe00c8"
+        },
+        {
+          "path": "index.html",
+          "bytes": 44035,
+          "sha256": "3329e14ac3cd3328d644ca27d3ae2f06a0ee9e089e052bdefcb0521fca3b5677"
+        },
+        {
+          "path": "projects.json",
+          "bytes": 53966,
+          "sha256": "67623595776342b0a1ec28db067d4437faf161d48ca955a3ab76fa353af39730"
+        },
+        {
+          "path": "style.css",
+          "bytes": 14560,
+          "sha256": "dd39394ef7d3ca8eba8bc652670ea5e7c770ea0d84116efd7433fa4fbd5743a1"
+        }
+      ],
+      "bytes": 117085,
+      "projects": 37,
+      "verified_crates": 27
+    },
+    "pushed_at_utc": "2026-11-20T08:03:22.675644+00:00",
+    "live_verification": {
+      "status": "passed",
+      "verified_at_utc": "2026-11-20T08:04:41.312458+00:00",
+      "http_checks": [
+        {
+          "path": ".nojekyll",
+          "status": 200,
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "url": "https://lightjunction.github.io/project-z-site/.nojekyll?v=668080bced1eb4c9941e324abc09e645d6e881f3"
+        },
+        {
+          "path": "app.js",
+          "status": 200,
+          "bytes": 4203,
+          "sha256": "93657999854f6d21d378fa387a0346c50528d8356a0a65b9a726662bd7672362",
+          "url": "https://lightjunction.github.io/project-z-site/app.js?v=668080bced1eb4c9941e324abc09e645d6e881f3"
+        },
+        {
+          "path": "favicon.svg",
+          "status": 200,
+          "bytes": 321,
+          "sha256": "46b2270683a9f0443180adefa46d1e20c67792e6a4aac4a7ce7ae52eacfe00c8",
+          "url": "https://lightjunction.github.io/project-z-site/favicon.svg?v=668080bced1eb4c9941e324abc09e645d6e881f3"
+        },
+        {
+          "path": "index.html",
+          "status": 200,
+          "bytes": 44035,
+          "sha256": "3329e14ac3cd3328d644ca27d3ae2f06a0ee9e089e052bdefcb0521fca3b5677",
+          "url": "https://lightjunction.github.io/project-z-site/index.html?v=668080bced1eb4c9941e324abc09e645d6e881f3"
+        },
+        {
+          "path": "projects.json",
+          "status": 200,
+          "bytes": 53966,
+          "sha256": "67623595776342b0a1ec28db067d4437faf161d48ca955a3ab76fa353af39730",
+          "url": "https://lightjunction.github.io/project-z-site/projects.json?v=668080bced1eb4c9941e324abc09e645d6e881f3"
+        },
+        {
+          "path": "style.css",
+          "status": 200,
+          "bytes": 14560,
+          "sha256": "dd39394ef7d3ca8eba8bc652670ea5e7c770ea0d84116efd7433fa4fbd5743a1",
+          "url": "https://lightjunction.github.io/project-z-site/style.css?v=668080bced1eb4c9941e324abc09e645d6e881f3"
+        },
+        {
+          "path": "/",
+          "status": 200,
+          "bytes": 44035,
+          "sha256": "3329e14ac3cd3328d644ca27d3ae2f06a0ee9e089e052bdefcb0521fca3b5677",
+          "url": "https://lightjunction.github.io/project-z-site/?v=668080bced1eb4c9941e324abc09e645d6e881f3"
+        }
+      ],
+      "projects": 37,
+      "verified_crates": 27,
+      "published_versions": {
+        "zfetch": "0.1.1",
+        "zgpui": "0.1.2",
+        "zpty": "0.2.3",
+        "zterm": "0.5.2",
+        "zrc": "0.1.2"
+      },
+      "oh_my_ztty_source": "0.2.4",
+      "public_manifest_sha256": "67623595776342b0a1ec28db067d4437faf161d48ca955a3ab76fa353af39730",
+      "pages_run": 44699517717
+    },
+    "status": "published",
+    "pages_workflow": {
+      "url": "https://github.com/LIghtJUNction/project-z-site/actions/runs/44699517717",
+      "id": 44699517717,
+      "conclusion": "success",
+      "jobs": {
+        "build": "success",
+        "report-build-status": "success",
+        "deploy": "success"
+      }
+    }
   },
   "visibility_verified_at_utc": "2026-11-20T07:58:32.360088+00:00"
 }
