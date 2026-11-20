@@ -1,0 +1,907 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-11-20T01:45:03.740405+00:00",
+  "scope": "Allowlisted facts from selected retained acceptance receipts; this is not a claim that every repository, application, platform, or benchmark gate passed.",
+  "method": "Read-only reuse audit of fixed-source receipts and previously downloaded artifacts. No new compilation, tests, desktop actions or publication were performed to produce this summary.",
+  "source_receipts": [
+    {
+      "id": "core-tests.json",
+      "sha256": "bdf2c5865fbede01ece2b32787ae168c96f05938b7fdba29b2e269f2d9822241",
+      "bytes": 5495,
+      "raw_public_url": null
+    },
+    {
+      "id": "three-new-libraries-publication.json",
+      "sha256": "e03128e17eee3661eb7eade4cba13bab68d59556f1a82cbdce080cc7b2d95659",
+      "bytes": 80388,
+      "raw_public_url": null
+    },
+    {
+      "id": "three-new-libraries-consumer-acceptance.json",
+      "sha256": "4416373b727ebb67b4112cd217d9466713c9ebde3ad0f7cba2d87f21f2a5e4c5",
+      "bytes": 31900,
+      "raw_public_url": null
+    },
+    {
+      "id": "zcalld-c72-native-candidate.json",
+      "sha256": "0c352a42be166c7a247610a08770fe70a5fe310d268719b9fd8ad0bf663977a7",
+      "bytes": 13007,
+      "raw_public_url": null
+    },
+    {
+      "id": "gpui-cpu-preflight-20261120T013236Z.json",
+      "sha256": "e982a1e9db105c926a091f6a5c9fc0fda50994deda3c4b2f6d5fbee24502f11a",
+      "bytes": 934,
+      "raw_public_url": null
+    },
+    {
+      "id": "new-library-tests.json",
+      "sha256": "718b9c9034e43402331db279217a2507bc6b972f1b8131350515fd4065e84d38",
+      "bytes": 588,
+      "raw_public_url": null
+    },
+    {
+      "id": "gpui-resource-guard-20261120T003625Z",
+      "sha256": "35f685c1e4b9f205b169b4b1da9fd99cf006103c2b84a4fba02c6431bb164bc9",
+      "bytes": 2242,
+      "raw_public_url": "https://github.com/LIghtJUNction/zgpui/blob/a4e3efc5d69fb6a46678ff67e04099bf87b98ae9/benchmarks/gpui-comparison/resource-gates/20261120T003625Z/receipt.json"
+    }
+  ],
+  "core_library_acceptance": {
+    "receipt_id": "core-tests.json",
+    "started_utc": "2026-11-20T00:25:10.098858+00:00",
+    "completed_utc": "2026-11-20T00:27:01.952154+00:00",
+    "status": "passed_within_recorded_scope",
+    "repository_check_count": 20,
+    "exit_zero_count": 20,
+    "nonzero_exit_count": 0,
+    "source_errors_after_count": 0,
+    "count_semantics": "Twenty repository checks, not twenty individual unit tests. This receipt does not provide a combined individual-test count.",
+    "scope": "20 library repositories only; full aggregate acceptance still requires check and resolve --all after application version propagation",
+    "repositories": [
+      {
+        "repository": "LIghtJUNction/z58",
+        "package": "z58",
+        "version": "0.1.6",
+        "source_commit": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+        "source_url": "https://github.com/LIghtJUNction/z58/commit/c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "214bdf7803324b7acc62d5d7585f9b76bd1e91bb7d69f8d3854c0e11de9571d5"
+      },
+      {
+        "repository": "LIghtJUNction/z64",
+        "package": "z64",
+        "version": "0.1.2",
+        "source_commit": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+        "source_url": "https://github.com/LIghtJUNction/z64/commit/7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "a6613c604a6d65f936a4026c527552b2a952a968de7fde7a736070b256c2e021"
+      },
+      {
+        "repository": "LIghtJUNction/zclap",
+        "package": "zclap",
+        "version": "0.1.4",
+        "source_commit": "4d87f3ae3743e81509d5ac5500909955667c860f",
+        "source_url": "https://github.com/LIghtJUNction/zclap/commit/4d87f3ae3743e81509d5ac5500909955667c860f",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "aff9655a141041788f6b4f18ab360b32a114b8fcbecd244f27f0f13b82e5b0f0"
+      },
+      {
+        "repository": "LIghtJUNction/zconv",
+        "package": "zconv",
+        "version": "0.4.0",
+        "source_commit": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+        "source_url": "https://github.com/LIghtJUNction/zconv/commit/0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "c67f059c03b8128e6422f30bd96a328e13317e69244046d29d5cb4597b035b67"
+      },
+      {
+        "repository": "LIghtJUNction/zdwire",
+        "package": "zdwire",
+        "version": "0.1.4",
+        "source_commit": "c046e3182b0adf15d43500400a427b7dd7389525",
+        "source_url": "https://github.com/LIghtJUNction/zdwire/commit/c046e3182b0adf15d43500400a427b7dd7389525",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "2b4d012f736c8e3dbfe5c1a195290372bc486793fc1aea432e657e5949529165"
+      },
+      {
+        "repository": "LIghtJUNction/zgpui",
+        "package": "zgpui",
+        "version": "0.1.0",
+        "source_commit": "1d796d1fc63808dc099ed7b10c92e75835ae2814",
+        "source_url": "https://github.com/LIghtJUNction/zgpui/commit/1d796d1fc63808dc099ed7b10c92e75835ae2814",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "fbaf7049cd8c921224c6bb0fd07b26a9dbe9c3d9ab1ea94f1f54bf95748b77a4"
+      },
+      {
+        "repository": "LIghtJUNction/zhex",
+        "package": "zhex",
+        "version": "0.1.3",
+        "source_commit": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+        "source_url": "https://github.com/LIghtJUNction/zhex/commit/09dfaa0adee628d0714e2f9e96921555e619b2f6",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "94b9ba8f497145477e906e97283b7fa1f6678c5c3c828a16221bded2d9de988f"
+      },
+      {
+        "repository": "LIghtJUNction/zldap",
+        "package": "zldap",
+        "version": "0.1.3",
+        "source_commit": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+        "source_url": "https://github.com/LIghtJUNction/zldap/commit/d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "6457c480e8e80d90506fbeb9cd05e49f9c069acd1cbd2ad9ec21761b9f461461"
+      },
+      {
+        "repository": "LIghtJUNction/zmime",
+        "package": "zmime",
+        "version": "0.1.2",
+        "source_commit": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+        "source_url": "https://github.com/LIghtJUNction/zmime/commit/2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "a21a61240bd1e6125ea0cbfb4552bbb26e864b197d848b73ba83b0492b061383"
+      },
+      {
+        "repository": "LIghtJUNction/zplugin",
+        "package": "zplugin",
+        "version": "0.3.1",
+        "source_commit": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+        "source_url": "https://github.com/LIghtJUNction/zplugin/commit/00d566eedcff7b2932e90b9dfeb44910c783d305",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "63ca274b71447f2efbed627f49683bd6220b1e8ddb4b37e09e8446ff14bbd9bb"
+      },
+      {
+        "repository": "LIghtJUNction/zscan",
+        "package": "zscan",
+        "version": "0.1.3",
+        "source_commit": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+        "source_url": "https://github.com/LIghtJUNction/zscan/commit/c000a84c748d8e090ff662b2aef3858aa4880b09",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "d8554186fbc4a3f2906c42932fe76f83f76e9373be85e6ea597b5e909f70eb38"
+      },
+      {
+        "repository": "LIghtJUNction/zsyn",
+        "package": "zsyn",
+        "version": "0.1.3",
+        "source_commit": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+        "source_url": "https://github.com/LIghtJUNction/zsyn/commit/b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "6b9f14a96e62bcb07d707ddd6dddedff1221c666631c9f72db5d19c4c8f7bf93"
+      },
+      {
+        "repository": "LIghtJUNction/zsys",
+        "package": "zsys",
+        "version": "0.1.1",
+        "source_commit": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+        "source_url": "https://github.com/LIghtJUNction/zsys/commit/808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "b152b60e0806d221278b4366d20bafbd39a932e113e52231b39e40ac12c53e79"
+      },
+      {
+        "repository": "LIghtJUNction/ztuio",
+        "package": "ztuio",
+        "version": "0.1.0",
+        "source_commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+        "source_url": "https://github.com/LIghtJUNction/ztuio/commit/9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "c620a3562b36579c22f8fffdc8dbcd7e819dd50d590865e54823e25694c2813f"
+      },
+      {
+        "repository": "LIghtJUNction/zui",
+        "package": "zui-native",
+        "version": "0.1.0",
+        "source_commit": "5e37fcfb791eec9ac523fc19373e95d0a513112f",
+        "source_url": "https://github.com/LIghtJUNction/zui/commit/5e37fcfb791eec9ac523fc19373e95d0a513112f",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "5d7a7af90d3e1d9ef308cd16b9aa1e211531275a6d64288cf974f68aa94e26e1"
+      },
+      {
+        "repository": "LIghtJUNction/zvte",
+        "package": "zvte",
+        "version": "0.1.3",
+        "source_commit": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+        "source_url": "https://github.com/LIghtJUNction/zvte/commit/b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "cb7c6cb277b41aec38b8e62a05644257b4c74706632dc07e3d599a842c8b1ea9"
+      },
+      {
+        "repository": "LIghtJUNction/zcall",
+        "package": "zcall",
+        "version": "0.3.0",
+        "source_commit": "8fb84b812b8025e34399b28e27242605d68ea345",
+        "source_url": "https://github.com/LIghtJUNction/zcall/commit/8fb84b812b8025e34399b28e27242605d68ea345",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "3289767384ec4efb4049bb4772b39cd5d04aca6a6d6efd66e3a914dcc69fff18"
+      },
+      {
+        "repository": "LIghtJUNction/zharness",
+        "package": "zharness",
+        "version": "0.5.1",
+        "source_commit": "e3580c01c7252da090d04e59b59762bc561777d1",
+        "source_url": "https://github.com/LIghtJUNction/zharness/commit/e3580c01c7252da090d04e59b59762bc561777d1",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "e3892448243b420da95f08553bb60796248dcbca4028ef36069ce486ca66d543"
+      },
+      {
+        "repository": "LIghtJUNction/zinput",
+        "package": "zinput",
+        "version": "0.1.3",
+        "source_commit": "37617313dd7aaabcca9dd567344a76c4cbe03907",
+        "source_url": "https://github.com/LIghtJUNction/zinput/commit/37617313dd7aaabcca9dd567344a76c4cbe03907",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "e00d1253b6fe026fabeb6b88d72d71e7d1fbb22b743b93e6b7a92ce109ae1121"
+      },
+      {
+        "repository": "LIghtJUNction/zmcpio",
+        "package": "zmcpio",
+        "version": "0.4.0",
+        "source_commit": "bc89d7fa3b0249b3a9037748e2113b31615e8c89",
+        "source_url": "https://github.com/LIghtJUNction/zmcpio/commit/bc89d7fa3b0249b3a9037748e2113b31615e8c89",
+        "recorded_exit_code": 0,
+        "retained_log_sha256": "02ea3be1192bb715fea8d890cb373b1794ac7bfbefff76a6582f12b5510bbd5a"
+      }
+    ],
+    "excluded_claims": [
+      "Whole-cohort application runtime acceptance",
+      "Native validation on every OS",
+      "Performance superiority"
+    ]
+  },
+  "new_library_publication": {
+    "receipt_id": "three-new-libraries-publication.json",
+    "audited_utc": "2026-11-20T00:47:15.317353+00:00",
+    "status": "three_actual_registry_downloads_verified",
+    "packages": [
+      {
+        "package": "zpty",
+        "version": "0.2.2",
+        "source_commit": "66919bc6dcb7757e0437fe955bfa809fb1282b68",
+        "source_url": "https://github.com/LIghtJUNction/zpty/commit/66919bc6dcb7757e0437fe955bfa809fb1282b68",
+        "registry_url": "https://crates.io/crates/zpty/0.2.2",
+        "download_url": "https://static.crates.io/crates/zpty/zpty-0.2.2.crate",
+        "download_bytes": 34743,
+        "download_sha256": "1d46215c9aaad115aa3637217dcd3d7752d4f511f05ca29729c83ae58c0dd955",
+        "index_checksum_match": true,
+        "api_checksum_match": true,
+        "not_yanked_at_audit": true,
+        "cargo_vcs_source_match": true,
+        "canonical_source_payload_match": true,
+        "verification_status": "verified"
+      },
+      {
+        "package": "zgraphics",
+        "version": "0.2.0",
+        "source_commit": "fe6357f98cf80fb6cc74739e45e8866ee17706ad",
+        "source_url": "https://github.com/LIghtJUNction/zgraphics/commit/fe6357f98cf80fb6cc74739e45e8866ee17706ad",
+        "registry_url": "https://crates.io/crates/zgraphics/0.2.0",
+        "download_url": "https://static.crates.io/crates/zgraphics/zgraphics-0.2.0.crate",
+        "download_bytes": 42600,
+        "download_sha256": "cc775cfedeae7a0563bb11e51e25b32e9d4a72757fb2935221ab7bc6f2c88e54",
+        "index_checksum_match": true,
+        "api_checksum_match": true,
+        "not_yanked_at_audit": true,
+        "cargo_vcs_source_match": true,
+        "canonical_source_payload_match": true,
+        "verification_status": "verified"
+      },
+      {
+        "package": "zterm",
+        "version": "0.5.0",
+        "source_commit": "13d5e2c74571d35cccd920b1204798211b70c79f",
+        "source_url": "https://github.com/LIghtJUNction/zterm/commit/13d5e2c74571d35cccd920b1204798211b70c79f",
+        "registry_url": "https://crates.io/crates/zterm/0.5.0",
+        "download_url": "https://static.crates.io/crates/zterm/zterm-0.5.0.crate",
+        "download_bytes": 75791,
+        "download_sha256": "5cad31f851ec516590643444f339eb6e0a2b7b034b68d190172233e9392364b1",
+        "index_checksum_match": true,
+        "api_checksum_match": true,
+        "not_yanked_at_audit": true,
+        "cargo_vcs_source_match": true,
+        "canonical_source_payload_match": true,
+        "verification_status": "verified"
+      }
+    ],
+    "scope": "Registry API and sparse-index checksums, actual archive bytes, .cargo_vcs_info and published source payloads matched the fixed canonical source.",
+    "compilation_performed": false
+  },
+  "ztty_consumer_acceptance": {
+    "receipt_id": "three-new-libraries-consumer-acceptance.json",
+    "audited_utc": "2026-11-20T01:28:13.139996+00:00",
+    "version": "0.5.0",
+    "publication_status": "development_candidate_not_app_release",
+    "accepted_source_commit": "1a2f165983d7abff507c69b54c0c4ed225f49a45",
+    "accepted_source_url": "https://github.com/LIghtJUNction/ztty/commit/1a2f165983d7abff507c69b54c0c4ed225f49a45",
+    "binary_build_source_commit": "6053a97920c29c852cd92d8b96e35f62cff92ecb",
+    "binary_build_source_url": "https://github.com/LIghtJUNction/ztty/commit/6053a97920c29c852cd92d8b96e35f62cff92ecb",
+    "dependencies": [
+      {
+        "name": "zpty",
+        "version": "0.2.2",
+        "source": "66919bc6dcb7757e0437fe955bfa809fb1282b68",
+        "crate_sha256": "1d46215c9aaad115aa3637217dcd3d7752d4f511f05ca29729c83ae58c0dd955",
+        "source_url": "https://github.com/LIghtJUNction/zpty/commit/66919bc6dcb7757e0437fe955bfa809fb1282b68"
+      },
+      {
+        "name": "zgraphics",
+        "version": "0.2.0",
+        "source": "fe6357f98cf80fb6cc74739e45e8866ee17706ad",
+        "crate_sha256": "cc775cfedeae7a0563bb11e51e25b32e9d4a72757fb2935221ab7bc6f2c88e54",
+        "source_url": "https://github.com/LIghtJUNction/zgraphics/commit/fe6357f98cf80fb6cc74739e45e8866ee17706ad"
+      },
+      {
+        "name": "zterm",
+        "version": "0.5.0",
+        "source": "13d5e2c74571d35cccd920b1204798211b70c79f",
+        "crate_sha256": "5cad31f851ec516590643444f339eb6e0a2b7b034b68d190172233e9392364b1",
+        "source_url": "https://github.com/LIghtJUNction/zterm/commit/13d5e2c74571d35cccd920b1204798211b70c79f"
+      }
+    ],
+    "production_inputs_identical": true,
+    "production_listing_sha256": "f089883ecb89e17fe48aa04cc5f456aed82a2d5bb061135fe090eda9ee375059",
+    "cargo_lock_sha256": "c4290a5f00aa4437ad31007dfcc0f35e582b4c4f62511ade176ff553fc34efa3",
+    "tracked_harness_hashes_rechecked": 76,
+    "frozen_binary_sha256": [
+      {
+        "name": "ztty-6053a97-wayland",
+        "sha256": "82df8800d781e69d9bfaae6b4a42423da2d4c63d5bc6b9ab5267196386c1edee",
+        "bytes": 1231608
+      },
+      {
+        "name": "ztty-6053a97-x11",
+        "sha256": "e33e27e55b7c659cb0761891cecc0fd08d005928298f1f705244d6a8c512f08f",
+        "bytes": 1138392
+      },
+      {
+        "name": "wayland-ime-peer-6053a97",
+        "sha256": "521fe34ee30e65aab7fb940939a623d94b8e7a86bb38743bb5caaac87ddb7f2d",
+        "bytes": 22704
+      }
+    ],
+    "existing_local_check": {
+      "exit_code": 0,
+      "rust_summary": {
+        "passed": 466,
+        "failed": 0,
+        "ignored": 6,
+        "method": "Sum of actual standard Rust test-result rows in raw log; do not add GUI assertions to this count."
+      },
+      "raw_log_sha256": "4006fcc5519353eaca987cddce3626273556a33e974213591374a9821cf8bee2",
+      "strict_clippy_scope": "Five independent library manifests plus Wayland workspace, all-targets, warnings denied.",
+      "release_builds": "Wayland and default/X11-only release builds recorded.",
+      "default_only_clippy_separate_receipt": "not independently located in this audit",
+      "native_budget_groups": 5,
+      "native_budget_sanitizers": true,
+      "known_warning": "The raw log retains a future-incompatibility warning for zune-png 0.5.2."
+    },
+    "original_gui_run": {
+      "started_utc": "2026-11-20T00:01:32.261134+00:00",
+      "finished_utc": "2026-11-20T00:03:36.737366+00:00",
+      "original_overall_passed": false,
+      "stages_passed": 20,
+      "stages_total": 21,
+      "passing_check_count": 300,
+      "failed_stage": "wayland-shared-gui",
+      "failed_stage_check_count": 0,
+      "failure": "Fixture initialization timeout before assertions. The original failure is retained.",
+      "receipt_sha256": "95f640f289d812b7edbd9af3134beab96bd02becf77e838708d9365a9647182f",
+      "steps": [
+        {
+          "name": "xim-all",
+          "passed": true,
+          "checks": 37,
+          "exit_code": 0,
+          "report_sha256": "abe45a4b90fda41cefe12f649930fd8eb61153d0184bac19550758e5593b2bd8",
+          "raw_log_sha256": "9e1725b131975676dd36bb44910e4863eac5dd0c6f18a4b8abd57b6883f8d61c"
+        },
+        {
+          "name": "input-software",
+          "passed": true,
+          "checks": 14,
+          "exit_code": 0,
+          "report_sha256": "53d94f06098799bb7c9868c3bf2dfd42540febd4f481c1c5fdf3383f09ea53d6",
+          "raw_log_sha256": "53d94f06098799bb7c9868c3bf2dfd42540febd4f481c1c5fdf3383f09ea53d6"
+        },
+        {
+          "name": "clipboard-transfer",
+          "passed": true,
+          "checks": 25,
+          "exit_code": 0,
+          "report_sha256": "0857f77c235bc7a0ab6165cbb800e1f7615b17af8a3de178822c065b28038065",
+          "raw_log_sha256": "97652870e7ff2391d261369efa1e489a9b6ad08fd0ca3923d76f6de51cc876f5"
+        },
+        {
+          "name": "copy-paste",
+          "passed": true,
+          "checks": 13,
+          "exit_code": 0,
+          "report_sha256": "576480e2225c8bce4ff7cdecfdb7fc468f12927cb797f49c36124388d4695666",
+          "raw_log_sha256": "576480e2225c8bce4ff7cdecfdb7fc468f12927cb797f49c36124388d4695666"
+        },
+        {
+          "name": "osc52-gpu",
+          "passed": true,
+          "checks": 13,
+          "exit_code": 0,
+          "report_sha256": "0842aacb0af46e91360d53fb0ce43cca6930d551bfc87799dbdd3b794accaad2",
+          "raw_log_sha256": "908333dde6922c410b4bac2eb83dfb351e0aa122ac76e8d7318c75971b989428"
+        },
+        {
+          "name": "graphics-software",
+          "passed": true,
+          "checks": 8,
+          "exit_code": 0,
+          "report_sha256": "cd608d84481df164eb57723aa2e1f0b63bfe868e83598578a13d57cbb01d3c83",
+          "raw_log_sha256": "d575bd0b3237b2b8890f29d2e4dd9fde4167d9c5767736ae57b04da981bb514b"
+        },
+        {
+          "name": "graphics-gpu",
+          "passed": true,
+          "checks": 8,
+          "exit_code": 0,
+          "report_sha256": "538306bfa237a8ebeabddb6df38284c9baee4fa5a75e9f95a5a2c3cd31950840",
+          "raw_log_sha256": "58992dd2dd37ec77b42c28f24a0fcad736b13b485e1a08f9b294d218d95177d8"
+        },
+        {
+          "name": "text-software",
+          "passed": true,
+          "checks": 8,
+          "exit_code": 0,
+          "report_sha256": "98858e15efe6b6a7ba44bddb3b75cfc238f23eac622171f7a0a9883e5e4d29df",
+          "raw_log_sha256": "527418d360ca942659b4e39c92b7f026c9a968a38affc93eed7b7cc492014489"
+        },
+        {
+          "name": "text-gpu",
+          "passed": true,
+          "checks": 8,
+          "exit_code": 0,
+          "report_sha256": "6e97f214dc0b42e52c0f8bf6322b4fe9ed9e8b31716450946b5b051cd36c4516",
+          "raw_log_sha256": "48b9d551a95711e3ac946aa63c10851eef0a38286579ec658affe78ebd812969"
+        },
+        {
+          "name": "retained-frame-software",
+          "passed": true,
+          "checks": 2,
+          "exit_code": 0,
+          "report_sha256": "1bd33755eae86efef6ec3af7ea7945aa414fd68980a88c3341db13668d3a6b42",
+          "raw_log_sha256": "4c9e9b45f719e0fa664e14edc9add329e0c2f594e661fc44149bf828ac1dc65a"
+        },
+        {
+          "name": "repaint-software",
+          "passed": true,
+          "checks": 11,
+          "exit_code": 0,
+          "report_sha256": "4c17f62a850849299160f21ccf38c4d00dac0e222451615e20f2fc972f862f27",
+          "raw_log_sha256": "9ce05a82aea4979c69671aba8896a07ab2d127f34760634959664b72e0b75989"
+        },
+        {
+          "name": "repaint-gpu",
+          "passed": true,
+          "checks": 11,
+          "exit_code": 0,
+          "report_sha256": "23ecf1db832985534a8aa62385126f996b6bfcc0db4510a25cbd40cd25bc2663",
+          "raw_log_sha256": "98a1bee0bae72a18bd3ae057afdf48a78a13dcd10ebd7dd52deaaaff445855d2"
+        },
+        {
+          "name": "native-ui-software",
+          "passed": true,
+          "checks": 24,
+          "exit_code": 0,
+          "report_sha256": "fbb474b144dab3273297b2f03bd0430ea99862a396010b45f58985770d1bf429",
+          "raw_log_sha256": "fbb474b144dab3273297b2f03bd0430ea99862a396010b45f58985770d1bf429"
+        },
+        {
+          "name": "native-ui-gpu",
+          "passed": true,
+          "checks": 24,
+          "exit_code": 0,
+          "report_sha256": "bb2250597c12418fe90ee9812cee024db4ecf730f4db90a149849da4ed60b238",
+          "raw_log_sha256": "bb2250597c12418fe90ee9812cee024db4ecf730f4db90a149849da4ed60b238"
+        },
+        {
+          "name": "workspaces",
+          "passed": true,
+          "checks": 17,
+          "exit_code": 0,
+          "report_sha256": "f2b5b2ad01db47ab2a25e20354c66b8203ed573eb1b313c62d0f53cdeceb23a2",
+          "raw_log_sha256": "f2b5b2ad01db47ab2a25e20354c66b8203ed573eb1b313c62d0f53cdeceb23a2"
+        },
+        {
+          "name": "shared-gui",
+          "passed": true,
+          "checks": 9,
+          "exit_code": 0,
+          "report_sha256": "a37eca2a61030ccf1841acecfe8b8d992527886d5c58a12c274f53286f3f9534",
+          "raw_log_sha256": "1856b7090a94314d4d53e3058b96e9e690787394574de2f7fe8cd32298958bbf"
+        },
+        {
+          "name": "plugin-cli-current",
+          "passed": true,
+          "checks": 22,
+          "exit_code": 0,
+          "report_sha256": "c3700ae8af9510b88c6a5b7b00e98910526f473ca79bae948e41fd77ed7c90ee",
+          "raw_log_sha256": "5fec044ea0587cbb6d1e00bc394886628eb57b71ec89225d2e02df9bc138132b"
+        },
+        {
+          "name": "plugin-cli-legacy",
+          "passed": true,
+          "checks": 22,
+          "exit_code": 0,
+          "report_sha256": "3c7a014557564a15d5975958373806b9a917145f69fb66bbd87b4977f5a9cae9",
+          "raw_log_sha256": "5a288ed71caab99898a49cd1fdb01438bc897a7e2cc902e93a1b07e75b1885ee"
+        },
+        {
+          "name": "plugin-gui-current",
+          "passed": true,
+          "checks": 10,
+          "exit_code": 0,
+          "report_sha256": "e9018a588995c28e2e5e0570700c71c67e0ab47eb6dbab358516269c192aca3c",
+          "raw_log_sha256": "2ee990467ff7d69737254236a0bede8cb47356ff86749f77614fd408d4e3d04f"
+        },
+        {
+          "name": "wayland-shared-gui",
+          "passed": false,
+          "checks": 0,
+          "exit_code": 1,
+          "report_sha256": "81de0ca3e63d4043e998969204e0814a7e60a7b8944bd8ed19e187e937501867",
+          "raw_log_sha256": "24d52d9fa9fb2b425d1548589c6f4b861d780f7f838e7b9e8185f130bb2f60cd"
+        },
+        {
+          "name": "wayland-cli",
+          "passed": true,
+          "checks": 14,
+          "exit_code": 0,
+          "report_sha256": "39d375dd1961f0fb417220197d8b08cb5fe7775efc639c80a083af08d527c934",
+          "raw_log_sha256": "73d88b61d61b3e6c668cad35e935e8966c813c1ac7fc02cbeb1a55f6a39567cb"
+        }
+      ]
+    },
+    "targeted_wayland_followup": {
+      "started_utc": "2026-11-20T00:21:27Z",
+      "finished_utc": "2026-11-20T00:21:42Z",
+      "passed": true,
+      "check_count": 65,
+      "required_check_names_present": 19,
+      "receipt_sha256": "a251cd4926e6b118fe1dcb94ed0b887a7232876a428fd25ceff12489279bbc3f",
+      "individual_checks_sha256": "47e8ed30c525f1e34119bfc9b6570cce0b436abe7da2660f04e9631f8b0ddf02",
+      "scope": "Linux headless Sway, software Mesa EGL, private shared broker; no physical display",
+      "compositor_version": "1.12",
+      "owned_cleanup_empty": true,
+      "relationship": "Complements the original 300 successful checks using the same product ELF; not a full 21-stage rerun."
+    },
+    "existing_library_test_rows": [
+      {
+        "library": "zpty",
+        "source": "66919bc6dcb7757e0437fe955bfa809fb1282b68",
+        "unit_passed": 0,
+        "doctest_passed": 0,
+        "note": "Linux cfg yields zero lib tests and a platform-gated darwin_spawn test executable; do not call this a nonzero Linux unit suite. Runtime PTY use is covered by consumer tests."
+      },
+      {
+        "library": "zgraphics",
+        "source": "fe6357f98cf80fb6cc74739e45e8866ee17706ad",
+        "unit_passed": 50,
+        "doctest_passed": 1
+      },
+      {
+        "library": "zterm",
+        "source": "13d5e2c74571d35cccd920b1204798211b70c79f",
+        "unit_passed": 158,
+        "doctest_passed": 3
+      }
+    ],
+    "existing_library_test_scope": "These pre-existing standalone-manifest checks ran inside ztty's acceptance workflow; they are not the new Project Z canonical-patch attempts.",
+    "new_canonical_library_gate": {
+      "receipt_id": "new-library-tests.json",
+      "status": "resource_not_started",
+      "checks_executed": 0,
+      "reason": "Startup resource floor was not met; no compiler or test process started."
+    },
+    "coverage": {
+      "zpty": [
+        "real PTY creation and I/O",
+        "keyboard and Unicode delivery",
+        "PTY resize from native configure",
+        "shared broker controls, observation and reattachment",
+        "child exit and compositor disconnect cleanup"
+      ],
+      "zgraphics": [
+        "Kitty graphic-extension checks with software and EGL renderer paths",
+        "visible pixels and clipping/placements as asserted by recorded GUI tests",
+        "bounded parser/storage correctness through 50 existing unit tests"
+      ],
+      "zterm": [
+        "terminal state exercised through real input/output and history/resize",
+        "complex text and rendering integration",
+        "native UI/workspaces/shared sessions",
+        "158 existing terminal-core unit tests and 3 doctests"
+      ],
+      "shared": [
+        "Cargo/API link compatibility at exact source pins",
+        "strict Clippy and release link completion",
+        "clipboard/OSC52 and IME lifecycle in isolated Linux sessions"
+      ]
+    },
+    "limitations": [
+      "Linux Xvfb/headless Sway and Mesa software EGL only for these GUI results; no physical GPU or real-desktop claim.",
+      "No native Windows/macOS consumer runtime claim from this receipt.",
+      "No performance pass; the terminal-core performance regression remains separate.",
+      "Earlier 8b9f566 Wayland evidence with a different ELF is not reused for this candidate."
+    ]
+  },
+  "zcalld_native_candidate": {
+    "receipt_id": "zcalld-c72-native-candidate.json",
+    "audited_utc": "2026-11-20T01:39:22.330305+00:00",
+    "version": "0.2.0",
+    "previous_source_commit": "8ef5e87fd1f00eeecaca3d7f8d77f343afbc21ca",
+    "source_commit": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+    "source_url": "https://github.com/LIghtJUNction/zcalld/commit/c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+    "failed_formal_gate": {
+      "run_id": 44649086262,
+      "url": "https://github.com/LIghtJUNction/zcalld/actions/runs/44649086262",
+      "conclusion": "failure",
+      "failed_job_id": 135999147799,
+      "platform": "Windows x86_64",
+      "failures": [
+        {
+          "test": "test_protocol_framing_and_origin_guards",
+          "expected": "HTTP 403 for untrusted Origin",
+          "observed": "ConnectionResetError: WinError 10054 before the HTTP response could be read"
+        },
+        {
+          "test": "test_shutdown_cancels_running_tool_and_drains_owned_host",
+          "expected": "aborted.log contains wait",
+          "observed": "empty list"
+        }
+      ],
+      "counts": {
+        "mcp_tests": 13,
+        "failures": 1,
+        "errors": 1
+      }
+    },
+    "upstream_fix_commits": [
+      {
+        "sha": "0c52409636fe49d38443e6863f1a6a0ce4be931f",
+        "message": "fix: isolate Windows IPC workers from console shutdown",
+        "url": "https://github.com/LIghtJUNction/zcalld/commit/0c52409636fe49d38443e6863f1a6a0ce4be931f"
+      },
+      {
+        "sha": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+        "message": "fix: preserve early HTTP rejections with bounded staged close",
+        "url": "https://github.com/LIghtJUNction/zcalld/commit/c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265"
+      }
+    ],
+    "manifest_lock_or_gitlinks_changed": false,
+    "successful_candidate_gate": {
+      "run_id": 44652099557,
+      "url": "https://github.com/LIghtJUNction/zcalld/actions/runs/44652099557",
+      "source_commit": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+      "jobs": [
+        {
+          "id": 136009244557,
+          "name": "build (macos-15, aarch64-apple-darwin)",
+          "conclusion": "success"
+        },
+        {
+          "id": 136009244804,
+          "name": "build (ubuntu-24.04, x86_64-unknown-linux-gnu)",
+          "conclusion": "success"
+        },
+        {
+          "id": 136009244846,
+          "name": "build (ubuntu-24.04-arm, aarch64-unknown-linux-gnu)",
+          "conclusion": "success"
+        },
+        {
+          "id": 136009244866,
+          "name": "build (windows-2025, x86_64-pc-windows-msvc)",
+          "conclusion": "success"
+        },
+        {
+          "id": 136009244872,
+          "name": "build (macos-15-intel, x86_64-apple-darwin)",
+          "conclusion": "success"
+        },
+        {
+          "id": 136013191513,
+          "name": "publish",
+          "conclusion": "skipped"
+        },
+        {
+          "id": 136013191518,
+          "name": "aur",
+          "conclusion": "skipped"
+        }
+      ],
+      "native_build_jobs_passed": 5,
+      "publish_status": "skipped",
+      "aur_status": "skipped",
+      "previous_failed_windows_tests": "Both passed in the new original Windows log; MCP 13/13 passed.",
+      "platform_limits": "Windows routing tests retain two Linux-only skips; library suite retains three platform-specific skips. A successful job does not imply every conditional test ran on every OS."
+    },
+    "artifacts": [
+      {
+        "id": 14591831148,
+        "name": "native-x86_64-unknown-linux-gnu",
+        "bytes": 7327768,
+        "digest": "sha256:ecbadd41403b084bc53aaca39586fd561919a24d75bf4c91cbed549500eb4581",
+        "expired": false,
+        "head_sha": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+        "actually_downloaded": true
+      },
+      {
+        "id": 14591666496,
+        "name": "native-aarch64-unknown-linux-gnu",
+        "bytes": 3389011,
+        "digest": "sha256:76fcc4e7fade0720b4ccf26bab67c9f883019ed31ac059bafae3674836d47b81",
+        "expired": false,
+        "head_sha": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+        "actually_downloaded": false
+      },
+      {
+        "id": 14591602588,
+        "name": "native-x86_64-apple-darwin",
+        "bytes": 3502363,
+        "digest": "sha256:2d569ed853e1ead6cf3a12125616cbc141d1d12a86aea815480459c81db61597",
+        "expired": false,
+        "head_sha": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+        "actually_downloaded": false
+      },
+      {
+        "id": 14590754757,
+        "name": "native-x86_64-pc-windows-msvc",
+        "bytes": 3580954,
+        "digest": "sha256:a915114c59a8cfe7c77cd336aa4d71aa09c3e0e246baf1c53779eea9c567bb59",
+        "expired": false,
+        "head_sha": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+        "actually_downloaded": true
+      },
+      {
+        "id": 14590314460,
+        "name": "native-aarch64-apple-darwin",
+        "bytes": 3283879,
+        "digest": "sha256:b732a5d5a3fe507e8e5a138a6845ba4286b8bd6cb66487ad386def918da11850",
+        "expired": false,
+        "head_sha": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+        "actually_downloaded": false
+      }
+    ],
+    "actual_download_verification": [
+      {
+        "sha256": "a915114c59a8cfe7c77cd336aa4d71aa09c3e0e246baf1c53779eea9c567bb59",
+        "bytes": 3580954,
+        "members": [
+          {
+            "name": "zcalld-0.2.0-x86_64-pc-windows-msvc.exe",
+            "bytes": 2335232,
+            "sha256": "8eaa8c6303f2c8b11e6e2dd52c6b94d79746170b70488a47e982c33b19a3c1a2"
+          },
+          {
+            "name": "zcalld-0.2.0-x86_64-pc-windows-msvc.zip",
+            "bytes": 2582828,
+            "sha256": "20a7e3d3dc5094c627f9e4dc004f77d7968ae5ed00ba65df4ff2883156c28fa7"
+          }
+        ]
+      },
+      {
+        "sha256": "ecbadd41403b084bc53aaca39586fd561919a24d75bf4c91cbed549500eb4581",
+        "bytes": 7327768,
+        "members": [
+          {
+            "name": "zcalld-0.2.0-source.tar.gz",
+            "bytes": 3707350,
+            "sha256": "533beb461ed8a15dc50545f6f1969635a9dd65e6302afa8f107ba8944f20b4ca"
+          },
+          {
+            "name": "zcalld-0.2.0-x86_64-unknown-linux-gnu",
+            "bytes": 2285768,
+            "sha256": "6a1e79b37185bd34fbede47e03753427b758f556140b2721d73dafe1e78681c2"
+          },
+          {
+            "name": "zcalld-0.2.0-x86_64-unknown-linux-gnu.tar.gz",
+            "bytes": 2584445,
+            "sha256": "77ab6c83dcd734b6275a1e8d5d4398ab683453a33edabfecf621ce3da1712ad4"
+          }
+        ]
+      }
+    ],
+    "source_bundle": {
+      "repository": "LIghtJUNction/zcalld",
+      "commit": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+      "submodules": {
+        "apps/zcall-gui": "5dbc423eedd4d529a38b3e8e3adc3e6355a56b2b",
+        "apps/zcall-gui/vendor/zui": "5e37fcfb791eec9ac523fc19373e95d0a513112f",
+        "apps/zcall-omarchy": "78282c3c3cfa6e9e65e2cbd654f38a96398c6e03",
+        "extensions/compat": "008910901a3ef8ac5dd57b748a3210faa463c2b9",
+        "vendor/zcall": "8fb84b812b8025e34399b28e27242605d68ea345",
+        "vendor/zconv": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+        "vendor/zplugin": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+        "vendor/zsys": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+      }
+    },
+    "package_binaries_match_standalone_uploads": {
+      "linux_x86_64": true,
+      "windows_x86_64": true
+    },
+    "publication_observed": {
+      "tag_v0_2_0_http_status": 404,
+      "latest_public_release": {
+        "tag": "v0.1.1",
+        "url": "https://github.com/LIghtJUNction/zcalld/releases/tag/v0.1.1"
+      },
+      "release_assets_for_v0_2_0_verified": false,
+      "state": "Candidate native artifacts verified; v0.2.0 tag/release had not been observed at the receipt timestamp.",
+      "next_owner_action": "Existing publisher completes its remaining acceptance and formal release workflow; public tag/assets/source must be rechecked before changing status to published."
+    },
+    "artifact_verification_limit": "Two candidate artifact archives were downloaded and checked. Other platform artifact digests are GitHub metadata, supported by successful native jobs. Downloaded binaries were not executed by this auditor."
+  },
+  "gpui_comparison": {
+    "status": "paused_no_performance_result",
+    "zgpui_version": "0.1.0",
+    "zgpui_source_commit": "1d796d1fc63808dc099ed7b10c92e75835ae2814",
+    "gpui_source_commit": "a246423a3b24a08e0d0c8574eab3a9de422747e0",
+    "cpu_checkpoint": "83369dbcea2ca7bca943a050dc2fa06869723f37",
+    "prepared_headless_checkpoint": "892fce4ceb152bc0b0564543930e1ebf08161e6e",
+    "cpu_lock_sha256": "23dcd455e3326f9836ea9da927d3014376db6656e56228f55e6421b5ae7ff490",
+    "public_evidence_url": "https://github.com/LIghtJUNction/zgpui/blob/a4e3efc5d69fb6a46678ff67e04099bf87b98ae9/benchmarks/gpui-comparison/resource-gates/20261120T003625Z/receipt.json",
+    "prior_guarded_build": {
+      "receipt_id": "gpui-resource-guard-20261120T003625Z",
+      "started_utc": "2026-11-20T00:36:25.403513+00:00",
+      "stopped_below_reserve_utc": "2026-11-20T00:36:58.667031+00:00",
+      "outcome": "resource_guard_stopped",
+      "build_succeeded": false,
+      "runtime_seconds": 33.263,
+      "cgroup_peak_bytes": 848125952,
+      "cgroup_swap_bytes": 0,
+      "reserve_bytes": 3221225472,
+      "available_bytes_when_stopped": 3091791872,
+      "stop_returncode_is_not_build_success": true
+    },
+    "latest_preflight": {
+      "receipt_id": "gpui-cpu-preflight-20261120T013236Z.json",
+      "recorded_utc": "2026-11-20T01:32:36.129394+00:00",
+      "status": "resource_not_started",
+      "mem_available_bytes": 5489348608,
+      "required_startup_available_bytes": 5637144576,
+      "hard_memory_max_bytes": 2147483648,
+      "reserve_bytes": 3221225472,
+      "startup_buffer_bytes": 268435456,
+      "new_build_started": false
+    },
+    "geometry_executed": false,
+    "performance_sample_count": 0,
+    "gpu_executed": false,
+    "limitations": [
+      "Resource observations are not benchmark samples.",
+      "No performance superiority claim.",
+      "Prepared shared-backend headless code remains uncompiled and unexecuted.",
+      "No process or owner was attributed as the cause of memory pressure."
+    ]
+  },
+  "pending_application_acceptance": [
+    {
+      "repository": "LIghtJUNction/ssmcp",
+      "dependency_update": {
+        "package": "zuse",
+        "version": "0.2.1",
+        "published_source": "d930769005d307c42639e8abedc81ab039427e40"
+      },
+      "status": "pending_owner_application_gate_receipt",
+      "accepted_application_commit": null,
+      "scope": "The SSMCP owner is integrating the zuse 0.2.1 cohort in a separate tree. Final application build, tests and native acceptance have not been included here.",
+      "closed": false
+    }
+  ],
+  "publication_hygiene": {
+    "format": "Explicit field allowlist; raw receipt dictionaries are not blindly copied.",
+    "omitted": [
+      "Local absolute paths and home/worktree/cache locations",
+      "Client, queue, conversation and message identities",
+      "Private owner conversation excerpts",
+      "Process IDs, cgroup/service identities, environment and command dumps",
+      "Full host swap/PSI/load snapshots",
+      "Signed download URLs and file-transfer identifiers"
+    ],
+    "credential_scan": "No credential-shaped values were found by targeted checks of the selected JSON receipts; this summary additionally excludes all unapproved fields.",
+    "public_urls": "Only ordinary GitHub and crates.io source/registry URLs; no signed artifact download links."
+  }
+}

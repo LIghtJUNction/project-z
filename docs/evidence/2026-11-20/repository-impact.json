@@ -1,0 +1,511 @@
+{
+  "generated_at": "2026-11-20T01:41:47.961123+00:00",
+  "catalog_sha256": "9f5b8fb11b85c71458d4dfff3bed9aa8fa768454bfd7a0f1769bbce903e30837",
+  "scope": "Cargo normal/build/dev dependencies plus declared runtime/installer/source-distribution requires; closures include the seed",
+  "repositories": {
+    "OniMods": {
+      "commit": "f0819fa207c52e98aa7dff8084620557669af7ea",
+      "direct_consumers": [],
+      "transitive_consumers_including_self": [
+        "OniMods"
+      ]
+    },
+    "lmm-api-source": {
+      "commit": "4571b477d490b86d477f44f1c6768cc5f3b409d1",
+      "direct_consumers": [],
+      "transitive_consumers_including_self": [
+        "lmm-api-source"
+      ]
+    },
+    "mechrevo-drivers": {
+      "commit": "4599a3825dac3c85efeeb490cb4eebe1c1b6dff0",
+      "direct_consumers": [],
+      "transitive_consumers_including_self": [
+        "mechrevo-drivers"
+      ]
+    },
+    "oh-my-ztty": {
+      "commit": "7b69b751772a839f090e408228d94f810fd96d1e",
+      "direct_consumers": [],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty"
+      ]
+    },
+    "ssmcp": {
+      "commit": "ecc450f17012f8120d7d49470ce9599ada65456f",
+      "direct_consumers": [
+        "oh-my-ztty",
+        "zrc"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zrc"
+      ]
+    },
+    "z58": {
+      "commit": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+      "direct_consumers": [],
+      "transitive_consumers_including_self": [
+        "z58"
+      ]
+    },
+    "z64": {
+      "commit": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+      "direct_consumers": [
+        "zuse"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "ssmcp",
+        "z64",
+        "zrc",
+        "ztype",
+        "zuse"
+      ]
+    },
+    "zcall": {
+      "commit": "8fb84b812b8025e34399b28e27242605d68ea345",
+      "direct_consumers": [
+        "zcalld",
+        "zharness",
+        "zmcpio"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zharness",
+        "zmcpio",
+        "zrc",
+        "ztype",
+        "zuse"
+      ]
+    },
+    "zcall-gui": {
+      "commit": "5dbc423eedd4d529a38b3e8e3adc3e6355a56b2b",
+      "direct_consumers": [
+        "zcalld"
+      ],
+      "transitive_consumers_including_self": [
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat"
+      ]
+    },
+    "zcall-omarchy": {
+      "commit": "78282c3c3cfa6e9e65e2cbd654f38a96398c6e03",
+      "direct_consumers": [
+        "zcalld"
+      ],
+      "transitive_consumers_including_self": [
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat"
+      ]
+    },
+    "zcalld": {
+      "commit": "c72a1cb9c6ae5af638ad1100c6ec31ff8ee6f265",
+      "direct_consumers": [
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld-compat"
+      ],
+      "transitive_consumers_including_self": [
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat"
+      ]
+    },
+    "zcalld-compat": {
+      "commit": "008910901a3ef8ac5dd57b748a3210faa463c2b9",
+      "direct_consumers": [
+        "zcall-omarchy",
+        "zcalld"
+      ],
+      "transitive_consumers_including_self": [
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat"
+      ]
+    },
+    "zclap": {
+      "commit": "4d87f3ae3743e81509d5ac5500909955667c860f",
+      "direct_consumers": [
+        "lmm-api-source",
+        "mechrevo-drivers",
+        "zclick",
+        "zdot",
+        "zmcl",
+        "zuse"
+      ],
+      "transitive_consumers_including_self": [
+        "lmm-api-source",
+        "mechrevo-drivers",
+        "oh-my-ztty",
+        "ssmcp",
+        "zclap",
+        "zclick",
+        "zdot",
+        "zmcl",
+        "zrc",
+        "ztype",
+        "zuse"
+      ]
+    },
+    "zclick": {
+      "commit": "530e2f347d2950605ee579a396d5760ebad034bd",
+      "direct_consumers": [],
+      "transitive_consumers_including_self": [
+        "zclick"
+      ]
+    },
+    "zconv": {
+      "commit": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+      "direct_consumers": [
+        "lmm-api-source",
+        "zcall",
+        "zcalld",
+        "zmcl"
+      ],
+      "transitive_consumers_including_self": [
+        "lmm-api-source",
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zconv",
+        "zharness",
+        "zmcl",
+        "zmcpio",
+        "zrc",
+        "ztype",
+        "zuse"
+      ]
+    },
+    "zdistro": {
+      "commit": "6a54a137fc697d372b54ef85105315f2ce522b3d",
+      "direct_consumers": [],
+      "transitive_consumers_including_self": [
+        "zdistro"
+      ]
+    },
+    "zdot": {
+      "commit": "e6b5feb98b05c59e0986624c0742dfe4a9187a2a",
+      "direct_consumers": [
+        "oh-my-ztty",
+        "zrc"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "zdot",
+        "zrc"
+      ]
+    },
+    "zdwire": {
+      "commit": "c046e3182b0adf15d43500400a427b7dd7389525",
+      "direct_consumers": [],
+      "transitive_consumers_including_self": [
+        "zdwire"
+      ]
+    },
+    "zfetch": {
+      "commit": "f19b278676206d76626dd01e4b89f7ad9ce9318f",
+      "direct_consumers": [
+        "oh-my-ztty"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "zfetch"
+      ]
+    },
+    "zgpui": {
+      "commit": "1d796d1fc63808dc099ed7b10c92e75835ae2814",
+      "direct_consumers": [
+        "zterm"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "zgpui",
+        "zterm",
+        "ztty"
+      ]
+    },
+    "zgraphics": {
+      "commit": "fe6357f98cf80fb6cc74739e45e8866ee17706ad",
+      "direct_consumers": [
+        "zterm"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "zgraphics",
+        "zterm",
+        "ztty"
+      ]
+    },
+    "zharness": {
+      "commit": "e3580c01c7252da090d04e59b59762bc561777d1",
+      "direct_consumers": [
+        "ssmcp"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zharness",
+        "zrc"
+      ]
+    },
+    "zhex": {
+      "commit": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+      "direct_consumers": [
+        "OniMods",
+        "lmm-api-source",
+        "mechrevo-drivers"
+      ],
+      "transitive_consumers_including_self": [
+        "OniMods",
+        "lmm-api-source",
+        "mechrevo-drivers",
+        "zhex"
+      ]
+    },
+    "zinput": {
+      "commit": "37617313dd7aaabcca9dd567344a76c4cbe03907",
+      "direct_consumers": [
+        "zterm",
+        "ztype"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "zinput",
+        "zterm",
+        "ztty",
+        "ztype"
+      ]
+    },
+    "zldap": {
+      "commit": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+      "direct_consumers": [],
+      "transitive_consumers_including_self": [
+        "zldap"
+      ]
+    },
+    "zmcl": {
+      "commit": "3659cf144c69356268f9a185d9ea80eecb50cc7c",
+      "direct_consumers": [],
+      "transitive_consumers_including_self": [
+        "zmcl"
+      ]
+    },
+    "zmcpio": {
+      "commit": "bc89d7fa3b0249b3a9037748e2113b31615e8c89",
+      "direct_consumers": [
+        "zuse"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zmcpio",
+        "zrc",
+        "ztype",
+        "zuse"
+      ]
+    },
+    "zmime": {
+      "commit": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+      "direct_consumers": [],
+      "transitive_consumers_including_self": [
+        "zmime"
+      ]
+    },
+    "zplugin": {
+      "commit": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+      "direct_consumers": [
+        "ssmcp",
+        "zcalld",
+        "zharness",
+        "zinput",
+        "ztty",
+        "ztype"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zharness",
+        "zinput",
+        "zplugin",
+        "zrc",
+        "zterm",
+        "ztty",
+        "ztype"
+      ]
+    },
+    "zpty": {
+      "commit": "66919bc6dcb7757e0437fe955bfa809fb1282b68",
+      "direct_consumers": [
+        "ztty"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "zpty",
+        "ztty"
+      ]
+    },
+    "zrc": {
+      "commit": "ef8bd9571e206c8086e38b9dcbdc760a466b5133",
+      "direct_consumers": [
+        "oh-my-ztty"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "zrc"
+      ]
+    },
+    "zscan": {
+      "commit": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+      "direct_consumers": [],
+      "transitive_consumers_including_self": [
+        "zscan"
+      ]
+    },
+    "zshard": {
+      "commit": "1cfa1a1eb761d14e2ccfd5381282b6ccd1491cff",
+      "direct_consumers": [
+        "oh-my-ztty"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "zshard"
+      ]
+    },
+    "zsyn": {
+      "commit": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+      "direct_consumers": [],
+      "transitive_consumers_including_self": [
+        "zsyn"
+      ]
+    },
+    "zsys": {
+      "commit": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+      "direct_consumers": [
+        "zplugin",
+        "zuse"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zharness",
+        "zinput",
+        "zplugin",
+        "zrc",
+        "zsys",
+        "zterm",
+        "ztty",
+        "ztype",
+        "zuse"
+      ]
+    },
+    "zterm": {
+      "commit": "13d5e2c74571d35cccd920b1204798211b70c79f",
+      "direct_consumers": [
+        "ztty"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "zterm",
+        "ztty"
+      ]
+    },
+    "ztty": {
+      "commit": "1a2f165983d7abff507c69b54c0c4ed225f49a45",
+      "direct_consumers": [
+        "oh-my-ztty"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "ztty"
+      ]
+    },
+    "ztuio": {
+      "commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+      "direct_consumers": [
+        "ssmcp"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zrc",
+        "ztuio"
+      ]
+    },
+    "ztype": {
+      "commit": "037de9972e169942ca6258d6aee6ba53711204f6",
+      "direct_consumers": [],
+      "transitive_consumers_including_self": [
+        "ztype"
+      ]
+    },
+    "zui": {
+      "commit": "5e37fcfb791eec9ac523fc19373e95d0a513112f",
+      "direct_consumers": [
+        "zcall-gui",
+        "zmcl",
+        "ztype"
+      ],
+      "transitive_consumers_including_self": [
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zmcl",
+        "ztype",
+        "zui"
+      ]
+    },
+    "zuse": {
+      "commit": "d930769005d307c42639e8abedc81ab039427e40",
+      "direct_consumers": [
+        "ssmcp",
+        "ztype"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zrc",
+        "ztype",
+        "zuse"
+      ]
+    },
+    "zvte": {
+      "commit": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+      "direct_consumers": [
+        "zterm"
+      ],
+      "transitive_consumers_including_self": [
+        "oh-my-ztty",
+        "zterm",
+        "ztty",
+        "zvte"
+      ]
+    }
+  }
+}

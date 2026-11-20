@@ -1,0 +1,75 @@
+schema_version = 1
+
+[policy]
+system_library = "zsys"
+forbidden_packages = ["ztty-ui", "ztui-core"]
+
+[repositories.ssmcp]
+role = "application"
+
+[repositories.ztty]
+role = "application"
+
+[repositories.zcalld]
+role = "application"
+# Optional frontend and helper sources are part of release/source distribution.
+requires = ["zcall-gui", "zcall-omarchy", "zcalld-compat"]
+
+[repositories.zuse]
+role = "application"
+
+[repositories.zdot]
+role = "application"
+
+[repositories.zclick]
+role = "bindings"
+
+[repositories.zcalld-compat]
+role = "extension"
+requires = ["zcalld"]
+
+[repositories.zshard]
+role = "shell"
+
+[repositories.oh-my-ztty]
+role = "suite"
+requires = ["ztty", "ssmcp", "zshard", "zdot", "zrc", "zfetch"]
+
+[repositories.zcall-gui]
+role = "application"
+requires = ["zcalld"]
+
+[repositories.lmm-api-source]
+role = "application"
+manifests = ["services/core/Cargo.toml", "apps/cli/Cargo.toml"]
+
+[repositories.ztype]
+role = "application"
+
+[repositories.zrc]
+role = "configuration"
+manifests = []
+requires = ["zdot", "ssmcp"]
+
+[repositories.zfetch]
+role = "application"
+
+[repositories.zdistro]
+role = "application"
+
+[repositories.zmcl]
+role = "application"
+
+[repositories.OniMods]
+role = "application"
+manifests = ["Cargo.toml"]
+
+[repositories.zcall-omarchy]
+role = "application"
+manifests = []
+# The optional compatibility features share this frontend and need propagation.
+requires = ["zcalld", "zcalld-compat"]
+
+[repositories.mechrevo-drivers]
+role = "application"
+manifests = ["console/Cargo.toml"]

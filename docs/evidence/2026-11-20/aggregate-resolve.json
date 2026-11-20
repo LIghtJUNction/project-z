@@ -1,0 +1,42 @@
+{
+  "coordinator_sha256": "82eb1b875ec0d3dbfabfe244b3c7747d88482db1f4dc20b7ed4932b9ea7693ec",
+  "catalog_sha256": "9f5b8fb11b85c71458d4dfff3bed9aa8fa768454bfd7a0f1769bbce903e30837",
+  "started_at": "2026-11-20T01:37:29.696587+00:00",
+  "completed_at": "2026-11-20T01:37:47.587285+00:00",
+  "command": [
+    "python3",
+    "scripts/project_z.py",
+    "resolve",
+    "--all"
+  ],
+  "exit_code": 0,
+  "stopped_for_resource_floor": false,
+  "elapsed_seconds": 17.89065672700235,
+  "limits": {
+    "memory.max": "536870912",
+    "memory.high": "402653184",
+    "memory.swap.max": "0",
+    "cpu.max": "75000 100000"
+  },
+  "min_mem_available_bytes": 4314718208,
+  "cgroup_memory_peak_bytes": 190652416,
+  "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+  "locks_and_config_unchanged": true,
+  "before_file": "aggregate-resolve-before.json",
+  "after_file": "aggregate-resolve-after.json",
+  "before_sha256": "830fc0a5e8666fef77f06fa7044dc87fbb8dab8792f952d073db0e4b561d2482",
+  "after_sha256": "830fc0a5e8666fef77f06fa7044dc87fbb8dab8792f952d073db0e4b561d2482",
+  "postcheck_exit_code": 0,
+  "log_sha256": "5418d735bdbbd68c06d5dc7323b1920a5bafc0c39c8b16cd274415abdb43f5ff",
+  "publication": {
+    "original_receipt_sha256": "985a1d9330370d790759bfbd1b2190f080d6a071ca03b1dcc08cf8a7c2658fdc",
+    "original_names_preserved": true,
+    "published_files": {
+      "before_file": "aggregate-locks-before.json",
+      "after_file": "aggregate-locks-after.json",
+      "log_file": "aggregate-resolve.log",
+      "postcheck_file": "aggregate-postcheck.log"
+    },
+    "note": "The before_file and after_file fields retain original receipt names. Use this mapping for the committed public copies; payload SHA-256 values are unchanged."
+  }
+}

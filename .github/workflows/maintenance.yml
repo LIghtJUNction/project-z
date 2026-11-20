@@ -1,0 +1,47 @@
+name: Audit Project Z maintenance
+
+on:
+  schedule:
+    - cron: '17 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: project-z-maintenance-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          submodules: false
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Audit upstream commits and releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/maintenance.py --require-catalog --owner "$GITHUB_REPOSITORY_OWNER"
+      - name: Show maintenance work
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          report = Path('dist/maintenance/summary.md')
+          if report.exists():
+              with open(os.environ['GITHUB_STEP_SUMMARY'], 'a', encoding='utf-8') as output:
+                  output.write(report.read_text(encoding='utf-8'))
+          PY
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: project-z-maintenance-audit
+          path: dist/maintenance/
+          if-no-files-found: warn
