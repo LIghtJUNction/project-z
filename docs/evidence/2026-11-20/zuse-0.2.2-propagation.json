@@ -1,0 +1,111 @@
+{
+  "schema": "project-z.zuse-0.2.2-propagation.v1",
+  "base_source": "b9de9241bf4cb9e95fdc079a727bf947da782652",
+  "started_at": "2026-11-20T05:42:46.320917+00:00",
+  "scope": "source integration; does not publish or install SSMCP or suite artifacts",
+  "pins": {
+    "zuse": "94c837551a7a2fd8ec9f577a3e2f57309bd5ce5a",
+    "ztype": "12e8a458d69b222a001a9e479823b65da840db6b",
+    "ssmcp": "bfe5f25ffab718f100b11d2ce55c8dc839cbad71",
+    "ssmcp/crates/zuse": "94c837551a7a2fd8ec9f577a3e2f57309bd5ce5a",
+    "oh-my-ztty": "0fdc87873c53e7c87d18952f83a7b94fc4149de5",
+    "zrc": "ef8bd9571e206c8086e38b9dcbdc760a466b5133"
+  },
+  "offline_resolution": true,
+  "checks": [
+    {
+      "name": "sync",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "sync"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.672,
+      "stdout": "Updated 42 repositories and 60 packages\n",
+      "stderr": ""
+    },
+    {
+      "name": "check",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.746,
+      "stdout": "OK: 42 repositories, 60 packages; versions and graph agree\n",
+      "stderr": ""
+    },
+    {
+      "name": "resolve_all",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "resolve",
+        "--all"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 6.431,
+      "stdout": "OK: local dependencies resolved in 36 repositories\n",
+      "stderr": ""
+    }
+  ],
+  "status": "passed",
+  "finished_at": "2026-11-20T05:42:55.325879+00:00",
+  "source_worktrees": 99,
+  "all_sources_clean": true,
+  "all_source_heads_preserved": true,
+  "lock_config_files": 139,
+  "all_locks_and_config_bytes_modes_and_presence_preserved": true,
+  "generated_files": {
+    "catalog.json": "9a526132edd6acd73973a38d9c8a291a0f03f8328d044abd51c3aa2478e8170d",
+    ".cargo/project-z.toml": "79f62559d8f5fe9a313ca3d6d5b8ab0ddaf39d47b0afe06b8a24a783c2c75d99",
+    "docs/PROJECTS.md": "f89cae7f08b81d37094016983027bcb635871d21fb16478e20df2d8fb99405dc"
+  },
+  "integration_parent": "79607a87d08937724aad371510bfe9b508ff1d85",
+  "parent_update_after_validation": {
+    "from": "b9de9241bf4cb9e95fdc079a727bf947da782652",
+    "to": "79607a87d08937724aad371510bfe9b508ff1d85",
+    "paths": [
+      "docs/evidence/2026-11-20/maintenance-resolution-gate/check.log",
+      "docs/evidence/2026-11-20/maintenance-resolution-gate/regressions.log",
+      "docs/evidence/2026-11-20/maintenance-resolution-gate/resolve.log",
+      "docs/evidence/2026-11-20/maintenance-resolution-gate/sync.log",
+      "docs/evidence/2026-11-20/maintenance-resolution-gate/validation.json",
+      "docs/evidence/2026-11-20/maintenance-resolution-gate/zdistro-status.json",
+      "docs/reports/maintenance-resolution-20261120.zh-CN.md"
+    ],
+    "classification": "documentation only; coordinator, manifests, gitlinks and generated inputs unchanged",
+    "same_validated_generated_files": true
+  },
+  "environment": {
+    "CARGO_NET_OFFLINE": "true",
+    "CARGO_BUILD_JOBS": "1",
+    "RUST_TEST_THREADS": "1",
+    "command_prefix": [
+      "nice",
+      "-n",
+      "19"
+    ]
+  },
+  "lock_config_scope": "Cargo.lock, .cargo/config, .cargo/config.toml and .cargo/project-z.toml across aggregate and recursive source worktrees; excludes .git, target, node_modules and .build",
+  "consumer_evidence": {
+    "ztype": "https://github.com/LIghtJUNction/ztype/blob/12e8a458d69b222a001a9e479823b65da840db6b/docs/evidence/zuse-0.2.2-validation.json",
+    "ztype_registry": "https://github.com/LIghtJUNction/ztype/blob/12e8a458d69b222a001a9e479823b65da840db6b/docs/evidence/zuse-0.2.2-registry.json",
+    "ssmcp": "ssmcp-zuse-0.2.2-consumer.json",
+    "ssmcp_evidence_sha256": "767987f9ca7a8c6b8a192aa086243301fe619411497ee128c131903170e5dd5b"
+  },
+  "delivery_scope": {
+    "zuse_registry_version": "0.2.2",
+    "ztype_consumer_main_published": true,
+    "ssmcp_verified_candidate": true,
+    "ssmcp_main_advanced": false,
+    "ssmcp_formal_release_started": false,
+    "ssmcp_installed_or_deployed": false,
+    "suite_asset_lock_ssmcp": "v0.10.10",
+    "suite_asset_lock_updated": false,
+    "zrc_installed_path_acceptance": false,
+    "owners": "Existing SSMCP integration/release maintainer, oh-my-ztty maintainer and zrc maintainer"
+  }
+}

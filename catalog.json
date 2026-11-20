@@ -60,7 +60,7 @@
       "path": "ssmcp",
       "url": "https://github.com/LIghtJUNction/ssmcp.git",
       "branch": "main",
-      "commit": "785e6b00440b048d00d9da626a33defa99108afe",
+      "commit": "bfe5f25ffab718f100b11d2ce55c8dc839cbad71",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -472,7 +472,7 @@
       "path": "ztype",
       "url": "https://github.com/LIghtJUNction/ztype",
       "branch": "main",
-      "commit": "037de9972e169942ca6258d6aee6ba53711204f6",
+      "commit": "12e8a458d69b222a001a9e479823b65da840db6b",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -496,7 +496,7 @@
       "path": "zuse",
       "url": "https://github.com/LIghtJUNction/zuse.git",
       "branch": "main",
-      "commit": "d930769005d307c42639e8abedc81ab039427e40",
+      "commit": "94c837551a7a2fd8ec9f577a3e2f57309bd5ce5a",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -2907,7 +2907,7 @@
         {
           "name": "zuse-computer",
           "alias": "zuse",
-          "requirement": "=0.2.1",
+          "requirement": "=0.2.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -4522,7 +4522,7 @@
         {
           "name": "zuse-computer",
           "alias": "zuse",
-          "requirement": "=0.2.1",
+          "requirement": "=0.2.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -4548,7 +4548,7 @@
     },
     {
       "name": "zuse-computer",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "repository": "zuse",
       "manifest": "zuse/Cargo.toml",
       "workspace": "zuse",
