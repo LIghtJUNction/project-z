@@ -60,7 +60,7 @@
       "path": "ssmcp",
       "url": "https://github.com/LIghtJUNction/ssmcp.git",
       "branch": "main",
-      "commit": "ecc450f17012f8120d7d49470ce9599ada65456f",
+      "commit": "785e6b00440b048d00d9da626a33defa99108afe",
       "role": "application",
       "manifests": [
         "Cargo.toml"
