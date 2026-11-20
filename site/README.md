@@ -41,9 +41,11 @@ The build reads no aggregate catalog, submodule or application configuration. It
 
 Only `site/dist` is a deployment artifact. The builder rejects extra snapshot fields, nonpublic repository records, unreviewed project IDs, foreign documentation/crate links and output directories containing unrelated files. It also rejects symlinked build inputs.
 
-The manual Pages workflow verifies current public visibility and the exact published crate versions, then uploads only this directory. It does not change repository visibility or initialize submodules. Deployment configuration and final workflow dispatch belong to the repository maintainer.
+The manual build workflow verifies current public visibility and the exact published crate versions, then exports only this directory as the `project-z-public-site` artifact. It does not enable Pages on the private aggregate repository, change repository visibility or initialize submodules.
 
-The intended separate public repository, `LIghtJUNction/project-z-site`, should receive only the six generated files and its own minimal deployment workflow. All asset paths also work under its `/project-z-site/` prefix. Do not copy the aggregate checkout or its catalog into that repository.
+The deployed site uses the separate public repository [LIghtJUNction/project-z-site](https://github.com/LIghtJUNction/project-z-site). Its Pages source is the root of the `main` branch. Publish only the six generated files and the public repository's short README; verify their hashes against `site/evidence/bundle-manifest.json` before pushing. All asset paths work under its `/project-z-site/` prefix. Do not copy the aggregate checkout, Git history, catalog or local configuration into that repository.
+
+The private repository's current plan does not support hosting Pages, as confirmed by the Pages API. The public site is therefore published independently while this repository retains its existing visibility. GitHub documents this plan boundary in [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
 
 ## Local review
 
@@ -57,7 +59,7 @@ Set `CHROMIUM` to an alternate executable path when needed. Screenshots and the 
 
 `site/scripts/check.py` verifies the output boundary, pre-rendered fallback, escaping and rejection of private/unreviewed data. Browser acceptance uses an isolated, unsigned-in Chromium profile and checks desktop/mobile layout, search, category selection, keyboard access, empty results and the JavaScript-disabled view.
 
-The action interfaces were read from the official action repositories: [checkout v4](https://github.com/actions/checkout/tree/v4), [configure-pages v5](https://github.com/actions/configure-pages/tree/v5), [upload-pages-artifact v3](https://github.com/actions/upload-pages-artifact/tree/v3) and [deploy-pages v5](https://github.com/actions/deploy-pages/tree/v5). Ordinary source pushes do not dispatch deployment.
+The export action interfaces are documented in the official [checkout v4](https://github.com/actions/checkout/tree/v4) and [upload-pages-artifact v3](https://github.com/actions/upload-pages-artifact/tree/v3) repositories. Ordinary source pushes do not dispatch this export workflow. A reviewed push to the public website repository triggers its Pages deployment.
 
 ## Visual reference
 
