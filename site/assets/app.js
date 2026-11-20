@@ -1,5 +1,21 @@
 (() => {
   "use strict";
+  const themeButton = document.querySelector(".theme-toggle");
+  function setTheme(theme, persist) {
+    document.documentElement.dataset.theme = theme;
+    if (themeButton) {
+      const label = theme === "dark" ? "切换浅色主题" : "切换深色主题";
+      themeButton.setAttribute("aria-label", label);
+      themeButton.title = label;
+    }
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "dark" ? "#141210" : "#faf8f4");
+    if (persist) { try { localStorage.setItem("project-z-theme", theme); } catch {} }
+  }
+  if (themeButton) {
+    setTheme(document.documentElement.dataset.theme === "light" ? "light" : "dark", false);
+    themeButton.addEventListener("click", () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark", true));
+    themeButton.hidden = false;
+  }
   const controls = document.querySelector(".project-controls");
   const search = document.querySelector("#project-search");
   const buttons = [...document.querySelectorAll(".filter-button")];

@@ -43,7 +43,7 @@ Only `site/dist` is a deployment artifact. The builder rejects extra snapshot fi
 
 The manual Pages workflow verifies current public visibility and the exact published crate versions, then uploads only this directory. It does not change repository visibility or initialize submodules. Deployment configuration and final workflow dispatch belong to the repository maintainer.
 
-A separate public site repository, if needed, should receive only the six generated files and its own minimal deployment workflow. Do not copy the aggregate checkout or its catalog into that repository.
+The intended separate public repository, `LIghtJUNction/project-z-site`, should receive only the six generated files and its own minimal deployment workflow. All asset paths also work under its `/project-z-site/` prefix. Do not copy the aggregate checkout or its catalog into that repository.
 
 ## Local review
 
@@ -58,3 +58,9 @@ Set `CHROMIUM` to an alternate executable path when needed. Screenshots and the 
 `site/scripts/check.py` verifies the output boundary, pre-rendered fallback, escaping and rejection of private/unreviewed data. Browser acceptance uses an isolated, unsigned-in Chromium profile and checks desktop/mobile layout, search, category selection, keyboard access, empty results and the JavaScript-disabled view.
 
 The action interfaces were read from the official action repositories: [checkout v4](https://github.com/actions/checkout/tree/v4), [configure-pages v5](https://github.com/actions/configure-pages/tree/v5), [upload-pages-artifact v3](https://github.com/actions/upload-pages-artifact/tree/v3) and [deploy-pages v5](https://github.com/actions/deploy-pages/tree/v5). Ordinary source pushes do not dispatch deployment.
+
+## Visual reference
+
+The warm Ink palette, restrained borders and z_ family wordmark follow the public [oh-my-ztty website](https://lightjunction.github.io/oh-my-ztty/). The page starts in warm dark mode and offers a warm light theme; the selection stays in local browser storage. Reference sources are [styles](https://github.com/LIghtJUNction/oh-my-ztty/blob/6d95c7eaa1a4ef27df2ae246edd7bddde5f3b31b/site/style.css), [wordmark/template](https://github.com/LIghtJUNction/oh-my-ztty/blob/6d95c7eaa1a4ef27df2ae246edd7bddde5f3b31b/site/template.html) and [favicon](https://github.com/LIghtJUNction/oh-my-ztty/blob/6d95c7eaa1a4ef27df2ae246edd7bddde5f3b31b/site/favicon.svg). The catalog layout is specific to this page.
+
+The saved [2026-11-20 validation record](VALIDATION.md) includes the before/after screenshots, browser checks and hashes of the six-file bundle.

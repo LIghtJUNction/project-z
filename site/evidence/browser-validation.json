@@ -1,0 +1,41 @@
+{
+  "schema": "project-z.browser-check.v1",
+  "checks": [
+    "desktop 1440 has no horizontal overflow",
+    "keyboard search, Escape reset, Tab/Enter category selection",
+    "Chinese search and shared URL state",
+    "empty results and keyboard recovery",
+    "full-width search normalization",
+    "named search, navigation and main landmarks in accessibility tree",
+    "keyboard theme toggle and persisted warm light/dark preference",
+    "tablet 768 has no horizontal overflow",
+    "mobile 390 has no horizontal overflow",
+    "mobile search reaches the verified zrc 0.1.2 registry entry",
+    "narrow mobile 320 has no horizontal overflow",
+    "all projects and links remain available when JavaScript fails to load",
+    "complete pre-rendered project list with JavaScript disabled",
+    "no page JavaScript exceptions",
+    "no external page requests, fonts, analytics or runtime APIs"
+  ],
+  "screenshots": [
+    "desktop.jpg",
+    "desktop-projects.jpg",
+    "empty-results.jpg",
+    "desktop-light.jpg",
+    "mobile.jpg",
+    "mobile-projects.jpg",
+    "javascript-unavailable.jpg",
+    "javascript-disabled.jpg"
+  ],
+  "origin": "isolated localhost project subpath",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/157.0.8103.38",
+    "revision": "@a733b5afbb3ba618844ff8876b89ad1a774b2f18",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "jsVersion": "15.7.112.23"
+  },
+  "projects": 37,
+  "verified_crates": 26,
+  "result": "passed"
+}

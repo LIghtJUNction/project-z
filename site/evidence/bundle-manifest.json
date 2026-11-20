@@ -1,0 +1,39 @@
+{
+  "schema": "project-z.public-bundle.v1",
+  "source_base": "142dbe043bffd8fa1cf8aa9b1d55fe7422f08127",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app.js",
+      "bytes": 4203,
+      "sha256": "93657999854f6d21d378fa387a0346c50528d8356a0a65b9a726662bd7672362"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 321,
+      "sha256": "46b2270683a9f0443180adefa46d1e20c67792e6a4aac4a7ce7ae52eacfe00c8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 43875,
+      "sha256": "956db3ae93d1a450690752d852d22d1687a6975e6a2ae3e7728c9e4185297e6a"
+    },
+    {
+      "path": "projects.json",
+      "bytes": 53574,
+      "sha256": "227cf3d7ebbccad0d82aeb093a7060a159b0827ee10589007bdbaaaa65eda4f2"
+    },
+    {
+      "path": "style.css",
+      "bytes": 14560,
+      "sha256": "dd39394ef7d3ca8eba8bc652670ea5e7c770ea0d84116efd7433fa4fbd5743a1"
+    }
+  ],
+  "bytes": 116533,
+  "projects": 37,
+  "verified_crates": 26
+}

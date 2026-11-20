@@ -17,8 +17,8 @@ const allowed = new Set(["index.html", "style.css", "app.js", "favicon.svg", "pr
 const types = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".json": "application/json; charset=utf-8", ".svg": "image/svg+xml" };
 const server = http.createServer(async (request, response) => {
   const url = new URL(request.url, "http://127.0.0.1");
-  const filename = url.pathname === "/project-z/" ? "index.html" : url.pathname.slice("/project-z/".length);
-  if (!url.pathname.startsWith("/project-z/") || !allowed.has(filename)) {
+  const filename = url.pathname === "/project-z-site/" ? "index.html" : url.pathname.slice("/project-z-site/".length);
+  if (!url.pathname.startsWith("/project-z-site/") || !allowed.has(filename)) {
     response.writeHead(404).end("Not found");
     return;
   }
@@ -31,7 +31,7 @@ const server = http.createServer(async (request, response) => {
 });
 server.listen(0, "127.0.0.1");
 await once(server, "listening");
-const base = `http://127.0.0.1:${server.address().port}/project-z/`;
+const base = `http://127.0.0.1:${server.address().port}/project-z-site/`;
 const log = await fs.open(path.join(output, "chromium.log"), "w");
 const browser = spawn(process.env.CHROMIUM || "chromium", [
   "--headless=new", "--no-first-run", "--no-default-browser-check",
@@ -80,7 +80,8 @@ async function viewport(width, height, mobile = false) {
 }
 async function key(key, code, number, modifiers = 0) {
   for (const type of ["keyDown", "keyUp"]) {
-    await send("Input.dispatchKeyEvent", { type, key, code, windowsVirtualKeyCode: number, modifiers });
+    const text = type === "keyDown" && key === "Enter" ? "\r" : undefined;
+    await send("Input.dispatchKeyEvent", { type, key, code, windowsVirtualKeyCode: number, modifiers, ...(text ? { text, unmodifiedText: text } : {}) });
   }
 }
 async function type(text) { await send("Input.insertText", { text }); }
@@ -179,6 +180,17 @@ try {
   const roles = tree.nodes.filter(node => !node.ignored).map(node => node.role?.value);
   assert.ok(roles.includes("searchbox") && roles.includes("main") && roles.includes("navigation"));
   report.checks.push("named search, navigation and main landmarks in accessibility tree");
+  await evaluate("document.querySelector('.theme-toggle').focus()");
+  await key("Enter", "Enter", 13);
+  assert.equal(await evaluate("document.documentElement.dataset.theme"), "light");
+  await evaluate("window.scrollTo(0, 0)");
+  await screenshot("desktop-light");
+  await navigate();
+  assert.equal(await evaluate("document.documentElement.dataset.theme"), "light");
+  await evaluate("document.querySelector('.theme-toggle').focus()");
+  await key("Enter", "Enter", 13);
+  assert.equal(await evaluate("document.documentElement.dataset.theme"), "dark");
+  report.checks.push("keyboard theme toggle and persisted warm light/dark preference");
   await viewport(768, 1024);
   await navigate();
   await noOverflow("tablet 768");
