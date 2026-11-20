@@ -1,0 +1,158 @@
+{
+  "schema": "project-z.ssmcp-native-baseline-progress.v1",
+  "observed_utc": "2026-11-20T22:37:58Z",
+  "pull_request": "https://github.com/LIghtJUNction/ssmcp/pull/159",
+  "draft": true,
+  "current_source": {
+    "head": "781b87df1d364137b6885f17f631a3e9e991bd58",
+    "tree": "6bf7beb143cfdce3878df856c27785164695430f",
+    "parent": "441814bf9945e0b49bb3dde170e57762abf8318e",
+    "root_github_readback": true,
+    "delta": {
+      "modified_files": [
+        "Cargo.toml"
+      ],
+      "added_include_entries": [
+        "scripts/e2e_connection_context_reload.py",
+        "docs/local-mode.md",
+        "scripts/e2e_local_socket.py"
+      ],
+      "runtime_source_or_script_changes": false,
+      "dependency_or_gitlink_changes": false
+    }
+  },
+  "previous_source": {
+    "head": "441814bf9945e0b49bb3dde170e57762abf8318e",
+    "tree": "72f4d06f61b06f62ae22ce1837dd429465ef0b39",
+    "ci": {
+      "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44826521363",
+      "status": "completed",
+      "conclusion": "success",
+      "root_metadata_readback": true,
+      "complete_platform_log_review_owner": "native source/release owner"
+    },
+    "native_failure": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-441814b-build/build-receipt.json",
+      "bytes": 50281,
+      "sha256": "5c3f2c3c971d7fbf908078997edb370a0345ca9cd850ee205226e665ffca9864",
+      "source": "441814bf9945e0b49bb3dde170e57762abf8318e",
+      "tree": "72f4d06f61b06f62ae22ce1837dd429465ef0b39",
+      "status": "failed",
+      "finished_at": 1795213267.7754738,
+      "first_error": {
+        "error": "RuntimeError: expected one actual source-matched link compilation for ssmcp, got 0",
+        "exit_code": null,
+        "first_compiler_error": null,
+        "first_stderr_error": null,
+        "step": "preserve-build-release-bins"
+      },
+      "artifacts": [
+        "library-test-fixture"
+      ],
+      "product_tests_executed": 0,
+      "steps": [
+        {
+          "name": "acquire-source-and-target-locks",
+          "status": "completed"
+        },
+        {
+          "name": "verify-bound-inputs-and-source",
+          "status": "completed"
+        },
+        {
+          "command": [
+            "cargo",
+            "--version"
+          ],
+          "exit_code": 0,
+          "name": "version-cargo",
+          "status": "completed"
+        },
+        {
+          "command": [
+            "rustc",
+            "--version"
+          ],
+          "exit_code": 0,
+          "name": "version-rustc",
+          "status": "completed"
+        },
+        {
+          "command": [
+            "cargo",
+            "metadata",
+            "--offline",
+            "--locked",
+            "--format-version",
+            "1",
+            "--manifest-path",
+            "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final/Cargo.toml"
+          ],
+          "exit_code": 0,
+          "name": "metadata-before",
+          "status": "completed"
+        },
+        {
+          "name": "audit-initial-metadata-and-selected-dependency-sources",
+          "status": "completed"
+        },
+        {
+          "command": [
+            "cargo",
+            "test",
+            "--lib",
+            "--no-run",
+            "--offline",
+            "--locked",
+            "--jobs",
+            "1",
+            "--message-format=json"
+          ],
+          "exit_code": 0,
+          "name": "build-library-fixture",
+          "status": "completed"
+        },
+        {
+          "name": "preserve-build-library-fixture",
+          "status": "completed"
+        },
+        {
+          "command": [
+            "cargo",
+            "build",
+            "--release",
+            "--bins",
+            "--offline",
+            "--locked",
+            "--jobs",
+            "1",
+            "--message-format=json"
+          ],
+          "exit_code": 0,
+          "name": "build-release-bins",
+          "status": "completed"
+        },
+        {
+          "error": "RuntimeError: expected one actual source-matched link compilation for ssmcp, got 0",
+          "name": "preserve-build-release-bins",
+          "status": "failed"
+        },
+        {
+          "name": "failure-readonly-postcheck",
+          "status": "completed"
+        }
+      ]
+    }
+  },
+  "current_native": {
+    "state": "r4 provenance and recorder repair in preparation; new 781 baseline not started at source-owner handoff",
+    "source_owner": "agent_feaba24f83028aa5a3aa3263e7fff5c9",
+    "source_owner_reported_prior_runner_exit_code": 1,
+    "complete_five_artifact_baseline": false,
+    "new_product_runtime_pass": false,
+    "gate10_p1_complete": false,
+    "source_owner_diagnosis": "old output-directory path join failed to bind the actually compiled release binary; preserve failure and repair strict link/public/copy identity checks",
+    "production_clients_reloaded": false
+  },
+  "scope": "Current source and immutable prior build receipt independently read; source-owner diagnostic/r4 preparation status is attributed. No new build or test was started by this review."
+}

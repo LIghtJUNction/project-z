@@ -1,0 +1,281 @@
+{
+  "schema": "project-z.ztype-pr3-scoped-ui-review.v1",
+  "reviewed_at": "2026-11-20T21:59:07.804382+00:00",
+  "status": "passed_scoped_ui_review",
+  "substantive_ui_blockers": [],
+  "scope": "Read-only review of fixed popup source, prior tests/build receipt and existing XIM screenshot; no code changes, compilation, GUI execution or protocol diagnosis.",
+  "source": {
+    "repository": "LIghtJUNction/ztype",
+    "pull_request": "https://github.com/LIghtJUNction/ztype/pull/3",
+    "head": "053eb39eb115decc0cb046e901598cf0bc4645fb",
+    "tree": "2c7bcdf4cdd7695dc50821e9c57033dc14d3640a",
+    "base": "da6feb1a3c5488f3854c63d5e5db173ca250dba4",
+    "native_checkout": "/home/lightjunction/Documents/GITHUB/project_z/dist/ztype-ztty-ui-20261121",
+    "fixed_changed_paths": [
+      "Cargo.lock",
+      "Cargo.toml",
+      "src/popup.rs"
+    ],
+    "working_copy_note": "HEAD matched fixed source; unrelated ongoing Wayland test modifications were observed and left untouched."
+  },
+  "build_binding": {
+    "native_receipt": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/build-gates.json",
+    "build_receipt_sha256": "8b5147dc3b7887db41e2fd07eee8310971f82cf4c6f8f3e03203eef95239aee0",
+    "commit": "053eb39eb115decc0cb046e901598cf0bc4645fb",
+    "source_files_matched": [
+      {
+        "path": "Cargo.toml",
+        "sha256": "e097cfadfbd772cc6ceae004134b26c0a582af998844e984710373acc2c3eb95"
+      },
+      {
+        "path": "Cargo.lock",
+        "sha256": "ccd77d7e26735530f261c122995478173e15f4319b77bbd40c7b599b04a52052"
+      },
+      {
+        "path": "src/popup.rs",
+        "sha256": "c0d10847d6e5bc8a4331a70ef0db6665e6a054e60c3ee47dff995d453dce336b"
+      }
+    ],
+    "binary_sha256": "1a2b96c03aa5129ea1935216da7b8696ef330a4a2ec49f0139027a4a9c0c82ae",
+    "test_step": {
+      "name": "tests",
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--offline",
+        "--all-targets"
+      ],
+      "exit_code": 0,
+      "seconds": 4.273
+    },
+    "all_build_steps_exit_zero": true
+  },
+  "contrast": {
+    "source": "src/popup.rs::LightPalette::new, lines 35-47; Renderer::render, lines 159-219",
+    "method": "Opaque sRGB source colors; linearized channels using threshold 0.04045, luminance weights 0.2126/0.7152/0.0722, ratio=(lighter+0.05)/(darker+0.05). Nominal text colors, not antialiased edge pixels.",
+    "required_ratio": 4.5,
+    "pairs": [
+      {
+        "role": "candidate text",
+        "foreground": "#1F1F1F",
+        "background": "#F8FAFD",
+        "ratio": 15.763930625355156,
+        "passes_4_5": true
+      },
+      {
+        "role": "preedit, page counter and unselected number",
+        "foreground": "#5F6368",
+        "background": "#F8FAFD",
+        "ratio": 5.785850246034968,
+        "passes_4_5": true
+      },
+      {
+        "role": "selected candidate text",
+        "foreground": "#041E49",
+        "background": "#D3E3FD",
+        "ratio": 12.567817380906765,
+        "passes_4_5": true
+      },
+      {
+        "role": "selected number",
+        "foreground": "#0B57D0",
+        "background": "#D3E3FD",
+        "ratio": 4.919161380241469,
+        "passes_4_5": true
+      }
+    ]
+  },
+  "selected_cue": {
+    "source": "src/popup.rs::Renderer::render, lines 169-219",
+    "background": "#D3E3FD rounded selected rectangle",
+    "text": "Selected candidate is rasterized bold; unselected candidate is regular. Selected number is blue and selected candidate text is dark blue.",
+    "not_color_only": true,
+    "shortcut_mapping": "Renderer uses input.page_range() and numbers index-range.start+1; numeric shortcuts are never elided."
+  },
+  "layout": {
+    "source": "src/popup.rs constants lines 8-20 and Renderer::render",
+    "candidate_raster_px": 16,
+    "number_raster_px": 12,
+    "preedit_raster_px": 14,
+    "horizontal_outer_margin_px": 20,
+    "candidate_inner_padding_px": 12,
+    "candidate_gap_px": 8,
+    "candidate_row_y_px": 54,
+    "candidate_row_height_px": 40,
+    "header_y_px": 18,
+    "card_height_px": 112,
+    "card_width_bounds_px": [
+      248,
+      640
+    ],
+    "precision_note": "MARGIN=20 controls left/right padding; it is not a claim of four equal 20px margins. Header begins at y=18 and candidate row leaves 18px below it.",
+    "font": "Font::new(\"\") uses the available font/fallback; no specific Google font is claimed."
+  },
+  "screenshot": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ztype-xim-candidate.png",
+    "bytes": 12454,
+    "sha256": "5dc07afc96c3c9b4eaf6fc8497d4db58ff4869a289aa6c00aba3b1fd5a081efe",
+    "image_dimensions_px": [
+      1000,
+      700
+    ],
+    "popup_geometry_px": [
+      8,
+      588,
+      248,
+      112
+    ],
+    "entire_card_within_image": true,
+    "four_corner_rgb": [
+      196,
+      199,
+      197
+    ],
+    "source_palette_colors_found_in_image": true,
+    "visual_assessment": "Compact light surface, clear two-row hierarchy, restrained blue selected item and ample horizontal whitespace. Candidate text and shortcut numbers are legible; no visible crop, overlap or black alpha corners in this screenshot."
+  },
+  "submission_contract": {
+    "conclusion": "Visual elision does not replace or truncate the committed candidate string. Existing frontend byte-capacity rejection remains explicit and preserves editable composition.",
+    "evidence": [
+      {
+        "file": "src/popup.rs",
+        "function": "Renderer::render",
+        "lines": [
+          74,
+          114
+        ],
+        "finding": "Takes &InputMethod and builds owned display Label.text from bounded_text/fit; original candidates are only borrowed."
+      },
+      {
+        "file": "src/popup.rs",
+        "function": "Renderer::fit and bounded_text",
+        "lines": [
+          243,
+          266,
+          336,
+          361
+        ],
+        "finding": "Produce separate display Strings using UTF-8 character boundaries; candidate prefix or preedit tail is visually elided."
+      },
+      {
+        "file": "src/lib.rs",
+        "function": "Session::commit",
+        "lines": [
+          141,
+          173
+        ],
+        "finding": "Gets original selected candidate, resolves full engine text, validates it and delivers text to TextTarget::commit_text before clearing composition."
+      },
+      {
+        "file": "src/input_method.rs",
+        "function": "Capture::commit_text and InputMethod::accept_with_suffix",
+        "lines": [
+          100,
+          107,
+          295,
+          313
+        ],
+        "finding": "Checks full byte length before copying and returns the complete output.text. No popup display string enters this path."
+      }
+    ]
+  },
+  "existing_validation": {
+    "cargo_test": {
+      "name": "tests",
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--offline",
+        "--all-targets"
+      ],
+      "exit_code": 0,
+      "seconds": 4.273
+    },
+    "build_steps_exit_zero": true,
+    "source_tests": [
+      {
+        "file": "src/popup.rs",
+        "names": [
+          "long_multilingual_labels_remain_bounded_and_selected_page_visible",
+          "real_chinese_and_long_table_candidates_render_without_a_display"
+        ],
+        "scope": "Bounded multilingual display strings, actual no-display rendering, bounded frame size and opaque pixels. The page_range helper is test-only and is not used as sole proof of production layout."
+      },
+      {
+        "file": "src/input_method.rs",
+        "names": [
+          "sentence_suffix_limits_count_bytes_and_preserve_rejected_composition",
+          "capture_validates_actual_commit_before_copying_or_consuming"
+        ],
+        "scope": "Full accepted candidate bytes and preservation on capacity rejection."
+      },
+      {
+        "file": "tests/composition.rs",
+        "names": [
+          "exact_unicode_reaches_bound_context_once",
+          "composed_pinyin_commits_once_to_the_current_context"
+        ],
+        "scope": "Exact full Unicode and nihaoshijie-to-你好世界 delivery, once only."
+      }
+    ],
+    "xim_summary": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ztype-xim-ui-20261121.json",
+    "xim_summary_sha256": "d60bccfb9b28de7587daf377a3ed151983e908dc49da8ef87cfda7323109a167",
+    "xim_checks_passed": 13,
+    "xim_commit_samples": [
+      {
+        "name": "ASCII before XIM starts",
+        "actual": "abc",
+        "expected": "abc"
+      },
+      {
+        "name": "existing Ztty reconnects after XIM starts",
+        "actual": "你好",
+        "expected": "你好"
+      },
+      {
+        "name": "multi-codepoint native commit reaches raw PTY",
+        "actual": "世界",
+        "expected": "世界"
+      },
+      {
+        "name": "additional native commit: nihaoshijie",
+        "actual": "你好世界",
+        "expected": "你好世界"
+      },
+      {
+        "name": "additional native commit: ni2",
+        "actual": "呢",
+        "expected": "呢"
+      },
+      {
+        "name": "second Ztty receives its own XIM commit",
+        "actual": "你好",
+        "expected": "你好"
+      },
+      {
+        "name": "focus returns to original terminal",
+        "actual": "你好",
+        "expected": "你好"
+      },
+      {
+        "name": "ordinary keys remain usable while XIM is stopped",
+        "actual": "abc",
+        "expected": "abc"
+      },
+      {
+        "name": "existing terminal reconnects after XIM restart",
+        "actual": "你好",
+        "expected": "你好"
+      }
+    ],
+    "owned_processes_remaining": 0
+  },
+  "limitations": [
+    "Scope is this candidate popup and existing XIM screenshot; this is not complete Material Design or accessibility certification.",
+    "The 20px margin statement applies horizontally. Thin card borders/dividers are decorative and were not substituted for text contrast checks.",
+    "Existing evidence separately tests bounded rendering and complete commits; it does not contain a dedicated render-then-commit long-candidate GUI scenario. Immutable rendering input plus unchanged commit path and existing exact-byte tests support the conclusion.",
+    "Wayland first-character protocol issue is separately owned by Core; UI review passing is not approval to mark the whole draft ready."
+  ]
+}

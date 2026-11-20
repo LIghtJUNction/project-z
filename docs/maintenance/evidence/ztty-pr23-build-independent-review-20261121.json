@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "source": {
+    "head": "076bc6ac8ff9ca17effe25decac7a4dbc4ec0c43",
+    "tree": "a7a99b41c9bfef6f4f617914b6c67466f5d3a7c8",
+    "status": "",
+    "lock_sha256": "c08e1d48d3fd77067496512bd54fec042ecc625da362db14cd4cac1b1db86101",
+    "manifest_sha256": "439108c88d76063163efe87bb573811fc67aed7134e6826ba6e5d3cfaab2b481"
+  },
+  "artifact": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-cursor-cause-20261120/build-076bc-r1/ztty-076bc6a",
+  "artifact_sha256": "c5debb5f35d2563e1a3cdf7eeb18bb064439c864ad020fd452f0c730afc61197",
+  "artifact_bytes": 1406392,
+  "published_C_sha256": "3c34ad8e9cb1cead9c898ebc342d2255328c013809b2342255f3a9a6cc263711",
+  "native_CC_source_matches_GitHub": true,
+  "actual_compiler_times_within_build": true,
+  "object_sha256": "6b37b430cc8287d39100ba3ecca8ffd6c0b8c4705c0d25a9152eb142e5167f67",
+  "archive_sha256": "7037b56bcd94a6c30c16e2d2a06c0cf85f7321b4b3fc2d3d4387f8eef487e681",
+  "archive_member_equals_object": true,
+  "linked_rlib_sha256": "3086be08b1d989c359c1b35b5bd4359c1174f1ceea1c90e7f3d3c9ad9eea5089",
+  "rlib_member_equals_object": true,
+  "actual_bin_uses_checked_rlib": true,
+  "actual_root_bin_fresh": false,
+  "steps": [
+    {
+      "name": "rustc-version",
+      "exit_code": 0,
+      "elapsed_seconds": 0.031871795654296875
+    },
+    {
+      "name": "fmt",
+      "exit_code": 0,
+      "elapsed_seconds": 0.4147782325744629
+    },
+    {
+      "name": "metadata",
+      "exit_code": 0,
+      "elapsed_seconds": 0.1640782356262207
+    },
+    {
+      "name": "clippy",
+      "exit_code": 0,
+      "elapsed_seconds": 2.5685436725616455
+    },
+    {
+      "name": "release-build",
+      "exit_code": 0,
+      "elapsed_seconds": 15.242391109466553
+    },
+    {
+      "name": "binary-version",
+      "exit_code": 0,
+      "elapsed_seconds": 0.003945589065551758
+    },
+    {
+      "name": "dynamic-symbols",
+      "exit_code": 0,
+      "elapsed_seconds": 0.019030094146728516
+    },
+    {
+      "name": "baseline-needed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.007974863052368164
+    },
+    {
+      "name": "candidate-needed",
+      "exit_code": 0,
+      "elapsed_seconds": 0.003940105438232422
+    }
+  ],
+  "native_receipt_sha256": "0052b1f2831464b56f7d906abdeac0283042bd0fad034dd57d7d99c77b283647",
+  "scope": "Read-only source/object/archive/link/ELF verification; no new build or GUI run."
+}

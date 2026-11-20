@@ -1,0 +1,58 @@
+{
+  "schema": "project-z.ztype-0.4.2-publication.v1",
+  "status": "merged_and_verified",
+  "repository": "LIghtJUNction/ztype",
+  "pull_request": "https://github.com/LIghtJUNction/ztype/pull/3",
+  "merge": {
+    "head": "e3e8c1014e29653da587cc993076cb02e469b456",
+    "tree": "930b79b4c49f21e252087e81f66494d4b4a1d7cc",
+    "parents": [
+      "da6feb1a3c5488f3854c63d5e5db173ca250dba4",
+      "677d7ca9a895a16a790759fa741d635baa1b704d"
+    ],
+    "merged_at": "2026-11-20T22:18:22Z"
+  },
+  "final_pr_head": "677d7ca9a895a16a790759fa741d635baa1b704d",
+  "runtime": {
+    "source": "053eb39eb115decc0cb046e901598cf0bc4645fb",
+    "tree": "2c7bcdf4cdd7695dc50821e9c57033dc14d3640a",
+    "version": "0.4.2",
+    "bytes": 1214472,
+    "sha256": "1a2b96c03aa5129ea1935216da7b8696ef330a4a2ec49f0139027a4a9c0c82ae",
+    "final_head_retains_exact_runtime_blobs": true,
+    "final_helpers_match_executed_hashes": true
+  },
+  "gates": {
+    "rust_passed": 72,
+    "rust_optional_ignored": 1,
+    "strict_root_clippy": true,
+    "release_actual_fresh_false": true,
+    "daily_input": 8,
+    "private_installer": 15,
+    "current_xim_ztty": 13,
+    "gtk_wayland": 28,
+    "native_wayland_ztty": 7
+  },
+  "paired_ztty": {
+    "tested_head": "076bc6ac8ff9ca17effe25decac7a4dbc4ec0c43",
+    "merged_head": "01e8b573bc787e982f96db2b1e6ec9151d321284",
+    "tree": "a7a99b41c9bfef6f4f617914b6c67466f5d3a7c8",
+    "sha256": "c5debb5f35d2563e1a3cdf7eeb18bb064439c864ad020fd452f0c730afc61197",
+    "merge_tree_equals_runtime_tested_tree": true
+  },
+  "evidence": {
+    "published": "https://github.com/LIghtJUNction/ztype/blob/677d7ca9a895a16a790759fa741d635baa1b704d/docs/evidence/ztty-ui-0.4.2-20261121/summary.json",
+    "receipt_coverage": "https://github.com/LIghtJUNction/ztype/blob/677d7ca9a895a16a790759fa741d635baa1b704d/docs/evidence/ztty-ui-0.4.2-20261121/receipt-script-coverage.json",
+    "root_native_review_sha256": "a75fb7d65eab5f9a42e42cbe4baf4e2319c34e689fad859378ff198722e77a05",
+    "ui_review_sha256": "ca0a00f795a98f9ff9097b8f11a23931783578301cedee1eb484a6d464cdd171"
+  },
+  "scope": {
+    "theme": "light",
+    "scale": 1,
+    "minimum_text_contrast": 4.919,
+    "host_installation_changed": false,
+    "host_input_method_activated": false,
+    "inline_terminal_preedit_position": "separate bounded source/receiver-frame review pending; candidate popup and native commit passed",
+    "compiled_binaries_committed": false
+  }
+}

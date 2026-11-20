@@ -1,0 +1,26 @@
+{
+  "schema": "project-z.ssmcp-441-progress.v1",
+  "head": "441814bf9945e0b49bb3dde170e57762abf8318e",
+  "tree": "72f4d06f61b06f62ae22ce1837dd429465ef0b39",
+  "pr": "https://github.com/LIghtJUNction/ssmcp/pull/159",
+  "draft": true,
+  "ci": {
+    "head": "441814bf9945e0b49bb3dde170e57762abf8318e",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/LIghtJUNction/ssmcp/actions/runs/44826521363",
+    "scope": "root read run metadata; detailed platform counts separately from source-owner complete-log review"
+  },
+  "native": {
+    "job": "26c4545eae1eab8d27485f4a48077d3c-4be",
+    "library_fixture": "source-owner reports actual Cargo exit 0",
+    "release_bins": "in progress",
+    "complete_five_artifacts": false,
+    "product_runtime_test_pass": false
+  },
+  "previous_attempts": {
+    "cae35a": "compile failed; original record retained",
+    "c248d42": "owner cancelled for disabled-chat reload defect; one incomplete library fixture, not full baseline"
+  },
+  "lock_diagnosis": "ssmcp-shared-lock-diagnosis-20261120.json"
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T05:53:12.837333+08:00",
+  "generated_at": "2026-11-21T06:49:58.545932+08:00",
   "timezone": "Asia/Taipei",
   "scope": "Initial 85 PRs, latest GitHub default-branch dependency migration, generated-binary history cleanup, development-machine cache cleanup, release integration and the requested named local/remote contexts",
   "batch_status": "in_progress",
@@ -1042,7 +1042,7 @@
       "cargo_metadata_locked": "passed",
       "binary_installation": false
     },
-    "updated_at": "2026-11-20T20:44:09.232470+00:00",
+    "updated_at": "2026-11-21T06:38:47.795914+08:00",
     "aggregate_pr": {
       "url": "https://github.com/LIghtJUNction/project-z/pull/7",
       "number": 7,
@@ -1377,29 +1377,36 @@
       "final_current_source_gates_pending": true,
       "historical_test_scope": "407084c4 only; does not qualify the current integration",
       "current_release": {
-        "status": "latest_source_pre_paste_baseline_build_in_progress",
-        "main_verified": "ccb91955c25969f4779588d4cebb09b72c00f829",
-        "candidate": "b156254b45c015a3994b8be1475b423167ac980f",
-        "candidate_actual_source_audit": {
-          "total_packages": 277,
-          "git_checkouts": 11,
-          "registry_sources": 264,
-          "status": "passed"
+        "status": "source781_r4_baseline_actual_compilation_in_progress",
+        "candidate": "781b87df1d364137b6885f17f631a3e9e991bd58",
+        "tree": "6bf7beb143cfdce3878df856c27785164695430f",
+        "new_formal_release": false,
+        "progress": {
+          "path": "evidence/ssmcp-781-progress-20261121.json",
+          "bytes": 5162,
+          "sha256": "c48fd16e8011c44bfddec3b58118aca4f25d1430fedbd5a499200ead69755686"
         },
-        "python_tests_passed": 100,
-        "latest_full_32_and_p1": "pending fixed zcalld listen candidate",
-        "new_formal_release": false
+        "current_native_observation": {
+          "path": "evidence/ssmcp-781-shared-lock-observation-20261121.json",
+          "bytes": 8508,
+          "sha256": "af4d5e4ede01a6cf47bbf016f56e35305f479b4f9b3cb9ed59c896e63fa6f619"
+        }
       },
       "named_context_followup": {
-        "status": "architecture_review_in_progress",
-        "requested": "Use Docker-style named contexts to unify local and remote selection",
-        "source_revision": "ccb91955c25969f4779588d4cebb09b72c00f829",
-        "existing_state": "Local and remote already share broker, wire and native runtime; CLI has separate local mode and HTTPS/SSH/default server selection",
-        "reference_urls": [
-          "https://docs.docker.com/engine/manage-resources/contexts/",
-          "https://docs.docker.com/reference/cli/docker/context/use/"
-        ],
-        "implemented": false
+        "status": "PR153_and_PR155_merged_source_specific_validation_retained",
+        "implemented": true,
+        "current_evidence": "current_maintenance.context_request",
+        "historical_architecture_review": {
+          "path": "evidence/input-ui-prior-status-c2c-20261121.json",
+          "bytes": 8683,
+          "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
+        }
+      },
+      "scope": "Historical source-specific observations are retained. Current PR159 status is linked below; old407/b156/91a results do not validate781.",
+      "prior_current_release_and_context_status": {
+        "path": "evidence/input-ui-prior-status-c2c-20261121.json",
+        "bytes": 8683,
+        "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
       }
     },
     "previous_aggregate_pr": {
@@ -1463,7 +1470,7 @@
     "tree": "df3e6ed3c4e9d950e6277bec472ea4c8406a94dc",
     "status": "draft_final_components_and_complete_44_repository_graph_pending",
     "base": "d2a6616c85b7e47c3faa32bd5728db49cdd9c142",
-    "source_snapshot_note": "Actual branch head read before this report-only commit. PR9 is integrated; final44 gitlinks/catalog remain owned by the aggregate maintainer and are not updated here."
+    "source_snapshot_note": "The recorded9d head identifies the last cited recursive-checker merge. This report is prepared from c2c1406 documentation; it changes no aggregate gitlink/catalog and claims no fresh branch head or final44 gate."
   },
   "dependency_snapshot": {
     "status": "19_repository_migrations_published_recursive_checker_merged_final_44_graph_pending",
@@ -10809,7 +10816,7 @@
     }
   },
   "current_maintenance": {
-    "generated_at": "2026-11-21T05:53:12.837333+08:00",
+    "generated_at": "2026-11-21T06:49:58.545932+08:00",
     "root_consumers": {
       "zcall-gui": {
         "status": "merged_and_main_tree_read_back",
@@ -15571,23 +15578,16 @@
       }
     },
     "ssmcp_release": {
-      "status": "existing_native_owner_main_integration_build_and_final_acceptance_in_progress",
+      "status": "source781_r4_baseline_actual_compilation_in_progress",
       "main_verified": "cf0ab581700918a37fcccbebb93de2e0cab02841",
-      "candidate": "b156254b45c015a3994b8be1475b423167ac980f",
-      "candidate_actual_source_audit": {
-        "total_packages": 277,
-        "git_checkouts": 11,
-        "registry_sources": 264,
-        "status": "passed"
-      },
-      "python_tests_passed": 100,
+      "candidate": "781b87df1d364137b6885f17f631a3e9e991bd58",
       "new_formal_release": false,
       "current_public_tree": "bd2bcce33baffa69b82d69d9cff3abdb85baa0fb",
-      "scope_note": "Earlier source-audit and Python test counts retain their original frozen-candidate scope; not relabelled as complete validation of the latest public main.",
+      "scope_note": "Prior b156 source audit/Python tests and441 CI retain their exact source identities. 441 Cargo lib/release returned0 but artifact producer runner returned1; no complete five-artifact baseline or runtime pass. 781 r4 baseline actual compilation in progress; full artifacts and runtime still pending.",
       "previous_final_gate_plan_text": "pending on final fixed SSMCP cohort plus zcalld97d; original build commits and evidence stay separate",
       "current_final_gate_plan": {
-        "status": "pending_final_frozen_ssmcp_and_d531_integration",
-        "plan": "Existing native SSMCP owner must validate the final frozen SSMCP plus this exact CLI with Gate10/P1, including actual cross-process blocking-generation cancellation, before root merges PR1.",
+        "status": "pending_new781_baseline_then_fixed_ssmcp_and_d531_gate10_p1",
+        "plan": "Existing native owner completes and verifies five actual artifacts at781 before current native runtime and zcalld d531 Gate10/P1. No new P1 pass is claimed.",
         "original_32_scope": "The historical32 set included five shared-library checks, two Go checks and package/install work outside this P1 path. Those unrelated checks are not rerun or reported as new32 passes.",
         "merge_owner": "Project Z root, after native final acceptance and fresh main/candidate tree verification",
         "draft": true,
@@ -15607,7 +15607,23 @@
         "tree": "b66c011c488b79972760848abee8427b4bbfe706",
         "owner_reported_scope": "178 unit /14 CLI/10 isolated PTY passed;10 helper fixtures ignored; no root rerun"
       },
-      "main_observation_scope": "Root GitHub plugin observed PR155 integration; current input/agent authoring and final source freeze remain with the existing native owner. No main-wide validation is inherited from the context candidate."
+      "main_observation_scope": "main_verified remains the previously observed public main. The current unmerged PR159 head is781; do not relabel a PR head as public main or inherit earlier context acceptance.",
+      "candidate_tree": "6bf7beb143cfdce3878df856c27785164695430f",
+      "prior_source_audit_and_python_counts": {
+        "path": "evidence/input-ui-prior-status-c2c-20261121.json",
+        "bytes": 8683,
+        "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
+      },
+      "current_progress": {
+        "path": "evidence/ssmcp-781-progress-20261121.json",
+        "bytes": 5162,
+        "sha256": "c48fd16e8011c44bfddec3b58118aca4f25d1430fedbd5a499200ead69755686"
+      },
+      "current_native_observation": {
+        "path": "evidence/ssmcp-781-shared-lock-observation-20261121.json",
+        "bytes": 8508,
+        "sha256": "af4d5e4ede01a6cf47bbf016f56e35305f479b4f9b3cb9ed59c896e63fa6f619"
+      }
     },
     "context_request": {
       "status": "fixed_candidate_validated_and_existing_owner_merge_observed",
@@ -16746,18 +16762,44 @@
         "tree": "62c26269d54b443addcd9da7bebc7a5a8d0fd645",
         "url": "https://github.com/LIghtJUNction/zuse/commit/a1bb8fd2cbce0a9d85134999883c578358065242",
         "readback": "GitHub plugin independently verified by root and aggregate owner",
-        "validation_scope": "Owner report records189-suite at the earlier source before a test-only Clippy fix and macOS visibility guard; final native X11 fixture/Clippy/cross-compilation are separately source-bound. No live Wayland/macOS/Windows runtime claim."
+        "validation_scope": "Owner report records189-suite at the earlier source before a test-only Clippy fix and macOS visibility guard; final native X11 fixture/Clippy/cross-compilation are separately source-bound. No live Wayland/macOS/Windows runtime claim.",
+        "isolated_followup": {
+          "pr": "https://github.com/LIghtJUNction/zuse/pull/2",
+          "draft": true,
+          "head": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+          "tree": "285dcbe660ee410338a3bbeaf2153bd43862b77b",
+          "status": "source_review_found_receipt_budget_issue_original_runtime_evidence_pending_not_in_a1_cohort",
+          "evidence": {
+            "path": "evidence/input-ui-followups-20261121.json",
+            "bytes": 8733,
+            "sha256": "88cc0d3ce36ae6408261a7e724661442e5b45117c73067d809d156d4d7a846f5"
+          },
+          "independent_static_review": {
+            "path": "evidence/zuse-pr2-static-review-20261121.json",
+            "bytes": 18579,
+            "sha256": "8487a2732670cacf23147dc514ebfaebb0bd50c8e8770b9a2150e30f6254d52d"
+          },
+          "fix_status": "separate draft branch preparation; original PR2 and frozen cohort untouched"
+        }
       },
       "ztype": {
-        "main": "da6feb1a3c5488f3854c63d5e5db173ca250dba4",
-        "tree": "e8a34d10f84572ef351f824a5e668286b58b1254",
-        "url": "https://github.com/LIghtJUNction/ztype/commit/da6feb1a3c5488f3854c63d5e5db173ca250dba4",
-        "delta": "Only Cargo.lock zuse source SHA changed from the76c migration publication.",
-        "owner_validation": "72 passed; one optional external-dictionary test ignored.",
-        "scope": "The earlier28 Wayland checks remain bound to76c and its recorded ELF, not automatically attributed to this new dependency source."
+        "main": "e3e8c1014e29653da587cc993076cb02e469b456",
+        "tree": "930b79b4c49f21e252087e81f66494d4b4a1d7cc",
+        "pr": "https://github.com/LIghtJUNction/ztype/pull/3",
+        "runtime_source": "053eb39eb115decc0cb046e901598cf0bc4645fb",
+        "publication": {
+          "path": "evidence/ztype-pr3-publication-20261121.json",
+          "bytes": 2428,
+          "sha256": "662d0e9bc3150625c741fe6e345adb4a123a49113dde32f223fef75b937289fa"
+        },
+        "prior_da6_dependency_only_receipt": {
+          "path": "evidence/input-ui-prior-status-c2c-20261121.json",
+          "bytes": 8683,
+          "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
+        }
       },
-      "ssmcp_consumer": "4237eea2 already published zusea1bb lock/gitlink. Root verified Cargo.lock SHA082cdef2ddb1a4acadf87bd927cb875c802808c20c303721829661c917a03aec; later main31e also contains context153 and PR154. Final source-owner integration and runtime acceptance remain in progress.",
-      "aggregate_owner": "Project Z root and builtin pr_personal_repos own the single final44 gitlink/catalog/check/resolve --all/impact snapshot.",
+      "ssmcp_consumer": "Historical4237/b0a locks and crates/zuse consumed a1bb. Current PR159 is781; no scoped-mice adoption or final native/P1 acceptance is claimed.",
+      "aggregate_owner": "Personal is the sole source-graph/checkout writer; root reviews and publishes the maintenance report.",
       "oh_my_ztty": {
         "main": "f04f6ea8ae909e121edabbd766ee725a472f8146",
         "tree": "279a0254c9059156081892c008247e08fa608384",
@@ -16767,11 +16809,32 @@
         "remaining": "Integrate draft zttyc7 pin and final SSMCP source without losing either source update; no new final bundle claim."
       },
       "ztty": {
-        "main": "febc90654e5fc680b0660f0874296e17eb389acf",
-        "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
-        "tested_head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+        "main": "01e8b573bc787e982f96db2b1e6ec9151d321284",
+        "tree": "a7a99b41c9bfef6f4f617914b6c67466f5d3a7c8",
+        "tested_head": "076bc6ac8ff9ca17effe25decac7a4dbc4ec0c43",
         "merge_tree_equals_tested_tree": true,
+        "publication": {
+          "path": "evidence/ztty-ime-publication-20261121.json",
+          "bytes": 10598,
+          "sha256": "3e603ae76e3537caedcac8e2adfa9b72e9db8ef790d7bb31bbf66058f6e4393f"
+        },
         "oh_my_ztty_and_final44_propagation": "pending"
+      },
+      "bounded_reverse_impact": {
+        "result": [
+          "oh-my-ztty",
+          "ssmcp",
+          "zrc",
+          "ztype",
+          "zuse"
+        ],
+        "receipt": {
+          "path": "evidence/zuse-existing-impact-20261121.json",
+          "bytes": 838,
+          "sha256": "8a5b290aa7bd6cd6ea2c769ac1448368ad8a0f305c6da9604a823f4985cf81bd"
+        },
+        "source_freshness_verified": false,
+        "final44_run": false
       }
     },
     "prior_hireferry_mobile_snapshot_1955": {
@@ -16968,10 +17031,11 @@
           "close_rpcs_recomputed": 162,
           "new_runtime_execution": false
         }
-      }
+      },
+      "scope_note": "PR22 memory-reclamation acceptance stays bound to bfee/ca160 and its ELF. PR23 input acceptance and pending PR24 caret work are separate; the66 memory stages were not rerun for them."
     },
     "ssmcp_input_requirement": {
-      "status": "phase2_source_frozen_draft_pr159_build_artifacts_in_progress",
+      "status": "source781_r4_baseline_actual_compilation_in_progress",
       "effective_name": "--input",
       "terminal": "Default input source",
       "web": "Input host/port explicit",
@@ -16988,7 +17052,6 @@
         "8a1e4b8dd7f95a0120882ce12554cf87",
         "afc50b750e3e865426123b9a85a63e61"
       ],
-      "source_implementation_or_runtime_pass_claimed": false,
       "semantics": "--input selects input source; --agent independently selects chat-message processor",
       "pipeline_support": true,
       "prior_fragment_interpretation_invalidated_at_commit": "45b60092829d9336bfe512793d8d3d8d021c3f5a",
@@ -17029,12 +17092,44 @@
       "publication": {
         "url": "https://github.com/LIghtJUNction/ssmcp/pull/159",
         "draft": true,
-        "head": "cae35a82683104049d4e30041df6e7e6bb3e6fc5",
-        "tree": "2657970b36433de80a3cea9de3c5c5d2aba8728a",
+        "head": "781b87df1d364137b6885f17f631a3e9e991bd58",
+        "tree": "6bf7beb143cfdce3878df856c27785164695430f",
         "source_published": true,
         "runtime_pass_claimed": false,
-        "final_five_artifact_build": "in progress by existing source owner"
-      }
+        "final_five_artifact_build": "r4 job581: library fixture compiled and preserved; release bins running; complete five artifacts still pending",
+        "progress": {
+          "path": "evidence/ssmcp-781-progress-20261121.json",
+          "bytes": 5162,
+          "sha256": "c48fd16e8011c44bfddec3b58118aca4f25d1430fedbd5a499200ead69755686"
+        },
+        "previous441_ci_metadata": {
+          "path": "evidence/ssmcp-441-progress-before-producer-failure-20261121.json",
+          "bytes": 1070,
+          "sha256": "652392118a44943074d275b8892497a4a4540d141bf6c0bf70a15f9a1b33f679"
+        },
+        "previous_lock_transition": {
+          "path": "evidence/ssmcp-shared-lock-diagnosis-20261121.json",
+          "bytes": 10758,
+          "sha256": "ee67d031ae035e27baee1dc32c276d9105d5a25ee38fa5bdaca28a887523a28a"
+        },
+        "historical_status": {
+          "path": "evidence/input-ui-prior-status-c2c-20261121.json",
+          "bytes": 8683,
+          "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
+        },
+        "followup_status": {
+          "path": "evidence/input-ui-followups-20261121.json",
+          "bytes": 8733,
+          "sha256": "88cc0d3ce36ae6408261a7e724661442e5b45117c73067d809d156d4d7a846f5"
+        },
+        "current_native_observation": {
+          "path": "evidence/ssmcp-781-shared-lock-observation-20261121.json",
+          "bytes": 8508,
+          "sha256": "af4d5e4ede01a6cf47bbf016f56e35305f479b4f9b3cb9ed59c896e63fa6f619"
+        }
+      },
+      "source_implementation_published": true,
+      "native_current_combination_runtime_pass_claimed": false
     },
     "org_final_archive": {
       "folder_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
@@ -17073,7 +17168,6 @@
       ]
     },
     "ztype_ztty_followup": {
-      "status": "private_0_4_2_build_and_13_xim_checks_passed_real_native_wayland_receiver_fix_in_progress",
       "request": "Continue ztype, support ztty, improve UI with Google design principles.",
       "source": "Two authenticated client_user revision2 messages forwarded by the existing dependency maintainer.",
       "source_message_ids": [
@@ -17082,31 +17176,63 @@
         "695894e8eb44ad4e123c10d84d857871",
         "28a8e74ff3ab7d72b11a72ee030e7e14"
       ],
-      "last_verified_ztype_main": "da6feb1a3c5488f3854c63d5e5db173ca250dba4",
-      "scope_boundary": "Earlier28 Wayland checks used GTK; new13 XIM checks use actual private copied c7 ztty. Native Wayland ztty presented/hidden popup but failed Chinese PTY commit. New frozen febc/bfee binary provided to the owner for relevant revalidation.",
-      "ownership": "Existing native dependency maintainer owns ztype source and private runtime gates; Core reads the failing event path; Personal owns any coordinated ztty source edit and the final44 graph.",
-      "implementation_or_runtime_acceptance_claimed": true,
       "preserved_installed_source": {
         "version": "0.4.1",
         "source": "05ee8403fac6232bcd692fb58e170a4c6b17fde0",
         "elf_sha256": "7708a88b2a8b914a52abe2f10395378fb33c731621fdde9301a6679a83dc10c8"
       },
-      "candidate": {
-        "base": "da6feb1a3c5488f3854c63d5e5db173ca250dba4",
-        "version": "0.4.2",
-        "elf_sha256": "1a2b96c03aa5129ea1935216da7b8696ef330a4a2ec49f0139027a4a9c0c82ae",
-        "build_receipt_sha256": "8b5147dc3b7887db41e2fd07eee8310971f82cf4c6f8f3e03203eef95239aee0",
-        "publication": "existing owner preparing immutable draft",
-        "cli_checks": 8,
-        "private_install_checks": 15,
-        "xim_checks": 13,
-        "xim_passed": true,
-        "native_wayland_passed": false,
-        "native_wayland_actual_pty": "ihaoshijie",
-        "native_wayland_expected_pty": "你好世界",
-        "evidence": "evidence/ztype-xim-ui-20261121.json",
-        "host_install_or_input_config_changed": false
-      }
+      "status": "ztype_pr3_and_ztty_pr23_merged_fixed_native_acceptance_passed_separate_caret_pr24_pending",
+      "last_verified_ztype_main": "e3e8c1014e29653da587cc993076cb02e469b456",
+      "merged_tree": "930b79b4c49f21e252087e81f66494d4b4a1d7cc",
+      "final_pr_head": "677d7ca9a895a16a790759fa741d635baa1b704d",
+      "runtime_source": "053eb39eb115decc0cb046e901598cf0bc4645fb",
+      "runtime_tree": "2c7bcdf4cdd7695dc50821e9c57033dc14d3640a",
+      "runtime_elf_sha256": "1a2b96c03aa5129ea1935216da7b8696ef330a4a2ec49f0139027a4a9c0c82ae",
+      "version": "0.4.2",
+      "gates": {
+        "rust_passed": 72,
+        "rust_optional_ignored": 1,
+        "strict_root_clippy": true,
+        "release_actual_fresh_false": true,
+        "daily_input": 8,
+        "private_installer": 15,
+        "current_xim_ztty": 13,
+        "gtk_wayland": 28,
+        "native_wayland_ztty": 7
+      },
+      "source_to_final_runtime_blobs_and_executed_helpers_match": true,
+      "scope_boundary": "GTK Wayland28 + actual native ztty Wayland7 + current XIM13 passed on their fixed binary pair. UI review is light theme/scale1. Host installed0.4.1 is unchanged. Inline caret blink is a separate draftPR24 pending runtime proof.",
+      "publication": {
+        "path": "evidence/ztype-pr3-publication-20261121.json",
+        "bytes": 2428,
+        "sha256": "662d0e9bc3150625c741fe6e345adb4a123a49113dde32f223fef75b937289fa"
+      },
+      "runtime_review": {
+        "path": "evidence/ztype-ztty-fixed-runtime-review-20261121.json",
+        "bytes": 9548,
+        "sha256": "a75fb7d65eab5f9a42e42cbe4baf4e2319c34e689fad859378ff198722e77a05"
+      },
+      "runtime_handoff": {
+        "path": "evidence/ztype-native-runtime-handoff-20261121.json",
+        "bytes": 9367,
+        "sha256": "57860366d230cbdb4442e20ff59d84e6608794b02bbad59e400af16cf9f10d6d"
+      },
+      "ui_review": {
+        "path": "evidence/ztype-ui-independent-review-20261121.json",
+        "bytes": 10254,
+        "sha256": "ca0a00f795a98f9ff9097b8f11a23931783578301cedee1eb484a6d464cdd171"
+      },
+      "archive_delivery": {
+        "path": "evidence/ztype-native-proof-delivery-20261121.json",
+        "bytes": 1580,
+        "sha256": "3ddf7a00999fc42a59789333ef14fdb52719874b1214ae863d60497adbb424b0"
+      },
+      "prior_status": {
+        "path": "evidence/input-ui-prior-status-c2c-20261121.json",
+        "bytes": 8683,
+        "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
+      },
+      "host_install_or_input_config_changed": false
     },
     "recursive_source_checks": {
       "status": "merged_into_coordination_branch",
@@ -17129,6 +17255,42 @@
         "sha256": "ee96020711d558b5f2a2adb996d6affe20c01860b365f2333af3401d5377bb42",
         "payloads": 9,
         "full_download_and_payload_hashes_verified": true
+      }
+    },
+    "ztty_wayland_input": {
+      "status": "pr23_merged_exact_tested_tree_native_acceptance_passed",
+      "main": "01e8b573bc787e982f96db2b1e6ec9151d321284",
+      "tree": "a7a99b41c9bfef6f4f617914b6c67466f5d3a7c8",
+      "tested_head": "076bc6ac8ff9ca17effe25decac7a4dbc4ec0c43",
+      "elf_sha256": "c5debb5f35d2563e1a3cdf7eeb18bb064439c864ad020fd452f0c730afc61197",
+      "merge_tree_equals_tested_tree": true,
+      "publication": {
+        "path": "evidence/ztty-ime-publication-20261121.json",
+        "bytes": 10598,
+        "sha256": "3e603ae76e3537caedcac8e2adfa9b72e9db8ef790d7bb31bbf66058f6e4393f"
+      },
+      "actual_C_and_linked_ELF_review": {
+        "path": "evidence/ztty-pr23-build-independent-review-20261121.json",
+        "bytes": 2417,
+        "sha256": "157729917feba0a22f4ffedaae022f5107fc7b780068bd79d056b1da7f0a5990"
+      },
+      "native_runtime_review": {
+        "path": "evidence/ztype-ztty-fixed-runtime-review-20261121.json",
+        "bytes": 9548,
+        "sha256": "a75fb7d65eab5f9a42e42cbe4baf4e2319c34e689fad859378ff198722e77a05"
+      },
+      "memory_66_stages_repeated": false,
+      "caret_followup": {
+        "pr": "https://github.com/LIghtJUNction/ztty/pull/24",
+        "head": "49c8024b94b055f43eee46a9ac8f671ad6b7f5a4",
+        "tree": "27dbb8a5ff3acfdc9bdc6e38a528667a43551895",
+        "status": "isolated_source_published_owner_reported_actual_build_passed_targeted_blink_runtime_pending",
+        "evidence": {
+          "path": "evidence/input-ui-followups-20261121.json",
+          "bytes": 8733,
+          "sha256": "88cc0d3ce36ae6408261a7e724661442e5b45117c73067d809d156d4d7a846f5"
+        },
+        "build_scope": "Owner reported actual fmt/metadata, strict root Clippy and release passed; targeted nonzero-row/column blink GUI regression pending."
       }
     }
   },
@@ -21808,5 +21970,17 @@
     },
     "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-git-sources-20261120/pr-cleanup-mechrevo-git-source.json"
   },
-  "current_snapshot_scope": "Current progress is recorded in current_maintenance. Earlier gates/consumer graphs retain their immutable original source cohorts; full new44 graph is pending."
+  "current_snapshot_scope": "Current progress is recorded in current_maintenance. Earlier gates/consumer graphs retain immutable original cohorts;441 CI is not781 native acceptance, PR23 input acceptance is not PR24 caret acceptance, and final44 remains pending.",
+  "report_preparation": {
+    "source_report_commit": "c2c1406752b4b8e23f3a7f0bec0fddc5209141da",
+    "source_report_tree": "2a0bc99dbb13609a62d557c82a71ebf59adea823",
+    "prepared_at_utc": "2026-11-20T22:41:32.179376+00:00",
+    "prepared_at_taipei": "2026-11-21T06:41:32.179376+08:00",
+    "published": false,
+    "followup_status": {
+      "path": "evidence/input-ui-followups-20261121.json",
+      "bytes": 8733,
+      "sha256": "88cc0d3ce36ae6408261a7e724661442e5b45117c73067d809d156d4d7a846f5"
+    }
+  }
 }

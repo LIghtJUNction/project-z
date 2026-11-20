@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "kind": "bounded_read_only_lock_and_job_diagnosis",
+  "observer": "/root/pr_core_repos",
+  "observation_window_utc": [
+    "2026-11-20T22:16:28.620999+00:00",
+    "2026-11-20T22:17:51.972368+00:00"
+  ],
+  "conclusion": "The former integration-validation process chain has exited. The shared lock has passed to the requested 441814bf baseline preparation, so the former job is no longer blocking that baseline.",
+  "former_job": {
+    "source_path": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/iteration-integration-20261121",
+    "branch": "feat/iteration-integration-20261121",
+    "commit": "91a195570ceda864877de6e68c71ffdf8ab41720",
+    "tree": "8e5c6db2a0d6eaac06b1f78a46fffb49da805697",
+    "tracked_status_clean": true,
+    "supplied_process_ids": [
+      1229162,
+      1229163,
+      1229164,
+      1264746
+    ],
+    "process_absence_observed_twice": true,
+    "script": {
+      "path": "/var/tmp/ssmcp-controls-20261121/final-integration/validate_final.py",
+      "bytes": 14852,
+      "mtime_ns": 1795212519792473600,
+      "sha256": "06752176218ae699a5ac02739e55a37b87daef544648d6e82c37c57a1bc69bfc"
+    },
+    "run_directory": "/var/tmp/ssmcp-controls-20261121/final-validation/20261120T220846Z",
+    "release_log": {
+      "path": "/var/tmp/ssmcp-controls-20261121/final-validation/20261120T220846Z/release.log",
+      "bytes": 178,
+      "mtime_ns": 1795212882736123000,
+      "tail": [
+        "   Compiling ssmcp v0.10.21 (/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/iteration-integration-20261121)",
+        "    Finished `release` profile [optimized] target(s) in 3m 47s"
+      ]
+    },
+    "existing_unit_result": {
+      "path": "/var/tmp/ssmcp-controls-20261121/final-validation/20261120T220846Z/test-result.json",
+      "bytes": 160739,
+      "sha256": "1dab04fbada839af74cac6ba8f9dbbab0f7cb04520c3100eb482740ce6e9efea",
+      "selected": 705,
+      "passed": 695,
+      "failed": 0,
+      "ignored": 10,
+      "seconds": 37.248
+    },
+    "existing_cli_result": {
+      "path": "/var/tmp/ssmcp-controls-20261121/final-validation/20261120T220846Z/cli-result.json",
+      "bytes": 317,
+      "sha256": "4d0f35a459fe990b7eb6aea714449af1283d115f9474c0f74f9831297614c93c",
+      "groups": {
+        "client_server_config": {
+          "passed": 5,
+          "failed": 0,
+          "ignored": 0
+        },
+        "connection_context": {
+          "passed": 10,
+          "failed": 0,
+          "ignored": 0
+        },
+        "resources": {
+          "passed": 10,
+          "failed": 0,
+          "ignored": 0
+        },
+        "two_tools": {
+          "passed": 2,
+          "failed": 0,
+          "ignored": 7
+        }
+      },
+      "passed_total": 27,
+      "failed_total": 0,
+      "ignored_total": 7
+    },
+    "final_source_record": {
+      "path": "/var/tmp/ssmcp-controls-20261121/final-validation/20261120T220846Z/source.json",
+      "bytes": 973,
+      "sha256": "becf2f3491a4815013fbd8b9ca18d7063982a58cc749aaf78f64a479903212ad",
+      "json": {
+        "commit": "91a195570ceda864877de6e68c71ffdf8ab41720",
+        "status": "",
+        "lock_sha256": "082cdef2ddb1a4acadf87bd927cb875c802808c20c303721829661c917a03aec",
+        "started_at_utc": "2026-11-20T22:08:48Z",
+        "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "crate_entry_sha256": "a82b8b937e413fd7560d64a68aca31dceff70f3eab2dbdc8cfd60ec1b1579d27",
+        "crate_entry_mtime_ns": 1795212528352247000,
+        "fixture_sha256": "cbc82609ea80ed6c6426305d2e01d47ef1ff4274d52e9aecdd81109f73cc7be6",
+        "fixture_binary": "/var/tmp/ssmcp-controls-20261121/final-validation/20261120T220846Z/ssmcp-lib-test",
+        "binaries": {
+          "ssmcp": "69a125b95704fb93e4b75ae7e23b3f4948633890f732d4f754fe043ee4d6c136",
+          "ssmcpd": "f010f0a4fce3bbfbb9312f90de0f3d96c4aa4b5b606acfe1260490ddcf7c2aa6"
+        },
+        "binary_directory": "/var/tmp/ssmcp-controls-20261121/final-validation/bin",
+        "run_directory": "/var/tmp/ssmcp-controls-20261121/final-validation/20261120T220846Z"
+      }
+    },
+    "final_phase_evidence": "The inspected script copies and hashes both release binaries and writes source.json/latest.json only after the release command and fixed source/clean/lock checks. The existing source record contains these final binary hashes.",
+    "actual_original_job_exit_code": "not independently recovered; no exit-0 claim",
+    "exact_agent_or_thread_owner": "unknown",
+    "terminal_context_record": {
+      "path": "/var/tmp/ssmcp-controls-20261121/current-checkpoint.json",
+      "sha256": "cb8fd05273bf002c194e454f92b8545e6b410aba793d3c73de9c6ef676cb7d8d",
+      "updated_at_utc": "2026-11-20T20:22:05Z",
+      "client_id": "2ee0da354becbdb9492c806b7a9eff4b37928ce14b9a9c2b4c7653f267101e2f",
+      "process_id": 2897928,
+      "caveat": "This older checkpoint associates the directory with the foreground terminal, not with an exact current agent or original validation job ID."
+    }
+  },
+  "current_lock": {
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "inode": 63537699,
+    "proc_locks_at_final_observation": [
+      "51: FLOCK  ADVISORY  WRITE 1234220 00:20:63537699 0 EOF"
+    ],
+    "observed_holder": {
+      "pid": 1234220,
+      "start_ticks": 14831401,
+      "ppid": 1234219,
+      "cwd": "/home/lightjunction/Documents/GITHUB/ssmcp",
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-tools/workspace-provenance-preparation/build_baseline.py",
+        "--revision",
+        "441814bf9945e0b49bb3dde170e57762abf8318e",
+        "--lock-sha256",
+        "082cdef2ddb1a4acadf87bd927cb875c802808c20c303721829661c917a03aec",
+        "--heads",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/git-heads-441814b-bound.json",
+        "80c69c24c5e3fa2a05964bb38d0de0903664dba49b282add5c8debbb69bba49c",
+        "--out",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-441814b-build"
+      ]
+    },
+    "observed_child": {
+      "pid": 1340955,
+      "start_ticks": 14873947,
+      "ppid": 1234220,
+      "cwd": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+      "argv": [
+        "/home/lightjunction/.rustup/toolchains/1.100.0-x86_64-unknown-linux-gnu/bin/cargo",
+        "build",
+        "--release",
+        "--bins",
+        "--offline",
+        "--locked",
+        "--jobs",
+        "1",
+        "--message-format=json"
+      ]
+    },
+    "requested_revision_in_actual_argv": "441814bf9945e0b49bb3dde170e57762abf8318e",
+    "requested_lock_sha256_in_actual_argv": "082cdef2ddb1a4acadf87bd927cb875c802808c20c303721829661c917a03aec",
+    "interpretation": "Actual holder argv matches the requested baseline preparation; the child was observed in its offline locked release-bins build. Its final outcome is not assessed here."
+  },
+  "source_relationship": {
+    "older_validation_commit": "91a195570ceda864877de6e68c71ffdf8ab41720",
+    "requested_baseline_commit": "441814bf9945e0b49bb3dde170e57762abf8318e",
+    "requested_baseline_tree": "72f4d06f61b06f62ae22ce1837dd429465ef0b39",
+    "either_is_ancestor_of_other": false,
+    "merge_base": "a19ac040b1c7e9daa6a2144db79cfaa1bee09954",
+    "diff_shortstat": "103 files changed, 6051 insertions(+), 4053 deletions(-)",
+    "cargo_lock_git_blob_both": "bf795de216ef37236b8ca4852a72b443dde6b5e3",
+    "interpretation": "The two sources are divergent and not equivalent despite their identical lockfile. Do not transfer the 91a test/build results to 441 or label it an exact duplicate validation of 441."
+  },
+  "observation_receipts": [
+    {
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-4de",
+      "exit_code": 0,
+      "observed_at": "2026-11-20T22:16:28.620999+00:00",
+      "stdout_artifact": {
+        "bytes": 7933,
+        "complete": true,
+        "expires_at_unix": 1795299389,
+        "id": "e08f8e5afba110d9b7b40240e1b7f529",
+        "lines": 1,
+        "max_bytes": 268435456,
+        "observed_bytes": 7933,
+        "path": "/tmp/ssmcp-1000/output-e08f8e5afba110d9b7b40240e1b7f529.log",
+        "retention_secs": 86400,
+        "schema": "ssmcp.output.v1",
+        "scope": "job:26c4545eae1eab8d27485f4a48077d3c-4de:stdout",
+        "sha256": "902fccb286209667e0043a9442e0d8416aa648ed798eecaca8840e62490dc00a",
+        "sha256_scope": "first_bytes_snapshot"
+      }
+    },
+    {
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-4e1",
+      "exit_code": 0,
+      "observed_at": "2026-11-20T22:17:00.213823+00:00",
+      "stdout_artifact": {
+        "bytes": 14386,
+        "complete": true,
+        "expires_at_unix": 1795299421,
+        "id": "d1f2fe6a94a9e543e79c8fcfb0b2a2ae",
+        "lines": 1,
+        "max_bytes": 268435456,
+        "observed_bytes": 14386,
+        "path": "/tmp/ssmcp-1000/output-d1f2fe6a94a9e543e79c8fcfb0b2a2ae.log",
+        "retention_secs": 86400,
+        "schema": "ssmcp.output.v1",
+        "scope": "job:26c4545eae1eab8d27485f4a48077d3c-4e1:stdout",
+        "sha256": "ff7bb686f9e0c57436d8b7b5fafb8bc802f518d15096dd93e07ad249d3e06d31",
+        "sha256_scope": "first_bytes_snapshot"
+      }
+    },
+    {
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-4e8",
+      "exit_code": 0,
+      "observed_at": "2026-11-20T22:17:51.972368+00:00",
+      "stdout_artifact": {
+        "bytes": 8411,
+        "complete": true,
+        "expires_at_unix": 1795299472,
+        "id": "91ea2d060800726d96f315197abf5145",
+        "lines": 1,
+        "max_bytes": 268435456,
+        "observed_bytes": 8411,
+        "path": "/tmp/ssmcp-1000/output-91ea2d060800726d96f315197abf5145.log",
+        "retention_secs": 86400,
+        "schema": "ssmcp.output.v1",
+        "scope": "job:26c4545eae1eab8d27485f4a48077d3c-4e8:stdout",
+        "sha256": "ca634639574b4a742bd9df7bdfa1f2c13a19442651a33abc02581e766df43f5b",
+        "sha256_scope": "first_bytes_snapshot"
+      }
+    }
+  ],
+  "scope": {
+    "inspected_directories": [
+      "/var/tmp/ssmcp-controls-20261121",
+      "/var/tmp/ssmcp-controls-20261121/final-integration",
+      "/var/tmp/ssmcp-controls-20261121/final-validation/20261120T220846Z"
+    ],
+    "actions": "Read proc state, lock ownership, exact script/log/receipt files and local Git identities; wrote only this report.",
+    "process_signals_sent": 0,
+    "locks_acquired_or_modified": 0,
+    "builds_or_tests_started": 0,
+    "source_changes": 0,
+    "recommendation": "Leave normal existing jobs intact; hand the observed lock transition and distinct source identities to the existing source owner."
+  }
+}
