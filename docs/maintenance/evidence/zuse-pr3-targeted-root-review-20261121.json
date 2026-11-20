@@ -1,0 +1,192 @@
+{
+  "schema": "project-z-zuse-receipt-targeted-root-review-v1",
+  "reviewed_at": "2026-11-20T23:13:59.722057+00:00",
+  "result": "passed",
+  "red_source": "44ffb599e96c412c216f395ed8b7286f585b5474",
+  "red_tree": "1d0daf3b3a8d2cc9436a938d6e8f1de7bcebefa7",
+  "green_source": "35664746549c482c99082e6180419b2c0f5ff532",
+  "green_tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+  "red_expected_failing_tests": 3,
+  "green_entrypoint_tests_passed": 6,
+  "green_scheduler_tests_passed": 10,
+  "green_commands_all_exit_zero": true,
+  "source_clean_after_both": true,
+  "cargo_lock_unchanged": true,
+  "receipts": [
+    {
+      "phase": "red",
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/original/gate-red/result.json",
+      "bytes": 5875,
+      "sha256": "91bc831b300b6de0a2625e721bf12f98ab1b201c72f3ddc868c6025ce54bc46f"
+    },
+    {
+      "phase": "green",
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/original/gate-green/result.json",
+      "bytes": 9510,
+      "sha256": "a3c05be4ab48fe50b18fe459ff23344e5b425f3f33d594c82acec555e6b2c0db"
+    }
+  ],
+  "available_raw_log_and_artifact_files_hash_checked": [
+    {
+      "phase": "red",
+      "name": "rustc-version.log",
+      "bytes": 37,
+      "sha256": "56625f11cb9e645f8e638a6bcdf0565a20a8724585b537b8548886789b9f77be"
+    },
+    {
+      "phase": "red",
+      "name": "rustc-version-compiler-artifacts.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "phase": "red",
+      "name": "cargo-version-compiler-artifacts.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "phase": "red",
+      "name": "metadata-compiler-artifacts.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "phase": "red",
+      "name": "entrypoints.log",
+      "bytes": 8921,
+      "sha256": "089c2090b02618232577ae8c85166976ee33ae89c5c3755bc68dd3d516435276"
+    },
+    {
+      "phase": "red",
+      "name": "entrypoints-compiler-artifacts.json",
+      "bytes": 4021,
+      "sha256": "9312ef5da7432c01692c4ca55ae7d034d77e784aee6a5f8732e835096fc78950"
+    },
+    {
+      "phase": "red",
+      "name": "summary.log",
+      "bytes": 6727,
+      "sha256": "f1e213d265b954d285c4dc30d242272a80222ffbce2c790e4894ef148d763693"
+    },
+    {
+      "phase": "red",
+      "name": "summary-compiler-artifacts.json",
+      "bytes": 1344,
+      "sha256": "e3bd090ae7046e3527362f800734aab8e3a9e5f7e00bdebbb575174db04e273a"
+    },
+    {
+      "phase": "green",
+      "name": "rustc-version.log",
+      "bytes": 37,
+      "sha256": "56625f11cb9e645f8e638a6bcdf0565a20a8724585b537b8548886789b9f77be"
+    },
+    {
+      "phase": "green",
+      "name": "rustc-version-compiler-artifacts.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "phase": "green",
+      "name": "cargo-version-compiler-artifacts.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "phase": "green",
+      "name": "metadata-compiler-artifacts.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "phase": "green",
+      "name": "format-compiler-artifacts.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "phase": "green",
+      "name": "diff-check-compiler-artifacts.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "phase": "green",
+      "name": "entrypoints.log",
+      "bytes": 8200,
+      "sha256": "5b20191ae82510b0ce6ec3e386febe263bd03a81a5d447f587498770c63e08d6"
+    },
+    {
+      "phase": "green",
+      "name": "entrypoints-compiler-artifacts.json",
+      "bytes": 3985,
+      "sha256": "c979a581422d0aa683eb21ddf024eff940bf7ebd9c32c8e1824b3e52fa9f11fe"
+    },
+    {
+      "phase": "green",
+      "name": "scheduler.log",
+      "bytes": 7027,
+      "sha256": "4e3df91e6af6f8a97165005e6ce6b02036bbe1a645e5eceb83204a5deaf87963"
+    },
+    {
+      "phase": "green",
+      "name": "scheduler-compiler-artifacts.json",
+      "bytes": 1332,
+      "sha256": "02ffd4cf659124d7160765a78cc892f533190a7cb200f1794f4b8a10c41232d2"
+    },
+    {
+      "phase": "green",
+      "name": "clippy.log",
+      "bytes": 19485,
+      "sha256": "2e466bda7fad1d49cc08b593afed148f71699a884610840690a2d8e99537d7e1"
+    },
+    {
+      "phase": "green",
+      "name": "clippy-compiler-artifacts.json",
+      "bytes": 3068,
+      "sha256": "989c55c97f84b9be2bc9605a1b5cde9fb00f1669a029e47c17f0d6a790256992"
+    }
+  ],
+  "scope": "Read original actual RED/GREEN receipts and available hashed logs; no test rerun. Full source static review is separately performed by Org. Original PR2 broad 286/20/native evidence is not established by this fix.",
+  "source_lock_evidence": [
+    {
+      "pid": 1910644,
+      "parent_pid": 1910631,
+      "parent_argv": [
+        "/usr/bin/flock",
+        "--wait",
+        "600",
+        "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate.py",
+        "red"
+      ],
+      "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "device": 34,
+      "inode": 63537699,
+      "proc_locks": [
+        "1051: FLOCK  ADVISORY  WRITE 1910631 00:20:63537699 0 EOF"
+      ]
+    },
+    {
+      "pid": 2075436,
+      "parent_pid": 2075435,
+      "parent_argv": [
+        "/usr/bin/flock",
+        "--wait",
+        "600",
+        "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate.py",
+        "green"
+      ],
+      "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "device": 34,
+      "inode": 63537699,
+      "proc_locks": [
+        "125: FLOCK  ADVISORY  WRITE 2075435 00:20:63537699 0 EOF"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "observed_unix": 1795216088.12166,
+  "scope": "personal-ztty-caret-gui-1795215885-2073335.scope",
+  "scope_show": "ActiveState=inactive\nSubState=dead\nControlGroup=\n",
+  "scope_stderr": "",
+  "scope_exit": 0,
+  "known_pids": {
+    "2073026": false,
+    "2073335": false,
+    "2073712": false,
+    "2073659": false
+  },
+  "outer_lock_available_at_probe": true,
+  "lock_inode": 63537699,
+  "remaining": {
+    "owned_brokers_remaining": [],
+    "owned_children_remaining": [],
+    "owned_helpers_remaining": []
+  },
+  "pngs": [
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-history-restored.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-history.png",
+      "bytes": 12555,
+      "sha256": "9676b566cb29cfd3e50cbfac22ad5aaa710555c9f1b288d74c1d855551f52ee6"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-mode-hidden-final.png",
+      "bytes": 5675,
+      "sha256": "35c06a0cb70c156dd74269b93377bed7dc13359aac60183185596b7c0f3ce52a"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-mode-hidden.png",
+      "bytes": 5675,
+      "sha256": "35c06a0cb70c156dd74269b93377bed7dc13359aac60183185596b7c0f3ce52a"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-mode-restored.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-00.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-01.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-02.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-03.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-04.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-05.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-06.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-07.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-08.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-09.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-10.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-11.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-12.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-13.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-14.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-15.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-16.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-first.png",
+      "bytes": 6639,
+      "sha256": "93e73ccccf5121efcbd41595f24787c64b68dc490aec13a708c6a2b104ede7cd"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-off-ready.png",
+      "bytes": 5675,
+      "sha256": "35c06a0cb70c156dd74269b93377bed7dc13359aac60183185596b7c0f3ce52a"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-00.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-01.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-02.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-03.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-04.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-05.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-06.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-07.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-08.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-09.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-10.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-11.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-12.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-13.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-14.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-15.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-16.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-first.png",
+      "bytes": 6636,
+      "sha256": "4fb2ed097fe0939ba1f2670cba8f7d316747e0914b560104c93fa14936190f89"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-on-ready.png",
+      "bytes": 5727,
+      "sha256": "24ac57b03d1df7cef9e269f145b39a0f9e63e909282c4949418b7eff0f8feb14"
+    },
+    {
+      "path": "gui-9eaed36-r3/wayland/caret-refocused.png",
+      "bytes": 5727,
+      "sha256": "6be682d0cc1a02cddea79689c656413224da32d2d8078e58a59cbe042aa13bfc"
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "phase": "green",
+  "source": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+  "started_at": "2026-11-20T23:04:54.480586+00:00",
+  "expected": {
+    "head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "purpose": "Focused regression validation; no desktop/native input",
+    "commands": [
+      [
+        "format",
+        [
+          "cargo",
+          "fmt",
+          "--all",
+          "--",
+          "--check"
+        ]
+      ],
+      [
+        "diff-check",
+        [
+          "git",
+          "diff",
+          "--check"
+        ]
+      ],
+      [
+        "entrypoints",
+        [
+          "cargo",
+          "test",
+          "--offline",
+          "--locked",
+          "--message-format=json-render-diagnostics",
+          "--test",
+          "script_entrypoints",
+          "--",
+          "--test-threads=1"
+        ]
+      ],
+      [
+        "scheduler",
+        [
+          "cargo",
+          "test",
+          "--offline",
+          "--locked",
+          "--message-format=json-render-diagnostics",
+          "--lib",
+          "script::scheduler::tests::",
+          "--",
+          "--test-threads=1"
+        ]
+      ],
+      [
+        "clippy",
+        [
+          "cargo",
+          "clippy",
+          "--offline",
+          "--locked",
+          "--message-format=json-render-diagnostics",
+          "-vv",
+          "--lib",
+          "--bin",
+          "zuse",
+          "--test",
+          "script_entrypoints",
+          "--",
+          "-D",
+          "warnings",
+          "-Cmetadata=zuse_receipt_3566474"
+        ]
+      ]
+    ]
+  },
+  "lock_receipt": {
+    "pid": 2075436,
+    "parent_pid": 2075435,
+    "parent_argv": [
+      "/usr/bin/flock",
+      "--wait",
+      "600",
+      "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "python3",
+      "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate.py",
+      "green"
+    ],
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "device": 34,
+    "inode": 63537699,
+    "proc_locks": [
+      "125: FLOCK  ADVISORY  WRITE 2075435 00:20:63537699 0 EOF"
+    ]
+  },
+  "commands": [
+    {
+      "name": "rustc-version",
+      "argv": [
+        "rustc",
+        "--version"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 0.186,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/rustc-version.log",
+      "log_sha256": "56625f11cb9e645f8e638a6bcdf0565a20a8724585b537b8548886789b9f77be",
+      "compiler_artifacts": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/rustc-version-compiler-artifacts.json",
+      "compiler_artifacts_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "test_summaries": []
+    },
+    {
+      "name": "cargo-version",
+      "argv": [
+        "cargo",
+        "--version"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 0.043,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/cargo-version.log",
+      "log_sha256": "d62bac2223cd9bd1a54c0ccd82d4084b7d1d60044855e2f6a1b49f4f77e6f41c",
+      "compiler_artifacts": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/cargo-version-compiler-artifacts.json",
+      "compiler_artifacts_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "test_summaries": []
+    },
+    {
+      "name": "metadata",
+      "argv": [
+        "cargo",
+        "metadata",
+        "--offline",
+        "--locked",
+        "--format-version",
+        "1"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 0.166,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/metadata.log",
+      "log_sha256": "9e1f59a91fe512dbd39290bbaaec77102de2518d5bfb3674df53f314048bf619",
+      "compiler_artifacts": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/metadata-compiler-artifacts.json",
+      "compiler_artifacts_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "test_summaries": []
+    },
+    {
+      "name": "format",
+      "argv": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--",
+        "--check"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 0.351,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/format.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compiler_artifacts": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/format-compiler-artifacts.json",
+      "compiler_artifacts_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "test_summaries": []
+    },
+    {
+      "name": "diff-check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 0.002,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/diff-check.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compiler_artifacts": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/diff-check-compiler-artifacts.json",
+      "compiler_artifacts_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "test_summaries": []
+    },
+    {
+      "name": "entrypoints",
+      "argv": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--message-format=json-render-diagnostics",
+        "--test",
+        "script_entrypoints",
+        "--",
+        "--test-threads=1"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 5.634,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/entrypoints.log",
+      "log_sha256": "5b20191ae82510b0ce6ec3e386febe263bd03a81a5d447f587498770c63e08d6",
+      "compiler_artifacts": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/entrypoints-compiler-artifacts.json",
+      "compiler_artifacts_sha256": "c979a581422d0aa683eb21ddf024eff940bf7ebd9c32c8e1824b3e52fa9f11fe",
+      "test_summaries": [
+        "test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.60s"
+      ]
+    },
+    {
+      "name": "scheduler",
+      "argv": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--message-format=json-render-diagnostics",
+        "--lib",
+        "script::scheduler::tests::",
+        "--",
+        "--test-threads=1"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 5.866,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/scheduler.log",
+      "log_sha256": "4e3df91e6af6f8a97165005e6ce6b02036bbe1a645e5eceb83204a5deaf87963",
+      "compiler_artifacts": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/scheduler-compiler-artifacts.json",
+      "compiler_artifacts_sha256": "02ffd4cf659124d7160765a78cc892f533190a7cb200f1794f4b8a10c41232d2",
+      "test_summaries": [
+        "test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 125 filtered out; finished in 0.75s"
+      ]
+    },
+    {
+      "name": "clippy",
+      "argv": [
+        "cargo",
+        "clippy",
+        "--offline",
+        "--locked",
+        "--message-format=json-render-diagnostics",
+        "-vv",
+        "--lib",
+        "--bin",
+        "zuse",
+        "--test",
+        "script_entrypoints",
+        "--",
+        "-D",
+        "warnings",
+        "-Cmetadata=zuse_receipt_3566474"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 2.148,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/clippy.log",
+      "log_sha256": "2e466bda7fad1d49cc08b593afed148f71699a884610840690a2d8e99537d7e1",
+      "compiler_artifacts": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/clippy-compiler-artifacts.json",
+      "compiler_artifacts_sha256": "989c55c97f84b9be2bc9605a1b5cde9fb00f1669a029e47c17f0d6a790256992",
+      "test_summaries": []
+    }
+  ],
+  "status": "passed",
+  "head": "35664746549c482c99082e6180419b2c0f5ff532",
+  "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+  "cargo_lock_sha256": "cffb29f3aa454c065523c6fc62ebf33721694df88af94e0aff2feea5d17855e0",
+  "environment_overrides": {
+    "CARGO_BUILD_JOBS": "1",
+    "CARGO_TARGET_DIR": "/var/tmp/project-z-cargo-target",
+    "RUSTC_WORKSPACE_WRAPPER": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/workspace-rustc-green.py"
+  },
+  "wrapper_sha256": "93c31d68e0500941b0c5a810804ccb97b91dc90fdbcc9401493a43f2b665b937",
+  "source_clean_after": true,
+  "finished_at": "2026-11-20T23:05:08.887345+00:00"
+}

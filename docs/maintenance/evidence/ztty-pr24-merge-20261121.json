@@ -1,0 +1,16 @@
+{
+  "repository": "LIghtJUNction/ztty",
+  "pr": 24,
+  "merge": "99ef7a0f02dfb643a426b4b5f8daf0bc009d9752",
+  "tree": "79b48dbf7560bd8a62e34c7073c416f84abba2c7",
+  "parents": [
+    "01e8b573bc787e982f96db2b1e6ec9151d321284",
+    "9eaed366b285dc9c6c5a74032e850bd6af8c0476"
+  ],
+  "tested_head": "9eaed366b285dc9c6c5a74032e850bd6af8c0476",
+  "merged_at": "2026-11-20T23:10:22Z",
+  "merge_tree_equals_tested_tree": true,
+  "runtime_source": "49c8024b94b055f43eee46a9ac8f671ad6b7f5a4",
+  "runtime_elf_sha256": "73e9a96c6ee912c87e85e324f510a4ce5525a5c98d2515022dc310d48bad53ec",
+  "independent_readback": "GitHub plugin GET git/commits and pulls/24; exact helper-only compare separately retained."
+}

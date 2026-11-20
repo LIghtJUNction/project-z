@@ -1,0 +1,50 @@
+{
+  "schema": "ztty.ime-caret-gui-job.v1",
+  "status": "passed",
+  "started_unix": 1795215885.8636475,
+  "source": {
+    "head": "9eaed366b285dc9c6c5a74032e850bd6af8c0476",
+    "tree": "79b48dbf7560bd8a62e34c7073c416f84abba2c7",
+    "status": "",
+    "binary_sha256": "73e9a96c6ee912c87e85e324f510a4ce5525a5c98d2515022dc310d48bad53ec",
+    "compositor_tools": {
+      "sway": {
+        "path": "/home/lightjunction/Documents/GITHUB/ztty/artifacts/native-wayland-20261119/artifacts/wayland-test-tools/root/usr/bin/sway",
+        "sha256": "7ba78b7531a3b3cb1852b3b1e464b4458cce1749c6c0fe3c6fb4b16ece9d5b9c"
+      },
+      "swaymsg": {
+        "path": "/home/lightjunction/Documents/GITHUB/ztty/artifacts/native-wayland-20261119/artifacts/wayland-test-tools/root/usr/bin/swaymsg",
+        "sha256": "8cde6e424950be9be0e7916202fca2a60806460b970a533c39d2ed2b9e2cad66"
+      }
+    },
+    "runtime_head": "49c8024b94b055f43eee46a9ac8f671ad6b7f5a4",
+    "runtime_source_unchanged": true,
+    "script_sha256": "c8b820b87a81aa8575fca69628651d16e44baf8f33b2e86aafcf344bd5784ce9"
+  },
+  "runner_sha256": "33fb02cf50295cb69cfd43821a61b4d2f1c8c3e9c3af72b4bd42a98c82d63ac7",
+  "lock_acquired_unix": 1795215885.879623,
+  "systemd_scope": "personal-ztty-caret-gui-1795215885-2073335.scope",
+  "command": [
+    "systemd-run",
+    "--user",
+    "--scope",
+    "--quiet",
+    "--collect",
+    "--unit=personal-ztty-caret-gui-1795215885-2073335",
+    "-p",
+    "MemoryMax=2G",
+    "-p",
+    "MemorySwapMax=512M",
+    "-p",
+    "CPUQuota=100%",
+    "-p",
+    "TasksMax=256",
+    "/usr/bin/python3",
+    "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-caret-20261120/run_gui_r3.py",
+    "--worker"
+  ],
+  "exit_code": 0,
+  "validation_sha256": "39e8c1a6b5190aa6f09ea75512485fecf7e14cc2c4bf01756e503e13a7d595f6",
+  "scope_state_after": "ActiveState=inactive\nSubState=dead\nControlGroup=\n",
+  "finished_unix": 1795215893.6140969
+}

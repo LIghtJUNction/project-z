@@ -1,0 +1,184 @@
+{
+  "schema": "ztty.ime-caret-gui.v1",
+  "ok": true,
+  "before": {
+    "head": "9eaed366b285dc9c6c5a74032e850bd6af8c0476",
+    "tree": "79b48dbf7560bd8a62e34c7073c416f84abba2c7",
+    "status": "",
+    "binary_sha256": "73e9a96c6ee912c87e85e324f510a4ce5525a5c98d2515022dc310d48bad53ec",
+    "compositor_tools": {
+      "sway": {
+        "path": "/home/lightjunction/Documents/GITHUB/ztty/artifacts/native-wayland-20261119/artifacts/wayland-test-tools/root/usr/bin/sway",
+        "sha256": "7ba78b7531a3b3cb1852b3b1e464b4458cce1749c6c0fe3c6fb4b16ece9d5b9c"
+      },
+      "swaymsg": {
+        "path": "/home/lightjunction/Documents/GITHUB/ztty/artifacts/native-wayland-20261119/artifacts/wayland-test-tools/root/usr/bin/swaymsg",
+        "sha256": "8cde6e424950be9be0e7916202fca2a60806460b970a533c39d2ed2b9e2cad66"
+      }
+    },
+    "runtime_head": "49c8024b94b055f43eee46a9ac8f671ad6b7f5a4",
+    "runtime_source_unchanged": true,
+    "script_sha256": "c8b820b87a81aa8575fca69628651d16e44baf8f33b2e86aafcf344bd5784ce9"
+  },
+  "started_unix": 1795215885.95136,
+  "scope": "One focused private headless Sway/input-method-v2 regression; software Mesa EGL, no host display or physical input; no memory-suite or full input-suite rerun.",
+  "command": [
+    "python3",
+    "tests/wayland_gui.py",
+    "--binary",
+    "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-caret-20261120/build-49c8024-r1/ztty-49c8024",
+    "--output",
+    "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-caret-20261120/gui-9eaed36-r3/wayland",
+    "--ime-cursor-only",
+    "--sway",
+    "/home/lightjunction/Documents/GITHUB/ztty/artifacts/native-wayland-20261119/artifacts/wayland-test-tools/root/usr/bin/sway",
+    "--swaymsg",
+    "/home/lightjunction/Documents/GITHUB/ztty/artifacts/native-wayland-20261119/artifacts/wayland-test-tools/root/usr/bin/swaymsg"
+  ],
+  "exit_code": 0,
+  "test_report": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-caret-20261120/gui-9eaed36-r3/wayland/validation.json",
+    "sha256": "4a9e437668c0a529c29e8cc323fde98852a4f3c7e5b600e957686865f8f0ee54",
+    "bytes": 11717,
+    "passed": true,
+    "checks": [
+      {
+        "name": "native_surface_and_pty",
+        "passed": true,
+        "app_id": "org.project-z.ztty"
+      },
+      {
+        "name": "cwd_and_terminal_environment",
+        "passed": true,
+        "state": {
+          "cols": 78,
+          "rows": 20,
+          "term": "xterm-256color",
+          "program": "ztty",
+          "pwd_matches_cwd": true
+        }
+      },
+      {
+        "name": "caret_on_rendered_prompt_and_cursor_phase",
+        "passed": true,
+        "row": 6,
+        "col": 9,
+        "cursor_pixels": 210,
+        "geometry": [
+          98,
+          134,
+          10,
+          21
+        ],
+        "dsr_hex": "1b5b373b313052",
+        "geometry_source": "actual PTY DSR and CSI16t cell-size response",
+        "query_response_hex": "1b5b373b3130521b5b363b32313b313074"
+      },
+      {
+        "name": "caret_on_composition_stays_at_logical_cursor",
+        "passed": true,
+        "sampled_frames": 17,
+        "sample_seconds": 1.3192976230056956,
+        "blink_interval_ms": 150,
+        "starting_phase_observed": true,
+        "exact_phase_of_each_composed_frame_instrumented": false
+      },
+      {
+        "name": "caret_on_preedit_does_not_write_pty",
+        "passed": true
+      },
+      {
+        "name": "caret_off_rendered_prompt_and_cursor_phase",
+        "passed": true,
+        "row": 9,
+        "col": 17,
+        "cursor_pixels": 0,
+        "geometry": [
+          178,
+          197,
+          10,
+          21
+        ],
+        "dsr_hex": "1b5b31303b313852",
+        "geometry_source": "actual PTY DSR and CSI16t cell-size response",
+        "query_response_hex": "1b5b31303b3138521b5b363b32313b313074"
+      },
+      {
+        "name": "caret_off_composition_stays_at_logical_cursor",
+        "passed": true,
+        "sampled_frames": 17,
+        "sample_seconds": 1.3229325900028925,
+        "blink_interval_ms": 150,
+        "starting_phase_observed": true,
+        "exact_phase_of_each_composed_frame_instrumented": false
+      },
+      {
+        "name": "caret_off_preedit_does_not_write_pty",
+        "passed": true
+      },
+      {
+        "name": "caret_hidden_mode_suppresses_overlay",
+        "passed": true
+      },
+      {
+        "name": "caret_visible_mode_restores_current_position",
+        "passed": true
+      },
+      {
+        "name": "caret_scrollback_suppresses_overlay",
+        "passed": true
+      },
+      {
+        "name": "caret_live_view_restores_current_position",
+        "passed": true
+      },
+      {
+        "name": "caret_focus_loss_deactivates_input_method",
+        "passed": true
+      },
+      {
+        "name": "caret_focus_return_does_not_replay_old_preedit",
+        "passed": true
+      },
+      {
+        "name": "caret_commit_reaches_same_owned_pty_once",
+        "passed": true,
+        "actual_hex": "e4bda0e5a5bde4b896e7958c",
+        "pid": 2073712,
+        "broker_pid": 2073659
+      },
+      {
+        "name": "caret_peer_exits_cleanly",
+        "passed": true
+      }
+    ],
+    "selected_case": "ime-cursor",
+    "remaining": {
+      "owned_brokers_remaining": [],
+      "owned_children_remaining": [],
+      "owned_helpers_remaining": []
+    }
+  },
+  "after": {
+    "head": "9eaed366b285dc9c6c5a74032e850bd6af8c0476",
+    "tree": "79b48dbf7560bd8a62e34c7073c416f84abba2c7",
+    "status": "",
+    "binary_sha256": "73e9a96c6ee912c87e85e324f510a4ce5525a5c98d2515022dc310d48bad53ec",
+    "compositor_tools": {
+      "sway": {
+        "path": "/home/lightjunction/Documents/GITHUB/ztty/artifacts/native-wayland-20261119/artifacts/wayland-test-tools/root/usr/bin/sway",
+        "sha256": "7ba78b7531a3b3cb1852b3b1e464b4458cce1749c6c0fe3c6fb4b16ece9d5b9c"
+      },
+      "swaymsg": {
+        "path": "/home/lightjunction/Documents/GITHUB/ztty/artifacts/native-wayland-20261119/artifacts/wayland-test-tools/root/usr/bin/swaymsg",
+        "sha256": "8cde6e424950be9be0e7916202fca2a60806460b970a533c39d2ed2b9e2cad66"
+      }
+    },
+    "runtime_head": "49c8024b94b055f43eee46a9ac8f671ad6b7f5a4",
+    "runtime_source_unchanged": true,
+    "script_sha256": "c8b820b87a81aa8575fca69628651d16e44baf8f33b2e86aafcf344bd5784ce9"
+  },
+  "finished_unix": 1795215893.5903492,
+  "stdout_sha256": "828c43178787a61a014ef576e3c9ce058f220d427a4aef70e5d9497b46f23ada",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

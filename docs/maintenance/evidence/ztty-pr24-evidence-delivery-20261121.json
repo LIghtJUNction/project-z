@@ -1,0 +1,31 @@
+{
+  "schema": "ztty.ime-caret-evidence-delivery.v1",
+  "repository": "LIghtJUNction/ztty",
+  "pr": 24,
+  "merge_sha": "99ef7a0f02dfb643a426b4b5f8daf0bc009d9752",
+  "tree": "79b48dbf7560bd8a62e34c7073c416f84abba2c7",
+  "publication": {
+    "bytes": 9637,
+    "sha256": "cfdcc98898fa85e7085d49146a9c8c2e575ab5ce698a15967ad2ef3cc8fa3f16",
+    "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-caret-20261120/publication.json",
+    "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-ztty-caret/publication.json"
+  },
+  "archive": {
+    "file_name": "ztty-pr24-caret-evidence-20261120.zip",
+    "bytes": 1001978,
+    "sha256": "211bde7127db7806e7524fc0555181ed84f8b3a9377be0faf985b93dd63a2f29",
+    "manifest_sha256": "d91763f6eccf8da03f70d5c27eccfa207b32115217a3c54e314c648c0a5ce8d4",
+    "payload_files": 148,
+    "zip_members": 149,
+    "drive_id": "1byru2K-yBHIZCPlS9zQCZsmapGML2I7n",
+    "drive_url": "https://drive.google.com/file/d/1byru2K-yBHIZCPlS9zQCZsmapGML2I7n/view",
+    "parent_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+    "metadata_verified": true,
+    "complete_download_bytes_verified": true,
+    "all_payload_hashes_verified": true
+  },
+  "limits": [
+    "Archive includes the exact compiled executable and screenshots only as Drive/native artifacts; no generated binary was tracked in Git.",
+    "Manifest publication and original failures are immutable payloads; this delivery receipt is written after archive readback."
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T06:49:58.545932+08:00",
+  "generated_at": "2026-11-21T07:20:13.349811+08:00",
   "timezone": "Asia/Taipei",
   "scope": "Initial 85 PRs, latest GitHub default-branch dependency migration, generated-binary history cleanup, development-machine cache cleanup, release integration and the requested named local/remote contexts",
   "batch_status": "in_progress",
@@ -1470,7 +1470,7 @@
     "tree": "df3e6ed3c4e9d950e6277bec472ea4c8406a94dc",
     "status": "draft_final_components_and_complete_44_repository_graph_pending",
     "base": "d2a6616c85b7e47c3faa32bd5728db49cdd9c142",
-    "source_snapshot_note": "The recorded9d head identifies the last cited recursive-checker merge. This report is prepared from c2c1406 documentation; it changes no aggregate gitlink/catalog and claims no fresh branch head or final44 gate."
+    "source_snapshot_note": "The recorded9d head identifies the cited recursive-checker merge. This report is prepared from794075f documentation; it changes no aggregate gitlink/catalog and claims no final44 gate. Publication head and exact file hashes are recorded separately after the guarded update."
   },
   "dependency_snapshot": {
     "status": "19_repository_migrations_published_recursive_checker_merged_final_44_graph_pending",
@@ -10813,10 +10813,142 @@
       "path": "evidence/hireferry-21-final-20261121.json",
       "bytes": 12031,
       "sha256": "f7037e41ab116300d5188c9e6fc445997c3dcdcd1fe4e85e9f1d37ebfcd35c3e"
+    },
+    "runtime_followup_20261121": {
+      "ssmcp-781-baseline-build-20261121.json": {
+        "path": "evidence/ssmcp-781-baseline-build-20261121.json",
+        "bytes": 79446,
+        "sha256": "d2204375614807af510f6c7fd08ec657d212a98f18f504cb21376c63f47ea7c0"
+      },
+      "ssmcp-781-baseline-independent-review-20261121.json": {
+        "path": "evidence/ssmcp-781-baseline-independent-review-20261121.json",
+        "bytes": 11032,
+        "sha256": "b3af65610a8b9f78077ef89c2e857a0ab8df7a6a04f59e2957f5f582cd63955a"
+      },
+      "ssmcp-781-preserved-artifacts-20261121.json": {
+        "path": "evidence/ssmcp-781-preserved-artifacts-20261121.json",
+        "bytes": 4442,
+        "sha256": "1a3a1ff057228a7b7b8bc92dbd911622bc815aaecd957254fd48df063f9713ad"
+      },
+      "ssmcp-781-second-baseline-progress-20261121.json": {
+        "path": "evidence/ssmcp-781-second-baseline-progress-20261121.json",
+        "bytes": 1223,
+        "sha256": "8233daea639e602eac17018d524d0bc4a7903098b1da2c4ca856b075f2b738c6"
+      },
+      "ztty-pr24-build-20261121.json": {
+        "path": "evidence/ztty-pr24-build-20261121.json",
+        "bytes": 35839,
+        "sha256": "13ea02248d25f1c707dad0d4b5b32b1b1ca3bf7890a8862464e08def5479bef8"
+      },
+      "ztty-pr24-gui-result-20261121.json": {
+        "path": "evidence/ztty-pr24-gui-result-20261121.json",
+        "bytes": 1951,
+        "sha256": "2e487bc56218d3e4cad07fb986bf34ac4c06edc2a6a375b2063d65f3a2b7f125"
+      },
+      "ztty-pr24-gui-20261121.json": {
+        "path": "evidence/ztty-pr24-gui-20261121.json",
+        "bytes": 6607,
+        "sha256": "39e8c1a6b5190aa6f09ea75512485fecf7e14cc2c4bf01756e503e13a7d595f6"
+      },
+      "ztty-pr24-gui-checks-20261121.json": {
+        "path": "evidence/ztty-pr24-gui-checks-20261121.json",
+        "bytes": 11717,
+        "sha256": "4a9e437668c0a529c29e8cc323fde98852a4f3c7e5b600e957686865f8f0ee54"
+      },
+      "ztty-pr24-cleanup-20261121.json": {
+        "path": "evidence/ztty-pr24-cleanup-20261121.json",
+        "bytes": 8223,
+        "sha256": "1e896d8b40cc1390faaeea76980637359fb5b50ea1022e764f4f7e4cda63543b"
+      },
+      "ztty-pr24-publication-20261121.json": {
+        "path": "evidence/ztty-pr24-publication-20261121.json",
+        "bytes": 9637,
+        "sha256": "cfdcc98898fa85e7085d49146a9c8c2e575ab5ce698a15967ad2ef3cc8fa3f16"
+      },
+      "ztty-pr24-independent-review-20261121.json": {
+        "path": "evidence/ztty-pr24-independent-review-20261121.json",
+        "bytes": 6302,
+        "sha256": "cc91a2fc5486265d4eb24123d28ab6ccecd26ffe4eb68d2b8913b96de0cb8c77"
+      },
+      "ztty-pr24-merge-20261121.json": {
+        "path": "evidence/ztty-pr24-merge-20261121.json",
+        "bytes": 694,
+        "sha256": "3903c18a920d8b3e28c062a18aed834fdc41e64d2e993ccfa953f3517db3be42"
+      },
+      "ztty-pr24-evidence-delivery-20261121.json": {
+        "path": "evidence/ztty-pr24-evidence-delivery-20261121.json",
+        "bytes": 1506,
+        "sha256": "f00a7d393ba8e42b1fdd97e290a75a6735d047599d8b17d5ebabfd377944012f"
+      },
+      "ztty-pr24-drive-readback-20261121.json": {
+        "path": "evidence/ztty-pr24-drive-readback-20261121.json",
+        "bytes": 1041,
+        "sha256": "c412a2c7e49eb8f1da17cf5f3adb94d098780d1c95d30d81075a60fda5029ce2"
+      },
+      "zuse-pr3-independent-review-20261121.json": {
+        "path": "evidence/zuse-pr3-independent-review-20261121.json",
+        "bytes": 11273,
+        "sha256": "0d3508ef01a3d284510290422828f86740e81df9d346df73220704d07828abae"
+      },
+      "zuse-pr3-independent-review-20261121.md": {
+        "path": "evidence/zuse-pr3-independent-review-20261121.md",
+        "bytes": 4201,
+        "sha256": "864cf5a8da88c706ef836d93c546580400d410767b9fd501915b43d98536e4d9"
+      },
+      "zuse-pr3-targeted-root-review-20261121.json": {
+        "path": "evidence/zuse-pr3-targeted-root-review-20261121.json",
+        "bytes": 6253,
+        "sha256": "6b571d771fc77deb8c6c21f10de7ae43119de1b8c8562f75d5cf2ffb3de88df2"
+      },
+      "zuse-pr3-red-20261121.json": {
+        "path": "evidence/zuse-pr3-red-20261121.json",
+        "bytes": 5875,
+        "sha256": "91bc831b300b6de0a2625e721bf12f98ab1b201c72f3ddc868c6025ce54bc46f"
+      },
+      "zuse-pr3-green-20261121.json": {
+        "path": "evidence/zuse-pr3-green-20261121.json",
+        "bytes": 9510,
+        "sha256": "a3c05be4ab48fe50b18fe459ff23344e5b425f3f33d594c82acec555e6b2c0db"
+      },
+      "zuse-pr3-receipt-fix-20261121.json": {
+        "path": "evidence/zuse-pr3-receipt-fix-20261121.json",
+        "bytes": 27363,
+        "sha256": "8d946d84432203d9f6285eab9ed690204e5f225c2d4f5d4c526041e9dbdfabcb"
+      },
+      "zuse-pr3-receipt-fix-20261121.md": {
+        "path": "evidence/zuse-pr3-receipt-fix-20261121.md",
+        "bytes": 5660,
+        "sha256": "a21a80c69c7281b5a9d3bd775c3f2346e0bdf544ea82750d17da984aeb8d1a25"
+      },
+      "zuse-pr3-publication-20261121.json": {
+        "path": "evidence/zuse-pr3-publication-20261121.json",
+        "bytes": 2471,
+        "sha256": "f700533b6e1bb6148481f7e44a764130ff42d72b356cfcc314e990792f33e1b3"
+      },
+      "zuse-pr2-original-provenance-20261121.json": {
+        "path": "evidence/zuse-pr2-original-provenance-20261121.json",
+        "bytes": 16381,
+        "sha256": "d832f8951bb6e3199d9b8ac71bf3bb19b96066f2dfad02bf105c249d73dd6d76"
+      },
+      "zuse-pr2-original-provenance-20261121.md": {
+        "path": "evidence/zuse-pr2-original-provenance-20261121.md",
+        "bytes": 4379,
+        "sha256": "3b3f2a4fe72590d1073f8554214569af8eecb0f1cb904a2adb51cdd74f13f043"
+      },
+      "zuse-pr2-original-manifest-20261121.json": {
+        "path": "evidence/zuse-pr2-original-manifest-20261121.json",
+        "bytes": 5582,
+        "sha256": "3537db55afb5b7f21e746b55b2f5276101d9955cf5e3706cffcb4bbc93e222b1"
+      },
+      "runtime-followup-prior-status-794-20261121.json": {
+        "path": "evidence/runtime-followup-prior-status-794-20261121.json",
+        "bytes": 13850,
+        "sha256": "a22bd6eaf613255bb81e5b6ce03201949819e1091b7cc4ef81b9be9cc0f4b901"
+      }
     }
   },
   "current_maintenance": {
-    "generated_at": "2026-11-21T06:49:58.545932+08:00",
+    "generated_at": "2026-11-21T07:20:13.349811+08:00",
     "root_consumers": {
       "zcall-gui": {
         "status": "merged_and_main_tree_read_back",
@@ -15578,16 +15710,16 @@
       }
     },
     "ssmcp_release": {
-      "status": "source781_r4_baseline_actual_compilation_in_progress",
+      "status": "source781_five_artifacts_built_second_baseline_partial_queue_fixture_successor_pending",
       "main_verified": "cf0ab581700918a37fcccbebb93de2e0cab02841",
       "candidate": "781b87df1d364137b6885f17f631a3e9e991bd58",
       "new_formal_release": false,
       "current_public_tree": "bd2bcce33baffa69b82d69d9cff3abdb85baa0fb",
-      "scope_note": "Prior b156 source audit/Python tests and441 CI retain their exact source identities. 441 Cargo lib/release returned0 but artifact producer runner returned1; no complete five-artifact baseline or runtime pass. 781 r4 baseline actual compilation in progress; full artifacts and runtime still pending.",
+      "scope_note": "All five fixed781/r4 artifacts built fresh=false; three build commands exit0. Root independently read the full receipt and rehashed all five files. First runtime stopped at old Next-caller assertion. Source owner reports second60e passed four samples, then ordinary16k postcheck stopped after queue response spill; busy/CtrlV not run. Exact queue projection successor prepared; full baseline/runtime/Gate10/P1 pending. Prior441 CI retains441 identity.",
       "previous_final_gate_plan_text": "pending on final fixed SSMCP cohort plus zcalld97d; original build commits and evidence stay separate",
       "current_final_gate_plan": {
-        "status": "pending_new781_baseline_then_fixed_ssmcp_and_d531_gate10_p1",
-        "plan": "Existing native owner completes and verifies five actual artifacts at781 before current native runtime and zcalld d531 Gate10/P1. No new P1 pass is claimed.",
+        "status": "pending_corrected781_six_case_baseline_then_runtime_and_d531_gate10_p1",
+        "plan": "Original owner reuses the five verified781 artifacts for the corrected same six-case baseline/Control-V, then completes fixed runtime and zcalld d531 Gate10/P1.",
         "original_32_scope": "The historical32 set included five shared-library checks, two Go checks and package/install work outside this P1 path. Those unrelated checks are not rerun or reported as new32 passes.",
         "merge_owner": "Project Z root, after native final acceptance and fresh main/candidate tree verification",
         "draft": true,
@@ -15615,14 +15747,80 @@
         "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
       },
       "current_progress": {
-        "path": "evidence/ssmcp-781-progress-20261121.json",
-        "bytes": 5162,
-        "sha256": "c48fd16e8011c44bfddec3b58118aca4f25d1430fedbd5a499200ead69755686"
+        "status": "five_fixed_artifacts_complete_second_runtime_partial_queue_projection_successor_prepared",
+        "source": "781b87df1d364137b6885f17f631a3e9e991bd58",
+        "tree": "6bf7beb143cfdce3878df856c27785164695430f",
+        "product_tests_executed_by_build": 0,
+        "second_runtime_owner_progress": {
+          "path": "evidence/ssmcp-781-second-baseline-progress-20261121.json",
+          "bytes": 1223,
+          "sha256": "8233daea639e602eac17018d524d0bc4a7903098b1da2c4ca856b075f2b738c6"
+        }
       },
       "current_native_observation": {
-        "path": "evidence/ssmcp-781-shared-lock-observation-20261121.json",
-        "bytes": 8508,
-        "sha256": "af4d5e4ede01a6cf47bbf016f56e35305f479b4f9b3cb9ed59c896e63fa6f619"
+        "path": "evidence/ssmcp-781-preserved-artifacts-20261121.json",
+        "bytes": 4442,
+        "sha256": "1a3a1ff057228a7b7b8bc92dbd911622bc815aaecd957254fd48df063f9713ad"
+      },
+      "prior_status_794": {
+        "path": "evidence/runtime-followup-prior-status-794-20261121.json",
+        "bytes": 13850,
+        "sha256": "a22bd6eaf613255bb81e5b6ce03201949819e1091b7cc4ef81b9be9cc0f4b901"
+      },
+      "build_receipt": {
+        "path": "evidence/ssmcp-781-baseline-build-20261121.json",
+        "bytes": 79446,
+        "sha256": "d2204375614807af510f6c7fd08ec657d212a98f18f504cb21376c63f47ea7c0"
+      },
+      "build_independent_review": {
+        "path": "evidence/ssmcp-781-baseline-independent-review-20261121.json",
+        "bytes": 11032,
+        "sha256": "b3af65610a8b9f78077ef89c2e857a0ab8df7a6a04f59e2957f5f582cd63955a"
+      },
+      "preserved_artifact_readback": {
+        "path": "evidence/ssmcp-781-preserved-artifacts-20261121.json",
+        "bytes": 4442,
+        "sha256": "1a3a1ff057228a7b7b8bc92dbd911622bc815aaecd957254fd48df063f9713ad"
+      },
+      "first_runtime_attempt": {
+        "job": "26c4545eae1eab8d27485f4a48077d3c-5e0",
+        "exit_code": 1,
+        "receipt_bytes": 23288,
+        "receipt_sha256": "23cf70065f3b4aa72beaeb45fefe0a6006da6fa5d5d1b4667249081db1348cb4",
+        "inputs_unchanged": true,
+        "samples": 0,
+        "frames": 0,
+        "ctrlv_executed": false,
+        "owner_diagnosis": "Explicit member:next sets target==next and leaves native_recipient null; old route-ready fixture assertion must follow that exact contract.",
+        "narrow_correction_owner": "Existing native source/release and original review_chat_followups owner; no second writer or artifact rebuild."
+      },
+      "second_runtime_attempt": {
+        "source": "authenticated native collab source owner feaba",
+        "seq": 332,
+        "sent_at_ms": 1795216580787,
+        "source_revision": "781b87df1d364137b6885f17f631a3e9e991bd58",
+        "job_id": "26c4545eae1eab8d27485f4a48077d3c-60e",
+        "exit_code": 1,
+        "both_eof": true,
+        "inputs_unchanged": true,
+        "completed_samples": [
+          "2738",
+          "64k",
+          "4MiB",
+          "4MiB+1 rejection"
+        ],
+        "ordinary16k": "Reached physical ready; ui.queue response spilled at33730 bytes, then postcheck failed",
+        "busy_executed": false,
+        "ctrlv_executed": false,
+        "full_baseline_passed": false,
+        "successor": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/handoffs/paste-readiness-r2",
+          "scope": "Exact /steering/queue projection retains full array equality and rejects partial data; fixed original case bytes/timeouts; reuse same five artifacts; no product source change",
+          "reported_driver_sha256_prefix": "4d104705",
+          "reported_ctrlv_sha256_prefix": "25f200a6",
+          "reported_consumer_sha256_prefix": "eb062bf2"
+        },
+        "verification_scope": "Owner progress handoff; raw second execution receipt and successor full hashes requested, not yet independently read by Project Z root."
       }
     },
     "context_request": {
@@ -16768,7 +16966,7 @@
           "draft": true,
           "head": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
           "tree": "285dcbe660ee410338a3bbeaf2153bd43862b77b",
-          "status": "source_review_found_receipt_budget_issue_original_runtime_evidence_pending_not_in_a1_cohort",
+          "status": "original_pr2_source_unchanged_p2_reproduced_and_fixed_in_separate_draft_pr3_original_broad_runtime_evidence_under_readonly_recovery",
           "evidence": {
             "path": "evidence/input-ui-followups-20261121.json",
             "bytes": 8733,
@@ -16779,7 +16977,82 @@
             "bytes": 18579,
             "sha256": "8487a2732670cacf23147dc514ebfaebb0bd50c8e8770b9a2150e30f6254d52d"
           },
-          "fix_status": "separate draft branch preparation; original PR2 and frozen cohort untouched"
+          "fix_status": "PR3 implementation fixed356; actual RED3 expected failures then GREEN6entrypoint+10scheduler/fmt/metadata/Clippy passed; independent fixed-source review found0new blockers. Draft; original PR2 and current a1 cohort unchanged.",
+          "fix": {
+            "pr": "https://github.com/LIghtJUNction/zuse/pull/3",
+            "draft": true,
+            "head": "35664746549c482c99082e6180419b2c0f5ff532",
+            "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+            "base": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+            "red": {
+              "path": "evidence/zuse-pr3-red-20261121.json",
+              "bytes": 5875,
+              "sha256": "91bc831b300b6de0a2625e721bf12f98ab1b201c72f3ddc868c6025ce54bc46f"
+            },
+            "green": {
+              "path": "evidence/zuse-pr3-green-20261121.json",
+              "bytes": 9510,
+              "sha256": "a3c05be4ab48fe50b18fe459ff23344e5b425f3f33d594c82acec555e6b2c0db"
+            },
+            "root_receipt_review": {
+              "path": "evidence/zuse-pr3-targeted-root-review-20261121.json",
+              "bytes": 6253,
+              "sha256": "6b571d771fc77deb8c6c21f10de7ae43119de1b8c8562f75d5cf2ffb3de88df2"
+            },
+            "independent_static_review": {
+              "path": "evidence/zuse-pr3-independent-review-20261121.json",
+              "bytes": 11273,
+              "sha256": "0d3508ef01a3d284510290422828f86740e81df9d346df73220704d07828abae"
+            },
+            "scope": "Event detail is a bounded prefix with explicit omission and cleanup accounting; parser tokens are measured with the locked parser; MCP retries only pure serialization once. Default max_steps and32MiB caps unchanged; no action replay.",
+            "full_handoff": {
+              "path": "evidence/zuse-pr3-receipt-fix-20261121.json",
+              "bytes": 27363,
+              "sha256": "8d946d84432203d9f6285eab9ed690204e5f225c2d4f5d4c526041e9dbdfabcb"
+            },
+            "publication": {
+              "path": "evidence/zuse-pr3-publication-20261121.json",
+              "bytes": 2471,
+              "sha256": "f700533b6e1bb6148481f7e44a764130ff42d72b356cfcc314e990792f33e1b3"
+            },
+            "drive_archive": {
+              "file_id": "15KpLTU4BgQl76r71kcI7Gppskl_T7eje",
+              "bytes": 51643,
+              "sha256": "7bcd05aae954037a5611a9e8d765b4dec698226347a4d784130f16b3349b40db",
+              "full_download_hash_verified_by_owner": true
+            }
+          },
+          "original_evidence_recovery": {
+            "status": "partial_original_receipts_recovered_not_full_source_bound_acceptance",
+            "source": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+            "worktree_clean": true,
+            "verified_original_text_files": 12,
+            "recovered": [
+              "7 Hyprland groups",
+              "CLI native output",
+              "1 AT-SPI Cargo test output",
+              "Cage fixture identity",
+              "preserved earlier Weston/Cage failures"
+            ],
+            "missing": [
+              "286 Rust raw commands/logs",
+              "20 no_std raw commands/logs",
+              "2 MPX original raw Cargo output",
+              "fmt/Clippy/five cross-target raw records",
+              "original17d0 ELF/source/lock/build identity manifest"
+            ],
+            "shared_current_elf_is_not_original": true,
+            "provenance": {
+              "path": "evidence/zuse-pr2-original-provenance-20261121.json",
+              "bytes": 16381,
+              "sha256": "d832f8951bb6e3199d9b8ac71bf3bb19b96066f2dfad02bf105c249d73dd6d76"
+            },
+            "manifest": {
+              "path": "evidence/zuse-pr2-original-manifest-20261121.json",
+              "bytes": 5582,
+              "sha256": "3537db55afb5b7f21e746b55b2f5276101d9955cf5e3706cffcb4bbc93e222b1"
+            }
+          }
         }
       },
       "ztype": {
@@ -17032,10 +17305,10 @@
           "new_runtime_execution": false
         }
       },
-      "scope_note": "PR22 memory-reclamation acceptance stays bound to bfee/ca160 and its ELF. PR23 input acceptance and pending PR24 caret work are separate; the66 memory stages were not rerun for them."
+      "scope_note": "PR22 memory acceptance stays bound to bfee/ca160 and its ELF. PR23 input acceptance and PR24 caret acceptance are separate; the66 memory stages were not rerun."
     },
     "ssmcp_input_requirement": {
-      "status": "source781_r4_baseline_actual_compilation_in_progress",
+      "status": "source781_five_artifacts_built_second_baseline_partial_queue_fixture_successor_pending",
       "effective_name": "--input",
       "terminal": "Default input source",
       "web": "Input host/port explicit",
@@ -17096,11 +17369,17 @@
         "tree": "6bf7beb143cfdce3878df856c27785164695430f",
         "source_published": true,
         "runtime_pass_claimed": false,
-        "final_five_artifact_build": "r4 job581: library fixture compiled and preserved; release bins running; complete five artifacts still pending",
+        "final_five_artifact_build": "Completed r4 job581: library-test fixture, ssmcp, ssmcp-frontend, ssmcpd and vt_snapshot, all fresh=false with source-bound link/public/preserved bytes equal.",
         "progress": {
-          "path": "evidence/ssmcp-781-progress-20261121.json",
-          "bytes": 5162,
-          "sha256": "c48fd16e8011c44bfddec3b58118aca4f25d1430fedbd5a499200ead69755686"
+          "status": "five_fixed_artifacts_complete_second_runtime_partial_queue_projection_successor_prepared",
+          "source": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "tree": "6bf7beb143cfdce3878df856c27785164695430f",
+          "product_tests_executed_by_build": 0,
+          "second_runtime_owner_progress": {
+            "path": "evidence/ssmcp-781-second-baseline-progress-20261121.json",
+            "bytes": 1223,
+            "sha256": "8233daea639e602eac17018d524d0bc4a7903098b1da2c4ca856b075f2b738c6"
+          }
         },
         "previous441_ci_metadata": {
           "path": "evidence/ssmcp-441-progress-before-producer-failure-20261121.json",
@@ -17123,9 +17402,19 @@
           "sha256": "88cc0d3ce36ae6408261a7e724661442e5b45117c73067d809d156d4d7a846f5"
         },
         "current_native_observation": {
-          "path": "evidence/ssmcp-781-shared-lock-observation-20261121.json",
-          "bytes": 8508,
-          "sha256": "af4d5e4ede01a6cf47bbf016f56e35305f479b4f9b3cb9ed59c896e63fa6f619"
+          "path": "evidence/ssmcp-781-preserved-artifacts-20261121.json",
+          "bytes": 4442,
+          "sha256": "1a3a1ff057228a7b7b8bc92dbd911622bc815aaecd957254fd48df063f9713ad"
+        },
+        "build_receipt": {
+          "path": "evidence/ssmcp-781-baseline-build-20261121.json",
+          "bytes": 79446,
+          "sha256": "d2204375614807af510f6c7fd08ec657d212a98f18f504cb21376c63f47ea7c0"
+        },
+        "prior_status_794": {
+          "path": "evidence/runtime-followup-prior-status-794-20261121.json",
+          "bytes": 13850,
+          "sha256": "a22bd6eaf613255bb81e5b6ce03201949819e1091b7cc4ef81b9be9cc0f4b901"
         }
       },
       "source_implementation_published": true,
@@ -17181,7 +17470,7 @@
         "source": "05ee8403fac6232bcd692fb58e170a4c6b17fde0",
         "elf_sha256": "7708a88b2a8b914a52abe2f10395378fb33c731621fdde9301a6679a83dc10c8"
       },
-      "status": "ztype_pr3_and_ztty_pr23_merged_fixed_native_acceptance_passed_separate_caret_pr24_pending",
+      "status": "ztype_pr3_ztty_pr23_input_and_separate_pr24_caret_merged",
       "last_verified_ztype_main": "e3e8c1014e29653da587cc993076cb02e469b456",
       "merged_tree": "930b79b4c49f21e252087e81f66494d4b4a1d7cc",
       "final_pr_head": "677d7ca9a895a16a790759fa741d635baa1b704d",
@@ -17201,7 +17490,7 @@
         "native_wayland_ztty": 7
       },
       "source_to_final_runtime_blobs_and_executed_helpers_match": true,
-      "scope_boundary": "GTK Wayland28 + actual native ztty Wayland7 + current XIM13 passed on their fixed binary pair. UI review is light theme/scale1. Host installed0.4.1 is unchanged. Inline caret blink is a separate draftPR24 pending runtime proof.",
+      "scope_boundary": "Original fixed pair GTK28/native ztty7/XIM13 and light-theme/scale1 UI results retain their runtime identities. Separate PR24 caret accepted16checks on runtime49c/ELF73e9, merged99ef. Host installed0.4.1 unchanged.",
       "publication": {
         "path": "evidence/ztype-pr3-publication-20261121.json",
         "bytes": 2428,
@@ -17232,7 +17521,15 @@
         "bytes": 8683,
         "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
       },
-      "host_install_or_input_config_changed": false
+      "host_install_or_input_config_changed": false,
+      "caret_followup": {
+        "merge": "99ef7a0f02dfb643a426b4b5f8daf0bc009d9752",
+        "evidence": {
+          "path": "evidence/ztty-pr24-independent-review-20261121.json",
+          "bytes": 6302,
+          "sha256": "cc91a2fc5486265d4eb24123d28ab6ccecd26ffe4eb68d2b8913b96de0cb8c77"
+        }
+      }
     },
     "recursive_source_checks": {
       "status": "merged_into_coordination_branch",
@@ -17282,15 +17579,56 @@
       "memory_66_stages_repeated": false,
       "caret_followup": {
         "pr": "https://github.com/LIghtJUNction/ztty/pull/24",
-        "head": "49c8024b94b055f43eee46a9ac8f671ad6b7f5a4",
-        "tree": "27dbb8a5ff3acfdc9bdc6e38a528667a43551895",
-        "status": "isolated_source_published_owner_reported_actual_build_passed_targeted_blink_runtime_pending",
-        "evidence": {
-          "path": "evidence/input-ui-followups-20261121.json",
-          "bytes": 8733,
-          "sha256": "88cc0d3ce36ae6408261a7e724661442e5b45117c73067d809d156d4d7a846f5"
+        "status": "merged_exact_tested_tree_16_focused_native_checks_passed",
+        "merge": "99ef7a0f02dfb643a426b4b5f8daf0bc009d9752",
+        "head": "9eaed366b285dc9c6c5a74032e850bd6af8c0476",
+        "tree": "79b48dbf7560bd8a62e34c7073c416f84abba2c7",
+        "runtime_source": "49c8024b94b055f43eee46a9ac8f671ad6b7f5a4",
+        "runtime_tree": "27dbb8a5ff3acfdc9bdc6e38a528667a43551895",
+        "elf_sha256": "73e9a96c6ee912c87e85e324f510a4ce5525a5c98d2515022dc310d48bad53ec",
+        "build_commands_passed": 9,
+        "focused_gui_checks_passed": 16,
+        "sampled_composition_frames": 34,
+        "nonzero_positions_tested": 2,
+        "all_owned_processes_cleaned": true,
+        "publication": {
+          "path": "evidence/ztty-pr24-publication-20261121.json",
+          "bytes": 9637,
+          "sha256": "cfdcc98898fa85e7085d49146a9c8c2e575ab5ce698a15967ad2ef3cc8fa3f16"
         },
-        "build_scope": "Owner reported actual fmt/metadata, strict root Clippy and release passed; targeted nonzero-row/column blink GUI regression pending."
+        "independent_review": {
+          "path": "evidence/ztty-pr24-independent-review-20261121.json",
+          "bytes": 6302,
+          "sha256": "cc91a2fc5486265d4eb24123d28ab6ccecd26ffe4eb68d2b8913b96de0cb8c77"
+        },
+        "merge_readback": {
+          "path": "evidence/ztty-pr24-merge-20261121.json",
+          "bytes": 694,
+          "sha256": "3903c18a920d8b3e28c062a18aed834fdc41e64d2e993ccfa953f3517db3be42"
+        },
+        "geometry_scope": "Actual PTY DSR/CSI16t positions and rendered pixels; not a captured compositor cursor-rectangle protocol trace.",
+        "gui_scope": "Private headless Sway1.12 and software Mesa EGL; actual starting on/off cursor phases,17frames each over1.3seconds; individual composed-frame blink phase not instrumented.",
+        "earlier_attempts": "47b preflight missing private compositor path;486 broker stderr observation timed out before caret assertions; preserved without relabeling product failure.",
+        "full_input_or_memory_suite_repeated": false,
+        "archive_delivery": {
+          "path": "evidence/ztty-pr24-evidence-delivery-20261121.json",
+          "bytes": 1506,
+          "sha256": "f00a7d393ba8e42b1fdd97e290a75a6735d047599d8b17d5ebabfd377944012f"
+        },
+        "archive": {
+          "drive_id": "1byru2K-yBHIZCPlS9zQCZsmapGML2I7n",
+          "url": "https://drive.google.com/file/d/1byru2K-yBHIZCPlS9zQCZsmapGML2I7n/view",
+          "bytes": 1001978,
+          "sha256": "211bde7127db7806e7524fc0555181ed84f8b3a9377be0faf985b93dd63a2f29",
+          "payloads": 148,
+          "zip_members": 149,
+          "full_download_and_all_payload_hashes_verified_by_owner": true,
+          "root_independent_full_download_and_all_payloads_verified": {
+            "path": "evidence/ztty-pr24-drive-readback-20261121.json",
+            "bytes": 1041,
+            "sha256": "c412a2c7e49eb8f1da17cf5f3adb94d098780d1c95d30d81075a60fda5029ce2"
+          }
+        }
       }
     }
   },
@@ -21970,17 +22308,18 @@
     },
     "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-git-sources-20261120/pr-cleanup-mechrevo-git-source.json"
   },
-  "current_snapshot_scope": "Current progress is recorded in current_maintenance. Earlier gates/consumer graphs retain immutable original cohorts;441 CI is not781 native acceptance, PR23 input acceptance is not PR24 caret acceptance, and final44 remains pending.",
+  "current_snapshot_scope": "Current maintenance includes merged PR24 exact16-check tree,781 five-artifact build and first route-fixture failure, and isolated zusePR3 RED/GREEN. Prior441 CI, PR23 paired input, PR22memory and old source graphs retain immutable cohorts. Full44 and finalP1 remain pending.",
   "report_preparation": {
-    "source_report_commit": "c2c1406752b4b8e23f3a7f0bec0fddc5209141da",
-    "source_report_tree": "2a0bc99dbb13609a62d557c82a71ebf59adea823",
-    "prepared_at_utc": "2026-11-20T22:41:32.179376+00:00",
-    "prepared_at_taipei": "2026-11-21T06:41:32.179376+08:00",
-    "published": false,
-    "followup_status": {
-      "path": "evidence/input-ui-followups-20261121.json",
-      "bytes": 8733,
-      "sha256": "88cc0d3ce36ae6408261a7e724661442e5b45117c73067d809d156d4d7a846f5"
+    "source_report_commit": "794075f187cb3ebaac8dc3de0a4d5dbba26403b8",
+    "source_report_tree": "f723367846a7665afaaa1df6b244b503ed75cc42",
+    "prepared_at_utc": "2026-11-20T23:20:13.349811+00:00",
+    "prepared_at_taipei": "2026-11-21T07:20:13.349811+08:00",
+    "snapshot_recorded_before_publication": true,
+    "report_only": true,
+    "prior_status": {
+      "path": "evidence/runtime-followup-prior-status-794-20261121.json",
+      "bytes": 13850,
+      "sha256": "a22bd6eaf613255bb81e5b6ce03201949819e1091b7cc4ef81b9be9cc0f4b901"
     }
   }
 }

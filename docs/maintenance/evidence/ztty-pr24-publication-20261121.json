@@ -1,0 +1,259 @@
+{
+  "schema": "ztty.ime-caret-publication.v1",
+  "repository": "LIghtJUNction/ztty",
+  "pull_request": {
+    "number": 24,
+    "url": "https://github.com/LIghtJUNction/ztty/pull/24",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-11-20T23:10:22Z",
+    "expected_head_sha": "9eaed366b285dc9c6c5a74032e850bd6af8c0476",
+    "base_sha": "01e8b573bc787e982f96db2b1e6ec9151d321284",
+    "merge_sha": "99ef7a0f02dfb643a426b4b5f8daf0bc009d9752",
+    "merge_tree": "79b48dbf7560bd8a62e34c7073c416f84abba2c7",
+    "merge_parents": [
+      "01e8b573bc787e982f96db2b1e6ec9151d321284",
+      "9eaed366b285dc9c6c5a74032e850bd6af8c0476"
+    ],
+    "fresh_plugin_main_and_commit_readback_verified": true,
+    "merge_tree_equals_tested_tree": true
+  },
+  "runtime": {
+    "head": "49c8024b94b055f43eee46a9ac8f671ad6b7f5a4",
+    "tree": "27dbb8a5ff3acfdc9bdc6e38a528667a43551895",
+    "binary": {
+      "path": "build-49c8024-r1/ztty-49c8024",
+      "bytes": 1406712,
+      "sha256": "73e9a96c6ee912c87e85e324f510a4ce5525a5c98d2515022dc310d48bad53ec"
+    },
+    "build_job": "b879919be66280447132d5d616be9361-46c",
+    "gates": [
+      "fmt",
+      "locked metadata",
+      "strict Clippy",
+      "release build"
+    ],
+    "root_lint_fresh": false,
+    "root_release_fresh": false,
+    "actual_compiler_cwd_argv_verified": true,
+    "c_object_archive_linked_rlib_identity_verified": true,
+    "build_validation_sha256": "13ea02248d25f1c707dad0d4b5b32b1b1ca3bf7890a8862464e08def5479bef8"
+  },
+  "regression": {
+    "head": "9eaed366b285dc9c6c5a74032e850bd6af8c0476",
+    "tree": "79b48dbf7560bd8a62e34c7073c416f84abba2c7",
+    "changed_after_runtime_build": [
+      "tests/wayland_gui.py"
+    ],
+    "runtime_source_unchanged": true,
+    "job": "b879919be66280447132d5d616be9361-494",
+    "passed": true,
+    "checks": [
+      {
+        "name": "native_surface_and_pty",
+        "passed": true,
+        "app_id": "org.project-z.ztty"
+      },
+      {
+        "name": "cwd_and_terminal_environment",
+        "passed": true,
+        "state": {
+          "cols": 78,
+          "rows": 20,
+          "term": "xterm-256color",
+          "program": "ztty",
+          "pwd_matches_cwd": true
+        }
+      },
+      {
+        "name": "caret_on_rendered_prompt_and_cursor_phase",
+        "passed": true,
+        "row": 6,
+        "col": 9,
+        "cursor_pixels": 210,
+        "geometry": [
+          98,
+          134,
+          10,
+          21
+        ],
+        "dsr_hex": "1b5b373b313052",
+        "geometry_source": "actual PTY DSR and CSI16t cell-size response",
+        "query_response_hex": "1b5b373b3130521b5b363b32313b313074"
+      },
+      {
+        "name": "caret_on_composition_stays_at_logical_cursor",
+        "passed": true,
+        "sampled_frames": 17,
+        "sample_seconds": 1.3192976230056956,
+        "blink_interval_ms": 150,
+        "starting_phase_observed": true,
+        "exact_phase_of_each_composed_frame_instrumented": false
+      },
+      {
+        "name": "caret_on_preedit_does_not_write_pty",
+        "passed": true
+      },
+      {
+        "name": "caret_off_rendered_prompt_and_cursor_phase",
+        "passed": true,
+        "row": 9,
+        "col": 17,
+        "cursor_pixels": 0,
+        "geometry": [
+          178,
+          197,
+          10,
+          21
+        ],
+        "dsr_hex": "1b5b31303b313852",
+        "geometry_source": "actual PTY DSR and CSI16t cell-size response",
+        "query_response_hex": "1b5b31303b3138521b5b363b32313b313074"
+      },
+      {
+        "name": "caret_off_composition_stays_at_logical_cursor",
+        "passed": true,
+        "sampled_frames": 17,
+        "sample_seconds": 1.3229325900028925,
+        "blink_interval_ms": 150,
+        "starting_phase_observed": true,
+        "exact_phase_of_each_composed_frame_instrumented": false
+      },
+      {
+        "name": "caret_off_preedit_does_not_write_pty",
+        "passed": true
+      },
+      {
+        "name": "caret_hidden_mode_suppresses_overlay",
+        "passed": true
+      },
+      {
+        "name": "caret_visible_mode_restores_current_position",
+        "passed": true
+      },
+      {
+        "name": "caret_scrollback_suppresses_overlay",
+        "passed": true
+      },
+      {
+        "name": "caret_live_view_restores_current_position",
+        "passed": true
+      },
+      {
+        "name": "caret_focus_loss_deactivates_input_method",
+        "passed": true
+      },
+      {
+        "name": "caret_focus_return_does_not_replay_old_preedit",
+        "passed": true
+      },
+      {
+        "name": "caret_commit_reaches_same_owned_pty_once",
+        "passed": true,
+        "actual_hex": "e4bda0e5a5bde4b896e7958c",
+        "pid": 2073712,
+        "broker_pid": 2073659
+      },
+      {
+        "name": "caret_peer_exits_cleanly",
+        "passed": true
+      }
+    ],
+    "scope": "One focused private headless Sway/input-method-v2 regression; software Mesa EGL, no host display or physical input; no memory-suite or full input-suite rerun.",
+    "command": [
+      "python3",
+      "tests/wayland_gui.py",
+      "--binary",
+      "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-caret-20261120/build-49c8024-r1/ztty-49c8024",
+      "--output",
+      "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-caret-20261120/gui-9eaed36-r3/wayland",
+      "--ime-cursor-only",
+      "--sway",
+      "/home/lightjunction/Documents/GITHUB/ztty/artifacts/native-wayland-20261119/artifacts/wayland-test-tools/root/usr/bin/sway",
+      "--swaymsg",
+      "/home/lightjunction/Documents/GITHUB/ztty/artifacts/native-wayland-20261119/artifacts/wayland-test-tools/root/usr/bin/swaymsg"
+    ],
+    "starting_blink_phases_observed": true,
+    "each_composed_frame_phase_instrumented": false,
+    "geometry_source": "Actual PTY DSR and CSI16t replies plus window viewport; assertions on captured pixels. No compositor protocol rectangle observation.",
+    "test_source_sha256": {
+      "tests/wayland_gui.py": "c8b820b87a81aa8575fca69628651d16e44baf8f33b2e86aafcf344bd5784ce9",
+      "tests/wayland_child.py": "9d470a4ab9d3a32efd2a0b7c864551b95d013a1de156da139ccfcde597b06646",
+      "tests/build_wayland_ime_peer.py": "06617787aa89913f221a6cbd16aa62319fbc2316bc494d728ce9ee2b46a745b4",
+      "tests/wayland_ime_peer.c": "62023c5b5f64a7384d28b3f98617f19a7568a63f0b799757f7665a1cc93e5231",
+      "tests/protocols/input-method-unstable-v2.xml": "99414dbad9458e71aa1fa01bc45f94ca6685787bfcb4d98948f72c1b45b60703",
+      "tools/isolated_xvfb.py": "9baf8e2d731be49ed57eefbaa48e15ba30fe581839d0ad1738a5cc4a19ceeb0a"
+    }
+  },
+  "receipts": {
+    "result.json": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-caret-20261120/gui-9eaed36-r3/result.json",
+      "bytes": 1951,
+      "sha256": "2e487bc56218d3e4cad07fb986bf34ac4c06edc2a6a375b2063d65f3a2b7f125"
+    },
+    "validation.json": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-caret-20261120/gui-9eaed36-r3/validation.json",
+      "bytes": 6607,
+      "sha256": "39e8c1a6b5190aa6f09ea75512485fecf7e14cc2c4bf01756e503e13a7d595f6"
+    },
+    "wayland/validation.json": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-caret-20261120/gui-9eaed36-r3/wayland/validation.json",
+      "bytes": 11717,
+      "sha256": "4a9e437668c0a529c29e8cc323fde98852a4f3c7e5b600e957686865f8f0ee54"
+    }
+  },
+  "earlier_attempts": [
+    {
+      "job": "b879919be66280447132d5d616be9361-46a",
+      "stage": "build launcher",
+      "result": "SHA transcription assertion before build/lock; preserved; corrected launcher passed as 46c",
+      "receipt": "build-launch-r1-failure.json"
+    },
+    {
+      "job": "b879919be66280447132d5d616be9361-47b",
+      "stage": "GUI preflight",
+      "exit_code": 2,
+      "result": "Missing explicit private Sway path; no compositor or terminal opened.",
+      "receipt": "gui-ce213-r1/result.json"
+    },
+    {
+      "job": "b879919be66280447132d5d616be9361-486",
+      "stage": "helper observation",
+      "exit_code": 1,
+      "result": "Native surface and environment passed; timed out expecting protocol logs on daemon stderr, which is intentionally /dev/null. No caret pixel assertions reached. Corrected helper uses existing PTY queries.",
+      "receipt": "gui-ce213-r2/result.json"
+    }
+  ],
+  "cleanup": {
+    "observed_unix": 1795216088.12166,
+    "scope": "personal-ztty-caret-gui-1795215885-2073335.scope",
+    "scope_show": "ActiveState=inactive\nSubState=dead\nControlGroup=\n",
+    "known_pids": {
+      "2073026": false,
+      "2073335": false,
+      "2073659": false,
+      "2073712": false
+    },
+    "outer_lock_available_at_probe": true,
+    "remaining": {
+      "owned_brokers_remaining": [],
+      "owned_children_remaining": [],
+      "owned_helpers_remaining": []
+    }
+  },
+  "visual_inspection": {
+    "viewed": [
+      "caret-on-ready.png",
+      "caret-off-ready.png",
+      "caret-on-00.png",
+      "caret-off-00.png"
+    ],
+    "result": "Rendered prompt and first-row marker remain visible; preedit is at the two expected nonzero logical caret positions."
+  },
+  "limits": [
+    "Private Linux headless Sway 1.12 with software Mesa EGL; no physical display or hardware GPU claim.",
+    "No full Chinese-input or memory-suite rerun; previous suites retain their own source and executable identities.",
+    "No host installation, input-method configuration, formal release or tag changes."
+  ],
+  "archive_delivery_receipt": "evidence-delivery.json"
+}

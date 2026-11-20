@@ -1,0 +1,28 @@
+{
+  "source": "authenticated native collab source owner feaba",
+  "seq": 332,
+  "sent_at_ms": 1795216580787,
+  "source_revision": "781b87df1d364137b6885f17f631a3e9e991bd58",
+  "job_id": "26c4545eae1eab8d27485f4a48077d3c-60e",
+  "exit_code": 1,
+  "both_eof": true,
+  "inputs_unchanged": true,
+  "completed_samples": [
+    "2738",
+    "64k",
+    "4MiB",
+    "4MiB+1 rejection"
+  ],
+  "ordinary16k": "Reached physical ready; ui.queue response spilled at33730 bytes, then postcheck failed",
+  "busy_executed": false,
+  "ctrlv_executed": false,
+  "full_baseline_passed": false,
+  "successor": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/handoffs/paste-readiness-r2",
+    "scope": "Exact /steering/queue projection retains full array equality and rejects partial data; fixed original case bytes/timeouts; reuse same five artifacts; no product source change",
+    "reported_driver_sha256_prefix": "4d104705",
+    "reported_ctrlv_sha256_prefix": "25f200a6",
+    "reported_consumer_sha256_prefix": "eb062bf2"
+  },
+  "verification_scope": "Owner progress handoff; raw second execution receipt and successor full hashes requested, not yet independently read by Project Z root."
+}

@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "kind": "read_only_original_pr2_evidence_provenance_audit",
+  "generated_at": "2026-11-20T23:15:42.129Z",
+  "repository": "LIghtJUNction/zuse",
+  "pull_request": 2,
+  "url": "https://github.com/LIghtJUNction/zuse/pull/2",
+  "conclusion": {
+    "status": "partially_closed",
+    "summary": "Original private Hyprland, CLI and AT-SPI outputs were recovered and copied byte-for-byte. The complete portable/MPX and source-to-product provenance chain was not recovered from the bounded known locations.",
+    "no_new_test_pass_claim": true,
+    "no_pr3_evidence_substitution": true,
+    "current_a1_cohort_unchanged": true
+  },
+  "identity": {
+    "base": "a1bb8fd2cbce0a9d85134999883c578358065242",
+    "implementation": "81b5225644e971019d1e8e61e89ffe6694c45a8d",
+    "implementation_tree": "bee9282bcc9ccb1a93dc6954b1d2fe8b13afbc23",
+    "head": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+    "tree": "285dcbe660ee410338a3bbeaf2153bd43862b77b",
+    "head_change_from_implementation": [
+      "docs/evidence/scoped-mice-native-2026-11-21.json",
+      "docs/validation-scoped-mice.md"
+    ],
+    "native_worktree": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121",
+    "observed_worktree_clean": true,
+    "observed_canonical_main": "a1bb8fd2cbce0a9d85134999883c578358065242",
+    "warning": "Present clean HEAD and documentation-only ancestry do not substitute for a build-time source-before/source-after manifest."
+  },
+  "sources": [
+    {
+      "kind": "github_fixed_document",
+      "path": "docs/validation-scoped-mice.md",
+      "blob": "710cd7e01f458fbcccc3619f1b520660d1454315",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/docs/validation-scoped-mice.md"
+    },
+    {
+      "kind": "github_fixed_summary",
+      "path": "docs/evidence/scoped-mice-native-2026-11-21.json",
+      "blob": "8d7117847f95af89ab3611c938fa02f7e25de22b",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/docs/evidence/scoped-mice-native-2026-11-21.json"
+    }
+  ],
+  "claims": [
+    {
+      "claim": "286 Rust passed / 0 failed / 5 ignored",
+      "original_raw_located": false,
+      "evidence_level": "author-published summary only in the inspected locations",
+      "missing": [
+        "original full cargo test --offline --locked --all-targets stdout/stderr",
+        "argv/cwd/env and process exit",
+        "build-time source/lock identity and compiler artifact identity"
+      ]
+    },
+    {
+      "claim": "20 no-default-features tests",
+      "original_raw_located": false,
+      "evidence_level": "author-published summary only in the inspected locations",
+      "missing": [
+        "original no-default-features cargo output and process exit",
+        "same fixed-source relationship"
+      ]
+    },
+    {
+      "claim": "2 private_x11 MPX Rust tests, final 1.03s",
+      "original_raw_located": false,
+      "evidence_level": "author-published summary only in the inspected locations",
+      "missing": [
+        "original --ignored/private-X11 cargo output identifying both tests",
+        "original private-fixture argv/env and process exit",
+        "test executable identity"
+      ],
+      "must_not_substitute": "The CLI native-scoped-mice summary and the one AT-SPI test are distinct fixtures, not these two Rust tests."
+    },
+    {
+      "claim": "7 Hyprland 0.57.2 groups",
+      "original_raw_located": true,
+      "evidence_level": "original saved fixture report independently read, not rerun",
+      "raw_relative_path": "scoped-validation-final/wayland-final.json",
+      "sha256": "c215f609f5324ed6593689a1fc484cb79f1a2e6b2ec7214e1c84a47b7c64f8f5",
+      "checks_passed": [
+        "window_metadata",
+        "pointer_motion",
+        "foreground_input",
+        "background_input",
+        "rejected_input",
+        "window_capture",
+        "unsupported_keyboard_states"
+      ],
+      "recorded_binary_sha256": "17d0a6867ee3dc9d176b5d8c3921069e51f06648c29459083cee16084f326c0b",
+      "matches_committed_wayland_summary": true,
+      "only_removed_fields": [
+        "isolation.render_node",
+        "isolation.cage_pid",
+        "isolation.hyprland_pid",
+        "isolation.baseline_keyboard_pid"
+      ],
+      "restoration_reported": {
+        "own_windows_closed": true,
+        "pointer": true,
+        "focus": true
+      },
+      "isolation_reported": {
+        "host_display_connection": false,
+        "host_focus_or_pointer_queries": false,
+        "private_socket_checks": true,
+        "physical_input_or_kms_fds": 0
+      },
+      "missing": [
+        "outer command/exit record",
+        "original tested ELF or immutable artifact copy",
+        "build-time source-to-ELF manifest"
+      ]
+    },
+    {
+      "claim": "CLI default/explicit-user/scope/cancellation cleanup",
+      "original_raw_located": true,
+      "evidence_level": "original saved CLI fixture stdout independently read",
+      "raw_relative_path": "scoped-validation-final/cli-native.log",
+      "sha256": "40813ac79f1f0d5c8fd8c0a835e90eb2796e69f29c83f45855e49a2d00970e4d",
+      "matches_committed_cli_summary": true,
+      "baseline_devices": 6,
+      "sigint": {
+        "cancel_ms": 5,
+        "child_exit": 1,
+        "status": "pass"
+      },
+      "sigterm": {
+        "cancel_ms": 3,
+        "child_exit": 1,
+        "status": "pass"
+      },
+      "helper_contract": "Fixed tests/native_scoped_mice.py checks own cleanup before returning and prints pass only after main/finally completes.",
+      "helper_blob": "9595ea21814127a04610ea36f10bb42aa8bac611",
+      "missing": [
+        "original --binary argv/path and outer process exit",
+        "the CLI output itself has no binary/source SHA"
+      ]
+    },
+    {
+      "claim": "Private GTK/AT-SPI fixture",
+      "original_raw_located": true,
+      "evidence_level": "original cargo output independently read",
+      "raw_relative_path": "scoped-validation-final/accessibility-native.log",
+      "sha256": "2e57339f6cae9c6e42f0d193105cfba3c01faf01aa2128909af8076b22ba99e5",
+      "test": "native_atspi_observe_edit_action_and_redaction",
+      "passed": 1,
+      "failed": 0,
+      "ignored": 0,
+      "seconds": 1.17,
+      "recorded_test_executable": "/var/tmp/project-z-cargo-target/debug/build/zuse-computer/15cdf606c2c4a429/out/accessibility_native-15cdf606c2c4a429",
+      "observed_retained_executable_sha256": "e2399efbd153b43b3936c2870a8588b43bf8a4e02b4482a1ef5ace4378dca2a9",
+      "helper_blob": "8bf4f779a7f30c2a227c6b74e2c4a37589014e0c",
+      "missing": [
+        "original process exit/build-time source manifest",
+        "original-time executable SHA; current file hash alone cannot prove historical immutability"
+      ]
+    },
+    {
+      "claim": "fmt / strict Clippy / five cross compile targets",
+      "original_raw_located": false,
+      "evidence_level": "author-published summary only in the inspected locations",
+      "missing": [
+        "original per-command outputs and process exits",
+        "fixed source and target identity"
+      ],
+      "scope": "Cross compilation remains compile-only, never native Windows/macOS/ARM acceptance."
+    }
+  ],
+  "artifact_observations": {
+    "observed_original_native_binary_found": false,
+    "original_native_binary_sha256": "17d0a6867ee3dc9d176b5d8c3921069e51f06648c29459083cee16084f326c0b",
+    "current_shared_binary": {
+      "path": "/var/tmp/project-z-cargo-target/debug/zuse",
+      "exists": true,
+      "bytes": 17454768,
+      "sha256": "04deac62ad725723f36d99baafa95591778d3b1742fccbbfc9ced2dd269003b0",
+      "inode": 64038321,
+      "stable_before_after": true
+    },
+    "stale_dep_info": {
+      "path": "/var/tmp/project-z-cargo-target/debug/zuse.d",
+      "sha256": "6b89487c61c69ebcd624f23d0f0280b6a224bbc0dbd56c322404cf25b0d98563",
+      "still_names_original_worktree": true,
+      "warning": "The shared zuse.d still names the PR2 worktree while the current zuse ELF hashes differently; this pair cannot establish original product identity."
+    },
+    "cage": {
+      "receipt_relative_path": "native-fixtures/cage-v6/receipt.json",
+      "receipt_sha256": "3a07d40faa7beef9145db19e3560c60a602726cb66f16cf362e5b2c58b6dc40d",
+      "upstream_commit": "b7b774ac957b6d8c7b39f0dcb9ebe19de3e8a45d",
+      "source_archive_sha256": "6dc1619665acd367e0174c93b234002549a66f55f1de9197d67f0305415babc8",
+      "binary_sha256": "5fd303a55924b59d8a506256ce843bea3980e6f90a095354cfd886f2c0b609ad",
+      "fresh_source_archive_and_binary_hashes_match_receipt": true,
+      "limited_patch": "Cage requests xdg-shell v6 instead of v5; current source builder receipt includes patch and before/after hashes."
+    }
+  },
+  "preserved_earlier_attempts": [
+    {
+      "path": "scoped-validation/wayland.json",
+      "sha256": "39856f16684fed50970b999850e1273bfb68bf5e545f6ecaa99baf4c5b1d8b53",
+      "status": "blocked",
+      "reason": "Weston parent advertises wl_compositor v5 while the child requests v6; raw log also records IPC path too long."
+    },
+    {
+      "path": "scoped-validation-final/wayland.json",
+      "sha256": "b9f986056cfd0bfef890bf8979ce5362d858b99f9efccbd8506c0a6163d0b009",
+      "status": "fail",
+      "reason": "Foreground input rejected because a unique main keyboard was not yet available; binary SHA was already 17d0."
+    }
+  ],
+  "bounded_search": {
+    "checked": [
+      "canonical zuse top-level and worktree list",
+      "scoped-mice worktree top-level and its two scoped-validation directories",
+      "native-fixtures/cage-v6 receipt and exact artifact paths",
+      "work-maintainer top-level names containing zuse",
+      "existing cloud zuse reports",
+      "one latest-128 exec.list call on the live zuse client"
+    ],
+    "exec_list_result": "The read-only list request timed out after 5s; no job contents were available and it was not repeated.",
+    "no_full_disk_search": true,
+    "owner_route": "Root reported the original a46 participant absent and the zuse f5 client roster empty."
+  },
+  "remaining_author_delivery": [
+    "Original raw stdout/stderr plus argv/cwd/env/exit for 286 all-targets, 20 no_std, the two MPX tests, and fmt/Clippy/cross checks.",
+    "Original compile/source snapshot manifest binding implementation 81b5225 (or provably code-equivalent precommit tree) and Cargo.lock to the native 17d0 ELF and test executables.",
+    "The preserved original 17d0 binary or its immutable archived object; if unavailable, state that historical artifact verification cannot be completed from a new build.",
+    "Original CLI/Hyprland job receipts for exact argv and exit, plus any existing archive ID/hash. No test rerun was requested."
+  ],
+  "copies": {
+    "directory": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence",
+    "count": 12,
+    "all_bytes_and_sha256_match_native": true,
+    "manifest_bytes": 5582,
+    "manifest_sha256": "3537db55afb5b7f21e746b55b2f5276101d9955cf5e3706cffcb4bbc93e222b1",
+    "files": [
+      {
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation/build.log",
+        "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation/build.log",
+        "bytes": 196,
+        "sha256": "4f738782cb530840d3eae34abc6cb9e94a1e43e6d6b595c5561d8c91b5de0912"
+      },
+      {
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation/cli-native.log",
+        "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation/cli-native.log",
+        "bytes": 301,
+        "sha256": "586272c26cc5ce88d158476791254b33d4566e736084d8b6a8482499dc10bdff"
+      },
+      {
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation/accessibility-native.log",
+        "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation/accessibility-native.log",
+        "bytes": 714,
+        "sha256": "e87af48b0f3d523ce99caa6c92d5a8d6763272fce16990ed98698cd8fc0e437b"
+      },
+      {
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation/wayland.json",
+        "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation/wayland.json",
+        "bytes": 6489,
+        "sha256": "39856f16684fed50970b999850e1273bfb68bf5e545f6ecaa99baf4c5b1d8b53"
+      },
+      {
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation-final/build.log",
+        "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation-final/build.log",
+        "bytes": 196,
+        "sha256": "cb82cabdd8620a8fabc1b0475835f8906438cde0d127d88cd254e39e804864d2"
+      },
+      {
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation-final/cli-native.log",
+        "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation-final/cli-native.log",
+        "bytes": 301,
+        "sha256": "40813ac79f1f0d5c8fd8c0a835e90eb2796e69f29c83f45855e49a2d00970e4d"
+      },
+      {
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation-final/accessibility-native.log",
+        "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation-final/accessibility-native.log",
+        "bytes": 714,
+        "sha256": "2e57339f6cae9c6e42f0d193105cfba3c01faf01aa2128909af8076b22ba99e5"
+      },
+      {
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation-final/wayland-headless.log",
+        "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation-final/wayland-headless.log",
+        "bytes": 2400,
+        "sha256": "d1b6d707ca2a8b6610bb1dfcbb7a4feb680ae4345ab7ebbbf9c7acc389e87829"
+      },
+      {
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation-final/wayland.json",
+        "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation-final/wayland.json",
+        "bytes": 2556,
+        "sha256": "b9f986056cfd0bfef890bf8979ce5362d858b99f9efccbd8506c0a6163d0b009"
+      },
+      {
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation-final/wayland-final.log",
+        "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation-final/wayland-final.log",
+        "bytes": 1987,
+        "sha256": "0659636f0e401cb265d8dcef3811671ab1a761a7a30d601c90d69d01305ded04"
+      },
+      {
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation-final/wayland-final.json",
+        "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation-final/wayland-final.json",
+        "bytes": 3598,
+        "sha256": "c215f609f5324ed6593689a1fc484cb79f1a2e6b2ec7214e1c84a47b7c64f8f5"
+      },
+      {
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/native-fixtures/cage-v6/receipt.json",
+        "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/native-fixtures/cage-v6/receipt.json",
+        "bytes": 1430,
+        "sha256": "3a07d40faa7beef9145db19e3560c60a602726cb66f16cf362e5b2c58b6dc40d"
+      }
+    ]
+  },
+  "actions": {
+    "native_reads_only": true,
+    "builds": 0,
+    "tests": 0,
+    "gui_runs": 0,
+    "models_started": 0,
+    "source_edits": 0,
+    "ref_changes": 0,
+    "locks_acquired": 0,
+    "signals": 0,
+    "external_uploads": 0,
+    "report_and_raw_text_copies_only": true
+  }
+}
