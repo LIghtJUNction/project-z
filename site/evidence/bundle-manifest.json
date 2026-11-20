@@ -20,12 +20,12 @@
     {
       "path": "index.html",
       "bytes": 44035,
-      "sha256": "5dda10db37b11ea6079ae2ffeb9027cb77f13d35943efcfbbc4e96868db243f6"
+      "sha256": "3329e14ac3cd3328d644ca27d3ae2f06a0ee9e089e052bdefcb0521fca3b5677"
     },
     {
       "path": "projects.json",
       "bytes": 53966,
-      "sha256": "e601996622f7af72171374f0f2203f4ee68bc8d640f301ac7a738485f7891254"
+      "sha256": "67623595776342b0a1ec28db067d4437faf161d48ca955a3ab76fa353af39730"
     },
     {
       "path": "style.css",

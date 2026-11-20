@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-20T07:58:18.811855+00:00",
+  "generated_at": "2026-11-20T08:02:26.755781+00:00",
   "categories": [
     {
       "id": "interface",
@@ -1184,7 +1184,7 @@
         "url": "https://github.com/LIghtJUNction/oh-my-ztty",
         "default_branch": "main",
         "visibility": "public",
-        "verified_at": "2026-11-20T06:42:16.896164+00:00",
+        "verified_at": "2026-11-20T08:02:26.753040+00:00",
         "source": "https://api.github.com/repos/LIghtJUNction/oh-my-ztty"
       },
       "documentation": {
@@ -1193,7 +1193,7 @@
         "sha256": "4784d5595f8eb0c9c87aa779203a6a86a04c8278871bf1a56356f18d05049e06"
       },
       "source_version": {
-        "version": "0.2.3",
+        "version": "0.2.4",
         "source": "https://raw.githubusercontent.com/LIghtJUNction/oh-my-ztty/main/VERSION"
       },
       "crate": null,
@@ -1201,7 +1201,7 @@
         "name": "oh-my-ztty",
         "source": "https://crates.io/api/v1/crates/oh-my-ztty",
         "status": "not_found",
-        "checked_at": "2026-11-20T06:42:16.896164+00:00"
+        "checked_at": "2026-11-20T08:02:26.753040+00:00"
       }
     },
     {
