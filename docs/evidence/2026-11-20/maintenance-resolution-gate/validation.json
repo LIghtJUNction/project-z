@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "code_commit": "b9de9241bf4cb9e95fdc079a727bf947da782652",
+  "code_tree": "90175012e0a7a1c0d5ac4e1c9d85a8e798db595f",
+  "gitlink_snapshot_base": "8e7416ede0753d8758153d944ef7a9d17e4a3f2a",
+  "environment": {
+    "system": "Linux",
+    "cargo_network": "offline",
+    "tools": [
+      "Python 3.14.10",
+      "cargo 1.100.0 (3acc79c0c 2026-11-05)",
+      "rustc 1.100.0 (0ef1bc386 2026-11-09)"
+    ]
+  },
+  "regressions": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "env": {
+      "CARGO_NET_OFFLINE": "true",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "tests": 82,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "elapsed_seconds": 11.77,
+    "exit_code": 0,
+    "log": "regressions.log"
+  },
+  "snapshot": {
+    "aggregate_source": "8e7416ede0753d8758153d944ef7a9d17e4a3f2a",
+    "status_before": "",
+    "gates": {
+      "sync": {
+        "status": "passed",
+        "summary": "Updated 42 repositories and 60 packages",
+        "log": "sync.log"
+      },
+      "check": {
+        "status": "passed",
+        "summary": "OK: 42 repositories, 60 packages; versions and graph agree",
+        "log": "check.log"
+      },
+      "resolve": {
+        "status": "passed",
+        "summary": "OK: local dependencies resolved in 36 repositories",
+        "log": "resolve.log"
+      }
+    },
+    "status_after": "",
+    "status": "passed",
+    "elapsed_seconds": 8.817
+  },
+  "feature_regression": {
+    "invalid_application_feature": "absent",
+    "valid_application_feature": "allowed",
+    "application_role_included": true,
+    "invalid_update_status": "blocked",
+    "invalid_update_committed": false,
+    "valid_update_status": "ready",
+    "valid_update_committed": true,
+    "original_worktree_preserved": true,
+    "temporary_configuration_restored": true,
+    "lockfile_restored": true
+  }
+}
