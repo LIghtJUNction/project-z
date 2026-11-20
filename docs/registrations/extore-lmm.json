@@ -3,9 +3,9 @@
   "status": "metadata_checks_passed",
   "ready_to_merge": true,
   "ready_to_merge_scope": "This dependency registration passed its metadata gates. Product browser qualification and production activation remain separately owned.",
-  "base_commit": "473afa85d868c2f2c9f1d1ee4aea5e6763d16d65",
+  "base_commit": "4ca04b7084711fde494129f9c1f34f5ae59f0739",
   "review_branch": "review/extore-lmm-registration",
-  "checked_at": "2026-11-20T01:45:01.469246+00:00",
+  "checked_at": "2026-11-20T03:39:48.560036+00:00",
   "registration": {
     "extore": {
       "commit": "8e3063690cf5595884b1e639535869fd593e0296",
@@ -15,7 +15,7 @@
       ]
     },
     "lmm-api-source": {
-      "commit": "120e0401555c35b7e42eae89d44bab77b2b38087",
+      "commit": "80e02c5053e2b85db9676831de7619e223ab6133",
       "role": "application",
       "manifests": [
         "services/core/Cargo.toml",
@@ -35,16 +35,10 @@
   "runtime_dependency": "LMM Go extension starts its local Rust host; that host loads the fixed Extore cdylib for authorized catalogue reads. repositories.lmm-api-source.requires includes extore in addition to the Cargo extore-plugin-api path edge.",
   "adopted_published_pins": [
     {
-      "name": "extore",
-      "before": "1c29a9a0bfa7e64c938581e5c5e5fcb1e6832f04",
-      "after": "8e3063690cf5595884b1e639535869fd593e0296",
-      "reason": "Advance the reviewed LMM/Extore pair together; actual Cargo manifests and lockfiles are unchanged."
-    },
-    {
       "name": "lmm-api-source",
-      "before": "44bae83fa2181bbfa49467a2140106b3fec9ff45",
-      "after": "120e0401555c35b7e42eae89d44bab77b2b38087",
-      "reason": "Advance the reviewed LMM/Extore pair together; actual Cargo manifests and lockfiles are unchanged."
+      "before": "120e0401555c35b7e42eae89d44bab77b2b38087",
+      "after": "80e02c5053e2b85db9676831de7619e223ab6133",
+      "reason": "Advance to the reviewed responsive variants layout and PostgreSQL test-proxy fixes. Cargo manifests, lockfiles, package metadata and the nested Extore pin are unchanged."
     }
   ],
   "source_contract": {
@@ -123,27 +117,28 @@
     {
       "command": "python3 -B scripts/project_z.py sync",
       "exit_code": 0,
-      "seconds": 0.328,
+      "seconds": 0.314,
       "result": "Updated 30 repositories and 51 packages",
       "log_sha256": "8467880fe04473ea4f0f0eb56ec149aff9dc7cc4e2caeebaa5958415a3184e61"
     },
     {
       "command": "python3 -B scripts/project_z.py check",
       "exit_code": 0,
-      "seconds": 0.434,
+      "seconds": 0.365,
       "result": "OK: 30 repositories, 51 packages; versions and graph agree",
       "log_sha256": "9920d6d886d67e46deccf3b6507d52c86af26d0c52561c4f7435d5e5b8c80b76"
     },
     {
       "command": "python3 -B scripts/project_z.py resolve extore lmm-api-source",
       "exit_code": 0,
-      "seconds": 1.706,
+      "seconds": 1.868,
       "result": "OK: local dependencies resolved in 2 repositories",
       "log_sha256": "6489f1074099a3758ed283a3f412318f2f8babff224c9f311f9477179a9f9c68"
     },
     {
       "command": "python3 -B scripts/project_z.py check",
       "exit_code": 0,
+      "seconds": 0.415,
       "result": "OK: 30 repositories, 51 packages; versions and graph agree",
       "log_sha256": "9920d6d886d67e46deccf3b6507d52c86af26d0c52561c4f7435d5e5b8c80b76",
       "phase": "after preserving and restoring only the four generated lockfiles"
@@ -212,9 +207,9 @@
     "other_consumers": "Reviewed published Cargo manifests, immutable gitlinks, and existing owner coordination records; no consumer applications or desktop actions were run."
   },
   "evidence": {
-    "metadata_and_source_equivalence_receipt_sha256": "b2a835d8f3f9363284da4e9c33dff0710423d9c3829e3f875331143dcb07a5d0",
-    "local_bundle": "lmm-api/out/project-z-extore-cohort-evidence/update-120e0401",
-    "previous_successful_registration": "473afa85d868c2f2c9f1d1ee4aea5e6763d16d65"
+    "metadata_and_source_equivalence_receipt_sha256": "9547e961a7aa385c387864a7b4a30d1b41e6084ef84ce16cfd558ae3e47fd0ae",
+    "local_bundle": "lmm-api/out/project-z-extore-cohort-evidence/update-80e02c50",
+    "previous_successful_registration": "4ca04b7084711fde494129f9c1f34f5ae59f0739"
   },
   "historical_registration": {
     "commit": "91c23210813fe6e1a4e8ef5071e7cfd2b7089d6c",
@@ -385,118 +380,56 @@
     "preserved_as_failed": true
   },
   "previous_successful_registration": {
-    "commit": "473afa85d868c2f2c9f1d1ee4aea5e6763d16d65",
+    "commit": "4ca04b7084711fde494129f9c1f34f5ae59f0739",
     "path": "docs/registrations/extore-lmm.json",
-    "blob": "b1beb0cc686116f16ef9c347e4d5efbcdd603349",
+    "blob": "b1d384a5c47688fbb0ea5db7b4935cbe8ed555a5",
     "checks": [
       {
         "command": "python3 -B scripts/project_z.py sync",
         "exit_code": 0,
-        "seconds": 0.367,
+        "seconds": 0.328,
         "result": "Updated 30 repositories and 51 packages",
         "log_sha256": "8467880fe04473ea4f0f0eb56ec149aff9dc7cc4e2caeebaa5958415a3184e61"
       },
       {
         "command": "python3 -B scripts/project_z.py check",
         "exit_code": 0,
-        "seconds": 0.465,
+        "seconds": 0.434,
         "result": "OK: 30 repositories, 51 packages; versions and graph agree",
         "log_sha256": "9920d6d886d67e46deccf3b6507d52c86af26d0c52561c4f7435d5e5b8c80b76"
       },
       {
         "command": "python3 -B scripts/project_z.py resolve extore lmm-api-source",
         "exit_code": 0,
-        "seconds": 2.12,
+        "seconds": 1.706,
         "result": "OK: local dependencies resolved in 2 repositories",
         "log_sha256": "6489f1074099a3758ed283a3f412318f2f8babff224c9f311f9477179a9f9c68"
       },
       {
         "command": "python3 -B scripts/project_z.py check",
         "exit_code": 0,
-        "seconds": 0.967,
         "result": "OK: 30 repositories, 51 packages; versions and graph agree",
         "log_sha256": "9920d6d886d67e46deccf3b6507d52c86af26d0c52561c4f7435d5e5b8c80b76",
-        "phase": "after restoring only resolver-generated lockfiles"
-      },
-      {
-        "command": "python3 -B scripts/project_z.py impact --repositories extore",
-        "exit_code": 0,
-        "seconds": 0.647,
-        "result": "extore\nlmm-api-source",
-        "log_sha256": "895c071abd998b56a8ba200420a3ffda8a92846b3d3aade0425568b1547678b4",
-        "phase": "after restoring only resolver-generated lockfiles"
-      },
-      {
-        "command": "python3 -B scripts/project_z.py impact --repositories zplugin",
-        "exit_code": 0,
-        "seconds": 0.522,
-        "result": "extore\nlmm-api-source\noh-my-ztty\nssmcp\nzcall-gui\nzcalld\nzcalld-compat\nzharness\nzplugin\nztty",
-        "log_sha256": "b029edaaf47e8d7bf69f8ecdf789dd82d1d8e227aad6e7b0d7ac5cebdabb2e32",
-        "phase": "after restoring only resolver-generated lockfiles"
+        "phase": "after preserving and restoring only the four generated lockfiles"
       }
     ],
     "evidence": {
-      "metadata_receipt_sha256": "0ba642293d8df2894a56d32fe6b08e37b3bcab6bd7c4007f049b3c97ca7f71ac",
-      "final_source_review_sha256": "de5cc8607b5b16a0b2064be4cbdffbadb8abc6668b6441f00f80c6cfece44349",
-      "lock_preservation_receipt_sha256": "2bbee242e40a979a421c05a2661b78425ec7fe06271d844659339e2226a21c25",
-      "published_pins_review_sha256": "0f73fae6d1fbdfce9e02eff1ca67fff81dcf381a191ad03688f2b76d3ef88425",
-      "lmm_extore_review_sha256": "9e644dd39bec6676b092a5585633bf424139d4a4b8361f0b444df6ae1fa5ce5b",
-      "local_bundle": "lmm-api/out/project-z-extore-cohort-evidence"
+      "metadata_and_source_equivalence_receipt_sha256": "b2a835d8f3f9363284da4e9c33dff0710423d9c3829e3f875331143dcb07a5d0",
+      "local_bundle": "lmm-api/out/project-z-extore-cohort-evidence/update-120e0401",
+      "previous_successful_registration": "473afa85d868c2f2c9f1d1ee4aea5e6763d16d65"
     },
     "adopted_published_pins": [
       {
-        "name": "ssmcp",
-        "before": "4e3132d60600dca5053af81cdefa6962c3058ac4",
-        "after": "70d847ee3b529f16292297b20b80b2d06a43a9d5",
-        "reason": "Published shared-cohort consumer removes ztui-core and pins the matching canonical libraries."
-      },
-      {
-        "name": "zharness",
-        "before": "84e370450f1d047d43119bf81caf73f742ba6b0a",
-        "after": "e3580c01c7252da090d04e59b59762bc561777d1",
-        "reason": "Version 0.5.1 consumes zplugin 0.3.1."
-      },
-      {
-        "name": "zuse",
-        "before": "5413e97788b2d688e66157ccb21a1165133082ef",
-        "after": "557ea46ae70e9de8f93b0928b505132e8c94e9db",
-        "reason": "Canonical version 0.2.0 matches the fixed SSMCP path dependency."
-      },
-      {
-        "name": "zcalld",
-        "before": "eb4b857d4f3b98867f762389d100fb982630a116",
-        "after": "25cd776a9ec9676d871abe67e3dff42e625a8a28",
-        "reason": "Published consumer and its plugin API adopt zplugin 0.3.1 and zsys 0.1.1."
-      },
-      {
-        "name": "zcall-gui",
-        "before": "8c59dc44b06de0eda53c8955683d7b553d7733e8",
-        "after": "27c98364d580dfa655ac793075f6a8f5865690bc",
-        "reason": "Published GUI pins the reviewed zui-native repository."
-      },
-      {
-        "name": "ztty",
-        "before": "3091db75c1f77174c30b2072c8ba3551ed143f4e",
-        "after": "6053a97920c29c852cd92d8b96e35f62cff92ecb",
-        "reason": "Published split-library consumer removes the retired ztty-ui package and adopts zplugin 0.3.1."
-      },
-      {
-        "name": "zui",
-        "before": "59f928e2826398b62868283e430db974edf382fb",
-        "after": "5e37fcfb791eec9ac523fc19373e95d0a513112f",
-        "reason": "Canonical source matches the GUI vendor gitlink exactly."
+        "name": "extore",
+        "before": "1c29a9a0bfa7e64c938581e5c5e5fcb1e6832f04",
+        "after": "8e3063690cf5595884b1e639535869fd593e0296",
+        "reason": "Advance the reviewed LMM/Extore pair together; actual Cargo manifests and lockfiles are unchanged."
       },
       {
         "name": "lmm-api-source",
-        "before": "04c234b259596b8a4a9ff5665c61ff17f1955111",
-        "after": "44bae83fa2181bbfa49467a2140106b3fec9ff45",
-        "reason": "Published Core-verified session binding candidate; Cargo manifests and lockfiles are unchanged from 04c234b2."
-      },
-      {
-        "name": "extore",
-        "before": "818400958a8660e5e72b1eefb4815dbb34452098",
-        "after": "1c29a9a0bfa7e64c938581e5c5e5fcb1e6832f04",
-        "reason": "Matches LMM third_party/extore. Changes from 81840095 are limited to two Python fixtures."
+        "before": "44bae83fa2181bbfa49467a2140106b3fec9ff45",
+        "after": "120e0401555c35b7e42eae89d44bab77b2b38087",
+        "reason": "Advance the reviewed LMM/Extore pair together; actual Cargo manifests and lockfiles are unchanged."
       }
     ]
   }
