@@ -114,3 +114,8 @@
 	path = lmm-api-source
 	url = https://github.com/TokenNotIncluded/lmm-api-source.git
 	branch = main
+
+[submodule "mechrevo-drivers"]
+	path = mechrevo-drivers
+	url = https://github.com/LIghtJUNction/mechrevo-drivers.git
+	branch = main

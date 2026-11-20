@@ -40,3 +40,7 @@ requires = ["zcalld"]
 [repositories.lmm-api-source]
 role = "application"
 manifests = ["services/core/Cargo.toml", "apps/cli/Cargo.toml"]
+
+[repositories.mechrevo-drivers]
+role = "application"
+manifests = ["console/Cargo.toml"]

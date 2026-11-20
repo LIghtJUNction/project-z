@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "base_commit": "b27ef85165902bcce1b583233d958bfaa8f76689",
+  "consumer_commit": "90f848035775d21efef6518a50964403ce09cb0b",
+  "baseline_sync": {
+    "exit_code": 0,
+    "stdout": "Updated 29 repositories and 48 packages\n",
+    "stderr": ""
+  },
+  "baseline_check": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "project-z: ssmcp/Cargo.toml: retired dependency ztui-core\nztty/crates/zterm/Cargo.toml: retired dependency ztty-ui\nztty/crates/ztty-ui/Cargo.toml: retired package name ztty-ui\nssmcp/crates/ztui/Cargo.toml: retired package name ztui-core\n"
+  },
+  "consumer_sync": {
+    "exit_code": 0,
+    "stdout": "Updated 30 repositories and 51 packages\n",
+    "stderr": ""
+  },
+  "consumer_check": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "project-z: ssmcp/Cargo.toml: retired dependency ztui-core\nztty/crates/zterm/Cargo.toml: retired dependency ztty-ui\nztty/crates/ztty-ui/Cargo.toml: retired package name ztty-ui\nssmcp/crates/ztui/Cargo.toml: retired package name ztui-core\n"
+  },
+  "consumer_metadata": {
+    "exit_code": 0,
+    "project_z_dependencies": [
+      {
+        "name": "zclap",
+        "version": "0.1.4",
+        "manifest_path": "zclap/Cargo.toml",
+        "source": null
+      },
+      {
+        "name": "zhex",
+        "version": "0.1.3",
+        "manifest_path": "zhex/Cargo.toml",
+        "source": null
+      }
+    ]
+  },
+  "impact_zclap": {
+    "exit_code": 0,
+    "stdout": "lmm-api-source\nmechrevo-drivers\noh-my-ztty\nzclap\nzclick\nzdot\nzuse\n",
+    "stderr": ""
+  },
+  "impact_zhex": {
+    "exit_code": 0,
+    "stdout": "lmm-api-source\nmechrevo-drivers\nzhex\n",
+    "stderr": ""
+  },
+  "recorded_at_utc": "2026-11-20T00:14:26.762190+00:00",
+  "status": "registration_prepared_baseline_blocked",
+  "base_branch": "coord/shared-libraries",
+  "complete_snapshot_accepted": false,
+  "source_tests": {
+    "source_commit": "90f848035775d21efef6518a50964403ce09cb0b",
+    "command": [
+      "cargo",
+      "test",
+      "--manifest-path",
+      "console/Cargo.toml",
+      "--offline",
+      "-p",
+      "mechrevo-console-core",
+      "-p",
+      "mechrevo-console-cli"
+    ],
+    "exit_code": 0,
+    "cli_passed": 18,
+    "core_passed": 118
+  },
+  "resolve_all": {
+    "status": "blocked_by_check",
+    "note": "The same four retired-package errors occur with and without this consumer. No policy was changed."
+  },
+  "next_step": "Land the existing ssmcp/ztty retirement migration, run sync, then pass check and resolve --all before accepting the aggregate snapshot."
+}
