@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-20T01:38:59.569676+00:00",
+  "operation": "remove extra blank lines at EOF only; tested Python AST is unchanged",
+  "files": [
+    {
+      "path": "scripts/project_z.py",
+      "tested_sha256": "82eb1b875ec0d3dbfabfe244b3c7747d88482db1f4dc20b7ed4932b9ea7693ec",
+      "committed_sha256": "1f0080ab142002d5dba2f43627178b0699afe883e31e07ef4c5b53a3873fb8a6",
+      "removed_trailing_newlines": 1,
+      "ast_unchanged": true
+    },
+    {
+      "path": "tests/test_project_z.py",
+      "tested_sha256": "59b0c7eb159963d3ee04518abda589d37b17e1ede55562b872b505f6cfdb0fb6",
+      "committed_sha256": "99372974e1e027d1923fa531136505d349c1e4d3fd0a973b28bfc61f381c4bf1",
+      "removed_trailing_newlines": 1,
+      "ast_unchanged": true
+    }
+  ]
+}

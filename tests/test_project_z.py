@@ -3,6 +3,7 @@
 from contextlib import redirect_stderr, redirect_stdout
 import io
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -332,6 +333,24 @@ class LocalConfigTests(FilesystemFixture):
             self.config.write_text(changed)
         self.assertEqual(self.config.read_text(), changed)
 
+    def test_workspace_override_is_temporary_and_does_not_rewrite_generated_patch(self):
+        override = '[patch.crates-io]\ncore = { path = "app/vendor/core" }\n'
+        with self.assertRaisesRegex(RuntimeError, "fixture failed"):
+            with pz.local_config(self.root, content=override):
+                self.assertEqual(self.config.read_text(), override)
+                self.assertEqual((self.root / pz.PATCH).read_text(), self.content)
+                raise RuntimeError("fixture failed")
+        self.assertFalse(self.config.exists())
+        self.assertEqual((self.root / pz.PATCH).read_text(), self.content)
+
+    def test_workspace_override_preserves_a_preexisting_canonical_configuration(self):
+        self.config.write_text(self.content)
+        override = '[patch.crates-io]\ncore = { path = "app/vendor/core" }\n'
+        with self.assertRaises(pz.CoordinationError):
+            with pz.local_config(self.root, content=override):
+                self.fail("a caller-owned configuration must not be replaced")
+        self.assertEqual(self.config.read_text(), self.content)
+
 
 class PathBoundaryTests(FilesystemFixture):
     def test_relative_path_normalizes_internal_parent_components(self):
@@ -488,6 +507,359 @@ class CliTests(FilesystemFixture):
             errors = pz.resolved_paths(data, data["repositories"], self.root)
         self.assertTrue(any("outside the canonical checkout" in error for error in errors))
         self.assertFalse((self.root / ".cargo/config.toml").exists())
+
+
+@unittest.skipUnless(shutil.which("git"), "workspace source fixtures require Git")
+class WorkspacePatchTests(FilesystemFixture):
+    """A real path consumer and registry consumer must share one package identity."""
+
+    def git(self, *args, cwd):
+        return subprocess.run(["git", *args], cwd=cwd, capture_output=True, text=True,
+                              check=True).stdout.strip()
+
+    def commit(self, directory):
+        self.git("add", "--all", cwd=directory)
+        self.git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid",
+                 "-c", "commit.gpgsign=false", "-c", f"core.hooksPath={self.hooks}",
+                 "commit", "-qm", "fixture", cwd=directory)
+
+    def clone(self, source, destination):
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        self.git("-c", "protocol.file.allow=always", "clone", "-q", "--no-hardlinks",
+                 "--recurse-submodules", str(source), str(destination), cwd=self.root)
+        return destination
+
+    def item(self, name):
+        return next(item for item in self.data["packages"] if item["name"] == name)
+
+    def repository(self, name):
+        return next(repo for repo in self.data["repositories"] if repo["name"] == name)
+
+    def patches(self, repository="consumer", manifest="Cargo.toml"):
+        text = pz.workspace_patch_text(self.data, self.repository(repository), manifest, self.root)
+        return tomllib.loads(text)["patch"]["crates-io"]
+
+    def setUp(self):
+        super().setUp()
+        self.hooks = self.root / "empty-hooks"
+        self.hooks.mkdir()
+        self.shared = self.root / "shared"
+        self.write("shared/Cargo.toml", '[workspace]\nmembers = ["runtime", "macros", "private"]\nresolver = "2"\n')
+        self.write("shared/runtime/Cargo.toml", '''[package]
+name = "fixture-plugin"
+version = "1.0.0"
+edition = "2021"
+[dependencies]
+fixture-plugin-macros = { path = "../macros", version = "=1.0.0" }
+''')
+        self.write("shared/runtime/src/lib.rs", "pub fn value() -> u32 { 1 }\n")
+        self.write("shared/macros/Cargo.toml", '''[package]
+name = "fixture-plugin-macros"
+version = "1.0.0"
+edition = "2021"
+[lib]
+proc-macro = true
+''')
+        self.write("shared/macros/src/lib.rs", "extern crate proc_macro;\n")
+        self.write("shared/private/Cargo.toml", '''[package]
+name = "fixture-private"
+version = "1.0.0"
+edition = "2021"
+publish = false
+''')
+        self.write("shared/private/src/lib.rs", "pub struct Internal;\n")
+        self.git("init", "-q", "-b", "main", cwd=self.shared)
+        self.commit(self.shared)
+        self.nested = self.clone(self.shared, self.root / "consumer/vendor/shared")
+        self.write("bridge/Cargo.toml", '''[package]
+name = "fixture-bridge"
+version = "1.0.0"
+edition = "2021"
+[dependencies]
+fixture-plugin = "=1.0.0"
+fixture-plugin-macros = "=1.0.0"
+''')
+        self.write("bridge/src/lib.rs", "pub struct Bridge;\n")
+        self.write("consumer/Cargo.toml", '''[package]
+name = "consumer"
+version = "1.0.0"
+edition = "2021"
+publish = false
+[workspace]
+[dependencies]
+fixture-plugin = { path = "vendor/shared/runtime", version = "=1.0.0" }
+fixture-bridge = { path = "../bridge", version = "=1.0.0" }
+''')
+        self.write("consumer/src/lib.rs", "pub struct Consumer;\n")
+        self.data = catalog(
+            package("fixture-plugin", repo="shared", manifest="shared/runtime/Cargo.toml",
+                    deps=[dependency("fixture-plugin-macros", path="shared/macros")]),
+            package("fixture-plugin-macros", repo="shared", manifest="shared/macros/Cargo.toml"),
+            package("fixture-private", repo="shared", manifest="shared/private/Cargo.toml", publish=False),
+            package("fixture-bridge", repo="bridge", deps=[dependency("fixture-plugin"),
+                                                          dependency("fixture-plugin-macros")]),
+            package("consumer", publish=False,
+                    deps=[dependency("fixture-plugin", path="consumer/vendor/shared/runtime"),
+                          dependency("fixture-bridge", path="bridge")]),
+        )
+        self.repository("shared")["commit"] = self.git("rev-parse", "HEAD", cwd=self.shared)
+
+    def second_workspace(self):
+        nested = self.clone(self.shared, self.root / "consumer/tools/vendor/shared")
+        self.write("consumer/tools/Cargo.toml", '''[package]
+name = "other-consumer"
+version = "1.0.0"
+edition = "2021"
+publish = false
+[workspace]
+[dependencies]
+fixture-plugin = { path = "vendor/shared/runtime", version = "=1.0.0" }
+fixture-bridge = { path = "../../bridge", version = "=1.0.0" }
+''')
+        self.write("consumer/tools/src/lib.rs", "pub struct Other;\n")
+        other = package("other-consumer", repo="consumer", manifest="consumer/tools/Cargo.toml",
+                        publish=False, deps=[dependency("fixture-plugin", path="consumer/tools/vendor/shared/runtime"),
+                                             dependency("fixture-bridge", path="bridge")])
+        other["workspace"] = "consumer/tools"
+        self.data["packages"].append(other)
+        self.repository("consumer")["manifests"].append("tools/Cargo.toml")
+        return nested
+
+    def bridge_with_vendor(self, *, dev=False):
+        bridge = self.root / "bridge"
+        declaration = 'fixture-plugin = { path = "vendor/shared/runtime", version = "=1.0.0" }\n'
+        self.write("bridge/Cargo.toml", '''[package]
+name = "fixture-bridge"
+version = "1.0.0"
+edition = "2021"
+[dependencies]
+fixture-plugin-macros = "=1.0.0"
+''' + ('[dev-dependencies]\n' if dev else '') + declaration)
+        self.git("init", "-q", "-b", "main", cwd=bridge)
+        self.git("-c", "protocol.file.allow=always", "submodule", "add", "-q",
+                 str(self.shared), "vendor/shared", cwd=bridge)
+        self.commit(bridge)
+        self.item("fixture-bridge")["dependencies"][0] = dependency(
+            "fixture-plugin", path="bridge/vendor/shared/runtime", kind="dev" if dev else "normal")
+        self.repository("bridge")["commit"] = self.git("rev-parse", "HEAD", cwd=bridge)
+        return bridge
+
+    def test_explicit_vendor_redirects_runtime_and_macros_as_one_repository(self):
+        patches = self.patches()
+        self.assertEqual(patches["fixture-plugin"], {"path": "consumer/vendor/shared/runtime"})
+        self.assertEqual(patches["fixture-plugin-macros"], {"path": "consumer/vendor/shared/macros"})
+        self.assertEqual(patches["fixture-bridge"], {"path": "bridge"})
+        self.assertNotIn("fixture-private", patches)
+        self.assertNotIn("consumer", patches)
+
+    def test_distinct_clean_commits_are_rejected_even_with_identical_package_version(self):
+        (self.nested / "runtime/src/lib.rs").write_text("pub fn value() -> u32 { 2 }\n")
+        self.commit(self.nested)
+        self.assertEqual(self.git("status", "--porcelain", cwd=self.nested), "")
+        with self.assertRaisesRegex(pz.CoordinationError, "noncanonical"):
+            self.patches()
+
+    def test_dirty_canonical_or_vendor_tree_cannot_supply_an_equivalent_copy(self):
+        for directory in [self.shared, self.nested]:
+            for tracked in [False, True]:
+                with self.subTest(directory=directory, tracked=tracked):
+                    path = directory / ("runtime/src/lib.rs" if tracked else "runtime/build.rs")
+                    previous = path.read_bytes() if path.exists() else None
+                    path.write_text("// unpublished local change\n")
+                    try:
+                        with self.assertRaisesRegex(pz.CoordinationError, "noncanonical"):
+                            self.patches()
+                    finally:
+                        if previous is None:
+                            path.unlink()
+                        else:
+                            path.write_bytes(previous)
+
+    def test_same_commit_does_not_allow_a_different_package_relative_path(self):
+        self.item("consumer")["dependencies"][0]["path"] = "consumer/vendor/shared/macros"
+        with self.assertRaisesRegex(pz.CoordinationError, "noncanonical"):
+            self.patches()
+
+    def test_two_explicit_roots_in_one_workspace_are_a_conflict(self):
+        second = self.clone(self.shared, self.root / "consumer/vendor/second")
+        self.item("consumer")["dependencies"].append(
+            dependency("fixture-plugin-macros", path=str(second.relative_to(self.root) / "macros")))
+        with self.assertRaisesRegex(pz.CoordinationError, "conflict") as failure:
+            self.patches()
+        self.assertIn("consumer/vendor/shared", str(failure.exception))
+        self.assertIn("consumer/vendor/second", str(failure.exception))
+
+    def test_explicit_canonical_and_vendor_roots_cannot_be_silently_unified(self):
+        self.item("consumer")["dependencies"].append(dependency("fixture-plugin-macros", path="shared/macros"))
+        with self.assertRaisesRegex(pz.CoordinationError, "conflict"):
+            self.patches()
+
+    def test_workspace_choices_do_not_pollute_other_workspaces_or_catalog(self):
+        self.second_workspace()
+        before = json.dumps(self.data, sort_keys=True)
+        first = self.patches()
+        second = self.patches(manifest="tools/Cargo.toml")
+        canonical = self.patches(repository="shared")
+        self.assertEqual(first["fixture-plugin"]["path"], "consumer/vendor/shared/runtime")
+        self.assertEqual(second["fixture-plugin"]["path"], "consumer/tools/vendor/shared/runtime")
+        self.assertEqual(second["fixture-plugin-macros"]["path"], "consumer/tools/vendor/shared/macros")
+        self.assertEqual(canonical["fixture-plugin"]["path"], "shared/runtime")
+        self.assertEqual(self.patches(), first)
+        self.assertEqual(json.dumps(self.data, sort_keys=True), before)
+
+    def test_registry_optional_and_dev_dependencies_propagate_vendor_constraints(self):
+        self.bridge_with_vendor()
+        for kind, optional in [("normal", False), ("normal", True), ("build", False), ("dev", False)]:
+            declaration = dependency("fixture-bridge", kind=kind)
+            declaration["optional"] = optional
+            self.item("consumer")["dependencies"] = [declaration]
+            with self.subTest(kind=kind, optional=optional):
+                patches = self.patches()
+                self.assertEqual(patches["fixture-plugin"]["path"], "bridge/vendor/shared/runtime")
+                self.assertEqual(patches["fixture-plugin-macros"]["path"], "bridge/vendor/shared/macros")
+
+    def test_transitive_dev_path_does_not_constrain_the_consuming_workspace(self):
+        self.bridge_with_vendor(dev=True)
+        patches = self.patches()
+        self.assertEqual(patches["fixture-plugin"]["path"], "consumer/vendor/shared/runtime")
+        self.assertEqual(patches["fixture-plugin-macros"]["path"], "consumer/vendor/shared/macros")
+        # Building the bridge's own tests does include its development dependency.
+        bridge_patches = self.patches(repository="bridge")
+        self.assertEqual(bridge_patches["fixture-plugin"]["path"], "bridge/vendor/shared/runtime")
+
+    def test_transitive_paths_move_with_the_selected_parent_repository(self):
+        bridge = self.bridge_with_vendor()
+        nested = self.clone(bridge, self.root / "consumer/vendor/bridge")
+        chosen = nested.relative_to(self.root).as_posix()
+        self.item("consumer")["dependencies"] = [
+            dependency("fixture-bridge", path=chosen),
+            dependency("fixture-plugin", path=chosen + "/vendor/shared/runtime"),
+        ]
+        patches = self.patches()
+        self.assertEqual(patches["fixture-bridge"]["path"], chosen)
+        self.assertEqual(patches["fixture-plugin"]["path"], chosen + "/vendor/shared/runtime")
+        self.assertEqual(patches["fixture-plugin-macros"]["path"], chosen + "/vendor/shared/macros")
+        self.assertEqual(self.git("status", "--porcelain", cwd=bridge), "")
+        self.assertEqual(self.git("status", "--porcelain", cwd=nested), "")
+
+    def test_resolve_and_run_use_the_same_workspace_config_and_restore_locks(self):
+        self.second_workspace()
+        self.generated(self.data)
+        expected = {"Cargo.toml": "consumer/vendor/shared", "tools/Cargo.toml": "consumer/tools/vendor/shared"}
+        locks = {manifest: self.write(str(Path("consumer") / Path(manifest).parent / "Cargo.lock"),
+                                     "original lock bytes\r\n") for manifest in expected}
+        originals = {manifest: path.read_bytes() for manifest, path in locks.items()}
+        seen = []
+
+        def observe(kind, manifest):
+            content = (self.root / ".cargo/config.toml").read_text()
+            patches = tomllib.loads(content)["patch"]["crates-io"]
+            self.assertEqual(patches["fixture-plugin"]["path"], expected[manifest] + "/runtime")
+            self.assertEqual(patches["fixture-plugin-macros"]["path"], expected[manifest] + "/macros")
+            locks[manifest].write_text("temporary resolution\n")
+            seen.append((kind, manifest, content))
+
+        def metadata(repo, manifest, *_args, **_kwargs):
+            observe("metadata", manifest)
+            return {"packages": [
+                {"name": name, "version": "1.0.0", "manifest_path": str(self.root / expected[manifest] / inner / "Cargo.toml")}
+                for name, inner in [("fixture-plugin", "runtime"), ("fixture-plugin-macros", "macros")]
+            ]}
+
+        real_run = subprocess.run
+
+        def execute(argv, **kwargs):
+            if argv[0] != "cargo":
+                return real_run(argv, **kwargs)
+            manifest = Path(argv[argv.index("--manifest-path") + 1]).relative_to(self.root / "consumer").as_posix()
+            observe("run", manifest)
+            return SimpleNamespace(returncode=0)
+
+        with patch.object(pz, "inventory", return_value=self.data), patch.object(pz, "metadata", side_effect=metadata), \
+             patch.object(pz.subprocess, "run", side_effect=execute), \
+             redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()) as error:
+            self.assertEqual(pz.main(["--root", str(self.root), "resolve", "consumer"]), 0, error.getvalue())
+            self.assertFalse((self.root / ".cargo/config.toml").exists())
+            self.assertEqual(pz.main(["--root", str(self.root), "run", "--repo", "consumer", "--", "test", "--offline"]), 0, error.getvalue())
+        self.assertEqual(len(seen), 6)
+        for manifest in expected:
+            configurations = [content for _, observed, content in seen if observed == manifest]
+            self.assertEqual(len(configurations), 3)
+            self.assertEqual(len(set(configurations)), 1)
+            self.assertEqual(locks[manifest].read_bytes(), originals[manifest])
+        self.assertFalse((self.root / ".cargo/config.toml").exists())
+        self.assertEqual((self.root / pz.PATCH).read_text(), pz.patch_text(self.data))
+
+    def test_workspace_config_and_lock_are_restored_after_resolution_or_command_failure(self):
+        self.generated(self.data)
+        lock = self.write("consumer/Cargo.lock", "user lock\r\n")
+        original = lock.read_bytes()
+        real_run = subprocess.run
+        for stage in ["resolve", "run"]:
+            def metadata(*_args, **_kwargs):
+                lock.write_text("temporary preflight\n")
+                if stage == "resolve":
+                    raise pz.CoordinationError("fixture resolution failed")
+                return {"packages": []}
+
+            def execute(argv, **kwargs):
+                if argv[0] != "cargo":
+                    return real_run(argv, **kwargs)
+                lock.write_text("temporary failed command\n")
+                return SimpleNamespace(returncode=7)
+
+            args = ["resolve", "consumer"] if stage == "resolve" else ["run", "--repo", "consumer", "--", "test"]
+            with self.subTest(stage=stage), patch.object(pz, "inventory", return_value=self.data), \
+                 patch.object(pz, "metadata", side_effect=metadata), patch.object(pz.subprocess, "run", side_effect=execute), \
+                 redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
+                self.assertEqual(pz.main(["--root", str(self.root), *args]), 1)
+                self.assertFalse((self.root / ".cargo/config.toml").exists())
+                self.assertEqual(lock.read_bytes(), original)
+
+    @unittest.skipUnless(shutil.which("cargo"), "offline Cargo metadata fixture requires Cargo")
+    def test_real_cargo_collision_is_removed_for_both_runtime_and_macro_packages(self):
+        self.generated(self.data)
+        env = dict(os.environ, CARGO_HOME=str(self.root / "cargo-home"), CARGO_NET_OFFLINE="true",
+                   CARGO_TARGET_DIR=str(self.root / "metadata-target"), CARGO_BUILD_JOBS="1",
+                   RUSTC_WRAPPER="", RUSTC_WORKSPACE_WRAPPER="")
+        argv = ["cargo", "metadata", "--offline", "--format-version", "1", "--manifest-path",
+                str(self.root / "consumer/Cargo.toml")]
+
+        with pz.preserved_workspace_locks(self.data, self.repository("consumer"), self.root), \
+             pz.local_config(self.root, content=pz.patch_text(self.data)):
+            baseline = subprocess.run(argv, cwd=self.root, env=env, capture_output=True, text=True, timeout=30)
+        self.assertNotEqual(baseline.returncode, 0, "the fixture must reproduce Cargo's actual duplicate-path failure")
+        self.assertIn("collision", baseline.stderr.lower(), baseline.stderr)
+        self.assertIn("lockfile", baseline.stderr.lower(), baseline.stderr)
+
+        content = pz.workspace_patch_text(self.data, self.repository("consumer"), "Cargo.toml", self.root)
+        with pz.preserved_workspace_locks(self.data, self.repository("consumer"), self.root), \
+             pz.local_config(self.root, content=content):
+            resolved = subprocess.run(argv, cwd=self.root, env=env, capture_output=True, text=True, timeout=30)
+        self.assertEqual(resolved.returncode, 0, resolved.stderr)
+        packages = json.loads(resolved.stdout)["packages"]
+        for name, inner in [("fixture-plugin", "runtime"), ("fixture-plugin-macros", "macros")]:
+            matches = [item for item in packages if item["name"] == name]
+            self.assertEqual(len(matches), 1)
+            self.assertEqual(Path(matches[0]["manifest_path"]).resolve(), self.nested / inner / "Cargo.toml")
+
+        # Cargo resolves dev dependencies only for the selected workspace, not
+        # for every transitive library whose metadata contains a dev edge.
+        self.bridge_with_vendor(dev=True)
+        content = pz.workspace_patch_text(self.data, self.repository("consumer"), "Cargo.toml", self.root)
+        with pz.preserved_workspace_locks(self.data, self.repository("consumer"), self.root), \
+             pz.local_config(self.root, content=content):
+            development = subprocess.run(argv, cwd=self.root, env=env, capture_output=True, text=True, timeout=30)
+        self.assertEqual(development.returncode, 0, development.stderr)
+        packages = json.loads(development.stdout)["packages"]
+        for name, inner in [("fixture-plugin", "runtime"), ("fixture-plugin-macros", "macros")]:
+            matches = [item for item in packages if item["name"] == name]
+            self.assertEqual(len(matches), 1)
+            self.assertEqual(Path(matches[0]["manifest_path"]).resolve(), self.nested / inner / "Cargo.toml")
+        self.assertFalse((self.root / ".cargo/config.toml").exists())
+        self.assertFalse((self.root / "consumer/Cargo.lock").exists())
+        self.assertEqual(self.git("status", "--porcelain", cwd=self.shared), "")
+        self.assertEqual(self.git("status", "--porcelain", cwd=self.nested), "")
 
 
 @unittest.skipUnless(shutil.which("git"), "source-equivalence fixtures require Git")

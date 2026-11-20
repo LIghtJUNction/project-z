@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-20T01:35:55.097448+00:00",
+  "exit_code": 0,
+  "seconds": 10.761370435997378,
+  "coordinator_sha256": "82eb1b875ec0d3dbfabfe244b3c7747d88482db1f4dc20b7ed4932b9ea7693ec",
+  "test_file_sha256": "59b0c7eb159963d3ee04518abda589d37b17e1ede55562b872b505f6cfdb0fb6",
+  "log_sha256": "62774d233cfbf6b6ee64ca6296b42f5c893c8a5248ecbab7b822e9dbfc8598c7"
+}
