@@ -114,3 +114,15 @@
 	path = lmm-api-source
 	url = https://github.com/TokenNotIncluded/lmm-api-source.git
 	branch = main
+[submodule "zgraphics"]
+	path = zgraphics
+	url = https://github.com/LIghtJUNction/zgraphics.git
+	branch = main
+[submodule "zpty"]
+	path = zpty
+	url = https://github.com/LIghtJUNction/zpty.git
+	branch = main
+[submodule "zterm"]
+	path = zterm
+	url = https://github.com/LIghtJUNction/zterm.git
+	branch = main
