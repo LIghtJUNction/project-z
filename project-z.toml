@@ -9,6 +9,7 @@ role = "application"
 
 [repositories.ztty]
 role = "application"
+manifests = ["Cargo.toml", "examples/dedent-plugin/Cargo.toml", "tests/fixtures/text-plugin/Cargo.toml"]
 
 [repositories.zcalld]
 role = "application"
@@ -19,6 +20,15 @@ source_links = { "apps/zcall-gui" = "zcall-gui" }
 
 [repositories.zuse]
 role = "application"
+
+[repositories.zcall]
+manifests = ["Cargo.toml", "fuzz/Cargo.toml"]
+
+[repositories.zconv]
+manifests = ["Cargo.toml", "fuzz/Cargo.toml"]
+
+[repositories.zdwire]
+manifests = ["Cargo.toml", "fuzz/Cargo.toml"]
 
 [repositories.zdot]
 role = "application"
