@@ -35,13 +35,16 @@ def main():
     parser.add_argument("output", type=Path)
     args = parser.parse_args()
 
-    verification = subprocess.run(
-        [sys.executable, str(ROOT / "scripts/project_z.py"), "check"],
-        cwd=ROOT, capture_output=True, text=True,
-    )
-    if verification.returncode:
-        parser.error(verification.stderr.strip() or verification.stdout.strip())
-    print(verification.stdout.strip(), file=sys.stderr)
+    for arguments in (["check"], ["resolve", "--all"]):
+        verification = subprocess.run(
+            [sys.executable, str(ROOT / "scripts/project_z.py"), *arguments],
+            cwd=ROOT, capture_output=True, text=True,
+        )
+        if verification.returncode:
+            detail = verification.stderr.strip() or verification.stdout.strip()
+            parser.error(f"{' '.join(arguments)} failed: {detail or verification.returncode}")
+        if verification.stdout.strip():
+            print(verification.stdout.strip(), file=sys.stderr)
 
     commit = git("rev-parse", "HEAD").decode().strip()
     if git("status", "--porcelain", "--untracked-files=no", "--ignore-submodules=none"):
