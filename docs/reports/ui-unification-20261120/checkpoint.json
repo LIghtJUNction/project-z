@@ -1,8 +1,8 @@
 {
   "schema": "project-z.ui-migration-checkpoint.v1",
-  "recorded_at": "2026-11-20T10:10:14.091884+00:00",
+  "recorded_at": "2026-11-20T10:47:16.996958+00:00",
   "initial_recorded_at": "2026-11-20T09:00:21.939780+00:00",
-  "status": "accepted-component-pins-check-passed",
+  "status": "accepted-cohort-final-validation-passed-awaiting-main-review",
   "base": "ad1c9e21c9a35ebb2f4059529409b4ad3f2960fd",
   "sync": "Updated 41 repositories and 60 packages",
   "check": {
@@ -23,19 +23,19 @@
     "ztype"
   ],
   "remaining_owners": {
-    "oh-my-ztty": "The sole 0.2.6 owner will supply the verified immutable suite source and component artifact lock. The aggregate pin is 0fdc87873c53e7c87d18952f83a7b94fc4149de5.",
+    "oh-my-ztty": "Released 0.2.6 at 1e3ce8d3e5a141d09e450fd3f635f987a5732be4 and pinned in the validated aggregate candidate. Actual suite installation is a separate owner handoff.",
     "ssmcp": "The single owner is preparing the full SSMCP 21 feature release. The aggregate pin is bfe5f25ffab718f100b11d2ce55c8dc839cbad71.",
     "zgpui_consumers": "The respective consumer owners are preparing exact sources for the zgpui 0.1.4 and 0.1.5 wave.",
     "zmcl": "The accepted zi18n consumer is zmcl 0.1.1 at 2b1218f70cf89fb042fd725d4ef92dcb4e67dfe9. The later native GUI release has its own owner and acceptance.",
     "zcall_zharness": "The zcall 0.4 and zharness 0.6.0 wave, including any zharness consumption of zguard, requires separate exact-source and dependency acceptance."
   },
-  "main_acceptance": "Pending check and resolve --all on the final coherent pins, plus independent verification of nested excluded applications and actual source archives.",
+  "main_acceptance": "Exact candidate 522bc7c9da008f05e9f715c1c1eda91b13ca89ec passed local check and resolve --all. Main review and promotion are pending.",
   "merged_main": "f0659de7c732163b5ebb02c76516dd11b264d21c",
   "previous_checkpoint": "b84f610364b0e79124aceb7665100296187c43fb",
   "accepted_gui_source": "e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74",
   "source_links_validation": "source-links-validation.json",
   "accepted_outer_gui_source": "ab2b3b6726fa7c7c6ee092607f95861d2097e332",
-  "resolve_all": "Independent validation passed for prior source 046bb4b0b73f82e0943c92d7c81facb9968b8520 (independent-validation-046bb4b.json). Full resolution is pending acceptance of the final oh-my-ztty 0.2.6 pins.",
+  "resolve_all": "Passed for candidate 522bc7c9da008f05e9f715c1c1eda91b13ca89ec at tree eb2dfc60e3ab31f96c6fb29c458573f8500a2ac6 (final-validation.json). Prior independent validation passed for 046bb4b0b73f82e0943c92d7c81facb9968b8520 (independent-validation-046bb4b.json).",
   "independent_validation": "independent-validation-046bb4b.json",
   "stage_1": {
     "base": "046bb4b0b73f82e0943c92d7c81facb9968b8520",
@@ -57,5 +57,12 @@
       "stdout": "OK: 43 repositories, 62 packages; versions and graph agree\n",
       "stderr": ""
     }
+  },
+  "final_validation": {
+    "source": "522bc7c9da008f05e9f715c1c1eda91b13ca89ec",
+    "tree": "eb2dfc60e3ab31f96c6fb29c458573f8500a2ac6",
+    "receipt": "final-validation.json",
+    "report": "final-validation.md",
+    "scope": "Receipt commit changes documentation only. It preserves the tested graph and gitlinks."
   }
 }

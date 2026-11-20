@@ -1,0 +1,102 @@
+{
+  "schema": "project-z.final-aggregate-validation.v1",
+  "source": "522bc7c9da008f05e9f715c1c1eda91b13ca89ec",
+  "tree": "eb2dfc60e3ab31f96c6fb29c458573f8500a2ac6",
+  "recorded_at_utc": "2026-11-20T10:47:16.996958+00:00",
+  "scope": "Exact committed aggregate candidate and its recursive gitlinks. The receipt commit changes documentation only. Native suite gates are evidence from its official release workflow.",
+  "catalog": {
+    "repositories": 43,
+    "packages": 62
+  },
+  "check": {
+    "argv": [
+      "python3",
+      "scripts/project_z.py",
+      "check"
+    ],
+    "started_at_utc": "2026-11-20T10:46:55.127572+00:00",
+    "completed_at_utc": "2026-11-20T10:46:56.124516+00:00",
+    "exit_code": 0,
+    "wall_seconds": 0.997,
+    "summary": "OK: 43 repositories, 62 packages; versions and graph agree"
+  },
+  "resolve_all": {
+    "argv": [
+      "python3",
+      "scripts/project_z.py",
+      "resolve",
+      "--all"
+    ],
+    "started_at_utc": "2026-11-20T10:46:56.124548+00:00",
+    "completed_at_utc": "2026-11-20T10:47:04.763624+00:00",
+    "exit_code": 0,
+    "wall_seconds": 8.639,
+    "summary": "OK: local dependencies resolved in 38 repositories",
+    "rust_repositories_resolved": 38
+  },
+  "preservation": {
+    "recursive_submodule_checkouts": 103,
+    "repository_checkouts_including_root": 104,
+    "cargo_lock_candidate_paths": 233,
+    "existing_cargo_lock_files": 142,
+    "worktree_cargo_config_candidate_paths": 209,
+    "existing_worktree_cargo_config_files": 3,
+    "external_cargo_configs_unchanged": true,
+    "clean_and_pinned_before": true,
+    "clean_and_pinned_after": true,
+    "preservation_changes": []
+  },
+  "suite": {
+    "version": "0.2.6",
+    "source": "1e3ce8d3e5a141d09e450fd3f635f987a5732be4",
+    "previous_source": "0fdc87873c53e7c87d18952f83a7b94fc4149de5",
+    "tag": "v0.2.6",
+    "tag_object": "5a5f45dcc37c443876aee5d29ed280bcf6c6058d",
+    "ztty_source": "6e2ce246b0b50e6b82da99756832feae6e966f21",
+    "ssmcp_source": "4f4dd88275c205e0e61a7601b4e0d11f56038769",
+    "ssmcp_release_version": "0.10.20",
+    "workflow": {
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/actions/runs/44719594477",
+      "id": 44719594477,
+      "conclusion": "success",
+      "jobs": 3,
+      "completed_at_utc": "2026-11-20T10:31:12Z",
+      "native_linux_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "native_gates": [
+        "full recursive checkout",
+        "installation lifecycle",
+        "locked bundle",
+        "native GUI",
+        "keyboard",
+        "completion",
+        "cleanup"
+      ]
+    },
+    "release": {
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty/releases/tag/v0.2.6",
+      "id": 452554850,
+      "published_at_utc": "2026-11-20T10:31:09Z",
+      "asset_count": 6,
+      "tar_archives": {
+        "x86_64": {
+          "bytes": 7273546,
+          "sha256": "94a22ce1300a337e741ef0c2a336e29e90696b621fbdfa05c0b66673ce10dc20"
+        },
+        "aarch64": {
+          "bytes": 7011427,
+          "sha256": "b035c460e3444e7b33dda4e5dd25bceecf0757af40b095950adb8d0ad001637b"
+        }
+      }
+    },
+    "publication_evidence": "Coordinator independently read the official workflow, jobs, tag and release. The Git tag object and peeled source were checked again while importing the exact suite gitlink."
+  },
+  "top_level_ssmcp_cargo_source": "bfe5f25ffab718f100b11d2ce55c8dc839cbad71",
+  "prior_validation": {
+    "source": "046bb4b0b73f82e0943c92d7c81facb9968b8520",
+    "receipt": "independent-validation-046bb4b.json"
+  },
+  "status": "passed-awaiting-main-review"
+}
