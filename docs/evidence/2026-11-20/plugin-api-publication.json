@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-11-20T02:03:57.713307+00:00",
+  "package": "ztty-plugin-api",
+  "version": "0.1.0",
+  "url": {
+    "api": "https://crates.io/api/v1/crates/ztty-plugin-api/0.1.0",
+    "archive": "https://static.crates.io/crates/ztty-plugin-api/ztty-plugin-api-0.1.0.crate"
+  },
+  "http_status": {
+    "api": 200,
+    "archive": 200
+  },
+  "crate_bytes": 3482,
+  "crate_sha256": "e00adc5df1eefa237ea1ccd8d837ceecabef1976141b78918901d95cb8e9d4a6",
+  "yanked": false,
+  "vcs": {
+    "git": {
+      "sha1": "36b367ffda4cea9b3b3dfbf38dc6375567912323"
+    },
+    "path_in_vcs": "crates/ztty-plugin-api"
+  },
+  "canonical_ztty_commit": "1a2f165983d7abff507c69b54c0c4ed225f49a45",
+  "source_files": [
+    {
+      "path": "src/lib.rs",
+      "published_sha256": "edf7482a3af57c379f6f3e9bc7ddcf2326ac030da858fb4fbbbddab78552371e",
+      "canonical_sha256": "edf7482a3af57c379f6f3e9bc7ddcf2326ac030da858fb4fbbbddab78552371e",
+      "identical": true
+    }
+  ],
+  "original_manifest_identical_to_canonical": true,
+  "original_manifest_sha256": "279130cb08ed5e639fe1b5d8d61a6948411fa3f58b96c434934abb5b1bcaca6b",
+  "canonical_manifest_sha256": "279130cb08ed5e639fe1b5d8d61a6948411fa3f58b96c434934abb5b1bcaca6b",
+  "normalized_zplugin_dependency": {
+    "version": "=0.3.1",
+    "features": [
+      "macros"
+    ],
+    "default-features": false
+  },
+  "public_consumer_report": "https://github.com/LIghtJUNction/ztty/blob/00d3d418c11f632789dfbb4034db8cefb5e3fd20/docs/reports/plugin-api-registry-20261120/README.md",
+  "compilation_or_tests_repeated": false
+}

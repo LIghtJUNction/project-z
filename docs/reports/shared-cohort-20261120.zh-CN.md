@@ -90,6 +90,8 @@ zuse [正式发布](https://github.com/LIghtJUNction/zuse/releases/tag/v0.2.1)�
 
 这些证据来自 Linux 私有 Xvfb、headless Sway 和 Mesa 软件 EGL。独立审计重算了三份 ELF 和 76 个受 Git 管理的测试/辅助文件的散列，支持复用现有功能验收；不据此声称原生 Windows/macOS、物理 GPU 或性能门禁通过。本轮另备的 canonical-patch 三库 unit gate 两次在资源准入阶段停止，没有进入 Cargo；该状态仍记录为 `resource_not_started`，不与已完成的消费者验收混算。
 
+另有已完成的 registry 发布：`ztty-plugin-api 0.1.0` 的正式来源为 `36b367ffda4cea9b3b3dfbf38dc6375567912323`，下载包为 3,482 B，SHA-256 为 `e00adc5df1eefa237ea1ccd8d837ceecabef1976141b78918901d95cb8e9d4a6`。本轮直接回读 API 和实际 crate 均成功、版本未撤回，包内 `src/lib.rs` 及原始 Cargo 清单与固定 ztty `1a2f165` 逐字一致。原负责人还完成了六个独立 registry 消费者和一个组合消费者，共 21 条 Cargo 命令通过，包含真实 PTY；这不等于动态插件加载或应用正式发布。详见[发布与消费回执](https://github.com/LIghtJUNction/ztty/blob/00d3d418c11f632789dfbb4034db8cefb5e3fd20/docs/reports/plugin-api-registry-20261120/README.md)，本轮来源复核保存于 `docs/evidence/2026-11-20/plugin-api-publication.json`。
+
 ztty 0.5.0 仍是开发候选。既有同条件测量发现性能回退：Unicode 吞吐中位数由约 104.584 降至 21.906 MiB/s，ASCII 由约 305.179 降至 252.769 MiB/s。功能通过不能消除这项性能结果，后续优化仍由原维护方推进并传播给套件。
 
 ### SSMCP 应用传播
