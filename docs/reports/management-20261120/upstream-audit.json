@@ -1,0 +1,622 @@
+{
+  "candidates": [],
+  "created_at": "2026-11-20T11:55:51.390764+00:00",
+  "errors": [],
+  "needs_maintenance": true,
+  "owner": "LIghtJUNction",
+  "registry": [
+    {
+      "name": "lmm-cli",
+      "repository": "lmm-api-source",
+      "status": "present",
+      "version": "0.1.0"
+    },
+    {
+      "name": "mechrevo-console-cli",
+      "repository": "mechrevo-drivers",
+      "status": "missing",
+      "version": "0.1.0"
+    },
+    {
+      "name": "mechrevo-console-core",
+      "repository": "mechrevo-drivers",
+      "status": "missing",
+      "version": "0.1.0"
+    },
+    {
+      "name": "mechrevo-console-gui",
+      "repository": "mechrevo-drivers",
+      "status": "missing",
+      "version": "0.1.0"
+    },
+    {
+      "name": "onim",
+      "repository": "OniMods",
+      "status": "present",
+      "version": "0.1.13"
+    },
+    {
+      "name": "ssmcp",
+      "repository": "ssmcp",
+      "status": "missing",
+      "version": "0.10.14"
+    },
+    {
+      "name": "z58",
+      "repository": "z58",
+      "status": "present",
+      "version": "0.1.6"
+    },
+    {
+      "name": "z64",
+      "repository": "z64",
+      "status": "present",
+      "version": "0.1.2"
+    },
+    {
+      "name": "zcall",
+      "repository": "zcall",
+      "status": "present",
+      "version": "0.3.0"
+    },
+    {
+      "name": "zcall-gui",
+      "repository": "zcall-gui",
+      "status": "missing",
+      "version": "0.1.1"
+    },
+    {
+      "name": "zcalld",
+      "repository": "zcalld",
+      "status": "missing",
+      "version": "0.2.5"
+    },
+    {
+      "name": "zcalld-plugin-api",
+      "repository": "zcalld",
+      "status": "missing",
+      "version": "0.2.5"
+    },
+    {
+      "name": "zcalld-plugin-routing",
+      "repository": "zcalld",
+      "status": "missing",
+      "version": "0.2.5"
+    },
+    {
+      "name": "zclap",
+      "repository": "zclap",
+      "status": "present",
+      "version": "0.1.4"
+    },
+    {
+      "name": "zclick-core",
+      "repository": "zclick",
+      "status": "present",
+      "version": "0.1.1-alpha.3"
+    },
+    {
+      "name": "zconv",
+      "repository": "zconv",
+      "status": "present",
+      "version": "0.4.0"
+    },
+    {
+      "name": "zdot",
+      "repository": "zdot",
+      "status": "missing",
+      "version": "0.2.0"
+    },
+    {
+      "name": "zdwire",
+      "repository": "zdwire",
+      "status": "present",
+      "version": "0.1.4"
+    },
+    {
+      "name": "zfetch",
+      "repository": "zfetch",
+      "status": "present",
+      "version": "0.1.1"
+    },
+    {
+      "name": "zgpui",
+      "repository": "zgpui",
+      "status": "present",
+      "version": "0.1.2"
+    },
+    {
+      "name": "zgraphics",
+      "repository": "zgraphics",
+      "status": "present",
+      "version": "0.2.0"
+    },
+    {
+      "name": "zguard",
+      "repository": "zguard",
+      "status": "present",
+      "version": "0.1.0"
+    },
+    {
+      "name": "zharness",
+      "repository": "zharness",
+      "status": "present",
+      "version": "0.5.1"
+    },
+    {
+      "name": "zhex",
+      "repository": "zhex",
+      "status": "present",
+      "version": "0.1.3"
+    },
+    {
+      "name": "zi18n",
+      "repository": "zi18n",
+      "status": "present",
+      "version": "0.1.0"
+    },
+    {
+      "name": "zinput",
+      "repository": "zinput",
+      "status": "present",
+      "version": "0.1.3"
+    },
+    {
+      "name": "zldap",
+      "repository": "zldap",
+      "status": "present",
+      "version": "0.1.3"
+    },
+    {
+      "name": "zmcl",
+      "repository": "zmcl",
+      "status": "missing",
+      "version": "0.1.1"
+    },
+    {
+      "name": "zmcl-core",
+      "repository": "zmcl",
+      "status": "missing",
+      "version": "0.1.0"
+    },
+    {
+      "name": "zmcpio",
+      "repository": "zmcpio",
+      "status": "present",
+      "version": "0.4.0"
+    },
+    {
+      "name": "zmime",
+      "repository": "zmime",
+      "status": "present",
+      "version": "0.1.2"
+    },
+    {
+      "name": "zplugin",
+      "repository": "zplugin",
+      "status": "present",
+      "version": "0.3.1"
+    },
+    {
+      "name": "zplugin-macros",
+      "repository": "zplugin",
+      "status": "present",
+      "version": "0.3.1"
+    },
+    {
+      "name": "zpty",
+      "repository": "zpty",
+      "status": "present",
+      "version": "0.2.3"
+    },
+    {
+      "name": "zrc",
+      "repository": "zrc",
+      "status": "present",
+      "version": "0.1.2"
+    },
+    {
+      "name": "zscan",
+      "repository": "zscan",
+      "status": "present",
+      "version": "0.1.3"
+    },
+    {
+      "name": "zsyn",
+      "repository": "zsyn",
+      "status": "present",
+      "version": "0.1.3"
+    },
+    {
+      "name": "zsys",
+      "repository": "zsys",
+      "status": "present",
+      "version": "0.1.1"
+    },
+    {
+      "name": "zterm",
+      "repository": "zterm",
+      "status": "present",
+      "version": "0.5.2"
+    },
+    {
+      "name": "ztty",
+      "repository": "ztty",
+      "status": "present",
+      "version": "0.5.2"
+    },
+    {
+      "name": "ztty-plugin-api",
+      "repository": "ztty",
+      "status": "present",
+      "version": "0.1.0"
+    },
+    {
+      "name": "ztuio",
+      "repository": "ztuio",
+      "status": "present",
+      "version": "0.1.0"
+    },
+    {
+      "name": "zuse-computer",
+      "repository": "zuse",
+      "status": "present",
+      "version": "0.2.2"
+    },
+    {
+      "name": "zvte",
+      "repository": "zvte",
+      "status": "present",
+      "version": "0.1.3"
+    }
+  ],
+  "root_head": "76dd114c11685d430dd55bb0d78b064a7349af73",
+  "schema_version": 1,
+  "source_dirty": true,
+  "upstreams": [
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "OniMods",
+      "pinned": "14dba75a5752c3142039a8660ce37cdf57d7082a",
+      "upstream": "3f10bc7908da0eaeafc999a8fadadb8178048b0e",
+      "url": "https://github.com/LIghtJUNction/OniMods.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "lmm-api-source",
+      "pinned": "4571b477d490b86d477f44f1c6768cc5f3b409d1",
+      "upstream": "3d1c09d5e0424b44603686f7419e76f790b2bb5c",
+      "url": "https://github.com/TokenNotIncluded/lmm-api-source.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "mechrevo-drivers",
+      "pinned": "4599a3825dac3c85efeeb490cb4eebe1c1b6dff0",
+      "upstream": "900eb4593a26ba6a461d40173768358be336bc23",
+      "url": "https://github.com/LIghtJUNction/mechrevo-drivers.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "oh-my-ztty",
+      "pinned": "1e3ce8d3e5a141d09e450fd3f635f987a5732be4",
+      "upstream": "0b60eb7d6e35d06a137278ffe0b3f1139c722fe6",
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "ssmcp",
+      "pinned": "bfe5f25ffab718f100b11d2ce55c8dc839cbad71",
+      "upstream": "606db3cb5f5a3c9859a1e7e5692633b6a104bbb8",
+      "url": "https://github.com/LIghtJUNction/ssmcp.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "z58",
+      "pinned": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+      "upstream": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+      "url": "https://github.com/LIghtJUNction/z58.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "z64",
+      "pinned": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+      "upstream": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+      "url": "https://github.com/LIghtJUNction/z64.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zcall",
+      "pinned": "8fb84b812b8025e34399b28e27242605d68ea345",
+      "upstream": "45df84f93848a9f7dc66eb7da953d18d14bb08f7",
+      "url": "https://github.com/LIghtJUNction/zcall.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zcall-gui",
+      "pinned": "e6ed24bdd5d7d193d76fc03a53d2bc1e10edec74",
+      "upstream": "da6b56d2cd286a9bf699cb3ee3d0a4f7db755e9f",
+      "url": "https://github.com/LIghtJUNction/zcall-gui.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zcall-omarchy",
+      "pinned": "78282c3c3cfa6e9e65e2cbd654f38a96398c6e03",
+      "upstream": "7db52e74ceb6c9d398791406e01265eecc127f87",
+      "url": "https://github.com/LIghtJUNction/zcall-omarchy.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zcalld",
+      "pinned": "ab2b3b6726fa7c7c6ee092607f95861d2097e332",
+      "upstream": "ecf9c31283ce59f1d11accc555bc61f99dc54ff2",
+      "url": "https://github.com/LIghtJUNction/zcalld.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zcalld-compat",
+      "pinned": "7c782e9a6f431c7112112c04940c015adf2d76df",
+      "upstream": "812f8f4b6b3700d8fca371407e527b17c7bb55c5",
+      "url": "https://github.com/LIghtJUNction/zcalld-compat.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zclap",
+      "pinned": "4d87f3ae3743e81509d5ac5500909955667c860f",
+      "upstream": "4d87f3ae3743e81509d5ac5500909955667c860f",
+      "url": "https://github.com/LIghtJUNction/zclap.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zclick",
+      "pinned": "21ac28b045447dec96a2de85d7aa6db0580081ab",
+      "upstream": "21ac28b045447dec96a2de85d7aa6db0580081ab",
+      "url": "https://github.com/LIghtJUNction/zclick.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zconv",
+      "pinned": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+      "upstream": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+      "url": "https://github.com/LIghtJUNction/zconv.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zdistro",
+      "pinned": "6a54a137fc697d372b54ef85105315f2ce522b3d",
+      "upstream": "6a54a137fc697d372b54ef85105315f2ce522b3d",
+      "url": "https://github.com/LIghtJUNction/zdistro.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zdot",
+      "pinned": "e6b5feb98b05c59e0986624c0742dfe4a9187a2a",
+      "upstream": "d8084d4ae55a24113f56335e8b584b5f13d91925",
+      "url": "https://github.com/LIghtJUNction/zdot.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zdwire",
+      "pinned": "c046e3182b0adf15d43500400a427b7dd7389525",
+      "upstream": "c046e3182b0adf15d43500400a427b7dd7389525",
+      "url": "https://github.com/LIghtJUNction/zdwire.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zfetch",
+      "pinned": "5006d7a9e2a2d3f292f677df94395e27a794b9c7",
+      "upstream": "5006d7a9e2a2d3f292f677df94395e27a794b9c7",
+      "url": "https://github.com/LIghtJUNction/zfetch.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zgpui",
+      "pinned": "5b268da910639abd2fb8e581acb4f6eed50b7516",
+      "upstream": "4aba3ba83815253fb7e4013baa8bcf894439d32d",
+      "url": "https://github.com/LIghtJUNction/zgpui.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zgraphics",
+      "pinned": "fe6357f98cf80fb6cc74739e45e8866ee17706ad",
+      "upstream": "b296a58f09d6052f13c86dc09e9e7b7f7e87438f",
+      "url": "https://github.com/LIghtJUNction/zgraphics.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zguard",
+      "pinned": "5cdd637edbb075f6611f88f8566e15de4b360cca",
+      "upstream": "6772b932a65e18f64e13591dee6edb2f6b099406",
+      "url": "https://github.com/LIghtJUNction/zguard.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zharness",
+      "pinned": "e3580c01c7252da090d04e59b59762bc561777d1",
+      "upstream": "db4206d3b74e37d57ff052948962f55514081d4b",
+      "url": "https://github.com/LIghtJUNction/zharness.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zhex",
+      "pinned": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+      "upstream": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+      "url": "https://github.com/LIghtJUNction/zhex.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zi18n",
+      "pinned": "b90984b48465a764bcb699ad2bb3251fa7020024",
+      "upstream": "cdff8dea19e97268d296afa827767ea689420591",
+      "url": "https://github.com/LIghtJUNction/zi18n.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zinput",
+      "pinned": "37617313dd7aaabcca9dd567344a76c4cbe03907",
+      "upstream": "724594e273af730138dc24eabefb55b08b6b82a2",
+      "url": "https://github.com/LIghtJUNction/zinput"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zldap",
+      "pinned": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+      "upstream": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+      "url": "https://github.com/LIghtJUNction/zldap.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zmcl",
+      "pinned": "2b1218f70cf89fb042fd725d4ef92dcb4e67dfe9",
+      "upstream": "7dc09fff213d659d99f98e61ebb2706654c0160b",
+      "url": "https://github.com/LIghtJUNction/zmcl.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zmcpio",
+      "pinned": "bc89d7fa3b0249b3a9037748e2113b31615e8c89",
+      "upstream": "bc89d7fa3b0249b3a9037748e2113b31615e8c89",
+      "url": "https://github.com/LIghtJUNction/zmcpio.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zmime",
+      "pinned": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+      "upstream": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+      "url": "https://github.com/LIghtJUNction/zmime.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zplugin",
+      "pinned": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+      "upstream": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+      "url": "https://github.com/LIghtJUNction/zplugin.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zpty",
+      "pinned": "d263f9a8f0881d259e46c51a7b6753c61ab9be59",
+      "upstream": "d263f9a8f0881d259e46c51a7b6753c61ab9be59",
+      "url": "https://github.com/LIghtJUNction/zpty.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zrc",
+      "pinned": "6311bf3377643fff0cff5a45a70b2256e22cc51f",
+      "upstream": "6311bf3377643fff0cff5a45a70b2256e22cc51f",
+      "url": "https://github.com/LIghtJUNction/zrc.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zscan",
+      "pinned": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+      "upstream": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+      "url": "https://github.com/LIghtJUNction/zscan.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zshard",
+      "pinned": "1cfa1a1eb761d14e2ccfd5381282b6ccd1491cff",
+      "upstream": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+      "url": "https://github.com/LIghtJUNction/zshard.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zsyn",
+      "pinned": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+      "upstream": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+      "url": "https://github.com/LIghtJUNction/zsyn.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zsys",
+      "pinned": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+      "upstream": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+      "url": "https://github.com/LIghtJUNction/zsys.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zterm",
+      "pinned": "b5adc3dbc5ca5f28a3ea7e45650a45245be9dc2d",
+      "upstream": "b5adc3dbc5ca5f28a3ea7e45650a45245be9dc2d",
+      "url": "https://github.com/LIghtJUNction/zterm.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "ztty",
+      "pinned": "6e2ce246b0b50e6b82da99756832feae6e966f21",
+      "upstream": "76fa2cfd13b776c027d5a86fadafde8e035f88f2",
+      "url": "https://github.com/LIghtJUNction/ztty.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "ztuio",
+      "pinned": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+      "upstream": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+      "url": "https://github.com/LIghtJUNction/ztuio.git"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "ztype",
+      "pinned": "9dd67a54ac536b22ab0fe4bd008d6b5cdd95c369",
+      "upstream": "f09f0d2fc3ef3cd1c1c0d78f6835c96a906f64e3",
+      "url": "https://github.com/LIghtJUNction/ztype"
+    },
+    {
+      "branch": "main",
+      "changed": true,
+      "path": "zuse",
+      "pinned": "94c837551a7a2fd8ec9f577a3e2f57309bd5ce5a",
+      "upstream": "75201caf6b73bc3a53671d1458db1f95f5e95f17",
+      "url": "https://github.com/LIghtJUNction/zuse.git"
+    },
+    {
+      "branch": "main",
+      "changed": false,
+      "path": "zvte",
+      "pinned": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+      "upstream": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+      "url": "https://github.com/LIghtJUNction/zvte.git"
+    }
+  ]
+}

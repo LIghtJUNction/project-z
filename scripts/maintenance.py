@@ -285,27 +285,37 @@ def coordinate(root):
     return output
 
 
-def apply_snapshot(root, report, destination=None):
+def apply_snapshot(root, report, destination=None, *, repositories=None):
     """Only this explicit entry point mutates Git, and only in a new worktree."""
     require_clean(root)
     if run(["git", "rev-parse", "HEAD"], root) != report["root_head"]:
         raise MaintenanceError("source HEAD changed during audit; rerun")
     if report["errors"]:
         raise MaintenanceError("audit is incomplete; resolve reported errors before applying")
-    updates = [row for row in report["upstreams"] if row["changed"]]
-    if not updates:
-        return {"status": "no_changes"}
     known = {row["path"]: row for row in modules(root)}
-    for row in updates:
+    selected = sorted(known if repositories is None else set(repositories))
+    if repositories is not None and not selected:
+        raise MaintenanceError("repository selection must not be empty")
+    unknown = set(selected) - known.keys()
+    if unknown:
+        raise MaintenanceError("unknown repository selection: " + ", ".join(repr(path) for path in sorted(unknown)))
+    all_updates = [row for row in report["upstreams"] if row["changed"]]
+    for row in all_updates:
         if row["path"] not in known or any(row[key] != known[row["path"]][key] for key in ("url", "branch")):
             raise MaintenanceError("apply plan contains a repository outside .gitmodules")
         if pinned_commit(root, row["path"]) != row["pinned"]:
             raise MaintenanceError("pinned gitlink changed during audit; rerun")
+    updates = [row for row in all_updates if row["path"] in selected]
+    selection = {"selected": selected,
+                 "deferred": sorted(row["path"] for row in all_updates if row["path"] not in selected)}
+    if not updates:
+        return {"status": "no_changes", **selection}
     stamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S") + "-" + uuid.uuid4().hex[:6]
     branch = "coord/maintenance-" + stamp
     destination = isolated_destination(root, destination or root / "dist/maintenance/worktrees" / stamp, known)
     run(["git", "worktree", "add", "-b", branch, destination, report["root_head"]], root)
-    result = {"status": "blocked", "branch": branch, "worktree": str(destination), "base": report["root_head"]}
+    result = {"status": "blocked", "branch": branch, "worktree": str(destination),
+              "base": report["root_head"], **selection}
     try:
         run(["git", "-c", "submodule.recurse=false", "submodule", "update", "--init"], destination, 600)
         for row in updates:
@@ -383,6 +393,9 @@ def markdown(report):
         lines += ["## Incomplete checks", "", *[f"- {cell(error)}" for error in errors], ""]
     if snapshot := report.get("snapshot"):
         lines += ["## Isolated snapshot", "", f"Status: **{snapshot['status']}**"]
+        for key, label in (("selected", "Selected repositories"), ("deferred", "Deferred upstream updates")):
+            if snapshot.get(key):
+                lines.append(f"- {label}: " + ", ".join(f"`{cell(path)}`" for path in snapshot[key]))
         for key in ("branch", "worktree", "commit", "error"):
             if key in snapshot:
                 lines.append(f"- {key}: `{cell(snapshot[key])}`")
@@ -412,6 +425,8 @@ def main(argv=None):
     parser.add_argument("--require-catalog", action="store_true",
                         help="read committed HEAD:catalog.json; never invoke Cargo or inventory")
     parser.add_argument("--apply", action="store_true", help="prepare a local commit in a new isolated worktree")
+    parser.add_argument("--repo", action="append", metavar="PATH",
+                        help="with --apply, update only this registered repository; repeat for a group")
     parser.add_argument("--worktree", type=Path, help="new destination for --apply; must not exist")
     args = parser.parse_args(argv)
     root = args.root.resolve()
@@ -419,9 +434,11 @@ def main(argv=None):
     try:
         if args.worktree and not args.apply:
             raise MaintenanceError("--worktree requires --apply")
+        if args.repo is not None and not args.apply:
+            raise MaintenanceError("--repo requires --apply; audits always cover all repositories")
         result = audit(root, args.owner, args.workers, args.timeout, args.require_catalog)
         if args.apply:
-            result["snapshot"] = apply_snapshot(root, result, args.worktree)
+            result["snapshot"] = apply_snapshot(root, result, args.worktree, repositories=args.repo)
             if result["snapshot"]["status"] == "blocked":
                 result["errors"].append(result["snapshot"]["error"])
     except (MaintenanceError, OSError, ValueError, KeyError) as error:

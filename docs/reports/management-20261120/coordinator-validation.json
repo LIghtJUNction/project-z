@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "tested_source_commit": "c96e4cdbf4bcb08019975bff7e738b5fe62475b3",
+  "stable_component_baseline": "76dd114c11685d430dd55bb0d78b064a7349af73",
+  "changed_source_files": [
+    "scripts/maintenance.py",
+    "tests/test_maintenance.py",
+    "docs/automation.md"
+  ],
+  "component_gitlinks_changed": false,
+  "generated_catalog_changed": false,
+  "validation": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "tests": 96,
+    "duration_seconds": 21.553,
+    "result": "passed",
+    "python": "3.14.10",
+    "rustc": "1.100.0 (0ef1bc386 2026-11-09)",
+    "cargo": "1.100.0 (3acc79c0c 2026-11-05)",
+    "test_process_limits": {
+      "memory_bytes": 536870912,
+      "swap_bytes": 0,
+      "cpu_quota_percent": 100,
+      "tasks": 128,
+      "cargo_jobs": 1
+    },
+    "test_process_environment": {
+      "RUSTC_WRAPPER": "",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "global_cargo_configuration_changed": false,
+    "log": "coordinator-tests.txt"
+  },
+  "scope_regressions": [
+    "Only selected gitlinks advance while changed but deferred repositories retain their baseline",
+    "Omitting --repo still updates all known changed repositories",
+    "Unknown and explicit empty selections fail before worktree creation",
+    "An unchanged selection retains deferred work and creates no candidate",
+    "Repeated --repo arguments work; --repo without --apply is rejected",
+    "Updating a library still resolves an unselected application and blocks incompatible features"
+  ],
+  "upstream_observation": {
+    "created_at": "2026-11-20T11:55:51.390764+00:00",
+    "root_head": "76dd114c11685d430dd55bb0d78b064a7349af73",
+    "repositories": 43,
+    "changed_upstreams": 22,
+    "catalog_package_versions_checked": 44,
+    "unavailable_versions": 11,
+    "candidates": 0,
+    "errors": [],
+    "record": "upstream-audit.json",
+    "note": "Committed catalog audited while the scoped-maintenance change was in progress; source_dirty describes that owned working copy."
+  }
+}
