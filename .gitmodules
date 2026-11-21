@@ -136,3 +136,6 @@
 [submodule "zuse-std"]
 	path = zuse-std
 	url = https://github.com/LIghtJUNction/zuse-std.git
+[submodule "zmem"]
+	path = zmem
+	url = https://github.com/LIghtJUNction/zmem.git

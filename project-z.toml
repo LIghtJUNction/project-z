@@ -47,7 +47,7 @@ role = "shell"
 
 [repositories.oh-my-ztty]
 role = "suite"
-requires = ["ztty", "ssmcp", "zshard", "zdot", "zrc", "zfetch"]
+requires = ["ztty", "ssmcp", "zshard", "zdot", "zrc", "zfetch", "zmem"]
 
 [repositories.zcall-gui]
 role = "application"
@@ -103,3 +103,6 @@ requires = ["zuse"]
 role = "extension"
 manifests = []
 requires = ["zuse"]
+
+[repositories.zmem]
+role = "application"
