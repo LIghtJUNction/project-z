@@ -1,0 +1,151 @@
+{
+  "schema": 1,
+  "observed_at_utc": "2026-11-21T08:39:34.272Z",
+  "repository": "LIghtJUNction/zplugin",
+  "branch": "fix/git-only-registry-stage-20261121",
+  "pull_request": "https://github.com/LIghtJUNction/zplugin/pull/2",
+  "pr_number": 2,
+  "commit": "e3e25e33d89a54e98c7a2605bb84cf016992b5a0",
+  "tree": "a8775f63edcf1938dd25a092b92dc4de13892452",
+  "parent": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+  "main_unchanged": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+  "open": true,
+  "draft": true,
+  "merged": false,
+  "authored_PR_body_exact_prefix": true,
+  "PR_appendix_present": false,
+  "base_leaf_count": 152,
+  "candidate_leaf_count": 155,
+  "unchanged_leaf_count": 148,
+  "whole_untruncated_tree_verified": true,
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 7263,
+      "sha256": "b7fbece6f235d5016801215b2dceb6498b6ccf07347179b9d54f5161eb367185",
+      "git_blob": "f0bfad556e9a171db9adc1e59f53cc03af36b4ce"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "bytes": 4603,
+      "sha256": "61cd2419c0cf9802d9a8fc9fbfbe1debf92990dc7b395d12cd8895066e089d90",
+      "git_blob": "c29b3ec1db52b9546c628bffa7faa76c2b6dd6b0"
+    },
+    {
+      "path": "docs/releases.md",
+      "bytes": 10304,
+      "sha256": "8988e4e8c069dd594307a73175176518c4255ee81153add3be3958c0198b25b9",
+      "git_blob": "35f37284080779743b77eaf42424206bf6ef34e6"
+    },
+    {
+      "path": "scripts/registry_stage.py",
+      "bytes": 18915,
+      "sha256": "1a7be734afb503f7b640266a0c586868e7b02f45b7fd7524be64b6e758cd634e",
+      "git_blob": "c715222c14d58d825c82c8d868d99acf4104f520"
+    },
+    {
+      "path": "scripts/release.py",
+      "bytes": 28932,
+      "sha256": "fbe21a1109bf0c4e099768f437093714a484dfd986a74b02d52b31684ed93aed",
+      "git_blob": "51e30f083984897799adfb93ec8d35cd5c535e7c"
+    },
+    {
+      "path": "scripts/test_registry_stage.py",
+      "bytes": 16665,
+      "sha256": "85980d904b6e59f8a463d85e9b20015b22c0698006cc75edb2050a412aaf3e5f",
+      "git_blob": "af2ece9c3ec20210fa4559a4d2ec63e94d2f44c1"
+    },
+    {
+      "path": "scripts/test_release_projection.py",
+      "bytes": 4773,
+      "sha256": "bd1d3df7c5249e828f4c1bd2f944a23a0a1f1b6edf065c6b1a6f3ee117147946",
+      "git_blob": "275283470489c403a41398cba44d34255856e7de"
+    }
+  ],
+  "raw_files_exact_readback": true,
+  "tests": {
+    "first_candidate": {
+      "tree": "bcf24a6531ba424f71e25c7b0092e0531dfdcc32",
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-dc7",
+      "exit_code": 0,
+      "both_eof": true,
+      "testsRun": 31,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "expectedFailures": 0,
+      "unexpectedSuccesses": 0,
+      "successful": true,
+      "elapsed_seconds": 4.0913477430003695,
+      "subprocesses": 723,
+      "allowed_subprocess_executables": [
+        "git"
+      ],
+      "live_network_allowed": false,
+      "cargo_allowed": false
+    },
+    "successor": {
+      "tree": "a8775f63edcf1938dd25a092b92dc4de13892452",
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-dee",
+      "exit_code": 0,
+      "both_eof": true,
+      "targeted": [
+        {
+          "label": "metadata-red",
+          "exit_code": 1,
+          "summary": {
+            "testsRun": 1,
+            "failures": 1,
+            "errors": 0,
+            "skipped": 0,
+            "successful": false,
+            "elapsed_seconds": 0.0017199449939653277,
+            "helper_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zplugin-registry-stage-20261121/source/scripts/registry_stage.py",
+            "test_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zplugin-registry-stage-20261121/revision-2/source/scripts/test_registry_stage.py",
+            "no_subprocess_or_network_allowed": true
+          }
+        },
+        {
+          "label": "metadata-green",
+          "exit_code": 0,
+          "summary": {
+            "testsRun": 1,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "successful": true,
+            "elapsed_seconds": 0.0007052650034893304,
+            "helper_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zplugin-registry-stage-20261121/revision-2/source/scripts/registry_stage.py",
+            "test_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zplugin-registry-stage-20261121/revision-2/source/scripts/test_registry_stage.py",
+            "no_subprocess_or_network_allowed": true
+          }
+        }
+      ],
+      "yaml": {
+        "package_available": true,
+        "version": "6.0.3",
+        "original_release_yaml": "rejected",
+        "original_error": "while scanning a simple key\n  in \"<unicode string>\", line 114, column 11:\n              target/release-projection.json\n              ^\ncould not find expected ':'\n  in \"<unicode string>\", line 115, column 11:\n              target/release-projection.patch\n              ^",
+        "release.yml": "parsed; all base semantics preserved except the explicit artifact path additions",
+        "ci.yml": "parsed; all base semantics preserved except the explicit artifact path additions"
+      }
+    },
+    "full_32_on_successor_run": false
+  },
+  "independent_review": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/zplugin-registry-stage-personal-review-20261121/review.json",
+    "bytes": 13321,
+    "sha256": "b4e50c08e79e6d2ed7126bd47d0d70327ffd22248a9c5fa87b8873def60553b9",
+    "blocking_findings": 0,
+    "root_full_read": true
+  },
+  "not_executed": [
+    "Cargo",
+    "registry network",
+    "native CI",
+    "merge",
+    "tag",
+    "release",
+    "target lock"
+  ]
+}

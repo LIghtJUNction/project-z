@@ -1,0 +1,143 @@
+{
+  "schema": "zharness-registry-stage-r3-handoff-v1",
+  "sealed_utc": "2026-11-21T08:58:35.173834+00:00",
+  "base_commit": "491b8525c13bded4b1f3399d5e8f9c83e4129c65",
+  "base_tree": "21e49b4c767669bca4885de412a345365aacb756",
+  "candidate_tree": "ab7ce418410dee6ee7e8c55fc950b1783226d190",
+  "previous_candidate_tree": "d4c379fbb494a32f02089f4facd5da754756f29d",
+  "previous_handoff": {
+    "path": "../handoff.json",
+    "bytes": 18650,
+    "sha256": "e9bf6caa7463566ea013ba053814ef741bb4bd5c02ce4b79e0e4c834cae86b7f",
+    "git_blob": "03876cc9cf6df7a770f4356fc28e6895c5cf64d3"
+  },
+  "reason": "R2 captured tracked hashes only; its two added modules had separate write/readback identities. R3 stages all seven files before the same 39-method run and records each before/after byte/hash. R2 evidence is unchanged.",
+  "source_delta": "Only PackageRecoveryTests.setUp normalizes the temporary root with Path.resolve(), avoiding path aliases under the owned-target guard. No production/helper or test-method/assertion change. This is not an actual macOS run.",
+  "files": [
+    {
+      "path": "files/.github/workflows/ci.yml",
+      "bytes": 5067,
+      "sha256": "4735b88547d6c676a20af88076d0e7a3f3b7f03f4f54224ebd6462246cd69eda",
+      "git_blob": "fed1af6a11e1364890d28e6a6a277eb558403024",
+      "repo_path": ".github/workflows/ci.yml",
+      "mode": "100644"
+    },
+    {
+      "path": "files/.github/workflows/release.yml",
+      "bytes": 4565,
+      "sha256": "8657df7d7d2141bc33854435f7476cf0852ae5f982bc007a9abe466146ec42a6",
+      "git_blob": "57c1ebdead183490f7b66e0a1c607f0b63276d0c",
+      "repo_path": ".github/workflows/release.yml",
+      "mode": "100644"
+    },
+    {
+      "path": "files/docs/RELEASE.md",
+      "bytes": 6934,
+      "sha256": "7e1b99dd4fecb864b879a1ccd3b2b4674a24cc5d9b3f07a2d672659fbbfd912c",
+      "git_blob": "b9603f5124574be26c7cf6f2ba9fae4fd0c20f40",
+      "repo_path": "docs/RELEASE.md",
+      "mode": "100644"
+    },
+    {
+      "path": "files/scripts/release.py",
+      "bytes": 32093,
+      "sha256": "e7a7b7a137e68c536a314f5bc045e3ac6bf5e8034f57ccb62168b69a19ce2342",
+      "git_blob": "b73cbb5d59c2956123f4e8a296deea00201d30cd",
+      "repo_path": "scripts/release.py",
+      "mode": "100644"
+    },
+    {
+      "path": "files/scripts/registry_stage.py",
+      "bytes": 18915,
+      "sha256": "1a7be734afb503f7b640266a0c586868e7b02f45b7fd7524be64b6e758cd634e",
+      "git_blob": "c715222c14d58d825c82c8d868d99acf4104f520",
+      "repo_path": "scripts/registry_stage.py",
+      "mode": "100644"
+    },
+    {
+      "path": "files/scripts/test_release.py",
+      "bytes": 31020,
+      "sha256": "4375a4390fcb300cf123efa2fcfcb813ff1390322d7045332f7a38df65bf3f4f",
+      "git_blob": "67a222a6b1fa4f1bbe62fa3c04a3bae2215c5ecd",
+      "repo_path": "scripts/test_release.py",
+      "mode": "100644"
+    },
+    {
+      "path": "files/scripts/test_registry_stage.py",
+      "bytes": 19757,
+      "sha256": "7494aca1af23ea9215b9cc3dd09e45b1c11f8aceed18f24fd0ec0f177ff7af19",
+      "git_blob": "4e17b86d0aedb3b069e7e6e9b67bc939bc6c2381",
+      "repo_path": "scripts/test_registry_stage.py",
+      "mode": "100644"
+    }
+  ],
+  "prepared": {
+    "path": "prepared.json",
+    "bytes": 4929,
+    "sha256": "1ef2a700681746f700c9871cafb14c80684809f44d297251bb2594a2a22bebc6",
+    "git_blob": "e264c949bfb02780922f2ae2589ee00dec3123e8"
+  },
+  "diff_from_r2": {
+    "path": "from-r2.patch",
+    "bytes": 398,
+    "sha256": "8bddf0bbe2fce3b97d24d6d9c1feaba4442db6b2918cd7dba10366a4603ee607",
+    "git_blob": "ad8eea08d0b6c6980fb7ffb48c59f5bc55cfc057"
+  },
+  "all_original_red_and_intermediate_records_preserved": true,
+  "validation": {
+    "base_commit": "491b8525c13bded4b1f3399d5e8f9c83e4129c65",
+    "base_tree": "21e49b4c767669bca4885de412a345365aacb756",
+    "candidate_tree": "ab7ce418410dee6ee7e8c55fc950b1783226d190",
+    "base_leaves": 129,
+    "candidate_leaves": 131,
+    "unchanged_old_leaves": 124,
+    "all_nonlisted_leaves_equal": true,
+    "r2_files_and_source_tree_preserved": true,
+    "all_39_test_method_asts_identical_to_r2": true,
+    "seven_sources_before_after_equal_current_files": true,
+    "all_seven_staged_before_test": true,
+    "runner_before_after_identical": true,
+    "source_head_unchanged": true,
+    "unittest_seconds": 3.726,
+    "collector_seconds": 3.830585137999151,
+    "tests": 39,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "inner_exit": 0,
+    "actual_outer_exit": 0,
+    "both_eof": true,
+    "local_git_subprocess_events": 1400,
+    "scope": {
+      "actual_cargo": false,
+      "actual_metadata": false,
+      "actual_registry": false,
+      "product": false,
+      "shared_target_lock": false,
+      "queued_jobs": 0,
+      "owned_job_nonrunning": true,
+      "temporary_fixture_directories": 0
+    },
+    "six_unchanged_files_include_production_and_helper": true
+  },
+  "actual_job_id": "26c4545eae1eab8d27485f4a48077d3c-e35",
+  "actual_native": {
+    "path": "evidence/actual-native-final.json",
+    "bytes": 7791,
+    "sha256": "c83fb5834976bc23cb5212c73eff9253d7ccbcbfd06f85c8f215f1f73daa1deb",
+    "git_blob": "19b184236ea818e709284d7a34b3df2cbbe68f63"
+  },
+  "result": {
+    "path": "evidence/green-final/result.json",
+    "bytes": 542208,
+    "sha256": "cd85ccd8a41fdadfb569010d3cf32bda657ad5683b308748782ef91d666a8754",
+    "git_blob": "4739db4d10ce761363074ebf02a05357e53625f1"
+  },
+  "scope_note": "Pure Python, synthetic archive parsing and local disposable Git fixtures were actually executed. Cargo/metadata and registry/API calls are mocked. No registryReady, product, platform, CI or release claim.",
+  "publication": {
+    "existing_pr": 10,
+    "branch": "fix/git-only-audit-and-release-20261121",
+    "remote_writer": "root",
+    "not_pushed": true
+  }
+}

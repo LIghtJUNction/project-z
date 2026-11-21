@@ -1,0 +1,66 @@
+{
+  "schema": "project-z.zharness-git-only-audit-publication.v1",
+  "observed_utc": "2026-11-21T08:14:24.970Z",
+  "repository": "LIghtJUNction/zharness",
+  "branch": "fix/git-only-audit-and-release-20261121",
+  "pull_request": 10,
+  "url": "https://github.com/LIghtJUNction/zharness/pull/10",
+  "head": "491b8525c13bded4b1f3399d5e8f9c83e4129c65",
+  "tree": "21e49b4c767669bca4885de412a345365aacb756",
+  "parents": [
+    "fb2948f78467dd92b216aabda6f18a5645f0e7f6"
+  ],
+  "main": "fb2948f78467dd92b216aabda6f18a5645f0e7f6",
+  "leaf_count": 129,
+  "unchanged_leaves": 127,
+  "changed": [
+    "scripts/audit.py",
+    "scripts/test_audit.py"
+  ],
+  "files": [
+    {
+      "path": "scripts/audit.py",
+      "bytes": 8124,
+      "sha256": "b04b03d181f906847451d72e90520aab0983b3f560f8662b0ca180051c4d71f2",
+      "git_blob": "26148d956af963d288d0f8aec81cb7ca68e5fc66"
+    },
+    {
+      "path": "scripts/test_audit.py",
+      "bytes": 12965,
+      "sha256": "25a676f6ab23b9001fafc62db25f4f65dd583182094e62accbfdf030f1390a7a",
+      "git_blob": "ad4bc3cb4fedaf772846f7064cc5c37589b13630"
+    }
+  ],
+  "raw_contents_equal": true,
+  "PR_authored_prefix_equal": true,
+  "PR_whole_body_equal": false,
+  "PR_additional_body": "\n## Sourcery 摘要\n\n调整依赖审计，使其符合仅使用 Git 的内部依赖策略，同时保留精确的锁文件来源信息和经过审核的依赖闭包。\n\n错误修复：\n- 更新依赖审计，以支持仅使用 Git 的开发依赖策略，而不是要求固定注册表版本。\n\n改进：\n- 将内部软件包绑定到规范的 Git 源、精确的锁文件提交和版本，并确保共享的 zplugin 与 zplugin-macros 工作区身份一致。\n- 强制执行经过审核的运行时和仅编译器依赖闭包、第三方软件包的注册表来源信息和校验和，以及规范的 Cargo 元数据根目录和依赖声明。\n\n测试：\n- 添加回归测试，覆盖源替换、锁文件条目完整性、提交和版本偏移、功能变更、工作区身份、元数据重定向以及可选的 Wasm 依赖。\n\n<details>\n<summary>Original summary in English</summary>\n\n## Summary by Sourcery\n\nAlign the dependency audit with Git-only internal dependencies while preserving exact lockfile provenance and reviewed dependency closures.\n\nBug Fixes:\n- Update the dependency audit to support the Git-only development dependency policy instead of requiring registry version pins.\n\nEnhancements:\n- Bind internal packages to canonical Git sources, exact lockfile commits and versions, including shared zplugin and zplugin-macros workspace identity.\n- Enforce reviewed runtime and compiler-only dependency closures, registry provenance and checksums for third-party packages, and canonical Cargo metadata roots and dependency declarations.\n\nTests:\n- Add regression coverage for source substitution, lockfile entry integrity, commit and version drift, feature changes, workspace identity, metadata redirection, and optional Wasm dependencies.\n\n</details>",
+  "tests": {
+    "red": {
+      "job": "9dce4838485bb6605bbe34324a2a0bc3-6b",
+      "exit_code": 1,
+      "running": false,
+      "both_EOF": true,
+      "methods": 1,
+      "failures": 1,
+      "errors": 0
+    },
+    "green": {
+      "job": "9dce4838485bb6605bbe34324a2a0bc3-6f",
+      "exit_code": 0,
+      "running": false,
+      "both_EOF": true,
+      "methods": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "same_test_bytes": true,
+    "external_execution_or_network_events": 0
+  },
+  "limits": {
+    "Cargo_metadata_product_CI": false,
+    "default_ref_modified": false,
+    "release_projection_followup_pending": true
+  }
+}

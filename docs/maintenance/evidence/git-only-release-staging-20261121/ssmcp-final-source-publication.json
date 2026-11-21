@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "observed_at_utc": "2026-11-21T08:58:51.939Z",
+  "repository": "LIghtJUNction/ssmcp",
+  "main": "4b4cbff311e930a8c8280ff1989a7f036ce7a892",
+  "tree": "16c341e1e5f828be0a4b4ee1ef0fe9f2945afe26",
+  "parents": [
+    "3f678a7fca7ea64d220454f1723189e43d3b5546",
+    "5623e52a48a03727f3341613beaa767bd94ea98d"
+  ],
+  "pull_request": "https://github.com/LIghtJUNction/ssmcp/pull/165",
+  "pr_number": 165,
+  "merged": true,
+  "merged_at_utc": "2026-11-21T08:51:57Z",
+  "pr_head": "5623e52a48a03727f3341613beaa767bd94ea98d",
+  "tree_identical_to_premerge_root_source_observation": true,
+  "premerge_source_observation": {
+    "observed_at_utc": "2026-11-21T08:51:28.187012+00:00",
+    "head": "5623e52a48a03727f3341613beaa767bd94ea98d",
+    "tree": "16c341e1e5f828be0a4b4ee1ef0fe9f2945afe26",
+    "clean": true
+  },
+  "scope": "GitHub main/commit/PR readback and prior bounded local source observation only",
+  "final_validation": {
+    "new_Gate35": "not yet established",
+    "runtime": "not yet established",
+    "UI": "not yet established",
+    "P1": "not yet established"
+  },
+  "root_group_heavy_work": "zero Cargo/build/metadata/product/shared-target writers and queue; fresh confirmation; original owner retains window",
+  "ztype_v2": "sealed, not started, not queued",
+  "historical_tests_not_transferred": true
+}

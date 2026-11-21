@@ -1,0 +1,183 @@
+{
+  "schema": 1,
+  "review_kind": "bounded_successor_static_and_existing_evidence_review",
+  "repository": "LIghtJUNction/zharness",
+  "conclusion": {
+    "material_blockers": 0,
+    "ready_for_draft_pr_update": true,
+    "formal_release_validated": false,
+    "summary": "R3 以一个 fixture 路径规范化变更消除 R2 条件性路径风险，并以同一组 39 方法的实际新运行补齐七文件来源绑定。沿用前继已完成的生产逻辑静审；未执行新的产品门禁。"
+  },
+  "previous_review": {
+    "path": "r2-review.json",
+    "bytes": 9988,
+    "sha256": "7199f9fa02ebf3e2b618e57bf866c6a75ec9f3dc5c645930b617a2869109983a",
+    "unchanged": true
+  },
+  "scope": [
+    "仅核 R2→R3 一行差异、生产/helper不变、全部39测试方法AST不变、已有原始新运行与七文件字节/hash。",
+    "R2 的 source-binding 缺口和初始 RED/green-1/green-final 原件继续保留；R3 不回写旧记录。",
+    "metadata 仍由受控 stage invocation 定位 target；finish prior-evidence/缺档重建/同hash/registry/GH顺序以及 clean developer main/tag CAS 的前继结论继续适用。"
+  ],
+  "source_reasoning": "Path(directory.name).resolve() 使私有 fixture 与生产 package target 的规范化约束使用同一根路径；没有修改测试方法、断言或生产目标目录策略。这不是实际 macOS/Windows 执行证明。",
+  "validation_boundary": "39 是包含原29和新增10的本轮方法数；不加到旧39或RED上。实际 Git/合成archive夹具运行，Cargo/metadata/registry API被mock，真实发行与跨平台门禁仍待实际执行。",
+  "reviewer_activity": {
+    "candidate_imported": false,
+    "candidate_tests_executed": 0,
+    "cargo": 0,
+    "metadata": 0,
+    "registry_network": 0,
+    "product": 0,
+    "target_lock": 0,
+    "queue": 0,
+    "source_ref_tag_writes": 0
+  },
+  "reviewed_at_utc": "2026-11-21T09:00:24.731225+00:00",
+  "candidate": {
+    "base_commit": "491b8525c13bded4b1f3399d5e8f9c83e4129c65",
+    "base_tree": "21e49b4c767669bca4885de412a345365aacb756",
+    "previous_candidate_tree": "d4c379fbb494a32f02089f4facd5da754756f29d",
+    "candidate_tree": "ab7ce418410dee6ee7e8c55fc950b1783226d190",
+    "source": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zharness-git-only-release-20261121/release-stage-r2/revision-3/source"
+  },
+  "independent_preservation": {
+    "base_leaves": 129,
+    "candidate_leaves": 131,
+    "old_unchanged": 124,
+    "only_changed_path_from_r2": "scripts/test_release.py",
+    "all_39_method_asts_unchanged": true,
+    "six_files_byte_identical_to_r2": true,
+    "r2_files_and_source_bytes_preserved": true,
+    "helper_sha256": "1a7be734afb503f7b640266a0c586868e7b02f45b7fd7524be64b6e758cd634e"
+  },
+  "source_binding": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 5067,
+      "sha256": "4735b88547d6c676a20af88076d0e7a3f3b7f03f4f54224ebd6462246cd69eda",
+      "git_blob": "fed1af6a11e1364890d28e6a6a277eb558403024",
+      "selected_before_after_match": true,
+      "staged_and_tree_match": true
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "bytes": 4565,
+      "sha256": "8657df7d7d2141bc33854435f7476cf0852ae5f982bc007a9abe466146ec42a6",
+      "git_blob": "57c1ebdead183490f7b66e0a1c607f0b63276d0c",
+      "selected_before_after_match": true,
+      "staged_and_tree_match": true
+    },
+    {
+      "path": "docs/RELEASE.md",
+      "bytes": 6934,
+      "sha256": "7e1b99dd4fecb864b879a1ccd3b2b4674a24cc5d9b3f07a2d672659fbbfd912c",
+      "git_blob": "b9603f5124574be26c7cf6f2ba9fae4fd0c20f40",
+      "selected_before_after_match": true,
+      "staged_and_tree_match": true
+    },
+    {
+      "path": "scripts/release.py",
+      "bytes": 32093,
+      "sha256": "e7a7b7a137e68c536a314f5bc045e3ac6bf5e8034f57ccb62168b69a19ce2342",
+      "git_blob": "b73cbb5d59c2956123f4e8a296deea00201d30cd",
+      "selected_before_after_match": true,
+      "staged_and_tree_match": true
+    },
+    {
+      "path": "scripts/registry_stage.py",
+      "bytes": 18915,
+      "sha256": "1a7be734afb503f7b640266a0c586868e7b02f45b7fd7524be64b6e758cd634e",
+      "git_blob": "c715222c14d58d825c82c8d868d99acf4104f520",
+      "selected_before_after_match": true,
+      "staged_and_tree_match": true
+    },
+    {
+      "path": "scripts/test_release.py",
+      "bytes": 31020,
+      "sha256": "4375a4390fcb300cf123efa2fcfcb813ff1390322d7045332f7a38df65bf3f4f",
+      "git_blob": "67a222a6b1fa4f1bbe62fa3c04a3bae2215c5ecd",
+      "selected_before_after_match": true,
+      "staged_and_tree_match": true
+    },
+    {
+      "path": "scripts/test_registry_stage.py",
+      "bytes": 19757,
+      "sha256": "7494aca1af23ea9215b9cc3dd09e45b1c11f8aceed18f24fd0ec0f177ff7af19",
+      "git_blob": "4e17b86d0aedb3b069e7e6e9b67bc939bc6c2381",
+      "selected_before_after_match": true,
+      "staged_and_tree_match": true
+    }
+  ],
+  "actual_run": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-e35",
+    "exit_code": 0,
+    "running": false,
+    "both_eof": true,
+    "tests": 39,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "unittest_seconds": 3.726,
+    "collector_seconds": 3.830585137999151,
+    "runner_before_after_same": true,
+    "seven_files_staged_and_actual_before_after_hashes_match": true,
+    "temporary_fixture_directories": 0,
+    "scope": {
+      "actual_cargo": false,
+      "actual_registry": false,
+      "product": false,
+      "shared_target_lock": false,
+      "only_local_git_subprocesses": true
+    }
+  },
+  "evidence": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zharness-git-only-release-20261121/release-stage-r2/revision-3/prepared.json",
+      "bytes": 4929,
+      "sha256": "1ef2a700681746f700c9871cafb14c80684809f44d297251bb2594a2a22bebc6",
+      "git_blob": "e264c949bfb02780922f2ae2589ee00dec3123e8"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zharness-git-only-release-20261121/release-stage-r2/revision-3/handoff.json",
+      "bytes": 5765,
+      "sha256": "1f7d42ecc75857dae0dba9e92f423a80f4384ffda33c9318f9dbd62fcfd29345",
+      "git_blob": "ccbb0dd25c1e5a5792c236f1b422dd358832b6a0"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zharness-git-only-release-20261121/release-stage-r2/revision-3/from-r2.patch",
+      "bytes": 398,
+      "sha256": "8bddf0bbe2fce3b97d24d6d9c1feaba4442db6b2918cd7dba10366a4603ee607",
+      "git_blob": "ad8eea08d0b6c6980fb7ffb48c59f5bc55cfc057"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zharness-git-only-release-20261121/release-stage-r2/revision-3/runner-from-r2.diff",
+      "bytes": 3375,
+      "sha256": "7b981e44c3558104a7f3f59fa7b3cf48c0d81e0c807228962a066b688e9d6cc6",
+      "git_blob": "867fa09e410d01e5edee234320fde499b7a228a9"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zharness-git-only-release-20261121/release-stage-r2/revision-3/run_fixtures.py",
+      "bytes": 4178,
+      "sha256": "34da82e13b02382d2f58862cb2084d3567d785101b8a1bb3fb135b913db69e22",
+      "git_blob": "296a588810b3b4814478ff4ae9e65de5fa56822b"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zharness-git-only-release-20261121/release-stage-r2/revision-3/evidence/actual-native-final.json",
+      "bytes": 7791,
+      "sha256": "c83fb5834976bc23cb5212c73eff9253d7ccbcbfd06f85c8f215f1f73daa1deb",
+      "git_blob": "19b184236ea818e709284d7a34b3df2cbbe68f63"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zharness-git-only-release-20261121/release-stage-r2/revision-3/evidence/green-final/result.json",
+      "bytes": 542208,
+      "sha256": "cd85ccd8a41fdadfb569010d3cf32bda657ad5683b308748782ef91d666a8754",
+      "git_blob": "4739db4d10ce761363074ebf02a05357e53625f1"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zharness-git-only-release-20261121/release-stage-r2/revision-3/evidence/green-final/stderr.log",
+      "bytes": 5903,
+      "sha256": "a6160c08d6f07152355ad86417a156fe6d6045dbbc3f2338d5027f7052a74e55",
+      "git_blob": "1134613cec8c2d5462f79f677f03bd81f156a5f3"
+    }
+  ]
+}
