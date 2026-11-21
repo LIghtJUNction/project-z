@@ -383,7 +383,10 @@ class OfflineResolutionApply(source_fixtures.GitSourceFixture):
 
     def test_application_feature_resolution_failure_cannot_create_ready_snapshot(self):
         manifest = self.app / "Cargo.toml"
-        manifest.write_text(manifest.read_text().replace('version = "1.0.0" }', 'version = "1.0.0", features = ["absent"] }'))
+        original = manifest.read_text()
+        dependency = 'tiny-core = { git = "' + self.url + 'shared.git" }'
+        self.assertIn(dependency, original)
+        manifest.write_text(original.replace(dependency, dependency[:-2] + ', features = ["absent"] }', 1))
         new = self.commit(self.app, "request missing upstream feature")
         result = maintenance.apply_snapshot(self.root, self.report(), self.destination)
         self.assertEqual(result["status"], "blocked", result)

@@ -130,3 +130,9 @@
 [submodule "lmm"]
 	path = lmm
 	url = https://github.com/TokenNotIncluded/lmm.git
+[submodule "bilibilive"]
+	path = bilibilive
+	url = https://github.com/LIghtJUNction/bilibilive.git
+[submodule "zuse-skills"]
+	path = zuse-skills
+	url = https://github.com/LIghtJUNction/zuse-skills.git

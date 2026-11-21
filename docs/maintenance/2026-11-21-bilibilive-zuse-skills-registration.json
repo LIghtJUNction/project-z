@@ -1,0 +1,282 @@
+{
+  "schema_version": 1,
+  "prepared_utc": "2026-11-21T14:46:52.333100+00:00",
+  "status": "draft: aggregate source and lock propagation remains blocked",
+  "scope": "Register the public bilibilive and zuse-skills sources while preserving the existing migration candidate and unrelated consumer work.",
+  "base_pull_request": {
+    "url": "https://github.com/LIghtJUNction/project-z/pull/7",
+    "state": "open",
+    "draft": true,
+    "branch": "coord/git-source-policy-20261120",
+    "observed_head": "b5ac5b7c5bdfafbe5562e9f9820288bea752f58f"
+  },
+  "existing_registration_pr": null,
+  "pr_search": {
+    "method": "GitHub public REST pulls?state=all; inspect current PR7 source tree",
+    "pull_requests_returned": 9,
+    "open_pull_requests": [
+      7
+    ],
+    "registration_in_pr7_tree": false
+  },
+  "inherited_candidate": "02a2b8ca26fbab2d6a6e38501366738631671b25",
+  "proposed_branch": "coord/bilibilive-zuse-skills-registration-20261121",
+  "proposed_base": "coord/git-source-policy-20261120",
+  "repository_count": 46,
+  "cargo_package_count": 73,
+  "published_heads_observed_utc": "2026-11-21T14:43:52.335186+00:00",
+  "published_heads": [
+    {
+      "repository": "bilibilive",
+      "url": "https://github.com/LIghtJUNction/bilibilive.git",
+      "branch": "main",
+      "commit": "0f97b0e59240fd1230878371c4b9126f0955b70f"
+    },
+    {
+      "repository": "lmm",
+      "url": "https://github.com/TokenNotIncluded/lmm.git",
+      "branch": "main",
+      "commit": "260a1eff2400aa64fc697028a406a8017ed6259c"
+    },
+    {
+      "repository": "lmm-api-source",
+      "url": "https://github.com/TokenNotIncluded/lmm-api-source.git",
+      "branch": "main",
+      "commit": "fa57cd2049ccd9138cdc0b4104db36b5b6c53ae5"
+    },
+    {
+      "repository": "zcall",
+      "url": "https://github.com/LIghtJUNction/zcall.git",
+      "branch": "main",
+      "commit": "8dd30a922a0aedbe821f610649b1ab26078d1882"
+    },
+    {
+      "repository": "zconv",
+      "url": "https://github.com/LIghtJUNction/zconv.git",
+      "branch": "main",
+      "commit": "f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712"
+    },
+    {
+      "repository": "zgpui",
+      "url": "https://github.com/LIghtJUNction/zgpui.git",
+      "branch": "main",
+      "commit": "174a8b73087deeac2ecfa036cad8bddba71c612f"
+    },
+    {
+      "repository": "zmcpio",
+      "url": "https://github.com/LIghtJUNction/zmcpio.git",
+      "branch": "main",
+      "commit": "c114a5ae9f925c64f3b090b8524016cbb90b6cff"
+    },
+    {
+      "repository": "zuse",
+      "url": "https://github.com/LIghtJUNction/zuse.git",
+      "branch": "main",
+      "commit": "0016f96067d1e4672c62be9d8008d210edcdae2d"
+    },
+    {
+      "repository": "zuse-skills",
+      "url": "https://github.com/LIghtJUNction/zuse-skills.git",
+      "branch": "main",
+      "commit": "3df51e300ff8834d120678936bdbf50fc1a12697"
+    }
+  ],
+  "new_runtime_relation": {
+    "repository": "zuse-skills",
+    "role": "extension",
+    "manifests": [],
+    "requires": [
+      "zuse"
+    ]
+  },
+  "source_updates": [
+    {
+      "repository": "bilibilive",
+      "before": "0985254faee713c75d9209e848289b50e3f45634",
+      "after": "0f97b0e59240fd1230878371c4b9126f0955b70f",
+      "package_version": "0.1.1"
+    },
+    {
+      "repository": "zmcpio",
+      "before": "d5e7ffb76184e6754bb7b564a217db1e2099e531",
+      "after": "c114a5ae9f925c64f3b090b8524016cbb90b6cff",
+      "package_version": "0.5.0"
+    },
+    {
+      "repository": "zuse-skills",
+      "before": null,
+      "after": "3df51e300ff8834d120678936bdbf50fc1a12697"
+    }
+  ],
+  "checks": [
+    {
+      "name": "sync",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "sync",
+        "--record"
+      ],
+      "started_utc": "2026-11-21T14:45:24.684155+00:00",
+      "exit_code": 0,
+      "stdout_lines": 1,
+      "stderr_lines": 0
+    },
+    {
+      "name": "check",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "check"
+      ],
+      "started_utc": "2026-11-21T14:45:25.206121+00:00",
+      "exit_code": 1,
+      "stdout_lines": 0,
+      "stderr_lines": 27
+    },
+    {
+      "name": "resolve_all",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "resolve",
+        "--all"
+      ],
+      "started_utc": "2026-11-21T14:45:27.917037+00:00",
+      "exit_code": 1,
+      "stdout_lines": 0,
+      "stderr_lines": 9
+    },
+    {
+      "name": "impact_zuse",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "impact",
+        "--repositories",
+        "zuse"
+      ],
+      "started_utc": "2026-11-21T14:45:30.356127+00:00",
+      "exit_code": 0,
+      "stdout_lines": 7,
+      "stderr_lines": 0
+    },
+    {
+      "name": "impact_bilibilive",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "impact",
+        "--repositories",
+        "bilibilive"
+      ],
+      "started_utc": "2026-11-21T14:45:30.776558+00:00",
+      "exit_code": 0,
+      "stdout_lines": 1,
+      "stderr_lines": 0
+    },
+    {
+      "name": "impact_skills",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "impact",
+        "--repositories",
+        "zuse-skills"
+      ],
+      "started_utc": "2026-11-21T14:45:31.264439+00:00",
+      "exit_code": 0,
+      "stdout_lines": 1,
+      "stderr_lines": 0
+    }
+  ],
+  "check": {
+    "exit_code": 1,
+    "remote_freshness_gate_entered": false,
+    "diagnostics": [
+      "ssmcp/'crates/zuse' -> 'zuse': pinned source 8d37a7df6fd94df1d0939eb6800c238e71f5835d differs from snapshot 0016f96067d1e4672c62be9d8008d210edcdae2d",
+      "ztty/'crates/zgpui' -> 'zgpui': pinned source b4d5493e0cd985d00558c7be0b5726965ab5163a differs from snapshot 174a8b73087deeac2ecfa036cad8bddba71c612f",
+      "zcalld/'extensions/compat' -> 'zcalld-compat': pinned source c521d1fb1ce8eac173ea2bb481816d3cd1df82d3 differs from snapshot 56a15b330384531b3a6c444190f53b6d3720bd5e",
+      "oh-my-ztty/'components/ssmcp' -> 'ssmcp': pinned source 5f4a35482c6353750248ddee8761e5fd3daffad6 differs from snapshot dae9d52c734b5d316bf90d2317a51e3992f68085",
+      "ztype/'vendor/zgpui' -> 'zgpui': pinned source b4d5493e0cd985d00558c7be0b5726965ab5163a differs from snapshot 174a8b73087deeac2ecfa036cad8bddba71c612f",
+      "mechrevo-console-cli -> zclap: omit version from internal Git development dependencies; project registry versions only in external release staging",
+      "mechrevo-console-core -> zhex: omit version from internal Git development dependencies; project registry versions only in external release staging",
+      "onim -> zhex: omit version from internal Git development dependencies; project registry versions only in external release staging",
+      "zclick-core -> zclap: omit version from internal Git development dependencies; project registry versions only in external release staging",
+      "zrc/Cargo.lock: stale internal zconv 0.4.0 from 'git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zconv.git#f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712'; update and commit the consumer lock",
+      "zharness/Cargo.lock: stale internal zcall 0.4.0 from 'git+https://github.com/LIghtJUNction/zcall.git#564ede15db66530a6dbb78e8b1f4a85998b6f0d8'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zcall.git#8dd30a922a0aedbe821f610649b1ab26078d1882'; update and commit the consumer lock",
+      "zharness/Cargo.lock: stale internal zconv 0.4.0 from 'git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zconv.git#f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712'; update and commit the consumer lock",
+      "zharness/Cargo.lock: stale internal zplugin 0.3.1 from 'git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4'; expected 0.3.1 from 'git+https://github.com/LIghtJUNction/zplugin.git#592a1be623b81a775026c470e6f0efe91fcf78f3'; update and commit the consumer lock",
+      "zharness/Cargo.lock: stale internal zplugin-macros 0.3.1 from 'git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4'; expected 0.3.1 from 'git+https://github.com/LIghtJUNction/zplugin.git#592a1be623b81a775026c470e6f0efe91fcf78f3'; update and commit the consumer lock",
+      "ztty/Cargo.lock: stale internal zgpui 0.1.5 from 'git+https://github.com/LIghtJUNction/zgpui.git#b4d5493e0cd985d00558c7be0b5726965ab5163a'; expected 0.1.6 from 'git+https://github.com/LIghtJUNction/zgpui.git#174a8b73087deeac2ecfa036cad8bddba71c612f'; update and commit the consumer lock",
+      "zterm/Cargo.lock: stale internal zgpui 0.1.5 from 'git+https://github.com/LIghtJUNction/zgpui.git#b4d5493e0cd985d00558c7be0b5726965ab5163a'; expected 0.1.6 from 'git+https://github.com/LIghtJUNction/zgpui.git#174a8b73087deeac2ecfa036cad8bddba71c612f'; update and commit the consumer lock",
+      "zuse/Cargo.lock: stale internal zmcpio 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#d5e7ffb76184e6754bb7b564a217db1e2099e531'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#c114a5ae9f925c64f3b090b8524016cbb90b6cff'; update and commit the consumer lock",
+      "ssmcp/Cargo.lock: stale internal zcall 0.4.0 from 'git+https://github.com/LIghtJUNction/zcall.git#199678d08104bed588e5d10b2c0634a47d7c8417'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zcall.git#8dd30a922a0aedbe821f610649b1ab26078d1882'; update and commit the consumer lock",
+      "ssmcp/Cargo.lock: stale internal zconv 0.4.0 from 'git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zconv.git#f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712'; update and commit the consumer lock",
+      "ssmcp/Cargo.lock: stale internal zmcpio 0.4.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#04bb6cd05c5295ab41a892a76cbef10b8ac07402'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#c114a5ae9f925c64f3b090b8524016cbb90b6cff'; update and commit the consumer lock",
+      "ssmcp/Cargo.lock: stale internal zuse-computer 0.3.0 from 'git+https://github.com/LIghtJUNction/zuse.git#8d37a7df6fd94df1d0939eb6800c238e71f5835d'; expected 0.4.0 from 'git+https://github.com/LIghtJUNction/zuse.git#0016f96067d1e4672c62be9d8008d210edcdae2d'; update and commit the consumer lock",
+      "ztype/Cargo.lock: stale internal zcall 0.4.0 from 'git+https://github.com/LIghtJUNction/zcall.git#199678d08104bed588e5d10b2c0634a47d7c8417'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zcall.git#8dd30a922a0aedbe821f610649b1ab26078d1882'; update and commit the consumer lock",
+      "ztype/Cargo.lock: stale internal zconv 0.4.0 from 'git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zconv.git#f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712'; update and commit the consumer lock",
+      "ztype/Cargo.lock: stale internal zgpui 0.1.5 from 'git+https://github.com/LIghtJUNction/zgpui.git#b4d5493e0cd985d00558c7be0b5726965ab5163a'; expected 0.1.6 from 'git+https://github.com/LIghtJUNction/zgpui.git#174a8b73087deeac2ecfa036cad8bddba71c612f'; update and commit the consumer lock",
+      "ztype/Cargo.lock: stale internal zgpui-raster 0.1.0 from 'git+https://github.com/LIghtJUNction/zgpui.git#b4d5493e0cd985d00558c7be0b5726965ab5163a'; expected 0.1.0 from 'git+https://github.com/LIghtJUNction/zgpui.git#174a8b73087deeac2ecfa036cad8bddba71c612f'; update and commit the consumer lock",
+      "ztype/Cargo.lock: stale internal zmcpio 0.4.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#04bb6cd05c5295ab41a892a76cbef10b8ac07402'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#c114a5ae9f925c64f3b090b8524016cbb90b6cff'; update and commit the consumer lock",
+      "ztype/Cargo.lock: stale internal zuse-computer 0.3.0 from 'git+https://github.com/LIghtJUNction/zuse.git#8d37a7df6fd94df1d0939eb6800c238e71f5835d'; expected 0.4.0 from 'git+https://github.com/LIghtJUNction/zuse.git#0016f96067d1e4672c62be9d8008d210edcdae2d'; update and commit the consumer lock"
+    ]
+  },
+  "resolve_all": {
+    "exit_code": 1,
+    "full_cargo_resolution_entered": false,
+    "diagnostics": [
+      "ssmcp/'crates/zuse' -> 'zuse': pinned source 8d37a7df6fd94df1d0939eb6800c238e71f5835d differs from snapshot 0016f96067d1e4672c62be9d8008d210edcdae2d",
+      "ztty/'crates/zgpui' -> 'zgpui': pinned source b4d5493e0cd985d00558c7be0b5726965ab5163a differs from snapshot 174a8b73087deeac2ecfa036cad8bddba71c612f",
+      "zcalld/'extensions/compat' -> 'zcalld-compat': pinned source c521d1fb1ce8eac173ea2bb481816d3cd1df82d3 differs from snapshot 56a15b330384531b3a6c444190f53b6d3720bd5e",
+      "oh-my-ztty/'components/ssmcp' -> 'ssmcp': pinned source 5f4a35482c6353750248ddee8761e5fd3daffad6 differs from snapshot dae9d52c734b5d316bf90d2317a51e3992f68085",
+      "ztype/'vendor/zgpui' -> 'zgpui': pinned source b4d5493e0cd985d00558c7be0b5726965ab5163a differs from snapshot 174a8b73087deeac2ecfa036cad8bddba71c612f",
+      "mechrevo-console-cli -> zclap: omit version from internal Git development dependencies; project registry versions only in external release staging",
+      "mechrevo-console-core -> zhex: omit version from internal Git development dependencies; project registry versions only in external release staging",
+      "onim -> zhex: omit version from internal Git development dependencies; project registry versions only in external release staging",
+      "zclick-core -> zclap: omit version from internal Git development dependencies; project registry versions only in external release staging"
+    ]
+  },
+  "diagnostic_delta": {
+    "baseline_diagnostics": 26,
+    "current_diagnostics": 27,
+    "all_legacy_keys_preserved": true,
+    "removed_legacy_keys": [],
+    "added": [
+      "zuse/Cargo.lock: stale internal zmcpio 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#d5e7ffb76184e6754bb7b564a217db1e2099e531'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#c114a5ae9f925c64f3b090b8524016cbb90b6cff'; update and commit the consumer lock"
+    ],
+    "updated_source_expectations": [
+      {
+        "key": "ssmcp/Cargo.lock: stale internal zmcpio",
+        "before": "ssmcp/Cargo.lock: stale internal zmcpio 0.4.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#04bb6cd05c5295ab41a892a76cbef10b8ac07402'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#d5e7ffb76184e6754bb7b564a217db1e2099e531'; update and commit the consumer lock",
+        "after": "ssmcp/Cargo.lock: stale internal zmcpio 0.4.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#04bb6cd05c5295ab41a892a76cbef10b8ac07402'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#c114a5ae9f925c64f3b090b8524016cbb90b6cff'; update and commit the consumer lock"
+      },
+      {
+        "key": "ztype/Cargo.lock: stale internal zmcpio",
+        "before": "ztype/Cargo.lock: stale internal zmcpio 0.4.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#04bb6cd05c5295ab41a892a76cbef10b8ac07402'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#d5e7ffb76184e6754bb7b564a217db1e2099e531'; update and commit the consumer lock",
+        "after": "ztype/Cargo.lock: stale internal zmcpio 0.4.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#04bb6cd05c5295ab41a892a76cbef10b8ac07402'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#c114a5ae9f925c64f3b090b8524016cbb90b6cff'; update and commit the consumer lock"
+      }
+    ]
+  },
+  "impact_zuse": [
+    "bilibilive",
+    "oh-my-ztty",
+    "ssmcp",
+    "zrc",
+    "ztype",
+    "zuse",
+    "zuse-skills"
+  ],
+  "impact_bilibilive": [
+    "bilibilive"
+  ],
+  "impact_zuse_skills": [
+    "zuse-skills"
+  ],
+  "validation_boundary": "Metadata inventory, registered source checks, and dependency impact were run in the sandbox. Existing source-policy failures stop full Cargo resolution and whole-aggregate remote freshness checks. No compilation or application tests were run in this registration step.",
+  "consumer_sources_or_lockfiles_edited": false,
+  "legacy_blockers_edited": false,
+  "remote_writes": false,
+  "native_machine_used": false
+}

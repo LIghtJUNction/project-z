@@ -1,0 +1,927 @@
+{
+  "schema_version": 1,
+  "prepared_utc": "2026-11-21T16:09:18.353564+00:00",
+  "status": "draft: 26 inherited structural/lock diagnostics remain; seven additional default-head differences observed outside this update",
+  "scope": "Advance only the published bilibilive and Zuse development sources and regenerate their aggregate entries. Preserve the existing bilibilive/zuse-skills registration and unrelated consumer migration work.",
+  "pull_request": {
+    "url": "https://github.com/LIghtJUNction/project-z/pull/10",
+    "state": "open",
+    "draft": true,
+    "head_branch": "coord/bilibilive-zuse-skills-registration-20261121",
+    "observed_head": "6c76ef89d2dd135533bf251bcfc07f0ba7003ebe",
+    "base_branch": "coord/git-source-policy-20261120",
+    "observed_base": "b5ac5b7c5bdfafbe5562e9f9820288bea752f58f",
+    "refs_observed_utc": "2026-11-21T16:05:28.833341+00:00"
+  },
+  "aggregate_parent": "6c76ef89d2dd135533bf251bcfc07f0ba7003ebe",
+  "repository_count": 46,
+  "cargo_package_count": 73,
+  "changed_paths": [
+    "bilibilive",
+    "zuse",
+    "catalog.json",
+    "docs/PROJECTS.md",
+    "docs/maintenance/2026-11-21-bilibilive-zuse-release-sync.json"
+  ],
+  "source_updates": [
+    {
+      "repository": "bilibilive",
+      "before": "0f97b0e59240fd1230878371c4b9126f0955b70f",
+      "after": "6a6801492e0d70ca6cc8103f92fe76ac7f2da2df"
+    },
+    {
+      "repository": "zuse",
+      "before": "0016f96067d1e4672c62be9d8008d210edcdae2d",
+      "after": "d67e47c5dcd443ad9121a908ca57059160249051"
+    }
+  ],
+  "generated_package_changes": [
+    {
+      "package": "bilibilive",
+      "before_version": "0.1.1",
+      "after_version": "0.1.2",
+      "changed_fields": [
+        "version"
+      ]
+    },
+    {
+      "package": "zuse-computer",
+      "before_version": "0.4.0",
+      "after_version": "0.4.2",
+      "changed_fields": [
+        "version"
+      ]
+    }
+  ],
+  "dependency_alignment": {
+    "bilibilive_commit": "6a6801492e0d70ca6cc8103f92fe76ac7f2da2df",
+    "bilibilive_cargo_lock_sha256": "a3d5ece1986450ec20a716fcb317500def51c919463d2767c61bceff7949796f",
+    "zuse_package_version": "0.4.2",
+    "bilibilive_locked_zuse_and_aggregate_zuse": "d67e47c5dcd443ad9121a908ca57059160249051",
+    "zuse_locked_zmcpio_and_aggregate_zmcpio": "c114a5ae9f925c64f3b090b8524016cbb90b6cff",
+    "consumer_evidence_url": "https://github.com/LIghtJUNction/bilibilive/blob/6a6801492e0d70ca6cc8103f92fe76ac7f2da2df/docs/evidence/dependencies-zuse-0.4.2.json"
+  },
+  "checks": [
+    {
+      "name": "sync-record",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "sync",
+        "--record"
+      ],
+      "started_at": "2026-11-21T16:07:02.030199+00:00",
+      "finished_at": "2026-11-21T16:07:02.490976+00:00",
+      "elapsed_seconds": 0.461,
+      "exit_code": 0,
+      "stdout": "sync-record.stdout.log",
+      "stdout_sha256": "90fa4e8edd429234aed2dde28676b2e93ba197e16c74c74b0034ac1390a912c0",
+      "stderr": "sync-record.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_lines": 1,
+      "stderr_lines": 0
+    },
+    {
+      "name": "check",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "check"
+      ],
+      "started_at": "2026-11-21T16:07:02.491211+00:00",
+      "finished_at": "2026-11-21T16:07:05.214784+00:00",
+      "elapsed_seconds": 2.724,
+      "exit_code": 1,
+      "stdout": "check.stdout.log",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "check.stderr.log",
+      "stderr_sha256": "9057148b8601ce92859fc1baad53515de540f9b70d299d073ebff433899f166f",
+      "stdout_lines": 0,
+      "stderr_lines": 26
+    },
+    {
+      "name": "resolve-all",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "resolve",
+        "--all"
+      ],
+      "started_at": "2026-11-21T16:07:05.215115+00:00",
+      "finished_at": "2026-11-21T16:07:08.109550+00:00",
+      "elapsed_seconds": 2.894,
+      "exit_code": 1,
+      "stdout": "resolve-all.stdout.log",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "resolve-all.stderr.log",
+      "stderr_sha256": "2dc6c05ff65991339529d7eed535a4c5cd564a64787c2e71df7f1d470b308604",
+      "stdout_lines": 0,
+      "stderr_lines": 9
+    },
+    {
+      "name": "impact-zuse",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "impact",
+        "--repositories",
+        "zuse"
+      ],
+      "started_at": "2026-11-21T16:07:08.109885+00:00",
+      "finished_at": "2026-11-21T16:07:08.585073+00:00",
+      "elapsed_seconds": 0.475,
+      "exit_code": 0,
+      "stdout": "impact-zuse.stdout.log",
+      "stdout_sha256": "5ba3ac0a9a1ef2862db8b70f8b42f4eb003483a5072b08e122dddbd205faa2c7",
+      "stderr": "impact-zuse.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_lines": 7,
+      "stderr_lines": 0
+    },
+    {
+      "name": "impact-bilibilive",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "impact",
+        "--repositories",
+        "bilibilive"
+      ],
+      "started_at": "2026-11-21T16:07:08.585344+00:00",
+      "finished_at": "2026-11-21T16:07:09.030037+00:00",
+      "elapsed_seconds": 0.445,
+      "exit_code": 0,
+      "stdout": "impact-bilibilive.stdout.log",
+      "stdout_sha256": "db3b25dad4a0cf0e9d8a6159220e05027440313daf983e4d2a6d922b80ceb866",
+      "stderr": "impact-bilibilive.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_lines": 1,
+      "stderr_lines": 0
+    },
+    {
+      "name": "impact-zuse-skills",
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "impact",
+        "--repositories",
+        "zuse-skills"
+      ],
+      "started_at": "2026-11-21T16:07:09.030335+00:00",
+      "finished_at": "2026-11-21T16:07:09.456357+00:00",
+      "elapsed_seconds": 0.426,
+      "exit_code": 0,
+      "stdout": "impact-zuse-skills.stdout.log",
+      "stdout_sha256": "708c9a71ccdd6e01052d6cf40e1d7835855448aca870ceb2271bc2afa89b532a",
+      "stderr": "impact-zuse-skills.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_lines": 1,
+      "stderr_lines": 0
+    }
+  ],
+  "diagnostic_comparison": {
+    "compared_at": "2026-11-21T16:07:50.961030+00:00",
+    "base": "6c76ef89d2dd135533bf251bcfc07f0ba7003ebe",
+    "base_check_diagnostics": 27,
+    "current_check_diagnostics": 26,
+    "preserved_legacy_issue_identities": 26,
+    "unchanged_diagnostic_messages": 23,
+    "updated_expected_zuse_identity": [
+      {
+        "identity": "ssmcp/'crates/zuse' -> 'zuse'",
+        "before": "ssmcp/'crates/zuse' -> 'zuse': pinned source 8d37a7df6fd94df1d0939eb6800c238e71f5835d differs from snapshot 0016f96067d1e4672c62be9d8008d210edcdae2d",
+        "after": "ssmcp/'crates/zuse' -> 'zuse': pinned source 8d37a7df6fd94df1d0939eb6800c238e71f5835d differs from snapshot d67e47c5dcd443ad9121a908ca57059160249051"
+      },
+      {
+        "identity": "ssmcp/Cargo.lock:zuse-computer",
+        "before": "ssmcp/Cargo.lock: stale internal zuse-computer 0.3.0 from 'git+https://github.com/LIghtJUNction/zuse.git#8d37a7df6fd94df1d0939eb6800c238e71f5835d'; expected 0.4.0 from 'git+https://github.com/LIghtJUNction/zuse.git#0016f96067d1e4672c62be9d8008d210edcdae2d'; update and commit the consumer lock",
+        "after": "ssmcp/Cargo.lock: stale internal zuse-computer 0.3.0 from 'git+https://github.com/LIghtJUNction/zuse.git#8d37a7df6fd94df1d0939eb6800c238e71f5835d'; expected 0.4.2 from 'git+https://github.com/LIghtJUNction/zuse.git#d67e47c5dcd443ad9121a908ca57059160249051'; update and commit the consumer lock"
+      },
+      {
+        "identity": "ztype/Cargo.lock:zuse-computer",
+        "before": "ztype/Cargo.lock: stale internal zuse-computer 0.3.0 from 'git+https://github.com/LIghtJUNction/zuse.git#8d37a7df6fd94df1d0939eb6800c238e71f5835d'; expected 0.4.0 from 'git+https://github.com/LIghtJUNction/zuse.git#0016f96067d1e4672c62be9d8008d210edcdae2d'; update and commit the consumer lock",
+        "after": "ztype/Cargo.lock: stale internal zuse-computer 0.3.0 from 'git+https://github.com/LIghtJUNction/zuse.git#8d37a7df6fd94df1d0939eb6800c238e71f5835d'; expected 0.4.2 from 'git+https://github.com/LIghtJUNction/zuse.git#d67e47c5dcd443ad9121a908ca57059160249051'; update and commit the consumer lock"
+      }
+    ],
+    "resolved_issues": [
+      {
+        "identity": "zuse/Cargo.lock:zmcpio",
+        "diagnostic": "zuse/Cargo.lock: stale internal zmcpio 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#d5e7ffb76184e6754bb7b564a217db1e2099e531'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#c114a5ae9f925c64f3b090b8524016cbb90b6cff'; update and commit the consumer lock"
+      }
+    ],
+    "new_issue_identities": [],
+    "remaining_diagnostics": [
+      "ssmcp/'crates/zuse' -> 'zuse': pinned source 8d37a7df6fd94df1d0939eb6800c238e71f5835d differs from snapshot d67e47c5dcd443ad9121a908ca57059160249051",
+      "ztty/'crates/zgpui' -> 'zgpui': pinned source b4d5493e0cd985d00558c7be0b5726965ab5163a differs from snapshot 174a8b73087deeac2ecfa036cad8bddba71c612f",
+      "zcalld/'extensions/compat' -> 'zcalld-compat': pinned source c521d1fb1ce8eac173ea2bb481816d3cd1df82d3 differs from snapshot 56a15b330384531b3a6c444190f53b6d3720bd5e",
+      "oh-my-ztty/'components/ssmcp' -> 'ssmcp': pinned source 5f4a35482c6353750248ddee8761e5fd3daffad6 differs from snapshot dae9d52c734b5d316bf90d2317a51e3992f68085",
+      "ztype/'vendor/zgpui' -> 'zgpui': pinned source b4d5493e0cd985d00558c7be0b5726965ab5163a differs from snapshot 174a8b73087deeac2ecfa036cad8bddba71c612f",
+      "mechrevo-console-cli -> zclap: omit version from internal Git development dependencies; project registry versions only in external release staging",
+      "mechrevo-console-core -> zhex: omit version from internal Git development dependencies; project registry versions only in external release staging",
+      "onim -> zhex: omit version from internal Git development dependencies; project registry versions only in external release staging",
+      "zclick-core -> zclap: omit version from internal Git development dependencies; project registry versions only in external release staging",
+      "zrc/Cargo.lock: stale internal zconv 0.4.0 from 'git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zconv.git#f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712'; update and commit the consumer lock",
+      "zharness/Cargo.lock: stale internal zcall 0.4.0 from 'git+https://github.com/LIghtJUNction/zcall.git#564ede15db66530a6dbb78e8b1f4a85998b6f0d8'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zcall.git#8dd30a922a0aedbe821f610649b1ab26078d1882'; update and commit the consumer lock",
+      "zharness/Cargo.lock: stale internal zconv 0.4.0 from 'git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zconv.git#f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712'; update and commit the consumer lock",
+      "zharness/Cargo.lock: stale internal zplugin 0.3.1 from 'git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4'; expected 0.3.1 from 'git+https://github.com/LIghtJUNction/zplugin.git#592a1be623b81a775026c470e6f0efe91fcf78f3'; update and commit the consumer lock",
+      "zharness/Cargo.lock: stale internal zplugin-macros 0.3.1 from 'git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4'; expected 0.3.1 from 'git+https://github.com/LIghtJUNction/zplugin.git#592a1be623b81a775026c470e6f0efe91fcf78f3'; update and commit the consumer lock",
+      "ztty/Cargo.lock: stale internal zgpui 0.1.5 from 'git+https://github.com/LIghtJUNction/zgpui.git#b4d5493e0cd985d00558c7be0b5726965ab5163a'; expected 0.1.6 from 'git+https://github.com/LIghtJUNction/zgpui.git#174a8b73087deeac2ecfa036cad8bddba71c612f'; update and commit the consumer lock",
+      "zterm/Cargo.lock: stale internal zgpui 0.1.5 from 'git+https://github.com/LIghtJUNction/zgpui.git#b4d5493e0cd985d00558c7be0b5726965ab5163a'; expected 0.1.6 from 'git+https://github.com/LIghtJUNction/zgpui.git#174a8b73087deeac2ecfa036cad8bddba71c612f'; update and commit the consumer lock",
+      "ssmcp/Cargo.lock: stale internal zcall 0.4.0 from 'git+https://github.com/LIghtJUNction/zcall.git#199678d08104bed588e5d10b2c0634a47d7c8417'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zcall.git#8dd30a922a0aedbe821f610649b1ab26078d1882'; update and commit the consumer lock",
+      "ssmcp/Cargo.lock: stale internal zconv 0.4.0 from 'git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zconv.git#f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712'; update and commit the consumer lock",
+      "ssmcp/Cargo.lock: stale internal zmcpio 0.4.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#04bb6cd05c5295ab41a892a76cbef10b8ac07402'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#c114a5ae9f925c64f3b090b8524016cbb90b6cff'; update and commit the consumer lock",
+      "ssmcp/Cargo.lock: stale internal zuse-computer 0.3.0 from 'git+https://github.com/LIghtJUNction/zuse.git#8d37a7df6fd94df1d0939eb6800c238e71f5835d'; expected 0.4.2 from 'git+https://github.com/LIghtJUNction/zuse.git#d67e47c5dcd443ad9121a908ca57059160249051'; update and commit the consumer lock",
+      "ztype/Cargo.lock: stale internal zcall 0.4.0 from 'git+https://github.com/LIghtJUNction/zcall.git#199678d08104bed588e5d10b2c0634a47d7c8417'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zcall.git#8dd30a922a0aedbe821f610649b1ab26078d1882'; update and commit the consumer lock",
+      "ztype/Cargo.lock: stale internal zconv 0.4.0 from 'git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zconv.git#f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712'; update and commit the consumer lock",
+      "ztype/Cargo.lock: stale internal zgpui 0.1.5 from 'git+https://github.com/LIghtJUNction/zgpui.git#b4d5493e0cd985d00558c7be0b5726965ab5163a'; expected 0.1.6 from 'git+https://github.com/LIghtJUNction/zgpui.git#174a8b73087deeac2ecfa036cad8bddba71c612f'; update and commit the consumer lock",
+      "ztype/Cargo.lock: stale internal zgpui-raster 0.1.0 from 'git+https://github.com/LIghtJUNction/zgpui.git#b4d5493e0cd985d00558c7be0b5726965ab5163a'; expected 0.1.0 from 'git+https://github.com/LIghtJUNction/zgpui.git#174a8b73087deeac2ecfa036cad8bddba71c612f'; update and commit the consumer lock",
+      "ztype/Cargo.lock: stale internal zmcpio 0.4.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#04bb6cd05c5295ab41a892a76cbef10b8ac07402'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#c114a5ae9f925c64f3b090b8524016cbb90b6cff'; update and commit the consumer lock",
+      "ztype/Cargo.lock: stale internal zuse-computer 0.3.0 from 'git+https://github.com/LIghtJUNction/zuse.git#8d37a7df6fd94df1d0939eb6800c238e71f5835d'; expected 0.4.2 from 'git+https://github.com/LIghtJUNction/zuse.git#d67e47c5dcd443ad9121a908ca57059160249051'; update and commit the consumer lock"
+    ],
+    "source_updates": [
+      {
+        "repository": "bilibilive",
+        "before": "0f97b0e59240fd1230878371c4b9126f0955b70f",
+        "after": "6a6801492e0d70ca6cc8103f92fe76ac7f2da2df"
+      },
+      {
+        "repository": "zuse",
+        "before": "0016f96067d1e4672c62be9d8008d210edcdae2d",
+        "after": "d67e47c5dcd443ad9121a908ca57059160249051"
+      }
+    ],
+    "generated_package_changes": [
+      {
+        "package": "bilibilive",
+        "before_version": "0.1.1",
+        "after_version": "0.1.2",
+        "changed_fields": [
+          "version"
+        ]
+      },
+      {
+        "package": "zuse-computer",
+        "before_version": "0.4.0",
+        "after_version": "0.4.2",
+        "changed_fields": [
+          "version"
+        ]
+      }
+    ],
+    "independently_observed_out_of_scope_freshness_differences": [
+      {
+        "repository": "OniMods",
+        "url": "https://github.com/LIghtJUNction/OniMods.git",
+        "selected_commit": "9d2ffb4f749919f513313d603daeed5a6767195b",
+        "observed_default_commit": "1b93643d3ec683aa2e512c7a5b42ae1177db5b33",
+        "observed_default_branch": "main",
+        "observed_at": "2026-11-21T16:05:27.854329+00:00",
+        "disposition": "Preserved outside this scoped bilibilive/Zuse update; requires repository-owner coordination before aggregate acceptance."
+      },
+      {
+        "repository": "mechrevo-drivers",
+        "url": "https://github.com/LIghtJUNction/mechrevo-drivers.git",
+        "selected_commit": "eb2959aac4efa7edd12ebc8bd8b040108e285dc8",
+        "observed_default_commit": "e522bf8c612865043fdf766726b93066249fb6f8",
+        "observed_default_branch": "main",
+        "observed_at": "2026-11-21T16:05:32.265751+00:00",
+        "disposition": "Preserved outside this scoped bilibilive/Zuse update; requires repository-owner coordination before aggregate acceptance."
+      },
+      {
+        "repository": "ssmcp",
+        "url": "https://github.com/LIghtJUNction/ssmcp.git",
+        "selected_commit": "dae9d52c734b5d316bf90d2317a51e3992f68085",
+        "observed_default_commit": "02aa4dcd18786062ef44be6c76422dff054fbfed",
+        "observed_default_branch": "main",
+        "observed_at": "2026-11-21T16:05:32.241110+00:00",
+        "disposition": "Preserved outside this scoped bilibilive/Zuse update; requires repository-owner coordination before aggregate acceptance."
+      },
+      {
+        "repository": "zclick",
+        "url": "https://github.com/LIghtJUNction/zclick.git",
+        "selected_commit": "b90a118e8ae72ebd45dd8fc2a4ec188c142439ec",
+        "observed_default_commit": "732f958299e0e7b3522e4e85264083f8a0acafdc",
+        "observed_default_branch": "main",
+        "observed_at": "2026-11-21T16:05:43.700543+00:00",
+        "disposition": "Preserved outside this scoped bilibilive/Zuse update; requires repository-owner coordination before aggregate acceptance."
+      },
+      {
+        "repository": "zharness",
+        "url": "https://github.com/LIghtJUNction/zharness.git",
+        "selected_commit": "fb2948f78467dd92b216aabda6f18a5645f0e7f6",
+        "observed_default_commit": "5f9a9f58f090326bf2d43f4df2cc90c1bc674c21",
+        "observed_default_branch": "main",
+        "observed_at": "2026-11-21T16:05:59.196408+00:00",
+        "disposition": "Preserved outside this scoped bilibilive/Zuse update; requires repository-owner coordination before aggregate acceptance."
+      },
+      {
+        "repository": "zrc",
+        "url": "https://github.com/LIghtJUNction/zrc.git",
+        "selected_commit": "995d22a2bde9722bfb6e817fb8303eaa6fd8f339",
+        "observed_default_commit": "c127bd2965525adc05c46c6fba492aa1e45460f1",
+        "observed_default_branch": "main",
+        "observed_at": "2026-11-21T16:06:09.192234+00:00",
+        "disposition": "Preserved outside this scoped bilibilive/Zuse update; requires repository-owner coordination before aggregate acceptance."
+      },
+      {
+        "repository": "zterm",
+        "url": "https://github.com/LIghtJUNction/zterm.git",
+        "selected_commit": "fde08990612a8e8eb62dd90c664faab917214a8b",
+        "observed_default_commit": "15174fecfb441011e4ae35d0e361b88eec29bd7a",
+        "observed_default_branch": "main",
+        "observed_at": "2026-11-21T16:06:15.547149+00:00",
+        "disposition": "Preserved outside this scoped bilibilive/Zuse update; requires repository-owner coordination before aggregate acceptance."
+      }
+    ],
+    "full_cargo_resolution_entered": false,
+    "freshness_step_inside_check_entered": false,
+    "all_registered_remote_heads_read_separately": 46
+  },
+  "resolve_preflight_diagnostics": [
+    "ssmcp/'crates/zuse' -> 'zuse': pinned source 8d37a7df6fd94df1d0939eb6800c238e71f5835d differs from snapshot d67e47c5dcd443ad9121a908ca57059160249051",
+    "ztty/'crates/zgpui' -> 'zgpui': pinned source b4d5493e0cd985d00558c7be0b5726965ab5163a differs from snapshot 174a8b73087deeac2ecfa036cad8bddba71c612f",
+    "zcalld/'extensions/compat' -> 'zcalld-compat': pinned source c521d1fb1ce8eac173ea2bb481816d3cd1df82d3 differs from snapshot 56a15b330384531b3a6c444190f53b6d3720bd5e",
+    "oh-my-ztty/'components/ssmcp' -> 'ssmcp': pinned source 5f4a35482c6353750248ddee8761e5fd3daffad6 differs from snapshot dae9d52c734b5d316bf90d2317a51e3992f68085",
+    "ztype/'vendor/zgpui' -> 'zgpui': pinned source b4d5493e0cd985d00558c7be0b5726965ab5163a differs from snapshot 174a8b73087deeac2ecfa036cad8bddba71c612f",
+    "mechrevo-console-cli -> zclap: omit version from internal Git development dependencies; project registry versions only in external release staging",
+    "mechrevo-console-core -> zhex: omit version from internal Git development dependencies; project registry versions only in external release staging",
+    "onim -> zhex: omit version from internal Git development dependencies; project registry versions only in external release staging",
+    "zclick-core -> zclap: omit version from internal Git development dependencies; project registry versions only in external release staging"
+  ],
+  "impact": {
+    "impact-zuse": [
+      "bilibilive",
+      "oh-my-ztty",
+      "ssmcp",
+      "zrc",
+      "ztype",
+      "zuse",
+      "zuse-skills"
+    ],
+    "impact-bilibilive": [
+      "bilibilive"
+    ],
+    "impact-zuse-skills": [
+      "zuse-skills"
+    ]
+  },
+  "public_default_head_readback": {
+    "schema_version": 1,
+    "started_at": "2026-11-21T16:05:22.714701+00:00",
+    "finished_at": "2026-11-21T16:06:26.379365+00:00",
+    "mode": "public read-only canonical Git default refs; no source checkout changes",
+    "sources": [
+      {
+        "repository": "OniMods",
+        "url": "https://github.com/LIghtJUNction/OniMods.git",
+        "snapshot_commit": "9d2ffb4f749919f513313d603daeed5a6767195b",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:22.715021+00:00",
+        "branch": "main",
+        "commit": "1b93643d3ec683aa2e512c7a5b42ae1177db5b33",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:27.854329+00:00"
+      },
+      {
+        "repository": "bilibilive",
+        "url": "https://github.com/LIghtJUNction/bilibilive.git",
+        "snapshot_commit": "0f97b0e59240fd1230878371c4b9126f0955b70f",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:22.715439+00:00",
+        "branch": "main",
+        "commit": "6a6801492e0d70ca6cc8103f92fe76ac7f2da2df",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:27.768483+00:00"
+      },
+      {
+        "repository": "lmm",
+        "url": "https://github.com/TokenNotIncluded/lmm.git",
+        "snapshot_commit": "260a1eff2400aa64fc697028a406a8017ed6259c",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:22.715740+00:00",
+        "branch": "main",
+        "commit": "260a1eff2400aa64fc697028a406a8017ed6259c",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:27.778928+00:00"
+      },
+      {
+        "repository": "lmm-api-source",
+        "url": "https://github.com/TokenNotIncluded/lmm-api-source.git",
+        "snapshot_commit": "fa57cd2049ccd9138cdc0b4104db36b5b6c53ae5",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:22.715941+00:00",
+        "branch": "main",
+        "commit": "fa57cd2049ccd9138cdc0b4104db36b5b6c53ae5",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:27.709013+00:00"
+      },
+      {
+        "repository": "mechrevo-drivers",
+        "url": "https://github.com/LIghtJUNction/mechrevo-drivers.git",
+        "snapshot_commit": "eb2959aac4efa7edd12ebc8bd8b040108e285dc8",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:27.709050+00:00",
+        "branch": "main",
+        "commit": "e522bf8c612865043fdf766726b93066249fb6f8",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:32.265751+00:00"
+      },
+      {
+        "repository": "oh-my-ztty",
+        "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
+        "snapshot_commit": "ab904f09d4a76003ac2431fa676aebcb4d23a7f0",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:27.768526+00:00",
+        "branch": "main",
+        "commit": "ab904f09d4a76003ac2431fa676aebcb4d23a7f0",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:32.137548+00:00"
+      },
+      {
+        "repository": "ssmcp",
+        "url": "https://github.com/LIghtJUNction/ssmcp.git",
+        "snapshot_commit": "dae9d52c734b5d316bf90d2317a51e3992f68085",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:27.778982+00:00",
+        "branch": "main",
+        "commit": "02aa4dcd18786062ef44be6c76422dff054fbfed",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:32.241110+00:00"
+      },
+      {
+        "repository": "z58",
+        "url": "https://github.com/LIghtJUNction/z58.git",
+        "snapshot_commit": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:27.854377+00:00",
+        "branch": "main",
+        "commit": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:32.135447+00:00"
+      },
+      {
+        "repository": "z64",
+        "url": "https://github.com/LIghtJUNction/z64.git",
+        "snapshot_commit": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:32.135703+00:00",
+        "branch": "main",
+        "commit": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:38.744231+00:00"
+      },
+      {
+        "repository": "zcall",
+        "url": "https://github.com/LIghtJUNction/zcall.git",
+        "snapshot_commit": "8dd30a922a0aedbe821f610649b1ab26078d1882",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:32.137590+00:00",
+        "branch": "main",
+        "commit": "8dd30a922a0aedbe821f610649b1ab26078d1882",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:38.802482+00:00"
+      },
+      {
+        "repository": "zcall-gui",
+        "url": "https://github.com/LIghtJUNction/zcall-gui.git",
+        "snapshot_commit": "95cbe443f06cd7d7e922ca498d916f970e712d4b",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:32.241194+00:00",
+        "branch": "main",
+        "commit": "95cbe443f06cd7d7e922ca498d916f970e712d4b",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:38.835899+00:00"
+      },
+      {
+        "repository": "zcall-omarchy",
+        "url": "https://github.com/LIghtJUNction/zcall-omarchy.git",
+        "snapshot_commit": "7db52e74ceb6c9d398791406e01265eecc127f87",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:32.265794+00:00",
+        "branch": "main",
+        "commit": "7db52e74ceb6c9d398791406e01265eecc127f87",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:38.667886+00:00"
+      },
+      {
+        "repository": "zcalld",
+        "url": "https://github.com/LIghtJUNction/zcalld.git",
+        "snapshot_commit": "ccf26395ab7418463dad56db6a78f1c009d57430",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:38.667920+00:00",
+        "branch": "main",
+        "commit": "ccf26395ab7418463dad56db6a78f1c009d57430",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:43.626224+00:00"
+      },
+      {
+        "repository": "zcalld-compat",
+        "url": "https://github.com/LIghtJUNction/zcalld-compat.git",
+        "snapshot_commit": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:38.744277+00:00",
+        "branch": "main",
+        "commit": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:43.702208+00:00"
+      },
+      {
+        "repository": "zclap",
+        "url": "https://github.com/LIghtJUNction/zclap.git",
+        "snapshot_commit": "4d87f3ae3743e81509d5ac5500909955667c860f",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:38.802551+00:00",
+        "branch": "main",
+        "commit": "4d87f3ae3743e81509d5ac5500909955667c860f",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:43.757739+00:00"
+      },
+      {
+        "repository": "zclick",
+        "url": "https://github.com/LIghtJUNction/zclick.git",
+        "snapshot_commit": "b90a118e8ae72ebd45dd8fc2a4ec188c142439ec",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:38.835960+00:00",
+        "branch": "main",
+        "commit": "732f958299e0e7b3522e4e85264083f8a0acafdc",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:43.700543+00:00"
+      },
+      {
+        "repository": "zconv",
+        "url": "https://github.com/LIghtJUNction/zconv.git",
+        "snapshot_commit": "f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:43.626301+00:00",
+        "branch": "main",
+        "commit": "f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:49.242134+00:00"
+      },
+      {
+        "repository": "zdistro",
+        "url": "https://github.com/LIghtJUNction/zdistro.git",
+        "snapshot_commit": "6a54a137fc697d372b54ef85105315f2ce522b3d",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:43.700578+00:00",
+        "branch": "main",
+        "commit": "6a54a137fc697d372b54ef85105315f2ce522b3d",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:49.191366+00:00"
+      },
+      {
+        "repository": "zdot",
+        "url": "https://github.com/LIghtJUNction/zdot.git",
+        "snapshot_commit": "f540adcd11a7ed56339895d3d52e0a9e5e3506c6",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:43.702240+00:00",
+        "branch": "main",
+        "commit": "f540adcd11a7ed56339895d3d52e0a9e5e3506c6",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:49.167874+00:00"
+      },
+      {
+        "repository": "zdwire",
+        "url": "https://github.com/LIghtJUNction/zdwire.git",
+        "snapshot_commit": "c046e3182b0adf15d43500400a427b7dd7389525",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:43.757789+00:00",
+        "branch": "main",
+        "commit": "c046e3182b0adf15d43500400a427b7dd7389525",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:49.172451+00:00"
+      },
+      {
+        "repository": "zfetch",
+        "url": "https://github.com/LIghtJUNction/zfetch.git",
+        "snapshot_commit": "f0614f3b76eca222f4b3880f8dd1707d1308f098",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:49.168144+00:00",
+        "branch": "main",
+        "commit": "f0614f3b76eca222f4b3880f8dd1707d1308f098",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:54.775688+00:00"
+      },
+      {
+        "repository": "zgpui",
+        "url": "https://github.com/LIghtJUNction/zgpui.git",
+        "snapshot_commit": "174a8b73087deeac2ecfa036cad8bddba71c612f",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:49.172546+00:00",
+        "branch": "main",
+        "commit": "174a8b73087deeac2ecfa036cad8bddba71c612f",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:54.751821+00:00"
+      },
+      {
+        "repository": "zgraphics",
+        "url": "https://github.com/LIghtJUNction/zgraphics.git",
+        "snapshot_commit": "aa0ed19fb706ad147aff1df54c4ef762d918e864",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:49.191396+00:00",
+        "branch": "main",
+        "commit": "aa0ed19fb706ad147aff1df54c4ef762d918e864",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:54.784207+00:00"
+      },
+      {
+        "repository": "zguard",
+        "url": "https://github.com/LIghtJUNction/zguard.git",
+        "snapshot_commit": "6772b932a65e18f64e13591dee6edb2f6b099406",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:49.242181+00:00",
+        "branch": "main",
+        "commit": "6772b932a65e18f64e13591dee6edb2f6b099406",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:54.855826+00:00"
+      },
+      {
+        "repository": "zharness",
+        "url": "https://github.com/LIghtJUNction/zharness.git",
+        "snapshot_commit": "fb2948f78467dd92b216aabda6f18a5645f0e7f6",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:54.751993+00:00",
+        "branch": "main",
+        "commit": "5f9a9f58f090326bf2d43f4df2cc90c1bc674c21",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:59.196408+00:00"
+      },
+      {
+        "repository": "zhex",
+        "url": "https://github.com/LIghtJUNction/zhex.git",
+        "snapshot_commit": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:54.775759+00:00",
+        "branch": "main",
+        "commit": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:59.234605+00:00"
+      },
+      {
+        "repository": "zi18n",
+        "url": "https://github.com/LIghtJUNction/zi18n.git",
+        "snapshot_commit": "cdff8dea19e97268d296afa827767ea689420591",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:54.784285+00:00",
+        "branch": "main",
+        "commit": "cdff8dea19e97268d296afa827767ea689420591",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:59.283377+00:00"
+      },
+      {
+        "repository": "zinput",
+        "url": "https://github.com/LIghtJUNction/zinput.git",
+        "snapshot_commit": "da22743e1ad16bedb79751c8e8bb71e63c45d197",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:54.857484+00:00",
+        "branch": "main",
+        "commit": "da22743e1ad16bedb79751c8e8bb71e63c45d197",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:05:59.193077+00:00"
+      },
+      {
+        "repository": "zldap",
+        "url": "https://github.com/LIghtJUNction/zldap.git",
+        "snapshot_commit": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:59.194617+00:00",
+        "branch": "main",
+        "commit": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:04.361304+00:00"
+      },
+      {
+        "repository": "zmcl",
+        "url": "https://github.com/LIghtJUNction/zmcl.git",
+        "snapshot_commit": "a2f9afe41d8013a32c2f928b9126e9f96e76f4db",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:59.196656+00:00",
+        "branch": "main",
+        "commit": "a2f9afe41d8013a32c2f928b9126e9f96e76f4db",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:04.405259+00:00"
+      },
+      {
+        "repository": "zmcpio",
+        "url": "https://github.com/LIghtJUNction/zmcpio.git",
+        "snapshot_commit": "c114a5ae9f925c64f3b090b8524016cbb90b6cff",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:59.234649+00:00",
+        "branch": "main",
+        "commit": "c114a5ae9f925c64f3b090b8524016cbb90b6cff",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:04.333900+00:00"
+      },
+      {
+        "repository": "zmime",
+        "url": "https://github.com/LIghtJUNction/zmime.git",
+        "snapshot_commit": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:05:59.283426+00:00",
+        "branch": "main",
+        "commit": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:04.463527+00:00"
+      },
+      {
+        "repository": "zplugin",
+        "url": "https://github.com/LIghtJUNction/zplugin.git",
+        "snapshot_commit": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:06:04.334132+00:00",
+        "branch": "main",
+        "commit": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:09.192627+00:00"
+      },
+      {
+        "repository": "zpty",
+        "url": "https://github.com/LIghtJUNction/zpty.git",
+        "snapshot_commit": "d263f9a8f0881d259e46c51a7b6753c61ab9be59",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:06:04.361350+00:00",
+        "branch": "main",
+        "commit": "d263f9a8f0881d259e46c51a7b6753c61ab9be59",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:09.318554+00:00"
+      },
+      {
+        "repository": "zrc",
+        "url": "https://github.com/LIghtJUNction/zrc.git",
+        "snapshot_commit": "995d22a2bde9722bfb6e817fb8303eaa6fd8f339",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:06:04.405311+00:00",
+        "branch": "main",
+        "commit": "c127bd2965525adc05c46c6fba492aa1e45460f1",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:09.192234+00:00"
+      },
+      {
+        "repository": "zscan",
+        "url": "https://github.com/LIghtJUNction/zscan.git",
+        "snapshot_commit": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:06:04.463624+00:00",
+        "branch": "main",
+        "commit": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:09.265848+00:00"
+      },
+      {
+        "repository": "zshard",
+        "url": "https://github.com/LIghtJUNction/zshard.git",
+        "snapshot_commit": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:06:09.192410+00:00",
+        "branch": "main",
+        "commit": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:15.622162+00:00"
+      },
+      {
+        "repository": "zsyn",
+        "url": "https://github.com/LIghtJUNction/zsyn.git",
+        "snapshot_commit": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:06:09.192654+00:00",
+        "branch": "main",
+        "commit": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:15.571215+00:00"
+      },
+      {
+        "repository": "zsys",
+        "url": "https://github.com/LIghtJUNction/zsys.git",
+        "snapshot_commit": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:06:09.265882+00:00",
+        "branch": "main",
+        "commit": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:15.614624+00:00"
+      },
+      {
+        "repository": "zterm",
+        "url": "https://github.com/LIghtJUNction/zterm.git",
+        "snapshot_commit": "fde08990612a8e8eb62dd90c664faab917214a8b",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:06:09.318598+00:00",
+        "branch": "main",
+        "commit": "15174fecfb441011e4ae35d0e361b88eec29bd7a",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:15.547149+00:00"
+      },
+      {
+        "repository": "ztty",
+        "url": "https://github.com/LIghtJUNction/ztty.git",
+        "snapshot_commit": "dd4ea6f6f375761ddb5bfd126e68a40db8ab6a12",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:06:15.547394+00:00",
+        "branch": "main",
+        "commit": "dd4ea6f6f375761ddb5bfd126e68a40db8ab6a12",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:20.987859+00:00"
+      },
+      {
+        "repository": "ztuio",
+        "url": "https://github.com/LIghtJUNction/ztuio.git",
+        "snapshot_commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:06:15.571312+00:00",
+        "branch": "main",
+        "commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:20.950706+00:00"
+      },
+      {
+        "repository": "ztype",
+        "url": "https://github.com/LIghtJUNction/ztype.git",
+        "snapshot_commit": "4d784aa25dd1036830314032ac7b747c7fe9a0ed",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:06:15.614656+00:00",
+        "branch": "main",
+        "commit": "4d784aa25dd1036830314032ac7b747c7fe9a0ed",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:21.061481+00:00"
+      },
+      {
+        "repository": "zuse",
+        "url": "https://github.com/LIghtJUNction/zuse.git",
+        "snapshot_commit": "0016f96067d1e4672c62be9d8008d210edcdae2d",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:06:15.622199+00:00",
+        "branch": "main",
+        "commit": "d67e47c5dcd443ad9121a908ca57059160249051",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:20.972334+00:00"
+      },
+      {
+        "repository": "zuse-skills",
+        "url": "https://github.com/LIghtJUNction/zuse-skills.git",
+        "snapshot_commit": "3df51e300ff8834d120678936bdbf50fc1a12697",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:06:20.951038+00:00",
+        "branch": "main",
+        "commit": "3df51e300ff8834d120678936bdbf50fc1a12697",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:26.299644+00:00"
+      },
+      {
+        "repository": "zvte",
+        "url": "https://github.com/LIghtJUNction/zvte.git",
+        "snapshot_commit": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+        "snapshot_branch": "main",
+        "started_at": "2026-11-21T16:06:20.972386+00:00",
+        "branch": "main",
+        "commit": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+        "status": "readback-succeeded",
+        "finished_at": "2026-11-21T16:06:26.378745+00:00"
+      }
+    ]
+  },
+  "release_and_development_sources": {
+    "bilibilive": {
+      "package_version": "0.1.2",
+      "release_tag": "v0.1.2",
+      "release_source": "9c0f2ae850ee0b930ba7f2e1754ad57797f2c413",
+      "release_tag_object": "40e2b2da3a0ab3cec9935d7ca031ced23a3b3f34",
+      "release_locked_zuse_version": "0.4.1",
+      "release_locked_zuse_commit": "48c35a2a5550f8dfc1e0e1be2577f1e64de6e0ae",
+      "aggregate_development_source": "6a6801492e0d70ca6cc8103f92fe76ac7f2da2df",
+      "development_locked_zuse_version": "0.4.2",
+      "development_locked_zuse_commit": "d67e47c5dcd443ad9121a908ca57059160249051",
+      "registry_version_url": "https://crates.io/api/v1/crates/bilibilive/0.1.2",
+      "registry_archive_url": "https://static.crates.io/crates/bilibilive/bilibilive-0.1.2.crate",
+      "registry_archive_sha256": "f599e03d37a4c168a8c89346dfb66632f06059c1afea9f4876e4fd8605caf225",
+      "registry_readback_utc": "2026-11-21T16:03:13.134292+00:00",
+      "registry_source_files_compared": 61,
+      "github_release_assets_verified": 9,
+      "source_guard_sha256": "92f142b65123b3c7ee347337139d539c6e187a9605c9c314bed786f94ff06f1e"
+    },
+    "zuse": {
+      "package_version": "0.4.2",
+      "release_tag": "v0.4.2",
+      "release_source": "b4fde0eb0fce85cc7db2f9f991c47a5a81889ada",
+      "release_tag_object": "1d036eab07936c6a079f8724be44a70f76044472",
+      "aggregate_development_source": "d67e47c5dcd443ad9121a908ca57059160249051",
+      "development_delta_from_release": "Only .github/workflows/ci.yml adds the existing 12 private CLI update fixtures; package source/version/lock bytes are unchanged.",
+      "registry_version_url": "https://crates.io/api/v1/crates/zuse-computer/0.4.2",
+      "registry_archive_url": "https://static.crates.io/crates/zuse-computer/zuse-computer-0.4.2.crate",
+      "registry_archive_sha256": "dda393ee6dbe4b1c24f946a8b7728d067d016d0888f496f62195b962eee0d2af",
+      "registry_readback_utc": "2026-11-21T15:50:38.522532+00:00",
+      "registry_source_files_compared": 199,
+      "github_release_assets_verified": 5,
+      "source_guard_sha256": "8bced7c334b35400e8732b45008cd61866d61345ea1e633556c7b5a8864f0748"
+    }
+  },
+  "verification_boundaries": {
+    "aggregate_full_cargo_resolution_entered": false,
+    "remote_freshness_phase_inside_check_entered": false,
+    "independent_public_remote_readbacks_completed": 46,
+    "unrelated_source_gitlinks_changed": false,
+    "consumer_source_or_locks_edited_in_this_aggregate_step": false,
+    "application_behavior_tests_repeated_in_aggregate": false,
+    "historical_evidence_modified": false,
+    "acceptance": "Keep PR10 draft. Repository owners must align the inherited source declarations, nested gitlinks, locks and separately observed newer public sources before strict check and resolve --all can accept the whole snapshot."
+  }
+}
