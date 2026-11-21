@@ -18,7 +18,7 @@
       "path": "bilibilive",
       "url": "https://github.com/LIghtJUNction/bilibilive.git",
       "branch": "main",
-      "commit": "0985254faee713c75d9209e848289b50e3f45634",
+      "commit": "0f97b0e59240fd1230878371c4b9126f0955b70f",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -385,7 +385,7 @@
       "path": "zmcpio",
       "url": "https://github.com/LIghtJUNction/zmcpio.git",
       "branch": "main",
-      "commit": "d5e7ffb76184e6754bb7b564a217db1e2099e531",
+      "commit": "c114a5ae9f925c64f3b090b8524016cbb90b6cff",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -554,6 +554,18 @@
       "requires": []
     },
     {
+      "name": "zuse-skills",
+      "path": "zuse-skills",
+      "url": "https://github.com/LIghtJUNction/zuse-skills.git",
+      "branch": "main",
+      "commit": "3df51e300ff8834d120678936bdbf50fc1a12697",
+      "role": "extension",
+      "manifests": [],
+      "requires": [
+        "zuse"
+      ]
+    },
+    {
       "name": "zvte",
       "path": "zvte",
       "url": "https://github.com/LIghtJUNction/zvte.git",
@@ -684,7 +696,7 @@
     },
     {
       "name": "bilibilive",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "repository": "bilibilive",
       "manifest": "bilibilive/Cargo.toml",
       "workspace": "bilibilive",

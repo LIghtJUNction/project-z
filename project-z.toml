@@ -94,3 +94,8 @@ manifests = ["console/Cargo.toml"]
 
 [repositories.bilibilive]
 role = "application"
+
+[repositories.zuse-skills]
+role = "extension"
+manifests = []
+requires = ["zuse"]
