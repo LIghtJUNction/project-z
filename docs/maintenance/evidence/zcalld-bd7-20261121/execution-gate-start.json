@@ -1,0 +1,57 @@
+{
+  "cancelled": false,
+  "command": [
+    "systemd-run",
+    "--user",
+    "--scope",
+    "--quiet",
+    "--unit=zcalld-listener-bd7a30c-20261121",
+    "--property=MemoryMax=2G",
+    "--property=MemorySwapMax=4G",
+    "--property=CPUQuota=100%",
+    "--property=RuntimeMaxSec=840",
+    "/usr/bin/flock",
+    "--nonblock",
+    "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "/usr/bin/python3",
+    "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/validate_bd7_cli.py"
+  ],
+  "cwd": "/home/lightjunction/Documents/GITHUB",
+  "duration_ms": 0,
+  "error": null,
+  "evicted_job_id": "26c4545eae1eab8d27485f4a48077d3c-9e4",
+  "exit_code": null,
+  "exit_signal": null,
+  "id": "26c4545eae1eab8d27485f4a48077d3c-a64",
+  "job_id": "26c4545eae1eab8d27485f4a48077d3c-a64",
+  "output_mode": "pipes",
+  "pid": 1513297,
+  "pid_role": "supervisor",
+  "running": true,
+  "state": "running",
+  "stderr": {
+    "artifact": null,
+    "eof": false,
+    "error": null,
+    "next_cursor": 0,
+    "start_cursor": 0,
+    "truncated": false
+  },
+  "stdin": {
+    "bytes_written": 0,
+    "mode": "null",
+    "open": false
+  },
+  "stdout": {
+    "artifact": null,
+    "eof": false,
+    "error": null,
+    "next_cursor": 0,
+    "start_cursor": 0,
+    "truncated": false
+  },
+  "timed_out": false,
+  "timeout_ms": 900000,
+  "title": "Validate fixed bd7 listener CLI identity, help and eight curl cases",
+  "tty_slot": null
+}

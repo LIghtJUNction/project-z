@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-21T02:59:28.450376+00:00",
+ "generated_at": "2026-11-21T03:42:51+00:00",
  "timezone": "Asia/Taipei",
  "scope": "Initial 85 PRs, latest GitHub default-branch dependency migration, generated-binary history cleanup, development-machine cache cleanup, release integration and the requested named local/remote contexts",
  "batch_status": "in_progress",
@@ -976,7 +976,10 @@
    }
   ],
   "pending": [
-   "Existing owners continue U/r12 and final consumer/UI/runtime/P1; adopted9fd snapshot is only19 running stages. Q35/35 remains historical. Fresh44 source propagation and zcalldPR1 final decision remain pending."
+   "Complete the remaining fixed-U UI/alias and final listenerP1 through the existing acceptance owner; firstUI failed before zuse_worker checks. Preserve UGate35/runtime18 success and previous failed attempts.",
+   "zcalldPR1 remains draft at bd7; its freshrelease/help/8curl batch is distinct from0af8 historical182Rust/Clippy.",
+   "zusePR4 merged into the PR2 featurebranch only; PR2 remainsdraft and zuse main staysa1 and fixed SSMCP U784 still depends on zusea1.",
+   "After final components settle, integrate current project-z main changes and perform the actual44-repository graph; not executed in this report."
   ],
   "dependency_snapshot": {
    "status": "git_latest_source_migration_in_progress",
@@ -1042,16 +1045,16 @@
    "cargo_metadata_locked": "passed",
    "binary_installation": false
   },
-  "updated_at": "2026-11-21T02:59:28.450376+00:00",
+  "updated_at": "2026-11-21T03:42:51+00:00",
   "aggregate_pr": {
    "url": "https://github.com/LIghtJUNction/project-z/pull/7",
    "number": 7,
    "branch": "coord/git-source-policy-20261120",
-   "head": "45b60092829d9336bfe512793d8d3d8d021c3f5a",
-   "tree": "5d355457e845e198915ff6cfe5e214d26875a182",
+   "head": "33fd62fdbb376b6b64f14e604a63452abc654a1b",
+   "tree": "903c194f17396292f4780a4729171196250bf70a",
    "status": "draft_component_migrations_and_complete_44_repository_graph_pending",
    "base": "d2a6616c85b7e47c3faa32bd5728db49cdd9c142",
-   "source_snapshot_note": "Head observed immediately before this report-only commit; subsequent graph publication must refresh actual component heads."
+   "source_snapshot_note": "Report branch observed at33fd before this report-only increment. No source/gitlink/catalog/default-branch selection or final44 validation is performed. PR.base metadata is not treated as actual main."
   },
   "dependency_policy": {
    "user_decision": "All internal cross-repository Project Z dependencies use latest GitHub default-branch source; crates.io publication is for external consumers.",
@@ -1370,7 +1373,7 @@
    },
    "current_source_owner_active": true,
    "current_release": {
-    "status": "Q_r11_gate35_passed_U_frozen_r12_running_at_024727",
+    "status": "U_r12_Gate35_and_runtime18_passed_UI_first_attempt_failed_before_zuse_checks",
     "candidate": "784370b5fe1b817c788273a5f7b1ab826c743965",
     "tree": "2c60d011da8c2b31aefd80367bf7f19e28f10b62",
     "source": {
@@ -1405,8 +1408,8 @@
      "bytes": 3280,
      "sha256": "72a113397d0381f59f50f10c74b0a3592c44131f44f71f85a4914c078301f62f"
     },
-    "current_candidate_runtime_pass_claimed": false,
-    "current_candidate_build_pass_claimed": false,
+    "current_candidate_runtime_pass_claimed": true,
+    "current_candidate_build_pass_claimed": true,
     "version_coordination": {
      "path": "evidence/ssmcp-v25-metadata-independent-review.json",
      "bytes": 13215,
@@ -1432,7 +1435,7 @@
      "bytes": 26774,
      "sha256": "0dd20d68f877342b841b2712d7ba978acfd9aae298311463fb81d053533fc88b"
     },
-    "candidate_identity_scope": "U source freeze and original02:47:27 progress only. Q is the separately completed historical Gate; no Q outcome is applied toU.",
+    "candidate_identity_scope": "Each U result is supported by its own source/run/artifact tuple. Q outcomes and equal binary hashes are not substituted for U execution. Runtime18 and firstUI are separate later attempts.",
     "Q_completed_gate_review": {
      "path": "evidence/ssmcp-Q-r11-gate-independent-review.json",
      "bytes": 80595,
@@ -1442,6 +1445,27 @@
      "path": "evidence/ssmcp-U-r12-progress-9fd-original-20261121.json",
      "bytes": 7022,
      "sha256": "b2b596aec110e0644c1a04d95bdabe6ed080a58088111171a48ff13d3352c045"
+    },
+    "prior_status_33fd": {
+     "path": "evidence/U-r12-followup-prior-status-33fd-20261121.json",
+     "bytes": 10950,
+     "sha256": "6954c6f5fd29cc948944b1b3ffea1ece214ca1bf0dc65eb3cdc4a31da1dd10e0"
+    },
+    "current_candidate_runtime_pass_scope": "Only the12private+6transport runtime batch; not the finalUI24/alias/P1 or an FC-style performance comparison.",
+    "U_completed_gate_review": {
+     "path": "evidence/ssmcp-U-r12-gate-review/ssmcp-U-r12-gate-independent-review.json",
+     "bytes": 189427,
+     "sha256": "0ac24bc458797e725be67c25c241d9ed008534826d286cfe2b9251c73d7ca868"
+    },
+    "U_runtime18_review": {
+     "path": "evidence/ssmcp-U-r12-runtime18/runtime18-root-receipt-read.json",
+     "bytes": 7672,
+     "sha256": "78545fb5b089e32626cc351156d9c30a112a74942ea7d1f902ea4f987c067fcf"
+    },
+    "U_UI_first_failure": {
+     "path": "evidence/ssmcp-U-ui24-first-attempt/ui-first-failure-root-receipt-read.json",
+     "bytes": 7918,
+     "sha256": "8c2c52b1fa7b2fab5069026dcfa57a522e94fdc83defca84203623b87bb28a5e"
     }
    },
    "named_context_followup": {
@@ -1518,11 +1542,11 @@
   "url": "https://github.com/LIghtJUNction/project-z/pull/7",
   "number": 7,
   "branch": "coord/git-source-policy-20261120",
-  "head": "9d725a1525c8d4da933fae561cdd337db25e5583",
-  "tree": "df3e6ed3c4e9d950e6277bec472ea4c8406a94dc",
+  "head": "33fd62fdbb376b6b64f14e604a63452abc654a1b",
+  "tree": "903c194f17396292f4780a4729171196250bf70a",
   "status": "draft_final_components_and_complete_44_repository_graph_pending",
   "base": "d2a6616c85b7e47c3faa32bd5728db49cdd9c142",
-  "source_snapshot_note": "Report-only preparation from fixed0d73/treea788 and all330 leaves. This is not a new aggregate/default-branch source selection. Preserve all existing source/gitlink/catalog leaves and later main changes at final44 integration."
+  "source_snapshot_note": "Report branch observed at33fd before this report-only increment. No source/gitlink/catalog/default-branch selection or final44 validation is performed. PR.base metadata is not treated as actual main."
  },
  "dependency_snapshot": {
   "status": "19_repository_migrations_published_recursive_checker_merged_final_44_graph_pending",
@@ -11727,10 +11751,155 @@
    "path": "evidence/Q-r11-native-recovery-prior-status-0d73-20261121.json",
    "bytes": 26774,
    "sha256": "0dd20d68f877342b841b2712d7ba978acfd9aae298311463fb81d053533fc88b"
+  },
+  "ssmcp-U-r12-gate-review/ssmcp-U-r12-gate-independent-review.json": {
+   "path": "evidence/ssmcp-U-r12-gate-review/ssmcp-U-r12-gate-independent-review.json",
+   "bytes": 189427,
+   "sha256": "0ac24bc458797e725be67c25c241d9ed008534826d286cfe2b9251c73d7ca868"
+  },
+  "ssmcp-U-r12-gate-review/ssmcp-U-r12-gate-independent-review.md": {
+   "path": "evidence/ssmcp-U-r12-gate-review/ssmcp-U-r12-gate-independent-review.md",
+   "bytes": 5268,
+   "sha256": "41410dc7b5c3e874e5510b4c730cec6cc07118d5db5acecbe6546ff03e5a73a4"
+  },
+  "ssmcp-U-r12-gate-review/ssmcp-U-r12-gate-review-summary.json": {
+   "path": "evidence/ssmcp-U-r12-gate-review/ssmcp-U-r12-gate-review-summary.json",
+   "bytes": 15244,
+   "sha256": "4f3c05d8e620cac009820e5c2917fe62e0a26fd1c1fbeee5372a59404123463b"
+  },
+  "ssmcp-U-r12-gate-review/original-text-index.json": {
+   "path": "evidence/ssmcp-U-r12-gate-review/original-text-index.json",
+   "bytes": 64566,
+   "sha256": "728eb0ebf7241baa586485c18e8f91020b0460a4ba9cc9dc70bf7a9edb2eefba"
+  },
+  "ssmcp-U-r12-gate-review/raw-audit-r2.json": {
+   "path": "evidence/ssmcp-U-r12-gate-review/raw-audit-r2.json",
+   "bytes": 321871,
+   "sha256": "47997ee14a0dc251699ea9c74e75d2b3eaf4b7bda4331f8c22434095a4065c98"
+  },
+  "ssmcp-U-r12-gate-review/contract-comparison.json": {
+   "path": "evidence/ssmcp-U-r12-gate-review/contract-comparison.json",
+   "bytes": 4079,
+   "sha256": "cac5682cc3c575dc08efc47ca2c527bc36eb23910b3039032f4ecfcdc172afc7"
+  },
+  "ssmcp-U-r12-gate-review/current-unit-observation.json": {
+   "path": "evidence/ssmcp-U-r12-gate-review/current-unit-observation.json",
+   "bytes": 807,
+   "sha256": "b4b6267b7b159a41d2e2d27b9c3236c0153d0083f65d53f1dd35e46f7fe178ee"
+  },
+  "ssmcp-U-r12-gate-review/github-U-commit-original.json": {
+   "path": "evidence/ssmcp-U-r12-gate-review/github-U-commit-original.json",
+   "bytes": 1829,
+   "sha256": "f135f20511d8648e130424c82bf250b259d1e095e04d8cdab75fad43d55a2921"
+  },
+  "ssmcp-U-r12-gate-review/archive-commit-headers.json": {
+   "path": "evidence/ssmcp-U-r12-gate-review/archive-commit-headers.json",
+   "bytes": 1059,
+   "sha256": "5120113d89676f8abdd64a2685a566599c10e3813d52c3486e7400034edaba62"
+  },
+  "zcalld-bd7-20261121/handoff.json": {
+   "path": "evidence/zcalld-bd7-20261121/handoff.json",
+   "bytes": 20083,
+   "sha256": "afab66b49d433d318b9a0ecdca8ded3505222efe00fb36a395c989962f0acbff"
+  },
+  "zcalld-bd7-20261121/candidate-validation.json": {
+   "path": "evidence/zcalld-bd7-20261121/candidate-validation.json",
+   "bytes": 91297,
+   "sha256": "af7e020482811bf3429bbd7a31b94759459d3f4d271e42c0e7b71a961b4e5b45"
+  },
+  "zcalld-bd7-20261121/locked-metadata-comparison.json": {
+   "path": "evidence/zcalld-bd7-20261121/locked-metadata-comparison.json",
+   "bytes": 3079,
+   "sha256": "07373fd5596ed3bdff5c5e7fd3d7d24178f3cfca08c2b183739b71c6b9a8f3ea"
+  },
+  "zcalld-bd7-20261121/postflight.json": {
+   "path": "evidence/zcalld-bd7-20261121/postflight.json",
+   "bytes": 3363,
+   "sha256": "06dae526cd811686acb9dcdc84d2914c168f065b386dd50d5667941d41a8b962"
+  },
+  "zcalld-bd7-20261121/execution-gate-start.json": {
+   "path": "evidence/zcalld-bd7-20261121/execution-gate-start.json",
+   "bytes": 1445,
+   "sha256": "156ee953c369acfde37c82f6c5cb5963924d367a9ba5b9a7e4c4843c24d4c001"
+  },
+  "zcalld-bd7-20261121/execution-gate-status.json": {
+   "path": "evidence/zcalld-bd7-20261121/execution-gate-status.json",
+   "bytes": 18897,
+   "sha256": "ecf64b915fcbc202c617526d986da8c847358a626ab0b5ee0499fae17f52de3a"
+  },
+  "zcalld-bd7-20261121/source-manifest.json": {
+   "path": "evidence/zcalld-bd7-20261121/source-manifest.json",
+   "bytes": 58217,
+   "sha256": "d3fd26ee0705635bf6d8a1436bcd3545bc84f39adb78a45f1c17ce1f9957b2cc"
+  },
+  "zcalld-bd7-20261121/source-Cargo.lock": {
+   "path": "evidence/zcalld-bd7-20261121/source-Cargo.lock",
+   "bytes": 3129,
+   "sha256": "23fd8fbbefe0232b60749d048d09f4d2a7d6783ea2e85deac160c172e5a4ffca"
+  },
+  "zcalld-bd7-20261121/gates/20261121T030538Z/46-release-cli.log": {
+   "path": "evidence/zcalld-bd7-20261121/gates/20261121T030538Z/46-release-cli.log",
+   "bytes": 23414,
+   "sha256": "91feca36930b2bc641d0a1d6fd994701bacd64dee138793dd745bc570a29bfab"
+  },
+  "zcalld-bd7-20261121/gates/20261121T030538Z/48-curl-cancellation.log": {
+   "path": "evidence/zcalld-bd7-20261121/gates/20261121T030538Z/48-curl-cancellation.log",
+   "bytes": 1050,
+   "sha256": "b732078be012a5ede8d5a038d10f5d9430d96d3f28681e0ea6e1f82d9fe9353c"
+  },
+  "zuse-67e-ci-44860554142/zuse-67e-ci-independent-review.json": {
+   "path": "evidence/zuse-67e-ci-44860554142/zuse-67e-ci-independent-review.json",
+   "bytes": 21537,
+   "sha256": "fffe5fa895ed4b2452179ee20377cea9d34761647aa69021881a2fefc35ee813"
+  },
+  "zuse-67e-ci-44860554142/originals-manifest.json": {
+   "path": "evidence/zuse-67e-ci-44860554142/originals-manifest.json",
+   "bytes": 12606,
+   "sha256": "423bcf72136699dd53d9c466efbfeef7832b678cf96833a420facdc290b00133"
+  },
+  "zuse-67e-ci-44860554142/delivery.json": {
+   "path": "evidence/zuse-67e-ci-44860554142/delivery.json",
+   "bytes": 5059,
+   "sha256": "4771a15cb6330b8d4ed40783346b9c625428969168517270e0240529ee35597e"
+  },
+  "project-z-google-doc-20261121/delivery-v4.json": {
+   "path": "evidence/project-z-google-doc-20261121/delivery-v4.json",
+   "bytes": 4433,
+   "sha256": "15337a455f412658160431a81feeb9002a8418eb7fe6deac91bf793689f52aa9"
+  },
+  "project-z-google-doc-20261121/readback-verification-v4.json": {
+   "path": "evidence/project-z-google-doc-20261121/readback-verification-v4.json",
+   "bytes": 17973,
+   "sha256": "a5d49c9179c9933dd653e84295185fe136588e0193c4f4dfbd47c4240cd0e51f"
+  },
+  "ssmcp-U-r12-runtime18/runtime18-root-receipt-read.json": {
+   "path": "evidence/ssmcp-U-r12-runtime18/runtime18-root-receipt-read.json",
+   "bytes": 7672,
+   "sha256": "78545fb5b089e32626cc351156d9c30a112a74942ea7d1f902ea4f987c067fcf"
+  },
+  "ssmcp-U-ui24-first-attempt/run.log": {
+   "path": "evidence/ssmcp-U-ui24-first-attempt/run.log",
+   "bytes": 1517,
+   "sha256": "13928db4a2e0f25aa81fe45325fb57643ec23b12f6bdc4997e59d924593de389"
+  },
+  "ssmcp-U-ui24-first-attempt/ui-first-failure-root-receipt-read.json": {
+   "path": "evidence/ssmcp-U-ui24-first-attempt/ui-first-failure-root-receipt-read.json",
+   "bytes": 7918,
+   "sha256": "8c2c52b1fa7b2fab5069026dcfa57a522e94fdc83defca84203623b87bb28a5e"
+  },
+  "zuse-67e-ci-44860554142/merge-fe47f96.json": {
+   "path": "evidence/zuse-67e-ci-44860554142/merge-fe47f96.json",
+   "bytes": 2855,
+   "sha256": "ec295d879efff00cdc13c52ad8f212ace43c8bc0db48a1bd22aa33d9b95afaf4"
+  },
+  "U-r12-followup-prior-status-33fd-20261121.json": {
+   "path": "evidence/U-r12-followup-prior-status-33fd-20261121.json",
+   "bytes": 10950,
+   "sha256": "6954c6f5fd29cc948944b1b3ffea1ece214ca1bf0dc65eb3cdc4a31da1dd10e0"
   }
  },
  "current_maintenance": {
-  "generated_at": "2026-11-21T02:59:28.450376+00:00",
+  "generated_at": "2026-11-21T03:42:51+00:00",
   "root_consumers": {
    "zcall-gui": {
     "status": "merged_and_main_tree_read_back",
@@ -16719,25 +16888,25 @@
    }
   },
   "ssmcp_release": {
-   "status": "Q_r11_gate35_passed_U_frozen_r12_running_at_024727",
+   "status": "U_r12_Gate35_and_runtime18_passed_UI_first_attempt_failed_before_zuse_checks",
    "main_verified": "f33ed8f14fc14aff05a2e4098743eb07e8527c06",
    "candidate": "784370b5fe1b817c788273a5f7b1ab826c743965",
    "new_formal_release": false,
    "current_public_tree": "f9bc35bf497c80d9d93d668f5d6e339c3d19c802",
-   "scope_note": "Q35/35 belongs to exactQ. U is a later frozen fixture successor with its own r12 progress, not a completed Gate in the adopted observation. OlderC/V/781/FC/0af8 evidence remains unchanged; finalUI/runtime/P1 and final44 are separate.",
+   "scope_note": "U784/tree2c60 independently passed its own35-stage r12 Gate and has a separately read12+6runtime completion. FirstUI attempt started4of24 suites:3passed, zuse_worker failed at privateXvfb readiness with0checks;20notrun and alias0. FinalUI/P1/final44 remain pending. Q/C/FC and0af8 histories are unchanged.",
    "previous_final_gate_plan_text": "pending on final fixed SSMCP cohort plus zcalld97d; original build commits and evidence stay separate",
    "current_final_gate_plan": {
-    "status": "Q_historical_gate_complete_U_r12_and_final_acceptance_pending",
-    "plan": "Retain completed exactQ/r11 and originalC failure. Continue the sole owners U/r12 fixed-source gates and artifact binding, then final consumer/UI/runtime and0af8 listenerP1. No Q-result transfer; fresh44 remains pending.",
+    "status": "fixed_U_UI_and_bd7_listener_P1_pending",
+    "plan": "Use exact U artifacts and the bd7 owned CLI for the remaining original acceptance; no finalP1 approval from build/runtime18 evidence alone.",
     "original_32_scope": "The historical32 set included five shared-library checks, two Go checks and package/install work outside this P1 path. Those unrelated checks are not rerun or reported as new32 passes.",
     "merge_owner": "Project Z root, after native final acceptance and fresh main/candidate tree verification",
     "draft": true,
     "historical_d531_evidence": "evidence/zcalld-listener-d531-20261121.json",
     "source_writers": "SSMCP existing native owner; zcalld successor delegated by root to original builtin Core; root remains PR1 merge owner.",
     "current_listener_evidence": {
-     "path": "evidence/zcalld-listener-0af8-handoff.json",
-     "bytes": 17117,
-     "sha256": "5dd323b66fbbb44c0b0944c46f0bba93a8be3e3fe05ce70ddd0fe8025ecf0c07"
+     "path": "evidence/zcalld-bd7-20261121/handoff.json",
+     "bytes": 20083,
+     "sha256": "afab66b49d433d318b9a0ecdca8ded3505222efe00fb36a395c989962f0acbff"
     }
    },
    "path_loss_observation": {
@@ -16762,27 +16931,27 @@
     "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
    },
    "current_progress": {
-    "phase": "Q/r11 complete; U frozen; original9fd r12 progress running at02:47:27.",
-    "source_owner": "Existing native SSMCP source author and acceptance owner",
-    "parallel_product_writer_created": false,
+    "phase": "U_gate_complete_runtime18_complete_UI_first_attempt_failed",
     "source_revision": "784370b5fe1b817c788273a5f7b1ab826c743965",
     "source_tree": "2c60d011da8c2b31aefd80367bf7f19e28f10b62",
-    "observed_at_utc": "2026-11-21T02:47:27.199423+00:00",
-    "observed_completed_stages": 19,
-    "all_observed_stage_exits_zero": true,
-    "complete_r12_gate_pass_claimed": false,
-    "five_owned_U_artifact_pass_claimed": false,
-    "final_runtime_UI_P1_pass_claimed": false,
+    "observed_at_utc": "2026-11-21T03:41:11.522125+00:00",
+    "complete_r12_gate_pass_claimed": true,
+    "five_owned_U_artifact_pass_claimed": true,
+    "runtime18_passed": true,
+    "UI_complete": false,
+    "alias_coverage_count": 0,
+    "P1_complete": false,
+    "final44_complete": false,
     "evidence": {
-     "path": "evidence/ssmcp-U-r12-progress-9fd-original-20261121.json",
-     "bytes": 7022,
-     "sha256": "b2b596aec110e0644c1a04d95bdabe6ed080a58088111171a48ff13d3352c045"
+     "path": "evidence/ssmcp-U-ui24-first-attempt/ui-first-failure-root-receipt-read.json",
+     "bytes": 7918,
+     "sha256": "8c2c52b1fa7b2fab5069026dcfa57a522e94fdc83defca84203623b87bb28a5e"
     }
    },
    "current_native_observation": {
-    "path": "evidence/ssmcp-U-r12-progress-9fd-original-20261121.json",
-    "bytes": 7022,
-    "sha256": "b2b596aec110e0644c1a04d95bdabe6ed080a58088111171a48ff13d3352c045"
+    "path": "evidence/ssmcp-U-ui24-first-attempt/ui-first-failure-root-receipt-read.json",
+    "bytes": 7918,
+    "sha256": "8c2c52b1fa7b2fab5069026dcfa57a522e94fdc83defca84203623b87bb28a5e"
    },
    "prior_status_794": {
     "path": "evidence/runtime-followup-prior-status-794-20261121.json",
@@ -17047,14 +17216,14 @@
     "bytes": 3280,
     "sha256": "72a113397d0381f59f50f10c74b0a3592c44131f44f71f85a4914c078301f62f"
    },
-   "current_candidate_runtime_pass_claimed": false,
+   "current_candidate_runtime_pass_claimed": true,
    "prior_status_cda": {
     "path": "evidence/listener-followup-prior-status-cda-20261121.json",
     "bytes": 37359,
     "sha256": "4def00b1d0ae2e7657b51b322ef994add8aede4f99ba24013056262ee070fd13"
    },
-   "current_native_observation_scope": "Original9fd progress at02:47:27UTC:19 completed stages exit0, statusrunning, finished_atnull, no final launcher exit. This report does not claim subsequent r12 completion.",
-   "current_candidate_build_pass_claimed": false,
+   "current_native_observation_scope": "Root read the original failedUI receipt, complete failure traceback and actualae2 output. No rerun/full semantic driver audit or root-cause claim.",
+   "current_candidate_build_pass_claimed": true,
    "version_coordination": {
     "status": "V0.10.25 metadata checkpoint published; C retains its version, exactlock and production-relay deferral.",
     "V": "f4e6ff043eef6686a9013750ffcb8ab66926b9d4",
@@ -17165,7 +17334,7 @@
     "bytes": 26774,
     "sha256": "0dd20d68f877342b841b2712d7ba978acfd9aae298311463fb81d053533fc88b"
    },
-   "candidate_identity_scope": "U source freeze and original02:47:27 progress only. Q is the separately completed historical Gate; no Q outcome is applied toU.",
+   "candidate_identity_scope": "Each U result is supported by its own source/run/artifact tuple. Q outcomes and equal binary hashes are not substituted for U execution. Runtime18 and firstUI are separate later attempts.",
    "Q_r11_milestone": {
     "source": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
     "tree": "5143f90c05066c95b2df58a9eab1831e05888a62",
@@ -17389,6 +17558,173 @@
     "final_launcher_exit_exists": false,
     "complete_Gate35_or_five_owned_artifacts_pass_claimed": false,
     "UI_runtime_P1_pass_claimed": false
+   },
+   "prior_status_33fd": {
+    "path": "evidence/U-r12-followup-prior-status-33fd-20261121.json",
+    "bytes": 10950,
+    "sha256": "6954c6f5fd29cc948944b1b3ffea1ece214ca1bf0dc65eb3cdc4a31da1dd10e0"
+   },
+   "current_candidate_runtime_pass_scope": "Only the12private+6transport runtime batch; not the finalUI24/alias/P1 or an FC-style performance comparison.",
+   "U_r12_milestone": {
+    "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "tree": "2c60d011da8c2b31aefd80367bf7f19e28f10b62",
+    "run_id": "f38d16ea5cc34c21c5a56313245625a1",
+    "started_at": 1795228951.8733153,
+    "finished_at": 1795229583.9105208,
+    "duration_seconds": 632.037205,
+    "gate_stages": 35,
+    "rust_parent_stages": 26,
+    "all_exit_zero": true,
+    "counts": {
+     "stage_count": 35,
+     "rust_parent_stages": 26,
+     "library_inventory": 2079,
+     "library_private": {
+      "failed": 0,
+      "filtered": 6,
+      "ignored": 23,
+      "measured": 0,
+      "passed": 2050,
+      "result": "ok"
+     },
+     "library_host": {
+      "failed": 0,
+      "filtered": 2073,
+      "ignored": 0,
+      "measured": 0,
+      "passed": 6,
+      "result": "ok"
+     },
+     "ordinary_integration_targets": 19,
+     "ordinary_integration_passed": 101,
+     "worker_ignored_exact_passed": 1,
+     "integration_total_targets": 20,
+     "integration_total_passed": 102,
+     "additional_mandatory_ignored_stages": 4,
+     "additional_mandatory_ignored_passed": 14,
+     "original_goals": {
+      "map": {
+       "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/U-original-goals-library-result-map.json",
+       "bytes": 11392,
+       "sha256": "aebc5950d178b30d662a7007f750c7a574b5f7559cbeaff91558ad53df7a906c",
+       "mode": 384
+      },
+      "count": 17,
+      "subset_of_private_2050": true,
+      "added_to_total": false
+     },
+     "nested_results_added": false
+    },
+    "independent_review": {
+     "path": "evidence/ssmcp-U-r12-gate-review/ssmcp-U-r12-gate-independent-review.json",
+     "bytes": 189427,
+     "sha256": "0ac24bc458797e725be67c25c241d9ed008534826d286cfe2b9251c73d7ca868"
+    },
+    "readable_review": {
+     "path": "evidence/ssmcp-U-r12-gate-review/ssmcp-U-r12-gate-independent-review.md",
+     "bytes": 5268,
+     "sha256": "41410dc7b5c3e874e5510b4c730cec6cc07118d5db5acecbe6546ff03e5a73a4"
+    },
+    "compact_review": {
+     "path": "evidence/ssmcp-U-r12-gate-review/ssmcp-U-r12-gate-review-summary.json",
+     "bytes": 15244,
+     "sha256": "4f3c05d8e620cac009820e5c2917fe62e0a26fd1c1fbeee5372a59404123463b"
+    },
+    "original_text_files_read": 212,
+    "selected_artifacts_fresh_false": 26,
+    "owned_outputs_rehashed": 5,
+    "original_G": {
+     "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/candidate-gates.json",
+     "bytes": 1282781,
+     "sha256": "cf17822a03c045fff67b2015e196fee0e1edaf45df55b0761331080eac496000",
+     "mode": 384
+    },
+    "Clippy_manifest_warning_preserved": true,
+    "Q_execution_reused": false,
+    "formal_release_or_P1_claim": false
+   },
+   "U_runtime18": {
+    "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "tree": "2c60d011da8c2b31aefd80367bf7f19e28f10b62",
+    "started_utc": "2026-11-21T03:27:15Z",
+    "finished_utc": "2026-11-21T03:27:27Z",
+    "duration_ms": 12127,
+    "private_checks_passed": 12,
+    "transport_checks_passed": 6,
+    "input_identities_unchanged": true,
+    "cleanup_errors": [],
+    "outer_exit_code": 0,
+    "original_report": {
+     "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/runtime-input-agent-784370b-r12-clean1-20261121/run/report.json",
+     "bytes": 62335,
+     "sha256": "ff972401586a41dba8a803a17f229098b1bed9f52c9de8aeff61aff2a6440cf9"
+    },
+    "original_launcher": {
+     "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/runtime-input-agent-784370b-r12-clean1-20261121/launch-result.json",
+     "bytes": 12641,
+     "sha256": "128d30c191226ec1d2fcb2532569f7ae32f6802c3e69499c8eb6f916c257b947"
+    },
+    "root_review": {
+     "path": "evidence/ssmcp-U-r12-runtime18/runtime18-root-receipt-read.json",
+     "bytes": 7672,
+     "sha256": "78545fb5b089e32626cc351156d9c30a112a74942ea7d1f902ea4f987c067fcf"
+    },
+    "review_scope": "Bounded independent read of existing runtime18 completion receipts, recorded input identities and current small text inputs; not an independent rerun or full audit of driver semantics.",
+    "job_reference_scope": "ac8 (source-owner reported; root did not read this job output here)",
+    "five_ELFs_reread_for_runtime_review": false,
+    "UI_alias_P1_pass_claimed": false
+   },
+   "U_UI_first_attempt": {
+    "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "started_utc": "2026-11-21T03:33:38Z",
+    "finished_utc": "2026-11-21T03:34:34Z",
+    "actual_job": "26c4545eae1eab8d27485f4a48077d3c-ae2",
+    "exit_code": 1,
+    "both_eof": true,
+    "planned_executions": 24,
+    "planned_logical_suites_including_alias": 25,
+    "started": 4,
+    "passed": 3,
+    "failed": 1,
+    "not_run": 20,
+    "passed_suites": [
+     {
+      "name": "message_references",
+      "checks": 53
+     },
+     {
+      "name": "force_send",
+      "checks": 137
+     },
+     {
+      "name": "listener_transports",
+      "checks": 74
+     }
+    ],
+    "failed_suite": {
+     "name": "zuse_worker",
+     "checks": 0,
+     "boundary": "private Xvfb exited without readiness; no inferred environmental or product root cause"
+    },
+    "alias_coverage_count": 0,
+    "all_four_children_reaped": true,
+    "inputs_unchanged": true,
+    "original_acceptance": {
+     "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-v1/acceptance.json",
+     "bytes": 792541,
+     "sha256": "ce8a1613666c1a796310d20b32368c44d72634b7af19b8873a54fbf23a75a208"
+    },
+    "root_review": {
+     "path": "evidence/ssmcp-U-ui24-first-attempt/ui-first-failure-root-receipt-read.json",
+     "bytes": 7918,
+     "sha256": "8c2c52b1fa7b2fab5069026dcfa57a522e94fdc83defca84203623b87bb28a5e"
+    },
+    "failure_log": {
+     "path": "evidence/ssmcp-U-ui24-first-attempt/run.log",
+     "bytes": 1517,
+     "sha256": "13928db4a2e0f25aa81fe45325fb57643ec23b12f6bdc4997e59d924593de389"
+    },
+    "P1_passed": false
    }
   },
   "context_request": {
@@ -18750,7 +19086,7 @@
      "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
     }
    },
-   "ssmcp_consumer": "Q647 completed r11Gate35; U784 is a later frozen fixture source with original02:47:27 r12 progress only. No final downstream selection, completeU gate/runtime/P1 or latest44 claim. Historical dependency snapshots remain unchanged.",
+   "ssmcp_consumer": "U784 completed its ownr12Gate35 andruntime18. FirstUI stopped before zuse_worker checks; finalUI/P1 and final44 source selection remain pending. No historical source graph was refreshed by this report.",
    "aggregate_owner": "Personal is the sole source-graph/checkout writer; root reviews and publishes the maintenance report.",
    "oh_my_ztty": {
     "main": "f04f6ea8ae909e121edabbd766ee725a472f8146",
@@ -19701,7 +20037,139 @@
     "PR1_merge_authorized_by_this_result": false,
     "boundary": "File/record admission only. No rerun of182Rust/8curl, Cargo, product, model or PTY. Original lock observations remain historical882, not current lock availability; no whole-tree continuous immutability or internal out-dir ELF hash added."
    }
-  }
+  },
+  "zcalld_listener_bd7": {
+   "source": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+   "tree": "cbd4a29ec9851a42dc36149fc099fb288c9623de",
+   "parents": [
+    "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "7da4b28511a1550c993f09cfb2601149a82c785b"
+   ],
+   "base": "7da4b28511a1550c993f09cfb2601149a82c785b",
+   "gui": "2593369b2e9695a4a4cabed20eb80bee01fc419c",
+   "compat": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+   "source_leaves": 220,
+   "unchanged_from_0af8": 218,
+   "changed_paths": [
+    "apps/zcall-gui",
+    "docs/RELEASE-0.4.4.md"
+   ],
+   "job": "26c4545eae1eab8d27485f4a48077d3c-a64",
+   "actual_commands": 87,
+   "exit_code": 0,
+   "both_eof": true,
+   "elapsed_seconds": 52.875212,
+   "release_seconds": 34.387,
+   "actual_root_release_calls": 1,
+   "root_bin_fresh_false": 1,
+   "help_passed": true,
+   "curl_passed": 8,
+   "curl_seconds": 5.177,
+   "owned_cli": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/zcalld",
+    "sha256": "d5464f6f24da08204840d5c84f1780249d3635aa18ffd696dd5f6060c5621ecb",
+    "bytes": 2964896,
+    "source_commit": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+    "source_tree": "cbd4a29ec9851a42dc36149fc099fb288c9623de",
+    "profile": "release",
+    "copied_under_outer_lock": true
+   },
+   "metadata_scope": "Equality is a dependency-graph/path-normalized metadata fact, not identical binary or GUI behavior. Actual source paths remain in all raw compiler and execution evidence.",
+   "handoff": {
+    "path": "evidence/zcalld-bd7-20261121/handoff.json",
+    "bytes": 20083,
+    "sha256": "afab66b49d433d318b9a0ecdca8ded3505222efe00fb36a395c989962f0acbff"
+   },
+   "receipt": {
+    "path": "evidence/zcalld-bd7-20261121/candidate-validation.json",
+    "bytes": 91297,
+    "sha256": "af7e020482811bf3429bbd7a31b94759459d3f4d271e42c0e7b71a961b4e5b45"
+   },
+   "metadata_comparison": {
+    "path": "evidence/zcalld-bd7-20261121/locked-metadata-comparison.json",
+    "bytes": 3079,
+    "sha256": "07373fd5596ed3bdff5c5e7fd3d7d24178f3cfca08c2b183739b71c6b9a8f3ea"
+   },
+   "postflight": {
+    "path": "evidence/zcalld-bd7-20261121/postflight.json",
+    "bytes": 3363,
+    "sha256": "06dae526cd811686acb9dcdc84d2914c168f065b386dd50d5667941d41a8b962"
+   },
+   "new_workspace_or_Clippy_runs": false,
+   "historical_0af8_182_not_recounted": true,
+   "PR1_draft": true,
+   "final_P1_passed": false
+  },
+  "zuse_PR4_feature_merge": {
+   "head": "67e2d6a4cee0d106f46bdf064013e163c0aa3337",
+   "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+   "publication": {
+    "merge_commit": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+    "parents": [
+     "83663988ebf736ec8de05d6372eef485c3d9ebac",
+     "67e2d6a4cee0d106f46bdf064013e163c0aa3337"
+    ],
+    "merged_at": "2026-11-21T03:28:10Z",
+    "PR4_merged": true,
+    "PR2_head": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "PR2_open_draft": true,
+    "main": "a1bb8fd2cbce0a9d85134999883c578358065242",
+    "merge_tree_equals_CI_and_head_tree": true,
+    "performed_by_reviewer": false,
+    "frozen_a1_downstream_scope_unchanged": true
+   },
+   "merge_object": {
+    "path": "evidence/zuse-67e-ci-44860554142/merge-fe47f96.json",
+    "bytes": 2855,
+    "sha256": "ec295d879efff00cdc13c52ad8f212ace43c8bc0db48a1bd22aa33d9b95afaf4"
+   },
+   "CI_run": 44860554142,
+   "CI_url": "https://github.com/LIghtJUNction/zuse/actions/runs/44860554142",
+   "three_platform_jobs_passed": true,
+   "CI_counts_not_added_across_platforms_or_to_356": true,
+   "private_MPX_or_physical_device_validation_claimed": false,
+   "review": {
+    "path": "evidence/zuse-67e-ci-44860554142/zuse-67e-ci-independent-review.json",
+    "bytes": 21537,
+    "sha256": "fffe5fa895ed4b2452179ee20377cea9d34761647aa69021881a2fefc35ee813"
+   },
+   "delivery": {
+    "path": "evidence/zuse-67e-ci-44860554142/delivery.json",
+    "bytes": 5059,
+    "sha256": "4771a15cb6330b8d4ed40783346b9c625428969168517270e0240529ee35597e"
+   },
+   "originals_manifest": {
+    "path": "evidence/zuse-67e-ci-44860554142/originals-manifest.json",
+    "bytes": 12606,
+    "sha256": "423bcf72136699dd53d9c466efbfeef7832b678cf96833a420facdc290b00133"
+   },
+   "downstream_frozen_source_unchanged": true
+  },
+  "readable_google_doc": {
+   "url": "https://docs.google.com/document/d/1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+   "document_id": "1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+   "snapshot_utc": "2026-11-21T03:38:30.890Z",
+   "published_and_fully_read_back": true,
+   "native_table": {
+    "count": 1,
+    "rows": 7,
+    "columns": 3,
+    "cells": 21
+   },
+   "delivery": {
+    "path": "evidence/project-z-google-doc-20261121/delivery-v4.json",
+    "bytes": 4433,
+    "sha256": "15337a455f412658160431a81feeb9002a8418eb7fe6deac91bf793689f52aa9"
+   },
+   "verification": {
+    "path": "evidence/project-z-google-doc-20261121/readback-verification-v4.json",
+    "bytes": 17973,
+    "sha256": "a5d49c9179c9933dd653e84295185fe136588e0193c4f4dfbd47c4240cd0e51f"
+   },
+   "raw_MD_JSON_archives_not_replaced": true
+  },
+  "root_consumers_record_scope": "The existing root_consumers objects retain their historical publication/gate identities. Current zcalld listener candidate and gate are separately recorded in zcalld_listener_bd7."
  },
  "core_git_source_migrations": {
   "schema": "project-z.core-github-source-migration.v1",
@@ -24379,43 +24847,31 @@
   },
   "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-git-sources-20261120/pr-cleanup-mechrevo-git-source.json"
  },
- "current_snapshot_scope": "Q647/tree5143 r11 Gate35 is an independently reviewed completed historical milestone. U784/tree2c60 was frozen at02:40:24; original9fd observed r12 running with19 zero-exit stages at02:47:27, without completeGate/launcher exit. No Q results are transferred toU, final UI/runtime/P1 or final44. Original85, all historical graph/component results, C failure and0af8/882/92c/92e retain their identities.",
+ "current_snapshot_scope": "U784/tree2c60 independently passed its own35-stage r12 Gate and has a separately read12+6runtime completion. FirstUI attempt started4of24 suites:3passed, zuse_worker failed at privateXvfb readiness with0checks;20notrun and alias0. FinalUI/P1/final44 remain pending. Q/C/FC and0af8 histories are unchanged.",
  "report_preparation": {
-  "source_report_commit": "0d73a83668ea8efb424a0d6536d2bd4f8d1e547a",
-  "source_report_tree": "a788332b8c3e1c2d68248f57725bfdc7f924cf3d",
-  "prepared_at_utc": "2026-11-21T02:59:28.450376+00:00",
-  "prepared_at_taipei": "2026-11-21T10:59:28.450376+08:00",
+  "source_report_commit": "33fd62fdbb376b6b64f14e604a63452abc654a1b",
+  "source_report_tree": "903c194f17396292f4780a4729171196250bf70a",
+  "prepared_at_utc": "2026-11-21T03:42:51+00:00",
+  "prepared_at_taipei": "2026-11-21T11:42:51+08:00",
   "fixed_observations": {
-   "Q_independent_review": "2026-11-21T02:36:57.650542+00:00",
-   "U_freeze": "2026-11-21T02:40:24.499674+00:00",
-   "U_progress": "2026-11-21T02:47:27.199423+00:00"
+   "U_independent_gate_review": "2026-11-21T03:22:29.783853+00:00",
+   "runtime18_root_review": "2026-11-21T03:36:05.072981+00:00",
+   "UI_first_failure_root_review": "2026-11-21T03:41:11.522125+00:00",
+   "bd7_handoff": "2026-11-21T03:11:47.519943+00:00",
+   "zuse_CI_and_merge_readback": "2026-11-21T03:32:26.015174+00:00",
+   "readable_Doc_snapshot": "2026-11-21T03:38:30.890Z"
   },
   "report_only": true,
   "not_published_by_preparer": true,
   "prior_status": {
-   "path": "evidence/Q-r11-native-recovery-prior-status-0d73-20261121.json",
-   "bytes": 26774,
-   "sha256": "0dd20d68f877342b841b2712d7ba978acfd9aae298311463fb81d053533fc88b"
+   "path": "evidence/U-r12-followup-prior-status-33fd-20261121.json",
+   "bytes": 10950,
+   "sha256": "6954c6f5fd29cc948944b1b3ffea1ece214ca1bf0dc65eb3cdc4a31da1dd10e0"
   },
-  "recovery": "New native candidate prepared from actual byte-verified0d73/native originals. Earlier inaccessible cloud21 remains unreviewed; this is not a byte-restoration claim.",
-  "old_unreviewed_cloud_candidate": {
-   "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-Q-r11-followup-20261121",
-   "snapshot_utc": "2026-11-21T02:41:05+00:00",
-   "prepared_sha256": "4e8d1df26398876805c41f58e104bd7e671d7858fad02a8b08d7cefddbe71b28",
-   "markdown_sha256": "603b26aee2af6438461eee0eb2e0dd2811d90131cec1d9874451dfbd9dd4ada2",
-   "summary_sha256": "78223d530ce6ffbe609ca5df914d0ae72a846ae5800367b1ff797a3ecbfe45db",
-   "review_status": "not independently reviewed; inaccessible at native recovery preparation; no byte-restoration claim"
-  },
-  "unavailable_old_support_not_recreated": [
-   {
-    "name": "ssmcp-Q-next-consumer-status-observation-20261121.json",
-    "bytes": 1761,
-    "sha256": "2785050452c4af08ed9cfb5f8c163901cde1ff2a836a4aba9e0cc970d7c15795",
-    "replacement_scope": "Exact original 1761-byte coordination record is unavailable and is not fabricated. Actual U freeze and original9fd progress now provide newer directly readable facts."
-   }
-  ],
-  "large_G_not_embedded": true,
-  "private_v24_routing_report_excluded": true,
-  "serialization": "indent1; all original85, historical graph/component, C failure and0af8 validation objects remain exact."
+  "original85_and_historical_graph_component_records_unchanged": true,
+  "large_G_and_UI_receipts_not_embedded_or_copied": true,
+  "runtime_auth_account_directories_excluded": true,
+  "no_product_Cargo_lock_or_final44_execution": true,
+  "serialization": "indent1; thin current summaries reference separate original evidence files."
  }
 }

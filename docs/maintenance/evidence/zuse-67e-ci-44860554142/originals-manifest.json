@@ -1,0 +1,260 @@
+{
+  "schema": 1,
+  "recorded_at_utc": "2026-11-21T03:32:26.015174+00:00",
+  "original_file_count": 19,
+  "files": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/ubuntu-job-136712704265.log",
+      "bytes": 86917,
+      "sha256": "8bb23119f5b945a2a2bb87049b929737e3c6f22ff390a92e260d0fe150b3586d",
+      "git_blob_sha1": "f679f072e8d79b8721ce83ab8f217ef3a84e83ee",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/actions/jobs/136712704265/logs",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": true,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/macos-job-136712704344.log",
+      "bytes": 73437,
+      "sha256": "4f4b88877c9e9c2955c293b0f21542729e068f747a04273415f1cc2f0969b1d0",
+      "git_blob_sha1": "148e7cac2bf87dda83a0fd6ef56270aa08ae72d7",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/actions/jobs/136712704344/logs",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": true,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/windows-job-136712704368.log",
+      "bytes": 74160,
+      "sha256": "198614e9e81662be027e22f5dc97c7fbaef74e2fd86aff1d2366598d2cb0d742",
+      "git_blob_sha1": "de431dc859f596003af77c124fe12faf4ee51e30",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/actions/jobs/136712704368/logs",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": true,
+      "CRLF_count": 795,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/runs-for-67e-head.json",
+      "bytes": 13326,
+      "sha256": "a99ad09f7fd0764a3a0ec29218fb83ad92326d1dc904d806659a730ca418874a",
+      "git_blob_sha1": "8940870176d17115a14f18e05e57755aaf9122c1",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/actions/runs?head_sha=67e2d6a4cee0d106f46bdf064013e163c0aa3337&per_page=20",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/jobs-44860554142.json",
+      "bytes": 6822,
+      "sha256": "0f950fe085ed59c54e49c5bf1b9558f978ddce4ce6da910a6fe98a9491a36f07",
+      "git_blob_sha1": "f68cf4f39f03b8b09eb4b8de66575f883f8a0c78",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/actions/runs/44860554142/jobs?per_page=100",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/pr4-observation.json",
+      "bytes": 20734,
+      "sha256": "7a96b99543544fb8fb052e4edbaf509fa209ee4d20ca4351d322a2ac96336941",
+      "git_blob_sha1": "1c6b10d0abe7656b2e99ea5aefb2f950325d5b80",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/pulls/4",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/head-67e2d6a.json",
+      "bytes": 1581,
+      "sha256": "3d8fa20766784595a05b9f564f4482ded7de380fdc6150049a8057604be8c579",
+      "git_blob_sha1": "1dd4f10e1aa7cf3b56b4b5767152e2eca0275d69",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/git/commits/67e2d6a4cee0d106f46bdf064013e163c0aa3337",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/ci-checkout-cf9d397.json",
+      "bytes": 2627,
+      "sha256": "a16fa6f7e4fac65f66e1464f8e9aad0e18479cf9b8f1160c2f3ae0d243b74079",
+      "git_blob_sha1": "c8c09be6e7f75617a5f682d437a5360bfe4a7718",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/git/commits/cf9d3973db10a8639cdfbc3460af8b9230cf1e5c",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/feature-base-ref.json",
+      "bytes": 407,
+      "sha256": "28ba4a017fbc4ff20940e135a455f696b32d777a839f3a1a872de3a5879fb3d5",
+      "git_blob_sha1": "b99c4d6883bcc7e503ce487fb0b9d41591dbe84e",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/git/ref/heads/feat/scoped-mice-20261121",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/main-ref.json",
+      "bytes": 334,
+      "sha256": "a7afb95848f9800c6b7ecd99706375af16eb1df2a8cb7bcf57e2e258522cec36",
+      "git_blob_sha1": "1599a6f170d26620baa03a9fafa23127e567e8a4",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/git/ref/heads/main",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/tree-67e-af46.json",
+      "bytes": 42200,
+      "sha256": "ac067cc0d7bba24ba5dcebcb3f8e2fdc4d51c10abe9f960f83c65e289b213120",
+      "git_blob_sha1": "493345547b481000aa05ce27cdb4f14014f89adc",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/git/trees/af46f28f9db1b4cd9f1103dc0f97687669b770d5?recursive=1",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/tree-2ffe-8b1.json",
+      "bytes": 42200,
+      "sha256": "3f06c45d72c41cb651c31c368bb8ed93668ab50d45704fcc1e520b61e1376044",
+      "git_blob_sha1": "f3c2aeec73cdd2cf65b155021779eea6bc45088e",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/git/trees/8b1aaf0b1eee3ec0db1a8bbbb37befcb1d2a8c03?recursive=1",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/source-scripts-check.py",
+      "bytes": 767,
+      "sha256": "05b1faf19244753f11365fd0cac89f5f5f8a4f6c78377aff075df9dd88bec5df",
+      "git_blob_sha1": "34b5f5acc6f01f78b53e23ce8a5bbbc31031567d",
+      "source_url": "https://github.com/LIghtJUNction/zuse/blob/67e2d6a4cee0d106f46bdf064013e163c0aa3337/scripts/check.py",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/source-workflow-ci.yml",
+      "bytes": 1083,
+      "sha256": "7ec93171e0dc2d18b0e0bee6a4c1277e84856ac4d846be82b1491f0e6dda722d",
+      "git_blob_sha1": "d27303105b09832808ace98cbaca2daf73cf1701",
+      "source_url": "https://github.com/LIghtJUNction/zuse/blob/67e2d6a4cee0d106f46bdf064013e163c0aa3337/.github/workflows/ci.yml",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/source-pointer_x11.rs",
+      "bytes": 53161,
+      "sha256": "c33931562a148219b53d8c56bcfd5f533ffac94df966f0e6fa14a4f6b517ded8",
+      "git_blob_sha1": "d04265e5f4284d0fc82f5db6cff9d835c6e87ce6",
+      "source_url": "https://github.com/LIghtJUNction/zuse/blob/67e2d6a4cee0d106f46bdf064013e163c0aa3337/src/platform/pointer_x11.rs",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/merge-fe47f96.json",
+      "bytes": 2855,
+      "sha256": "ec295d879efff00cdc13c52ad8f212ace43c8bc0db48a1bd22aa33d9b95afaf4",
+      "git_blob_sha1": "0b677512b4980d91e1933006cf383c1d85b4b6c2",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/git/commits/fe47f963e604c13a2646baf5d391df5a7c69fc36",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "direct_write_hash_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/pr4-after-merge.json",
+      "bytes": 25423,
+      "sha256": "c6c4db98b8b209c51d8a150089837d6edba7c62646adfe92aec7c300297d4cfc",
+      "git_blob_sha1": "cb16120295e612a0338b48457a802583cf19609f",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/pulls/4",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "direct_write_hash_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/pr2-after-merge.json",
+      "bytes": 21298,
+      "sha256": "76e27ed71588708842e56d9a294c98426fb2519e1a5ebb4df48063bb1f40d7da",
+      "git_blob_sha1": "f2baf2f169cb0fe7f4147efbb61d5ef53def9853",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/pulls/2",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "direct_write_hash_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/main-ref-after-merge.json",
+      "bytes": 334,
+      "sha256": "a7afb95848f9800c6b7ecd99706375af16eb1df2a8cb7bcf57e2e258522cec36",
+      "git_blob_sha1": "1599a6f170d26620baa03a9fafa23127e567e8a4",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/git/ref/heads/main",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": false,
+      "CRLF_count": 0,
+      "direct_write_hash_verified": true
+    }
+  ],
+  "source_blobs_match_fixed_tree": [
+    {
+      "file": "source-scripts-check.py",
+      "source_path": "scripts/check.py",
+      "git_blob_sha1": "34b5f5acc6f01f78b53e23ce8a5bbbc31031567d",
+      "matches_fixed_tree": true
+    },
+    {
+      "file": "source-workflow-ci.yml",
+      "source_path": ".github/workflows/ci.yml",
+      "git_blob_sha1": "d27303105b09832808ace98cbaca2daf73cf1701",
+      "matches_fixed_tree": true
+    },
+    {
+      "file": "source-pointer_x11.rs",
+      "source_path": "src/platform/pointer_x11.rs",
+      "git_blob_sha1": "d04265e5f4284d0fc82f5db6cff9d835c6e87ce6",
+      "matches_fixed_tree": true
+    }
+  ],
+  "default_result_totals_recomputed_from_original_logs": [
+    {
+      "file": "ubuntu-job-136712704265.log",
+      "summary_rows": 22,
+      "passed": 289,
+      "failed": 0,
+      "ignored": 5
+    },
+    {
+      "file": "macos-job-136712704344.log",
+      "summary_rows": 22,
+      "passed": 267,
+      "failed": 0,
+      "ignored": 3
+    },
+    {
+      "file": "windows-job-136712704368.log",
+      "summary_rows": 22,
+      "passed": 263,
+      "failed": 0,
+      "ignored": 2
+    }
+  ],
+  "product_commands_executed_by_reviewer": 0
+}
