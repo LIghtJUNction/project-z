@@ -546,7 +546,7 @@
       "path": "zuse",
       "url": "https://github.com/LIghtJUNction/zuse.git",
       "branch": "main",
-      "commit": "d67e47c5dcd443ad9121a908ca57059160249051",
+      "commit": "b5ebbd3679af215706cbd73b17045e014f5e0524",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -5523,7 +5523,7 @@
     },
     {
       "name": "zuse-computer",
-      "version": "0.4.2",
+      "version": "0.5.0",
       "repository": "zuse",
       "manifest": "zuse/Cargo.toml",
       "workspace": "zuse",
