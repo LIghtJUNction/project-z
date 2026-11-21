@@ -1,0 +1,308 @@
+{
+  "schema": "ssmcp-frozen-U-session-groups-python-diagnosis-v1",
+  "recorded_utc": "2026-11-21T04:12:17Z",
+  "kind": "bounded read-only Python fixture comparison",
+  "frozen_source_root": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source",
+  "product_identity_as_supplied_by_owner": {
+    "commit": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "tree": "2c60d011da8c2b31aefd80367bf7f19e28f10b62"
+  },
+  "scope": {
+    "actual_existing_log_read": true,
+    "Python_source_and_inherited_startup_helpers_read": true,
+    "Rust_review_ownership": "Core / root independently inspect the recipient filtering and refresh contract",
+    "no_source_or_driver_changes": true,
+    "no_new_reproduction_or_product_execution": true,
+    "no_auth_or_account_files_read": true,
+    "no_GUI_Cargo_models_signals_or_locks_touched": true
+  },
+  "original_failure": {
+    "log": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-mesa-v1/suites/session_groups/run.log",
+      "bytes": 10563,
+      "sha256": "18f2fed2e00bff5823288f6a2d089ef37b85a048f7c48400c3f4a68fe2c41fe4",
+      "git_blob_sha1": "aca83e828a09fb8b5d4b3c13a2d1817d5fb2debd"
+    },
+    "line_count": 97,
+    "raw_PASS_lines": 21,
+    "raw_final_summary": {
+      "status": "failed",
+      "checks": 21,
+      "frames": 0,
+      "elapsed_seconds": 9.768
+    },
+    "count_breakdown": {
+      "account_and_connection_setup": 17,
+      "three_distinct_live_processes": 1,
+      "three_exact_directory_descriptors": 3
+    },
+    "wrapper_checks_zero_is_not_zero_assertions_executed": true,
+    "wrapper_aggregate_as_reported_by_root": {
+      "actual_executions": 10,
+      "passed_executions": 9,
+      "aliases": 1
+    },
+    "failure_chain": [
+      {
+        "file": "scripts/e2e_session_groups.py",
+        "line": 179,
+        "operation": "select(front, recipients)"
+      },
+      {
+        "file": "scripts/e2e_session_groups.py",
+        "line": 90,
+        "operation": "open_picker(front, recipient['id']) for the first client:A recipient"
+      },
+      {
+        "file": "scripts/e2e_interactions.py",
+        "line": 115,
+        "operation": "wait for conversation.view == agents"
+      },
+      {
+        "file": "scripts/e2e_input_history.py",
+        "line": 151,
+        "operation": "raise after unchanged 8-second observation deadline"
+      }
+    ],
+    "observed_UI_message": "No verified native recipient matches this name · draft retained",
+    "peer_logs": "Group process A and Group process B are connected in mode=shell.",
+    "group_selection_or_delivery_pass_not_claimed": true
+  },
+  "comparison": [
+    {
+      "file": "scripts/e2e_session_groups.py",
+      "lines": [
+        150,
+        179
+      ],
+      "facts": [
+        "Create front, then two ordinary owned peers via start_client(label, name, cwd).",
+        "Join one owned collab member on process A; exact target set is process A account_inbox, that verified agent, and process B account_inbox.",
+        "messages.list confirms exactly one online/sendable descriptor for each exact id, kind and client id.",
+        "Immediately query the first exact recipient id through select; there is no prior empty-query picker and no assertion that the source UI has received its recipient snapshot."
+      ]
+    },
+    {
+      "file": "scripts/e2e_interactions.py",
+      "lines": [
+        472,
+        490
+      ],
+      "facts": [
+        "Open the picker with an empty query before starting the ordinary peer.",
+        "Start the peer with the same inherited helper and argument shape.",
+        "quiet_until waits for PTY-native-recipient to appear in the actual source PTY without sending keyboard input during observation.",
+        "Only then inspect the directory and proceed to explicit selection and send."
+      ]
+    },
+    {
+      "file": "scripts/e2e_interactions.py",
+      "lines": [
+        537,
+        548
+      ],
+      "facts": [
+        "Reopen the empty-query picker, join the verified member, and wait for PTY-native-agent to appear.",
+        "Query its exact agent id only after this UI observation."
+      ]
+    }
+  ],
+  "startup_identity": {
+    "inheritance": [
+      "SessionGroups",
+      "Interactions",
+      "InputHistory",
+      "Composer",
+      "Dashboard",
+      "Harness"
+    ],
+    "helper": {
+      "file": "scripts/e2e.py",
+      "lines": [
+        558,
+        576
+      ],
+      "name": "Harness.start_client"
+    },
+    "parameters_both_cases": {
+      "explicit": [
+        "label",
+        "name",
+        "cwd"
+      ],
+      "harness": null,
+      "fixture": null,
+      "fixture_args": [],
+      "harnesses": [],
+      "extra_env": null
+    },
+    "helper_wait": "Wait at most 10 seconds for the child connection credential record; no frontend recipient-cache readiness wait is implemented.",
+    "forwarding": {
+      "file": "scripts/e2e.py",
+      "lines": [
+        452,
+        453
+      ],
+      "to": "AccountGateway.client_command"
+    },
+    "final_command": {
+      "file": "scripts/e2e_account_gateway.py",
+      "lines": [
+        159,
+        164
+      ],
+      "argv_shape": [
+        "ssmcp",
+        "--server",
+        "owned_origin",
+        "--name",
+        "fixture_label",
+        "--shell",
+        "/bin/sh",
+        "--no-setup",
+        "--reconnect-delay",
+        "1"
+      ]
+    },
+    "no_peer_mode_or_agent_role_difference_found": true,
+    "no_start_peer_or_start_shell_override_in_relevant_Python_inheritance_chain": true,
+    "source_environment_helper": {
+      "file": "scripts/e2e.py",
+      "lines": [
+        485,
+        556
+      ],
+      "scope": "Both use the same owned private state/PATH/login seeding helper; source was read only. No actual generated auth/config/account files were opened."
+    }
+  },
+  "diagnosis": {
+    "established": "The failed fixture checks service-side directory readiness but makes its first exact UI lookup without the frontend-readiness precondition explicitly observed by the successful interactions fixture.",
+    "strongest_bounded_candidate": "Frontend recipient snapshot / asynchronous-refresh ordering at the first exact-id picker query.",
+    "runtime_root_cause_confirmed": false,
+    "shell_mode_as_cause_supported": false,
+    "why_external_directory_pass_is_insufficient": "A successful separate messages.list call proves the service knows the identities; it does not establish that the source PTY's local UI state has consumed that directory.",
+    "why_existing_wait_does_not_retry_query": {
+      "file": "scripts/e2e_input_history.py",
+      "lines": [
+        139,
+        151
+      ],
+      "facts": "wait_state pumps and reads conversation state. It does not send /message again, change query mode, or assert recipient-snapshot completion."
+    },
+    "missing_runtime_evidence": [
+      "The exact source UI native-recipient snapshot immediately before its first /message client:A query.",
+      "The refresh request/completion sequence for that query in this existing run.",
+      "Evidence that an empty-query readiness synchronization resolves this exact run condition; no new execution was performed here."
+    ],
+    "independent_Rust_corroboration_as_reported_by_Core": {
+      "source_scope": "Fixed U messaging.rs",
+      "facts": [
+        "valid_entry checks verified identity/kind fields, not mode=shell.",
+        "Both empty and nonempty picker queries request chat_native_refresh before reading a snapshot.",
+        "A no-match nonempty query returns before changing view to Agents.",
+        "Refresh queues a List operation through mpsc.try_send; the immediate snapshot is read from a cache updated only after the reply.",
+        "Automatic watcher polling depends on visible Chat/Agents or incomplete outgoing messages; pumping a failed-query view does not itself resubmit that query."
+      ],
+      "directly_reaudited_by_this_Python_review": false,
+      "scope_limit": "This supports an ordering explanation but does not prove the exact contents of the b37 cache; Core/root separately own the fixed Rust reading."
+    }
+  },
+  "minimal_fixture_candidate": {
+    "not_applied_or_run": true,
+    "intended_scope": "Make the group-delivery fixture's UI-recipient readiness precondition explicit.",
+    "location": "scripts/e2e_session_groups.py, after the three authenticated-directory checks and before the initial select(front, recipients)",
+    "steps": [
+      "Call the existing open_picker(front) with its empty query.",
+      "Use the existing bounded quiet_until mechanism to observe Group process A, Group process B and Exact group thread in the owned source PTY, without new input during observation.",
+      "Then run the existing select(front, recipients) unchanged, including exact recipient id, native selected identity, no implicit selection/send, empty inboxes and all later receipt assertions."
+    ],
+    "preserve": [
+      "two ordinary peer processes and one verified member",
+      "same identities and ordinary account_inbox roles",
+      "existing wait_state timeout of 8 seconds and quiet_until default timeout of 9 seconds",
+      "all original exact-recipient and no-implicit-send assertions",
+      "original raw failure and actual21-check count"
+    ],
+    "avoid": [
+      "fixed sleeps",
+      "increased timeout",
+      "repeating queries until a pass",
+      "changing shell peers into model agents",
+      "loosening exact-id or consent assertions",
+      "production source changes solely to pass this fixture"
+    ],
+    "product_contract_separation": "This synchronization candidate does not establish that a product's first cold /message <id> query already behaves correctly. If the product contract requires that first query to wait for the directory and succeed, the existing owner must assess and test that separate behavior explicitly. Do not erase the original cold-query failure or credit a warmed fixture as proof of the cold-path contract.",
+    "status": "historical proposal only; not adopted and not executed",
+    "current_recommendation": false
+  },
+  "source_files": [
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_session_groups.py",
+      "bytes": 19792,
+      "sha256": "6377ecff80b3da6be16f9017e74c7f548d12e6c3df3a62e0e8567ce4981c9924",
+      "git_blob_sha1": "62245b4f655befd1ac5967cd2de68e1573ad9ca6"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_interactions.py",
+      "bytes": 44311,
+      "sha256": "8bfd7e5ac4519be9e186e3361e8e683b47e8b396a8b7df880035ecc6e8ba43e5",
+      "git_blob_sha1": "0f92d17d50efc5b9409057e4aa7a77fabfd8f605"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_input_history.py",
+      "bytes": 48202,
+      "sha256": "8c364314553954ab37618dac7d464b0654522aa7da13d4d5f8720d8395dd3493",
+      "git_blob_sha1": "e3ccf6c5bb31c1d6f81af3fc9a4c54ebcaccdf21"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_composer.py",
+      "bytes": 39178,
+      "sha256": "b68877f72e05e15745ff893debfd095fbfcae110422b1c96cf56b45dd4c5f3bf",
+      "git_blob_sha1": "6dc1f4495dca1d4a213cacc058344aa75b695dfe"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_dashboard.py",
+      "bytes": 37916,
+      "sha256": "e9edc9571ff9d8c52549f57838995ff1b26ba1790e8b0703f3a611e59c7fb569",
+      "git_blob_sha1": "12381f644f81cb458151e4f3872968e2d1362e60"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e.py",
+      "bytes": 49707,
+      "sha256": "6d9ac0b14416e034e171cff3697dac8e1bd9203ccfb6b18fff9691429230505a",
+      "git_blob_sha1": "af4d2b021e060986bbffeaca2a0d83dc93902c41"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_account_gateway.py",
+      "bytes": 20488,
+      "sha256": "54d94dd8768c4dbbf32ccf277061935163f98fccf0bed8946e27aa8d6bfd697a",
+      "git_blob_sha1": "65d46dd51970d86467c1133e99dece0f37342d81"
+    }
+  ],
+  "readonly_jobs": [
+    {
+      "id": "26c4545eae1eab8d27485f4a48077d3c-b5a",
+      "purpose": "frozen scripts and original failure excerpts"
+    },
+    {
+      "id": "26c4545eae1eab8d27485f4a48077d3c-b5f",
+      "purpose": "static Python inheritance and startup methods"
+    },
+    {
+      "id": "26c4545eae1eab8d27485f4a48077d3c-b62",
+      "purpose": "command/environment forwarding and observer loop"
+    },
+    {
+      "id": "26c4545eae1eab8d27485f4a48077d3c-b67",
+      "purpose": "final account-gateway argv"
+    }
+  ],
+  "completion": "Read-only diagnosis complete. The historical fixture synchronization proposal remains documented but was explicitly not adopted. The original source owner is fixing product cold-query behavior while retaining the original session_groups regression.",
+  "owner_disposition": {
+    "source": "Root forwarded existing native source/acceptance owner messages seq887/889",
+    "status": "product cold-query fix in progress by original owner; original session_groups fixture retained",
+    "previous_fixture_warmup_candidate": "not adopted; not applied; not executed",
+    "owner_reason": "An entirely empty directory can also make the empty-query /message path return early; warming the fixture must not hide a first-exact-query product problem.",
+    "final_recommendation": "Preserve the unchanged original session_groups case and let the existing source owner repair the cold-query product behavior. Consume that owner's subsequent fixed-source regression evidence; this reviewer performs no implementation or reproduction."
+  }
+}

@@ -1,0 +1,531 @@
+{
+  "schema": "project-z.U-r12-ui-second-failure-independent-read.v1",
+  "reviewed_at_utc": "2026-11-21T04:17:31.049474+00:00",
+  "scope": "Read only the two fixed originals below. No driver import, source review, product execution, Cargo, locks, live-process inspection, input-file or ELF reread.",
+  "conclusion": {
+    "evidence_inconsistencies": 0,
+    "batch_status": "failed",
+    "UI_complete": false,
+    "P1_pass_claimed": false,
+    "final44_pass_claimed": false
+  },
+  "source_revision": "784370b5fe1b817c788273a5f7b1ab826c743965",
+  "expected_version": "0.10.25",
+  "started_utc": "2026-11-21T03:53:48Z",
+  "finished_utc": "2026-11-21T03:56:39Z",
+  "seconds": 171.074,
+  "originals": {
+    "acceptance": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-mesa-v1/acceptance.json",
+      "bytes": 921146,
+      "sha256": "8821744cc88365371f588aed69862029195a3295d6cd9d88981991dc9c2d9fd3",
+      "git_blob_sha1": "ae0d121e199e358983af54ebbd35623a2bcb88bb"
+    },
+    "redacted_session_groups_log": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-mesa-v1/suites/session_groups/run.log",
+      "bytes": 10563,
+      "sha256": "18f2fed2e00bff5823288f6a2d089ef37b85a048f7c48400c3f4a68fe2c41fe4",
+      "git_blob_sha1": "aca83e828a09fb8b5d4b3c13a2d1817d5fb2debd"
+    }
+  },
+  "execution_counting": {
+    "logical_suites_including_alias": 25,
+    "planned_executions": 24,
+    "actual_executions": 10,
+    "passed_executions": 9,
+    "failed_executions": 1,
+    "not_run": 14,
+    "alias_coverage": 1,
+    "alias_is_extra_independent_execution_or_pass": false,
+    "counts_not_added_to_Gate35_or_runtime18": true
+  },
+  "suite_states": [
+    {
+      "name": "message_references",
+      "status": "passed",
+      "process_started": true,
+      "exit_code": 0,
+      "owned_child_reaped": true,
+      "seconds": 12.336,
+      "checks": 53,
+      "checks_field_present": true,
+      "inputs_before_after": {
+        "both_present": true,
+        "equal": true,
+        "canonical_json_sha256_before": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780",
+        "canonical_json_sha256_after": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780"
+      }
+    },
+    {
+      "name": "force_send",
+      "status": "passed",
+      "process_started": true,
+      "exit_code": 0,
+      "owned_child_reaped": true,
+      "seconds": 24.26,
+      "checks": 137,
+      "checks_field_present": true,
+      "inputs_before_after": {
+        "both_present": true,
+        "equal": true,
+        "canonical_json_sha256_before": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780",
+        "canonical_json_sha256_after": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780"
+      }
+    },
+    {
+      "name": "listener_transports",
+      "status": "passed",
+      "process_started": true,
+      "exit_code": 0,
+      "owned_child_reaped": true,
+      "seconds": 7.672,
+      "checks": 74,
+      "checks_field_present": true,
+      "inputs_before_after": {
+        "both_present": true,
+        "equal": true,
+        "canonical_json_sha256_before": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780",
+        "canonical_json_sha256_after": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780"
+      }
+    },
+    {
+      "name": "zuse_worker",
+      "status": "passed",
+      "process_started": true,
+      "exit_code": 0,
+      "owned_child_reaped": true,
+      "seconds": 2.647,
+      "checks": 31,
+      "checks_field_present": true,
+      "inputs_before_after": {
+        "both_present": true,
+        "equal": true,
+        "canonical_json_sha256_before": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780",
+        "canonical_json_sha256_after": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780"
+      }
+    },
+    {
+      "name": "interactions",
+      "status": "passed",
+      "process_started": true,
+      "exit_code": 0,
+      "owned_child_reaped": true,
+      "seconds": 55.32,
+      "checks": 172,
+      "checks_field_present": true,
+      "inputs_before_after": {
+        "both_present": true,
+        "equal": true,
+        "canonical_json_sha256_before": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780",
+        "canonical_json_sha256_after": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780"
+      }
+    },
+    {
+      "name": "private_desktop",
+      "status": "passed",
+      "process_started": true,
+      "exit_code": 0,
+      "owned_child_reaped": true,
+      "seconds": 3.334,
+      "checks": 35,
+      "checks_field_present": true,
+      "inputs_before_after": {
+        "both_present": true,
+        "equal": true,
+        "canonical_json_sha256_before": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780",
+        "canonical_json_sha256_after": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780"
+      }
+    },
+    {
+      "name": "account_compat",
+      "status": "passed",
+      "process_started": true,
+      "exit_code": 0,
+      "owned_child_reaped": true,
+      "seconds": 2.87,
+      "checks": 69,
+      "checks_field_present": true,
+      "inputs_before_after": {
+        "both_present": true,
+        "equal": true,
+        "canonical_json_sha256_before": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780",
+        "canonical_json_sha256_after": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780"
+      }
+    },
+    {
+      "name": "input_history",
+      "status": "passed",
+      "process_started": true,
+      "exit_code": 0,
+      "owned_child_reaped": true,
+      "seconds": 23.578,
+      "checks": 150,
+      "checks_field_present": true,
+      "inputs_before_after": {
+        "both_present": true,
+        "equal": true,
+        "canonical_json_sha256_before": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780",
+        "canonical_json_sha256_after": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780"
+      }
+    },
+    {
+      "name": "reload_state",
+      "status": "passed",
+      "process_started": true,
+      "exit_code": 0,
+      "owned_child_reaped": true,
+      "seconds": 8.027,
+      "checks": 37,
+      "checks_field_present": true,
+      "inputs_before_after": {
+        "both_present": true,
+        "equal": true,
+        "canonical_json_sha256_before": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780",
+        "canonical_json_sha256_after": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780"
+      }
+    },
+    {
+      "name": "session_groups",
+      "status": "failed",
+      "process_started": true,
+      "exit_code": 1,
+      "owned_child_reaped": true,
+      "seconds": 11.118,
+      "checks_field_present": false,
+      "inputs_before_after": {
+        "both_present": true,
+        "equal": true,
+        "canonical_json_sha256_before": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780",
+        "canonical_json_sha256_after": "3764827a0ca94fdf955af23d9083c29358e332c4efedc8ef2ba2b6a6ca0f0780"
+      }
+    },
+    {
+      "name": "client_ui",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite",
+      "checks_field_present": false
+    },
+    {
+      "name": "canvas_logs",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite",
+      "checks_field_present": false
+    },
+    {
+      "name": "composer",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite",
+      "checks_field_present": false
+    },
+    {
+      "name": "questions",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite",
+      "checks_field_present": false
+    },
+    {
+      "name": "presentations",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite",
+      "checks_field_present": false
+    },
+    {
+      "name": "context_memory",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite",
+      "checks_field_present": false
+    },
+    {
+      "name": "file_paste",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite",
+      "checks_field_present": false
+    },
+    {
+      "name": "relay_composer",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite",
+      "checks_field_present": false
+    },
+    {
+      "name": "goal_startup",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite",
+      "checks_field_present": false
+    },
+    {
+      "name": "tool_summaries",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite",
+      "checks_field_present": false
+    },
+    {
+      "name": "readable_commands",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite",
+      "checks_field_present": false
+    },
+    {
+      "name": "summary_commands",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite",
+      "checks_field_present": false
+    },
+    {
+      "name": "physical_latency",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite",
+      "checks_field_present": false
+    },
+    {
+      "name": "time_wait",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite",
+      "checks_field_present": false
+    }
+  ],
+  "first_nine_passed": [
+    {
+      "name": "message_references",
+      "checks": 53,
+      "log_sha256_recorded": "6a19ea656142e005731e9064a6a84c1051a37d8396ecf07304a136aacedd20a1",
+      "report_sha256_recorded": "1ecb8b47e3937a2404cc8758c4e03a2d67f9e733b9cdff7decf2bdb0484abb4c"
+    },
+    {
+      "name": "force_send",
+      "checks": 137,
+      "log_sha256_recorded": "d31953d4db980ae9a7f38bd16892cb1312e513d9c8198fbf8d88c734f9eb5460",
+      "report_sha256_recorded": "ce7194a307f42219d25f6d873542aca133bcfb73b97b115af0dcd93538dde6cd"
+    },
+    {
+      "name": "listener_transports",
+      "checks": 74,
+      "log_sha256_recorded": "23424fc51571e57a86024ca47d5345c80b2b728256b797e5f079aff01fe85b91",
+      "report_sha256_recorded": "c9b86f51ef84ced9e86de3f5174eeabbd55ae0d0d3f0713828a5ea3eff092e8a"
+    },
+    {
+      "name": "zuse_worker",
+      "checks": 31,
+      "log_sha256_recorded": "f7dc3e87110944852e8351d5a8f7755bbc54e25c9c30d2b668c0d045611686a4",
+      "report_sha256_recorded": "c98830f4a6e61418dbd934f64dd1fd799be74c4b9068a9dfdeb079bf87bf9218"
+    },
+    {
+      "name": "interactions",
+      "checks": 172,
+      "log_sha256_recorded": "c7c6a932aeac46d2b79bf467a613c4fa1107b85126ebe2cf1799af3fa7934b27",
+      "report_sha256_recorded": "76813bd7578af243d4b87e2bd714463a4c904f32ada7cb052e03e2286f7dcdba"
+    },
+    {
+      "name": "private_desktop",
+      "checks": 35,
+      "log_sha256_recorded": "94d939846a2c91103983b0545964aedf3c23f699da6062c00a2ea76dd2b71090",
+      "report_sha256_recorded": "0ce1075bdd1c69bfff096ba7c429d406ef9eedaff1c2f2f42585b3246d8bdb0b"
+    },
+    {
+      "name": "account_compat",
+      "checks": 69,
+      "log_sha256_recorded": "26a8b5091b78f52b542123875bc1ccd580fa1f7f6332ea5aa664c12825d3d454",
+      "report_sha256_recorded": "84e1a8b7edee3e85d19bec1b9ea66115d961e6e046abbdb2522e048709c4cf44"
+    },
+    {
+      "name": "input_history",
+      "checks": 150,
+      "log_sha256_recorded": "9227f60852c025610268cac3e7ab535428fe66d3a70c77dda8d9567c82adee65",
+      "report_sha256_recorded": "8f165b96f4c8fe1a4b2f349d10436f26e63a63714866704b1e3cf16363898d26"
+    },
+    {
+      "name": "reload_state",
+      "checks": 37,
+      "log_sha256_recorded": "ddfe5d4bebdf31b0a953b3421522c436702f7ecfba4b51bb8d1dd30a01fbbd74",
+      "report_sha256_recorded": "629cc66d1e67fa6f249187d54f7c9fbf2c0205d67a67b9ef1564962ba7e6ebcb"
+    }
+  ],
+  "alias": {
+    "name": "human_finish",
+    "status": "covered_by",
+    "covered_by": "interactions",
+    "independently_executed": false,
+    "independent_pass": false
+  },
+  "failure": {
+    "name": "session_groups",
+    "exit_code": 1,
+    "wrapper_checks_zero": {
+      "value": 0,
+      "provenance": "Root reported its actual b37 wrapper stdout; this reviewer did not read that job output in the two-original scope.",
+      "is_count_of_executed_assertions": false
+    },
+    "acceptance_checks_key_present": false,
+    "acceptance_checks_value": null,
+    "original_log_setup_PASS_lines": [
+      {
+        "line": 1,
+        "text": "PASS the owned account router keeps its credentials in a private ready record"
+      },
+      {
+        "line": 2,
+        "text": "PASS the isolated account has the expected stable provider identity and handle"
+      },
+      {
+        "line": 3,
+        "text": "PASS the real production account router is healthy"
+      },
+      {
+        "line": 4,
+        "text": "PASS the account connection advertises its exact identity-scoped MCP resource"
+      },
+      {
+        "line": 5,
+        "text": "PASS MCP 401 advertises protected-resource metadata"
+      },
+      {
+        "line": 6,
+        "text": "PASS resource metadata binds the exact account endpoint and OAuth issuer"
+      },
+      {
+        "line": 7,
+        "text": "PASS OAuth discovery advertises authorization-code PKCE S256"
+      },
+      {
+        "line": 8,
+        "text": "PASS public MCP client registers through OAuth DCR"
+      },
+      {
+        "line": 9,
+        "text": "PASS the account OAuth endpoint requires provider consent instead of a connection login code"
+      },
+      {
+        "line": 10,
+        "text": "PASS the OAuth browser binding is Secure, HttpOnly and SameSite Lax"
+      },
+      {
+        "line": 11,
+        "text": "PASS OAuth pages cannot be cached and bind same-origin form submission"
+      },
+      {
+        "line": 12,
+        "text": "PASS real identity exchange validates provider PKCE and requires explicit consent"
+      },
+      {
+        "line": 13,
+        "text": "PASS OAuth consent preserves the registered callback, state and issuer"
+      },
+      {
+        "line": 14,
+        "text": "PASS the real OAuth endpoint issues an identity-scoped MCP access token"
+      },
+      {
+        "line": 15,
+        "text": "PASS OAuth access expires in eight hours and supplies a refresh token"
+      },
+      {
+        "line": 16,
+        "text": "PASS OAuth token responses cannot be cached"
+      },
+      {
+        "line": 17,
+        "text": "PASS the account relay credential cannot authenticate as an MCP access token"
+      },
+      {
+        "line": 18,
+        "text": "PASS one owned source PTY and two distinct owned recipient processes are live"
+      },
+      {
+        "line": 19,
+        "text": "PASS the authenticated directory advertises the exact selected identity"
+      },
+      {
+        "line": 20,
+        "text": "PASS the authenticated directory advertises the exact selected identity"
+      },
+      {
+        "line": 21,
+        "text": "PASS the authenticated directory advertises the exact selected identity"
+      }
+    ],
+    "original_log_setup_PASS_count": 21,
+    "original_log_final_summary": {
+      "line": 97,
+      "value": {
+        "status": "failed",
+        "checks": 21,
+        "frames": 0,
+        "elapsed_seconds": 9.768
+      }
+    },
+    "failure_assertion_line": 38,
+    "failure_assertion": "the explicit native recipient picker",
+    "terminal_observation": "No verified native recipient matches this name; draft retained",
+    "raw_directory_cache_state_recorded_by_these_originals": false,
+    "root_cause_confirmed": false,
+    "not_zero_assertions": true
+  },
+  "cleanup_and_inputs": {
+    "all_ten_started_owned_children_recorded_reaped": true,
+    "failed_child_recorded_reaped": true,
+    "failed_child_exit_code": 1,
+    "failed_row_inner_cleanup_field_present": false,
+    "failed_row_inner_cleanup": null,
+    "per_suite_input_manifests_structurally_equal": true,
+    "top_level_recorded_inputs_unchanged": {
+      "unchanged": true,
+      "input_set_sha256": "19e4cefb584e1ec5fc0d01274f517e4794c21c18dad74879656dad9ffc320907",
+      "changed": []
+    },
+    "top_level_input_set_sha256_before": "19e4cefb584e1ec5fc0d01274f517e4794c21c18dad74879656dad9ffc320907",
+    "top_level_hash_formula_independently_recomputed": false,
+    "current_input_files_or_ELFs_rehashed": false,
+    "live_processes_or_global_lock_checked": false
+  },
+  "separate_P1_record": {
+    "status": "not_run_by_this_controller",
+    "scope": "Native zcalld listen integration has a separate feature-cohort receipt bound to its exact SSMCP and zcalld source, binaries and harnesses. This UI result does not prove a stable core release contains that feature."
+  },
+  "coordinator_next_action": {
+    "provenance": "Root relayed native source/acceptance decisions seq887/889; not independently executed or source-audited in this review.",
+    "retain_original_session_groups_fixture": true,
+    "seven_line_fixture_warmup_adopted": false,
+    "seven_line_fixture_warmup_executed": false,
+    "planned_product_work": "Original source owner fixes matching after asynchronous refresh on a cold directory query.",
+    "timing_explanation_scope": "Source-supported explanation only; original cache scene was not recorded and final root cause is not established here.",
+    "successor_source_or_runtime_pass_claimed": false,
+    "U_results_transfer_to_successor": false
+  },
+  "report_branch_context": {
+    "actual_start_for_future_final44": "efe912eb54a8240fab39126d1f2f6a464cc67f8b",
+    "final44_executed": false,
+    "canonical_reports_changed": false,
+    "GitHub_or_Drive_updated": false
+  },
+  "original_read_integrity": {
+    "before": {
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-mesa-v1/acceptance.json": {
+        "device": 68,
+        "inode": 187506345,
+        "bytes": 921146,
+        "mtime_ns": 1795233399415579070
+      },
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-mesa-v1/suites/session_groups/run.log": {
+        "device": 68,
+        "inode": 187506205,
+        "bytes": 10563,
+        "mtime_ns": 1795233397071107718
+      }
+    },
+    "after": {
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-mesa-v1/acceptance.json": {
+        "device": 68,
+        "inode": 187506345,
+        "bytes": 921146,
+        "mtime_ns": 1795233399415579070
+      },
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-mesa-v1/suites/session_groups/run.log": {
+        "device": 68,
+        "inode": 187506205,
+        "bytes": 10563,
+        "mtime_ns": 1795233397071107718
+      }
+    },
+    "bytes_and_stat_unchanged": true
+  }
+}
