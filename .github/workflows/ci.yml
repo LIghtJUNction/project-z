@@ -3,6 +3,13 @@ name: Coordinate Project Z
 on:
   workflow_dispatch:
   workflow_call:
+    inputs:
+      candidate_artifact:
+        type: string
+        default: ''
+      candidate_sha:
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -21,11 +28,16 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          submodules: recursive
+          submodules: ${{ inputs.candidate_artifact && 'false' || 'recursive' }}
           persist-credentials: false
       - uses: actions/setup-python@v6
         with:
           python-version: '3.13'
+      - uses: ./.github/actions/candidate
+        if: inputs.candidate_artifact != ''
+        with:
+          artifact: ${{ inputs.candidate_artifact }}
+          sha: ${{ inputs.candidate_sha }}
       - uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: '1.100.0'
@@ -48,11 +60,16 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          submodules: recursive
+          submodules: ${{ inputs.candidate_artifact && 'false' || 'recursive' }}
           persist-credentials: false
       - uses: actions/setup-python@v6
         with:
           python-version: '3.13'
+      - uses: ./.github/actions/candidate
+        if: inputs.candidate_artifact != ''
+        with:
+          artifact: ${{ inputs.candidate_artifact }}
+          sha: ${{ inputs.candidate_sha }}
       - uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: '1.100.0'

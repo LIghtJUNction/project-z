@@ -11,7 +11,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 import re
 
-__all__ = ["satisfies"]
+__all__ = ["satisfies", "version_key"]
 
 _NUMBER = r"(?:0|[1-9][0-9]*)"
 _COMPONENT = rf"(?:{_NUMBER}|[xX*])"
@@ -98,6 +98,12 @@ def _prerelease_key(pre: tuple[str, ...]) -> tuple:
         for value in pre
     )
     return (not pre, identifiers)
+
+
+def version_key(text: str) -> tuple:
+    """Compare full package versions using SemVer precedence (ignoring build metadata)."""
+    version, _ = _parse_version(text)
+    return version.numbers, _prerelease_key(version.pre)
 
 
 def _matches(version: _Version, comparator: _Comparator) -> bool:

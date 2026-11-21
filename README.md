@@ -71,4 +71,4 @@ python3 scripts/project_z.py order
 
 `scripts/maintenance.py` 审计上游默认分支和外部发布状态；显式 `--apply` 在独立工作树准备更新，通过全图检查后才形成候选提交。注册表尚未发布不阻止内部采用最新 Git 源码。
 
-`scripts/release.py` 和正式工作流打包已验证、干净的递归源码，并保存提交清单。正式标签与发布制品不会由日常同步自动更新。协作细节见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+`scripts/release.py` 和正式工作流打包已验证、干净的递归源码，并保存提交清单。[每六小时的同步工作流](docs/scheduled-snapshots.md)默认仅验证。维护者显式启用写入后，完整 CI 通过且存在未发布的新版本时才创建聚合补丁发行。协作细节见 [CONTRIBUTING.md](CONTRIBUTING.md)。
