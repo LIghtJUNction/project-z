@@ -91,3 +91,8 @@ requires = ["zcalld", "zcalld-compat"]
 [repositories.mechrevo-drivers]
 role = "application"
 manifests = ["console/Cargo.toml"]
+
+[repositories.zuse-skills]
+role = "extension"
+manifests = []
+requires = ["zuse"]

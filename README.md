@@ -9,18 +9,20 @@ Project Z 统一维护内部库及其消费者。**内部依赖直接使用 GitH
 在独立工作区中运行：
 
 ```sh
-git clone --recurse-submodules https://github.com/LIghtJUNction/project-z.git
+git clone https://github.com/LIghtJUNction/project-z.git
 cd project-z
 python3 scripts/project_z.py sync
 python3 scripts/project_z.py check
 python3 scripts/project_z.py resolve --all
 ```
 
+`sync` 会从远端默认分支初始化缺失或空目录中的子模块，再记录本轮提交。未初始化目录中的已有文件、未提交改动和需要移动的活动分支会阻止同步。
+
 需要 Git、Python 3.11 或更新版本，以及仓库指定的 Rust 工具链。应用需要的系统库、桌面会话和设备见各自说明。
 
 | 命令 | 作用 |
 | --- | --- |
-| `sync` | 查询 GitHub 默认分支，更新干净且处于 detached 状态的子仓检出，记录确切提交并生成索引 |
+| `sync` | 查询 GitHub 默认分支，初始化缺失的子仓并更新干净的 detached 检出，记录确切提交并生成索引 |
 | `check` | 核对内部 Git 声明、锁文件、嵌套 gitlink、远端新鲜性和生成文件 |
 | `resolve --all` | 用 Cargo `--locked` 解析全部 Rust 工作区，逐包核对 Git URL、提交与版本 |
 | `impact --repositories <名称>` | 列出直接、间接和明确登记的运行时、安装消费者 |

@@ -595,6 +595,57 @@ class GitSourceFixture(FilesystemFixture):
 
 @unittest.skipUnless(shutil.which("git") and shutil.which("cargo"), "requires Git and Cargo")
 class GitSourceIntegrationTests(GitSourceFixture):
+    def test_sync_bootstraps_plain_clone_without_fetching_unavailable_gitlinks(self):
+        for name in ("shared", "app"):
+            self.git(self.root, "update-index", "--cacheinfo", f"160000,{'1' * 40},{name}")
+        self.git(self.root, "commit", "-qm", "record unavailable historical sources")
+        self.git(self.shared, "branch", "-m", "main", "development")
+        fresh = self.base / "fresh aggregate"
+        self.git(self.base, "clone", "-q", "--no-recurse-submodules", str(self.root), str(fresh))
+        for name in ("shared", "app"):
+            self.assertFalse((fresh / name / ".git").exists())
+        with self.assertRaisesRegex(pz.CoordinationError, "initialize the submodule"):
+            pz.repositories(fresh)
+        # Cover both a missing path and the empty gitlink directory Git creates.
+        (fresh / "shared").rmdir()
+        with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()) as errors:
+            self.assertEqual(pz.main(["--root", str(fresh), "sync"]), 0, errors.getvalue())
+            self.assertEqual(pz.main(["--root", str(fresh), "check"]), 0, errors.getvalue())
+            self.assertEqual(pz.main(["--root", str(fresh), "resolve", "--all"]), 0, errors.getvalue())
+        for name, expected in (("shared", self.shared_initial), ("app", self.app_initial)):
+            self.assertEqual(self.git(fresh / name, "rev-parse", "HEAD"), expected)
+            self.assertEqual(self.git(fresh / name, "rev-parse", "--abbrev-ref", "HEAD"), "HEAD")
+        data = json.loads((fresh / "catalog.json").read_text())
+        self.assertEqual(next(repo for repo in data["repositories"] if repo["name"] == "shared")["branch"], "development")
+
+    def test_sync_preserves_nonempty_uninitialized_source_before_cloning_anything(self):
+        fresh = self.base / "fresh aggregate"
+        self.git(self.base, "clone", "-q", "--no-recurse-submodules", str(self.root), str(fresh))
+        user_file = fresh / "shared" / "unfinished.txt"
+        user_file.write_text("preserve unfinished work\n")
+        with self.assertRaisesRegex(pz.CoordinationError, "preserve any local files"):
+            pz.sync_sources(fresh)
+        self.assertEqual(user_file.read_text(), "preserve unfinished work\n")
+        for name in ("app", "shared"):
+            self.assertFalse((fresh / name / ".git").exists())
+
+    def test_sync_checks_existing_edits_and_active_branches_before_initializing_missing_source(self):
+        self.git(self.root, "submodule", "deinit", "--force", "--", "app")
+        source = self.root / "shared" / "core/src/lib.rs"
+        original = source.read_text()
+        source.write_text("preserve user edit\n")
+        with self.assertRaisesRegex(pz.CoordinationError, "not clean"):
+            pz.sync_sources(self.root)
+        self.assertEqual(source.read_text(), "preserve user edit\n")
+        self.assertFalse((self.root / "app" / ".git").exists())
+        source.write_text(original)
+        self.git(self.root / "shared", "switch", "-c", "active-work")
+        self.advance_shared()
+        with self.assertRaisesRegex(pz.CoordinationError, "active branch"):
+            pz.sync_sources(self.root)
+        self.assertFalse((self.root / "app" / ".git").exists())
+        self.assertEqual(self.git(self.root / "shared", "rev-parse", "HEAD"), self.shared_initial)
+
     def test_real_locked_git_resolution_includes_private_optional_package(self):
         self.assertEqual(pz.validate(self.data, pz.policy(self.root), self.root), [])
         self.assertEqual(pz.freshness_errors(self.data, self.root), [])

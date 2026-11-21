@@ -59,4 +59,4 @@ jobs:
         if: runner.os == 'Windows'
         uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756
       - name: Test libraries against the same local dependency snapshot
-        run: python3 scripts/project_z.py run -- test --lib --tests
+        run: python3 scripts/project_z.py run -- test --tests

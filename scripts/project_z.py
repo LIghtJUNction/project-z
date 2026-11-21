@@ -90,7 +90,7 @@ def freshness_errors(data, root=ROOT):
             if any(repo[key] != heads[repo["name"]][key] for key in ("branch", "commit"))]
 
 
-def repositories(root=ROOT):
+def repositories(root=ROOT, *, allow_uninitialized=False):
     config = configparser.ConfigParser(interpolation=None)
     if not config.read(root / ".gitmodules"):
         raise CoordinationError("missing .gitmodules")
@@ -105,17 +105,18 @@ def repositories(root=ROOT):
         name = path
         source = root / path
         relative(source, root)
-        if not (source / ".git").exists():
+        initialized = (source / ".git").exists()
+        if not initialized and not allow_uninitialized:
             raise CoordinationError(f"{name}: initialize the submodule first")
         options = overrides.get(name, {})
         manifests = options.get("manifests", ["Cargo.toml"] if (source / "Cargo.toml").exists() else [])
-        default_ref = command(["git", "for-each-ref", "--format=%(symref)", "refs/remotes/origin/HEAD"], source).strip()
+        default_ref = command(["git", "for-each-ref", "--format=%(symref)", "refs/remotes/origin/HEAD"], source).strip() if initialized else ""
         result.append({
             "name": name,
             "path": path,
             "url": config[section]["url"],
             "branch": default_ref.removeprefix("refs/remotes/origin/") or recorded_branches.get(name),
-            "commit": command(["git", "rev-parse", "HEAD"], source).strip(),
+            "commit": command(["git", "rev-parse", "HEAD"], source).strip() if initialized else None,
             "role": options.get("role", "library"),
             "manifests": manifests,
             "requires": sorted(options.get("requires", [])),
@@ -127,15 +128,15 @@ def repositories(root=ROOT):
 
 
 def sync_sources(root=ROOT):
-    """Advance only clean isolated submodule checkouts; never edit consumers."""
-    repos = repositories(root)
+    """Initialize missing sources and advance clean isolated submodule checkouts."""
+    repos = repositories(root, allow_uninitialized=True)
     errors = checkout_errors({"repositories": repos}, root, allow_uninitialized=True)
     if errors:
         raise CoordinationError("\n".join(errors))
     heads = latest_heads(repos, root)
     for repo in repos:
         source = root / repo["path"]
-        if repo["commit"] != heads[repo["name"]]["commit"]:
+        if repo["commit"] is not None and repo["commit"] != heads[repo["name"]]["commit"]:
             if command(["git", "rev-parse", "--abbrev-ref", "HEAD"], source).strip() != "HEAD":
                 raise CoordinationError(f"{repo['name']}: active branch; use a detached isolated checkout before sync")
     for repo in repos:
@@ -143,6 +144,12 @@ def sync_sources(root=ROOT):
         wanted = heads[repo["name"]]
         branch = wanted["branch"]
         remote_ref = "refs/remotes/origin/" + branch
+        if repo["commit"] is None:
+            # Start from the observed default branch, not an obsolete aggregate
+            # gitlink that may no longer be available after upstream cleanup.
+            command(["git", "clone", "--no-checkout", "--no-recurse-submodules", "--single-branch",
+                     "--no-tags", "--branch", branch, "--", repo["url"], str(source)], root)
+            command(["git", "submodule", "init", "--", repo["path"]], root)
         command(["git", "fetch", "--no-tags", "--no-recurse-submodules", "--", repo["url"],
                  f"+refs/heads/{branch}:{remote_ref}"], source)
         if command(["git", "rev-parse", remote_ref], source).strip() != wanted["commit"]:
