@@ -18,7 +18,7 @@
       "path": "bilibilive",
       "url": "https://github.com/LIghtJUNction/bilibilive.git",
       "branch": "main",
-      "commit": "ae04b1640ab3a78bba3a5a000c1eea551a55c5dc",
+      "commit": "0985254faee713c75d9209e848289b50e3f45634",
       "role": "application",
       "manifests": [
         "Cargo.toml"
