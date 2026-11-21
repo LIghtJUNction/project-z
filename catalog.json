@@ -30,7 +30,7 @@
       "path": "lmm",
       "url": "https://github.com/TokenNotIncluded/lmm.git",
       "branch": "main",
-      "commit": "7ba45df9438adb6871fefdf07241285980601c5d",
+      "commit": "260a1eff2400aa64fc697028a406a8017ed6259c",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -42,7 +42,7 @@
       "path": "lmm-api-source",
       "url": "https://github.com/TokenNotIncluded/lmm-api-source.git",
       "branch": "main",
-      "commit": "ec0dac93ab7386567ebf51e26bcc264d8921e6be",
+      "commit": "fa57cd2049ccd9138cdc0b4104db36b5b6c53ae5",
       "role": "application",
       "manifests": [
         "services/core/Cargo.toml"
@@ -1446,8 +1446,8 @@
         {
           "name": "zhex",
           "alias": null,
-          "requirement": "^0.1.3",
-          "explicit_version": true,
+          "requirement": "*",
+          "explicit_version": false,
           "kind": "normal",
           "target": null,
           "optional": false,
