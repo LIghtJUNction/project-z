@@ -91,3 +91,6 @@ requires = ["zcalld", "zcalld-compat"]
 [repositories.mechrevo-drivers]
 role = "application"
 manifests = ["console/Cargo.toml"]
+
+[repositories.bilibilive]
+role = "application"
