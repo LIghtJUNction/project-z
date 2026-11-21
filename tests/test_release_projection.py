@@ -41,7 +41,7 @@ members = ["member"]
 version = "0.9.0"
 
 [workspace.dependencies]
-kernel = { package = "zconv", git = "https://github.com/LightJunction/zconv", default-features = false }
+kernel = { package = "zconv", git = "https://github.com/LightJunction/zconv", version = "^0.4.0", default-features = false }
 
 [package]
 name = "projection-fixture"
@@ -62,12 +62,14 @@ edition = "2021"
 [target.'cfg(unix)'.dev-dependencies.dev_alias]
 package = "zconv"
 git = "https://github.com/lightjunction/zconv.git/"
+version = ">=0.4, <0.5"
 default-features = false
 features = ["fixture-feature"]
 
 [build-dependencies.build_alias]
 package = "zconv"
 git = "https://github.com/LIghtJUNction/zconv.git"
+version = "~0.4.0"
 
 [[example]]
 name = "one"
@@ -100,14 +102,57 @@ source = "git+https://github.com/lightjunction/zconv#{'c' * 40}"
             with self.subTest(raw=raw[-170:]), self.assertRaises(projection.ProjectionError):
                 projection.exact_pin(projection.parse_lock(tomllib.loads(raw)), "zconv", URL)
 
-    def test_preserves_unknown_external_dependency_and_rejects_source_version(self):
+    def test_preserves_unknown_external_dependency_and_rejects_selectors(self):
         lock = projection.parse_lock(tomllib.loads(LOCK))
-        document = {"dependencies": {"alias": {"git": "https://github.com/other/zconv", "package": "zconv"}}}
+        document = {"dependencies": {"alias": {
+            "git": "https://github.com/other/zconv", "package": "zconv", "version": "=0.4.0",
+        }}}
+        original = deepcopy(document)
         self.assertFalse(projection.rewrite(document, lock, {URL}, "Cargo.toml"))
-        self.assertIn("git", document["dependencies"]["alias"])
-        document["dependencies"]["alias"].update(git=URL, version="=0.4.0")
-        with self.assertRaisesRegex(projection.ProjectionError, "alternate source"):
-            projection.rewrite(document, lock, {URL}, "Cargo.toml")
+        self.assertEqual(document, original)
+        for key, value in {
+            "rev": SHA, "branch": "main", "tag": "v0.4.0", "path": "../zconv",
+            "registry": "other", "registry-index": "https://example.invalid/index",
+            "workspace": True,
+        }.items():
+            with self.subTest(key=key):
+                document = {"dependencies": {"alias": {
+                    "git": URL, "package": "zconv", "version": "=0.4.0", key: value,
+                }}}
+                original = deepcopy(document)
+                with self.assertRaisesRegex(projection.ProjectionError, "alternate source"):
+                    projection.rewrite(document, lock, {URL}, "Cargo.toml")
+                self.assertEqual(document, original)
+
+    def test_compatible_version_metadata_preserves_options_and_uses_locked_pin(self):
+        lock = projection.parse_lock(tomllib.loads(LOCK))
+        for requirement in ("0.4", "^0.4.0", "~0.4.0", ">=0.3, <0.5", "=0.4.0", "0.4.*"):
+            with self.subTest(requirement=requirement):
+                options = {"package": "zconv", "default-features": False,
+                           "optional": True, "features": ["fixture-feature"]}
+                document = {"dependencies": {"kernel": {
+                    **options, "git": URL, "version": requirement,
+                }}}
+                records = projection.rewrite(document, lock, {URL}, "Cargo.toml")
+                self.assertEqual(document["dependencies"]["kernel"],
+                                 {**options, "version": "=0.4.0"})
+                self.assertEqual([(item["alias"], item["version"], item["git_sha"])
+                                  for item in records], [("kernel", "0.4.0", SHA)])
+
+    def test_mismatched_or_invalid_version_metadata_is_rejected_unchanged(self):
+        lock = projection.parse_lock(tomllib.loads(LOCK))
+        cases = [(value, "does not satisfy") for value in ("^0.5", ">=1", "=0.4.1")]
+        cases += [(value, "invalid version requirement")
+                  for value in ("", "not-a-version", "0.4 || 0.5", None, True, 1, {}, [])]
+        for requirement, reason in cases:
+            with self.subTest(requirement=requirement):
+                document = {"dependencies": {"kernel": {
+                    "package": "zconv", "git": URL, "version": requirement,
+                }}}
+                original = deepcopy(document)
+                with self.assertRaisesRegex(projection.ProjectionError, reason):
+                    projection.rewrite(document, lock, {URL}, "Cargo.toml")
+                self.assertEqual(document, original)
 
 
 class RepositoryTests(unittest.TestCase):

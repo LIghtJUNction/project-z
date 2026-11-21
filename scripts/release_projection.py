@@ -17,6 +17,8 @@ import tarfile
 import tempfile
 import tomllib
 
+from cargo_versions import satisfies
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DEPS = ("dependencies", "build-dependencies", "dev-dependencies")
@@ -117,9 +119,22 @@ def rewrite(document, locks, allowlist, manifest):
             if url not in allowlist:
                 continue
             name = declaration.get("package", alias)
-            if {"rev", "branch", "tag", "version", "path", "registry", "registry-index", "workspace"} & declaration.keys():
+            if {"rev", "branch", "tag", "path", "registry", "registry-index", "workspace"} & declaration.keys():
                 raise ProjectionError(f"{manifest}: {alias}: expected a GitHub URL without a selector or alternate source")
             version, sha = exact_pin(locks, name, url)
+            if "version" in declaration:
+                requirement = declaration["version"]
+                try:
+                    compatible = satisfies(version, requirement)
+                except ValueError as error:
+                    raise ProjectionError(
+                        f"{manifest}: {alias}: invalid version requirement {requirement!r}: {error}"
+                    ) from error
+                if not compatible:
+                    raise ProjectionError(
+                        f"{manifest}: {alias}: locked version {version} does not satisfy "
+                        f"version requirement {requirement!r}"
+                    )
             del declaration["git"]
             declaration["version"] = f"={version}"
             conversions.append({"manifest": manifest, "table": kind, "alias": alias, "package": name,
