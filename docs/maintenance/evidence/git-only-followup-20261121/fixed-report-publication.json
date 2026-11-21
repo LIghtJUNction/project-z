@@ -1,0 +1,152 @@
+{
+  "schema": "project-z.git-only-release-report-publication.v1",
+  "observed_at_utc": "2026-11-21T09:24:11.822Z",
+  "knowledge_cutoff_utc": "2026-11-21T09:03:55.489Z",
+  "repository": "LIghtJUNction/project-z",
+  "branch": "coord/git-source-policy-20261120",
+  "commit": "14cd62c8a69eca18877d252a2f4f423f48ca8bea",
+  "parent": "d7dbbf5dc0141d0184c960f57d719694228570b2",
+  "tree": "d94baf96e2899cdbcf8096ce4d060b575538ec21",
+  "pull_request": {
+    "number": 7,
+    "url": "https://github.com/LIghtJUNction/project-z/pull/7",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "head": "14cd62c8a69eca18877d252a2f4f423f48ca8bea",
+    "body_exact": true,
+    "prior_body_preserved": true
+  },
+  "files": [
+    {
+      "path": "docs/maintenance/2026-11-21-git-only-release-staging.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 16369,
+      "sha256": "dadcecbddc9d07e088e4ea0e5a31d28d74f45368bb7b3d5336fcd1c1f4d0dbde",
+      "git_blob": "414e48aa7d9e82eb4c7fcffc6d33621d3cce84c8",
+      "full_text_readback_equal": true
+    },
+    {
+      "path": "docs/maintenance/2026-11-21-git-only-release-staging.md",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 12838,
+      "sha256": "9e0fad27798108220fe06d1e0dc37d9647c4db0f438201eaebb4ec49b815e83b",
+      "git_blob": "46e4842af1ab36edb7504c4ce4d055821dc24106",
+      "full_text_readback_equal": true
+    },
+    {
+      "path": "docs/maintenance/evidence/git-only-release-staging-20261121/ssmcp-final-source-publication.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 1333,
+      "sha256": "f0dab36073be99fe47ea972ad6cd8ed573450f2bff2d9baefcad9da016694b6f",
+      "git_blob": "944798909cf7fbe3aa5d9d72f434e69e9c58690a",
+      "full_text_readback_equal": true
+    },
+    {
+      "path": "docs/maintenance/evidence/git-only-release-staging-20261121/ssmcp-gate15-unrun-fixture-followup.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 1653,
+      "sha256": "9feede22a7c677780d36cf196d9dd5a1f2d4ced60fe38c771d09b597c6887bbe",
+      "git_blob": "d52f11346534a08a60c503638b3c0a46a203ea72",
+      "full_text_readback_equal": true
+    },
+    {
+      "path": "docs/maintenance/evidence/git-only-release-staging-20261121/zcall-publication-readback.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 3819,
+      "sha256": "296da5dfe0e492900ba8e7d72c72f0152fe87382ee32503b97bd47f55b92ecc3",
+      "git_blob": "b32f4ccc4def5a7fad7215b30aa4039cc8590609",
+      "full_text_readback_equal": true
+    },
+    {
+      "path": "docs/maintenance/evidence/git-only-release-staging-20261121/zharness-audit-publication-readback.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 3674,
+      "sha256": "fbba151d2755be70c0e168720947b52b7d4d10da288d4c8288f2993343f9b19d",
+      "git_blob": "17faeda1856ae82721d85e38f96b4dff6bf4caa1",
+      "full_text_readback_equal": true
+    },
+    {
+      "path": "docs/maintenance/evidence/git-only-release-staging-20261121/zharness-r2-to-r3.patch",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 398,
+      "sha256": "8bddf0bbe2fce3b97d24d6d9c1feaba4442db6b2918cd7dba10366a4603ee607",
+      "git_blob": "ad8eea08d0b6c6980fb7ffb48c59f5bc55cfc057",
+      "full_text_readback_equal": true
+    },
+    {
+      "path": "docs/maintenance/evidence/git-only-release-staging-20261121/zharness-r3-handoff.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 5765,
+      "sha256": "1f7d42ecc75857dae0dba9e92f423a80f4384ffda33c9318f9dbd62fcfd29345",
+      "git_blob": "ccbb0dd25c1e5a5792c236f1b422dd358832b6a0",
+      "full_text_readback_equal": true
+    },
+    {
+      "path": "docs/maintenance/evidence/git-only-release-staging-20261121/zharness-r3-independent-review.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 8676,
+      "sha256": "1bb16f3d237310685dd9a036ba6efe029b9bdb1d4d43cfe11c6dd26af5568785",
+      "git_blob": "eb3a5004c19b00500cd3f44d91c03da4ab400af3",
+      "full_text_readback_equal": true
+    },
+    {
+      "path": "docs/maintenance/evidence/git-only-release-staging-20261121/zharness-r3-stderr.log",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 5903,
+      "sha256": "a6160c08d6f07152355ad86417a156fe6d6045dbbc3f2338d5027f7052a74e55",
+      "git_blob": "1134613cec8c2d5462f79f677f03bd81f156a5f3",
+      "full_text_readback_equal": true
+    },
+    {
+      "path": "docs/maintenance/evidence/git-only-release-staging-20261121/zharness-release-publication-readback.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 3711,
+      "sha256": "08805b8af6f162bdf5090880f548e6e3a2db60107dc667a6d189eda530283335",
+      "git_blob": "9fc8396e8e6c93d6a357c1e48a18d24bf4f84d34",
+      "full_text_readback_equal": true
+    },
+    {
+      "path": "docs/maintenance/evidence/git-only-release-staging-20261121/zmcpio-publication-readback.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 4257,
+      "sha256": "748624c26d3703cdd22384af5ef700cf404eb3272848ae69052dce8798d3d177",
+      "git_blob": "963f2b65048a84cf99098d7c14d343d5885c3340",
+      "full_text_readback_equal": true
+    },
+    {
+      "path": "docs/maintenance/evidence/git-only-release-staging-20261121/zplugin-publication-readback.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 5910,
+      "sha256": "c61c1be507903a5ecb77ef5faf25c4fe985f6b021c05e73abcc665b3d1179b65",
+      "git_blob": "f13408abefe38f70cebdca2498f512b421d3c75e",
+      "full_text_readback_equal": true
+    }
+  ],
+  "total_bytes": 74306,
+  "old_leaves_preserved": 489,
+  "new_leaves": 13,
+  "total_leaves": 502,
+  "full_raw_readbacks_exact": true,
+  "independent_review": {
+    "reviewer": "personal repository reviewer",
+    "blockers": 0,
+    "full13files": true
+  },
+  "default_main_modified": false,
+  "report_preparation_added_tests": false,
+  "doc_v10": "awaiting actual report commit handoff"
+}

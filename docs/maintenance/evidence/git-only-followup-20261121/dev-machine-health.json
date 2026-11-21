@@ -1,0 +1,34 @@
+{
+  "schema": "project-z.developer-machine-resource-observation.v1",
+  "observed_at_utc": "2026-11-21T09:27:54.745882+00:00",
+  "memory_bytes": {
+    "MemTotal": 16476704768,
+    "MemAvailable": 4539777024,
+    "SwapTotal": 40529100800,
+    "SwapFree": 22970441728
+  },
+  "loadavg": [
+    6.25634765625,
+    6.54443359375,
+    7.20556640625
+  ],
+  "disks": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB",
+      "total": 1000203091968,
+      "free": 387023847424
+    },
+    {
+      "path": "/var/tmp/project-z-cargo-target",
+      "total": 1023133351936,
+      "free": 732169867264
+    }
+  ],
+  "source": "direct /proc/meminfo, os.getloadavg and shutil.disk_usage via authorized SSMCP client",
+  "native_job": "26c4545eae1eab8d27485f4a48077d3c-eb4",
+  "actual_exit_code": 0,
+  "both_eof": true,
+  "heavy_work_started": false,
+  "does_not_prove_global_idle_or_target_lock_release": true,
+  "ztype_v2": "still unstarted and unqueued; original SSMCP owner retains shared target window"
+}
