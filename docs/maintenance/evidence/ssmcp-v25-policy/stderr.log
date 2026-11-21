@@ -1,0 +1,16 @@
+test_build_only_never_deploys_even_when_requested (__main__.DeploymentPolicyTests.test_build_only_never_deploys_even_when_requested) ... ok
+test_deferred_version_cannot_be_deployed_by_tag_or_dispatch (__main__.DeploymentPolicyTests.test_deferred_version_cannot_be_deployed_by_tag_or_dispatch) ... ok
+test_dispatch_accepts_exact_boolean_choices_for_old_or_new_tags (__main__.DeploymentPolicyTests.test_dispatch_accepts_exact_boolean_choices_for_old_or_new_tags) ... ok
+test_invalid_deployment_inputs_fail_before_writing_an_output (__main__.DeploymentPolicyTests.test_invalid_deployment_inputs_fail_before_writing_an_output) ... ok
+test_legacy_tag_without_deployment_output_keeps_the_default (__main__.DeploymentPolicyTests.test_legacy_tag_without_deployment_output_keeps_the_default) ... ok
+test_malformed_input_containers_fail_before_writing_an_output (__main__.DeploymentPolicyTests.test_malformed_input_containers_fail_before_writing_an_output) ... ok
+test_missing_or_invalid_publication_output_never_enables_deployment (__main__.DeploymentPolicyTests.test_missing_or_invalid_publication_output_never_enables_deployment) ... ok
+test_missing_or_malformed_version_cannot_bypass_deferral (__main__.DeploymentPolicyTests.test_missing_or_malformed_version_cannot_bypass_deferral) ... ok
+test_other_versions_keep_existing_deployment_selection (__main__.DeploymentPolicyTests.test_other_versions_keep_existing_deployment_selection) ... ok
+test_policy_appends_one_result_without_replacing_existing_outputs (__main__.DeploymentPolicyTests.test_policy_appends_one_result_without_replacing_existing_outputs) ... ok
+test_tag_push_preserves_automatic_deployment (__main__.DeploymentPolicyTests.test_tag_push_preserves_automatic_deployment) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.587s
+
+OK

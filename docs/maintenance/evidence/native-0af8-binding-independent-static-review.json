@@ -1,0 +1,314 @@
+{
+  "schema": "project-z.native-0af8-binding.independent-static-review.v1",
+  "reviewed_at_utc": "2026-11-21T01:44:59.117896+00:00",
+  "reviewer": "Core; independent static reader of c906 prepared adapter and original Core job882 records",
+  "decision": {
+    "status": "no_material_static_blocker_found",
+    "blocking_findings": [],
+    "material_inconsistencies": [],
+    "meaning": "The fixed package is suitable for the separately authorized single read-only validation and three one-location schema contracts after native-copy readiness is confirmed. This review is not an execution result or P1 approval."
+  },
+  "scope": {
+    "candidate_modules_imported": false,
+    "candidate_code_or_contracts_executed": false,
+    "native_validator_or_product_run": false,
+    "new_native_source_or_elf_reads": false,
+    "lock_acquisition_or_process_action": false,
+    "source_ref_drive_or_prepared_package_writes": false,
+    "only_outputs_written": [
+      "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-binding-independent-static-review.json",
+      "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-binding-independent-static-review.md"
+    ],
+    "method": "Read complete adapter and runner, inspect the reused Evidence implementation and import-level AST, compare the entire 733-line baseline patch, parse and hash only existing ZIP/JSON/raw-log evidence. Personal independently reviewed the three negative-case definitions."
+  },
+  "package_integrity": {
+    "archive": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-binding-readonly-prepared-v1.zip",
+      "bytes": 258329,
+      "sha256": "89e216148dde0bb64a3a14196c14b7293b3c8dfce9a884ac8637a4ea2267ccf9"
+    },
+    "manifest": {
+      "path": "manifest.json",
+      "bytes": 3363,
+      "sha256": "f84e770a5e3cb0a1d0de7d7b778397d81177eb1f6e8b69bde6ecb430debd3c33"
+    },
+    "members": 15,
+    "payloads": 14,
+    "payload_sizes_sha256_and_expanded_bytes_match": true,
+    "crc_errors": null,
+    "nested_original_archive": {
+      "path": "text-evidence-0af8.zip",
+      "bytes": 163136,
+      "sha256": "0607343a03c0316c05d5813a4dbdbf2d873ba83a5329c459681d3d8cd5cc0172"
+    },
+    "nested_original_equals_core_archive_byte_for_byte": true,
+    "nested_members": 70,
+    "nested_payloads": 69,
+    "nested_manifests": 1,
+    "prepared_flags": {
+      "execution_allowed": false,
+      "p1_execution_authorized": false,
+      "contracts_run": false,
+      "actual_native_validator_run": false
+    },
+    "native_copy_readiness": "Not established by this cloud review. Prepared plan still records native_package_created=false and output_directory_created=false."
+  },
+  "controls": {
+    "native_git_binding.py": {
+      "path": "candidate/native_git_binding.py",
+      "bytes": 56548,
+      "sha256": "d131dbc547846b8a5ae9cfd2af10d630ff4fcc59cf6b8310a112cc04e57c8116"
+    },
+    "baseline_native_git_binding.py": {
+      "path": "baseline/native_git_binding.py",
+      "bytes": 39577,
+      "sha256": "57eea7dafabba6db76d1b2ac4ca3922bc7584715330b376b50b4dde8679248de"
+    },
+    "reviewed_evidence_reader_25c59.py": {
+      "path": "candidate/reviewed_evidence_reader_25c59.py",
+      "bytes": 41707,
+      "sha256": "25c59c56aef77ea780ce396d684bc40e727a49c0e0e55daf8f4df97aaa4e2bea"
+    },
+    "validate_readonly_once.py": {
+      "path": "candidate/validate_readonly_once.py",
+      "bytes": 6215,
+      "sha256": "f4ba29a48842f8fda51de9991b66c45987302cc913b5699004d8b8d13b0969ba"
+    },
+    "test_new_schema_contracts.py": {
+      "path": "candidate/test_new_schema_contracts.py",
+      "bytes": 6580,
+      "sha256": "feb83d95e964610cb4ceea9be046914c4f4857a2f7da43b14d3f6a712046f9e1"
+    },
+    "execution-job882-readback.json": {
+      "path": "candidate/execution-job882-readback.json",
+      "bytes": 6690,
+      "sha256": "bc6826b02aad7abf7793cb3536c6825de602c2ac4ffe7c57daacee2276cfa18e"
+    },
+    "implementation.patch": {
+      "path": "implementation.patch",
+      "bytes": 51453,
+      "sha256": "a02d007391958c67b83245d3c4d6529c3a8545446f289fcbb07799ccee160cca"
+    },
+    "readonly-input-manifest.json": {
+      "path": "readonly-input-manifest.json",
+      "bytes": 102413,
+      "sha256": "26ae4d804bc1b99628989b507594475fda4af05d545178edb1c2a9d669a6b023"
+    },
+    "readonly-run-plan.json": {
+      "path": "readonly-run-plan.json",
+      "bytes": 6510,
+      "sha256": "568c4103d483af485a6b5c891a08fb37c39956cb2515857316e708f31bbcc40f"
+    }
+  },
+  "patch_review": {
+    "exact_unified_diff_reconstructed": true,
+    "lines": 733,
+    "unchanged_ast_definitions": [
+      "PendingNativeGate",
+      "_pairs",
+      "git_object",
+      "json_bytes",
+      "same_json",
+      "sha256",
+      "source_tree",
+      "validate_compiler",
+      "validate_curl_log",
+      "validate_native_gate"
+    ],
+    "changed_definitions": [
+      "expected_commands",
+      "inspect_native_gate",
+      "require",
+      "validate_commands",
+      "validate_execution_projection",
+      "validate_manifest",
+      "validate_metadata",
+      "validate_rust_log",
+      "validate_source_files",
+      "validate_text_evidence"
+    ],
+    "added_definitions": [
+      "cargo_running",
+      "validate_workspace_compilation"
+    ],
+    "removed_definitions": [],
+    "changes": [
+      "Fixed source, paths, package0.4.4, job882 and every evidence hash replace the d531 identities; no fallback to old receipts.",
+      "Exact source schema changes from218 old leaves to220 actual leaves; git_sha plus bytes/SHA declarations are translated explicitly, with the original safe tree reconstruction retained.",
+      "Cargo -vv parent displays are bound to unique fresh=false compiler artifacts, locked metadata package/source/profile and actual execution environment before named test results are counted.",
+      "Actual workspace-wrapper invocations and two root Clippy calls are bound to the original raw Cargo logs and sidecars.",
+      "Original nonblocking launcher and three parent/kernel-row/matching-FD observations replace the old waiting-launcher/EAGAIN-probe schema. The old probe was not performed in882 and is not borrowed.",
+      "New handoff source/execution/validation projections and complete2000-byte job stream replace the old embedded-gate schema; all final P1 admission flags remain false."
+    ],
+    "assertion_comparison": "No unsupported weakening found in the fixed-input successor. Schema-specific removed fields are replaced by exact new original record/hash checks rather than accepted generically."
+  },
+  "fixed_native_source": {
+    "revision": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+    "base": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+    "version": "0.4.4",
+    "source_root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source",
+    "gui": "d491b627223807da7b2929f3feea7461393d124c",
+    "compat": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+    "tracked_leaves": 220,
+    "blob_declarations": 213,
+    "gitlinks": 7,
+    "modes": {
+      "100644": 195,
+      "160000": 7,
+      "100755": 18
+    },
+    "input_manifest_213_declarations_equal_original_manifest": true,
+    "future_reader_behavior": "Check each regular tracked file and its nonsymlink parents, executable mode, stable identity, Git blob, and bytes/SHA from the same read; gitlinks remain commit identities, not invented subtree coverage.",
+    "actual_native_source_reread_in_this_review": false
+  },
+  "original_text_and_job_binding": {
+    "input_manifest_records": 37,
+    "all_37_unique_original_paths_and_archive_members": true,
+    "all_37_size_sha_match_original_zip": true,
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-882",
+    "start_and_completion_argv_equal": true,
+    "new_readback_snapshot_equals_original_completion": true,
+    "stdout_bytes": 2000,
+    "stdout_sha256": "469b4a99d613f7f8d6b334447fe652368aac22d6fdf1f6f080937d4275a51d59",
+    "stderr_bytes": 0,
+    "raw_base64_cursor_eof_and_no_truncation_match": true,
+    "stdout_json_lines": 23,
+    "exact_ordered_command_projections": 22,
+    "final_stdout_projection_equals_fixed_source_tree_binary": true,
+    "actual_exit_code": 0,
+    "supervisor_duration_ms": 71635,
+    "invocation_id": "1018aea0b906485888a3871b87cd652a",
+    "scope_memory_boundary": "426926080 bytes is the original mid-run initial-scope observation. No final peak is inferred."
+  },
+  "recorded_product_scope_not_rerun": {
+    "commands": 22,
+    "rust_parent_counts": [
+      93,
+      7,
+      15,
+      0,
+      3,
+      0,
+      0,
+      32,
+      15,
+      3,
+      2,
+      9,
+      3
+    ],
+    "rust_passed": 182,
+    "rust_ignored": 0,
+    "listener_tests": 7,
+    "listener_tests_are_subset_of182": true,
+    "actual_root_clippy_calls": 2,
+    "strict_clippy_flags_source": "Exact original Cargo argv; not a claim that every child line repeats all flags.",
+    "actual_curl_cases": 8,
+    "curl_skipped": 0,
+    "metadata_packages": 19,
+    "workspace_packages": 10,
+    "git_packages": 5,
+    "git_repositories": 4,
+    "registry_packages": 4,
+    "old_d531179_or218_source_inventory_not_reused": true,
+    "new_runtime_results_created": 0
+  },
+  "compiler_and_cli_boundary": {
+    "actual_root_rustc_source_and_stage_bound": true,
+    "release_cargo_artifact_fresh": false,
+    "owned_cli": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/zcalld",
+      "bytes": 2964896,
+      "sha256": "dbe2db6d7130a7751616162fe503468c5f77df0ee7b9c517cd690c2d0e95c63b"
+    },
+    "profile": "release",
+    "chain": "Hash-pinned raw wrapper cwd/argv and actual Cargo -vv output identify the root release compile; fresh=false Cargo executable is tied to the original driver copy under the observed outer lock, its byte equality check and immutable owned size/SHA. Future Evidence.artifact reads that owned file; it does not execute it or read the mutable shared-target executable.",
+    "separate_rustc_link_out_dir_elf_hash_present": false,
+    "this_reviewer_rehashed_any_elf": false,
+    "native_cli_is_ssmcp_dependency_proof": false
+  },
+  "lock_and_cleanup_boundary": {
+    "one_original_nonblocking_outer_flock": true,
+    "three_original_observations": [
+      "start",
+      "artifact_copy",
+      "driver_finish"
+    ],
+    "original_flock_pid": 3732615,
+    "matching_parent_fds": [
+      "3"
+    ],
+    "inode": 63537699,
+    "recorded_stat_device": 34,
+    "recorded_proc_device": "00:20",
+    "device_equality_claimed": false,
+    "note": "Both original device representations are preserved. The producer matched its parent FD stat identity with the lock path. The adapter does not invent numerical equality or add a lock probe.",
+    "cleanup_original": {
+      "archive_path": "postflight.json",
+      "bytes": 1080,
+      "sha256": "5a361d61ff5b7866195589b1b31ca7de8c3665bd98755d7e2a577b58c41ab6f8"
+    },
+    "owned_scope_and_pids_released_in_original": true,
+    "foreign_holder_at_original_postflight": 3756319,
+    "global_lock_free_at_original_postflight": false,
+    "cleanup_implementation_scope": "The adapter hash-binds the complete handoff containing cleanup descriptors and truthful foreign-holder flags, but does not separately parse postflight.json. This review read that original and Personal runtime review; native proof is not a fresh cleanup or present lock-availability certificate.",
+    "current_global_lock_availability_claimed": false
+  },
+  "side_effect_and_runner_review": {
+    "adapter_and_reader_top_level": "Only stdlib imports, inert constant/path construction and definitions; no import-time original reads, subprocesses, locks or product execution.",
+    "runner_main_guarded": true,
+    "hash_pinned_module_loads": 2,
+    "native_validation_calls": 1,
+    "ssmcp_validator_calls": 0,
+    "no_git_cargo_cli_model_subprocess_lock_acquisition_signal_or_deletion_path": true,
+    "allowed_output_directory": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-validation-v1",
+    "output_creation": "Exact --out required; resolved owned root; new directory with exist_ok=false; exclusive xb outputs with0400 mode. Existing failed/successful output is retained and rejected, not overwritten.",
+    "allowed_outputs": [
+      "proof.json",
+      "receipt.json"
+    ],
+    "exception_behavior": "Failure is recorded in the new receipt; no retry, cleanup deletion or product fallback.",
+    "after_validation_control_rechecks": 3,
+    "second_full_source_pass_claimed": false,
+    "candidate_native_admissibility_not_final_p1": {
+      "execution_allowed": false,
+      "p1_admissible": false,
+      "p1_execution_authorized": false
+    },
+    "ssmcp_dependency_separation": "Runner uses only unchanged reader.Evidence and never calls validate_ssmcp_gate; reader EXECUTION_ALLOWED=false and FINAL_BINDING=None are checked. Historical SSMCP dependency constants are not promoted by the native CLI proof."
+  },
+  "independent_negative_contract_review": {
+    "descriptor": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-native-0af8-schema-contracts-static-review.json",
+      "bytes": 8410,
+      "sha256": "d6788cb9b95bd75aa44a66ed95a6a30495b803483fa0226629c264b499729669"
+    },
+    "reviewer": "Personal",
+    "blocking_findings": 0,
+    "count": 3,
+    "status": "statically_reviewed_not_executed",
+    "cases": [
+      "Borrowed known compiler artifact is rejected by package/source/profile identity.",
+      "A byte declaration changed5→6 is rejected against the same verified file read.",
+      "Truncated stdout with a matching shortened cursor/base64 cannot borrow the completed snapshot."
+    ],
+    "false_positive_guard": "Each correct baseline is checked by the same validator outside assertRaisesRegex. All setup/lookup/mutation steps are outside each expected-error block, which contains only the target call."
+  },
+  "original_runtime_independent_review": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-zcalld-0af8-runtime-independent-review.json",
+    "bytes": 17845,
+    "sha256": "2d802419058c52c9061b2c10dfc7e396d4734fd3d3291ff86aaa11c94b8cf3c8"
+  },
+  "remaining_steps_owned_elsewhere": [
+    "c906 confirms exact native package copy/modes/hashes and absence of the new output directory.",
+    "After separate authorization, run the prepared read-only validator once and the three contracts in one location; preserve actual outputs and failures.",
+    "The native acceptance owner separately binds SSMCP source/dependencies and final P1; this package and static review authorize no product run."
+  ],
+  "not_established": [
+    "Actual new adapter or contract success",
+    "Fresh native source or CLI byte verification by this reviewer",
+    "Current global lock availability",
+    "Final SSMCP selected32/Gate10/P1, release, PR merge or final dependency graph"
+  ]
+}

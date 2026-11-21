@@ -1,0 +1,20 @@
+{
+  "schema": "project-z.ssmcp-v25-metadata-evidence-delivery.v1",
+  "verified_at_utc": "2026-11-21T01:36:13.421425+00:00",
+  "source": "f4e6ff043eef6686a9013750ffcb8ab66926b9d4",
+  "tree": "d6546dd46464ac1cbb1c3aabc0493638a44649f7",
+  "status": "metadata_and_existing_policy_tests_only",
+  "policy_passed": 11,
+  "product_build_runtime_final_P1_executed": false,
+  "drive_id": "1CxxtroyjbkWwXCmEWoYxbvbnJmsSoG4V",
+  "drive_url": "https://drive.google.com/file/d/1CxxtroyjbkWwXCmEWoYxbvbnJmsSoG4V/view",
+  "bytes": 27173,
+  "sha256": "9c3c3fe1af6c7e1313d7d2701fc5fb2ab04535f5bbc863dad319129a5fa36cc3",
+  "payloads": 11,
+  "members": 12,
+  "complete_download_verified": true,
+  "every_payload_verified": true,
+  "independent_review_bytes": 13215,
+  "independent_review_sha256": "191d13a95f322bab28bd7d880dd80e41db2e046a59e86b8d621ced0c68fdd359",
+  "frozen_b572_report_modified": false
+}

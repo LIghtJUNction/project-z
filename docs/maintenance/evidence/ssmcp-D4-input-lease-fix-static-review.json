@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "title": "SSMCP D4 input lease fix — independent fixed-source review",
+  "observed_at_utc": "2026-11-21 01:36:40 UTC",
+  "verdict": {
+    "static_blockers": 0,
+    "scope": "F2→D4 ancestry and the exact storage.rs/test/doc delta only",
+    "runtime_validated_by_this_review": false,
+    "historical_F2_root_cause_retroactively_confirmed": false,
+    "ready_to_claim_V25_or_other_candidate_pass": false
+  },
+  "identity": {
+    "D4": "d4c4b9c6fe09a4d7b246ca54a08f5c7b258289fb",
+    "tree": "c64ea74cfb85474f05dd2c8bb3c834c73d10b08e",
+    "public_main_observed": "f33ed8f14fc14aff05a2e4098743eb07e8527c06",
+    "manifest_version": "0.10.24",
+    "rust_version": "1.100",
+    "ancestry": [
+      {
+        "sha": "f2ce882245e8fb3480b0a3172f1b1283f47af20f",
+        "role": "F2 original failed-run identity"
+      },
+      {
+        "sha": "224c2338b3170ebdfe4dde4d4835e5dedb813194",
+        "parent": "f2ce882245e8fb3480b0a3172f1b1283f47af20f",
+        "role": "One new Unix test, +25/-0 in storage.rs"
+      },
+      {
+        "sha": "10fdc1c10888c59799bb98908911033bacc3f046",
+        "parent": "224c2338b3170ebdfe4dde4d4835e5dedb813194",
+        "role": "Unix InputLease Drop, +13/-0 in storage.rs"
+      },
+      {
+        "sha": "d4c4b9c6fe09a4d7b246ca54a08f5c7b258289fb",
+        "parent": "10fdc1c10888c59799bb98908911033bacc3f046",
+        "role": "Release notes only, +3/-1"
+      }
+    ],
+    "corrected_fix_sha_note": "The supplied fix identifier omitted 089; GitHub ancestry gives 10fdc1c10888c59799bb98908911033bacc3f046. The supplied identifier returned 404; no alternative commit was assumed."
+  },
+  "delta": {
+    "merge_base": "f2ce882245e8fb3480b0a3172f1b1283f47af20f",
+    "ahead_by": 3,
+    "behind_by": 0,
+    "changed_files": [
+      {
+        "path": "docs/release-notes-0.10.24.md",
+        "blob": "e350d07daad137d6686bc1e25f16ad4dbb104db8",
+        "additions": 3,
+        "deletions": 1
+      },
+      {
+        "path": "src/computer/host_control/storage.rs",
+        "blob": "2b81a6559e7b9650bbb70266eed0c1039cdea821",
+        "additions": 38,
+        "deletions": 0
+      }
+    ],
+    "storage_structural_check": {
+      "drop_count": 1,
+      "new_test_block_count": 1,
+      "old_storage_exact_after_removing_two_insertions": true,
+      "storage_test_annotations_before": 4,
+      "storage_test_annotations_after": 5
+    },
+    "unchanged_files": [
+      {
+        "path": "src/computer/host_control.rs",
+        "F2": "e58f32e3fc5219e8ac1418479460e70f96e0461c",
+        "D4": "e58f32e3fc5219e8ac1418479460e70f96e0461c",
+        "equal": true
+      },
+      {
+        "path": "src/computer/host_control/tests.rs",
+        "F2": "dd386922e6dea2078f601fdf772c8fe4949f70f0",
+        "D4": "dd386922e6dea2078f601fdf772c8fe4949f70f0",
+        "equal": true
+      },
+      {
+        "path": "src/platform.rs",
+        "F2": "9fa766f8045ef38e8932abb5013e9988d88f5883",
+        "D4": "9fa766f8045ef38e8932abb5013e9988d88f5883",
+        "equal": true
+      },
+      {
+        "path": "Cargo.toml",
+        "F2": "c7119a7becd6daf3c74159879204cb699f20202e",
+        "D4": "c7119a7becd6daf3c74159879204cb699f20202e",
+        "equal": true
+      },
+      {
+        "path": "Cargo.lock",
+        "F2": "3b71ea185e01567058877b5d6767ffc2dccc759c",
+        "D4": "3b71ea185e01567058877b5d6767ffc2dccc759c",
+        "equal": true
+      },
+      {
+        "path": "src/client/terminal/events.rs",
+        "F2": "47645d8962054b22c0fde2c9f160d68af3b387b8",
+        "D4": "47645d8962054b22c0fde2c9f160d68af3b387b8",
+        "equal": true
+      },
+      {
+        "path": "src/client/terminal/events/source_tests.rs",
+        "F2": "7124bd2d0d0e77461db15e8cbfbebfa3acf8202f",
+        "D4": "7124bd2d0d0e77461db15e8cbfbebfa3acf8202f",
+        "equal": true
+      }
+    ]
+  },
+  "findings": [
+    {
+      "topic": "Correct final-lease scope",
+      "result": "No static blocker",
+      "evidence": "storage.rs:54-65; unchanged host_control.rs/tests.rs blobs",
+      "reason": "Unlock is attached to InputLease destruction, before automatic File close. No unlock was added to off, revoke, ticket cancellation, or HostControl::run. Existing release-guard retention and cancellation ordering code remain byte-identical."
+    },
+    {
+      "topic": "Unix boundary and syscall contract",
+      "result": "No static blocker",
+      "evidence": "#[cfg(unix)] on Drop and new test; storage.rs:59-62; Rust File::unlock docs",
+      "reason": "On the inspected Rust standard library contract, File::unlock maps to Unix flock(LOCK_UN), matching the existing platform::lock_file flock acquisition. Interrupted errors retry; success ends the loop. Other errors break and allow ordinary field destruction. No Windows Drop behavior was added. API stable since 1.89; crate requires 1.100."
+    },
+    {
+      "topic": "Failure branch boundary",
+      "result": "Not newly runtime-validated",
+      "evidence": "storage.rs:59-62",
+      "reason": "The new test covers successful unlock and retained-descriptor behavior; it does not inject Interrupted or other unlock errors. Non-Interrupted errors are not reported by Drop and fall back to File destruction. This is an explicit coverage boundary, not evidence of a new failure."
+    },
+    {
+      "topic": "One deterministic new case",
+      "result": "No weakening found",
+      "evidence": "storage.rs:418-441",
+      "reason": "try_clone retains the same open file description without launching a child. Assertions require exclusion while old lease lives; immediate acquisition after old lease drop despite the retained File; continued exclusion after closing that old File while the new lease lives; acquisition after new lease drop. No sleep, retry-based success, ignored annotation, reduced assertion or environment early-return was added."
+    },
+    {
+      "topic": "Original failure/guard contract",
+      "result": "Preserved",
+      "evidence": "host_control/tests.rs blob dd386922e6dea2078f601fdf772c8fe4949f70f0 unchanged",
+      "reason": "The original off_drops_running_input_before_its_guard_is_released test and its final immediate try_input assertion remain unchanged. Removing the exact 13-line Drop and 25-line new test from D4 storage.rs reconstructs F2 storage.rs exactly."
+    },
+    {
+      "topic": "Image fix and later docs",
+      "result": "Identity separated",
+      "evidence": "events.rs and source_tests.rs F2/D4 blobs identical; X→D4 only release-notes file",
+      "reason": "The image fix already present in F2 is carried into D4 without an additional change in this chain. This review does not independently re-validate image runtime behavior."
+    }
+  ],
+  "test_count_accounting": {
+    "new_test_functions": 1,
+    "new_test_name": "computer::host_control::storage::tests::input_lease_drop_unlocks_while_an_inherited_descriptor_stays_open",
+    "new_test_cfg": "unix",
+    "storage_plain_test_count_before": 4,
+    "storage_plain_test_count_after": 5,
+    "F2_observed": {
+      "selected": 2047,
+      "passed": 2023,
+      "failed": 1,
+      "ignored": 23
+    },
+    "D4_owner_reported": {
+      "passed": 2025,
+      "failed": 0,
+      "ignored": 23,
+      "total_from_summary": 2048,
+      "cli_passed": 27,
+      "release_binaries_reported": true,
+      "individual_output_complete": false,
+      "native_directory": "/var/tmp/ssmcp-controls-20261121/final-validation-0.10.24/20261121T010434Z"
+    },
+    "interpretation": "Exactly one added source test. With the reported full-library selection, the +2 passed delta consists of one new test plus the formerly failing test becoming successful; it is not two newly added tests. This review does not independently assert per-test D4 execution because individual_output_complete is false and raw D4 runtime collection was intentionally not expanded.",
+    "transfer_boundary": "D4-only owner-reported run; not V25, V/C or other source acceptance."
+  },
+  "execution_boundary": {
+    "product_tests": 0,
+    "builds": 0,
+    "source_or_ref_changes": 0,
+    "foreign_worktree_reads": 0,
+    "process_or_lock_operations": 0,
+    "new_agents": 0,
+    "historical_diagnosis_file_modified": false,
+    "normal_merge_owner": "Existing native source author; no second implementation or merge performed by this reviewer."
+  },
+  "references": [
+    {
+      "kind": "github_compare",
+      "url": "https://github.com/LIghtJUNction/ssmcp/compare/f2ce882245e8fb3480b0a3172f1b1283f47af20f...d4c4b9c6fe09a4d7b246ca54a08f5c7b258289fb"
+    },
+    {
+      "kind": "github_source",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/d4c4b9c6fe09a4d7b246ca54a08f5c7b258289fb/src/computer/host_control/storage.rs#L48-L72"
+    },
+    {
+      "kind": "github_test",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/d4c4b9c6fe09a4d7b246ca54a08f5c7b258289fb/src/computer/host_control/storage.rs#L418-L441"
+    },
+    {
+      "kind": "rust_standard_library",
+      "url": "https://doc.rust-lang.org/std/fs/struct.File.html#method.unlock",
+      "claim": "Unix LOCK_UN mapping and stability 1.89"
+    },
+    {
+      "kind": "linux_man_pages",
+      "url": "https://man7.org/linux/man-pages/man2/flock.2.html",
+      "claim": "Open-file-description lifetime and explicit unlock"
+    },
+    {
+      "kind": "rust_reference",
+      "url": "https://doc.rust-lang.org/reference/destructors.html",
+      "claim": "Custom Drop runs before field destruction"
+    },
+    {
+      "kind": "previous_independent_diagnosis",
+      "path": "ssmcp-F2-input-lease-independent-diagnosis.json",
+      "sha256": "5aabfc3d988bc5e7f1c1a32ea5022a0fb486014215268acaadf8e3933df4c195"
+    }
+  ]
+}

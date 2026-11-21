@@ -1,0 +1,415 @@
+{
+  "schema": "project-z.native-0af8-binding.actual-result-independent-review.v1",
+  "decision": {
+    "status": "actual_readonly_and_three_contract_results_consistent",
+    "blocking_findings": [],
+    "material_inconsistencies": [],
+    "meaning": "The preserved actual92c/92e records support three passing schema contracts and one successful read-only native-input validation. They do not record a new product, Cargo, model, PTY, selected32 or finalP1 run."
+  },
+  "scope": {
+    "reviewer": "Core",
+    "method": "Downloaded the exact Drive archive; hashed all payloads; compared request/start/completion/full streams and proof/receipt/maps against the previously reviewed package and original Core882 archive.",
+    "candidate_modules_imported_or_executed": false,
+    "contracts_or_validator_rerun": false,
+    "new_product_compile_or_native_operation": false,
+    "new_elf_read_or_copy": false,
+    "lock_or_process_actions": false,
+    "source_ref_drive_or_previous_review_mutations": false,
+    "only_created": "Local downloaded archive and read-only extraction; these two independent review files."
+  },
+  "drive_source": {
+    "file_id": "15iPC2lwbFIrBmsdVJJXuIb7h2tpxzGY-",
+    "url": "https://drive.google.com/file/d/15iPC2lwbFIrBmsdVJJXuIb7h2tpxzGY-/view?usp=drivesdk",
+    "mime_type": "application/zip",
+    "metadata_size": 66351,
+    "provider_modified_time": "2026-11-21T01:53:14.644Z",
+    "complete_download_matches_expected_sha256": true
+  },
+  "archive_checks": {
+    "members": 19,
+    "payloads": 18,
+    "manifest_count": 1,
+    "all_sizes_sha256_utf8_crc_and_extracted_bytes_match": true,
+    "extracted_directory_mode": "0500",
+    "extracted_file_modes": "0444",
+    "actual_streams_present_and_complete": true
+  },
+  "prepared_identity": {
+    "copied_manifest_equals_previous_original": true,
+    "preflight_job": {
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-92b",
+      "pid": 417440,
+      "duration_ms": 22,
+      "argv": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-c",
+        "<hash-only preflight script>"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "timeout_ms": 15000,
+      "request_start_status_equal": true,
+      "exit_code": 0,
+      "streams": {
+        "stdout": {
+          "bytes": 1627,
+          "sha256": "9fb4b6132cd4cf007197c7643adc41ea6475e0b0e42a10267b3ec731146b28f3",
+          "eof": true,
+          "truncated": false
+        },
+        "stderr": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "eof": true,
+          "truncated": false
+        }
+      }
+    },
+    "native_control_files": {
+      "native_git_binding.py": {
+        "bytes": 56548,
+        "sha256": "d131dbc547846b8a5ae9cfd2af10d630ff4fcc59cf6b8310a112cc04e57c8116",
+        "native_observed_mode": "0444"
+      },
+      "reviewed_evidence_reader_25c59.py": {
+        "bytes": 41707,
+        "sha256": "25c59c56aef77ea780ce396d684bc40e727a49c0e0e55daf8f4df97aaa4e2bea",
+        "native_observed_mode": "0444"
+      },
+      "execution-job882-readback.json": {
+        "bytes": 6690,
+        "sha256": "bc6826b02aad7abf7793cb3536c6825de602c2ac4ffe7c57daacee2276cfa18e",
+        "native_observed_mode": "0444"
+      },
+      "validate_readonly_once.py": {
+        "bytes": 6215,
+        "sha256": "f4ba29a48842f8fda51de9991b66c45987302cc913b5699004d8b8d13b0969ba",
+        "native_observed_mode": "0444"
+      },
+      "test_new_schema_contracts.py": {
+        "bytes": 6580,
+        "sha256": "feb83d95e964610cb4ceea9be046914c4f4857a2f7da43b14d3f6a712046f9e1",
+        "native_observed_mode": "0444"
+      }
+    },
+    "output_preflight": "Existing-output guard succeeded: the exact native output directory was absent.",
+    "historical_flags": "The copied preparation manifest retains original prepared/not-run flags. The new result manifest and receipts separately report actual execution; original preparation bytes were not rewritten.",
+    "package_archive": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-binding-readonly-prepared-v1.zip",
+      "bytes": 258329,
+      "sha256": "89e216148dde0bb64a3a14196c14b7293b3c8dfce9a884ac8637a4ea2267ccf9"
+    }
+  },
+  "actual_contracts": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-92c",
+    "pid": 420528,
+    "duration_ms": 78,
+    "argv": [
+      "/usr/bin/python3",
+      "-I",
+      "-B",
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-prepared-v1/candidate/test_new_schema_contracts.py",
+      "--evidence-root",
+      "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121"
+    ],
+    "cwd": "/home/lightjunction/Documents/GITHUB",
+    "timeout_ms": 60000,
+    "request_start_status_equal": true,
+    "exit_code": 0,
+    "streams": {
+      "stdout": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "eof": true,
+        "truncated": false
+      },
+      "stderr": {
+        "bytes": 563,
+        "sha256": "faf94d64e9080d37f1113ba37a57652a5f7203c84d220a53e8e5f6637376b6f0",
+        "eof": true,
+        "truncated": false
+      }
+    },
+    "selected_names": [
+      "test_verbose_test_execution_cannot_borrow_another_artifact",
+      "test_manifest_byte_claim_must_match_the_same_blob_read",
+      "test_complete_job_snapshot_cannot_cover_truncated_stream_bytes"
+    ],
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "raw_unittest_seconds": 0.03,
+    "actual_argv_equals_prepared_native_plan": true,
+    "scope": "Three evidence-parser rejection paths and their successful controls, not native listener behavior. Fixed script and positive-control placement were reviewed before execution."
+  },
+  "actual_readonly": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-92e",
+    "pid": 426182,
+    "duration_ms": 178,
+    "argv": [
+      "/usr/bin/python3",
+      "-I",
+      "-B",
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-prepared-v1/candidate/validate_readonly_once.py",
+      "--out",
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-validation-v1"
+    ],
+    "cwd": "/home/lightjunction/Documents/GITHUB",
+    "timeout_ms": 60000,
+    "request_start_status_equal": true,
+    "exit_code": 0,
+    "streams": {
+      "stdout": {
+        "bytes": 626,
+        "sha256": "27a3eaf6f8a22005ff0bb41c5b675a21adc23d645c35cb1b8623a3d4dd97163c",
+        "eof": true,
+        "truncated": false
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "eof": true,
+        "truncated": false
+      }
+    },
+    "identified_invocations": 1,
+    "actual_argv_equals_prepared_native_plan": true,
+    "receipt_interval_seconds": 0.138444,
+    "output_descriptors_match_stdout": true,
+    "receipt_argv_and_cwd_match_job": true,
+    "three_controls_before_after_equal": true,
+    "timing_note": "Unittest duration, runner interval and supervisor duration have different boundaries.",
+    "receipt": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-readonly-actual-result-evidence/receipt.json",
+      "bytes": 3246,
+      "sha256": "eaa88d170b4c1b5e0fa43418c65ad356b8a8bedc65d6737f47cc91de1de44d22"
+    },
+    "proof": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-readonly-actual-result-evidence/proof.json",
+      "bytes": 168614,
+      "sha256": "9e80b37871e98572fcbf196b386bab6bc03bf73ce8fd6921183328650c62f7ba"
+    },
+    "controls": [
+      {
+        "bytes": 41707,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-prepared-v1/candidate/reviewed_evidence_reader_25c59.py",
+        "sha256": "25c59c56aef77ea780ce396d684bc40e727a49c0e0e55daf8f4df97aaa4e2bea"
+      },
+      {
+        "bytes": 56548,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-prepared-v1/candidate/native_git_binding.py",
+        "sha256": "d131dbc547846b8a5ae9cfd2af10d630ff4fcc59cf6b8310a112cc04e57c8116"
+      },
+      {
+        "bytes": 6690,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-prepared-v1/candidate/execution-job882-readback.json",
+        "sha256": "bc6826b02aad7abf7793cb3536c6825de602c2ac4ffe7c57daacee2276cfa18e"
+      }
+    ],
+    "started_at": "2026-11-21T01:50:12.284854+00:00",
+    "finished_at": "2026-11-21T01:50:12.423298+00:00"
+  },
+  "proof_input_reconciliation": {
+    "source_blob_count": 213,
+    "source_entries_sha256_git_blob_mode_match_original_manifest": true,
+    "source_manifest_leaf_count": 220,
+    "gitlink_count": 7,
+    "gitlinks_identity_only": true,
+    "content_file_count": 251,
+    "content_count_breakdown": {
+      "original_text_files": 37,
+      "tracked_source_blobs": 213,
+      "original882_readback_supplement": 1
+    },
+    "evidence_file_count": 252,
+    "evidence_count_breakdown": {
+      "content_files": 251,
+      "owned_cli": 1
+    },
+    "exact_path_sets_and_every_hash_match_original_inputs": true,
+    "unexpected_paths_or_hashes": [],
+    "source_read_scope": "Each file was checked for stable metadata identity and exact Git/blob/hash declarations during its individual read. No second whole-tree pass or continuous whole-tree immutability claim.",
+    "reader_hashed_owned_cli_per_fixed_successful_path": true,
+    "reviewer_rehashed_cli": false,
+    "independent_internal_rustc_outdir_elf_hash_added": false,
+    "revision": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+    "source_root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source",
+    "owned_cli": {
+      "bytes": 2964896,
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/zcalld",
+      "sha256": "dbe2db6d7130a7751616162fe503468c5f77df0ee7b9c517cd690c2d0e95c63b"
+    }
+  },
+  "bound_original_product_evidence": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-882",
+    "scope": {
+      "commands": 22,
+      "curl_cases_passed": 8,
+      "historical_32_stage_rerun": false,
+      "listener_tests_passed": 7,
+      "p1_executed": false,
+      "rust_tests_passed": 182
+    },
+    "rust_parent_counts": [
+      93,
+      7,
+      15,
+      0,
+      3,
+      0,
+      0,
+      32,
+      15,
+      3,
+      2,
+      9,
+      3
+    ],
+    "each_parent_executable_and_test_name_list_equals_original_log": true,
+    "listener7_subset_of182": true,
+    "actual_original_root_clippy_calls": 2,
+    "compiler_artifact_equals_original_gate": true,
+    "compiler_fresh": false,
+    "curl_projection_equals_original8_cases": true,
+    "three_original_lock_observations_match882": true,
+    "product_suites_rerun_by92c_or92e": false,
+    "new_results_to_count": "Three schema contracts and one evidence validation; do not add182 or8 again.",
+    "compiler_package_id": "path+file:///home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source#zcalld@0.4.4"
+  },
+  "p1_and_ssmcp_boundary": {
+    "native_input_admissible": true,
+    "execution_allowed": false,
+    "p1_admissible": false,
+    "p1_execution_authorized": false,
+    "P1_EXECUTION_ALLOWED": false,
+    "P1_FINAL_BINDING": null,
+    "receipt_product_execution_allowed": false,
+    "receipt_p1_executed": false,
+    "ssmcp_validator_called": false,
+    "new_ssmcp_source_or_dependency_admission": false,
+    "final_p1_or_merge_authorized": false
+  },
+  "retained_limits": [
+    "owner_lock_independently_verified refers to original882 observations. The new read-only job did not acquire an outer lock or inspect current global ownership.",
+    "Postflight cleanup is not separately parsed by this adapter. Fixed handoff and original postflight/independent review retain foreign3756319 and no-current-global-lock-free boundaries.",
+    "No original182 Rust,8 curl, selected32, Cargo/build, model or PTY work was repeated by these new jobs.",
+    "This package does not contain or settle the separate C Gate failure or finalP1. This review authorizes no source/ref change or PR1 merge."
+  ],
+  "reviewed_at_utc": "2026-11-21T01:59:32.341178+00:00",
+  "archive": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-readonly-actual-result-evidence.zip",
+    "bytes": 66351,
+    "sha256": "2f9f806e44fd8c1530bd75aa69446ba2e70a0b6ddcb2c39b664a600d9266b1c8"
+  },
+  "payload_descriptors": [
+    {
+      "bytes": 1682,
+      "path": "preflight-request.json",
+      "sha256": "f445b622ec80ec6cf9181038c0e16242fb0c9b23a5525bb659819da4071c78e5"
+    },
+    {
+      "bytes": 2581,
+      "path": "preflight-start.json",
+      "sha256": "efffa2c2fd51b47450aa5f8e726a3db285d533afc549f6438d3b81dfc0b71c3b"
+    },
+    {
+      "bytes": 6831,
+      "path": "preflight-completion.json",
+      "sha256": "196e044289c9544b52c0b640a8a9298f49c0e4b63d0e27c88aaf62eff3553803"
+    },
+    {
+      "bytes": 500,
+      "path": "contracts-request.json",
+      "sha256": "5b6e44294abac605ac1ddb45e29d65d24bb9d3789b79a6180d8435b69e0ca8cc"
+    },
+    {
+      "bytes": 1401,
+      "path": "contracts-start.json",
+      "sha256": "0858a237a0ad428f54eda144acc256db313ede81087ba0a5d265a97087bf9853"
+    },
+    {
+      "bytes": 3094,
+      "path": "contracts-completion.json",
+      "sha256": "8c671986242cd1ed94f0830e6824816d9ac1cd5facb81e4dc3b12eb5b99d615b"
+    },
+    {
+      "bytes": 0,
+      "path": "contracts.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 563,
+      "path": "contracts.stderr.log",
+      "sha256": "faf94d64e9080d37f1113ba37a57652a5f7203c84d220a53e8e5f6637376b6f0"
+    },
+    {
+      "bytes": 548,
+      "path": "readonly-request.json",
+      "sha256": "518d684f6bd91ed07d751ee0cdd24ef0c805073bea7482acb87a12fd16951915"
+    },
+    {
+      "bytes": 1449,
+      "path": "readonly-start.json",
+      "sha256": "2ca70e31a1c340eabc44ca4d4a5ed2efa23477ad0cc32d10ead8a96014104ef9"
+    },
+    {
+      "bytes": 3317,
+      "path": "readonly-completion.json",
+      "sha256": "cd30e55e472d189db58fc26e9b4c0adbea6e43e780e3fd742bdb9e8236b37124"
+    },
+    {
+      "bytes": 626,
+      "path": "readonly.stdout.log",
+      "sha256": "27a3eaf6f8a22005ff0bb41c5b675a21adc23d645c35cb1b8623a3d4dd97163c"
+    },
+    {
+      "bytes": 0,
+      "path": "readonly.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 168614,
+      "path": "proof.json",
+      "sha256": "9e80b37871e98572fcbf196b386bab6bc03bf73ce8fd6921183328650c62f7ba"
+    },
+    {
+      "bytes": 3246,
+      "path": "receipt.json",
+      "sha256": "eaa88d170b4c1b5e0fa43418c65ad356b8a8bedc65d6737f47cc91de1de44d22"
+    },
+    {
+      "bytes": 1949,
+      "path": "result-summary.json",
+      "sha256": "4f9f42dc9056526a6bafded1f1ef15c42e4acc5fdcf7bdeae14ad53adef6ae81"
+    },
+    {
+      "bytes": 629,
+      "path": "prepared-package-reference.json",
+      "sha256": "4d2a78c44641ae9e6896c9666d8d37c93658a090686d145f24629043012cc5a8"
+    },
+    {
+      "bytes": 3363,
+      "path": "prepared-package-manifest.json",
+      "sha256": "f84e770a5e3cb0a1d0de7d7b778397d81177eb1f6e8b69bde6ecb430debd3c33"
+    }
+  ],
+  "linked_prior_reviews": {
+    "full_adapter_static": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-binding-independent-static-review.json",
+      "bytes": 14941,
+      "sha256": "bf2b9598fc77fb515f794067ef6ede5e6152b41ea5675fea54b692077d9568fa"
+    },
+    "three_contracts_static": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-native-0af8-schema-contracts-static-review.json",
+      "bytes": 8410,
+      "sha256": "d6788cb9b95bd75aa44a66ed95a6a30495b803483fa0226629c264b499729669"
+    },
+    "original882_independent": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-zcalld-0af8-runtime-independent-review.json",
+      "bytes": 17845,
+      "sha256": "2d802419058c52c9061b2c10dfc7e396d4734fd3d3291ff86aaa11c94b8cf3c8"
+    }
+  }
+}

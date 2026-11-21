@@ -1,0 +1,8 @@
+test_verbose_test_execution_cannot_borrow_another_artifact (__main__.NewSchemaContracts.test_verbose_test_execution_cannot_borrow_another_artifact) ... ok
+test_manifest_byte_claim_must_match_the_same_blob_read (__main__.NewSchemaContracts.test_manifest_byte_claim_must_match_the_same_blob_read) ... ok
+test_complete_job_snapshot_cannot_cover_truncated_stream_bytes (__main__.NewSchemaContracts.test_complete_job_snapshot_cannot_cover_truncated_stream_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.030s
+
+OK

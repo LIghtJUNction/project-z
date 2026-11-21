@@ -1,0 +1,44 @@
+{
+  "P1_EXECUTION_ALLOWED": false,
+  "P1_FINAL_BINDING": null,
+  "bound_original_gate_scope": {
+    "commands": 22,
+    "curl_cases_passed": 8,
+    "historical_32_stage_rerun": false,
+    "listener_tests_passed": 7,
+    "p1_executed": false,
+    "rust_tests_passed": 182
+  },
+  "boundaries": {
+    "cargo_product_pty_or_model_run": false,
+    "controls_integrity": "Only the three frozen adapter/reader/readback controls were reread after validation.",
+    "elf": "The frozen copied CLI was hashed by the existing adapter; no additional internal Cargo out-dir ELF digest was performed.",
+    "historical32_run": false,
+    "original_rust_or_curl_suite_rerun": false,
+    "p1_executed": false,
+    "postflight": "The adapter does not independently parse postflight cleanup semantics; cleanup provenance remains the fixed handoff, original postflight evidence, and independent review.",
+    "source_integrity": "Each of the 213 source blobs was checked within its individual read using metadata identity and hashes; there was no second whole-source pass and no continuous whole-tree immutability claim."
+  },
+  "controls_before_after_equal": true,
+  "evidence_file_count": 252,
+  "native_output": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-validation-v1",
+  "new_execution": {
+    "contracts": {
+      "failed": 0,
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-92c",
+      "passed": 3,
+      "seconds_from_raw_unittest": 0.03
+    },
+    "readonly": {
+      "exit_code": 0,
+      "invocations": 1,
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-92e"
+    }
+  },
+  "owner_lock_independently_verified": true,
+  "revision": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+  "schema": "ssmcp.native-0af8.readonly-validation-evidence.v1",
+  "source_blob_count": 213,
+  "source_tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+  "status": "passed_native_input_readonly_validation"
+}

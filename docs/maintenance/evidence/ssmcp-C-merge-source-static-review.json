@@ -1,0 +1,658 @@
+{
+  "schema_version": 1,
+  "title": "SSMCP C normal merge: fixed-source retention review",
+  "reviewed_at_utc": "2026-11-21 01:54:37 UTC",
+  "verdict": {
+    "material_source_merge_blockers": 0,
+    "product_gate_or_P1_acceptance": false,
+    "review_type": "Read-only immutable GitHub source/tree review",
+    "reporting_corrections": [
+      "1114 is the merged M/C leaf total, not V's leaf count or the count retained from V.",
+      "The whole repository changes three e2e helper files (canvas_logs, client_ui, dashboard), plus test_release from V metadata. A claim about only two changes requires its explicitly named seven-file subset."
+    ]
+  },
+  "identities": {
+    "C": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+    "C_tree": "bf393700928fd9aa37f2dea8b8683ebe13b114cd",
+    "M": "c0152934838f755453413975e31de2449a4398a9",
+    "M_tree": "e1850ac60f390f48b24fe79d5629f5e1c68af5e2",
+    "V": "f4e6ff043eef6686a9013750ffcb8ab66926b9d4",
+    "V_tree": "d6546dd46464ac1cbb1c3aabc0493638a44649f7",
+    "D4": "d4c4b9c6fe09a4d7b246ca54a08f5c7b258289fb",
+    "D4_tree": "c64ea74cfb85474f05dd2c8bb3c834c73d10b08e",
+    "B": "be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1",
+    "B_tree": "5e8ea273c8f8bd8b0e7b1f87ccc0d19fd594601b",
+    "FC": "fc06728a36d0b4d2920e1e2bc29885721ced5780",
+    "FC_tree": "088fe1cde36fe63a33df1f9b7cfb619ae5f8ee35"
+  },
+  "ancestry": {
+    "C_parents": [
+      "c0152934838f755453413975e31de2449a4398a9"
+    ],
+    "M_parents": [
+      "f4e6ff043eef6686a9013750ffcb8ab66926b9d4",
+      "d4c4b9c6fe09a4d7b246ca54a08f5c7b258289fb"
+    ],
+    "V_parents": [
+      "be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1"
+    ],
+    "C_after_M": "Only docs/release-notes-0.10.25.md changed; no product/helper change"
+  },
+  "tree_method": {
+    "source": "GitHub recursive tree API, immutable commits/trees; all responses truncated=false",
+    "leaf_definition": "type != tree, comparing path + type + mode + SHA; gitlinks count as leaves",
+    "directory_count_excluded": true,
+    "expanded_submodule_contents_included": false,
+    "counts": {
+      "B": {
+        "leaves": 1105,
+        "blobs": 1101,
+        "gitlinks": 4
+      },
+      "V": {
+        "leaves": 1106,
+        "blobs": 1102,
+        "gitlinks": 4
+      },
+      "M": {
+        "leaves": 1114,
+        "blobs": 1110,
+        "gitlinks": 4
+      },
+      "C": {
+        "leaves": 1114,
+        "blobs": 1110,
+        "gitlinks": 4
+      },
+      "D4": {
+        "leaves": 1105,
+        "blobs": 1101,
+        "gitlinks": 4
+      }
+    },
+    "C_and_M_tree_entries": {
+      "all": 1325,
+      "blobs": 1110,
+      "gitlinks": 4,
+      "directories": 211
+    },
+    "V_tree_entries": {
+      "all": 1316,
+      "blobs": 1102,
+      "gitlinks": 4,
+      "directories": 210
+    },
+    "retention": {
+      "M_equal_V": 1099,
+      "C_equal_V": 1098,
+      "M_changed_V_all_equal_D4": true,
+      "C_changed_V_except_notes_all_D4": true
+    },
+    "diff_counts": {
+      "B_V": {
+        "total": 6,
+        "added": 1,
+        "modified": 5,
+        "deleted": 0
+      },
+      "V_M": {
+        "total": 15,
+        "added": 8,
+        "modified": 7,
+        "deleted": 0
+      },
+      "M_C": {
+        "total": 1,
+        "added": 0,
+        "modified": 1,
+        "deleted": 0
+      },
+      "V_C": {
+        "total": 16,
+        "added": 8,
+        "modified": 8,
+        "deleted": 0
+      },
+      "D4_C": {
+        "total": 61,
+        "added": 9,
+        "modified": 52,
+        "deleted": 0
+      }
+    }
+  },
+  "exact_merge_delta": [
+    {
+      "path": "docs/release-notes-0.10.24.md",
+      "change": "modified",
+      "V": "8b11919cbe38d14bc59594a8b5c10443b027717e",
+      "M": "e350d07daad137d6686bc1e25f16ad4dbb104db8",
+      "D4": "e350d07daad137d6686bc1e25f16ad4dbb104db8",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    },
+    {
+      "path": "docs/reports/client-resources-2026-11-21/analysis-data.json",
+      "change": "added",
+      "V": null,
+      "M": "2503b31006e88b5c774e7631e6e9a43f91420b10",
+      "D4": "2503b31006e88b5c774e7631e6e9a43f91420b10",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    },
+    {
+      "path": "docs/reports/client-resources-2026-11-21/deliverable-manifest.json",
+      "change": "added",
+      "V": null,
+      "M": "a52e6c3d544da4a8b3f4f0d4f2e0aca3cdcc9bb9",
+      "D4": "a52e6c3d544da4a8b3f4f0d4f2e0aca3cdcc9bb9",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    },
+    {
+      "path": "docs/reports/client-resources-2026-11-21/original-deliverable-manifest.json",
+      "change": "added",
+      "V": null,
+      "M": "7eb17312215e1c6dd109411c1737b31fb68da5ef",
+      "D4": "7eb17312215e1c6dd109411c1737b31fb68da5ef",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    },
+    {
+      "path": "docs/reports/client-resources-2026-11-21/paired-summary.csv",
+      "change": "added",
+      "V": null,
+      "M": "2e78595665e21635765445d5e3994741d59b0378",
+      "D4": "2e78595665e21635765445d5e3994741d59b0378",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    },
+    {
+      "path": "docs/reports/client-resources-2026-11-21/performance-report.md",
+      "change": "added",
+      "V": null,
+      "M": "13f0f53b7ea28189ffbbac37d32db6a6d94ecc26",
+      "D4": "13f0f53b7ea28189ffbbac37d32db6a6d94ecc26",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    },
+    {
+      "path": "docs/reports/client-resources-2026-11-21/raw-phases.csv",
+      "change": "added",
+      "V": null,
+      "M": "7a895fd1c889054373d05044af864b3a2ab5a286",
+      "D4": "7a895fd1c889054373d05044af864b3a2ab5a286",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    },
+    {
+      "path": "docs/reports/client-resources-2026-11-21/raw-runs.csv",
+      "change": "added",
+      "V": null,
+      "M": "6bde41fd246f0d10432cd4f19a4b6be487377440",
+      "D4": "6bde41fd246f0d10432cd4f19a4b6be487377440",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    },
+    {
+      "path": "docs/reports/client-resources-2026-11-21/README.md",
+      "change": "added",
+      "V": null,
+      "M": "8507afb767666d627e624f9803816fe2c4830924",
+      "D4": "8507afb767666d627e624f9803816fe2c4830924",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    },
+    {
+      "path": "scripts/e2e_canvas_logs.py",
+      "change": "modified",
+      "V": "52dc0dd396b2d7296b0737921d1b82053aa2c993",
+      "M": "ed21d86eaac42810d1e38401fac8dd6bb1b112f4",
+      "D4": "ed21d86eaac42810d1e38401fac8dd6bb1b112f4",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    },
+    {
+      "path": "scripts/e2e_client_ui.py",
+      "change": "modified",
+      "V": "2e57c878e9d97708a63d25830088f597cc7a5732",
+      "M": "5c7b394823fa4b840be41f7f12a432615ec85815",
+      "D4": "5c7b394823fa4b840be41f7f12a432615ec85815",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    },
+    {
+      "path": "scripts/e2e_dashboard.py",
+      "change": "modified",
+      "V": "f545559421ffffd41d97655cd0d8242e845b17d9",
+      "M": "12381f644f81cb458151e4f3872968e2d1362e60",
+      "D4": "12381f644f81cb458151e4f3872968e2d1362e60",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    },
+    {
+      "path": "src/client/terminal/events.rs",
+      "change": "modified",
+      "V": "c6c855d1a3ee4aced8d7c960481cc0126441ad9d",
+      "M": "47645d8962054b22c0fde2c9f160d68af3b387b8",
+      "D4": "47645d8962054b22c0fde2c9f160d68af3b387b8",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    },
+    {
+      "path": "src/client/terminal/events/source_tests.rs",
+      "change": "modified",
+      "V": "b0c52537da24276d07c74b172efdc0fccce52f41",
+      "M": "7124bd2d0d0e77461db15e8cbfbebfa3acf8202f",
+      "D4": "7124bd2d0d0e77461db15e8cbfbebfa3acf8202f",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    },
+    {
+      "path": "src/computer/host_control/storage.rs",
+      "change": "modified",
+      "V": "29cb30421a008bf70dd1afac05844714af638ec3",
+      "M": "2b81a6559e7b9650bbb70266eed0c1039cdea821",
+      "D4": "2b81a6559e7b9650bbb70266eed0c1039cdea821",
+      "mode": "100644",
+      "type": "blob",
+      "exactly_D4": true
+    }
+  ],
+  "C_notes_delta": [
+    {
+      "path": "docs/release-notes-0.10.25.md",
+      "kind": "modified",
+      "from": {
+        "sha": "346ed902ccb2fee0100daf6cfa74bf5d2acded55",
+        "type": "blob",
+        "mode": "100644"
+      },
+      "to": {
+        "sha": "314c34f0b0d520cd032e7f10cd4c69f791a22a20",
+        "type": "blob",
+        "mode": "100644"
+      },
+      "to_equals_D4": false,
+      "to_equals_V": false,
+      "to_equals_B": false
+    }
+  ],
+  "critical_blob_rows": [
+    {
+      "path": "src/client/terminal/events.rs",
+      "C": "47645d8962054b22c0fde2c9f160d68af3b387b8",
+      "M": "47645d8962054b22c0fde2c9f160d68af3b387b8",
+      "V": "c6c855d1a3ee4aced8d7c960481cc0126441ad9d",
+      "D4": "47645d8962054b22c0fde2c9f160d68af3b387b8",
+      "B": "c6c855d1a3ee4aced8d7c960481cc0126441ad9d"
+    },
+    {
+      "path": "src/client/terminal/events/source_tests.rs",
+      "C": "7124bd2d0d0e77461db15e8cbfbebfa3acf8202f",
+      "M": "7124bd2d0d0e77461db15e8cbfbebfa3acf8202f",
+      "V": "b0c52537da24276d07c74b172efdc0fccce52f41",
+      "D4": "7124bd2d0d0e77461db15e8cbfbebfa3acf8202f",
+      "B": "b0c52537da24276d07c74b172efdc0fccce52f41"
+    },
+    {
+      "path": "src/computer/host_control/storage.rs",
+      "C": "2b81a6559e7b9650bbb70266eed0c1039cdea821",
+      "M": "2b81a6559e7b9650bbb70266eed0c1039cdea821",
+      "V": "29cb30421a008bf70dd1afac05844714af638ec3",
+      "D4": "2b81a6559e7b9650bbb70266eed0c1039cdea821",
+      "B": "29cb30421a008bf70dd1afac05844714af638ec3"
+    },
+    {
+      "path": "src/computer/host_control.rs",
+      "C": "e58f32e3fc5219e8ac1418479460e70f96e0461c",
+      "M": "e58f32e3fc5219e8ac1418479460e70f96e0461c",
+      "V": "e58f32e3fc5219e8ac1418479460e70f96e0461c",
+      "D4": "e58f32e3fc5219e8ac1418479460e70f96e0461c",
+      "B": "e58f32e3fc5219e8ac1418479460e70f96e0461c"
+    },
+    {
+      "path": "src/computer/host_control/tests.rs",
+      "C": "dd386922e6dea2078f601fdf772c8fe4949f70f0",
+      "M": "dd386922e6dea2078f601fdf772c8fe4949f70f0",
+      "V": "dd386922e6dea2078f601fdf772c8fe4949f70f0",
+      "D4": "dd386922e6dea2078f601fdf772c8fe4949f70f0",
+      "B": "dd386922e6dea2078f601fdf772c8fe4949f70f0"
+    },
+    {
+      "path": "src/platform.rs",
+      "C": "9fa766f8045ef38e8932abb5013e9988d88f5883",
+      "M": "9fa766f8045ef38e8932abb5013e9988d88f5883",
+      "V": "9fa766f8045ef38e8932abb5013e9988d88f5883",
+      "D4": "9fa766f8045ef38e8932abb5013e9988d88f5883",
+      "B": "9fa766f8045ef38e8932abb5013e9988d88f5883"
+    },
+    {
+      "path": "Cargo.toml",
+      "C": "9f9d656ad9a19c5acd5d893d9e243040b09820fc",
+      "M": "9f9d656ad9a19c5acd5d893d9e243040b09820fc",
+      "V": "9f9d656ad9a19c5acd5d893d9e243040b09820fc",
+      "D4": "c7119a7becd6daf3c74159879204cb699f20202e",
+      "B": "668495f5431916f570e37f887c4c93affb98d09a"
+    },
+    {
+      "path": "Cargo.lock",
+      "C": "c2a982f5f06fdab726b969495647515b130fe8f1",
+      "M": "c2a982f5f06fdab726b969495647515b130fe8f1",
+      "V": "c2a982f5f06fdab726b969495647515b130fe8f1",
+      "D4": "3b71ea185e01567058877b5d6767ffc2dccc759c",
+      "B": "3b71ea185e01567058877b5d6767ffc2dccc759c"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "C": "f085a990058d6b5fe76fd5f08ce37a3deffcadf0",
+      "M": "f085a990058d6b5fe76fd5f08ce37a3deffcadf0",
+      "V": "f085a990058d6b5fe76fd5f08ce37a3deffcadf0",
+      "D4": "001f26514d79bc78d251d4b5ddbd35b476e54de4",
+      "B": "001f26514d79bc78d251d4b5ddbd35b476e54de4"
+    },
+    {
+      "path": "scripts/test_release.py",
+      "C": "95d1f060e02384efcb89a16917f78b5e24e4a1d5",
+      "M": "95d1f060e02384efcb89a16917f78b5e24e4a1d5",
+      "V": "95d1f060e02384efcb89a16917f78b5e24e4a1d5",
+      "D4": "f0e33e65e4359e7b5a72b6ec1fbdc1b6590c2739",
+      "B": "d5dc039f83e6ff58fd1b31fbfcc69361a2883312"
+    },
+    {
+      "path": "scripts/e2e_canvas_logs.py",
+      "C": "ed21d86eaac42810d1e38401fac8dd6bb1b112f4",
+      "M": "ed21d86eaac42810d1e38401fac8dd6bb1b112f4",
+      "V": "52dc0dd396b2d7296b0737921d1b82053aa2c993",
+      "D4": "ed21d86eaac42810d1e38401fac8dd6bb1b112f4",
+      "B": "52dc0dd396b2d7296b0737921d1b82053aa2c993"
+    },
+    {
+      "path": "scripts/e2e_client_ui.py",
+      "C": "5c7b394823fa4b840be41f7f12a432615ec85815",
+      "M": "5c7b394823fa4b840be41f7f12a432615ec85815",
+      "V": "2e57c878e9d97708a63d25830088f597cc7a5732",
+      "D4": "5c7b394823fa4b840be41f7f12a432615ec85815",
+      "B": "2e57c878e9d97708a63d25830088f597cc7a5732"
+    },
+    {
+      "path": "scripts/e2e_dashboard.py",
+      "C": "12381f644f81cb458151e4f3872968e2d1362e60",
+      "M": "12381f644f81cb458151e4f3872968e2d1362e60",
+      "V": "f545559421ffffd41d97655cd0d8242e845b17d9",
+      "D4": "12381f644f81cb458151e4f3872968e2d1362e60",
+      "B": "f545559421ffffd41d97655cd0d8242e845b17d9"
+    },
+    {
+      "path": "scripts/e2e_composer.py",
+      "C": "75371e60a01ca2f782be5a49e3f41da77a752580",
+      "M": "75371e60a01ca2f782be5a49e3f41da77a752580",
+      "V": "75371e60a01ca2f782be5a49e3f41da77a752580",
+      "D4": "020d371b92136b83b662f0c8ee1a7efdd3df86cf",
+      "B": "75371e60a01ca2f782be5a49e3f41da77a752580"
+    }
+  ],
+  "source_universe_B_to_C": {
+    "C_src_leaves": 366,
+    "B_src_leaves": 366,
+    "unchanged_C_src_from_B": 363,
+    "changed_src_from_B": [
+      {
+        "path": "src/client/terminal/events.rs",
+        "B": "c6c855d1a3ee4aced8d7c960481cc0126441ad9d",
+        "C": "47645d8962054b22c0fde2c9f160d68af3b387b8"
+      },
+      {
+        "path": "src/client/terminal/events/source_tests.rs",
+        "B": "b0c52537da24276d07c74b172efdc0fccce52f41",
+        "C": "7124bd2d0d0e77461db15e8cbfbebfa3acf8202f"
+      },
+      {
+        "path": "src/computer/host_control/storage.rs",
+        "B": "29cb30421a008bf70dd1afac05844714af638ec3",
+        "C": "2b81a6559e7b9650bbb70266eed0c1039cdea821"
+      }
+    ],
+    "deletions": []
+  },
+  "D4_repairs": {
+    "image_and_test": "events.rs=47645d8962054b22c0fde2c9f160d68af3b387b8 and events/source_tests.rs=7124bd2d0d0e77461db15e8cbfbebfa3acf8202f are exact D4 in C.",
+    "unix_lease_and_test": "storage.rs=2b81a6559e7b9650bbb70266eed0c1039cdea821 is exact D4 in C, including cfg(unix) explicit unlock/Interrupted retry and the one new retained-descriptor case.",
+    "guard_scope": "host_control.rs, host_control/tests.rs and platform.rs remain B/V/D4-identical; no early unlock or guard-order change in the merge.",
+    "prior_review": {
+      "path": "ssmcp-D4-input-lease-fix-static-review.json",
+      "sha256": "065da9246f1b6e2fba928b7dbaac770ae2c8f177db5422df501219527dda0ffd",
+      "scope": "Static source only; does not transfer the author's D4 runtime acceptance to C."
+    }
+  },
+  "V_metadata_retention": {
+    "version": "0.10.25",
+    "Cargo_toml_exact_V": true,
+    "Cargo_lock_exact_V": true,
+    "lock_change_from_B": "Only ssmcp's own package version 0.10.24→0.10.25; dependency entries unchanged in the fixed B→V diff.",
+    "release_policy_exact_V": true,
+    "policy_path": ".github/workflows/release.yml",
+    "deferred_rule": "Version 0.10.25 is in deferred_versions; deploy is false when deferred is non-null even when publication/request flags are true.",
+    "test_release_exact_V": true,
+    "test_release_scope": "0.10.25 enters deferred-version test loop; the other-version example advances to 0.10.26.",
+    "gitlinks": [
+      {
+        "path": "crates/zharness",
+        "sha": "cb63a9a0aa163214c6062664cd62fefb357be5a8",
+        "mode": "160000"
+      },
+      {
+        "path": "crates/zplugin",
+        "sha": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4",
+        "mode": "160000"
+      },
+      {
+        "path": "crates/ztuio",
+        "sha": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+        "mode": "160000"
+      },
+      {
+        "path": "crates/zuse",
+        "sha": "a1bb8fd2cbce0a9d85134999883c578358065242",
+        "mode": "160000"
+      }
+    ],
+    "gitlinks_equal_B_V_D4": true
+  },
+  "FC_and_composer": {
+    "four_paths": [
+      {
+        "path": "scripts/e2e_paste_performance.py",
+        "FC": "0568b0d7130186c64a148ca6f7fbf23872786b1e",
+        "B": "0568b0d7130186c64a148ca6f7fbf23872786b1e",
+        "C": "0568b0d7130186c64a148ca6f7fbf23872786b1e"
+      },
+      {
+        "path": "src/client/terminal.rs",
+        "FC": "70117841cd292569c40de6557d84265d4443ddc5",
+        "B": "6bae50314018d672fb7464aabcc487d67b9c0756",
+        "C": "6bae50314018d672fb7464aabcc487d67b9c0756"
+      },
+      {
+        "path": "src/client/terminal/conversation.rs",
+        "FC": "3eb74183a9965d69834e4802fd71e3490f1995f2",
+        "B": "46efd44829bddeffb94080a6ccd2006bc3465273",
+        "C": "46efd44829bddeffb94080a6ccd2006bc3465273"
+      },
+      {
+        "path": "src/client/terminal/conversation/tests/paste_batch.rs",
+        "FC": "7008d284bea2324a7e9699fd4993b00a2bedcc3b",
+        "B": "7008d284bea2324a7e9699fd4993b00a2bedcc3b",
+        "C": "7008d284bea2324a7e9699fd4993b00a2bedcc3b"
+      }
+    ],
+    "whole_blob_identity_note": "The performance helper and seven-test paste_batch file are byte-identical to FC. terminal.rs/conversation.rs include later B integration and are not whole-file FC blobs; they are exact B/V in C.",
+    "complete_FC_postimage_hunks": [
+      {
+        "path": "src/client/terminal.rs",
+        "hunks": [
+          {
+            "index": 1,
+            "lines": 23,
+            "new_context_exact_present": true
+          }
+        ]
+      },
+      {
+        "path": "src/client/terminal/conversation.rs",
+        "hunks": [
+          {
+            "index": 1,
+            "lines": 16,
+            "new_context_exact_present": true
+          },
+          {
+            "index": 2,
+            "lines": 8,
+            "new_context_exact_present": true
+          },
+          {
+            "index": 3,
+            "lines": 12,
+            "new_context_exact_present": true
+          },
+          {
+            "index": 4,
+            "lines": 12,
+            "new_context_exact_present": true
+          },
+          {
+            "index": 5,
+            "lines": 7,
+            "new_context_exact_present": true
+          },
+          {
+            "index": 6,
+            "lines": 43,
+            "new_context_exact_present": true
+          },
+          {
+            "index": 7,
+            "lines": 6,
+            "new_context_exact_present": true
+          },
+          {
+            "index": 8,
+            "lines": 7,
+            "new_context_exact_present": true
+          }
+        ]
+      }
+    ],
+    "all_nine_postimage_hunks_present": true,
+    "new_test_definitions_in_paste_batch": 7,
+    "tests_executed_here": 0,
+    "prior_FC_seven_unit_execution_transferred": false,
+    "composer_files": [
+      {
+        "path": "src/client/composer.rs",
+        "FC": "1aaf0b0ef3e497489c667a485d8a9a518688f81d",
+        "B": "1aaf0b0ef3e497489c667a485d8a9a518688f81d",
+        "C": "1aaf0b0ef3e497489c667a485d8a9a518688f81d"
+      },
+      {
+        "path": "scripts/e2e_composer.py",
+        "FC": "020d371b92136b83b662f0c8ee1a7efdd3df86cf",
+        "B": "75371e60a01ca2f782be5a49e3f41da77a752580",
+        "C": "75371e60a01ca2f782be5a49e3f41da77a752580"
+      }
+    ],
+    "composer_note": "composer.rs matches FC/B/V/C; e2e_composer.py preserves B/V's later helper changes, rather than reverting to the older FC helper."
+  },
+  "UI_navigation": {
+    "files_exact_D4": [
+      "scripts/e2e_canvas_logs.py",
+      "scripts/e2e_client_ui.py",
+      "scripts/e2e_dashboard.py"
+    ],
+    "client_ui": {
+      "source_lines": "590-603",
+      "retained": "F1 help, End to final section, Home to beginning, Escape close remain actual actions with bounded until assertions.",
+      "changed_expected_content": "Final Native harnesses section checks /pi, /cc, /codex and the capability/approval sentence rather than /handoff; final-content assertion is not simply removed."
+    },
+    "dashboard": {
+      "source_lines": "595-626",
+      "escape": "After leaving filter edit, exact navigation object asserts focus=audit; audit visible; input hidden; selection_mode=false; audit_detail=false; cleared filter; log_scrollback=0.",
+      "PageUp": "Coalesced ESC[5~x remains, oldest marker moves, log_scrollback must be >0; subsequent typing must not jump to live tail or route to hidden shell.",
+      "small_viewport": "4-row resize still asserts hidden cursor/hidden shell remains inaccessible.",
+      "assessment": "The focus condition moved from the awaited rendering predicate into a broader exact state assertion; focus and scroll were not removed."
+    },
+    "canvas_logs": {
+      "source": "Whole exact D4 blob ed21d86eaac42810d1e38401fac8dd6bb1b112f4; fixed B→C patch inspected",
+      "scope": "Explicit right-click thread-history routing, unavailable synthetic history preservation, button-release behavior, F9 Logs, and Escape return retain selection/draft checks."
+    }
+  },
+  "owner_defined_subsets": {
+    "claimed_runtime_paths": 18,
+    "claimed_helper_paths": 7,
+    "exact_path_manifest_supplied": false,
+    "status": "Do not restate the owner's unnamed 18/7 claim as independently verified. Full src comparison proves 363/366 C source leaves equal B, with only the three named D4 repair files different. Exact 18/7 membership can be checked when its manifest is supplied.",
+    "all_changed_python_helpers_B_to_C": [
+      {
+        "path": "scripts/e2e_canvas_logs.py",
+        "B": "52dc0dd396b2d7296b0737921d1b82053aa2c993",
+        "C": "ed21d86eaac42810d1e38401fac8dd6bb1b112f4"
+      },
+      {
+        "path": "scripts/e2e_client_ui.py",
+        "B": "2e57c878e9d97708a63d25830088f597cc7a5732",
+        "C": "5c7b394823fa4b840be41f7f12a432615ec85815"
+      },
+      {
+        "path": "scripts/e2e_dashboard.py",
+        "B": "f545559421ffffd41d97655cd0d8242e845b17d9",
+        "C": "12381f644f81cb458151e4f3872968e2d1362e60"
+      },
+      {
+        "path": "scripts/test_release.py",
+        "B": "d5dc039f83e6ff58fd1b31fbfcc69361a2883312",
+        "C": "95d1f060e02384efcb89a16917f78b5e24e4a1d5"
+      }
+    ],
+    "gate_blocker": false
+  },
+  "boundaries": {
+    "products_executed": 0,
+    "Cargo_or_tests_executed": 0,
+    "GUI_or_desktop_input": 0,
+    "source_ref_or_existing_report_modifications": 0,
+    "foreign_worktree_reads": 0,
+    "source_owner_gate35_not_blocked_by_this_review": true,
+    "prior_F2_D4_review_unchanged": true,
+    "no_claims": [
+      "C build success",
+      "C 35-stage pass",
+      "C P1 pass",
+      "D4 runtime results applying to C",
+      "FC paired timing applying to C",
+      "C deployed or installed"
+    ]
+  },
+  "references": [
+    "https://github.com/LIghtJUNction/ssmcp/commit/d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+    "https://github.com/LIghtJUNction/ssmcp/commit/c0152934838f755453413975e31de2449a4398a9",
+    "https://github.com/LIghtJUNction/ssmcp/compare/f4e6ff043eef6686a9013750ffcb8ab66926b9d4...d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+    "https://github.com/LIghtJUNction/ssmcp/compare/be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1...f4e6ff043eef6686a9013750ffcb8ab66926b9d4",
+    "https://github.com/LIghtJUNction/ssmcp/blob/d29dae7e2b9ff6794f17f3c96c0cc37977936084/scripts/e2e_dashboard.py#L595-L626",
+    "https://github.com/LIghtJUNction/ssmcp/blob/d29dae7e2b9ff6794f17f3c96c0cc37977936084/scripts/e2e_client_ui.py#L590-L603"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "argv": [
+    "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-prepared-v1/candidate/validate_readonly_once.py",
+    "--out",
+    "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-validation-v1"
+  ],
+  "controls_after": [
+    {
+      "bytes": 41707,
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-prepared-v1/candidate/reviewed_evidence_reader_25c59.py",
+      "sha256": "25c59c56aef77ea780ce396d684bc40e727a49c0e0e55daf8f4df97aaa4e2bea"
+    },
+    {
+      "bytes": 56548,
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-prepared-v1/candidate/native_git_binding.py",
+      "sha256": "d131dbc547846b8a5ae9cfd2af10d630ff4fcc59cf6b8310a112cc04e57c8116"
+    },
+    {
+      "bytes": 6690,
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-prepared-v1/candidate/execution-job882-readback.json",
+      "sha256": "bc6826b02aad7abf7793cb3536c6825de602c2ac4ffe7c57daacee2276cfa18e"
+    }
+  ],
+  "controls_before": [
+    {
+      "bytes": 41707,
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-prepared-v1/candidate/reviewed_evidence_reader_25c59.py",
+      "sha256": "25c59c56aef77ea780ce396d684bc40e727a49c0e0e55daf8f4df97aaa4e2bea"
+    },
+    {
+      "bytes": 56548,
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-prepared-v1/candidate/native_git_binding.py",
+      "sha256": "d131dbc547846b8a5ae9cfd2af10d630ff4fcc59cf6b8310a112cc04e57c8116"
+    },
+    {
+      "bytes": 6690,
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-prepared-v1/candidate/execution-job882-readback.json",
+      "sha256": "bc6826b02aad7abf7793cb3536c6825de602c2ac4ffe7c57daacee2276cfa18e"
+    }
+  ],
+  "cwd": "/home/lightjunction/Documents/GITHUB",
+  "evidence_file_count": 252,
+  "finished_at": "2026-11-21T01:50:12.423298+00:00",
+  "owner_lock_independently_verified": true,
+  "p1_executed": false,
+  "product_execution_allowed": false,
+  "proof": {
+    "bytes": 168614,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-validation-v1/proof.json",
+    "sha256": "9e80b37871e98572fcbf196b386bab6bc03bf73ce8fd6921183328650c62f7ba"
+  },
+  "schema": "ssmcp.native-0af8.readonly-invocation.v1",
+  "source_blob_count": 213,
+  "source_or_original_evidence_written": false,
+  "source_revision": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+  "source_tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+  "started_at": "2026-11-21T01:50:12.284854+00:00",
+  "status": "passed_readonly_validation",
+  "validated_scope": {
+    "commands": 22,
+    "curl_cases_passed": 8,
+    "historical_32_stage_rerun": false,
+    "listener_tests_passed": 7,
+    "p1_executed": false,
+    "rust_tests_passed": 182
+  }
+}

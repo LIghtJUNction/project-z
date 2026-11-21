@@ -1,0 +1,454 @@
+{
+  "schema": "project-z.C-readonly-followup.report-independent-review.v1",
+  "reviewed_at_utc": "2026-11-21T02:12:21.285723+00:00",
+  "decision": {
+    "status": "no_material_report_blocker_found",
+    "blocking_findings": [],
+    "material_inconsistencies": [],
+    "candidate_modified": false,
+    "publication_performed": false,
+    "meaning": "The frozen 20-text report increment accurately distinguishes fixed-source review, historical product execution, the failed C attempt, and new read-only evidence checks. This is a report review, not product acceptance or merge approval."
+  },
+  "scope": {
+    "prepared_directory": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-C-readonly-followup-20261121",
+    "snapshot_utc": "2026-11-21T02:02:30+00:00",
+    "snapshot_taipei": "2026-11-21T10:02:30+08:00",
+    "expected_parent": "b57291ca0feae61d691387f5a4f9ab2d9d99dd1d",
+    "base_tree": "d88659739eec7332d253fc40efda65470de8492b",
+    "later_Q_source_or_results_included": false,
+    "candidate_validator_executed": false,
+    "product_Cargo_tests_or_runtime_executed": false,
+    "native_worktrees_or_processes_accessed": false
+  },
+  "frozen_inputs": {
+    "manifest": {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-C-readonly-followup-20261121/prepared.json",
+      "bytes": 20165,
+      "sha256": "1d07ac9d96cb180f07583db2798826469b8e3d8f94c56b2a766be8a4318d9fbe",
+      "git_blob_sha1": "ef8843deeb5f7c98767682d681a3ee3b8acd43f4"
+    },
+    "markdown": {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-C-readonly-followup-20261121/2026-11-20-pr-and-dependencies.md",
+      "bytes": 57908,
+      "sha256": "39aa2600eaab6422490ce9da34617dd5d1979bb3f21589db24b08a7fd2d7b177",
+      "git_blob_sha1": "417fc16f7d52ee1d695c329c526bf7aa2273afae"
+    },
+    "summary": {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-C-readonly-followup-20261121/2026-11-20-pr-and-dependencies.json",
+      "bytes": 977191,
+      "sha256": "089ff608e668d8fdc5bd1c6d778fd0042b0aaed370b94a0b4d2afa5706d99b3a",
+      "git_blob_sha1": "a53ddfed33bf6f96a1ff8a1aaa0f804466e5502f"
+    },
+    "baseline_tree": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/C-readonly-followup-review-base-tree.json",
+      "bytes": 103119,
+      "sha256": "7333944b662c4d95e09e9f8fc40eae009438f57db02c89ba601791c9b8974a87",
+      "git_blob_sha1": "aaadd83cde08693414dd9c21442220ebd673818b"
+    },
+    "baseline_summary": {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/summary.json",
+      "bytes": 966143,
+      "sha256": "f86edec06cd673e36abd91f709eaca2c79b74ad7469a769509a452d335f44f25",
+      "git_blob_sha1": "574f92d9ece9fa271986cd9f1c1e8215b21c0c20"
+    },
+    "baseline_markdown": {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/maintenance.md",
+      "bytes": 53825,
+      "sha256": "571e5833786e2204a1e3ebd1f825ac8f066bc0038484a06747edb754b848f7b1",
+      "git_blob_sha1": "de3d6da92e843878c7114dced0be65dd90313355"
+    }
+  },
+  "integrity": {
+    "published_text_files": 20,
+    "reports_modified": 2,
+    "support_paths_added": 18,
+    "original_copies": 17,
+    "generated_prior_status_archives": 1,
+    "all20_bytes_sha256_gitblob_characters_match": true,
+    "all17_original_copies_byte_identical": true,
+    "all20_utf8_without_NUL": true,
+    "duplicate_target_paths": [],
+    "deleted_paths": [],
+    "origins_descriptor": {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-C-readonly-followup-20261121/evidence-origins.json",
+      "bytes": 6941,
+      "sha256": "3c736d5cb060785fe115ddb4250521ccd43625eadb4da35abdc2b96175d102cf",
+      "git_blob_sha1": "574e6a8cfe09411ac3c31edc23d7bc2fe25684b7"
+    },
+    "auxiliary_descriptor_hashes_match": true,
+    "prepared_files_rechecked_after_review": true,
+    "zip_elf_or_fullproof_added_to_git": false
+  },
+  "tree_reconciliation": {
+    "base_truncated": false,
+    "base_leaves": 310,
+    "base_blobs": 267,
+    "base_gitlinks": 43,
+    "baseline_root_tree_independently_recomputed": "d88659739eec7332d253fc40efda65470de8492b",
+    "baseline_report_blobs_match_exact_local_originals": true,
+    "unchanged_base_leaves": 308,
+    "candidate_leaves": 328,
+    "candidate20_only_root_tree": "95d8728ff5f858e00ea10cd483a38236ee3a14de",
+    "tree_boundary": "This computed tree includes only the frozen20 listed files over B572. Adding this review or other publication files will intentionally change the final publication tree. No ref was written."
+  },
+  "preservation": {
+    "original85": {
+      "count": 85,
+      "counts": {
+        "已合并": 56,
+        "验收／集成中": 1,
+        "已关闭": 14,
+        "具体阻塞": 5,
+        "仓库已归档": 9
+      },
+      "pull_requests_deep_equal": true,
+      "counting_rule_deep_equal": true
+    },
+    "unchanged_top_level_objects": [
+      "timezone",
+      "scope",
+      "batch_status",
+      "counts",
+      "counting_rule",
+      "external_owner_merges",
+      "dependency_snapshot",
+      "ssmcp_local_repair",
+      "additional_integration_prs",
+      "pull_requests",
+      "final_source_cohort",
+      "final_aggregate_gates",
+      "consumer_propagation",
+      "component_integrations",
+      "component_integration_scope",
+      "previous_source_graph_validation",
+      "personal_binary_cleanup",
+      "git_source_policy_code_gates",
+      "magicbox_current_build",
+      "magicbox_current_emulator",
+      "magicbox_prior_emulator_validation",
+      "magicbox_prior_emulator_validation_scope",
+      "core_git_source_migrations",
+      "git_source_policy_followup",
+      "org_git_source_publications",
+      "mechrevo_git_source_migration"
+    ],
+    "all26_unchanged_top_level_objects_deep_equal": true,
+    "changed_top_level_fields": [
+      "generated_at",
+      "coordination",
+      "aggregate_pr",
+      "evidence_files",
+      "current_maintenance",
+      "current_snapshot_scope",
+      "report_preparation"
+    ],
+    "old_evidence_index_entries_preserved": true,
+    "old_graphs_and_component_integrations_deep_equal": true,
+    "original_0af882_and_zuse356_blocks_deep_equal": true,
+    "prior_status_archive": {
+      "path": "evidence/C-readonly-prior-status-b572-20261121.json",
+      "bytes": 23699,
+      "sha256": "f35d2ba69243b34247748c8ec9bf8ecb1616cee146af2d94cbc1434b35b52b9f",
+      "eight_replaced_status_sections_exactly_equal_baseline": true
+    },
+    "published_migrations": 19,
+    "fully_verified_history_repositories": 14
+  },
+  "summary_format": {
+    "bytes": 977191,
+    "baseline_bytes": 966143,
+    "added_bytes": 11048,
+    "one_space_json_serialization_exact": true,
+    "under_1MiB": true,
+    "remaining_bytes_to_1MiB": 71385,
+    "full168614_byte_proof_or_parsed_object_embedded": false
+  },
+  "links": {
+    "markdown_relative_links": 97,
+    "structured_summary_evidence_path_objects": 339,
+    "independent_structured_reference_list_equals_preparer_list": true,
+    "additional_historical_string_refs": 6,
+    "all_summary_evidence_string_occurrences": 345,
+    "all_resolve_in_baseline_plus_prepared_tree": true,
+    "broken": [],
+    "scope": "The339 count covers structured objects with a path field. Six additional unchanged historical receipt_path/proof strings also resolve. Relative-path existence was checked independently, without executing the candidate checker."
+  },
+  "source_and_execution_findings": {
+    "V": {
+      "source": "f4e6ff043eef6686a9013750ffcb8ab66926b9d4",
+      "tree": "d6546dd46464ac1cbb1c3aabc0493638a44649f7",
+      "changed_paths": 6,
+      "other_lock_package_records_unchanged": 276,
+      "gitlinks_unchanged": 4,
+      "policy_tests": {
+        "job": "26c4545eae1eab8d27485f4a48077d3c-8d7",
+        "passed": 11,
+        "failed": 0,
+        "skipped": 0
+      },
+      "boundary": "Original V policy execution and metadata review only; not C product acceptance or a formal release. Original policy receipt/log and fixed metadata review were read."
+    },
+    "D4": {
+      "source": "d4c4b9c6fe09a4d7b246ca54a08f5c7b258289fb",
+      "tree": "c64ea74cfb85474f05dd2c8bb3c834c73d10b08e",
+      "wording": "Unix input lease object Drop explicitly unlocks; this is not a last duplicated-file-descriptor closure claim.",
+      "new_regression_definitions": 1,
+      "original_guard_and_cancellation_order_retained": true,
+      "D4_author_test_counts_not_promoted_to_C": true
+    },
+    "C_static": {
+      "source": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+      "tree": "bf393700928fd9aa37f2dea8b8683ebe13b114cd",
+      "freeze_time": "2026-11-21T01:46:07.352796+00:00",
+      "frozen_version": "0.10.25",
+      "total_leaves": 1114,
+      "leaves_same_as_V": 1098,
+      "named_subset": {
+        "sources_same_B": 18,
+        "helpers_same_B": 5,
+        "helpers_changed_from_B_exact_D4": 2
+      },
+      "whole_source_universe_claimed_from_subset": false,
+      "FC_and_Composer_source_retention_separate_from_runtime": true
+    },
+    "C_actual_failure": {
+      "run_id": "47ff4beb94d03df6834a6460b493a5d7",
+      "source": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+      "first_four_stages": [
+        {
+          "stage": "release-policy",
+          "exit_code": 0
+        },
+        {
+          "stage": "deployment-policy",
+          "exit_code": 0
+        },
+        {
+          "stage": "fmt",
+          "exit_code": 0
+        },
+        {
+          "stage": "library-compile",
+          "exit_code": 0
+        }
+      ],
+      "failed_stage": "library-private",
+      "failed_stage_index": 5,
+      "exit_code": 101,
+      "passed": 2049,
+      "failed": 3,
+      "ignored": 23,
+      "filtered": 4,
+      "raw_test_seconds": 35.62,
+      "failure_observations": [
+        "Two socket tests report unsafe ownership or permissions for /tmp.",
+        "The foreground-chat rejection test fails its expected error-text assertion."
+      ],
+      "root_cause_confirmed": false,
+      "complete35_stage_or_five_owned_artifacts_pass_claimed": false,
+      "runtime_P1_or_release_pass_claimed": false,
+      "raw_candidate_gate_sha256": "42421f9c5d727786b68da62b8ef686807d300f0a8999d1e3369bf4f7afe4daef",
+      "raw_library_log_sha256": "35bf0940230057397d500006fe48966214586282fece014709b50ccd5640cde3"
+    },
+    "native_0af8": {
+      "source": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+      "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+      "contract_job": "26c4545eae1eab8d27485f4a48077d3c-92c",
+      "schema_contracts_passed": 3,
+      "contract_failed_or_skipped": 0,
+      "readonly_job": "26c4545eae1eab8d27485f4a48077d3c-92e",
+      "readonly_invocations": 1,
+      "readonly_exit": 0,
+      "source_blob_count": 213,
+      "content_file_count": 251,
+      "evidence_file_count": 252,
+      "three_controls_before_after_equal": true,
+      "original_job": "26c4545eae1eab8d27485f4a48077d3c-882",
+      "original_Rust_passed": 182,
+      "listener7_included_in182": true,
+      "original_curl_passed": 8,
+      "new_product_runs": 0,
+      "P1_EXECUTION_ALLOWED": false,
+      "P1_FINAL_BINDING": null,
+      "ssmcp_validator_called": false,
+      "global_lock_availability_or_continuous_whole_tree_immutability_or_outdir_hash_added": false,
+      "PR1_merge_authorized_by_readonly_result": false
+    },
+    "current_aliases": {
+      "SSMCP_C_failure_current": true,
+      "B_version_and_image_pending_text_historical": true,
+      "prior_d531_806_E1_and0af_initial_hold_preserved": true,
+      "PR1_and_PR7_remain_drafts": true,
+      "final44_executed": false,
+      "old781_FC_and_zuse356_counts_not_added_to_C": true
+    }
+  },
+  "archive_availability": {
+    "file_id": "15iPC2lwbFIrBmsdVJJXuIb7h2tpxzGY-",
+    "url": "https://drive.google.com/file/d/15iPC2lwbFIrBmsdVJJXuIb7h2tpxzGY-/view",
+    "connected_account_metadata_read_succeeded": true,
+    "metadata_size": 66351,
+    "metadata_modified_time": "2026-11-21T01:53:14.644Z",
+    "public_anonymous_access_checked": false,
+    "complete_download": {
+      "performed_by_existing_Core_review": true,
+      "repeated_by_this_reviewer": false
+    },
+    "existing_downloaded_zip": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-readonly-actual-result-evidence.zip",
+      "bytes": 66351,
+      "sha256": "2f9f806e44fd8c1530bd75aa69446ba2e70a0b6ddcb2c39b664a600d9266b1c8",
+      "git_blob_sha1": "7804b6e305993ad157958efc017897a76394be7c"
+    },
+    "members": 19,
+    "payloads": 18,
+    "outer_manifest": 1,
+    "all_payload_bytes_sha256_UTF8_CRC_checked_independently": true,
+    "payload_set_exact": true,
+    "manifest_in_git_equals_outer_manifest": true,
+    "nested_prepared_package_manifest_is_one_payload": true,
+    "large_proof": {
+      "path": "proof.json",
+      "bytes": 168614,
+      "sha256": "9e80b37871e98572fcbf196b386bab6bc03bf73ce8fd6921183328650c62f7ba",
+      "present_in_archive": true,
+      "copied_or_embedded_into20_publication_files": false
+    }
+  },
+  "checked_files": [
+    {
+      "path": "docs/maintenance/2026-11-20-pr-and-dependencies.json",
+      "bytes": 977191,
+      "sha256": "089ff608e668d8fdc5bd1c6d778fd0042b0aaed370b94a0b4d2afa5706d99b3a",
+      "git_blob_sha1": "a53ddfed33bf6f96a1ff8a1aaa0f804466e5502f"
+    },
+    {
+      "path": "docs/maintenance/2026-11-20-pr-and-dependencies.md",
+      "bytes": 57908,
+      "sha256": "39aa2600eaab6422490ce9da34617dd5d1979bb3f21589db24b08a7fd2d7b177",
+      "git_blob_sha1": "417fc16f7d52ee1d695c329c526bf7aa2273afae"
+    },
+    {
+      "path": "docs/maintenance/evidence/C-readonly-prior-status-b572-20261121.json",
+      "bytes": 23699,
+      "sha256": "f35d2ba69243b34247748c8ec9bf8ecb1616cee146af2d94cbc1434b35b52b9f",
+      "git_blob_sha1": "d54fe4b49e841470198fbe1873459527b36509a7"
+    },
+    {
+      "path": "docs/maintenance/evidence/native-0af8-binding-actual-result-review.json",
+      "bytes": 16379,
+      "sha256": "533d808acc9fa351c93de00d050b473b50c20a50cf58a2d6922e47416236b392",
+      "git_blob_sha1": "b05b9549cbfd216217a65bf404b4ef5be8dc1918"
+    },
+    {
+      "path": "docs/maintenance/evidence/native-0af8-binding-independent-static-review.json",
+      "bytes": 14941,
+      "sha256": "bf2b9598fc77fb515f794067ef6ede5e6152b41ea5675fea54b692077d9568fa",
+      "git_blob_sha1": "93bdb7961316425339866b074d1f74e85adaaa97"
+    },
+    {
+      "path": "docs/maintenance/evidence/native-0af8-readonly-actual-result-evidence/contracts.stderr.log",
+      "bytes": 563,
+      "sha256": "faf94d64e9080d37f1113ba37a57652a5f7203c84d220a53e8e5f6637376b6f0",
+      "git_blob_sha1": "0b81c8e45952257abe189d02d648ab674e8abc87"
+    },
+    {
+      "path": "docs/maintenance/evidence/native-0af8-readonly-actual-result-evidence/manifest.json",
+      "bytes": 3308,
+      "sha256": "a1027e80fb1345bea506941615308ff4071106701b725589a8593c8df0bf6a8d",
+      "git_blob_sha1": "69d6f577b941dc8e6a564fbb479820d3c4263fb3"
+    },
+    {
+      "path": "docs/maintenance/evidence/native-0af8-readonly-actual-result-evidence/receipt.json",
+      "bytes": 3246,
+      "sha256": "eaa88d170b4c1b5e0fa43418c65ad356b8a8bedc65d6737f47cc91de1de44d22",
+      "git_blob_sha1": "7ee209c42f7d0d8916bb5dac4730c4c2c0683c32"
+    },
+    {
+      "path": "docs/maintenance/evidence/native-0af8-readonly-actual-result-evidence/result-summary.json",
+      "bytes": 1949,
+      "sha256": "4f9f42dc9056526a6bafded1f1ef15c42e4acc5fdcf7bdeae14ad53adef6ae81",
+      "git_blob_sha1": "64fe425c0cd4c1efaa961327e3c8e5227ce43480"
+    },
+    {
+      "path": "docs/maintenance/evidence/native-0af8-schema-contracts-static-review.json",
+      "bytes": 8410,
+      "sha256": "d6788cb9b95bd75aa44a66ed95a6a30495b803483fa0226629c264b499729669",
+      "git_blob_sha1": "fa2ca0da6ec539f2d43806dcfc3854c42b35cdb1"
+    },
+    {
+      "path": "docs/maintenance/evidence/ssmcp-C-gate-failure-original-extract.json",
+      "bytes": 22941,
+      "sha256": "96eb6d9020a272435a7d9a285299ad54a35ae0332a47da81e466b3ac6f178559",
+      "git_blob_sha1": "ee3579b629a37e9d198bdbbbad557b81bda55e27"
+    },
+    {
+      "path": "docs/maintenance/evidence/ssmcp-C-gate-failure-test-blocks.json",
+      "bytes": 2087,
+      "sha256": "db44ca345e5290e2a13e0ca9b19b945257427f5dde75a422206e64422cc68705",
+      "git_blob_sha1": "47a1ee882c770bd31ccae74049da8123ebe244e0"
+    },
+    {
+      "path": "docs/maintenance/evidence/ssmcp-C-merge-source-static-review.json",
+      "bytes": 23615,
+      "sha256": "ec4c1d11d64990cda56ed0906b338e80e16e7759502160fff0d6d491c8b6acce",
+      "git_blob_sha1": "e62e1db8cfa16a344ed084c36691476c3adb76a6"
+    },
+    {
+      "path": "docs/maintenance/evidence/ssmcp-C-source-freeze-original.json",
+      "bytes": 3162,
+      "sha256": "6c8bab3f7b542bc29235e04bcd4ddf25c12d9b3051cc7d7a0a3bb284cc3d29f9",
+      "git_blob_sha1": "661cb12331f6a5c37c2e3395b4ccb4551f2dbddf"
+    },
+    {
+      "path": "docs/maintenance/evidence/ssmcp-C-subset25-static-supplement.json",
+      "bytes": 9785,
+      "sha256": "5053e9f48270b018115e7db197003980878068f4af573df971f0a48de8920616",
+      "git_blob_sha1": "60b0ff535b8ece97156d49742199d0e13ce74f2d"
+    },
+    {
+      "path": "docs/maintenance/evidence/ssmcp-D4-input-lease-fix-static-review.json",
+      "bytes": 9627,
+      "sha256": "065da9246f1b6e2fba928b7dbaac770ae2c8f177db5422df501219527dda0ffd",
+      "git_blob_sha1": "70d6ae5799f255fff8101728622edc72d231050b"
+    },
+    {
+      "path": "docs/maintenance/evidence/ssmcp-v25-evidence-delivery.json",
+      "bytes": 886,
+      "sha256": "a71b0c1e2cb9ae4100b6e3036c6e6a5544b64ed5a88731f3e05cc0f992190d94",
+      "git_blob_sha1": "fe1faf2568805d2d4e84b7870f44c5c0ac5b406e"
+    },
+    {
+      "path": "docs/maintenance/evidence/ssmcp-v25-metadata-independent-review.json",
+      "bytes": 13215,
+      "sha256": "191d13a95f322bab28bd7d880dd80e41db2e046a59e86b8d621ced0c68fdd359",
+      "git_blob_sha1": "acb2997447ecec29e270f9823df0485a4b5942da"
+    },
+    {
+      "path": "docs/maintenance/evidence/ssmcp-v25-policy/receipt.json",
+      "bytes": 4079,
+      "sha256": "4283a9f76824f70d6a8e197c744845b94683019e8652be9def486d8be3611098",
+      "git_blob_sha1": "d6fdf316fda8091ad5c4107bd935444745a92bf1"
+    },
+    {
+      "path": "docs/maintenance/evidence/ssmcp-v25-policy/stderr.log",
+      "bytes": 1835,
+      "sha256": "0857ddd4511c4b90e29c5b841e753c1aed6be3f36a86c2bfd55fd66e8203a075",
+      "git_blob_sha1": "3b34e1b4896195b58529214edc350b2f4e5eff2c"
+    }
+  ],
+  "review_method": {
+    "performed": [
+      "Read frozen report/original evidence bytes and parse JSON/Markdown.",
+      "Recompute bytes/SHA256/Git blobs and Git tree structure in memory.",
+      "Compare all historical objects, evidence copies and relative references.",
+      "Read existing archived raw records and check outer manifest/payload hashes.",
+      "Fetch metadata of the existing Drive archive without downloading again."
+    ],
+    "not_performed": [
+      "No candidate validator, product test, Cargo, runtime, GUI, PTY, model or native command.",
+      "No edits to the prepared report, baseline reports, source, refs, tags or Drive."
+    ],
+    "publication_guard": "Root still owns fresh-head/readback and publication. This review binds only the listed frozen manifest and source-time snapshot."
+  }
+}
