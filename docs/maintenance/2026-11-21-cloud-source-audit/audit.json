@@ -1,0 +1,1852 @@
+{
+  "status": "BLOCKED — independently observed upstream heads; aggregate gitlinks not promoted",
+  "acquisition": {
+    "initial_utc": [
+      "2026-11-21T16:09:18+00:00",
+      "2026-11-21T16:09:29+00:00"
+    ],
+    "final_sample_utc": [
+      "2026-11-21T16:35:43+00:00",
+      "2026-11-21T16:35:56+00:00"
+    ],
+    "aggregate_main": "be64e5ab88a8d72fe81956f6ba64a363e2299fde",
+    "aggregate_main_registered": 43,
+    "pr7": {
+      "number": 7,
+      "draft": true,
+      "head": "b5ac5b7c5bdfafbe5562e9f9820288bea752f58f",
+      "base": "main"
+    },
+    "pr10": {
+      "number": 10,
+      "draft": true,
+      "initial_head": "6c76ef89d2dd135533bf251bcfc07f0ba7003ebe",
+      "closing_head": "df34cc651b7b72a00fe437da49d911e876cdc9ca",
+      "base": "coord/git-source-policy-20261120",
+      "update_changed": [
+        "bilibilive",
+        "zuse",
+        "catalog.json",
+        "docs/PROJECTS.md",
+        "docs/maintenance/2026-11-21-bilibilive-zuse-release-sync.json"
+      ]
+    },
+    "coordinator_scripts_tree": "aa7015e0e93b04cc8d392db7256412c11f1446b2",
+    "identical_tested_scripts_and_policy_across_pr10_updates": true,
+    "acquisition_method": "git ls-remote --symref <url> HEAD, GitHub public visibility, detached public main checkouts and git rev-parse HEAD; named public refs or published default-branch ancestry for each recursive checkout",
+    "freshness": "All 46 sampled default heads matched the final catalog. check stops before its remote freshness phase when local consistency fails.",
+    "public_recursive_checkouts": 63,
+    "registered_top_level": 46,
+    "registered_cargo_repositories": 40,
+    "cargo_packages": 73,
+    "toolchain": {
+      "rustc": "1.100.0 (0ef1bc386 2026-11-09)",
+      "cargo": "1.100.0 (3acc79c0c 2026-11-05)",
+      "python": "3.12.14"
+    }
+  },
+  "historical_sources": {
+    "aggregate_checkpoint": "0783fdf6f70e07bf873bbebb97aea868e0e06002",
+    "checkpoint_zi18n": "cdff8dea19e97268d296afa827767ea689420591",
+    "checkpoint_lmm_api_source": "ec0dac93ab7386567ebf51e26bcc264d8921e6be",
+    "github_commit_lookup": {
+      "LIghtJUNction/zi18n@0783fdf": "422 no commit found",
+      "LIghtJUNction/zi18n@b90984b48465a764bcb699ad2bb3251fa7020024": "200 commit identity",
+      "LIghtJUNction/zi18n@cdff8dea19e97268d296afa827767ea689420591": "200 commit identity",
+      "TokenNotIncluded/lmm-api-source@ec0dac93ab7386567ebf51e26bcc264d8921e6be": "422 no commit found",
+      "TokenNotIncluded/lmm-api-source@3d1c09d5e0424b44603686f7419e76f790b2bb5c": "200 commit identity"
+    },
+    "lmm_nested_cli": "260a1eff2400aa64fc697028a406a8017ed6259c",
+    "zmcl_nested_zi18n": "cdff8dea19e97268d296afa827767ea689420591",
+    "extore": {
+      "path": "lmm-api-source/packages/extore",
+      "pin": "cf3469dbe827afcfb2e3f054a63f7b9b7c40bc2b",
+      "public_ref": "refs/heads/review/extore-zplugin-catalog",
+      "scope": "Exact public nested source recorded by LMM. Not a registered Project Z default head."
+    }
+  },
+  "heads": [
+    {
+      "repository": "OniMods",
+      "url": "https://github.com/LIghtJUNction/OniMods.git",
+      "default_branch": "main",
+      "remote_head": "1b93643d3ec683aa2e512c7a5b42ae1177db5b33",
+      "aggregate_main": "3f10bc7908da0eaeafc999a8fadadb8178048b0e",
+      "pr7": "3f10bc7908da0eaeafc999a8fadadb8178048b0e",
+      "pr10_at_open": "9d2ffb4f749919f513313d603daeed5a6767195b",
+      "pr10_at_close": "9d2ffb4f749919f513313d603daeed5a6767195b",
+      "first_observed_head": "1b93643d3ec683aa2e512c7a5b42ae1177db5b33"
+    },
+    {
+      "repository": "bilibilive",
+      "url": "https://github.com/LIghtJUNction/bilibilive.git",
+      "default_branch": "main",
+      "remote_head": "6a6801492e0d70ca6cc8103f92fe76ac7f2da2df",
+      "aggregate_main": null,
+      "pr7": null,
+      "pr10_at_open": "0f97b0e59240fd1230878371c4b9126f0955b70f",
+      "pr10_at_close": "6a6801492e0d70ca6cc8103f92fe76ac7f2da2df",
+      "first_observed_head": "6a6801492e0d70ca6cc8103f92fe76ac7f2da2df"
+    },
+    {
+      "repository": "lmm",
+      "url": "https://github.com/TokenNotIncluded/lmm.git",
+      "default_branch": "main",
+      "remote_head": "260a1eff2400aa64fc697028a406a8017ed6259c",
+      "aggregate_main": null,
+      "pr7": null,
+      "pr10_at_open": "260a1eff2400aa64fc697028a406a8017ed6259c",
+      "pr10_at_close": "260a1eff2400aa64fc697028a406a8017ed6259c",
+      "first_observed_head": "260a1eff2400aa64fc697028a406a8017ed6259c"
+    },
+    {
+      "repository": "lmm-api-source",
+      "url": "https://github.com/TokenNotIncluded/lmm-api-source.git",
+      "default_branch": "main",
+      "remote_head": "fa57cd2049ccd9138cdc0b4104db36b5b6c53ae5",
+      "aggregate_main": "3d1c09d5e0424b44603686f7419e76f790b2bb5c",
+      "pr7": "3d1c09d5e0424b44603686f7419e76f790b2bb5c",
+      "pr10_at_open": "fa57cd2049ccd9138cdc0b4104db36b5b6c53ae5",
+      "pr10_at_close": "fa57cd2049ccd9138cdc0b4104db36b5b6c53ae5",
+      "first_observed_head": "fa57cd2049ccd9138cdc0b4104db36b5b6c53ae5"
+    },
+    {
+      "repository": "mechrevo-drivers",
+      "url": "https://github.com/LIghtJUNction/mechrevo-drivers.git",
+      "default_branch": "main",
+      "remote_head": "e522bf8c612865043fdf766726b93066249fb6f8",
+      "aggregate_main": "900eb4593a26ba6a461d40173768358be336bc23",
+      "pr7": "900eb4593a26ba6a461d40173768358be336bc23",
+      "pr10_at_open": "eb2959aac4efa7edd12ebc8bd8b040108e285dc8",
+      "pr10_at_close": "eb2959aac4efa7edd12ebc8bd8b040108e285dc8",
+      "first_observed_head": "e522bf8c612865043fdf766726b93066249fb6f8"
+    },
+    {
+      "repository": "oh-my-ztty",
+      "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
+      "default_branch": "main",
+      "remote_head": "ab904f09d4a76003ac2431fa676aebcb4d23a7f0",
+      "aggregate_main": "0b60eb7d6e35d06a137278ffe0b3f1139c722fe6",
+      "pr7": "0b60eb7d6e35d06a137278ffe0b3f1139c722fe6",
+      "pr10_at_open": "ab904f09d4a76003ac2431fa676aebcb4d23a7f0",
+      "pr10_at_close": "ab904f09d4a76003ac2431fa676aebcb4d23a7f0",
+      "first_observed_head": "ab904f09d4a76003ac2431fa676aebcb4d23a7f0"
+    },
+    {
+      "repository": "ssmcp",
+      "url": "https://github.com/LIghtJUNction/ssmcp.git",
+      "default_branch": "main",
+      "remote_head": "02aa4dcd18786062ef44be6c76422dff054fbfed",
+      "aggregate_main": "2126b7b7f09eaba5efb4800214c4b509aa4a86d5",
+      "pr7": "2126b7b7f09eaba5efb4800214c4b509aa4a86d5",
+      "pr10_at_open": "dae9d52c734b5d316bf90d2317a51e3992f68085",
+      "pr10_at_close": "dae9d52c734b5d316bf90d2317a51e3992f68085",
+      "first_observed_head": "02aa4dcd18786062ef44be6c76422dff054fbfed"
+    },
+    {
+      "repository": "z58",
+      "url": "https://github.com/LIghtJUNction/z58.git",
+      "default_branch": "main",
+      "remote_head": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+      "aggregate_main": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+      "pr7": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+      "pr10_at_open": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+      "pr10_at_close": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+      "first_observed_head": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3"
+    },
+    {
+      "repository": "z64",
+      "url": "https://github.com/LIghtJUNction/z64.git",
+      "default_branch": "main",
+      "remote_head": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+      "aggregate_main": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+      "pr7": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+      "pr10_at_open": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+      "pr10_at_close": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+      "first_observed_head": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd"
+    },
+    {
+      "repository": "zcall",
+      "url": "https://github.com/LIghtJUNction/zcall.git",
+      "default_branch": "main",
+      "remote_head": "8dd30a922a0aedbe821f610649b1ab26078d1882",
+      "aggregate_main": "45df84f93848a9f7dc66eb7da953d18d14bb08f7",
+      "pr7": "45df84f93848a9f7dc66eb7da953d18d14bb08f7",
+      "pr10_at_open": "8dd30a922a0aedbe821f610649b1ab26078d1882",
+      "pr10_at_close": "8dd30a922a0aedbe821f610649b1ab26078d1882",
+      "first_observed_head": "8dd30a922a0aedbe821f610649b1ab26078d1882"
+    },
+    {
+      "repository": "zcall-gui",
+      "url": "https://github.com/LIghtJUNction/zcall-gui.git",
+      "default_branch": "main",
+      "remote_head": "95cbe443f06cd7d7e922ca498d916f970e712d4b",
+      "aggregate_main": "2dd7eedec55cbd40a2f2db993279c498623d6216",
+      "pr7": "2dd7eedec55cbd40a2f2db993279c498623d6216",
+      "pr10_at_open": "95cbe443f06cd7d7e922ca498d916f970e712d4b",
+      "pr10_at_close": "95cbe443f06cd7d7e922ca498d916f970e712d4b",
+      "first_observed_head": "95cbe443f06cd7d7e922ca498d916f970e712d4b"
+    },
+    {
+      "repository": "zcall-omarchy",
+      "url": "https://github.com/LIghtJUNction/zcall-omarchy.git",
+      "default_branch": "main",
+      "remote_head": "7db52e74ceb6c9d398791406e01265eecc127f87",
+      "aggregate_main": "7db52e74ceb6c9d398791406e01265eecc127f87",
+      "pr7": "7db52e74ceb6c9d398791406e01265eecc127f87",
+      "pr10_at_open": "7db52e74ceb6c9d398791406e01265eecc127f87",
+      "pr10_at_close": "7db52e74ceb6c9d398791406e01265eecc127f87",
+      "first_observed_head": "7db52e74ceb6c9d398791406e01265eecc127f87"
+    },
+    {
+      "repository": "zcalld",
+      "url": "https://github.com/LIghtJUNction/zcalld.git",
+      "default_branch": "main",
+      "remote_head": "61df8ac1c4e135f07313e6984dc389f49acc5afe",
+      "aggregate_main": "1c1441404ddc54416cf24b57d276958a8b98b811",
+      "pr7": "1c1441404ddc54416cf24b57d276958a8b98b811",
+      "pr10_at_open": "ccf26395ab7418463dad56db6a78f1c009d57430",
+      "pr10_at_close": "ccf26395ab7418463dad56db6a78f1c009d57430",
+      "first_observed_head": "61df8ac1c4e135f07313e6984dc389f49acc5afe"
+    },
+    {
+      "repository": "zcalld-compat",
+      "url": "https://github.com/LIghtJUNction/zcalld-compat.git",
+      "default_branch": "main",
+      "remote_head": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+      "aggregate_main": "c02044edeacdd642dcbea77bc3e1fe893b21b103",
+      "pr7": "c02044edeacdd642dcbea77bc3e1fe893b21b103",
+      "pr10_at_open": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+      "pr10_at_close": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+      "first_observed_head": "56a15b330384531b3a6c444190f53b6d3720bd5e"
+    },
+    {
+      "repository": "zclap",
+      "url": "https://github.com/LIghtJUNction/zclap.git",
+      "default_branch": "main",
+      "remote_head": "4d87f3ae3743e81509d5ac5500909955667c860f",
+      "aggregate_main": "4d87f3ae3743e81509d5ac5500909955667c860f",
+      "pr7": "4d87f3ae3743e81509d5ac5500909955667c860f",
+      "pr10_at_open": "4d87f3ae3743e81509d5ac5500909955667c860f",
+      "pr10_at_close": "4d87f3ae3743e81509d5ac5500909955667c860f",
+      "first_observed_head": "4d87f3ae3743e81509d5ac5500909955667c860f"
+    },
+    {
+      "repository": "zclick",
+      "url": "https://github.com/LIghtJUNction/zclick.git",
+      "default_branch": "main",
+      "remote_head": "732f958299e0e7b3522e4e85264083f8a0acafdc",
+      "aggregate_main": "21ac28b045447dec96a2de85d7aa6db0580081ab",
+      "pr7": "21ac28b045447dec96a2de85d7aa6db0580081ab",
+      "pr10_at_open": "b90a118e8ae72ebd45dd8fc2a4ec188c142439ec",
+      "pr10_at_close": "b90a118e8ae72ebd45dd8fc2a4ec188c142439ec",
+      "first_observed_head": "732f958299e0e7b3522e4e85264083f8a0acafdc"
+    },
+    {
+      "repository": "zconv",
+      "url": "https://github.com/LIghtJUNction/zconv.git",
+      "default_branch": "main",
+      "remote_head": "f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712",
+      "aggregate_main": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+      "pr7": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+      "pr10_at_open": "f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712",
+      "pr10_at_close": "f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712",
+      "first_observed_head": "f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712"
+    },
+    {
+      "repository": "zdistro",
+      "url": "https://github.com/LIghtJUNction/zdistro.git",
+      "default_branch": "main",
+      "remote_head": "6a54a137fc697d372b54ef85105315f2ce522b3d",
+      "aggregate_main": "6a54a137fc697d372b54ef85105315f2ce522b3d",
+      "pr7": "6a54a137fc697d372b54ef85105315f2ce522b3d",
+      "pr10_at_open": "6a54a137fc697d372b54ef85105315f2ce522b3d",
+      "pr10_at_close": "6a54a137fc697d372b54ef85105315f2ce522b3d",
+      "first_observed_head": "6a54a137fc697d372b54ef85105315f2ce522b3d"
+    },
+    {
+      "repository": "zdot",
+      "url": "https://github.com/LIghtJUNction/zdot.git",
+      "default_branch": "main",
+      "remote_head": "f540adcd11a7ed56339895d3d52e0a9e5e3506c6",
+      "aggregate_main": "d8084d4ae55a24113f56335e8b584b5f13d91925",
+      "pr7": "d8084d4ae55a24113f56335e8b584b5f13d91925",
+      "pr10_at_open": "f540adcd11a7ed56339895d3d52e0a9e5e3506c6",
+      "pr10_at_close": "f540adcd11a7ed56339895d3d52e0a9e5e3506c6",
+      "first_observed_head": "f540adcd11a7ed56339895d3d52e0a9e5e3506c6"
+    },
+    {
+      "repository": "zdwire",
+      "url": "https://github.com/LIghtJUNction/zdwire.git",
+      "default_branch": "main",
+      "remote_head": "c046e3182b0adf15d43500400a427b7dd7389525",
+      "aggregate_main": "c046e3182b0adf15d43500400a427b7dd7389525",
+      "pr7": "c046e3182b0adf15d43500400a427b7dd7389525",
+      "pr10_at_open": "c046e3182b0adf15d43500400a427b7dd7389525",
+      "pr10_at_close": "c046e3182b0adf15d43500400a427b7dd7389525",
+      "first_observed_head": "c046e3182b0adf15d43500400a427b7dd7389525"
+    },
+    {
+      "repository": "zfetch",
+      "url": "https://github.com/LIghtJUNction/zfetch.git",
+      "default_branch": "main",
+      "remote_head": "f0614f3b76eca222f4b3880f8dd1707d1308f098",
+      "aggregate_main": "5006d7a9e2a2d3f292f677df94395e27a794b9c7",
+      "pr7": "5006d7a9e2a2d3f292f677df94395e27a794b9c7",
+      "pr10_at_open": "f0614f3b76eca222f4b3880f8dd1707d1308f098",
+      "pr10_at_close": "f0614f3b76eca222f4b3880f8dd1707d1308f098",
+      "first_observed_head": "f0614f3b76eca222f4b3880f8dd1707d1308f098"
+    },
+    {
+      "repository": "zgpui",
+      "url": "https://github.com/LIghtJUNction/zgpui.git",
+      "default_branch": "main",
+      "remote_head": "174a8b73087deeac2ecfa036cad8bddba71c612f",
+      "aggregate_main": "b4d5493e0cd985d00558c7be0b5726965ab5163a",
+      "pr7": "b4d5493e0cd985d00558c7be0b5726965ab5163a",
+      "pr10_at_open": "174a8b73087deeac2ecfa036cad8bddba71c612f",
+      "pr10_at_close": "174a8b73087deeac2ecfa036cad8bddba71c612f",
+      "first_observed_head": "174a8b73087deeac2ecfa036cad8bddba71c612f"
+    },
+    {
+      "repository": "zgraphics",
+      "url": "https://github.com/LIghtJUNction/zgraphics.git",
+      "default_branch": "main",
+      "remote_head": "aa0ed19fb706ad147aff1df54c4ef762d918e864",
+      "aggregate_main": "b296a58f09d6052f13c86dc09e9e7b7f7e87438f",
+      "pr7": "b296a58f09d6052f13c86dc09e9e7b7f7e87438f",
+      "pr10_at_open": "aa0ed19fb706ad147aff1df54c4ef762d918e864",
+      "pr10_at_close": "aa0ed19fb706ad147aff1df54c4ef762d918e864",
+      "first_observed_head": "aa0ed19fb706ad147aff1df54c4ef762d918e864"
+    },
+    {
+      "repository": "zguard",
+      "url": "https://github.com/LIghtJUNction/zguard.git",
+      "default_branch": "main",
+      "remote_head": "6772b932a65e18f64e13591dee6edb2f6b099406",
+      "aggregate_main": "6772b932a65e18f64e13591dee6edb2f6b099406",
+      "pr7": "6772b932a65e18f64e13591dee6edb2f6b099406",
+      "pr10_at_open": "6772b932a65e18f64e13591dee6edb2f6b099406",
+      "pr10_at_close": "6772b932a65e18f64e13591dee6edb2f6b099406",
+      "first_observed_head": "6772b932a65e18f64e13591dee6edb2f6b099406"
+    },
+    {
+      "repository": "zharness",
+      "url": "https://github.com/LIghtJUNction/zharness.git",
+      "default_branch": "main",
+      "remote_head": "5f9a9f58f090326bf2d43f4df2cc90c1bc674c21",
+      "aggregate_main": "db4206d3b74e37d57ff052948962f55514081d4b",
+      "pr7": "db4206d3b74e37d57ff052948962f55514081d4b",
+      "pr10_at_open": "fb2948f78467dd92b216aabda6f18a5645f0e7f6",
+      "pr10_at_close": "fb2948f78467dd92b216aabda6f18a5645f0e7f6",
+      "first_observed_head": "5f9a9f58f090326bf2d43f4df2cc90c1bc674c21"
+    },
+    {
+      "repository": "zhex",
+      "url": "https://github.com/LIghtJUNction/zhex.git",
+      "default_branch": "main",
+      "remote_head": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+      "aggregate_main": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+      "pr7": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+      "pr10_at_open": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+      "pr10_at_close": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+      "first_observed_head": "09dfaa0adee628d0714e2f9e96921555e619b2f6"
+    },
+    {
+      "repository": "zi18n",
+      "url": "https://github.com/LIghtJUNction/zi18n.git",
+      "default_branch": "main",
+      "remote_head": "cdff8dea19e97268d296afa827767ea689420591",
+      "aggregate_main": "b90984b48465a764bcb699ad2bb3251fa7020024",
+      "pr7": "b90984b48465a764bcb699ad2bb3251fa7020024",
+      "pr10_at_open": "cdff8dea19e97268d296afa827767ea689420591",
+      "pr10_at_close": "cdff8dea19e97268d296afa827767ea689420591",
+      "first_observed_head": "cdff8dea19e97268d296afa827767ea689420591"
+    },
+    {
+      "repository": "zinput",
+      "url": "https://github.com/LIghtJUNction/zinput.git",
+      "default_branch": "main",
+      "remote_head": "da22743e1ad16bedb79751c8e8bb71e63c45d197",
+      "aggregate_main": "003829a5e7ea45d9827376d89e37c9e6cfbf4a12",
+      "pr7": "003829a5e7ea45d9827376d89e37c9e6cfbf4a12",
+      "pr10_at_open": "da22743e1ad16bedb79751c8e8bb71e63c45d197",
+      "pr10_at_close": "da22743e1ad16bedb79751c8e8bb71e63c45d197",
+      "first_observed_head": "da22743e1ad16bedb79751c8e8bb71e63c45d197"
+    },
+    {
+      "repository": "zldap",
+      "url": "https://github.com/LIghtJUNction/zldap.git",
+      "default_branch": "main",
+      "remote_head": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+      "aggregate_main": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+      "pr7": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+      "pr10_at_open": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+      "pr10_at_close": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+      "first_observed_head": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8"
+    },
+    {
+      "repository": "zmcl",
+      "url": "https://github.com/LIghtJUNction/zmcl.git",
+      "default_branch": "main",
+      "remote_head": "a2f9afe41d8013a32c2f928b9126e9f96e76f4db",
+      "aggregate_main": "70e9fe78fba84dc009c68239e38f5baf32920ff9",
+      "pr7": "70e9fe78fba84dc009c68239e38f5baf32920ff9",
+      "pr10_at_open": "a2f9afe41d8013a32c2f928b9126e9f96e76f4db",
+      "pr10_at_close": "a2f9afe41d8013a32c2f928b9126e9f96e76f4db",
+      "first_observed_head": "a2f9afe41d8013a32c2f928b9126e9f96e76f4db"
+    },
+    {
+      "repository": "zmcpio",
+      "url": "https://github.com/LIghtJUNction/zmcpio.git",
+      "default_branch": "main",
+      "remote_head": "c114a5ae9f925c64f3b090b8524016cbb90b6cff",
+      "aggregate_main": "a88d2accf0fa642eded27c844aaf7d7bb6dd3501",
+      "pr7": "a88d2accf0fa642eded27c844aaf7d7bb6dd3501",
+      "pr10_at_open": "c114a5ae9f925c64f3b090b8524016cbb90b6cff",
+      "pr10_at_close": "c114a5ae9f925c64f3b090b8524016cbb90b6cff",
+      "first_observed_head": "c114a5ae9f925c64f3b090b8524016cbb90b6cff"
+    },
+    {
+      "repository": "zmime",
+      "url": "https://github.com/LIghtJUNction/zmime.git",
+      "default_branch": "main",
+      "remote_head": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+      "aggregate_main": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+      "pr7": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+      "pr10_at_open": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+      "pr10_at_close": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+      "first_observed_head": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42"
+    },
+    {
+      "repository": "zplugin",
+      "url": "https://github.com/LIghtJUNction/zplugin.git",
+      "default_branch": "main",
+      "remote_head": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+      "aggregate_main": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+      "pr7": "00d566eedcff7b2932e90b9dfeb44910c783d305",
+      "pr10_at_open": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+      "pr10_at_close": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+      "first_observed_head": "592a1be623b81a775026c470e6f0efe91fcf78f3"
+    },
+    {
+      "repository": "zpty",
+      "url": "https://github.com/LIghtJUNction/zpty.git",
+      "default_branch": "main",
+      "remote_head": "d263f9a8f0881d259e46c51a7b6753c61ab9be59",
+      "aggregate_main": "d263f9a8f0881d259e46c51a7b6753c61ab9be59",
+      "pr7": "d263f9a8f0881d259e46c51a7b6753c61ab9be59",
+      "pr10_at_open": "d263f9a8f0881d259e46c51a7b6753c61ab9be59",
+      "pr10_at_close": "d263f9a8f0881d259e46c51a7b6753c61ab9be59",
+      "first_observed_head": "d263f9a8f0881d259e46c51a7b6753c61ab9be59"
+    },
+    {
+      "repository": "zrc",
+      "url": "https://github.com/LIghtJUNction/zrc.git",
+      "default_branch": "main",
+      "remote_head": "c127bd2965525adc05c46c6fba492aa1e45460f1",
+      "aggregate_main": "6311bf3377643fff0cff5a45a70b2256e22cc51f",
+      "pr7": "6311bf3377643fff0cff5a45a70b2256e22cc51f",
+      "pr10_at_open": "995d22a2bde9722bfb6e817fb8303eaa6fd8f339",
+      "pr10_at_close": "995d22a2bde9722bfb6e817fb8303eaa6fd8f339",
+      "first_observed_head": "c127bd2965525adc05c46c6fba492aa1e45460f1"
+    },
+    {
+      "repository": "zscan",
+      "url": "https://github.com/LIghtJUNction/zscan.git",
+      "default_branch": "main",
+      "remote_head": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+      "aggregate_main": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+      "pr7": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+      "pr10_at_open": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+      "pr10_at_close": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+      "first_observed_head": "c000a84c748d8e090ff662b2aef3858aa4880b09"
+    },
+    {
+      "repository": "zshard",
+      "url": "https://github.com/LIghtJUNction/zshard.git",
+      "default_branch": "main",
+      "remote_head": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+      "aggregate_main": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+      "pr7": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+      "pr10_at_open": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+      "pr10_at_close": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+      "first_observed_head": "f7842f70e439c4abda2a46698f0ebe067d38b297"
+    },
+    {
+      "repository": "zsyn",
+      "url": "https://github.com/LIghtJUNction/zsyn.git",
+      "default_branch": "main",
+      "remote_head": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+      "aggregate_main": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+      "pr7": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+      "pr10_at_open": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+      "pr10_at_close": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+      "first_observed_head": "b1cb68fd61101e98c504a90e47b74e2bccdd0165"
+    },
+    {
+      "repository": "zsys",
+      "url": "https://github.com/LIghtJUNction/zsys.git",
+      "default_branch": "main",
+      "remote_head": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+      "aggregate_main": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+      "pr7": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+      "pr10_at_open": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+      "pr10_at_close": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+      "first_observed_head": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+    },
+    {
+      "repository": "zterm",
+      "url": "https://github.com/LIghtJUNction/zterm.git",
+      "default_branch": "main",
+      "remote_head": "15174fecfb441011e4ae35d0e361b88eec29bd7a",
+      "aggregate_main": "cd9abc560d28c2d8ad6ed2073e8d9a7c27810da1",
+      "pr7": "cd9abc560d28c2d8ad6ed2073e8d9a7c27810da1",
+      "pr10_at_open": "fde08990612a8e8eb62dd90c664faab917214a8b",
+      "pr10_at_close": "fde08990612a8e8eb62dd90c664faab917214a8b",
+      "first_observed_head": "15174fecfb441011e4ae35d0e361b88eec29bd7a"
+    },
+    {
+      "repository": "ztty",
+      "url": "https://github.com/LIghtJUNction/ztty.git",
+      "default_branch": "main",
+      "remote_head": "c63dbd52e9fb597b77245403460972ecb699f096",
+      "aggregate_main": "66d39d021d195d981c50ca88a7715a2b37552854",
+      "pr7": "66d39d021d195d981c50ca88a7715a2b37552854",
+      "pr10_at_open": "dd4ea6f6f375761ddb5bfd126e68a40db8ab6a12",
+      "pr10_at_close": "dd4ea6f6f375761ddb5bfd126e68a40db8ab6a12",
+      "first_observed_head": "094085e90eda4df1e696bbc16283527445ee5a8d"
+    },
+    {
+      "repository": "ztuio",
+      "url": "https://github.com/LIghtJUNction/ztuio.git",
+      "default_branch": "main",
+      "remote_head": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+      "aggregate_main": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+      "pr7": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+      "pr10_at_open": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+      "pr10_at_close": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+      "first_observed_head": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e"
+    },
+    {
+      "repository": "ztype",
+      "url": "https://github.com/LIghtJUNction/ztype.git",
+      "default_branch": "main",
+      "remote_head": "4d784aa25dd1036830314032ac7b747c7fe9a0ed",
+      "aggregate_main": "26c1410ffcb3572a779ebd67a9a468301609f384",
+      "pr7": "26c1410ffcb3572a779ebd67a9a468301609f384",
+      "pr10_at_open": "4d784aa25dd1036830314032ac7b747c7fe9a0ed",
+      "pr10_at_close": "4d784aa25dd1036830314032ac7b747c7fe9a0ed",
+      "first_observed_head": "4d784aa25dd1036830314032ac7b747c7fe9a0ed"
+    },
+    {
+      "repository": "zuse",
+      "url": "https://github.com/LIghtJUNction/zuse.git",
+      "default_branch": "main",
+      "remote_head": "b5ebbd3679af215706cbd73b17045e014f5e0524",
+      "aggregate_main": "94c837551a7a2fd8ec9f577a3e2f57309bd5ce5a",
+      "pr7": "94c837551a7a2fd8ec9f577a3e2f57309bd5ce5a",
+      "pr10_at_open": "0016f96067d1e4672c62be9d8008d210edcdae2d",
+      "pr10_at_close": "d67e47c5dcd443ad9121a908ca57059160249051",
+      "first_observed_head": "d67e47c5dcd443ad9121a908ca57059160249051"
+    },
+    {
+      "repository": "zuse-skills",
+      "url": "https://github.com/LIghtJUNction/zuse-skills.git",
+      "default_branch": "main",
+      "remote_head": "fce48d78dcbedbecaaa56a09fdf11b12b9a6b09a",
+      "aggregate_main": null,
+      "pr7": null,
+      "pr10_at_open": "3df51e300ff8834d120678936bdbf50fc1a12697",
+      "pr10_at_close": "3df51e300ff8834d120678936bdbf50fc1a12697",
+      "first_observed_head": "3df51e300ff8834d120678936bdbf50fc1a12697"
+    },
+    {
+      "repository": "zvte",
+      "url": "https://github.com/LIghtJUNction/zvte.git",
+      "default_branch": "main",
+      "remote_head": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+      "aggregate_main": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+      "pr7": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+      "pr10_at_open": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+      "pr10_at_close": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+      "first_observed_head": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0"
+    }
+  ],
+  "generated_sha256": {
+    "catalog.json": "6163d7e091877a5485011ad9b1e8bd8456a8913b705f80a4f7e849c5c05bb765",
+    "PROJECTS.md": "a12c6968fc69e526bace602065d218351c83ba4d0dea82ca56354ce9e95ecf49"
+  },
+  "policy": {
+    "manifests": 75,
+    "direct_declarations": 72,
+    "violations": []
+  },
+  "gates": {
+    "sync": {
+      "command": "python3 scripts/project_z.py sync",
+      "exit": 1,
+      "scope": "Initial sample. Six recursive-source pin mismatches before recursive initialization or generation.",
+      "output": [
+        "project-z: ssmcp/'crates/zharness' -> 'zharness': pinned source fb2948f78467dd92b216aabda6f18a5645f0e7f6 differs from snapshot 5f9a9f58f090326bf2d43f4df2cc90c1bc674c21",
+        "ssmcp/'crates/zuse' -> 'zuse': pinned source 8d37a7df6fd94df1d0939eb6800c238e71f5835d differs from snapshot d67e47c5dcd443ad9121a908ca57059160249051",
+        "oh-my-ztty/'components/ztty' -> 'ztty': pinned source dd4ea6f6f375761ddb5bfd126e68a40db8ab6a12 differs from snapshot 094085e90eda4df1e696bbc16283527445ee5a8d",
+        "oh-my-ztty/'components/ssmcp' -> 'ssmcp': pinned source 5f4a35482c6353750248ddee8761e5fd3daffad6 differs from snapshot 02aa4dcd18786062ef44be6c76422dff054fbfed",
+        "oh-my-ztty/'components/zrc' -> 'zrc': pinned source 995d22a2bde9722bfb6e817fb8303eaa6fd8f339 differs from snapshot c127bd2965525adc05c46c6fba492aa1e45460f1",
+        "ztype/'vendor/zgpui' -> 'zgpui': pinned source b4d5493e0cd985d00558c7be0b5726965ab5163a differs from snapshot 174a8b73087deeac2ecfa036cad8bddba71c612f"
+      ]
+    },
+    "record": {
+      "command": "python3 scripts/project_z.py sync --record",
+      "exit": 0,
+      "output": "Recorded 46 repositories and 73 packages; run check and resolve --all"
+    },
+    "check": {
+      "command": "python3 scripts/project_z.py check",
+      "exit": 1,
+      "output": [
+        "project-z: ssmcp/'crates/zharness' -> 'zharness': pinned source fb2948f78467dd92b216aabda6f18a5645f0e7f6 differs from snapshot 5f9a9f58f090326bf2d43f4df2cc90c1bc674c21",
+        "ssmcp/'crates/zuse' -> 'zuse': pinned source 8d37a7df6fd94df1d0939eb6800c238e71f5835d differs from snapshot b5ebbd3679af215706cbd73b17045e014f5e0524",
+        "oh-my-ztty/'components/ztty' -> 'ztty': pinned source dd4ea6f6f375761ddb5bfd126e68a40db8ab6a12 differs from snapshot c63dbd52e9fb597b77245403460972ecb699f096",
+        "oh-my-ztty/'components/ssmcp' -> 'ssmcp': pinned source 5f4a35482c6353750248ddee8761e5fd3daffad6 differs from snapshot 02aa4dcd18786062ef44be6c76422dff054fbfed",
+        "oh-my-ztty/'components/zrc' -> 'zrc': pinned source 995d22a2bde9722bfb6e817fb8303eaa6fd8f339 differs from snapshot c127bd2965525adc05c46c6fba492aa1e45460f1",
+        "ztype/'vendor/zgpui' -> 'zgpui': pinned source b4d5493e0cd985d00558c7be0b5726965ab5163a differs from snapshot 174a8b73087deeac2ecfa036cad8bddba71c612f",
+        "bilibilive/Cargo.lock: stale internal zuse-computer 0.4.2 from 'git+https://github.com/LIghtJUNction/zuse.git#d67e47c5dcd443ad9121a908ca57059160249051'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zuse.git#b5ebbd3679af215706cbd73b17045e014f5e0524'; update and commit the consumer lock",
+        "ssmcp/Cargo.lock: stale internal zcall 0.4.0 from 'git+https://github.com/LIghtJUNction/zcall.git#199678d08104bed588e5d10b2c0634a47d7c8417'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zcall.git#8dd30a922a0aedbe821f610649b1ab26078d1882'; update and commit the consumer lock",
+        "ssmcp/Cargo.lock: stale internal zconv 0.4.0 from 'git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zconv.git#f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712'; update and commit the consumer lock",
+        "ssmcp/Cargo.lock: stale internal zharness 0.6.0 from 'git+https://github.com/LIghtJUNction/zharness.git#fb2948f78467dd92b216aabda6f18a5645f0e7f6'; expected 0.6.0 from 'git+https://github.com/LIghtJUNction/zharness.git#5f9a9f58f090326bf2d43f4df2cc90c1bc674c21'; update and commit the consumer lock",
+        "ssmcp/Cargo.lock: stale internal zmcpio 0.4.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#04bb6cd05c5295ab41a892a76cbef10b8ac07402'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#c114a5ae9f925c64f3b090b8524016cbb90b6cff'; update and commit the consumer lock",
+        "ssmcp/Cargo.lock: stale internal zuse-computer 0.3.0 from 'git+https://github.com/LIghtJUNction/zuse.git#8d37a7df6fd94df1d0939eb6800c238e71f5835d'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zuse.git#b5ebbd3679af215706cbd73b17045e014f5e0524'; update and commit the consumer lock",
+        "ztype/Cargo.lock: stale internal zcall 0.4.0 from 'git+https://github.com/LIghtJUNction/zcall.git#199678d08104bed588e5d10b2c0634a47d7c8417'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zcall.git#8dd30a922a0aedbe821f610649b1ab26078d1882'; update and commit the consumer lock",
+        "ztype/Cargo.lock: stale internal zconv 0.4.0 from 'git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zconv.git#f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712'; update and commit the consumer lock",
+        "ztype/Cargo.lock: stale internal zgpui 0.1.5 from 'git+https://github.com/LIghtJUNction/zgpui.git#b4d5493e0cd985d00558c7be0b5726965ab5163a'; expected 0.1.6 from 'git+https://github.com/LIghtJUNction/zgpui.git#174a8b73087deeac2ecfa036cad8bddba71c612f'; update and commit the consumer lock",
+        "ztype/Cargo.lock: stale internal zgpui-raster 0.1.0 from 'git+https://github.com/LIghtJUNction/zgpui.git#b4d5493e0cd985d00558c7be0b5726965ab5163a'; expected 0.1.0 from 'git+https://github.com/LIghtJUNction/zgpui.git#174a8b73087deeac2ecfa036cad8bddba71c612f'; update and commit the consumer lock",
+        "ztype/Cargo.lock: stale internal zmcpio 0.4.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#04bb6cd05c5295ab41a892a76cbef10b8ac07402'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#c114a5ae9f925c64f3b090b8524016cbb90b6cff'; update and commit the consumer lock",
+        "ztype/Cargo.lock: stale internal zuse-computer 0.3.0 from 'git+https://github.com/LIghtJUNction/zuse.git#8d37a7df6fd94df1d0939eb6800c238e71f5835d'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zuse.git#b5ebbd3679af215706cbd73b17045e014f5e0524'; update and commit the consumer lock"
+      ]
+    },
+    "resolve_all": {
+      "command": "python3 scripts/project_z.py resolve --all",
+      "exit": 1,
+      "stage": "source-link precheck; full-graph locked Cargo phase not entered",
+      "output": [
+        "project-z: ssmcp/'crates/zharness' -> 'zharness': pinned source fb2948f78467dd92b216aabda6f18a5645f0e7f6 differs from snapshot 5f9a9f58f090326bf2d43f4df2cc90c1bc674c21",
+        "ssmcp/'crates/zuse' -> 'zuse': pinned source 8d37a7df6fd94df1d0939eb6800c238e71f5835d differs from snapshot b5ebbd3679af215706cbd73b17045e014f5e0524",
+        "oh-my-ztty/'components/ztty' -> 'ztty': pinned source dd4ea6f6f375761ddb5bfd126e68a40db8ab6a12 differs from snapshot c63dbd52e9fb597b77245403460972ecb699f096",
+        "oh-my-ztty/'components/ssmcp' -> 'ssmcp': pinned source 5f4a35482c6353750248ddee8761e5fd3daffad6 differs from snapshot 02aa4dcd18786062ef44be6c76422dff054fbfed",
+        "oh-my-ztty/'components/zrc' -> 'zrc': pinned source 995d22a2bde9722bfb6e817fb8303eaa6fd8f339 differs from snapshot c127bd2965525adc05c46c6fba492aa1e45460f1",
+        "ztype/'vendor/zgpui' -> 'zgpui': pinned source b4d5493e0cd985d00558c7be0b5726965ab5163a differs from snapshot 174a8b73087deeac2ecfa036cad8bddba71c612f"
+      ]
+    },
+    "checkout_errors": [],
+    "stale_generated": []
+  },
+  "impact": {
+    "aggregate_main": {
+      "changed_or_added": [
+        "OniMods",
+        "bilibilive",
+        "lmm",
+        "lmm-api-source",
+        "mechrevo-drivers",
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall",
+        "zcall-gui",
+        "zcalld",
+        "zcalld-compat",
+        "zclick",
+        "zconv",
+        "zdot",
+        "zfetch",
+        "zgpui",
+        "zgraphics",
+        "zharness",
+        "zi18n",
+        "zinput",
+        "zmcl",
+        "zmcpio",
+        "zplugin",
+        "zrc",
+        "zterm",
+        "ztty",
+        "ztype",
+        "zuse",
+        "zuse-skills"
+      ],
+      "coordinator_impact": [
+        "OniMods",
+        "bilibilive",
+        "lmm",
+        "lmm-api-source",
+        "mechrevo-drivers",
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zclick",
+        "zconv",
+        "zdot",
+        "zfetch",
+        "zgpui",
+        "zgraphics",
+        "zharness",
+        "zi18n",
+        "zinput",
+        "zmcl",
+        "zmcpio",
+        "zplugin",
+        "zrc",
+        "zterm",
+        "ztty",
+        "ztype",
+        "zuse",
+        "zuse-skills"
+      ],
+      "including_registered_distribution_gitlinks": [
+        "OniMods",
+        "bilibilive",
+        "lmm",
+        "lmm-api-source",
+        "mechrevo-drivers",
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zclick",
+        "zconv",
+        "zdot",
+        "zfetch",
+        "zgpui",
+        "zgraphics",
+        "zharness",
+        "zi18n",
+        "zinput",
+        "zmcl",
+        "zmcpio",
+        "zplugin",
+        "zrc",
+        "zterm",
+        "ztty",
+        "ztype",
+        "zuse",
+        "zuse-skills"
+      ]
+    },
+    "pr7": {
+      "changed_or_added": [
+        "OniMods",
+        "bilibilive",
+        "lmm",
+        "lmm-api-source",
+        "mechrevo-drivers",
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall",
+        "zcall-gui",
+        "zcalld",
+        "zcalld-compat",
+        "zclick",
+        "zconv",
+        "zdot",
+        "zfetch",
+        "zgpui",
+        "zgraphics",
+        "zharness",
+        "zi18n",
+        "zinput",
+        "zmcl",
+        "zmcpio",
+        "zplugin",
+        "zrc",
+        "zterm",
+        "ztty",
+        "ztype",
+        "zuse",
+        "zuse-skills"
+      ],
+      "coordinator_impact": [
+        "OniMods",
+        "bilibilive",
+        "lmm",
+        "lmm-api-source",
+        "mechrevo-drivers",
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zclick",
+        "zconv",
+        "zdot",
+        "zfetch",
+        "zgpui",
+        "zgraphics",
+        "zharness",
+        "zi18n",
+        "zinput",
+        "zmcl",
+        "zmcpio",
+        "zplugin",
+        "zrc",
+        "zterm",
+        "ztty",
+        "ztype",
+        "zuse",
+        "zuse-skills"
+      ],
+      "including_registered_distribution_gitlinks": [
+        "OniMods",
+        "bilibilive",
+        "lmm",
+        "lmm-api-source",
+        "mechrevo-drivers",
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zclick",
+        "zconv",
+        "zdot",
+        "zfetch",
+        "zgpui",
+        "zgraphics",
+        "zharness",
+        "zi18n",
+        "zinput",
+        "zmcl",
+        "zmcpio",
+        "zplugin",
+        "zrc",
+        "zterm",
+        "ztty",
+        "ztype",
+        "zuse",
+        "zuse-skills"
+      ]
+    },
+    "pr10_at_open": {
+      "changed_or_added": [
+        "OniMods",
+        "bilibilive",
+        "mechrevo-drivers",
+        "ssmcp",
+        "zcalld",
+        "zclick",
+        "zharness",
+        "zrc",
+        "zterm",
+        "ztty",
+        "zuse",
+        "zuse-skills"
+      ],
+      "coordinator_impact": [
+        "OniMods",
+        "bilibilive",
+        "mechrevo-drivers",
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zclick",
+        "zharness",
+        "zrc",
+        "zterm",
+        "ztty",
+        "ztype",
+        "zuse",
+        "zuse-skills"
+      ],
+      "including_registered_distribution_gitlinks": [
+        "OniMods",
+        "bilibilive",
+        "mechrevo-drivers",
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zclick",
+        "zharness",
+        "zrc",
+        "zterm",
+        "ztty",
+        "ztype",
+        "zuse",
+        "zuse-skills"
+      ]
+    },
+    "pr10_at_close": {
+      "changed_or_added": [
+        "OniMods",
+        "mechrevo-drivers",
+        "ssmcp",
+        "zcalld",
+        "zclick",
+        "zharness",
+        "zrc",
+        "zterm",
+        "ztty",
+        "zuse",
+        "zuse-skills"
+      ],
+      "coordinator_impact": [
+        "OniMods",
+        "bilibilive",
+        "mechrevo-drivers",
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zclick",
+        "zharness",
+        "zrc",
+        "zterm",
+        "ztty",
+        "ztype",
+        "zuse",
+        "zuse-skills"
+      ],
+      "including_registered_distribution_gitlinks": [
+        "OniMods",
+        "bilibilive",
+        "mechrevo-drivers",
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zclick",
+        "zharness",
+        "zrc",
+        "zterm",
+        "ztty",
+        "ztype",
+        "zuse",
+        "zuse-skills"
+      ]
+    }
+  },
+  "individual_impact": {
+    "zi18n": {
+      "coordinator_impact": [
+        "zi18n",
+        "zmcl"
+      ],
+      "including_registered_distribution_gitlinks": [
+        "zi18n",
+        "zmcl"
+      ]
+    },
+    "lmm-api-source": {
+      "coordinator_impact": [
+        "lmm-api-source"
+      ],
+      "including_registered_distribution_gitlinks": [
+        "lmm-api-source"
+      ]
+    },
+    "lmm": {
+      "coordinator_impact": [
+        "lmm"
+      ],
+      "including_registered_distribution_gitlinks": [
+        "lmm",
+        "lmm-api-source"
+      ]
+    },
+    "zharness": {
+      "coordinator_impact": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zharness",
+        "zrc"
+      ],
+      "including_registered_distribution_gitlinks": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zharness",
+        "zrc"
+      ]
+    },
+    "zuse": {
+      "coordinator_impact": [
+        "bilibilive",
+        "oh-my-ztty",
+        "ssmcp",
+        "zrc",
+        "ztype",
+        "zuse",
+        "zuse-skills"
+      ],
+      "including_registered_distribution_gitlinks": [
+        "bilibilive",
+        "oh-my-ztty",
+        "ssmcp",
+        "zrc",
+        "ztype",
+        "zuse",
+        "zuse-skills"
+      ]
+    },
+    "ssmcp": {
+      "coordinator_impact": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zrc"
+      ],
+      "including_registered_distribution_gitlinks": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zrc"
+      ]
+    },
+    "ztype": {
+      "coordinator_impact": [
+        "ztype"
+      ],
+      "including_registered_distribution_gitlinks": [
+        "ztype"
+      ]
+    },
+    "zuse-skills": {
+      "coordinator_impact": [
+        "zuse-skills"
+      ],
+      "including_registered_distribution_gitlinks": [
+        "zuse-skills"
+      ]
+    }
+  },
+  "recursive_registered_gitlink_drift": [
+    {
+      "path": "oh-my-ztty/components/ssmcp",
+      "target_repository": "ssmcp",
+      "gitlink": "5f4a35482c6353750248ddee8761e5fd3daffad6",
+      "sampled_head": "02aa4dcd18786062ef44be6c76422dff054fbfed"
+    },
+    {
+      "path": "oh-my-ztty/components/ssmcp/crates/zharness",
+      "target_repository": "zharness",
+      "gitlink": "fb2948f78467dd92b216aabda6f18a5645f0e7f6",
+      "sampled_head": "5f9a9f58f090326bf2d43f4df2cc90c1bc674c21"
+    },
+    {
+      "path": "oh-my-ztty/components/ssmcp/crates/zuse",
+      "target_repository": "zuse",
+      "gitlink": "ac5713c2bfc3cc4848e89107cc1a6929ec48e2dc",
+      "sampled_head": "b5ebbd3679af215706cbd73b17045e014f5e0524"
+    },
+    {
+      "path": "oh-my-ztty/components/zrc",
+      "target_repository": "zrc",
+      "gitlink": "995d22a2bde9722bfb6e817fb8303eaa6fd8f339",
+      "sampled_head": "c127bd2965525adc05c46c6fba492aa1e45460f1"
+    },
+    {
+      "path": "oh-my-ztty/components/ztty",
+      "target_repository": "ztty",
+      "gitlink": "dd4ea6f6f375761ddb5bfd126e68a40db8ab6a12",
+      "sampled_head": "c63dbd52e9fb597b77245403460972ecb699f096"
+    },
+    {
+      "path": "oh-my-ztty/components/ztty/crates/zgpui",
+      "target_repository": "zgpui",
+      "gitlink": "b4d5493e0cd985d00558c7be0b5726965ab5163a",
+      "sampled_head": "174a8b73087deeac2ecfa036cad8bddba71c612f"
+    },
+    {
+      "path": "oh-my-ztty/components/ztty/crates/zterm",
+      "target_repository": "zterm",
+      "gitlink": "fde08990612a8e8eb62dd90c664faab917214a8b",
+      "sampled_head": "15174fecfb441011e4ae35d0e361b88eec29bd7a"
+    },
+    {
+      "path": "ssmcp/crates/zharness",
+      "target_repository": "zharness",
+      "gitlink": "fb2948f78467dd92b216aabda6f18a5645f0e7f6",
+      "sampled_head": "5f9a9f58f090326bf2d43f4df2cc90c1bc674c21"
+    },
+    {
+      "path": "ssmcp/crates/zuse",
+      "target_repository": "zuse",
+      "gitlink": "8d37a7df6fd94df1d0939eb6800c238e71f5835d",
+      "sampled_head": "b5ebbd3679af215706cbd73b17045e014f5e0524"
+    },
+    {
+      "path": "ztype/vendor/zgpui",
+      "target_repository": "zgpui",
+      "gitlink": "b4d5493e0cd985d00558c7be0b5726965ab5163a",
+      "sampled_head": "174a8b73087deeac2ecfa036cad8bddba71c612f"
+    }
+  ],
+  "individual_locked_resolution": {
+    "method": "scripts/project_z.py resolved_paths(catalog, [repository], root), including its locked_source_errors and per-manifest cargo metadata --locked source/commit checks. SSMCP and ztype were held at their reported source-link prerequisites.",
+    "counts": {
+      "passed": 37,
+      "blocked": 1,
+      "no_cargo_manifest": 6,
+      "blocked_before_cargo": 2
+    },
+    "passed_manifest_count": 42,
+    "results": {
+      "OniMods": {
+        "status": "passed",
+        "source": "1b93643d3ec683aa2e512c7a5b42ae1177db5b33",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "bilibilive": {
+        "status": "blocked",
+        "source": "6a6801492e0d70ca6cc8103f92fe76ac7f2da2df",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": [
+          "bilibilive/Cargo.lock: stale internal zuse-computer 0.4.2 from 'git+https://github.com/LIghtJUNction/zuse.git#d67e47c5dcd443ad9121a908ca57059160249051'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zuse.git#b5ebbd3679af215706cbd73b17045e014f5e0524'; update and commit the consumer lock"
+        ]
+      },
+      "lmm": {
+        "status": "passed",
+        "source": "260a1eff2400aa64fc697028a406a8017ed6259c",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "lmm-api-source": {
+        "status": "passed",
+        "source": "fa57cd2049ccd9138cdc0b4104db36b5b6c53ae5",
+        "manifests": [
+          "services/core/Cargo.toml"
+        ],
+        "detail": []
+      },
+      "mechrevo-drivers": {
+        "status": "passed",
+        "source": "e522bf8c612865043fdf766726b93066249fb6f8",
+        "manifests": [
+          "console/Cargo.toml"
+        ],
+        "detail": []
+      },
+      "oh-my-ztty": {
+        "status": "no_cargo_manifest",
+        "source": "ab904f09d4a76003ac2431fa676aebcb4d23a7f0",
+        "manifests": []
+      },
+      "ssmcp": {
+        "status": "blocked_before_cargo",
+        "source": "02aa4dcd18786062ef44be6c76422dff054fbfed",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": [
+          "ssmcp/'crates/zharness' -> 'zharness': pinned source fb2948f78467dd92b216aabda6f18a5645f0e7f6 differs from snapshot 5f9a9f58f090326bf2d43f4df2cc90c1bc674c21",
+          "ssmcp/'crates/zuse' -> 'zuse': pinned source 8d37a7df6fd94df1d0939eb6800c238e71f5835d differs from snapshot b5ebbd3679af215706cbd73b17045e014f5e0524",
+          "ssmcp/Cargo.lock: stale internal zcall 0.4.0 from 'git+https://github.com/LIghtJUNction/zcall.git#199678d08104bed588e5d10b2c0634a47d7c8417'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zcall.git#8dd30a922a0aedbe821f610649b1ab26078d1882'; update and commit the consumer lock",
+          "ssmcp/Cargo.lock: stale internal zconv 0.4.0 from 'git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zconv.git#f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712'; update and commit the consumer lock",
+          "ssmcp/Cargo.lock: stale internal zharness 0.6.0 from 'git+https://github.com/LIghtJUNction/zharness.git#fb2948f78467dd92b216aabda6f18a5645f0e7f6'; expected 0.6.0 from 'git+https://github.com/LIghtJUNction/zharness.git#5f9a9f58f090326bf2d43f4df2cc90c1bc674c21'; update and commit the consumer lock",
+          "ssmcp/Cargo.lock: stale internal zmcpio 0.4.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#04bb6cd05c5295ab41a892a76cbef10b8ac07402'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#c114a5ae9f925c64f3b090b8524016cbb90b6cff'; update and commit the consumer lock",
+          "ssmcp/Cargo.lock: stale internal zuse-computer 0.3.0 from 'git+https://github.com/LIghtJUNction/zuse.git#8d37a7df6fd94df1d0939eb6800c238e71f5835d'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zuse.git#b5ebbd3679af215706cbd73b17045e014f5e0524'; update and commit the consumer lock"
+        ]
+      },
+      "z58": {
+        "status": "passed",
+        "source": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "z64": {
+        "status": "passed",
+        "source": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zcall": {
+        "status": "passed",
+        "source": "8dd30a922a0aedbe821f610649b1ab26078d1882",
+        "manifests": [
+          "Cargo.toml",
+          "fuzz/Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zcall-gui": {
+        "status": "passed",
+        "source": "95cbe443f06cd7d7e922ca498d916f970e712d4b",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zcall-omarchy": {
+        "status": "no_cargo_manifest",
+        "source": "7db52e74ceb6c9d398791406e01265eecc127f87",
+        "manifests": []
+      },
+      "zcalld": {
+        "status": "passed",
+        "source": "61df8ac1c4e135f07313e6984dc389f49acc5afe",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zcalld-compat": {
+        "status": "no_cargo_manifest",
+        "source": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+        "manifests": []
+      },
+      "zclap": {
+        "status": "passed",
+        "source": "4d87f3ae3743e81509d5ac5500909955667c860f",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zclick": {
+        "status": "passed",
+        "source": "732f958299e0e7b3522e4e85264083f8a0acafdc",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zconv": {
+        "status": "passed",
+        "source": "f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712",
+        "manifests": [
+          "Cargo.toml",
+          "fuzz/Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zdistro": {
+        "status": "no_cargo_manifest",
+        "source": "6a54a137fc697d372b54ef85105315f2ce522b3d",
+        "manifests": []
+      },
+      "zdot": {
+        "status": "passed",
+        "source": "f540adcd11a7ed56339895d3d52e0a9e5e3506c6",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zdwire": {
+        "status": "passed",
+        "source": "c046e3182b0adf15d43500400a427b7dd7389525",
+        "manifests": [
+          "Cargo.toml",
+          "fuzz/Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zfetch": {
+        "status": "passed",
+        "source": "f0614f3b76eca222f4b3880f8dd1707d1308f098",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zgpui": {
+        "status": "passed",
+        "source": "174a8b73087deeac2ecfa036cad8bddba71c612f",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zgraphics": {
+        "status": "passed",
+        "source": "aa0ed19fb706ad147aff1df54c4ef762d918e864",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zguard": {
+        "status": "passed",
+        "source": "6772b932a65e18f64e13591dee6edb2f6b099406",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zharness": {
+        "status": "passed",
+        "source": "5f9a9f58f090326bf2d43f4df2cc90c1bc674c21",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zhex": {
+        "status": "passed",
+        "source": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zi18n": {
+        "status": "passed",
+        "source": "cdff8dea19e97268d296afa827767ea689420591",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zinput": {
+        "status": "passed",
+        "source": "da22743e1ad16bedb79751c8e8bb71e63c45d197",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zldap": {
+        "status": "passed",
+        "source": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zmcl": {
+        "status": "passed",
+        "source": "a2f9afe41d8013a32c2f928b9126e9f96e76f4db",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zmcpio": {
+        "status": "passed",
+        "source": "c114a5ae9f925c64f3b090b8524016cbb90b6cff",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zmime": {
+        "status": "passed",
+        "source": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zplugin": {
+        "status": "passed",
+        "source": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zpty": {
+        "status": "passed",
+        "source": "d263f9a8f0881d259e46c51a7b6753c61ab9be59",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zrc": {
+        "status": "passed",
+        "source": "c127bd2965525adc05c46c6fba492aa1e45460f1",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zscan": {
+        "status": "passed",
+        "source": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zshard": {
+        "status": "no_cargo_manifest",
+        "source": "f7842f70e439c4abda2a46698f0ebe067d38b297",
+        "manifests": []
+      },
+      "zsyn": {
+        "status": "passed",
+        "source": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zsys": {
+        "status": "passed",
+        "source": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zterm": {
+        "status": "passed",
+        "source": "15174fecfb441011e4ae35d0e361b88eec29bd7a",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "ztty": {
+        "status": "passed",
+        "source": "c63dbd52e9fb597b77245403460972ecb699f096",
+        "manifests": [
+          "Cargo.toml",
+          "examples/dedent-plugin/Cargo.toml",
+          "tests/fixtures/text-plugin/Cargo.toml"
+        ],
+        "detail": []
+      },
+      "ztuio": {
+        "status": "passed",
+        "source": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "ztype": {
+        "status": "blocked_before_cargo",
+        "source": "4d784aa25dd1036830314032ac7b747c7fe9a0ed",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": [
+          "ztype/'vendor/zgpui' -> 'zgpui': pinned source b4d5493e0cd985d00558c7be0b5726965ab5163a differs from snapshot 174a8b73087deeac2ecfa036cad8bddba71c612f",
+          "ztype/Cargo.lock: stale internal zcall 0.4.0 from 'git+https://github.com/LIghtJUNction/zcall.git#199678d08104bed588e5d10b2c0634a47d7c8417'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zcall.git#8dd30a922a0aedbe821f610649b1ab26078d1882'; update and commit the consumer lock",
+          "ztype/Cargo.lock: stale internal zconv 0.4.0 from 'git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1'; expected 0.4.1 from 'git+https://github.com/LIghtJUNction/zconv.git#f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712'; update and commit the consumer lock",
+          "ztype/Cargo.lock: stale internal zgpui 0.1.5 from 'git+https://github.com/LIghtJUNction/zgpui.git#b4d5493e0cd985d00558c7be0b5726965ab5163a'; expected 0.1.6 from 'git+https://github.com/LIghtJUNction/zgpui.git#174a8b73087deeac2ecfa036cad8bddba71c612f'; update and commit the consumer lock",
+          "ztype/Cargo.lock: stale internal zgpui-raster 0.1.0 from 'git+https://github.com/LIghtJUNction/zgpui.git#b4d5493e0cd985d00558c7be0b5726965ab5163a'; expected 0.1.0 from 'git+https://github.com/LIghtJUNction/zgpui.git#174a8b73087deeac2ecfa036cad8bddba71c612f'; update and commit the consumer lock",
+          "ztype/Cargo.lock: stale internal zmcpio 0.4.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#04bb6cd05c5295ab41a892a76cbef10b8ac07402'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zmcpio.git#c114a5ae9f925c64f3b090b8524016cbb90b6cff'; update and commit the consumer lock",
+          "ztype/Cargo.lock: stale internal zuse-computer 0.3.0 from 'git+https://github.com/LIghtJUNction/zuse.git#8d37a7df6fd94df1d0939eb6800c238e71f5835d'; expected 0.5.0 from 'git+https://github.com/LIghtJUNction/zuse.git#b5ebbd3679af215706cbd73b17045e014f5e0524'; update and commit the consumer lock"
+        ]
+      },
+      "zuse": {
+        "status": "passed",
+        "source": "b5ebbd3679af215706cbd73b17045e014f5e0524",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      },
+      "zuse-skills": {
+        "status": "no_cargo_manifest",
+        "source": "fce48d78dcbedbecaaa56a09fdf11b12b9a6b09a",
+        "manifests": []
+      },
+      "zvte": {
+        "status": "passed",
+        "source": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+        "manifests": [
+          "Cargo.toml"
+        ],
+        "detail": []
+      }
+    }
+  },
+  "tests": {
+    "zi18n": {
+      "command": "cargo test --locked --manifest-path zi18n/Cargo.toml --all-features",
+      "commit": "cdff8dea19e97268d296afa827767ea689420591",
+      "exit": 0,
+      "results": [
+        "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+        "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+      ]
+    },
+    "zmcl": {
+      "command": "cargo test --locked --manifest-path zmcl/Cargo.toml --features gui --bin zmcl gui::titles::tests::titles_preserve_existing_english_bytes -- --exact",
+      "commit": "a2f9afe41d8013a32c2f928b9126e9f96e76f4db",
+      "exit": 0,
+      "result": "1 passed, 91 filtered out",
+      "initial_failure": "missing native development headers; retested with Debian trixie FreeType/fontconfig/X11 development files extracted into an isolated temporary sysroot and the container runtime libraries"
+    },
+    "coordinator": {
+      "command": "python3 -m unittest discover -s tests -v",
+      "initial_run": {
+        "total": 112,
+        "ok": 102,
+        "failures": 1,
+        "errors": 9,
+        "cause": "Sandbox provides a .git marker at each writable temporary root. isolated_destination rejects workspace fixture destinations beneath it.",
+        "affected": [
+          "test_apply_pins_exact_upstream_only_in_new_worktree (test_maintenance.IsolatedApply.test_apply_pins_exact_upstream_only_in_new_worktree) ... ERROR",
+          "test_cli_repeated_repository_selection_and_audit_only_rejection (test_maintenance.IsolatedApply.test_cli_repeated_repository_selection_and_audit_only_rejection) ... FAIL",
+          "test_failed_dependency_gate_preserves_uncommitted_review_worktree (test_maintenance.IsolatedApply.test_failed_dependency_gate_preserves_uncommitted_review_worktree) ... ERROR",
+          "test_nested_url_replacement_removal_and_hidden_dirty_source (test_maintenance.IsolatedApply.test_nested_url_replacement_removal_and_hidden_dirty_source) ... ERROR",
+          "test_selected_update_defers_other_changes_and_default_still_updates_all (test_maintenance.IsolatedApply.test_selected_update_defers_other_changes_and_default_still_updates_all) ... ERROR",
+          "test_upstream_movement_requires_a_new_audit (test_maintenance.IsolatedApply.test_upstream_movement_requires_a_new_audit) ... ERROR",
+          "test_application_feature_resolution_failure_cannot_create_ready_snapshot (test_maintenance.OfflineResolutionApply.test_application_feature_resolution_failure_cannot_create_ready_snapshot) ... ERROR",
+          "test_default_branch_rename_is_recorded_without_editing_source (test_maintenance.OfflineResolutionApply.test_default_branch_rename_is_recorded_without_editing_source) ... ERROR",
+          "test_latest_library_with_unmigrated_consumer_lock_is_blocked (test_maintenance.OfflineResolutionApply.test_latest_library_with_unmigrated_consumer_lock_is_blocked) ... ERROR",
+          "test_updated_consumer_and_library_are_committed_with_actual_locked_resolution (test_maintenance.OfflineResolutionApply.test_updated_consumer_and_library_are_committed_with_actual_locked_resolution) ... ERROR"
+        ]
+      },
+      "focused_rerun": {
+        "total": 93,
+        "ok": 93,
+        "modules": [
+          "test_project_z",
+          "test_recursive_sources",
+          "test_release",
+          "test_release_projection",
+          "test_release_receipts",
+          "test_cargo_versions"
+        ]
+      },
+      "isolated_offline_rerun": {
+        "python": "3.13.5",
+        "cargo": "1.100.0",
+        "total": 112,
+        "passed": 112,
+        "failed": 0,
+        "skipped": 0,
+        "exit": 0,
+        "isolation": "fresh cloud container, cleared process environment, Git file protocol only, CARGO_NET_OFFLINE=true, separate temporary fixture root and Cargo target",
+        "trailer": [
+          "----------------------------------------------------------------------",
+          "Ran 112 tests in 17.813s",
+          "",
+          "OK"
+        ]
+      }
+    }
+  },
+  "preceding_validation": {
+    "utc": "2026-11-21T16:19:13+00:00",
+    "check_diagnostics": 17,
+    "source_link_mismatches": 6,
+    "stale_lock_records": 11,
+    "changed_main_heads_since": [
+      {
+        "repository": "ztty",
+        "from": "094085e90eda4df1e696bbc16283527445ee5a8d",
+        "to": "c63dbd52e9fb597b77245403460972ecb699f096"
+      },
+      {
+        "repository": "zuse",
+        "from": "d67e47c5dcd443ad9121a908ca57059160249051",
+        "to": "b5ebbd3679af215706cbd73b17045e014f5e0524"
+      },
+      {
+        "repository": "zuse-skills",
+        "from": "74273d89def711b7625ca74cf49272c91bf797f4",
+        "to": "fce48d78dcbedbecaaa56a09fdf11b12b9a6b09a"
+      }
+    ],
+    "additional_blocker": "bilibilive still locks zuse-computer 0.4.2 at d67e47c5; sampled Zuse main now exposes 0.5.0 at b5ebbd36"
+  },
+  "committed_workspace_locks": [
+    {
+      "workspace": "OniMods",
+      "repository": "OniMods",
+      "git_blob": "c4a0beada867c3a594a46eca0bfd9d0bb775409c",
+      "sha256": "528b41f960fa17022878ff0d5326334fa5ef3b8dcf7169d69d269b7fcab4214a"
+    },
+    {
+      "workspace": "bilibilive",
+      "repository": "bilibilive",
+      "git_blob": "e393f36619fb24ba051a2394621876bbdf2740e5",
+      "sha256": "a3d5ece1986450ec20a716fcb317500def51c919463d2767c61bceff7949796f"
+    },
+    {
+      "workspace": "lmm",
+      "repository": "lmm",
+      "git_blob": "d1930baccb86df75caca07ad2cf991b05d1201c1",
+      "sha256": "d751968f109e864e4921423532339f310c4891bbab4cf817f8e037c800488101"
+    },
+    {
+      "workspace": "lmm-api-source/services/core",
+      "repository": "lmm-api-source",
+      "git_blob": "f3d6d7cc3fdc98a9d5dca9f57d53489ab82bc45a",
+      "sha256": "7ad8b7b8b84e4c74924208479df25fc6e85304c1112d0f1a77bea2b53dadf9a7"
+    },
+    {
+      "workspace": "mechrevo-drivers/console",
+      "repository": "mechrevo-drivers",
+      "git_blob": "2bf5404caa0466012dd3b961c8512c1470787a9e",
+      "sha256": "cb9251dca7a6112c76f5cf46520a4d2223cf23512100b2f55f9ce3b81157dedc"
+    },
+    {
+      "workspace": "ssmcp",
+      "repository": "ssmcp",
+      "git_blob": "c64e987b31bb984d9e413164e6c057b027803c8c",
+      "sha256": "b8caf2e4f747094a0bcd12842b1fe7894d7d956efa1f8b756f17a16518b9d393"
+    },
+    {
+      "workspace": "z58",
+      "repository": "z58",
+      "git_blob": "98aca05a4ed8d8fb7bd7d76989e799410d827749",
+      "sha256": "a1a9cec9d5520a31ea63c9d2eefc93eba223c87f42ddbb86204d3eed414b2ebc"
+    },
+    {
+      "workspace": "z64",
+      "repository": "z64",
+      "git_blob": "283051e1ae6eb4b4e4e5f7b578ffb0394b771c9c",
+      "sha256": "57cd4b552b944dc250ee85424e948ba02bd36f99da38c220564454481a87a7bb"
+    },
+    {
+      "workspace": "zcall",
+      "repository": "zcall",
+      "git_blob": "3a54f7a60707a78d8930bb4be64d33fd26242ff6",
+      "sha256": "968baa295fdd019c9ab8a55b2e8d8f17b507e287710cc028e9796243dc93b305"
+    },
+    {
+      "workspace": "zcall/fuzz",
+      "repository": "zcall",
+      "git_blob": "ecaf836ac295f1ca3d85911f89c9ade122f83f28",
+      "sha256": "8d1566337e83ae630ebca7b98b73205c516dc5a38eec1ceca61896c47a56ab37"
+    },
+    {
+      "workspace": "zcall-gui",
+      "repository": "zcall-gui",
+      "git_blob": "af8f14e07136b0812e58fb721a59506c0139b86a",
+      "sha256": "57cd8d1fcc6e2ad18354528512dfe5cc344209887679c69aab539792a2b14b37"
+    },
+    {
+      "workspace": "zcalld",
+      "repository": "zcalld",
+      "git_blob": "333a8b2ae2cacff3f1d53c97e8c6e5f11ad21e4e",
+      "sha256": "1d390022cb3b8496899d6b877b1b82da0f1b6d52cefd157545ec6195463c384a"
+    },
+    {
+      "workspace": "zclap",
+      "repository": "zclap",
+      "git_blob": "39fb3b949d862a0cd080e8e117f87bdf43c67a49",
+      "sha256": "d288486dd35d22286de6ed5081a35ce5da6c773effabb2eb0495dd26e5122c8d"
+    },
+    {
+      "workspace": "zclick",
+      "repository": "zclick",
+      "git_blob": "d6ba9c6b2a4982260666a9bae919462bd212df8c",
+      "sha256": "2f8ccbea1d67edc8649535493cb3f98c996abdcc0ebfb5b8213d10679f215606"
+    },
+    {
+      "workspace": "zconv",
+      "repository": "zconv",
+      "git_blob": "1c58d8c573703d9f020eacc30453627147ef987e",
+      "sha256": "6ca56c9eace6a89d04d7840d5b98c82fa93a6f3146051bcfaf54639c3ce95cc4"
+    },
+    {
+      "workspace": "zconv/fuzz",
+      "repository": "zconv",
+      "git_blob": "759c975bca0801726adb9e8c13d952df7a5ae461",
+      "sha256": "bf8ed2f05cd774dc55cfd8ac0f96e9ac55ed4b851552914486fd4842452c9e0c"
+    },
+    {
+      "workspace": "zdot",
+      "repository": "zdot",
+      "git_blob": "4052e2e845b9dc511780125b046c2e44d828fbaa",
+      "sha256": "dda82d30a4b1a3f7c09aabb030c082fbc88b5aceb3d6064b73e6b2e67bf72ca3"
+    },
+    {
+      "workspace": "zdwire",
+      "repository": "zdwire",
+      "git_blob": "2044fb9db876237bac32a54839b1beb74b82284f",
+      "sha256": "749bf7c4f2f912b2f156d81597758f370ffff1e8a28927207dccf047826d3a3c"
+    },
+    {
+      "workspace": "zdwire/fuzz",
+      "repository": "zdwire",
+      "git_blob": "c28b0ce8c2f27b74ac17f4646c47940345ff0d6c",
+      "sha256": "b478b4f57de608c3c54d9d98c47fb3f3b172944e0a599481afdcd95e5b65fc17"
+    },
+    {
+      "workspace": "zfetch",
+      "repository": "zfetch",
+      "git_blob": "fb431c2a92ba87e29435ac19660888c0669108b4",
+      "sha256": "180d47c8945477f6759cea3d61d779d11dc4ea6c4837df9246ca83337a3ae8a6"
+    },
+    {
+      "workspace": "zgpui",
+      "repository": "zgpui",
+      "git_blob": "d0bfce88e4d58d75abc389b7fd42d88a25910472",
+      "sha256": "30ddf1bf8a9d5607bb12374472ae28f16ebef2fd5f7e236ee8237b3ba8bd4802"
+    },
+    {
+      "workspace": "zgraphics",
+      "repository": "zgraphics",
+      "git_blob": "c0911d8f1de7a2f672b2273d7d7740e736945118",
+      "sha256": "1284cc4c284978b2ace3ccd2139502cd184a4508b6160d06db61cfa323d2b0a1"
+    },
+    {
+      "workspace": "zguard",
+      "repository": "zguard",
+      "git_blob": "e3012092a3d0165a5f79bc39309248774c203c9e",
+      "sha256": "675a532f10543ff4d4ce801ca7de42e46becea86522af32d17ce1fe9888425fe"
+    },
+    {
+      "workspace": "zharness",
+      "repository": "zharness",
+      "git_blob": "3cbfd7c0ea560697627780ddcb3a98bb087dd5dc",
+      "sha256": "580e038aa4bfc632baa1e3b9f595ebb6d9cdfe1e7b4c7a46b6137745b71f8bc4"
+    },
+    {
+      "workspace": "zhex",
+      "repository": "zhex",
+      "git_blob": "7434eea5666c1fec98938ad968b9d82120c1e362",
+      "sha256": "8249c4f31172c09f3508df8879e1c933afcc04ceec4394c7aa90749ae9a20b12"
+    },
+    {
+      "workspace": "zi18n",
+      "repository": "zi18n",
+      "git_blob": "4fc4b373ea69f16758ac459a60ad92a757903713",
+      "sha256": "76e0ffa8c84d3087b4eefd36012b8ea4de5e789c5d1e7a2bbe2d87242ec10cc4"
+    },
+    {
+      "workspace": "zinput",
+      "repository": "zinput",
+      "git_blob": "0e03b498e151eec72e88b2bc82310a64e29e37c7",
+      "sha256": "4f46c58ac47eab48400aa3d3742519bac9c7e7de73e8bf30b4902576dee3c9a3"
+    },
+    {
+      "workspace": "zldap",
+      "repository": "zldap",
+      "git_blob": "fe07ac3fabd35cf2eedb17dd3719c3e4dd2b551f",
+      "sha256": "15b21c84a51ad24c18aced0e26077f1c778a7649990afd5ea8fb6abe05bde834"
+    },
+    {
+      "workspace": "zmcl",
+      "repository": "zmcl",
+      "git_blob": "b10813772e3c7280cecf4a7bd8f715481a7129c9",
+      "sha256": "41b0c5fc2d9a1361e6421e42aa3ed315455821aedb69a5efd66ed6e744def1bd"
+    },
+    {
+      "workspace": "zmcpio",
+      "repository": "zmcpio",
+      "git_blob": "eda1598b02606e920566e4bec8eb13f5768b88eb",
+      "sha256": "e1eecce0a93de2b3e3efd99f16205e8f5914d7f3717db92e7b678d1b7ce9f403"
+    },
+    {
+      "workspace": "zmime",
+      "repository": "zmime",
+      "git_blob": "4abbe2821b11065f5d8f253594da9196a245a9ef",
+      "sha256": "bfd6f008bda55589c8c11028461d2b42a8ba2901e5f9210ed7700b739217342d"
+    },
+    {
+      "workspace": "zplugin",
+      "repository": "zplugin",
+      "git_blob": "1909022d1ad0ac7380619488b71fd3841149d633",
+      "sha256": "a5aec4b4ad4c1008a6c97d46dabad1f5c423278ec138889fa7b8129817509dc6"
+    },
+    {
+      "workspace": "zpty",
+      "repository": "zpty",
+      "git_blob": "dc875e3c0c72a6e853695790f6d0b7c59caf15ef",
+      "sha256": "2bd7a726a0d1e3bc0f80b715fc86353e12ec4f98c3389dabcecb547ae8250e56"
+    },
+    {
+      "workspace": "zrc",
+      "repository": "zrc",
+      "git_blob": "bce3adb3f3dfbfd7185c41d3e98ee1a25ac9ec50",
+      "sha256": "b7d2b103e971459709b2b2ff0b6f98d9c318240d541ae9e03c585c0a8763762b"
+    },
+    {
+      "workspace": "zscan",
+      "repository": "zscan",
+      "git_blob": "1169cb0a80be9004910f348c4eacfaaadfb21d88",
+      "sha256": "8b1d1a347dcde035c3351ffed503f0fbfbd163d2dfd72a49f2d4442c9a5301be"
+    },
+    {
+      "workspace": "zsyn",
+      "repository": "zsyn",
+      "git_blob": "818705a8b098588b4f4665eddff2fed03a5a8e7e",
+      "sha256": "0a6435bf7ccde0dd3875267a7583c78b1c781231e0c61e363b7ad81a84197052"
+    },
+    {
+      "workspace": "zsys",
+      "repository": "zsys",
+      "git_blob": "8946264a6a54a7f10ea0dbad3744f88ea8880213",
+      "sha256": "7da45bf7d424ece39b8dd1cc7e7b41fbe23269b7a336d3d4e9e572f5a3c917f3"
+    },
+    {
+      "workspace": "zterm",
+      "repository": "zterm",
+      "git_blob": "b523c8f3b572611092ad66318709a3715c721ea8",
+      "sha256": "7382234c57e332a6bb5054b5a635784f739dc402c814d336b68007608f753fcb"
+    },
+    {
+      "workspace": "ztty",
+      "repository": "ztty",
+      "git_blob": "ce2e42fcf2a9794de47c3100d495dff80a2e1e64",
+      "sha256": "0e842a83d1549bbe2604c263f51c97be74bf9379acb825d8b9cf65edb74a23af"
+    },
+    {
+      "workspace": "ztty/examples/dedent-plugin",
+      "repository": "ztty",
+      "git_blob": "0732add8d7e947336de0a13fab880b989991f736",
+      "sha256": "748699d6052b8342b3b0b500578c8308795f7b222c695f09ea2cb833bc116bae"
+    },
+    {
+      "workspace": "ztty/tests/fixtures/text-plugin",
+      "repository": "ztty",
+      "git_blob": "77258029604d874359df740ecd831272b4788f5e",
+      "sha256": "c58b19f4df085515f8a472e4db3aa16ccd5f5519db4d5eeec28e17df6edf78f8"
+    },
+    {
+      "workspace": "ztuio",
+      "repository": "ztuio",
+      "git_blob": "746f3d331d0b146f2ec41f763ad3ca9fa45c052e",
+      "sha256": "b1932772b34fd2c36461d1f66b709f8b2c2e6c37818204282a229cbcee743a14"
+    },
+    {
+      "workspace": "ztype",
+      "repository": "ztype",
+      "git_blob": "e568d675b2bc1545fc7d8de842174217bff9be85",
+      "sha256": "9057fd94ae4ebdef0338bf35e4c679da76d62b5843b090c90e923e2b50f8148a"
+    },
+    {
+      "workspace": "zuse",
+      "repository": "zuse",
+      "git_blob": "53a2d532c6fd0d5addf2de0addcf62a7afb2704b",
+      "sha256": "b16cf3e65ec8820f91bec38359d7bbce32b8cda3fd21ccfeddf70fe6365b1129"
+    },
+    {
+      "workspace": "zvte",
+      "repository": "zvte",
+      "git_blob": "04a74331eefc7519ec2155b99e5022d775d6707f",
+      "sha256": "7bb51104e198fa691c114c862dc17a59d6a2df41a0b43ca8f634d46d7a206804"
+    }
+  ]
+}
