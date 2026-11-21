@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "status": "published_and_independently_read_back",
+  "source": {
+    "repository": "LIghtJUNction/project-z",
+    "branch": "coord/git-source-policy-20261120",
+    "commit": "88fa3610f24cc21705107bff4917a6ec26c022d0",
+    "tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+    "sole_parent": "ba666696e38c350c7bf3cdcc01fd940fcfa69145"
+  },
+  "publication": {
+    "mechanism": "GitHub connector create_tree/create_commit/update_ref",
+    "force": false,
+    "expected_ref": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "tested_tree_equals_remote_tree": true,
+    "remote_raw_files_match_tested_contents": true,
+    "complete_tree_comparison": {
+      "base_tree": "434aae35045919f11806416c7c70f1d525dea040",
+      "tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+      "total": 400,
+      "unchanged": 396,
+      "changed": [
+        "docs/release-projection.md",
+        "scripts/release_projection.py",
+        "tests/test_release_projection.py",
+        "tests/test_release_receipts.py"
+      ],
+      "added": [],
+      "removed": []
+    }
+  },
+  "files": [
+    {
+      "path": "docs/release-projection.md",
+      "bytes": 5658,
+      "sha256": "06a57eff7c4fa5bf2be825c288415dead003b89d058079e4daa33cee147496b8",
+      "git_blob": "4461f954fe94defb8055e4e3deb434fcb38b7a6f"
+    },
+    {
+      "path": "scripts/release_projection.py",
+      "bytes": 14539,
+      "sha256": "7df4df89eb8401aefa8124b45461a7c35df17fa0f7d6733f6eccf4a00cae63f2",
+      "git_blob": "ee12250feb7c0cd12c7350ca5574c5b974a89318"
+    },
+    {
+      "path": "tests/test_release_projection.py",
+      "bytes": 11080,
+      "sha256": "3e81f32fe63b2a2265444676034b7caee64d6a3259fff6effd17774027bfcd37",
+      "git_blob": "44f0a71b44ce4ce1a7e7823943aab752be815d74"
+    },
+    {
+      "path": "tests/test_release_receipts.py",
+      "bytes": 7563,
+      "sha256": "d0bbbc25f8d3b894f4315454625cba409da28dde010fbdc7a9c19fef0a92e084",
+      "git_blob": "b06534747913b6239809fa07388abcba8d6eaca2"
+    }
+  ],
+  "validation": {
+    "red": {
+      "base_production_unchanged": true,
+      "tested_tree": "756e841391a840499f61629674e2889545dc75ec",
+      "actual_exit": 1,
+      "selected_methods": 2,
+      "subcase_and_setup_errors": 7,
+      "expected_failure": true,
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_release_projection.MatchTests.test_compatible_version_metadata_preserves_options_and_uses_locked_pin",
+        "test_release_receipts.ReceiptTests.test_matching_receipt_bytes_identity_and_commit_accept"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/source/tests",
+      "result_descriptor": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/red-result.json",
+        "bytes": 2664,
+        "sha256": "f44024e09119551412cc1e03c9cc1cd3f5c097229c54a244087e939d2f0efc1a"
+      },
+      "real_cargo_invoked": false
+    },
+    "green": {
+      "actual_job": "26c4545eae1eab8d27485f4a48077d3c-bc6",
+      "actual_exit": 0,
+      "both_eof": true,
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/validate_release.py",
+        "--source",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/source",
+        "--output",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green"
+      ],
+      "test_counts": {
+        "run": 18,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "expected_failures": 0,
+        "unexpected_successes": 0,
+        "successful": true
+      },
+      "modules": {
+        "test_release": 4,
+        "test_release_projection": 8,
+        "test_release_receipts": 6
+      },
+      "unittest_elapsed_seconds": 1.79,
+      "driver_elapsed_seconds": 2.043487787246704,
+      "real_cargo_calls": [
+        {
+          "argv": [
+            "cargo",
+            "metadata",
+            "--offline",
+            "--no-deps",
+            "--format-version=1"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/stage/source",
+          "started_at": 1795236691.393561,
+          "exit_code": 0,
+          "finished_at": 1795236692.342482,
+          "stdout": {
+            "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/cargo-metadata.stdout.json",
+            "bytes": 3901,
+            "sha256": "9b375f9020936d2731ad43c2aff9278ffb3d12bc2e1922a895dfa218f2e0c27a"
+          },
+          "stderr": {
+            "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/cargo-metadata.stderr.log",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        }
+      ],
+      "observer_semantics": "subprocess.run delegates exactly once with the original arguments and returns the actual CompletedProcess; it records and restricts commands, not mocks results.",
+      "parent_outer_lock": {
+        "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "mode": "LOCK_EX|LOCK_NB",
+        "attempts": 1,
+        "wait_queue": false,
+        "inode": 63537699,
+        "acquired_at": 1795236690.6568081,
+        "kernel_rows_while_held": [
+          "154: FLOCK  ADVISORY  WRITE 3004230 00:20:63537699 0 EOF"
+        ],
+        "kernel_rows_before_unlock": [
+          "154: FLOCK  ADVISORY  WRITE 3004230 00:20:63537699 0 EOF"
+        ],
+        "released_at": 1795236692.5013516
+      },
+      "child_pids_after_tests": ""
+    },
+    "postflight": {
+      "observed_at": 1795236740.382908,
+      "owned_pids": [
+        {
+          "pid": 3004230,
+          "exists": false
+        },
+        {
+          "pid": 3004229,
+          "exists": false
+        }
+      ],
+      "target_lock_inode": 63537699,
+      "target_kernel_rows_at_observation": [],
+      "no_lock_acquisition_performed": true,
+      "source_head": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+      "source_tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+      "status": "M  docs/release-projection.md\nM  scripts/release_projection.py\nM  tests/test_release_projection.py\nM  tests/test_release_receipts.py\n",
+      "temporary_remaining": [],
+      "claim_boundary": "No owned processes remained; matching lock rows were empty at this independent observation only. No claim of future global lock availability."
+    },
+    "actual_job_root_read": {
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-bc6",
+      "running": false,
+      "exit_code": 0,
+      "stdout_eof": true,
+      "stderr_eof": true,
+      "stdout": "{\"result\": {\"path\": \"/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/result.json\", \"bytes\": 88013, \"sha256\": \"b9a6fb00182c3aab032e3b74239d94af24b2d4a362c22b5ddbcb4364b2f53ea3\"}, \"status\": \"passed\", \"exit_code\": 0, \"tests\": {\"run\": 18, \"failures\": 0, \"errors\": 0, \"skipped\": 0, \"expected_failures\": 0, \"unexpected_successes\": 0, \"successful\": true}, \"cargo_commands\": 1, \"own_lock_rows_after_close\": [], \"error\": null}\n"
+    },
+    "scope": {
+      "executed": "Three existing release modules with three added regression methods, local temporary Git fixtures, one original offline metadata assertion.",
+      "not_executed": [
+        "full Python suite",
+        "Rust compilation or tests",
+        "real Project Z sync/check/resolve/impact",
+        "product/GUI/P1",
+        "CI",
+        "installation",
+        "publishing"
+      ],
+      "no_target_cleanup": true,
+      "no_other_worktree_changes": true,
+      "no_future_Core_heavy_task": true
+    }
+  },
+  "independent_static_review": {
+    "base": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+    "reviewer": "pr_org_repos",
+    "scope": "Independent static read of exact four-file patch; no tests/Cargo/product or file/ref writes",
+    "blocking_findings": 0,
+    "conclusion": "ready for publication with existing actual 18-test batch"
+  },
+  "pr": {
+    "url": "https://github.com/LIghtJUNction/project-z/pull/7",
+    "number": 7,
+    "state": "open",
+    "draft": true,
+    "head": "88fa3610f24cc21705107bff4917a6ec26c022d0",
+    "base": "be64e5ab88a8d72fe81956f6ba64a363e2299fde",
+    "updated_at": "2026-11-21T05:00:59Z",
+    "entire_body_readback_matches": true,
+    "entire_prior_body_preserved": true,
+    "body_archive": "pr7-body-published.md"
+  },
+  "native_source_handoff": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/handoff.json",
+    "bytes": 11863,
+    "sha256": "257bad369feed9b69d6a238d655308ca919ac8ea76dbe3def603f3c924aef14e"
+  },
+  "coordination": {
+    "metadata_batch_completed": true,
+    "window_returned_to": "SSMCP r13 original owner",
+    "outbound_receipts": [
+      960,
+      961,
+      971,
+      972
+    ],
+    "team_heavy_running": 0,
+    "team_heavy_queued": 0,
+    "further_Cargo_build_product_shared_target_writes_paused": true
+  },
+  "claim_boundary": "This is the release projection/receipt compatibility batch only. It does not establish final 44-source graph, Rust/product, P1, install, or release acceptance."
+}

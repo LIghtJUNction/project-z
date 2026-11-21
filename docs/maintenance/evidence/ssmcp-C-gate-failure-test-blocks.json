@@ -1,0 +1,11 @@
+{
+  "read_job_id": "26c4545eae1eab8d27485f4a48077d3c-949",
+  "read_job_exit": 0,
+  "read_both_eof": true,
+  "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/logs/candidate2-library-private.log",
+  "bytes": 559083,
+  "sha256": "35bf0940230057397d500006fe48966214586282fece014709b50ccd5640cde3",
+  "failure_section_start_character": 556195,
+  "failure_section": "failures:\n\n---- client::local::socket::tests::dropping_the_host_cleans_its_socket_without_explicit_shutdown stdout ----\n\nthread 'client::local::socket::tests::dropping_the_host_cleans_its_socket_without_explicit_shutdown' (460970) panicked at src/client/local/socket/tests.rs:225:66:\ncalled `Result::unwrap()` on an `Err` value: \"local socket parent /tmp has unsafe ownership or permissions\"\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n\n---- client::local::socket::tests::http_socket_uses_the_same_origin_and_authenticated_mcp_router stdout ----\n\nthread 'client::local::socket::tests::http_socket_uses_the_same_origin_and_authenticated_mcp_router' (460971) panicked at src/client/local/socket/tests.rs:181:66:\ncalled `Result::unwrap()` on an `Err` value: \"local socket parent /tmp has unsafe ownership or permissions\"\n\n---- session::service::tests::create_rejects_foreground_chat_modes_before_saving_or_spawning stdout ----\n\nthread 'session::service::tests::create_rejects_foreground_chat_modes_before_saving_or_spawning' (468402) panicked at src/session/service.rs:946:13:\nassertion failed: result.unwrap_err().to_string().contains(\"require the foreground\")\n\n\nfailures:\n    client::local::socket::tests::dropping_the_host_cleans_its_socket_without_explicit_shutdown\n    client::local::socket::tests::http_socket_uses_the_same_origin_and_authenticated_mcp_router\n    session::service::tests::create_rejects_foreground_chat_modes_before_saving_or_spawning\n\ntest result: FAILED. 2049 passed; 3 failed; 23 ignored; 0 measured; 4 filtered out; finished in 35.62s\n\n",
+  "read_full_file_for_hash": true
+}

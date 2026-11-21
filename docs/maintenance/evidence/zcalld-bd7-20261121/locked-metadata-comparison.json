@@ -1,0 +1,70 @@
+{
+  "schema": "zcalld.bd7.metadata-path-normalization.v1",
+  "status": "equal_after_explicit_root_path_normalization",
+  "new_source": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+  "old_source": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+  "new_raw_log": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/36-locked-metadata.log",
+    "bytes": 76753,
+    "sha256": "cbb01c76cb0b5f15f543d0cdde735d9a28ef30dc6ecd8326ab7ba96ea9598160"
+  },
+  "old_raw_log": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/05-locked-metadata.log",
+    "bytes": 76848,
+    "sha256": "9fd5a336d020836ba93ccfb8d5e087866ee23f4fbf5df00ed5d786df9b5beb04"
+  },
+  "new_complete_metadata": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/locked-metadata-full.json",
+    "bytes": 121798,
+    "sha256": "8c269047993ba31b373edeb64f65cd9473aacc19ece1e92605448e781b21353c"
+  },
+  "old_complete_metadata": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/historical-0af8-locked-metadata-full.json",
+    "bytes": 121893,
+    "sha256": "af70412c7a563eca84d90bb1846dab498fde994e23f8a2106f2423c73e002c58"
+  },
+  "normalized_metadata": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/locked-metadata-path-normalized.json",
+    "bytes": 115908,
+    "sha256": "cd4413fce1c0fdad4cf70b677747d55c28f9d6fcd5d4422db55a635c509d8d82"
+  },
+  "normalization": {
+    "only_old_prefix": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source",
+    "only_new_prefix": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+    "replacement": "<ZCALLD_SOURCE_ROOT>",
+    "all_other_values_unchanged": true
+  },
+  "packages": 19,
+  "resolve_nodes": 19,
+  "workspace_members": 10,
+  "git_packages": [
+    {
+      "name": "zcall",
+      "version": "0.4.0",
+      "source": "git+https://github.com/LIghtJUNction/zcall.git#317c52f101f112c6af671a629d8406305a168e4a"
+    },
+    {
+      "name": "zconv",
+      "version": "0.4.0",
+      "source": "git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1"
+    },
+    {
+      "name": "zplugin",
+      "version": "0.3.1",
+      "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+    },
+    {
+      "name": "zplugin-macros",
+      "version": "0.3.1",
+      "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+    },
+    {
+      "name": "zsys",
+      "version": "0.1.1",
+      "source": "git+https://github.com/LIghtJUNction/zsys.git#808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+    }
+  ],
+  "binary_equivalence_claim": false,
+  "gui_acceptance_claim": false,
+  "boundary": "Equality is a dependency-graph/path-normalized metadata fact, not identical binary or GUI behavior. Actual source paths remain in all raw compiler and execution evidence."
+}

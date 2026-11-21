@@ -1,0 +1,48 @@
+{
+  "schema": "project-z.zcalld-e1-pin-independent-review.v1",
+  "observed_at_utc": "2026-11-21T00:35:00.721Z",
+  "scope": "Read-only GitHub object and compare review; no gate/build/native/source/ref changes.",
+  "head": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+  "tree": "34795b388520d9a0587f0543ba5763d37b1aeb84",
+  "parents": [
+    "8fe9b42e8b25fc78328ac50e4bd2fc9b9faf438f"
+  ],
+  "old_tree": "65c4d7a3ac4af29427510edbf1e407a5ef6f307d",
+  "total_leaf_count": 220,
+  "unchanged_leaf_count": 219,
+  "changed_paths": [
+    {
+      "path": "extensions/compat",
+      "before": {
+        "sha": "c521d1fb1ce8eac173ea2bb481816d3cd1df82d3",
+        "mode": "160000",
+        "type": "commit"
+      },
+      "after": {
+        "sha": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+        "mode": "160000",
+        "type": "commit"
+      }
+    }
+  ],
+  "compat_compare": {
+    "base": "c521d1fb1ce8eac173ea2bb481816d3cd1df82d3",
+    "head": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+    "ahead_by": 1,
+    "behind_by": 0,
+    "files": [
+      {
+        "path": "README.md",
+        "sha": "434f9c1db660d254788731701280d723b67f1bb3",
+        "patch": "@@ -162,7 +162,8 @@ or major and dispatches the release workflow explicitly.\n x86_64/aarch64 packages with Go 1.26.8 and CGO disabled. Guard inference uses the\n CPU implementation. The local gate executes Linux helpers; cross compilation\n alone does not establish runtime coverage on Windows or macOS. Each archive\n-contains both helpers, host scripts, builtin provider modules/catalog, licenses,\n+contains all three helpers (`zcalld-pluginctl`, `zcalld-privacy`, and\n+`zcalld-claude-tui`), host scripts, builtin provider modules/catalog, licenses,\n and build metadata. Source and generated AUR recipes are separate assets;\n SHA256SUMS covers every archive. Source staging requires a clean, committed tree.\n "
+      }
+    ]
+  },
+  "verdict": "No blocking discrepancy. Only the 160000 compat pin changes; all other219 leaves and runtime/Cargo/lock inputs remain exact. Upstream change only corrects README helper names. Actual candidate gate remains required.",
+  "source_urls": [
+    "https://api.github.com/repos/LIghtJUNction/zcalld/git/commits/e1e23cf62402780bf934c4e187d98b78aa26b825",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/34795b388520d9a0587f0543ba5763d37b1aeb84?recursive=1",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/65c4d7a3ac4af29427510edbf1e407a5ef6f307d?recursive=1",
+    "https://api.github.com/repos/LIghtJUNction/zcalld-compat/compare/c521d1fb1ce8eac173ea2bb481816d3cd1df82d3...56a15b330384531b3a6c444190f53b6d3720bd5e"
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "schema": "project-z.zuse-pr2-admission-readonly.v1",
+  "snapshot_utc": "2026-11-21T06:53:30Z",
+  "verdict": {
+    "reviewed_feature_source_and_CI": "No source/CI blocker found for fe47 tree af46; this is exactly the tree tested by the sealed 67e CI run.",
+    "current_PR2": "Already merged on readback; do not continue to describe it as an open draft.",
+    "current_main": "830fcefd2277cbba46536c67d206f29058ba7fb3 is the observed main and differs from the reviewed feature tree.",
+    "downstream": "Each SSMCP and ztype consumer requires owner-led compatibility assessment and validation of its new fixed dependency combination. Change facade or call-site code only where actual incompatibility is found. W/r14 using zuse a1 does not prove the new dependency.",
+    "product_execution_in_this_review": false,
+    "merge_or_ready_by_this_reviewer": false,
+    "latest_main_full_CI_logs_independently_reviewed": false
+  },
+  "original_review_target": {
+    "main_a1": "a1bb8fd2cbce0a9d85134999883c578358065242",
+    "main_a1_tree": "62c26269d54b443addcd9da7bebc7a5a8d0fd645",
+    "feature_fe47": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "tested_67e": "67e2d6a4cee0d106f46bdf064013e163c0aa3337",
+    "actual_CI_checkout": "cf9d3973db10a8639cdfbc3460af8b9230cf1e5c",
+    "equal_whole_tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+    "feature_parents": [
+      "83663988ebf736ec8de05d6372eef485c3d9ebac",
+      "67e2d6a4cee0d106f46bdf064013e163c0aa3337"
+    ],
+    "actual_CI_checkout_parents": [
+      "83663988ebf736ec8de05d6372eef485c3d9ebac",
+      "67e2d6a4cee0d106f46bdf064013e163c0aa3337"
+    ],
+    "a1_to_fe47": {
+      "merge_base": "a1bb8fd2cbce0a9d85134999883c578358065242",
+      "ahead_by": 9,
+      "behind_by": 0,
+      "changed_paths": 45
+    },
+    "no_unverified_source_delta_between_fe47_and_67e": true,
+    "evidence_urls": [
+      "https://api.github.com/repos/LIghtJUNction/zuse/git/commits/fe47f963e604c13a2646baf5d391df5a7c69fc36",
+      "https://api.github.com/repos/LIghtJUNction/zuse/git/commits/67e2d6a4cee0d106f46bdf064013e163c0aa3337",
+      "https://api.github.com/repos/LIghtJUNction/zuse/git/commits/cf9d3973db10a8639cdfbc3460af8b9230cf1e5c",
+      "https://api.github.com/repos/LIghtJUNction/zuse/compare/a1bb8fd2cbce0a9d85134999883c578358065242...fe47f963e604c13a2646baf5d391df5a7c69fc36"
+    ]
+  },
+  "current_public_PR": {
+    "url": "https://github.com/LIghtJUNction/zuse/pull/2",
+    "state": "closed",
+    "draft_field": true,
+    "merged": true,
+    "merged_at": "2026-11-21T06:46:06Z",
+    "merge_commit_sha_reported_by_API": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "merged_by_account": "LIghtJUNction",
+    "actor_human_or_agent_not_inferred": true,
+    "head": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "base_reported": "a1bb8fd2cbce0a9d85134999883c578358065242",
+    "actual_main": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+    "actual_main_tree": "3c110034f10ba5f35b0e18ac6b890d533121a473",
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "published_reviews": 0,
+    "issue_comments": 0,
+    "main_protected": false,
+    "required_status_checks": {
+      "enforcement_level": "off",
+      "contexts": [],
+      "checks": []
+    },
+    "rulesets": [],
+    "earlier_observation": "The initial read returned open/draft, mergeable=true/clean; this is superseded by the closing readback.",
+    "merged_draft_field_boundary": "The final API response still has draft=true, but state=closed and merged=true. Draft is not reported as a remaining blocker after the merge.",
+    "legacy_status_boundary": "The legacy combined-status response has total_count=0 and an empty statuses array; its pending state is not a failing or outstanding check.",
+    "rules_endpoint_limit": "The connector rejected /rules/branches/main as outside its allowed URL set; this is a tool coverage limitation, not a repository policy failure."
+  },
+  "observed_new_main": {
+    "head": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+    "tree": "3c110034f10ba5f35b0e18ac6b890d533121a473",
+    "sole_parent": "687c6349cffb45947bce5ae922f44523acca9465",
+    "chain_from_feature": [
+      "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+      "687c6349cffb45947bce5ae922f44523acca9465",
+      "830fcefd2277cbba46536c67d206f29058ba7fb3"
+    ],
+    "tree_proof": {
+      "old_tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+      "new_tree": "3c110034f10ba5f35b0e18ac6b890d533121a473",
+      "old_leaves": 159,
+      "new_leaves": 159,
+      "changed": [
+        {
+          "path": ".github/workflows/release.yml",
+          "before": {
+            "mode": "100644",
+            "type": "blob",
+            "sha": "a7acb88c5afdf192bb5c640198fc8c8928381fcf"
+          },
+          "after": {
+            "mode": "100644",
+            "type": "blob",
+            "sha": "c4bfe92c45b6c7d1663925c9f1d711091b62b6ca"
+          }
+        },
+        {
+          "path": "CHANGELOG.md",
+          "before": {
+            "mode": "100644",
+            "type": "blob",
+            "sha": "52610f9cc5e5dd47a997eaf717d54bea243aa4df"
+          },
+          "after": {
+            "mode": "100644",
+            "type": "blob",
+            "sha": "09abfbc6e8155d5d3c2f9a9af01528190b3fd8dd"
+          }
+        },
+        {
+          "path": "Cargo.lock",
+          "before": {
+            "mode": "100644",
+            "type": "blob",
+            "sha": "9834d3ee693fb7efe8ad667ee889322874d61b58"
+          },
+          "after": {
+            "mode": "100644",
+            "type": "blob",
+            "sha": "6ee12abdf65ea21dfe5588f1476da08c1bc77694"
+          }
+        },
+        {
+          "path": "Cargo.toml",
+          "before": {
+            "mode": "100644",
+            "type": "blob",
+            "sha": "e2eb5a7a79c324f8f12a4d25202c2de95821bc8d"
+          },
+          "after": {
+            "mode": "100644",
+            "type": "blob",
+            "sha": "f119b496d7a37efd5bdab6e8f8a37c3e9f3d4d59"
+          }
+        },
+        {
+          "path": "README.md",
+          "before": {
+            "mode": "100644",
+            "type": "blob",
+            "sha": "577af47dccf68f28a1c87f362eebcad8a49e640d"
+          },
+          "after": {
+            "mode": "100644",
+            "type": "blob",
+            "sha": "a17f3df2f3fb9caecfb873ece1073b97e34226e8"
+          }
+        }
+      ],
+      "unchanged": 154,
+      "both_recursive_not_truncated": true
+    },
+    "delta": {
+      "package_version": {
+        "before": "0.2.2",
+        "after": "0.3.0"
+      },
+      "zcall_lock": {
+        "before": "564ede15db66530a6dbb78e8b1f4a85998b6f0d8",
+        "after": "317c52f101f112c6af671a629d8406305a168e4a"
+      },
+      "direct_Git_dependencies": [
+        "zmcpio",
+        "zclap",
+        "z64",
+        "zsys"
+      ],
+      "manifest": "Removes version selectors from the four canonical default-branch Git dependencies; feature/optional/default-feature settings are unchanged.",
+      "release_workflow": "Removes Cargo registry publication; keeps GitHub native-binary release workflow.",
+      "classification": "Manifest, dependency lock, version, release workflow and documentation changes; no Rust source changes. This is not a docs-only change."
+    },
+    "checks": {
+      "scope": "GitHub check-run status read only; not a complete log or release-asset audit.",
+      "all_completed_success": true,
+      "count": 10,
+      "entries": [
+        {
+          "name": "publish",
+          "id": 136764538583,
+          "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44877126754/job/136764538583",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+          "completed_at": "2026-11-21T06:48:16Z"
+        },
+        {
+          "name": "build (ubuntu-24.04-arm, aarch64-unknown-linux-gnu)",
+          "id": 136764225186,
+          "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44877126754/job/136764225186",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+          "completed_at": "2026-11-21T06:47:09Z"
+        },
+        {
+          "name": "build (windows-2025, x86_64-pc-windows-msvc)",
+          "id": 136764225142,
+          "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44877126754/job/136764225142",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+          "completed_at": "2026-11-21T06:47:49Z"
+        },
+        {
+          "name": "build (macos-15, aarch64-apple-darwin)",
+          "id": 136764225097,
+          "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44877126754/job/136764225097",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+          "completed_at": "2026-11-21T06:47:29Z"
+        },
+        {
+          "name": "build (macos-15-intel, x86_64-apple-darwin)",
+          "id": 136764225078,
+          "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44877126754/job/136764225078",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+          "completed_at": "2026-11-21T06:47:54Z"
+        },
+        {
+          "name": "build (ubuntu-24.04, x86_64-unknown-linux-gnu)",
+          "id": 136764225075,
+          "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44877126754/job/136764225075",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+          "completed_at": "2026-11-21T06:47:21Z"
+        },
+        {
+          "name": "identity",
+          "id": 136764175957,
+          "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44877126754/job/136764175957",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+          "completed_at": "2026-11-21T06:46:35Z"
+        },
+        {
+          "name": "check (windows-2025)",
+          "id": 136763041864,
+          "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44876758379/job/136763041864",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+          "completed_at": "2026-11-21T06:42:45Z"
+        },
+        {
+          "name": "check (ubuntu-24.04)",
+          "id": 136763041836,
+          "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44876758379/job/136763041836",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+          "completed_at": "2026-11-21T06:42:48Z"
+        },
+        {
+          "name": "check (macos-15)",
+          "id": 136763041625,
+          "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44876758379/job/136763041625",
+          "status": "completed",
+          "conclusion": "success",
+          "head_sha": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+          "completed_at": "2026-11-21T06:42:23Z"
+        }
+      ]
+    },
+    "evidence_urls": [
+      "https://api.github.com/repos/LIghtJUNction/zuse/git/ref/heads/main",
+      "https://api.github.com/repos/LIghtJUNction/zuse/git/commits/830fcefd2277cbba46536c67d206f29058ba7fb3",
+      "https://api.github.com/repos/LIghtJUNction/zuse/compare/fe47f963e604c13a2646baf5d391df5a7c69fc36...830fcefd2277cbba46536c67d206f29058ba7fb3",
+      "https://api.github.com/repos/LIghtJUNction/zuse/git/trees/3c110034f10ba5f35b0e18ac6b890d533121a473?recursive=1",
+      "https://api.github.com/repos/LIghtJUNction/zuse/commits/830fcefd2277cbba46536c67d206f29058ba7fb3/check-runs"
+    ]
+  },
+  "full_CI_evidence": {
+    "fixed_run": 44860554142,
+    "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44860554142",
+    "source": "67e2d6a4cee0d106f46bdf064013e163c0aa3337",
+    "actual_checkout": "cf9d3973db10a8639cdfbc3460af8b9230cf1e5c",
+    "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+    "complete_logs_rehashed_and_read_this_round": true,
+    "original_log_readback": "ci-original-log-readback.json",
+    "platforms": [
+      {
+        "file": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/ubuntu-job-136712704265.log",
+        "bytes": 86917,
+        "sha256": "8bb23119f5b945a2a2bb87049b929737e3c6f22ff390a92e260d0fe150b3586d",
+        "summary_rows": 22,
+        "passed": 289,
+        "failed": 0,
+        "ignored": 5
+      },
+      {
+        "file": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/macos-job-136712704344.log",
+        "bytes": 73437,
+        "sha256": "4f4b88877c9e9c2955c293b0f21542729e068f747a04273415f1cc2f0969b1d0",
+        "summary_rows": 22,
+        "passed": 267,
+        "failed": 0,
+        "ignored": 3
+      },
+      {
+        "file": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/windows-job-136712704368.log",
+        "bytes": 74160,
+        "sha256": "198614e9e81662be027e22f5dc97c7fbaef74e2fd86aff1d2366598d2cb0d742",
+        "summary_rows": 22,
+        "passed": 263,
+        "failed": 0,
+        "ignored": 2
+      }
+    ],
+    "sealed_review": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/zuse-67e-ci-independent-review.json",
+      "bytes": 21537,
+      "sha256": "fffe5fa895ed4b2452179ee20377cea9d34761647aa69021881a2fefc35ee813"
+    },
+    "sealed_delivery": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/delivery.json",
+      "bytes": 5059,
+      "sha256": "4771a15cb6330b8d4ed40783346b9c625428969168517270e0240529ee35597e"
+    },
+    "actual_commands": "fmt; locked tests; no-default-features library check; no-default-features wasm32 library check; strict all-target Clippy",
+    "no_count_aggregation_across_platforms": true,
+    "historical_native_scope": {
+      "no_std_native_and_Wasm_checks_both_actually_executed_on_all_three": true,
+      "separate_no_std_test_suite_run_in_this_CI": false,
+      "old_20_no_std_results_transferred": false,
+      "private_X11_cases_in_Linux_default": 2,
+      "private_X11_source": {
+        "path": "src/platform/pointer_x11.rs",
+        "blob": "d04265e5f4284d0fc82f5db6cff9d835c6e87ce6",
+        "guard_lines": [
+          1059,
+          1224
+        ],
+        "required_environment": "ZUSE_TEST_PRIVATE_X11=1"
+      },
+      "private_X11_actual_MPX_claimed": false,
+      "private_X11_reason": "The fixed workflow does not set the opt-in flag or launch private Xvfb. Ordinary ok lines are not evidence that the guarded native bodies executed.",
+      "native_accessibility_Chromium_X11_GUI_claimed": false,
+      "linux_serial_boundary": "Private PTY, not physical serial hardware",
+      "linux_USB_boundary": "Isolated synthetic libusb, not physical USB hardware",
+      "no_new_physical_input_or_desktop_or_P1_acceptance_claim": true
+    },
+    "fe47_own_check_run": {
+      "id": 44861285612,
+      "status": "completed",
+      "conclusion": "success",
+      "scope": "Status read only; the sealed full logs are for 67e's same whole tree."
+    }
+  },
+  "repository_rules_and_public_handoff": {
+    "AGENTS_blob": "762c7e3e41c5f866c133c2da36c5b7dd072af5e1",
+    "AGENTS_url": "https://github.com/LIghtJUNction/zuse/blob/fe47f963e604c13a2646baf5d391df5a7c69fc36/AGENTS.md",
+    "requirement": "Enumerate direct/transitive consumers, coordinate active owners, propagate exact dependency identities and locks, and validate consumers or record a concrete blocker and responsible owner.",
+    "PR_body_boundary": "The earlier draft body explicitly deferred SSMCP/ztype facade integration and consumer validation. Merging the feature does not complete that downstream work.",
+    "implementation_compatibility": "Independent pointer is the new Runtime default; user/system pointer must be explicitly selected. Integrations using low-level platform::Desktop must be assessed by their owners.",
+    "owner_coordination": "Root coordinates the existing SSMCP source owner and ztype owner; this reviewer changed neither consumer.",
+    "workflow_scope": {
+      "ci": "pull_request or workflow_dispatch",
+      "bump": "workflow_dispatch only",
+      "release": "push of v[0-9]* tags, workflow_dispatch, or workflow_call",
+      "ordinary_main_merge_alone_is_not_a_formal_release_trigger": true,
+      "read_workflow_blobs": {
+        "ci": "d27303105b09832808ace98cbaca2daf73cf1701",
+        "bump": "a054a5abd8a98e2637dfc33a92dbe7198f9e42a5",
+        "release_at_fe47": "a7acb88c5afdf192bb5c640198fc8c8928381fcf",
+        "release_at_830": "c4bfe92c45b6c7d1663925c9f1d711091b62b6ca"
+      }
+    }
+  },
+  "required_next_actions": [
+    "Use a fresh actual-main read when selecting the next SSMCP/ztype dependency; observed main is 830, not fe47 or a1.",
+    "Preserve the semantic-version and actual Git-lock changes when adapting the consumer, and record the new source tuple.",
+    "Run the necessary fixed-consumer runtime/UI/P1 checks under the existing owner/window. Do not relabel W/r14 a1 results as evidence for the new dependency.",
+    "No repeat of identical-tree fe47/67e platform CI is required solely to account for the merge commit. Current 830 is a changed graph and its independent full log/product evidence remains separate.",
+    "Final44 remains paused until current component integration and validation complete."
+  ],
+  "operations": {
+    "GitHub": "read only",
+    "native": "Read sealed text evidence and write only this new evidence directory",
+    "Cargo": 0,
+    "product_runs": 0,
+    "GUI": 0,
+    "CI_dispatch": 0,
+    "shared_target_writes": 0,
+    "locks_taken": 0,
+    "remote_ref_writes": 0,
+    "merge": 0,
+    "mark_ready": 0
+  }
+}

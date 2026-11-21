@@ -1,0 +1,374 @@
+{
+  "schema_version": 1,
+  "kind": "proposed_minimum_current_candidate_validation_not_executed",
+  "generated_at": "2026-11-20T23:22:43.537Z",
+  "identity": {
+    "repository": "LIghtJUNction/zuse",
+    "pull_request": 3,
+    "head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "feature_base": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+    "current_downstream_cohort": "a1bb8fd2cbce0a9d85134999883c578358065242",
+    "native_source": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+    "native_head_and_clean_status_read_job": "26c4545eae1eab8d27485f4a48077d3c-666",
+    "native_head_matches_and_clean": true,
+    "lock_sha256": "cffb29f3aa454c065523c6fc62ebf33721694df88af94e0aff2feea5d17855e0"
+  },
+  "purpose": "Fill missing evidence for the combined scoped-mice implementation plus P2 repair on the actual final candidate. Do not reproduce historical numeric totals or replay the superseded PR2 source.",
+  "policy": {
+    "local_gate": "scripts/check.py: fmt, default cargo test, native no-default-features lib check, wasm no_std check if target installed, all-targets strict Clippy.",
+    "ci": "Three hosted OS runners invoke the local script; Linux additionally runs private PTY and synthetic libusb fixtures. Use this as a coverage reference; do not trigger routine hosted CI.",
+    "native_requirements": "MPX/CLI/AT-SPI/Wayland come from the feature's actual behavioral claims and original PR2 validation document, rather than a new blanket requirement for every ignored fixture.",
+    "release_workflow": "Tags/dispatch/call produce release packages; no release workflow or tag belongs to this merge validation.",
+    "downstream": "AGENTS and docs/maintenance require exact source/artifact receipts and reverse-consumer ownership. Keep a1 frozen now and record later adapter/lock/gitlink integration as owned pending work, not completed propagation."
+  },
+  "reusable_without_reexecution": [
+    {
+      "item": "Fixed 356 static review",
+      "evidence": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-independent-static-review.json",
+      "sha256": "0d3508ef01a3d284510290422828f86740e81df9d346df73220704d07828abae",
+      "scope": "Five-file fixed diff; no new static blocker; token/byte/error/cleanup/retry semantics.",
+      "requires": "Source/code/helper and locked dependency equivalence must be retained."
+    },
+    {
+      "item": "GREEN job611 and root readback",
+      "evidence": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/original/gate-green/result.json",
+      "sha256": "a3c05be4ab48fe50b18fe459ff23344e5b425f3f33d594c82acec555e6b2c0db",
+      "scope": [
+        "6 script_entrypoints tests",
+        "10 scheduler tests including five outcomes in one MockHost test",
+        "cargo fmt --all -- --check",
+        "git diff --check",
+        "offline locked metadata"
+      ],
+      "note": "Do not rerun these as separate targeted batches. The new broad default suite naturally overlaps; count unique test functions per command and do not add 16 to a full-suite total."
+    },
+    {
+      "item": "Targeted strict Clippy",
+      "scope": [
+        "lib",
+        "zuse bin",
+        "script_entrypoints integration target"
+      ],
+      "limitation": "This is not all-targets Clippy; remaining tests/examples/bench targets still need the repository-defined broad lint."
+    },
+    {
+      "item": "356 CLI and lib-test artifact identities",
+      "cli_sha256": "04deac62ad725723f36d99baafa95591778d3b1742fccbbfc9ced2dd269003b0",
+      "cli_bytes": 17454768,
+      "lib_test_sha256": "f0ca156f4908ff7e96aca1777dbb83b7728545c778f3f603fcfa96039935309b",
+      "scope": "Existing source-matched compiler-artifact fresh=false evidence can avoid forced rebuilding of unchanged root outputs.",
+      "condition": "Under the outer lock, re-hash and copy a matching existing file to an owned evidence artifact path; otherwise use the newly emitted compiler-artifact from the candidate batch. Never trust the shared path or stale .d alone."
+    },
+    {
+      "item": "Private Cage environment artifact",
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/native-fixtures/cage-v6/build/cage",
+      "sha256": "5fd303a55924b59d8a506256ce843bea3980e6f90a095354cfd886f2c0b609ad",
+      "scope": "Already independently hashed against its retained source/archive/patch receipt. Re-hash before reuse; no new Cage download/build is needed.",
+      "limitation": "This does not reuse a prior zuse runtime pass."
+    }
+  ],
+  "new_validation": [
+    {
+      "id": "portable-default",
+      "required": true,
+      "argv": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--message-format=json-render-diagnostics"
+      ],
+      "scope": "Complete current default-feature unit/integration/doc baseline from scripts/check.py; includes current parser/compiler/runtime/mouse/touchpad tests.",
+      "rationale": "The old 286 total lacks raw evidence, and the existing 16 tests intentionally cover only P2. Report the current actual pass/fail/ignored/filter counts; 286 is not an assertion.",
+      "alternative_not_additional": "If the report explicitly needs the old all-targets coverage label, use cargo test --offline --locked --all-targets and one cargo test --offline --locked --doc instead of the default command. Do not run both variants. Default cargo test is the minimal repository gate; no performance benchmark claim is needed."
+    },
+    {
+      "id": "no-std-tests",
+      "required": true,
+      "argv": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--no-default-features",
+        "--message-format=json-render-diagnostics"
+      ],
+      "scope": "Current no_std parser/motion tests, including tests/core.rs.",
+      "rationale": "The old 20 claim has no recovered raw evidence. Do not narrow this command to --lib: tests/core.rs has 17 tests and would be omitted. Use actual results without requiring a historical count."
+    },
+    {
+      "id": "native-no-std-check",
+      "required": true,
+      "argv": [
+        "cargo",
+        "check",
+        "--offline",
+        "--locked",
+        "--no-default-features",
+        "--lib"
+      ],
+      "scope": "Exact native no_std library check in the maintained local gate."
+    },
+    {
+      "id": "wasm-no-std",
+      "required": true,
+      "argv": [
+        "cargo",
+        "check",
+        "--offline",
+        "--locked",
+        "--no-default-features",
+        "--lib",
+        "--target",
+        "wasm32-unknown-unknown"
+      ],
+      "scope": "Actual no_std non-native target compilation.",
+      "rationale": "Although check.py skips it if not installed, CI explicitly installs it and PR2 claims it. Missing target must be recorded as blocked, not silently passed."
+    },
+    {
+      "id": "remaining-portability",
+      "required_for_retaining_pr2_cross_compile_claims": true,
+      "argv_template": [
+        "cargo",
+        "check",
+        "--offline",
+        "--locked",
+        "--all-targets",
+        "--target",
+        "<target>"
+      ],
+      "targets": [
+        "x86_64-pc-windows-gnu",
+        "x86_64-apple-darwin",
+        "aarch64-apple-darwin",
+        "aarch64-unknown-linux-gnu"
+      ],
+      "scope": "Compile current std/platform branches and test targets once per documented target.",
+      "rationale": "No complete original raw cross-target proof was recovered. These are local compilation checks, not live Windows/macOS/ARM native tests or the Windows MSVC CI job."
+    },
+    {
+      "id": "all-targets-clippy",
+      "required": true,
+      "argv": [
+        "cargo",
+        "clippy",
+        "--offline",
+        "--locked",
+        "--all-targets",
+        "--message-format=json-render-diagnostics",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "scope": "Complete the existing scripts/check.py lint coverage; do not describe prior three-target GREEN as all-targets."
+    },
+    {
+      "id": "private-mpx",
+      "required": true,
+      "argv_if_using_cargo": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--lib",
+        "private_x11_",
+        "--",
+        "--test-threads=1",
+        "--nocapture"
+      ],
+      "preferred_artifact_reuse": "Run the source-proven lib-test executable with private_x11_ --test-threads=1 --nocapture after authenticating an owned high-number Xvfb. Both exact expected test names must execute.",
+      "exact_test_suffixes": [
+        "private_x11_pointer_lifetime_events_and_cursor_isolation",
+        "private_x11_script_parallel_scopes_errors_and_cancellation"
+      ],
+      "private_fixture": "Use the unchanged tests/private_xvfb.py lease/Xauthority helper; record owned PID/display/auth file, readiness and cleanup. Set ZUSE_TEST_PRIVATE_X11=1, private DISPLAY/XAUTHORITY, clear host WAYLAND_DISPLAY.",
+      "critical_guard": "These two tests are NOT #[ignore]. They immediately return when ZUSE_TEST_PRIVATE_X11 is not 1. A normal cargo test 'passed' therefore is not MPX acceptance; --ignored would select neither.",
+      "rationale": "This is the defining new backend/ownership behavior and the original two-test raw proof was not recovered."
+    },
+    {
+      "id": "private-cli",
+      "required": true,
+      "argv": [
+        "python3",
+        "tests/native_scoped_mice.py",
+        "--binary",
+        "<owned-copy-of-source-proven-356-CLI>"
+      ],
+      "scope": "Actual default-independent and explicit-user modes, script scope exit, held-button SIGINT/SIGTERM, native cleanup and truthful current receipt.",
+      "rationale": "Recovered historical output lacks executable identity/argv chain; scheduler receipt behavior has now changed. One current private run closes that gap."
+    },
+    {
+      "id": "private-accessibility",
+      "required": true,
+      "argv": [
+        "python3",
+        "tests/run_accessibility_native.py",
+        "--manifest-path",
+        "<fixed-356-source>/Cargo.toml"
+      ],
+      "scope": "Existing actual private D-Bus/GTK/AT-SPI target-motion test and its CLI/MCP consumer boundary.",
+      "rationale": "The PR2 modified this fixture and Runtime selection; historical log is not a current source-to-artifact proof.",
+      "nested_cargo_note": "This unchanged helper internally executes cargo test --offline --test accessibility_native -- --ignored --nocapture and does not add --locked. Keep the same source cwd/manifest and exclusive outer lock, record exact nested argv and test/CLI artifact identity, and verify Cargo.lock/source unchanged. Do not claim its nested command included --locked."
+    },
+    {
+      "id": "private-wayland",
+      "required": true,
+      "argv": [
+        "python3",
+        "tests/native_wayland_private.py",
+        "--headless",
+        "--headless-parent",
+        "cage",
+        "--cage",
+        "<verified-existing-v6-Cage>",
+        "--binary",
+        "<owned-copy-of-source-proven-356-CLI>",
+        "--state-tests",
+        "--report",
+        "<owned-validation-dir>/wayland.json"
+      ],
+      "optional_existing_environment_arg": [
+        "--render-node",
+        "<verified-render-only-node>"
+      ],
+      "scope": "Seven current private Hyprland groups including actual Num Lock shortcuts, original keyboard state, rejection-before-effects and post-cleanup ordinary input.",
+      "rationale": "The original seven-group JSON is valid history but lacks original source-to-ELF proof; the combined current candidate must be linked to an actually exercised binary.",
+      "boundary": "Use the unchanged headless wrapper with its persistent private baseline keyboard; do not invoke the raw allow-desktop helper against the user's compositor. Preserve all state assertions and failed attempts."
+    },
+    {
+      "id": "local-ci-serial",
+      "required_for_linux_ci_equivalent": true,
+      "argv": [
+        "python3",
+        "tests/native_serial.py",
+        "--binary",
+        "<owned-copy-of-source-proven-356-CLI>",
+        "--output",
+        "<owned-validation-dir>/serial"
+      ],
+      "scope": "Fresh private PTYs only; no user-supplied serial device."
+    },
+    {
+      "id": "local-ci-usb",
+      "required_for_linux_ci_equivalent": true,
+      "argv": [
+        "python3",
+        "tests/native_usb.py",
+        "--binary",
+        "<owned-copy-of-source-proven-356-CLI>",
+        "--output",
+        "<owned-validation-dir>/usb"
+      ],
+      "scope": "Private synthetic C libusb; header-based ABI and enumeration proof precede operations; no physical USB backend.",
+      "note": "These two fixtures are explicit Linux CI steps. They do not require broad browser/mobile/hardware acceptance."
+    }
+  ],
+  "receipt_contract": [
+    "Before any execution, coordinate the existing SSMCP runtime quiet-lock window and the shared Cargo owner lock with their current owners; Cargo serialization alone is not proof that time-sensitive runtime baselines are quiet. This artifact authorizes no start; Core remains the sole executor.",
+    "One fixed candidate source identity: HEAD/tree/clean status and Cargo.lock hash before and after. If future merge tree differs, explicitly prove implementation/helper/dependency equivalence or scope a new gate.",
+    "One coordinated outer flock /var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock around shared Cargo and artifact capture; CARGO_BUILD_JOBS=1 and existing resource scheduling. No nested flock in helpers.",
+    "Record actual rustc/cargo versions, target triples, relevant environment, cwd/argv, timestamps, command exit and stdout/stderr. No hard-coded expected historical test totals.",
+    "Record compiler-artifact package target/source path/fresh flag and actual executable hashes. Fresh=true is acceptable only with an already established exact-source artifact identity; force no rebuild merely for a new timestamp.",
+    "Keep the CLI/test binaries used by native runs in owned non-Git evidence storage or hash before/after under the lock. Verify each --binary resolves to that artifact; shared path names are insufficient.",
+    "Private fixtures must record readiness/isolation, selected tests and successful cleanup. Report any non-executed/guard-skipped fixtures separately from true passes.",
+    "Retain failed attempts and resource failures separately; a new 356 pass does not retroactively certify historical 81b/bb838 commands.",
+    "Archive the raw evidence plus a small manifest externally, then merge/read back only the validated tree. Source merge, release, and downstream propagation remain separate states."
+  ],
+  "not_required_for_this_gap": [
+    "Repeat the old 44ff RED or separately rerun the already-complete 16 GREEN tests",
+    "Repeat fmt/diff/metadata with unchanged fixed source/lock solely for bookkeeping",
+    "Rebuild/download the already-proven Cage helper",
+    "All ignored Chromium/X11 UTF-8/browser fixtures or Android/iOS/real serial/real USB hardware runs unrelated to the changed feature",
+    "Native Windows/macOS/ARM acceptance claims from local cross compilation",
+    "Release package build, tag, deployment or SSMCP/P1/current a1 downstream rebuild"
+  ],
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "blob": "762c7e3e41c5f866c133c2da36c5b7dd072af5e1",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/AGENTS.md"
+    },
+    {
+      "path": "docs/maintenance.md",
+      "blob": "24b46e50c5338907a662f8df73d28d45f633133f",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/docs/maintenance.md"
+    },
+    {
+      "path": "scripts/check.py",
+      "blob": "34b5f5acc6f01f78b53e23ce8a5bbbc31031567d",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/scripts/check.py"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "blob": "d27303105b09832808ace98cbaca2daf73cf1701",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/.github/workflows/ci.yml"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "blob": "a7acb88c5afdf192bb5c640198fc8c8928381fcf",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/.github/workflows/release.yml"
+    },
+    {
+      "path": "Cargo.toml",
+      "blob": "e2eb5a7a79c324f8f12a4d25202c2de95821bc8d",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/Cargo.toml"
+    },
+    {
+      "path": "src/lib.rs",
+      "blob": "317488076fddf79b3fc21bc58ba9c34e7a45de17",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/src/lib.rs"
+    },
+    {
+      "path": "src/platform/pointer_x11.rs",
+      "blob": "d04265e5f4284d0fc82f5db6cff9d835c6e87ce6",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/src/platform/pointer_x11.rs"
+    },
+    {
+      "path": "tests/core.rs",
+      "blob": "708e73ea74bf8fe88227b6c8ffcff25ead2da34f",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/tests/core.rs"
+    },
+    {
+      "path": "tests/private_xvfb.py",
+      "blob": "540f3585e382296aa7365c3329507965127274f3",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/tests/private_xvfb.py"
+    },
+    {
+      "path": "tests/native_scoped_mice.py",
+      "blob": "9595ea21814127a04610ea36f10bb42aa8bac611",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/tests/native_scoped_mice.py"
+    },
+    {
+      "path": "tests/run_accessibility_native.py",
+      "blob": "8bf4f779a7f30c2a227c6b74e2c4a37589014e0c",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/tests/run_accessibility_native.py"
+    },
+    {
+      "path": "tests/native_wayland_private.py",
+      "blob": "7b8bc5f67c9e71e7eace9fddf54ab3a831f651d1",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/tests/native_wayland_private.py"
+    },
+    {
+      "path": "tests/native_serial.py",
+      "blob": "cc987d1d75bfcc4555e43ca5e9e885bec951beea",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/tests/native_serial.py"
+    },
+    {
+      "path": "tests/native_usb.py",
+      "blob": "d82df625161a99b4bbb64e196c57354905e917b5",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/tests/native_usb.py"
+    }
+  ],
+  "actions_in_this_review": {
+    "native_read_job_count": 1,
+    "native_product_commands_executed": 0,
+    "builds": 0,
+    "tests": 0,
+    "gui": 0,
+    "source_edits": 0,
+    "ref_changes": 0,
+    "models_started": 0,
+    "plan_files_only": true
+  }
+}

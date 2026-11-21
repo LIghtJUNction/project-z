@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "-u",
+    "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r14-binding/run_bound.py",
+    "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final"
+  ],
+  "controller_sha256": "d3ac9dd1873a04653c7f4601df32977fbcc9da2143564b4639162e17cba796db",
+  "error": null,
+  "exit_code": 0,
+  "finished_utc": "2026-11-21T05:56:01.331566+00:00",
+  "invocation_id": "96256392e87944e2a00cb78d6c8aff9b",
+  "launcher_returncode": 0,
+  "launcher_sha256": "3a307c26d1c099b08fd8609c0dc2e9bdf2e7476ffaa650a5feacda7b878187a4",
+  "pid": 3740883,
+  "source_lock_acquired": true,
+  "source_lock_held_until_child_return": true,
+  "source_lock_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-author.lock",
+  "source_revision": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+  "source_tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+  "started_utc": "2026-11-21T05:42:50.565070+00:00",
+  "target_lock_acquired_by_outer_controller": false
+}

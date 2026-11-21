@@ -1,0 +1,376 @@
+{
+  "schema": "project-z.ssmcp-V2-ui-failure-bounded-readback.v1",
+  "reviewed_at_utc": "2026-11-21T05:41:18.539300+00:00",
+  "status": "original_failed_attempt_verified",
+  "source_revision": "f42baae1d5227bd6db8315aef778160b80b57274",
+  "source_tree": "64b40eb8a3e0188076cf376229d3d87074d27dcc",
+  "originals": [
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/acceptance.json",
+      "bytes": 984372,
+      "sha256": "da801f5209b688130332f3916804fd68ecc4e3643e34db5e6ddc2c4b3fe8eb63"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/composer/run.log",
+      "bytes": 11503,
+      "sha256": "5be585269dab282876c95946da2ced078a9bbc30098e1e046ac392533a328544"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/session_groups/run.log",
+      "bytes": 7907,
+      "sha256": "7bcffae1b743ff6ccfc4270ae1e4399f5c41761ee9955e68722f8aee35b487f9"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/composer/evidence/report.json",
+      "bytes": 8590,
+      "sha256": "13f17c603c1b6ddba85b5d26df2e202f7698cbf066ec08d79f9ff6e85217757f"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/composer/suite.json",
+      "bytes": 5998,
+      "sha256": "c6a37acaa39ebe30adeafc30fc5487373926c2246c45040f379b2fd9360e3d20"
+    }
+  ],
+  "native_job": {
+    "job_id": "92eb2e0c47ccd1044fd6f6414c55af55-1a4",
+    "exit_code": 1,
+    "running": false,
+    "stdout_eof": true,
+    "stderr_eof": true,
+    "stdout_bytes": 3627
+  },
+  "attempt": {
+    "started_utc": "2026-11-21T05:27:26Z",
+    "finished_utc": "2026-11-21T05:31:00Z",
+    "duration_seconds": 214.15,
+    "planned_independent_executions": 24,
+    "logical_suites_including_alias": 25,
+    "executed": 13,
+    "passed": 12,
+    "failed": 1,
+    "not_run": [
+      "questions",
+      "presentations",
+      "context_memory",
+      "file_paste",
+      "relay_composer",
+      "goal_startup",
+      "tool_summaries",
+      "readable_commands",
+      "summary_commands",
+      "physical_latency",
+      "time_wait"
+    ],
+    "alias_coverage": [
+      {
+        "name": "human_finish",
+        "status": "covered_by",
+        "covered_by": "interactions",
+        "independently_executed": false,
+        "independent_pass": false,
+        "source_alias_proof": {
+          "schema": "ssmcp.source-suite-alias.v1",
+          "name": "human_finish",
+          "covered_by": "interactions",
+          "source_revision": "f42baae1d5227bd6db8315aef778160b80b57274",
+          "alias_file": {
+            "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/source/scripts/e2e_human_finish.py",
+            "relative_path": "scripts/e2e_human_finish.py",
+            "bytes": 544,
+            "sha256": "a6103ab116650dfb0afeef211be7e7f94f28ec904d90f484d38824670437709f",
+            "mode": 509
+          },
+          "target_file": {
+            "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/source/scripts/e2e_interactions.py",
+            "relative_path": "scripts/e2e_interactions.py",
+            "bytes": 44311,
+            "sha256": "8bfd7e5ac4519be9e186e3361e8e683b47e8b396a8b7df880035ecc6e8ba43e5",
+            "mode": 509
+          },
+          "target_entrypoint": "main",
+          "target_entrypoint_line": 703,
+          "target_entrypoint_ast_sha256": "5e9375b8a9aac9546295a5c1eca5a67622a6b0f87803f03a4e90080e3e63e703",
+          "supported_alias_ast_sha256": "dd52b2fe63a184a9b168a3b938bdb7690054d54afddd4ff7ca1aa18e12923be5",
+          "independently_executed": false,
+          "independent_pass": false
+        },
+        "target_report": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/interactions/evidence/report.json",
+          "sha256": "55f462f55883e65326c3e3af3a8733ca6be806da2eae0d8f95c7853c8547ca4c",
+          "script_sha256": "8bfd7e5ac4519be9e186e3361e8e683b47e8b396a8b7df880035ecc6e8ba43e5",
+          "source_revision": "f42baae1d5227bd6db8315aef778160b80b57274"
+        }
+      }
+    ],
+    "passed_checks_arithmetic_sum": 996,
+    "sum_is_not_unique_global_test_count": true,
+    "passed_suites": [
+      {
+        "name": "message_references",
+        "checks": 53,
+        "seconds": 12.623,
+        "exit_code": 0
+      },
+      {
+        "name": "force_send",
+        "checks": 137,
+        "seconds": 21.11,
+        "exit_code": 0
+      },
+      {
+        "name": "listener_transports",
+        "checks": 74,
+        "seconds": 7.675,
+        "exit_code": 0
+      },
+      {
+        "name": "zuse_worker",
+        "checks": 31,
+        "seconds": 2.788,
+        "exit_code": 0
+      },
+      {
+        "name": "interactions",
+        "checks": 172,
+        "seconds": 50.286,
+        "exit_code": 0
+      },
+      {
+        "name": "private_desktop",
+        "checks": 35,
+        "seconds": 4.039,
+        "exit_code": 0
+      },
+      {
+        "name": "account_compat",
+        "checks": 69,
+        "seconds": 2.882,
+        "exit_code": 0
+      },
+      {
+        "name": "input_history",
+        "checks": 150,
+        "seconds": 23.441,
+        "exit_code": 0
+      },
+      {
+        "name": "reload_state",
+        "checks": 37,
+        "seconds": 7.569,
+        "exit_code": 0
+      },
+      {
+        "name": "session_groups",
+        "checks": 108,
+        "seconds": 13.919,
+        "exit_code": 0
+      },
+      {
+        "name": "client_ui",
+        "checks": 58,
+        "seconds": 7.333,
+        "exit_code": 0
+      },
+      {
+        "name": "canvas_logs",
+        "checks": 72,
+        "seconds": 9.871,
+        "exit_code": 0
+      }
+    ]
+  },
+  "session_groups": {
+    "original_fixture_used": true,
+    "recorded_script_sha256": "6377ecff80b3da6be16f9017e74c7f548d12e6c3df3a62e0e8567ce4981c9924",
+    "producer_result": {
+      "status": "passed",
+      "checks": 108,
+      "frames": 8,
+      "elapsed_seconds": 12.33
+    },
+    "suite_seconds": 13.919,
+    "claim": "The same original cold-start case that failed on U passed on this V2 attempt; this does not certify all UI."
+  },
+  "composer_failure": {
+    "suite_exit_code": 1,
+    "suite_seconds": 22.754,
+    "wrapper_reported_checks": 0,
+    "acceptance_failed_row_has_checks_key": false,
+    "original_log_PASS_lines": 61,
+    "failure": "AssertionError: timed out waiting for the explicit Next caller choice returning to the active edit",
+    "observed_footer_contains": "To This process · Next caller",
+    "observed_footer_found": true,
+    "original_script": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/source/scripts/e2e_composer.py",
+      "bytes": 39178,
+      "sha256": "b68877f72e05e15745ff893debfd095fbfcae110422b1c96cf56b45dd4c5f3bf",
+      "lines_510_to_518": [
+        {
+          "line": 510,
+          "text": "        self.check(held[\"editing\"] == retargeted[\"id\"]"
+        },
+        {
+          "line": 511,
+          "text": "                   and held[\"target\"] == members[0][\"agent_id\"]"
+        },
+        {
+          "line": 512,
+          "text": "                   and held[\"draft\"] == {\"text\": retargeted[\"text\"], \"cursor\": 0},"
+        },
+        {
+          "line": 513,
+          "text": "                   \"Left preserves the held request, exact recipient and original text during retargeting\")"
+        },
+        {
+          "line": 514,
+          "text": "        front.send(HOME + ENTER)"
+        },
+        {
+          "line": 515,
+          "text": "        front.until(lambda shot: editing_queue(shot, \"next caller\")"
+        },
+        {
+          "line": 516,
+          "text": "                                 and column(shot) == (\"conversation\", 2, 8) and not shot[\"hide_cursor\"],"
+        },
+        {
+          "line": 517,
+          "text": "                    \"the explicit Next caller choice returning to the active edit\")"
+        },
+        {
+          "line": 518,
+          "text": "        retargeted_text = \"COMPOSER_RETARGET_NEXT_CALLER\""
+        }
+      ]
+    },
+    "failed_row_has_internal_cleanup_summary": false,
+    "producer_report": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/composer/evidence/report.json",
+      "bytes": 8590,
+      "sha256": "13f17c603c1b6ddba85b5d26df2e202f7698cbf066ec08d79f9ff6e85217757f",
+      "status": "failed",
+      "completed_checks": 61,
+      "duration_seconds": 21.378,
+      "has_internal_cleanup_field": false
+    },
+    "observed_edit_queue_title": "Edit queue · Enter sends · Next caller",
+    "static_diagnosis": {
+      "kind": "case_sensitive_title_expectation_mismatch",
+      "helper": "editing_queue() compares the complete Edit queue title exactly",
+      "old_explicit_selection_literal": "next caller",
+      "product_explicit_target_next_label": "Next caller",
+      "product_default_no_explicit_target_label": "next caller",
+      "reviewer": "pr_core_repos",
+      "root_read_fixed_production_lines": true,
+      "product_source_url": "https://github.com/LIghtJUNction/ssmcp/blob/f42baae1d5227bd6db8315aef778160b80b57274/src/client/terminal/conversation.rs",
+      "only_this_explicit_case_should_change": true,
+      "other_state_delivery_and_identity_assertions_preserved": true
+    }
+  },
+  "input_and_cleanup_records": {
+    "top_unchanged": {
+      "unchanged": true,
+      "input_set_sha256": "fb6c84c6d0904c6e0de4f39dc71a19e561440c7840824bbce400d3decabe5c75",
+      "changed": []
+    },
+    "top_before_input_set_sha256": "fb6c84c6d0904c6e0de4f39dc71a19e561440c7840824bbce400d3decabe5c75",
+    "all_13_before_after_records_equal_exact_Python": true,
+    "per_execution": [
+      {
+        "name": "message_references",
+        "before_equals_after": true,
+        "owned_child_reaped": true
+      },
+      {
+        "name": "force_send",
+        "before_equals_after": true,
+        "owned_child_reaped": true
+      },
+      {
+        "name": "listener_transports",
+        "before_equals_after": true,
+        "owned_child_reaped": true
+      },
+      {
+        "name": "zuse_worker",
+        "before_equals_after": true,
+        "owned_child_reaped": true
+      },
+      {
+        "name": "interactions",
+        "before_equals_after": true,
+        "owned_child_reaped": true
+      },
+      {
+        "name": "private_desktop",
+        "before_equals_after": true,
+        "owned_child_reaped": true
+      },
+      {
+        "name": "account_compat",
+        "before_equals_after": true,
+        "owned_child_reaped": true
+      },
+      {
+        "name": "input_history",
+        "before_equals_after": true,
+        "owned_child_reaped": true
+      },
+      {
+        "name": "reload_state",
+        "before_equals_after": true,
+        "owned_child_reaped": true
+      },
+      {
+        "name": "session_groups",
+        "before_equals_after": true,
+        "owned_child_reaped": true
+      },
+      {
+        "name": "client_ui",
+        "before_equals_after": true,
+        "owned_child_reaped": true
+      },
+      {
+        "name": "canvas_logs",
+        "before_equals_after": true,
+        "owned_child_reaped": true
+      },
+      {
+        "name": "composer",
+        "before_equals_after": true,
+        "owned_child_reaped": true
+      }
+    ],
+    "claim": "Recorded wrapper child reaping and before/after inputs were checked. Failed producer has no completed internal cleanup summary; this readback did not inspect all descendant processes or rehash ELF files, and did not recompute the producer input-set hash formula."
+  },
+  "continuation": {
+    "owner_message": 1015,
+    "owner_report": "Existing author preparing a one-literal composer expectation correction and new exact-source r14; no new candidate Gate/runtime/UI/P1 success is established by this file.",
+    "P1_executed_in_this_attempt": false,
+    "final44_executed": false
+  },
+  "reviewer_operations": {
+    "product_or_Cargo_run": false,
+    "lock_acquired": false,
+    "source_modified": false,
+    "ELF_rehashed": false
+  },
+  "supplemental_readback_at_utc": "2026-11-21T05:44:31.882083+00:00",
+  "record_reconciled_at_utc": "2026-11-21T05:51:01.144169+00:00",
+  "post_snapshot_source_successor": {
+    "commit": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+    "parent": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "committed_at_utc": "2026-11-21T05:35:22Z",
+    "changed_file": "scripts/e2e_composer.py",
+    "new_blob": "87750b2965fe11116ee95f00ed4a8eb74eaced8f",
+    "change": "Only the explicit-selection expectation changes next caller to Next caller at line515",
+    "production_Rust_changed": false,
+    "other_assertions_unchanged": true,
+    "source_version_gate_results_claimed": false,
+    "comparison_url": "https://github.com/LIghtJUNction/ssmcp/compare/f42baae1d5227bd6db8315aef778160b80b57274...4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "reviewer": "pr_core_repos",
+    "root_GitHub_complete_compare_verified": true
+  }
+}

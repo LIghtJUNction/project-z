@@ -1,0 +1,38 @@
+{
+  "schema": "project-z.W-fixed-source-peer-review.v1",
+  "reviewer": "/root/pr_org_repos",
+  "scope": "Independent read-only GitHub immutable commit, compare and two complete recursive trees. No native, product, Cargo, source or ref operations.",
+  "source": {
+    "commit": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+    "sole_parent": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "parent_tree": "64b40eb8a3e0188076cf376229d3d87074d27dcc"
+  },
+  "trees": {
+    "truncated": false,
+    "entries_each": 1325,
+    "leaves_each": 1114,
+    "modified": 1,
+    "added": 0,
+    "deleted": 0,
+    "unchanged_leaves": 1113,
+    "unchanged_gitlinks": 4
+  },
+  "change": {
+    "path": "scripts/e2e_composer.py",
+    "mode": "100644",
+    "old_blob": "6dc1f4495dca1d4a213cacc058344aa75b695dfe",
+    "new_blob": "87750b2965fe11116ee95f00ed4a8eb74eaced8f",
+    "removed": "editing_queue(shot, \"next caller\")",
+    "added": "editing_queue(shot, \"Next caller\")",
+    "remaining_column_and_hide_cursor_assertions_preserved": true
+  },
+  "source_urls": [
+    "https://api.github.com/repos/LIghtJUNction/ssmcp/git/commits/4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "https://api.github.com/repos/LIghtJUNction/ssmcp/git/trees/5be29af415b915ef3307bfed08c6cefec2798898?recursive=1",
+    "https://api.github.com/repos/LIghtJUNction/ssmcp/git/trees/64b40eb8a3e0188076cf376229d3d87074d27dcc?recursive=1",
+    "https://api.github.com/repos/LIghtJUNction/ssmcp/compare/f42baae1d5227bd6db8315aef778160b80b57274...4de17310ce2ecdbc8b6c6ab86ee365653f753ee8"
+  ],
+  "blocking_findings": 0,
+  "boundary": "This is a structured transcript of the peer's explicit immutable-source review, not a raw GitHub response or runtime result."
+}

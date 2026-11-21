@@ -1,0 +1,424 @@
+{
+  "schema": "project-z-independent-report-review-v1",
+  "recorded_utc": "2026-11-21T03:55:00Z",
+  "reviewed_snapshot_utc": "2026-11-21T03:42:51+00:00",
+  "reviewed_snapshot_taipei": "2026-11-21T11:42:51+08:00",
+  "review_kind": "read-only evidence and report audit; no product execution",
+  "verdict": {
+    "content_review": "pass",
+    "publication_review": "pass for the sealed 31-file candidate plus the verified CI detail adjunct",
+    "material_inconsistencies": 0,
+    "blockers": [],
+    "nested_reference_closure": "Root confirmed full-byte reading and inclusion of the fixed 32,092-byte ci-extracted-results.json as payload 32. The author's sealed 31-file directory and manifest remain unchanged.",
+    "publication_authority": "Root alone performs final publication and remote readback."
+  },
+  "candidate": {
+    "native_directory": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-U-r12-bd7-followup-20261121",
+    "prepared_manifest": {
+      "bytes": 31343,
+      "sha256": "f18f92b99f5e8668dd8f430ea27079e8249a3f7bf69c8fc3ffb2d42697936d2a"
+    },
+    "reports": [
+      {
+        "path": "docs/maintenance/2026-11-20-pr-and-dependencies.md",
+        "bytes": 67015,
+        "sha256": "8fd9a7276918abdc438ed3259ceb8b4e18fcdc0e3470c66990a037dcf78add21",
+        "git_blob_sha1": "de39fba89743e91ef56fb0a7cf7b701ea90295b6"
+      },
+      {
+        "path": "docs/maintenance/2026-11-20-pr-and-dependencies.json",
+        "bytes": 1011176,
+        "sha256": "55b47135f409fb1ff1b40313c4397be6106ea87bd3b8ec7904af765b9e51f5ac",
+        "git_blob_sha1": "26fb9227994aaaeff872bed6779cebb553e967f9"
+      }
+    ],
+    "payload_files": 31,
+    "byte_identical_copied_originals": 28,
+    "generated_prior_status_files": 1,
+    "report_files": 2,
+    "fixed_snapshot_not_later_live_status": true,
+    "manifest_still_matches_at_closure": true
+  },
+  "base": {
+    "repository": "LIghtJUNction/project-z",
+    "commit": "33fd62fdbb376b6b64f14e604a63452abc654a1b",
+    "tree": "903c194f17396292f4780a4729171196250bf70a",
+    "independently_read_github_commit_and_recursive_tree": true,
+    "truncated": false,
+    "leaves": 352,
+    "source_report_files": [
+      {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-Q-r11-followup-native-recovery-20261121/2026-11-20-pr-and-dependencies.md",
+        "bytes": 62402,
+        "sha256": "8eedf09940c71754491ced143140979dd11017ea6447b6747c382aeab3971766",
+        "git_blob_sha1": "873a5c4b081e8673719d8569d15f6650efd7730a"
+      },
+      {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-Q-r11-followup-native-recovery-20261121/2026-11-20-pr-and-dependencies.json",
+        "bytes": 992190,
+        "sha256": "dd466e39f7e6ee9b6e5535ef116c5ba28c452be363069fe7089d53851aec2ddb",
+        "git_blob_sha1": "dc090064d3a9e8901202c0c5884b0eed93f31b9d"
+      }
+    ]
+  },
+  "byte_and_tree_audit": {
+    "all_31_bytes_sha256_git_blob_sha1_match": true,
+    "all_28_original_sources_freshly_read_and_byte_equal": true,
+    "author_base_tree_equals_independently_fetched_github_tree": true,
+    "base_report_blobs_equal_github_leaves": true,
+    "overlay": {
+      "base_leaf_paths_retained": 352,
+      "old_leaf_tuples_unchanged": 350,
+      "reports_modified": 2,
+      "new_leaves": 29,
+      "deleted_leaves": 0,
+      "result_leaves": 381
+    },
+    "report_and_evidence_only": true,
+    "no_source_gitlink_catalog_workflow_changes": true
+  },
+  "preserved_history": {
+    "initial_queue": {
+      "total": 85,
+      "merged": 56,
+      "closed": 14,
+      "archived": 9,
+      "blocked": 5,
+      "in_progress": 1
+    },
+    "original_pull_request_rows_deep_equal": true,
+    "Q_r11_milestone_deep_equal": true,
+    "protected_top_level_fields": {
+      "timezone": true,
+      "scope": true,
+      "batch_status": true,
+      "counts": true,
+      "counting_rule": true,
+      "external_owner_merges": true,
+      "dependency_snapshot": true,
+      "ssmcp_local_repair": true,
+      "additional_integration_prs": true,
+      "pull_requests": true,
+      "final_source_cohort": true,
+      "final_aggregate_gates": true,
+      "consumer_propagation": true,
+      "component_integrations": true,
+      "component_integration_scope": true,
+      "previous_source_graph_validation": true,
+      "personal_binary_cleanup": true,
+      "git_source_policy_code_gates": true,
+      "magicbox_current_build": true,
+      "magicbox_current_emulator": true,
+      "magicbox_prior_emulator_validation": true,
+      "magicbox_prior_emulator_validation_scope": true,
+      "core_git_source_migrations": true,
+      "git_source_policy_followup": true,
+      "org_git_source_publications": true,
+      "mechrevo_git_source_migration": true
+    },
+    "prior_status_all_15_values_equal_original": true,
+    "prior_status_preserved_fields": [
+      "status",
+      "scope_note",
+      "current_progress",
+      "current_native_observation",
+      "current_native_observation_scope",
+      "current_candidate_build_pass_claimed",
+      "current_candidate_runtime_pass_claimed",
+      "candidate_identity_scope",
+      "current_final_gate_plan",
+      "prior_coordination_current_release",
+      "prior_coordination_pending",
+      "prior_current_snapshot_scope",
+      "prior_report_preparation",
+      "prior_aggregate_pr",
+      "prior_coordination_aggregate_pr"
+    ],
+    "inaccessible_previous_cloud_Q_candidate_remains_unreviewed_in_prior_record": true,
+    "old_C_failures_FC_and_0af8_evidence_not_relabelled": true,
+    "historical_root_consumers_scope_explicit": true,
+    "aggregate_head_alias_note": "Updated aliases describe the report branch at 33fd, not a new default-branch source graph selection. Historical graph objects remain unchanged."
+  },
+  "references": {
+    "main_markdown_occurrences": 132,
+    "structured_summary_references": 432,
+    "string_summary_references": 438,
+    "broken_in_these_three_scans": 0,
+    "new_summary_evidence_descriptor_mismatches": 0,
+    "scope": "Counts cover the main report Markdown and summary references. They do not automatically include relative fields inside copied evidence JSON.",
+    "additional_nested_reference": {
+      "from": "docs/maintenance/evidence/zuse-67e-ci-44860554142/zuse-67e-ci-independent-review.json",
+      "key": "$.details_file",
+      "value": "ci-extracted-results.json",
+      "present_in_sealed_31": false,
+      "verified_original": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/ci-extracted-results.json",
+        "bytes": 32092,
+        "sha256": "caee487d2c9874bebc6f9a4dbfccb94e3b1906a127f3c5df6a780b16eb34c1c5",
+        "git_blob_sha1": "8bbbe3ec4dbb97a3462094a1bd99e7d25609218d",
+        "json_parseable": true,
+        "json_root_type": "list"
+      },
+      "required_repository_path": "docs/maintenance/evidence/zuse-67e-ci-44860554142/ci-extracted-results.json",
+      "original_31_manifest_must_remain_unchanged": true,
+      "original_ci_logs_need_not_be_copied_for_this_reference": true,
+      "root_confirmed_inclusion_in_publication_payload_32": true,
+      "root_payload_readback_reported_bytes": 32092,
+      "publication_closure_resolved": true,
+      "root_32_file_payload_total_bytes": 2030927
+    },
+    "independent_review_markdown_links": "Only candidate paths, the verified adjunct, and the sibling review JSON are used.",
+    "summary_size": {
+      "bytes": 1011176,
+      "previous_bytes": 992190,
+      "increase_bytes": 18986,
+      "limit_bytes": 1048576,
+      "remaining_bytes": 37400
+    }
+  },
+  "substantive_checks": [
+    {
+      "topic": "U/r12 Gate35",
+      "evidence": {
+        "path": "docs/maintenance/evidence/ssmcp-U-r12-gate-review/ssmcp-U-r12-gate-review-summary.json",
+        "bytes": 15244,
+        "sha256": "4f3c05d8e620cac009820e5c2917fe62e0a26fd1c1fbeee5372a59404123463b",
+        "git_blob_sha1": "b592a7abfe31eb87e29d7d52d07bfbb6116f8475"
+      },
+      "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+      "tree": "2c60d011da8c2b31aefd80367bf7f19e28f10b62",
+      "run_id": "f38d16ea5cc34c21c5a56313245625a1",
+      "actual_stages": 35,
+      "zero_exit_stages": 35,
+      "rust_parent_result_stages": 26,
+      "private_tests": {
+        "passed": 2050,
+        "failed": 0,
+        "ignored": 23,
+        "filtered": 6
+      },
+      "host_input_tests": {
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0,
+        "filtered": 2073
+      },
+      "ordinary_integration_passed": 101,
+      "ignored_exact_worker_passed": 1,
+      "additional_mandatory_ignored_stages": 4,
+      "additional_mandatory_ignored_passed": 14,
+      "original_17_are_subset_of_private_2050": true,
+      "nested_child_results_not_added": true,
+      "root_strict_clippy_steps_passed": 2,
+      "unused_qrcodegen_manifest_warning_retained": true,
+      "evidence_scope": "The copied independent U review establishes its 212-text/35-log/55-probe/26-compiler-chain/5-owned-artifact evidence. This report audit read that review and the selected original receipts; it did not rerun those gates or independently rehash the ELF files.",
+      "Q_results_not_inherited": true,
+      "cleanup": "Collected/not-found unit and absent original PIDs are bounded observations. They are not historical exit-code proof or a global/continuous free-lock claim."
+    },
+    {
+      "topic": "U runtime18",
+      "evidence": {
+        "path": "docs/maintenance/evidence/ssmcp-U-r12-runtime18/runtime18-root-receipt-read.json",
+        "bytes": 7672,
+        "sha256": "78545fb5b089e32626cc351156d9c30a112a74942ea7d1f902ea4f987c067fcf",
+        "git_blob_sha1": "1ecc59c31be195818013e220374c735bbcbc3dbd"
+      },
+      "private_mcp_checks": 12,
+      "transport_checks": 6,
+      "all_passed": true,
+      "same_U_source_and_owned_artifact_identities": true,
+      "exact_inputs_before_after_equal": true,
+      "runtime_elapsed_ms": 12127,
+      "outer_exit_code": 0,
+      "owned_process_cleanup_errors": [],
+      "root_actual_job_ac8_output_read": false,
+      "job_identifier_is_owner_reported": true,
+      "five_ELFs_reread_by_this_runtime_review": false,
+      "does_not_establish_UI24_or_P1_or_performance_AB": true
+    },
+    {
+      "topic": "U UI first attempt",
+      "evidence": {
+        "path": "docs/maintenance/evidence/ssmcp-U-ui24-first-attempt/ui-first-failure-root-receipt-read.json",
+        "bytes": 7918,
+        "sha256": "8c2c52b1fa7b2fab5069026dcfa57a522e94fdc83defca84203623b87bb28a5e",
+        "git_blob_sha1": "997383707a345ff8a4e12745c7bf6f01a98404bb"
+      },
+      "actual_job": "26c4545eae1eab8d27485f4a48077d3c-ae2",
+      "actual_exit_code": 1,
+      "running": false,
+      "stdout_eof": true,
+      "stderr_eof": true,
+      "planned_executions": 24,
+      "logical_suites_including_alias": 25,
+      "passed": [
+        {
+          "suite": "message_references",
+          "checks": 53
+        },
+        {
+          "suite": "force_send",
+          "checks": 137
+        },
+        {
+          "suite": "listener_transports",
+          "checks": 74
+        }
+      ],
+      "failed": {
+        "suite": "zuse_worker",
+        "elapsed_seconds": 1.552,
+        "checks": 0,
+        "stage": "private Xvfb readiness before worker execution"
+      },
+      "not_run_executions": 20,
+      "alias_count": 0,
+      "P1_pass": false,
+      "four_owned_children_reaped": true,
+      "inputs_unchanged": true,
+      "failure_log": {
+        "bytes": 1517,
+        "sha256": "13928db4a2e0f25aa81fe45325fb57643ec23b12f6bdc4997e59d924593de389"
+      },
+      "no_product_root_cause_inferred_from_missing_Xvfb_stderr": true,
+      "later_diagnostics_not_imported_into_snapshot": true
+    },
+    {
+      "topic": "zcalld bd7 narrow gate",
+      "evidence": {
+        "path": "docs/maintenance/evidence/zcalld-bd7-20261121/handoff.json",
+        "bytes": 20083,
+        "sha256": "afab66b49d433d318b9a0ecdca8ded3505222efe00fb36a395c989962f0acbff",
+        "git_blob_sha1": "a5c6ed3a015dd768b9b8ff86427747fa8b2771ad"
+      },
+      "source": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+      "tree": "cbd4a29ec9851a42dc36149fc099fb288c9623de",
+      "source_leaves": 220,
+      "unchanged_from_0af8": 218,
+      "changed_from_0af8": [
+        "apps/zcall-gui",
+        "docs/RELEASE-0.4.4.md"
+      ],
+      "actual_job_suffix": "a64",
+      "actual_exit_code": 0,
+      "double_eof": true,
+      "commands": 87,
+      "commands_are_not_test_count": true,
+      "release_seconds": 34.387,
+      "actual_root_release_invocations": 1,
+      "root_release_fresh": false,
+      "owned_CLI": {
+        "bytes": 2964896,
+        "sha256": "d5464f6f24da08204840d5c84f1780249d3635aa18ffd696dd5f6060c5621ecb"
+      },
+      "real_TCP_Unix_curl_groups": 8,
+      "all_passed": true,
+      "link_cargo_executable_owned_copy_equality_recorded_during_gate": true,
+      "metadata_comparison_only_normalizes_root_path": true,
+      "workspace_Rust_tests_run": false,
+      "strict_Clippy_run": false,
+      "GUI_run": false,
+      "P1_run": false,
+      "historical_882_182_tests_and_two_Clippy_not_recounted_or_inherited": true,
+      "own_scope_PID_and_lock_cleanup_bounded": true,
+      "global_idle_claim": false,
+      "PR1_remains_draft": true
+    },
+    {
+      "topic": "zuse PR4 and three-platform CI",
+      "evidence": {
+        "path": "docs/maintenance/evidence/zuse-67e-ci-44860554142/zuse-67e-ci-independent-review.json",
+        "bytes": 21537,
+        "sha256": "fffe5fa895ed4b2452179ee20377cea9d34761647aa69021881a2fefc35ee813",
+        "git_blob_sha1": "94c654c766a0ee17e3005869ae02c6caa62a95c7"
+      },
+      "source": "67e2d6a4cee0d106f46bdf064013e163c0aa3337",
+      "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+      "CI_run": 44860554142,
+      "all_three_platform_jobs_passed": true,
+      "default_results": {
+        "Linux": {
+          "passed": 289,
+          "failed": 0,
+          "ignored": 5
+        },
+        "macOS": {
+          "passed": 267,
+          "failed": 0,
+          "ignored": 3
+        },
+        "Windows": {
+          "passed": 263,
+          "failed": 0,
+          "ignored": 2
+        }
+      },
+      "native_and_Wasm_no_std_checks_passed": true,
+      "strict_Clippy_all_platforms_passed": true,
+      "Linux_PTY_groups": 5,
+      "Linux_synthetic_USB_groups": 11,
+      "groups_not_added_to_Rust_test_count": true,
+      "private_MPX_body_execution_not_claimed": true,
+      "old_no_std_20_tests_not_inherited": true,
+      "merge": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+      "parents": [
+        "83663988ebf736ec8de05d6372eef485c3d9ebac",
+        "67e2d6a4cee0d106f46bdf064013e163c0aa3337"
+      ],
+      "merge_tree_equals_tested_tree": true,
+      "PR2_open_draft_at_fe47": true,
+      "zuse_main_remains_a1": true,
+      "SSMCP_current_candidate_is_U_not_a1": true,
+      "SSMCP_U_zuse_dependency_cohort_unchanged": true,
+      "earlier_368_and_2ffe_failures_not_relabelled_as_success": true
+    },
+    {
+      "topic": "Readable Google Doc v4",
+      "evidence": {
+        "path": "docs/maintenance/evidence/project-z-google-doc-20261121/delivery-v4.json",
+        "bytes": 4433,
+        "sha256": "15337a455f412658160431a81feeb9002a8418eb7fe6deac91bf793689f52aa9",
+        "git_blob_sha1": "2ceda1ac667e42230c9bb4cd372ea68be6c77d2d"
+      },
+      "document_id": "1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+      "cutoff_utc": "2026-11-21T03:38:30.890Z",
+      "archive_commit": "33fd62fdbb376b6b64f14e604a63452abc654a1b",
+      "structured_readback_verified": true,
+      "visual_browser_rendering_performed": false,
+      "nonempty_paragraphs": 25,
+      "tables": 1,
+      "table_cells": 21,
+      "links": 14,
+      "not_the_later_034251_report_publication": true,
+      "existing_raw_MD_JSON_archive_bytes_unchanged": true
+    }
+  ],
+  "review_execution": {
+    "inventory_job": "26c4545eae1eab8d27485f4a48077d3c-b26",
+    "closure_job": "26c4545eae1eab8d27485f4a48077d3c-b3b",
+    "successful_readonly_jobs_exit_zero_and_double_eof": true,
+    "audit": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/U-r12-report-review/report-inventory-audit.json",
+      "bytes": 42031,
+      "sha256": "575784a2e5d00235dd6049bd5f94d87c9b64a6eba0c2798a58178eb5ef8542e0",
+      "git_blob_sha1": "0c7c9d523f467bb0036e803376d42389a5e02228"
+    },
+    "closure_check": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/U-r12-report-review/final-prior-and-detail-closure-check-v2.json",
+      "bytes": 1430,
+      "sha256": "7f19673c442d012eae429f3c040edb8d9922f361f95d2bfcd42552db6aaef4bb",
+      "git_blob_sha1": "4fbd0fdc2887d911087318a48b30cabcf9a3aeea"
+    },
+    "no_author_validator_executed": true,
+    "no_product_build_test_GUI_CI_triggered": true,
+    "no_large_ELF_hashes_repeated": true,
+    "candidate_canonical_git_refs_Drive_unmodified": true,
+    "only_owned_review_artifacts_written": true
+  },
+  "publication_paths": {
+    "json": "docs/maintenance/evidence/U-r12-bd7-report-independent-review.json",
+    "markdown": "docs/maintenance/evidence/U-r12-bd7-report-independent-review.md",
+    "additional_original": "docs/maintenance/evidence/zuse-67e-ci-44860554142/ci-extracted-results.json",
+    "note": "Sealed author candidate:31 files. Root assembled one verified detail original as payload32; with these two review files the intended publication is34 text files. Root performs final descriptor/changed-set readback. The author's31-file manifest stays unchanged."
+  }
+}

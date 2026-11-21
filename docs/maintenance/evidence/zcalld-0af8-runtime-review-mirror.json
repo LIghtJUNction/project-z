@@ -1,0 +1,25 @@
+{
+  "schema": "project-z.zcalld-0af8-review-native-mirror.v1",
+  "observed_at_utc": "2026-11-21T01:06:31.109Z",
+  "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-zcalld-0af8-runtime-independent-review.json",
+  "native": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/zcalld-0af8-runtime-independent-review.json",
+    "bytes": 17845,
+    "sha256": "2d802419058c52c9061b2c10dfc7e396d4734fd3d3291ff86aaa11c94b8cf3c8",
+    "json_source_verified": true
+  },
+  "fs_write_verified": true,
+  "readback": {
+    "method": "Read and SHA256 only this mirrored JSON; no product/Cargo/build/ELF/shared-target or lock work.",
+    "job_id": "b879919be66280447132d5d616be9361-49a",
+    "exit_code": 0,
+    "both_eof": true,
+    "duration_ms": 101,
+    "full_file_digest_equal": true
+  },
+  "fs_read_text_attempt": {
+    "spilled": true,
+    "not_treated_as_complete_text_readback": true
+  },
+  "user_messages": null
+}

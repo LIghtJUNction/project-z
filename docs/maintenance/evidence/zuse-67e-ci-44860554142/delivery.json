@@ -1,0 +1,103 @@
+{
+  "schema": 1,
+  "recorded_at_utc": "2026-11-21T03:32:26.015174+00:00",
+  "native_directory": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142",
+  "run_id": 44860554142,
+  "head": "67e2d6a4cee0d106f46bdf064013e163c0aa3337",
+  "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+  "verdict": "all_three_platform_CI_jobs_passed_no_material_merge_evidence_blocker",
+  "original_file_count": 19,
+  "archive_payload_count": 23,
+  "archive_member_count": 24,
+  "publication": {
+    "merge_commit": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+    "parents": [
+      "83663988ebf736ec8de05d6372eef485c3d9ebac",
+      "67e2d6a4cee0d106f46bdf064013e163c0aa3337"
+    ],
+    "merged_at": "2026-11-21T03:28:10Z",
+    "PR4_merged": true,
+    "PR2_head": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "PR2_open_draft": true,
+    "main": "a1bb8fd2cbce0a9d85134999883c578358065242",
+    "merge_tree_equals_CI_and_head_tree": true,
+    "performed_by_reviewer": false,
+    "frozen_a1_downstream_scope_unchanged": true
+  },
+  "all_archive_payload_hashes_verified": true,
+  "review_json": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/zuse-67e-ci-independent-review.json",
+    "bytes": 21537,
+    "sha256": "fffe5fa895ed4b2452179ee20377cea9d34761647aa69021881a2fefc35ee813",
+    "git_blob_sha1": "94c654c766a0ee17e3005869ae02c6caa62a95c7"
+  },
+  "review_markdown": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/zuse-67e-ci-independent-review.md",
+    "bytes": 4813,
+    "sha256": "2a27b2fb7edaeaf66263c0bc1899bdeecf6590b2ea95228ca6773928ec83934f",
+    "git_blob_sha1": "32ce5778217bf43135e38432fe173bcb76fc52a6"
+  },
+  "extracted_results": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/ci-extracted-results.json",
+    "bytes": 32092,
+    "sha256": "caee487d2c9874bebc6f9a4dbfccb94e3b1906a127f3c5df6a780b16eb34c1c5",
+    "git_blob_sha1": "8bbbe3ec4dbb97a3462094a1bd99e7d25609218d"
+  },
+  "originals_manifest": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/originals-manifest.json",
+    "bytes": 12606,
+    "sha256": "423bcf72136699dd53d9c466efbfeef7832b678cf96833a420facdc290b00133",
+    "git_blob_sha1": "98ee9fa8903ef0f6da35ed3d0aeb318451f157c6"
+  },
+  "archive_manifest": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/archive-manifest.json",
+    "bytes": 3912,
+    "sha256": "7c20a94476319ab38c5bdc11a410828606e7371c9f7fd28428915e3ff72b0d21",
+    "git_blob_sha1": "07704a12208ffcce630416db99306121d3c629d4"
+  },
+  "archive": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/zuse-67e-ci-text-evidence.zip",
+    "bytes": 123917,
+    "sha256": "9d4291a53b05f6a810df386631f94eba73d14ea70cb310f9d3071b1ca82f3607",
+    "git_blob_sha1": "6002fe56ff3d6687130bb5ee03a7824b42d92af8"
+  },
+  "complete_raw_logs": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/ubuntu-job-136712704265.log",
+      "bytes": 86917,
+      "sha256": "8bb23119f5b945a2a2bb87049b929737e3c6f22ff390a92e260d0fe150b3586d",
+      "git_blob_sha1": "f679f072e8d79b8721ce83ab8f217ef3a84e83ee",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/actions/jobs/136712704265/logs",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": true,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/macos-job-136712704344.log",
+      "bytes": 73437,
+      "sha256": "4f4b88877c9e9c2955c293b0f21542729e068f747a04273415f1cc2f0969b1d0",
+      "git_blob_sha1": "148e7cac2bf87dda83a0fd6ef56270aa08ae72d7",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/actions/jobs/136712704344/logs",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": true,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/windows-job-136712704368.log",
+      "bytes": 74160,
+      "sha256": "198614e9e81662be027e22f5dc97c7fbaef74e2fd86aff1d2366598d2cb0d742",
+      "git_blob_sha1": "de431dc859f596003af77c124fe12faf4ee51e30",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/actions/jobs/136712704368/logs",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": true,
+      "CRLF_count": 795,
+      "transfer_parts_verified": true
+    }
+  ],
+  "no_product_execution_or_ref_or_CI_dispatch": true,
+  "Drive_uploaded": false,
+  "root_controls_any_publication_or_merge": true
+}

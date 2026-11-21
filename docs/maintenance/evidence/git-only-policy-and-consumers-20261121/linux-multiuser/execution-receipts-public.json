@@ -1,0 +1,100 @@
+{
+  "schema": "ssmcp.linux-multiuser-readonly.execution-receipts.v1",
+  "jobs": [
+    {
+      "job_id": "f38688300b30e5d0bad6368b8bb014cc-b",
+      "source": "Retained actual ssmcp.exec.read response; not a new execution",
+      "exit_code": 0,
+      "running": false,
+      "stdout_file": "job-b.stdout.json",
+      "stderr": "",
+      "stdout_eof": true,
+      "stderr_eof": true,
+      "stdout_truncated": false,
+      "stderr_truncated": false,
+      "submitted_command": {
+        "argv": [
+          "/usr/bin/python3",
+          "-c",
+          "import os,pwd,stat,json\nfrom pathlib import Path\ndef err(e): return {\"error\":type(e).__name__,\"errno\":getattr(e,\"errno\",None)}\ndef info(p):\n try:\n  s=os.lstat(p)\n  return {\"path\":str(p),\"uid\":s.st_uid,\"gid\":s.st_gid,\"mode\":oct(stat.S_IMODE(s.st_mode)),\"kind\":\"symlink\" if stat.S_ISLNK(s.st_mode) else \"directory\" if stat.S_ISDIR(s.st_mode) else \"file\",\"link\":os.readlink(p) if stat.S_ISLNK(s.st_mode) else None}\n except OSError as e: return {\"path\":str(p),**err(e)}\nu=pwd.getpwnam(\"x\")\nr={\"observer\":{\"uid\":os.getuid(),\"euid\":os.geteuid(),\"pid\":os.getpid()},\"target_user\":{\"name\":u.pw_name,\"uid\":u.pw_uid,\"gid\":u.pw_gid,\"home\":u.pw_dir,\"shell\":u.pw_shell},\"processes\":[],\"target_uid_process_count\":0}\nkeep={\"HOME\",\"PATH\",\"SHELL\",\"PWD\",\"OLDPWD\",\"XDG_CONFIG_HOME\",\"XDG_STATE_HOME\",\"XDG_RUNTIME_DIR\",\"SSMCP_SESSION_HOME\",\"SSMCP_AUTH_HOME\",\"SSMCP_CLIENT_CONFIG\"}\nfor d in Path(\"/proc\").iterdir():\n if not d.name.isdigit(): continue\n try:\n  f={}\n  for line in (d/\"status\").read_text().splitlines():\n   if \":\" in line:\n    k,v=line.split(\":\",1);f[k]=v.strip()\n  ids=[int(v) for v in f.get(\"Uid\",\"\").split()]\n  if u.pw_uid not in ids: continue\n  r[\"target_uid_process_count\"]+=1\n  name=f.get(\"Name\",\"\")\n  if name.lstrip(\"-\") not in {\"bash\",\"fish\",\"zsh\",\"dash\",\"sh\",\"ssmcp\",\"ssmcp-frontend\",\"su\",\"sudo\",\"login\"} and not name.startswith(\"ssmcp\"): continue\n  x={\"pid\":int(d.name),\"ppid\":int(f.get(\"PPid\",\"0\")),\"name\":name,\"uids\":ids}\n  for key in (\"exe\",\"cwd\"):\n   try:x[key]=os.readlink(d/key)\n   except OSError as e:x[key]=err(e)\n  try:\n   argv=(d/\"cmdline\").read_bytes().split(b\"\\0\")\n   x[\"argv0\"]=argv[0].decode(\"utf-8\",\"replace\")\n   x[\"is_saved_session_runner\"]=b\"__session-run\" in argv\n  except OSError as e:x[\"argv0\"]=err(e)\n  try:\n   env={}\n   for item in (d/\"environ\").read_bytes().split(b\"\\0\"):\n    k,sep,v=item.partition(b\"=\")\n    key=k.decode(\"utf-8\",\"replace\")\n    if sep and key in keep:env[key]=v.decode(\"utf-8\",\"replace\")\n   x[\"selected_environment\"]=env\n  except OSError as e:x[\"selected_environment\"]=err(e)\n  r[\"processes\"].append(x)\n except (OSError,ValueError):continue\nr[\"processes\"]=sorted(r[\"processes\"],key=lambda x:x[\"pid\"])[:24]\nr[\"exact_path_metadata\"]=[info(p) for p in [\"/home\",\"/home/lightjunction\",\"/home/lightjunction/Documents\",\"/home/lightjunction/Documents/GITHUB\",\"/home/lightjunction/Documents/GITHUB/ssmcp\",u.pw_dir]]\nprint(json.dumps(r,ensure_ascii=False,separators=(\",\",\":\")))\n"
+        ],
+        "cwd": "/home/lightjunction/Documents/GITHUB/ssmcp",
+        "title": "Read x user runtime paths and limited process metadata",
+        "timeout_ms": 15000
+      },
+      "command_provenance": "Actual returned exec snapshot and submitted argv match"
+    },
+    {
+      "job_id": "f38688300b30e5d0bad6368b8bb014cc-11",
+      "source": "Retained actual ssmcp.exec.read response; not a new execution",
+      "exit_code": 0,
+      "running": false,
+      "stdout_file": "job-11.stdout.json",
+      "stderr": "",
+      "stdout_eof": true,
+      "stderr_eof": true,
+      "stdout_truncated": false,
+      "stderr_truncated": false,
+      "submitted_command": {
+        "argv": [
+          "/usr/bin/python3",
+          "-c",
+          "import os,stat,json,hashlib,re\nfrom pathlib import Path\ndef error(e): return {\"error\":type(e).__name__,\"errno\":getattr(e,\"errno\",None)}\ndef candidate(p):\n r={\"path\":str(p)}\n try:\n  s=p.lstat();r.update(uid=s.st_uid,gid=s.st_gid,mode=oct(stat.S_IMODE(s.st_mode)),size=s.st_size)\n  r[\"symlink\"]=os.readlink(p) if p.is_symlink() else None\n  q=p.resolve(strict=True);r[\"resolved\"]=str(q);t=q.stat()\n  if not stat.S_ISREG(t.st_mode): return r\n  h=hashlib.sha256()\n  with q.open(\"rb\") as f:\n   head=f.read(16384);h.update(head)\n   while True:\n    c=f.read(1024*1024)\n    if not c:break\n    h.update(c)\n  r[\"resolved_bytes\"]=t.st_size;r[\"sha256\"]=h.hexdigest()\n  r[\"kind\"]=\"ELF\" if head[:4]==b\"\\x7fELF\" else \"script\" if head.startswith(b\"#!\") else \"other\"\n  if r[\"kind\"]==\"script\":\n   r[\"interpreter\"]=head.splitlines()[0].decode(\"utf-8\",\"replace\")[:160]\n   r[\"has_exec\"]=bool(re.search(rb\"\\bexec\\b\",head))\n   r[\"saved_session_literal\"]=b\"__session-run\" in head\n   text=head.decode(\"utf-8\",\"replace\")\n   r[\"literal_ssmcp_paths\"]=sorted(set(re.findall(r\"/[A-Za-z0-9_./-]*ssmcp[A-Za-z0-9_./-]*\",text)))[:12]\n except OSError as e:r.update(error(e))\n return r\nr={\"candidate_paths\":[candidate(Path(p)) for p in [\"/usr/local/bin/ssmcp\",\"/usr/bin/ssmcp\",\"/bin/ssmcp\",\"/home/x/.local/bin/ssmcp\",\"/home/x/bin/ssmcp\"]],\"x_config_access\":[],\"packages\":[]}\nfor s in [\"/home/x/.config/fish/config.fish\",\"/home/x/.config/fish/fish_variables\",\"/home/x/.local/state/ssmcp/sessions\",\"/home/x/.config/ssmcp\"]:\n try:\n  m=os.lstat(s);r[\"x_config_access\"].append({\"path\":s,\"uid\":m.st_uid,\"mode\":oct(stat.S_IMODE(m.st_mode))})\n except OSError as e:r[\"x_config_access\"].append({\"path\":s,**error(e)})\ndb=Path(\"/var/lib/pacman/local\")\ntry:\n for p in db.iterdir():\n  if not re.match(r\"^ssmcp(?:-bin|-git)?-[0-9]\",p.name):continue\n  fields={};key=None\n  for line in (p/\"desc\").read_text().splitlines():\n   if line.startswith(\"%\") and line.endswith(\"%\"):key=line.strip(\"%\")\n   elif line and key in {\"NAME\",\"VERSION\",\"BUILDDATE\",\"INSTALLDATE\"}:fields[key]=line\n  files=(p/\"files\").read_text().splitlines()\n  r[\"packages\"].append({\"database_path\":str(p),\"fields\":fields,\"owns_usr_bin_ssmcp\":\"usr/bin/ssmcp\" in files})\nexcept OSError as e:r[\"package_database\"]=error(e)\ntry:r[\"proc_mount_options\"]=[line.split()[3] for line in Path(\"/proc/mounts\").read_text().splitlines() if line.split()[1]==\"/proc\"]\nexcept OSError as e:r[\"proc_mount_options\"]=error(e)\ntry:r[\"original_home_access_acl_hex\"]=os.getxattr(\"/home/lightjunction\",\"system.posix_acl_access\").hex()\nexcept OSError as e:r[\"original_home_access_acl\"]=error(e)\nprint(json.dumps(r,ensure_ascii=False,separators=(\",\",\":\")))\n"
+        ],
+        "cwd": "/home/lightjunction/Documents/GITHUB/ssmcp",
+        "title": "Read system ssmcp candidates without executing binaries",
+        "timeout_ms": 15000
+      },
+      "command_provenance": "Exact submitted exec.start argv retained in this session; start and read receipts share the job_id"
+    },
+    {
+      "job_id": "f38688300b30e5d0bad6368b8bb014cc-14",
+      "source": "Retained actual ssmcp.exec.read response; not a new execution",
+      "exit_code": 0,
+      "running": false,
+      "stdout_file": "job-14.stdout.json",
+      "stderr": "",
+      "stdout_eof": true,
+      "stderr_eof": true,
+      "stdout_truncated": false,
+      "stderr_truncated": false,
+      "submitted_command": {
+        "argv": [
+          "/usr/bin/python3",
+          "-c",
+          "import json,gzip,hashlib,re\nfrom pathlib import Path\np=Path(\"/usr/bin/ssmcp\")\ns=p.stat();b=p.read_bytes();t=p.stat()\nm=Path(\"/var/lib/pacman/local/ssmcp-git-0.9.1.r377.gee05244-1/mtree\")\nr={\"binary\":{\"path\":str(p),\"bytes\":len(b),\"sha256\":hashlib.sha256(b).hexdigest(),\"stat_unchanged\":(s.st_dev,s.st_ino,s.st_size,s.st_mtime_ns)==(t.st_dev,t.st_ino,t.st_size,t.st_mtime_ns),\"logged_error_literal_present\":b\"has unsafe ownership or permissions\" in b,\"legacy_tmp_literal_present\":b\"/tmp/ssmcp\" in b}}\ntry:\n lines=gzip.decompress(m.read_bytes()).decode().splitlines()\n entries=[x for x in lines if x.split(\" \",1)[0]==\"./usr/bin/ssmcp\"]\n r[\"package_mtree\"]={\"path\":str(m),\"entry_count\":len(entries),\"entries\":entries}\n if len(entries)==1:\n  q=re.search(r\"(?:^| )sha256digest=([a-f0-9]{64})(?: |$)\",entries[0])\n  r[\"package_mtree\"][\"matches_binary_sha256\"]=bool(q and q.group(1)==r[\"binary\"][\"sha256\"])\nexcept OSError as e:r[\"package_mtree\"]={\"path\":str(m),\"error\":type(e).__name__,\"errno\":e.errno}\nprint(json.dumps(r,ensure_ascii=False,separators=(\",\",\":\")))\n"
+        ],
+        "cwd": "/home/lightjunction/Documents/GITHUB/ssmcp",
+        "title": "Bind the existing system ssmcp binary to package metadata",
+        "timeout_ms": 10000
+      },
+      "command_provenance": "Exact submitted exec.start argv retained in this session; start and read receipts share the job_id"
+    }
+  ],
+  "diagnostic_commands_reexecuted_for_this_save": false,
+  "product_executions": 0,
+  "cargo_executions": 0,
+  "sudo_or_identity_switches": 0,
+  "installation_or_permission_changes": 0,
+  "credentials_exported": false,
+  "full_environment_exported": false,
+  "public_copy": {
+    "kind": "public_derivative",
+    "original": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/linux-multiuser-readonly-20261121/execution-receipts.json",
+      "bytes": 9579,
+      "sha256": "16f8528d35a4b28549cda6fc72b558be5c6baa4601f9da955f95baa39dd266be"
+    },
+    "changes": [
+      {
+        "removed_fields": [
+          "jobs[0].native_client_id",
+          "jobs[1].native_client_id",
+          "jobs[2].native_client_id"
+        ],
+        "reason": "Transport client route identifiers are not needed to assess the recorded commands or results."
+      }
+    ],
+    "commands_job_ids_and_results_unchanged": true
+  }
+}

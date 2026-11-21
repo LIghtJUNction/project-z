@@ -1,0 +1,757 @@
+{
+  "schema": "project-z.zuse-356-portable-handoff.v1",
+  "status": "portable_passed_private_native_pending",
+  "observed_at": "2026-11-20T23:40:47.600187+00:00",
+  "repository": "LIghtJUNction/zuse",
+  "pr": "https://github.com/LIghtJUNction/zuse/pull/3",
+  "head": "35664746549c482c99082e6180419b2c0f5ff532",
+  "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+  "source": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+  "refs_changed": false,
+  "source_before": {
+    "head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "status": "",
+    "lock": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/Cargo.lock",
+      "bytes": 1138,
+      "sha256": "cffb29f3aa454c065523c6fc62ebf33721694df88af94e0aff2feea5d17855e0"
+    }
+  },
+  "source_after": {
+    "head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "status": "",
+    "lock": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/Cargo.lock",
+      "bytes": 1138,
+      "sha256": "cffb29f3aa454c065523c6fc62ebf33721694df88af94e0aff2feea5d17855e0"
+    }
+  },
+  "job": {
+    "id": "26c4545eae1eab8d27485f4a48077d3c-6dc",
+    "exit": 0,
+    "milliseconds": 61129,
+    "stdout_eof": true,
+    "stderr_eof": true
+  },
+  "resources": {
+    "scope": "zuse-356-portable-20261120.scope",
+    "memory_max": "2G",
+    "swap_max": "2G",
+    "cpu_quota": "100%",
+    "runtime_max_seconds": 840,
+    "cargo_jobs": 1,
+    "target_dir": "/var/tmp/project-z-cargo-target",
+    "acquisition": "single nonblocking outer flock; no queued retry",
+    "memory_peak_observed": false
+  },
+  "lock_receipt": {
+    "parent_pid": 2585341,
+    "parent_argv": [
+      "/usr/bin/flock",
+      "--nonblock",
+      "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "python3",
+      "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/gate.py",
+      "portable",
+      ""
+    ],
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "device": 34,
+    "inode": 63537699,
+    "proc_locks": [
+      "297: FLOCK  ADVISORY  WRITE 2585341 00:20:63537699 0 EOF"
+    ]
+  },
+  "cleanup": {
+    "observed_at": "2026-11-20T23:40:47.600187+00:00",
+    "scope_argv": [
+      "systemctl",
+      "--user",
+      "show",
+      "zuse-356-portable-20261120.scope",
+      "--property=LoadState,ActiveState,SubState,Result,ControlGroup,MemoryPeak,CPUUsageNSec"
+    ],
+    "scope_exit": 0,
+    "scope_stdout": "LoadState=not-found\nActiveState=inactive\nSubState=dead\nResult=success\nControlGroup=\nMemoryPeak=[not set]\nCPUUsageNSec=[not set]\n",
+    "scope_stderr": "",
+    "outer_lock_path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "device": 34,
+    "inode": 63537699,
+    "current_lock_rows": [],
+    "original_flock_pid_exists": false,
+    "original_supervisor_pid_exists": false,
+    "raw_evidence_integrity": [
+      {
+        "name": "rustc-version",
+        "kind": "log",
+        "matches": true
+      },
+      {
+        "name": "rustc-version",
+        "kind": "compiler_artifacts",
+        "matches": true
+      },
+      {
+        "name": "cargo-version",
+        "kind": "log",
+        "matches": true
+      },
+      {
+        "name": "cargo-version",
+        "kind": "compiler_artifacts",
+        "matches": true
+      },
+      {
+        "name": "default-tests",
+        "kind": "log",
+        "matches": true
+      },
+      {
+        "name": "default-tests",
+        "kind": "compiler_artifacts",
+        "matches": true
+      },
+      {
+        "name": "no-std-tests",
+        "kind": "log",
+        "matches": true
+      },
+      {
+        "name": "no-std-tests",
+        "kind": "compiler_artifacts",
+        "matches": true
+      },
+      {
+        "name": "native-no-std-check",
+        "kind": "log",
+        "matches": true
+      },
+      {
+        "name": "native-no-std-check",
+        "kind": "compiler_artifacts",
+        "matches": true
+      },
+      {
+        "name": "wasm-no-std-check",
+        "kind": "log",
+        "matches": true
+      },
+      {
+        "name": "wasm-no-std-check",
+        "kind": "compiler_artifacts",
+        "matches": true
+      },
+      {
+        "name": "check-x86_64-pc-windows-gnu",
+        "kind": "log",
+        "matches": true
+      },
+      {
+        "name": "check-x86_64-pc-windows-gnu",
+        "kind": "compiler_artifacts",
+        "matches": true
+      },
+      {
+        "name": "check-x86_64-apple-darwin",
+        "kind": "log",
+        "matches": true
+      },
+      {
+        "name": "check-x86_64-apple-darwin",
+        "kind": "compiler_artifacts",
+        "matches": true
+      },
+      {
+        "name": "check-aarch64-apple-darwin",
+        "kind": "log",
+        "matches": true
+      },
+      {
+        "name": "check-aarch64-apple-darwin",
+        "kind": "compiler_artifacts",
+        "matches": true
+      },
+      {
+        "name": "install-aarch64-unknown-linux-gnu",
+        "kind": "log",
+        "matches": true
+      },
+      {
+        "name": "install-aarch64-unknown-linux-gnu",
+        "kind": "compiler_artifacts",
+        "matches": true
+      },
+      {
+        "name": "check-aarch64-unknown-linux-gnu",
+        "kind": "log",
+        "matches": true
+      },
+      {
+        "name": "check-aarch64-unknown-linux-gnu",
+        "kind": "compiler_artifacts",
+        "matches": true
+      },
+      {
+        "name": "all-targets-clippy",
+        "kind": "log",
+        "matches": true
+      },
+      {
+        "name": "all-targets-clippy",
+        "kind": "compiler_artifacts",
+        "matches": true
+      }
+    ],
+    "owned_artifact_integrity": {
+      "cli": {
+        "matches": true,
+        "mode": "0o500"
+      },
+      "accessibility_test": {
+        "matches": true,
+        "mode": "0o500"
+      },
+      "lib_test": {
+        "matches": true,
+        "mode": "0o500"
+      }
+    },
+    "private_native_started": false
+  },
+  "commands": [
+    {
+      "name": "rustc-version",
+      "argv": [
+        "rustc",
+        "--version",
+        "--verbose"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 0.368,
+      "harness_counts": null,
+      "root_artifacts": 0,
+      "root_artifacts_fresh_false": 0,
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/rustc-version.log",
+        "bytes": 198,
+        "sha256": "be69adad9137eaa0bdac1dd07e2fe286b1831fc8bad193ea27806ca0c7c8e7c6"
+      },
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/rustc-version-compiler-artifacts.json",
+        "bytes": 3,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    },
+    {
+      "name": "cargo-version",
+      "argv": [
+        "cargo",
+        "--version"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 0.114,
+      "harness_counts": null,
+      "root_artifacts": 0,
+      "root_artifacts_fresh_false": 0,
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/cargo-version.log",
+        "bytes": 37,
+        "sha256": "d62bac2223cd9bd1a54c0ccd82d4084b7d1d60044855e2f6a1b49f4f77e6f41c"
+      },
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/cargo-version-compiler-artifacts.json",
+        "bytes": 3,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    },
+    {
+      "name": "default-tests",
+      "argv": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--message-format=json-render-diagnostics",
+        "-vv"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 24.915,
+      "harness_counts": {
+        "passed": 289,
+        "failed": 0,
+        "ignored": 5
+      },
+      "root_artifacts": 24,
+      "root_artifacts_fresh_false": 24,
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/default-tests.log",
+        "bytes": 155341,
+        "sha256": "b1ab27f7bc9787d619726666defbb866725995b7008435e8d1fd03b65e9a2245"
+      },
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/default-tests-compiler-artifacts.json",
+        "bytes": 33009,
+        "sha256": "c67929726258460ed19e54e686e41b80f34bb9ea3f9317f0281b461c71d667e3"
+      }
+    },
+    {
+      "name": "no-std-tests",
+      "argv": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--no-default-features",
+        "--message-format=json-render-diagnostics",
+        "-vv"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 3.822,
+      "harness_counts": {
+        "passed": 20,
+        "failed": 0,
+        "ignored": 0
+      },
+      "root_artifacts": 22,
+      "root_artifacts_fresh_false": 22,
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/no-std-tests.log",
+        "bytes": 90867,
+        "sha256": "2d94d349757b19462b05df7b791d84087433273291a2eb7ffef83f2a13ecd66f"
+      },
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/no-std-tests-compiler-artifacts.json",
+        "bytes": 29645,
+        "sha256": "6dde7df31c807c9300803b1d3f332959bba851711b2876f1e475fa8a85fe71c1"
+      }
+    },
+    {
+      "name": "native-no-std-check",
+      "argv": [
+        "cargo",
+        "check",
+        "--offline",
+        "--locked",
+        "--no-default-features",
+        "--lib",
+        "--message-format=json-render-diagnostics",
+        "-vv"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 0.265,
+      "harness_counts": null,
+      "root_artifacts": 1,
+      "root_artifacts_fresh_false": 1,
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/native-no-std-check.log",
+        "bytes": 2702,
+        "sha256": "d86240a79f394a03b5334d7958e56fd93d55706c706ece47f710c9f1f240dc17"
+      },
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/native-no-std-check-compiler-artifacts.json",
+        "bytes": 1216,
+        "sha256": "84f5511ee0732fa55f278e9709ce19f7170a61c41fdbe1476bddf50b6762578d"
+      }
+    },
+    {
+      "name": "wasm-no-std-check",
+      "argv": [
+        "cargo",
+        "check",
+        "--offline",
+        "--locked",
+        "--no-default-features",
+        "--lib",
+        "--target",
+        "wasm32-unknown-unknown",
+        "--message-format=json-render-diagnostics",
+        "-vv"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 0.365,
+      "harness_counts": null,
+      "root_artifacts": 1,
+      "root_artifacts_fresh_false": 1,
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/wasm-no-std-check.log",
+        "bytes": 2854,
+        "sha256": "c99929019418d1bc334aaff34a9b490deb9a8b3e6d20108d5958de13d6d2c111"
+      },
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/wasm-no-std-check-compiler-artifacts.json",
+        "bytes": 1262,
+        "sha256": "1f0593ccd9da8cc9dbac0e66b5a20e065b5eb3fe91bd8a85f06859ae59283a63"
+      }
+    },
+    {
+      "name": "check-x86_64-pc-windows-gnu",
+      "argv": [
+        "cargo",
+        "check",
+        "--offline",
+        "--locked",
+        "--all-targets",
+        "--target",
+        "x86_64-pc-windows-gnu",
+        "--message-format=json-render-diagnostics",
+        "-vv"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 4.624,
+      "harness_counts": null,
+      "root_artifacts": 25,
+      "root_artifacts_fresh_false": 25,
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/check-x86_64-pc-windows-gnu.log",
+        "bytes": 108029,
+        "sha256": "06d7f34fac730736753e1b4e16c310f07c4a372bb149ceb1a53aacd1d3784613"
+      },
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/check-x86_64-pc-windows-gnu-compiler-artifacts.json",
+        "bytes": 33179,
+        "sha256": "1b05a505e3fd438557bfeceaeca7ee016452047500b478dcec55e61ab79b555c"
+      }
+    },
+    {
+      "name": "check-x86_64-apple-darwin",
+      "argv": [
+        "cargo",
+        "check",
+        "--offline",
+        "--locked",
+        "--all-targets",
+        "--target",
+        "x86_64-apple-darwin",
+        "--message-format=json-render-diagnostics",
+        "-vv"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 4.526,
+      "harness_counts": null,
+      "root_artifacts": 25,
+      "root_artifacts_fresh_false": 25,
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/check-x86_64-apple-darwin.log",
+        "bytes": 107947,
+        "sha256": "f503b913f47e0820fb686734c7b487edc508e6010b996b72a06bbff8ca0065bd"
+      },
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/check-x86_64-apple-darwin-compiler-artifacts.json",
+        "bytes": 33079,
+        "sha256": "8507f750c80c95eb38654929e2c90ef2988c49d2df72fe4d8c2656dc37f02746"
+      }
+    },
+    {
+      "name": "check-aarch64-apple-darwin",
+      "argv": [
+        "cargo",
+        "check",
+        "--offline",
+        "--locked",
+        "--all-targets",
+        "--target",
+        "aarch64-apple-darwin",
+        "--message-format=json-render-diagnostics",
+        "-vv"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 4.977,
+      "harness_counts": null,
+      "root_artifacts": 25,
+      "root_artifacts_fresh_false": 25,
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/check-aarch64-apple-darwin.log",
+        "bytes": 108338,
+        "sha256": "06cf4e3c621e595484be34c232ce4ad8250ed7964339c63c06c9fd21a0079048"
+      },
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/check-aarch64-apple-darwin-compiler-artifacts.json",
+        "bytes": 33129,
+        "sha256": "db8732fb6b5baf11da5f9d706191b0ebeaee6518c8fe4c9030b11a76f5a1c9d2"
+      }
+    },
+    {
+      "name": "install-aarch64-unknown-linux-gnu",
+      "argv": [
+        "rustup",
+        "target",
+        "add",
+        "--toolchain",
+        "stable",
+        "aarch64-unknown-linux-gnu"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 4.673,
+      "harness_counts": null,
+      "root_artifacts": 0,
+      "root_artifacts_fresh_false": 0,
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/install-aarch64-unknown-linux-gnu.log",
+        "bytes": 37,
+        "sha256": "831ad8906cd548d1be0b512110752469e0a5b4f23e8ea459eb4bf438761bef31"
+      },
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/install-aarch64-unknown-linux-gnu-compiler-artifacts.json",
+        "bytes": 3,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    },
+    {
+      "name": "check-aarch64-unknown-linux-gnu",
+      "argv": [
+        "cargo",
+        "check",
+        "--offline",
+        "--locked",
+        "--all-targets",
+        "--target",
+        "aarch64-unknown-linux-gnu",
+        "--message-format=json-render-diagnostics",
+        "-vv"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 6.479,
+      "harness_counts": null,
+      "root_artifacts": 25,
+      "root_artifacts_fresh_false": 25,
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/check-aarch64-unknown-linux-gnu.log",
+        "bytes": 120412,
+        "sha256": "de927c95c88489cdc4562bb6236f1e54c1c015bdbfadbed4eaf6ee4a475955e8"
+      },
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/check-aarch64-unknown-linux-gnu-compiler-artifacts.json",
+        "bytes": 33379,
+        "sha256": "bc94c0561c9f10c0f950bf2a8dd9898850339174ffe1d8dcae9954fefdca682f"
+      }
+    },
+    {
+      "name": "all-targets-clippy",
+      "argv": [
+        "cargo",
+        "clippy",
+        "--offline",
+        "--locked",
+        "--all-targets",
+        "--message-format=json-render-diagnostics",
+        "-vv",
+        "--",
+        "-D",
+        "warnings",
+        "-Cmetadata=zuse_full_3566474"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "exit": 0,
+      "seconds": 5.427,
+      "harness_counts": null,
+      "root_artifacts": 25,
+      "root_artifacts_fresh_false": 25,
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/all-targets-clippy.log",
+        "bytes": 101430,
+        "sha256": "34d2e442f813cd5d916063505032db1b968643db79006a37af16fb37859ad12f"
+      },
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/all-targets-clippy-compiler-artifacts.json",
+        "bytes": 32079,
+        "sha256": "fb1a35a3e313cc7b0d3bbc33d24869cd1fda2a6b2bb2da83a9c8fd849a1d92d3"
+      }
+    }
+  ],
+  "runtime_artifacts": {
+    "cli": {
+      "copy": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/cli-7a6a6d995b3a1b77",
+        "bytes": 17454624,
+        "sha256": "7a6a6d995b3a1b77e2cd5d4ea585e72e5c170e338e333d85684ec2dbca9b864b"
+      },
+      "shared_output": {
+        "path": "/var/tmp/project-z-cargo-target/debug/zuse",
+        "bytes": 17454624,
+        "sha256": "7a6a6d995b3a1b77e2cd5d4ea585e72e5c170e338e333d85684ec2dbca9b864b"
+      },
+      "compiler_record_command": "default-tests",
+      "fresh": false,
+      "target": {
+        "kind": [
+          "bin"
+        ],
+        "crate_types": [
+          "bin"
+        ],
+        "name": "zuse",
+        "src_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/src/main.rs",
+        "edition": "2024",
+        "required-features": [
+          "std"
+        ],
+        "doc": true,
+        "doctest": false,
+        "test": true
+      },
+      "features": [
+        "default",
+        "std"
+      ]
+    },
+    "accessibility_test": {
+      "copy": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/accessibility_test-d6e9f46a49db84ce",
+        "bytes": 19457200,
+        "sha256": "d6e9f46a49db84ce90acd6b16b60fe6785ed73b3fc91c15755d385511b67d58c"
+      },
+      "shared_output": {
+        "path": "/var/tmp/project-z-cargo-target/debug/build/zuse-computer/7f0e41a79d61769f/out/accessibility_native-7f0e41a79d61769f",
+        "bytes": 19457200,
+        "sha256": "d6e9f46a49db84ce90acd6b16b60fe6785ed73b3fc91c15755d385511b67d58c"
+      },
+      "compiler_record_command": "default-tests",
+      "fresh": false,
+      "target": {
+        "kind": [
+          "test"
+        ],
+        "crate_types": [
+          "bin"
+        ],
+        "name": "accessibility_native",
+        "src_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/tests/accessibility_native.rs",
+        "edition": "2024",
+        "doc": false,
+        "doctest": false,
+        "test": true
+      },
+      "features": [
+        "default",
+        "std"
+      ]
+    },
+    "lib_test": {
+      "copy": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/lib_test-e36daa4146c197cd",
+        "bytes": 21480832,
+        "sha256": "e36daa4146c197cdbf7822d06220561543dd8d168c4f8810e5966c202568e4fb"
+      },
+      "shared_output": {
+        "path": "/var/tmp/project-z-cargo-target/debug/build/zuse-computer/f4baf0c055c07362/out/zuse-f4baf0c055c07362",
+        "bytes": 21480832,
+        "sha256": "e36daa4146c197cdbf7822d06220561543dd8d168c4f8810e5966c202568e4fb"
+      },
+      "compiler_record_command": "default-tests",
+      "fresh": false,
+      "target": {
+        "kind": [
+          "lib"
+        ],
+        "crate_types": [
+          "lib"
+        ],
+        "name": "zuse",
+        "src_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/src/lib.rs",
+        "edition": "2024",
+        "doc": true,
+        "doctest": true,
+        "test": true
+      },
+      "features": [
+        "default",
+        "std"
+      ]
+    }
+  },
+  "native_pending": [
+    "Authenticated private Xvfb MPX two real tests",
+    "Private X11 scoped mice CLI fixture",
+    "Private D-Bus/Xvfb AT-SPI fixture",
+    "Private Cage/Hyprland state tests",
+    "Private PTY serial fixture",
+    "Synthetic libusb fixture"
+  ],
+  "coverage_limits": [
+    "289 default harness passed entries include two private_x11 early-return guards, not actual MPX acceptance.",
+    "Five default ignored entries are listed from the raw log; they are not passed.",
+    "No_std 20 includes tests/core.rs 17 cases; it is a second feature configuration, not 20 distinct additions to the default total.",
+    "The earlier 16 focused passing tests overlap the default suite and are not added to 289.",
+    "Four cross-target checks validate compilation only, not operating-system or hardware execution.",
+    "No claim of historical author 286/20/17d0 reproduction or full original PR2 source-to-binary closure.",
+    "No private-native command, host desktop input, hardware access, SSMCP gate, release or merge has been run by this phase."
+  ],
+  "default_ignored_entries": [
+    "test script::interrupt::platform::tests::signal_fixture ... ignored, process-global signals; invoked only by the subprocess test",
+    "test native_atspi_observe_edit_action_and_redaction ... ignored, run through python3 tests/run_accessibility_native.py for an isolated fixture",
+    "test native_chromium_isolated_profile ... ignored, requires a local sandboxed Chromium; run explicitly with --ignored",
+    "test native_selection_preserves_document_and_input ... ignored, requires a local sandboxed Chromium; run explicitly with --ignored",
+    "test input ... ignored, run python3 tests/native_x11_utf8.py"
+  ],
+  "evidence": [
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-evidence/portable/result.json",
+      "bytes": 24696,
+      "sha256": "53eda19a7a10de808b81ef99f56b454e2cf82bef6b468ee13f2f89222d5f7456"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-evidence/execution-portable-start.json",
+      "bytes": 2475,
+      "sha256": "c4e9d2dc5189bffca3cb172f0d1cb3c24a1a1d902283186b1eecd2b2fc1c3263"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-evidence/execution-portable-status.json",
+      "bytes": 1344,
+      "sha256": "0416013776b1f3c869de235ac94ef493822908009fb904e28d88d1e2ea4da116"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-evidence/portable-postflight.json",
+      "bytes": 3451,
+      "sha256": "7cc88e58df969b02dde4cd0af9c135704f7202921b9d9771ef8ca9926969d7ea"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-evidence/portable-start-preflight.json",
+      "bytes": 2726,
+      "sha256": "8e8d67405f6cb4b07b56b46c17859af791b169d1a75230af532e3dde7da494ec"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-evidence/request-portable-nonblocking.json",
+      "bytes": 657,
+      "sha256": "ec35b20a30b1f91277d151e875234e28160f2acc407f761a1587d1ca6306601b"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-evidence/portable-identity-review.json",
+      "bytes": 30587,
+      "sha256": "42f710c68b1d7a3e65c6092e9dc49c62e359e3fea911e270a67f2508c7fabc49"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-evidence/portable-clippy-readback.json",
+      "bytes": 8663,
+      "sha256": "66b466b1ff5c60c9a9299f8f5f5532f5fd74a4aa56ddcb4b501d973c8464be23"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-evidence/portable-identity-interpretation-v2.json",
+      "bytes": 1600,
+      "sha256": "a55b1a77b9d62c8a51dd2cc872132a8102f15be53942fbc79ad69f36226bfa83"
+    }
+  ],
+  "driver": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/gate.py",
+    "bytes": 13370,
+    "sha256": "8712f55de634c6cf47d13ac5b88984c4536317ad01fa064db3c8d4679eaaa231"
+  },
+  "actual_root_compilation": {
+    "manifest_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/Cargo.toml",
+    "root_clippy_running_lines": 25,
+    "strict_flags_source": "Actual cargo invocation and original command receipt; cargo -vv child argv omits additional cargo-clippy flags.",
+    "interpretation": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-evidence/portable-identity-interpretation-v2.json"
+  }
+}

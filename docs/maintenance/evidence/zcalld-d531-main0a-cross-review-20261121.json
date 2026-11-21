@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "reviewed_at_utc": "2026-11-20 23:50:41 UTC",
+  "scope": "Fixed-source read-only cross-review; no source/ref changes, merge execution, build or tests.",
+  "identities": {
+    "base": {
+      "commit": "c4b4bbabe0c718430ffe2f46936408e9bdef4885",
+      "tree": "bbf870d95990cdd44523aaa4cc046899048e04ce"
+    },
+    "main": {
+      "commit": "0a0a62cdca25bbdf289a17f03dfeed1acc945595",
+      "tree": "69f60a24c0924b58d33cce4354fc3dc6a82210ed"
+    },
+    "pr1": {
+      "head": "d5314fe930b0932bbce076ff578474d3ef084695",
+      "tree": "06826bbb2eb2857ea1f0e9cc834abe9b149d3625",
+      "api_reported_base": "c4b4bbabe0c718430ffe2f46936408e9bdef4885",
+      "url": "https://github.com/LIghtJUNction/zcalld/pull/1"
+    },
+    "nearest_merge_base": "c4b4bbabe0c718430ffe2f46936408e9bdef4885",
+    "merge_base_evidence": "Fixed GitHub main...head compare reports c4b4; d531 has c4b4 as a direct parent and main's 11-commit sequence starts there.",
+    "comparison": {
+      "main_ahead_of_base": 11,
+      "pr_ahead_of_main": 11,
+      "pr_behind_main": 11
+    },
+    "freshness": "Pinned review of these three commits, not a claim that 0a0 remains current main at publication."
+  },
+  "overlap": {
+    "recursive_trees_complete": true,
+    "main_changed_path_count": 25,
+    "listener_changed_path_count": 6,
+    "changed_path_intersection": [
+      "apps/zcall-gui"
+    ],
+    "listener_rust_matrix": [
+      {
+        "path": "src/curl.rs",
+        "base": "ec2e014c49ee194ff2ddc8c6538371ff72a55d34",
+        "main": "ec2e014c49ee194ff2ddc8c6538371ff72a55d34",
+        "listener": "9365406b23b9744bba9b21dae999e82d19683357"
+      },
+      {
+        "path": "src/listener.rs",
+        "base": null,
+        "main": null,
+        "listener": "8451bacea5c3c297ee49819fefbf505fc45fdfc8"
+      },
+      {
+        "path": "src/listener/local.rs",
+        "base": null,
+        "main": null,
+        "listener": "3a88768ec95e5b0dbad07db72d65c4e7d9ba97c5"
+      },
+      {
+        "path": "src/listener/local/generation.rs",
+        "base": null,
+        "main": null,
+        "listener": "80ee8557e5e7291794e953bf695ddc884b4b21ca"
+      },
+      {
+        "path": "src/main.rs",
+        "base": "52368bd765db740431d5bbc0949ee5ca5b3527e0",
+        "main": "52368bd765db740431d5bbc0949ee5ca5b3527e0",
+        "listener": "efae67a5b9ee61bfeb36052aa286b63d9201db64"
+      }
+    ],
+    "conclusion": "All five listener Rust files have the same base/main preimage (or remain absent in both). No text-file conflict exists in this fixed three-way path comparison."
+  },
+  "gui": {
+    "path": "apps/zcall-gui",
+    "base": "9a7eab6fa969bd197e54dc87fd6e9f9927281780",
+    "main": "ca35a306088a85e49e9e851aab24329deed20056",
+    "listener": "d357d39b24bdef0cba48ee4a8cc367ded1b2b45d",
+    "ancestry": {
+      "status": "ahead",
+      "ahead": 3,
+      "behind": 0,
+      "merge_base": "d357d39b24bdef0cba48ee4a8cc367ded1b2b45d",
+      "url": "https://github.com/LIghtJUNction/zcall-gui/compare/d357d39b24bdef0cba48ee4a8cc367ded1b2b45d...ca35a306088a85e49e9e851aab24329deed20056"
+    },
+    "selected_main_commit": "ca35a306088a85e49e9e851aab24329deed20056",
+    "reason": "The new main GUI is a descendant of d357 and includes its README follow-up. The further runtime change accepts the installer's explicit private-directory OICI ACEs while retaining strict file/foreign-ACL checks. Retaining d357 would undo this compatibility correction.",
+    "coupled_runtime_paths": [
+      "zcalld/src/privacy_windows.rs",
+      "zcall-gui/src/core_install_windows.rs"
+    ],
+    "github_mergeability": {
+      "observed_at_utc": "2026-11-20 23:43:44 UTC",
+      "mergeable": false,
+      "state": "dirty"
+    },
+    "limit": "This audit established the only jointly changed gitlink and its ancestry. It did not execute Git's merge engine and does not claim that the GitHub dirty flag proves a text or runtime conflict."
+  },
+  "must_preserve_from_main": {
+    "lock_and_manifest_matrix": [
+      {
+        "path": "Cargo.toml",
+        "base": "d20a82f97fa695c4f095e27460702f512e54687e",
+        "main": "8d30c76381b9f6ad72382f06a87bb8aa7a5f2970",
+        "listener": "d20a82f97fa695c4f095e27460702f512e54687e"
+      },
+      {
+        "path": "Cargo.lock",
+        "base": "7d7e663cf64c652720e6ff8afe09a003112a63cc",
+        "main": "533c2a374b6a833d6637dff69a2cea7f76dedc18",
+        "listener": "7d7e663cf64c652720e6ff8afe09a003112a63cc"
+      },
+      {
+        "path": "vendor/zcall",
+        "base": "564ede15db66530a6dbb78e8b1f4a85998b6f0d8",
+        "main": "317c52f101f112c6af671a629d8406305a168e4a",
+        "listener": "564ede15db66530a6dbb78e8b1f4a85998b6f0d8"
+      },
+      {
+        "path": "extensions/compat",
+        "base": "4ccb15406eca7bf8075e85841412c2f33438a4bd",
+        "main": "c521d1fb1ce8eac173ea2bb481816d3cd1df82d3",
+        "listener": "4ccb15406eca7bf8075e85841412c2f33438a4bd"
+      }
+    ],
+    "workspace_version": "0.4.4",
+    "former_listener_workspace_version": "0.4.3",
+    "zcall": {
+      "version": "0.4.0",
+      "source": "git+https://github.com/LIghtJUNction/zcall.git#317c52f101f112c6af671a629d8406305a168e4a",
+      "gitlink": "317c52f101f112c6af671a629d8406305a168e4a",
+      "actual_delta_from_564e": {
+        "url": "https://github.com/LIghtJUNction/zcall/compare/564ede15db66530a6dbb78e8b1f4a85998b6f0d8...317c52f101f112c6af671a629d8406305a168e4a",
+        "status": "ahead",
+        "ahead": 1,
+        "behind": 0,
+        "changed_paths": [
+          "scripts/release.py",
+          "scripts/test_release.py"
+        ],
+        "runtime_or_manifest_changes": false
+      }
+    },
+    "compat_gitlink": "c521d1fb1ce8eac173ea2bb481816d3cd1df82d3",
+    "gui_gitlink": "ca35a306088a85e49e9e851aab24329deed20056",
+    "all_25_main_delta_paths": [
+      ".github/workflows/release.yml",
+      "CHANGELOG.md",
+      "Cargo.lock",
+      "Cargo.toml",
+      "README.md",
+      "apps/zcall-gui",
+      "crates/zcalld-installer/src/private.rs",
+      "crates/zcalld-installer/src/process.rs",
+      "crates/zcalld-installer/src/process_windows.rs",
+      "crates/zcalld-installer/src/transaction.rs",
+      "extensions/compat",
+      "plugins/aliases/Cargo.toml",
+      "plugins/community/Cargo.toml",
+      "plugins/desktop/Cargo.toml",
+      "plugins/policy/Cargo.toml",
+      "plugins/redact/Cargo.toml",
+      "plugins/routing/Cargo.toml",
+      "scripts/test-builtin-fetch.py",
+      "scripts/test-codex-metadata.py",
+      "scripts/test-codex-policy.py",
+      "scripts/test-weekly-maintenance.py",
+      "src/privacy_windows.rs",
+      "src/system.rs",
+      "src/transport.rs",
+      "vendor/zcall"
+    ],
+    "policy": "Preserve every main-only path including release workflows, current locks/version metadata, Windows ACL/TCP reset/deferred-process fixes, snapshot reader and their tests. Do not transplant the old candidate's whole tree or old lock."
+  },
+  "semantic_cross_review": [
+    {
+      "boundary": "listener and Windows disconnect detection",
+      "evidence": "src/listener.rs gates local/generation to Linux. New tcp_reset code and Stream::is_disconnected branch are Windows-only; Linux transport code is unchanged by this main delta. Listener generation's transport use is client_address, which is unchanged.",
+      "result": "No new direct interface conflict found by source inspection; preserve the Windows reset/FIN semantics and its regression tests."
+    },
+    {
+      "boundary": "curl shared entry point",
+      "evidence": "src/curl.rs in 0a0 is byte-identical to c4b4. Candidate changes perform() to delegate to perform_inner(None,false) and adds Linux perform_local with optional Unix socket and disabled ambient proxy.",
+      "result": "Keep the exact existing listener blob and original cancellation callbacks. This is previously tested candidate code, not evidence that a new combined source has passed."
+    },
+    {
+      "boundary": "signal and private socket handling",
+      "evidence": "Listener uses system::STOPPING/setup_signals plus its own Unix private_socket checks. Main's system.rs change only adds Windows tcp_reset; installer snapshot/privacy/process changes are separate paths.",
+      "result": "No changed Linux signal/socket contract found. Preserve main installer changes in full rather than replacing unrelated modules."
+    },
+    {
+      "boundary": "GUI/installer ACL compatibility",
+      "evidence": "Main creates explicit OICI private-directory ACEs. GUI ca35 includes check_private accepting flags 0x03 only for directories; d357 predates this correction.",
+      "result": "Actual coupled-source requirement: retain ca35 with the new main. The gitlink is not a choice between equivalent documentation-only versions."
+    },
+    {
+      "boundary": "zcall dependency",
+      "evidence": "Independent 564e...317c compare changes only scripts/release.py and scripts/test_release.py.",
+      "result": "No zcall runtime API delta observed, but retain main's matching lock and vendor gitlink, current workspace versions and release preparation fix."
+    }
+  ],
+  "minimal_integration_recipe_not_executed": [
+    "Fresh-read main before the owner starts. If it has advanced beyond 0a0, review that added delta instead of applying this fixed-source conclusion blindly.",
+    "For exactly 0a0, preserve its complete tree and apply only the five listed d531 listener Rust blobs. These have unchanged base preimages.",
+    "Keep apps/zcall-gui at main's descendant ca35, extensions/compat at c521, vendor/zcall and Cargo.lock at 317c, and all 0.4.4 same-workspace metadata. Do not take d531's old GUI/locks/manifests.",
+    "Check resulting changed paths and exact source tree, then let the sole authorized owner run required new candidate/P1 validation. Prior d531 evidence stays bound to d531/tree06826."
+  ],
+  "sources": [
+    "https://api.github.com/repos/LIghtJUNction/zcalld/compare/0a0a62cdca25bbdf289a17f03dfeed1acc945595...d5314fe930b0932bbce076ff578474d3ef084695",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/compare/c4b4bbabe0c718430ffe2f46936408e9bdef4885...0a0a62cdca25bbdf289a17f03dfeed1acc945595",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/compare/c4b4bbabe0c718430ffe2f46936408e9bdef4885...d5314fe930b0932bbce076ff578474d3ef084695",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/c4b4bbabe0c718430ffe2f46936408e9bdef4885?recursive=1",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/0a0a62cdca25bbdf289a17f03dfeed1acc945595?recursive=1",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/d5314fe930b0932bbce076ff578474d3ef084695?recursive=1",
+    "https://api.github.com/repos/LIghtJUNction/zcall-gui/compare/d357d39b24bdef0cba48ee4a8cc367ded1b2b45d...ca35a306088a85e49e9e851aab24329deed20056",
+    "https://api.github.com/repos/LIghtJUNction/zcall/compare/564ede15db66530a6dbb78e8b1f4a85998b6f0d8...317c52f101f112c6af671a629d8406305a168e4a"
+  ],
+  "actions_performed": {
+    "github_reads": true,
+    "artifact_saved": true,
+    "source_or_ref_writes": false,
+    "git_merge_executed": false,
+    "builds_or_tests": false,
+    "final44": false
+  }
+}

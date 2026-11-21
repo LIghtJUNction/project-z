@@ -1,0 +1,77 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "-u",
+    "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/run_gates.py",
+    "f42baae1d5227bd6db8315aef778160b80b57274",
+    "--worktree",
+    "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+    "--submodule-root",
+    "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/crates"
+  ],
+  "environment": {
+    "CARGO_BUILD_JOBS": "1",
+    "CARGO_HOME": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/cargo-home",
+    "CARGO_TARGET_DIR": "/var/tmp/project-z-cargo-target",
+    "RUSTC_WRAPPER": "/home/lightjunction/.cargo/rustc-serial"
+  },
+  "exclusive_target_lock": true,
+  "exit_code": 0,
+  "finished_at": 1795237794.2250454,
+  "gate_receipt_sha256": "66f3be6c3f0ee4a4bdf9900633b49fa598db8a8545d4b8f67a3ea051b2671b35",
+  "gate_run_id": "f6121dd70d3f8c4fb3d747a9bf2697bf",
+  "gate_status": "passed",
+  "hashes_after": {
+    "cargo_config": "d664480527bc29872d5c9e9ce844c8a3f1f8cc55d224f9a1867bdee7f0da9bf3",
+    "cargo_lock": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608",
+    "dependency_auditor": "eed621aa874c9accf6f06284f1b7e4c2631f5a99780027450c1102b203b30c1e",
+    "driver": "50faf99702ee39bf1d893025a98bc429b907af307a443fbf304c1386a4de28ba",
+    "git_heads": "f5d603af9faee8ea64b562c5457d6e683bc85950218db6533c8d314841e42e28",
+    "owner_agreement": "965467ce452a4899201d7ddd1ca239fa84d2f4604fcf1123eccd93150866227e",
+    "reviewed_baseline": "56d6e26709ee72f53a2a59dad17d5d23182b51d7000af3a5759c974493738c6b",
+    "workspace_wrapper": "f416c3a75f62e0d2b99b0da099e6b61ef12a17000afb500b70b4a0eb583914f0",
+    "wrapper": "8b61096a9869fc6e790c963715efded612b17583cee90c830aadda2da8917a43"
+  },
+  "hashes_before": {
+    "cargo_config": "d664480527bc29872d5c9e9ce844c8a3f1f8cc55d224f9a1867bdee7f0da9bf3",
+    "cargo_lock": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608",
+    "dependency_auditor": "eed621aa874c9accf6f06284f1b7e4c2631f5a99780027450c1102b203b30c1e",
+    "driver": "50faf99702ee39bf1d893025a98bc429b907af307a443fbf304c1386a4de28ba",
+    "git_heads": "f5d603af9faee8ea64b562c5457d6e683bc85950218db6533c8d314841e42e28",
+    "owner_agreement": "965467ce452a4899201d7ddd1ca239fa84d2f4604fcf1123eccd93150866227e",
+    "reviewed_baseline": "56d6e26709ee72f53a2a59dad17d5d23182b51d7000af3a5759c974493738c6b",
+    "workspace_wrapper": "f416c3a75f62e0d2b99b0da099e6b61ef12a17000afb500b70b4a0eb583914f0",
+    "wrapper": "8b61096a9869fc6e790c963715efded612b17583cee90c830aadda2da8917a43"
+  },
+  "input_paths": {
+    "cargo_config": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/cargo-home/config.toml",
+    "cargo_lock": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final/Cargo.lock",
+    "dependency_auditor": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/focused-eed621aa/dependency_audit.py",
+    "driver": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/run_gates.py",
+    "git_heads": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/git-heads-v25-r13.json",
+    "owner_agreement": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/shared-target-agreement-v25-r13.json",
+    "reviewed_baseline": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/recovered-gate10/run_gates.py",
+    "workspace_wrapper": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/context20-preparation/workspace-provenance-r4/workspace_rustc.py",
+    "wrapper": "/home/lightjunction/.cargo/rustc-serial"
+  },
+  "invocation_id": "4da7a4c9e0074782aa7d375610b04163",
+  "launcher_sha256": "085e6b5300f040ad6be77bed5d0481c8fdd5dd142a61930de56c54b1d7ef327e",
+  "shared_target_owner_lock": {
+    "agreement_sha256": "965467ce452a4899201d7ddd1ca239fa84d2f4604fcf1123eccd93150866227e",
+    "held_for_entire_batch": true,
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock"
+  },
+  "source_revision": "f42baae1d5227bd6db8315aef778160b80b57274",
+  "started_at": 1795237162.1127353,
+  "status": "passed",
+  "umask": "0022",
+  "versions": {
+    "cargo": "cargo 1.100.0 (3acc79c0c 2026-11-05)",
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)"
+  },
+  "worktree": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+  "worktree_head_after": "f42baae1d5227bd6db8315aef778160b80b57274",
+  "worktree_status_after": ""
+}

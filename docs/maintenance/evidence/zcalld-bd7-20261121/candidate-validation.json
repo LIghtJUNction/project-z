@@ -1,0 +1,2292 @@
+{
+  "schema": "zcalld.listener-successor.cli-validation.v1",
+  "status": "passed",
+  "candidate": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+  "tree": "cbd4a29ec9851a42dc36149fc099fb288c9623de",
+  "base": "7da4b28511a1550c993f09cfb2601149a82c785b",
+  "commands": [
+    {
+      "argv": [
+        "systemctl",
+        "--user",
+        "show",
+        "zcalld-listener-bd7a30c-20261121.scope",
+        "--property=Id,InvocationID,ActiveState,SubState,ControlGroup,Result,MainPID"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "inside-scope-identity",
+      "started_at": "2026-11-21T03:05:38.171331+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/00-inside-scope-identity.log",
+      "pid": 1513300,
+      "exit_code": 0,
+      "elapsed_seconds": 0.004,
+      "finished_at": "2026-11-21T03:05:38.175862+00:00",
+      "log_bytes": 247,
+      "log_sha256": "37b6994d800881ed6e2312046e3136ce850bbaa0a26298fa90e2e37a66a98840",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "head",
+      "started_at": "2026-11-21T03:05:38.176422+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/01-head.log",
+      "pid": 1513301,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:05:38.178025+00:00",
+      "log_bytes": 41,
+      "log_sha256": "79815e741a410d76a3b0581b5149c473386e7f4617867a8e40ca075f90d9edf2",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD^{tree}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "tree",
+      "started_at": "2026-11-21T03:05:38.178261+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/02-tree.log",
+      "pid": 1513302,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.181047+00:00",
+      "log_bytes": 41,
+      "log_sha256": "5b6b22b9362c8adaf1e8b9a96a7a1438f36e7f339f73467c3a806205992db56f",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "clean-source",
+      "started_at": "2026-11-21T03:05:38.181593+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/03-clean-source.log",
+      "pid": 1513303,
+      "exit_code": 0,
+      "elapsed_seconds": 0.017,
+      "finished_at": "2026-11-21T03:05:38.198485+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "show",
+        "-s",
+        "--format=%P",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "parents",
+      "started_at": "2026-11-21T03:05:38.198787+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/04-parents.log",
+      "pid": 1513312,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:05:38.200420+00:00",
+      "log_bytes": 82,
+      "log_sha256": "c9bab125690351893dcbc37a8590b5dc3c6b020216ce51ff427c8535fedb1c6f",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "0af8f65653bc4035888380b8b2f390d774fd30fd",
+        "bd7a30c0a9e3865f137af229d5883e8fb984f518"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "previous-delta",
+      "started_at": "2026-11-21T03:05:38.201021+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/05-previous-delta.log",
+      "pid": 1513313,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:05:38.202597+00:00",
+      "log_bytes": 37,
+      "log_sha256": "ec644b0bbbc4898e515f881e5d1bbd9dc387795bf6dc983b4e4bcfb1934666da",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-source-manifest",
+      "started_at": "2026-11-21T03:05:38.203186+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/06-before-source-manifest.log",
+      "pid": 1513314,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:05:38.204867+00:00",
+      "log_bytes": 18172,
+      "log_sha256": "1946de123d064284db37f353b98a7398226be68522a73cbf9b3f3ba9212e1c04",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-root-0",
+      "started_at": "2026-11-21T03:05:38.246323+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/07-before-root-0.log",
+      "pid": 1513315,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.248307+00:00",
+      "log_bytes": 83,
+      "log_sha256": "418e8c7d0aeb7a510ef0123ad9c2509009c1ae2f8b53c9ebb5d863ae84880748",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-head-0",
+      "started_at": "2026-11-21T03:05:38.248659+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/08-before-nested-head-0.log",
+      "pid": 1513316,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:05:38.250064+00:00",
+      "log_bytes": 41,
+      "log_sha256": "79815e741a410d76a3b0581b5149c473386e7f4617867a8e40ca075f90d9edf2",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-clean-0",
+      "started_at": "2026-11-21T03:05:38.250410+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/09-before-nested-clean-0.log",
+      "pid": 1513318,
+      "exit_code": 0,
+      "elapsed_seconds": 0.018,
+      "finished_at": "2026-11-21T03:05:38.268772+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zsys",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-root-1",
+      "started_at": "2026-11-21T03:05:38.269186+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/10-before-root-1.log",
+      "pid": 1513339,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:05:38.271629+00:00",
+      "log_bytes": 95,
+      "log_sha256": "e1917ee7eb53859275330c2e818b0a568f314ec2415a48c21d2630acbc215d2b",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zsys",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-head-1",
+      "started_at": "2026-11-21T03:05:38.272029+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/11-before-nested-head-1.log",
+      "pid": 1513341,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.274035+00:00",
+      "log_bytes": 41,
+      "log_sha256": "f564ed6a46a2293b24ec314978abbe0e31b8e5be437b11027a495c1c4321ae27",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zsys",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-clean-1",
+      "started_at": "2026-11-21T03:05:38.274687+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/12-before-nested-clean-1.log",
+      "pid": 1513342,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.276752+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zplugin",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-root-2",
+      "started_at": "2026-11-21T03:05:38.277094+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/13-before-root-2.log",
+      "pid": 1513343,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:05:38.279549+00:00",
+      "log_bytes": 98,
+      "log_sha256": "675b69212aa96566ab3d6679bee4b0af247df887b9b6b13e06411e64585a392f",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zplugin",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-head-2",
+      "started_at": "2026-11-21T03:05:38.279926+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/14-before-nested-head-2.log",
+      "pid": 1513344,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.282827+00:00",
+      "log_bytes": 41,
+      "log_sha256": "7af92899fa10a6f2a85a9b5331c0b5384f66a56d3f9304a4dec0b4f495cf15fd",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zplugin",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-clean-2",
+      "started_at": "2026-11-21T03:05:38.283461+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/15-before-nested-clean-2.log",
+      "pid": 1513346,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.285642+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zconv",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-root-3",
+      "started_at": "2026-11-21T03:05:38.286165+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/16-before-root-3.log",
+      "pid": 1513347,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.288390+00:00",
+      "log_bytes": 96,
+      "log_sha256": "783b3be8b72b09d69128d9b01b41384d86c3870a0c967fb7c77df9cb2670b037",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zconv",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-head-3",
+      "started_at": "2026-11-21T03:05:38.288827+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/17-before-nested-head-3.log",
+      "pid": 1513348,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:05:38.290368+00:00",
+      "log_bytes": 41,
+      "log_sha256": "fa456099be8ece6e712fa6f52181072247a425a0300fa3038437e611d52bc525",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zconv",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-clean-3",
+      "started_at": "2026-11-21T03:05:38.290693+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/18-before-nested-clean-3.log",
+      "pid": 1513349,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.292979+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zcall",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-root-4",
+      "started_at": "2026-11-21T03:05:38.293680+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/19-before-root-4.log",
+      "pid": 1513350,
+      "exit_code": 0,
+      "elapsed_seconds": 0.004,
+      "finished_at": "2026-11-21T03:05:38.306891+00:00",
+      "log_bytes": 96,
+      "log_sha256": "c682fd3e7fd923794a693340fb06a73486e7df8021a582c420e7ed9fa1c98876",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zcall",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-head-4",
+      "started_at": "2026-11-21T03:05:38.308969+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/20-before-nested-head-4.log",
+      "pid": 1513351,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.311179+00:00",
+      "log_bytes": 41,
+      "log_sha256": "f55f0e99a1898a88586ef0c8c10861b7aacfaa5006402ebc10cf251d6828cf8b",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zcall",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-clean-4",
+      "started_at": "2026-11-21T03:05:38.311625+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/21-before-nested-clean-4.log",
+      "pid": 1513352,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.314115+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/extensions/compat",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-root-5",
+      "started_at": "2026-11-21T03:05:38.314536+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/22-before-root-5.log",
+      "pid": 1513353,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.316829+00:00",
+      "log_bytes": 101,
+      "log_sha256": "6d8f132918f1e8ac4747ed48d2457e221b69317ecd5bcb76172149df217d58a9",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/extensions/compat",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-head-5",
+      "started_at": "2026-11-21T03:05:38.318223+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/23-before-nested-head-5.log",
+      "pid": 1513354,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:05:38.320096+00:00",
+      "log_bytes": 41,
+      "log_sha256": "8d42020e8bd66b016ee22ca1b306bdbaa2211a643e1e4b4a735f9cba4c1d7d78",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/extensions/compat",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-clean-5",
+      "started_at": "2026-11-21T03:05:38.320494+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/24-before-nested-clean-5.log",
+      "pid": 1513355,
+      "exit_code": 0,
+      "elapsed_seconds": 0.003,
+      "finished_at": "2026-11-21T03:05:38.325065+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-omarchy",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-root-6",
+      "started_at": "2026-11-21T03:05:38.325478+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/25-before-root-6.log",
+      "pid": 1513356,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:05:38.327097+00:00",
+      "log_bytes": 102,
+      "log_sha256": "8f8ef4181707960e5cc8a33457a8e6e13dabe44591a4ea71f9802aaec7321b80",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-omarchy",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-head-6",
+      "started_at": "2026-11-21T03:05:38.328141+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/26-before-nested-head-6.log",
+      "pid": 1513359,
+      "exit_code": 0,
+      "elapsed_seconds": 0.003,
+      "finished_at": "2026-11-21T03:05:38.331086+00:00",
+      "log_bytes": 41,
+      "log_sha256": "bb4d6b83754830f43124241cdbe6ccf25cf488a8f55db3204d6a6387bb10bf2f",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-omarchy",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-clean-6",
+      "started_at": "2026-11-21T03:05:38.331559+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/27-before-nested-clean-6.log",
+      "pid": 1513360,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.334646+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-root-7",
+      "started_at": "2026-11-21T03:05:38.335140+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/28-before-root-7.log",
+      "pid": 1513361,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:05:38.336933+00:00",
+      "log_bytes": 98,
+      "log_sha256": "7d19e3e3fc8e60ced9fe361cc67afedec5d65b869f173752dd13df7e84beef87",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-head-7",
+      "started_at": "2026-11-21T03:05:38.338294+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/29-before-nested-head-7.log",
+      "pid": 1513362,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.341214+00:00",
+      "log_bytes": 41,
+      "log_sha256": "fb833efe965e9d777c70aaa29c22ed6908e3de46558f58b971535f9dac750a4e",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-clean-7",
+      "started_at": "2026-11-21T03:05:38.341615+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/30-before-nested-clean-7.log",
+      "pid": 1513363,
+      "exit_code": 0,
+      "elapsed_seconds": 0.005,
+      "finished_at": "2026-11-21T03:05:38.346564+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui/vendor/zgpui",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-root-8",
+      "started_at": "2026-11-21T03:05:38.347107+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/31-before-root-8.log",
+      "pid": 1513365,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:05:38.349265+00:00",
+      "log_bytes": 111,
+      "log_sha256": "ce852300b3812719a2932fe1dd98606148e28de245c39fcbbf75233aeab61671",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui/vendor/zgpui",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-head-8",
+      "started_at": "2026-11-21T03:05:38.350396+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/32-before-nested-head-8.log",
+      "pid": 1513366,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.353216+00:00",
+      "log_bytes": 41,
+      "log_sha256": "6fa87039f628ec537f5cf9fc7aa482c4153f4ae0a014f3e9862eede23209fa1a",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui/vendor/zgpui",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "before-nested-clean-8",
+      "started_at": "2026-11-21T03:05:38.353673+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/33-before-nested-clean-8.log",
+      "pid": 1513367,
+      "exit_code": 0,
+      "elapsed_seconds": 0.003,
+      "finished_at": "2026-11-21T03:05:38.356926+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--name-only",
+        "7da4b28511a1550c993f09cfb2601149a82c785b",
+        "bd7a30c0a9e3865f137af229d5883e8fb984f518"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "candidate-paths",
+      "started_at": "2026-11-21T03:05:38.357504+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/34-candidate-paths.log",
+      "pid": 1513373,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:05:38.361522+00:00",
+      "log_bytes": 113,
+      "log_sha256": "72228da4d201a64c3ce08d02bf9c00350a5f910c1cd4bdcb49bbd11d60ce498d",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "HEAD",
+        "--",
+        "extensions/compat"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "compat-source",
+      "started_at": "2026-11-21T03:05:38.362257+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/35-compat-source.log",
+      "pid": 1513375,
+      "exit_code": 0,
+      "elapsed_seconds": 0.009,
+      "finished_at": "2026-11-21T03:05:38.371589+00:00",
+      "log_bytes": 73,
+      "log_sha256": "fdc954e4bcff182f370ede20f358392cfefab954796096c02b4db318ea9e4c80",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "cargo",
+        "metadata",
+        "--locked",
+        "--offline",
+        "--format-version",
+        "1"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "locked-metadata",
+      "started_at": "2026-11-21T03:05:38.372221+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/36-locked-metadata.log",
+      "pid": 1513379,
+      "exit_code": 0,
+      "elapsed_seconds": 0.512,
+      "finished_at": "2026-11-21T03:05:38.885941+00:00",
+      "log_bytes": 76753,
+      "log_sha256": "cbb01c76cb0b5f15f543d0cdde735d9a28ef30dc6ecd8326ab7ba96ea9598160",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "--",
+        "https://github.com/LIghtJUNction/zcall.git",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "fresh-zcall",
+      "started_at": "2026-11-21T03:05:38.887917+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/37-fresh-zcall.log",
+      "pid": 1513459,
+      "exit_code": 0,
+      "elapsed_seconds": 1.058,
+      "finished_at": "2026-11-21T03:05:39.946904+00:00",
+      "log_bytes": 72,
+      "log_sha256": "a647c8744ff8243b0b308907f4ab1a9cb33c7261fb6ceb5ef002a8b3b7f401d5",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "--",
+        "https://github.com/LIghtJUNction/zconv.git",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "fresh-zconv",
+      "started_at": "2026-11-21T03:05:39.947546+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/38-fresh-zconv.log",
+      "pid": 1513477,
+      "exit_code": 0,
+      "elapsed_seconds": 0.748,
+      "finished_at": "2026-11-21T03:05:40.696208+00:00",
+      "log_bytes": 72,
+      "log_sha256": "d57812d9274b31fe1be39380e5f8f9526399026477d4e6ff7a9b7ed3a9aac09a",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "--",
+        "https://github.com/LIghtJUNction/zplugin.git",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "fresh-zplugin",
+      "started_at": "2026-11-21T03:05:40.696891+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/39-fresh-zplugin.log",
+      "pid": 1513941,
+      "exit_code": 0,
+      "elapsed_seconds": 0.753,
+      "finished_at": "2026-11-21T03:05:41.450170+00:00",
+      "log_bytes": 72,
+      "log_sha256": "137a246ffa75e3277f95e62b83cc8d97a4dcf0272f7d41c1c6cf4d08d61e68ed",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "--",
+        "https://github.com/LIghtJUNction/zsys.git",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "fresh-zsys",
+      "started_at": "2026-11-21T03:05:41.450776+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/40-fresh-zsys.log",
+      "pid": 1513950,
+      "exit_code": 0,
+      "elapsed_seconds": 0.741,
+      "finished_at": "2026-11-21T03:05:42.192001+00:00",
+      "log_bytes": 72,
+      "log_sha256": "451085ece399077d75426ea2230bcdea5197b5508d62dd2d042ce71afef43b47",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "--",
+        "https://github.com/LIghtJUNction/zcalld-compat.git",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "fresh-compat",
+      "started_at": "2026-11-21T03:05:42.193125+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/41-fresh-compat.log",
+      "pid": 1513993,
+      "exit_code": 0,
+      "elapsed_seconds": 0.802,
+      "finished_at": "2026-11-21T03:05:42.995590+00:00",
+      "log_bytes": 72,
+      "log_sha256": "6f1f03b5f7c7ce93becc5e8aa932bf29d825f5b48f223b81ed2e1692898ca9de",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "origin",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "fresh-main",
+      "started_at": "2026-11-21T03:05:42.996240+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/42-fresh-main.log",
+      "pid": 1514450,
+      "exit_code": 0,
+      "elapsed_seconds": 0.673,
+      "finished_at": "2026-11-21T03:05:43.669301+00:00",
+      "log_bytes": 72,
+      "log_sha256": "b14f28b86bb9a75ab277170e6a6f0c1b12eaad1127e566ec273d620bf84c0100",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--",
+        "origin",
+        "refs/heads/feat/ssmcp-listener-p1-20261120"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "fresh-pr-head",
+      "started_at": "2026-11-21T03:05:43.670082+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/43-fresh-pr-head.log",
+      "pid": 1514493,
+      "exit_code": 0,
+      "elapsed_seconds": 0.667,
+      "finished_at": "2026-11-21T03:05:44.337711+00:00",
+      "log_bytes": 84,
+      "log_sha256": "8567fb1e737f4dea566e61507030fbe37243d760bd6acd5259670f2a31f076b2",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "HEAD",
+        "--",
+        "apps/zcall-gui"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "gui-source",
+      "started_at": "2026-11-21T03:05:44.338699+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/44-gui-source.log",
+      "pid": 1514533,
+      "exit_code": 0,
+      "elapsed_seconds": 0.003,
+      "finished_at": "2026-11-21T03:05:44.342375+00:00",
+      "log_bytes": 70,
+      "log_sha256": "5511116cc9983db424bb7d49d135de6cd4c7db3062a0e32edce05ee2ea2a3f70",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "--",
+        "https://github.com/LIghtJUNction/zcall-gui.git",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "fresh-gui",
+      "started_at": "2026-11-21T03:05:44.343026+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/45-fresh-gui.log",
+      "pid": 1514534,
+      "exit_code": 0,
+      "elapsed_seconds": 0.672,
+      "finished_at": "2026-11-21T03:05:45.016916+00:00",
+      "log_bytes": 72,
+      "log_sha256": "41f26c8a49cad814d21524944b149cfd18077c852e4cb2f9f1a2ccae446c140a",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "cargo",
+        "build",
+        "--release",
+        "--offline",
+        "--locked",
+        "--bin",
+        "zcalld",
+        "--message-format=json-render-diagnostics",
+        "-vv"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "release-cli",
+      "started_at": "2026-11-21T03:05:45.019283+00:00",
+      "timeout_seconds": 300,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/46-release-cli.log",
+      "pid": 1514969,
+      "exit_code": 0,
+      "elapsed_seconds": 34.387,
+      "finished_at": "2026-11-21T03:06:19.406572+00:00",
+      "log_bytes": 23414,
+      "log_sha256": "91feca36930b2bc641d0a1d6fd994701bacd64dee138793dd745bc570a29bfab",
+      "rust_tests_passed": 0,
+      "root_compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/46-release-cli-compiler-artifacts.json",
+        "bytes": 972,
+        "sha256": "6a2be0e78d1c0d31697085a277447466a56aa151be128c9c1b1f20a32deabdce",
+        "count": 1,
+        "fresh_false": 1
+      }
+    },
+    {
+      "argv": [
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/zcalld",
+        "--help"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "listener-help",
+      "started_at": "2026-11-21T03:06:19.435886+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/47-listener-help.log",
+      "pid": 1522682,
+      "exit_code": 0,
+      "elapsed_seconds": 0.003,
+      "finished_at": "2026-11-21T03:06:19.440108+00:00",
+      "log_bytes": 2379,
+      "log_sha256": "d2ca8020172aa188080d5a7bbe75d0f0ed0a09274dcb2120c38eb9d6254846b3",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/test-generation-cancellation.py",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/zcalld",
+        "GenerationCancellationTests.test_cancel_curl_tcp_pending_head",
+        "GenerationCancellationTests.test_cancel_curl_tcp_pending_body",
+        "GenerationCancellationTests.test_cancel_curl_unix_pending_head",
+        "GenerationCancellationTests.test_cancel_curl_unix_pending_body",
+        "GenerationCancellationTests.test_half_close_curl_tcp_pending_head",
+        "GenerationCancellationTests.test_half_close_curl_tcp_pending_body",
+        "GenerationCancellationTests.test_half_close_curl_unix_pending_head",
+        "GenerationCancellationTests.test_half_close_curl_unix_pending_body"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "curl-cancellation",
+      "started_at": "2026-11-21T03:06:19.440829+00:00",
+      "timeout_seconds": 90,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/48-curl-cancellation.log",
+      "pid": 1522687,
+      "exit_code": 0,
+      "elapsed_seconds": 5.177,
+      "finished_at": "2026-11-21T03:06:24.619503+00:00",
+      "log_bytes": 1050,
+      "log_sha256": "b732078be012a5ede8d5a038d10f5d9430d96d3f28681e0ea6e1f82d9fe9353c",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "final-clean-source",
+      "started_at": "2026-11-21T03:06:24.620882+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/49-final-clean-source.log",
+      "pid": 1523863,
+      "exit_code": 0,
+      "elapsed_seconds": 0.027,
+      "finished_at": "2026-11-21T03:06:24.648849+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-source-manifest",
+      "started_at": "2026-11-21T03:06:24.650519+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/50-after-source-manifest.log",
+      "pid": 1523877,
+      "exit_code": 0,
+      "elapsed_seconds": 0.003,
+      "finished_at": "2026-11-21T03:06:24.653698+00:00",
+      "log_bytes": 18172,
+      "log_sha256": "1946de123d064284db37f353b98a7398226be68522a73cbf9b3f3ba9212e1c04",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-root-0",
+      "started_at": "2026-11-21T03:06:24.700705+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/51-after-root-0.log",
+      "pid": 1523888,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:06:24.703274+00:00",
+      "log_bytes": 83,
+      "log_sha256": "418e8c7d0aeb7a510ef0123ad9c2509009c1ae2f8b53c9ebb5d863ae84880748",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-head-0",
+      "started_at": "2026-11-21T03:06:24.704419+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/52-after-nested-head-0.log",
+      "pid": 1523891,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:06:24.706526+00:00",
+      "log_bytes": 41,
+      "log_sha256": "79815e741a410d76a3b0581b5149c473386e7f4617867a8e40ca075f90d9edf2",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-clean-0",
+      "started_at": "2026-11-21T03:06:24.707350+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/53-after-nested-clean-0.log",
+      "pid": 1523893,
+      "exit_code": 0,
+      "elapsed_seconds": 0.022,
+      "finished_at": "2026-11-21T03:06:24.729542+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zsys",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-root-1",
+      "started_at": "2026-11-21T03:06:24.730452+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/54-after-root-1.log",
+      "pid": 1523902,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.733062+00:00",
+      "log_bytes": 95,
+      "log_sha256": "e1917ee7eb53859275330c2e818b0a568f314ec2415a48c21d2630acbc215d2b",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zsys",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-head-1",
+      "started_at": "2026-11-21T03:06:24.734233+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/55-after-nested-head-1.log",
+      "pid": 1523903,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.737080+00:00",
+      "log_bytes": 41,
+      "log_sha256": "f564ed6a46a2293b24ec314978abbe0e31b8e5be437b11027a495c1c4321ae27",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zsys",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-clean-1",
+      "started_at": "2026-11-21T03:06:24.737900+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/56-after-nested-clean-1.log",
+      "pid": 1523904,
+      "exit_code": 0,
+      "elapsed_seconds": 0.003,
+      "finished_at": "2026-11-21T03:06:24.741270+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zplugin",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-root-2",
+      "started_at": "2026-11-21T03:06:24.742429+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/57-after-root-2.log",
+      "pid": 1523923,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.744965+00:00",
+      "log_bytes": 98,
+      "log_sha256": "675b69212aa96566ab3d6679bee4b0af247df887b9b6b13e06411e64585a392f",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zplugin",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-head-2",
+      "started_at": "2026-11-21T03:06:24.745801+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/58-after-nested-head-2.log",
+      "pid": 1523924,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.748425+00:00",
+      "log_bytes": 41,
+      "log_sha256": "7af92899fa10a6f2a85a9b5331c0b5384f66a56d3f9304a4dec0b4f495cf15fd",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zplugin",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-clean-2",
+      "started_at": "2026-11-21T03:06:24.749281+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/59-after-nested-clean-2.log",
+      "pid": 1523925,
+      "exit_code": 0,
+      "elapsed_seconds": 0.003,
+      "finished_at": "2026-11-21T03:06:24.752915+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zconv",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-root-3",
+      "started_at": "2026-11-21T03:06:24.753970+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/60-after-root-3.log",
+      "pid": 1523927,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.757359+00:00",
+      "log_bytes": 96,
+      "log_sha256": "783b3be8b72b09d69128d9b01b41384d86c3870a0c967fb7c77df9cb2670b037",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zconv",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-head-3",
+      "started_at": "2026-11-21T03:06:24.758247+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/61-after-nested-head-3.log",
+      "pid": 1523929,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.761105+00:00",
+      "log_bytes": 41,
+      "log_sha256": "fa456099be8ece6e712fa6f52181072247a425a0300fa3038437e611d52bc525",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zconv",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-clean-3",
+      "started_at": "2026-11-21T03:06:24.761987+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/62-after-nested-clean-3.log",
+      "pid": 1523930,
+      "exit_code": 0,
+      "elapsed_seconds": 0.003,
+      "finished_at": "2026-11-21T03:06:24.765773+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zcall",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-root-4",
+      "started_at": "2026-11-21T03:06:24.766681+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/63-after-root-4.log",
+      "pid": 1523931,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.769587+00:00",
+      "log_bytes": 96,
+      "log_sha256": "c682fd3e7fd923794a693340fb06a73486e7df8021a582c420e7ed9fa1c98876",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zcall",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-head-4",
+      "started_at": "2026-11-21T03:06:24.770404+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/64-after-nested-head-4.log",
+      "pid": 1523933,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.773966+00:00",
+      "log_bytes": 41,
+      "log_sha256": "f55f0e99a1898a88586ef0c8c10861b7aacfaa5006402ebc10cf251d6828cf8b",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zcall",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-clean-4",
+      "started_at": "2026-11-21T03:06:24.775393+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/65-after-nested-clean-4.log",
+      "pid": 1523938,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.779152+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/extensions/compat",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-root-5",
+      "started_at": "2026-11-21T03:06:24.780068+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/66-after-root-5.log",
+      "pid": 1523942,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.789359+00:00",
+      "log_bytes": 101,
+      "log_sha256": "6d8f132918f1e8ac4747ed48d2457e221b69317ecd5bcb76172149df217d58a9",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/extensions/compat",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-head-5",
+      "started_at": "2026-11-21T03:06:24.792395+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/67-after-nested-head-5.log",
+      "pid": 1523943,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:06:24.794736+00:00",
+      "log_bytes": 41,
+      "log_sha256": "8d42020e8bd66b016ee22ca1b306bdbaa2211a643e1e4b4a735f9cba4c1d7d78",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/extensions/compat",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-clean-5",
+      "started_at": "2026-11-21T03:06:24.795570+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/68-after-nested-clean-5.log",
+      "pid": 1523944,
+      "exit_code": 0,
+      "elapsed_seconds": 0.003,
+      "finished_at": "2026-11-21T03:06:24.800055+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-omarchy",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-root-6",
+      "started_at": "2026-11-21T03:06:24.800900+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/69-after-root-6.log",
+      "pid": 1523945,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.803905+00:00",
+      "log_bytes": 102,
+      "log_sha256": "8f8ef4181707960e5cc8a33457a8e6e13dabe44591a4ea71f9802aaec7321b80",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-omarchy",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-head-6",
+      "started_at": "2026-11-21T03:06:24.805017+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/70-after-nested-head-6.log",
+      "pid": 1523946,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.807626+00:00",
+      "log_bytes": 41,
+      "log_sha256": "bb4d6b83754830f43124241cdbe6ccf25cf488a8f55db3204d6a6387bb10bf2f",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-omarchy",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-clean-6",
+      "started_at": "2026-11-21T03:06:24.808460+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/71-after-nested-clean-6.log",
+      "pid": 1523947,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.811404+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-root-7",
+      "started_at": "2026-11-21T03:06:24.812234+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/72-after-root-7.log",
+      "pid": 1523948,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.814997+00:00",
+      "log_bytes": 98,
+      "log_sha256": "7d19e3e3fc8e60ced9fe361cc67afedec5d65b869f173752dd13df7e84beef87",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-head-7",
+      "started_at": "2026-11-21T03:06:24.816173+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/73-after-nested-head-7.log",
+      "pid": 1523952,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.819686+00:00",
+      "log_bytes": 41,
+      "log_sha256": "fb833efe965e9d777c70aaa29c22ed6908e3de46558f58b971535f9dac750a4e",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-clean-7",
+      "started_at": "2026-11-21T03:06:24.820604+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/74-after-nested-clean-7.log",
+      "pid": 1523953,
+      "exit_code": 0,
+      "elapsed_seconds": 0.005,
+      "finished_at": "2026-11-21T03:06:24.826344+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui/vendor/zgpui",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-root-8",
+      "started_at": "2026-11-21T03:06:24.827338+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/75-after-root-8.log",
+      "pid": 1523955,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:06:24.829580+00:00",
+      "log_bytes": 111,
+      "log_sha256": "ce852300b3812719a2932fe1dd98606148e28de245c39fcbbf75233aeab61671",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui/vendor/zgpui",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-head-8",
+      "started_at": "2026-11-21T03:06:24.832098+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/76-after-nested-head-8.log",
+      "pid": 1523956,
+      "exit_code": 0,
+      "elapsed_seconds": 0.001,
+      "finished_at": "2026-11-21T03:06:24.834377+00:00",
+      "log_bytes": 41,
+      "log_sha256": "6fa87039f628ec537f5cf9fc7aa482c4153f4ae0a014f3e9862eede23209fa1a",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui/vendor/zgpui",
+        "status",
+        "--porcelain",
+        "--untracked-files=all",
+        "--ignore-submodules=none"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "after-nested-clean-8",
+      "started_at": "2026-11-21T03:06:24.835208+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/77-after-nested-clean-8.log",
+      "pid": 1523957,
+      "exit_code": 0,
+      "elapsed_seconds": 0.002,
+      "finished_at": "2026-11-21T03:06:24.839152+00:00",
+      "log_bytes": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "--",
+        "https://github.com/LIghtJUNction/zcalld.git",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "final-fresh-main",
+      "started_at": "2026-11-21T03:06:24.840244+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/78-final-fresh-main.log",
+      "pid": 1523958,
+      "exit_code": 0,
+      "elapsed_seconds": 0.658,
+      "finished_at": "2026-11-21T03:06:25.499564+00:00",
+      "log_bytes": 72,
+      "log_sha256": "b14f28b86bb9a75ab277170e6a6f0c1b12eaad1127e566ec273d620bf84c0100",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "--",
+        "https://github.com/LIghtJUNction/zcall-gui.git",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "final-fresh-gui",
+      "started_at": "2026-11-21T03:06:25.500577+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/79-final-fresh-gui.log",
+      "pid": 1524145,
+      "exit_code": 0,
+      "elapsed_seconds": 0.964,
+      "finished_at": "2026-11-21T03:06:26.465522+00:00",
+      "log_bytes": 72,
+      "log_sha256": "41f26c8a49cad814d21524944b149cfd18077c852e4cb2f9f1a2ccae446c140a",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "--",
+        "https://github.com/LIghtJUNction/zcalld-compat.git",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "final-fresh-compat",
+      "started_at": "2026-11-21T03:06:26.466602+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/80-final-fresh-compat.log",
+      "pid": 1524401,
+      "exit_code": 0,
+      "elapsed_seconds": 0.912,
+      "finished_at": "2026-11-21T03:06:27.379709+00:00",
+      "log_bytes": 72,
+      "log_sha256": "6f1f03b5f7c7ce93becc5e8aa932bf29d825f5b48f223b81ed2e1692898ca9de",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "--",
+        "https://github.com/LIghtJUNction/zcall.git",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "final-fresh-zcall",
+      "started_at": "2026-11-21T03:06:27.380744+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/81-final-fresh-zcall.log",
+      "pid": 1524490,
+      "exit_code": 0,
+      "elapsed_seconds": 0.774,
+      "finished_at": "2026-11-21T03:06:28.155492+00:00",
+      "log_bytes": 72,
+      "log_sha256": "a647c8744ff8243b0b308907f4ab1a9cb33c7261fb6ceb5ef002a8b3b7f401d5",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "--",
+        "https://github.com/LIghtJUNction/zconv.git",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "final-fresh-zconv",
+      "started_at": "2026-11-21T03:06:28.156468+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/82-final-fresh-zconv.log",
+      "pid": 1524779,
+      "exit_code": 0,
+      "elapsed_seconds": 0.71,
+      "finished_at": "2026-11-21T03:06:28.867276+00:00",
+      "log_bytes": 72,
+      "log_sha256": "d57812d9274b31fe1be39380e5f8f9526399026477d4e6ff7a9b7ed3a9aac09a",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "--",
+        "https://github.com/LIghtJUNction/zplugin.git",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "final-fresh-zplugin",
+      "started_at": "2026-11-21T03:06:28.868447+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/83-final-fresh-zplugin.log",
+      "pid": 1524953,
+      "exit_code": 0,
+      "elapsed_seconds": 0.786,
+      "finished_at": "2026-11-21T03:06:29.655209+00:00",
+      "log_bytes": 72,
+      "log_sha256": "137a246ffa75e3277f95e62b83cc8d97a4dcf0272f7d41c1c6cf4d08d61e68ed",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--symref",
+        "--",
+        "https://github.com/LIghtJUNction/zsys.git",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "final-fresh-zsys",
+      "started_at": "2026-11-21T03:06:29.656067+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/84-final-fresh-zsys.log",
+      "pid": 1525048,
+      "exit_code": 0,
+      "elapsed_seconds": 0.703,
+      "finished_at": "2026-11-21T03:06:30.361157+00:00",
+      "log_bytes": 72,
+      "log_sha256": "451085ece399077d75426ea2230bcdea5197b5508d62dd2d042ce71afef43b47",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "ls-remote",
+        "--",
+        "origin",
+        "refs/heads/feat/ssmcp-listener-p1-20261120"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "final-pr-head",
+      "started_at": "2026-11-21T03:06:30.362219+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/85-final-pr-head.log",
+      "pid": 1525304,
+      "exit_code": 0,
+      "elapsed_seconds": 0.654,
+      "finished_at": "2026-11-21T03:06:31.017190+00:00",
+      "log_bytes": 84,
+      "log_sha256": "8567fb1e737f4dea566e61507030fbe37243d760bd6acd5259670f2a31f076b2",
+      "rust_tests_passed": 0
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "label": "final-head",
+      "started_at": "2026-11-21T03:06:31.018484+00:00",
+      "timeout_seconds": 180,
+      "log": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/86-final-head.log",
+      "pid": 1525468,
+      "exit_code": 0,
+      "elapsed_seconds": 0.004,
+      "finished_at": "2026-11-21T03:06:31.023195+00:00",
+      "log_bytes": 41,
+      "log_sha256": "79815e741a410d76a3b0581b5149c473386e7f4617867a8e40ca075f90d9edf2",
+      "rust_tests_passed": 0
+    }
+  ],
+  "evidence_directory": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z",
+  "source_root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+  "target_directory": "/var/tmp/project-z-cargo-target",
+  "outer_batch_lock": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+  "started_at": "2026-11-21T03:05:38.160183+00:00",
+  "runner_sha256": "6fb8c794236db74f7f666d74ea3af84313d2b67f3ea267cfa21f12ac78f24ec1",
+  "boundary": "This fixed successor release CLI, help and eight real loopback/Unix curl cases only. Historical 0af8 workspace tests and Clippy are not repeated or relabeled. Final SSMCP P1 and GUI acceptance remain separate.",
+  "actual_outer_lock": {
+    "observed_at": "2026-11-21T03:05:38.171285+00:00",
+    "parent_pid": 1513298,
+    "parent_argv": [
+      "/usr/bin/flock",
+      "--nonblock",
+      "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "/usr/bin/python3",
+      "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/validate_bd7_cli.py"
+    ],
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "lock_inode": 63537699,
+    "lock_device": 34,
+    "proc_locks": [
+      "76: FLOCK  ADVISORY  WRITE 1513298 00:20:63537699 0 EOF"
+    ],
+    "matching_parent_fds": [
+      "3"
+    ],
+    "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/zcalld-listener-bd7a30c-20261121.scope\n",
+    "additional_acquisition_attempted": false
+  },
+  "inside_scope": "Id=zcalld-listener-bd7a30c-20261121.scope\nActiveState=active\nSubState=running\nInvocationID=1523613aec6245d4916d0e6af20db02c\nResult=success\nControlGroup=/user.slice/user-1000.slice/user@1000.service/app.slice/zcalld-listener-bd7a30c-20261121.scope\n",
+  "python_executable": "/usr/bin/python3",
+  "python_version": "3.14.10 (main, Nov  4 2026, 18:21:50) [GCC 16.2.1 20260810]",
+  "workspace_wrapper": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/workspace-rustc-bd7.py",
+    "bytes": 590,
+    "sha256": "a9be4be225cfab383d84273889332e0d600882127304d6f3f98d68ba0187fb37"
+  },
+  "environment": {
+    "CARGO_BUILD_JOBS": "1",
+    "CARGO_TARGET_DIR": "/var/tmp/project-z-cargo-target",
+    "CARGO_NET_OFFLINE": "true",
+    "RUSTC_WORKSPACE_WRAPPER": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/workspace-rustc-bd7.py"
+  },
+  "source_before": {
+    "manifest": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source-manifest.json",
+      "bytes": 58217,
+      "sha256": "d3fd26ee0705635bf6d8a1436bcd3545bc84f39adb78a45f1c17ce1f9957b2cc",
+      "device": 68,
+      "inode": 187499779,
+      "mtime_ns": 1795229431926339037,
+      "mode": "0o600"
+    },
+    "leaf_count": 220,
+    "tracked_bytes_verified": true,
+    "recursive_checkouts": [
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+        "head": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zsys",
+        "head": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zplugin",
+        "head": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zconv",
+        "head": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zcall",
+        "head": "317c52f101f112c6af671a629d8406305a168e4a",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/extensions/compat",
+        "head": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-omarchy",
+        "head": "7db52e74ceb6c9d398791406e01265eecc127f87",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui",
+        "head": "2593369b2e9695a4a4cabed20eb80bee01fc419c",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui/vendor/zgpui",
+        "head": "b4d5493e0cd985d00558c7be0b5726965ab5163a",
+        "clean": true
+      }
+    ]
+  },
+  "compat_source": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+  "root_package_id": "path+file:///home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source#zcalld@0.4.4",
+  "git_dependencies": [
+    {
+      "name": "zcall",
+      "version": "0.4.0",
+      "source": "git+https://github.com/LIghtJUNction/zcall.git#317c52f101f112c6af671a629d8406305a168e4a"
+    },
+    {
+      "name": "zconv",
+      "version": "0.4.0",
+      "source": "git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1"
+    },
+    {
+      "name": "zplugin",
+      "version": "0.3.1",
+      "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+    },
+    {
+      "name": "zplugin-macros",
+      "version": "0.3.1",
+      "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+    },
+    {
+      "name": "zsys",
+      "version": "0.1.1",
+      "source": "git+https://github.com/LIghtJUNction/zsys.git#808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+    }
+  ],
+  "gui_source": "2593369b2e9695a4a4cabed20eb80bee01fc419c",
+  "source_manifest": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/source-manifest.txt",
+    "bytes": 18172,
+    "sha256": "1946de123d064284db37f353b98a7398226be68522a73cbf9b3f3ba9212e1c04"
+  },
+  "cargo_lock_sha256": "23fd8fbbefe0232b60749d048d09f4d2a7d6783ea2e85deac160c172e5a4ffca",
+  "release_root_compiler_calls": [
+    {
+      "observed_at": "2026-11-21T03:05:49.023742+00:00",
+      "pid": 1515644,
+      "parent_pid": 1515639,
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "argv": [
+        "/home/lightjunction/.rustup/toolchains/1.100.0-x86_64-unknown-linux-gnu/bin/rustc",
+        "--crate-name",
+        "zcalld",
+        "--edition=2024",
+        "src/main.rs",
+        "--error-format=json",
+        "--json=diagnostic-rendered-ansi,artifacts,future-incompat,unused-externs-silent",
+        "--crate-type",
+        "bin",
+        "--emit=dep-info,link",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "lto=thin",
+        "-C",
+        "codegen-units=1",
+        "--check-cfg",
+        "cfg(docsrs,test)",
+        "--check-cfg",
+        "cfg(feature, values())",
+        "-C",
+        "metadata=faf29bdc1405d9d9",
+        "--out-dir",
+        "/var/tmp/project-z-cargo-target/release/build/zcalld/acd5c73386e3f58b/out",
+        "-C",
+        "linker=clang",
+        "-C",
+        "strip=symbols",
+        "-L",
+        "dependency=/var/tmp/project-z-cargo-target/release/build/zconv/fe9c8a3cb2be3bc6/out",
+        "-L",
+        "dependency=/var/tmp/project-z-cargo-target/release/build/zplugin-macros/d239815905d1119b/out",
+        "-L",
+        "dependency=/var/tmp/project-z-cargo-target/release/build/zplugin/d4453f4997e1fe13/out",
+        "-L",
+        "dependency=/var/tmp/project-z-cargo-target/release/build/zsys/4ad0d46710f70c81/out",
+        "--extern",
+        "zcall=/var/tmp/project-z-cargo-target/release/build/zcall/d4d0657e3a501d19/out/libzcall-d4d0657e3a501d19.rlib",
+        "--extern",
+        "zcalld_compat_client=/var/tmp/project-z-cargo-target/release/build/zcalld-compat-client/5393519a87f5b449/out/libzcalld_compat_client-5393519a87f5b449.rlib",
+        "--extern",
+        "zcalld_installer=/var/tmp/project-z-cargo-target/release/build/zcalld-installer/58d15baed22b350b/out/libzcalld_installer-58d15baed22b350b.rlib",
+        "--extern",
+        "zcalld_plugin_api=/var/tmp/project-z-cargo-target/release/build/zcalld-plugin-api/5b72b5f4d462c438/out/libzcalld_plugin_api-5b72b5f4d462c438.rlib",
+        "--extern",
+        "zconv=/var/tmp/project-z-cargo-target/release/build/zconv/fe9c8a3cb2be3bc6/out/libzconv-fe9c8a3cb2be3bc6.rlib",
+        "--extern",
+        "zplugin=/var/tmp/project-z-cargo-target/release/build/zplugin/d4453f4997e1fe13/out/libzplugin-d4453f4997e1fe13.rlib",
+        "-C",
+        "link-arg=-fuse-ld=mold",
+        "--force-warn=unused_crate_dependencies"
+      ],
+      "cargo_manifest_dir": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source"
+    }
+  ],
+  "artifact_copy_outer_lock": {
+    "observed_at": "2026-11-21T03:06:19.418834+00:00",
+    "parent_pid": 1513298,
+    "parent_argv": [
+      "/usr/bin/flock",
+      "--nonblock",
+      "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "/usr/bin/python3",
+      "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/validate_bd7_cli.py"
+    ],
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "lock_inode": 63537699,
+    "lock_device": 34,
+    "proc_locks": [
+      "108: FLOCK  ADVISORY  WRITE 1513298 00:20:63537699 0 EOF"
+    ],
+    "matching_parent_fds": [
+      "3"
+    ],
+    "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/zcalld-listener-bd7a30c-20261121.scope\n",
+    "additional_acquisition_attempted": false
+  },
+  "cargo_compiler_artifact": {
+    "reason": "compiler-artifact",
+    "package_id": "path+file:///home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source#zcalld@0.4.4",
+    "manifest_path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/Cargo.toml",
+    "target": {
+      "kind": [
+        "bin"
+      ],
+      "crate_types": [
+        "bin"
+      ],
+      "name": "zcalld",
+      "src_path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/src/main.rs",
+      "edition": "2024",
+      "doc": true,
+      "doctest": false,
+      "test": true
+    },
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "features": [],
+    "filenames": [
+      "/var/tmp/project-z-cargo-target/release/zcalld"
+    ],
+    "executable": "/var/tmp/project-z-cargo-target/release/zcalld",
+    "fresh": false
+  },
+  "actual_link_output": {
+    "path": "/var/tmp/project-z-cargo-target/release/build/zcalld/acd5c73386e3f58b/out/zcalld",
+    "bytes": 2964896,
+    "sha256": "d5464f6f24da08204840d5c84f1780249d3635aa18ffd696dd5f6060c5621ecb",
+    "device": 34,
+    "inode": 64119285,
+    "mtime_ns": 1795230379339867415,
+    "mode": "0o700"
+  },
+  "cargo_executable_before_copy": {
+    "path": "/var/tmp/project-z-cargo-target/release/zcalld",
+    "bytes": 2964896,
+    "sha256": "d5464f6f24da08204840d5c84f1780249d3635aa18ffd696dd5f6060c5621ecb",
+    "device": 34,
+    "inode": 64119285,
+    "mtime_ns": 1795230379339867415,
+    "mode": "0o700"
+  },
+  "link_output_equals_cargo_executable": true,
+  "binary": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/zcalld",
+    "sha256": "d5464f6f24da08204840d5c84f1780249d3635aa18ffd696dd5f6060c5621ecb",
+    "bytes": 2964896,
+    "source_commit": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+    "source_tree": "cbd4a29ec9851a42dc36149fc099fb288c9623de",
+    "profile": "release",
+    "copied_under_outer_lock": true
+  },
+  "owned_copy_equals_actual_link_output": true,
+  "owned_copy": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/zcalld",
+    "bytes": 2964896,
+    "sha256": "d5464f6f24da08204840d5c84f1780249d3635aa18ffd696dd5f6060c5621ecb",
+    "device": 68,
+    "inode": 187500615,
+    "mtime_ns": 1795230379339867415,
+    "mode": "0o500"
+  },
+  "unchanged_curl_fixture": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/scripts/test-generation-cancellation.py",
+    "bytes": 14696,
+    "sha256": "d254dd4bb1f84c5e9499dabbd5d03b417b22dae25920976ba1edf308bdbb619e",
+    "device": 68,
+    "inode": 187497742,
+    "mtime_ns": 1795229418673195995,
+    "mode": "0o700"
+  },
+  "curl_cancellation_tests": {
+    "names": [
+      "GenerationCancellationTests.test_cancel_curl_tcp_pending_head",
+      "GenerationCancellationTests.test_cancel_curl_tcp_pending_body",
+      "GenerationCancellationTests.test_cancel_curl_unix_pending_head",
+      "GenerationCancellationTests.test_cancel_curl_unix_pending_body",
+      "GenerationCancellationTests.test_half_close_curl_tcp_pending_head",
+      "GenerationCancellationTests.test_half_close_curl_tcp_pending_body",
+      "GenerationCancellationTests.test_half_close_curl_unix_pending_head",
+      "GenerationCancellationTests.test_half_close_curl_unix_pending_body"
+    ],
+    "passed": 8,
+    "skipped": 0
+  },
+  "source_after": {
+    "manifest": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source-manifest.json",
+      "bytes": 58217,
+      "sha256": "d3fd26ee0705635bf6d8a1436bcd3545bc84f39adb78a45f1c17ce1f9957b2cc",
+      "device": 68,
+      "inode": 187499779,
+      "mtime_ns": 1795229431926339037,
+      "mode": "0o600"
+    },
+    "leaf_count": 220,
+    "tracked_bytes_verified": true,
+    "recursive_checkouts": [
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+        "head": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zsys",
+        "head": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zplugin",
+        "head": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zconv",
+        "head": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/vendor/zcall",
+        "head": "317c52f101f112c6af671a629d8406305a168e4a",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/extensions/compat",
+        "head": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-omarchy",
+        "head": "7db52e74ceb6c9d398791406e01265eecc127f87",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui",
+        "head": "2593369b2e9695a4a4cabed20eb80bee01fc419c",
+        "clean": true
+      },
+      {
+        "root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/apps/zcall-gui/vendor/zgpui",
+        "head": "b4d5493e0cd985d00558c7be0b5726965ab5163a",
+        "clean": true
+      }
+    ]
+  },
+  "final_outer_lock": {
+    "observed_at": "2026-11-21T03:06:31.035344+00:00",
+    "parent_pid": 1513298,
+    "parent_argv": [
+      "/usr/bin/flock",
+      "--nonblock",
+      "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "/usr/bin/python3",
+      "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/validate_bd7_cli.py"
+    ],
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "lock_inode": 63537699,
+    "lock_device": 34,
+    "proc_locks": [
+      "76: FLOCK  ADVISORY  WRITE 1513298 00:20:63537699 0 EOF"
+    ],
+    "matching_parent_fds": [
+      "3"
+    ],
+    "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/zcalld-listener-bd7a30c-20261121.scope\n",
+    "additional_acquisition_attempted": false
+  },
+  "finished_at": "2026-11-21T03:06:31.035395+00:00"
+}

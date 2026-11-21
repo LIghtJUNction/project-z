@@ -1,0 +1,20 @@
+{
+  "schema": "project-z.ssmcp24c-source-observation.v1",
+  "observed_at_utc": "2026-11-21 00:34:09 UTC",
+  "pr": {
+    "url": "https://github.com/LIghtJUNction/ssmcp/pull/159",
+    "draft": true,
+    "head": "24c32869ba730f4a91406ebd6b05e18a462bec80",
+    "base_at_pr_read": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+    "updated_at": "2026-11-21T00:30:37Z"
+  },
+  "commit": {
+    "sha": "24c32869ba730f4a91406ebd6b05e18a462bec80",
+    "tree": "d8cb76cefa139d4809edba45f2b701d45e2a59e0",
+    "parents": [
+      "b87d8d0f1c47684da9574610f1279d40aefa2f96"
+    ],
+    "message": "test: expect the explicit Next caller recipient [skip ci]"
+  },
+  "scope": "GitHub source-only metadata. Existing owner reports f208 semantic union and independent Next caller assertion fix pushed; sourceowner will serially incorporate publicf33 and a source-only0.10.24 version successor. FixedFC input A/B evidence remains atfc06728. No actual24c build/runtime/finalP1/release claimed."
+}

@@ -1,0 +1,285 @@
+{
+  "schema": "project-z.zcalld-0af8-source-publication.v1",
+  "status": "prepared_waiting_for_existing_owner",
+  "source": {
+    "head": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+    "base": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+    "parent": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+    "source_root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source",
+    "version": "0.4.4",
+    "gui": "d491b627223807da7b2929f3feea7461393d124c",
+    "compat": "56a15b330384531b3a6c444190f53b6d3720bd5e"
+  },
+  "publication": {
+    "pull_request": "https://github.com/LIghtJUNction/zcalld/pull/1",
+    "branch": "feat/ssmcp-listener-p1-20261120",
+    "expected_old": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+    "force": false,
+    "update": {
+      "success": true
+    },
+    "readback_head": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "pr_head": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "pr_base": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+    "draft": true,
+    "state": "open",
+    "updated_at": "2026-11-21T00:45:42Z"
+  },
+  "tree_preservation": {
+    "head": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+    "parent": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+    "old_tree": "34795b388520d9a0587f0543ba5763d37b1aeb84",
+    "old_leaves": 220,
+    "new_leaves": 220,
+    "unchanged_leaves": 219,
+    "changed_paths": [
+      "apps/zcall-gui"
+    ],
+    "old_gui": {
+      "path": "apps/zcall-gui",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "ca35a306088a85e49e9e851aab24329deed20056"
+    },
+    "new_gui": {
+      "path": "apps/zcall-gui",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "d491b627223807da7b2929f3feea7461393d124c"
+    },
+    "refs_updated": true
+  },
+  "preparation_job": {
+    "cancelled": false,
+    "command": [
+      "python3",
+      "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/prepare_0af8_source.py"
+    ],
+    "cwd": "/home/lightjunction/Documents/GITHUB",
+    "duration_ms": 2821,
+    "error": null,
+    "exit_code": 0,
+    "exit_signal": null,
+    "id": "26c4545eae1eab8d27485f4a48077d3c-856",
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-856",
+    "output_mode": "pipes",
+    "pid": 3623951,
+    "pid_role": "supervisor",
+    "running": false,
+    "state": "completed",
+    "stderr": {
+      "artifact": null,
+      "eof": true,
+      "error": null,
+      "next_cursor": 0,
+      "start_cursor": 0,
+      "truncated": false
+    },
+    "stdin": {
+      "bytes_written": 0,
+      "mode": "null",
+      "open": false
+    },
+    "stdout": {
+      "artifact": null,
+      "eof": true,
+      "error": null,
+      "next_cursor": 1961,
+      "start_cursor": 0,
+      "truncated": false
+    },
+    "timed_out": false,
+    "title": "Prepare fixed zcalld 0af8 source after GUI packaging update",
+    "tty_slot": null
+  },
+  "prelaunch_job": {
+    "cancelled": false,
+    "command": [
+      "python3",
+      "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/prelaunch_0af8.py"
+    ],
+    "cwd": "/home/lightjunction/Documents/GITHUB",
+    "duration_ms": 27006,
+    "error": null,
+    "exit_code": 1,
+    "exit_signal": null,
+    "id": "26c4545eae1eab8d27485f4a48077d3c-858",
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-858",
+    "output_mode": "pipes",
+    "pid": 3629813,
+    "pid_role": "supervisor",
+    "running": false,
+    "state": "completed",
+    "stderr": {
+      "artifact": null,
+      "eof": true,
+      "error": null,
+      "next_cursor": 0,
+      "start_cursor": 0,
+      "truncated": false
+    },
+    "stdin": {
+      "bytes_written": 0,
+      "mode": "null",
+      "open": false
+    },
+    "stdout": {
+      "artifact": null,
+      "eof": true,
+      "error": null,
+      "next_cursor": 3181,
+      "start_cursor": 0,
+      "truncated": false
+    },
+    "timed_out": false,
+    "title": null,
+    "tty_slot": null
+  },
+  "prelaunch": {
+    "bytes": 3743,
+    "sha256": "8bdb4eaaa26a6b7adec09bbf86be333e81261fe11f0803e826cce54704a88141",
+    "content": {
+      "schema": "project-z.zcalld-0af8-prelaunch.v1",
+      "ready": false,
+      "observed_at": "2026-11-21T00:44:14.551591+00:00",
+      "lock_acquisition_attempted": false,
+      "source": {
+        "head": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+        "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+        "status": "",
+        "lock": {
+          "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source/Cargo.lock",
+          "bytes": 3129,
+          "sha256": "23fd8fbbefe0232b60749d048d09f4d2a7d6783ea2e85deac160c172e5a4ffca",
+          "mode": "0o600"
+        }
+      },
+      "helpers": {
+        "validate_0af8_candidate.py": {
+          "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validate_0af8_candidate.py",
+          "bytes": 14868,
+          "sha256": "4b40fbfd0eded716ec62630497fa5653cce8bbdc1285aafb71d1a940df52c470",
+          "mode": "0o700"
+        },
+        "workspace-rustc-0af8.py": {
+          "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/workspace-rustc-0af8.py",
+          "bytes": 590,
+          "sha256": "a9be4be225cfab383d84273889332e0d600882127304d6f3f98d68ba0187fb37",
+          "mode": "0o700"
+        },
+        "validation-request.json": {
+          "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validation-request.json",
+          "bytes": 629,
+          "sha256": "1440e1924703033807a72334a0671399cbc05396808cf311f018cb1d7df0f371",
+          "mode": "0o600"
+        }
+      },
+      "python": {
+        "path": "/usr/bin/python3.14",
+        "bytes": 14424,
+        "sha256": "2f02aa4f93265e0ad19d8ffaaef9703d515921c14474a451b8e2d83c583ca233",
+        "mode": "0o755",
+        "version": "Python 3.14.10"
+      },
+      "ssmcp_scan": {
+        "root": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121",
+        "receipt_count": 151,
+        "historical_exclusion": {
+          "path": "prepaste-baseline-c248d42-build/build-receipt.json",
+          "reason": "Original owner cancelled this historical build-only attempt; root confirmed."
+        }
+      },
+      "active_ssmcp_receipts": [],
+      "outer_lock": {
+        "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "device": 34,
+        "inode": 63537699,
+        "rows": [
+          "277: FLOCK  ADVISORY  WRITE 3628159 00:20:63537699 0 EOF"
+        ],
+        "flock_processes": [
+          {
+            "pid": 3628159,
+            "argv": [
+              "flock",
+              "-x",
+              "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+              "env",
+              "CARGO_TARGET_DIR=/var/tmp/project-z-cargo-target",
+              "python3",
+              "/var/tmp/ssmcp-controls-20261121/final-integration/validate_release_0_10_24.py"
+            ]
+          }
+        ]
+      },
+      "memory_available_bytes": 6556422144,
+      "scope_probe": {
+        "argv": [
+          "systemctl",
+          "--user",
+          "show",
+          "zcalld-listener-0af8-20261121.scope",
+          "--property=ActiveState,SubState,ControlGroup"
+        ],
+        "exit": 0,
+        "stdout": "ActiveState=inactive\nSubState=dead\nControlGroup=\n",
+        "stderr": ""
+      },
+      "request": {
+        "command": [
+          "systemd-run",
+          "--user",
+          "--scope",
+          "--quiet",
+          "--unit=zcalld-listener-0af8-20261121",
+          "--property=MemoryMax=2G",
+          "--property=MemorySwapMax=4G",
+          "--property=CPUQuota=100%",
+          "--property=RuntimeMaxSec=840",
+          "/usr/bin/flock",
+          "--nonblock",
+          "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+          "python3",
+          "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validate_0af8_candidate.py"
+        ],
+        "cwd": "/home/lightjunction/Documents/GITHUB",
+        "timeout_ms": 900000,
+        "title": "Validate fixed zcalld 0af8 listener candidate"
+      },
+      "error": "AssertionError: Existing outer lock holder or waiter"
+    }
+  },
+  "gate": {
+    "started": false,
+    "exec_start_called": false,
+    "lock_attempted": false,
+    "cargo_executed": false,
+    "reason": "A current SSMCP release validator holds the same outer lock. The read-only guard stopped before any gate launch; no queue or retry."
+  },
+  "classification": {
+    "gui": "AUR packaging/validation/workflow change; Rust/UI/Cargo/lock/gitlinks unchanged. Not documentation-only. No GUI AUR execution is claimed.",
+    "compat": "README-only successor integrated by E1.",
+    "historical_8fe": "Job806 exited1 at compat-source freshness before fmt/tests/Clippy/build/curl; raw receipt preserved.",
+    "historical_e1": "No product gate started; GitHub prelaunch discovered GUI d491."
+  },
+  "independent_reviews": [
+    {
+      "path": "pr-cleanup-zcalld-0af-gui-pin-independent-review.json",
+      "bytes": 2074,
+      "sha256": "faf51008344a29868ff18ff21fe9faf5046887153014d1251897f502b5f7efdf"
+    },
+    {
+      "path": "pr-cleanup-zcalld-0af-parameters-independent-review.json",
+      "bytes": 2302,
+      "sha256": "e397d0e59ffba51ee2dcd9dfcb86c28250e3e5b08ed024666eb8e3564268d83c"
+    },
+    {
+      "path": "pr-cleanup-zcall-gui-d491-independent-review.json",
+      "bytes": 7460,
+      "sha256": "96963d8d59c7a233408bd42b1e4649f595034ab83ebaa3b8549bc5fe5f98099d"
+    }
+  ],
+  "final_p1": "Pending with existing SSMCP acceptance owner; no old source counts assigned."
+}

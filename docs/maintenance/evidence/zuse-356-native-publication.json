@@ -1,0 +1,47 @@
+{
+  "schema": "project-z.zuse356-private-native-publication.v1",
+  "head": "35664746549c482c99082e6180419b2c0f5ff532",
+  "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+  "files": [
+    {
+      "kind": "json",
+      "file_id": "1sDqfE67kKKTl1QNfxFPzwhFRw6RP9qs6",
+      "url": "https://drive.google.com/file/d/1sDqfE67kKKTl1QNfxFPzwhFRw6RP9qs6",
+      "bytes": 35026,
+      "sha256": "77394e59dd4c015268e5bb8663f66fca9c57bdbc44ab4f5b9a94c029f487122a",
+      "downloaded_bytes_match": true
+    },
+    {
+      "kind": "md",
+      "file_id": "1K-3K8TZvRwt-mdC5CiFRT4ZnNc57x5MQ",
+      "url": "https://drive.google.com/file/d/1K-3K8TZvRwt-mdC5CiFRT4ZnNc57x5MQ",
+      "bytes": 3915,
+      "sha256": "4858db3c8e2d15209771fc25b1827b78c120f0bf9d5c6b9c905cc731d7ecdeb4",
+      "downloaded_bytes_match": true
+    },
+    {
+      "kind": "text_archive",
+      "file_id": "1_4o5_1MuigO8fMdlw7hOd67TZvW6yP6l",
+      "url": "https://drive.google.com/file/d/1_4o5_1MuigO8fMdlw7hOd67TZvW6yP6l",
+      "bytes": 50905,
+      "sha256": "6e2822aabf6f730d60582eb22feff4d025d607fcc0bb81d0be3a4fd31beda3c5",
+      "downloaded_bytes_match": true,
+      "payload_files": 73,
+      "manifest_files": 1
+    }
+  ],
+  "independent_review": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-native-independent-review.json",
+    "bytes": 14150,
+    "sha256": "70c844a688d0b838420c4e50e6172216e0488c6a2274944da480375dff20995e",
+    "conclusion": "No material inconsistency or blocker; independent read-only review, no new execution"
+  },
+  "pr": {
+    "number": 3,
+    "state": "open",
+    "draft": true,
+    "head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "base": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+    "metadata_updated_at": "2026-11-21T00:26:10Z"
+  }
+}

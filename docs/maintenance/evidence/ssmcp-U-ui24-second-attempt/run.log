@@ -1,0 +1,97 @@
+PASS the owned account router keeps its credentials in a private ready record
+PASS the isolated account has the expected stable provider identity and handle
+PASS the real production account router is healthy
+PASS the account connection advertises its exact identity-scoped MCP resource
+PASS MCP 401 advertises protected-resource metadata
+PASS resource metadata binds the exact account endpoint and OAuth issuer
+PASS OAuth discovery advertises authorization-code PKCE S256
+PASS public MCP client registers through OAuth DCR
+PASS the account OAuth endpoint requires provider consent instead of a connection login code
+PASS the OAuth browser binding is Secure, HttpOnly and SameSite Lax
+PASS OAuth pages cannot be cached and bind same-origin form submission
+PASS real identity exchange validates provider PKCE and requires explicit consent
+PASS OAuth consent preserves the registered callback, state and issuer
+PASS the real OAuth endpoint issues an identity-scoped MCP access token
+PASS OAuth access expires in eight hours and supplies a refresh token
+PASS OAuth token responses cannot be cached
+PASS the account relay credential cannot authenticate as an MCP access token
+PASS one owned source PTY and two distinct owned recipient processes are live
+PASS the authenticated directory advertises the exact selected identity
+PASS the authenticated directory advertises the exact selected identity
+PASS the authenticated directory advertises the exact selected identity
+Traceback (most recent call last):
+  File "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_session_groups.py", line 317, in main
+    report.update(harness.run())
+                  ~~~~~~~~~~~^^
+  File "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_session_groups.py", line 179, in run
+    selected = self.select(front, recipients)
+  File "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_session_groups.py", line 90, in select
+    self.open_picker(front, recipient["id"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_interactions.py", line 115, in open_picker
+    return self.wait_state(front, lambda item: item["view"] == "agents",
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           "the explicit native recipient picker")
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_input_history.py", line 151, in wait_state
+    raise AssertionError(description + "\n" + front.failure_detail())
+AssertionError: the explicit native recipient picker
+client pid=10 returncode=None stdout_bytes=0 pty_bytes=16778
+Owned terminal snapshot:
+  ssmcp  /  workspace                                                                                     conversation
+  Edit────────────────────────────────────────Local relayfixture · Max 1 GB · Reset 12-01 · 电脑控制：关闭（状态异常）
+❯ /message client:[redacted-token]
+ No verified native recipient matches this name · draft retained                     connected · http://127.0.0.1:44939
+Owned terminal tail:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Edit────────────────────────────────────────Local relayfixture · Max 1 GB · Reset 12-01 · 电脑控制：关闭（状态异常）  ❯ Message the agent                                                                                                                                                                                                                                                                                                                                                      Client v0.10.25 · server v0.10.25                                                   connected · http://127.0.0.1:44939 ❯ /message client:[redacted-token]                                       Enter send · Ctrl+J newline · Ctrl+C clear · Alt+C select/copy                      connected · http://127.0.0.1:44939  No verified native recipient matches this name · draft retained                     connected · http://127.0.0.1:44939 
+
+
+account-router.log:
+"
+ts_ms=1795233395443 level=info target=ssmcpd::mcp event="http_complete" request_id="3-67" method="POST" status="200" duration_ms="50"
+ts_ms=1795233395494 level=info target=ssmcpd::auth event="mcp_call" rpc_id="50" method="tools/call" github_subject_id="123" request_id="3-68"
+ts_ms=1795233395542 level=info target=ssmcpd::mcp event="http_complete" request_id="3-68" method="POST" status="200" duration_ms="48"
+ts_ms=1795233395593 level=info target=ssmcpd::auth event="mcp_call" rpc_id="51" method="tools/call" github_subject_id="123" request_id="3-69"
+ts_ms=1795233395640 level=info target=ssmcpd::mcp event="http_complete" request_id="3-69" method="POST" status="200" duration_ms="46"
+ts_ms=1795233395691 level=info target=ssmcpd::auth event="mcp_call" rpc_id="52" method="tools/call" github_subject_id="123" request_id="3-70"
+ts_ms=1795233395743 level=info target=ssmcpd::mcp event="http_complete" request_id="3-70" method="POST" status="200" duration_ms="52"
+ts_ms=1795233395794 level=info target=ssmcpd::auth event="mcp_call" rpc_id="53" method="tools/call" github_subject_id="123" request_id="3-71"
+ts_ms=1795233395842 level=info target=ssmcpd::mcp event="http_complete" request_id="3-71" method="POST" status="200" duration_ms="47"
+ts_ms=1795233395893 level=info target=ssmcpd::auth event="mcp_call" rpc_id="54" method="tools/call" github_subject_id="123" request_id="3-72"
+ts_ms=1795233395944 level=info target=ssmcpd::mcp event="http_complete" request_id="3-72" method="POST" status="200" duration_ms="51"
+ts_ms=1795233395995 level=info target=ssmcpd::auth event="mcp_call" rpc_id="55" method="tools/call" github_subject_id="123" request_id="3-73"
+ts_ms=1795233396045 level=info target=ssmcpd::mcp event="http_complete" request_id="3-73" method="POST" status="200" duration_ms="50"
+ts_ms=1795233396097 level=info target=ssmcpd::auth event="mcp_call" rpc_id="56" method="tools/call" github_subject_id="123" request_id="3-74"
+ts_ms=1795233396148 level=info target=ssmcpd::mcp event="http_complete" request_id="3-74" method="POST" status="200" duration_ms="51"
+ts_ms=1795233396199 level=info target=ssmcpd::auth event="mcp_call" rpc_id="57" method="tools/call" github_subject_id="123" request_id="3-75"
+ts_ms=1795233396247 level=info target=ssmcpd::mcp event="http_complete" request_id="3-75" method="POST" status="200" duration_ms="47"
+ts_ms=1795233396298 level=info target=ssmcpd::auth event="mcp_call" rpc_id="58" method="tools/call" github_subject_id="123" request_id="3-76"
+ts_ms=1795233396350 level=info target=ssmcpd::mcp event="http_complete" request_id="3-76" method="POST" status="200" duration_ms="52"
+ts_ms=1795233396401 level=info target=ssmcpd::auth event="mcp_call" rpc_id="59" method="tools/call" github_subject_id="123" request_id="3-77"
+ts_ms=1795233396450 level=info target=ssmcpd::mcp event="http_complete" request_id="3-77" method="POST" status="200" duration_ms="48"
+ts_ms=1795233396501 level=info target=ssmcpd::auth event="mcp_call" rpc_id="60" method="tools/call" github_subject_id="123" request_id="3-78"
+ts_ms=1795233396551 level=info target=ssmcpd::mcp event="http_complete" request_id="3-78" method="POST" status="200" duration_ms="50"
+ts_ms=1795233396602 level=info target=ssmcpd::auth event="mcp_call" rpc_id="61" method="tools/call" github_subject_id="123" request_id="3-79"
+ts_ms=1795233396652 level=info target=ssmcpd::mcp event="http_complete" request_id="3-79" method="POST" status="200" duration_ms="49"
+ts_ms=1795233396703 level=info target=ssmcpd::auth event="mcp_call" rpc_id="62" method="tools/call" github_subject_id="123" request_id="3-80"
+ts_ms=1795233396753 level=info target=ssmcpd::mcp event="http_complete" request_id="3-80" method="POST" status="200" duration_ms="49"
+ts_ms=1795233396804 level=info target=ssmcpd::auth event="mcp_call" rpc_id="63" method="tools/call" github_subject_id="123" request_id="3-81"
+ts_ms=1795233396857 level=info target=ssmcpd::mcp event="http_complete" request_id="3-81" method="POST" status="200" duration_ms="52"
+
+
+group-process-a.log:
+[PROG] https Connecting to http://127.0.0.1:44939 with an explicit account allow list
+[RES ] version Client v0.10.25 · server v0.10.25
+[PROG] shell Starting native tools; optional harnesses stay unloaded
+[OK  ] shell CONNECTED client=Group process A mode=shell cwd=/home/lightjunction/.local/state/work-…
+[RES ] shell Sign in with an allowed GitHub account. Ctrl-C disconnects this client.
+sh-5.3$ 
+
+group-process-b.log:
+[PROG] https Connecting to http://127.0.0.1:44939 with an explicit account allow list
+[RES ] version Client v0.10.25 · server v0.10.25
+[PROG] shell Starting native tools; optional harnesses stay unloaded
+[OK  ] shell CONNECTED client=Group process B mode=shell cwd=/home/lightjunction/.local/state/work-…
+[RES ] shell Sign in with an allowed GitHub account. Ctrl-C disconnects this client.
+sh-5.3$ 
+{"status": "failed", "checks": 21, "frames": 0, "elapsed_seconds": 9.768}

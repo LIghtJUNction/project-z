@@ -1,0 +1,1007 @@
+{
+  "schema": "project-z.ssmcp-connection-context-followup.v1",
+  "status": "implemented_validated_and_merge_observed",
+  "updated_at": "2026-11-20T21:05:12.687643+00:00",
+  "repository": "LIghtJUNction/ssmcp",
+  "implementation": {
+    "original_pull_request": 153,
+    "original_fixed_head": "8de1f81fc6d4cf0fb8c4a3d6342b5d3a59044e61",
+    "external_merge": "b0a07b047b1532688f06b9df8423e9bfc044c405",
+    "external_merge_tree": "37b33d06c09dcadb6315f98b9c06d54d040822b2",
+    "external_merge_was_not_performed_by_this_agent": true
+  },
+  "followup": {
+    "pull_request": 155,
+    "url": "https://github.com/LIghtJUNction/ssmcp/pull/155",
+    "draft": false,
+    "merged": true,
+    "branch": "fix/context-reload-target-20261121",
+    "candidate": "bbebfaef5eeefa182776ff03f21d510c1ea4fed3",
+    "tree": "1356b94a1e43b13185d280fec98451fdd5a6b010",
+    "parents": [
+      "5ca8fb78876c9270876b4240cda32c0e191ebe84"
+    ],
+    "integration_base": "31e4d0431a5da4dc5e298a0a9f06e8813b814e77",
+    "native_source": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+    "native_clean_readback": true,
+    "changed_paths": [
+      "README.md",
+      "docs/client-server.md",
+      "docs/connection-contexts.md",
+      "scripts/e2e_connection_context_reload.py",
+      "src/client.rs",
+      "src/client/reload.rs",
+      "src/client/connection_context.rs",
+      "src/client/ui.rs"
+    ],
+    "dependency_change_from_base": false,
+    "merge_performed_by_this_agent": false,
+    "merge_sha": "cf0ab581700918a37fcccbebb93de2e0cab02841",
+    "merge_tree": "bd2bcce33baffa69b82d69d9cff3abdb85baa0fb",
+    "merge_parent": "e767225827eec4955ab49bb80629cea8879ec10b",
+    "merged_at": "2026-11-20T21:02:15Z",
+    "merged_by_login": "LIghtJUNction",
+    "mergeable": null,
+    "mergeable_state": "unknown (PR already merged)",
+    "github_pr_base_sha_returned": "31e4d0431a5da4dc5e298a0a9f06e8813b814e77",
+    "actual_main_ref_observed": "cf0ab581700918a37fcccbebb93de2e0cab02841",
+    "main_observed_via": "GitHub GET git/ref/heads/main; separate from PR.base.sha",
+    "tested_tree_differs_from_merge_tree": true,
+    "concurrent_main_changes_are_not_claimed_as_tested": true
+  },
+  "reason": "Foreground reload now pins the resolved endpoint rather than reselecting a changed context; shared UI configuration accepts and validates the context store. Literal argument values, saved-session entry points, cwd, inherited environment and origin-scoped credentials are preserved.",
+  "validation": {
+    "prior": {
+      "candidate": "ab980a3a8c1007459410eea34c2b16e5ae1208c1",
+      "tree": "1dc7afce67e7fd2d4ddcf9081610f24d6d0bb6f4",
+      "receipt_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-gates/20261120T195106Z/receipt.json",
+      "receipt_bytes": 16629,
+      "receipt_sha256": "0ffe2c5729fecb5f2865598c03abbd3b1662ac5c3d40d2af2b8d3f06ff3e84d4",
+      "unit_passed": 75,
+      "unit_failed": 0,
+      "unit_ignored": 0,
+      "cli_executed": 0,
+      "cli_compile_failed": true,
+      "reason": "New CLI test fixture tried LowerHex formatting for the SHA256 digest Array; fixed in 8de1f81 without production changes.",
+      "clippy_executed": false
+    },
+    "followup": {
+      "status": "passed",
+      "candidate": "bbebfaef5eeefa182776ff03f21d510c1ea4fed3",
+      "tree": "1356b94a1e43b13185d280fec98451fdd5a6b010",
+      "unit_passed": 84,
+      "cli_passed": 17,
+      "test_failed": 0,
+      "test_ignored": 0,
+      "actual_process_cases_passed": 3,
+      "actual_process_cases_failed": 0,
+      "clippy": "passed",
+      "format": "passed",
+      "locked_metadata": "passed",
+      "runtime_scope": "Linux local OAuth/MCP process reload; HTTPS argv pinning covered by focused Rust tests. No real remote account or model.",
+      "actual_process_selections": [
+        "command_line",
+        "environment",
+        "current"
+      ],
+      "actual_process_elapsed_seconds": 19.142,
+      "process_regression_script_unchanged_since_reproduced_failure": true,
+      "process_regression_sources": {
+        "e2e_connection_context_reload.py": "968124104bda4128d2a0629a5f10b4bce23c0fa145f3e85f63cb26eff20ac667",
+        "e2e_local.py": "34f2146275e56e8e3ddd638140eaf8e5e293cc69cedf2c86e88bb9f070e6c3b3",
+        "e2e.py": "138eebca6b1fdd546c66096ae175fdbba257cdef174a1b4396720545f629f2fe",
+        "e2e_account_gateway.py": "54d94dd8768c4dbbf32ccf277061935163f98fccf0bed8946e27aa8d6bfd697a"
+      },
+      "first_execution": {
+        "cloud_path": "/workspace/scratch/3cc863eec631/ssmcp-context-bbeb-tests-before-interruption.json",
+        "bytes": 23231,
+        "sha256": "fc501f0320aeb3b6a93eee324af2f0730a6a4ea4d8dde7c30163a7e1b779668e",
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/receipt.json"
+      },
+      "first_execution_job": "89e6734e0887cd4fff5277f37e7545e7-4c",
+      "first_execution_original_status_preserved": "in_progress",
+      "first_execution_original_exit_code_unavailable": true,
+      "interruption_observation": {
+        "cloud_path": "/workspace/scratch/3cc863eec631/ssmcp-context-bbeb-interruption-observation.json",
+        "bytes": 2138,
+        "sha256": "41de55d452bd870468b7eb3ff0c2d7025ad6614ae391977e1bc34ab1ae116a6e",
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/interruption-observation.json"
+      },
+      "continuation_receipt": {
+        "cloud_path": "/workspace/scratch/3cc863eec631/ssmcp-context-bbeb-final-validation.json",
+        "bytes": 17312,
+        "sha256": "d3808175dee4f5f26a43aa5228fcf2b14b7af722523647c5de9ebdca7d11d1d2",
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/receipt.json"
+      },
+      "continuation_job": "26c4545eae1eab8d27485f4a48077d3c-235",
+      "continuation_exit_code": 0,
+      "continuation_only_completed_artifact_and_process_cases": true,
+      "inherited_same_source_validation": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/receipt.json",
+        "bytes": 23231,
+        "sha256": "fc501f0320aeb3b6a93eee324af2f0730a6a4ea4d8dde7c30163a7e1b779668e",
+        "candidate": "bbebfaef5eeefa182776ff03f21d510c1ea4fed3",
+        "tree": "1356b94a1e43b13185d280fec98451fdd5a6b010",
+        "completed_commands": [
+          "head",
+          "tree",
+          "clean-source",
+          "locked-metadata",
+          "fmt",
+          "clippy",
+          "client-connection_context-tests",
+          "client-tests",
+          "client-account-tests",
+          "client-config-tests",
+          "client-trust-tests",
+          "session-tests",
+          "client-reload-tests",
+          "client-named_entry_tests-username_destination_uses_https_without_ssh_options",
+          "client-ui-tests-connection_contexts_keep_their_validation_in_ui_configuration",
+          "public-cli-regressions"
+        ],
+        "unit_passed": 84,
+        "cli_passed": 17,
+        "test_failed": 0,
+        "test_ignored": 0,
+        "raw_logs_rehashed": true,
+        "no_completed_tests_reexecuted": true
+      },
+      "actual_process_report": {
+        "cloud_path": "/workspace/scratch/3cc863eec631/ssmcp-context-bbeb-actual-reload.json",
+        "bytes": 7635,
+        "sha256": "bc0949d0b6bae2af68d1405008e11aab48f58eb2dc2bdbbba63b139d3dcb7a70",
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/actual-local-context-reload.json"
+      },
+      "actual_process_log": {
+        "cloud_path": "/workspace/scratch/3cc863eec631/ssmcp-context-bbeb-actual-reload.log",
+        "bytes": 6197,
+        "sha256": "aefddb3dc72adb190026e039667131b86a4f47225949f066844b64d25fccec9e",
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/05-actual-local-context-reload.log"
+      },
+      "postflight": {
+        "cloud_path": "/workspace/scratch/3cc863eec631/ssmcp-context-bbeb-postflight.json",
+        "bytes": 1051,
+        "sha256": "c966a7855dd68958bd3adfaff66db5188ab627b6273deb44b16278b3b3165400",
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/postflight.json"
+      },
+      "binary": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/ssmcp",
+        "bytes": 215941144,
+        "sha256": "9daa9e1af8152f2cfed004c7e484b3c5cdf2d5a7dde3866ed2cc0506d49f1657",
+        "source_commit": "bbebfaef5eeefa182776ff03f21d510c1ea4fed3",
+        "source_tree": "1356b94a1e43b13185d280fec98451fdd5a6b010",
+        "compiler_artifact": {
+          "reason": "compiler-artifact",
+          "package_id": "path+file:///home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a#ssmcp@0.10.21",
+          "manifest_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a/Cargo.toml",
+          "target": {
+            "kind": [
+              "bin"
+            ],
+            "crate_types": [
+              "bin"
+            ],
+            "name": "ssmcp",
+            "src_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a/src/bin/ssmcp.rs",
+            "edition": "2024",
+            "doc": true,
+            "doctest": false,
+            "test": true
+          },
+          "profile": {
+            "opt_level": "0",
+            "debuginfo": 1,
+            "debug_assertions": true,
+            "overflow_checks": true,
+            "test": false
+          },
+          "features": [],
+          "filenames": [
+            "/var/tmp/project-z-cargo-target/debug/ssmcp"
+          ],
+          "executable": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+          "fresh": false
+        }
+      },
+      "cargo_lock": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a/Cargo.lock",
+        "bytes": 66476,
+        "sha256": "082cdef2ddb1a4acadf87bd927cb875c802808c20c303721829661c917a03aec"
+      },
+      "git_package_count": 12,
+      "git_repository_count": 11,
+      "git_packages": [
+        {
+          "name": "z64",
+          "version": "0.1.2",
+          "id": "git+https://github.com/LIghtJUNction/z64.git#z64@0.1.2",
+          "source": "git+https://github.com/LIghtJUNction/z64.git#7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd"
+        },
+        {
+          "name": "zcall",
+          "version": "0.4.0",
+          "id": "git+https://github.com/LIghtJUNction/zcall.git#zcall@0.4.0",
+          "source": "git+https://github.com/LIghtJUNction/zcall.git#564ede15db66530a6dbb78e8b1f4a85998b6f0d8"
+        },
+        {
+          "name": "zclap",
+          "version": "0.1.4",
+          "id": "git+https://github.com/LIghtJUNction/zclap.git#zclap@0.1.4",
+          "source": "git+https://github.com/LIghtJUNction/zclap.git#4d87f3ae3743e81509d5ac5500909955667c860f"
+        },
+        {
+          "name": "zconv",
+          "version": "0.4.0",
+          "id": "git+https://github.com/LIghtJUNction/zconv.git#zconv@0.4.0",
+          "source": "git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1"
+        },
+        {
+          "name": "zguard",
+          "version": "0.1.0",
+          "id": "git+https://github.com/LIghtJUNction/zguard.git#zguard@0.1.0",
+          "source": "git+https://github.com/LIghtJUNction/zguard.git#6772b932a65e18f64e13591dee6edb2f6b099406"
+        },
+        {
+          "name": "zharness",
+          "version": "0.6.0",
+          "id": "git+https://github.com/LIghtJUNction/zharness.git#zharness@0.6.0",
+          "source": "git+https://github.com/LIghtJUNction/zharness.git#cb63a9a0aa163214c6062664cd62fefb357be5a8"
+        },
+        {
+          "name": "zmcpio",
+          "version": "0.4.0",
+          "id": "git+https://github.com/LIghtJUNction/zmcpio.git#zmcpio@0.4.0",
+          "source": "git+https://github.com/LIghtJUNction/zmcpio.git#84fc4978a248c2a3e2dd110f4f26fa52dd8b6890"
+        },
+        {
+          "name": "zplugin",
+          "version": "0.3.1",
+          "id": "git+https://github.com/LIghtJUNction/zplugin.git#zplugin@0.3.1",
+          "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+        },
+        {
+          "name": "zplugin-macros",
+          "version": "0.3.1",
+          "id": "git+https://github.com/LIghtJUNction/zplugin.git#zplugin-macros@0.3.1",
+          "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+        },
+        {
+          "name": "zsys",
+          "version": "0.1.1",
+          "id": "git+https://github.com/LIghtJUNction/zsys.git#zsys@0.1.1",
+          "source": "git+https://github.com/LIghtJUNction/zsys.git#808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+        },
+        {
+          "name": "ztuio",
+          "version": "0.1.0",
+          "id": "git+https://github.com/LIghtJUNction/ztuio.git#ztuio@0.1.0",
+          "source": "git+https://github.com/LIghtJUNction/ztuio.git#9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e"
+        },
+        {
+          "name": "zuse-computer",
+          "version": "0.2.2",
+          "id": "git+https://github.com/LIghtJUNction/zuse.git#zuse-computer@0.2.2",
+          "source": "git+https://github.com/LIghtJUNction/zuse.git#a1bb8fd2cbce0a9d85134999883c578358065242"
+        }
+      ],
+      "target_directory": "/var/tmp/project-z-cargo-target",
+      "initial_driver": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gate-r3.py",
+        "bytes": 8418,
+        "sha256": "15557b507cade45f17485e1f102b8ea2b1904432266d4d3ffd91ef39de35c8bb"
+      },
+      "continuation_driver": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gate-resume.py",
+        "bytes": 9077,
+        "sha256": "0f42017895ff0a1811c0b0e2ee4bffd16e26f70b7c3585be0a5644a7ba50832b"
+      },
+      "first_execution_actual_start": {
+        "cloud_path": "/workspace/scratch/3cc863eec631/ssmcp-context-reload-exec-start-bbebfaef.json",
+        "bytes": 7749,
+        "sha256": "16a56be3d6e6916f570e1812e57f081c5aec7d33a4941dee396ff9b942962222",
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-exec-start-bbebfaef.json"
+      },
+      "continuation_actual_start": {
+        "cloud_path": "/workspace/scratch/3cc863eec631/ssmcp-context-reload-exec-start-bbebfaef-resume.json",
+        "bytes": 7987,
+        "sha256": "1b8f26c024065bec05b169476f83e9e7317eee610d7f5371dc3a1b55977de013",
+        "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-exec-start-bbebfaef-resume.json"
+      },
+      "outer_lock_before": {
+        "observed_at": "2026-11-20T20:59:43.157639+00:00",
+        "runner_pid": 92611,
+        "parent_pid": 81443,
+        "parent_argv": [
+          "/usr/bin/flock",
+          "-w",
+          "480",
+          "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+          "python3",
+          "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gate-resume.py",
+          "bbebfaef5eeefa182776ff03f21d510c1ea4fed3",
+          "1356b94a1e43b13185d280fec98451fdd5a6b010"
+        ],
+        "runner_cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/pr-core-context-reload-bbebfaef-resume.scope\n",
+        "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "inode": 63537699,
+        "proc_locks_rows": [
+          "401: FLOCK  ADVISORY  WRITE 81443 00:20:63537699 0 EOF"
+        ],
+        "independent_nonblocking_probe": "blocked"
+      },
+      "outer_lock_at_artifact_copy": {
+        "observed_at": "2026-11-20T21:00:07.750366+00:00",
+        "runner_pid": 92611,
+        "parent_pid": 81443,
+        "parent_argv": [
+          "/usr/bin/flock",
+          "-w",
+          "480",
+          "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+          "python3",
+          "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gate-resume.py",
+          "bbebfaef5eeefa182776ff03f21d510c1ea4fed3",
+          "1356b94a1e43b13185d280fec98451fdd5a6b010"
+        ],
+        "runner_cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/pr-core-context-reload-bbebfaef-resume.scope\n",
+        "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "inode": 63537699,
+        "proc_locks_rows": [
+          "1367: FLOCK  ADVISORY  WRITE 81443 00:20:63537699 0 EOF"
+        ],
+        "independent_nonblocking_probe": "blocked"
+      },
+      "original_runner_absent": true,
+      "original_lock_owner_released": true,
+      "scope_postflight": "ActiveState=inactive\nSubState=dead\nResult=success\nControlGroup=\nMemoryPeak=[not set]\n",
+      "completed_first_commands": [
+        {
+          "name": "head",
+          "argv": [
+            "git",
+            "rev-parse",
+            "HEAD"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/00-head.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.004,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/00-head.log",
+          "bytes": 41,
+          "sha256": "e49ba50474f690d77930c0569d6ae6828651c770a9d7bb9f1c307aac304fe915"
+        },
+        {
+          "name": "tree",
+          "argv": [
+            "git",
+            "rev-parse",
+            "HEAD^{tree}"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/01-tree.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.004,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/01-tree.log",
+          "bytes": 41,
+          "sha256": "be53bbc8ffdba49937f1d85dc4e1c7dc4f941134118fef03aec424d8df494419"
+        },
+        {
+          "name": "clean-source",
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/02-clean-source.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.008,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/02-clean-source.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "locked-metadata",
+          "argv": [
+            "cargo",
+            "metadata",
+            "--locked",
+            "--format-version",
+            "1"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/03-locked-metadata.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.365,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/03-locked-metadata.log",
+          "bytes": 1368999,
+          "sha256": "89ebd79de9b28ca5de9b1d3646e1bf2dc282a3f5466317bb845ae028456dcf46"
+        },
+        {
+          "name": "fmt",
+          "argv": [
+            "cargo",
+            "fmt",
+            "--all",
+            "--",
+            "--check"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/04-fmt.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 2.219,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/04-fmt.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "clippy",
+          "argv": [
+            "cargo",
+            "clippy",
+            "--locked",
+            "--lib",
+            "--bins",
+            "--test",
+            "connection_context",
+            "--test",
+            "client_server_config",
+            "--test",
+            "allow_account",
+            "--",
+            "-D",
+            "warnings"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/05-clippy.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 5.527,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/05-clippy.log",
+          "bytes": 538,
+          "sha256": "143eb5e969eebc3a991d7a772c8b519573d69c39045a9e10210a3407210d10bb"
+        },
+        {
+          "name": "client-connection_context-tests",
+          "argv": [
+            "cargo",
+            "test",
+            "--locked",
+            "--lib",
+            "client::connection_context::tests::",
+            "--",
+            "--test-threads=1"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/06-client-connection_context-tests.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 108.894,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/06-client-connection_context-tests.log",
+          "bytes": 1357,
+          "sha256": "3df83e3dc302614229aeb7840a2abe7380a1c88e65c7d50cee3fe6ed724e5795",
+          "test_results": [
+            {
+              "status": "ok",
+              "passed": 8,
+              "failed": 0,
+              "ignored": 0
+            }
+          ]
+        },
+        {
+          "name": "client-tests",
+          "argv": [
+            "cargo",
+            "test",
+            "--locked",
+            "--lib",
+            "client::tests::",
+            "--",
+            "--test-threads=1"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/07-client-tests.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.317,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/07-client-tests.log",
+          "bytes": 2998,
+          "sha256": "dbc4dbab6c60af52a54f2f79aa8404b2552e9be52610cf6af1226e487fc9ac06",
+          "test_results": [
+            {
+              "status": "ok",
+              "passed": 30,
+              "failed": 0,
+              "ignored": 0
+            }
+          ]
+        },
+        {
+          "name": "client-account-tests",
+          "argv": [
+            "cargo",
+            "test",
+            "--locked",
+            "--lib",
+            "client::account::tests::",
+            "--",
+            "--test-threads=1"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/08-client-account-tests.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.165,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/08-client-account-tests.log",
+          "bytes": 1739,
+          "sha256": "7ce92c8ac55a86b66618099097d470b59a47737d069de2cf49894e34aae016fe",
+          "test_results": [
+            {
+              "status": "ok",
+              "passed": 16,
+              "failed": 0,
+              "ignored": 0
+            }
+          ]
+        },
+        {
+          "name": "client-config-tests",
+          "argv": [
+            "cargo",
+            "test",
+            "--locked",
+            "--lib",
+            "client::config::tests::",
+            "--",
+            "--test-threads=1"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/09-client-config-tests.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.114,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/09-client-config-tests.log",
+          "bytes": 802,
+          "sha256": "767237c2c382a661bc05e44aff9e0e2867aa78afdd2eaacf393050ec16bbe214",
+          "test_results": [
+            {
+              "status": "ok",
+              "passed": 5,
+              "failed": 0,
+              "ignored": 0
+            }
+          ]
+        },
+        {
+          "name": "client-trust-tests",
+          "argv": [
+            "cargo",
+            "test",
+            "--locked",
+            "--lib",
+            "client::trust::tests::",
+            "--",
+            "--test-threads=1"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/10-client-trust-tests.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.164,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/10-client-trust-tests.log",
+          "bytes": 1126,
+          "sha256": "032bbd616d56e8ac23c27885dc43bedb44a1900e9fa8478d422a1e133948cd0c",
+          "test_results": [
+            {
+              "status": "ok",
+              "passed": 9,
+              "failed": 0,
+              "ignored": 0
+            }
+          ]
+        },
+        {
+          "name": "session-tests",
+          "argv": [
+            "cargo",
+            "test",
+            "--locked",
+            "--lib",
+            "session::tests::",
+            "--",
+            "--test-threads=1"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/11-session-tests.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.114,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/11-session-tests.log",
+          "bytes": 897,
+          "sha256": "abe5badce0e61db8a9577395fc51d509a3d7c8c786428110d916000a13a443bb",
+          "test_results": [
+            {
+              "status": "ok",
+              "passed": 7,
+              "failed": 0,
+              "ignored": 0
+            }
+          ]
+        },
+        {
+          "name": "client-reload-tests",
+          "argv": [
+            "cargo",
+            "test",
+            "--locked",
+            "--lib",
+            "client::reload::tests::",
+            "--",
+            "--test-threads=1"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/12-client-reload-tests.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.115,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/12-client-reload-tests.log",
+          "bytes": 996,
+          "sha256": "8c1bc844ae97c87e9ddd047e897f0467b4dc10935f539fd77181b08e1a51ee86",
+          "test_results": [
+            {
+              "status": "ok",
+              "passed": 7,
+              "failed": 0,
+              "ignored": 0
+            }
+          ]
+        },
+        {
+          "name": "client-named_entry_tests-username_destination_uses_https_without_ssh_options",
+          "argv": [
+            "cargo",
+            "test",
+            "--locked",
+            "--lib",
+            "client::named_entry_tests::username_destination_uses_https_without_ssh_options",
+            "--",
+            "--test-threads=1"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/13-client-named_entry_tests-username_destination_uses_https_without_ssh_options.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.114,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/13-client-named_entry_tests-username_destination_uses_https_without_ssh_options.log",
+          "bytes": 409,
+          "sha256": "c5f055515680f69ef9f01805bad0c9a56f076fd270b6c8bb46079dc4aa8ecc2d",
+          "test_results": [
+            {
+              "status": "ok",
+              "passed": 1,
+              "failed": 0,
+              "ignored": 0
+            }
+          ]
+        },
+        {
+          "name": "client-ui-tests-connection_contexts_keep_their_validation_in_ui_configuration",
+          "argv": [
+            "cargo",
+            "test",
+            "--locked",
+            "--lib",
+            "client::ui::tests::connection_contexts_keep_their_validation_in_ui_configuration",
+            "--",
+            "--test-threads=1"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/14-client-ui-tests-connection_contexts_keep_their_validation_in_ui_configuration.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.115,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/14-client-ui-tests-connection_contexts_keep_their_validation_in_ui_configuration.log",
+          "bytes": 411,
+          "sha256": "d757f4b52d6bc5f4f1870be1ea047a539b06d66dac5c194e9ae1b91d0b55cd40",
+          "test_results": [
+            {
+              "status": "ok",
+              "passed": 1,
+              "failed": 0,
+              "ignored": 0
+            }
+          ]
+        },
+        {
+          "name": "public-cli-regressions",
+          "argv": [
+            "cargo",
+            "test",
+            "--locked",
+            "--test",
+            "connection_context",
+            "--test",
+            "client_server_config",
+            "--test",
+            "allow_account",
+            "--",
+            "--test-threads=1"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/15-public-cli-regressions.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 27.569,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205207Z/15-public-cli-regressions.log",
+          "bytes": 2350,
+          "sha256": "5b6de69b2351e0421456e2b3bffe903ec4d69f1f9d84172cc14d99b9e2c79e33",
+          "test_results": [
+            {
+              "status": "ok",
+              "passed": 3,
+              "failed": 0,
+              "ignored": 0
+            },
+            {
+              "status": "ok",
+              "passed": 5,
+              "failed": 0,
+              "ignored": 0
+            },
+            {
+              "status": "ok",
+              "passed": 9,
+              "failed": 0,
+              "ignored": 0
+            }
+          ]
+        }
+      ],
+      "continuation_commands": [
+        {
+          "name": "head",
+          "argv": [
+            "git",
+            "rev-parse",
+            "HEAD"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/00-head.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.004,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/00-head.log",
+          "bytes": 41,
+          "sha256": "e49ba50474f690d77930c0569d6ae6828651c770a9d7bb9f1c307aac304fe915"
+        },
+        {
+          "name": "tree",
+          "argv": [
+            "git",
+            "rev-parse",
+            "HEAD^{tree}"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/01-tree.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.004,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/01-tree.log",
+          "bytes": 41,
+          "sha256": "be53bbc8ffdba49937f1d85dc4e1c7dc4f941134118fef03aec424d8df494419"
+        },
+        {
+          "name": "clean-source",
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/02-clean-source.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.008,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/02-clean-source.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "locked-metadata",
+          "argv": [
+            "cargo",
+            "metadata",
+            "--locked",
+            "--format-version",
+            "1"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/03-locked-metadata.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.415,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/03-locked-metadata.log",
+          "bytes": 1368999,
+          "sha256": "89ebd79de9b28ca5de9b1d3646e1bf2dc282a3f5466317bb845ae028456dcf46"
+        },
+        {
+          "name": "cli-artifact",
+          "argv": [
+            "cargo",
+            "build",
+            "--locked",
+            "--bin",
+            "ssmcp",
+            "--message-format=json"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/04-cli-artifact.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 24.116,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/04-cli-artifact.log",
+          "bytes": 187276,
+          "sha256": "1a1abbd085684294b97572fb6bbd93ab230e47df1cf02bb49cecba7c43a4bfac"
+        },
+        {
+          "name": "actual-local-context-reload",
+          "argv": [
+            "python3",
+            "scripts/e2e_connection_context_reload.py",
+            "--bin-dir",
+            "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation",
+            "--report",
+            "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/actual-local-context-reload.json"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/05-actual-local-context-reload.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 19.359,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/05-actual-local-context-reload.log",
+          "bytes": 6197,
+          "sha256": "aefddb3dc72adb190026e039667131b86a4f47225949f066844b64d25fccec9e"
+        },
+        {
+          "name": "final-clean-source",
+          "argv": [
+            "git",
+            "status",
+            "--porcelain"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/06-final-clean-source.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.008,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/06-final-clean-source.log",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "name": "final-head",
+          "argv": [
+            "git",
+            "rev-parse",
+            "HEAD"
+          ],
+          "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-b0a",
+          "log": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/07-final-head.log",
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 0.004,
+          "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T205943Z-continuation/07-final-head.log",
+          "bytes": 41,
+          "sha256": "e49ba50474f690d77930c0569d6ae6828651c770a9d7bb9f1c307aac304fe915"
+        }
+      ]
+    },
+    "old_results_not_relabelled_as_new_execution": true,
+    "full_32_or_p1_rerun": false,
+    "services_or_deployment_changed": false,
+    "aa1_attempt": {
+      "candidate": "aa1fa28b45c71bd00f4916e72d220be2c2ecf0fe",
+      "tree": "787543ebed5d71aa160cfc3e8613c502f40c486c",
+      "receipt_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T201954Z/receipt.json",
+      "receipt_bytes": 20911,
+      "receipt_sha256": "27269a61c74e292c7fda8cc57cb5ae78b05c222dbc5f6d5fa663dd40de965cfb",
+      "unit_passed": 83,
+      "cli_passed": 17,
+      "failed_tests": 0,
+      "ignored_tests": 0,
+      "clippy": "failed: ptr_arg at src/client/connection_context.rs:175",
+      "immutable_binary_built": false,
+      "actual_reload_executed": false,
+      "one_line_fix": "5ca8fb78876c9270876b4240cda32c0e191ebe84",
+      "execution_start": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-exec-start-aa1fa28b.json",
+        "bytes": 1859,
+        "sha256": "915cfc0c1fa7c6db0d6c124dc970b1469933129be2264a9cb2a08c55aafd9907"
+      }
+    },
+    "preflight_20261120T202958Z": {
+      "scope_not_started": true,
+      "lock_pid": 3808557,
+      "lock_command": [
+        "flock",
+        "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "python3",
+        "/var/tmp/ssmcp-controls-20261121/main-integration-g04btbdn/build-controls-main.py"
+      ],
+      "memory_available_kib": 5793560,
+      "clean_source": true
+    },
+    "five_ca_attempt": {
+      "candidate": "5ca8fb78876c9270876b4240cda32c0e191ebe84",
+      "tree": "8548187096d1d785b4030f55ef230d81c86497f7",
+      "receipt_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T203240Z/receipt.json",
+      "receipt_bytes": 26391,
+      "receipt_sha256": "6d2981c3d266f446ab60112bb0ce723af1db4e8519f6ef59604aa222954a005f",
+      "clippy": "passed",
+      "unit_passed": 83,
+      "cli_passed": 17,
+      "test_failed": 0,
+      "test_ignored": 0,
+      "binary": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-gates/20261120T203240Z/ssmcp",
+        "bytes": 215931224,
+        "sha256": "a67e7ae9fa0f6c0ad74986162a5454d885ac01890c2ded0bba6bd206944703a5"
+      },
+      "actual_process": {
+        "status": "failed_before_reload",
+        "cases_passed": 0,
+        "reason": "Strict shared UI configuration Document omitted contexts; actual client startup rejected the valid table.",
+        "fixed_by": "bbebfaef5eeefa182776ff03f21d510c1ea4fed3",
+        "report_sha256": "c850dfe0518a77de36700b02f68b1fe4b5e0bdb1ff7bfee6659392ae63d46d24",
+        "log_sha256": "8234e71bfa6133c5dda634c02e91502eea3336c492f65708c99745c680a56561"
+      },
+      "execution_start": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-reload-exec-start-5ca8fb78.json",
+        "bytes": 7755,
+        "sha256": "12576dc756e368ed4b918d27f2945d9e23f63f8957d6d8c66c4d93cf2ce584be"
+      }
+    },
+    "results_are_per_fixed_candidate_not_unique_test_totals": true,
+    "test_counts_are_not_summed_across_repeated_attempts": true
+  },
+  "reviews": {
+    "personal_static_review": {
+      "production": "No blocker identified in arity-aware endpoint pinning, saved-runner passthrough or cwd/environment preservation.",
+      "process_fixture": "No blocker identified in private fixture isolation, actual reload route or owned-process cleanup.",
+      "runtime_execution": false
+    },
+    "root_documentation": {
+      "paths": [
+        "README.md",
+        "docs/client-server.md",
+        "docs/connection-contexts.md"
+      ],
+      "prose_unchanged": true,
+      "extra_blank_eof_lines_removed": true
+    }
+  },
+  "integration_owner": "Coordinated native SSMCP source owner; merge was observed after passing continuation. This agent updated the PR evidence and did not call merge.",
+  "related_authenticated_user_request": {
+    "message_id": "1bc30821c16799967ec878297b7691b0",
+    "revision": 2,
+    "text": "\u7ee7\u7eed\u8fed\u4ee3ztty\u9879\u76ee",
+    "forwarded_to_root": true,
+    "native_evidence": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-context-new-ztty-request-1bc308.json",
+    "sha256": "3aeaef9eecf6ff6a352e238411315299d42092e2ac715a77725a3205e56508bb"
+  },
+  "scope_boundaries": {
+    "full_ssmcp_32_or_p1_run": false,
+    "new_input_agent_or_unix_socket_features_modified": false,
+    "release_tags_changed": false,
+    "production_deployment_changed": false,
+    "generated_binaries_added_to_git": false,
+    "newer_main_tree_claimed_as_full_tested_candidate": false
+  }
+}

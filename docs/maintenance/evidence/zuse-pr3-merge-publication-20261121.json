@@ -1,0 +1,37 @@
+{
+  "schema": "project-z.zuse-pr3-merge-publication.v1",
+  "observed_at_utc": "2026-11-21 00:29:41 UTC",
+  "repository": "LIghtJUNction/zuse",
+  "pr": 3,
+  "status": "merged_into_pr2_feature_branch_exact_tested_tree",
+  "url": "https://github.com/LIghtJUNction/zuse/pull/3",
+  "tested_head": "35664746549c482c99082e6180419b2c0f5ff532",
+  "tested_tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+  "actual_merge": "83663988ebf736ec8de05d6372eef485c3d9ebac",
+  "actual_parents": [
+    "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+    "35664746549c482c99082e6180419b2c0f5ff532"
+  ],
+  "merged_at": "2026-11-21T00:29:22Z",
+  "pr2": {
+    "url": "https://github.com/LIghtJUNction/zuse/pull/2",
+    "head": "83663988ebf736ec8de05d6372eef485c3d9ebac",
+    "base": "a1bb8fd2cbce0a9d85134999883c578358065242",
+    "draft": true
+  },
+  "main": {
+    "sha": "a1bb8fd2cbce0a9d85134999883c578358065242",
+    "unchanged": true
+  },
+  "evidence": {
+    "portable": "zuse-356-portable-handoff.json",
+    "private_native": "zuse-356-native-handoff.json",
+    "independent_native": "zuse-356-native-independent-review.json",
+    "independent_native_sha256": "70c844a688d0b838420c4e50e6172216e0488c6a2274944da480375dff20995e"
+  },
+  "boundaries": [
+    "This merge only updates the PR2 feature branch; no main merge, downstream dependency refresh, build or gate was run by the merge operation.",
+    "Portable289 entries include the same two MPX functions, whose real environment execution was separately verified; do not claim291 unique tests.",
+    "Old PR2 reported runtime evidence is not reconstructed or replaced by these fixed356 results."
+  ]
+}

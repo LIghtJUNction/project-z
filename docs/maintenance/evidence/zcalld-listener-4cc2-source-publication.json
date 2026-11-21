@@ -1,0 +1,26 @@
+{
+  "schema": "project-z.zcalld4cc-source-drive-publication.v1",
+  "candidate": "4cc2fd1cfb6eb49dacc022af6c15cc0f7825e409",
+  "tree": "262cb876bcf4f83ef2c66912863629f0401db89d",
+  "scope": "Source-only integration evidence; no new-tree compilation or runtime pass claimed.",
+  "files": [
+    {
+      "kind": "json",
+      "file_id": "1KTz9mCTzxU8CPVJeK034cbbn21Mq0YZk",
+      "url": "https://drive.google.com/file/d/1KTz9mCTzxU8CPVJeK034cbbn21Mq0YZk",
+      "bytes": 9585,
+      "sha256": "64e9d75f34e47d8c78d43420ee853a1bdeba21d974d110adb7c7da4b755a941c",
+      "downloaded_and_byte_equal": true,
+      "readback": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-listener-4cc2-source-handoff-drive-readback.json"
+    },
+    {
+      "kind": "md",
+      "file_id": "1qG43AGWjXmb96nSY7iXODvUQmdhIbB-7",
+      "url": "https://drive.google.com/file/d/1qG43AGWjXmb96nSY7iXODvUQmdhIbB-7",
+      "bytes": 2701,
+      "sha256": "a78180c7d1c89dc4dbf7c2869eaa7e0ec435678bfb914465e19791ae7b1116d8",
+      "downloaded_and_byte_equal": true,
+      "readback": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-listener-4cc2-source-handoff-drive-readback.md"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "schema": "project-z.git-only-consumers.github-reference-observation.v1",
+  "snapshot_utc": "2026-11-21T07:30:11Z",
+  "method": "Read-only GitHub connector responses; selected public identity fields, no source/refs mutation or CI trigger.",
+  "observations": [
+    {
+      "key": "project_pr7",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/project-z/pulls/7",
+      "observed_at_utc": "2026-11-21T07:30:11Z",
+      "kind": "pull_request",
+      "number": 7,
+      "url": "https://github.com/LIghtJUNction/project-z/pull/7",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "merged_at": null,
+      "merge_commit_sha": "d6e0619798a35137c3e1edfa8605ea0d4831fab5",
+      "head": "892b9d1eecbc8a7ac2bee724749e9bf8f07322c0",
+      "head_ref": "coord/git-source-policy-20261120",
+      "base": "be64e5ab88a8d72fe81956f6ba64a363e2299fde",
+      "base_ref": "main",
+      "mergeable": true,
+      "mergeable_state": "clean"
+    },
+    {
+      "key": "project_commit892",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/project-z/git/commits/892b9d1eecbc8a7ac2bee724749e9bf8f07322c0",
+      "observed_at_utc": "2026-11-21T07:30:11Z",
+      "kind": "git_commit",
+      "sha": "892b9d1eecbc8a7ac2bee724749e9bf8f07322c0",
+      "tree": "03d67141b18a4b85b87343736bc0b247b69c611c",
+      "parents": [
+        "c9de7a60351b277a4903c9f40781cbae69cd6e5c"
+      ],
+      "message": "fix(policy): require Git-only internal development dependencies [skip ci]\n\nReject version selectors on internal cross-repository declarations while preserving same-repository and external rules. Keep locked source identity and the existing external release projection.\n\nValidation: 24 selected Python methods passed, no skips; the new policy regressions failed against the previous implementation. Cargo, product and aggregate graph gates remain pending."
+    },
+    {
+      "key": "ztype_pr4",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/ztype/pulls/4",
+      "observed_at_utc": "2026-11-21T07:30:11Z",
+      "kind": "pull_request",
+      "number": 4,
+      "url": "https://github.com/LIghtJUNction/ztype/pull/4",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "merged_at": null,
+      "merge_commit_sha": "f48de6a2407ac651b973eb6274d050d3bc3fa24b",
+      "head": "bd26b5bea1a45aa3a0f2b67b85b507472b4fd890",
+      "head_ref": "chore/rolling-git-zuse-030-20261121",
+      "base": "e3e8c1014e29653da587cc993076cb02e469b456",
+      "base_ref": "main",
+      "mergeable": true,
+      "mergeable_state": "clean"
+    },
+    {
+      "key": "zuse_main",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/git/ref/heads/main",
+      "observed_at_utc": "2026-11-21T07:30:11Z",
+      "kind": "git_ref",
+      "ref": "refs/heads/main",
+      "object": {
+        "sha": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+        "type": "commit",
+        "url": "https://api.github.com/repos/LIghtJUNction/zuse/git/commits/830fcefd2277cbba46536c67d206f29058ba7fb3"
+      }
+    },
+    {
+      "key": "ssmcp_pr164",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/ssmcp/pulls/164",
+      "observed_at_utc": "2026-11-21T07:30:11Z",
+      "kind": "pull_request",
+      "number": 164,
+      "url": "https://github.com/LIghtJUNction/ssmcp/pull/164",
+      "state": "closed",
+      "draft": false,
+      "merged": true,
+      "merged_at": "2026-11-21T06:41:36Z",
+      "merge_commit_sha": "3f678a7fca7ea64d220454f1723189e43d3b5546",
+      "head": "cb3d51c90e82a2d116c77782f9da146b98744af2",
+      "head_ref": "work/openai-caller-meta-20261121",
+      "base": "ea2bfcae6aea9672d8955f832a8ec5bd1e0749f4",
+      "base_ref": "main",
+      "mergeable": null,
+      "mergeable_state": "unknown"
+    },
+    {
+      "key": "ssmcp_C2",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/commits/cb3d51c90e82a2d116c77782f9da146b98744af2",
+      "observed_at_utc": "2026-11-21T07:30:11Z",
+      "kind": "git_commit",
+      "sha": "cb3d51c90e82a2d116c77782f9da146b98744af2",
+      "tree": "51a73774a9880fcb2b62be3c3d95e719e349c761",
+      "parents": [
+        "cb67a9aacdb16dbd612a877208c1db6221860483"
+      ],
+      "message": "feat: inspect OpenAI caller metadata and open explicit ChatGPT links [skip ci]"
+    },
+    {
+      "key": "ssmcp_P2",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/commits/3f678a7fca7ea64d220454f1723189e43d3b5546",
+      "observed_at_utc": "2026-11-21T07:30:11Z",
+      "kind": "git_commit",
+      "sha": "3f678a7fca7ea64d220454f1723189e43d3b5546",
+      "tree": "51a73774a9880fcb2b62be3c3d95e719e349c761",
+      "parents": [
+        "ea2bfcae6aea9672d8955f832a8ec5bd1e0749f4"
+      ],
+      "message": "feat: add per-conversation OpenAI context and ChatGPT shortcuts (#164)\n\n* feat: capture negotiated MCP caller context in its saved conversation [skip ci]\n\n* feat: inspect OpenAI caller metadata and open explicit ChatGPT links [skip ci]\n\n---------\n\nCo-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+    },
+    {
+      "key": "ssmcp_source_ref",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/ref/heads/work/local-startup-zuse-20261121",
+      "observed_at_utc": "2026-11-21T07:30:11Z",
+      "kind": "git_ref",
+      "ref": "refs/heads/work/local-startup-zuse-20261121",
+      "object": {
+        "sha": "9e1a06c4c6a04fe6a7ac7919c9cee9ab497ac95b",
+        "type": "commit",
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/commits/9e1a06c4c6a04fe6a7ac7919c9cee9ab497ac95b"
+      }
+    },
+    {
+      "key": "ssmcp_9e1",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/commits/9e1a06c4c6a04fe6a7ac7919c9cee9ab497ac95b",
+      "observed_at_utc": "2026-11-21T07:30:11Z",
+      "kind": "git_commit",
+      "sha": "9e1a06c4c6a04fe6a7ac7919c9cee9ab497ac95b",
+      "tree": "6e6c0024c494d37b736432ae7d5ea91ad8783310",
+      "parents": [
+        "1a2f7591ad0abb53907c048dcaed028434e17c47"
+      ],
+      "message": "fix: preserve permanent output cleanup initialization errors [skip ci]"
+    },
+    {
+      "key": "zcalld_pr1",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zcalld/pulls/1",
+      "observed_at_utc": "2026-11-21T07:30:11Z",
+      "kind": "pull_request",
+      "number": 1,
+      "url": "https://github.com/LIghtJUNction/zcalld/pull/1",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "merged_at": null,
+      "merge_commit_sha": "02988497eb1b99a39fe586c2a2387735d32441ef",
+      "head": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+      "head_ref": "feat/ssmcp-listener-p1-20261120",
+      "base": "7da4b28511a1550c993f09cfb2601149a82c785b",
+      "base_ref": "main",
+      "mergeable": null,
+      "mergeable_state": "unknown"
+    }
+  ]
+}

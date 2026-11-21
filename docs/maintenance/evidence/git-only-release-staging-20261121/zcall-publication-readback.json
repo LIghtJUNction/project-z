@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "observed_at_utc": "2026-11-21T08:35:02.687Z",
+  "repository": "LIghtJUNction/zcall",
+  "branch": "fix/git-only-release-staging-20261121",
+  "pull_request": "https://github.com/LIghtJUNction/zcall/pull/2",
+  "pr_number": 2,
+  "commit": "177175439b053df3931425a9532eac349340eee5",
+  "tree": "19c12e12cd845f8d4704bbd1bb7a94572951f413",
+  "parent": "199678d08104bed588e5d10b2c0634a47d7c8417",
+  "main_unchanged": "199678d08104bed588e5d10b2c0634a47d7c8417",
+  "open": true,
+  "draft": true,
+  "merged": false,
+  "authored_PR_body_exact_prefix": true,
+  "PR_appendix_present": false,
+  "base_leaf_count": 73,
+  "candidate_leaf_count": 74,
+  "unchanged_leaf_count": 68,
+  "whole_untruncated_tree_verified": true,
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 4644,
+      "sha256": "1b8247a7b0dec21ea2c7b75547ec1945c3afe3820ea721329f1dfdc202daaf57",
+      "git_blob": "6a9271f86671d450b2b34fc5286953b061a0700a"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "bytes": 5550,
+      "sha256": "c392c26515a5e7c8cb0e0ae69966842f9c7df5a12bafe2cdad32a1407b47abff",
+      "git_blob": "6c044a98fecc307bad9c4a8ad0690bf75c71fc93"
+    },
+    {
+      "path": "docs/RELEASING.md",
+      "bytes": 7243,
+      "sha256": "aa011c08075e69336971715b0db8ab2952879b5299040dd6ac7740d2366ea2c0",
+      "git_blob": "6b0cc3fc0ae6d91a7a0ad16d0c396326b2f4528d"
+    },
+    {
+      "path": "scripts/release.py",
+      "bytes": 18508,
+      "sha256": "6968dc110628ae22962f8a64072cd7fa3ccf745f93c643e740ef9a8923ee62cb",
+      "git_blob": "60dc9768c38a72c4703ec79abf7011a11501a23b"
+    },
+    {
+      "path": "scripts/test_release.py",
+      "bytes": 27766,
+      "sha256": "a6f5b2b410c7e273d972a73d5a73e8cbf2942f080bafcc3921619b0542a944f0",
+      "git_blob": "6d68abc01e2c80c9fcef0b7cad4ed0c5a513391d"
+    },
+    {
+      "path": "scripts/test_release_git_only.py",
+      "bytes": 15095,
+      "sha256": "fe3ea25e40095741f5642601bfaa6626ac8f7314aa55c09028541533a753e3ca",
+      "git_blob": "9fe9f6dc7e432fba679097f54e1f4b8a925f5dcb"
+    }
+  ],
+  "raw_files_exact_readback": true,
+  "actual_test_jobs": [
+    {
+      "label": "red-cold-cache-r1-workflow",
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-dbf",
+      "exit_code": 1,
+      "running": false,
+      "stdout_eof": true,
+      "stderr_eof": true,
+      "receipt": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-personal-zcall-release-gitonly-20261121/r2/evidence/red-cold-cache-r1-workflow/receipt.json",
+        "bytes": 4556,
+        "sha256": "5fa2feee85c3f56b6a3b01e4ca4d519474625c08a39246ab86139549483202af"
+      },
+      "tests_run": 2,
+      "failures": 0,
+      "errors": 2,
+      "skipped": 0,
+      "forbidden_attempts": []
+    },
+    {
+      "label": "green-r2",
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-dc2",
+      "exit_code": 0,
+      "running": false,
+      "stdout_eof": true,
+      "stderr_eof": true,
+      "receipt": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-personal-zcall-release-gitonly-20261121/r2/evidence/green-r2/receipt.json",
+        "bytes": 4490,
+        "sha256": "97a547545fd44239d274efaf28a9c46d26dde2e33bc343bcb58e83f3f77933f5"
+      },
+      "tests_run": 46,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "forbidden_attempts": []
+    }
+  ],
+  "independent_review": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/zcall-git-only-r2-core-static-review.json",
+    "bytes": 13178,
+    "sha256": "4ee6d079450fef1bc4da1788324a77d82a24cb069f0e949103f16b97191541fd",
+    "blocking_findings": 0,
+    "root_full_read": true
+  },
+  "not_executed": [
+    "Cargo",
+    "registry network",
+    "native CI",
+    "merge",
+    "tag",
+    "release",
+    "target lock"
+  ]
+}

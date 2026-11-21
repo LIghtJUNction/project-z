@@ -1,0 +1,120 @@
+{
+  "schema": "project-z.ztty-memory-publication.v1",
+  "status": "merged_and_verified",
+  "repository": "LIghtJUNction/ztty",
+  "pull_request_url": "https://github.com/LIghtJUNction/ztty/pull/22",
+  "publication": {
+    "main": {
+      "sha": "febc90654e5fc680b0660f0874296e17eb389acf",
+      "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+      "parents": [
+        "c6dc42c882d77d96dba96adb5b09ce177b579dfe",
+        "bfee445fb6d4bae932674c2d65c840513962ada7"
+      ],
+      "commit_date": "2026-11-20T21:47:26Z"
+    },
+    "pr": {
+      "number": 22,
+      "state": "closed",
+      "merged": true,
+      "merged_at": "2026-11-20T21:47:26Z",
+      "head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+      "base": "c6dc42c882d77d96dba96adb5b09ce177b579dfe",
+      "merge_commit_sha": "febc90654e5fc680b0660f0874296e17eb389acf",
+      "changed_files": 3,
+      "additions": 19,
+      "deletions": 0
+    }
+  },
+  "tested": {
+    "head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+    "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+    "baseline_head": "c6dc42c882d77d96dba96adb5b09ce177b579dfe",
+    "candidate_elf_sha256": "01269c72f7a56f273ad33c8c19b303c00310567ed79abb5b256b68e84e90bef6",
+    "baseline_elf_sha256": "748da679b89394d8f7a70ffb5872023ea7c4c02e3dc9563a22bff7bd1f133fa7",
+    "merge_tree_equals_tested_tree": true
+  },
+  "gates": {
+    "actual_root_clippy": true,
+    "actual_root_release_fresh_false": true,
+    "compiler_cwd_argv_verified": true,
+    "gnu_malloc_trim_symbol_verified": true,
+    "fmt": true,
+    "locked_offline_metadata": true,
+    "lifecycle_checks": 34,
+    "memory_profiles": 6,
+    "memory_stages": 66,
+    "close_rpc_measurements": 162,
+    "owned_processes_reaped": true,
+    "scope_inactive": true,
+    "gnu_musl_module_boundary": {
+      "passed": true,
+      "rerun_for_bfee": false,
+      "reason": "os.rs bytes and rustc version identical to actual cad4 GNU/musl object probes; no whole-application musl claim"
+    }
+  },
+  "measurement": {
+    "environment": "private Xvfb / Mesa llvmpipe / LP_NUM_THREADS=2",
+    "gpu_third_close_anonymous_bytes": {
+      "baseline": [
+        323821568,
+        324331520
+      ],
+      "candidate": [
+        44300288,
+        44615680
+      ]
+    },
+    "gpu_close_rpc_median_ms": {
+      "baseline": 1.994955,
+      "candidate": 3.0207035
+    },
+    "timing_scope": "whole close RPC including protocol, teardown, reclamation and scheduling",
+    "no_physical_gpu_vram_frame_or_input_latency_claim": true
+  },
+  "evidence": {
+    "native_root": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120",
+    "build_receipt": "candidate-build-bfee-r1/validation.json",
+    "build_receipt_sha256": "2413629a571493db7581d4ca26649d977b67cf99f506c5f7996671ab67e9354e",
+    "gui_result": "candidate-gui-bfee-r1/result.json",
+    "gui_result_sha256": "8a7921c54cc900739db0e1141dd82936a551a7a48e3cee441fe204e7c7094b9a",
+    "compact": {
+      "native_name": "integrated-bfee-validation.json",
+      "local_path": "/workspace/scratch/3cc863eec631/pr-cleanup-ztty-memory-final-validation.json",
+      "bytes": 73251,
+      "sha256": "587ec15fdf4a1001cad71a58c517a5f54798e6af96d0edc5e9fabbfc5d792152",
+      "drive_id": "1zyoUnbShHBDViIePo7zsrtapY0ADlY9D"
+    },
+    "archive": {
+      "native_name": "ztty-view-reclamation-evidence-20261120.zip",
+      "local_path": "/workspace/scratch/3cc863eec631/pr-cleanup-ztty-view-reclamation-evidence.zip",
+      "bytes": 502187,
+      "sha256": "583d389c61cb32a693e4539382b5e07506ae4775abd31bca3e396d73bbd2685b",
+      "drive_id": "1kbVMmeWDPEmuYPJRlofrjwE06zTv0ARV",
+      "text_files": 131
+    },
+    "drive_parent": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+    "drive_metadata_and_full_download_equality_verified": true,
+    "failed_attempts_preserved": true
+  },
+  "scope": {
+    "production_paths": [
+      "src/os.rs",
+      "src/session/requests.rs",
+      "src/session/workspaces.rs"
+    ],
+    "insertions": 19,
+    "deletions": 0,
+    "upstream_c6_paths_preserved": 16,
+    "desktop_install": false,
+    "formal_release": false,
+    "generated_binaries_tracked": false,
+    "global_cargo_config_changed": false,
+    "shared_target_cleaned": false
+  },
+  "aggregate": {
+    "pr7_head_seen": "9d725a1525c8d4da933fae561cdd337db25e5583",
+    "final_44_graph_run": false,
+    "other_component_heads_pending": true
+  }
+}

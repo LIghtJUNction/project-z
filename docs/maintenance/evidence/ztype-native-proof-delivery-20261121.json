@@ -1,0 +1,33 @@
+{
+  "schema": "project-z.ztype-native-proof-delivery.v1",
+  "archive_name": "ztype-0.4.2-native-proof-20261121.zip",
+  "bytes": 3481823,
+  "sha256": "5890cfc5a23dbd735362176eaf01764a5dde8b9a8e1eda111d5a3d6862e29845",
+  "payload_files": 218,
+  "zip_members": 219,
+  "manifest_bytes": 38692,
+  "manifest_sha256": "b5103ecad8a343af4a7c1e28e52df8ddcdeff36b8899acf4fafef63cf23c02f7",
+  "payload_uncompressed_bytes": 10297039,
+  "all_payload_hashes_verified": true,
+  "local_verified_at": "2026-11-20T22:33:40.796824+00:00",
+  "source_head": "677d7ca9a895a16a790759fa741d635baa1b704d",
+  "runtime_source": "053eb39eb115decc0cb046e901598cf0bc4645fb",
+  "integration": {
+    "ztype_main": "e3e8c1014e29653da587cc993076cb02e469b456",
+    "ztype_merged_tree": "930b79b4c49f21e252087e81f66494d4b4a1d7cc",
+    "ztype_pull_request": "https://github.com/LIghtJUNction/ztype/pull/3",
+    "ztty_main": "01e8b573bc787e982f96db2b1e6ec9151d321284",
+    "ztty_pull_request": "https://github.com/LIghtJUNction/ztty/pull/23",
+    "verification": "Root expected-head merge and remote API readback; own remote PR state independently read back as MERGED"
+  },
+  "drive": {
+    "file_id": "141WFsEjk1e_TK64v6H6K4odz1Vyc19Nq",
+    "url": "https://drive.google.com/file/d/141WFsEjk1e_TK64v6H6K4odz1Vyc19Nq/view",
+    "parent_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+    "metadata_readback_confirmed": true,
+    "full_download_verified": true,
+    "bytes": 3481823,
+    "sha256": "5890cfc5a23dbd735362176eaf01764a5dde8b9a8e1eda111d5a3d6862e29845",
+    "verified_at": "2026-11-20T22:35:46.552122+00:00"
+  }
+}

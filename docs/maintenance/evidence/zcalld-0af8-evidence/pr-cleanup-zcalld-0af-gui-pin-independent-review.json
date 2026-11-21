@@ -1,0 +1,47 @@
+{
+  "schema": "project-z.zcalld-0af-gui-pin-independent-review.v1",
+  "observed_at_utc": "2026-11-21T00:42:36.992Z",
+  "scope": "Read-only GitHub commit and full recursive tree comparison; no product/build/gate/native/source/ref changes.",
+  "head": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+  "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+  "parents": [
+    "e1e23cf62402780bf934c4e187d98b78aa26b825"
+  ],
+  "base_tree": "34795b388520d9a0587f0543ba5763d37b1aeb84",
+  "leaf_count": 220,
+  "unchanged_leaf_count": 219,
+  "changes": [
+    {
+      "path": "apps/zcall-gui",
+      "before": {
+        "sha": "ca35a306088a85e49e9e851aab24329deed20056",
+        "type": "commit",
+        "mode": "160000"
+      },
+      "after": {
+        "sha": "d491b627223807da7b2929f3feea7461393d124c",
+        "type": "commit",
+        "mode": "160000"
+      }
+    }
+  ],
+  "compat_preserved": {
+    "sha": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+    "type": "commit",
+    "mode": "160000"
+  },
+  "classification": "Exactly one GUI gitlink propagation on E1; all219 other leaves preserved.",
+  "gui_source_review": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-zcall-gui-d491-independent-review.json",
+    "bytes": 7460,
+    "sha256": "96963d8d59c7a233408bd42b1e4649f595034ab83ebaa3b8549bc5fe5f98099d",
+    "scope": "Packaging/source-AUR changes, not docs-only; GUI Rust/UI/Cargo/lock/gitlinks unchanged."
+  },
+  "verdict": "No added listener/runtime blocker. Existing source-bound Rust/listener/eight-curl gate remains the needed scope; bind launcher to this head/tree/GUI pin before actual run. This review does not certify AUR, GUI runtime, final P1 or final44.",
+  "blocking_findings": [],
+  "source_urls": [
+    "https://api.github.com/repos/LIghtJUNction/zcalld/git/commits/0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/34795b388520d9a0587f0543ba5763d37b1aeb84?recursive=1",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/ca3cdf4a464543a1323b057d241d45983cba6a05?recursive=1"
+  ]
+}

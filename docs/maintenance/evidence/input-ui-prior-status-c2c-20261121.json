@@ -1,0 +1,147 @@
+{
+  "schema": "project-z.input-ui-prior-status.v1",
+  "scope": "Historical current-status fields copied exactly from the c2c report snapshot; superseded by the new current_maintenance entries, not current pending work.",
+  "source_report_commit": "c2c1406752b4b8e23f3a7f0bec0fddc5209141da",
+  "source_summary_sha256": "720f1c0bfa76cfb1cde85af0d47714bcced716a15e6a49a545b81e2117d8e363",
+  "ztype_ztty_followup": {
+    "status": "private_0_4_2_build_and_13_xim_checks_passed_real_native_wayland_receiver_fix_in_progress",
+    "request": "Continue ztype, support ztty, improve UI with Google design principles.",
+    "source": "Two authenticated client_user revision2 messages forwarded by the existing dependency maintainer.",
+    "source_message_ids": [
+      "6a46f03cb99610891b5de45e7e7b0752",
+      "956884afc78b0321f8ed3fe00dba91d9",
+      "695894e8eb44ad4e123c10d84d857871",
+      "28a8e74ff3ab7d72b11a72ee030e7e14"
+    ],
+    "last_verified_ztype_main": "da6feb1a3c5488f3854c63d5e5db173ca250dba4",
+    "scope_boundary": "Earlier28 Wayland checks used GTK; new13 XIM checks use actual private copied c7 ztty. Native Wayland ztty presented/hidden popup but failed Chinese PTY commit. New frozen febc/bfee binary provided to the owner for relevant revalidation.",
+    "ownership": "Existing native dependency maintainer owns ztype source and private runtime gates; Core reads the failing event path; Personal owns any coordinated ztty source edit and the final44 graph.",
+    "implementation_or_runtime_acceptance_claimed": true,
+    "preserved_installed_source": {
+      "version": "0.4.1",
+      "source": "05ee8403fac6232bcd692fb58e170a4c6b17fde0",
+      "elf_sha256": "7708a88b2a8b914a52abe2f10395378fb33c731621fdde9301a6679a83dc10c8"
+    },
+    "candidate": {
+      "base": "da6feb1a3c5488f3854c63d5e5db173ca250dba4",
+      "version": "0.4.2",
+      "elf_sha256": "1a2b96c03aa5129ea1935216da7b8696ef330a4a2ec49f0139027a4a9c0c82ae",
+      "build_receipt_sha256": "8b5147dc3b7887db41e2fd07eee8310971f82cf4c6f8f3e03203eef95239aee0",
+      "publication": "existing owner preparing immutable draft",
+      "cli_checks": 8,
+      "private_install_checks": 15,
+      "xim_checks": 13,
+      "xim_passed": true,
+      "native_wayland_passed": false,
+      "native_wayland_actual_pty": "ihaoshijie",
+      "native_wayland_expected_pty": "你好世界",
+      "evidence": "evidence/ztype-xim-ui-20261121.json",
+      "host_install_or_input_config_changed": false
+    }
+  },
+  "ssmcp_input_requirement_status": "phase2_source_frozen_draft_pr159_build_artifacts_in_progress",
+  "ssmcp_input_publication": {
+    "url": "https://github.com/LIghtJUNction/ssmcp/pull/159",
+    "draft": true,
+    "head": "cae35a82683104049d4e30041df6e7e6bb3e6fc5",
+    "tree": "2657970b36433de80a3cea9de3c5c5d2aba8728a",
+    "source_published": true,
+    "runtime_pass_claimed": false,
+    "final_five_artifact_build": "in progress by existing source owner"
+  },
+  "ssmcp_release": {
+    "status": "existing_native_owner_main_integration_build_and_final_acceptance_in_progress",
+    "main_verified": "cf0ab581700918a37fcccbebb93de2e0cab02841",
+    "candidate": "b156254b45c015a3994b8be1475b423167ac980f",
+    "candidate_actual_source_audit": {
+      "total_packages": 277,
+      "git_checkouts": 11,
+      "registry_sources": 264,
+      "status": "passed"
+    },
+    "python_tests_passed": 100,
+    "new_formal_release": false,
+    "current_public_tree": "bd2bcce33baffa69b82d69d9cff3abdb85baa0fb",
+    "scope_note": "Earlier source-audit and Python test counts retain their original frozen-candidate scope; not relabelled as complete validation of the latest public main.",
+    "previous_final_gate_plan_text": "pending on final fixed SSMCP cohort plus zcalld97d; original build commits and evidence stay separate",
+    "current_final_gate_plan": {
+      "status": "pending_final_frozen_ssmcp_and_d531_integration",
+      "plan": "Existing native SSMCP owner must validate the final frozen SSMCP plus this exact CLI with Gate10/P1, including actual cross-process blocking-generation cancellation, before root merges PR1.",
+      "original_32_scope": "The historical32 set included five shared-library checks, two Go checks and package/install work outside this P1 path. Those unrelated checks are not rerun or reported as new32 passes.",
+      "merge_owner": "Project Z root, after native final acceptance and fresh main/candidate tree verification",
+      "draft": true,
+      "local_evidence": "evidence/zcalld-listener-d531-20261121.json"
+    },
+    "path_loss_observation": {
+      "observed_window_utc": "2026-11-20T19:32:00Z/2026-11-20T19:34:00Z",
+      "observation": "Multiple existing native owners confirmed that several top-level GITHUB/ssmcp-* source/evidence directories no longer existed. Root also received ENOENT for the previously recorded current-status.json. Primary ssmcp Git source, the isolated Project Z context worktree and zcalld97d handoff survived.",
+      "cause": "Not established. Project Z root/Core/Org/Personal report no deletion or move of these paths; their exact receipted cache deletions were the129+3LMM+4WGT batches.",
+      "recovery_owner": "Existing sole native SSMCP source/release owner",
+      "recovery_status": "Recovering source patch and retained evidence from existing copies. Missing five baseline binaries require real rebuilds. No previous runtime receipt will be relabelled as a new build.",
+      "new_recovery_archive_root": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/archives/"
+    },
+    "controls_publication": {
+      "pr": 156,
+      "merge": "90c497007f6d6f16c3dd2da6a4599c48787e5ee1",
+      "tree": "b66c011c488b79972760848abee8427b4bbfe706",
+      "owner_reported_scope": "178 unit /14 CLI/10 isolated PTY passed;10 helper fixtures ignored; no root rerun"
+    },
+    "main_observation_scope": "Root GitHub plugin observed PR155 integration; current input/agent authoring and final source freeze remain with the existing native owner. No main-wide validation is inherited from the context candidate."
+  },
+  "coordination_ssmcp_owner_status": {
+    "source": "407084c4fcc582f5fef01b772de838f04e2d5484",
+    "library_private": {
+      "passed": 1880,
+      "failed": 5,
+      "ignored": 22,
+      "filtered": 4
+    },
+    "native_p1_final": "not_run_due_failed_gate",
+    "newer_main": "ccb91955c25969f4779588d4cebb09b72c00f829",
+    "current_source_owner_active": true,
+    "no_formal_release_v21": true,
+    "latest_release_requested": true,
+    "final_current_source_gates_pending": true,
+    "historical_test_scope": "407084c4 only; does not qualify the current integration",
+    "current_release": {
+      "status": "latest_source_pre_paste_baseline_build_in_progress",
+      "main_verified": "ccb91955c25969f4779588d4cebb09b72c00f829",
+      "candidate": "b156254b45c015a3994b8be1475b423167ac980f",
+      "candidate_actual_source_audit": {
+        "total_packages": 277,
+        "git_checkouts": 11,
+        "registry_sources": 264,
+        "status": "passed"
+      },
+      "python_tests_passed": 100,
+      "latest_full_32_and_p1": "pending fixed zcalld listen candidate",
+      "new_formal_release": false
+    },
+    "named_context_followup": {
+      "status": "architecture_review_in_progress",
+      "requested": "Use Docker-style named contexts to unify local and remote selection",
+      "source_revision": "ccb91955c25969f4779588d4cebb09b72c00f829",
+      "existing_state": "Local and remote already share broker, wire and native runtime; CLI has separate local mode and HTTPS/SSH/default server selection",
+      "reference_urls": [
+        "https://docs.docker.com/engine/manage-resources/contexts/",
+        "https://docs.docker.com/reference/cli/docker/context/use/"
+      ],
+      "implemented": false
+    }
+  },
+  "latest_upstream_ztype": {
+    "main": "da6feb1a3c5488f3854c63d5e5db173ca250dba4",
+    "tree": "e8a34d10f84572ef351f824a5e668286b58b1254",
+    "url": "https://github.com/LIghtJUNction/ztype/commit/da6feb1a3c5488f3854c63d5e5db173ca250dba4",
+    "delta": "Only Cargo.lock zuse source SHA changed from the76c migration publication.",
+    "owner_validation": "72 passed; one optional external-dictionary test ignored.",
+    "scope": "The earlier28 Wayland checks remain bound to76c and its recorded ELF, not automatically attributed to this new dependency source."
+  },
+  "latest_upstream_ztty": {
+    "main": "febc90654e5fc680b0660f0874296e17eb389acf",
+    "tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+    "tested_head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+    "merge_tree_equals_tested_tree": true,
+    "oh_my_ztty_and_final44_propagation": "pending"
+  }
+}

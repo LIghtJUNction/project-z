@@ -1,0 +1,62 @@
+{
+  "schema": "ssmcp-source-freeze-v1",
+  "utc": "2026-11-21T00:43:00.589512+00:00",
+  "status": "frozen",
+  "source_revision": "be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1",
+  "source_tree": "5e8ea273c8f8bd8b0e7b1f87ccc0d19fd594601b",
+  "version": "0.10.24",
+  "source_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+  "previous_source": "fc06728a36d0b4d2920e1e2bc29885721ced5780",
+  "checkout": {
+    "argv": [
+      "git",
+      "-C",
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+      "-c",
+      "submodule.recurse=false",
+      "checkout",
+      "--detach",
+      "be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "\u4e4b\u524d\u7684 HEAD \u4f4d\u7f6e\u662f fc06728 perf: batch terminal paste and completion work\nHEAD \u76ee\u524d\u4f4d\u4e8e be6da5b test: assert audit focus when Escape closes the filter [skip ci]\n"
+  },
+  "gitlinks": {
+    "crates/zharness": "cb63a9a0aa163214c6062664cd62fefb357be5a8",
+    "crates/zplugin": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4",
+    "crates/ztuio": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+    "crates/zuse": "a1bb8fd2cbce0a9d85134999883c578358065242"
+  },
+  "cargo_lock": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final/Cargo.lock",
+    "bytes": 66476,
+    "sha256": "e8578cea449acae5281fc723f30bbaba56774cc3f460dd4e449b8381c21be53b"
+  },
+  "heads": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/git-heads.json",
+    "bytes": 9437,
+    "sha256": "5b743006b190a718f29fac985e66b5e944d6b5794213ac9f606fc2cd8f1c065e"
+  },
+  "author_exit": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-main-union-f33/author-exit.json",
+    "bytes": 1360,
+    "sha256": "46e74aeb2a33c6cd728b62946fbf6d99b20c435a8e1caee147d234fa58160c19"
+  },
+  "source_review": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-main-union-f33/root-static-review.json",
+    "bytes": 2528,
+    "sha256": "968ec96e5d02ac60dd897b1fe36ca7d1f3a8c4cdaf7c8c08a89ad7a64159cca8"
+  },
+  "normal_push": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-main-union-f33/root-normal-push-receipt.json",
+    "bytes": 1072,
+    "sha256": "efc4e85ce78aa3a62c750d0d0cb87c87bd2756e8a5afca3ccb2198bfaeb673f0"
+  },
+  "github_head_readback": "be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1",
+  "github_tree_readback": "5e8ea273c8f8bd8b0e7b1f87ccc0d19fd594601b",
+  "historic_ab_receipts_verified_unchanged": true,
+  "historic_AB_exports_artifacts_not_touched": true,
+  "new_build_not_started": true,
+  "clean": true
+}

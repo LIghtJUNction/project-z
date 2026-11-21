@@ -1,0 +1,57 @@
+{
+  "schema": "project-z.zcalld8fe-source-publication.v1",
+  "candidate": "8fe9b42e8b25fc78328ac50e4bd2fc9b9faf438f",
+  "tree": "65c4d7a3ac4af29427510edbf1e407a5ef6f307d",
+  "base": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+  "parents": [
+    "4cc2fd1cfb6eb49dacc022af6c15cc0f7825e409",
+    "37c82ee7cec35594771a02869f7f72f12a3ace1d"
+  ],
+  "pr": {
+    "number": 1,
+    "url": "https://github.com/LIghtJUNction/zcalld/pull/1",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "metadata_updated_at": "2026-11-21T00:32:35Z"
+  },
+  "ref_update": {
+    "tool": "GitHub plugin",
+    "branch": "feat/ssmcp-listener-p1-20261120",
+    "expected_sha": "4cc2fd1cfb6eb49dacc022af6c15cc0f7825e409",
+    "new_sha": "8fe9b42e8b25fc78328ac50e4bd2fc9b9faf438f",
+    "force": false,
+    "success": true
+  },
+  "source_preservation": {
+    "old_4cc_leaves_preserved": 219,
+    "total_new_leaves": 220,
+    "main_nonlistener_leaves_preserved": 215,
+    "added_from_main": "docs/RELEASE-0.4.4.md",
+    "added_blob": "823b0095740322e27bed6c09083a9020824c671f",
+    "runtime_cargo_lock_gitlinks_unchanged_from_4cc": true
+  },
+  "independent_review": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-zcalld-8fe-tree-launcher-independent-review.json",
+    "bytes": 7153,
+    "sha256": "68b269174148a38122ad1ce4e3cf151ce256beb9a545e8eef4b8d2cd15eacb6e"
+  },
+  "source_preparation": {
+    "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-37c-20261121/preparation-summary.json",
+    "bytes": 2109,
+    "sha256": "92b1199a4f5ef17d031516657cff2245113ce5d2b3b3319dc0dae34e5a16a057"
+  },
+  "first_gate": {
+    "job": "26c4545eae1eab8d27485f4a48077d3c-806",
+    "exit": 1,
+    "duration_ms": 4057,
+    "result": "upstream compatibility source freshness stopped before Rust/fmt/lint/release/curl",
+    "raw_receipt_sha256": "ebf57c7482bea178dc7fb83fbff46ab1fd0562cf0fdb9d39ac6f2a8e28c97c34",
+    "guard_receipt_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-listener-8fe-source-guard-stop.json",
+    "guard_receipt_bytes": 3604,
+    "guard_receipt_sha256": "19daffafb0bcacc8603b6c5144733eb2759ef2f0f48e452c2dee2132f8b07731"
+  },
+  "runtime_validation_passed": false,
+  "binary_provided": false,
+  "final_p1_executed": false
+}

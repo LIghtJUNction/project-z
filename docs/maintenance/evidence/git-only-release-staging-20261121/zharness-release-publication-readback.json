@@ -1,0 +1,111 @@
+{
+  "schema": 1,
+  "observed_at_utc": "2026-11-21T09:02:37.652Z",
+  "repository": "LIghtJUNction/zharness",
+  "branch": "fix/git-only-audit-and-release-20261121",
+  "pull_request": "https://github.com/LIghtJUNction/zharness/pull/10",
+  "pr_number": 10,
+  "commit": "9d36a29976c185e8cdad029e6169057a10850ad4",
+  "tree": "ab7ce418410dee6ee7e8c55fc950b1783226d190",
+  "parent": "491b8525c13bded4b1f3399d5e8f9c83e4129c65",
+  "main_unchanged": "fb2948f78467dd92b216aabda6f18a5645f0e7f6",
+  "open": true,
+  "draft": true,
+  "merged": false,
+  "authored_PR_body_exact_prefix": true,
+  "PR_appendix_preserved": true,
+  "base_leaf_count": 129,
+  "candidate_leaf_count": 131,
+  "unchanged_leaf_count": 124,
+  "whole_untruncated_tree_verified": true,
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 5067,
+      "sha256": "4735b88547d6c676a20af88076d0e7a3f3b7f03f4f54224ebd6462246cd69eda",
+      "git_blob": "fed1af6a11e1364890d28e6a6a277eb558403024"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "bytes": 4565,
+      "sha256": "8657df7d7d2141bc33854435f7476cf0852ae5f982bc007a9abe466146ec42a6",
+      "git_blob": "57c1ebdead183490f7b66e0a1c607f0b63276d0c"
+    },
+    {
+      "path": "docs/RELEASE.md",
+      "bytes": 6934,
+      "sha256": "7e1b99dd4fecb864b879a1ccd3b2b4674a24cc5d9b3f07a2d672659fbbfd912c",
+      "git_blob": "b9603f5124574be26c7cf6f2ba9fae4fd0c20f40"
+    },
+    {
+      "path": "scripts/release.py",
+      "bytes": 32093,
+      "sha256": "e7a7b7a137e68c536a314f5bc045e3ac6bf5e8034f57ccb62168b69a19ce2342",
+      "git_blob": "b73cbb5d59c2956123f4e8a296deea00201d30cd"
+    },
+    {
+      "path": "scripts/registry_stage.py",
+      "bytes": 18915,
+      "sha256": "1a7be734afb503f7b640266a0c586868e7b02f45b7fd7524be64b6e758cd634e",
+      "git_blob": "c715222c14d58d825c82c8d868d99acf4104f520"
+    },
+    {
+      "path": "scripts/test_release.py",
+      "bytes": 31020,
+      "sha256": "4375a4390fcb300cf123efa2fcfcb813ff1390322d7045332f7a38df65bf3f4f",
+      "git_blob": "67a222a6b1fa4f1bbe62fa3c04a3bae2215c5ecd"
+    },
+    {
+      "path": "scripts/test_registry_stage.py",
+      "bytes": 19757,
+      "sha256": "7494aca1af23ea9215b9cc3dd09e45b1c11f8aceed18f24fd0ec0f177ff7af19",
+      "git_blob": "4e17b86d0aedb3b069e7e6e9b67bc939bc6c2381"
+    }
+  ],
+  "raw_files_exact_readback": true,
+  "actual_test_job": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-e35",
+    "actual_outer_exit": 0,
+    "inner_exit": 0,
+    "both_eof": true,
+    "tests": 39,
+    "original_tests": 29,
+    "new_tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "all_seven_source_files_hashed_before_after": true,
+    "unittest_seconds": 3.726,
+    "collector_seconds": 3.830585137999151,
+    "result": {
+      "path": "evidence/green-final/result.json",
+      "bytes": 542208,
+      "sha256": "cd85ccd8a41fdadfb569010d3cf32bda657ad5683b308748782ef91d666a8754",
+      "git_blob": "4739db4d10ce761363074ebf02a05357e53625f1"
+    }
+  },
+  "prior_audit": {
+    "commit": "491b8525c13bded4b1f3399d5e8f9c83e4129c65",
+    "tests": 17,
+    "unchanged_by_increment": true,
+    "separate_run": true
+  },
+  "independent_review": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/zharness-registry-stage-org-review-20261121/r3-review.json",
+    "bytes": 8676,
+    "sha256": "1bb16f3d237310685dd9a036ba6efe029b9bdb1d4d43cfe11c6dd26af5568785",
+    "material_blockers": 0,
+    "root_full_read": true
+  },
+  "not_executed": [
+    "Cargo",
+    "actual metadata",
+    "registry network",
+    "native CI",
+    "actual Windows/macOS runner",
+    "merge",
+    "tag",
+    "release",
+    "target lock"
+  ]
+}

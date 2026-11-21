@@ -1,0 +1,136 @@
+{
+  "observed_at": "2026-11-20T23:07:48.491825+00:00",
+  "build_receipt": {
+    "bytes": 79446,
+    "sha256": "d2204375614807af510f6c7fd08ec657d212a98f18f504cb21376c63f47ea7c0"
+  },
+  "preserved_artifact_current_hashes": [
+    {
+      "name": "library-test-fixture",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/bin/library-test-fixture",
+      "bytes": 165519472,
+      "sha256": "edea75a764a08d6b4ed76d49d16160ce3750dc9f333cce41e574c46562ac9c81"
+    },
+    {
+      "name": "ssmcp",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/bin/ssmcp",
+      "bytes": 15754224,
+      "sha256": "09c7219a0863ebfc97f51246e569b65dd4963493b9e8b7f0885672b6b95c5ac2"
+    },
+    {
+      "name": "ssmcp-frontend",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/bin/ssmcp-frontend",
+      "bytes": 1386576,
+      "sha256": "229e65b1f52098b7292d9e387e9442d24c9411ab2e34a55fcbe4a6171e0398b5"
+    },
+    {
+      "name": "ssmcpd",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/bin/ssmcpd",
+      "bytes": 8252208,
+      "sha256": "909133cae9bfc0d9bcefdf4af4740a9bc3c50a1097025a3178bc8e04daa62e86"
+    },
+    {
+      "name": "vt_snapshot",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/bin/examples/vt_snapshot",
+      "bytes": 440984,
+      "sha256": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f"
+    }
+  ],
+  "failed_route_receipt": {
+    "bytes": 23288,
+    "sha256": "23cf70065f3b4aa72beaeb45fefe0a6006da6fa5d5d1b4667249081db1348cb4",
+    "keys": [
+      "build_receipt_scope",
+      "cargo_executed",
+      "cohort",
+      "finished_at",
+      "first_error",
+      "inputs_after",
+      "inputs_before",
+      "inputs_unchanged",
+      "phase",
+      "quiet_lock",
+      "release_gate_executed",
+      "schema",
+      "scope",
+      "scratch",
+      "source_revision",
+      "source_tree",
+      "started_at",
+      "status",
+      "steps"
+    ],
+    "scalars": {
+      "build_receipt_scope": "build_only",
+      "cargo_executed": false,
+      "finished_at": 1795215286.0499704,
+      "first_error": "RuntimeError: six-cases exited 1; retain /home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-run/logs/six-cases.stdout and /home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-run/logs/six-cases.stderr",
+      "inputs_unchanged": true,
+      "phase": "baseline",
+      "release_gate_executed": false,
+      "schema": "ssmcp-paste-execution-v1",
+      "scope": "frozen_six_case_and_ctrlv_execution",
+      "source_revision": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "source_tree": "6bf7beb143cfdce3878df856c27785164695430f",
+      "started_at": 1795215267.075917,
+      "status": "failed"
+    },
+    "dict_keys": {
+      "cohort": [
+        "build_configuration",
+        "build_environment",
+        "build_step_evidence_environment",
+        "case_timeout",
+        "config_sha256",
+        "ctrlv_file_paste_sha256",
+        "ctrlv_paste_reader_sha256",
+        "ctrlv_sha256",
+        "git_repositories",
+        "gitlinks",
+        "helpers",
+        "lock_sha256",
+        "node_sha256",
+        "runner_sha256",
+        "scratch_filesystem",
+        "workspace_compile_provenance_schema",
+        "workspace_wrapper",
+        "wrapper_sha256"
+      ],
+      "inputs_after": [
+        "bytes",
+        "mode",
+        "path",
+        "sha256"
+      ],
+      "inputs_before": [
+        "bytes",
+        "mode",
+        "path",
+        "sha256"
+      ],
+      "quiet_lock": [
+        "acquired_at",
+        "device",
+        "held_for_entire_execution",
+        "inode",
+        "path",
+        "released_at",
+        "wait_seconds",
+        "waiting_since"
+      ],
+      "scratch": [
+        "device",
+        "host_path",
+        "mode",
+        "sandbox_path",
+        "type"
+      ]
+    },
+    "list_lengths": {
+      "steps": 1
+    }
+  },
+  "native_read_job_id": "26c4545eae1eab8d27485f4a48077d3c-621",
+  "native_read_exit_code": 0,
+  "native_read_stdout_eof": true
+}

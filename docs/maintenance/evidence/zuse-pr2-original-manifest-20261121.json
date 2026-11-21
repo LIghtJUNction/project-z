@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-11-20T23:11:58.176193+00:00",
+  "source_read_job": "26c4545eae1eab8d27485f4a48077d3c-63f",
+  "original_source_root": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121",
+  "files": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation/build.log",
+      "bytes": 196,
+      "sha256": "4f738782cb530840d3eae34abc6cb9e94a1e43e6d6b595c5561d8c91b5de0912",
+      "mtime_ns": 1795211457093106700,
+      "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation/build.log"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation/cli-native.log",
+      "bytes": 301,
+      "sha256": "586272c26cc5ce88d158476791254b33d4566e736084d8b6a8482499dc10bdff",
+      "mtime_ns": 1795211457976127200,
+      "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation/cli-native.log"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation/accessibility-native.log",
+      "bytes": 714,
+      "sha256": "e87af48b0f3d523ce99caa6c92d5a8d6763272fce16990ed98698cd8fc0e437b",
+      "mtime_ns": 1795211459827170300,
+      "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation/accessibility-native.log"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation/wayland.json",
+      "bytes": 6489,
+      "sha256": "39856f16684fed50970b999850e1273bfb68bf5e545f6ecaa99baf4c5b1d8b53",
+      "mtime_ns": 1795211460236914000,
+      "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation/wayland.json"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation-final/build.log",
+      "bytes": 196,
+      "sha256": "cb82cabdd8620a8fabc1b0475835f8906438cde0d127d88cd254e39e804864d2",
+      "mtime_ns": 1795212119906684200,
+      "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation-final/build.log"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation-final/cli-native.log",
+      "bytes": 301,
+      "sha256": "40813ac79f1f0d5c8fd8c0a835e90eb2796e69f29c83f45855e49a2d00970e4d",
+      "mtime_ns": 1795212120898705200,
+      "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation-final/cli-native.log"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation-final/accessibility-native.log",
+      "bytes": 714,
+      "sha256": "2e57339f6cae9c6e42f0d193105cfba3c01faf01aa2128909af8076b22ba99e5",
+      "mtime_ns": 1795212122706743600,
+      "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation-final/accessibility-native.log"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation-final/wayland-headless.log",
+      "bytes": 2400,
+      "sha256": "d1b6d707ca2a8b6610bb1dfcbb7a4feb680ae4345ab7ebbbf9c7acc389e87829",
+      "mtime_ns": 1795212126091815200,
+      "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation-final/wayland-headless.log"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation-final/wayland.json",
+      "bytes": 2556,
+      "sha256": "b9f986056cfd0bfef890bf8979ce5362d858b99f9efccbd8506c0a6163d0b009",
+      "mtime_ns": 1795212126135534000,
+      "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation-final/wayland.json"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation-final/wayland-final.log",
+      "bytes": 1987,
+      "sha256": "0659636f0e401cb265d8dcef3811671ab1a761a7a30d601c90d69d01305ded04",
+      "mtime_ns": 1795212396480104400,
+      "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation-final/wayland-final.log"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/scoped-validation-final/wayland-final.json",
+      "bytes": 3598,
+      "sha256": "c215f609f5324ed6593689a1fc484cb79f1a2e6b2ec7214e1c84a47b7c64f8f5",
+      "mtime_ns": 1795212396531126300,
+      "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/scoped-validation-final/wayland-final.json"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/native-fixtures/cage-v6/receipt.json",
+      "bytes": 1430,
+      "sha256": "3a07d40faa7beef9145db19e3560c60a602726cb66f16cf362e5b2c58b6dc40d",
+      "mtime_ns": 1795212035824218400,
+      "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-original-evidence/native-fixtures/cage-v6/receipt.json"
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "schema": "project-z.zuse356-pr3-merge-readiness.v1",
+  "written_at_utc": "2026-11-21T00:31:04.437628+00:00",
+  "observation_phase": "pre_merge_GitHub_read_only_snapshot_preserved",
+  "pre_merge_observed_at_utc": null,
+  "repository": "LIghtJUNction/zuse",
+  "review_target": "PR3 into PR2 feature branch only",
+  "decision": {
+    "pre_merge_technical_readiness": "No source, conflict, tested-tree or local-validation blocker found for merging fixed PR3 into PR2 feature branch.",
+    "pre_merge_immediate_api_merge_blocker": "PR3 was draft; no ready/merge action was performed by this reviewer.",
+    "current_disposition_from_root_publication": "Root subsequently marked ready and merged PR3 at exact tested tree; draft blocker is resolved.",
+    "current_pr3_to_pr2_blockers": [],
+    "pr2_to_main_or_release_authorized_or_validated_by_this_review": false
+  },
+  "pre_merge_sources": {
+    "pr3": {
+      "number": 3,
+      "url": "https://github.com/LIghtJUNction/zuse/pull/3",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "mergeable": true,
+      "mergeable_state": "clean",
+      "head": {
+        "ref": "fix/scoped-receipt-budget-20261121",
+        "sha": "35664746549c482c99082e6180419b2c0f5ff532",
+        "repository": "LIghtJUNction/zuse"
+      },
+      "base": {
+        "ref": "feat/scoped-mice-20261121",
+        "sha": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+        "repository": "LIghtJUNction/zuse"
+      },
+      "updated_at": "2026-11-21T00:26:10Z",
+      "commits": 2,
+      "changed_files": 5
+    },
+    "pr2": {
+      "number": 2,
+      "url": "https://github.com/LIghtJUNction/zuse/pull/2",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "mergeable": true,
+      "mergeable_state": "clean",
+      "head": {
+        "ref": "feat/scoped-mice-20261121",
+        "sha": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+        "repository": "LIghtJUNction/zuse"
+      },
+      "base": {
+        "ref": "main",
+        "sha": "a1bb8fd2cbce0a9d85134999883c578358065242",
+        "repository": "LIghtJUNction/zuse"
+      },
+      "updated_at": "2026-11-20T22:14:06Z"
+    },
+    "main": {
+      "ref": "refs/heads/main",
+      "sha": "a1bb8fd2cbce0a9d85134999883c578358065242",
+      "tree": "62c26269d54b443addcd9da7bebc7a5a8d0fd645",
+      "read_independently_of_PR_base_snapshot": true
+    },
+    "head_and_base_fresh_ref_confirmations": {
+      "head": "35664746549c482c99082e6180419b2c0f5ff532",
+      "base": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd"
+    },
+    "tested_tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "changed_paths": [
+      "docs/scoped-mice.md",
+      "src/json.rs",
+      "src/mcp.rs",
+      "src/script/scheduler.rs",
+      "tests/script_entrypoints.rs"
+    ],
+    "cargo_manifest_or_lock_changed_by_PR3": false
+  },
+  "merge_tree_proof": {
+    "method": "merge",
+    "repository_allows_merge_commit": true,
+    "compare": {
+      "status": "ahead",
+      "ahead_by": 2,
+      "behind_by": 0,
+      "merge_base": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd"
+    },
+    "github_precomputed_merge": {
+      "sha": "e5d3178f98c703252d608cd5ae46192ee64bc2c7",
+      "parents": [
+        "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+        "35664746549c482c99082e6180419b2c0f5ff532"
+      ],
+      "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+      "url": "https://api.github.com/repos/LIghtJUNction/zuse/git/commits/e5d3178f98c703252d608cd5ae46192ee64bc2c7",
+      "is_published_merge_commit": false
+    },
+    "complete_file_snapshot_equal_to_tested_tree": true,
+    "reason": "The target base is an ancestor of head356. GitHub already calculated a two-parent merge whose root tree is the exact tested tree. A different final merge SHA/message/date does not change that file snapshot when these parents remain fixed.",
+    "freshness_constraint": "This pre-merge proof applies only to the observed bb838 base and 356 head. It is not permission to merge a later drifted candidate.",
+    "post_merge_root_proof": {
+      "actual_merge": "83663988ebf736ec8de05d6372eef485c3d9ebac",
+      "actual_parents": [
+        "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+        "35664746549c482c99082e6180419b2c0f5ff532"
+      ],
+      "tested_tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+      "status": "merged_into_pr2_feature_branch_exact_tested_tree",
+      "merged_at": "2026-11-21T00:29:22Z",
+      "pr2_head": "83663988ebf736ec8de05d6372eef485c3d9ebac",
+      "pr2_still_draft": true,
+      "main_unchanged": "a1bb8fd2cbce0a9d85134999883c578358065242",
+      "provenance": "Root publication read as original JSON; this reviewer did not perform the merge or a new post-merge GitHub query.",
+      "proof": {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-merge-publication-20261121.json",
+        "bytes": 1635,
+        "sha256": "d00d12ba9852378418cc28a7c7aea39e25c59d1202336d776757f4c8977d0ba6"
+      }
+    }
+  },
+  "evidence_coverage": {
+    "identity": "All reusable current-candidate evidence below is fixed to 356 / tree0d1, not original PR2 bb838/81b author totals.",
+    "static": {
+      "scope": "All five changed paths, completion/error/cancellation/cleanup summaries, bounded logs and pure MCP re-encoding without action replay.",
+      "blocking_findings": 0,
+      "review_sha256": "0d3508ef01a3d284510290422828f86740e81df9d346df73220704d07828abae"
+    },
+    "targeted_red_green": {
+      "red_source": "44ffb599e96c412c216f395ed8b7286f585b5474",
+      "red_failures": 3,
+      "green_source": "35664746549c482c99082e6180419b2c0f5ff532",
+      "green_tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+      "green_passed": 16,
+      "green_failed": 0,
+      "green_ignored": 0,
+      "green_job": "26c4545eae1eab8d27485f4a48077d3c-611",
+      "fmt_locked_metadata_and_relevant_strict_clippy_passed": true,
+      "overlaps_default_suite": true
+    },
+    "portable": {
+      "job": "26c4545eae1eab8d27485f4a48077d3c-6dc",
+      "status": "passed",
+      "default_passed_entries": 289,
+      "default_ignored": 5,
+      "default_failed": 0,
+      "no_std_passed": 20,
+      "native_and_wasm_no_std_checks": "passed",
+      "cross_checks": [
+        "x86_64-pc-windows-gnu",
+        "x86_64-apple-darwin",
+        "aarch64-apple-darwin",
+        "aarch64-unknown-linux-gnu"
+      ],
+      "cross_target_runtime_execution_claimed": false,
+      "strict_all_targets_clippy": "passed",
+      "actual_root_clippy_invocations": 25,
+      "fresh_false_root_clippy_records": 25,
+      "source_lock_before_after_clean": true
+    },
+    "private_native": {
+      "job": "26c4545eae1eab8d27485f4a48077d3c-7c9",
+      "exit": 0,
+      "actual_command_count": 6,
+      "supervisor_seconds": 13.107,
+      "mpx_real_tests": 2,
+      "private_cli_workflow": "passed",
+      "atspi_real_tests": 1,
+      "wayland_groups": 7,
+      "owned_pty_groups": 5,
+      "synthetic_usb_groups": 11,
+      "all_scope_cleanup_checks_in_original_receipt": "passed",
+      "renderer_name_observed": false,
+      "physical_hardware_acceptance_claimed": false,
+      "atspi_nested_locked_flag": false,
+      "cargo_lock_before_after_equal": true
+    },
+    "compiler_to_runtime_identity": [
+      {
+        "name": "cli",
+        "bytes": 17454624,
+        "sha256": "7a6a6d995b3a1b77e2cd5d4ea585e72e5c170e338e333d85684ec2dbca9b864b"
+      },
+      {
+        "name": "accessibility_test",
+        "bytes": 19457200,
+        "sha256": "d6e9f46a49db84ce90acd6b16b60fe6785ed73b3fc91c15755d385511b67d58c"
+      },
+      {
+        "name": "lib_test",
+        "bytes": 21480832,
+        "sha256": "e36daa4146c197cdbf7822d06220561543dd8d168c4f8810e5966c202568e4fb"
+      }
+    ],
+    "github_tree_bindings": {
+      "tree_entry_count": 181,
+      "tree_truncated": false,
+      "eight_native_fixture_blobs_match_current_git_tree": true,
+      "cargo_lock_sha256_matches_runtime": true,
+      "control_files": [
+        {
+          "path": "AGENTS.md",
+          "bytes": 780,
+          "sha256": "33b6c1a884bca8437fe0e96838d2ff0975b1ba44e06d6ef2b54706ce1dc81146",
+          "git_blob": "762c7e3e41c5f866c133c2da36c5b7dd072af5e1"
+        },
+        {
+          "path": ".github/workflows/ci.yml",
+          "bytes": 1083,
+          "sha256": "7ec93171e0dc2d18b0e0bee6a4c1277e84856ac4d846be82b1491f0e6dda722d",
+          "git_blob": "d27303105b09832808ace98cbaca2daf73cf1701"
+        },
+        {
+          "path": ".github/workflows/bump.yml",
+          "bytes": 1060,
+          "sha256": "853f01b408ee57c6d4afa86cab7dc72cfcbd9bf020bb3f8b5f4d63e00e6a0636",
+          "git_blob": "a054a5abd8a98e2637dfc33a92dbe7198f9e42a5"
+        },
+        {
+          "path": ".github/workflows/release.yml",
+          "bytes": 3134,
+          "sha256": "7104fcbccfec47630074c1db74feef84c0148aa33bd569590001394f4ef2d1cd",
+          "git_blob": "a7acb88c5afdf192bb5c640198fc8c8928381fcf"
+        },
+        {
+          "path": "Cargo.lock",
+          "bytes": 1138,
+          "sha256": "cffb29f3aa454c065523c6fc62ebf33721694df88af94e0aff2feea5d17855e0",
+          "git_blob": "9834d3ee693fb7efe8ad667ee889322874d61b58"
+        }
+      ]
+    },
+    "counting": "Do not add the two real MPX executions to default289 as291 unique; both were already default guarded entries. The16 targeted tests overlap default, no_std20 is another configuration, and fixture groups are not unit-test totals."
+  },
+  "repository_merge_controls_observed": {
+    "target_branch_protected": false,
+    "target_required_status_checks_enforcement": "off",
+    "target_required_status_contexts": [],
+    "repository_and_inherited_rulesets": [],
+    "pr3_review_submissions": 0,
+    "pr3_unresolved_inline_threads": 0,
+    "pr2_review_submissions": 0,
+    "pr3_issue_comments": {
+      "count": 1,
+      "kind": "Sourcery reviewer guide only; no requested-change finding",
+      "url": "https://github.com/LIghtJUNction/zuse/pull/3#issuecomment-7052567466"
+    },
+    "requested_external_ci_or_review_run": false,
+    "hosted_ci_not_claimed_as_current_candidate_runtime_proof": true,
+    "authenticated_connection_permissions": {
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
+    },
+    "repository_archived": false
+  },
+  "workflow_and_propagation_boundary": {
+    "ci": "Current CI is pull_request/workflow_dispatch. A PR2 synchronize event after feature-branch merge may start CI; no hosted run was requested or relied upon in this read-only decision.",
+    "release": "Bump is workflow_dispatch only. Release accepts version-tag pushes, workflow_dispatch or workflow_call. Feature-branch merge creates no release tag and does not match release push trigger.",
+    "workflow_files_changed_by_PR3": false,
+    "AGENTS": "Dependency propagation and consumer receipts remain required for eventual library/downstream delivery. Current instruction deliberately keeps main/a1 and consumers frozen; isolated PR3→PR2 repair integration does not complete propagation.",
+    "separate_remaining_work": [
+      "PR2 remains draft pending coordinator/source-owner integration decision.",
+      "Any main/downstream Git/lock/gitlink refresh needs its own fixed-cohort consumer validation and receipts.",
+      "No new main release, physical hardware/GPU coverage, final44, or SSMCP P1 is certified here."
+    ]
+  },
+  "pre_merge_observed_blockers": [
+    {
+      "kind": "workflow_state",
+      "fact": "PR3 draft=true",
+      "effect": "Direct merge was blocked until ready-for-review transition.",
+      "resolved": true,
+      "resolution": "Root subsequently marked ready and merged; see root publication.",
+      "is_current_blocker": false
+    }
+  ],
+  "unresolved_source_or_validation_blockers": [],
+  "evidence": [
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-pr3-merge-readiness-github-snapshot.json",
+      "bytes": 71770,
+      "sha256": "bbadfa600fe1782398eed5e1047aaa152606e7e636157f2691fdbedb3f4ea975"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-independent-static-review.json",
+      "bytes": 11273,
+      "sha256": "0d3508ef01a3d284510290422828f86740e81df9d346df73220704d07828abae"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-receipt-fix.json",
+      "bytes": 27363,
+      "sha256": "8d946d84432203d9f6285eab9ed690204e5f225c2d4f5d4c526041e9dbdfabcb"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/original/gate-green/result.json",
+      "bytes": 9510,
+      "sha256": "a3c05be4ab48fe50b18fe459ff23344e5b425f3f33d594c82acec555e6b2c0db"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-portable-independent-review.json",
+      "bytes": 10412,
+      "sha256": "ba8a4ed048b4d8a6cb681a989ab1cb5f96aa48c0563e4be5671902efe2a11511"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-evidence/portable/result.json",
+      "bytes": 24696,
+      "sha256": "53eda19a7a10de808b81ef99f56b454e2cf82bef6b468ee13f2f89222d5f7456"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-native-independent-review.json",
+      "bytes": 14150,
+      "sha256": "70c844a688d0b838420c4e50e6172216e0488c6a2274944da480375dff20995e"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-native-evidence/native/result.json",
+      "bytes": 14627,
+      "sha256": "ada3df93162ce40412aecda93c84023904a12f3539e22a307046489936fdc9df"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-minimum-validation-plan.json",
+      "bytes": 19007,
+      "sha256": "e21b5560794b26ba843c71fb8814cee1927ce832dcc4a5246bb5539b54c7d414"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-merge-publication-20261121.json",
+      "bytes": 1635,
+      "sha256": "d00d12ba9852378418cc28a7c7aea39e25c59d1202336d776757f4c8977d0ba6"
+    }
+  ],
+  "read_only_actions": {
+    "github_GETs_only": true,
+    "mark_ready": false,
+    "merge": false,
+    "push": false,
+    "update_PR": false,
+    "source_or_worktree_mutation": false,
+    "product_build_test_or_GUI": false,
+    "ELF_rehash": false,
+    "main_or_a1_modified_by_reviewer": false
+  },
+  "next_step": "Await root next report for read-only document review; do not repeat product gates or merge actions.",
+  "github_snapshot_materialized_at_utc": "2026-11-21T00:29:44.406Z",
+  "observation_time_note": "The saved GitHub responses capture pre-merge state. Per-GET completion timestamps were not recorded; materialized_at_utc is file assembly time, not a claim that the PR was still draft at that clock time."
+}

@@ -1,0 +1,313 @@
+{
+  "schema": "project-z-ssmcp-build-independent-review-v1",
+  "reviewed_at": "2026-11-20T23:08:25.631437+00:00",
+  "source_revision": "781b87df1d364137b6885f17f631a3e9e991bd58",
+  "source_tree": "6bf7beb143cfdce3878df856c27785164695430f",
+  "scope": "Read exact native build receipt, independently check source/artifact/command consistency, and rehash five preserved files on the developer machine; no rebuild or product test execution.",
+  "raw_receipt": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-baseline-build-receipt.json",
+    "native_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/build-receipt.json",
+    "bytes": 79446,
+    "sha256": "d2204375614807af510f6c7fd08ec657d212a98f18f504cb21376c63f47ea7c0"
+  },
+  "native_readback": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-preserved-artifact-readback.json",
+    "bytes": 4442,
+    "sha256": "1a3a1ff057228a7b7b8bc92dbd911622bc815aaecd957254fd48df063f9713ad",
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-621",
+    "exit_code": 0,
+    "observed_at": "2026-11-20T23:07:48.491825+00:00"
+  },
+  "result": "passed",
+  "commands": [
+    {
+      "name": "build-library-fixture",
+      "command": [
+        "cargo",
+        "test",
+        "--lib",
+        "--no-run",
+        "--offline",
+        "--locked",
+        "--jobs",
+        "1",
+        "--message-format=json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "build-release-bins",
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "--bins",
+        "--offline",
+        "--locked",
+        "--jobs",
+        "1",
+        "--message-format=json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "build-vt-snapshot",
+      "command": [
+        "cargo",
+        "build",
+        "--release",
+        "--example",
+        "vt_snapshot",
+        "--offline",
+        "--locked",
+        "--jobs",
+        "1",
+        "--message-format=json"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "library-test-fixture",
+      "source": "src/lib.rs",
+      "fresh": false,
+      "profile": {
+        "debug_assertions": true,
+        "debuginfo": 0,
+        "opt_level": "0",
+        "overflow_checks": true,
+        "test": true
+      },
+      "preserved": {
+        "bytes": 165519472,
+        "mode": 493,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/bin/library-test-fixture",
+        "sha256": "edea75a764a08d6b4ed76d49d16160ce3750dc9f333cce41e574c46562ac9c81"
+      },
+      "compiler_invocation": {
+        "bytes": 728,
+        "mode": 384,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/rustc-invocations/build-library-fixture/invocation-1798591-1795214798870722020.json",
+        "sha256": "fab731c8a83a509c4323fd550a2869c3ba6269e09eae877f59fb63053fdbcf32"
+      },
+      "link_public_preserved_hashes_equal": true,
+      "native_current_preserved_hash_verified": true
+    },
+    {
+      "name": "ssmcp",
+      "source": "src/bin/ssmcp.rs",
+      "fresh": false,
+      "profile": {
+        "debug_assertions": false,
+        "debuginfo": 0,
+        "opt_level": "z",
+        "overflow_checks": false,
+        "test": false
+      },
+      "preserved": {
+        "bytes": 15754224,
+        "mode": 493,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/bin/ssmcp",
+        "sha256": "09c7219a0863ebfc97f51246e569b65dd4963493b9e8b7f0885672b6b95c5ac2"
+      },
+      "compiler_invocation": {
+        "bytes": 707,
+        "mode": 384,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/rustc-invocations/build-release-bins/invocation-1852800-1795215014754187023.json",
+        "sha256": "12538103ed138f072c9e4186ef35e68b2138c43cbe0965a4acdc88826b0c0f99"
+      },
+      "link_public_preserved_hashes_equal": true,
+      "native_current_preserved_hash_verified": true
+    },
+    {
+      "name": "ssmcp-frontend",
+      "source": "src/bin/ssmcp-frontend.rs",
+      "fresh": false,
+      "profile": {
+        "debug_assertions": false,
+        "debuginfo": 0,
+        "opt_level": "z",
+        "overflow_checks": false,
+        "test": false
+      },
+      "preserved": {
+        "bytes": 1386576,
+        "mode": 493,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/bin/ssmcp-frontend",
+        "sha256": "229e65b1f52098b7292d9e387e9442d24c9411ab2e34a55fcbe4a6171e0398b5"
+      },
+      "compiler_invocation": {
+        "bytes": 725,
+        "mode": 384,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/rustc-invocations/build-release-bins/invocation-1841843-1795214966434958767.json",
+        "sha256": "08e71ee692c41d5370653aeebc8da87bd5f7fa3fd3385ed3ee391bfcb108ed4c"
+      },
+      "link_public_preserved_hashes_equal": true,
+      "native_current_preserved_hash_verified": true
+    },
+    {
+      "name": "ssmcpd",
+      "source": "src/bin/ssmcpd.rs",
+      "fresh": false,
+      "profile": {
+        "debug_assertions": false,
+        "debuginfo": 0,
+        "opt_level": "z",
+        "overflow_checks": false,
+        "test": false
+      },
+      "preserved": {
+        "bytes": 8252208,
+        "mode": 493,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/bin/ssmcpd",
+        "sha256": "909133cae9bfc0d9bcefdf4af4740a9bc3c50a1097025a3178bc8e04daa62e86"
+      },
+      "compiler_invocation": {
+        "bytes": 709,
+        "mode": 384,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/rustc-invocations/build-release-bins/invocation-1843615-1795214974580381480.json",
+        "sha256": "0f5e9567996563f02e50373b122b7e6bc9013add943d64ed99f729fe0c7b0bb3"
+      },
+      "link_public_preserved_hashes_equal": true,
+      "native_current_preserved_hash_verified": true
+    },
+    {
+      "name": "vt_snapshot",
+      "source": "examples/vt_snapshot.rs",
+      "fresh": false,
+      "profile": {
+        "debug_assertions": false,
+        "debuginfo": 0,
+        "opt_level": "z",
+        "overflow_checks": false,
+        "test": false
+      },
+      "preserved": {
+        "bytes": 440984,
+        "mode": 493,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/bin/examples/vt_snapshot",
+        "sha256": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f"
+      },
+      "compiler_invocation": {
+        "bytes": 720,
+        "mode": 384,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/rustc-invocations/build-vt-snapshot/invocation-1895801-1795215181999847432.json",
+        "sha256": "2db1395f2d230401aed6f16b8070e4427bff79c5cf9514a8255ea769bc4b2471"
+      },
+      "link_public_preserved_hashes_equal": true,
+      "native_current_preserved_hash_verified": true
+    }
+  ],
+  "cargo_lock_sha256": "082cdef2ddb1a4acadf87bd927cb875c802808c20c303721829661c917a03aec",
+  "gitlinks": {
+    "crates/zharness": "cb63a9a0aa163214c6062664cd62fefb357be5a8",
+    "crates/zplugin": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4",
+    "crates/ztuio": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+    "crates/zuse": "a1bb8fd2cbce0a9d85134999883c578358065242"
+  },
+  "workspace_wrapper_sha256": "f416c3a75f62e0d2b99b0da099e6b61ef12a17000afb500b70b4a0eb583914f0",
+  "receipt_source_and_input_guards_passed": true,
+  "both_recorded_locks_released": true,
+  "product_tests_executed": 0,
+  "benchmark_executed": false,
+  "release_gate_executed": false,
+  "limitations": [
+    "The source/input unchanged checks are recorded by the native producer; this review independently checked their consistency and artifact bytes, without re-executing those gates.",
+    "Build completion does not establish six-scenario paste, Ctrl+V, runtime-18 or final P1 acceptance."
+  ],
+  "first_runtime_attempt": {
+    "bytes": 23288,
+    "sha256": "23cf70065f3b4aa72beaeb45fefe0a6006da6fa5d5d1b4667249081db1348cb4",
+    "keys": [
+      "build_receipt_scope",
+      "cargo_executed",
+      "cohort",
+      "finished_at",
+      "first_error",
+      "inputs_after",
+      "inputs_before",
+      "inputs_unchanged",
+      "phase",
+      "quiet_lock",
+      "release_gate_executed",
+      "schema",
+      "scope",
+      "scratch",
+      "source_revision",
+      "source_tree",
+      "started_at",
+      "status",
+      "steps"
+    ],
+    "scalars": {
+      "build_receipt_scope": "build_only",
+      "cargo_executed": false,
+      "finished_at": 1795215286.0499704,
+      "first_error": "RuntimeError: six-cases exited 1; retain /home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-run/logs/six-cases.stdout and /home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-run/logs/six-cases.stderr",
+      "inputs_unchanged": true,
+      "phase": "baseline",
+      "release_gate_executed": false,
+      "schema": "ssmcp-paste-execution-v1",
+      "scope": "frozen_six_case_and_ctrlv_execution",
+      "source_revision": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "source_tree": "6bf7beb143cfdce3878df856c27785164695430f",
+      "started_at": 1795215267.075917,
+      "status": "failed"
+    },
+    "dict_keys": {
+      "cohort": [
+        "build_configuration",
+        "build_environment",
+        "build_step_evidence_environment",
+        "case_timeout",
+        "config_sha256",
+        "ctrlv_file_paste_sha256",
+        "ctrlv_paste_reader_sha256",
+        "ctrlv_sha256",
+        "git_repositories",
+        "gitlinks",
+        "helpers",
+        "lock_sha256",
+        "node_sha256",
+        "runner_sha256",
+        "scratch_filesystem",
+        "workspace_compile_provenance_schema",
+        "workspace_wrapper",
+        "wrapper_sha256"
+      ],
+      "inputs_after": [
+        "bytes",
+        "mode",
+        "path",
+        "sha256"
+      ],
+      "inputs_before": [
+        "bytes",
+        "mode",
+        "path",
+        "sha256"
+      ],
+      "quiet_lock": [
+        "acquired_at",
+        "device",
+        "held_for_entire_execution",
+        "inode",
+        "path",
+        "released_at",
+        "wait_seconds",
+        "waiting_since"
+      ],
+      "scratch": [
+        "device",
+        "host_path",
+        "mode",
+        "sandbox_path",
+        "type"
+      ]
+    },
+    "list_lengths": {
+      "steps": 1
+    }
+  }
+}

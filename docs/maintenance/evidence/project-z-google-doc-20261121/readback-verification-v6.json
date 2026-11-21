@@ -1,0 +1,830 @@
+{
+  "schema_version": 6,
+  "document_id": "1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+  "title": "Project Z 进度报告（2026-11-21）",
+  "url": "https://docs.google.com/document/d/1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+  "revision_id": "AHj4eMSYznfr2ZpqVgnonrUxzftsiSwkW_Sq9rkqP7D0GBtOOUePoov5TY1z15eMQoK_aRZxUo22iqFHc6p6lHLIDc9QOSDqCLZkzKrnbTU",
+  "parent_ids": [
+    "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0"
+  ],
+  "mime_type": "application/vnd.google-apps.document",
+  "status_cutoff_utc": "2026-11-21T05:07:21Z",
+  "final_readback_verified": true,
+  "checks": {
+    "issues": [],
+    "nonempty_paragraphs": 31,
+    "all_paragraphs_match": true,
+    "one_native_7_by_3_table": true,
+    "all_21_cells_match": true,
+    "source_hyperlinks": 22,
+    "all_source_links_match": true,
+    "numbered_steps": 3,
+    "native_headings": [
+      {
+        "text": "Project Z 进度报告",
+        "kind": "TITLE",
+        "font_size": 22
+      },
+      {
+        "text": "2026年11月20—21日，本轮进展与验收边界",
+        "kind": "SUBTITLE",
+        "font_size": 13
+      },
+      {
+        "text": "状态概览",
+        "kind": "HEADING_1",
+        "font_size": 18
+      },
+      {
+        "text": "本轮结果如何使用",
+        "kind": "HEADING_1",
+        "font_size": 18
+      },
+      {
+        "text": "发行工具：兼容版本元数据，18 项测试通过",
+        "kind": "HEADING_2",
+        "font_size": 16
+      },
+      {
+        "text": "SSMCP：U 的既有结果与 V2 的进行中验证",
+        "kind": "HEADING_2",
+        "font_size": 16
+      },
+      {
+        "text": "zcalld：bd7 的 CLI 验证与旧 0af8 分开记录",
+        "kind": "HEADING_2",
+        "font_size": 16
+      },
+      {
+        "text": "zuse：跨平台收尾问题已定位并修复",
+        "kind": "HEADING_2",
+        "font_size": 16
+      },
+      {
+        "text": "接续工作",
+        "kind": "HEADING_1",
+        "font_size": 18
+      },
+      {
+        "text": "证据与时间范围",
+        "kind": "HEADING_1",
+        "font_size": 18
+      }
+    ],
+    "parent_folder_matches": true,
+    "full_Docs_resource_read": true,
+    "visual_browser_render_not_performed": true,
+    "effective_font_sizes_match": true,
+    "fonts_resolve_named_style_inheritance": true
+  },
+  "maintenance_publication": {
+    "report_commit": "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+    "report_changed_text_files": 34,
+    "snapshot_utc": "2026-11-21T03:42:51Z",
+    "merge_commit": "efe912eb54a8240fab39126d1f2f6a464cc67f8b",
+    "merge_tree": "dd9345a7bf252832ce46878e0a50c7a27df5e8c9",
+    "merge_parents": [
+      "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+      "be64e5ab88a8d72fe81956f6ba64a363e2299fde"
+    ],
+    "pr7_draft": true,
+    "independent_GitHub_object_reads": true,
+    "evidence_commit": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "evidence_added_text_files": 10,
+    "evidence_code_changes": false,
+    "release_fix_commit": "88fa3610f24cc21705107bff4917a6ec26c022d0",
+    "release_fix_tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+    "release_fix_parent": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "maintenance_branch_head": "88fa3610f24cc21705107bff4917a6ec26c022d0"
+  },
+  "release_fix": {
+    "commit": "88fa3610f24cc21705107bff4917a6ec26c022d0",
+    "tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+    "base": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "files_changed": 4,
+    "leaf_count": 400,
+    "unchanged_leaves": 396,
+    "tests": {
+      "total": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "modules": {
+        "release": 4,
+        "projection": 8,
+        "receipts": 6
+      }
+    },
+    "original_offline_fixture_metadata": {
+      "executions": 1,
+      "exit_code": 0,
+      "argv": [
+        "cargo",
+        "metadata",
+        "--offline",
+        "--no-deps",
+        "--format-version=1"
+      ]
+    },
+    "actual_job": "26c4545eae1eab8d27485f4a48077d3c-bc6",
+    "actual_exit": 0,
+    "both_eof": true,
+    "original_helper_reused": true,
+    "independent_static_review_no_blocker": true,
+    "not_final44_or_Rust_product_validation": true,
+    "handoff": {
+      "bytes": 11863,
+      "sha256": "257bad369feed9b69d6a238d655308ca919ac8ea76dbe3def603f3c924aef14e"
+    }
+  },
+  "v2_r13": {
+    "public_source": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "public_tree": "64b40eb8a3e0188076cf376229d3d87074d27dcc",
+    "pr": 159,
+    "pr_draft": true,
+    "source_owner_reports_pushed_and_frozen": true,
+    "complete_freeze_readback_pending": true,
+    "root_actual_unit_observation": {
+      "observed_at_utc": "2026-11-21T05:05:08.550567Z",
+      "job_suffix": "be8",
+      "load_state": "loaded",
+      "active_state": "active",
+      "sub_state": "running",
+      "main_pid": 3115830,
+      "invocation_id": "4da7a4c9e0074782aa7d375610b04163"
+    },
+    "new_gate35_pass_not_established": true,
+    "U_results_not_transferred": true,
+    "new_UI_P1_pending": true
+  },
+  "runtime_followup": {
+    "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "actual_job_suffix": "ac8",
+    "actual_exit": 0,
+    "both_eof": true,
+    "case_counts": {
+      "private": 12,
+      "transport": 6,
+      "total": 18
+    },
+    "start_utc": "2026-11-21T03:27:15Z",
+    "end_utc": "2026-11-21T03:27:27Z",
+    "report": {
+      "bytes": 62335,
+      "sha256": "ff972401586a41dba8a803a17f229098b1bed9f52c9de8aeff61aff2a6440cf9"
+    },
+    "launcher": {
+      "bytes": 12641,
+      "sha256": "128d30c191226ec1d2fcb2532569f7ae32f6802c3e69499c8eb6f916c257b947"
+    },
+    "direct_source": "Original source owner readback followed by Root's completed independent raw receipt review; the fixed summary descriptor below records the latter.",
+    "ui_alias_p1_pass_not_claimed": true,
+    "root_independent_raw_read": {
+      "completed": true,
+      "summary_bytes": 7672,
+      "summary_sha256": "78545fb5b089e32626cc351156d9c30a112a74942ea7d1f902ea4f987c067fcf",
+      "scope": "12+6 passed; cleanup/errors; launcher completion/reaped; input identity before/after; five U owned binaries; evidence module/driver hashes"
+    }
+  },
+  "ui_first_actual_failure": {
+    "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "root_actual_read_ref": "ae2",
+    "exit_code": 1,
+    "both_eof": true,
+    "passed_suites": [
+      {
+        "name": "message_references",
+        "checks": 53
+      },
+      {
+        "name": "force_send",
+        "checks": 137
+      },
+      {
+        "name": "listener_transports",
+        "checks": 74
+      }
+    ],
+    "failed_suite": {
+      "name": "zuse_worker",
+      "completed_checks": 0,
+      "error": "private Xvfb exited without readiness",
+      "location": "private_xvfb.py:109"
+    },
+    "ui_overall_passed": false,
+    "alias_pending": true,
+    "p1_not_run": true,
+    "source_of_status": "Root actual exec.read observation; no additional gate by Docs writer"
+  },
+  "ui_second_actual_failure": {
+    "run_reference": "b37",
+    "first_nine_suites_passed": 9,
+    "selected_passing_checks": {
+      "interactions": 172,
+      "zuse_worker": 31,
+      "private_desktop": 35
+    },
+    "failed_suite": "session_groups",
+    "actual_setup_checks_passed": 21,
+    "remaining_suites_not_run": 14,
+    "ui_overall_passed": false,
+    "p1_not_run": true,
+    "first_round_preserved": true,
+    "mesa_environment_fixture_fix_applied_by_original_owner": true,
+    "known_code_behavior": "The async recipient list refresh is enqueued, then the existing client snapshot is immediately matched before changing to Agents view.",
+    "cache_at_failure_not_recorded": true,
+    "cause_limit": "Source supports the timing explanation; no claim that the actual b37 cache was empty or stale.",
+    "owner_decision": "Fix the product cold exact-ID query and retain original session_groups fixture; no fixture prewarming patch adopted.",
+    "product_patch_and_new_acceptance_pending": true,
+    "source_of_status": "Root source/acceptance owner updates plus Core fixed U static source review; no new validation by Docs writer",
+    "alias_coverage": {
+      "name": "human_finish",
+      "covered_by": "interactions",
+      "independently_executed": false,
+      "independent_pass": false,
+      "counted_as_additional_passing_suite": false
+    }
+  },
+  "pr4_merge": {
+    "commit": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+    "base_kind": "feature_branch",
+    "main_unchanged": "a1bb8fd2cbce0a9d85134999883c578358065242"
+  },
+  "complete_text_projection": {
+    "paragraphs": [
+      {
+        "kind": "TITLE",
+        "text": "Project Z 进度报告"
+      },
+      {
+        "kind": "SUBTITLE",
+        "text": "2026年11月20—21日，本轮进展与验收边界"
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "发行工具的版本兼容性修复已发布，18 项针对性测试全部通过。SSMCP 的 Q、U 门禁及 U runtime 18 项保留原源码成绩；新候选 V2 的 r13 于 05:05 UTC 被直接观察到仍在运行，尚无新一轮通过结论。UI、P1 与最终 44 仓新图仍待收口。"
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "完整历史报告和机器清单仍以 c08d6e89 的 2026-11-21 03:42:51 UTC 快照为准，该批为 34 个文本文件增量。维护分支随后正常合入主线 efe912eb；ba666696 又增加 10 份证据，未改代码；88fa3610 发布了本页所述的发行工具修复。PR7 仍为草稿。既有云盘原始 Markdown、JSON 仍保留 0d73 版本，这份 Doc 是后续可读进度副本。",
+        "links": [
+          {
+            "label": "完整历史报告",
+            "url": "https://github.com/LIghtJUNction/project-z/blob/c08d6e894efd1b8f134ae5abb55f66cb6e2ac178/docs/maintenance/2026-11-20-pr-and-dependencies.md"
+          },
+          {
+            "label": "机器清单",
+            "url": "https://github.com/LIghtJUNction/project-z/blob/c08d6e894efd1b8f134ae5abb55f66cb6e2ac178/docs/maintenance/2026-11-20-pr-and-dependencies.json"
+          },
+          {
+            "label": "efe912eb",
+            "url": "https://github.com/LIghtJUNction/project-z/commit/efe912eb54a8240fab39126d1f2f6a464cc67f8b"
+          },
+          {
+            "label": "ba666696",
+            "url": "https://github.com/LIghtJUNction/project-z/commit/ba666696e38c350c7bf3cdcc01fd940fcfa69145"
+          },
+          {
+            "label": "88fa3610",
+            "url": "https://github.com/LIghtJUNction/project-z/commit/88fa3610f24cc21705107bff4917a6ec26c022d0"
+          },
+          {
+            "label": "PR7",
+            "url": "https://github.com/LIghtJUNction/project-z/pull/7"
+          }
+        ]
+      },
+      {
+        "kind": "HEADING_1",
+        "text": "状态概览"
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "初始 85 项按原清单去重统计；新增依赖迁移和修复 PR 单独记录，不改旧清单的分母。本轮已发布的 19 仓内部 Git 源迁移与 14 仓受控历史附件清理，详见固定归档。"
+      },
+      {
+        "kind": "HEADING_1",
+        "text": "本轮结果如何使用"
+      },
+      {
+        "kind": "HEADING_2",
+        "text": "发行工具：兼容版本元数据，18 项测试通过"
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "修复 88fa3610 接受合法的 version + git 依赖声明，复用现有 Cargo 版本匹配函数，先核对锁定版本满足约束，再投影为锁中的 =exact 版本。非法或不兼容的约束仍会拒绝，提交选择器及其他来源混用的限制保持，别名、features、optional、target 和 workspace 继承不变。receipts 也走同一校验入口，并继续核对确切提交与归档哈希。",
+        "links": [
+          {
+            "label": "修复 88fa3610",
+            "url": "https://github.com/LIghtJUNction/project-z/commit/88fa3610f24cc21705107bff4917a6ec26c022d0"
+          }
+        ]
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "旧代码先在两个针对性方法中实际失败；修复后的 release 4 项、projection 8 项、receipts 6 项共 18 项通过，0 失败、0 跳过。原有 cargo metadata --offline --no-deps --format-version=1 在私有临时夹具中真实执行一次并退出 0，没有隐藏 PATH 或跳过断言。批次只取一次非阻塞共享锁，结束后子进程和夹具已清理；这不等于 Rust 产品验收，也不等于最终 44 仓图通过。"
+      },
+      {
+        "kind": "HEADING_2",
+        "text": "SSMCP：U 的既有结果与 V2 的进行中验证"
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "Q 固定源码 647bce2e 的 r11 共 35 阶段完成，并通过独立复核。后继 U 固定源码 784370b5 的 r12 于 02:53:04 UTC 完成 35/35 阶段；随后独立复核无阻断，核对了 212 份文本原件、实际编译链和 5 份受控产物副本。两轮结果保留各自源码身份，不把 Q 的成绩转挂 U。",
+        "links": [
+          {
+            "label": "Q 固定源码 647bce2e",
+            "url": "https://github.com/LIghtJUNction/ssmcp/commit/647bce2ec9cf74beab43adea831c2e0712d28ea8"
+          },
+          {
+            "label": "U 固定源码 784370b5",
+            "url": "https://github.com/LIghtJUNction/ssmcp/commit/784370b5fe1b817c788273a5f7b1ab826c743965"
+          }
+        ]
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "这里的 35 是门禁阶段数，阶段数与用例数分别记录。U 的运行时通信检查（runtime）已有 18/18 实际通过回执：12 项私有检查和 6 项传输检查，于 03:27:15—03:27:27 UTC 完成，包含双向中文正文与确认、缺失文件警告和清理。首次入口仅因 6 个生成的 Python 缓存被源码清单守卫挡住；原负责人可逆移走后，1,545 个源码文件的字节、权限和集合仍一致。主协调已核对这份 runtime 回执、清理和输入前后身份，结果一致。"
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "UI 第一轮实际退出码为 1：message_references（53）、force_send（137）、listener_transports（74）检查通过；zuse_worker 在私有 Xvfb 就绪前退出，完成检查为 0。该失败保留为历史。随后修正私有 Xvfb 的 Mesa 环境，使第二轮 zuse_worker（31）及 private_desktop（35）检查通过。"
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "UI 第二轮共计划 24 组，实际执行 10 组，前 9 组通过。human_finish 是 interactions 覆盖的 1 个 alias，不是另一次独立执行或第 10 个独立通过组；interactions 有 172 项检查通过。第 10 组 session_groups 在打开精确收件人选择器时失败，原日志已有 21 项 setup 检查通过，失败摘要中的 0 不能解释为没有执行检查。剩余 14 组未运行，这一轮 UI 整体尚未通过，P1 未运行。"
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "U 中已定位的代码问题是：/message 发起异步目录刷新后，立即在现有快照中匹配精确 ID。原作者选择修产品的首次查询流程，保留原 session_groups 用例。现场缓存未捕获，不能断言当时缓存为空或陈旧；新候选是否解决完整场景仍需其实际验收。",
+        "links": [
+          {
+            "label": "代码问题",
+            "url": "https://github.com/LIghtJUNction/ssmcp/blob/784370b5fe1b817c788273a5f7b1ab826c743965/src/client/terminal/conversation/messaging.rs#L195-L219"
+          }
+        ]
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "公开 PR159 的候选已推进到 V2 f42baae1（tree 64b40eb8），仍为草稿。原负责人报告已推送并冻结，完整冻结原件尚未完成独立读取。05:05:08 UTC 的直接单元观察为 active／running；即使同时显示 Result=success 或 ExecMainStatus=0，也不表示 r13 已结束。新一轮 35 阶段、UI 和 P1 尚无完成结论，U/r12 的成绩不转挂 V2。",
+        "links": [
+          {
+            "label": "PR159",
+            "url": "https://github.com/LIghtJUNction/ssmcp/pull/159"
+          },
+          {
+            "label": "V2 f42baae1",
+            "url": "https://github.com/LIghtJUNction/ssmcp/commit/f42baae1d5227bd6db8315aef778160b80b57274"
+          }
+        ]
+      },
+      {
+        "kind": "HEADING_2",
+        "text": "zcalld：bd7 的 CLI 验证与旧 0af8 分开记录"
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "候选 bd7a30c0 把当时主线更新合入原功能分支，保留双父历史。220 个叶对象中，218 个与 0af8 原物一致，仅更新 GUI 固定源和发行说明。该候选于 03:05:38—03:06:31 UTC 完成一次实际窄验证：release 构建 34.387 秒，帮助断言通过，原 8 个 TCP／Unix curl 取消和半关闭场景全部通过。",
+        "links": [
+          {
+            "label": "候选 bd7a30c0",
+            "url": "https://github.com/LIghtJUNction/zcalld/commit/bd7a30c0a9e3865f137af229d5883e8fb984f518"
+          }
+        ]
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "87 条实际命令包含源码、依赖与清理读取，并非 87 项产品测试。新 CLI 的真实编译、链接输出、Cargo 产物和私有副本已连成同一字节证明链；独立清理观察确认本批进程与控制组退出。旧 0af8 的 182 项 Rust（内含 7 个 listener）、2 次实际 Clippy 和 8 个 curl，仍属于旧源码，本次没有重跑或重复计入。"
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "GUI 259 的既有官方 CI 还提供私有 Xvfb 导航证据；其合成夹具与模拟安装的范围保持，不外推真实供应商或物理桌面验收。PR1 继续草稿，等待同一新 CLI 的最终 P1。",
+        "links": [
+          {
+            "label": "GUI 259 的既有官方 CI",
+            "url": "https://github.com/LIghtJUNction/zcall-gui/actions/runs/44853641350"
+          }
+        ]
+      },
+      {
+        "kind": "HEADING_2",
+        "text": "zuse：跨平台收尾问题已定位并修复"
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "历史 2ffe 候选在 macOS、Windows 的 Rust 测试已通过，最后的 Clippy 检查因 Mouse.close 显式释放一个无 Drop 类型而失败。修复 67e2d6a4 将 Backend 放进更小的词法作用域，仍先完成资源清理，再释放用户鼠标租约；独立静态复核未发现阻断，也没有放宽断言或跳过测试。",
+        "links": [
+          {
+            "label": "修复 67e2d6a4",
+            "url": "https://github.com/LIghtJUNction/zuse/commit/67e2d6a4cee0d106f46bdf064013e163c0aa3337"
+          }
+        ]
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "CI 44860554142 已成功完成，Linux、macOS、Windows 的格式、测试、适用 no_std／Wasm 与严格 Clippy 均通过；Linux 另有私有 PTY 和合成 USB 检查。功能分支、主线准入与消费者传播仍分步处理。PR2 保持草稿隔离，当前 SSMCP 固定组合仍使用 a1bb8fd2，不能把本次 CI 成绩写成下游已经完成升级。",
+        "links": [
+          {
+            "label": "CI 44860554142",
+            "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44860554142"
+          },
+          {
+            "label": "PR2",
+            "url": "https://github.com/LIghtJUNction/zuse/pull/2"
+          }
+        ]
+      },
+      {
+        "kind": "HEADING_1",
+        "text": "接续工作"
+      },
+      {
+        "kind": "NUMBERED",
+        "text": "等待 V2／r13 的实际终态，并由原负责人用原验收用例完成新候选的 UI 与最终 P1；U/r12 的已通过回执不转挂新源码。"
+      },
+      {
+        "kind": "NUMBERED",
+        "text": "按功能分支、主线、消费者的顺序推进 zuse，核对各消费者的真实锁文件和 Git 来源；冻结组合的变化另记实际验收。"
+      },
+      {
+        "kind": "NUMBERED",
+        "text": "最终组件提交就位后，刷新 44 仓来源映射并执行完整 sync／check／resolve。当前尚未执行这一新图，旧图和局部门禁不能替代它。"
+      },
+      {
+        "kind": "HEADING_1",
+        "text": "证据与时间范围"
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "本页整理的是 2026年11月20—21日的维护进展，状态更新截至 2026-11-21 05:07 UTC（台北时间 13:07）。固定 GitHub 归档负责完整历史清单，后续状态采用各自实际回执与 CI 的观察时间；运行中的单元不能当作已经通过的门禁。"
+      },
+      {
+        "kind": "NORMAL_TEXT",
+        "text": "U 独审记录：ssmcp-U-r12-gate-independent-review.json，SHA-256 0ac24bc458797e725be67c25c241d9ed008534826d286cfe2b9251c73d7ca868。bd7 实际交接记录：handoff.json，SHA-256 afab66b49d433d318b9a0ecdca8ded3505222efe00fb36a395c989962f0acbff。原始源码、日志与产物证明链均已保存；这份阅读版不取代这些原件。"
+      }
+    ],
+    "table": [
+      [
+        "事项",
+        "已核实状态",
+        "收口边界"
+      ],
+      [
+        "初始 85 项 PR",
+        "56 已合并，14 已关闭，9 仓库已归档，5 具体阻塞，1 验收／集成中。",
+        "原清单去重口径保持；新增 PR 另列。"
+      ],
+      [
+        "SSMCP Q／r11",
+        "固定 Q 的 35 阶段完成，独立复核无阻断。",
+        "历史里程碑，成绩保留 Q 身份。"
+      ],
+      [
+        "SSMCP U 与 V2",
+        "U 的 35/35 阶段独审及 runtime 18/18 通过；V2／r13 已观察到运行中。",
+        "U 第二轮 UI 第 10 组失败；不把 U 成绩转挂 V2，新的 UI／P1 待验。"
+      ],
+      [
+        "zcalld PR1",
+        "bd7 新 CLI release 构建、帮助检查与原 8 个 curl 场景通过。",
+        "PR1 仍为草稿；历史 0af8 Rust／Clippy 不转挂。"
+      ],
+      [
+        "zuse 跨平台修复",
+        "67e 修复已发布，三平台 CI 通过。",
+        "PR4 已合入功能分支 fe47f963；PR2 仍为草稿，main 与 SSMCP 组合仍使用 a1。"
+      ],
+      [
+        "发行工具与最终 44 仓图",
+        "88fa 发行修复的 18/18 测试通过；PR7 仍为草稿。",
+        "仅一次临时离线 metadata；最终新图与 Rust 产品验收未执行。"
+      ]
+    ],
+    "tableLinks": [
+      {
+        "row": 2,
+        "col": 0,
+        "label": "SSMCP Q／r11",
+        "url": "https://github.com/LIghtJUNction/project-z/blob/33fd62fdbb376b6b64f14e604a63452abc654a1b/docs/maintenance/evidence/ssmcp-Q-r11-gate-independent-review.json"
+      },
+      {
+        "row": 4,
+        "col": 0,
+        "label": "zcalld PR1",
+        "url": "https://github.com/LIghtJUNction/zcalld/pull/1"
+      },
+      {
+        "row": 6,
+        "col": 0,
+        "label": "发行工具与最终 44 仓图",
+        "url": "https://github.com/LIghtJUNction/project-z/pull/7"
+      },
+      {
+        "row": 5,
+        "col": 2,
+        "label": "PR4",
+        "url": "https://github.com/LIghtJUNction/zuse/pull/4"
+      },
+      {
+        "row": 5,
+        "col": 2,
+        "label": "fe47f963",
+        "url": "https://github.com/LIghtJUNction/zuse/commit/fe47f963e604c13a2646baf5d391df5a7c69fc36"
+      }
+    ]
+  },
+  "prior_delivery": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/delivery-v5.json",
+    "bytes": 6200,
+    "sha256": "2db7230ecdc55ea19b623b041df8f605cd95f6e8e5424d78a8dbdcf1dd9c8e4f"
+  },
+  "created_once": true,
+  "raw_MD_JSON_unchanged": true,
+  "raw_drive_MD_JSON_version": "0d73",
+  "document_update_tests_builds_target_locks_not_executed": true,
+  "effective_font_checks": [
+    {
+      "index": 0,
+      "kind": "TITLE",
+      "expected": 22,
+      "actual": [
+        22
+      ]
+    },
+    {
+      "index": 1,
+      "kind": "SUBTITLE",
+      "expected": 13,
+      "actual": [
+        13
+      ]
+    },
+    {
+      "index": 2,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 3,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 4,
+      "kind": "HEADING_1",
+      "expected": 18,
+      "actual": [
+        18
+      ]
+    },
+    {
+      "index": 5,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 6,
+      "kind": "HEADING_1",
+      "expected": 18,
+      "actual": [
+        18
+      ]
+    },
+    {
+      "index": 7,
+      "kind": "HEADING_2",
+      "expected": 16,
+      "actual": [
+        16
+      ]
+    },
+    {
+      "index": 8,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 9,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 10,
+      "kind": "HEADING_2",
+      "expected": 16,
+      "actual": [
+        16
+      ]
+    },
+    {
+      "index": 11,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 12,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 13,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 14,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 15,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 16,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 17,
+      "kind": "HEADING_2",
+      "expected": 16,
+      "actual": [
+        16
+      ]
+    },
+    {
+      "index": 18,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 19,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 20,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 21,
+      "kind": "HEADING_2",
+      "expected": 16,
+      "actual": [
+        16
+      ]
+    },
+    {
+      "index": 22,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 23,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 24,
+      "kind": "HEADING_1",
+      "expected": 18,
+      "actual": [
+        18
+      ]
+    },
+    {
+      "index": 25,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 26,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 27,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 28,
+      "kind": "HEADING_1",
+      "expected": 18,
+      "actual": [
+        18
+      ]
+    },
+    {
+      "index": 29,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    },
+    {
+      "index": 30,
+      "kind": "NORMAL_TEXT",
+      "expected": 11,
+      "actual": [
+        11
+      ]
+    }
+  ],
+  "raw_readback_descriptors": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-final-readback-v6.json",
+      "bytes": 126697,
+      "sha256": "72b9e5638fa158d616355ad27528fcedb9e6b32fd6ca64f19946745ae278fa4e"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/metadata-final-readback-v6.json",
+      "bytes": 758,
+      "sha256": "8c3e7269b661c7465b0e133fd344089a6b98cef5f158d29b8578bf9378b85ae1"
+    }
+  ],
+  "immutable_archive_commit": "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+  "source_readbacks": {
+    "release_fix": {
+      "sha": "88fa3610f24cc21705107bff4917a6ec26c022d0",
+      "tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+      "parents": [
+        "ba666696e38c350c7bf3cdcc01fd940fcfa69145"
+      ]
+    },
+    "V2": {
+      "sha": "f42baae1d5227bd6db8315aef778160b80b57274",
+      "tree": "64b40eb8a3e0188076cf376229d3d87074d27dcc",
+      "parents": [
+        "18f43d69715538582ddc2806434009170f188e3c"
+      ]
+    }
+  },
+  "text_projection_descriptor": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-text-v6.md",
+    "bytes": 10389,
+    "sha256": "4938d40e7a7e1cce88febbe5099defd43e326235e8d888011df40ee9ee38dc96"
+  }
+}

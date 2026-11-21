@@ -1,0 +1,47 @@
+{
+  "schema": "project-z.zuse-pr2-admission-delivery.v1",
+  "recorded_at_utc": "2026-11-21T06:59:01.411679+00:00",
+  "directory": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/zuse-pr2-admission-readonly-20261121",
+  "files": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/zuse-pr2-admission-readonly-20261121/zuse-pr2-admission-readonly-review.json",
+      "name": "zuse-pr2-admission-readonly-review.json",
+      "bytes": 18032,
+      "sha256": "b6583d762214b4576e073fe565be9fb45f8a6f014508e96b8d0219f744b77825",
+      "git_blob": "6b98af45b98b94edb03ba39c4d148370a19c9156"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/zuse-pr2-admission-readonly-20261121/zuse-pr2-admission-readonly-review.md",
+      "name": "zuse-pr2-admission-readonly-review.md",
+      "bytes": 3221,
+      "sha256": "4bb41f3b60b3bc69b5cc1abf417eea59f5bf98ce41715a117545706229e373c8",
+      "git_blob": "adae2d0679c784e17f8b9a8dfbcc7de1f1038e04"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/zuse-pr2-admission-readonly-20261121/ci-original-log-readback.json",
+      "name": "ci-original-log-readback.json",
+      "bytes": 4685,
+      "sha256": "e7c4d6edeba52043dad713625f66fd352cbc2e61922ec676e37602dc86a8a17f",
+      "git_blob": "2ca5f58cefcb3638947d55706e8e4ccb0acc3689"
+    }
+  ],
+  "all_readback_bytes_equal": true,
+  "markdown_links_valid": true,
+  "read_only_product_scope": true,
+  "remote_writes": 0,
+  "Cargo": 0,
+  "product_runs": 0,
+  "CI_dispatch": 0,
+  "locks_taken": 0,
+  "editorial_revision": {
+    "reason": "Distinguish compatibility assessment and necessary adaptation from mandatory facade code changes in both consumers.",
+    "changed_claim_fields": [
+      "verdict.downstream",
+      "Markdown downstream compatibility sentence"
+    ],
+    "source_snapshot_unchanged": "2026-11-21T06:53:30Z",
+    "no_new_source_or_CI_observations": true,
+    "backup_directory": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/zuse-pr2-admission-readonly-before-compatibility-wording-20261121",
+    "backup_all_four_original_bytes_verified": true
+  }
+}

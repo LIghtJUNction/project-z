@@ -1,0 +1,42 @@
+[
+  {
+    "label": "main",
+    "commit_recorded": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "pax_headers": {
+      "comment": "784370b5fe1b817c788273a5f7b1ab826c743965"
+    },
+    "members": 1325
+  },
+  {
+    "label": "crates/zharness",
+    "commit_recorded": "cb63a9a0aa163214c6062664cd62fefb357be5a8",
+    "pax_headers": {
+      "comment": "cb63a9a0aa163214c6062664cd62fefb357be5a8"
+    },
+    "members": 146
+  },
+  {
+    "label": "crates/zplugin",
+    "commit_recorded": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4",
+    "pax_headers": {
+      "comment": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+    },
+    "members": 196
+  },
+  {
+    "label": "crates/ztuio",
+    "commit_recorded": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+    "pax_headers": {
+      "comment": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e"
+    },
+    "members": 24
+  },
+  {
+    "label": "crates/zuse",
+    "commit_recorded": "a1bb8fd2cbce0a9d85134999883c578358065242",
+    "pax_headers": {
+      "comment": "a1bb8fd2cbce0a9d85134999883c578358065242"
+    },
+    "members": 158
+  }
+]

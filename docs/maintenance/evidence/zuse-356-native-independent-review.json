@@ -1,0 +1,338 @@
+{
+  "schema": "project-z.zuse356-native-independent-review.v1",
+  "reviewed_at_utc": "2026-11-20T16:25:42.996099-08:00",
+  "result": "no_material_inconsistency_found",
+  "blocker_count": 0,
+  "issues": [],
+  "scope": "Read-only original-text/ZIP review; no product build, runtime, GUI, new native probe, ELF hashing, source or ref changes.",
+  "source": {
+    "head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "source_before_after_clean_and_equal": true,
+    "cargo_lock": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/Cargo.lock",
+      "bytes": 1138,
+      "sha256": "cffb29f3aa454c065523c6fc62ebf33721694df88af94e0aff2feea5d17855e0"
+    },
+    "portable_receipt_sha256": "53eda19a7a10de808b81ef99f56b454e2cf82bef6b468ee13f2f89222d5f7456",
+    "portable_receipt_equal_prior_independently_reviewed_original": true,
+    "six_cached_source_helpers_equal_fixed_fixture_sha_and_git_blob": [
+      "tests/private_xvfb.py",
+      "tests/native_scoped_mice.py",
+      "tests/run_accessibility_native.py",
+      "tests/native_wayland_private.py",
+      "tests/native_serial.py",
+      "tests/native_usb.py"
+    ]
+  },
+  "archive": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-native-text-evidence.zip",
+    "bytes": 50905,
+    "sha256": "6e2822aabf6f730d60582eb22feff4d025d607fcc0bb81d0be3a4fd31beda3c5",
+    "payload_count": 73,
+    "member_count": 74,
+    "crc_valid": true,
+    "all_manifest_hashes_and_sizes_match": true,
+    "all_extracted_originals_equal_zip": true,
+    "manifest_sha256": "95d9a7bdb23ee415f9a5fb8475a5e4e042ba8bec5436cfe900de3bd5118155c4",
+    "new_drive_download_by_reviewer": false
+  },
+  "execution": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-7c9",
+    "exit_code": 0,
+    "running": false,
+    "both_streams_eof": true,
+    "supervisor_seconds": 13.107,
+    "receipt_wall_seconds": 13.039921,
+    "sum_command_seconds": 12.812,
+    "commands": [
+      {
+        "name": "private-mpx",
+        "exit": 0,
+        "seconds": 1.367,
+        "argv": [
+          "python3",
+          "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/private_mpx_356.py",
+          "--source",
+          "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+          "--test-binary",
+          "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/lib_test-e36daa4146c197cd",
+          "--output",
+          "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/mpx"
+        ],
+        "raw_log": "native/private-mpx.log"
+      },
+      {
+        "name": "private-cli",
+        "exit": 0,
+        "seconds": 0.766,
+        "argv": [
+          "python3",
+          "tests/native_scoped_mice.py",
+          "--binary",
+          "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/cli-7a6a6d995b3a1b77"
+        ],
+        "raw_log": "native/private-cli.log"
+      },
+      {
+        "name": "private-accessibility",
+        "exit": 0,
+        "seconds": 4.423,
+        "argv": [
+          "python3",
+          "tests/run_accessibility_native.py",
+          "--manifest-path",
+          "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/Cargo.toml"
+        ],
+        "raw_log": "native/private-accessibility.log"
+      },
+      {
+        "name": "private-wayland",
+        "exit": 0,
+        "seconds": 5.376,
+        "argv": [
+          "python3",
+          "tests/native_wayland_private.py",
+          "--headless",
+          "--headless-parent",
+          "cage",
+          "--cage",
+          "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/native-fixtures/cage-v6/build/cage",
+          "--binary",
+          "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/cli-7a6a6d995b3a1b77",
+          "--state-tests",
+          "--render-node",
+          "/dev/dri/renderD129",
+          "--report",
+          "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/wayland.json"
+        ],
+        "raw_log": "native/private-wayland.log"
+      },
+      {
+        "name": "private-serial",
+        "exit": 0,
+        "seconds": 0.365,
+        "argv": [
+          "python3",
+          "tests/native_serial.py",
+          "--binary",
+          "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/cli-7a6a6d995b3a1b77",
+          "--output",
+          "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/serial"
+        ],
+        "raw_log": "native/private-serial.log"
+      },
+      {
+        "name": "private-usb",
+        "exit": 0,
+        "seconds": 0.515,
+        "argv": [
+          "python3",
+          "tests/native_usb.py",
+          "--binary",
+          "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/cli-7a6a6d995b3a1b77",
+          "--output",
+          "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/usb"
+        ],
+        "raw_log": "native/private-usb.log"
+      }
+    ]
+  },
+  "native_results": {
+    "mpx": {
+      "actual_passed": 2,
+      "failed": 0,
+      "ignored": 0,
+      "filtered_out": 133,
+      "selected_tests": [
+        "platform::pointer_x11::tests::private_x11_pointer_lifetime_events_and_cursor_isolation",
+        "platform::pointer_x11::tests::private_x11_script_parallel_scopes_errors_and_cancellation"
+      ],
+      "env_private_x11": "1",
+      "authenticated_ready": true,
+      "display": ":18292",
+      "xauthority_mode": "0o600",
+      "wayland_environment_removed": true,
+      "binary_unchanged": true,
+      "private_auth_source": "tests/private_xvfb.py: lease 10000..29999, Xauthority 0600, Xvfb -nolisten tcp -auth, authenticated xdpyinfo; private_mpx_356.py sets env1 for the actual invocation.",
+      "not_added_to_default_289": true
+    },
+    "cli": {
+      "workflow": "private authenticated Xvfb scoped-mice CLI",
+      "status": "passed",
+      "behaviors": [
+        "legacy default independent pointer",
+        "legacy explicit user release",
+        "script normal exit",
+        "SIGINT cancellation",
+        "SIGTERM cancellation"
+      ],
+      "sigint_cancel_ms": 5,
+      "sigterm_cancel_ms": 6,
+      "signal_child_exit_1_is_expected": true,
+      "baseline_devices_6_is_not_test_count": true
+    },
+    "atspi": {
+      "actual_passed": 1,
+      "failed": 0,
+      "ignored": 0,
+      "test": "native_atspi_observe_edit_action_and_redaction",
+      "nested_actual_cargo_argv": [
+        "/home/lightjunction/.cargo/bin/cargo",
+        "test",
+        "--offline",
+        "--manifest-path",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/Cargo.toml",
+        "--test",
+        "accessibility_native",
+        "--",
+        "--ignored",
+        "--nocapture"
+      ],
+      "locked_flag_present": false,
+      "offline": true,
+      "before_after_cargo_lock_equal": true,
+      "actual_root_rustc_invocations": 3,
+      "native_compiler_artifact_json_empty_due_plain_output": true,
+      "executed_shared_test_path_matches_portable_identity": true,
+      "isolation": "Owned dbus-run-session, private accessibility bus/registry and authenticated Xvfb GTK fixture; helper finally terminates owned processes."
+    },
+    "wayland": {
+      "group_count": 7,
+      "all_groups_ok": true,
+      "groups": [
+        "window_metadata",
+        "pointer_motion",
+        "foreground_input",
+        "background_input",
+        "rejected_input",
+        "window_capture",
+        "unsupported_keyboard_states"
+      ],
+      "mode": "owned-headless-cage-and-private-hyprland",
+      "cage_version": "Cage version 0.3.1",
+      "cage_binary": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/native-fixtures/cage-v6/build/cage",
+        "bytes": 84072,
+        "sha256": "5fd303a55924b59d8a506256ce843bea3980e6f90a095354cfd886f2c0b609ad"
+      },
+      "hyprland_version": "v0.57.2",
+      "render_node": "/dev/dri/renderD129",
+      "private_socket_checks": true,
+      "physical_input_or_kms_fds": 0,
+      "host_display_connection": false,
+      "host_focus_or_pointer_queries": false,
+      "private_windows_pointer_focus_restored": true,
+      "gl_renderer_name_observed_in_this_run": false,
+      "qualification": "Successful private.log was not retained and raw result lacks GL renderer name. Current run proves owned headless Cage/Hyprland behavior; neither llvmpipe/swrast/software-renderer identity nor physical GPU behavior is newly evidenced."
+    },
+    "serial": {
+      "group_count": 5,
+      "failed": 0,
+      "backend": "owned-kernel-pty",
+      "physical_devices_opened": false,
+      "groups": [
+        "all_256_bytes_bidirectional_and_termios_restore",
+        "read_timeout",
+        "implicit_drop_restores_configuration",
+        "partial_write_timeout_stops_and_restores",
+        "whole_program_preflight_has_no_prior_effects"
+      ],
+      "boundary": "Owned kernel PTYs, synthetic peer bytes and termios restoration; not physical UART acceptance."
+    },
+    "usb": {
+      "group_count": 11,
+      "failed": 0,
+      "backend": "synthetic-libusb-c-abi",
+      "physical_devices_opened": false,
+      "library_path_scope": "CLI child processes only",
+      "synthetic_library_sha256": "23226f6c51b1b1b11ffce8cbfabeb951789c7085c4ef410a0dae993df8fc0225",
+      "groups": [
+        "enumeration_only_proves_fake_library_selection",
+        "bus_address_and_vid_pid_locked_before_open",
+        "busy_interface_does_not_detach",
+        "bulk_interrupt_control_ffi_payloads",
+        "partial_writes_not_retried_and_stop_following_steps",
+        "read_timeout_preserves_partial_bytes",
+        "invalid_native_count_is_rejected",
+        "control_timeout_completion_unknown",
+        "release_failure_still_closes_handle_context_library",
+        "implicit_drop_releases_all_resources",
+        "whole_program_preflight_has_no_prior_effects"
+      ],
+      "raw_trace_files": 38,
+      "nonempty_load_to_unload_traces": 16,
+      "empty_preflight_traces": 22,
+      "boundary": "Synthetic C libusb ABI selected in CLI children. The 11 groups and 38 trace files are not 38 hardware tests or physical USB acceptance."
+    }
+  },
+  "artifacts": [
+    {
+      "name": "cli",
+      "bytes": 17454624,
+      "sha256": "7a6a6d995b3a1b77e2cd5d4ea585e72e5c170e338e333d85684ec2dbca9b864b",
+      "owned_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/cli-7a6a6d995b3a1b77",
+      "source_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/src/main.rs",
+      "portable_fresh": false,
+      "portable_compiler_record_and_native_preflight_match": true,
+      "post_run_hash_check": "gate.py checks both owned/shared outputs before accepting passed"
+    },
+    {
+      "name": "accessibility_test",
+      "bytes": 19457200,
+      "sha256": "d6e9f46a49db84ce90acd6b16b60fe6785ed73b3fc91c15755d385511b67d58c",
+      "owned_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/accessibility_test-d6e9f46a49db84ce",
+      "source_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/tests/accessibility_native.rs",
+      "portable_fresh": false,
+      "portable_compiler_record_and_native_preflight_match": true,
+      "post_run_hash_check": "gate.py checks both owned/shared outputs before accepting passed"
+    },
+    {
+      "name": "lib_test",
+      "bytes": 21480832,
+      "sha256": "e36daa4146c197cdbf7822d06220561543dd8d168c4f8810e5966c202568e4fb",
+      "owned_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/lib_test-e36daa4146c197cd",
+      "source_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/src/lib.rs",
+      "portable_fresh": false,
+      "portable_compiler_record_and_native_preflight_match": true,
+      "post_run_hash_check": "gate.py checks both owned/shared outputs before accepting passed"
+    }
+  ],
+  "cleanup": {
+    "scope": "zuse-356-native-20261120.scope",
+    "observed_at": "2026-11-21T00:18:00.868464+00:00",
+    "scope_inactive_dead": true,
+    "scope_result": "success",
+    "control_group_empty": true,
+    "owned_pids_checked": [
+      3188302,
+      3188303,
+      3188334,
+      3188827,
+      3188950,
+      3190509,
+      3191932,
+      3192129,
+      3188355
+    ],
+    "owned_pids_still_present": [],
+    "mpx_cleanup": {
+      "owned_xvfb_exited": true,
+      "lease_absent": true,
+      "authority_absent": true
+    },
+    "outer_lock_device": 34,
+    "outer_lock_inode": 63537699,
+    "acquired_flock_pid": 3188303,
+    "no_holder_or_waiter_at_recorded_postflight": true,
+    "memory_peak_not_recorded": true,
+    "new_current_probe": false
+  },
+  "counting_and_decision_boundary": [
+    "Default 289 passed / 5 ignored remains its historical portable result; these two MPX functions were already present there as guarded early-return entries, so 291 unique is not asserted.",
+    "The AT-SPI ignored test was explicitly executed here; do not rewrite the earlier five-ignored receipt or add fixture-group totals to unit totals.",
+    "The prior focused 16 overlap the default suite; no_std20 is a separate feature configuration. No combined unique count is manufactured.",
+    "This closes the targeted private-native provenance gap for fixed356 alongside its existing portable and P2 RED/GREEN/static evidence. It does not validate original286 claims, main/a1 downstream cohort, general hardware, integration merge, release, or final44."
+  ],
+  "evidence_hash_file": "zuse-356-native-independent-review-original-hashes.json"
+}

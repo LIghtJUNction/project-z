@@ -1,0 +1,20 @@
+{
+  "schema": "project-z-ztty-pr24-drive-root-readback-v1",
+  "verified_at": "2026-11-20T23:20:11.556879+00:00",
+  "drive_id": "1byru2K-yBHIZCPlS9zQCZsmapGML2I7n",
+  "url": "https://drive.google.com/file/d/1byru2K-yBHIZCPlS9zQCZsmapGML2I7n/view",
+  "bytes": 1001978,
+  "sha256": "211bde7127db7806e7524fc0555181ed84f8b3a9377be0faf985b93dd63a2f29",
+  "full_raw_download_verified": true,
+  "zip_members": 149,
+  "payload_files": 148,
+  "all_payload_sizes_and_sha256_verified": true,
+  "manifest_bytes": 28235,
+  "manifest_sha256": "d91763f6eccf8da03f70d5c27eccfa207b32115217a3c54e314c648c0a5ce8d4",
+  "merge": "99ef7a0f02dfb643a426b4b5f8daf0bc009d9752",
+  "tested_head": "9eaed366b285dc9c6c5a74032e850bd6af8c0476",
+  "tested_tree": "79b48dbf7560bd8a62e34c7073c416f84abba2c7",
+  "runtime_head": "49c8024b94b055f43eee46a9ac8f671ad6b7f5a4",
+  "local_archive": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ztty-pr24-drive-readback.zip",
+  "scope": "Read-only full Drive archive and all payload verification; no rebuild, GUI or input replay."
+}

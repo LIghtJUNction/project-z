@@ -1,0 +1,83 @@
+{
+  "schema": "ssmcp-version25-deployment-policy-validation-v1",
+  "started_utc": "2026-11-21T01:19:09.943543+00:00",
+  "finished_utc": "2026-11-21T01:19:12.721766+00:00",
+  "duration_seconds": 2.778227721020812,
+  "argv": [
+    "python3",
+    "-I",
+    "-B",
+    "-c",
+    "import runpy,sys;sys.path.insert(0,'/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/scripts');sys.argv=['/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/scripts/test_release.py','DeploymentPolicyTests','-v'];runpy.run_path('/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/scripts/test_release.py',run_name='__main__')"
+  ],
+  "exit_code": 0,
+  "source_before": {
+    "commit": "f4e6ff043eef6686a9013750ffcb8ab66926b9d4",
+    "tree": "d6546dd46464ac1cbb1c3aabc0493638a44649f7",
+    "status": "",
+    "files": {
+      "scripts/test_release.py": {
+        "path": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/scripts/test_release.py",
+        "bytes": 92882,
+        "sha256": "f1351c31ddeaa9f77808fd4580ed5d7518c8f346421caa263527d63a353a9259"
+      },
+      "scripts/release.py": {
+        "path": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/scripts/release.py",
+        "bytes": 54070,
+        "sha256": "43e995d675689f3c881f4452172796f4e2f7b195dbceef3dbb9b1ed1d9f95be4"
+      },
+      ".github/workflows/release.yml": {
+        "path": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/.github/workflows/release.yml",
+        "bytes": 18881,
+        "sha256": "6dd28b97b77386edb6fa8d6538ed9954f0ed00b1b97e1baa2651f339415c2295"
+      },
+      "Cargo.lock": {
+        "path": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/Cargo.lock",
+        "bytes": 66476,
+        "sha256": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608"
+      }
+    }
+  },
+  "source_after": {
+    "commit": "f4e6ff043eef6686a9013750ffcb8ab66926b9d4",
+    "tree": "d6546dd46464ac1cbb1c3aabc0493638a44649f7",
+    "status": "",
+    "files": {
+      "scripts/test_release.py": {
+        "path": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/scripts/test_release.py",
+        "bytes": 92882,
+        "sha256": "f1351c31ddeaa9f77808fd4580ed5d7518c8f346421caa263527d63a353a9259"
+      },
+      "scripts/release.py": {
+        "path": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/scripts/release.py",
+        "bytes": 54070,
+        "sha256": "43e995d675689f3c881f4452172796f4e2f7b195dbceef3dbb9b1ed1d9f95be4"
+      },
+      ".github/workflows/release.yml": {
+        "path": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/.github/workflows/release.yml",
+        "bytes": 18881,
+        "sha256": "6dd28b97b77386edb6fa8d6538ed9954f0ed00b1b97e1baa2651f339415c2295"
+      },
+      "Cargo.lock": {
+        "path": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/Cargo.lock",
+        "bytes": 66476,
+        "sha256": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608"
+      }
+    }
+  },
+  "inputs_unchanged": true,
+  "stdout": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-version25-preparation/deployment-policy-validation/stdout.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-version25-preparation/deployment-policy-validation/stderr.log",
+    "bytes": 1835,
+    "sha256": "0857ddd4511c4b90e29c5b841e753c1aed6be3f36a86c2bfd55fd66e8203a075"
+  },
+  "coverage": "existing DeploymentPolicyTests executes actual workflow policy with private event/output fixtures",
+  "cargo_or_product_binary_run": false,
+  "ci_or_publish_or_deploy": false,
+  "shared_target_lock_acquired": false
+}

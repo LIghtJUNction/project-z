@@ -1,0 +1,453 @@
+{
+  "schema": "zcalld.bd7.actual-cli-handoff.v1",
+  "status": "passed",
+  "collected_at": "2026-11-21T03:11:47.519943+00:00",
+  "source": {
+    "commit": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+    "tree": "cbd4a29ec9851a42dc36149fc099fb288c9623de",
+    "parents": [
+      "0af8f65653bc4035888380b8b2f390d774fd30fd",
+      "7da4b28511a1550c993f09cfb2601149a82c785b"
+    ],
+    "base": "7da4b28511a1550c993f09cfb2601149a82c785b",
+    "source_root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+    "package_version": "0.4.4",
+    "leaf_count": 220,
+    "unchanged_from_0af8": 218,
+    "changed_paths": [
+      "apps/zcall-gui",
+      "docs/RELEASE-0.4.4.md"
+    ],
+    "gui": "2593369b2e9695a4a4cabed20eb80bee01fc419c",
+    "compat": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+    "manifest": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source-manifest.json",
+      "bytes": 58217,
+      "sha256": "d3fd26ee0705635bf6d8a1436bcd3545bc84f39adb78a45f1c17ce1f9957b2cc"
+    },
+    "raw_manifest": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source-manifest.raw.txt",
+      "bytes": 18172,
+      "sha256": "1946de123d064284db37f353b98a7398226be68522a73cbf9b3f3ba9212e1c04"
+    },
+    "lock": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source-Cargo.lock",
+      "bytes": 3129,
+      "sha256": "23fd8fbbefe0232b60749d048d09f4d2a7d6783ea2e85deac160c172e5a4ffca"
+    }
+  },
+  "execution": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-a64",
+    "controller": {
+      "name": "ChatGPT Core",
+      "model": "GPT-6 Astra Pro"
+    },
+    "exit_code": 0,
+    "stdout_eof": true,
+    "stderr_eof": true,
+    "stdout_bytes": 6722,
+    "stderr_bytes": 0,
+    "started_at": "2026-11-21T03:05:38.160183+00:00",
+    "finished_at": "2026-11-21T03:06:31.035395+00:00",
+    "elapsed_seconds": 52.875212,
+    "actual_command_count": 87,
+    "start_request": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/execution-gate-start-request.json",
+      "bytes": 927,
+      "sha256": "e769c80a9a87ac1e87bb9f719476c3cf92d13c79f1124afc896931344ee6b7d2"
+    },
+    "start_response": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/execution-gate-start.json",
+      "bytes": 1445,
+      "sha256": "156ee953c369acfde37c82f6c5cb5963924d367a9ba5b9a7e4c4843c24d4c001"
+    },
+    "status": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/execution-gate-status.json",
+      "bytes": 18897,
+      "sha256": "ecf64b915fcbc202c617526d986da8c847358a626ab0b5ee0499fae17f52de3a"
+    },
+    "stdout": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/execution-gate.stdout.txt",
+      "bytes": 6722,
+      "sha256": "a2d57ecddcfb3c2d3082fd006116bd4232304d148f7550d613696062bad4109f"
+    },
+    "stderr": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/execution-gate.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "gate": {
+    "receipt": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/candidate-validation.json",
+      "bytes": 91297,
+      "sha256": "af7e020482811bf3429bbd7a31b94759459d3f4d271e42c0e7b71a961b4e5b45"
+    },
+    "command_index": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/command-log-index.json",
+      "bytes": 57454,
+      "sha256": "70ee9e79f02c896bd586aa88c7c31157baa6eb0e44e685d0bee23db1b1d25155"
+    },
+    "cargo_commands": [
+      "metadata",
+      "build"
+    ],
+    "release_seconds": 34.387,
+    "actual_root_release_calls": 1,
+    "fresh_false_root_bin_artifacts": 1,
+    "all_compiler_artifacts": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/release-all-compiler-artifacts.json",
+      "bytes": 16470,
+      "sha256": "32748355e4326a4616376a39dc1cdb3c70cb61ad8d661ad28a733ac11cddb8e9"
+    },
+    "root_artifacts": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/46-release-cli-compiler-artifacts.json",
+      "bytes": 972,
+      "sha256": "6a2be0e78d1c0d31697085a277447466a56aa151be128c9c1b1f20a32deabdce",
+      "count": 1,
+      "fresh_false": 1
+    },
+    "help_command": {
+      "index": 47,
+      "label": "listener-help",
+      "argv": [
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/zcalld",
+        "--help"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "exit_code": 0,
+      "elapsed_seconds": 0.003,
+      "raw_log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/47-listener-help.log",
+        "bytes": 2379,
+        "sha256": "d2ca8020172aa188080d5a7bbe75d0f0ed0a09274dcb2120c38eb9d6254846b3"
+      }
+    },
+    "curl_command": {
+      "index": 48,
+      "label": "curl-cancellation",
+      "argv": [
+        "python3",
+        "scripts/test-generation-cancellation.py",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/zcalld",
+        "GenerationCancellationTests.test_cancel_curl_tcp_pending_head",
+        "GenerationCancellationTests.test_cancel_curl_tcp_pending_body",
+        "GenerationCancellationTests.test_cancel_curl_unix_pending_head",
+        "GenerationCancellationTests.test_cancel_curl_unix_pending_body",
+        "GenerationCancellationTests.test_half_close_curl_tcp_pending_head",
+        "GenerationCancellationTests.test_half_close_curl_tcp_pending_body",
+        "GenerationCancellationTests.test_half_close_curl_unix_pending_head",
+        "GenerationCancellationTests.test_half_close_curl_unix_pending_body"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "exit_code": 0,
+      "elapsed_seconds": 5.177,
+      "raw_log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/48-curl-cancellation.log",
+        "bytes": 1050,
+        "sha256": "b732078be012a5ede8d5a038d10f5d9430d96d3f28681e0ea6e1f82d9fe9353c"
+      }
+    },
+    "curl_cases": {
+      "names": [
+        "GenerationCancellationTests.test_cancel_curl_tcp_pending_head",
+        "GenerationCancellationTests.test_cancel_curl_tcp_pending_body",
+        "GenerationCancellationTests.test_cancel_curl_unix_pending_head",
+        "GenerationCancellationTests.test_cancel_curl_unix_pending_body",
+        "GenerationCancellationTests.test_half_close_curl_tcp_pending_head",
+        "GenerationCancellationTests.test_half_close_curl_tcp_pending_body",
+        "GenerationCancellationTests.test_half_close_curl_unix_pending_head",
+        "GenerationCancellationTests.test_half_close_curl_unix_pending_body"
+      ],
+      "passed": 8,
+      "skipped": 0
+    },
+    "curl_argv_unchanged_except_owned_binary": true,
+    "fixture": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/scripts/test-generation-cancellation.py",
+      "bytes": 14696,
+      "sha256": "d254dd4bb1f84c5e9499dabbd5d03b417b22dae25920976ba1edf308bdbb619e",
+      "device": 68,
+      "inode": 187497742,
+      "mtime_ns": 1795229418673195995,
+      "mode": "0o700"
+    },
+    "workspace_tests_run": false,
+    "clippy_run": false,
+    "gui_run": false,
+    "final_ssmcp_p1_run": false
+  },
+  "build_identity": {
+    "compiler_artifact": {
+      "reason": "compiler-artifact",
+      "package_id": "path+file:///home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source#zcalld@0.4.4",
+      "manifest_path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/Cargo.toml",
+      "target": {
+        "kind": [
+          "bin"
+        ],
+        "crate_types": [
+          "bin"
+        ],
+        "name": "zcalld",
+        "src_path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source/src/main.rs",
+        "edition": "2024",
+        "doc": true,
+        "doctest": false,
+        "test": true
+      },
+      "profile": {
+        "opt_level": "3",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [],
+      "filenames": [
+        "/var/tmp/project-z-cargo-target/release/zcalld"
+      ],
+      "executable": "/var/tmp/project-z-cargo-target/release/zcalld",
+      "fresh": false
+    },
+    "actual_root_compiler_call": {
+      "observed_at": "2026-11-21T03:05:49.023742+00:00",
+      "pid": 1515644,
+      "parent_pid": 1515639,
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source",
+      "argv": [
+        "/home/lightjunction/.rustup/toolchains/1.100.0-x86_64-unknown-linux-gnu/bin/rustc",
+        "--crate-name",
+        "zcalld",
+        "--edition=2024",
+        "src/main.rs",
+        "--error-format=json",
+        "--json=diagnostic-rendered-ansi,artifacts,future-incompat,unused-externs-silent",
+        "--crate-type",
+        "bin",
+        "--emit=dep-info,link",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "lto=thin",
+        "-C",
+        "codegen-units=1",
+        "--check-cfg",
+        "cfg(docsrs,test)",
+        "--check-cfg",
+        "cfg(feature, values())",
+        "-C",
+        "metadata=faf29bdc1405d9d9",
+        "--out-dir",
+        "/var/tmp/project-z-cargo-target/release/build/zcalld/acd5c73386e3f58b/out",
+        "-C",
+        "linker=clang",
+        "-C",
+        "strip=symbols",
+        "-L",
+        "dependency=/var/tmp/project-z-cargo-target/release/build/zconv/fe9c8a3cb2be3bc6/out",
+        "-L",
+        "dependency=/var/tmp/project-z-cargo-target/release/build/zplugin-macros/d239815905d1119b/out",
+        "-L",
+        "dependency=/var/tmp/project-z-cargo-target/release/build/zplugin/d4453f4997e1fe13/out",
+        "-L",
+        "dependency=/var/tmp/project-z-cargo-target/release/build/zsys/4ad0d46710f70c81/out",
+        "--extern",
+        "zcall=/var/tmp/project-z-cargo-target/release/build/zcall/d4d0657e3a501d19/out/libzcall-d4d0657e3a501d19.rlib",
+        "--extern",
+        "zcalld_compat_client=/var/tmp/project-z-cargo-target/release/build/zcalld-compat-client/5393519a87f5b449/out/libzcalld_compat_client-5393519a87f5b449.rlib",
+        "--extern",
+        "zcalld_installer=/var/tmp/project-z-cargo-target/release/build/zcalld-installer/58d15baed22b350b/out/libzcalld_installer-58d15baed22b350b.rlib",
+        "--extern",
+        "zcalld_plugin_api=/var/tmp/project-z-cargo-target/release/build/zcalld-plugin-api/5b72b5f4d462c438/out/libzcalld_plugin_api-5b72b5f4d462c438.rlib",
+        "--extern",
+        "zconv=/var/tmp/project-z-cargo-target/release/build/zconv/fe9c8a3cb2be3bc6/out/libzconv-fe9c8a3cb2be3bc6.rlib",
+        "--extern",
+        "zplugin=/var/tmp/project-z-cargo-target/release/build/zplugin/d4453f4997e1fe13/out/libzplugin-d4453f4997e1fe13.rlib",
+        "-C",
+        "link-arg=-fuse-ld=mold",
+        "--force-warn=unused_crate_dependencies"
+      ],
+      "cargo_manifest_dir": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/source"
+    },
+    "actual_link_output_observed_during_gate": {
+      "path": "/var/tmp/project-z-cargo-target/release/build/zcalld/acd5c73386e3f58b/out/zcalld",
+      "bytes": 2964896,
+      "sha256": "d5464f6f24da08204840d5c84f1780249d3635aa18ffd696dd5f6060c5621ecb",
+      "device": 34,
+      "inode": 64119285,
+      "mtime_ns": 1795230379339867415,
+      "mode": "0o700"
+    },
+    "cargo_executable_observed_during_gate": {
+      "path": "/var/tmp/project-z-cargo-target/release/zcalld",
+      "bytes": 2964896,
+      "sha256": "d5464f6f24da08204840d5c84f1780249d3635aa18ffd696dd5f6060c5621ecb",
+      "device": 34,
+      "inode": 64119285,
+      "mtime_ns": 1795230379339867415,
+      "mode": "0o700"
+    },
+    "owned_copy_observed_during_gate": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/zcalld",
+      "bytes": 2964896,
+      "sha256": "d5464f6f24da08204840d5c84f1780249d3635aa18ffd696dd5f6060c5621ecb",
+      "device": 68,
+      "inode": 187500615,
+      "mtime_ns": 1795230379339867415,
+      "mode": "0o500"
+    },
+    "all_three_byte_equal": true,
+    "collector_reread_shared_target": false,
+    "binary": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gates/20261121T030538Z/zcalld",
+      "sha256": "d5464f6f24da08204840d5c84f1780249d3635aa18ffd696dd5f6060c5621ecb",
+      "bytes": 2964896,
+      "source_commit": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+      "source_tree": "cbd4a29ec9851a42dc36149fc099fb288c9623de",
+      "profile": "release",
+      "copied_under_outer_lock": true
+    },
+    "metadata_comparison": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/locked-metadata-comparison.json",
+      "bytes": 3079,
+      "sha256": "07373fd5596ed3bdff5c5e7fd3d7d24178f3cfca08c2b183739b71c6b9a8f3ea"
+    },
+    "full_metadata": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/locked-metadata-full.json",
+      "bytes": 121798,
+      "sha256": "8c269047993ba31b373edeb64f65cd9473aacc19ece1e92605448e781b21353c"
+    },
+    "normalized_metadata": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/locked-metadata-path-normalized.json",
+      "bytes": 115908,
+      "sha256": "cd4413fce1c0fdad4cf70b677747d55c28f9d6fcd5d4422db55a635c509d8d82"
+    },
+    "global_configuration_changed": false,
+    "target_directory": "/var/tmp/project-z-cargo-target",
+    "private_workspace_wrapper": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/workspace-rustc-bd7.py",
+      "bytes": 590,
+      "sha256": "a9be4be225cfab383d84273889332e0d600882127304d6f3f98d68ba0187fb37"
+    }
+  },
+  "lock_and_cleanup": {
+    "inside_scope": "Id=zcalld-listener-bd7a30c-20261121.scope\nActiveState=active\nSubState=running\nInvocationID=1523613aec6245d4916d0e6af20db02c\nResult=success\nControlGroup=/user.slice/user-1000.slice/user@1000.service/app.slice/zcalld-listener-bd7a30c-20261121.scope\n",
+    "actual_start_lock": {
+      "observed_at": "2026-11-21T03:05:38.171285+00:00",
+      "parent_pid": 1513298,
+      "parent_argv": [
+        "/usr/bin/flock",
+        "--nonblock",
+        "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/validate_bd7_cli.py"
+      ],
+      "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "lock_inode": 63537699,
+      "lock_device": 34,
+      "proc_locks": [
+        "76: FLOCK  ADVISORY  WRITE 1513298 00:20:63537699 0 EOF"
+      ],
+      "matching_parent_fds": [
+        "3"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/zcalld-listener-bd7a30c-20261121.scope\n",
+      "additional_acquisition_attempted": false
+    },
+    "actual_copy_lock": {
+      "observed_at": "2026-11-21T03:06:19.418834+00:00",
+      "parent_pid": 1513298,
+      "parent_argv": [
+        "/usr/bin/flock",
+        "--nonblock",
+        "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/validate_bd7_cli.py"
+      ],
+      "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "lock_inode": 63537699,
+      "lock_device": 34,
+      "proc_locks": [
+        "108: FLOCK  ADVISORY  WRITE 1513298 00:20:63537699 0 EOF"
+      ],
+      "matching_parent_fds": [
+        "3"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/zcalld-listener-bd7a30c-20261121.scope\n",
+      "additional_acquisition_attempted": false
+    },
+    "actual_final_inside_lock": {
+      "observed_at": "2026-11-21T03:06:31.035344+00:00",
+      "parent_pid": 1513298,
+      "parent_argv": [
+        "/usr/bin/flock",
+        "--nonblock",
+        "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/validate_bd7_cli.py"
+      ],
+      "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "lock_inode": 63537699,
+      "lock_device": 34,
+      "proc_locks": [
+        "76: FLOCK  ADVISORY  WRITE 1513298 00:20:63537699 0 EOF"
+      ],
+      "matching_parent_fds": [
+        "3"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/zcalld-listener-bd7a30c-20261121.scope\n",
+      "additional_acquisition_attempted": false
+    },
+    "postflight": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/postflight.json",
+      "bytes": 3363,
+      "sha256": "06dae526cd811686acb9dcdc84d2914c168f065b386dd50d5667941d41a8b962"
+    },
+    "postflight_observed_at": "2026-11-21T03:07:52.654491+00:00",
+    "owned_cleanup_confirmed": true,
+    "kernel_records_at_postflight": [],
+    "continuous_kernel_or_global_idle_claim": false,
+    "further_core_heavy_tasks_scheduled": false
+  },
+  "historical_0af8": {
+    "source": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+    "job": "26c4545eae1eab8d27485f4a48077d3c-882",
+    "rust_passed": 182,
+    "listener_subset": 7,
+    "actual_root_clippy_calls": 2,
+    "curl_passed": 8,
+    "receipt": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/candidate-validation.json",
+      "bytes": 30016,
+      "sha256": "3fe0f9676a5500296c11560835f9353047e64fdb5913291d2321b6090ce72313"
+    },
+    "scope": "Historical execution on 0af8 only; neither rerun nor counted as new bd7 tests. New dependency comparison is explicitly path-normalized."
+  },
+  "gui_existing_owner_evidence": {
+    "proof": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/gui-259-existing-ci-evidence.json",
+      "bytes": 8208,
+      "sha256": "ac1df86c9f4e3210fd72f2be03f8e1629d351be5bf576ef9509c76dc039138f5",
+      "original_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/gui-259-existing-ci-evidence-20261121/existing-gui-259-ci-evidence.json"
+    },
+    "run_id": 44853641350,
+    "actual_checked_out_source": "2593369b2e9695a4a4cabed20eb80bee01fc419c",
+    "scope": "Existing official owner CI evidence; no GUI rerun. Private Xvfb/fixture scope and fake installer/provider limits remain as recorded in the original proof."
+  },
+  "independent_static_review": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-bd7a30c-20261121/independent-static-review.json",
+    "bytes": 5314,
+    "sha256": "331fc135957733f082aa64e3862c64181755c16ffc294dd712074b4c5be9e3d8",
+    "original_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/zcalld-bd7-runner-independent-static-review.json"
+  },
+  "remaining": {
+    "pr1_draft": true,
+    "merge_authority": "root after final native acceptance",
+    "final_ssmcp_p1": false,
+    "consumer_reader": "Original native owner adapts to the new 87-command schema and current artifact identity; no old22/182 relabeling."
+  },
+  "archive_note": "delivery.json separately records this immutable handoff and complete text ZIP hashes to avoid a circular archive hash."
+}

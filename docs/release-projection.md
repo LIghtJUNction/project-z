@@ -1,8 +1,10 @@
 # Project Z dependency projection (review only)
 
-Project Z source manifests can use bare GitHub URLs for internal dependencies. The
-committed Git lockfile identifies the exact source used to build that snapshot.
-crates.io does not accept normal/build dependencies that only exist in Git, so
+Project Z development manifests use GitHub default-branch sources for internal
+cross-repository dependencies, without `version`, `branch`, `tag` or `rev`.
+Package versions and the committed Git lockfile remain part of the source identity.
+For external publication, crates.io requires registry versions for normal/build
+dependencies that use Git during development, so
 use a separate staging directory for the registry manifest. This tool does not
 change the source manifest or source lock, create tags, or publish anything.
 
@@ -27,11 +29,15 @@ before staging the resulting post-bump SHA. The Git source snapshot and staging
 must start from this same commit.
 
 Staging archives tracked files from that commit and reads its committed workspace
-Cargo.lock. It rewrites only bare HTTPS GitHub dependency declarations whose
-canonical repository URL is listed in Project Z's .gitmodules. A unique
-name + URL Git lock entry with a full Git SHA is required. The result uses
-exact =VERSION constraints, preserving aliases, features, targets and dependency
-kinds. The default scope is all Cargo.toml files under the selected workspace
+Cargo.lock. It rewrites only HTTPS GitHub dependency declarations whose canonical
+repository URL is listed in Project Z's .gitmodules. A unique name + URL Git lock
+entry with a full Git SHA is required. Historical commits may include `version`
+beside `git`; staging accepts them only when the locked version satisfies that
+Cargo requirement. Malformed requirements
+and mismatches are rejected before conversion. Selectors (`rev`, `branch`,
+`tag`) and mixed path, registry or workspace sources remain rejected. The result
+uses exact =VERSION constraints from the lock, preserving aliases, features,
+optional/default-feature settings, targets and dependency kinds. The default scope is all Cargo.toml files under the selected workspace
 folder. Use repeatable --member-manifest to select members explicitly when
 excluded aux projects have separate lockfiles. The workspace's own Cargo.toml
 is always processed. The first version requires tracked Cargo.lock and does
@@ -52,8 +58,8 @@ workflow. This tool is not wired into CI or the GitHub release workflow.
 
 Use this separate read-only check before treating the staged dependency pins as
 release candidates. It recomputes the plan from the specified commit and lock,
-not from an editable staging report. Use the same workspace/member flags as in
-staging. The archive directory holds files named PACKAGE-VERSION.crate.
+not from an editable staging report. It applies the same version-requirement
+check as staging. Use the same workspace/member flags as in staging. The archive directory holds files named PACKAGE-VERSION.crate.
 
     python3 scripts/release_receipts.py \
       --repo "$SOURCE_REPO" --commit "$SOURCE_SHA" \
@@ -76,3 +82,10 @@ existing 0.2.2 archive from 94c83755, even though its name, version and reposito
 match. No upload or network call is made. This check does not verify registry
 availability, yank state, the complete transitive graph, or validate/install
 the staged package. It does not change the staging-only label or enable CI.
+
+Cargo's [multiple locations rule](https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html#multiple-locations)
+permits `version` together with `git`. Project Z's development policy is stricter:
+internal cross-repository declarations use Git without a version selector. The
+projection retains compatibility with historical multiple-location declarations
+and still requires an exact source receipt before accepting a registry archive
+for release.

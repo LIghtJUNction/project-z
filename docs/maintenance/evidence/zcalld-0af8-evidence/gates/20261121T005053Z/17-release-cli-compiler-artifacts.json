@@ -1,0 +1,34 @@
+[
+  {
+    "reason": "compiler-artifact",
+    "package_id": "path+file:///home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source#zcalld@0.4.4",
+    "manifest_path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source/Cargo.toml",
+    "target": {
+      "kind": [
+        "bin"
+      ],
+      "crate_types": [
+        "bin"
+      ],
+      "name": "zcalld",
+      "src_path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source/src/main.rs",
+      "edition": "2024",
+      "doc": true,
+      "doctest": false,
+      "test": true
+    },
+    "profile": {
+      "opt_level": "3",
+      "debuginfo": 0,
+      "debug_assertions": false,
+      "overflow_checks": false,
+      "test": false
+    },
+    "features": [],
+    "filenames": [
+      "/var/tmp/project-z-cargo-target/release/zcalld"
+    ],
+    "executable": "/var/tmp/project-z-cargo-target/release/zcalld",
+    "fresh": false
+  }
+]

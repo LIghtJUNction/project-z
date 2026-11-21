@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-20 23:40:17 UTC",
+  "scope": {
+    "review": "bounded GitHub-plugin immutable source comparison",
+    "executed_builds": 0,
+    "executed_tests": 0,
+    "executed_gui": 0,
+    "repo_worktree_ref_tag_writes": 0,
+    "changes_made": "Only independent scratch report/evidence files",
+    "runtime_acceptance_claim": false,
+    "source_owner": "Existing native source owner; no parallel implementation"
+  },
+  "sources": {
+    "audit_base": {
+      "commit": "cf0ab581700918a37fcccbebb93de2e0cab02841",
+      "tree": "bd2bcce33baffa69b82d69d9cff3abdb85baa0fb"
+    },
+    "candidate": {
+      "pr": 159,
+      "commit": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "tree": "6bf7beb143cfdce3878df856c27785164695430f"
+    },
+    "main_snapshot": {
+      "commit": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "tree": "7eeb434be1d24e14b453488f5fbca90d933e12b9"
+    },
+    "recent_merge_base": {
+      "commit": "a19ac040b1c7e9daa6a2144db79cfaa1bee09954"
+    }
+  },
+  "ancestry": {
+    "cf0_to_candidate": {
+      "ahead_by": 29,
+      "behind_by": 0
+    },
+    "cf0_to_main": {
+      "ahead_by": 32,
+      "behind_by": 0
+    },
+    "candidate_vs_main": {
+      "status": "diverged",
+      "main_unique_commits": 25,
+      "candidate_unique_commits": 22,
+      "actual_merge_base": "a19ac040b1c7e9daa6a2144db79cfaa1bee09954"
+    },
+    "note": "cf0 is the requested older audit ancestor, not the nearest merge base. GitHub compare 781...f208 patches are relative to a19, not a direct full-file candidate-to-main diff."
+  },
+  "pr_snapshot": {
+    "url": "https://github.com/LIghtJUNction/ssmcp/pull/159",
+    "head": "781b87df1d364137b6885f17f631a3e9e991bd58",
+    "base_ref": "main",
+    "api_base_sha": "cf0ab581700918a37fcccbebb93de2e0cab02841",
+    "api_base_sha_is_current_main": false,
+    "draft": true,
+    "state": "open",
+    "mergeable": false,
+    "updated_at": "2026-11-20T23:18:58Z"
+  },
+  "counts": {
+    "cf0": {
+      "both_same": 10,
+      "candidate_only": 19,
+      "main_only": 63,
+      "both_different": 27
+    },
+    "cf0_union": 119,
+    "a19": {
+      "both_same": 1,
+      "candidate_only": 21,
+      "main_only": 64,
+      "both_different": 24
+    },
+    "a19_union": 110
+  },
+  "content_identity_checks": {
+    "complete_recursive_trees": true,
+    "compare_files": 156,
+    "tree_sha_mismatches": 0,
+    "not_text_conflict_counts": true
+  },
+  "main_findings": [
+    {
+      "id": "agent-contract",
+      "title": "同名 --agent 的两套不同契约",
+      "priority": "integration_decision_required",
+      "risk": "保留两个独立 parser arm 会互相遮蔽；整文件取任一侧会失去另一侧已经存在的能力。相同 flag 和 ssmcp 值不能被当作同一语义。",
+      "owner_action": "唯一 source owner 先固定与最终需求一致的一份 CLI/保存会话契约，再整合已有启动协议能力及消息路由；在新候选中验证默认值、帮助/列表、别名、字面参数、gateway 与收件人区分。此审查不替 owner 发明新 CLI。"
+    },
+    {
+      "id": "disabled-chat-lifecycle",
+      "title": "--input none、relay 协商与 reload 不是仅 UI 开关",
+      "priority": "integration_preserve",
+      "risk": "仅移植 Options/隐藏 composer 会遗漏 RPC/catalog/relay/attach 的一致性；Process 同时涉及主线 agent driver 与候选 chat_enabled。",
+      "owner_action": "保留 disabled_chat_keeps_the_outbox_and_advances_reload_without_queue_commands 的真实不丢草稿/队列边界，并与 main 的 foreground_reload_preserves_agent_selection_and_native_arguments_after_separator、foreground_local_reload_preserves_agent_and_socket_before_native_separator 一起覆盖。区分 --socket（local MCP HTTP）与 --input sock（聊天入口）。"
+    },
+    {
+      "id": "retired-hooks",
+      "title": "main 已删除 finish/强制继续 hooks，781 仍修改旧入口",
+      "priority": "integration_decision_required",
+      "risk": "这是明确 modify/delete 及语义交叉。直接恢复候选旧文件或候选 client_guide 会复活 main 已退休的入口和文案；机械保留旧 finish 测试也会校验错误的旧契约。",
+      "owner_action": "none 的聊天能力过滤应落到当前仍存在的入口；保留 retired_tool_error 与 no-native-dispatch 测试。对旧 finish 的断言按退休契约更新，另用一个仍有效的 human-chat RPC 验证 chat_disabled。保留 owner/幂等/消息不重复及取消观察不停止任务的约束。不要重新创建 finish 工作流。"
+    },
+    {
+      "id": "time-and-render",
+      "title": "计时从标签修改扩展到实际运行状态",
+      "priority": "integration_preserve",
+      "risk": "用候选 timing.rs 整体覆盖 main 会丢失实际 job deadline/新状态模型；只修文字或快照测试不证明真实计时、被动等待和清理状态正确。",
+      "owner_action": "保留 main 的 monotonic/deadline/typed event 数据链与新字段，再保留候选关于 observation budget 不是 job deadline 的区别。新候选覆盖 none+time catalog、nearest deadline、open-ended job、到期但任务仍运行、无伪造 native deadline。"
+    },
+    {
+      "id": "paste-and-terminal",
+      "title": "粘贴核心同 blob 不等于新组合通过",
+      "priority": "evidence_boundary",
+      "risk": "共享 paste/composer 核心仍会与变化后的收件人、history、time、stdout/stderr 和退出逻辑组合。相同 helper 或局部 blob 不能将旧 ELF 的 baseline/P1 结果迁移给新 ELF。",
+      "owner_action": "复用已有 benchmark/helper 的源哈希和固定测试方法；整合后冻结新候选与五产物对应关系，再按既定 quiet lock 验证真实 PTY 粘贴、字节/光标、收件人、错误恢复与退出清理。不要扩大旧结果范围或中断现有作业。"
+    },
+    {
+      "id": "cargo-and-packaging",
+      "title": "候选 3 条 include 已在 main 中，版本/lock 已变化",
+      "priority": "integration_preserve",
+      "risk": "整份取候选 Cargo 文件会回退主线版本/锁来源；重复手工追加会产生重复 include。",
+      "owner_action": "按所选新 main 组合保留完整 include 集合与匹配版本/lock；记录新 Cargo/lock blob 与实际解析来源。旧 441 CI、781 baseline、147 tag 或 57d/main 接受记录都不能替代新组合。"
+    }
+  ],
+  "conclusion": "不宜把 781 当作可直接合入 f208 的已验候选。唯一 source owner 需要先处理 agent 契约、none 生命周期与已退休 hooks 的交叉；保留主线 runtime/time/peer 与候选 chat 保护后固定一个新的 commit/tree/lock/产物 cohort。此结论仅静态合并风险，不是编译或运行失败结论。",
+  "new_cohort_requirements": [
+    "固定整合前的 fresh main、candidate 与实际 merge-base；当前三方快照是 cf0 / 781 / f208。远端后续变化由唯一 owner 重新读回。",
+    "新 commit/tree 必须记录 Cargo.toml、Cargo.lock、关键 helper blob、实际 compiler-artifact root source、五产物路径与 SHA，不能从共享目录旧文件或 .d 推断身份。",
+    "保留已验旧身份的 receipt；441 CI、781 baseline、147/v21、57d/PR161 的结果各归原身份。旧 helper 相同只允许复用方法，不能移用其运行通过结论。",
+    "输入/agent/none/保存/attach/reload 的组合、retired hook 无 native dispatch、time 与真实 PTY paste/退出清理按冻结后的候选验收；资源与 quiet/outer 锁由原 owner 协调，本审查不启动。",
+    "v21/v22 tags、release assets、生产服务保持现状；不以重指 tag 消除来源差异。"
+  ],
+  "evidence": {
+    "review_json": "ssmcp-cf0-781-f208-three-way-review.json",
+    "review_md": "ssmcp-cf0-781-f208-three-way-review.md",
+    "inventory": "ssmcp-cf0-781-f208-three-way-inventory.json",
+    "focused_patches": "ssmcp-cf0-781-f208-focused-patches.json"
+  }
+}

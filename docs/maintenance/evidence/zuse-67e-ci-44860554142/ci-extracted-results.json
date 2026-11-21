@@ -1,0 +1,1323 @@
+[
+  {
+    "job_id": 136712704265,
+    "summary_rows": [
+      {
+        "line": 501,
+        "status": "ok",
+        "passed": 134,
+        "failed": 0,
+        "ignored": 1,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 1.64
+      },
+      {
+        "line": 507,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 514,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 1,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 525,
+        "status": "ok",
+        "passed": 5,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.11
+      },
+      {
+        "line": 534,
+        "status": "ok",
+        "passed": 3,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.08
+      },
+      {
+        "line": 541,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 1,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 548,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 1,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 571,
+        "status": "ok",
+        "passed": 17,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 587,
+        "status": "ok",
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.05
+      },
+      {
+        "line": 595,
+        "status": "ok",
+        "passed": 3,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 610,
+        "status": "ok",
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.01
+      },
+      {
+        "line": 628,
+        "status": "ok",
+        "passed": 12,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 643,
+        "status": "ok",
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 656,
+        "status": "ok",
+        "passed": 7,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.02
+      },
+      {
+        "line": 668,
+        "status": "ok",
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 707,
+        "status": "ok",
+        "passed": 33,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.12
+      },
+      {
+        "line": 719,
+        "status": "ok",
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.52
+      },
+      {
+        "line": 740,
+        "status": "ok",
+        "passed": 15,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.02
+      },
+      {
+        "line": 761,
+        "status": "ok",
+        "passed": 15,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 773,
+        "status": "ok",
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.01
+      },
+      {
+        "line": 780,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 1,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 786,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      }
+    ],
+    "android_capture": [
+      {
+        "name": "complete_png_replaces_destination_and_reports_dimensions",
+        "line": 521,
+        "result": "ok"
+      },
+      {
+        "name": "invalid_capture_path_fails_preflight_and_does_not_query_the_device",
+        "line": 519,
+        "result": "ok"
+      },
+      {
+        "name": "failed_destination_replace_cleans_the_staged_image",
+        "line": 520,
+        "result": "ok"
+      },
+      {
+        "name": "truncated_png_is_rejected_without_replacing_previous_capture",
+        "line": 522,
+        "result": "ok"
+      },
+      {
+        "name": "incomplete_png_chunks_preserve_the_previous_capture",
+        "line": 523,
+        "result": "ok"
+      }
+    ],
+    "android_review": [
+      {
+        "name": "printable_ascii_aliases_and_components_pass_preflight",
+        "line": 531,
+        "result": "ok"
+      },
+      {
+        "name": "android_argument_errors_reject_the_complete_program",
+        "line": 530,
+        "result": "ok"
+      },
+      {
+        "name": "failed_retarget_clears_the_previous_device",
+        "line": 532,
+        "result": "ok"
+      }
+    ],
+    "android_browser": [
+      {
+        "name": "browser::android_browser_tests::android_browser_discovery_accepts_only_browser_paths_on_loopback",
+        "line": 376,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_close_refusal_is_error_and_never_touches_other_targets",
+        "line": 377,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_discovery_retains_bounded_eof_fallback_without_length",
+        "line": 378,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_discovery_uses_length_without_waiting_for_adb_eof",
+        "line": 379,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_drop_closes_only_its_created_tab",
+        "line": 380,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_failed_attach_still_closes_created_tab",
+        "line": 381,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_failed_creation_never_closes_unknown_tabs",
+        "line": 382,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_lists_listening_chrome_sockets_without_tabs",
+        "line": 383,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_discovery_rejects_short_or_ambiguous_http_framing",
+        "line": 384,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_owns_one_tab_and_never_requests_all_targets_or_forwards",
+        "line": 385,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_rejects_ambiguous_absent_and_webview_targets",
+        "line": 386,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_rejects_external_discovery_before_websocket_or_tab_creation",
+        "line": 387,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_requires_explicit_valid_arguments_before_io",
+        "line": 388,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_rejects_unauthorized_device_before_socket_access",
+        "line": 389,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_rejects_mismatched_owned_tab_information",
+        "line": 390,
+        "result": "ok"
+      }
+    ],
+    "ios_cases": [
+      {
+        "name": "ios::tests::ambiguous_overlimit_and_truncated_http_responses_are_rejected",
+        "line": 411,
+        "result": "ok"
+      },
+      {
+        "name": "ios::tests::chunked_http_and_prefix_endpoints_are_decoded_without_waiting_for_eof",
+        "line": 414,
+        "result": "ok"
+      }
+    ],
+    "native_groups": [
+      {
+        "line": 896,
+        "name": "all_256_bytes_bidirectional_and_termios_restore",
+        "status": "passed",
+        "detail": {
+          "bytes_each_direction": 256,
+          "raw_8n1": true,
+          "kernel_baud": 115200,
+          "complete_configuration_restored": true
+        }
+      },
+      {
+        "line": 897,
+        "name": "read_timeout",
+        "status": "passed",
+        "detail": {
+          "requested_timeout_ms": 80,
+          "elapsed_ms": 80,
+          "configuration_restored": true
+        }
+      },
+      {
+        "line": 898,
+        "name": "implicit_drop_restores_configuration",
+        "status": "passed",
+        "detail": {
+          "explicit_close": false,
+          "configuration_restored": true
+        }
+      },
+      {
+        "line": 899,
+        "name": "partial_write_timeout_stops_and_restores",
+        "status": "passed",
+        "detail": {
+          "requested_bytes": 32768,
+          "bytes_before_timeout": 15360,
+          "later_step_stopped": true,
+          "configuration_restored": true
+        }
+      },
+      {
+        "line": 900,
+        "name": "whole_program_preflight_has_no_prior_effects",
+        "status": "passed",
+        "detail": {
+          "invalid_cases": 7,
+          "prior_effects": 0
+        }
+      },
+      {
+        "line": 901,
+        "name": "enumeration_only_proves_fake_library_selection",
+        "status": "passed",
+        "detail": {
+          "devices": 2,
+          "handles_opened": 0,
+          "fixture_selected": true
+        }
+      },
+      {
+        "line": 902,
+        "name": "bus_address_and_vid_pid_locked_before_open",
+        "status": "passed",
+        "detail": {
+          "mismatched_vendor_product_address_cases": 3,
+          "handles_opened": 0
+        }
+      },
+      {
+        "line": 903,
+        "name": "busy_interface_does_not_detach",
+        "status": "passed",
+        "detail": {
+          "automatic_detach": false,
+          "released_unclaimed_interface": false
+        }
+      },
+      {
+        "line": 904,
+        "name": "bulk_interrupt_control_ffi_payloads",
+        "status": "passed",
+        "detail": {
+          "bulk_bytes_each_direction": 256,
+          "interrupt_bytes_each_direction": 256,
+          "control_bytes_each_direction": 32,
+          "argument_abi_verified": true
+        }
+      },
+      {
+        "line": 905,
+        "name": "partial_writes_not_retried_and_stop_following_steps",
+        "status": "passed",
+        "detail": {
+          "short_or_timed_out_write_cases": 4,
+          "transfer_calls_per_failure": 1,
+          "later_steps_executed": 0
+        }
+      },
+      {
+        "line": 906,
+        "name": "read_timeout_preserves_partial_bytes",
+        "status": "passed",
+        "detail": {
+          "partial_bytes": 17,
+          "timed_out": true,
+          "transfer_calls": 1
+        }
+      },
+      {
+        "line": 907,
+        "name": "invalid_native_count_is_rejected",
+        "status": "passed",
+        "detail": {
+          "impossible_count_rejected": true,
+          "later_step_stopped": true
+        }
+      },
+      {
+        "line": 908,
+        "name": "control_timeout_completion_unknown",
+        "status": "passed",
+        "detail": {
+          "read_and_write_timeout_cases": 2,
+          "completion_reported_unknown": true
+        }
+      },
+      {
+        "line": 909,
+        "name": "release_failure_still_closes_handle_context_library",
+        "status": "passed",
+        "detail": {
+          "release_failure_reported": true,
+          "handle_context_and_library_closed": true
+        }
+      },
+      {
+        "line": 910,
+        "name": "implicit_drop_releases_all_resources",
+        "status": "passed",
+        "detail": {
+          "explicit_close": false,
+          "release_close_exit_unload": true
+        }
+      },
+      {
+        "line": 911,
+        "name": "whole_program_preflight_has_no_prior_effects",
+        "status": "passed",
+        "detail": {
+          "invalid_cases": 11,
+          "libraries_loaded": 0,
+          "prior_transfers": 0
+        }
+      }
+    ],
+    "actual_checkout_lines": [
+      {
+        "line": 148,
+        "text": "[command]/usr/bin/git log -1 --format=%H"
+      },
+      {
+        "line": 149,
+        "text": "cf9d3973db10a8639cdfbc3460af8b9230cf1e5c"
+      }
+    ],
+    "toolchain_lines": [
+      {
+        "line": 237,
+        "text": "  stable-x86_64-unknown-linux-gnu updated - rustc 1.100.0 (0ef1bc386 2026-11-09) (from rustc 1.100.0 (0ef1bc386 2026-11-09))"
+      },
+      {
+        "line": 251,
+        "text": "  stable-x86_64-unknown-linux-gnu unchanged - rustc 1.100.0 (0ef1bc386 2026-11-09)"
+      },
+      {
+        "line": 322,
+        "text": "rustc +\"$toolchain\" --version --verbose"
+      },
+      {
+        "line": 330,
+        "text": "rustc 1.100.0 (0ef1bc386 2026-11-09)"
+      },
+      {
+        "line": 886,
+        "text": "cargo build --locked"
+      }
+    ]
+  },
+  {
+    "job_id": 136712704344,
+    "summary_rows": [
+      {
+        "line": 469,
+        "status": "ok",
+        "passed": 114,
+        "failed": 0,
+        "ignored": 1,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 2.45
+      },
+      {
+        "line": 475,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 480,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 491,
+        "status": "ok",
+        "passed": 5,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.45
+      },
+      {
+        "line": 501,
+        "status": "ok",
+        "passed": 3,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.39
+      },
+      {
+        "line": 509,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 1,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 516,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 1,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 541,
+        "status": "ok",
+        "passed": 17,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.01
+      },
+      {
+        "line": 557,
+        "status": "ok",
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.1
+      },
+      {
+        "line": 565,
+        "status": "ok",
+        "passed": 3,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 579,
+        "status": "ok",
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.02
+      },
+      {
+        "line": 596,
+        "status": "ok",
+        "passed": 12,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 610,
+        "status": "ok",
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.03
+      },
+      {
+        "line": 621,
+        "status": "ok",
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 632,
+        "status": "ok",
+        "passed": 5,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.02
+      },
+      {
+        "line": 671,
+        "status": "ok",
+        "passed": 33,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.18
+      },
+      {
+        "line": 682,
+        "status": "ok",
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.84
+      },
+      {
+        "line": 705,
+        "status": "ok",
+        "passed": 15,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.03
+      },
+      {
+        "line": 727,
+        "status": "ok",
+        "passed": 15,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 738,
+        "status": "ok",
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.06
+      },
+      {
+        "line": 743,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 748,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      }
+    ],
+    "android_capture": [
+      {
+        "name": "complete_png_replaces_destination_and_reports_dimensions",
+        "line": 486,
+        "result": "ok"
+      },
+      {
+        "name": "invalid_capture_path_fails_preflight_and_does_not_query_the_device",
+        "line": 485,
+        "result": "ok"
+      },
+      {
+        "name": "failed_destination_replace_cleans_the_staged_image",
+        "line": 484,
+        "result": "ok"
+      },
+      {
+        "name": "truncated_png_is_rejected_without_replacing_previous_capture",
+        "line": 487,
+        "result": "ok"
+      },
+      {
+        "name": "incomplete_png_chunks_preserve_the_previous_capture",
+        "line": 489,
+        "result": "ok"
+      }
+    ],
+    "android_review": [
+      {
+        "name": "printable_ascii_aliases_and_components_pass_preflight",
+        "line": 495,
+        "result": "ok"
+      },
+      {
+        "name": "android_argument_errors_reject_the_complete_program",
+        "line": 496,
+        "result": "ok"
+      },
+      {
+        "name": "failed_retarget_clears_the_previous_device",
+        "line": 498,
+        "result": "ok"
+      }
+    ],
+    "android_browser": [
+      {
+        "name": "browser::android_browser_tests::android_browser_discovery_accepts_only_browser_paths_on_loopback",
+        "line": 362,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_close_refusal_is_error_and_never_touches_other_targets",
+        "line": 363,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_discovery_retains_bounded_eof_fallback_without_length",
+        "line": 364,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_discovery_uses_length_without_waiting_for_adb_eof",
+        "line": 365,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_drop_closes_only_its_created_tab",
+        "line": 366,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_failed_attach_still_closes_created_tab",
+        "line": 367,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_discovery_rejects_short_or_ambiguous_http_framing",
+        "line": 368,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_lists_listening_chrome_sockets_without_tabs",
+        "line": 369,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_failed_creation_never_closes_unknown_tabs",
+        "line": 370,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_owns_one_tab_and_never_requests_all_targets_or_forwards",
+        "line": 371,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_rejects_ambiguous_absent_and_webview_targets",
+        "line": 372,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_rejects_external_discovery_before_websocket_or_tab_creation",
+        "line": 373,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_rejects_unauthorized_device_before_socket_access",
+        "line": 374,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_requires_explicit_valid_arguments_before_io",
+        "line": 375,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_rejects_mismatched_owned_tab_information",
+        "line": 378,
+        "result": "ok"
+      }
+    ],
+    "ios_cases": [
+      {
+        "name": "ios::tests::ambiguous_overlimit_and_truncated_http_responses_are_rejected",
+        "line": 401,
+        "result": "ok"
+      },
+      {
+        "name": "ios::tests::chunked_http_and_prefix_endpoints_are_decoded_without_waiting_for_eof",
+        "line": 402,
+        "result": "ok"
+      }
+    ],
+    "native_groups": [],
+    "actual_checkout_lines": [
+      {
+        "line": 132,
+        "text": "[command]/opt/homebrew/bin/git log -1 --format=%H"
+      },
+      {
+        "line": 133,
+        "text": "cf9d3973db10a8639cdfbc3460af8b9230cf1e5c"
+      }
+    ],
+    "toolchain_lines": [
+      {
+        "line": 221,
+        "text": "  stable-aarch64-apple-darwin updated - rustc 1.100.0 (0ef1bc386 2026-11-09) (from rustc 1.100.0 (0ef1bc386 2026-11-09))"
+      },
+      {
+        "line": 237,
+        "text": "  stable-aarch64-apple-darwin unchanged - rustc 1.100.0 (0ef1bc386 2026-11-09)"
+      },
+      {
+        "line": 308,
+        "text": "rustc +\"$toolchain\" --version --verbose"
+      },
+      {
+        "line": 316,
+        "text": "rustc 1.100.0 (0ef1bc386 2026-11-09)"
+      }
+    ]
+  },
+  {
+    "job_id": 136712704368,
+    "summary_rows": [
+      {
+        "line": 464,
+        "status": "ok",
+        "passed": 110,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 1.12
+      },
+      {
+        "line": 470,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 476,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 487,
+        "status": "ok",
+        "passed": 5,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.12
+      },
+      {
+        "line": 496,
+        "status": "ok",
+        "passed": 3,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.1
+      },
+      {
+        "line": 503,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 1,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 510,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 1,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 533,
+        "status": "ok",
+        "passed": 17,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 548,
+        "status": "ok",
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.07
+      },
+      {
+        "line": 557,
+        "status": "ok",
+        "passed": 3,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 572,
+        "status": "ok",
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.01
+      },
+      {
+        "line": 590,
+        "status": "ok",
+        "passed": 12,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 605,
+        "status": "ok",
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.07
+      },
+      {
+        "line": 617,
+        "status": "ok",
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 628,
+        "status": "ok",
+        "passed": 5,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.05
+      },
+      {
+        "line": 667,
+        "status": "ok",
+        "passed": 33,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.19
+      },
+      {
+        "line": 679,
+        "status": "ok",
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.83
+      },
+      {
+        "line": 700,
+        "status": "ok",
+        "passed": 15,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.03
+      },
+      {
+        "line": 721,
+        "status": "ok",
+        "passed": 15,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 733,
+        "status": "ok",
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0.07
+      },
+      {
+        "line": 739,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      },
+      {
+        "line": 745,
+        "status": "ok",
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered": 0,
+        "seconds": 0
+      }
+    ],
+    "android_capture": [
+      {
+        "name": "complete_png_replaces_destination_and_reports_dimensions",
+        "line": 483,
+        "result": "ok"
+      },
+      {
+        "name": "invalid_capture_path_fails_preflight_and_does_not_query_the_device",
+        "line": 481,
+        "result": "ok"
+      },
+      {
+        "name": "failed_destination_replace_cleans_the_staged_image",
+        "line": 482,
+        "result": "ok"
+      },
+      {
+        "name": "truncated_png_is_rejected_without_replacing_previous_capture",
+        "line": 484,
+        "result": "ok"
+      },
+      {
+        "name": "incomplete_png_chunks_preserve_the_previous_capture",
+        "line": 485,
+        "result": "ok"
+      }
+    ],
+    "android_review": [
+      {
+        "name": "printable_ascii_aliases_and_components_pass_preflight",
+        "line": 492,
+        "result": "ok"
+      },
+      {
+        "name": "android_argument_errors_reject_the_complete_program",
+        "line": 493,
+        "result": "ok"
+      },
+      {
+        "name": "failed_retarget_clears_the_previous_device",
+        "line": 494,
+        "result": "ok"
+      }
+    ],
+    "android_browser": [
+      {
+        "name": "browser::android_browser_tests::android_browser_discovery_accepts_only_browser_paths_on_loopback",
+        "line": 363,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_close_refusal_is_error_and_never_touches_other_targets",
+        "line": 365,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_discovery_retains_bounded_eof_fallback_without_length",
+        "line": 366,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_discovery_uses_length_without_waiting_for_adb_eof",
+        "line": 367,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_drop_closes_only_its_created_tab",
+        "line": 368,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_failed_attach_still_closes_created_tab",
+        "line": 369,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_failed_creation_never_closes_unknown_tabs",
+        "line": 370,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_lists_listening_chrome_sockets_without_tabs",
+        "line": 371,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_discovery_rejects_short_or_ambiguous_http_framing",
+        "line": 372,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_owns_one_tab_and_never_requests_all_targets_or_forwards",
+        "line": 373,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_rejects_external_discovery_before_websocket_or_tab_creation",
+        "line": 374,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_rejects_unauthorized_device_before_socket_access",
+        "line": 375,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_requires_explicit_valid_arguments_before_io",
+        "line": 376,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_rejects_ambiguous_absent_and_webview_targets",
+        "line": 377,
+        "result": "ok"
+      },
+      {
+        "name": "browser::android_browser_tests::android_browser_rejects_mismatched_owned_tab_information",
+        "line": 379,
+        "result": "ok"
+      }
+    ],
+    "ios_cases": [
+      {
+        "name": "ios::tests::ambiguous_overlimit_and_truncated_http_responses_are_rejected",
+        "line": 396,
+        "result": "ok"
+      },
+      {
+        "name": "ios::tests::chunked_http_and_prefix_endpoints_are_decoded_without_waiting_for_eof",
+        "line": 399,
+        "result": "ok"
+      }
+    ],
+    "native_groups": [],
+    "actual_checkout_lines": [
+      {
+        "line": 135,
+        "text": "[command]\"C:\\Program Files\\Git\\bin\\git.exe\" log -1 --format=%H"
+      },
+      {
+        "line": 136,
+        "text": "cf9d3973db10a8639cdfbc3460af8b9230cf1e5c"
+      }
+    ],
+    "toolchain_lines": [
+      {
+        "line": 225,
+        "text": "  stable-x86_64-pc-windows-msvc updated - rustc 1.100.0 (0ef1bc386 2026-11-09) (from rustc 1.100.0 (0ef1bc386 2026-11-09))"
+      },
+      {
+        "line": 239,
+        "text": "  stable-x86_64-pc-windows-msvc unchanged - rustc 1.100.0 (0ef1bc386 2026-11-09)"
+      },
+      {
+        "line": 310,
+        "text": "rustc +\"$toolchain\" --version --verbose"
+      },
+      {
+        "line": 318,
+        "text": "rustc 1.100.0 (0ef1bc386 2026-11-09)"
+      }
+    ]
+  }
+]

@@ -1,0 +1,83 @@
+{
+  "schema": "project-z.ssmcp-781-fc-paired-evidence-delivery.v1",
+  "completed_at_utc": "2026-11-21T00:20:12.072618+00:00",
+  "status": "archive_uploaded_and_verified_cloud_and_native",
+  "drive": {
+    "id": "1exRBgnPGqpC9E6j5exa1-1tAOpizbK0V",
+    "url": "https://drive.google.com/file/d/1exRBgnPGqpC9E6j5exa1-1tAOpizbK0V/view?usp=drivesdk",
+    "folder_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+    "name": "ssmcp-781-fc-paired-evidence-20261121.zip",
+    "mime_type": "application/zip",
+    "bytes": 117191,
+    "sha256": "a3f1dc3c2457d4a12abe4a3da8edb88cc6c6162e6f7105d7c92d291b004b11f0"
+  },
+  "archive": {
+    "payload_count": 20,
+    "outer_manifest_count": 1,
+    "member_count": 21,
+    "payload_types": {
+      "json": 16,
+      "markdown": 2,
+      "original_nested_zip": 2
+    },
+    "original_build_and_runtime_json_count": 8,
+    "outer_manifest_path": "paired-evidence-manifest.json",
+    "outer_manifest_sha256": "49ee9532c7ee27a6b5e47ceb59572082a2603bf51cc07526892888d73f6bcc00",
+    "per_file_origins_bytes_sha256_in_manifest": true,
+    "original_bytes_and_directory_names_preserved": true,
+    "relative_markdown_links_verified": 13,
+    "contains_elf_config_bodies_or_credentials": false
+  },
+  "deduplication": {
+    "existing_folder_items_scanned": 119,
+    "pages": 2,
+    "complete": true,
+    "same_name_or_size_matches": 0,
+    "uploads": 1
+  },
+  "verification": {
+    "drive_metadata_name_size_mime_parent_match": true,
+    "drive_full_download_equals_original": true,
+    "all_20_payload_hashes_match_cloud": true,
+    "native_full_download_sha256_match": true,
+    "all_20_payload_hashes_match_native": true,
+    "nested_archives_verified_per_download": 2,
+    "native_job_id": "26c4545eae1eab8d27485f4a48077d3c-7ce",
+    "native_job_exit_code": 0,
+    "native_job_running": false,
+    "native_stdout_eof": true,
+    "native_stderr_eof": true
+  },
+  "cloud": {
+    "zip": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-fc-paired-evidence-20261121.zip",
+    "drive_readback_zip": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-fc-paired-evidence-drive-readback.zip",
+    "delivery_json": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-fc-paired-evidence-delivery.json",
+    "drive_readback_proof": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-fc-paired-evidence-drive-readback.json",
+      "bytes": 4765,
+      "sha256": "594cad89905e912224957103be493119403436af7dfc616408cb77ab0ee25311"
+    },
+    "native_mirror_proof": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-fc-paired-evidence-native-verification.json",
+      "bytes": 5165,
+      "sha256": "f626aa298d26312fac30e9b7d93a4f16b60276c3846bd62f50668e3142463d5e"
+    }
+  },
+  "native": {
+    "directory": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-fc-comparison-20261121/independent-pair-a3f1dc3c",
+    "zip": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-fc-comparison-20261121/independent-pair-a3f1dc3c/ssmcp-781-fc-paired-evidence-20261121.zip",
+    "payload_directory": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-fc-comparison-20261121/independent-pair-a3f1dc3c/payloads",
+    "verification_json": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-fc-comparison-20261121/independent-pair-a3f1dc3c/native-verification.json",
+    "verification_json_bytes": 5165,
+    "verification_json_sha256": "f626aa298d26312fac30e9b7d93a4f16b60276c3846bd62f50668e3142463d5e",
+    "delivery_json": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-fc-comparison-20261121/independent-pair-a3f1dc3c/delivery.json",
+    "drive_readback_json": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-fc-comparison-20261121/independent-pair-a3f1dc3c/drive-readback.json"
+  },
+  "scope": {
+    "new_product_gate_build_runtime_or_gui": false,
+    "product_elf_rehashed": false,
+    "source_ref_or_main_report_modified": false,
+    "signed_download_url_persisted": false,
+    "statistical_or_system_clipboard_claims_added": false
+  }
+}

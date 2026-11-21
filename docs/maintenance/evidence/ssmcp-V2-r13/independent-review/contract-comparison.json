@@ -1,0 +1,188 @@
+{
+  "schema": "project-z.V2-r13.coverage-contract-comparison.v1",
+  "read_at_utc": "2026-11-21T05:20:18.639492+00:00",
+  "scope": "Coverage comparison only. New executions, logs and binaries are independently read from r13; no r12 result or artifact used as r13 proof.",
+  "current_gate": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/candidate-gates.json",
+    "bytes": 1286399,
+    "sha256": "66f3be6c3f0ee4a4bdf9900633b49fa598db8a8545d4b8f67a3ea051b2671b35"
+  },
+  "historical_coverage_index": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/candidate-gates.json",
+    "bytes": 1282781,
+    "sha256": "cf17822a03c045fff67b2015e196fee0e1edaf45df55b0761331080eac496000"
+  },
+  "raw_current_audit": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-V2-r13-actual-gate-review-20261121/raw-audit.json",
+    "bytes": 325263,
+    "sha256": "5b068c7475cd9c703b9da9fd90564e68d7be08806914319d30ce30e89f0c9cfb"
+  },
+  "same_35_stage_order": true,
+  "same_20_integration_inventories": true,
+  "library_inventory_changes": {
+    "all": {
+      "before": 2079,
+      "after": 2086,
+      "added": [
+        "client::messaging::tests::lookup_rejects_invalid_and_timed_out_replies_and_does_not_cross_connections",
+        "client::messaging::tests::lookup_waits_for_the_coalesced_quiet_list_even_when_the_directory_is_unchanged",
+        "client::terminal::conversation::messaging::tests::coalesced_miss_joins_a_query_after_list_and_finishes_on_its_empty_reply",
+        "client::terminal::conversation::messaging::tests::cold_exact_lookup_highlights_merged_process_row_without_selecting_or_sending",
+        "client::terminal::conversation::messaging::tests::explicit_lookup_reports_fresh_miss_or_failure_without_clearing_the_command",
+        "client::terminal::conversation::messaging::tests::newer_query_coalesces_the_list_and_consumes_only_its_own_command",
+        "client::terminal::conversation::messaging::tests::queued_lookup_reply_cannot_override_escape_navigation_or_a_newer_draft"
+      ],
+      "removed": []
+    },
+    "host": {
+      "before": 6,
+      "after": 6,
+      "added": [],
+      "removed": []
+    },
+    "host_selected": {
+      "before": 6,
+      "after": 6,
+      "added": [],
+      "removed": []
+    },
+    "ignored": {
+      "before": 23,
+      "after": 23,
+      "added": [],
+      "removed": []
+    },
+    "ignored_code_mode": {
+      "before": 2,
+      "after": 2,
+      "added": [],
+      "removed": []
+    },
+    "ignored_not_executed": {
+      "before": 21,
+      "after": 21,
+      "added": [],
+      "removed": []
+    },
+    "private": {
+      "before": 2073,
+      "after": 2080,
+      "added": [
+        "client::messaging::tests::lookup_rejects_invalid_and_timed_out_replies_and_does_not_cross_connections",
+        "client::messaging::tests::lookup_waits_for_the_coalesced_quiet_list_even_when_the_directory_is_unchanged",
+        "client::terminal::conversation::messaging::tests::coalesced_miss_joins_a_query_after_list_and_finishes_on_its_empty_reply",
+        "client::terminal::conversation::messaging::tests::cold_exact_lookup_highlights_merged_process_row_without_selecting_or_sending",
+        "client::terminal::conversation::messaging::tests::explicit_lookup_reports_fresh_miss_or_failure_without_clearing_the_command",
+        "client::terminal::conversation::messaging::tests::newer_query_coalesces_the_list_and_consumes_only_its_own_command",
+        "client::terminal::conversation::messaging::tests::queued_lookup_reply_cannot_override_escape_navigation_or_a_newer_draft"
+      ],
+      "removed": []
+    },
+    "private_selected": {
+      "before": 2050,
+      "after": 2057,
+      "added": [
+        "client::messaging::tests::lookup_rejects_invalid_and_timed_out_replies_and_does_not_cross_connections",
+        "client::messaging::tests::lookup_waits_for_the_coalesced_quiet_list_even_when_the_directory_is_unchanged",
+        "client::terminal::conversation::messaging::tests::coalesced_miss_joins_a_query_after_list_and_finishes_on_its_empty_reply",
+        "client::terminal::conversation::messaging::tests::cold_exact_lookup_highlights_merged_process_row_without_selecting_or_sending",
+        "client::terminal::conversation::messaging::tests::explicit_lookup_reports_fresh_miss_or_failure_without_clearing_the_command",
+        "client::terminal::conversation::messaging::tests::newer_query_coalesces_the_list_and_consumes_only_its_own_command",
+        "client::terminal::conversation::messaging::tests::queued_lookup_reply_cannot_override_escape_navigation_or_a_newer_draft"
+      ],
+      "removed": []
+    }
+  },
+  "same_HOST6_and_ignored_selections": true,
+  "private_command_skips_all_six_HOST_tests": true,
+  "host_command_names_all_six": true,
+  "new_private_tests_only": [
+    "client::messaging::tests::lookup_rejects_invalid_and_timed_out_replies_and_does_not_cross_connections",
+    "client::messaging::tests::lookup_waits_for_the_coalesced_quiet_list_even_when_the_directory_is_unchanged",
+    "client::terminal::conversation::messaging::tests::coalesced_miss_joins_a_query_after_list_and_finishes_on_its_empty_reply",
+    "client::terminal::conversation::messaging::tests::cold_exact_lookup_highlights_merged_process_row_without_selecting_or_sending",
+    "client::terminal::conversation::messaging::tests::explicit_lookup_reports_fresh_miss_or_failure_without_clearing_the_command",
+    "client::terminal::conversation::messaging::tests::newer_query_coalesces_the_list_and_consumes_only_its_own_command",
+    "client::terminal::conversation::messaging::tests::queued_lookup_reply_cannot_override_escape_navigation_or_a_newer_draft"
+  ],
+  "no_removed_test_names": true,
+  "workspace_helper": {
+    "artifact": {
+      "bytes": 126784192,
+      "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+      "sha256": "5701ca41cb049a36c042b8acf4253dd81a874b8e97e1261f76fce6a60cc8dbe5"
+    },
+    "compiler_artifact": {
+      "executable": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+      "features": [],
+      "filenames": [
+        "/var/tmp/project-z-cargo-target/debug/ssmcp"
+      ],
+      "fresh": false,
+      "manifest_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/source/Cargo.toml",
+      "package_id": "path+file:///home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/source#ssmcp@0.10.25",
+      "profile": {
+        "debug_assertions": true,
+        "debuginfo": 0,
+        "opt_level": "0",
+        "overflow_checks": true,
+        "test": false
+      },
+      "reason": "compiler-artifact",
+      "target": {
+        "crate_types": [
+          "bin"
+        ],
+        "doc": true,
+        "doctest": false,
+        "edition": "2024",
+        "kind": [
+          "bin"
+        ],
+        "name": "ssmcp",
+        "src_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/source/src/bin/ssmcp.rs",
+        "test": true
+      }
+    },
+    "source_stage": "integration-compile"
+  },
+  "workspace_helper_checks": {
+    "integration-connection_context": {
+      "after": {
+        "bytes": 126784192,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "5701ca41cb049a36c042b8acf4253dd81a874b8e97e1261f76fce6a60cc8dbe5"
+      },
+      "before": {
+        "bytes": 126784192,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "5701ca41cb049a36c042b8acf4253dd81a874b8e97e1261f76fce6a60cc8dbe5"
+      }
+    },
+    "integration-workspace_bridge": {
+      "after": {
+        "bytes": 126784192,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "5701ca41cb049a36c042b8acf4253dd81a874b8e97e1261f76fce6a60cc8dbe5"
+      },
+      "before": {
+        "bytes": 126784192,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "5701ca41cb049a36c042b8acf4253dd81a874b8e97e1261f76fce6a60cc8dbe5"
+      }
+    },
+    "integration-workspace_bridge-ignored": {
+      "after": {
+        "bytes": 126784192,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "5701ca41cb049a36c042b8acf4253dd81a874b8e97e1261f76fce6a60cc8dbe5"
+      },
+      "before": {
+        "bytes": 126784192,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "5701ca41cb049a36c042b8acf4253dd81a874b8e97e1261f76fce6a60cc8dbe5"
+      }
+    }
+  },
+  "live_shared_helper_reread": false
+}

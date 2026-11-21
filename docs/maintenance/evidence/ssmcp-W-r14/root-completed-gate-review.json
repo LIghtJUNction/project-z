@@ -1,0 +1,491 @@
+{
+  "utc": "2026-11-21T05:58:08.604794+00:00",
+  "status": "passed",
+  "run_id": "3e89242560e0a243bde3d8442ce7e1db",
+  "source_revision": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+  "checks_complete": 35,
+  "unit": "ActiveState=inactive\nSubState=dead\nMainPID=0\nExecMainStatus=0\n",
+  "source_manifest_keys": [
+    "entries",
+    "path",
+    "sha256"
+  ],
+  "compile_provenance_keys": [
+    "build_stages",
+    "copy_policy",
+    "dependency_artifacts_may_be_fresh",
+    "excluded_stages",
+    "link_identity",
+    "link_output_schema",
+    "namespace",
+    "nesting",
+    "schema",
+    "selected_artifacts_require_fresh_false",
+    "selected_artifacts_require_link_output_proof",
+    "step_evidence_environment",
+    "verified_before_and_after",
+    "wrapper"
+  ],
+  "gate": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/candidate-gates.json",
+    "bytes": 1286360,
+    "sha256": "423e7072304bcc191da324b0233a00f704c31710f7120522ef16c6e58026ff3c"
+  },
+  "launcher_exit": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14-launch/exit.json",
+    "bytes": 4793,
+    "sha256": "6468c5b03875fa10170dbfbcfb95da7414d1a1e15b0e84ee2383f397746cb80e"
+  },
+  "owned_exit": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r14-binding/owned/exit.json",
+    "bytes": 1168,
+    "sha256": "6c5c5d17c5dca26345694dedf5b932572ff8099ae8dec1d8da1ffb1ed1553b6c"
+  },
+  "input_hashes_unchanged": true,
+  "gate_finished_at": 1795240561.2126365,
+  "launcher_finished_at": 1795240561.2983754,
+  "owned_finished_utc": "2026-11-21T05:56:01.331566+00:00",
+  "checks": [
+    {
+      "name": "release-policy",
+      "exit_code": 0
+    },
+    {
+      "name": "deployment-policy",
+      "exit_code": 0
+    },
+    {
+      "name": "fmt",
+      "exit_code": 0
+    },
+    {
+      "name": "library-compile",
+      "exit_code": 0
+    },
+    {
+      "name": "library-private",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 6,
+          "ignored": 23,
+          "measured": 0,
+          "passed": 2057,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "library-host",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 2080,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 6,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "clippy",
+      "exit_code": 0
+    },
+    {
+      "name": "windows-gnu-clippy",
+      "exit_code": 0
+    },
+    {
+      "name": "integration-compile",
+      "exit_code": 0
+    },
+    {
+      "name": "integration-allow_account",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 3,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-cc_backend",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 1,
+          "measured": 0,
+          "passed": 6,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-client_resources",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 1,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-client_server_config",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 5,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-codex_backend",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 2,
+          "measured": 0,
+          "passed": 14,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-collaboration",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 3,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-connection_context",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 10,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-context",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 12,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-context_helpers",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 2,
+          "measured": 0,
+          "passed": 0,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-context_runtime",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 1,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-oauth_security",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 11,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-pi_backend",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 1,
+          "measured": 0,
+          "passed": 9,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-release_client",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 4,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-resources",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 10,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-rsync",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 3,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-server_runtime",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 1,
+          "measured": 0,
+          "passed": 3,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-terminals",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 4,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-two_tools",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 7,
+          "measured": 0,
+          "passed": 2,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-workspace_bridge",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 3,
+          "measured": 0,
+          "passed": 0,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-zuse_worker_entry",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 1,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "library-code-mode-ignored",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 2084,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 2,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-two_tools-ignored",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 2,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 7,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-workspace_bridge-ignored",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 3,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "integration-context_helpers-ignored",
+      "exit_code": 0,
+      "test_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 2,
+          "result": "ok"
+        }
+      ]
+    },
+    {
+      "name": "release",
+      "exit_code": 0
+    },
+    {
+      "name": "decoder",
+      "exit_code": 0
+    }
+  ],
+  "artifacts": {
+    "library-compile/library-test-fixture": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/library-compile/library-test-fixture",
+      "bytes": 166677776,
+      "sha256": "57fb20efb29b2eefabf9dfe0f3b88b0fb58db6e35efce2fb6feec4b3d625fab3"
+    },
+    "release/ssmcp": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/release/ssmcp",
+      "bytes": 15750352,
+      "sha256": "d654703a12f9479e97b9807ac8d61f370bd5c413963bf6e5b6e45dfbd8434f41"
+    },
+    "release/ssmcp-frontend": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/release/ssmcp-frontend",
+      "bytes": 1386584,
+      "sha256": "2e19f8ad2fea673f899bbfc44449161e072381571946b85e3c6a5dc7e8325a06"
+    },
+    "release/ssmcpd": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/release/ssmcpd",
+      "bytes": 8176168,
+      "sha256": "c1991fac3c0c6aa0a229781c87fe67ef24c028fd5ffc88b0c50dc413baaa5527"
+    },
+    "decoder/vt_snapshot": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/decoder/vt_snapshot",
+      "bytes": 440984,
+      "sha256": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f"
+    }
+  },
+  "runtime_bindings": {
+    "node": "/home/lightjunction/.local/share/mise/installs/node/26.13.1/bin/node",
+    "outer_bwrap": "/usr/bin/bwrap",
+    "path_prefix": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/native-bin",
+    "runner": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/src/code_mode.js",
+      "sha256": "1d5185af93cd8e72fb6e1ed3e9c2a4d676de7702d6426b7e02a8cc08a36c21f4"
+    }
+  },
+  "source_manifest_summary": {
+    "entries": 1849,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source-manifest.json",
+    "sha256": "6ebe935d8f04d92450159bb2251297f12e0bf894a97cf7b440211159e99a69e8"
+  }
+}

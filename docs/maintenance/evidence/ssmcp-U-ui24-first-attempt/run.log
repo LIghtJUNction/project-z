@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_zuse_worker.py", line 252, in <module>
+    main()
+    ~~~~^^
+  File "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_zuse_worker.py", line 232, in main
+    try: harness.run()
+         ~~~~~~~~~~~^^
+  File "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_zuse_worker.py", line 152, in run
+    host, _=self.display("zuse untouched sentinel")
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/e2e_zuse_worker.py", line 53, in display
+    server.start()
+    ~~~~~~~~~~~~^^
+  File "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/private_xvfb.py", line 158, in start
+    assert ready_line(process.stdout) == f"{number}\n".encode(), "Xvfb must announce exactly the requested high display"
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/scripts/private_xvfb.py", line 109, in ready_line
+    assert chunk, "private Xvfb exited without readiness"
+           ^^^^^
+AssertionError: private Xvfb exited without readiness

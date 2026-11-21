@@ -1,0 +1,169 @@
+{
+  "all_stage_exits_zero": true,
+  "at_utc": "2026-11-21T02:24:55.930431+00:00",
+  "dependency_sources": {
+    "git_checkout_count": 11,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/dependency-source-manifest.json",
+    "registry_package_count": 264,
+    "resolved_package_count": 277,
+    "sha256": "d8051b708aee7b705432100a7e8a861c841575038141c01325300b9d217bbedb",
+    "verified_before_and_after": true
+  },
+  "finished_utc": "2026-11-21T02:22:17.674951+00:00",
+  "five_fresh_compilations_and_private_copy_hashes_verified": true,
+  "five_owned_elfs": {
+    "library-test-fixture": {
+      "actual_invocation": {
+        "bytes": 739,
+        "mode": 384,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/rustc-invocations/library-compile/invocation-729101-1795227024159742732.json",
+        "sha256": "b10a2633c82ec368c823512e55ff040151fc440901fce84d898ca31a9be4fb56"
+      },
+      "copy": {
+        "bytes": 166657104,
+        "mode": "0o700",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/library-compile/library-test-fixture",
+        "sha256": "2b2771c074ffbd8c4a73b9ea8805df162ba86190bebe52a4e69b66d2653fc7b8"
+      },
+      "fresh": false,
+      "link_output": {
+        "bytes": 166657104,
+        "mode": 493,
+        "path": "/var/tmp/project-z-cargo-target/debug/build/ssmcp/1a01125c55603d60/out/ssmcp-1a01125c55603d60",
+        "sha256": "2b2771c074ffbd8c4a73b9ea8805df162ba86190bebe52a4e69b66d2653fc7b8"
+      },
+      "stage": "library-compile"
+    },
+    "ssmcp": {
+      "actual_invocation": {
+        "bytes": 718,
+        "mode": 384,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/rustc-invocations/release/invocation-862570-1795227550012404497.json",
+        "sha256": "c2df69d55544771016583a20b26c54adba483196d494f6138ed7b66d51e65596"
+      },
+      "copy": {
+        "bytes": 15738696,
+        "mode": "0o700",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/release/ssmcp",
+        "sha256": "2dbab2aa293ae411de20f9839d574bf62ef79a644710884a81f6fe6239717e35"
+      },
+      "fresh": false,
+      "link_output": {
+        "bytes": 15738696,
+        "mode": 493,
+        "path": "/var/tmp/project-z-cargo-target/release/build/ssmcp/bec4ffd352b47ece/out/ssmcp",
+        "sha256": "2dbab2aa293ae411de20f9839d574bf62ef79a644710884a81f6fe6239717e35"
+      },
+      "stage": "release"
+    },
+    "ssmcp-frontend": {
+      "actual_invocation": {
+        "bytes": 736,
+        "mode": 384,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/rustc-invocations/release/invocation-852066-1795227503135107766.json",
+        "sha256": "e5c315796f879e387e57dfdfa01ace89b16e04bbb4daac3282b1c5280d962298"
+      },
+      "copy": {
+        "bytes": 1386584,
+        "mode": "0o700",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/release/ssmcp-frontend",
+        "sha256": "2e19f8ad2fea673f899bbfc44449161e072381571946b85e3c6a5dc7e8325a06"
+      },
+      "fresh": false,
+      "link_output": {
+        "bytes": 1386584,
+        "mode": 493,
+        "path": "/var/tmp/project-z-cargo-target/release/build/ssmcp/1951411f107c3f34/out/ssmcp_frontend",
+        "sha256": "2e19f8ad2fea673f899bbfc44449161e072381571946b85e3c6a5dc7e8325a06"
+      },
+      "stage": "release"
+    },
+    "ssmcpd": {
+      "actual_invocation": {
+        "bytes": 720,
+        "mode": 384,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/rustc-invocations/release/invocation-853753-1795227511056589639.json",
+        "sha256": "8a18f91e3c0812871529f12b9e54abf0ee673e8452c3f92bc82e937ba7562971"
+      },
+      "copy": {
+        "bytes": 8176168,
+        "mode": "0o700",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/release/ssmcpd",
+        "sha256": "e2e63fcfc63c05ca81907c976f8f3dda2aee65db9efa6d0d242fba69b95271b0"
+      },
+      "fresh": false,
+      "link_output": {
+        "bytes": 8176168,
+        "mode": 493,
+        "path": "/var/tmp/project-z-cargo-target/release/build/ssmcp/58a74720a86b65a1/out/ssmcpd",
+        "sha256": "e2e63fcfc63c05ca81907c976f8f3dda2aee65db9efa6d0d242fba69b95271b0"
+      },
+      "stage": "release"
+    },
+    "vt_snapshot": {
+      "actual_invocation": {
+        "bytes": 731,
+        "mode": 384,
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/rustc-invocations/decoder/invocation-901300-1795227720468496492.json",
+        "sha256": "ab79217a3ceda4175191789dee54048c7414b0b8e829cb007d60e7367f13f599"
+      },
+      "copy": {
+        "bytes": 440984,
+        "mode": "0o700",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/decoder/vt_snapshot",
+        "sha256": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f"
+      },
+      "fresh": false,
+      "link_output": {
+        "bytes": 440984,
+        "mode": 493,
+        "path": "/var/tmp/project-z-cargo-target/release/build/ssmcp/7b72577e8b73e4cc/out/vt_snapshot",
+        "sha256": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f"
+      },
+      "stage": "decoder"
+    }
+  },
+  "gate": {
+    "bytes": 1282803,
+    "mode": "0o600",
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-gates.json",
+    "sha256": "645dd18969232888cbb393e4193542b421706161eaf6ef2af0af6acca553d7ec"
+  },
+  "integration_targets": 20,
+  "launcher_exit": {
+    "bytes": 4792,
+    "mode": "0o644",
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11-launch/exit.json",
+    "sha256": "72b5f78ea2deedeb6f8998315c1a2df617809ceb6d1220ff8112b1840847b36c"
+  },
+  "library_partition": {
+    "complete": true,
+    "disjoint": true,
+    "host": 6,
+    "private": 2073,
+    "total": 2079
+  },
+  "mandatory_ignored_passed": 14,
+  "nine_inputs_unchanged": true,
+  "ordinary_integration_passed": 102,
+  "outer_exit": {
+    "bytes": 1167,
+    "mode": "0o644",
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r11-binding/owned/exit.json",
+    "sha256": "37e9a0929b8b6ea71bf158c5d758a4ebad0f056d63c781f4de7828be0d01885d"
+  },
+  "run_id": "ecfe8f69dcb362096018be9a632ff96c",
+  "rust_stages": 26,
+  "schema": "ssmcp-Q-r11-completed-gate-review-v1",
+  "source_manifest": {
+    "entries": 1849,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source-manifest.json",
+    "sha256": "c969fcd1041b983f8761edb8cf5077c85f430db1f30589fd2cc19da607e2bbfb"
+  },
+  "source_revision": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+  "source_tree": "5143f90c05066c95b2df58a9eab1831e05888a62",
+  "stages": 35,
+  "static_ui_precondition_issue_pending": "Explicit Next caller is next rather than null in stale E2E fixture predicates; source-only correction by original author is pending.",
+  "status": "passed",
+  "ui_runtime_p1_executed": false
+}

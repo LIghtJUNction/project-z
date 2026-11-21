@@ -1,0 +1,152 @@
+{
+  "schema": "project-z.paired-native-followup-corrected-review.v1",
+  "reviewed_at_utc": "2026-11-21T00:42:14.034124+00:00",
+  "snapshot_utc": "2026-11-21T00:39:55.660383+00:00",
+  "status": "passed_no_reporting_blockers",
+  "blocker_count": 0,
+  "reviewer": "builtin pr_org_repos",
+  "scope": "Read-only targeted correction/four-new-evidence/manifest review at fixed00:39:55UTC snapshot; no product gates or source/ref/PR/prepared-file changes. Later active-source drift is outside this report snapshot.",
+  "previous_review_preserved": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/paired-native-followup-independent-review.json",
+    "bytes": 8797,
+    "sha256": "bda059b7da696ba70b214e21564177a1de6e9ae048e59428900e6dd8b2889c99",
+    "git_blob_sha1": "208cfaeb0e0579f2cc130e52e45a1db46983511d"
+  },
+  "prepared_manifest": {
+    "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-paired-native-followup-20261121/prepared.json",
+    "bytes": 39780,
+    "sha256": "af996b9f9f15a9a8bd1599d387744e9b5cfacac477c88b5c6e60e0fe98356a95",
+    "git_blob_sha1": "5591ed384c4e4bbac625b96c5793a24e9a99bdad"
+  },
+  "report_files": {
+    "summary": {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-paired-native-followup-20261121/2026-11-20-pr-and-dependencies.json",
+      "bytes": 946323,
+      "sha256": "69bad73b1d35eda95ae74a31d62c5ed721ae87bd52490a4b120d28a1b55c8703",
+      "git_blob_sha1": "de5e3c2f588f36e548043ff8eda34ad6e5434aee"
+    },
+    "markdown": {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-paired-native-followup-20261121/2026-11-20-pr-and-dependencies.md",
+      "bytes": 48708,
+      "sha256": "2d7400951cee8fe9c88962cbf496fa0c0d2569c8a03b8b9ca56a0d7a9293f82f",
+      "git_blob_sha1": "6834e432dff16f6ffe6c775d8797c2cfb547487b"
+    }
+  },
+  "resolved_findings": [
+    {
+      "id": "R1",
+      "resolved": true,
+      "basis": "MD identifies d531 as historical; parent latestmain37c and current listenerE1/tree347 are separated from immutable c4/d531 history and failed806. No E1 product result claimed."
+    },
+    {
+      "id": "R2",
+      "resolved": true,
+      "basis": "MD explicitly distinguishes781 andFC source identities while keeping same dependency/toolchain/input/frozen-fixture method; four-path change is retained."
+    }
+  ],
+  "new_evidence": [
+    {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-paired-native-followup-20261121/evidence/ssmcp-fc-new-tests-execution-scope.json",
+      "bytes": 1670,
+      "sha256": "798ad614c6571587a0e77b7b8bf2d8d0af37e04bf32a22c866aa42740240b73d",
+      "git_blob_sha1": "c086541819b9b5b0bbce0c635028c8cdbc063843"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-paired-native-followup-20261121/evidence/zcalld-e1-parameters-independent-review.json",
+      "bytes": 2174,
+      "sha256": "debbd4cd80c7829fc00373414b4ed77d974050de71a5c463f9b32eff7134ba69",
+      "git_blob_sha1": "2a723d1911c6b87b50ef05d07f8b84555362912b"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-paired-native-followup-20261121/evidence/zcalld-e1-pin-independent-review.json",
+      "bytes": 2649,
+      "sha256": "67ad8fa9dc9709832f9f9c30293de6610668a9cc7df5da1902d1c128177e08e6",
+      "git_blob_sha1": "082d53a7cf16256bb249c84cf0c946eb9043c7a1"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-paired-native-followup-20261121/evidence/zcalld-e1-source-observation.json",
+      "bytes": 1196,
+      "sha256": "0868985c72362ff60fc96db41a3339efa5446e8fcce52651ab6a4f2ad4cb87d1",
+      "git_blob_sha1": "10f437898b65a57965ca79cf5d00362410eb8f29"
+    }
+  ],
+  "fc_unit_scope": {
+    "independent_fixed_github_blob_read": {
+      "source_url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/7008d284bea2324a7e9699fd4993b00a2bedcc3b",
+      "source_bytes": 8620,
+      "source_sha256": "68511f539518cd13a8067598cf660734eefed4436fbeeb24d579a0f9215ef6e9",
+      "git_blob_sha1": "7008d284bea2324a7e9699fd4993b00a2bedcc3b",
+      "function_names": [
+        "bracketed_paste_work_tracks_read_spans_not_payload_bytes",
+        "plain_text_completion_work_is_linear_in_each_input_batch",
+        "batched_paste_preserves_split_unicode_navigation_and_literal_commands",
+        "batched_binary_paste_keeps_embedded_markers_opaque",
+        "oversized_literal_span_rejects_the_paste_without_changing_the_draft",
+        "coalesced_controls_refresh_suggestions_before_accepting_or_dismissing",
+        "carriage_return_executes_the_command_before_paste_and_tail_input"
+      ],
+      "function_count": 7
+    },
+    "source_matches_root_evidence": true,
+    "build_receipt_scope": "build_only",
+    "actual_library_no_run_command_matches": true,
+    "product_tests_executed": 0,
+    "runtime_steps": 2,
+    "runtime_cargo_executed": false,
+    "conclusion": "Seven new unit functions compiled; execution not established. Runtime80+31 assertions remain separate."
+  },
+  "zcalld_e1_scope": {
+    "head": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+    "tree": "34795b388520d9a0587f0543ba5763d37b1aeb84",
+    "static_evidence_consistent": true,
+    "only_gitlink_changes": true,
+    "retained_other_leaf_entries": 219,
+    "upstream_one_README_only_commit": true,
+    "launcher_review_only_approved_identity_and_expected_path_substitutions": true,
+    "current_product_result_pending": true,
+    "historical806_exit": 1,
+    "historical806_product_tests": 0,
+    "later_drift_not_used_to_rewrite_this_snapshot": true
+  },
+  "integrity": {
+    "files": 52,
+    "unique_repository_paths": 52,
+    "all_bytes_characters_sha256_gitblob_match": true,
+    "summary_bytes": 946323,
+    "headroom_below_1MiB": 102253,
+    "markdown_relative_links": 83,
+    "unique_link_targets": 76,
+    "broken_links": 0,
+    "link_basis": "prepared52 union existing verifiedGitHub47d tree",
+    "links_evidence": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/paired-native-followup-corrected-review-links.json",
+      "bytes": 22989,
+      "sha256": "da90f60e47a664072f2dab8579890b3dd9309ed367df335b240cea4bb63f2217",
+      "git_blob_sha1": "b7565d25dd2ca821f8413aec9eaf0222cb7fff1c"
+    },
+    "semantic_deep_equality": {
+      "counts": true,
+      "pull_requests": true,
+      "dependency_snapshot": true,
+      "final_source_cohort": true,
+      "final_aggregate_gates": true,
+      "consumer_propagation": true,
+      "component_integrations": true,
+      "component_integration_scope": true,
+      "previous_source_graph_validation": true,
+      "core_git_source_migrations": true,
+      "git_source_policy_followup": true,
+      "org_git_source_publications": true,
+      "mechrevo_git_source_migration": true
+    },
+    "initial85_count": 85,
+    "original_counts": {
+      "已合并": 56,
+      "验收／集成中": 1,
+      "已关闭": 14,
+      "具体阻塞": 5,
+      "仓库已归档": 9
+    }
+  },
+  "unchanged_conclusions_reused": "Prior review FCfivebuild/fourruntime and n1/slow-submetrics/fakeclipboard boundaries; zuse portable/native counts and GL/AT-SPI limitations; exact836featuremerge/maina1; SSMCP24c source-only/f33integrationpending; no final44/P1 pass. These are report evidence conclusions, not new product executions."
+}

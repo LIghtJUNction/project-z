@@ -1,0 +1,132 @@
+{
+  "native_wayland": "pass",
+  "compositor": "v0.57.2",
+  "binary_sha256": "7a6a6d995b3a1b77e2cd5d4ea585e72e5c170e338e333d85684ec2dbca9b864b",
+  "checks": {
+    "window_metadata": {
+      "ok": true,
+      "result": {
+        "owned_windows": 2,
+        "native_wayland": true
+      }
+    },
+    "pointer_motion": {
+      "ok": true,
+      "result": {
+        "coordinate_matches": true
+      }
+    },
+    "foreground_input": {
+      "ok": true,
+      "result": {
+        "text": "AZuse 42! 中文✓🙂"
+      }
+    },
+    "background_input": {
+      "ok": true,
+      "result": {
+        "text": "AZuse 42! 中文✓🙂 background!? !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~Z",
+        "focus_unchanged": true,
+        "foreground_text_unchanged": true
+      }
+    },
+    "rejected_input": {
+      "ok": true,
+      "result": {
+        "unsupported_text_rejected_before_input": true
+      }
+    },
+    "window_capture": {
+      "ok": true,
+      "result": {
+        "width": 640,
+        "height": 720,
+        "center_rgb": [
+          32,
+          160,
+          96
+        ],
+        "bytes": 18967
+      }
+    },
+    "unsupported_keyboard_states": {
+      "ok": true,
+      "result": {
+        "rejected_before_effect": [
+          "caps",
+          "group1",
+          "num_lock_text_and_background",
+          "held_key"
+        ],
+        "original_plain_letters_after_rejection": true,
+        "num_lock_foreground_shortcuts": 2,
+        "num_lock_keypad_after_shortcut": true,
+        "num_lock_original_keyboard_states_unchanged": true
+      }
+    }
+  },
+  "private_initial_held_key_count": 0,
+  "restored": {
+    "own_windows_closed": true,
+    "pointer": true,
+    "focus": true,
+    "pointer_after_focus": {
+      "x": 960,
+      "y": 360
+    },
+    "pointer_expected": {
+      "x": 400,
+      "y": 300
+    },
+    "pointer_observed": {
+      "x": 400,
+      "y": 300
+    }
+  },
+  "isolation": {
+    "mode": "owned-headless-cage-and-private-hyprland",
+    "host_display_connection": false,
+    "host_focus_or_pointer_queries": false,
+    "host_state_restoration": false,
+    "seat_backend": "seatd-with-absent-private-socket",
+    "cage_version": "Cage version 0.3.1",
+    "max_expected_ipc_path_bytes": 100,
+    "render_node": "/dev/dri/renderD129",
+    "cage_pid": 3190520,
+    "parent_protocol_versions": {
+      "wl_shm": 2,
+      "zwp_linux_dmabuf_v1": 4,
+      "wl_compositor": 6,
+      "wl_subcompositor": 1,
+      "wl_data_device_manager": 3,
+      "zwp_primary_selection_device_manager_v1": 1,
+      "wl_seat": 9,
+      "ext_idle_notifier_v1": 2,
+      "zwp_idle_inhibit_manager_v1": 1,
+      "xdg_wm_base": 6,
+      "zxdg_decoration_manager_v1": 1,
+      "org_kde_kwin_server_decoration_manager": 1,
+      "wp_viewporter": 1,
+      "wp_presentation": 2,
+      "zwlr_export_dmabuf_manager_v1": 1,
+      "zwlr_screencopy_manager_v1": 3,
+      "wp_single_pixel_buffer_manager_v1": 1,
+      "zxdg_output_manager_v1": 3,
+      "zwlr_output_manager_v1": 4,
+      "zwlr_gamma_control_manager_v1": 1,
+      "zwp_virtual_keyboard_manager_v1": 1,
+      "zwlr_virtual_pointer_manager_v1": 2,
+      "zwp_relative_pointer_manager_v1": 1,
+      "zwlr_foreign_toplevel_manager_v1": 3,
+      "xwayland_shell_v1": 1,
+      "wl_output": 4
+    },
+    "hyprland_pid": 3190538,
+    "private_socket_checks": true,
+    "physical_input_or_kms_fds": 0,
+    "hyprland_version": "v0.57.2",
+    "baseline_keyboard_pid": 3191038,
+    "baseline_keyboard": "owned-persistent-virtual-us-de-neutral",
+    "baseline_keyboard_initial_count": 1
+  }
+}

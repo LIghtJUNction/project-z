@@ -1,0 +1,104 @@
+{
+  "schema": "project-z.U-r12.contract-readonly-comparison.v1",
+  "observed_utc": "2026-11-21T03:19:08.871625+00:00",
+  "Q_gate": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-gates.json",
+    "bytes": 1282803,
+    "sha256": "645dd18969232888cbb393e4193542b421706161eaf6ef2af0af6acca553d7ec"
+  },
+  "purpose": "Compare intended stage/name coverage only. All U outcomes independently read from U logs, not inherited from Q execution.",
+  "same_35_stage_order": true,
+  "same_library_and_20_integration_name_inventories": true,
+  "same_26_test_selections": true,
+  "same_original_17_goal_names": true,
+  "actual_U_stage_argv_uses_U_bound_test_executables": true,
+  "actual_U_private_skips_exact_six_host_names": true,
+  "actual_U_host_explicit_exact_six_names": true,
+  "actual_U_mandatory_ignored_argv_retained": true,
+  "root_package_version": "0.10.25",
+  "metadata_targets_equal_20_integration_census": true,
+  "workspace_helper": {
+    "artifact": {
+      "bytes": 126705048,
+      "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+      "sha256": "dd934269e6b271e094fc4863c52da12dc3ae2e1bb647a7781ad4e0e334bd82c9"
+    },
+    "compiler_artifact": {
+      "executable": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+      "features": [],
+      "filenames": [
+        "/var/tmp/project-z-cargo-target/debug/ssmcp"
+      ],
+      "fresh": false,
+      "manifest_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/Cargo.toml",
+      "package_id": "path+file:///home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source#ssmcp@0.10.25",
+      "profile": {
+        "debug_assertions": true,
+        "debuginfo": 0,
+        "opt_level": "0",
+        "overflow_checks": true,
+        "test": false
+      },
+      "reason": "compiler-artifact",
+      "target": {
+        "crate_types": [
+          "bin"
+        ],
+        "doc": true,
+        "doctest": false,
+        "edition": "2024",
+        "kind": [
+          "bin"
+        ],
+        "name": "ssmcp",
+        "src_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final12/source/src/bin/ssmcp.rs",
+        "test": true
+      }
+    },
+    "source_stage": "integration-compile"
+  },
+  "workspace_helper_checks": {
+    "integration-connection_context": {
+      "after": {
+        "bytes": 126705048,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "dd934269e6b271e094fc4863c52da12dc3ae2e1bb647a7781ad4e0e334bd82c9"
+      },
+      "before": {
+        "bytes": 126705048,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "dd934269e6b271e094fc4863c52da12dc3ae2e1bb647a7781ad4e0e334bd82c9"
+      }
+    },
+    "integration-workspace_bridge": {
+      "after": {
+        "bytes": 126705048,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "dd934269e6b271e094fc4863c52da12dc3ae2e1bb647a7781ad4e0e334bd82c9"
+      },
+      "before": {
+        "bytes": 126705048,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "dd934269e6b271e094fc4863c52da12dc3ae2e1bb647a7781ad4e0e334bd82c9"
+      }
+    },
+    "integration-workspace_bridge-ignored": {
+      "after": {
+        "bytes": 126705048,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "dd934269e6b271e094fc4863c52da12dc3ae2e1bb647a7781ad4e0e334bd82c9"
+      },
+      "before": {
+        "bytes": 126705048,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "dd934269e6b271e094fc4863c52da12dc3ae2e1bb647a7781ad4e0e334bd82c9"
+      }
+    }
+  },
+  "Q_goal_map": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/Q-original-goals-library-result-map.json",
+    "bytes": 6058,
+    "sha256": "5214c32c1178d446d9b0c4e2b4ddb2a32d4a1e48e958dc1924adaa2a3960eb59"
+  },
+  "executed_any_product": false
+}

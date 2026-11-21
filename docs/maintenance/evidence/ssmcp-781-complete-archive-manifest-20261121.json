@@ -1,0 +1,26 @@
+{
+  "schema": "project-z-781-complete-baseline-originals-v1",
+  "native_job": "26c4545eae1eab8d27485f4a48077d3c-6c1",
+  "source": "781b87df1d364137b6885f17f631a3e9e991bd58",
+  "files": [
+    {
+      "path": "execution-receipt.json",
+      "native_source": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-busy-run/execution-receipt.json",
+      "bytes": 29263,
+      "sha256": "aefc6b8a20c8bec808057acae758c60fb44630c5912cb1851cced2a7dc2eef63"
+    },
+    {
+      "path": "six-cases-report.json",
+      "native_source": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-busy-run/six-cases/report.json",
+      "bytes": 19660,
+      "sha256": "7b7c9081616aca563d74efe883cd716e6be8da594e2671e283c904a7b096c64c"
+    },
+    {
+      "path": "ctrlv-report.json",
+      "native_source": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-busy-run/ctrlv/report.json",
+      "bytes": 13333,
+      "sha256": "df1d570ed1bbcf8e47d6a4e99c94d06357319ebc0ca22a9c5e9d3d82b05498d4"
+    }
+  ],
+  "scope": "Original three JSON receipts only, no binary or configuration body."
+}

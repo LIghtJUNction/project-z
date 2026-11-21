@@ -1,0 +1,416 @@
+{
+  "schema": "project-z.git-only-release-staging-fixed-snapshot.v1",
+  "previous_report": {
+    "commit": "d7dbbf5dc0141d0184c960f57d719694228570b2",
+    "cutoff_utc": "2026-11-21T07:30:11Z",
+    "markdown": "https://github.com/LIghtJUNction/project-z/blob/d7dbbf5dc0141d0184c960f57d719694228570b2/docs/maintenance/2026-11-21-git-only-policy-and-consumers.md",
+    "json": "https://github.com/LIghtJUNction/project-z/blob/d7dbbf5dc0141d0184c960f57d719694228570b2/docs/maintenance/2026-11-21-git-only-policy-and-consumers.json"
+  },
+  "initial_pr_inventory": {
+    "total": 85,
+    "merged": 56,
+    "closed": 14,
+    "archived": 9,
+    "blocked": 5,
+    "integration": 1,
+    "integration_item": "zcalld PR1",
+    "unchanged": true
+  },
+  "components": [
+    {
+      "name": "zplugin",
+      "status": "published_draft_not_merged",
+      "commit": "e3e25e33d89a54e98c7a2605bb84cf016992b5a0",
+      "tree": "a8775f63edcf1938dd25a092b92dc4de13892452",
+      "base": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+      "main": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+      "pull_request": "https://github.com/LIghtJUNction/zplugin/pull/2",
+      "changed_files": 7,
+      "unchanged_leaves": 148,
+      "tests": {
+        "first_candidate": {
+          "tree": "bcf24a6531ba424f71e25c7b0092e0531dfdcc32",
+          "methods": 31,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "successor_targeted": {
+          "tree": "a8775f63edcf1938dd25a092b92dc4de13892452",
+          "methods": 1,
+          "red_failures": 1,
+          "green_failures": 0,
+          "green_errors": 0,
+          "skipped": 0,
+          "purpose": "SemVer build metadata containing hyphen, for example 1.2.3+build-01; not Cargo metadata.",
+          "full_suite_rerun": false
+        },
+        "full_32_on_successor": false
+      },
+      "independent_review": {
+        "blocking_findings": 0,
+        "recorded_in_publication_evidence": true,
+        "independent_review_did_not_execute_tests": true
+      },
+      "not_executed": [
+        "Cargo",
+        "registry network",
+        "native CI",
+        "merge",
+        "tag",
+        "release",
+        "target lock"
+      ],
+      "publication_evidence": "evidence/git-only-release-staging-20261121/zplugin-publication-readback.json"
+    },
+    {
+      "name": "zcall",
+      "status": "published_draft_not_merged",
+      "commit": "177175439b053df3931425a9532eac349340eee5",
+      "tree": "19c12e12cd845f8d4704bbd1bb7a94572951f413",
+      "base": "199678d08104bed588e5d10b2c0634a47d7c8417",
+      "main": "199678d08104bed588e5d10b2c0634a47d7c8417",
+      "pull_request": "https://github.com/LIghtJUNction/zcall/pull/2",
+      "changed_files": 6,
+      "unchanged_leaves": 68,
+      "tests": {
+        "methods": 46,
+        "old_methods": 32,
+        "git_only_methods": 12,
+        "cold_cache_methods": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "red_cold_cache": {
+          "methods": 2,
+          "errors": 2,
+          "exit_code": 1
+        },
+        "green_exit_code": 0
+      },
+      "independent_review": {
+        "blocking_findings": 0,
+        "recorded_in_publication_evidence": true,
+        "independent_review_did_not_execute_tests": true
+      },
+      "not_executed": [
+        "Cargo",
+        "registry network",
+        "native CI",
+        "merge",
+        "tag",
+        "release",
+        "target lock"
+      ],
+      "publication_evidence": "evidence/git-only-release-staging-20261121/zcall-publication-readback.json",
+      "lock_binding_boundary": "The selected working Git lock entry must equal the committed lock entry; this is not a claim that all Cargo.toml declarations equal their committed text."
+    },
+    {
+      "name": "zmcpio",
+      "status": "published_draft_not_merged",
+      "commit": "20c08e93055c0d977824b9f5e102f490a9267c1d",
+      "tree": "d0646243c6feabd765e150186967530dd38f2482",
+      "base": "04bb6cd05c5295ab41a892a76cbef10b8ac07402",
+      "main": "04bb6cd05c5295ab41a892a76cbef10b8ac07402",
+      "pull_request": "https://github.com/LIghtJUNction/zmcpio/pull/4",
+      "changed_files": 7,
+      "unchanged_leaves": 73,
+      "tests": {
+        "methods": 21,
+        "original_methods": 19,
+        "crlf_methods": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "red": {
+          "methods": 2,
+          "errors": 1,
+          "passes": 1,
+          "exit_code": 1
+        },
+        "green_exit_code": 0,
+        "windows_actual_ci": false
+      },
+      "independent_review": {
+        "blocking_findings": 0,
+        "recorded_in_publication_evidence": true,
+        "independent_review_did_not_execute_tests": true
+      },
+      "not_executed": [
+        "Cargo",
+        "registry network",
+        "native CI",
+        "Windows runner",
+        "merge",
+        "tag",
+        "release",
+        "target lock"
+      ],
+      "publication_evidence": "evidence/git-only-release-staging-20261121/zmcpio-publication-readback.json"
+    },
+    {
+      "name": "zharness",
+      "status": "published_draft_not_merged",
+      "commit": "9d36a29976c185e8cdad029e6169057a10850ad4",
+      "tree": "ab7ce418410dee6ee7e8c55fc950b1783226d190",
+      "base": "491b8525c13bded4b1f3399d5e8f9c83e4129c65",
+      "main": "fb2948f78467dd92b216aabda6f18a5645f0e7f6",
+      "pull_request": "https://github.com/LIghtJUNction/zharness/pull/10",
+      "changed_files": 7,
+      "unchanged_leaves": 124,
+      "tests": {
+        "historical_audit": {
+          "commit": "491b8525c13bded4b1f3399d5e8f9c83e4129c65",
+          "methods": 17,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "separate_run": true,
+          "rerun_with_release_stage": false
+        },
+        "final_release_stage": {
+          "tree": "ab7ce418410dee6ee7e8c55fc950b1783226d190",
+          "methods": 39,
+          "original_methods": 29,
+          "new_methods": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "exit_code": 0,
+          "both_eof": true,
+          "started_utc": "2026-11-21T08:56:38.183245+00:00",
+          "finished_utc": "2026-11-21T08:56:42.013827+00:00",
+          "elapsed_seconds": 3.830585137999151,
+          "all_seven_source_files_before_after_equal": true,
+          "all_39_method_asts_unchanged_from_r2": true,
+          "local_git_events": 1400,
+          "remaining_temporary_fixture_directories": 0
+        },
+        "aggregate_count_intentionally_not_computed": true
+      },
+      "release_stage": {
+        "source_prepared_and_published_as_draft": true,
+        "actual_registry_validation": false,
+        "actual_Cargo": false,
+        "formal_release_ready_claim": false
+      },
+      "not_executed": [
+        "Cargo",
+        "actual metadata",
+        "registry network",
+        "native CI",
+        "actual Windows/macOS runner",
+        "merge",
+        "tag",
+        "release",
+        "target lock"
+      ],
+      "publication_evidence": "evidence/git-only-release-staging-20261121/zharness-release-publication-readback.json",
+      "change_comparison_base": "491b8525c13bded4b1f3399d5e8f9c83e4129c65",
+      "candidate_leaves": 131,
+      "r2_preservation": {
+        "tree": "d4c379fbb494a32f02089f4facd5da754756f29d",
+        "records_unchanged": true,
+        "limitation": "R2 runner hashed tracked files but did not include the two added modules in the same before/after set; separate identity records did not make it a complete seven-file in-run source binding."
+      },
+      "r3_delta": {
+        "path": "scripts/test_release.py",
+        "change": "PackageRecoveryTests.setUp uses Path(directory.name).resolve()",
+        "production_and_helper_unchanged": true,
+        "test_methods_and_assertions_unchanged": true,
+        "actual_macOS_or_Windows_run": false
+      },
+      "independent_review": {
+        "blocking_findings": 0,
+        "evidence": "evidence/git-only-release-staging-20261121/zharness-r3-independent-review.json",
+        "tests_executed_by_reviewer": 0
+      },
+      "historical_audit_evidence": "evidence/git-only-release-staging-20261121/zharness-audit-publication-readback.json"
+    }
+  ],
+  "ssmcp": {
+    "remote_main": "4b4cbff311e930a8c8280ff1989a7f036ce7a892",
+    "tree": "16c341e1e5f828be0a4b4ee1ef0fe9f2945afe26",
+    "parents": [
+      "3f678a7fca7ea64d220454f1723189e43d3b5546",
+      "5623e52a48a03727f3341613beaa767bd94ea98d"
+    ],
+    "pull_request": "https://github.com/LIghtJUNction/ssmcp/pull/165",
+    "merged_at_utc": "2026-11-21T08:51:57Z",
+    "local_premerge_observation": {
+      "observed_at_utc": "2026-11-21T08:51:28.187012+00:00",
+      "head": "5623e52a48a03727f3341613beaa767bd94ea98d",
+      "tree": "16c341e1e5f828be0a4b4ee1ef0fe9f2945afe26",
+      "clean": true
+    },
+    "same_tree": true,
+    "local_checkout_at_remote_main_not_verified": true,
+    "final_Gate15_bound": false,
+    "final_Gate15_executed": false,
+    "new_final_Gate_runtime_UI_P1_pass": false,
+    "reported_fixture_followup": {
+      "kind": "test fixture and release-note correction",
+      "finding": "Closing only the live Python child stdout may not produce EOF while the Linux guardian retains stdout; the 10-second case could time out first.",
+      "evidence_scope": "static finding confirmed by the source owner; no executed reproduction reported",
+      "planned_change": "Inject flushed invalid JSON, preserve On/unknown/replay_safe=false/cleanup assertions and the original 10-second bound; clarify two note statements.",
+      "source_or_merge_of_followup": "pending"
+    },
+    "source_or_merge_of_followup_at_cutoff": "pending",
+    "evidence": [
+      "evidence/git-only-release-staging-20261121/ssmcp-final-source-publication.json",
+      "evidence/git-only-release-staging-20261121/ssmcp-gate15-unrun-fixture-followup.json"
+    ],
+    "old_source_results_not_transferred": true,
+    "original_validation_owner_retains_window": true
+  },
+  "historical_validation_boundaries": {
+    "ssmcp_W": {
+      "source": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+      "gate35": "passed on W",
+      "runtime18": "passed on W",
+      "ui": "7 executed; 6 independent passes; account_compat failed; 17 not run; alias is coverage only",
+      "p1": "not passed"
+    },
+    "zcalld": {
+      "source": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+      "release_help_eight_curl": "historical bounded pass",
+      "old_0af8": {
+        "rust": 182,
+        "listener_subset": 7,
+        "actual_clippy": 2,
+        "curl": 8,
+        "separate_source": true
+      },
+      "pr1": "draft; final P1 pending"
+    },
+    "zuse": {
+      "last_reported_main": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+      "not_refreshed_in_this_preparation": true
+    }
+  },
+  "final_44": {
+    "executed": false,
+    "old_graphs_unchanged": true
+  },
+  "knowledge_cutoff_utc": "2026-11-21T09:03:55.489Z",
+  "knowledge_cutoff_taipei": "2026-11-21T17:03:55.489+08:00",
+  "report_role": "Independent follow-up to d7db; original fixed report and Doc v9 remain unchanged.",
+  "evidence_scope": "Published draft source, existing pure-Python/local-Git fixture results, independent static reviews, and fixed SSMCP source observations. This report preparation did not add a product gate.",
+  "four_upstream_main": {
+    "observed_by_root_at_utc": "2026-11-21T09:02:56Z",
+    "zcall": "199678d08104bed588e5d10b2c0634a47d7c8417",
+    "zplugin": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+    "zmcpio": "04bb6cd05c5295ab41a892a76cbef10b8ac07402",
+    "zharness": "fb2948f78467dd92b216aabda6f18a5645f0e7f6"
+  },
+  "pending_work": [
+    "Complete the original SSMCP author's fixture-only successor and note correction, then establish a new exact source and owner agreement before Gate35/runtime/UI/P1.",
+    "Review each draft and execute necessary real Cargo, registry, package, and platform gates under a separately coordinated window; do not equate Python fixtures with release readiness.",
+    "Finish zcalld PR1 final P1 and component-consumer validation on their actual fixed sources.",
+    "Refresh the final 44-repository mapping and run final sync/check/resolve only after the component sources and gates are ready."
+  ],
+  "doc_and_raw_drive": {
+    "current_doc_version_at_preparation": 9,
+    "next_doc_version": 10,
+    "Doc_updated_in_this_preparation": false,
+    "old_raw_markdown_and_json_version": "0d73",
+    "raw_files_not_replaced": true
+  },
+  "report_preparation_only": {
+    "added_Cargo": 0,
+    "added_metadata": 0,
+    "added_product": 0,
+    "added_CI": 0,
+    "target_lock": 0,
+    "queued": 0,
+    "source_or_remote_ref_writes": 0,
+    "component_authors_existing_Python_runs_are_separately_recorded": true
+  },
+  "evidence": [
+    {
+      "path": "evidence/git-only-release-staging-20261121/zplugin-publication-readback.json",
+      "bytes": 5910,
+      "sha256": "c61c1be507903a5ecb77ef5faf25c4fe985f6b021c05e73abcc665b3d1179b65",
+      "role": "publication",
+      "copy_mode": "original_bytes"
+    },
+    {
+      "path": "evidence/git-only-release-staging-20261121/zcall-publication-readback.json",
+      "bytes": 3819,
+      "sha256": "296da5dfe0e492900ba8e7d72c72f0152fe87382ee32503b97bd47f55b92ecc3",
+      "role": "publication",
+      "copy_mode": "original_bytes"
+    },
+    {
+      "path": "evidence/git-only-release-staging-20261121/zmcpio-publication-readback.json",
+      "bytes": 4257,
+      "sha256": "748624c26d3703cdd22384af5ef700cf404eb3272848ae69052dce8798d3d177",
+      "role": "publication",
+      "copy_mode": "original_bytes"
+    },
+    {
+      "path": "evidence/git-only-release-staging-20261121/zharness-audit-publication-readback.json",
+      "bytes": 3674,
+      "sha256": "fbba151d2755be70c0e168720947b52b7d4d10da288d4c8288f2993343f9b19d",
+      "role": "historical_audit_publication",
+      "copy_mode": "original_bytes"
+    },
+    {
+      "path": "evidence/git-only-release-staging-20261121/zharness-release-publication-readback.json",
+      "bytes": 3711,
+      "sha256": "08805b8af6f162bdf5090880f548e6e3a2db60107dc667a6d189eda530283335",
+      "role": "publication",
+      "copy_mode": "original_bytes"
+    },
+    {
+      "path": "evidence/git-only-release-staging-20261121/ssmcp-final-source-publication.json",
+      "bytes": 1333,
+      "sha256": "f0dab36073be99fe47ea972ad6cd8ed573450f2bff2d9baefcad9da016694b6f",
+      "role": "source_publication_only",
+      "copy_mode": "original_bytes"
+    },
+    {
+      "path": "evidence/git-only-release-staging-20261121/ssmcp-gate15-unrun-fixture-followup.json",
+      "bytes": 1653,
+      "sha256": "9feede22a7c677780d36cf196d9dd5a1f2d4ced60fe38c771d09b597c6887bbe",
+      "role": "fixed_cutoff_followup",
+      "copy_mode": "original_bytes"
+    },
+    {
+      "path": "evidence/git-only-release-staging-20261121/zharness-r3-handoff.json",
+      "bytes": 5765,
+      "sha256": "1f7d42ecc75857dae0dba9e92f423a80f4384ffda33c9318f9dbd62fcfd29345",
+      "role": "sealed_prepublication_handoff",
+      "copy_mode": "original_bytes"
+    },
+    {
+      "path": "evidence/git-only-release-staging-20261121/zharness-r3-independent-review.json",
+      "bytes": 8676,
+      "sha256": "1bb16f3d237310685dd9a036ba6efe029b9bdb1d4d43cfe11c6dd26af5568785",
+      "role": "independent_readonly_review",
+      "copy_mode": "original_bytes"
+    },
+    {
+      "path": "evidence/git-only-release-staging-20261121/zharness-r3-stderr.log",
+      "bytes": 5903,
+      "sha256": "a6160c08d6f07152355ad86417a156fe6d6045dbbc3f2338d5027f7052a74e55",
+      "role": "original_test_stderr",
+      "copy_mode": "original_bytes"
+    },
+    {
+      "path": "evidence/git-only-release-staging-20261121/zharness-r2-to-r3.patch",
+      "bytes": 398,
+      "sha256": "8bddf0bbe2fce3b97d24d6d9c1feaba4442db6b2918cd7dba10366a4603ee607",
+      "role": "original_one_line_delta",
+      "copy_mode": "original_bytes"
+    }
+  ],
+  "test_counting_rules": [
+    "No combined passing-test total across repositories, source revisions, or reruns.",
+    "zplugin31 on first candidate and1 targeted on R2; not full32 on R2.",
+    "zcall46 on its R2 source.",
+    "zmcpio21 on its R2 source.",
+    "zharness audit17 belongs to491; final stage39 belongs toab7; previous39 runs are not added.",
+    "Old182 includes the7 listener tests; aliases and ignored tests are not invented independent passes."
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "schema": "project-z.U-r12-runtime18-root-receipt-read.v1",
+  "recorded_at_utc": "2026-11-21T03:36:05.072981+00:00",
+  "source_revision": "784370b5fe1b817c788273a5f7b1ab826c743965",
+  "source_tree": "2c60d011da8c2b31aefd80367bf7f19e28f10b62",
+  "report": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/runtime-input-agent-784370b-r12-clean1-20261121/run/report.json",
+    "bytes": 62335,
+    "sha256": "ff972401586a41dba8a803a17f229098b1bed9f52c9de8aeff61aff2a6440cf9"
+  },
+  "outer_launch": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/runtime-input-agent-784370b-r12-clean1-20261121/launch-result.json",
+    "bytes": 12641,
+    "sha256": "128d30c191226ec1d2fcb2532569f7ae32f6802c3e69499c8eb6f916c257b947"
+  },
+  "started_utc": "2026-11-21T03:27:15Z",
+  "finished_utc": "2026-11-21T03:27:27Z",
+  "duration_ms": 12127,
+  "passed": true,
+  "module_checks": {
+    "private_mcp": {
+      "status": "passed",
+      "checks": [
+        {
+          "name": "private_mcp.owned_account_and_two_clients",
+          "passed": true
+        },
+        {
+          "name": "private_mcp.chat_history_draft_queue_baseline",
+          "passed": true
+        },
+        {
+          "name": "private_mcp.globally_retired_native_tools_absent",
+          "passed": true
+        },
+        {
+          "name": "private_mcp.none_remaining_human_tools_hidden",
+          "passed": true
+        },
+        {
+          "name": "private_mcp.concurrent_chat_remaining_human_tools_present",
+          "passed": true
+        },
+        {
+          "name": "private_mcp.none_stale_human_reply_rejected",
+          "passed": true
+        },
+        {
+          "name": "private_mcp.none_stale_human_wait_rejected",
+          "passed": true
+        },
+        {
+          "name": "private_mcp.none_exec_roundtrip",
+          "passed": true
+        },
+        {
+          "name": "private_mcp.none_time_roundtrip",
+          "passed": true
+        },
+        {
+          "name": "private_mcp.none_native_messages_roundtrip",
+          "passed": true
+        },
+        {
+          "name": "private_mcp.none_reload_reconnect_preserves_none",
+          "passed": true
+        },
+        {
+          "name": "private_mcp.chat_history_draft_queue_unchanged",
+          "passed": true
+        }
+      ],
+      "cleanup": {
+        "passed": true,
+        "errors": [],
+        "owned_processes": [
+          {
+            "pid": 350,
+            "exited": true,
+            "exit_code": 0
+          },
+          {
+            "pid": 356,
+            "exited": true,
+            "exit_code": 0
+          },
+          {
+            "pid": 729,
+            "exited": true,
+            "exit_code": 0
+          },
+          {
+            "pid": 830,
+            "exited": true,
+            "exit_code": 0
+          },
+          {
+            "pid": 355,
+            "exited": true,
+            "exit_code": 0
+          },
+          {
+            "pid": 728,
+            "exited": true,
+            "exit_code": 0
+          },
+          {
+            "pid": 829,
+            "exited": true,
+            "exit_code": 0
+          }
+        ]
+      }
+    },
+    "transport": {
+      "status": "passed",
+      "checks": [
+        {
+          "name": "mcp_stdio_protocol_only",
+          "passed": true
+        },
+        {
+          "name": "pipe_mcp_literal_and_warnings",
+          "passed": true
+        },
+        {
+          "name": "fake_exec_argv_literal",
+          "passed": true
+        },
+        {
+          "name": "fake_exec_nonzero_bounded_diagnostics",
+          "passed": true
+        },
+        {
+          "name": "unix_socket_write_half_close_once",
+          "passed": true
+        },
+        {
+          "name": "terminal_original_history_and_current_draft",
+          "passed": true
+        }
+      ],
+      "cleanup": {
+        "passed": true,
+        "processes": [
+          {
+            "pid": 4,
+            "returncode": 0
+          },
+          {
+            "pid": 9,
+            "returncode": 0
+          },
+          {
+            "pid": 66,
+            "returncode": 0
+          },
+          {
+            "pid": 71,
+            "returncode": 0
+          },
+          {
+            "pid": 117,
+            "returncode": 0
+          },
+          {
+            "pid": 122,
+            "returncode": 0
+          },
+          {
+            "pid": 168,
+            "returncode": 0
+          },
+          {
+            "pid": 173,
+            "returncode": 0
+          },
+          {
+            "pid": 221,
+            "returncode": 0
+          },
+          {
+            "pid": 227,
+            "returncode": 0
+          }
+        ],
+        "decoders": [
+          {
+            "pid": 226,
+            "returncode": 0
+          }
+        ],
+        "fake_processes": [
+          {
+            "pid": 39,
+            "start_time_ticks": "16740359",
+            "exited": true,
+            "cleanup_signalled": false
+          },
+          {
+            "pid": 103,
+            "start_time_ticks": "16740419",
+            "exited": true,
+            "cleanup_signalled": false
+          },
+          {
+            "pid": 154,
+            "start_time_ticks": "16740470",
+            "exited": true,
+            "cleanup_signalled": false
+          },
+          {
+            "pid": 207,
+            "start_time_ticks": "16740516",
+            "exited": true,
+            "cleanup_signalled": false
+          },
+          {
+            "pid": 291,
+            "start_time_ticks": "16740594",
+            "exited": true,
+            "cleanup_signalled": false
+          }
+        ],
+        "errors": [],
+        "socket_directories_removed": true
+      }
+    }
+  },
+  "inputs_before_after_exact": true,
+  "five_binary_identities_match_U_owned_gate": true,
+  "five_ELFs_reread_by_this_receipt_review": false,
+  "current_small_text_inputs_rehashed": [
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-r12-gate-readonly-validation-v1/out-once/proof.json",
+      "bytes": 624100,
+      "sha256": "5b0876e98d59d1da9ea1e5b6aded4c73fa96ca5747d239a666ac36b669d64fa6"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/runtime-u-source-contracts-prepared-20261121/transport_smoke.py",
+      "bytes": 53245,
+      "sha256": "5f0a777b73fe6a32c6509913df4e0c099ebac13d9a942f6f4749c5e6f2e6538b"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/runtime-u-source-contracts-prepared-20261121/private_mcp_smoke.py",
+      "bytes": 59433,
+      "sha256": "7a712fcf4d593fa3e493d7c807b3497139570e2c4d820ee86f4583ad84bb6336"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/input-agent-runtime-u-clean1-review-20261121/driver.py",
+      "bytes": 25574,
+      "sha256": "153ebeb51dd3d595f2c0354caf604c31abc173c4fff060a5ac1b184232a93344"
+    }
+  ],
+  "source_file_count_recorded": 1545,
+  "outer_cleanup": {
+    "exit_code": 0,
+    "pid": 1813739,
+    "reaped": true,
+    "spawned": true,
+    "termination_requested": false
+  },
+  "short_temp_cleanup": {
+    "removed": true
+  },
+  "scope": "Bounded independent read of existing runtime18 completion receipts, recorded input identities and current small text inputs; not an independent rerun or full audit of driver semantics.",
+  "actual_execution_job": "ac8 (source-owner reported; root did not read this job output here)",
+  "UI24_alias_P1_passed_claimed": false,
+  "product_executed_by_reviewer": false
+}

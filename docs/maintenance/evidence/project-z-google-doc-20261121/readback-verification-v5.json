@@ -1,0 +1,528 @@
+{
+  "schema_version": 5,
+  "created_at": "2026-11-21T04:14:11.495Z",
+  "document_id": "1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+  "url": "https://docs.google.com/document/d/1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+  "title": "Project Z 进度报告（2026-11-21）",
+  "parent_ids": [
+    "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0"
+  ],
+  "mime_type": "application/vnd.google-apps.document",
+  "revision_id": "AHj4eMTkEqI6YaGcpcAy1uOjB1nn3FYyz0mCZmppwh9tS6LAanoQZAEvZOI1pJCKUZvB8OQp-9MFzdtjUhWKv_k1wkDFeoq8dzvk0jG7cbQ",
+  "final_readback_verified": true,
+  "checks": {
+    "issues": [],
+    "nonempty_paragraphs": 27,
+    "all_paragraphs_match": true,
+    "all_21_cells_match": true,
+    "one_native_7_by_3_table": true,
+    "source_hyperlinks": 17,
+    "all_source_links_match": true,
+    "numbered_steps": 3,
+    "native_headings": [
+      {
+        "text": "Project Z 进度报告",
+        "kind": "TITLE",
+        "actual": [
+          22
+        ]
+      },
+      {
+        "text": "2026年11月20—21日，本轮进展与验收边界",
+        "kind": "SUBTITLE",
+        "actual": [
+          13
+        ]
+      },
+      {
+        "text": "状态概览",
+        "kind": "HEADING_1",
+        "actual": [
+          18
+        ]
+      },
+      {
+        "text": "本轮结果如何使用",
+        "kind": "HEADING_1",
+        "actual": [
+          18
+        ]
+      },
+      {
+        "text": "SSMCP：Q 是历史里程碑，U 是新的固定组合",
+        "kind": "HEADING_2",
+        "actual": [
+          16
+        ]
+      },
+      {
+        "text": "zcalld：bd7 的 CLI 验证与旧 0af8 分开记录",
+        "kind": "HEADING_2",
+        "actual": [
+          16
+        ]
+      },
+      {
+        "text": "zuse：跨平台收尾问题已定位并修复",
+        "kind": "HEADING_2",
+        "actual": [
+          16
+        ]
+      },
+      {
+        "text": "接续工作",
+        "kind": "HEADING_1",
+        "actual": [
+          18
+        ]
+      },
+      {
+        "text": "证据与时间范围",
+        "kind": "HEADING_1",
+        "actual": [
+          18
+        ]
+      }
+    ],
+    "parent_folder_matches": true,
+    "full_Docs_resource_read": true,
+    "visual_browser_render_not_performed": true
+  },
+  "status_cutoff_utc": "2026-11-21T04:13:20.268Z",
+  "immutable_archive_commit": "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+  "maintenance_publication": {
+    "report_commit": "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+    "report_changed_text_files": 34,
+    "snapshot_utc": "2026-11-21T03:42:51Z",
+    "merge_commit": "efe912eb54a8240fab39126d1f2f6a464cc67f8b",
+    "merge_tree": "dd9345a7bf252832ce46878e0a50c7a27df5e8c9",
+    "merge_parents": [
+      "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+      "be64e5ab88a8d72fe81956f6ba64a363e2299fde"
+    ],
+    "pr7_draft": true,
+    "independent_GitHub_object_reads": true
+  },
+  "pr4_merge": {
+    "commit": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+    "base_kind": "feature_branch",
+    "main_unchanged": "a1bb8fd2cbce0a9d85134999883c578358065242"
+  },
+  "runtime_followup": {
+    "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "actual_job_suffix": "ac8",
+    "actual_exit": 0,
+    "both_eof": true,
+    "case_counts": {
+      "private": 12,
+      "transport": 6,
+      "total": 18
+    },
+    "start_utc": "2026-11-21T03:27:15Z",
+    "end_utc": "2026-11-21T03:27:27Z",
+    "report": {
+      "bytes": 62335,
+      "sha256": "ff972401586a41dba8a803a17f229098b1bed9f52c9de8aeff61aff2a6440cf9"
+    },
+    "launcher": {
+      "bytes": 12641,
+      "sha256": "128d30c191226ec1d2fcb2532569f7ae32f6802c3e69499c8eb6f916c257b947"
+    },
+    "direct_source": "Original source owner readback followed by Root's completed independent raw receipt review; the fixed summary descriptor below records the latter.",
+    "ui_alias_p1_pass_not_claimed": true,
+    "root_independent_raw_read": {
+      "completed": true,
+      "summary_bytes": 7672,
+      "summary_sha256": "78545fb5b089e32626cc351156d9c30a112a74942ea7d1f902ea4f987c067fcf",
+      "scope": "12+6 passed; cleanup/errors; launcher completion/reaped; input identity before/after; five U owned binaries; evidence module/driver hashes"
+    }
+  },
+  "ui_first_actual_failure": {
+    "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "root_actual_read_ref": "ae2",
+    "exit_code": 1,
+    "both_eof": true,
+    "passed_suites": [
+      {
+        "name": "message_references",
+        "checks": 53
+      },
+      {
+        "name": "force_send",
+        "checks": 137
+      },
+      {
+        "name": "listener_transports",
+        "checks": 74
+      }
+    ],
+    "failed_suite": {
+      "name": "zuse_worker",
+      "completed_checks": 0,
+      "error": "private Xvfb exited without readiness",
+      "location": "private_xvfb.py:109"
+    },
+    "ui_overall_passed": false,
+    "alias_pending": true,
+    "p1_not_run": true,
+    "source_of_status": "Root actual exec.read observation; no additional gate by Docs writer"
+  },
+  "ui_second_actual_failure": {
+    "run_reference": "b37",
+    "first_nine_suites_passed": 9,
+    "alias_passed": 1,
+    "selected_passing_checks": {
+      "interactions": 172,
+      "zuse_worker": 31,
+      "private_desktop": 35
+    },
+    "failed_suite": "session_groups",
+    "actual_setup_checks_passed": 21,
+    "remaining_suites_not_run": 14,
+    "ui_overall_passed": false,
+    "p1_not_run": true,
+    "first_round_preserved": true,
+    "mesa_environment_fixture_fix_applied_by_original_owner": true,
+    "known_code_behavior": "The async recipient list refresh is enqueued, then the existing client snapshot is immediately matched before changing to Agents view.",
+    "cache_at_failure_not_recorded": true,
+    "cause_limit": "Source supports the timing explanation; no claim that the actual b37 cache was empty or stale.",
+    "owner_decision": "Fix the product cold exact-ID query and retain original session_groups fixture; no fixture prewarming patch adopted.",
+    "product_patch_and_new_acceptance_pending": true,
+    "source_of_status": "Root source/acceptance owner updates plus Core fixed U static source review; no new validation by Docs writer"
+  },
+  "complete_text_projection": {
+    "paragraphs": [
+      {
+        "text": "Project Z 进度报告",
+        "namedStyleType": "TITLE",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "2026年11月20—21日，本轮进展与验收边界",
+        "namedStyleType": "SUBTITLE",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "组件级验证已完成新的固定源码检查：SSMCP 的 Q 与 U 各自完成 35 阶段门禁，U 的 runtime 18 项及 zcalld 新 CLI 窄验证通过。UI 第二轮在第 10 组 session_groups 停下，P1 与最终 44 仓新图仍待完成。原作者正在修首次精确消息查询流程，原验收用例保持。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "完整历史报告和机器清单已更新到固定提交 c08d6e89，归档快照为 2026-11-21 03:42:51 UTC，共 34 个文本文件增量。维护分支随后正常合入主线为 efe912eb，保留两侧历史及主线发行检查；PR7 仍为草稿。本文另列该快照之后的第二轮 UI 状态。既有云盘原始 Markdown、JSON 仍保留 0d73 版本，这份 Doc 是可读进度副本。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": [
+          {
+            "text": "完整历史报告",
+            "url": "https://github.com/LIghtJUNction/project-z/blob/c08d6e894efd1b8f134ae5abb55f66cb6e2ac178/docs/maintenance/2026-11-20-pr-and-dependencies.md"
+          },
+          {
+            "text": "机器清单",
+            "url": "https://github.com/LIghtJUNction/project-z/blob/c08d6e894efd1b8f134ae5abb55f66cb6e2ac178/docs/maintenance/2026-11-20-pr-and-dependencies.json"
+          },
+          {
+            "text": "efe912eb",
+            "url": "https://github.com/LIghtJUNction/project-z/commit/efe912eb54a8240fab39126d1f2f6a464cc67f8b"
+          },
+          {
+            "text": "PR7",
+            "url": "https://github.com/LIghtJUNction/project-z/pull/7"
+          }
+        ]
+      },
+      {
+        "text": "状态概览",
+        "namedStyleType": "HEADING_1",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "初始 85 项按原清单去重统计；新增依赖迁移和修复 PR 单独记录，不改旧清单的分母。本轮已发布的 19 仓内部 Git 源迁移与 14 仓受控历史附件清理，详见固定归档。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "本轮结果如何使用",
+        "namedStyleType": "HEADING_1",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "SSMCP：Q 是历史里程碑，U 是新的固定组合",
+        "namedStyleType": "HEADING_2",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "Q 固定源码 647bce2e 的 r11 共 35 阶段完成，并通过独立复核。后继 U 固定源码 784370b5 的 r12 于 02:53:04 UTC 完成 35/35 阶段；随后独立复核无阻断，核对了 212 份文本原件、实际编译链和 5 份受控产物副本。两轮结果保留各自源码身份，不把 Q 的成绩转挂 U。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": [
+          {
+            "text": "Q 固定源码 647bce2e",
+            "url": "https://github.com/LIghtJUNction/ssmcp/commit/647bce2ec9cf74beab43adea831c2e0712d28ea8"
+          },
+          {
+            "text": "U 固定源码 784370b5",
+            "url": "https://github.com/LIghtJUNction/ssmcp/commit/784370b5fe1b817c788273a5f7b1ab826c743965"
+          }
+        ]
+      },
+      {
+        "text": "这里的 35 是门禁阶段数，阶段数与用例数分别记录。U 的运行时通信检查（runtime）已有 18/18 实际通过回执：12 项私有检查和 6 项传输检查，于 03:27:15—03:27:27 UTC 完成，包含双向中文正文与确认、缺失文件警告和清理。首次入口仅因 6 个生成的 Python 缓存被源码清单守卫挡住；原负责人可逆移走后，1,545 个源码文件的字节、权限和集合仍一致。主协调已核对这份 runtime 回执、清理和输入前后身份，结果一致。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "UI 第一轮实际退出码为 1：message_references（53）、force_send（137）、listener_transports（74）检查通过；zuse_worker 在私有 Xvfb 就绪前退出，完成检查为 0。该失败保留为历史。随后修正私有 Xvfb 的 Mesa 环境，使第二轮 zuse_worker（31）及 private_desktop（35）检查通过。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "UI 第二轮已通过前 9 组及 1 个 alias 检查，其中 interactions 有 172 项检查通过。第 10 组 session_groups 在打开精确收件人选择器时失败；原日志已有 21 项 setup 检查通过，失败摘要中的 0 不能解释为没有执行检查。剩余 14 组未运行，UI 整体尚未通过，P1 未运行。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "已定位的代码问题是：/message 发起异步目录刷新后，立即在现有快照中匹配精确 ID。原作者决定修产品的首次查询流程，保留原 session_groups 用例。现场缓存未捕获，尚不能断言当时缓存为空或陈旧；补丁与新验收待完成。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": [
+          {
+            "text": "代码问题",
+            "url": "https://github.com/LIghtJUNction/ssmcp/blob/784370b5fe1b817c788273a5f7b1ab826c743965/src/client/terminal/conversation/messaging.rs#L195-L219"
+          }
+        ]
+      },
+      {
+        "text": "zcalld：bd7 的 CLI 验证与旧 0af8 分开记录",
+        "namedStyleType": "HEADING_2",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "候选 bd7a30c0 把当时主线更新合入原功能分支，保留双父历史。220 个叶对象中，218 个与 0af8 原物一致，仅更新 GUI 固定源和发行说明。该候选于 03:05:38—03:06:31 UTC 完成一次实际窄验证：release 构建 34.387 秒，帮助断言通过，原 8 个 TCP／Unix curl 取消和半关闭场景全部通过。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": [
+          {
+            "text": "候选 bd7a30c0",
+            "url": "https://github.com/LIghtJUNction/zcalld/commit/bd7a30c0a9e3865f137af229d5883e8fb984f518"
+          }
+        ]
+      },
+      {
+        "text": "87 条实际命令包含源码、依赖与清理读取，并非 87 项产品测试。新 CLI 的真实编译、链接输出、Cargo 产物和私有副本已连成同一字节证明链；独立清理观察确认本批进程与控制组退出。旧 0af8 的 182 项 Rust（内含 7 个 listener）、2 次实际 Clippy 和 8 个 curl，仍属于旧源码，本次没有重跑或重复计入。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "GUI 259 的既有官方 CI 还提供私有 Xvfb 导航证据；其合成夹具与模拟安装的范围保持，不外推真实供应商或物理桌面验收。PR1 继续草稿，等待同一新 CLI 的最终 P1。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": [
+          {
+            "text": "GUI 259 的既有官方 CI",
+            "url": "https://github.com/LIghtJUNction/zcall-gui/actions/runs/44853641350"
+          }
+        ]
+      },
+      {
+        "text": "zuse：跨平台收尾问题已定位并修复",
+        "namedStyleType": "HEADING_2",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "历史 2ffe 候选在 macOS、Windows 的 Rust 测试已通过，最后的 Clippy 检查因 Mouse.close 显式释放一个无 Drop 类型而失败。修复 67e2d6a4 将 Backend 放进更小的词法作用域，仍先完成资源清理，再释放用户鼠标租约；独立静态复核未发现阻断，也没有放宽断言或跳过测试。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": [
+          {
+            "text": "修复 67e2d6a4",
+            "url": "https://github.com/LIghtJUNction/zuse/commit/67e2d6a4cee0d106f46bdf064013e163c0aa3337"
+          }
+        ]
+      },
+      {
+        "text": "CI 44860554142 已成功完成，Linux、macOS、Windows 的格式、测试、适用 no_std／Wasm 与严格 Clippy 均通过；Linux 另有私有 PTY 和合成 USB 检查。功能分支、主线准入与消费者传播仍分步处理。PR2 保持草稿隔离，当前 SSMCP 固定组合仍使用 a1bb8fd2，不能把本次 CI 成绩写成下游已经完成升级。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": [
+          {
+            "text": "CI 44860554142",
+            "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44860554142"
+          },
+          {
+            "text": "PR2",
+            "url": "https://github.com/LIghtJUNction/zuse/pull/2"
+          }
+        ]
+      },
+      {
+        "text": "接续工作",
+        "namedStyleType": "HEADING_1",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "完成产品的首次精确查询修复，由原负责人用原验收用例验证新候选的 UI 和最终 P1；已通过的回执保留其原源码身份。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": {
+          "listId": "kix.af3l5yjsyar3",
+          "textStyle": {
+            "underline": false
+          }
+        },
+        "links": []
+      },
+      {
+        "text": "按功能分支、主线、消费者的顺序推进 zuse，核对各消费者的真实锁文件和 Git 来源；冻结组合的变化另记实际验收。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": {
+          "listId": "kix.af3l5yjsyar3",
+          "textStyle": {
+            "underline": false
+          }
+        },
+        "links": []
+      },
+      {
+        "text": "最终组件提交就位后，刷新 44 仓来源映射并执行完整 sync／check／resolve。当前尚未执行这一新图，旧图和局部门禁不能替代它。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": {
+          "listId": "kix.af3l5yjsyar3",
+          "textStyle": {
+            "underline": false
+          }
+        },
+        "links": []
+      },
+      {
+        "text": "证据与时间范围",
+        "namedStyleType": "HEADING_1",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "本页整理的是 2026年11月20—21日的维护进展，状态更新截至 2026-11-21 04:13 UTC（台北时间 12:13）。固定 GitHub 归档负责完整历史清单，后续状态采用各自实际回执与 CI 的观察时间。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": []
+      },
+      {
+        "text": "U 独审记录：ssmcp-U-r12-gate-independent-review.json，SHA-256 0ac24bc458797e725be67c25c241d9ed008534826d286cfe2b9251c73d7ca868。bd7 实际交接记录：handoff.json，SHA-256 afab66b49d433d318b9a0ecdca8ded3505222efe00fb36a395c989962f0acbff。原始源码、日志与产物证明链均已保存；这份阅读版不取代这些原件。",
+        "namedStyleType": "NORMAL_TEXT",
+        "bullet": null,
+        "links": []
+      }
+    ],
+    "table": [
+      [
+        "事项",
+        "已核实状态",
+        "收口边界"
+      ],
+      [
+        "初始 85 项 PR",
+        "56 已合并，14 已关闭，9 仓库已归档，5 具体阻塞，1 验收／集成中。",
+        "原清单去重口径保持；新增 PR 另列。"
+      ],
+      [
+        "SSMCP Q／r11",
+        "固定 Q 的 35 阶段完成，独立复核无阻断。",
+        "历史里程碑，成绩保留 Q 身份。"
+      ],
+      [
+        "SSMCP U／r12",
+        "U 的 35/35 阶段完成并独审通过；runtime 18/18 已有原负责人的实际通过回执。",
+        "UI 第二轮前 9 组及 alias 通过；第 10 组失败，14 组未跑，P1 待验。"
+      ],
+      [
+        "zcalld PR1",
+        "bd7 新 CLI release 构建、帮助检查与原 8 个 curl 场景通过。",
+        "PR1 仍为草稿；历史 0af8 Rust／Clippy 不转挂。"
+      ],
+      [
+        "zuse 跨平台修复",
+        "67e 修复已发布，三平台 CI 通过。",
+        "PR4 已合入功能分支 fe47f963；PR2 仍为草稿，main 与 SSMCP 组合仍使用 a1。"
+      ],
+      [
+        "最终 44 仓图",
+        "维护分支已正常合入主线发行工具，PR7 仍为草稿。",
+        "最终新组合尚未执行，待组件就位后更新映射并验收。"
+      ]
+    ],
+    "table_links": [
+      {
+        "row": 2,
+        "col": 0,
+        "label": "SSMCP Q／r11",
+        "url": "https://github.com/LIghtJUNction/project-z/blob/33fd62fdbb376b6b64f14e604a63452abc654a1b/docs/maintenance/evidence/ssmcp-Q-r11-gate-independent-review.json"
+      },
+      {
+        "row": 4,
+        "col": 0,
+        "label": "zcalld PR1",
+        "url": "https://github.com/LIghtJUNction/zcalld/pull/1"
+      },
+      {
+        "row": 6,
+        "col": 0,
+        "label": "最终 44 仓图",
+        "url": "https://github.com/LIghtJUNction/project-z/pull/7"
+      },
+      {
+        "row": 5,
+        "col": 2,
+        "label": "PR4",
+        "url": "https://github.com/LIghtJUNction/zuse/pull/4"
+      },
+      {
+        "row": 5,
+        "col": 2,
+        "label": "fe47f963",
+        "url": "https://github.com/LIghtJUNction/zuse/commit/fe47f963e604c13a2646baf5d391df5a7c69fc36"
+      }
+    ]
+  },
+  "prior_delivery": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/delivery-v4.json",
+    "bytes": 4433,
+    "sha256": "15337a455f412658160431a81feeb9002a8418eb7fe6deac91bf793689f52aa9"
+  },
+  "created_once": true,
+  "raw_MD_JSON_unchanged": true,
+  "raw_drive_MD_JSON_version": "0d73",
+  "no_product_or_compilation_executed": true,
+  "raw_readback_descriptors": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-final-readback-v5.json",
+      "bytes": 115636,
+      "sha256": "fa2b852e75ad2f1da471789486069f8b4697f12ad754bf8778f8d876b6dde0e1"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/metadata-final-readback-v5.json",
+      "bytes": 736,
+      "sha256": "8ad2b1d95976a546afadbb93b5941ad81c9f13db851d258ba1f82df5e0247c54"
+    }
+  ],
+  "archival_write_timeout_recovery": {
+    "original_request_timed_out": true,
+    "raw_files_exist_and_hash_read_back": true,
+    "recovery_probe_job": "26c4545eae1eab8d27485f4a48077d3c-b7e",
+    "probe_exit_code": 0,
+    "probe_both_eof": true,
+    "no_raw_file_rewrite": true
+  }
+}

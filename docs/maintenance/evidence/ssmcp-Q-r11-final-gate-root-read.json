@@ -1,0 +1,736 @@
+{
+  "read_job_id": "26c4545eae1eab8d27485f4a48077d3c-9b2",
+  "read_exit_code": 0,
+  "read_both_eof": true,
+  "output_bytes": 23139,
+  "output_sha256": "76e0094b28d7620ba52726378aa8337a17e64931c6036e0fe3e6c4d1e2359ceb",
+  "utc": "2026-11-21T02:25:53.523122+00:00",
+  "files": [
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-gates.json",
+      "bytes": 1282803,
+      "sha256": "645dd18969232888cbb393e4193542b421706161eaf6ef2af0af6acca553d7ec",
+      "keys": [
+        "binaries",
+        "cargo_config_search",
+        "cargo_metadata",
+        "checks",
+        "code_mode_runner_final",
+        "dependency_auditor_sha256",
+        "dependency_sources",
+        "finished_at",
+        "git_head_observations",
+        "historical_template",
+        "integration_artifacts",
+        "integration_binaries",
+        "integration_test_names",
+        "library_artifact",
+        "library_binary",
+        "library_partition",
+        "library_sha256",
+        "library_test_names",
+        "optimized_build_artifacts",
+        "probes",
+        "reviewed_baseline",
+        "reviewed_baseline_sha256",
+        "root_worktree",
+        "root_worktree_head",
+        "run_id",
+        "runtime_bindings",
+        "runtime_tools",
+        "runtime_tools_final",
+        "script_sha256",
+        "source_archives",
+        "source_manifest",
+        "source_revision",
+        "started_at",
+        "status",
+        "test_environment_exceptions",
+        "workspace_bridge_helper",
+        "workspace_bridge_helper_checks",
+        "workspace_build_artifacts",
+        "workspace_compile_provenance",
+        "zuse_desktop_tools"
+      ],
+      "summary": {
+        "status": "passed",
+        "run_id": "ecfe8f69dcb362096018be9a632ff96c",
+        "source_revision": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+        "started_at": 1795227009.4109368,
+        "finished_at": 1795227737.5537446,
+        "failed_stage": null,
+        "error": null
+      },
+      "checks": [
+        {
+          "name": "release-policy",
+          "exit_code": 0,
+          "seconds": 5.13,
+          "test_results": null
+        },
+        {
+          "name": "deployment-policy",
+          "exit_code": 0,
+          "seconds": 0.34,
+          "test_results": null
+        },
+        {
+          "name": "fmt",
+          "exit_code": 0,
+          "seconds": 2.35,
+          "test_results": null
+        },
+        {
+          "name": "library-compile",
+          "exit_code": 0,
+          "seconds": 75.55,
+          "test_results": null
+        },
+        {
+          "name": "library-private",
+          "exit_code": 0,
+          "seconds": 34.51,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 6,
+              "ignored": 23,
+              "measured": 0,
+              "passed": 2050,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "library-host",
+          "exit_code": 0,
+          "seconds": 0.02,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 2073,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 6,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "clippy",
+          "exit_code": 0,
+          "seconds": 93.73,
+          "test_results": null
+        },
+        {
+          "name": "windows-gnu-clippy",
+          "exit_code": 0,
+          "seconds": 88.39,
+          "test_results": null
+        },
+        {
+          "name": "integration-compile",
+          "exit_code": 0,
+          "seconds": 57.65,
+          "test_results": null
+        },
+        {
+          "name": "integration-allow_account",
+          "exit_code": 0,
+          "seconds": 0.06,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 3,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-cc_backend",
+          "exit_code": 0,
+          "seconds": 1.16,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 1,
+              "measured": 0,
+              "passed": 6,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-client_resources",
+          "exit_code": 0,
+          "seconds": 0.07,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 1,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-client_server_config",
+          "exit_code": 0,
+          "seconds": 0.09,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 5,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-codex_backend",
+          "exit_code": 0,
+          "seconds": 20.48,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 2,
+              "measured": 0,
+              "passed": 14,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-collaboration",
+          "exit_code": 0,
+          "seconds": 0.14,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 3,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-connection_context",
+          "exit_code": 0,
+          "seconds": 0.24,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 10,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-context",
+          "exit_code": 0,
+          "seconds": 0.09,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 12,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-context_helpers",
+          "exit_code": 0,
+          "seconds": 0,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 2,
+              "measured": 0,
+              "passed": 0,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-context_runtime",
+          "exit_code": 0,
+          "seconds": 0.09,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 1,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-oauth_security",
+          "exit_code": 0,
+          "seconds": 1.14,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 11,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-pi_backend",
+          "exit_code": 0,
+          "seconds": 0.14,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 1,
+              "measured": 0,
+              "passed": 9,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-release_client",
+          "exit_code": 0,
+          "seconds": 0.04,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 4,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-resources",
+          "exit_code": 0,
+          "seconds": 0.12,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 10,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-rsync",
+          "exit_code": 0,
+          "seconds": 0.15,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 3,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-server_runtime",
+          "exit_code": 0,
+          "seconds": 0.01,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 1,
+              "measured": 0,
+              "passed": 3,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-terminals",
+          "exit_code": 0,
+          "seconds": 0.4,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 4,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-two_tools",
+          "exit_code": 0,
+          "seconds": 0.03,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 7,
+              "measured": 0,
+              "passed": 2,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-workspace_bridge",
+          "exit_code": 0,
+          "seconds": 0,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 3,
+              "measured": 0,
+              "passed": 0,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-zuse_worker_entry",
+          "exit_code": 0,
+          "seconds": 0.17,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 1,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "library-code-mode-ignored",
+          "exit_code": 0,
+          "seconds": 0.29,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 2077,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 2,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-two_tools-ignored",
+          "exit_code": 0,
+          "seconds": 1.5,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 2,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 7,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-workspace_bridge-ignored",
+          "exit_code": 0,
+          "seconds": 2.1,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 3,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "integration-context_helpers-ignored",
+          "exit_code": 0,
+          "seconds": 0.29,
+          "test_results": [
+            {
+              "failed": 0,
+              "filtered": 0,
+              "ignored": 0,
+              "measured": 0,
+              "passed": 2,
+              "result": "ok"
+            }
+          ]
+        },
+        {
+          "name": "release",
+          "exit_code": 0,
+          "seconds": 216.37,
+          "test_results": null
+        },
+        {
+          "name": "decoder",
+          "exit_code": 0,
+          "seconds": 94.91,
+          "test_results": null
+        }
+      ],
+      "short_fields": {
+        "binaries": {
+          "ssmcp": {
+            "bytes": 15738696,
+            "path": "/var/tmp/project-z-cargo-target/release/ssmcp",
+            "sha256": "2dbab2aa293ae411de20f9839d574bf62ef79a644710884a81f6fe6239717e35"
+          },
+          "ssmcp-frontend": {
+            "bytes": 1386584,
+            "path": "/var/tmp/project-z-cargo-target/release/ssmcp-frontend",
+            "sha256": "2e19f8ad2fea673f899bbfc44449161e072381571946b85e3c6a5dc7e8325a06"
+          },
+          "ssmcpd": {
+            "bytes": 8176168,
+            "path": "/var/tmp/project-z-cargo-target/release/ssmcpd",
+            "sha256": "e2e63fcfc63c05ca81907c976f8f3dda2aee65db9efa6d0d242fba69b95271b0"
+          },
+          "vt_snapshot": {
+            "bytes": 440984,
+            "path": "/var/tmp/project-z-cargo-target/release/examples/vt_snapshot",
+            "sha256": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f"
+          }
+        },
+        "code_mode_runner_final": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source/src/code_mode.js",
+          "sha256": "1d5185af93cd8e72fb6e1ed3e9c2a4d676de7702d6426b7e02a8cc08a36c21f4"
+        },
+        "dependency_auditor_sha256": "eed621aa874c9accf6f06284f1b7e4c2631f5a99780027450c1102b203b30c1e",
+        "dependency_sources": {
+          "git_checkout_count": 11,
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/dependency-source-manifest.json",
+          "registry_package_count": 264,
+          "resolved_package_count": 277,
+          "sha256": "d8051b708aee7b705432100a7e8a861c841575038141c01325300b9d217bbedb",
+          "verified_before_and_after": true
+        },
+        "finished_at": 1795227737.5537446,
+        "git_head_observations": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/git-heads-v25-r11.json",
+          "sha256": "e9a5366eb04267e66d09c512f955aa59423330de029a85e5f4d6cbdae4e8db90"
+        },
+        "historical_template": {
+          "expected_sha256": "39b1231de0cac1ffbc2f064fc12f08669273876fd655295965f979ea911fceb5",
+          "status": "not_recovered"
+        },
+        "library_artifact": {
+          "bytes": 166657104,
+          "path": "/var/tmp/project-z-cargo-target/debug/build/ssmcp/1a01125c55603d60/out/ssmcp-1a01125c55603d60",
+          "sha256": "2b2771c074ffbd8c4a73b9ea8805df162ba86190bebe52a4e69b66d2653fc7b8"
+        },
+        "library_binary": "/var/tmp/project-z-cargo-target/debug/build/ssmcp/1a01125c55603d60/out/ssmcp-1a01125c55603d60",
+        "library_partition": {
+          "complete": true,
+          "disjoint": true,
+          "host": 6,
+          "private": 2073,
+          "total": 2079
+        },
+        "library_sha256": "2b2771c074ffbd8c4a73b9ea8805df162ba86190bebe52a4e69b66d2653fc7b8",
+        "reviewed_baseline": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/recovered-gate10/run_gates.py",
+        "reviewed_baseline_sha256": "56d6e26709ee72f53a2a59dad17d5d23182b51d7000af3a5759c974493738c6b",
+        "root_worktree": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+        "root_worktree_head": {
+          "after_export": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+          "before_export": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+          "final": "647bce2ec9cf74beab43adea831c2e0712d28ea8"
+        },
+        "run_id": "ecfe8f69dcb362096018be9a632ff96c",
+        "runtime_bindings": {
+          "node": "/home/lightjunction/.local/share/mise/installs/node/26.13.1/bin/node",
+          "outer_bwrap": "/usr/bin/bwrap",
+          "path_prefix": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/native-bin",
+          "runner": {
+            "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source/src/code_mode.js",
+            "sha256": "1d5185af93cd8e72fb6e1ed3e9c2a4d676de7702d6426b7e02a8cc08a36c21f4"
+          }
+        },
+        "script_sha256": "729f242ffd2580ee0e72e1790b0df950b3961fd83fa8c1f215410d99c3ee5fbd",
+        "source_manifest": {
+          "entries": 1849,
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source-manifest.json",
+          "sha256": "c969fcd1041b983f8761edb8cf5077c85f430db1f30589fd2cc19da607e2bbfb"
+        },
+        "source_revision": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+        "started_at": 1795227009.4109368,
+        "status": "passed",
+        "test_environment_exceptions": {
+          "integration-server_runtime": {
+            "reason": "The dependency-failure fixture must discover Node through its empty PATH.",
+            "unset": [
+              "SSMCP_NODE"
+            ]
+          }
+        },
+        "workspace_bridge_helper": {
+          "artifact": {
+            "bytes": 126705048,
+            "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+            "sha256": "69dbd64ee1c5d072309e9f67901c0c9e35a557d43c8b5ed68b78118745388183"
+          },
+          "compiler_artifact": {
+            "executable": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+            "features": [],
+            "filenames": [
+              "/var/tmp/project-z-cargo-target/debug/ssmcp"
+            ],
+            "fresh": false,
+            "manifest_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source/Cargo.toml",
+            "package_id": "path+file:///home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source#ssmcp@0.10.25",
+            "profile": {
+              "debug_assertions": true,
+              "debuginfo": 0,
+              "opt_level": "0",
+              "overflow_checks": true,
+              "test": false
+            },
+            "reason": "compiler-artifact",
+            "target": {
+              "crate_types": [
+                "bin"
+              ],
+              "doc": true,
+              "doctest": false,
+              "edition": "2024",
+              "kind": [
+                "bin"
+              ],
+              "name": "ssmcp",
+              "src_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source/src/bin/ssmcp.rs",
+              "test": true
+            }
+          },
+          "source_stage": "integration-compile"
+        },
+        "workspace_bridge_helper_checks": {
+          "integration-connection_context": {
+            "after": {
+              "bytes": 126705048,
+              "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+              "sha256": "69dbd64ee1c5d072309e9f67901c0c9e35a557d43c8b5ed68b78118745388183"
+            },
+            "before": {
+              "bytes": 126705048,
+              "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+              "sha256": "69dbd64ee1c5d072309e9f67901c0c9e35a557d43c8b5ed68b78118745388183"
+            }
+          },
+          "integration-workspace_bridge": {
+            "after": {
+              "bytes": 126705048,
+              "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+              "sha256": "69dbd64ee1c5d072309e9f67901c0c9e35a557d43c8b5ed68b78118745388183"
+            },
+            "before": {
+              "bytes": 126705048,
+              "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+              "sha256": "69dbd64ee1c5d072309e9f67901c0c9e35a557d43c8b5ed68b78118745388183"
+            }
+          },
+          "integration-workspace_bridge-ignored": {
+            "after": {
+              "bytes": 126705048,
+              "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+              "sha256": "69dbd64ee1c5d072309e9f67901c0c9e35a557d43c8b5ed68b78118745388183"
+            },
+            "before": {
+              "bytes": 126705048,
+              "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+              "sha256": "69dbd64ee1c5d072309e9f67901c0c9e35a557d43c8b5ed68b78118745388183"
+            }
+          }
+        }
+      }
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11-launch/exit.json",
+      "bytes": 4792,
+      "sha256": "72b5f78ea2deedeb6f8998315c1a2df617809ceb6d1220ff8112b1840847b36c",
+      "keys": [
+        "command",
+        "environment",
+        "exclusive_target_lock",
+        "exit_code",
+        "finished_at",
+        "gate_receipt_sha256",
+        "gate_run_id",
+        "gate_status",
+        "hashes_after",
+        "hashes_before",
+        "input_paths",
+        "invocation_id",
+        "launcher_sha256",
+        "shared_target_owner_lock",
+        "source_revision",
+        "started_at",
+        "status",
+        "umask",
+        "versions",
+        "worktree",
+        "worktree_head_after",
+        "worktree_status_after"
+      ],
+      "text": "{\n  \"command\": [\n    \"/usr/bin/python3\",\n    \"-I\",\n    \"-B\",\n    \"-u\",\n    \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/run_gates.py\",\n    \"647bce2ec9cf74beab43adea831c2e0712d28ea8\",\n    \"--worktree\",\n    \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final\",\n    \"--submodule-root\",\n    \"/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/crates\"\n  ],\n  \"environment\": {\n    \"CARGO_BUILD_JOBS\": \"1\",\n    \"CARGO_HOME\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/cargo-home\",\n    \"CARGO_TARGET_DIR\": \"/var/tmp/project-z-cargo-target\",\n    \"RUSTC_WRAPPER\": \"/home/lightjunction/.cargo/rustc-serial\"\n  },\n  \"exclusive_target_lock\": true,\n  \"exit_code\": 0,\n  \"finished_at\": 1795227737.640136,\n  \"gate_receipt_sha256\": \"645dd18969232888cbb393e4193542b421706161eaf6ef2af0af6acca553d7ec\",\n  \"gate_run_id\": \"ecfe8f69dcb362096018be9a632ff96c\",\n  \"gate_status\": \"passed\",\n  \"hashes_after\": {\n    \"cargo_config\": \"d664480527bc29872d5c9e9ce844c8a3f1f8cc55d224f9a1867bdee7f0da9bf3\",\n    \"cargo_lock\": \"0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608\",\n    \"dependency_auditor\": \"eed621aa874c9accf6f06284f1b7e4c2631f5a99780027450c1102b203b30c1e\",\n    \"driver\": \"729f242ffd2580ee0e72e1790b0df950b3961fd83fa8c1f215410d99c3ee5fbd\",\n    \"git_heads\": \"e9a5366eb04267e66d09c512f955aa59423330de029a85e5f4d6cbdae4e8db90\",\n    \"owner_agreement\": \"b8559d1d1005fe2a22c295bc57f97d6e2c562cad260cbc1a2f161119fe32fcf6\",\n    \"reviewed_baseline\": \"56d6e26709ee72f53a2a59dad17d5d23182b51d7000af3a5759c974493738c6b\",\n    \"workspace_wrapper\": \"f416c3a75f62e0d2b99b0da099e6b61ef12a17000afb500b70b4a0eb583914f0\",\n    \"wrapper\": \"8b61096a9869fc6e790c963715efded612b17583cee90c830aadda2da8917a43\"\n  },\n  \"hashes_before\": {\n    \"cargo_config\": \"d664480527bc29872d5c9e9ce844c8a3f1f8cc55d224f9a1867bdee7f0da9bf3\",\n    \"cargo_lock\": \"0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608\",\n    \"dependency_auditor\": \"eed621aa874c9accf6f06284f1b7e4c2631f5a99780027450c1102b203b30c1e\",\n    \"driver\": \"729f242ffd2580ee0e72e1790b0df950b3961fd83fa8c1f215410d99c3ee5fbd\",\n    \"git_heads\": \"e9a5366eb04267e66d09c512f955aa59423330de029a85e5f4d6cbdae4e8db90\",\n    \"owner_agreement\": \"b8559d1d1005fe2a22c295bc57f97d6e2c562cad260cbc1a2f161119fe32fcf6\",\n    \"reviewed_baseline\": \"56d6e26709ee72f53a2a59dad17d5d23182b51d7000af3a5759c974493738c6b\",\n    \"workspace_wrapper\": \"f416c3a75f62e0d2b99b0da099e6b61ef12a17000afb500b70b4a0eb583914f0\",\n    \"wrapper\": \"8b61096a9869fc6e790c963715efded612b17583cee90c830aadda2da8917a43\"\n  },\n  \"input_paths\": {\n    \"cargo_config\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/cargo-home/config.toml\",\n    \"cargo_lock\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final/Cargo.lock\",\n    \"dependency_auditor\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/focused-eed621aa/dependency_audit.py\",\n    \"driver\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/run_gates.py\",\n    \"git_heads\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/git-heads-v25-r11.json\",\n    \"owner_agreement\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/shared-target-agreement-v25-r11.json\",\n    \"reviewed_baseline\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/recovered-gate10/run_gates.py\",\n    \"workspace_wrapper\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/context20-preparation/workspace-provenance-r4/workspace_rustc.py\",\n    \"wrapper\": \"/home/lightjunction/.cargo/rustc-serial\"\n  },\n  \"invocation_id\": \"880bd12873874a43a7f0a1eb9dc28c91\",\n  \"launcher_sha256\": \"bd71863301a98264feea7567783dc271a50b202995939476b69bf0a5aa504fa1\",\n  \"shared_target_owner_lock\": {\n    \"agreement_sha256\": \"b8559d1d1005fe2a22c295bc57f97d6e2c562cad260cbc1a2f161119fe32fcf6\",\n    \"held_for_entire_batch\": true,\n    \"path\": \"/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock\"\n  },\n  \"source_revision\": \"647bce2ec9cf74beab43adea831c2e0712d28ea8\",\n  \"started_at\": 1795227008.9475212,\n  \"status\": \"passed\",\n  \"umask\": \"0022\",\n  \"versions\": {\n    \"cargo\": \"cargo 1.100.0 (3acc79c0c 2026-11-05)\",\n    \"rustc\": \"rustc 1.100.0 (0ef1bc386 2026-11-09)\"\n  },\n  \"worktree\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final\",\n  \"worktree_head_after\": \"647bce2ec9cf74beab43adea831c2e0712d28ea8\",\n  \"worktree_status_after\": \"\"\n}\n"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11-launch/launch.json",
+      "bytes": 3624,
+      "sha256": "c62314dd39e23b5a0dd487fd70a91f9d631cb894043b47bb8ef16435a8076f0e",
+      "keys": [
+        "command",
+        "environment",
+        "exclusive_target_lock",
+        "hashes_before",
+        "input_paths",
+        "invocation_id",
+        "launcher_sha256",
+        "shared_target_owner_lock",
+        "source_revision",
+        "started_at",
+        "umask",
+        "versions",
+        "worktree"
+      ],
+      "text": "{\n  \"command\": [\n    \"/usr/bin/python3\",\n    \"-I\",\n    \"-B\",\n    \"-u\",\n    \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/run_gates.py\",\n    \"647bce2ec9cf74beab43adea831c2e0712d28ea8\",\n    \"--worktree\",\n    \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final\",\n    \"--submodule-root\",\n    \"/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/crates\"\n  ],\n  \"environment\": {\n    \"CARGO_BUILD_JOBS\": \"1\",\n    \"CARGO_HOME\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/cargo-home\",\n    \"CARGO_TARGET_DIR\": \"/var/tmp/project-z-cargo-target\",\n    \"RUSTC_WRAPPER\": \"/home/lightjunction/.cargo/rustc-serial\"\n  },\n  \"exclusive_target_lock\": true,\n  \"hashes_before\": {\n    \"cargo_config\": \"d664480527bc29872d5c9e9ce844c8a3f1f8cc55d224f9a1867bdee7f0da9bf3\",\n    \"cargo_lock\": \"0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608\",\n    \"dependency_auditor\": \"eed621aa874c9accf6f06284f1b7e4c2631f5a99780027450c1102b203b30c1e\",\n    \"driver\": \"729f242ffd2580ee0e72e1790b0df950b3961fd83fa8c1f215410d99c3ee5fbd\",\n    \"git_heads\": \"e9a5366eb04267e66d09c512f955aa59423330de029a85e5f4d6cbdae4e8db90\",\n    \"owner_agreement\": \"b8559d1d1005fe2a22c295bc57f97d6e2c562cad260cbc1a2f161119fe32fcf6\",\n    \"reviewed_baseline\": \"56d6e26709ee72f53a2a59dad17d5d23182b51d7000af3a5759c974493738c6b\",\n    \"workspace_wrapper\": \"f416c3a75f62e0d2b99b0da099e6b61ef12a17000afb500b70b4a0eb583914f0\",\n    \"wrapper\": \"8b61096a9869fc6e790c963715efded612b17583cee90c830aadda2da8917a43\"\n  },\n  \"input_paths\": {\n    \"cargo_config\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/cargo-home/config.toml\",\n    \"cargo_lock\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final/Cargo.lock\",\n    \"dependency_auditor\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/focused-eed621aa/dependency_audit.py\",\n    \"driver\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/run_gates.py\",\n    \"git_heads\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/git-heads-v25-r11.json\",\n    \"owner_agreement\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/shared-target-agreement-v25-r11.json\",\n    \"reviewed_baseline\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/recovered-gate10/run_gates.py\",\n    \"workspace_wrapper\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/context20-preparation/workspace-provenance-r4/workspace_rustc.py\",\n    \"wrapper\": \"/home/lightjunction/.cargo/rustc-serial\"\n  },\n  \"invocation_id\": \"880bd12873874a43a7f0a1eb9dc28c91\",\n  \"launcher_sha256\": \"bd71863301a98264feea7567783dc271a50b202995939476b69bf0a5aa504fa1\",\n  \"shared_target_owner_lock\": {\n    \"agreement_sha256\": \"b8559d1d1005fe2a22c295bc57f97d6e2c562cad260cbc1a2f161119fe32fcf6\",\n    \"held_for_entire_batch\": true,\n    \"path\": \"/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock\"\n  },\n  \"source_revision\": \"647bce2ec9cf74beab43adea831c2e0712d28ea8\",\n  \"started_at\": 1795227008.9475212,\n  \"umask\": \"0022\",\n  \"versions\": {\n    \"cargo\": \"cargo 1.100.0 (3acc79c0c 2026-11-05)\",\n    \"rustc\": \"rustc 1.100.0 (0ef1bc386 2026-11-09)\"\n  },\n  \"worktree\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final\"\n}\n"
+    }
+  ]
+}

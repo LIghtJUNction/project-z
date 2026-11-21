@@ -1,0 +1,47 @@
+{
+  "schema": "project-z.ssmcp-source-B-observation.v1",
+  "observed_at_utc": "2026-11-21T01:05:05.095910+00:00",
+  "source_only": true,
+  "repository": "LIghtJUNction/ssmcp",
+  "pr": 159,
+  "head": "be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1",
+  "tree": "5e8ea273c8f8bd8b0e7b1f87ccc0d19fd594601b",
+  "parents": [
+    "c8f5d1ecc25721937f6ebc585247c67cfa75a932"
+  ],
+  "version": "0.10.24",
+  "cargo_toml_version_present": true,
+  "pr_base": "f33ed8f14fc14aff05a2e4098743eb07e8527c06",
+  "main": "f33ed8f14fc14aff05a2e4098743eb07e8527c06",
+  "state": "open",
+  "draft": true,
+  "mergeable": true,
+  "git_source_urls": [
+    "https://api.github.com/repos/LIghtJUNction/ssmcp/pulls/159",
+    "https://api.github.com/repos/LIghtJUNction/ssmcp/git/commits/be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1",
+    "https://raw.githubusercontent.com/LIghtJUNction/ssmcp/be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1/Cargo.toml",
+    "https://api.github.com/repos/LIghtJUNction/ssmcp/git/ref/heads/main"
+  ],
+  "native_freeze_original": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-main-union-f33/source-freeze-be6da5b.json",
+    "local_file": "ssmcp-B-source-freeze-original.json",
+    "bytes": 2862,
+    "sha256": "518f21c2afe0c148f4d653ce861e8cd6ab0e590b899e21414c91f85eedc597c1",
+    "read_job": "26c4545eae1eab8d27485f4a48077d3c-8b4",
+    "exit_code": 0,
+    "both_eof": true
+  },
+  "gate_status": "no B build, runtime or final P1 executed by this continuation; source author paused final binding while another actual 0.10.24 release owner resolves its image regression",
+  "version25_status": "proposed successor only; not frozen or published by this observation",
+  "image_propagation_review": {
+    "file": "ssmcp-B-image-summary-propagation-review.json",
+    "bytes": 13664,
+    "sha256": "e9b283374fb9736a0e01e5dfe283a8796e5952dc5e26de3bcb13b1b0987bdc65",
+    "scope": "independent static source mechanism, not a new runtime reproduction"
+  },
+  "boundaries": [
+    "781/FC paired performance stays bound to its original sources.",
+    "The source freeze receipt is not execution evidence.",
+    "Other release owner worktree observations are historical snapshots; no foreign source or process mutation occurred."
+  ]
+}

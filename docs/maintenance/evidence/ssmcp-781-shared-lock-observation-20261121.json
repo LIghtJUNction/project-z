@@ -1,0 +1,229 @@
+{
+  "schema": "project-z.shared-cargo-lock-observation.v1",
+  "observed_window_utc": [
+    "2026-11-20T22:47:44.477639+00:00",
+    "2026-11-20T22:48:15.725701+00:00"
+  ],
+  "conclusion": "The requested 781 r4 baseline itself holds the shared Cargo owner lock. It progressed from the library-fixture Cargo command to release-bins during this bounded observation; the earlier wait-only state is no longer current.",
+  "native_client": "75db0934afec06d809de95c6c16094b39d1e14a15f436a00edef91c107594d2b",
+  "baseline_job": "26c4545eae1eab8d27485f4a48077d3c-581",
+  "baseline_job_id_provenance": "Supplied by root/source owner; argv, PID lineage, output directory, lock and active build stages independently read here.",
+  "revision_in_argv": "781b87df1d364137b6885f17f631a3e9e991bd58",
+  "source_owner_route": {
+    "source_owner": "agent_feaba24f83028aa5a3aa3263e7fff5c9",
+    "client": "2ee0da354becbdb9492c806b7a9eff4b37928ce14b9a9c2b4c7653f267101e2f",
+    "provenance": "Existing root-authenticated owner handoff; no message sent or roster operation in this diagnostic."
+  },
+  "lock": {
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "inode": 63537699,
+    "stat_dev_inode": "00:22:63537699",
+    "proc_locks_lines": [
+      "119: FLOCK  ADVISORY  WRITE 1722196 00:20:63537699 0 EOF"
+    ],
+    "holder_fd": {
+      "fd": "4",
+      "target": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "info": "pos:\t0\nflags:\t02500002\nmnt_id:\t35\nino:\t63537699\nlock:\t1: FLOCK  ADVISORY  WRITE 1722196 00:20:63537699 0 EOF\n"
+    },
+    "device_label_caveat": "stat returned 00:22 while /proc/locks and this holder's fdinfo report 00:20. Exact FD target, inode and fdinfo lock agree. Initial exact-device string match returned no row and is not evidence that the lock was free."
+  },
+  "holder": {
+    "pid": 1722196,
+    "ppid": 1722195,
+    "start_ticks": 15027125,
+    "cwd": "/home/lightjunction/Documents/GITHUB/ssmcp",
+    "argv": [
+      "/usr/bin/python3",
+      "-I",
+      "-B",
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-tools/workspace-provenance-r4/build_baseline.py",
+      "--revision",
+      "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "--lock-sha256",
+      "082cdef2ddb1a4acadf87bd927cb875c802808c20c303721829661c917a03aec",
+      "--heads",
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/git-heads-781b87d-bound.json",
+      "7783746571dbd3fcbdeeca3633f359bd21c44220d31160896af930c04ebcbb57",
+      "--out",
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build"
+    ],
+    "state": "S",
+    "wchan": "do_wait",
+    "children": [
+      1820585
+    ]
+  },
+  "earlier_child": {
+    "pid": 1798577,
+    "comm": "cargo",
+    "ppid": 1722196,
+    "state": "S",
+    "start_ticks": 15056474,
+    "utime_ticks": 8,
+    "stime_ticks": 2,
+    "cwd": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+    "argv": [
+      "/home/lightjunction/.rustup/toolchains/1.100.0-x86_64-unknown-linux-gnu/bin/cargo",
+      "test",
+      "--lib",
+      "--no-run",
+      "--offline",
+      "--locked",
+      "--jobs",
+      "1",
+      "--message-format=json"
+    ],
+    "wchan": "futex_do_wait",
+    "children": [],
+    "fd1": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/logs/build-library-fixture.stdout",
+    "fd2": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/logs/build-library-fixture.stderr"
+  },
+  "current_child": {
+    "pid": 1820585,
+    "ppid": 1722196,
+    "start_ticks": 15064552,
+    "cwd": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+    "argv": [
+      "/home/lightjunction/.rustup/toolchains/1.100.0-x86_64-unknown-linux-gnu/bin/cargo",
+      "build",
+      "--release",
+      "--bins",
+      "--offline",
+      "--locked",
+      "--jobs",
+      "1",
+      "--message-format=json"
+    ],
+    "state": "S",
+    "wchan": "futex_do_wait"
+  },
+  "progress": {
+    "earlier_stage": "cargo test --lib --no-run --offline --locked --jobs 1 --message-format=json",
+    "later_stage": "cargo build --release --bins --offline --locked --jobs 1 --message-format=json",
+    "library_fixture_exit_code": 0,
+    "library_fixture_compiler_artifact_fresh": false,
+    "library_fixture_build_finished_success": true,
+    "library_fixture_elapsed_from_stderr": "1m 19s",
+    "preserve_library_fixture_status": "completed",
+    "release_build_status": "running",
+    "product_tests_executed": 0,
+    "final_job_exit_known": false,
+    "complete_five_artifact_baseline_claimed": false
+  },
+  "exact_logs": {
+    "library_stdout": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/logs/build-library-fixture.stdout",
+      "bytes": 213718,
+      "mtime_ns": 1795214878093846000
+    },
+    "library_stderr": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/logs/build-library-fixture.stderr",
+      "bytes": 188,
+      "mtime_ns": 1795214878093846000,
+      "tail": "   Compiling ssmcp v0.10.21 (/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final)\n    Finished `test` profile [unoptimized] target(s) in 1m 19s\n"
+    },
+    "receipt": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/build-receipt.json",
+      "bytes": 43412,
+      "mtime_ns": 1795214879489827800,
+      "sha256": "c140c09b98e354c714b314b67428150463f6062062e900c738283d6012f00855",
+      "keys": [
+        "artifacts",
+        "benchmark_executed",
+        "configuration_reference",
+        "dependency_manifest",
+        "environment",
+        "environment_reference",
+        "git_head_binding",
+        "gitlinks",
+        "inputs_before",
+        "locks",
+        "metadata_inventory",
+        "package_validation_gates_executed",
+        "product_tests_executed",
+        "release_gate_executed",
+        "schema",
+        "scope",
+        "source_manifest",
+        "source_revision",
+        "source_tree",
+        "source_worktree",
+        "started_at",
+        "status",
+        "steps",
+        "workspace_compile_provenance"
+      ],
+      "selected": {
+        "status": "running",
+        "started_at": 1795214505.3639212,
+        "product_tests_executed": 0
+      },
+      "steps": [
+        {
+          "name": "acquire-source-and-target-locks",
+          "status": "completed"
+        },
+        {
+          "name": "verify-bound-inputs-and-source",
+          "status": "completed"
+        },
+        {
+          "name": "version-cargo",
+          "status": "completed",
+          "exit_code": 0
+        },
+        {
+          "name": "version-rustc",
+          "status": "completed",
+          "exit_code": 0
+        },
+        {
+          "name": "metadata-before",
+          "status": "completed",
+          "exit_code": 0
+        },
+        {
+          "name": "audit-initial-metadata-and-selected-dependency-sources",
+          "status": "completed"
+        },
+        {
+          "name": "build-library-fixture",
+          "status": "completed",
+          "exit_code": 0
+        },
+        {
+          "name": "preserve-build-library-fixture",
+          "status": "completed"
+        },
+        {
+          "name": "build-release-bins",
+          "status": "running"
+        }
+      ]
+    }
+  },
+  "observer_jobs": [
+    {
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-5b3",
+      "exit_code": 0,
+      "stdout_bytes": 3333
+    },
+    {
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-5b7",
+      "exit_code": 0,
+      "stdout_bytes": 11541
+    }
+  ],
+  "scope": {
+    "process_signals_sent": 0,
+    "locks_acquired_or_modified": 0,
+    "builds_or_tests_started": 0,
+    "source_changes": 0,
+    "client_reloads": 0,
+    "waiting_jobs_restarted": 0,
+    "scope_expansion": "None; read lock inode, related PID lineage and exact baseline output files only."
+  },
+  "recommendation": "Let the existing 781 r4 job continue. Forward this stage and lock ownership to the existing owner; do not restart the baseline or clear its lock."
+}
+

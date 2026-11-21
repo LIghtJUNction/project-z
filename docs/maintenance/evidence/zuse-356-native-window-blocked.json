@@ -1,0 +1,57 @@
+{
+  "schema": "project-z.zuse356-native-window-blocked.v1",
+  "observed_at": "2026-11-21T00:08:15.849715+00:00",
+  "status": "prepared_not_started",
+  "gate_started": false,
+  "lock_acquisition_attempted": false,
+  "reason": "Existing SSMCP validation owns the shared outer lock; no queue or retry was submitted.",
+  "preflight": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native-start-preflight.json",
+    "bytes": 15886,
+    "sha256": "394271412e983cdb941329db80404b928f5783dbaebdafaf6aa62444ed8ecb58"
+  },
+  "request": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/request-native-nonblocking.json",
+    "bytes": 682,
+    "sha256": "f98f8340a39615da2129c43992bbd42ed1308f144563251ae37b9041b4b90147"
+  },
+  "holder": {
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "device": 34,
+    "inode": 63537699,
+    "rows": [
+      "85: FLOCK  ADVISORY  WRITE 3058117 00:20:63537699 0 EOF"
+    ],
+    "flock_processes": [
+      {
+        "pid": 3058117,
+        "argv": [
+          "flock",
+          "-x",
+          "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+          "env",
+          "CARGO_TARGET_DIR=/var/tmp/project-z-cargo-target",
+          "python3",
+          "/var/tmp/ssmcp-controls-20261121/final-integration/validate_release_0_10_23_display.py"
+        ]
+      }
+    ]
+  },
+  "source": {
+    "head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "status": "",
+    "lock": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/Cargo.lock",
+      "bytes": 1138,
+      "sha256": "cffb29f3aa454c065523c6fc62ebf33721694df88af94e0aff2feea5d17855e0"
+    }
+  },
+  "artifact_matches": true,
+  "readonly_job": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-7a9",
+    "exit_code": 0,
+    "stdout_eof": true,
+    "stderr_eof": true
+  }
+}

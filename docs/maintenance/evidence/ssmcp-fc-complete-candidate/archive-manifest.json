@@ -1,0 +1,34 @@
+{
+  "schema": "project-z-fc-original-receipts-v1",
+  "source": "fc06728a36d0b4d2920e1e2bc29885721ced5780",
+  "tree": "088fe1cde36fe63a33df1f9b7cfb619ae5f8ee35",
+  "build_job": "26c4545eae1eab8d27485f4a48077d3c-73a",
+  "execution_job": "26c4545eae1eab8d27485f4a48077d3c-770",
+  "files": [
+    {
+      "path": "build-receipt.json",
+      "native_source": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-build/build-receipt.json",
+      "bytes": 79517,
+      "sha256": "8e6154ba2bbb16bab14cfa8d4b0a693775c28656e3dc554ad1e5d5301108ddd7"
+    },
+    {
+      "path": "execution-receipt.json",
+      "native_source": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-run/execution-receipt.json",
+      "bytes": 30277,
+      "sha256": "13a685aa21e523c1d42e4c62b4bd61b6fb065fb0d8a5500a819e34218cb1e1bb"
+    },
+    {
+      "path": "six-cases-report.json",
+      "native_source": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-run/six-cases/report.json",
+      "bytes": 21212,
+      "sha256": "4ef95978b201f9a3a8d3c42cd4ded2282ff4e7c802a269242027a32691cc6b49"
+    },
+    {
+      "path": "ctrlv-report.json",
+      "native_source": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-run/ctrlv/report.json",
+      "bytes": 13247,
+      "sha256": "af2b6f5a996ae60fe2a0bb4bf632e5c1bb39e015111a205deb3b8bf68d88be7f"
+    }
+  ],
+  "scope": "Four original JSON receipts, no ELF or configuration body."
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "project-z.source-tree-equivalence-readback.v1",
+  "observed_source": "GitHub plugin independent GETs of actual main ref, PR159, immutable F/P Git commits and W...P compare",
+  "W": {
+    "commit": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "tree": "5be29af415b915ef3307bfed08c6cefec2798898"
+  },
+  "F": {
+    "commit": "f1de4bf70d5406cf9f38347e298a829456b92e57",
+    "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+    "parents": [
+      "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+      "c12fdf1d413501ddeb03a2dd2fb8c47731d2129f"
+    ],
+    "committed_utc": "2026-11-21T06:10:29Z"
+  },
+  "P": {
+    "commit": "ea2bfcae6aea9672d8955f832a8ec5bd1e0749f4",
+    "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+    "parents": [
+      "c12fdf1d413501ddeb03a2dd2fb8c47731d2129f"
+    ],
+    "committed_utc": "2026-11-21T06:13:34Z",
+    "actual_main_ref_matches": true
+  },
+  "tree_all_equal": true,
+  "PR159": {
+    "url": "https://github.com/LIghtJUNction/ssmcp/pull/159",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-11-21T06:13:34Z",
+    "head": "f1de4bf70d5406cf9f38347e298a829456b92e57",
+    "base": "c12fdf1d413501ddeb03a2dd2fb8c47731d2129f",
+    "merge_commit": "ea2bfcae6aea9672d8955f832a8ec5bd1e0749f4",
+    "merged_by_account": "LIghtJUNction",
+    "execution_session_not_inferred_from_account": true
+  },
+  "ancestry": {
+    "compare_url": "https://github.com/LIghtJUNction/ssmcp/compare/4de17310ce2ecdbc8b6c6ab86ee365653f753ee8...ea2bfcae6aea9672d8955f832a8ec5bd1e0749f4",
+    "status": "diverged",
+    "ahead_by": 2,
+    "behind_by": 46,
+    "merge_base": "f33ed8f14fc14aff05a2e4098743eb07e8527c06",
+    "W_is_ancestor_of_P": false,
+    "why": "P is a squash with sole parent c12; GitHub comparison is diverged. F has W as a parent but F is not P."
+  },
+  "validation_boundary": {
+    "W_gate35": "passed-with-independent-review",
+    "W_runtime18": "passed-with-independent-bounded-review",
+    "W_UI": "failed-account_compat-after6passed;17notrun",
+    "W_P1": "not_run-confirmed-native-owner1093",
+    "P_extra_product_execution_by_this_equivalence_read": false,
+    "W_results_not_claimed_as_new_P_run": true,
+    "formal_release_completed_claimed": false
+  },
+  "original_author_local_merge": {
+    "scope": "Native owner reported a separate local M completed after the existing remote F; normal push preflight stopped on changed remote. This record adopts actual F/P; it does not claim M was pushed.",
+    "root_did_not_repeat_merge_or_force_push": true
+  },
+  "frozen_dependencies": {
+    "current_v25_a1_and_all4_gitlinks_retained": true,
+    "P1_core_commit": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+    "later_zuse_zcalld_consumer_propagation": "separate successor scope; not covered by this W acceptance"
+  },
+  "initial85": {
+    "merged": 56,
+    "closed": 14,
+    "archived": 9,
+    "blocked": 5,
+    "integration": 1,
+    "integration_item": "LIghtJUNction/zcalld#1",
+    "SSMCP_PR159_is_followup_not_new_initial_inventory_count": true
+  },
+  "native_archive_actual_utc": "2026-11-21T06:22:40.563241+00:00"
+}

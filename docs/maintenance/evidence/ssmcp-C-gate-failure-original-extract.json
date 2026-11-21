@@ -1,0 +1,514 @@
+{
+  "read_job_id": "26c4545eae1eab8d27485f4a48077d3c-947",
+  "read_job_exit": 0,
+  "read_both_eof": true,
+  "utc": "2026-11-21T01:56:57.632168+00:00",
+  "gate": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/candidate-gates.json",
+    "bytes": 909191,
+    "sha256": "42421f9c5d727786b68da62b8ef686807d300f0a8999d1e3369bf4f7afe4daef",
+    "shape": {
+      "cargo_config_search": {
+        "type": "dict",
+        "length": 1
+      },
+      "cargo_metadata": {
+        "type": "dict",
+        "length": 7
+      },
+      "checks": {
+        "type": "list",
+        "length": 5
+      },
+      "dependency_auditor_sha256": {
+        "type": "str",
+        "length": 64
+      },
+      "dependency_sources": {
+        "type": "dict",
+        "length": 5
+      },
+      "error": {
+        "type": "str",
+        "length": 819
+      },
+      "failed_stage": {
+        "type": "str",
+        "length": 15
+      },
+      "finished_at": {
+        "type": "float",
+        "length": null
+      },
+      "git_head_observations": {
+        "type": "dict",
+        "length": 2
+      },
+      "historical_template": {
+        "type": "dict",
+        "length": 2
+      },
+      "library_artifact": {
+        "type": "dict",
+        "length": 3
+      },
+      "library_binary": {
+        "type": "str",
+        "length": 93
+      },
+      "library_partition": {
+        "type": "dict",
+        "length": 5
+      },
+      "library_sha256": {
+        "type": "str",
+        "length": 64
+      },
+      "library_test_names": {
+        "type": "dict",
+        "length": 8
+      },
+      "probes": {
+        "type": "dict",
+        "length": 10
+      },
+      "reviewed_baseline": {
+        "type": "str",
+        "length": 123
+      },
+      "reviewed_baseline_sha256": {
+        "type": "str",
+        "length": 64
+      },
+      "root_worktree": {
+        "type": "str",
+        "length": 95
+      },
+      "root_worktree_head": {
+        "type": "dict",
+        "length": 2
+      },
+      "run_id": {
+        "type": "str",
+        "length": 32
+      },
+      "runtime_bindings": {
+        "type": "dict",
+        "length": 4
+      },
+      "runtime_tools": {
+        "type": "dict",
+        "length": 10
+      },
+      "script_sha256": {
+        "type": "str",
+        "length": 64
+      },
+      "source_archives": {
+        "type": "dict",
+        "length": 2
+      },
+      "source_manifest": {
+        "type": "dict",
+        "length": 3
+      },
+      "source_revision": {
+        "type": "str",
+        "length": 40
+      },
+      "started_at": {
+        "type": "float",
+        "length": null
+      },
+      "status": {
+        "type": "str",
+        "length": 6
+      },
+      "workspace_build_artifacts": {
+        "type": "dict",
+        "length": 1
+      },
+      "workspace_compile_provenance": {
+        "type": "dict",
+        "length": 13
+      }
+    },
+    "scalars": {
+      "dependency_auditor_sha256": "eed621aa874c9accf6f06284f1b7e4c2631f5a99780027450c1102b203b30c1e",
+      "error": "RuntimeError: library-private exited 101, log: /home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/logs/candidate2-library-private.log\n\nthread 'session::service::tests::create_rejects_foreground_chat_modes_before_saving_or_spawning' (468402) panicked at src/session/service.rs:946:13:\nassertion failed: result.unwrap_err().to_string().contains(\"require the foreground\")\n\n\nfailures:\n    client::local::socket::tests::dropping_the_host_cleans_its_socket_without_explicit_shutdown\n    client::local::socket::tests::http_socket_uses_the_same_origin_and_authenticated_mcp_router\n    session::service::tests::create_rejects_foreground_chat_modes_before_saving_or_spawning\n\ntest result: FAILED. 2049 passed; 3 failed; 23 ignored; 0 measured; 4 filtered out; finished in 35.62s\n",
+      "failed_stage": "library-private",
+      "finished_at": 1795225972.923553,
+      "library_binary": "/var/tmp/project-z-cargo-target/debug/build/ssmcp/1a01125c55603d60/out/ssmcp-1a01125c55603d60",
+      "library_sha256": "945924dd1e26dfa5df498f4e38127c62a092ae7c1359d74ce96224d601d8acca",
+      "reviewed_baseline": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/recovered-gate10/run_gates.py",
+      "reviewed_baseline_sha256": "56d6e26709ee72f53a2a59dad17d5d23182b51d7000af3a5759c974493738c6b",
+      "root_worktree": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+      "run_id": "47ff4beb94d03df6834a6460b493a5d7",
+      "script_sha256": "66453f8d7c51f9212cd975d7a065eb34c98d2237f2d3a267bbfdfa783aa479ea",
+      "source_revision": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+      "started_at": 1795225841.5272284,
+      "status": "failed"
+    },
+    "checks": [
+      {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts",
+          "-p",
+          "test_release.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/logs/candidate2-release-policy.log",
+        "name": "release-policy"
+      },
+      {
+        "command": [
+          "python3",
+          "-W",
+          "error",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts",
+          "-p",
+          "test_server_deploy.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/logs/candidate2-deployment-policy.log",
+        "name": "deployment-policy"
+      },
+      {
+        "command": [
+          "cargo",
+          "fmt",
+          "--all",
+          "--",
+          "--check"
+        ],
+        "exit_code": 0,
+        "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/logs/candidate2-fmt.log",
+        "name": "fmt"
+      },
+      {
+        "command": [
+          "cargo",
+          "test",
+          "--offline",
+          "--locked",
+          "--lib",
+          "--no-run",
+          "--message-format=json",
+          "--jobs",
+          "1"
+        ],
+        "exit_code": 0,
+        "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/logs/candidate2-library-compile.log",
+        "name": "library-compile"
+      },
+      {
+        "command": [
+          "/usr/bin/bwrap",
+          "--unshare-user",
+          "--uid",
+          "1000",
+          "--gid",
+          "1000",
+          "--dev-bind",
+          "/",
+          "/",
+          "--bind",
+          "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/candidate-test-tmp",
+          "/tmp",
+          "--unsetenv",
+          "SSMCP_OUTPUT_RELOAD",
+          "--setenv",
+          "TMPDIR",
+          "/tmp",
+          "--chdir",
+          "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/source",
+          "/var/tmp/project-z-cargo-target/debug/build/ssmcp/1a01125c55603d60/out/ssmcp-1a01125c55603d60",
+          "--exact",
+          "--test-threads=4",
+          "--skip",
+          "client::local::tests::bundled_runner_is_private_and_removed_after_failed_startup",
+          "--skip",
+          "client::local::tests::bundled_runner_never_overwrites_or_removes_a_replaced_file",
+          "--skip",
+          "client::local::tests::private_socket_rejects_symlinks_and_exposed_permissions",
+          "--skip",
+          "client::local::tests::gateway_checks_all_origins_and_has_no_portal_routes"
+        ],
+        "exit_code": 101,
+        "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/logs/candidate2-library-private.log",
+        "name": "library-private"
+      }
+    ]
+  },
+  "logs": [
+    {
+      "name": "candidate2-deployment-policy.log",
+      "bytes": 5660
+    },
+    {
+      "name": "candidate2-fmt.log",
+      "bytes": 0
+    },
+    {
+      "name": "candidate2-library-compile.cargo-json.json",
+      "bytes": 264840
+    },
+    {
+      "name": "candidate2-library-compile.log",
+      "bytes": 214293
+    },
+    {
+      "name": "candidate2-library-private.log",
+      "bytes": 559083
+    },
+    {
+      "name": "candidate2-release-policy.log",
+      "bytes": 19894
+    },
+    {
+      "name": "probe-cargo-metadata.stderr",
+      "bytes": 0
+    },
+    {
+      "name": "probe-cargo-metadata.stdout",
+      "bytes": 1484723
+    },
+    {
+      "name": "probe-list-library-all.stderr",
+      "bytes": 0
+    },
+    {
+      "name": "probe-list-library-all.stdout",
+      "bytes": 202254
+    },
+    {
+      "name": "probe-list-library-code-mode-selection.stderr",
+      "bytes": 0
+    },
+    {
+      "name": "probe-list-library-code-mode-selection.stdout",
+      "bytes": 144
+    },
+    {
+      "name": "probe-list-library-host.stderr",
+      "bytes": 0
+    },
+    {
+      "name": "probe-list-library-host.stdout",
+      "bytes": 338
+    },
+    {
+      "name": "probe-list-library-ignored.stderr",
+      "bytes": 0
+    },
+    {
+      "name": "probe-list-library-ignored.stdout",
+      "bytes": 1555
+    },
+    {
+      "name": "probe-list-library-private.stderr",
+      "bytes": 0
+    },
+    {
+      "name": "probe-list-library-private.stdout",
+      "bytes": 201916
+    },
+    {
+      "name": "probe-version-before-bwrap.stderr",
+      "bytes": 0
+    },
+    {
+      "name": "probe-version-before-bwrap.stdout",
+      "bytes": 18
+    },
+    {
+      "name": "probe-version-before-node.stderr",
+      "bytes": 0
+    },
+    {
+      "name": "probe-version-before-node.stdout",
+      "bytes": 9
+    },
+    {
+      "name": "probe-version-before-prlimit.stderr",
+      "bytes": 0
+    },
+    {
+      "name": "probe-version-before-prlimit.stdout",
+      "bytes": 35
+    },
+    {
+      "name": "probe-version-before-rsync.stderr",
+      "bytes": 0
+    },
+    {
+      "name": "probe-version-before-rsync.stdout",
+      "bytes": 892
+    }
+  ],
+  "release25-final10-launch/launch.json": {
+    "bytes": 3611,
+    "sha256": "e7299efe8068cfc68c000412425c66e24ae4ea090bc901ad179d0379376c3e68",
+    "content": {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-u",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/run_gates.py",
+        "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+        "--worktree",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+        "--submodule-root",
+        "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/crates"
+      ],
+      "environment": {
+        "CARGO_BUILD_JOBS": "1",
+        "CARGO_HOME": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/cargo-home",
+        "CARGO_TARGET_DIR": "/var/tmp/project-z-cargo-target",
+        "RUSTC_WRAPPER": "/home/lightjunction/.cargo/rustc-serial"
+      },
+      "exclusive_target_lock": true,
+      "hashes_before": {
+        "cargo_config": "d664480527bc29872d5c9e9ce844c8a3f1f8cc55d224f9a1867bdee7f0da9bf3",
+        "cargo_lock": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608",
+        "dependency_auditor": "eed621aa874c9accf6f06284f1b7e4c2631f5a99780027450c1102b203b30c1e",
+        "driver": "66453f8d7c51f9212cd975d7a065eb34c98d2237f2d3a267bbfdfa783aa479ea",
+        "git_heads": "3cdd40cc24b4d51088bdf34f9ace60ab5c90d8e280ce8864a4eab920dbb53ed4",
+        "owner_agreement": "cd995a33b1b2e3865adfb54c51577944dce09b1a4103a59aa81e2a77bfdf2da8",
+        "reviewed_baseline": "56d6e26709ee72f53a2a59dad17d5d23182b51d7000af3a5759c974493738c6b",
+        "workspace_wrapper": "f416c3a75f62e0d2b99b0da099e6b61ef12a17000afb500b70b4a0eb583914f0",
+        "wrapper": "8b61096a9869fc6e790c963715efded612b17583cee90c830aadda2da8917a43"
+      },
+      "input_paths": {
+        "cargo_config": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/cargo-home/config.toml",
+        "cargo_lock": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final/Cargo.lock",
+        "dependency_auditor": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/focused-eed621aa/dependency_audit.py",
+        "driver": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/run_gates.py",
+        "git_heads": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/git-heads-v25.json",
+        "owner_agreement": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/shared-target-agreement.json",
+        "reviewed_baseline": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/recovered-gate10/run_gates.py",
+        "workspace_wrapper": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/context20-preparation/workspace-provenance-r4/workspace_rustc.py",
+        "wrapper": "/home/lightjunction/.cargo/rustc-serial"
+      },
+      "invocation_id": "5298e2367b1944639a48d7e522efc00a",
+      "launcher_sha256": "291ead43ceb6d495d4bbd2f76da32113acc9e4dc19d72eb03843ba05130e73ed",
+      "shared_target_owner_lock": {
+        "agreement_sha256": "cd995a33b1b2e3865adfb54c51577944dce09b1a4103a59aa81e2a77bfdf2da8",
+        "held_for_entire_batch": true,
+        "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock"
+      },
+      "source_revision": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+      "started_at": 1795225841.089984,
+      "umask": "0022",
+      "versions": {
+        "cargo": "cargo 1.100.0 (3acc79c0c 2026-11-05)",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)"
+      },
+      "worktree": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final"
+    }
+  },
+  "release25-final10-launch/exit.json": {
+    "bytes": 4837,
+    "sha256": "f31ff68524a0927a99cff22a20746e6de16c852bc4d9bec5ecea18326d199ff4",
+    "content": {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "-u",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/run_gates.py",
+        "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+        "--worktree",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+        "--submodule-root",
+        "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/crates"
+      ],
+      "environment": {
+        "CARGO_BUILD_JOBS": "1",
+        "CARGO_HOME": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/cargo-home",
+        "CARGO_TARGET_DIR": "/var/tmp/project-z-cargo-target",
+        "RUSTC_WRAPPER": "/home/lightjunction/.cargo/rustc-serial"
+      },
+      "exclusive_target_lock": true,
+      "exit_code": 1,
+      "finished_at": 1795225973.0101123,
+      "gate_receipt_sha256": "42421f9c5d727786b68da62b8ef686807d300f0a8999d1e3369bf4f7afe4daef",
+      "gate_run_id": "47ff4beb94d03df6834a6460b493a5d7",
+      "gate_status": "failed",
+      "hashes_after": {
+        "cargo_config": "d664480527bc29872d5c9e9ce844c8a3f1f8cc55d224f9a1867bdee7f0da9bf3",
+        "cargo_lock": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608",
+        "dependency_auditor": "eed621aa874c9accf6f06284f1b7e4c2631f5a99780027450c1102b203b30c1e",
+        "driver": "66453f8d7c51f9212cd975d7a065eb34c98d2237f2d3a267bbfdfa783aa479ea",
+        "git_heads": "3cdd40cc24b4d51088bdf34f9ace60ab5c90d8e280ce8864a4eab920dbb53ed4",
+        "owner_agreement": "cd995a33b1b2e3865adfb54c51577944dce09b1a4103a59aa81e2a77bfdf2da8",
+        "reviewed_baseline": "56d6e26709ee72f53a2a59dad17d5d23182b51d7000af3a5759c974493738c6b",
+        "workspace_wrapper": "f416c3a75f62e0d2b99b0da099e6b61ef12a17000afb500b70b4a0eb583914f0",
+        "wrapper": "8b61096a9869fc6e790c963715efded612b17583cee90c830aadda2da8917a43"
+      },
+      "hashes_before": {
+        "cargo_config": "d664480527bc29872d5c9e9ce844c8a3f1f8cc55d224f9a1867bdee7f0da9bf3",
+        "cargo_lock": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608",
+        "dependency_auditor": "eed621aa874c9accf6f06284f1b7e4c2631f5a99780027450c1102b203b30c1e",
+        "driver": "66453f8d7c51f9212cd975d7a065eb34c98d2237f2d3a267bbfdfa783aa479ea",
+        "git_heads": "3cdd40cc24b4d51088bdf34f9ace60ab5c90d8e280ce8864a4eab920dbb53ed4",
+        "owner_agreement": "cd995a33b1b2e3865adfb54c51577944dce09b1a4103a59aa81e2a77bfdf2da8",
+        "reviewed_baseline": "56d6e26709ee72f53a2a59dad17d5d23182b51d7000af3a5759c974493738c6b",
+        "workspace_wrapper": "f416c3a75f62e0d2b99b0da099e6b61ef12a17000afb500b70b4a0eb583914f0",
+        "wrapper": "8b61096a9869fc6e790c963715efded612b17583cee90c830aadda2da8917a43"
+      },
+      "input_paths": {
+        "cargo_config": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/cargo-home/config.toml",
+        "cargo_lock": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final/Cargo.lock",
+        "dependency_auditor": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/focused-eed621aa/dependency_audit.py",
+        "driver": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/run_gates.py",
+        "git_heads": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/git-heads-v25.json",
+        "owner_agreement": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/shared-target-agreement.json",
+        "reviewed_baseline": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/recovered-gate10/run_gates.py",
+        "workspace_wrapper": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/context20-preparation/workspace-provenance-r4/workspace_rustc.py",
+        "wrapper": "/home/lightjunction/.cargo/rustc-serial"
+      },
+      "invocation_id": "5298e2367b1944639a48d7e522efc00a",
+      "launcher_error": "AssertionError: gate did not pass",
+      "launcher_sha256": "291ead43ceb6d495d4bbd2f76da32113acc9e4dc19d72eb03843ba05130e73ed",
+      "shared_target_owner_lock": {
+        "agreement_sha256": "cd995a33b1b2e3865adfb54c51577944dce09b1a4103a59aa81e2a77bfdf2da8",
+        "held_for_entire_batch": true,
+        "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock"
+      },
+      "source_revision": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+      "started_at": 1795225841.089984,
+      "status": "failed",
+      "umask": "0022",
+      "versions": {
+        "cargo": "cargo 1.100.0 (3acc79c0c 2026-11-05)",
+        "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)"
+      },
+      "worktree": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+      "worktree_head_after": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+      "worktree_status_after": ""
+    }
+  },
+  "release25-final10-launch/stderr.log": {
+    "bytes": 837,
+    "sha256": "3ce8f882bac95bce56e8e9fe762dedbbe888f4d243bd070d673b024f772b4290",
+    "content": "library-private: RuntimeError: library-private exited 101, log: /home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/logs/candidate2-library-private.log\n\nthread 'session::service::tests::create_rejects_foreground_chat_modes_before_saving_or_spawning' (468402) panicked at src/session/service.rs:946:13:\nassertion failed: result.unwrap_err().to_string().contains(\"require the foreground\")\n\n\nfailures:\n    client::local::socket::tests::dropping_the_host_cleans_its_socket_without_explicit_shutdown\n    client::local::socket::tests::http_socket_uses_the_same_origin_and_authenticated_mcp_router\n    session::service::tests::create_rejects_foreground_chat_modes_before_saving_or_spawning\n\ntest result: FAILED. 2049 passed; 3 failed; 23 ignored; 0 measured; 4 filtered out; finished in 35.62s\n\n"
+  },
+  "release25-final10-launch/stdout.log": {
+    "bytes": 1996,
+    "sha256": "26a53dc7dc8974c522eeda544a36081c97ca52c4a75bc6c21c71f25a8916c8da",
+    "content": "{\"started\": \"release-policy\", \"command\": [\"python3\", \"-m\", \"unittest\", \"discover\", \"-s\", \"scripts\", \"-p\", \"test_release.py\", \"-v\"]}\n{\"completed\": \"release-policy\", \"exit_code\": 0, \"seconds\": 5.19, \"test_results\": null}\n{\"started\": \"deployment-policy\", \"command\": [\"python3\", \"-W\", \"error\", \"-m\", \"unittest\", \"discover\", \"-s\", \"scripts\", \"-p\", \"test_server_deploy.py\", \"-v\"]}\n{\"completed\": \"deployment-policy\", \"exit_code\": 0, \"seconds\": 0.25, \"test_results\": null}\n{\"started\": \"fmt\", \"command\": [\"cargo\", \"fmt\", \"--all\", \"--\", \"--check\"]}\n{\"completed\": \"fmt\", \"exit_code\": 0, \"seconds\": 2.51, \"test_results\": null}\n{\"started\": \"library-compile\", \"command\": [\"cargo\", \"test\", \"--offline\", \"--locked\", \"--lib\", \"--no-run\", \"--message-format=json\", \"--jobs\", \"1\"]}\n{\"completed\": \"library-compile\", \"exit_code\": 0, \"seconds\": 79.11, \"test_results\": null}\n{\"started\": \"library-private\", \"command\": [\"/usr/bin/bwrap\", \"--unshare-user\", \"--uid\", \"1000\", \"--gid\", \"1000\", \"--dev-bind\", \"/\", \"/\", \"--bind\", \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/candidate-test-tmp\", \"/tmp\", \"--unsetenv\", \"SSMCP_OUTPUT_RELOAD\", \"--setenv\", \"TMPDIR\", \"/tmp\", \"--chdir\", \"/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final10/source\", \"/var/tmp/project-z-cargo-target/debug/build/ssmcp/1a01125c55603d60/out/ssmcp-1a01125c55603d60\", \"--exact\", \"--test-threads=4\", \"--skip\", \"client::local::tests::bundled_runner_is_private_and_removed_after_failed_startup\", \"--skip\", \"client::local::tests::bundled_runner_never_overwrites_or_removes_a_replaced_file\", \"--skip\", \"client::local::tests::private_socket_rejects_symlinks_and_exposed_permissions\", \"--skip\", \"client::local::tests::gateway_checks_all_origins_and_has_no_portal_routes\"]}\n{\"completed\": \"library-private\", \"exit_code\": 101, \"seconds\": 35.63, \"test_results\": [{\"result\": \"FAILED\", \"passed\": 2049, \"failed\": 3, \"ignored\": 23, \"measured\": 0, \"filtered\": 4}]}\n"
+  }
+}

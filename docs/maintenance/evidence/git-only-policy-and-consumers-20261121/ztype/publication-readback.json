@@ -1,0 +1,83 @@
+{
+  "schema": "project-z.ztype-rolling-git-publication.v1",
+  "observed_at_utc": "2026-11-21T07:15:28.509Z",
+  "commit": "bd26b5bea1a45aa3a0f2b67b85b507472b4fd890",
+  "tree": "80efad744bd91f41e7567f5bb352a352e45774ff",
+  "parents": [
+    "e3e8c1014e29653da587cc993076cb02e469b456"
+  ],
+  "base_leaves": 112,
+  "final_leaves": 112,
+  "unchanged": 110,
+  "changes": [
+    {
+      "path": "Cargo.lock",
+      "before": "be72d185a38ce68690c8214ae350a968631848a5",
+      "after": "35c6387c48cdc5027bf12d58fe8e32cabd87fe89",
+      "mode": "100644"
+    },
+    {
+      "path": "Cargo.toml",
+      "before": "a02f78d7e78ca12e5787cb7c0498a12248c2b87b",
+      "after": "8e74edfb294b6b978936e405350b115ee165ffe9",
+      "mode": "100644"
+    }
+  ],
+  "added": [],
+  "deleted": [],
+  "both_trees_untruncated": true,
+  "PR": {
+    "url": "https://github.com/LIghtJUNction/ztype/pull/4",
+    "head": "bd26b5bea1a45aa3a0f2b67b85b507472b4fd890",
+    "base": "e3e8c1014e29653da587cc993076cb02e469b456",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "mergeable": true,
+    "mergeable_state": "clean",
+    "body_exact": false,
+    "authored_body_exact_prefix_preserved": true,
+    "remote_appendix_observed": true,
+    "remote_appendix_label": "Sourcery-labelled summary observed; actor not inferred",
+    "updated_at": "2026-11-21T07:13:32Z"
+  },
+  "manifest_exact": true,
+  "lock_exact": true,
+  "gitlinks": [
+    {
+      "path": "vendor/zgpui",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "b4d5493e0cd985d00558c7be0b5726965ab5163a"
+    },
+    {
+      "path": "vendor/zinput",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "fe1cbaec744fa790a043383d45f612b8d19dcd32"
+    }
+  ],
+  "passed": true,
+  "branch": "chore/rolling-git-zuse-030-20261121",
+  "prepared_files": [
+    {
+      "path": "Cargo.toml",
+      "bytes": 1567,
+      "sha256": "97293ab1431b4c13b9876ae4d320b8d6e9342a4b4b57df083a08836a16a2c860"
+    },
+    {
+      "path": "Cargo.lock",
+      "bytes": 3526,
+      "sha256": "aa8364d887e1bbb249487d408db85f4adc277b3e65bdf3a41c51c260174c6cdc"
+    }
+  ],
+  "validation": {
+    "static_TOML_and_source_tree_only": true,
+    "Cargo_resolution": false,
+    "Cargo_generated_lock": false,
+    "product": false,
+    "UI": false,
+    "merge": false,
+    "remaining_locks_not_claimed_latest": true
+  }
+}

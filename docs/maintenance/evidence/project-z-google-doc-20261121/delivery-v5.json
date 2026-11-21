@@ -1,0 +1,148 @@
+{
+  "schema_version": 5,
+  "state": "published_and_fully_read_back",
+  "document_id": "1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+  "title": "Project Z 进度报告（2026-11-21）",
+  "url": "https://docs.google.com/document/d/1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+  "folder_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+  "revision_id": "AHj4eMTkEqI6YaGcpcAy1uOjB1nn3FYyz0mCZmppwh9tS6LAanoQZAEvZOI1pJCKUZvB8OQp-9MFzdtjUhWKv_k1wkDFeoq8dzvk0jG7cbQ",
+  "status_cutoff_utc": "2026-11-21T04:13:20.268Z",
+  "immutable_archive_commit": "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+  "maintenance_publication": {
+    "report_commit": "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+    "report_changed_text_files": 34,
+    "snapshot_utc": "2026-11-21T03:42:51Z",
+    "merge_commit": "efe912eb54a8240fab39126d1f2f6a464cc67f8b",
+    "merge_tree": "dd9345a7bf252832ce46878e0a50c7a27df5e8c9",
+    "merge_parents": [
+      "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+      "be64e5ab88a8d72fe81956f6ba64a363e2299fde"
+    ],
+    "pr7_draft": true,
+    "independent_GitHub_object_reads": true
+  },
+  "created_once": true,
+  "original_raw_drive_MD_JSON_unchanged": true,
+  "raw_drive_MD_JSON_version": "0d73",
+  "nonempty_paragraphs_including_native_headings": 27,
+  "native_table": {
+    "count": 1,
+    "rows": 7,
+    "columns": 3,
+    "cells": 21
+  },
+  "source_hyperlinks": 17,
+  "full_title_content_table_style_links_parent_readback": true,
+  "visual_browser_render_not_performed": true,
+  "product_tests_builds_locks_not_run": true,
+  "pr4_feature_merge": {
+    "commit": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+    "base_kind": "feature_branch",
+    "main_unchanged": "a1bb8fd2cbce0a9d85134999883c578358065242"
+  },
+  "runtime_followup": {
+    "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "actual_job_suffix": "ac8",
+    "actual_exit": 0,
+    "both_eof": true,
+    "case_counts": {
+      "private": 12,
+      "transport": 6,
+      "total": 18
+    },
+    "start_utc": "2026-11-21T03:27:15Z",
+    "end_utc": "2026-11-21T03:27:27Z",
+    "report": {
+      "bytes": 62335,
+      "sha256": "ff972401586a41dba8a803a17f229098b1bed9f52c9de8aeff61aff2a6440cf9"
+    },
+    "launcher": {
+      "bytes": 12641,
+      "sha256": "128d30c191226ec1d2fcb2532569f7ae32f6802c3e69499c8eb6f916c257b947"
+    },
+    "direct_source": "Original source owner readback followed by Root's completed independent raw receipt review; the fixed summary descriptor below records the latter.",
+    "ui_alias_p1_pass_not_claimed": true,
+    "root_independent_raw_read": {
+      "completed": true,
+      "summary_bytes": 7672,
+      "summary_sha256": "78545fb5b089e32626cc351156d9c30a112a74942ea7d1f902ea4f987c067fcf",
+      "scope": "12+6 passed; cleanup/errors; launcher completion/reaped; input identity before/after; five U owned binaries; evidence module/driver hashes"
+    }
+  },
+  "ui_first_actual_failure": {
+    "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "root_actual_read_ref": "ae2",
+    "exit_code": 1,
+    "both_eof": true,
+    "passed_suites": [
+      {
+        "name": "message_references",
+        "checks": 53
+      },
+      {
+        "name": "force_send",
+        "checks": 137
+      },
+      {
+        "name": "listener_transports",
+        "checks": 74
+      }
+    ],
+    "failed_suite": {
+      "name": "zuse_worker",
+      "completed_checks": 0,
+      "error": "private Xvfb exited without readiness",
+      "location": "private_xvfb.py:109"
+    },
+    "ui_overall_passed": false,
+    "alias_pending": true,
+    "p1_not_run": true,
+    "source_of_status": "Root actual exec.read observation; no additional gate by Docs writer"
+  },
+  "ui_second_actual_failure": {
+    "run_reference": "b37",
+    "first_nine_suites_passed": 9,
+    "alias_passed": 1,
+    "selected_passing_checks": {
+      "interactions": 172,
+      "zuse_worker": 31,
+      "private_desktop": 35
+    },
+    "failed_suite": "session_groups",
+    "actual_setup_checks_passed": 21,
+    "remaining_suites_not_run": 14,
+    "ui_overall_passed": false,
+    "p1_not_run": true,
+    "first_round_preserved": true,
+    "mesa_environment_fixture_fix_applied_by_original_owner": true,
+    "known_code_behavior": "The async recipient list refresh is enqueued, then the existing client snapshot is immediately matched before changing to Agents view.",
+    "cache_at_failure_not_recorded": true,
+    "cause_limit": "Source supports the timing explanation; no claim that the actual b37 cache was empty or stale.",
+    "owner_decision": "Fix the product cold exact-ID query and retain original session_groups fixture; no fixture prewarming patch adopted.",
+    "product_patch_and_new_acceptance_pending": true,
+    "source_of_status": "Root source/acceptance owner updates plus Core fixed U static source review; no new validation by Docs writer"
+  },
+  "raw_readback_descriptors": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-final-readback-v5.json",
+      "bytes": 115636,
+      "sha256": "fa2b852e75ad2f1da471789486069f8b4697f12ad754bf8778f8d876b6dde0e1"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/metadata-final-readback-v5.json",
+      "bytes": 736,
+      "sha256": "8ad2b1d95976a546afadbb93b5941ad81c9f13db851d258ba1f82df5e0247c54"
+    }
+  ],
+  "prior_revision_delivery": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/delivery-v4.json",
+    "bytes": 4433,
+    "sha256": "15337a455f412658160431a81feeb9002a8418eb7fe6deac91bf793689f52aa9"
+  },
+  "verification_descriptor": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/readback-verification-v5.json",
+    "bytes": 21494,
+    "sha256": "a53e2c02f2cf6b0037f2b0484c02c84e6048918cac6a26d760556f6d8eff4450"
+  }
+}

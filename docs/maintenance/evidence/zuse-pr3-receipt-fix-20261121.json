@@ -1,0 +1,660 @@
+{
+  "schema": "project-z.zuse-pr3-receipt-fix.v1",
+  "recorded_at": "2026-11-20T23:15:29.267080+00:00",
+  "repository": "LIghtJUNction/zuse",
+  "pull_request": 3,
+  "url": "https://github.com/LIghtJUNction/zuse/pull/3",
+  "status": "focused_validation_passed_independent_static_review_complete_draft_for_author_integration",
+  "identity": {
+    "head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "branch": "fix/scoped-receipt-budget-20261121",
+    "base_branch": "feat/scoped-mice-20261121",
+    "base": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+    "base_tree": "285dcbe660ee410338a3bbeaf2153bd43862b77b",
+    "test_commit": "44ffb599e96c412c216f395ed8b7286f585b5474",
+    "test_tree": "1d0daf3b3a8d2cc9436a938d6e8f1de7bcebefa7",
+    "source_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+    "changed_paths": [
+      "docs/scoped-mice.md",
+      "src/json.rs",
+      "src/mcp.rs",
+      "src/script/scheduler.rs",
+      "tests/script_entrypoints.rs"
+    ],
+    "cargo_manifests_and_lock_changed": false,
+    "frozen_pr2_main_and_downstream_refs_changed": false
+  },
+  "problem": {
+    "token_boundary": "With explicitly raised max_steps, 2500 pure touchpad.capabilities operations completed but exceeded the unchanged 65536-token parser limit; CLI returned nonzero and MCP could lose the response.",
+    "encoding_boundary": "2200 operations fit the parser token limit but the text plus structured MCP envelope exceeded the prior fixed escaping allowance, producing Buffer needed=1263385 and terminating the stdio session.",
+    "red_is_runtime_assertion_failure_not_compilation_failure": true
+  },
+  "decisions": [
+    "Keep the original default max_steps=256 and supported explicit execution budgets. Detailed event logging does not reduce those execution limits.",
+    "Use the locked parser actual token count and the existing 768KiB detail budget. Retain a strict prefix and expose events_omitted for all later omitted details.",
+    "Reserve 256 parser tokens for final receipt/envelope fields. Keep cleanup attempted/failed counters outside optional details and preserve execution, cancellation and cleanup errors, including dual failure.",
+    "Retry only the already computed MCP result serialization once, using Writer.needed and the existing 32MiB encoded-response ceiling. Never re-enter Runtime or replay actions."
+  ],
+  "red": {
+    "head": "44ffb599e96c412c216f395ed8b7286f585b5474",
+    "tree": "1d0daf3b3a8d2cc9436a938d6e8f1de7bcebefa7",
+    "source_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source-red",
+    "source_clean_after": true,
+    "status": "expected_regressions_reproduced",
+    "started_at": "2026-11-20T22:53:53.593808+00:00",
+    "finished_at": "2026-11-20T22:54:11.813368+00:00",
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-5dd",
+    "driver_exit": 0,
+    "driver_exit_meaning": "RED driver succeeds only when the expected regression commands actually fail.",
+    "commands": [
+      {
+        "name": "rustc-version",
+        "argv": [
+          "rustc",
+          "--version"
+        ],
+        "exit": 0,
+        "seconds": 2.147,
+        "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-red/rustc-version.log",
+        "log_sha256": "56625f11cb9e645f8e638a6bcdf0565a20a8724585b537b8548886789b9f77be",
+        "test_summaries": []
+      },
+      {
+        "name": "cargo-version",
+        "argv": [
+          "cargo",
+          "--version"
+        ],
+        "exit": 0,
+        "seconds": 0.53,
+        "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-red/cargo-version.log",
+        "log_sha256": "d62bac2223cd9bd1a54c0ccd82d4084b7d1d60044855e2f6a1b49f4f77e6f41c",
+        "test_summaries": []
+      },
+      {
+        "name": "metadata",
+        "argv": [
+          "cargo",
+          "metadata",
+          "--offline",
+          "--locked",
+          "--format-version",
+          "1"
+        ],
+        "exit": 0,
+        "seconds": 0.919,
+        "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-red/metadata.log",
+        "log_sha256": "ecfdcf298ce093fe00a646a9fb77f50a39d3f4aae9ba5376f60170bf34001369",
+        "test_summaries": []
+      },
+      {
+        "name": "entrypoints",
+        "argv": [
+          "cargo",
+          "test",
+          "--offline",
+          "--locked",
+          "--message-format=json-render-diagnostics",
+          "--test",
+          "script_entrypoints",
+          "script_receipt_",
+          "--",
+          "--test-threads=1"
+        ],
+        "exit": 101,
+        "seconds": 9.225,
+        "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-red/entrypoints.log",
+        "log_sha256": "089c2090b02618232577ae8c85166976ee33ae89c5c3755bc68dd3d516435276",
+        "test_summaries": [
+          "test result: FAILED. 0 passed; 2 failed; 0 ignored; 0 measured; 4 filtered out; finished in 0.13s"
+        ]
+      },
+      {
+        "name": "summary",
+        "argv": [
+          "cargo",
+          "test",
+          "--offline",
+          "--locked",
+          "--message-format=json-render-diagnostics",
+          "--lib",
+          "script_receipt_summary_preserves_effects_errors_and_cleanup",
+          "--",
+          "--test-threads=1"
+        ],
+        "exit": 101,
+        "seconds": 5.378,
+        "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-red/summary.log",
+        "log_sha256": "f1e213d265b954d285c4dc30d242272a80222ffbce2c790e4894ef148d763693",
+        "test_summaries": [
+          "test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 134 filtered out; finished in 0.05s"
+        ]
+      }
+    ],
+    "test_counts": {
+      "passed": 0,
+      "failed": 3,
+      "ignored": 0,
+      "entrypoint_failures": 2,
+      "scheduler_failure": 1,
+      "note": "The original four-case MockHost matrix stopped at its first failing case; this RED run does not claim every subcase executed."
+    },
+    "lock_receipt": {
+      "pid": 1910644,
+      "parent_pid": 1910631,
+      "parent_argv": [
+        "/usr/bin/flock",
+        "--wait",
+        "600",
+        "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate.py",
+        "red"
+      ],
+      "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "device": 34,
+      "inode": 63537699,
+      "proc_locks": [
+        "1051: FLOCK  ADVISORY  WRITE 1910631 00:20:63537699 0 EOF"
+      ]
+    },
+    "environment_overrides": {
+      "CARGO_BUILD_JOBS": "1",
+      "CARGO_TARGET_DIR": "/var/tmp/project-z-cargo-target",
+      "RUSTC_WORKSPACE_WRAPPER": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/workspace-rustc-red.py"
+    },
+    "wrapper_sha256": "316effabfcec8ac489e1bd6b70a1efa15096bf77dab992e510939844ddd40bc8",
+    "raw_result": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/original/gate-red/result.json",
+      "bytes": 5875,
+      "sha256": "91bc831b300b6de0a2625e721bf12f98ab1b201c72f3ddc868c6025ce54bc46f",
+      "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-red/result.json"
+    },
+    "actual_start_snapshot": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/original/execution-red-start.json",
+      "bytes": 2120,
+      "sha256": "06156034d397ad31542a5ab07aaf212f4b7f0751a035c3e4682948316ed99d55",
+      "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/execution-red-start.json"
+    }
+  },
+  "green": {
+    "head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "source_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+    "source_clean_after": true,
+    "status": "passed",
+    "started_at": "2026-11-20T23:04:54.480586+00:00",
+    "finished_at": "2026-11-20T23:05:08.887345+00:00",
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-611",
+    "driver_exit": 0,
+    "driver_exit_meaning": "All planned validation commands completed successfully.",
+    "commands": [
+      {
+        "name": "rustc-version",
+        "argv": [
+          "rustc",
+          "--version"
+        ],
+        "exit": 0,
+        "seconds": 0.186,
+        "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/rustc-version.log",
+        "log_sha256": "56625f11cb9e645f8e638a6bcdf0565a20a8724585b537b8548886789b9f77be",
+        "test_summaries": []
+      },
+      {
+        "name": "cargo-version",
+        "argv": [
+          "cargo",
+          "--version"
+        ],
+        "exit": 0,
+        "seconds": 0.043,
+        "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/cargo-version.log",
+        "log_sha256": "d62bac2223cd9bd1a54c0ccd82d4084b7d1d60044855e2f6a1b49f4f77e6f41c",
+        "test_summaries": []
+      },
+      {
+        "name": "metadata",
+        "argv": [
+          "cargo",
+          "metadata",
+          "--offline",
+          "--locked",
+          "--format-version",
+          "1"
+        ],
+        "exit": 0,
+        "seconds": 0.166,
+        "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/metadata.log",
+        "log_sha256": "9e1f59a91fe512dbd39290bbaaec77102de2518d5bfb3674df53f314048bf619",
+        "test_summaries": []
+      },
+      {
+        "name": "format",
+        "argv": [
+          "cargo",
+          "fmt",
+          "--all",
+          "--",
+          "--check"
+        ],
+        "exit": 0,
+        "seconds": 0.351,
+        "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/format.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "test_summaries": []
+      },
+      {
+        "name": "diff-check",
+        "argv": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit": 0,
+        "seconds": 0.002,
+        "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/diff-check.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "test_summaries": []
+      },
+      {
+        "name": "entrypoints",
+        "argv": [
+          "cargo",
+          "test",
+          "--offline",
+          "--locked",
+          "--message-format=json-render-diagnostics",
+          "--test",
+          "script_entrypoints",
+          "--",
+          "--test-threads=1"
+        ],
+        "exit": 0,
+        "seconds": 5.634,
+        "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/entrypoints.log",
+        "log_sha256": "5b20191ae82510b0ce6ec3e386febe263bd03a81a5d447f587498770c63e08d6",
+        "test_summaries": [
+          "test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.60s"
+        ]
+      },
+      {
+        "name": "scheduler",
+        "argv": [
+          "cargo",
+          "test",
+          "--offline",
+          "--locked",
+          "--message-format=json-render-diagnostics",
+          "--lib",
+          "script::scheduler::tests::",
+          "--",
+          "--test-threads=1"
+        ],
+        "exit": 0,
+        "seconds": 5.866,
+        "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/scheduler.log",
+        "log_sha256": "4e3df91e6af6f8a97165005e6ce6b02036bbe1a645e5eceb83204a5deaf87963",
+        "test_summaries": [
+          "test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 125 filtered out; finished in 0.75s"
+        ]
+      },
+      {
+        "name": "clippy",
+        "argv": [
+          "cargo",
+          "clippy",
+          "--offline",
+          "--locked",
+          "--message-format=json-render-diagnostics",
+          "-vv",
+          "--lib",
+          "--bin",
+          "zuse",
+          "--test",
+          "script_entrypoints",
+          "--",
+          "-D",
+          "warnings",
+          "-Cmetadata=zuse_receipt_3566474"
+        ],
+        "exit": 0,
+        "seconds": 2.148,
+        "log": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/clippy.log",
+        "log_sha256": "2e466bda7fad1d49cc08b593afed148f71699a884610840690a2d8e99537d7e1",
+        "test_summaries": []
+      }
+    ],
+    "test_counts": {
+      "passed": 16,
+      "failed": 0,
+      "ignored": 0,
+      "entrypoint_tests": 6,
+      "scheduler_tests": 10,
+      "scheduler_filtered_out": 125,
+      "note": "Five MockHost outcomes are subcases of one passing test, not five additional test functions. RED failures and independent static review are not added to this count."
+    },
+    "lock_receipt": {
+      "pid": 2075436,
+      "parent_pid": 2075435,
+      "parent_argv": [
+        "/usr/bin/flock",
+        "--wait",
+        "600",
+        "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate.py",
+        "green"
+      ],
+      "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "device": 34,
+      "inode": 63537699,
+      "proc_locks": [
+        "125: FLOCK  ADVISORY  WRITE 2075435 00:20:63537699 0 EOF"
+      ]
+    },
+    "environment_overrides": {
+      "CARGO_BUILD_JOBS": "1",
+      "CARGO_TARGET_DIR": "/var/tmp/project-z-cargo-target",
+      "RUSTC_WORKSPACE_WRAPPER": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/workspace-rustc-green.py"
+    },
+    "wrapper_sha256": "93c31d68e0500941b0c5a810804ccb97b91dc90fdbcc9401493a43f2b665b937",
+    "raw_result": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/original/gate-green/result.json",
+      "bytes": 9510,
+      "sha256": "a3c05be4ab48fe50b18fe459ff23344e5b425f3f33d594c82acec555e6b2c0db",
+      "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/result.json"
+    },
+    "actual_start_snapshot": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/original/execution-green-start.json",
+      "bytes": 2148,
+      "sha256": "024039b7d30b96719e1e02705ff2695a83c9f543cbf0e18354f447f6ac40ef8c",
+      "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/execution-green-start.json"
+    }
+  },
+  "coverage": {
+    "cli": "2500 pure capability queries with an explicitly raised step budget return completed, truthful omitted count and cleanup summary.",
+    "mcp_stdio": "One real child process receives 2200, 2500 and then 1 capability query; all three responses preserve IDs, successful status, text/structured equality and later-request availability.",
+    "mock_host_outcomes": [
+      "success",
+      "input failure",
+      "cleanup failure",
+      "simultaneous input and cleanup failure",
+      "cooperative cancellation"
+    ],
+    "byte_budget": "Oversized details preserve the recorded prefix, omit later records explicitly, execute the subsequent click and close the owned resource.",
+    "native_input_performed": false
+  },
+  "toolchain": {
+    "rustc-version.log": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "cargo-version.log": "cargo 1.100.0 (3acc79c0c 2026-11-05)"
+  },
+  "dependency_identity": {
+    "cargo_lock_sha256": "cffb29f3aa454c065523c6fc62ebf33721694df88af94e0aff2feea5d17855e0",
+    "unchanged_from_feature_base": true,
+    "actual_metadata_git_packages": [
+      {
+        "name": "z64",
+        "version": "0.1.2",
+        "source": "git+https://github.com/LIghtJUNction/z64.git#7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd"
+      },
+      {
+        "name": "zcall",
+        "version": "0.4.0",
+        "source": "git+https://github.com/LIghtJUNction/zcall.git#564ede15db66530a6dbb78e8b1f4a85998b6f0d8"
+      },
+      {
+        "name": "zclap",
+        "version": "0.1.4",
+        "source": "git+https://github.com/LIghtJUNction/zclap.git#4d87f3ae3743e81509d5ac5500909955667c860f"
+      },
+      {
+        "name": "zconv",
+        "version": "0.4.0",
+        "source": "git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1"
+      },
+      {
+        "name": "zmcpio",
+        "version": "0.4.0",
+        "source": "git+https://github.com/LIghtJUNction/zmcpio.git#84fc4978a248c2a3e2dd110f4f26fa52dd8b6890"
+      },
+      {
+        "name": "zsys",
+        "version": "0.1.1",
+        "source": "git+https://github.com/LIghtJUNction/zsys.git#808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+      }
+    ],
+    "scope": "Fixed PR2 lock graph used for this narrow fix. This is not a new latest-default-head audit or downstream cohort update."
+  },
+  "compiler_identity": {
+    "all_root_records_fresh": false,
+    "meaning": "All observed root compiler-artifact fresh values are false; actual fixed root sources were compiled/linted.",
+    "artifacts": {
+      "entrypoints": [
+        {
+          "target": "zuse",
+          "kind": [
+            "lib"
+          ],
+          "test": false,
+          "source": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/src/lib.rs",
+          "fresh": false,
+          "file_identities_at_validation": [
+            {
+              "path": "/var/tmp/project-z-cargo-target/debug/build/zuse-computer/754b3dd61b66eff7/out/libzuse-754b3dd61b66eff7.rlib",
+              "bytes": 22561146,
+              "sha256": "1b883844b8c26235713c1c7ec08cfb96f7b6efc7c25867bb8cdd4797d56a2464"
+            }
+          ]
+        },
+        {
+          "target": "script_entrypoints",
+          "kind": [
+            "test"
+          ],
+          "test": true,
+          "source": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/tests/script_entrypoints.rs",
+          "fresh": false,
+          "file_identities_at_validation": [
+            {
+              "path": "/var/tmp/project-z-cargo-target/debug/build/zuse-computer/33c50dac5cad38c9/out/script_entrypoints-33c50dac5cad38c9",
+              "bytes": 19404552,
+              "sha256": "7bff597fbe00586f7fe6d98672ec92133cb8b37b0260dd8bddd3a2939a618251"
+            }
+          ]
+        },
+        {
+          "target": "zuse",
+          "kind": [
+            "bin"
+          ],
+          "test": false,
+          "source": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/src/main.rs",
+          "fresh": false,
+          "file_identities_at_validation": [
+            {
+              "path": "/var/tmp/project-z-cargo-target/debug/zuse",
+              "bytes": 17454768,
+              "sha256": "04deac62ad725723f36d99baafa95591778d3b1742fccbbfc9ced2dd269003b0"
+            }
+          ]
+        }
+      ],
+      "scheduler": [
+        {
+          "target": "zuse",
+          "kind": [
+            "lib"
+          ],
+          "test": true,
+          "source": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/src/lib.rs",
+          "fresh": false,
+          "file_identities_at_validation": [
+            {
+              "path": "/var/tmp/project-z-cargo-target/debug/build/zuse-computer/5b03048937ce47b1/out/zuse-5b03048937ce47b1",
+              "bytes": 21480136,
+              "sha256": "f0ca156f4908ff7e96aca1777dbb83b7728545c778f3f603fcfa96039935309b"
+            }
+          ]
+        }
+      ],
+      "clippy": [
+        {
+          "target": "zuse",
+          "kind": [
+            "lib"
+          ],
+          "test": false,
+          "source": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/src/lib.rs",
+          "fresh": false,
+          "file_identities_at_validation": []
+        },
+        {
+          "target": "zuse",
+          "kind": [
+            "bin"
+          ],
+          "test": false,
+          "source": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/src/main.rs",
+          "fresh": false,
+          "file_identities_at_validation": []
+        },
+        {
+          "target": "script_entrypoints",
+          "kind": [
+            "test"
+          ],
+          "test": true,
+          "source": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/tests/script_entrypoints.rs",
+          "fresh": false,
+          "file_identities_at_validation": []
+        }
+      ]
+    },
+    "clippy_actual_invocations": [
+      {
+        "line": 19,
+        "source": "src/lib.rs",
+        "line_sha256": "8c59d0702c05cb0a8a62757404a3aa7409a1f681cc60bb2725c5a43cb5e5fdc3"
+      },
+      {
+        "line": 21,
+        "source": "src/main.rs",
+        "line_sha256": "c5043e9ce20e9a02cd5a749cc73e8f819b32d931be1e101e27691015e019d259"
+      },
+      {
+        "line": 23,
+        "source": "tests/script_entrypoints.rs",
+        "line_sha256": "7c98693dcc87317f9bc4f000f576d3a9adea6bef577a25b81e2d00093131928b"
+      }
+    ],
+    "clippy_requested_metadata_option": "-Cmetadata=zuse_receipt_3566474",
+    "literal_flag_visibility": "The unique option is recorded in the executed cargo command; -vv does not print CLIPPY_ARGS. Real source invocations and fresh=false prove the lint ran. Original naive visibility probe is preserved and clarified in compiler-identity-interpretation-v2.json.",
+    "artifact_scope": "Artifact bytes and hashes were captured under the validation lock. Paths are shared Cargo outputs, not immutable delivered binaries; later contents must not be attributed to this source without rechecking."
+  },
+  "resources_and_cleanup": {
+    "shared_target": "/var/tmp/project-z-cargo-target",
+    "outer_lock": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "memory_max_bytes": 2147483648,
+    "swap_max_bytes": 2147483648,
+    "cpu_quota_percent": 100,
+    "cargo_jobs": 1,
+    "lock_evidence": "Actual parent flock argv and matching /proc/locks inode/PID recorded inside each gate, not a constant assertion.",
+    "cleanup": {
+      "observed_at": "2026-11-20T23:12:53.849707+00:00",
+      "read_only": true,
+      "units": [
+        {
+          "unit": "zuse-receipt-red-20261120-2255.scope",
+          "exit": 0,
+          "stdout": "LoadState=not-found\nActiveState=inactive\nSubState=dead\nResult=success\nControlGroup=\n",
+          "stderr": ""
+        },
+        {
+          "unit": "zuse-receipt-green-3566474.scope",
+          "exit": 0,
+          "stdout": "LoadState=not-found\nActiveState=inactive\nSubState=dead\nResult=success\nControlGroup=\n",
+          "stderr": ""
+        }
+      ]
+    },
+    "cleanup_raw": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/original/scope-cleanup-readback.json",
+      "bytes": 514,
+      "sha256": "b8c4c3446533c4ec9300ef05ed22b4875f9b949a19518162ab67f13732e71f48",
+      "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/scope-cleanup-readback.json"
+    },
+    "scope": "Both owned batches have ended; this does not assert that the global lock remains free for unrelated later jobs.",
+    "green_final_exec_snapshot": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/original/green-exec-final-snapshot.json",
+      "bytes": 1295,
+      "sha256": "283600416149044f63666941d5389a58389fccc47f94434435c24631d2ce2bdd",
+      "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/green-exec-final-snapshot.json"
+    }
+  },
+  "independent_static_review": {
+    "reviewer": "/root/pr_org_repos",
+    "blocking_findings": 0,
+    "json": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-independent-static-review.json",
+      "bytes": 11273,
+      "sha256": "0d3508ef01a3d284510290422828f86740e81df9d346df73220704d07828abae"
+    },
+    "markdown": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-independent-static-review.md",
+      "bytes": 4201,
+      "sha256": "864cf5a8da88c706ef836d93c546580400d410767b9fd501915b43d98536e4d9"
+    },
+    "static_token_accounting": {
+      "method": "Counting fixed current JSON container/key/value layouts from source, not executing product code or tests.",
+      "parser_tokens": 65536,
+      "event_token_reserve": 256,
+      "max_event_tokens": 65280,
+      "current_receipt_tokens_outside_events": 31,
+      "current_modern_text_only_mcp_tokens_outside_receipt": 27,
+      "max_total_tokens": 65338,
+      "remaining_tokens": 198,
+      "pure_capability_event_tokens": 27,
+      "capability_2200_event_tokens": 59400,
+      "capability_2500_retained_by_token_budget": 2417,
+      "capability_2500_omitted_by_token_budget": 83,
+      "scope": "Current zuse.script text-only receipt and locked zmcpio modern envelope. New receipt fields or envelope changes require this accounting to be revisited."
+    },
+    "boundary": "Independent source/control-flow review only; reviewer ran no build, test or native input."
+  },
+  "evidence": {
+    "native_root": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121",
+    "cloud_original_root": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/original",
+    "driver": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/original/gate.py",
+      "bytes": 5716,
+      "sha256": "713d02c27577771c5ecafc7e8ed559fa12dea150db86d2c050683415093f9ab3",
+      "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate.py"
+    },
+    "interpretation": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/compiler-identity-interpretation-v2.json",
+      "bytes": 5613,
+      "sha256": "7aa7bb052f34e258f8cc09ee28d25b9bdc3a0077d455bb1c6de19b437a6b10f3"
+    },
+    "original_native_index": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/original/native-file-index.json",
+      "bytes": 6722,
+      "sha256": "1c1bfbc2b2a5921badc5c3f6f6b99b0799464c9d24b1c08642db74661cd27107",
+      "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/native-file-index.json"
+    },
+    "original_transfer_archive": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr3-evidence/zuse-pr3-original-receipts.zip",
+      "bytes": 26335,
+      "sha256": "bc3e3446ce090d0ee4c90b482b6ccfec16abdf6661d0e8c9b374108742d40907",
+      "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/zuse-pr3-original-receipts.zip"
+    }
+  },
+  "limits_and_pending": [
+    "PR3 remains draft for the original PR2 author/source owner to integrate. No merge, release tag, publish or downstream lock update.",
+    "PR2 author-reported 286 Rust, 20 no_std, cross-platform and private native acceptance are separate original-source evidence, not repeated or certified by these 16 tests.",
+    "No system input, Xvfb/Hyprland, GUI, SSMCP build, complete P1 or frozen-cohort validation was executed here.",
+    "The 32MiB ceiling bounds encoded MCP response bytes, not process RSS. Token arithmetic is for the current receipt and locked modern text-only envelope.",
+    "MCP notification cancellation, SIGKILL/crash recovery and application consumption of submitted native events are not newly guaranteed by this patch."
+  ]
+}

@@ -1,0 +1,879 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-11-20 23:40:17 UTC",
+  "repository": "LIghtJUNction/ssmcp",
+  "scope": {
+    "review": "bounded GitHub-plugin immutable source comparison",
+    "executed_builds": 0,
+    "executed_tests": 0,
+    "executed_gui": 0,
+    "repo_worktree_ref_tag_writes": 0,
+    "changes_made": "Only independent scratch report/evidence files",
+    "runtime_acceptance_claim": false,
+    "source_owner": "Existing native source owner; no parallel implementation"
+  },
+  "sources": {
+    "audit_base": {
+      "commit": "cf0ab581700918a37fcccbebb93de2e0cab02841",
+      "tree": "bd2bcce33baffa69b82d69d9cff3abdb85baa0fb"
+    },
+    "candidate": {
+      "pr": 159,
+      "commit": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "tree": "6bf7beb143cfdce3878df856c27785164695430f"
+    },
+    "main_snapshot": {
+      "commit": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "tree": "7eeb434be1d24e14b453488f5fbca90d933e12b9"
+    },
+    "recent_merge_base": {
+      "commit": "a19ac040b1c7e9daa6a2144db79cfaa1bee09954"
+    }
+  },
+  "ancestry": {
+    "cf0_to_candidate": {
+      "ahead_by": 29,
+      "behind_by": 0
+    },
+    "cf0_to_main": {
+      "ahead_by": 32,
+      "behind_by": 0
+    },
+    "candidate_vs_main": {
+      "status": "diverged",
+      "main_unique_commits": 25,
+      "candidate_unique_commits": 22,
+      "actual_merge_base": "a19ac040b1c7e9daa6a2144db79cfaa1bee09954"
+    },
+    "note": "cf0 is the requested older audit ancestor, not the nearest merge base. GitHub compare 781...f208 patches are relative to a19, not a direct full-file candidate-to-main diff."
+  },
+  "pr_snapshot": {
+    "url": "https://github.com/LIghtJUNction/ssmcp/pull/159",
+    "head": "781b87df1d364137b6885f17f631a3e9e991bd58",
+    "base_ref": "main",
+    "api_base_sha": "cf0ab581700918a37fcccbebb93de2e0cab02841",
+    "api_base_sha_is_current_main": false,
+    "draft": true,
+    "state": "open",
+    "mergeable": false,
+    "updated_at": "2026-11-20T23:18:58Z"
+  },
+  "tree_method": {
+    "all_recursive_tree_responses_complete": true,
+    "classification_uses": "path + mode:type:blob-or-gitlink SHA; absent path is distinct",
+    "cf0_counts": {
+      "both_same": 10,
+      "candidate_only": 19,
+      "main_only": 63,
+      "both_different": 27
+    },
+    "cf0_changed_union": 119,
+    "actual_mergebase_counts": {
+      "both_same": 1,
+      "candidate_only": 21,
+      "main_only": 64,
+      "both_different": 24
+    },
+    "actual_mergebase_changed_union": 110,
+    "patch_tree_crosscheck": {
+      "candidate_file_count": 56,
+      "main_file_count": 100,
+      "mismatches": []
+    },
+    "counts_are_not_text_conflict_counts": true
+  },
+  "classes": {
+    "both_same": [
+      {
+        "path": "docs/local-mode.md",
+        "blob": "fb32d6a885f654dbba279893bcf913611680f7a1",
+        "mode": "100644"
+      },
+      {
+        "path": "scripts/benchmark_client_memory.py",
+        "blob": "5eb790f5b14444166f5a496e0ca1593745497d5e",
+        "mode": "100755"
+      },
+      {
+        "path": "scripts/e2e_local_socket.py",
+        "blob": "2fd4ebeb84f3c17cc801708290bb0fb8d083853f",
+        "mode": "100644"
+      },
+      {
+        "path": "src/client/account/send.rs",
+        "blob": "623ed77bf57684b75cbdbbea6fc4f42b90a9269e",
+        "mode": "100644"
+      },
+      {
+        "path": "src/client/composer.rs",
+        "blob": "1aaf0b0ef3e497489c667a485d8a9a518688f81d",
+        "mode": "100644"
+      },
+      {
+        "path": "src/client/computer_control.rs",
+        "blob": "1ef9a23c80273de046f22f6fb37eff977bdeac77",
+        "mode": "100644"
+      },
+      {
+        "path": "src/client/interface/computer.rs",
+        "blob": "536ca7413ac474860132ca8d46b346c62818e39e",
+        "mode": "100644"
+      },
+      {
+        "path": "src/client/local/socket.rs",
+        "blob": "da6851e0401fd9371580f0d87e4e252b34972f76",
+        "mode": "100644"
+      },
+      {
+        "path": "src/client/terminal/computer.rs",
+        "blob": "ef22a7b061c3e4d615bd42808f2926b7d01d3aa6",
+        "mode": "100644"
+      },
+      {
+        "path": "tests/connection_context.rs",
+        "blob": "3307573cc4b1a33f847abd67be362e983ea44f6c",
+        "mode": "100644"
+      }
+    ],
+    "candidate_only": [
+      "scripts/e2e_service_portable.py",
+      "src/client/account.rs",
+      "src/client/chat_io.rs",
+      "src/client/chat_io/options.rs",
+      "src/client/chat_io/process.rs",
+      "src/client/chat_io/transport.rs",
+      "src/client/chat_io/transport/socket.rs",
+      "src/client/chat_io/transport/stdio.rs",
+      "src/client/interface/history.rs",
+      "src/client/interface/history/ownership.rs",
+      "src/client/interface/questions/delivery.rs",
+      "src/client/messaging.rs",
+      "src/client/relay.rs",
+      "src/client/steering.rs",
+      "src/device.rs",
+      "src/oauth_github_tests.rs",
+      "src/runtime.rs",
+      "src/session/attach.rs",
+      "src/session/service.rs"
+    ],
+    "main_only": [
+      ".github/workflows/release.yml",
+      "Cargo.lock",
+      "README.md",
+      "docs/agent-collaboration.md",
+      "docs/agent-entry.md",
+      "docs/await.md",
+      "docs/backends.md",
+      "docs/finish-and-questions.md",
+      "docs/optional-harnesses.md",
+      "docs/release-notes-0.10.21.md",
+      "docs/release-notes-0.10.22.md",
+      "docs/releases.md",
+      "docs/thread-listeners.md",
+      "docs/time-primitives.md",
+      "docs/user-wait.md",
+      "docs/zcalld-listener.md",
+      "scripts/e2e.py",
+      "scripts/e2e_account_relay.py",
+      "scripts/e2e_agent_entry.py",
+      "scripts/e2e_agents.py",
+      "scripts/e2e_connection_context_reload.py",
+      "scripts/e2e_daemon.py",
+      "scripts/e2e_human_finish.py",
+      "scripts/e2e_input_history.py",
+      "scripts/e2e_interactions.py",
+      "scripts/e2e_local.py",
+      "scripts/e2e_presentations.py",
+      "scripts/e2e_time_primitives.py",
+      "scripts/e2e_unified.py",
+      "scripts/e2e_user_wait.py",
+      "scripts/test_release.py",
+      "src/backend.rs",
+      "src/backend/events.rs",
+      "src/backend/peer.rs",
+      "src/backend/shell.rs",
+      "src/client/activity.rs",
+      "src/client/agent.rs",
+      "src/client/interface/listener.rs",
+      "src/client/interface/messages.rs",
+      "src/client/interface/questions.rs",
+      "src/client/interface/questions/requests.rs",
+      "src/client/interface/questions/workflow.rs",
+      "src/client/interface/reply.rs",
+      "src/client/interface/user_wait.rs",
+      "src/client/panel.rs",
+      "src/client/terminal/conversation/user_wait.rs",
+      "src/code_mode/reminders.rs",
+      "src/code_mode/user_wait.rs",
+      "src/http/await_tool/tests.rs",
+      "src/http/question_delivery_tests.rs",
+      "src/http/question_delivery_tests/finish_receipts.rs",
+      "src/http/question_delivery_tests/retired_hooks.rs",
+      "src/registry.rs",
+      "src/runtime/native_plugins/process/lazy.rs",
+      "src/runtime/time.rs",
+      "src/runtime/time/civil.rs",
+      "src/runtime/time/execution.rs",
+      "src/runtime/time/relay.rs",
+      "src/steering.rs",
+      "src/steering/waiting.rs",
+      "src/username.rs",
+      "tests/resources.rs",
+      "tests/two_tools.rs"
+    ],
+    "both_different": [
+      {
+        "path": "Cargo.toml",
+        "base": "90d2fef3bbc2cad2bbc7233fa5d731369135e6de",
+        "candidate": "077b28e987508a5fedc02d9f5d6fc83e2b758e5e",
+        "main": "c98818fb86a74041379050b741cbb233326f794a"
+      },
+      {
+        "path": "docs/client-input.md",
+        "base": "f307f34c0c77a281df2f86b0522dac67e1888dd2",
+        "candidate": "a6750d3110f25bc291af56f04cb76913aaa5299f",
+        "main": "3866bbb5da4c6aa23c3a59e860b1f431b3ea90f3"
+      },
+      {
+        "path": "docs/code-mode.md",
+        "base": "fa0b46e8737b1065ae1f5f892770facc5269c182",
+        "candidate": "0a07fdd452c0e0863b27142c83b2d5f17b9d20c1",
+        "main": "01ca2f6c89cf054edad872fee998b748b75bd4a9"
+      },
+      {
+        "path": "scripts/e2e_computer_controls.py",
+        "base": "a0bf18098f3b9db2b1402cd51fbc10dc4ed4fd4f",
+        "candidate": "7b4fde794acc4149cfb6b8e92834f92345dfa8ad",
+        "main": "57fa5495a145adc019733259d731ade83fb0cd58"
+      },
+      {
+        "path": "src/broker.rs",
+        "base": "dd13f4fd9dd6684d72bfa9cd004853942c21f6eb",
+        "candidate": "f120ebab700c3a1356f3eb37d7fdf7ca2c5d4ac4",
+        "main": "0e651ca55d2aae8067739bfc8e0d5e55b730b6ca"
+      },
+      {
+        "path": "src/broker/session_io.rs",
+        "base": "6db67a3e43d9c8709b41df4ec6d4b02a13ff0749",
+        "candidate": "908acae13ab2246a8471012a21dde0b3b6790ddd",
+        "main": "d442aefb7eeaf721c1c8f82864af8d5d38c0ceed"
+      },
+      {
+        "path": "src/client.rs",
+        "base": "8869675721cc5e50e5711889a579cbe2e08e303f",
+        "candidate": "6e29548a013b5292f98f2e95152dffa1554e750e",
+        "main": "bc83224f61a0489546a3a19dfcd433a202ea1ee3"
+      },
+      {
+        "path": "src/client/interface.rs",
+        "base": "0c85366e24c2b5a8238d7a70f99434acd7daf3b9",
+        "candidate": "7e6a521704283486ce3fd366edbbc117b699fa5f",
+        "main": "3f4224f5bf1ace7e7dfb14abc225b0c5b22fa383"
+      },
+      {
+        "path": "src/client/local.rs",
+        "base": "4a6d11389b41d0869b79cd25d8b1338874391f38",
+        "candidate": "1ae3ba2d1002157d4ecf43efbe71f8548ae33d04",
+        "main": "fa610a268cfcf30b824d6fcc7ca543fa23c48ce9"
+      },
+      {
+        "path": "src/client/local/socket/tests.rs",
+        "base": null,
+        "candidate": "4cede1e46fc07ea039ed3af14c045501cd5be961",
+        "main": "c111f324859c448619f59e774ce44a23a25fa316"
+      },
+      {
+        "path": "src/client/reload.rs",
+        "base": "db0e73f512f3393ff79df9c0ff6fbbb82817d5b1",
+        "candidate": "356ee095a52b99189bdf45b631a62bb0d92f0c88",
+        "main": "bc6a6ecd0f27d46c0db0ae916f7a0b4d26752322"
+      },
+      {
+        "path": "src/client/render.rs",
+        "base": "08d1f8c609703e122733ef3ebd185bfa1eef6942",
+        "candidate": "97d8a619e4f71912913db930c0f398808307b6a5",
+        "main": "5f800394c07f1125579f2b2dfffb33e2a5410050"
+      },
+      {
+        "path": "src/client/terminal.rs",
+        "base": "cbb2fb2d46e1a09427c4f588bc65bbb4d887b6cd",
+        "candidate": "d5a997f7299fd9009f7ef899c283529d4fee168a",
+        "main": "779946462185665af8f5aa08dda89b326b79371a"
+      },
+      {
+        "path": "src/client/terminal/conversation.rs",
+        "base": "acc8fe2c782257361dfb8be401c79bba02ee9f11",
+        "candidate": "b502924e42a799a8a6229d2ceae0c630b5e5d1a9",
+        "main": "eb3794d930a009dfad69ce6445b508a268d458e8"
+      },
+      {
+        "path": "src/client/terminal/conversation/history.rs",
+        "base": "d37edc06500afe97f6672469a589f04b87b3c559",
+        "candidate": "d84abd4297edacd391d56d485b35f6dab66f12f2",
+        "main": "2fa9c99110440b09f32de63b4c96e3634fc9c9a6"
+      },
+      {
+        "path": "src/client/terminal/conversation/timing.rs",
+        "base": "7b416000d1294e3a051f7cbeb79a261030176621",
+        "candidate": "f2ad7f6e9d19db0c81e59f596b59127bef5b4ae4",
+        "main": "b38845f0134b4d4ea10fa3d63a1af8f8647a3d4f"
+      },
+      {
+        "path": "src/client/terminal/conversation/timing/tests.rs",
+        "base": "f262e1d7644c004c92f88da3e9c0034fe04a7c7a",
+        "candidate": "8def18b181cfb145da1a67cebee4ac556203d99b",
+        "main": "ff4e7fe86085ff4ce3e4c1e86e95f20ddcdd2f7e"
+      },
+      {
+        "path": "src/code_mode.rs",
+        "base": "fc54b3dd2ef7e2e3537ecfaa858f1ed39f098aff",
+        "candidate": "33c7039db738fe48bd0ce9fd5ca55622036e0b97",
+        "main": "5c209e1d4a904adaee17cb59776328441494f8db"
+      },
+      {
+        "path": "src/http.rs",
+        "base": "0d6059385bff9cac79e912f351f07f9848152a19",
+        "candidate": "f3fb54ab380f2e8290c6dbf67e5249b7be4b9cbe",
+        "main": "3aeea065a292384ba9aac690b031f0a725b7a0ec"
+      },
+      {
+        "path": "src/http/await_tool.rs",
+        "base": "ffc819968f5d8c16e2532c1f845b023a1512e740",
+        "candidate": "9040236a7a3d17fd07267179b7d8fbcd02530f0a",
+        "main": "19aaeff78861cd799a00112f04a5089e665ce054"
+      },
+      {
+        "path": "src/http/finish_request.rs",
+        "base": "807115d8203c0de40c155b2177436613ef193b24",
+        "candidate": "5000496b82424b505488d1200dccb949449fddd8",
+        "main": null
+      },
+      {
+        "path": "src/http/user_wait.rs",
+        "base": "d8187ca67f605cd05a8171eebc9483530de953d4",
+        "candidate": "8214ceaa41ff6b0439fc72b4efe5aeb3c91aa78c",
+        "main": "4af935b4985cd3dc43b4bb008d414c14957e53d4"
+      },
+      {
+        "path": "src/resources.rs",
+        "base": "36af17d8411c46a6fe8679c7ba78713d8ec99e5f",
+        "candidate": "db0acb163e3a2aad8f67fbda2183de3c2f4f50be",
+        "main": "9395236a970f8222d8a254dee1547dcf01156b05"
+      },
+      {
+        "path": "src/runtime/capabilities.rs",
+        "base": "30be0f4442ceb11a02ba30d0f83f368d125d6159",
+        "candidate": "855c6035b3dba985b7d1f8b1289b8ba2ca0e728b",
+        "main": "aa1f28fc5317fbd390e601b7a7ef65ba4bc9f5ed"
+      },
+      {
+        "path": "src/runtime/native_plugins/process.rs",
+        "base": "eb513e79422f7093f00bc080783248036bf642b9",
+        "candidate": "9baee8ff6f02168ccb25f530acfcb99fe7699b04",
+        "main": "54dd94c99e24c0dec7582ae2a5211a9276f97352"
+      },
+      {
+        "path": "src/runtime/time/tests.rs",
+        "base": "37a082865d9677e1ac851264b6c3c770ab1ea255",
+        "candidate": "27bfcc10815982bea892776ce06e3e26bcee49a9",
+        "main": "d49cb42407ea4a5f5aacfbb2581a44c5aff45a1f"
+      },
+      {
+        "path": "src/wire.rs",
+        "base": "86aa23244e8a54fba617e6f92b08c320d8f6e10e",
+        "candidate": "0050cf2036b73a03f43e4098f53296e41653cc6e",
+        "main": "e912b5afc0b3297018cfd6b779e3789906db3d40"
+      }
+    ]
+  },
+  "unchanged_paste_blobs": {
+    "src/client/input.rs": "56416ce8ae46a65dca66e8056230f7ea9539b57c",
+    "src/client/input/paste.rs": "5159a42bb0380f0bb810c52c741818d05ded8b67",
+    "src/client/references/paste.rs": "473a64f090b4d8d0dbdc5dc30b59d93c839a794f",
+    "src/client/terminal/conversation/paste.rs": "6ee72bc084e86a1c7f484c6e1ca7bd440f544a51",
+    "scripts/e2e_file_paste.py": "34ac0995989bacb5d3873bdd16d718dd53b59a5a"
+  },
+  "findings": [
+    {
+      "id": "agent-contract",
+      "priority": "integration_decision_required",
+      "title": "同名 --agent 的两套不同契约",
+      "candidate": "Options.chat / chat_io::Flags 默认 next-caller；选择聊天消息处理目标，Program::run 实际运行 Codex exec、Claude --print 等；ssmcp 使用精确 recipient ID + account。",
+      "main": "Options.agent / agent::Selection 选择启动时加载的协议/catalog；默认 None；支持 --agent=list、--agent=... 及 -- 后原生参数；ssmcp 使用 endpoint + token-env 的认证 MCP gateway，明确不是 device/session。",
+      "risk": "保留两个独立 parser arm 会互相遮蔽；整文件取任一侧会失去另一侧已经存在的能力。相同 flag 和 ssmcp 值不能被当作同一语义。",
+      "owner_action": "唯一 source owner 先固定与最终需求一致的一份 CLI/保存会话契约，再整合已有启动协议能力及消息路由；在新候选中验证默认值、帮助/列表、别名、字面参数、gateway 与收件人区分。此审查不替 owner 发明新 CLI。",
+      "sources": [
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "src/client.rs",
+          "symbols": [
+            "Options::parse",
+            "Options::session_spec",
+            "connect_inner"
+          ]
+        },
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "src/client/chat_io/options.rs",
+          "symbols": [
+            "Flags::finish",
+            "Settings::validate_saved_input"
+          ]
+        },
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "src/client/chat_io/process.rs",
+          "symbols": [
+            "Target::resolve",
+            "Program::run"
+          ]
+        },
+        {
+          "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+          "path": "src/client/agent.rs",
+          "symbols": [
+            "Selection::new",
+            "Selection::activate",
+            "Selection::append_saved",
+            "dispatch"
+          ]
+        },
+        {
+          "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+          "path": "src/backend/peer.rs",
+          "symbols": [
+            "Settings::parse",
+            "Settings::reject_self"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "disabled-chat-lifecycle",
+      "priority": "integration_preserve",
+      "title": "--input none、relay 协商与 reload 不是仅 UI 开关",
+      "candidate": "配置经 client/runtime/native Process/UI catalog/broker/device/relay 贯穿；none 不创建聊天 outbox 房间但保留控制通道，reload 继续等 ReloadCommit；saved attach 不启动 composer。未收到 relay disabled-chat ACK 会失败关闭。",
+      "main": "增加协议启动、peer driver、原生 -- 分隔与保存会话/reload 的覆盖；本身没有候选 chat_io 或 disabled-chat 改动。",
+      "risk": "仅移植 Options/隐藏 composer 会遗漏 RPC/catalog/relay/attach 的一致性；Process 同时涉及主线 agent driver 与候选 chat_enabled。",
+      "owner_action": "保留 disabled_chat_keeps_the_outbox_and_advances_reload_without_queue_commands 的真实不丢草稿/队列边界，并与 main 的 foreground_reload_preserves_agent_selection_and_native_arguments_after_separator、foreground_local_reload_preserves_agent_and_socket_before_native_separator 一起覆盖。区分 --socket（local MCP HTTP）与 --input sock（聊天入口）。",
+      "sources": [
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "src/client/steering.rs",
+          "symbols": [
+            "Manager::connect_with_chat",
+            "Manager::reload_ready",
+            "disabled_chat_keeps_the_outbox_and_advances_reload_without_queue_commands"
+          ]
+        },
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "src/client/relay.rs",
+          "symbols": [
+            "offer_chat_disabled"
+          ]
+        },
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "src/broker.rs",
+          "symbols": [
+            "Session::require_chat"
+          ]
+        },
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "src/session/attach.rs",
+          "symbols": [
+            "attached"
+          ]
+        },
+        {
+          "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+          "path": "src/client/reload.rs",
+          "symbols": [
+            "connection_arguments"
+          ]
+        },
+        {
+          "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+          "path": "src/runtime/native_plugins/process.rs",
+          "symbols": [
+            "Process::start_with_agent",
+            "Process::refresh_peer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "retired-hooks",
+      "priority": "integration_decision_required",
+      "title": "main 已删除 finish/强制继续 hooks，781 仍修改旧入口",
+      "candidate": "修改 src/http/finish_request.rs 为 require_chat；wire::human_chat_tool、runtime time 测试和动态 guide 仍引用旧 finish/answer 及结束授权说明。",
+      "main": "删除 finish_request.rs、code_mode/reminders.rs、旧 finish_receipts；wire::retired_tool_error、HTTP/interface/await 拒绝旧 finish/answer；final messages 仍要求 conversation owner，但无需 finish approval；去掉强制 continuation hooks。",
+      "risk": "这是明确 modify/delete 及语义交叉。直接恢复候选旧文件或候选 client_guide 会复活 main 已退休的入口和文案；机械保留旧 finish 测试也会校验错误的旧契约。",
+      "owner_action": "none 的聊天能力过滤应落到当前仍存在的入口；保留 retired_tool_error 与 no-native-dispatch 测试。对旧 finish 的断言按退休契约更新，另用一个仍有效的 human-chat RPC 验证 chat_disabled。保留 owner/幂等/消息不重复及取消观察不停止任务的约束。不要重新创建 finish 工作流。",
+      "sources": [
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "src/http/finish_request.rs",
+          "symbols": [
+            "execute"
+          ]
+        },
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "src/runtime/capabilities.rs",
+          "symbols": [
+            "client_guide"
+          ]
+        },
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "src/runtime/time/tests.rs",
+          "symbols": [
+            "remote_time_catalog_and_hard_coded_calls_fail_closed_without_negotiation"
+          ]
+        },
+        {
+          "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+          "path": "src/wire.rs",
+          "symbols": [
+            "retired_tool_error",
+            "Operation::validate"
+          ]
+        },
+        {
+          "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+          "path": "src/http/question_delivery_tests/retired_hooks.rs",
+          "symbols": [
+            "retired_native_tools_never_dispatch_or_consume_human_answers",
+            "retired_finish_wait_never_starts_a_native_observation"
+          ]
+        },
+        {
+          "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+          "path": "src/client/interface/messages.rs",
+          "symbols": [
+            "send_with_presentation",
+            "final_messages_and_presentations_need_owner_but_no_finish_approval"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-and-render",
+      "priority": "integration_preserve",
+      "title": "计时从标签修改扩展到实际运行状态",
+      "candidate": "terminal timing 区分 Countdown/Elapsed/Observation/User wait，runtime/time/tests 加 none 与 timing 能力协商。",
+      "main": "增加 civil/absolute deadline/interval/list，Entry 新字段及 ExecutionTiming，最近真实 deadline/短到期回执选择；后台原生 job 时间经 typed timing 接入 render/panel，避免 provider JSON 伪造时间。",
+      "risk": "用候选 timing.rs 整体覆盖 main 会丢失实际 job deadline/新状态模型；只修文字或快照测试不证明真实计时、被动等待和清理状态正确。",
+      "owner_action": "保留 main 的 monotonic/deadline/typed event 数据链与新字段，再保留候选关于 observation budget 不是 job deadline 的区别。新候选覆盖 none+time catalog、nearest deadline、open-ended job、到期但任务仍运行、无伪造 native deadline。",
+      "sources": [
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "src/client/terminal/conversation/timing.rs",
+          "symbols": [
+            "label",
+            "State::chat_clock_label"
+          ]
+        },
+        {
+          "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+          "path": "src/client/terminal/conversation/timing.rs",
+          "symbols": [
+            "selected",
+            "clock_label",
+            "State::chat_timing_snapshot_at"
+          ]
+        },
+        {
+          "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+          "path": "src/client/render.rs",
+          "symbols": [
+            "emit_timed_event",
+            "provider_json_cannot_forge_native_job_deadlines_or_elapsed_origins"
+          ]
+        },
+        {
+          "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+          "path": "src/runtime/time.rs",
+          "symbols": [
+            "Entry"
+          ]
+        },
+        {
+          "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+          "path": "src/runtime/time/tests.rs",
+          "symbols": [
+            "absolute_deadline_is_converted_once_and_owner_list_does_not_share_timers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paste-and-terminal",
+      "priority": "evidence_boundary",
+      "title": "粘贴核心同 blob 不等于新组合通过",
+      "candidate": "conversation.rs 增加配置 agent 收件人、pending/unconfirmed 回执和草稿保留；history mouse 返回 bool 并修正命中行为；render 增加将 local OAuth 信息写 stderr 以保护协议 stdout。",
+      "main": "conversation/render/panel/terminal 变更真实时钟、右键 header 非 history target、窄/宽 footer 与测试隔离。",
+      "risk": "共享 paste/composer 核心仍会与变化后的收件人、history、time、stdout/stderr 和退出逻辑组合。相同 helper 或局部 blob 不能将旧 ELF 的 baseline/P1 结果迁移给新 ELF。",
+      "owner_action": "复用已有 benchmark/helper 的源哈希和固定测试方法；整合后冻结新候选与五产物对应关系，再按既定 quiet lock 验证真实 PTY 粘贴、字节/光标、收件人、错误恢复与退出清理。不要扩大旧结果范围或中断现有作业。",
+      "sources": [
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "src/client/terminal/conversation.rs",
+          "symbols": [
+            "State::chat_poll_agent"
+          ]
+        },
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "src/client/terminal/conversation/history.rs",
+          "symbols": [
+            "chat_thread_history_mouse"
+          ]
+        },
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "src/client/render.rs",
+          "symbols": [
+            "local_connection_stderr"
+          ]
+        },
+        {
+          "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+          "path": "src/client/terminal.rs",
+          "symbols": [
+            "mod tests"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cargo-and-packaging",
+      "priority": "integration_preserve",
+      "title": "候选 3 条 include 已在 main 中，版本/lock 已变化",
+      "candidate": "Cargo.toml 只新增 3 条 package include；Cargo.lock 相对 cf0 完全不变，package version 仍 0.10.21。",
+      "main": "Cargo.toml version 0.10.22，8 条新增 include 包含候选全部 3 条。Cargo.lock 只变本包版本及 zcall 来源 564ede15→317c52f1。",
+      "risk": "整份取候选 Cargo 文件会回退主线版本/锁来源；重复手工追加会产生重复 include。",
+      "owner_action": "按所选新 main 组合保留完整 include 集合与匹配版本/lock；记录新 Cargo/lock blob 与实际解析来源。旧 441 CI、781 baseline、147 tag 或 57d/main 接受记录都不能替代新组合。",
+      "sources": [
+        {
+          "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+          "path": "Cargo.toml",
+          "symbols": [
+            "package.include"
+          ]
+        },
+        {
+          "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+          "path": "Cargo.toml",
+          "symbols": [
+            "package.version",
+            "package.include"
+          ]
+        },
+        {
+          "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+          "path": "Cargo.lock",
+          "symbols": [
+            "ssmcp",
+            "zcall"
+          ]
+        }
+      ]
+    }
+  ],
+  "conclusion": "不宜把 781 当作可直接合入 f208 的已验候选。唯一 source owner 需要先处理 agent 契约、none 生命周期与已退休 hooks 的交叉；保留主线 runtime/time/peer 与候选 chat 保护后固定一个新的 commit/tree/lock/产物 cohort。此结论仅静态合并风险，不是编译或运行失败结论。",
+  "new_cohort_requirements": [
+    "固定整合前的 fresh main、candidate 与实际 merge-base；当前三方快照是 cf0 / 781 / f208。远端后续变化由唯一 owner 重新读回。",
+    "新 commit/tree 必须记录 Cargo.toml、Cargo.lock、关键 helper blob、实际 compiler-artifact root source、五产物路径与 SHA，不能从共享目录旧文件或 .d 推断身份。",
+    "保留已验旧身份的 receipt；441 CI、781 baseline、147/v21、57d/PR161 的结果各归原身份。旧 helper 相同只允许复用方法，不能移用其运行通过结论。",
+    "输入/agent/none/保存/attach/reload 的组合、retired hook 无 native dispatch、time 与真实 PTY paste/退出清理按冻结后的候选验收；资源与 quiet/outer 锁由原 owner 协调，本审查不启动。",
+    "v21/v22 tags、release assets、生产服务保持现状；不以重指 tag 消除来源差异。"
+  ],
+  "source_links": [
+    {
+      "finding": "agent-contract",
+      "path": "src/client.rs",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/src/client.rs"
+    },
+    {
+      "finding": "agent-contract",
+      "path": "src/client/chat_io/options.rs",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/src/client/chat_io/options.rs"
+    },
+    {
+      "finding": "agent-contract",
+      "path": "src/client/chat_io/process.rs",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/src/client/chat_io/process.rs"
+    },
+    {
+      "finding": "agent-contract",
+      "path": "src/client/agent.rs",
+      "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/f208a03b5403332214f3acf6ee0b176752b5d2c9/src/client/agent.rs"
+    },
+    {
+      "finding": "agent-contract",
+      "path": "src/backend/peer.rs",
+      "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/f208a03b5403332214f3acf6ee0b176752b5d2c9/src/backend/peer.rs"
+    },
+    {
+      "finding": "disabled-chat-lifecycle",
+      "path": "src/client/steering.rs",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/src/client/steering.rs"
+    },
+    {
+      "finding": "disabled-chat-lifecycle",
+      "path": "src/client/relay.rs",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/src/client/relay.rs"
+    },
+    {
+      "finding": "disabled-chat-lifecycle",
+      "path": "src/broker.rs",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/src/broker.rs"
+    },
+    {
+      "finding": "disabled-chat-lifecycle",
+      "path": "src/session/attach.rs",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/src/session/attach.rs"
+    },
+    {
+      "finding": "disabled-chat-lifecycle",
+      "path": "src/client/reload.rs",
+      "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/f208a03b5403332214f3acf6ee0b176752b5d2c9/src/client/reload.rs"
+    },
+    {
+      "finding": "disabled-chat-lifecycle",
+      "path": "src/runtime/native_plugins/process.rs",
+      "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/f208a03b5403332214f3acf6ee0b176752b5d2c9/src/runtime/native_plugins/process.rs"
+    },
+    {
+      "finding": "retired-hooks",
+      "path": "src/http/finish_request.rs",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/src/http/finish_request.rs"
+    },
+    {
+      "finding": "retired-hooks",
+      "path": "src/runtime/capabilities.rs",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/src/runtime/capabilities.rs"
+    },
+    {
+      "finding": "retired-hooks",
+      "path": "src/runtime/time/tests.rs",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/src/runtime/time/tests.rs"
+    },
+    {
+      "finding": "retired-hooks",
+      "path": "src/wire.rs",
+      "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/f208a03b5403332214f3acf6ee0b176752b5d2c9/src/wire.rs"
+    },
+    {
+      "finding": "retired-hooks",
+      "path": "src/http/question_delivery_tests/retired_hooks.rs",
+      "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/f208a03b5403332214f3acf6ee0b176752b5d2c9/src/http/question_delivery_tests/retired_hooks.rs"
+    },
+    {
+      "finding": "retired-hooks",
+      "path": "src/client/interface/messages.rs",
+      "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/f208a03b5403332214f3acf6ee0b176752b5d2c9/src/client/interface/messages.rs"
+    },
+    {
+      "finding": "time-and-render",
+      "path": "src/client/terminal/conversation/timing.rs",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/src/client/terminal/conversation/timing.rs"
+    },
+    {
+      "finding": "time-and-render",
+      "path": "src/client/terminal/conversation/timing.rs",
+      "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/f208a03b5403332214f3acf6ee0b176752b5d2c9/src/client/terminal/conversation/timing.rs"
+    },
+    {
+      "finding": "time-and-render",
+      "path": "src/client/render.rs",
+      "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/f208a03b5403332214f3acf6ee0b176752b5d2c9/src/client/render.rs"
+    },
+    {
+      "finding": "time-and-render",
+      "path": "src/runtime/time.rs",
+      "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/f208a03b5403332214f3acf6ee0b176752b5d2c9/src/runtime/time.rs"
+    },
+    {
+      "finding": "time-and-render",
+      "path": "src/runtime/time/tests.rs",
+      "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/f208a03b5403332214f3acf6ee0b176752b5d2c9/src/runtime/time/tests.rs"
+    },
+    {
+      "finding": "paste-and-terminal",
+      "path": "src/client/terminal/conversation.rs",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/src/client/terminal/conversation.rs"
+    },
+    {
+      "finding": "paste-and-terminal",
+      "path": "src/client/terminal/conversation/history.rs",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/src/client/terminal/conversation/history.rs"
+    },
+    {
+      "finding": "paste-and-terminal",
+      "path": "src/client/render.rs",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/src/client/render.rs"
+    },
+    {
+      "finding": "paste-and-terminal",
+      "path": "src/client/terminal.rs",
+      "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/f208a03b5403332214f3acf6ee0b176752b5d2c9/src/client/terminal.rs"
+    },
+    {
+      "finding": "cargo-and-packaging",
+      "path": "Cargo.toml",
+      "ref": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/781b87df1d364137b6885f17f631a3e9e991bd58/Cargo.toml"
+    },
+    {
+      "finding": "cargo-and-packaging",
+      "path": "Cargo.toml",
+      "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/f208a03b5403332214f3acf6ee0b176752b5d2c9/Cargo.toml"
+    },
+    {
+      "finding": "cargo-and-packaging",
+      "path": "Cargo.lock",
+      "ref": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/f208a03b5403332214f3acf6ee0b176752b5d2c9/Cargo.lock"
+    }
+  ],
+  "evidence": {
+    "inventory": "ssmcp-cf0-781-f208-three-way-inventory.json",
+    "focused_patches": "ssmcp-cf0-781-f208-focused-patches.json",
+    "root_observations": [
+      "ssmcp-main-f208-observation.json",
+      "ssmcp-v21-tag-source-observation.json"
+    ]
+  }
+}

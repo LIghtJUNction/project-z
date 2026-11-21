@@ -1,0 +1,269 @@
+{
+  "schema": "project-z.zuse-pr3-independent-static-review.v1",
+  "recorded_utc": "2026-11-20 23:08:34 UTC",
+  "repository": "LIghtJUNction/zuse",
+  "pull_request": 3,
+  "url": "https://github.com/LIghtJUNction/zuse/pull/3",
+  "identity": {
+    "feature_base": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+    "test_commit": "44ffb599e96c412c216f395ed8b7286f585b5474",
+    "reviewed_implementation": "35664746549c482c99082e6180419b2c0f5ff532",
+    "reviewed_tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "parent": "44ffb599e96c412c216f395ed8b7286f585b5474",
+    "independent_github_commit_readback": true,
+    "implementation_changed_files": [
+      "docs/scoped-mice.md",
+      "src/json.rs",
+      "src/mcp.rs",
+      "src/script/scheduler.rs",
+      "tests/script_entrypoints.rs"
+    ],
+    "cargo_manifest_or_lock_changed": false
+  },
+  "decision": {
+    "recommendation": "no_additional_static_blocker_found_original_receipt_budget_P2_addressed",
+    "blocking_findings": 0,
+    "scope": "Independent fixed-source control-flow and serialization-budget review; not an independent build/runtime acceptance or a main/cohort integration authorization."
+  },
+  "checks": [
+    {
+      "topic": "Detailed-event omission is logging-only and remains a prefix",
+      "result": "supported",
+      "evidence": [
+        "S1"
+      ],
+      "detail": "Once an event would exceed 768KiB including separator allowance or the actual token budget, events_omitted increments and record returns Ok. Every later detail is omitted. Scheduling, native host calls, configured step/wait checks, live-mouse limits and cooperative cancellation are unchanged."
+    },
+    {
+      "topic": "Real errors, cancellation, partial effects and cleanup",
+      "result": "supported",
+      "evidence": [
+        "S1",
+        "S2",
+        "S9",
+        "S11"
+      ],
+      "detail": "cleanup_attempted increments before host.close; cleanup_failed increments from its result before logging. Counts survive omitted close records. execute_on still combines execution and cleanup errors, reports failed for either and retains both error strings when both fail. No rollback or accepted-by-application claim is introduced; omission is explicit and does not justify replay."
+    },
+    {
+      "topic": "Actual parser token accounting and final framing reserve",
+      "result": "supported_for_current_fixed_receipt_and_text_only_script_MCP_shapes",
+      "evidence": [
+        "S1",
+        "S2",
+        "S3",
+        "S7",
+        "S8"
+      ],
+      "detail": "token_count uses the same Document parser and tokens_used. Detailed events are capped at65536-256=65280 tokens. Current receipt adds31 tokens outside events; modern text-only MCP adds27 more. Maximum65338 leaves198 tokens below65536. Existing event layouts contain fixed members; dynamic target strings are escaped and do not add JSON members."
+    },
+    {
+      "topic": "Exact encoded capacity retry cannot replay actions",
+      "result": "supported",
+      "evidence": [
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "detail": "The result and is_error already exist before encode. The closure only invokes protocol.tool_result with the same content/structured value. Only Buffer with needed>current length triggers one resize and one retry. Writer continues counting all raw/escaped segments after insufficient space and returns exact needed; no Runtime, script execution or outer handle is reinvoked."
+    },
+    {
+      "topic": "32MiB output limit and non-capacity errors",
+      "result": "supported",
+      "evidence": [
+        "S4"
+      ],
+      "detail": "Both initial saturated capacity and the retry needed size are checked against33554432 bytes before resize. Non-Buffer errors and a retry failure propagate; there is no unlimited loop or new general oversized-result recovery promise. This is an encoded-result limit, not a total-process RSS guarantee."
+    },
+    {
+      "topic": "CLI and continuing real stdio coverage",
+      "result": "test_source_covers_original_reproducers_and_later_requests",
+      "evidence": [
+        "S9",
+        "S10"
+      ],
+      "detail": "Tests cover CLI2500 with truthful successful status, one actual stdio child receiving2200/2500/1 scripts, equal text and structured receipt, ordered response IDs, no protocol error and successful child exit. MockHost coverage checks byte-budget continuation and five outcome combinations including native+cleanup dual failure and cancellation. No reviewer test execution."
+    }
+  ],
+  "static_arithmetic": {
+    "method": "Counting fixed current JSON container/key/value layouts from source, not executing product code or tests.",
+    "parser_tokens": 65536,
+    "event_token_reserve": 256,
+    "max_event_tokens": 65280,
+    "current_receipt_tokens_outside_events": 31,
+    "current_modern_text_only_mcp_tokens_outside_receipt": 27,
+    "max_total_tokens": 65338,
+    "remaining_tokens": 198,
+    "pure_capability_event_tokens": 27,
+    "capability_2200_event_tokens": 59400,
+    "capability_2500_retained_by_token_budget": 2417,
+    "capability_2500_omitted_by_token_budget": 83,
+    "scope": "Current zuse.script text-only receipt and locked zmcpio modern envelope. New receipt fields or envelope changes require this accounting to be revisited."
+  },
+  "owner_reported_validation": {
+    "source": "Core handoff after independent source reads; raw gate logs not independently reopened by this reviewer.",
+    "red": "Three actual regression failures reported for the test-only source.",
+    "green": {
+      "job_suffix": "611",
+      "entrypoint_tests": 6,
+      "scheduler_tests": 10,
+      "fmt": true,
+      "locked_metadata": true,
+      "relevant_clippy": true,
+      "reported_exit_code": 0,
+      "reported_scope_released": true,
+      "native_result_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/gate-green/result.json",
+      "result_sha256_prefix": "a3c05be4",
+      "compiler_artifact_delivery": "Owner still assembling exact artifact/fresh=false receipt at this review snapshot."
+    },
+    "independent_reviewer_pass_count": 0
+  },
+  "limitations": [
+    "No product execution, test, build, GUI, shared-lock operation, native input or source edit by reviewer.",
+    "The separate PR2 native286/no_std/cross claims were not adopted or repeated.",
+    "CLI/Rust cooperative cancellation is not a claim of newly wired MCP cancellation notifications.",
+    "Crash/SIGKILL/display-loss cleanup guarantees remain outside this patch, as documented.",
+    "No main/default-branch or downstream dependency/cohort ref changed by reviewer."
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "35664746549c482c99082e6180419b2c0f5ff532",
+      "path": "src/script/scheduler.rs",
+      "lines": [
+        100,
+        151
+      ],
+      "git_blob_sha": "e04f3765a32f16b0745764ae8ec812958faa806a",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/src/script/scheduler.rs#L100-L151"
+    },
+    {
+      "id": "S2",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "35664746549c482c99082e6180419b2c0f5ff532",
+      "path": "src/script/scheduler.rs",
+      "lines": [
+        487,
+        550
+      ],
+      "git_blob_sha": "e04f3765a32f16b0745764ae8ec812958faa806a",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/src/script/scheduler.rs#L487-L550"
+    },
+    {
+      "id": "S3",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "35664746549c482c99082e6180419b2c0f5ff532",
+      "path": "src/json.rs",
+      "lines": [
+        34,
+        61
+      ],
+      "git_blob_sha": "bcf4cdd2306a7cfc3e1190e62078911087a7bdfe",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/src/json.rs#L34-L61"
+    },
+    {
+      "id": "S4",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "35664746549c482c99082e6180419b2c0f5ff532",
+      "path": "src/mcp.rs",
+      "lines": [
+        561,
+        606
+      ],
+      "git_blob_sha": "fc54b7d3b48b3c98022980d903c0367af325910b",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/src/mcp.rs#L561-L606"
+    },
+    {
+      "id": "S5",
+      "repository": "LIghtJUNction/zmcpio",
+      "revision": "84fc4978a248c2a3e2dd110f4f26fa52dd8b6890",
+      "path": "src/writer.rs",
+      "lines": [
+        11,
+        73
+      ],
+      "git_blob_sha": "dd973519f9f01a11bde8ec9e6d5dc060b6d07f38",
+      "url": "https://github.com/LIghtJUNction/zmcpio/blob/84fc4978a248c2a3e2dd110f4f26fa52dd8b6890/src/writer.rs#L11-L73"
+    },
+    {
+      "id": "S6",
+      "repository": "LIghtJUNction/zmcpio",
+      "revision": "84fc4978a248c2a3e2dd110f4f26fa52dd8b6890",
+      "path": "src/tools.rs",
+      "lines": [
+        150,
+        237
+      ],
+      "git_blob_sha": "ae23fcec2d4d8879e0b8deb9740fc1e7839ef632",
+      "url": "https://github.com/LIghtJUNction/zmcpio/blob/84fc4978a248c2a3e2dd110f4f26fa52dd8b6890/src/tools.rs#L150-L237"
+    },
+    {
+      "id": "S7",
+      "repository": "LIghtJUNction/zmcpio",
+      "revision": "84fc4978a248c2a3e2dd110f4f26fa52dd8b6890",
+      "path": "src/mcp.rs",
+      "lines": [
+        555,
+        573
+      ],
+      "git_blob_sha": "836a303372a0ad799179de192068b9b1b1473716",
+      "url": "https://github.com/LIghtJUNction/zmcpio/blob/84fc4978a248c2a3e2dd110f4f26fa52dd8b6890/src/mcp.rs#L555-L573"
+    },
+    {
+      "id": "S8",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "35664746549c482c99082e6180419b2c0f5ff532",
+      "path": "src/script/mod.rs",
+      "lines": [
+        62,
+        72
+      ],
+      "git_blob_sha": "fa4ba564388115c2cbcd7a6b42d6de557b9d9778",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/src/script/mod.rs#L62-L72"
+    },
+    {
+      "id": "S9",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "35664746549c482c99082e6180419b2c0f5ff532",
+      "path": "src/script/scheduler.rs",
+      "lines": [
+        825,
+        928
+      ],
+      "git_blob_sha": "e04f3765a32f16b0745764ae8ec812958faa806a",
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/src/script/scheduler.rs#L825-L928"
+    },
+    {
+      "id": "S10",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "35664746549c482c99082e6180419b2c0f5ff532",
+      "path": "tests/script_entrypoints.rs",
+      "lines": null,
+      "git_blob_sha": null,
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/tests/script_entrypoints.rs"
+    },
+    {
+      "id": "S11",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "35664746549c482c99082e6180419b2c0f5ff532",
+      "path": "docs/scoped-mice.md",
+      "lines": [
+        234,
+        243
+      ],
+      "git_blob_sha": null,
+      "url": "https://github.com/LIghtJUNction/zuse/blob/35664746549c482c99082e6180419b2c0f5ff532/docs/scoped-mice.md#L234-L243"
+    }
+  ],
+  "actions": {
+    "github_writes": 0,
+    "source_writes": 0,
+    "builds": 0,
+    "tests_run": 0,
+    "gui_runs": 0,
+    "subagents_spawned": 0,
+    "report_files_only": true
+  }
+}
+

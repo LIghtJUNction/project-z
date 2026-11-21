@@ -1,0 +1,451 @@
+{
+  "schema": "project-z.zcalld-listener-0af8-handoff.v1",
+  "status": "local_gate_passed_final_p1_pending",
+  "created_at": "2026-11-21T00:55:51.311360+00:00",
+  "source": {
+    "head": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+    "base": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+    "parent": [
+      "e1e23cf62402780bf934c4e187d98b78aa26b825"
+    ],
+    "source_root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source",
+    "clean_at_driver_finish_and_collection": true,
+    "package_version": "0.4.4",
+    "package_id": "path+file:///home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source#zcalld@0.4.4",
+    "gui": "d491b627223807da7b2929f3feea7461393d124c",
+    "compat": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+    "leaf_count": 220,
+    "manifest": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source-manifest.json",
+      "bytes": 59392,
+      "sha256": "022e49f7878e2f460da596e5f7a7e82c587964bb9c6d685ec61debc0a2d09c8e"
+    },
+    "manifest_raw": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source-manifest.raw.txt",
+      "bytes": 18172,
+      "sha256": "34e70010c1d9b86cbe88f3fc78857e06897446f8f3c50cbd4e5d8eb66ae9fd25"
+    },
+    "cargo_lock": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source-Cargo.lock",
+      "bytes": 3129,
+      "sha256": "23fd8fbbefe0232b60749d048d09f4d2a7d6783ea2e85deac160c172e5a4ffca"
+    },
+    "git_dependencies": [
+      {
+        "name": "zcall",
+        "version": "0.4.0",
+        "source": "git+https://github.com/LIghtJUNction/zcall.git#317c52f101f112c6af671a629d8406305a168e4a"
+      },
+      {
+        "name": "zconv",
+        "version": "0.4.0",
+        "source": "git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1"
+      },
+      {
+        "name": "zplugin",
+        "version": "0.3.1",
+        "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+      },
+      {
+        "name": "zplugin-macros",
+        "version": "0.3.1",
+        "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+      },
+      {
+        "name": "zsys",
+        "version": "0.1.1",
+        "source": "git+https://github.com/LIghtJUNction/zsys.git#808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+      }
+    ]
+  },
+  "execution": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-882",
+    "actual_exit_code": 0,
+    "duration_ms": 71635,
+    "both_eof": true,
+    "actual_start": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/execution-gate-start.json",
+      "bytes": 1419,
+      "sha256": "701679d1550be51a8805c10468fc2db8057c5aed864d5c87f63542019531d884"
+    },
+    "actual_status": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/execution-gate-status.json",
+      "bytes": 1340,
+      "sha256": "12ea3d5e1dc5a9c59befb1ec3765071485fa554b9d438e976c3b62a21176f92f"
+    },
+    "actual_initial_scope": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/execution-gate-initial-scope.json",
+      "bytes": 520,
+      "sha256": "3ab3407269cdcbdb3891c7e533695504db31c8abaffc0c24002006b1bed507d9"
+    },
+    "actual_outer_lock": {
+      "observed_at": "2026-11-21T00:50:53.815476+00:00",
+      "parent_pid": 3732615,
+      "parent_argv": [
+        "/usr/bin/flock",
+        "--nonblock",
+        "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validate_0af8_candidate.py"
+      ],
+      "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "lock_inode": 63537699,
+      "lock_device": 34,
+      "proc_locks": [
+        "1: FLOCK  ADVISORY  WRITE 3732615 00:20:63537699 0 EOF"
+      ],
+      "matching_parent_fds": [
+        "3"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/zcalld-listener-0af8-20261121.scope\n",
+      "additional_acquisition_attempted": false
+    },
+    "artifact_copy_outer_lock": {
+      "observed_at": "2026-11-21T00:52:00.135591+00:00",
+      "parent_pid": 3732615,
+      "parent_argv": [
+        "/usr/bin/flock",
+        "--nonblock",
+        "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validate_0af8_candidate.py"
+      ],
+      "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "lock_inode": 63537699,
+      "lock_device": 34,
+      "proc_locks": [
+        "1: FLOCK  ADVISORY  WRITE 3732615 00:20:63537699 0 EOF"
+      ],
+      "matching_parent_fds": [
+        "3"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/zcalld-listener-0af8-20261121.scope\n",
+      "additional_acquisition_attempted": false
+    },
+    "driver_finish_outer_lock": {
+      "observed_at": "2026-11-21T00:52:05.357246+00:00",
+      "parent_pid": 3732615,
+      "parent_argv": [
+        "/usr/bin/flock",
+        "--nonblock",
+        "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validate_0af8_candidate.py"
+      ],
+      "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "lock_inode": 63537699,
+      "lock_device": 34,
+      "proc_locks": [
+        "1: FLOCK  ADVISORY  WRITE 3732615 00:20:63537699 0 EOF"
+      ],
+      "matching_parent_fds": [
+        "3"
+      ],
+      "cgroup": "0::/user.slice/user-1000.slice/user@1000.service/app.slice/zcalld-listener-0af8-20261121.scope\n",
+      "additional_acquisition_attempted": false
+    },
+    "postflight": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/postflight.json",
+      "bytes": 1080,
+      "sha256": "5a361d61ff5b7866195589b1b31ca7de8c3665bd98755d7e2a577b58c41ab6f8"
+    },
+    "owned_scope_and_processes_released": true,
+    "global_lock_free_at_postflight": false,
+    "foreign_holder_observation": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/postflight-foreign-holder-observation.json",
+      "bytes": 186,
+      "sha256": "7d55652c60d8b1610322695401165da7d71134a28643343c8969d2bde08b96d5"
+    }
+  },
+  "validation": {
+    "raw_receipt": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/candidate-validation.json",
+      "bytes": 30016,
+      "sha256": "3fe0f9676a5500296c11560835f9353047e64fdb5913291d2321b6090ce72313"
+    },
+    "driver": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validate_0af8_candidate.py",
+      "bytes": 14868,
+      "sha256": "4b40fbfd0eded716ec62630497fa5653cce8bbdc1285aafb71d1a940df52c470"
+    },
+    "workspace_wrapper": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/workspace-rustc-0af8.py",
+      "bytes": 590,
+      "sha256": "a9be4be225cfab383d84273889332e0d600882127304d6f3f98d68ba0187fb37"
+    },
+    "command_index": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/command-log-index.json",
+      "bytes": 18014,
+      "sha256": "b5765616d8480f9c546e2f9f7df9679932347c0a00bfb15bb876e248f646960e"
+    },
+    "all_command_exit_codes": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "rust_suites": [
+      {
+        "passed": 93,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered_out": 0
+      },
+      {
+        "passed": 7,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered_out": 0
+      },
+      {
+        "passed": 15,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered_out": 0
+      },
+      {
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered_out": 0
+      },
+      {
+        "passed": 3,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered_out": 0
+      },
+      {
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered_out": 0
+      },
+      {
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered_out": 0
+      },
+      {
+        "passed": 32,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered_out": 0
+      },
+      {
+        "passed": 15,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered_out": 0
+      },
+      {
+        "passed": 3,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered_out": 0
+      },
+      {
+        "passed": 2,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered_out": 0
+      },
+      {
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered_out": 0
+      },
+      {
+        "passed": 3,
+        "failed": 0,
+        "ignored": 0,
+        "measured": 0,
+        "filtered_out": 0
+      }
+    ],
+    "rust_passed_total": 182,
+    "rust_ignored_total": 0,
+    "listener_tests": [
+      "listener::local::generation::tests::native_listener_model_result_preserves_text_and_rejects_tools_and_controls",
+      "listener::local::generation::tests::native_listener_request_keeps_exact_user_text_and_does_not_restore_context",
+      "listener::local::generation::tests::native_listener_response_is_bounded_before_json_parsing",
+      "listener::local::tests::native_listener_delivery_keeps_literal_text_and_requires_exact_scope",
+      "listener::local::tests::native_listener_private_socket_uses_one_bounded_frame_and_no_half_close",
+      "listener::local::tests::native_listener_rejects_oversized_response_before_allocating_body",
+      "listener::local::tests::native_listener_requires_an_explicit_socket_and_route_and_rejects_duplicate_options"
+    ],
+    "listener_subset_not_added_again": true,
+    "actual_root_clippy_calls": 2,
+    "curl": {
+      "names": [
+        "GenerationCancellationTests.test_cancel_curl_tcp_pending_head",
+        "GenerationCancellationTests.test_cancel_curl_tcp_pending_body",
+        "GenerationCancellationTests.test_cancel_curl_unix_pending_head",
+        "GenerationCancellationTests.test_cancel_curl_unix_pending_body",
+        "GenerationCancellationTests.test_half_close_curl_tcp_pending_head",
+        "GenerationCancellationTests.test_half_close_curl_tcp_pending_body",
+        "GenerationCancellationTests.test_half_close_curl_unix_pending_head",
+        "GenerationCancellationTests.test_half_close_curl_unix_pending_body"
+      ],
+      "passed": 8,
+      "skipped": 0
+    },
+    "workspace_test_index": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/workspace-test-index.json",
+      "bytes": 21377,
+      "sha256": "9cc5b4ceb4d02e8c3ce76faef3ad74a1af82d5250ddf82111fb43509e890e684"
+    },
+    "workspace_all_compiler_artifacts": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/workspace-all-compiler-artifacts.json",
+      "bytes": 32279,
+      "sha256": "34320223a9df4c4bcf3df0df3564fd4ed1e786485a0b31023a7d0f6e12ed2496"
+    }
+  },
+  "binary": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/zcalld",
+    "sha256": "dbe2db6d7130a7751616162fe503468c5f77df0ee7b9c517cd690c2d0e95c63b",
+    "bytes": 2964896,
+    "source_commit": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "source_tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+    "profile": "release",
+    "copied_under_outer_lock": true,
+    "mode": "0o500",
+    "actual_cargo_compiler_artifact": {
+      "reason": "compiler-artifact",
+      "package_id": "path+file:///home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source#zcalld@0.4.4",
+      "manifest_path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source/Cargo.toml",
+      "target": {
+        "kind": [
+          "bin"
+        ],
+        "crate_types": [
+          "bin"
+        ],
+        "name": "zcalld",
+        "src_path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source/src/main.rs",
+        "edition": "2024",
+        "doc": true,
+        "doctest": false,
+        "test": true
+      },
+      "profile": {
+        "opt_level": "3",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [],
+      "filenames": [
+        "/var/tmp/project-z-cargo-target/release/zcalld"
+      ],
+      "executable": "/var/tmp/project-z-cargo-target/release/zcalld",
+      "fresh": false
+    },
+    "actual_release_root_compiler_calls": [
+      {
+        "observed_at": "2026-11-21T00:51:31.203923+00:00",
+        "pid": 3744300,
+        "parent_pid": 3744299,
+        "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source",
+        "argv": [
+          "/home/lightjunction/.rustup/toolchains/1.100.0-x86_64-unknown-linux-gnu/bin/rustc",
+          "--crate-name",
+          "zcalld",
+          "--edition=2024",
+          "src/main.rs",
+          "--error-format=json",
+          "--json=diagnostic-rendered-ansi,artifacts,future-incompat,unused-externs-silent",
+          "--crate-type",
+          "bin",
+          "--emit=dep-info,link",
+          "-C",
+          "opt-level=3",
+          "-C",
+          "lto=thin",
+          "-C",
+          "codegen-units=1",
+          "--check-cfg",
+          "cfg(docsrs,test)",
+          "--check-cfg",
+          "cfg(feature, values())",
+          "-C",
+          "metadata=225d7309d328d629",
+          "--out-dir",
+          "/var/tmp/project-z-cargo-target/release/build/zcalld/1b818d4c10358fa5/out",
+          "-C",
+          "linker=clang",
+          "-C",
+          "strip=symbols",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zconv/fe9c8a3cb2be3bc6/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zplugin-macros/d239815905d1119b/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zplugin/d4453f4997e1fe13/out",
+          "-L",
+          "dependency=/var/tmp/project-z-cargo-target/release/build/zsys/4ad0d46710f70c81/out",
+          "--extern",
+          "zcall=/var/tmp/project-z-cargo-target/release/build/zcall/d4d0657e3a501d19/out/libzcall-d4d0657e3a501d19.rlib",
+          "--extern",
+          "zcalld_compat_client=/var/tmp/project-z-cargo-target/release/build/zcalld-compat-client/6d28f2b112232dc4/out/libzcalld_compat_client-6d28f2b112232dc4.rlib",
+          "--extern",
+          "zcalld_installer=/var/tmp/project-z-cargo-target/release/build/zcalld-installer/b9acfb8dd326302e/out/libzcalld_installer-b9acfb8dd326302e.rlib",
+          "--extern",
+          "zcalld_plugin_api=/var/tmp/project-z-cargo-target/release/build/zcalld-plugin-api/4aa83f5ec4cfb739/out/libzcalld_plugin_api-4aa83f5ec4cfb739.rlib",
+          "--extern",
+          "zconv=/var/tmp/project-z-cargo-target/release/build/zconv/fe9c8a3cb2be3bc6/out/libzconv-fe9c8a3cb2be3bc6.rlib",
+          "--extern",
+          "zplugin=/var/tmp/project-z-cargo-target/release/build/zplugin/d4453f4997e1fe13/out/libzplugin-d4453f4997e1fe13.rlib",
+          "-C",
+          "link-arg=-fuse-ld=mold",
+          "--force-warn=unused_crate_dependencies"
+        ],
+        "cargo_manifest_dir": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source"
+      }
+    ]
+  },
+  "boundaries": [
+    "Final SSMCP P1/selected32 belong to the existing native acceptance owner and were not run here.",
+    "The GUI d491 AUR packaging change was statically classified; GUI AUR execution/publication is not claimed.",
+    "The seven listener cases are included in the workspace total, not additional tests.",
+    "Historical d531179/8, 8fe806 guard failure, E1 unstarted GUI hold and 0af first foreign-lock hold retain their own identities.",
+    "The old 8fe attempt stopped before product commands; the new0af attempt is a first necessary local gate on new main/source.",
+    "The owned scope and launcher/flock exited. A new foreign holder was observed; global lock availability is not inferred from owned cleanup.",
+    "No additional Core heavy task is planned. Native acceptance coordinates its own single nonblocking acquisition."
+  ],
+  "new_test_or_build_performed_by_collector": false
+}

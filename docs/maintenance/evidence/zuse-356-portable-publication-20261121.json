@@ -1,0 +1,38 @@
+{
+  "schema": "project-z.zuse-356-portable-publication.v1",
+  "head": "35664746549c482c99082e6180419b2c0f5ff532",
+  "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+  "phase": "portable",
+  "private_native_started": false,
+  "source_refs_changed": false,
+  "google_drive_folder": {
+    "id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+    "url": "https://drive.google.com/drive/folders/1vjkFko8onQm9WiScrw7QBopK9vNGTLx0"
+  },
+  "files": [
+    {
+      "kind": "40-file text evidence archive; no executable bytes",
+      "id": "1I_8ldn-U5A1yb-22o4nEYYldTotgfdf8",
+      "url": "https://drive.google.com/file/d/1I_8ldn-U5A1yb-22o4nEYYldTotgfdf8",
+      "bytes": 101079,
+      "sha256": "e26e2957ef444bc4407095d197c55c69ee8df28350260510f839050e6afff299",
+      "download_verified": true,
+      "local_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-portable-text-evidence.zip"
+    },
+    {
+      "kind": "readable portable handoff",
+      "id": "1hRmxUlFMu1loK-ywYCot3kRTEqApfcmM",
+      "url": "https://drive.google.com/file/d/1hRmxUlFMu1loK-ywYCot3kRTEqApfcmM",
+      "bytes": 2786,
+      "sha256": "d4a2bf29b89a4fa8b1cdc5f6319b6081749cec3639071e92f595f8a6bfada752",
+      "download_verified": true,
+      "local_path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-portable-handoff.md"
+    }
+  ],
+  "handoff": {
+    "local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-portable-handoff.json",
+    "native": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable-handoff.json",
+    "bytes": 26848,
+    "sha256": "3005b2d3abddcb09ee9d9ab836f21196e202377f881536a8ed4b4c7e2c52e0df"
+  }
+}

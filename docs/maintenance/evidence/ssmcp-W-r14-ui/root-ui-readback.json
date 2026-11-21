@@ -1,0 +1,194 @@
+{
+  "schema": "project-z.ui-original-readback.v1",
+  "reviewed_at_utc": "2026-11-21T06:18:22.067770+00:00",
+  "source_revision": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+  "source_tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+  "source_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source",
+  "expected_version": "0.10.25",
+  "originals": {
+    "acceptance": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/acceptance.json",
+      "bytes": 865869,
+      "sha256": "d7aad6e79802b14164b0811dd358bcab68312b23245038d1de2166b9575d304c"
+    },
+    "run_log": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/suites/account_compat/run.log",
+      "bytes": 6818,
+      "sha256": "0567b3341d57157d4e2b0c3602d0f133bf943055fd49cab52ee1cfdf9aa9f3a4"
+    },
+    "producer_report": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/suites/account_compat/evidence/report.json",
+      "bytes": 7896,
+      "sha256": "4e2c2218321320f9905c35d8b3592507deaba9bd430a4c4f95e183337aa03b3b"
+    },
+    "wrapper_suite": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/suites/account_compat/suite.json",
+      "bytes": 6457,
+      "sha256": "935f0fa9c2e7ced1f580fc1a2f52e4ded4f921babb89ca91bbb1218a0be92a17"
+    }
+  },
+  "actual_result": {
+    "status": "failed",
+    "started_utc": "2026-11-21T06:10:05Z",
+    "finished_utc": "2026-11-21T06:12:42Z",
+    "seconds": 156.116,
+    "independent_planned": 24,
+    "independent_executed": 7,
+    "independent_passed": 6,
+    "independent_failed": 1,
+    "not_run": 17,
+    "not_run_names": [
+      "input_history",
+      "reload_state",
+      "session_groups",
+      "client_ui",
+      "canvas_logs",
+      "composer",
+      "questions",
+      "presentations",
+      "context_memory",
+      "file_paste",
+      "relay_composer",
+      "goal_startup",
+      "tool_summaries",
+      "readable_commands",
+      "summary_commands",
+      "physical_latency",
+      "time_wait"
+    ],
+    "alias_coverage_count": 1,
+    "aliases_not_independent_execution": true,
+    "error": "acceptance stopped at account_compat"
+  },
+  "executed_suites": [
+    {
+      "name": "message_references",
+      "status": "passed",
+      "checks": 53,
+      "exit_code": 0,
+      "seconds": 17.132,
+      "owned_child_reaped": true
+    },
+    {
+      "name": "force_send",
+      "status": "passed",
+      "checks": 137,
+      "exit_code": 0,
+      "seconds": 25.077,
+      "owned_child_reaped": true
+    },
+    {
+      "name": "listener_transports",
+      "status": "passed",
+      "checks": 74,
+      "exit_code": 0,
+      "seconds": 10.91,
+      "owned_child_reaped": true
+    },
+    {
+      "name": "zuse_worker",
+      "status": "passed",
+      "checks": 32,
+      "exit_code": 0,
+      "seconds": 4.501,
+      "owned_child_reaped": true
+    },
+    {
+      "name": "interactions",
+      "status": "passed",
+      "checks": 172,
+      "exit_code": 0,
+      "seconds": 62.787,
+      "owned_child_reaped": true
+    },
+    {
+      "name": "private_desktop",
+      "status": "passed",
+      "checks": 35,
+      "exit_code": 0,
+      "seconds": 5.611,
+      "owned_child_reaped": true
+    },
+    {
+      "name": "account_compat",
+      "status": "failed",
+      "exit_code": 1,
+      "seconds": 3.683,
+      "owned_child_reaped": true,
+      "error": "RuntimeError: suite process did not complete successfully"
+    }
+  ],
+  "passed_suite_checks_arithmetic_sum_not_unique": 503,
+  "failed_producer": {
+    "name": "account_compat",
+    "status": "failed",
+    "checks_recorded": 62,
+    "passed": 61,
+    "failed": 1,
+    "failed_check_names": [
+      "new-main:another_subject_cannot_list_connection"
+    ],
+    "raw_log_check_records": 62,
+    "raw_log_passed": 61,
+    "raw_log_failed": 1,
+    "elapsed_seconds": 1.515,
+    "error": "new-main:another_subject_cannot_list_connection",
+    "production_state_used": false,
+    "production_connections_opened": false,
+    "global_configuration_modified": false,
+    "failed_acceptance_row_has_checks_field": false,
+    "wrapper_suite_has_checks_field": false,
+    "failed_HTTP_status_or_response_body_recorded": false,
+    "producer_has_cleanup_field": false,
+    "wrapper_stdout_checks": 0,
+    "wrapper_zero_not_zero_actual_assertions": true
+  },
+  "inputs_and_cleanup": {
+    "all7_inputs_before_equals_after_exact_Python": true,
+    "all7_wrapper_owned_child_reaped": true,
+    "recorded_input_set_status": {
+      "unchanged": true,
+      "input_set_sha256": "fcf7a8eb49e1d77598d0fc40b80c2b68afc457eaf3b1eacc995149e6169f4610",
+      "changed": []
+    },
+    "full_input_set_hash_formula_recomputed": false,
+    "full_descendant_process_inspection": false
+  },
+  "original_script": {
+    "script": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/scripts/e2e_account_compat.py",
+    "script_sha256": "6464d132cf6d51777564ddf1245a3a95c3a2cf238c757b813c296c4d412ef5a4"
+  },
+  "later_stages": {
+    "composer": "not_run_in_this_W_attempt",
+    "P1": "not_run-confirmed-native-owner1093",
+    "SSMCP_main_integration": "separate existing author operation; no new merge commit claimed here",
+    "final44": "not_started"
+  },
+  "diagnosis_boundary": {
+    "composite_predicate": "status == 200 and result.get('clients') == []",
+    "fixture_failure_line": 374,
+    "root_cause_established": false,
+    "no_privacy_or_visibility_breach_conclusion_from_missing_response": true,
+    "static_review": "Core reviewing fixed fixture lifecycle and relevant filtering; no product replay by root",
+    "next_diagnostic": "Original native owner preparing one same-W-artifact/original-assertions/scope/time-budget diagnostic with only redacted failure context added; no diagnostic result claimed."
+  },
+  "reviewer_operations": {
+    "original_finalized_acceptance_read": true,
+    "entire_failed_run_log_producer_report_and_wrapper_read": true,
+    "product_runs": 0,
+    "Cargo_runs": 0,
+    "target_lock_acquisitions": 0,
+    "ELF_rehashes": 0,
+    "current_user_client_reload": false,
+    "native_job_stdout_and_overall_exit_independently_read": true
+  },
+  "native_job": {
+    "job_id": "92eb2e0c47ccd1044fd6f6414c55af55-1c8",
+    "exit_code": 1,
+    "running": false,
+    "stdout_bytes": 2094,
+    "both_eof": true,
+    "root_independently_read_complete": true
+  },
+  "reconciled_at_utc": "2026-11-21T06:22:40.563241+00:00"
+}

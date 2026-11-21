@@ -1,0 +1,459 @@
+{
+  "receipt": {
+    "schema": 1,
+    "status": "passed",
+    "started_unix": 1795208483.9689236,
+    "source_identity": {
+      "head": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25",
+      "tree": "4a1d16553d2defdd2d7b46c5ac7aa7bff8961c67",
+      "status": "",
+      "binary_sha256": "239aa74c8952d272832188ccde80c4805505faf892bb4247904aaafbba1e1e8c",
+      "binary_bytes": 1399448,
+      "collector_sha256": "30490e7a1946ec61ff3f12dc6ad7d04c0313190823187429fe112c5a6b05a8f4",
+      "runner_sha256": "46d1eb5d1509d59cbbad81e19caee1f328ae9d724bafe79a21f450e0b433d80e"
+    },
+    "runner_sha256": "81cd953113912f33019bf903c37cf16faaf6dd961666fd760b6175d4c7b1eca6",
+    "production_source_changed": false,
+    "production_binary_changed": false,
+    "new_compilation": {
+      "rust": false,
+      "private_diagnostic_c": true
+    },
+    "scope": "Private Xvfb / llvmpipe; instrumentation and explicit trim are diagnostics, not production performance claims.",
+    "lock": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "lock_acquired_unix": 1795208484.0066018,
+    "systemd_scope": "personal-ztty-allocator-1795208484-121348.scope",
+    "argv": [
+      "systemd-run",
+      "--user",
+      "--scope",
+      "--quiet",
+      "--collect",
+      "--unit=personal-ztty-allocator-1795208484-121348",
+      "-p",
+      "MemoryMax=2G",
+      "-p",
+      "MemorySwapMax=0",
+      "-p",
+      "CPUQuota=100%",
+      "-p",
+      "TasksMax=256",
+      "/usr/bin/python3",
+      "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/run_allocator_diagnosis.py",
+      "--worker"
+    ],
+    "exit_code": 0,
+    "final_identity": {
+      "head": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25",
+      "tree": "4a1d16553d2defdd2d7b46c5ac7aa7bff8961c67",
+      "status": "",
+      "binary_sha256": "239aa74c8952d272832188ccde80c4805505faf892bb4247904aaafbba1e1e8c",
+      "binary_bytes": 1399448,
+      "collector_sha256": "30490e7a1946ec61ff3f12dc6ad7d04c0313190823187429fe112c5a6b05a8f4",
+      "runner_sha256": "46d1eb5d1509d59cbbad81e19caee1f328ae9d724bafe79a21f450e0b433d80e"
+    },
+    "measurements_sha256": "c5224218cd68ff34a1cd0eb0f8096ea8c93a503979736adf8142c27efff095e5",
+    "scope_state_after": "inactive",
+    "finished_unix": 1795208505.2651827
+  },
+  "diagnostic_c": {
+    "argv": [
+      "cc",
+      "-std=c11",
+      "-shared",
+      "-fPIC",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/diagnostics/egl_trace.c",
+      "-o",
+      "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/egl-allocator-diagnosis-r1/egl_trace.so",
+      "-ldl",
+      "-pthread"
+    ],
+    "source_sha256": "4dd38c76e31beafe00813b321cb7eb1a4bf92c247f5a4b12b76b045a7b79e87b",
+    "library_sha256": "39191cc69589b2c23c01519dae729ef8a9d00d42c4af770f0cc2d848fe2b5d43",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "collector": {
+    "original_sha256": "30490e7a1946ec61ff3f12dc6ad7d04c0313190823187429fe112c5a6b05a8f4",
+    "instrumented_sha256": "7b5f21bb5a17a5b1c21aa047fd04664cfd21074f62c937d5237f114fe0dcacea",
+    "changes": [
+      "Explicit private LD_PRELOAD only for the owned terminal process.",
+      "Normal poll-loop allocator snapshot at each completed stage; one explicit trim only in the trim profile."
+    ]
+  },
+  "profiles": [
+    {
+      "profile": "trace",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/egl-allocator-diagnosis-r1/measure_memory_stages.py",
+        "--repo",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/baseline/ztty",
+        "--renderer",
+        "gpu",
+        "--output",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/egl-allocator-diagnosis-r1/trace.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 10.514967918395996,
+      "report_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/egl-allocator-diagnosis-r1/trace.json",
+      "report_sha256": "b3fa086f718db3a634fe514f5c6289e4e142d5079d61ee4f9e481fae55f7f7e9",
+      "ok": true,
+      "broker_pid": 121547,
+      "destroy_context_successes": 10,
+      "destroy_surface_successes": 10,
+      "all_destroyed_resources_unbound": true,
+      "remaining_owned_pids": [],
+      "trace_sha256": "957c477ff34a67c2691aba870cb880a624bd5a51f3677688acbef810ebecfc74",
+      "log_sha256": "192d2005aa44057f7a995ef403a99df26609edbf3e28b96f1567789c86a49e8f",
+      "snapshots": [
+        {
+          "event": "one_blank",
+          "pid": 121547,
+          "tid": 121547,
+          "monotonic_ns": 144251824768863,
+          "handle": 0,
+          "result": 1,
+          "current": 0,
+          "contexts_created": 1,
+          "contexts_live": 1,
+          "surfaces_created": 1,
+          "surfaces_live": 1,
+          "arena": 44421120,
+          "uordblks": 41980160,
+          "fordblks": 2440960,
+          "hblks": 3,
+          "hblkhd": 5361696,
+          "keepcost": 148320
+        },
+        {
+          "event": "ten_blank",
+          "pid": 121547,
+          "tid": 121547,
+          "monotonic_ns": 144253833499339,
+          "handle": 0,
+          "result": 1,
+          "current": 0,
+          "contexts_created": 10,
+          "contexts_live": 10,
+          "surfaces_created": 10,
+          "surfaces_live": 10,
+          "arena": 370831360,
+          "uordblks": 367300960,
+          "fordblks": 3530400,
+          "hblks": 3,
+          "hblkhd": 5361696,
+          "keepcost": 131392
+        },
+        {
+          "event": "screen_and_history_cleared",
+          "pid": 121547,
+          "tid": 121547,
+          "monotonic_ns": 144259075948878,
+          "handle": 0,
+          "result": 1,
+          "current": 0,
+          "contexts_created": 10,
+          "contexts_live": 10,
+          "surfaces_created": 10,
+          "surfaces_live": 10,
+          "arena": 377737216,
+          "uordblks": 368091840,
+          "fordblks": 9645376,
+          "hblks": 3,
+          "hblkhd": 5361696,
+          "keepcost": 771856
+        },
+        {
+          "event": "nine_closed_one_blank_remains",
+          "pid": 121547,
+          "tid": 121547,
+          "monotonic_ns": 144260396950445,
+          "handle": 0,
+          "result": 1,
+          "current": 0,
+          "contexts_created": 10,
+          "contexts_live": 1,
+          "surfaces_created": 10,
+          "surfaces_live": 1,
+          "arena": 377737216,
+          "uordblks": 42357168,
+          "fordblks": 335380048,
+          "hblks": 3,
+          "hblkhd": 5361696,
+          "keepcost": 1713968
+        }
+      ],
+      "trim": [],
+      "rows": [
+        {
+          "stage": "one_blank",
+          "broker": {
+            "Rss_bytes": 159461376,
+            "Pss_bytes": 133254144,
+            "Private_Clean_bytes": 73641984,
+            "Private_Dirty_bytes": 47296512,
+            "Pss_Anon_bytes": 43649024,
+            "Pss_File_bytes": 85701632,
+            "Pss_Shmem_bytes": 3903488,
+            "Shared_Clean_bytes": 37998592,
+            "Shared_Dirty_bytes": 524288,
+            "Swap_bytes": 0
+          },
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "ten_blank",
+          "broker": {
+            "Rss_bytes": 336613376,
+            "Pss_bytes": 308353024,
+            "Private_Clean_bytes": 73588736,
+            "Private_Dirty_bytes": 222859264,
+            "Pss_Anon_bytes": 184190976,
+            "Pss_File_bytes": 85237760,
+            "Pss_Shmem_bytes": 38924288,
+            "Shared_Clean_bytes": 39641088,
+            "Shared_Dirty_bytes": 524288,
+            "Swap_bytes": 0
+          },
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "screen_and_history_cleared",
+          "broker": {
+            "Rss_bytes": 346316800,
+            "Pss_bytes": 318027776,
+            "Private_Clean_bytes": 73605120,
+            "Private_Dirty_bytes": 232513536,
+            "Pss_Anon_bytes": 193845248,
+            "Pss_File_bytes": 85258240,
+            "Pss_Shmem_bytes": 38924288,
+            "Shared_Clean_bytes": 39673856,
+            "Shared_Dirty_bytes": 524288,
+            "Swap_bytes": 0
+          },
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "nine_closed_one_blank_remains",
+          "broker": {
+            "Rss_bytes": 309772288,
+            "Pss_bytes": 283375616,
+            "Private_Clean_bytes": 73699328,
+            "Private_Dirty_bytes": 197308416,
+            "Pss_Anon_bytes": 193660928,
+            "Pss_File_bytes": 85811200,
+            "Pss_Shmem_bytes": 3903488,
+            "Shared_Clean_bytes": 38240256,
+            "Shared_Dirty_bytes": 524288,
+            "Swap_bytes": 0
+          },
+          "xres_pixmap_bytes": 4
+        }
+      ]
+    },
+    {
+      "profile": "trim",
+      "argv": [
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/egl-allocator-diagnosis-r1/measure_memory_stages.py",
+        "--repo",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/baseline/ztty",
+        "--renderer",
+        "gpu",
+        "--output",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/egl-allocator-diagnosis-r1/trim.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 10.437161207199097,
+      "report_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/egl-allocator-diagnosis-r1/trim.json",
+      "report_sha256": "bc11d596259a6b02bf77d0af7e07286bc857183f75add94c494771a34cebe2c1",
+      "ok": true,
+      "broker_pid": 124088,
+      "destroy_context_successes": 10,
+      "destroy_surface_successes": 10,
+      "all_destroyed_resources_unbound": true,
+      "remaining_owned_pids": [],
+      "trace_sha256": "51ff43e758a5f8400a57e5dbbc25c713944c09bc0fb259dc3e92b3dae819531f",
+      "log_sha256": "cffbc170ae82a28ff6bfa3fe5ae09fec92d0015f8336b5d8f8aa93403701aff5",
+      "snapshots": [
+        {
+          "event": "one_blank",
+          "pid": 124088,
+          "tid": 124088,
+          "monotonic_ns": 144262135125019,
+          "handle": 0,
+          "result": 1,
+          "current": 0,
+          "contexts_created": 1,
+          "contexts_live": 1,
+          "surfaces_created": 1,
+          "surfaces_live": 1,
+          "arena": 44425216,
+          "uordblks": 41981664,
+          "fordblks": 2443552,
+          "hblks": 3,
+          "hblkhd": 5361696,
+          "keepcost": 164384
+        },
+        {
+          "event": "ten_blank",
+          "pid": 124088,
+          "tid": 124088,
+          "monotonic_ns": 144264290254065,
+          "handle": 0,
+          "result": 1,
+          "current": 0,
+          "contexts_created": 10,
+          "contexts_live": 10,
+          "surfaces_created": 10,
+          "surfaces_live": 10,
+          "arena": 370839552,
+          "uordblks": 367308192,
+          "fordblks": 3531360,
+          "hblks": 3,
+          "hblkhd": 5361696,
+          "keepcost": 132224
+        },
+        {
+          "event": "screen_and_history_cleared",
+          "pid": 124088,
+          "tid": 124088,
+          "monotonic_ns": 144269542475913,
+          "handle": 0,
+          "result": 1,
+          "current": 0,
+          "contexts_created": 10,
+          "contexts_live": 10,
+          "surfaces_created": 10,
+          "surfaces_live": 10,
+          "arena": 377737216,
+          "uordblks": 368099600,
+          "fordblks": 9637616,
+          "hblks": 3,
+          "hblkhd": 5361696,
+          "keepcost": 938448
+        },
+        {
+          "event": "nine_closed_one_blank_remains",
+          "pid": 124088,
+          "tid": 124088,
+          "monotonic_ns": 144270864785292,
+          "handle": 0,
+          "result": 1,
+          "current": 0,
+          "contexts_created": 10,
+          "contexts_live": 1,
+          "surfaces_created": 10,
+          "surfaces_live": 1,
+          "arena": 377737216,
+          "uordblks": 42360048,
+          "fordblks": 335377168,
+          "hblks": 3,
+          "hblkhd": 5361696,
+          "keepcost": 1698128
+        }
+      ],
+      "trim": [
+        {
+          "event": "diagnostic_trim",
+          "pid": 124088,
+          "tid": 124088,
+          "monotonic_ns": 144270870121091,
+          "handle": 0,
+          "result": 1,
+          "current": 0,
+          "contexts_created": 10,
+          "contexts_live": 1,
+          "surfaces_created": 10,
+          "surfaces_live": 1,
+          "arena": 376041472,
+          "uordblks": 42360048,
+          "fordblks": 333681424,
+          "hblks": 3,
+          "hblkhd": 5361696,
+          "keepcost": 2384
+        }
+      ],
+      "rows": [
+        {
+          "stage": "one_blank",
+          "broker": {
+            "Rss_bytes": 159895552,
+            "Pss_bytes": 133527552,
+            "Private_Clean_bytes": 73801728,
+            "Private_Dirty_bytes": 47374336,
+            "Pss_Anon_bytes": 43726848,
+            "Pss_File_bytes": 85897216,
+            "Pss_Shmem_bytes": 3903488,
+            "Shared_Clean_bytes": 38195200,
+            "Shared_Dirty_bytes": 524288,
+            "Swap_bytes": 0
+          },
+          "xres_pixmap_bytes": 4
+        },
+        {
+          "stage": "ten_blank",
+          "broker": {
+            "Rss_bytes": 337219584,
+            "Pss_bytes": 308757504,
+            "Private_Clean_bytes": 73695232,
+            "Private_Dirty_bytes": 223109120,
+            "Pss_Anon_bytes": 184440832,
+            "Pss_File_bytes": 85392384,
+            "Pss_Shmem_bytes": 38924288,
+            "Shared_Clean_bytes": 39903232,
+            "Shared_Dirty_bytes": 512000,
+            "Swap_bytes": 0
+          },
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "screen_and_history_cleared",
+          "broker": {
+            "Rss_bytes": 346914816,
+            "Pss_bytes": 318453760,
+            "Private_Clean_bytes": 73744384,
+            "Private_Dirty_bytes": 232755200,
+            "Pss_Anon_bytes": 194086912,
+            "Pss_File_bytes": 85442560,
+            "Pss_Shmem_bytes": 38924288,
+            "Shared_Clean_bytes": 39903232,
+            "Shared_Dirty_bytes": 512000,
+            "Swap_bytes": 0
+          },
+          "xres_pixmap_bytes": 40
+        },
+        {
+          "stage": "nine_closed_one_blank_remains",
+          "broker": {
+            "Rss_bytes": 160317440,
+            "Pss_bytes": 133774336,
+            "Private_Clean_bytes": 73859072,
+            "Private_Dirty_bytes": 47497216,
+            "Pss_Anon_bytes": 43849728,
+            "Pss_File_bytes": 86021120,
+            "Pss_Shmem_bytes": 3903488,
+            "Shared_Clean_bytes": 38449152,
+            "Shared_Dirty_bytes": 512000,
+            "Swap_bytes": 0
+          },
+          "xres_pixmap_bytes": 4
+        }
+      ]
+    }
+  ],
+  "scope_readback": {
+    "exit_code": 0,
+    "stdout": "ActiveState=inactive\nSubState=dead\nControlGroup=\n",
+    "stderr": ""
+  },
+  "outer_lock_available_now": true
+}

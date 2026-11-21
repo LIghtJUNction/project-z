@@ -1,0 +1,247 @@
+{
+  "schema": "project-z.ztty-ime-publication.v1",
+  "status": "merged_and_verified",
+  "repository": "LIghtJUNction/ztty",
+  "publication": {
+    "main": {
+      "sha": "01e8b573bc787e982f96db2b1e6ec9151d321284",
+      "tree": "a7a99b41c9bfef6f4f617914b6c67466f5d3a7c8",
+      "parents": [
+        "febc90654e5fc680b0660f0874296e17eb389acf",
+        "076bc6ac8ff9ca17effe25decac7a4dbc4ec0c43"
+      ],
+      "date": "2026-11-20T22:17:13Z"
+    },
+    "pr": {
+      "url": "https://github.com/LIghtJUNction/ztty/pull/23",
+      "merged": true,
+      "state": "closed",
+      "merged_at": "2026-11-20T22:17:14Z",
+      "merge_commit_sha": "01e8b573bc787e982f96db2b1e6ec9151d321284",
+      "head": "076bc6ac8ff9ca17effe25decac7a4dbc4ec0c43",
+      "base": "febc90654e5fc680b0660f0874296e17eb389acf",
+      "changed_files": 1,
+      "additions": 11,
+      "deletions": 5
+    }
+  },
+  "tested_source": {
+    "head": "076bc6ac8ff9ca17effe25decac7a4dbc4ec0c43",
+    "tree": "a7a99b41c9bfef6f4f617914b6c67466f5d3a7c8",
+    "merge_tree_equals_tested_tree": true
+  },
+  "build_handoff": {
+    "schema": "project-z.ztty-ime-build-handoff.v1",
+    "status": "build_passed_native_gui_pending",
+    "recorded_unix": 1795212253.3639321,
+    "pull_request": "https://github.com/LIghtJUNction/ztty/pull/23",
+    "head": "076bc6ac8ff9ca17effe25decac7a4dbc4ec0c43",
+    "tree": "a7a99b41c9bfef6f4f617914b6c67466f5d3a7c8",
+    "base": "febc90654e5fc680b0660f0874296e17eb389acf",
+    "binary": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-cursor-cause-20261120/build-076bc-r1/ztty-076bc6a",
+      "bytes": 1406392,
+      "sha256": "c5debb5f35d2563e1a3cdf7eeb18bb064439c864ad020fd452f0c730afc61197"
+    },
+    "source": {
+      "head": "076bc6ac8ff9ca17effe25decac7a4dbc4ec0c43",
+      "tree": "a7a99b41c9bfef6f4f617914b6c67466f5d3a7c8",
+      "status": "",
+      "lock_sha256": "c08e1d48d3fd77067496512bd54fec042ecc625da362db14cd4cac1b1db86101",
+      "manifest_sha256": "439108c88d76063163efe87bb573811fc67aed7134e6826ba6e5d3cfaab2b481"
+    },
+    "validation": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-cursor-cause-20261120/build-076bc-r1/validation.json",
+      "bytes": 36088,
+      "sha256": "0052b1f2831464b56f7d906abdeac0283042bd0fad034dd57d7d99c77b283647"
+    },
+    "result": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-cursor-cause-20261120/build-076bc-r1/result.json",
+      "sha256": "910f5aa7afb5bf29d1581a37b5b58c4a0ef3e9d3188c8508f35fab96f1039b6b"
+    },
+    "scope_fresh": {
+      "ActiveState": "inactive",
+      "SubState": "dead",
+      "ControlGroup": ""
+    },
+    "runner": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-cursor-cause-20261120/run_build.py",
+      "sha256": "60ab63bbe73d97be2907a20d3a55aa35744d3a36458d7855d3346a6d45028285"
+    },
+    "actual_build_identity": {
+      "cargo_root_bin_fresh": false,
+      "actual_compiler_output": "/var/tmp/project-z-cargo-target/release/build/ztty/cbc1b21a32da1dfe/out/ztty",
+      "c_source_sha256": "3c34ad8e9cb1cead9c898ebc342d2255328c013809b2342255f3a9a6cc263711",
+      "c_source_cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-ime-cursor-cause-20261120/source",
+      "object_sha256": "6b37b430cc8287d39100ba3ecca8ffd6c0b8c4705c0d25a9152eb142e5167f67",
+      "archive_sha256": "7037b56bcd94a6c30c16e2d2a06c0cf85f7321b4b3fc2d3d4387f8eef487e681",
+      "archive_member_equals_object": true,
+      "linked_rlib_sha256": "3086be08b1d989c359c1b35b5bd4359c1174f1ceea1c90e7f3d3c9ad9eea5089",
+      "rlib_member_equals_object": true,
+      "cc_ar_wrapper_arguments_changed": false,
+      "global_config_changed": false,
+      "shared_target_cleaned": false
+    },
+    "passed_commands": [
+      "rustc-version",
+      "fmt",
+      "metadata",
+      "clippy",
+      "release-build",
+      "binary-version",
+      "dynamic-symbols",
+      "baseline-needed",
+      "candidate-needed"
+    ],
+    "git_source_dependencies": [
+      {
+        "name": "zgpui",
+        "version": "0.1.5",
+        "source": "git+https://github.com/LIghtJUNction/zgpui.git#b4d5493e0cd985d00558c7be0b5726965ab5163a"
+      },
+      {
+        "name": "zgraphics",
+        "version": "0.2.0",
+        "source": "git+https://github.com/LIghtJUNction/zgraphics.git#aa0ed19fb706ad147aff1df54c4ef762d918e864"
+      },
+      {
+        "name": "zinput",
+        "version": "0.1.3",
+        "source": "git+https://github.com/LIghtJUNction/zinput.git#fe1cbaec744fa790a043383d45f612b8d19dcd32"
+      },
+      {
+        "name": "zplugin",
+        "version": "0.3.1",
+        "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+      },
+      {
+        "name": "zplugin-macros",
+        "version": "0.3.1",
+        "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+      },
+      {
+        "name": "zpty",
+        "version": "0.2.3",
+        "source": "git+https://github.com/LIghtJUNction/zpty.git#d263f9a8f0881d259e46c51a7b6753c61ab9be59"
+      },
+      {
+        "name": "zsys",
+        "version": "0.1.1",
+        "source": "git+https://github.com/LIghtJUNction/zsys.git#808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+      },
+      {
+        "name": "zterm",
+        "version": "0.5.2",
+        "source": "git+https://github.com/LIghtJUNction/zterm.git#1a761334f0b9cf26da700426a5b82778f0d48c3d"
+      },
+      {
+        "name": "zvte",
+        "version": "0.1.3",
+        "source": "git+https://github.com/LIghtJUNction/zvte.git#b4e50a5cde476fb5303060f3ecbc9200ccea5cc0"
+      }
+    ],
+    "next_gate_owner": "existing native ztype owner b081; sole GUI runner",
+    "next_gate": "Run unchanged continuous-input native Wayland acceptance against this exact immutable ELF, preserving old failure receipts.",
+    "gui_run_by_personal": false,
+    "memory_66_stages_repeated": false
+  },
+  "native_acceptance": {
+    "status": "fixed_candidate_native_acceptance_passed",
+    "head": "076bc6ac8ff9ca17effe25decac7a4dbc4ec0c43",
+    "tree": "a7a99b41c9bfef6f4f617914b6c67466f5d3a7c8",
+    "ztty_elf_sha256": "c5debb5f35d2563e1a3cdf7eeb18bb064439c864ad020fd452f0c730afc61197",
+    "ztype_elf_sha256": "1a2b96c03aa5129ea1935216da7b8696ef330a4a2ec49f0139027a4a9c0c82ae",
+    "checks": {
+      "gtk": 28,
+      "native_ztty_wayland": 7,
+      "xim": 13
+    },
+    "received_text": "你好世界",
+    "received_utf8_hex": "e4bda0e5a5bde4b896e7958c0a",
+    "source_pair_from_actual_receipts": true,
+    "command_exit_codes": [
+      0,
+      0
+    ],
+    "host_binary_and_library_bookends_unchanged": true,
+    "owned_processes_stopped": true,
+    "limitations": [
+      "Private nested Hyprland/Weston and private Xvfb; no host install/input-method changes.",
+      "Native Wayland candidate presentation is asserted by metadata; this reader has not visually reviewed candidate PNGs.",
+      "New ztype source-to-ELF handoff is owned by b081/root; this receipt binds the exact observed ztype ELF."
+    ],
+    "original_files": {
+      "wayland-fixed/receipt.json": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/wayland-fixed/receipt.json",
+        "bytes": 2643,
+        "sha256": "35bd7119b1d5dfb39ccadb41eaf25fed91000af819007f629bcb15754bb86880"
+      },
+      "wayland-fixed/nested-report.json": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/wayland-fixed/nested-report.json",
+        "bytes": 10242,
+        "sha256": "05161924fe8c55e4f2610dbbca758e9bd8d999b5111b55f0239a174afecb029d"
+      },
+      "xim-current/receipt.json": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/xim-current/receipt.json",
+        "bytes": 3096,
+        "sha256": "9f17cc52949e314186da8d1294d0011cce49ef394a7d6aaa5a66c166f041f77b"
+      },
+      "xim-current/report.json": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/xim-current/report.json",
+        "bytes": 3274,
+        "sha256": "d137e81cbbc350cd94ff056be5849538a7a3a60f9a7f72185d7d2156df660aba"
+      }
+    },
+    "unchanged_fixture_proof": {
+      "executed_script_hashes": {
+        "scripts/test_wayland_nested.py": "6a1f1fe9fd53024f29045f68e8c87ecbc87c943ebbfb9e85e65b3347982340ee",
+        "scripts/test_ztty_wayland.py": "689e059877cff0a895f747ddf15ed339658e4508a34214b0c78c4b2e32ddc938"
+      },
+      "command_changed_only_output_and_ztty_binary_paths": true,
+      "baseline_receipt_sha256": "023e97868e74f15b13817e1c5fb24657e828aff94c936efe3c9e6297a5eb1edf",
+      "baseline_exit_code": 1,
+      "fixed_exit_code": 0,
+      "manifest_note": "The prior receipt listed an unused test_wayland.py key; the fixed receipt lists the actually invoked popup helper. Root/native owner is recording this provenance correction; the two executed entry/terminal scripts are byte-identical."
+    }
+  },
+  "evidence": {
+    "build_archive": {
+      "drive_url": "https://drive.google.com/file/d/1Jsh2NHBtkuhJ69WesdJ-pfICW2a6Ifif/view",
+      "bytes": 51726,
+      "sha256": "2ac013f6f038e9abc3cdd930b6fdef3babf3ee07414fc8bebfaca85b8021d14e",
+      "full_download_verified": true
+    },
+    "native_ui_original_root": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1",
+    "native_batch": {
+      "path": "fixed-native-batch.json",
+      "bytes": 2330,
+      "sha256": "255d8992c163f90fa894be5fff9abae4051d7ff5c5703e61a0cb18c49f8352ad"
+    },
+    "full_gui_archive_owner": "native ztype b081/root; avoid duplicate uploads"
+  },
+  "scope": {
+    "changed_paths": [
+      "native/wayland_services.c"
+    ],
+    "insertions": 11,
+    "deletions": 5,
+    "initial_enable_other_preserved": true,
+    "external_edit_guard_preserved": true,
+    "focus_and_serial_guard_preserved": true,
+    "production_cargo_manifest_lock_unchanged": true,
+    "host_install": false,
+    "formal_release": false,
+    "generated_binaries_in_git": false,
+    "memory_66_stages_repeated": false
+  },
+  "followup": {
+    "kind": "readonly_inline_preedit_and_fixture_timing_review",
+    "root_requested": true,
+    "no_confirmed_caret_bug": true
+  },
+  "aggregate": {
+    "latest_report_head_observed": "c2c1406752b4b8e23f3a7f0bec0fddc5209141da",
+    "ztty_selected_when_finalizing": "01e8b573bc787e982f96db2b1e6ec9151d321284",
+    "final44_graph_run": false
+  }
+}

@@ -1,0 +1,2211 @@
+{
+  "schema": "ssmcp-Q-r11-gate-independent-readonly-review-v1",
+  "reviewed_at_utc": "2026-11-21T02:36:57.650542+00:00",
+  "reviewer": "/root/pr_core_repos",
+  "conclusion": {
+    "blocking_findings": 0,
+    "material_evidence_inconsistencies": 0,
+    "observed_gate_status": "passed",
+    "claim_scope": "Completed historical Q/r11 Gate35 only",
+    "successor_runtime_ui_p1_admission": false
+  },
+  "operations": {
+    "original_texts_hashed_and_parsed": 202,
+    "candidate_imported_or_executed": false,
+    "original_validator_executed": false,
+    "cargo_or_product_test_started": false,
+    "lock_acquired": false,
+    "signal_sent": false,
+    "source_ref_or_old_report_modified": false,
+    "five_existing_owned_artifacts_read_only_hashed": true,
+    "shared_target_executables_read_by_reviewer": false
+  },
+  "fixed_source": {
+    "commit": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+    "tree": "5143f90c05066c95b2df58a9eab1831e05888a62",
+    "parent_C": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+    "version": "0.10.25",
+    "original_worktree": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+    "exported_source": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+    "root_worktree_heads": {
+      "after_export": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+      "before_export": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+      "final": "647bce2ec9cf74beab43adea831c2e0712d28ea8"
+    },
+    "after_gate_worktree_clean": true,
+    "source_manifest": {
+      "entries": 1849,
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source-manifest.json",
+      "sha256": "c969fcd1041b983f8761edb8cf5077c85f430db1f30589fd2cc19da607e2bbfb",
+      "entry_types": {
+        "directory": 304,
+        "file": 1545
+      }
+    },
+    "source_archives": {
+      "gitlinks": {
+        "crates/zharness": {
+          "archive": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/archives/zharness.tar",
+          "commit": "cb63a9a0aa163214c6062664cd62fefb357be5a8",
+          "repository": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/crates/zharness",
+          "sha256": "611a96aea977134d09bfe078d8985e1b5ed8de8f8353ad75a1a724d5d8a2fd29"
+        },
+        "crates/zplugin": {
+          "archive": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/archives/zplugin.tar",
+          "commit": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4",
+          "repository": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/crates/zplugin",
+          "sha256": "73d03620fb51d292b080aea0eab253dd5d0600aa9c82a4e5286334dcab6f157f"
+        },
+        "crates/ztuio": {
+          "archive": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/archives/ztuio.tar",
+          "commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+          "repository": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/crates/ztuio",
+          "sha256": "0322272bfee9152f5944a45fb23b6d8957ea4800dd985e80f62b6939f3ee2706"
+        },
+        "crates/zuse": {
+          "archive": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/archives/zuse.tar",
+          "commit": "a1bb8fd2cbce0a9d85134999883c578358065242",
+          "repository": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/crates/zuse",
+          "sha256": "ec27aeda53bf6ed948c6d7b743a997fc73977ff27f7494653429d6db6dfc9b42"
+        }
+      },
+      "main": {
+        "archive": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/archives/main.tar",
+        "commit": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+        "repository": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+        "sha256": "4374a5d209048d45004b29d4a3994dca6162e9d636b3c5b59309cf9d648f43ea"
+      }
+    },
+    "cargo_lock_sha256": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608"
+  },
+  "run": {
+    "run_id": "ecfe8f69dcb362096018be9a632ff96c",
+    "started_at": 1795227009.4109368,
+    "finished_at": 1795227737.5537446,
+    "duration_seconds": 728.142808,
+    "actual_stage_count": 35,
+    "actual_rust_parent_stages": 26,
+    "all_stage_exit_codes_zero": true,
+    "gate_receipt": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-gates.json",
+      "bytes": 1282803,
+      "sha256": "645dd18969232888cbb393e4193542b421706161eaf6ef2af0af6acca553d7ec"
+    },
+    "driver": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/run_gates.py",
+      "bytes": 83560,
+      "sha256": "729f242ffd2580ee0e72e1790b0df950b3961fd83fa8c1f215410d99c3ee5fbd"
+    },
+    "unit": "ssmcp-release25-gate35-r11-20261121.service",
+    "invocation_id": "880bd12873874a43a7f0a1eb9dc28c91"
+  },
+  "counts": {
+    "library_all_inventory": 2079,
+    "private_partition_inventory": 2073,
+    "host_partition_inventory": 6,
+    "library_private": {
+      "passed": 2050,
+      "failed": 0,
+      "ignored": 23,
+      "filtered": 6
+    },
+    "library_host": {
+      "passed": 6,
+      "failed": 0,
+      "ignored": 0,
+      "filtered": 2073
+    },
+    "partitions_disjoint_complete_and_host_not_ignored": true,
+    "integration_targets": 20,
+    "integration_total_passed": 102,
+    "ordinary_integration": {
+      "target_stages": 19,
+      "passed": 101
+    },
+    "separate_worker_target": {
+      "target_stages": 1,
+      "passed": 1,
+      "mode": "ignored-exact",
+      "name": "missing_worker_entry_is_recoverable_without_spawning_the_embedding_binary"
+    },
+    "additional_mandatory_ignored": {
+      "stages": 4,
+      "passed": 14,
+      "groups": {
+        "code_mode": 2,
+        "two_tools": 7,
+        "workspace_bridge": 3,
+        "context_helpers": 2
+      }
+    },
+    "original_17_goal_cases": {
+      "exact_raw_ok_lines_verified": 17,
+      "subset_of_private_2050": true,
+      "added_to_total": false
+    },
+    "nested_child_test_summaries_added": false,
+    "gate_stages_not_all_rust_tests": true
+  },
+  "raw_verification": {
+    "all_35_logs_hashed": true,
+    "all_26_parent_results_match_raw_tail_and_selection": true,
+    "all_selected_name_start_lines_present": true,
+    "nested_summaries_matched_to_raw_line_numbers": true,
+    "all_55_probe_stdout_stderr_present": true,
+    "all_probe_exit_codes_zero": true,
+    "all_library_and_integration_list_inventories_match_raw_output": true,
+    "all_four_cargo_json_archives_equal_parsed_original_log_records": true,
+    "compiler_artifact_count_selected": 26,
+    "all_selected_artifacts_fresh_false": true,
+    "actual_wrapper_records_hashed_and_matched": true,
+    "source_argument_cwd_metadata_target_and_manifest_agree": true,
+    "link_cargo_owned_byte_hash_equal_in_original_gate_receipt": true,
+    "original_shared_target_executables_reread": false,
+    "full_rustc_argument_hash_recomputed": false,
+    "rustc_argument_boundary": "The original wrapper saves filtered compile argv and a digest/count of full argv; this review validates saved records, not unavailable full argv bytes."
+  },
+  "source_dependencies": {
+    "metadata_before_after_identical_bytes": true,
+    "metadata_bytes": 1484723,
+    "metadata_sha256": "679ed6d26fc70e0dcef6b6e7fff577c57a935e9976402bb8d473989e017153c6",
+    "resolved_packages": 277,
+    "registry_packages": 264,
+    "git_packages": 12,
+    "root_path_packages": 1,
+    "git_checkouts": 11,
+    "git_package_identities": [
+      {
+        "name": "z64",
+        "version": "0.1.2",
+        "source": "git+https://github.com/LIghtJUNction/z64.git#7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd"
+      },
+      {
+        "name": "zcall",
+        "version": "0.4.0",
+        "source": "git+https://github.com/LIghtJUNction/zcall.git#317c52f101f112c6af671a629d8406305a168e4a"
+      },
+      {
+        "name": "zclap",
+        "version": "0.1.4",
+        "source": "git+https://github.com/LIghtJUNction/zclap.git#4d87f3ae3743e81509d5ac5500909955667c860f"
+      },
+      {
+        "name": "zconv",
+        "version": "0.4.0",
+        "source": "git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1"
+      },
+      {
+        "name": "zguard",
+        "version": "0.1.0",
+        "source": "git+https://github.com/LIghtJUNction/zguard.git#6772b932a65e18f64e13591dee6edb2f6b099406"
+      },
+      {
+        "name": "zharness",
+        "version": "0.6.0",
+        "source": "git+https://github.com/LIghtJUNction/zharness.git#cb63a9a0aa163214c6062664cd62fefb357be5a8"
+      },
+      {
+        "name": "zmcpio",
+        "version": "0.4.0",
+        "source": "git+https://github.com/LIghtJUNction/zmcpio.git#84fc4978a248c2a3e2dd110f4f26fa52dd8b6890"
+      },
+      {
+        "name": "zplugin",
+        "version": "0.3.1",
+        "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+      },
+      {
+        "name": "zplugin-macros",
+        "version": "0.3.1",
+        "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+      },
+      {
+        "name": "zsys",
+        "version": "0.1.1",
+        "source": "git+https://github.com/LIghtJUNction/zsys.git#808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+      },
+      {
+        "name": "ztuio",
+        "version": "0.1.0",
+        "source": "git+https://github.com/LIghtJUNction/ztuio.git#9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e"
+      },
+      {
+        "name": "zuse-computer",
+        "version": "0.2.2",
+        "source": "git+https://github.com/LIghtJUNction/zuse.git#a1bb8fd2cbce0a9d85134999883c578358065242"
+      }
+    ],
+    "why_twelve_git_packages_in_eleven_checkouts": "zplugin and zplugin-macros share the same zplugin checkout.",
+    "dependency_manifest_read": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/dependency-source-manifest.json",
+      "bytes": 4246566,
+      "sha256": "d8051b708aee7b705432100a7e8a861c841575038141c01325300b9d217bbedb",
+      "matches_G": true,
+      "top_keys": [
+        "cargo_lock_sha256",
+        "git_checkouts",
+        "inactive_internal_lock_packages_not_source_audited",
+        "lock_package_count",
+        "packages",
+        "registry_sources",
+        "resolved_package_count",
+        "single_zplugin_id"
+      ],
+      "outline": {
+        "cargo_lock_sha256": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608",
+        "git_checkouts": {
+          "count": 11,
+          "first_item_keys": [
+            "commit",
+            "files",
+            "gitlinks",
+            "path",
+            "tree"
+          ]
+        },
+        "inactive_internal_lock_packages_not_source_audited": {
+          "count": 0,
+          "first_item_keys": null
+        },
+        "lock_package_count": 277,
+        "packages": {
+          "count": 277,
+          "first_item_keys": [
+            "dependencies",
+            "features",
+            "id",
+            "manifest_path",
+            "manifest_sha256",
+            "name",
+            "source",
+            "version"
+          ]
+        },
+        "registry_sources": {
+          "count": 264,
+          "keys_sample": [
+            "registry+https://github.com/rust-lang/crates.io-index#adler2@2.0.1",
+            "registry+https://github.com/rust-lang/crates.io-index#ambient-authority@0.0.2",
+            "registry+https://github.com/rust-lang/crates.io-index#anyhow@1.0.104",
+            "registry+https://github.com/rust-lang/crates.io-index#arrayvec@0.7.8",
+            "registry+https://github.com/rust-lang/crates.io-index#atomic-waker@1.1.2",
+            "registry+https://github.com/rust-lang/crates.io-index#autocfg@1.5.1",
+            "registry+https://github.com/rust-lang/crates.io-index#axum-core@0.5.6",
+            "registry+https://github.com/rust-lang/crates.io-index#axum@0.8.9",
+            "registry+https://github.com/rust-lang/crates.io-index#base64@0.22.1",
+            "registry+https://github.com/rust-lang/crates.io-index#base64@0.23.1",
+            "registry+https://github.com/rust-lang/crates.io-index#bitflags@1.3.2",
+            "registry+https://github.com/rust-lang/crates.io-index#bitflags@2.13.2",
+            "registry+https://github.com/rust-lang/crates.io-index#block-buffer@0.10.4",
+            "registry+https://github.com/rust-lang/crates.io-index#block-buffer@0.12.1",
+            "registry+https://github.com/rust-lang/crates.io-index#bumpalo@3.20.4",
+            "registry+https://github.com/rust-lang/crates.io-index#bytemuck@1.25.2",
+            "registry+https://github.com/rust-lang/crates.io-index#byteorder-lite@0.1.0",
+            "registry+https://github.com/rust-lang/crates.io-index#bytes@1.12.2",
+            "registry+https://github.com/rust-lang/crates.io-index#cap-fs-ext@4.0.3",
+            "registry+https://github.com/rust-lang/crates.io-index#cap-primitives@4.0.3"
+          ]
+        },
+        "resolved_package_count": 277,
+        "single_zplugin_id": "git+https://github.com/LIghtJUNction/zplugin.git#zplugin@0.3.1"
+      }
+    },
+    "gate_before_after_source_audit_reported": true,
+    "independent_full_dependency_tree_reaudit_performed": false,
+    "nine_launcher_input_hashes_before_after_equal": true,
+    "runtime_tools_and_code_mode_runner_before_after_equal": true
+  },
+  "artifact_chain": {
+    "selected_artifacts_by_stage": {
+      "decoder": 1,
+      "integration-compile": 21,
+      "library-compile": 1,
+      "release": 3
+    },
+    "five_controlled_outputs": [
+      {
+        "stage": "library-compile",
+        "label": "library-test-fixture",
+        "source_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source/src/lib.rs",
+        "source_sha256": "a82b8b937e413fd7560d64a68aca31dceff70f3eab2dbdc8cfd60ec1b1579d27",
+        "profile": {
+          "debug_assertions": true,
+          "debuginfo": 0,
+          "opt_level": "0",
+          "overflow_checks": true,
+          "test": true
+        },
+        "fresh": false,
+        "invocation": {
+          "bytes": 739,
+          "mode": 384,
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/rustc-invocations/library-compile/invocation-729101-1795227024159742732.json",
+          "sha256": "b10a2633c82ec368c823512e55ff040151fc440901fce84d898ca31a9be4fb56"
+        },
+        "link_output": {
+          "bytes": 166657104,
+          "mode": 493,
+          "path": "/var/tmp/project-z-cargo-target/debug/build/ssmcp/1a01125c55603d60/out/ssmcp-1a01125c55603d60",
+          "sha256": "2b2771c074ffbd8c4a73b9ea8805df162ba86190bebe52a4e69b66d2653fc7b8"
+        },
+        "cargo_executable": {
+          "bytes": 166657104,
+          "path": "/var/tmp/project-z-cargo-target/debug/build/ssmcp/1a01125c55603d60/out/ssmcp-1a01125c55603d60",
+          "sha256": "2b2771c074ffbd8c4a73b9ea8805df162ba86190bebe52a4e69b66d2653fc7b8"
+        },
+        "owned_copy": {
+          "bytes": 166657104,
+          "mode": 448,
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/library-compile/library-test-fixture",
+          "sha256": "2b2771c074ffbd8c4a73b9ea8805df162ba86190bebe52a4e69b66d2653fc7b8"
+        },
+        "independent_owned_file_read": {
+          "stage": "library-compile",
+          "label": "library-test-fixture",
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/library-compile/library-test-fixture",
+          "bytes": 166657104,
+          "sha256": "2b2771c074ffbd8c4a73b9ea8805df162ba86190bebe52a4e69b66d2653fc7b8",
+          "mode": 448,
+          "device": 68,
+          "inode": 187474318,
+          "stable_during_read": true,
+          "matches_G": true
+        }
+      },
+      {
+        "stage": "release",
+        "label": "ssmcp",
+        "source_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source/src/bin/ssmcp.rs",
+        "source_sha256": "84cdf2e11b8da39d52fc013ff585c4a2e6c8981ac90c8fec426ac825b6ebbee2",
+        "profile": {
+          "debug_assertions": false,
+          "debuginfo": 0,
+          "opt_level": "z",
+          "overflow_checks": false,
+          "test": false
+        },
+        "fresh": false,
+        "invocation": {
+          "bytes": 718,
+          "mode": 384,
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/rustc-invocations/release/invocation-862570-1795227550012404497.json",
+          "sha256": "c2df69d55544771016583a20b26c54adba483196d494f6138ed7b66d51e65596"
+        },
+        "link_output": {
+          "bytes": 15738696,
+          "mode": 493,
+          "path": "/var/tmp/project-z-cargo-target/release/build/ssmcp/bec4ffd352b47ece/out/ssmcp",
+          "sha256": "2dbab2aa293ae411de20f9839d574bf62ef79a644710884a81f6fe6239717e35"
+        },
+        "cargo_executable": {
+          "bytes": 15738696,
+          "path": "/var/tmp/project-z-cargo-target/release/ssmcp",
+          "sha256": "2dbab2aa293ae411de20f9839d574bf62ef79a644710884a81f6fe6239717e35"
+        },
+        "owned_copy": {
+          "bytes": 15738696,
+          "mode": 448,
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/release/ssmcp",
+          "sha256": "2dbab2aa293ae411de20f9839d574bf62ef79a644710884a81f6fe6239717e35"
+        },
+        "independent_owned_file_read": {
+          "stage": "release",
+          "label": "ssmcp",
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/release/ssmcp",
+          "bytes": 15738696,
+          "sha256": "2dbab2aa293ae411de20f9839d574bf62ef79a644710884a81f6fe6239717e35",
+          "mode": 448,
+          "device": 68,
+          "inode": 187481921,
+          "stable_during_read": true,
+          "matches_G": true
+        }
+      },
+      {
+        "stage": "release",
+        "label": "ssmcpd",
+        "source_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source/src/bin/ssmcpd.rs",
+        "source_sha256": "8aa7829018f5944bb2a3689c4bfd4b98ccafbc75d17a8e80a1ea2a671ef0c84f",
+        "profile": {
+          "debug_assertions": false,
+          "debuginfo": 0,
+          "opt_level": "z",
+          "overflow_checks": false,
+          "test": false
+        },
+        "fresh": false,
+        "invocation": {
+          "bytes": 720,
+          "mode": 384,
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/rustc-invocations/release/invocation-853753-1795227511056589639.json",
+          "sha256": "8a18f91e3c0812871529f12b9e54abf0ee673e8452c3f92bc82e937ba7562971"
+        },
+        "link_output": {
+          "bytes": 8176168,
+          "mode": 493,
+          "path": "/var/tmp/project-z-cargo-target/release/build/ssmcp/58a74720a86b65a1/out/ssmcpd",
+          "sha256": "e2e63fcfc63c05ca81907c976f8f3dda2aee65db9efa6d0d242fba69b95271b0"
+        },
+        "cargo_executable": {
+          "bytes": 8176168,
+          "path": "/var/tmp/project-z-cargo-target/release/ssmcpd",
+          "sha256": "e2e63fcfc63c05ca81907c976f8f3dda2aee65db9efa6d0d242fba69b95271b0"
+        },
+        "owned_copy": {
+          "bytes": 8176168,
+          "mode": 448,
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/release/ssmcpd",
+          "sha256": "e2e63fcfc63c05ca81907c976f8f3dda2aee65db9efa6d0d242fba69b95271b0"
+        },
+        "independent_owned_file_read": {
+          "stage": "release",
+          "label": "ssmcpd",
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/release/ssmcpd",
+          "bytes": 8176168,
+          "sha256": "e2e63fcfc63c05ca81907c976f8f3dda2aee65db9efa6d0d242fba69b95271b0",
+          "mode": 448,
+          "device": 68,
+          "inode": 187481919,
+          "stable_during_read": true,
+          "matches_G": true
+        }
+      },
+      {
+        "stage": "release",
+        "label": "ssmcp-frontend",
+        "source_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source/src/bin/ssmcp-frontend.rs",
+        "source_sha256": "e2e367a3f8bf889ed6ce3e283c56620eff07aa768bbba38949d55160bb02d93a",
+        "profile": {
+          "debug_assertions": false,
+          "debuginfo": 0,
+          "opt_level": "z",
+          "overflow_checks": false,
+          "test": false
+        },
+        "fresh": false,
+        "invocation": {
+          "bytes": 736,
+          "mode": 384,
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/rustc-invocations/release/invocation-852066-1795227503135107766.json",
+          "sha256": "e5c315796f879e387e57dfdfa01ace89b16e04bbb4daac3282b1c5280d962298"
+        },
+        "link_output": {
+          "bytes": 1386584,
+          "mode": 493,
+          "path": "/var/tmp/project-z-cargo-target/release/build/ssmcp/1951411f107c3f34/out/ssmcp_frontend",
+          "sha256": "2e19f8ad2fea673f899bbfc44449161e072381571946b85e3c6a5dc7e8325a06"
+        },
+        "cargo_executable": {
+          "bytes": 1386584,
+          "path": "/var/tmp/project-z-cargo-target/release/ssmcp-frontend",
+          "sha256": "2e19f8ad2fea673f899bbfc44449161e072381571946b85e3c6a5dc7e8325a06"
+        },
+        "owned_copy": {
+          "bytes": 1386584,
+          "mode": 448,
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/release/ssmcp-frontend",
+          "sha256": "2e19f8ad2fea673f899bbfc44449161e072381571946b85e3c6a5dc7e8325a06"
+        },
+        "independent_owned_file_read": {
+          "stage": "release",
+          "label": "ssmcp-frontend",
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/release/ssmcp-frontend",
+          "bytes": 1386584,
+          "sha256": "2e19f8ad2fea673f899bbfc44449161e072381571946b85e3c6a5dc7e8325a06",
+          "mode": 448,
+          "device": 68,
+          "inode": 187481917,
+          "stable_during_read": true,
+          "matches_G": true
+        }
+      },
+      {
+        "stage": "decoder",
+        "label": "vt_snapshot",
+        "source_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source/examples/vt_snapshot.rs",
+        "source_sha256": "118386a69d58dfdb5ecc35c567d1ce77afb891d57a8a62dfadde0be8ec1621c0",
+        "profile": {
+          "debug_assertions": false,
+          "debuginfo": 0,
+          "opt_level": "z",
+          "overflow_checks": false,
+          "test": false
+        },
+        "fresh": false,
+        "invocation": {
+          "bytes": 731,
+          "mode": 384,
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/rustc-invocations/decoder/invocation-901300-1795227720468496492.json",
+          "sha256": "ab79217a3ceda4175191789dee54048c7414b0b8e829cb007d60e7367f13f599"
+        },
+        "link_output": {
+          "bytes": 440984,
+          "mode": 493,
+          "path": "/var/tmp/project-z-cargo-target/release/build/ssmcp/7b72577e8b73e4cc/out/vt_snapshot",
+          "sha256": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f"
+        },
+        "cargo_executable": {
+          "bytes": 440984,
+          "path": "/var/tmp/project-z-cargo-target/release/examples/vt_snapshot",
+          "sha256": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f"
+        },
+        "owned_copy": {
+          "bytes": 440984,
+          "mode": 448,
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/decoder/vt_snapshot",
+          "sha256": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f"
+        },
+        "independent_owned_file_read": {
+          "stage": "decoder",
+          "label": "vt_snapshot",
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/workspace-artifact-copies/decoder/vt_snapshot",
+          "bytes": 440984,
+          "sha256": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f",
+          "mode": 448,
+          "device": 68,
+          "inode": 187481985,
+          "stable_during_read": true,
+          "matches_G": true
+        }
+      }
+    ],
+    "terminology": "One debug library test executable plus three release binaries and one release example; not five release binaries.",
+    "extra_integration_debug_client": "CARGO_BIN_EXE_ssmcp is separately evidenced inside the 21 integration-compile artifacts; it is not one of the five controlled outputs.",
+    "shared_link_output_hash_boundary": "The Gate recorded and compared link-output/Cargo-public/owned bytes while its launcher held the target lock. This review independently hashes only the retained five owned copies, not current shared-target paths."
+  },
+  "binding_and_locks": {
+    "driver_diff": "Exactly two FINAL_SOURCE_SHA/TREE assignment lines differ from reviewed c878 HOST6 preparation, including quote style; all other bytes identical.",
+    "launcher_diff": "Normalized AST identical outside FINAL_SOURCE_SHA/TREE and EXPECTED bindings.",
+    "unit_start": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r11-binding/start-unit.json",
+      "bytes": 742,
+      "sha256": "4202e558a03ca3a22d420ded41440ee5e57e3828f962dcaec42fe78199b1ad4f"
+    },
+    "outer_controller": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r11-binding/run_owned.py",
+      "bytes": 2457,
+      "sha256": "0c8e4233cab7eae276b3ec4b61987956b4457f61e3207edc4fdd0e6e2902f3d7"
+    },
+    "launcher": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r11-binding/run_bound.py",
+      "bytes": 7785,
+      "sha256": "bd71863301a98264feea7567783dc271a50b202995939476b69bf0a5aa504fa1"
+    },
+    "outer_exit": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r11-binding/owned/exit.json",
+      "bytes": 1167,
+      "sha256": "37e9a0929b8b6ea71bf158c5d758a4ebad0f056d63c781f4de7828be0d01885d"
+    },
+    "launcher_launch": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11-launch/launch.json",
+      "bytes": 3624,
+      "sha256": "c62314dd39e23b5a0dd487fd70a91f9d631cb894043b47bb8ef16435a8076f0e"
+    },
+    "launcher_exit": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11-launch/exit.json",
+      "bytes": 4792,
+      "sha256": "72b5f78ea2deedeb6f8998315c1a2df617809ceb6d1220ff8112b1840847b36c"
+    },
+    "outer_target_lock_acquisition": false,
+    "source_author_lock": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-author.lock",
+    "target_lock": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "code_path": "Outer controller obtains source-author.lock once with LOCK_NB, calls bound launcher, waits, verifies Q clean and writes exit. Inner launcher obtains the target lock once with LOCK_NB, waits for the Gate and source/hash checks, writes exit, then closes its fd. Outer finally closes only its source lock.",
+    "actual_completion_chain": "unit-start exit0 and invocation ID -> owned launch/outer exit0 -> launcher exit0 -> exact G passed receipt; all source and invocation identities agree.",
+    "native_exec_96f_scope": "An asynchronous systemd-start job; its exit0/bothEOF establishes unit submission only, not product completion.",
+    "continuous_kernel_lock_ownership_independently_observed": false,
+    "held_for_entire_batch_flag_is_independent_proof": false,
+    "original_systemd_exit_event_or_original_proc_cleanup_archive_available_to_reviewer": false,
+    "current_point_observation": {
+      "schema": "Q-r11-independent-postflight-observation-v1",
+      "read_job": {
+        "id": "26c4545eae1eab8d27485f4a48077d3c-9d6",
+        "exit_code": 0,
+        "stdout_eof": true,
+        "stderr_eof": true,
+        "command": [
+          "python3",
+          "-I",
+          "-B",
+          "-c",
+          "import subprocess,json,datetime,pathlib,os\nunit='ssmcp-release25-gate35-r11-20261121.service'\nargv=['systemctl','--user','show',unit,'--property=LoadState,ActiveState,SubState,MainPID,ControlGroup,InvocationID,Result']\nr=subprocess.run(argv,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,timeout=10)\nprint(json.dumps({'observed_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'kind':'independent_current_read_only_observation_not_historical_lock_trace','argv':argv,'exit_code':r.returncode,'stdout':r.stdout,'stderr':r.stderr,'known_original_pids':[{'pid':pid,'proc_exists_now':pathlib.Path('/proc',str(pid)).exists()} for pid in [723736,723754]],'lock_acquired':False,'signals_sent':False,'candidate_executed':False}))"
+        ],
+        "cwd": "/home/lightjunction/Documents/GITHUB"
+      },
+      "observation": {
+        "observed_at_utc": "2026-11-21T02:34:55.449139+00:00",
+        "kind": "independent_current_read_only_observation_not_historical_lock_trace",
+        "argv": [
+          "systemctl",
+          "--user",
+          "show",
+          "ssmcp-release25-gate35-r11-20261121.service",
+          "--property=LoadState,ActiveState,SubState,MainPID,ControlGroup,InvocationID,Result"
+        ],
+        "exit_code": 0,
+        "stdout": "LoadState=not-found\nActiveState=inactive\nSubState=dead\nInvocationID=\nMainPID=0\nResult=success\nControlGroup=\n",
+        "stderr": "",
+        "known_original_pids": [
+          {
+            "pid": 723736,
+            "proc_exists_now": false
+          },
+          {
+            "pid": 723754,
+            "proc_exists_now": false
+          }
+        ],
+        "lock_acquired": false,
+        "signals_sent": false,
+        "candidate_executed": false
+      }
+    },
+    "current_unit_collected_original_pids_absent": true,
+    "historical_result_inferred_from_collected_unit_Result_success": false,
+    "global_lock_currently_free_claimed": false
+  },
+  "observations": [
+    {
+      "kind": "resolved_count_label",
+      "detail": "The owner initial completed review labelled 102 ordinary. Preserved original plus separate c683 count clarification correctly state 101 ordinary + 1 ignored-exact worker. Raw tests and totals are unchanged."
+    },
+    {
+      "kind": "nonblocking_warning",
+      "detail": "Both Clippy commands exit0 with compiler -D warnings. Their raw logs also contain Cargo manifest unused dependency qrcodegen warnings. Passing commands are not zero-warning claims."
+    },
+    {
+      "kind": "known_successor_boundary",
+      "detail": "Owner reports a stale Python UI fixture expecting None rather than explicit Next, with minimal successor/r12 preparation underway. No successor SHA is asserted here, and Q Gate results cannot be transferred to it."
+    }
+  ],
+  "not_claimed": {
+    "ui_e2e_pass": false,
+    "runtime_or_performance_AB_pass_for_Q": false,
+    "final_listener_P1_pass": false,
+    "new_consumer_validation_on_Q_or_successor": false,
+    "release_or_merge_approval": false,
+    "new_candidate_sha_known": false,
+    "old_C_failures_erased": false,
+    "new_tests_executed_for_this_review": false
+  },
+  "stage_evidence": [
+    {
+      "name": "release-policy",
+      "exit_code": 0,
+      "seconds": 5.13,
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_release.py",
+        "-v"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-release-policy.log",
+        "bytes": 19894,
+        "sha256": "b74ecf929758e923eb2685b6e7352391b079d16e3c403391e33f997a595c21b7"
+      }
+    },
+    {
+      "name": "deployment-policy",
+      "exit_code": 0,
+      "seconds": 0.34,
+      "command": [
+        "python3",
+        "-W",
+        "error",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_server_deploy.py",
+        "-v"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-deployment-policy.log",
+        "bytes": 5660,
+        "sha256": "2dcadf0ef5430f5c79f557ce9e7044aaf45a8ecf6d6e956f2dcd1ce71928eab0"
+      }
+    },
+    {
+      "name": "fmt",
+      "exit_code": 0,
+      "seconds": 2.35,
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--",
+        "--check"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-fmt.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "library-compile",
+      "exit_code": 0,
+      "seconds": 75.55,
+      "command": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--lib",
+        "--no-run",
+        "--message-format=json",
+        "--jobs",
+        "1"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-library-compile.log",
+        "bytes": 213954,
+        "sha256": "34c2edda3ea880f7f0c6ca5a39d28581fc8ef3db296e00ec33b83d2aedffb8c5"
+      }
+    },
+    {
+      "name": "library-private",
+      "exit_code": 0,
+      "seconds": 34.51,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/1a01125c55603d60/out/ssmcp-1a01125c55603d60",
+        "--exact",
+        "--test-threads=4",
+        "--skip",
+        "client::local::tests::bundled_runner_is_private_and_removed_after_failed_startup",
+        "--skip",
+        "client::local::tests::bundled_runner_never_overwrites_or_removes_a_replaced_file",
+        "--skip",
+        "client::local::tests::private_socket_rejects_symlinks_and_exposed_permissions",
+        "--skip",
+        "client::local::tests::gateway_checks_all_origins_and_has_no_portal_routes",
+        "--skip",
+        "client::local::socket::tests::dropping_the_host_cleans_its_socket_without_explicit_shutdown",
+        "--skip",
+        "client::local::socket::tests::http_socket_uses_the_same_origin_and_authenticated_mcp_router"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-library-private.log",
+        "bytes": 557308,
+        "sha256": "3294ceafe0afe1a59db4a985c42a67b2fc0d3a498dd8764621d8b3513c3735c6"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 6,
+          "ignored": 23,
+          "measured": 0,
+          "passed": 2050,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 3,
+      "selected_names": 2050,
+      "skipped_ignored": 23
+    },
+    {
+      "name": "library-host",
+      "exit_code": 0,
+      "seconds": 0.02,
+      "command": [
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/1a01125c55603d60/out/ssmcp-1a01125c55603d60",
+        "--exact",
+        "--test-threads=1",
+        "client::local::tests::bundled_runner_is_private_and_removed_after_failed_startup",
+        "client::local::tests::bundled_runner_never_overwrites_or_removes_a_replaced_file",
+        "client::local::tests::private_socket_rejects_symlinks_and_exposed_permissions",
+        "client::local::tests::gateway_checks_all_origins_and_has_no_portal_routes",
+        "client::local::socket::tests::dropping_the_host_cleans_its_socket_without_explicit_shutdown",
+        "client::local::socket::tests::http_socket_uses_the_same_origin_and_authenticated_mcp_router"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-library-host.log",
+        "bytes": 2069,
+        "sha256": "ce3be8a1ea8c13b3dcbd6c35260c2072772dde98e9f98ab758478eadb8ec4318"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 2073,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 6,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 6,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "clippy",
+      "exit_code": 0,
+      "seconds": 93.73,
+      "command": [
+        "cargo",
+        "clippy",
+        "--offline",
+        "--locked",
+        "--workspace",
+        "--all-targets",
+        "--jobs",
+        "1",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-clippy.log",
+        "bytes": 6331,
+        "sha256": "6e6ee9ec9fb69700df8a73495e22a35a510840ba432d1cd195963d110d474b75"
+      }
+    },
+    {
+      "name": "windows-gnu-clippy",
+      "exit_code": 0,
+      "seconds": 88.39,
+      "command": [
+        "cargo",
+        "clippy",
+        "--offline",
+        "--locked",
+        "--target",
+        "x86_64-pc-windows-gnu",
+        "--workspace",
+        "--all-targets",
+        "--jobs",
+        "1",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-windows-gnu-clippy.log",
+        "bytes": 7970,
+        "sha256": "fad3335f0caf178bf80e25f976685efa320ff3dcc4deddbb26118ed192c6d4ef"
+      }
+    },
+    {
+      "name": "integration-compile",
+      "exit_code": 0,
+      "seconds": 57.65,
+      "command": [
+        "cargo",
+        "test",
+        "--offline",
+        "--locked",
+        "--package",
+        "ssmcp",
+        "--no-run",
+        "--message-format=json",
+        "--jobs",
+        "1",
+        "--test",
+        "allow_account",
+        "--test",
+        "cc_backend",
+        "--test",
+        "client_resources",
+        "--test",
+        "client_server_config",
+        "--test",
+        "codex_backend",
+        "--test",
+        "collaboration",
+        "--test",
+        "connection_context",
+        "--test",
+        "context",
+        "--test",
+        "context_helpers",
+        "--test",
+        "context_runtime",
+        "--test",
+        "oauth_security",
+        "--test",
+        "pi_backend",
+        "--test",
+        "release_client",
+        "--test",
+        "resources",
+        "--test",
+        "rsync",
+        "--test",
+        "server_runtime",
+        "--test",
+        "terminals",
+        "--test",
+        "two_tools",
+        "--test",
+        "workspace_bridge",
+        "--test",
+        "zuse_worker_entry"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-compile.log",
+        "bytes": 235554,
+        "sha256": "baec33a2c579998b0ef000f4407431f452256f07d7a2ad02d51256661c1e8b6a"
+      }
+    },
+    {
+      "name": "integration-allow_account",
+      "exit_code": 0,
+      "seconds": 0.06,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/9683e0ba8f6cb65b/out/allow_account-9683e0ba8f6cb65b",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-allow_account.log",
+        "bytes": 331,
+        "sha256": "21c433abd0331037fcde032caaf5f620ff150b3d54a123709032bd58d6353b8b"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 3,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 3,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-cc_backend",
+      "exit_code": 0,
+      "seconds": 1.16,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/5715785ea871a01b/out/cc_backend-5715785ea871a01b",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-cc_backend.log",
+        "bytes": 2050,
+        "sha256": "8f8537552fe3d9925b4f1f10a6696f50daa5dc949a41c0a0994df5b1ea359bba"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 1,
+          "measured": 0,
+          "passed": 6,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 6,
+      "skipped_ignored": 1
+    },
+    {
+      "name": "integration-client_resources",
+      "exit_code": 0,
+      "seconds": 0.07,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/8214f1f3e6b42056/out/client_resources-8214f1f3e6b42056",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-client_resources.log",
+        "bytes": 251,
+        "sha256": "a78f9f3bdff3c797c64ce9cfb5989c22c91514cb85ed034cb5d69aed5700d036"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 1,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 1,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-client_server_config",
+      "exit_code": 0,
+      "seconds": 0.09,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/20a85a3da063ca4e/out/client_server_config-20a85a3da063ca4e",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-client_server_config.log",
+        "bytes": 512,
+        "sha256": "68767f2f8ac7957aba04890a8bf627f8e446d7d2649522ad004d68405704c59d"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 5,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 5,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-codex_backend",
+      "exit_code": 0,
+      "seconds": 20.48,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/dd97123a7e756b24/out/codex_backend-dd97123a7e756b24",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-codex_backend.log",
+        "bytes": 9537,
+        "sha256": "f5162ab21faa0ef3bdb919828096573f558115fb8cce587a9c84bfa529e13a8c"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 2,
+          "measured": 0,
+          "passed": 14,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 14,
+      "skipped_ignored": 2
+    },
+    {
+      "name": "integration-collaboration",
+      "exit_code": 0,
+      "seconds": 0.14,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/d1296e331c697383/out/collaboration-d1296e331c697383",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-collaboration.log",
+        "bytes": 24130,
+        "sha256": "8c96e1ea9709ebb0f938ea2ce680fa6a323d4c68fcab74c059df47a3847bbb62"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 3,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 3,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-connection_context",
+      "exit_code": 0,
+      "seconds": 0.24,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/79cdb8b091898632/out/connection_context-79cdb8b091898632",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-connection_context.log",
+        "bytes": 893,
+        "sha256": "b1be70dad9813e7814968515cf6ed85a1dd9fb91ca9fd8b62e957042fa25e022"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 10,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 10,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-context",
+      "exit_code": 0,
+      "seconds": 0.09,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/d9feb308e9807f4b/out/context-d9feb308e9807f4b",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-context.log",
+        "bytes": 9635,
+        "sha256": "baf0742483af0d733e3c3268b664f8023f572392f065a518d4290248f321e9bb"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 12,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 12,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-context_helpers",
+      "exit_code": 0,
+      "seconds": 0.0,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/3466fb1655423402/out/context_helpers-3466fb1655423402",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-context_helpers.log",
+        "bytes": 470,
+        "sha256": "d97772d6536da9b8f88482e90b8e19d8e60b8dca14361909d1e1e7ba08fe8512"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 2,
+          "measured": 0,
+          "passed": 0,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 0,
+      "skipped_ignored": 2
+    },
+    {
+      "name": "integration-context_runtime",
+      "exit_code": 0,
+      "seconds": 0.09,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/4220d87755ee3f2d/out/context_runtime-4220d87755ee3f2d",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-context_runtime.log",
+        "bytes": 387,
+        "sha256": "6953f0fae43437da5decf70f15df7d37d5aa4a1b49e0c369703680999ed20efc"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 1,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 1,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-oauth_security",
+      "exit_code": 0,
+      "seconds": 1.14,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/f66fb984d7cb0066/out/oauth_security-f66fb984d7cb0066",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-oauth_security.log",
+        "bytes": 24155,
+        "sha256": "29fb5a2e4891d3a7703a76ae81eec6e93f67ed048795bb6e46ae41b6c497c80a"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 11,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 11,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-pi_backend",
+      "exit_code": 0,
+      "seconds": 0.14,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/a7016b276a4dd988/out/pi_backend-a7016b276a4dd988",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-pi_backend.log",
+        "bytes": 5283,
+        "sha256": "1ead63a00287b5427dc456f8b3067202c07fc6c63c46e72981d8f7e65c7c7230"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 1,
+          "measured": 0,
+          "passed": 9,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 9,
+      "skipped_ignored": 1
+    },
+    {
+      "name": "integration-release_client",
+      "exit_code": 0,
+      "seconds": 0.04,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/00cac09e1bbba4ce/out/release_client-00cac09e1bbba4ce",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-release_client.log",
+        "bytes": 2866,
+        "sha256": "028ccd5acb303243bb3c7f103a6476dc0c7f8e5d1d4966fa27fa36c07a6ef82c"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 4,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 4,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-resources",
+      "exit_code": 0,
+      "seconds": 0.12,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/897bc50903959dfa/out/resources-897bc50903959dfa",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-resources.log",
+        "bytes": 65044,
+        "sha256": "86563dca45e54ba79bd9a2f9bed4135e19701f6e9c705bddc576f131a2a14e4f"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 10,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 10,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-rsync",
+      "exit_code": 0,
+      "seconds": 0.15,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/1a5577db085ff6cc/out/rsync-1a5577db085ff6cc",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-rsync.log",
+        "bytes": 309,
+        "sha256": "36ae720f390c21d4c95b7eb40a6c17be00db4722130659d2296329fce86349a1"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 3,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 3,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-server_runtime",
+      "exit_code": 0,
+      "seconds": 0.01,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/a223b38a00bb7f8e/out/server_runtime-a223b38a00bb7f8e",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-server_runtime.log",
+        "bytes": 484,
+        "sha256": "eae88079efd75e981f4b9e44d76603b64317ae789264741fa1749cd9b9090d3a"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 1,
+          "measured": 0,
+          "passed": 3,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 3,
+      "skipped_ignored": 1
+    },
+    {
+      "name": "integration-terminals",
+      "exit_code": 0,
+      "seconds": 0.4,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/81f6104c212494cb/out/terminals-81f6104c212494cb",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-terminals.log",
+        "bytes": 1001,
+        "sha256": "d92735e70621d895cd64c2c5ed7395192bb914fa4cdef24a8fd70596f6ecefd0"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 4,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 4,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-two_tools",
+      "exit_code": 0,
+      "seconds": 0.03,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/ce4cb0452fccf006/out/two_tools-ce4cb0452fccf006",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-two_tools.log",
+        "bytes": 7507,
+        "sha256": "7b3041b71de80a8230691b58b8de7c45a352897dd1c472647036777ee9d5df91"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 7,
+          "measured": 0,
+          "passed": 2,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 2,
+      "skipped_ignored": 7
+    },
+    {
+      "name": "integration-workspace_bridge",
+      "exit_code": 0,
+      "seconds": 0.0,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/facaa8f72a1a30c4/out/workspace_bridge-facaa8f72a1a30c4",
+        "--test-threads=4"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-workspace_bridge.log",
+        "bytes": 574,
+        "sha256": "a016ef16e661a8133328e13bbf46a3c8360c174db26c22b61328bd62e02b6bbd"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 3,
+          "measured": 0,
+          "passed": 0,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 0,
+      "skipped_ignored": 3
+    },
+    {
+      "name": "integration-zuse_worker_entry",
+      "exit_code": 0,
+      "seconds": 0.17,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/6a662defcea56b89/out/zuse_worker_entry-6a662defcea56b89",
+        "--ignored",
+        "--exact",
+        "missing_worker_entry_is_recoverable_without_spawning_the_embedding_binary",
+        "--test-threads=1"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-zuse_worker_entry.log",
+        "bytes": 198,
+        "sha256": "f00d1baea7ad85a902f12159066b4b6b74520492ca7965519efbf4752b0561d7"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 1,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 1,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "library-code-mode-ignored",
+      "exit_code": 0,
+      "seconds": 0.29,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/1a01125c55603d60/out/ssmcp-1a01125c55603d60",
+        "--ignored",
+        "--exact",
+        "--test-threads=1",
+        "code_mode::tests::real_system_runtime_uses_mandatory_os_isolation",
+        "code_mode::tests::runtime_check_uses_the_mandatory_system_sandbox"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-library-code-mode-ignored.log",
+        "bytes": 272,
+        "sha256": "fd926c478c7bdf6da30098c7b1e26e29f4cddddb66cf18d233f3c534c1b961dc"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 2077,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 2,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 2,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-two_tools-ignored",
+      "exit_code": 0,
+      "seconds": 1.5,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/ce4cb0452fccf006/out/two_tools-ce4cb0452fccf006",
+        "--ignored",
+        "--test-threads=1"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-two_tools-ignored.log",
+        "bytes": 31966,
+        "sha256": "f7b45dc2fa913ea888de043224577922c61b4edc9f994d274a354aa18f8f9efb"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 2,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 7,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 7,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-workspace_bridge-ignored",
+      "exit_code": 0,
+      "seconds": 2.1,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/facaa8f72a1a30c4/out/workspace_bridge-facaa8f72a1a30c4",
+        "--ignored",
+        "--test-threads=1"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-workspace_bridge-ignored.log",
+        "bytes": 12859,
+        "sha256": "3f305b990629e621a4bf5d56628be1e5b1946fc01f75a33e891a2c87762ac10f"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 3,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 3,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "integration-context_helpers-ignored",
+      "exit_code": 0,
+      "seconds": 0.29,
+      "command": [
+        "/usr/bin/bwrap",
+        "--unshare-user",
+        "--uid",
+        "1000",
+        "--gid",
+        "1000",
+        "--dev-bind",
+        "/",
+        "/",
+        "--bind",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+        "/tmp",
+        "--unsetenv",
+        "SSMCP_OUTPUT_RELOAD",
+        "--setenv",
+        "TMPDIR",
+        "/tmp",
+        "--chdir",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+        "/var/tmp/project-z-cargo-target/debug/build/ssmcp/3466fb1655423402/out/context_helpers-3466fb1655423402",
+        "--ignored",
+        "--test-threads=1"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-integration-context_helpers-ignored.log",
+        "bytes": 1738,
+        "sha256": "10f3735b8490bb2440d125f41696003592e4f31c91f42f744cdfd855a57cb885"
+      },
+      "parent_results": [
+        {
+          "failed": 0,
+          "filtered": 0,
+          "ignored": 0,
+          "measured": 0,
+          "passed": 2,
+          "result": "ok"
+        }
+      ],
+      "child_summaries_not_added": 0,
+      "selected_names": 2,
+      "skipped_ignored": 0
+    },
+    {
+      "name": "release",
+      "exit_code": 0,
+      "seconds": 216.37,
+      "command": [
+        "cargo",
+        "build",
+        "--offline",
+        "--locked",
+        "--release",
+        "--message-format=json",
+        "--bins",
+        "--jobs",
+        "1"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-release.log",
+        "bytes": 218088,
+        "sha256": "63a1c79be0220794858758b1b2b6c4e3098dbe79c2c9b91a63ac60fa799f3c6e"
+      }
+    },
+    {
+      "name": "decoder",
+      "exit_code": 0,
+      "seconds": 94.91,
+      "command": [
+        "cargo",
+        "build",
+        "--offline",
+        "--locked",
+        "--release",
+        "--message-format=json",
+        "--example",
+        "vt_snapshot",
+        "--jobs",
+        "1"
+      ],
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-decoder.log",
+        "bytes": 216107,
+        "sha256": "a07e63313ac3894684c75906616030239262360b49ee3af6994bcd41c9557fa6"
+      }
+    }
+  ],
+  "supporting_inputs": [
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-r11-actual-receipts-original.json",
+      "bytes": 1446007,
+      "sha256": "be3ffc6bbaafbc9e8de9a9e6cb39fe860889fbc76d3456d6ce13bb7f805f54c6"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-r11-raw-evidence-original.json",
+      "bytes": 7113590,
+      "sha256": "e105a47e90f01791f719cda356449c089c48be30e2aa98cad10098a04a5e78f1"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-r11-outer-evidence-original.json",
+      "bytes": 18399,
+      "sha256": "8767704717fe8d37cc19cf7e33b600702db922ebc4cb961fae31d6fb59ea8c1b"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-r11-local-reconciliation.json",
+      "bytes": 67250,
+      "sha256": "c3b95f2070dfa30e2003d3618c44cc4dd4135571a63b9a3fc14e89f436ac497a"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-source-freeze-original.json",
+      "bytes": 3242,
+      "sha256": "0eebae75a3f8f5ce772958e5f897c0ebc6652c245fd6a32285680e5e11f0db00"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-fixture-static-review.json",
+      "bytes": 7646,
+      "sha256": "ae1f187c6276d38eda1ff81ff3414a94fb683420804443a7d00ee9abd0e691df"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-prepared-independent-static-review.json",
+      "bytes": 8904,
+      "sha256": "edd940810cf1c2cf95a12f4e9a0df79099ccd45fe1904edbe5840b62f7558ab9"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-independent-static-review.json",
+      "bytes": 18771,
+      "sha256": "bc6a4850ebf7143c200bc9bb18cdefa36a046f2631085994824444a9a875b620"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-original-goals-library-result-map.json",
+      "bytes": 6058,
+      "sha256": "5214c32c1178d446d9b0c4e2b4ddb2a32d4a1e48e958dc1924adaa2a3960eb59"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-r11-final-gate-root-read.json",
+      "bytes": 31346,
+      "sha256": "30729b47b74201addf7282c9b6bd2cbbca834a87be252c8f90cd5617e7ab9092"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-r11-owner-completed-review-original.json",
+      "bytes": 7663,
+      "sha256": "d34195f917a33264fc9d6618fa5f90149fc28521c58c12e8a53eb5acd840e60b"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-r11-owner-count-clarification-original.json",
+      "bytes": 1792,
+      "sha256": "c683c79e718368c28264f05e9b0101d4d409f986f125684b35590e5a25746fad"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-r11-unit-start-original.json",
+      "bytes": 742,
+      "sha256": "4202e558a03ca3a22d420ded41440ee5e57e3828f962dcaec42fe78199b1ad4f"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-r11-outer-exit-original.json",
+      "bytes": 1167,
+      "sha256": "37e9a0929b8b6ea71bf158c5d758a4ebad0f056d63c781f4de7828be0d01885d"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-r11-unit-current-independent-observation.json",
+      "bytes": 1905,
+      "sha256": "f9ad85493c4eb500126a2b9323707d6725f6dbc8b7f5aab33a48af6ddf3193fe"
+    }
+  ]
+}

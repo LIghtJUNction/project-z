@@ -1,0 +1,238 @@
+{
+  "schema_version": 7,
+  "state": "published_and_full_readback_verified",
+  "document_id": "1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+  "title": "Project Z 进度报告（2026-11-21）",
+  "url": "https://docs.google.com/document/d/1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+  "folder_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+  "revision_id": "AHj4eMStxPJE5v7kHzsuHgLizBvpa5gc1ZZIQMvmSZKjyGOIBP0KYKTu3_hZr3n3rl1ico-GZhSs9P8FyH4Y0YJ24F9BQVbItzx7tlpKK-I",
+  "status_cutoff_utc": "2026-11-21T05:46:09Z",
+  "immutable_archive_commit": "1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d",
+  "maintenance_publication": {
+    "report_commit": "1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d",
+    "report_changed_text_files": 29,
+    "snapshot_utc": "2026-11-21T05:31:38.652772Z",
+    "merge_commit": "efe912eb54a8240fab39126d1f2f6a464cc67f8b",
+    "merge_tree": "dd9345a7bf252832ce46878e0a50c7a27df5e8c9",
+    "merge_parents": [
+      "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+      "be64e5ab88a8d72fe81956f6ba64a363e2299fde"
+    ],
+    "pr7_draft": true,
+    "independent_GitHub_object_reads": true,
+    "evidence_commit": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "evidence_added_text_files": 10,
+    "evidence_code_changes": false,
+    "release_fix_commit": "88fa3610f24cc21705107bff4917a6ec26c022d0",
+    "release_fix_tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+    "release_fix_parent": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "maintenance_branch_head": "1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d",
+    "previous_report_commit": "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+    "report_added_text_files": 29,
+    "report_code_changes": false
+  },
+  "created_once": true,
+  "original_raw_drive_MD_JSON_unchanged": true,
+  "raw_drive_MD_JSON_version": "0d73",
+  "nonempty_paragraphs_including_native_headings": 31,
+  "native_table": {
+    "count": 1,
+    "rows": 7,
+    "columns": 3
+  },
+  "source_hyperlinks": 26,
+  "native_numbered_items": 3,
+  "full_title_content_table_style_links_parent_readback": true,
+  "visual_browser_render_not_performed": true,
+  "document_update_tests_builds_target_locks_not_executed": true,
+  "release_fix": {
+    "commit": "88fa3610f24cc21705107bff4917a6ec26c022d0",
+    "tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+    "base": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "files_changed": 4,
+    "leaf_count": 400,
+    "unchanged_leaves": 396,
+    "tests": {
+      "total": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "modules": {
+        "release": 4,
+        "projection": 8,
+        "receipts": 6
+      }
+    },
+    "original_offline_fixture_metadata": {
+      "executions": 1,
+      "exit_code": 0,
+      "argv": [
+        "cargo",
+        "metadata",
+        "--offline",
+        "--no-deps",
+        "--format-version=1"
+      ]
+    },
+    "actual_job": "26c4545eae1eab8d27485f4a48077d3c-bc6",
+    "actual_exit": 0,
+    "both_eof": true,
+    "original_helper_reused": true,
+    "independent_static_review_no_blocker": true,
+    "not_final44_or_Rust_product_validation": true,
+    "handoff": {
+      "bytes": 11863,
+      "sha256": "257bad369feed9b69d6a238d655308ca919ac8ea76dbe3def603f3c924aef14e"
+    }
+  },
+  "v2_r13": {
+    "public_source": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "public_tree": "64b40eb8a3e0188076cf376229d3d87074d27dcc",
+    "pr": 159,
+    "pr_draft": true,
+    "source_owner_reports_pushed_and_frozen": true,
+    "complete_freeze_readback_pending": false,
+    "root_actual_unit_observation": {
+      "observed_at_utc": "2026-11-21T05:05:08.550567Z",
+      "job_suffix": "be8",
+      "load_state": "loaded",
+      "active_state": "active",
+      "sub_state": "running",
+      "main_pid": 3115830,
+      "invocation_id": "4da7a4c9e0074782aa7d375610b04163"
+    },
+    "new_gate35_pass_not_established": false,
+    "U_results_not_transferred": true,
+    "gate_finished_utc": "2026-11-21T05:09:54Z",
+    "gate35_pass": true,
+    "independent_review": {
+      "blockers": 0,
+      "text_originals": 213,
+      "rust_parent_test_aggregates": 26,
+      "fresh_false_compiler_artifacts": 26,
+      "owned_copies_rehashed": 5
+    },
+    "counts": {
+      "private": 2057,
+      "private_includes_new7_and_existing17": true,
+      "host": 6,
+      "ordinary_integration": 101,
+      "worker_ignored_exact": 1,
+      "mandatory_ignored": 14
+    },
+    "runtime18_source_bound": true,
+    "ui_overall_passed": false,
+    "P1_not_run": true,
+    "next_source_acceptance_pending_as_of_cutoff": true
+  },
+  "v2_runtime18": {
+    "source": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "passed": 18,
+    "source_of_status": "Root actual original readback published at fixed report commit; Docs writer read complete published summary.",
+    "descriptor_pending": false,
+    "U_receipt_not_reused": true,
+    "successor_receipt_not_inferred": true,
+    "evidence": {
+      "path": "docs/maintenance/evidence/ssmcp-V2-r13-runtime/root-runtime-readback.json",
+      "bytes": 11093,
+      "sha256": "988bedd22deca4f81af8b1ab4fae4c8698050aff7ce2b52f4a34c5c9c1edaf4b",
+      "publication_commit_pending": false,
+      "publication_commit": "1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d",
+      "url": "https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/evidence/ssmcp-V2-r13-runtime/root-runtime-readback.json",
+      "git_blob": "09e1c1dba6fbc9938a9a934f2089da91dc85bc67"
+    }
+  },
+  "v2_ui_actual_failure": {
+    "source": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "job": "92eb2e0c47ccd1044fd6f6414c55af55-1a4",
+    "actual_exit": 1,
+    "both_eof": true,
+    "started_utc": "2026-11-21T05:27:26Z",
+    "finished_utc": "2026-11-21T05:31:00Z",
+    "planned": 24,
+    "executed": 13,
+    "passed_independent_suites": 12,
+    "remaining_not_run": 11,
+    "coverage_aliases": 1,
+    "alias_not_independent_pass": true,
+    "session_groups": {
+      "checks": 108,
+      "frames": 8
+    },
+    "composer": {
+      "log_PASS_lines": 61,
+      "producer_report_checks": 61,
+      "wrapper_checks": 0,
+      "acceptance_row_has_checks": false,
+      "failure": "Timed out waiting for the explicit Next caller choice returning to the active edit"
+    },
+    "P1_not_run": true,
+    "original_acceptance": {
+      "bytes": 984372,
+      "sha256": "da801f5209b688130332f3916804fd68ecc4e3643e34db5e6ddc2c4b3fe8eb63"
+    },
+    "composer_log": {
+      "bytes": 11503,
+      "sha256": "5be585269dab282876c95946da2ced078a9bbc30098e1e046ac392533a328544"
+    }
+  },
+  "composer_successor": {
+    "commit": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+    "parent": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "changed_paths": [
+      "scripts/e2e_composer.py"
+    ],
+    "changed_lines": 1,
+    "old_literal": "next caller",
+    "new_literal": "Next caller",
+    "line": 515,
+    "full_file_single_replacement_verified": true,
+    "production_Rust_unchanged": true,
+    "r14_pass_not_established_as_of_cutoff": true
+  },
+  "pr4_feature_merge": {
+    "commit": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+    "base_kind": "feature_branch",
+    "main_unchanged": "a1bb8fd2cbce0a9d85134999883c578358065242"
+  },
+  "prior_revision_delivery": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/delivery-v6.json",
+    "bytes": 9046,
+    "sha256": "f15b9b8643d3a5d59bebf102ec844c301f7180d6a04707c600caf2f128842d7e"
+  },
+  "snapshot_boundary": "State cutoff 2026-11-21T05:46:09Z; r14 later outcomes excluded. Old U receipts remain separate from f42. Doc actual modified time is delivery time, not the state cutoff.",
+  "raw_readback_descriptors": {
+    "document-final-readback-v7.json": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-final-readback-v7.json",
+      "bytes": 132160,
+      "sha256": "96ab6d56ce766c679ccfc6fc08b6bf110258b8e22cd93e84108cd59ddbe263a9"
+    },
+    "metadata-final-readback-v7.json": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/metadata-final-readback-v7.json",
+      "bytes": 758,
+      "sha256": "cd408fa1e1fe545dd1bce38072fe1e5d26694e3982bda8d3148e667cffd99dad"
+    }
+  },
+  "text_projection_descriptor": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-text-v7.md",
+    "bytes": 11145,
+    "sha256": "4d7ea360f2b39ebb251d6e8db5dd48652999006916f272bb8d51cb2327a1a67a"
+  },
+  "verification_descriptor": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/readback-verification-v7.json",
+    "bytes": 50398,
+    "sha256": "d1d271368f75366af2c8159eef8b1d7f1e65c3723f8854d7c9f2ab0654d34052"
+  },
+  "plan_descriptor": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-plan-v7.json",
+    "bytes": 26031,
+    "sha256": "06651918bffe17b64df1933a4275912ee387012d8c8a6bc5f4af6f409767deb1"
+  },
+  "update_receipt_descriptor": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-update-receipt-v7.json",
+    "bytes": 2090,
+    "sha256": "f3f8c5f080a070eaa132520f1dd372f784781ab4c0049ebb24738355d963b7c1"
+  }
+}

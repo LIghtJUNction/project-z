@@ -1,0 +1,440 @@
+{
+  "schema": 1,
+  "binary_sha256": "73e9a96c6ee912c87e85e324f510a4ce5525a5c98d2515022dc310d48bad53ec",
+  "source": "9eaed366b285dc9c6c5a74032e850bd6af8c0476",
+  "source_worktree_dirty": false,
+  "scope": "Linux headless Sway, software Mesa EGL, private shared broker; no physical display",
+  "selected_case": "ime-cursor",
+  "checks": [
+    {
+      "name": "native_surface_and_pty",
+      "passed": true,
+      "app_id": "org.project-z.ztty"
+    },
+    {
+      "name": "cwd_and_terminal_environment",
+      "passed": true,
+      "state": {
+        "cols": 78,
+        "rows": 20,
+        "term": "xterm-256color",
+        "program": "ztty",
+        "pwd_matches_cwd": true
+      }
+    },
+    {
+      "name": "caret_on_rendered_prompt_and_cursor_phase",
+      "passed": true,
+      "row": 6,
+      "col": 9,
+      "cursor_pixels": 210,
+      "geometry": [
+        98,
+        134,
+        10,
+        21
+      ],
+      "dsr_hex": "1b5b373b313052",
+      "geometry_source": "actual PTY DSR and CSI16t cell-size response",
+      "query_response_hex": "1b5b373b3130521b5b363b32313b313074"
+    },
+    {
+      "name": "caret_on_composition_stays_at_logical_cursor",
+      "passed": true,
+      "sampled_frames": 17,
+      "sample_seconds": 1.3192976230056956,
+      "blink_interval_ms": 150,
+      "starting_phase_observed": true,
+      "exact_phase_of_each_composed_frame_instrumented": false
+    },
+    {
+      "name": "caret_on_preedit_does_not_write_pty",
+      "passed": true
+    },
+    {
+      "name": "caret_off_rendered_prompt_and_cursor_phase",
+      "passed": true,
+      "row": 9,
+      "col": 17,
+      "cursor_pixels": 0,
+      "geometry": [
+        178,
+        197,
+        10,
+        21
+      ],
+      "dsr_hex": "1b5b31303b313852",
+      "geometry_source": "actual PTY DSR and CSI16t cell-size response",
+      "query_response_hex": "1b5b31303b3138521b5b363b32313b313074"
+    },
+    {
+      "name": "caret_off_composition_stays_at_logical_cursor",
+      "passed": true,
+      "sampled_frames": 17,
+      "sample_seconds": 1.3229325900028925,
+      "blink_interval_ms": 150,
+      "starting_phase_observed": true,
+      "exact_phase_of_each_composed_frame_instrumented": false
+    },
+    {
+      "name": "caret_off_preedit_does_not_write_pty",
+      "passed": true
+    },
+    {
+      "name": "caret_hidden_mode_suppresses_overlay",
+      "passed": true
+    },
+    {
+      "name": "caret_visible_mode_restores_current_position",
+      "passed": true
+    },
+    {
+      "name": "caret_scrollback_suppresses_overlay",
+      "passed": true
+    },
+    {
+      "name": "caret_live_view_restores_current_position",
+      "passed": true
+    },
+    {
+      "name": "caret_focus_loss_deactivates_input_method",
+      "passed": true
+    },
+    {
+      "name": "caret_focus_return_does_not_replay_old_preedit",
+      "passed": true
+    },
+    {
+      "name": "caret_commit_reaches_same_owned_pty_once",
+      "passed": true,
+      "actual_hex": "e4bda0e5a5bde4b896e7958c",
+      "pid": 2073712,
+      "broker_pid": 2073659
+    },
+    {
+      "name": "caret_peer_exits_cleanly",
+      "passed": true
+    }
+  ],
+  "test_source_sha256": {
+    "tests/wayland_gui.py": "c8b820b87a81aa8575fca69628651d16e44baf8f33b2e86aafcf344bd5784ce9",
+    "tests/wayland_child.py": "9d470a4ab9d3a32efd2a0b7c864551b95d013a1de156da139ccfcde597b06646",
+    "tests/build_wayland_ime_peer.py": "06617787aa89913f221a6cbd16aa62319fbc2316bc494d728ce9ee2b46a745b4",
+    "tests/wayland_ime_peer.c": "62023c5b5f64a7384d28b3f98617f19a7568a63f0b799757f7665a1cc93e5231",
+    "tests/protocols/input-method-unstable-v2.xml": "99414dbad9458e71aa1fa01bc45f94ca6685787bfcb4d98948f72c1b45b60703",
+    "tools/isolated_xvfb.py": "9baf8e2d731be49ed57eefbaa48e15ba30fe581839d0ad1738a5cc4a19ceeb0a"
+  },
+  "compositor_version": "1.12",
+  "caret_ime_states": [
+    "STATE 0 0 0 0",
+    "STATE 0 0 0 0",
+    "STATE 0 0 0 0",
+    "STATE 1 1 13 0",
+    "STATE 0 5 13 0",
+    "STATE 0 5 13 0",
+    "STATE 1 6 13 0"
+  ],
+  "caret_samples": [
+    {
+      "phase_at_start": "on",
+      "index": 0,
+      "seconds_since_observed_phase": 0.07656273999600671,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 1,
+      "seconds_since_observed_phase": 0.15367371798492968,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 2,
+      "seconds_since_observed_phase": 0.23229377300594933,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 3,
+      "seconds_since_observed_phase": 0.3101119629864115,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 4,
+      "seconds_since_observed_phase": 0.386702477990184,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 5,
+      "seconds_since_observed_phase": 0.4635963370092213,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 6,
+      "seconds_since_observed_phase": 0.5405650849861559,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 7,
+      "seconds_since_observed_phase": 0.61693520998233,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 8,
+      "seconds_since_observed_phase": 0.693635801988421,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 9,
+      "seconds_since_observed_phase": 0.7710020589875057,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 10,
+      "seconds_since_observed_phase": 0.8476796390023082,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 11,
+      "seconds_since_observed_phase": 0.9247347549826372,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 12,
+      "seconds_since_observed_phase": 1.003049902006751,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 13,
+      "seconds_since_observed_phase": 1.0796524040051736,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 14,
+      "seconds_since_observed_phase": 1.1567736220022198,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 15,
+      "seconds_since_observed_phase": 1.2383337699866388,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "on",
+      "index": 16,
+      "seconds_since_observed_phase": 1.3175877059984487,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 0,
+      "seconds_since_observed_phase": 0.04695401599747129,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 1,
+      "seconds_since_observed_phase": 0.12429646198870614,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 2,
+      "seconds_since_observed_phase": 0.2019305170106236,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 3,
+      "seconds_since_observed_phase": 0.29169146399362944,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 4,
+      "seconds_since_observed_phase": 0.3699077240016777,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 5,
+      "seconds_since_observed_phase": 0.44604451599298045,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 6,
+      "seconds_since_observed_phase": 0.5276573059963994,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 7,
+      "seconds_since_observed_phase": 0.6033643760019913,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 8,
+      "seconds_since_observed_phase": 0.679762382991612,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 9,
+      "seconds_since_observed_phase": 0.7556941770017147,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 10,
+      "seconds_since_observed_phase": 0.8322704249876551,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 11,
+      "seconds_since_observed_phase": 0.9085408539976925,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 12,
+      "seconds_since_observed_phase": 0.9851278600108344,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 13,
+      "seconds_since_observed_phase": 1.062722512986511,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 14,
+      "seconds_since_observed_phase": 1.1405530519841705,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 15,
+      "seconds_since_observed_phase": 1.2170204930007458,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    },
+    {
+      "phase_at_start": "off",
+      "index": 16,
+      "seconds_since_observed_phase": 1.2944819539843593,
+      "underline_pixels": 50,
+      "origin_unchanged": true,
+      "prompt_unchanged": true
+    }
+  ],
+  "caret_geometry_from_pty": [
+    {
+      "phase": "on",
+      "row": 6,
+      "col": 9,
+      "rectangle": [
+        98,
+        134,
+        10,
+        21
+      ]
+    },
+    {
+      "phase": "off",
+      "row": 9,
+      "col": 17,
+      "rectangle": [
+        178,
+        197,
+        10,
+        21
+      ]
+    }
+  ],
+  "owned_brokers_remaining": [],
+  "owned_children_remaining": [],
+  "owned_helpers_remaining": [],
+  "passed": true,
+  "elapsed_seconds": 7.288086456013843
+}

@@ -1,0 +1,586 @@
+{
+  "schema_version": 1,
+  "title": "Project Z 后续进展：发行投影修复与 SSMCP V2/r13 门禁",
+  "snapshot_utc": "2026-11-21T05:31:38.652772Z",
+  "snapshot_asia_taipei": "2026-11-21T13:31:38.652772+08:00",
+  "scope": "Fixed V2/r13 and runtime milestone, reconciled with late-arriving UI originals that finished within the snapshot. Later source-only successor is explicitly separate; historical results are not transferred.",
+  "outcomes": [
+    "Project Z 的 version+git 发行投影兼容修复已推送协调分支，测试树与远端树完全一致。",
+    "SSMCP V2/r13 的35阶段门禁完成，独立原件复核为0阻断、0实质不一致。",
+    "同一V2源码随后完成独立的12项private MCP与6项transport检查；不加入Gate的Rust计数。",
+    "V2 UI实际13/24执行：12通过、composer失败、11未运行，alias1不另计。原session_groups108通过；P1未执行，最终44未完成。UI原件在快照后才读回，其实际结束05:31:00仍在快照内。"
+  ],
+  "evidence_index": {
+    "file_count": 27,
+    "total_bytes": 605067,
+    "selection": "14 original records +8 selected independent-review records +1 runtime readback +4 UI original/readback files; native complete archives retain their separate scope.",
+    "files": [
+      {
+        "path": "evidence/project-z-google-doc-20261121/delivery-v6.json",
+        "bytes": 9046,
+        "sha256": "f15b9b8643d3a5d59bebf102ec844c301f7180d6a04707c600caf2f128842d7e",
+        "git_blob_sha1": "bd0b407dc2cc98e8a5fc1c34861b5e3737e75c18"
+      },
+      {
+        "path": "evidence/project-z-google-doc-20261121/readback-verification-v6.json",
+        "bytes": 29105,
+        "sha256": "40d6cf3cd93dbe3594b5b2cd8ffb0ae68cf027b17c44e56370886d08247cddf1",
+        "git_blob_sha1": "2e0e4491316e2268f06c02b5a11c9eb18ed20cb8"
+      },
+      {
+        "path": "evidence/project-z-release-compat-88fa361/green-result.json",
+        "bytes": 88013,
+        "sha256": "b9a6fb00182c3aab032e3b74239d94af24b2d4a362c22b5ddbcb4364b2f53ea3",
+        "git_blob_sha1": "5e6a6164f7dd1d214f86084d94e566badb74874b"
+      },
+      {
+        "path": "evidence/project-z-release-compat-88fa361/handoff.json",
+        "bytes": 11863,
+        "sha256": "257bad369feed9b69d6a238d655308ca919ac8ea76dbe3def603f3c924aef14e",
+        "git_blob_sha1": "54465163b16ce8078890b9ec9cdc319e9350cc04"
+      },
+      {
+        "path": "evidence/project-z-release-compat-88fa361/handoff.md",
+        "bytes": 2802,
+        "sha256": "e0bdc0750a2a25d6fa0bf8a5c6167b03950b289d6d3097ec4d3d7dd1a5376e13",
+        "git_blob_sha1": "60762d54f6cccbe4d7f37fcdc2e228b58e23acd5"
+      },
+      {
+        "path": "evidence/project-z-release-compat-88fa361/postflight.json",
+        "bytes": 596,
+        "sha256": "3d70571fb68782a2e45db0c1517989f8372c04eef11bb3ccf387f47af4380450",
+        "git_blob_sha1": "975623b1d5be6eacb18b24d71cb580d286b56086"
+      },
+      {
+        "path": "evidence/project-z-release-compat-88fa361/publication-readback.json",
+        "bytes": 9534,
+        "sha256": "57f5426670d611a7967549f352b85157049ee90316f38c51585d49fff7b43687",
+        "git_blob_sha1": "db4ddd87f4a35e37f29a30390ed32481138e54cf"
+      },
+      {
+        "path": "evidence/project-z-release-compat-88fa361/red-result.json",
+        "bytes": 2664,
+        "sha256": "f44024e09119551412cc1e03c9cc1cd3f5c097229c54a244087e939d2f0efc1a",
+        "git_blob_sha1": "3e0564144e85c50e57af389b985cef6d8ed8cea5"
+      },
+      {
+        "path": "evidence/project-z-release-compat-88fa361/tests.stderr.log",
+        "bytes": 2950,
+        "sha256": "43b7e30bb8595761ba6de58cf8ddf5925b54bae7aafc13a5a62cc7f028f9a989",
+        "git_blob_sha1": "5f67e5c4b2a7a1b807b89a7f3c6e3a04567d5e59"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13-runtime/root-runtime-readback.json",
+        "bytes": 11093,
+        "sha256": "988bedd22deca4f81af8b1ab4fae4c8698050aff7ce2b52f4a34c5c9c1edaf4b",
+        "git_blob_sha1": "09e1c1dba6fbc9938a9a934f2089da91dc85bc67"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13-ui/composer-run.log",
+        "bytes": 11503,
+        "sha256": "5be585269dab282876c95946da2ced078a9bbc30098e1e046ac392533a328544",
+        "git_blob_sha1": "f877179f6a2a1b9dcb3a624bbdbdc91d01db617a"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13-ui/native-job-stdout.log",
+        "bytes": 3627,
+        "sha256": "542131ecbae85ac3a21da4389ecbb8d65f88befa602864c9f38287e2fff4401d",
+        "git_blob_sha1": "7471afd6388a4d8ff417b2f804be95fc4fb2d9d4"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13-ui/root-ui-readback.json",
+        "bytes": 13535,
+        "sha256": "90a767abe895a99f078a356cc3d08ecde8d16b4d19a22dcd3b98cdafa2fb2288",
+        "git_blob_sha1": "9a555bf13e32d3030bd6fbca0150064f4a8e66d5"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13-ui/session-groups-run.log",
+        "bytes": 7907,
+        "sha256": "7bcffae1b743ff6ccfc4270ae1e4399f5c41761ee9955e68722f8aee35b487f9",
+        "git_blob_sha1": "8f1583052bdd1b263bb6792e9d56e4c37d4e3e37"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13/independent-review/compile-time-binding.json",
+        "bytes": 13914,
+        "sha256": "a3433f87b09bac76cdd1c5d27ec08bc1527f65e2c646ec4fb4a8dab6776b88d3",
+        "git_blob_sha1": "aee1c717021537dd2ee639a115c977596317781f"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13/independent-review/contract-comparison.json",
+        "bytes": 8685,
+        "sha256": "150fe7c36ca6de4ca2f1bce56ac7ba24c7094adbfe8034f1cd53e8159ff70ffd",
+        "git_blob_sha1": "b471b3e385a40707f8a91b580df0c4d4c5ec7db3"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13/independent-review/github-V2-commit-original.json",
+        "bytes": 1829,
+        "sha256": "08829e015711f3b3a565edf3af84907563432dab0c17d3f42784f26c151dd804",
+        "git_blob_sha1": "2a765598bea807d840c99df22d31efca7fb04202"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13/independent-review/lock-exit-independent-review.json",
+        "bytes": 8999,
+        "sha256": "90b031d71fefd90071a65aa6a66ba6bda8e228bd0e17e8d385e27cfd931fc28c",
+        "git_blob_sha1": "9af5efda883c7f24e0de7e512ea4958845b12257"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13/independent-review/original-text-index.json",
+        "bytes": 65014,
+        "sha256": "5597fe59e7655597e096868c89d637037e56016caf0e496f3612cadba2aea87e",
+        "git_blob_sha1": "93ce6e395fbe51c2be26a3e4329f6cd53a607a87"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13/independent-review/ssmcp-V2-r13-gate-independent-review.json",
+        "bytes": 251279,
+        "sha256": "f90362963867c0d24a5563ebc043d864b595685ee05c11c255af33ad70999f1d",
+        "git_blob_sha1": "aa7eec22fe0aa8e4f80094006650418ae769dcd4"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13/independent-review/ssmcp-V2-r13-gate-independent-review.md",
+        "bytes": 4816,
+        "sha256": "3a82aa018cff4200dba63ed6ea21b80b4346e1004022bc9ae292fd6b94fe5dd2",
+        "git_blob_sha1": "328c7f6151b71cd01d3cc6d58bd1801bb3f80d13"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13/independent-review/ssmcp-V2-r13-gate-review-summary.json",
+        "bytes": 11886,
+        "sha256": "2a77c879f678926f680a967fd1a63a8164cc0ef2887359b0530c4306b9d78442",
+        "git_blob_sha1": "51cfa9674d375b194c3fdd0c643195df64d0e71d"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13/launcher-exit.json",
+        "bytes": 4793,
+        "sha256": "a0c83d3dcebd1163939f56a476c9782bc46ac1ec00d08c644c05cd6fa9857927",
+        "git_blob_sha1": "f8653dd611d0096953f28d21625049aa863bfb76"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13/native-picker-library-result-map.json",
+        "bytes": 6065,
+        "sha256": "500d837c0d6402db35367a84f52fcd68d94ab69ef0045ab146a2c692af5f4ab6",
+        "git_blob_sha1": "55b4855fc0ec70edc20b979ae8f051346971d2b7"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13/owned-exit.json",
+        "bytes": 1168,
+        "sha256": "b54e0d23c7607084c98ef122cef6fdd69995f2d5a19f5f9e690c9f92a1bf3620",
+        "git_blob_sha1": "2c299afede1d790654bd3eb9039a0e3d85d15faf"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13/source-freeze-f42baae.json",
+        "bytes": 3878,
+        "sha256": "daa27d4b5386a7229cd88c0f973ad0fbf5996d3095736e578a3ed5df3384a602",
+        "git_blob_sha1": "ffc2ca5db30b4f56c067c2d5415318dca97efb81"
+      },
+      {
+        "path": "evidence/ssmcp-V2-r13/source-owner-gate-review.json",
+        "bytes": 18503,
+        "sha256": "83100fd8f0843fed68363bb2570e5bc06f22d0367f5623afb59dbc7e7524cf6a",
+        "git_blob_sha1": "ee9ed885f75b5435965b78aa502e707d2ce86662"
+      }
+    ],
+    "self_report_hashes_excluded": true
+  },
+  "project_z_release_projection": {
+    "state": "published_and_read_back",
+    "repository": "LIghtJUNction/project-z",
+    "branch": "coord/git-source-policy-20261120",
+    "commit": "88fa3610f24cc21705107bff4917a6ec26c022d0",
+    "tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+    "parent": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "commit_url": "https://github.com/LIghtJUNction/project-z/commit/88fa3610f24cc21705107bff4917a6ec26c022d0",
+    "changed_files": [
+      "docs/release-projection.md",
+      "scripts/release_projection.py",
+      "tests/test_release_projection.py",
+      "tests/test_release_receipts.py"
+    ],
+    "tree_readback": {
+      "leaves": 400,
+      "unchanged": 396,
+      "modified": 4,
+      "added": 0,
+      "removed": 0,
+      "tested_tree_equals_remote_tree": true,
+      "remote_four_files_match": true
+    },
+    "behavior": "允许兼容的version与内部git并存；复用未改的cargo_versions.satisfies校验唯一锁定版本，通过后仍投影为锁中的=exact。",
+    "preserved": {
+      "selector_and_alternate_sources_rejected": [
+        "rev",
+        "branch",
+        "tag",
+        "path",
+        "registry",
+        "registry-index",
+        "workspace"
+      ],
+      "invalid_or_incompatible_version_rejected": true,
+      "aliases_features_optional_default_features_targets_workspace_inheritance": true,
+      "source_manifest_and_source_lock_unchanged_by_staging": true,
+      "external_dependencies_unchanged": true,
+      "label": "STAGING_ONLY_UNVERIFIED_NO_PUBLISH",
+      "exact_source_receipt_and_archive_provenance_still_required": true,
+      "release_or_registry_publication_not_established": true
+    },
+    "validation": {
+      "red": {
+        "selected_methods": 2,
+        "actual_exit_code": 1,
+        "expected_failure": true,
+        "subcase_and_setup_errors": 7,
+        "errors_are_not_seven_test_methods": true
+      },
+      "green": {
+        "test_methods": 18,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "modules": {
+          "release": 4,
+          "projection": 8,
+          "receipts": 6
+        },
+        "actual_exit_code": 0,
+        "both_eof": true
+      },
+      "original_real_metadata": {
+        "argv": [
+          "cargo",
+          "metadata",
+          "--offline",
+          "--no-deps",
+          "--format-version=1"
+        ],
+        "actual_invocations": 1,
+        "exit_code": 0
+      },
+      "independent_static_blockers": 0,
+      "no_full_graph_Rust_product_GUI_P1_or_formal_release_claim": true,
+      "cleanup": "原批次受控子进程、临时目录与锁均有退出记录；一次观察的空锁记录不推广为当前或持续全局空闲。"
+    },
+    "evidence": [
+      "evidence/project-z-release-compat-88fa361/publication-readback.json",
+      "evidence/project-z-release-compat-88fa361/handoff.json",
+      "evidence/project-z-release-compat-88fa361/red-result.json",
+      "evidence/project-z-release-compat-88fa361/green-result.json",
+      "evidence/project-z-release-compat-88fa361/tests.stderr.log",
+      "evidence/project-z-release-compat-88fa361/postflight.json"
+    ]
+  },
+  "ssmcp_v2": {
+    "commit": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "tree": "64b40eb8a3e0188076cf376229d3d87074d27dcc",
+    "parent": "18f43d69715538582ddc2806434009170f188e3c",
+    "version": "0.10.25",
+    "commit_url": "https://github.com/LIghtJUNction/ssmcp/commit/f42baae1d5227bd6db8315aef778160b80b57274",
+    "original_session_groups_fixture": {
+      "git_blob": "62245b4f655befd1ac5967cd2de68e1573ad9ca6",
+      "bytes": 19792,
+      "unchanged_from_U": true
+    },
+    "source_freeze_record_scope": "04:58:57的source-freeze中new_build_not_started是当时状态；后续Gate与runtime的完成由各自新原件证明。",
+    "gate": {
+      "status": "passed",
+      "run_id": "f6121dd70d3f8c4fb3d747a9bf2697bf",
+      "started_at_utc": "2026-11-21T04:59:22.538104+00:00",
+      "finished_at_utc": "2026-11-21T05:09:54.138883+00:00",
+      "duration_seconds": 631.60078,
+      "actual_stages": 35,
+      "all_stage_exit_codes_zero": true,
+      "Rust_parent_result_stages": 26,
+      "counts": {
+        "library_private": {
+          "passed": 2057,
+          "failed": 0,
+          "ignored": 23,
+          "filtered": 6
+        },
+        "library_host": {
+          "passed": 6,
+          "failed": 0,
+          "ignored": 0,
+          "filtered": 2080
+        },
+        "ordinary_integration": {
+          "targets": 19,
+          "passed": 101
+        },
+        "worker_ignored_exact": {
+          "passed": 1
+        },
+        "additional_mandatory_ignored": {
+          "stages": 4,
+          "passed": 14
+        },
+        "Python_policy": {
+          "release_policy_passed": 100,
+          "deployment_policy_passed": 35,
+          "not_added_to_Rust_counts": true
+        },
+        "new_regressions": {
+          "count": 7,
+          "subset_of_private_2057": true
+        },
+        "original_target_mapping": {
+          "count": 17,
+          "subset_of_private_2057": true
+        },
+        "no_nested_child_or_historical_result_addition": true
+      },
+      "coverage": "与r12比较覆盖集合：阶段和集成清单保持，仅新增7个private测试、无删除。覆盖比较不继承r12成绩。",
+      "independent_review": {
+        "completed_at_utc": "2026-11-21T05:27:55.992049+00:00",
+        "blockers": 0,
+        "material_inconsistencies": 0,
+        "original_texts_verified": 213,
+        "selected_fresh_false_compiler_chains": 26,
+        "current_owned_ELFs_stream_hashed": 5,
+        "source_entries": {
+          "files": 1545,
+          "directories": 304,
+          "total": 1849
+        },
+        "controlled_output_kinds": {
+          "debug_library_test": 1,
+          "release_binaries": 3,
+          "release_example": 1
+        },
+        "no_claim_all_five_are_release_binaries": true,
+        "evidence": "evidence/ssmcp-V2-r13/independent-review/ssmcp-V2-r13-gate-review-summary.json"
+      },
+      "warnings": [
+        {
+          "stage": "clippy",
+          "warnings": [
+            "warning: unused dependency `qrcodegen`",
+            "warning: `ssmcp` (manifest) generated 1 warning"
+          ]
+        },
+        {
+          "stage": "windows-gnu-clippy",
+          "warnings": [
+            "warning: unused dependency `qrcodegen`",
+            "warning: `ssmcp` (manifest) generated 1 warning"
+          ]
+        }
+      ],
+      "exit_boundary": "原Gate、launcher与外层控制器的run/source/receipt和退出0链一致。独立锁审查不等于持续内核跟踪或当前全局空闲。",
+      "evidence": [
+        "evidence/ssmcp-V2-r13/source-owner-gate-review.json",
+        "evidence/ssmcp-V2-r13/launcher-exit.json",
+        "evidence/ssmcp-V2-r13/owned-exit.json",
+        "evidence/ssmcp-V2-r13/native-picker-library-result-map.json",
+        "evidence/ssmcp-V2-r13/independent-review/ssmcp-V2-r13-gate-independent-review.json",
+        "evidence/ssmcp-V2-r13/independent-review/contract-comparison.json",
+        "evidence/ssmcp-V2-r13/independent-review/lock-exit-independent-review.json"
+      ]
+    },
+    "runtime18": {
+      "status": "passed_bounded_original_readback",
+      "same_V2_source_and_Gate_owned_artifact_descriptors": true,
+      "started_at_utc": "2026-11-21T05:25:12Z",
+      "finished_at_utc": "2026-11-21T05:25:19Z",
+      "runtime_duration_ms": 7764,
+      "outer_duration_ms": 8120,
+      "counts": {
+        "private_mcp": 12,
+        "transport": 6,
+        "passed": 18,
+        "errors": 0
+      },
+      "outer_exit_code": 0,
+      "outer_reaped": true,
+      "short_temp_removed": true,
+      "exact_inputs_before_after_equal": true,
+      "transport_bindings_before_after_equal": true,
+      "text_inputs_rehashed_by_root": 4,
+      "five_binary_descriptors_match_this_Gate": true,
+      "ELF_rehashed_by_runtime_readback": false,
+      "full_harness_semantic_reaudit": false,
+      "actual_job_identifier": {
+        "label": "main1a0",
+        "source": "原执行者回报；root直接核对原launch与runtime文件"
+      },
+      "source_receipts": [
+        {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/runtime-input-agent-f42baae-r13-20261121/launch-result.json",
+          "bytes": 12612,
+          "sha256": "a295675c21c79c72cd9faaebb3966edf17601ca97ed9488c57c4134bc1c51ee9"
+        },
+        {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/runtime-input-agent-f42baae-r13-20261121/run/report.json",
+          "bytes": 62204,
+          "sha256": "7920cfcab677eea3419b4d0bef8449c63ef57702c102d171e40fa043990fe814"
+        }
+      ],
+      "scope": {
+        "checks_not_added_to_Gate_or_historical_U": true,
+        "models_started": false,
+        "TLS_verified": false,
+        "UI_P1_final44_certified": false,
+        "cleanup": "核对原模块清理与外层reaped记录；没有新增全后代进程扫描。"
+      },
+      "evidence": "evidence/ssmcp-V2-r13-runtime/root-runtime-readback.json"
+    },
+    "pending": {
+      "as_of_utc": "2026-11-21T05:31:38.652772Z",
+      "UI24_plus_alias": {
+        "completion_receipt_received": true,
+        "outcome": "failed_at_composer",
+        "full_pass": false
+      },
+      "P1": {
+        "execution_started": false,
+        "completion_receipt_received": false
+      },
+      "final_release_or_merge_acceptance": false
+    },
+    "ui_attempt": {
+      "status": "failed",
+      "source_commit": "f42baae1d5227bd6db8315aef778160b80b57274",
+      "started_utc": "2026-11-21T05:27:26Z",
+      "finished_utc": "2026-11-21T05:31:00Z",
+      "duration_seconds": 214.15,
+      "actual_job": {
+        "job_id": "92eb2e0c47ccd1044fd6f6414c55af55-1a4",
+        "exit_code": 1,
+        "running": false,
+        "stdout_eof": true,
+        "stderr_eof": true,
+        "stdout_bytes": 3627
+      },
+      "planned_independent_suites": 24,
+      "executed": 13,
+      "passed": 12,
+      "failed_suite": "composer",
+      "not_run": 11,
+      "alias_coverage": 1,
+      "alias_is_not_independent_execution": true,
+      "passed_checks_arithmetic_sum": 996,
+      "sum_is_not_unique_global_test_count": true,
+      "session_groups": {
+        "passed": true,
+        "checks": 108,
+        "frames": 8,
+        "producer_elapsed_seconds": 12.33,
+        "wrapper_seconds": 13.919,
+        "original_fixture_unmodified": true
+      },
+      "composer": {
+        "status": "failed",
+        "wrapper_seconds": 22.754,
+        "producer_seconds": 21.378,
+        "original_PASS_lines": 61,
+        "producer_completed_checks": 61,
+        "wrapper_stdout_checks": 0,
+        "acceptance_row_has_checks_field": false,
+        "no_zero_assertions_claim": true,
+        "diagnosis": {
+          "kind": "case_sensitive_title_expectation_mismatch",
+          "helper": "editing_queue() compares the complete Edit queue title exactly",
+          "old_explicit_selection_literal": "next caller",
+          "product_explicit_target_next_label": "Next caller",
+          "product_default_no_explicit_target_label": "next caller",
+          "reviewer": "pr_core_repos",
+          "root_read_fixed_production_lines": true,
+          "product_source_url": "https://github.com/LIghtJUNction/ssmcp/blob/f42baae1d5227bd6db8315aef778160b80b57274/src/client/terminal/conversation.rs",
+          "only_this_explicit_case_should_change": true,
+          "other_state_delivery_and_identity_assertions_preserved": true
+        }
+      },
+      "input_cleanup_boundary": "Recorded wrapper child reaping and before/after inputs were checked. Failed producer has no completed internal cleanup summary; this readback did not inspect all descendant processes or rehash ELF files, and did not recompute the producer input-set hash formula.",
+      "evidence": [
+        "evidence/ssmcp-V2-r13-ui/root-ui-readback.json",
+        "evidence/ssmcp-V2-r13-ui/native-job-stdout.log",
+        "evidence/ssmcp-V2-r13-ui/composer-run.log",
+        "evidence/ssmcp-V2-r13-ui/session-groups-run.log"
+      ]
+    }
+  },
+  "google_doc_v6": {
+    "url": "https://docs.google.com/document/d/1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+    "document_id": "1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+    "status": "published_and_fully_read_back",
+    "fixed_cutoff_utc": "2026-11-21T05:07:21Z",
+    "content": {
+      "nonempty_paragraphs": 31,
+      "table": {
+        "rows": 7,
+        "columns": 3,
+        "cells": 21
+      },
+      "source_links": 22,
+      "numbered_steps": 3,
+      "paragraph_and_cell_texts_verified": 52
+    },
+    "title_content_table_style_links_parent_verified": true,
+    "visual_browser_render_performed": false,
+    "later_r13_050954_completion_included": false,
+    "historical_running_observation_was_correct_at_its_cutoff": true,
+    "original_raw_Drive_MD_JSON_version": "0d73",
+    "original_raw_Drive_MD_JSON_unchanged": true,
+    "evidence": [
+      "evidence/project-z-google-doc-20261121/delivery-v6.json",
+      "evidence/project-z-google-doc-20261121/readback-verification-v6.json"
+    ]
+  },
+  "retained_status": {
+    "initial_85": {
+      "total": 85,
+      "merged": 56,
+      "closed": 14,
+      "archived": 9,
+      "blocked": 5,
+      "in_progress": 1,
+      "classification_changed_by_this_followup": false
+    },
+    "historical_report_commit": "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+    "preserved_merge_commit": "efe912eb54a8240fab39126d1f2f6a464cc67f8b",
+    "historical_UI_second_failure_evidence_commit": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "historical_U_success_and_both_UI_failures_unchanged": true,
+    "zcalld_PR1": {
+      "head": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+      "draft": true,
+      "actual_P1_completion_pending": true
+    },
+    "zuse": {
+      "feature_PR4_merge": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+      "PR2_draft": true,
+      "main": "a1bb8fd2cbce0a9d85134999883c578358065242",
+      "feature_result_not_propagated_to_current_SSMCP_cohort": true
+    },
+    "final44": {
+      "completed": false,
+      "new_graph_execution_in_this_report": false
+    }
+  },
+  "preparation_boundary": {
+    "initial_two_summary_writer": "pr_org_repos",
+    "late_UI_reconciliation_writer": "root",
+    "source_evidence_original_bytes_unchanged": true,
+    "new_UI_readback_augmented_from_original_producer_report": true,
+    "previous_near_1MiB_main_report_unmodified": true,
+    "report_preparation_did_not_run_product_Cargo_GUI_CI_or_take_target_lock": true,
+    "report_preparation_did_not_modify_source_refs_tags_or_Drive": true,
+    "proposed_new_text_paths": 29,
+    "actual_report_commit_not_fabricated_or_self_embedded": true,
+    "not_a_formal_release_acceptance": true
+  },
+  "evidence_readback_completed_through_utc": "2026-11-21T05:44:31.882083+00:00",
+  "record_reconciled_at_utc": "2026-11-21T05:51:01.144169+00:00",
+  "post_snapshot_source_followup": {
+    "commit": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+    "parent": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "committed_at_utc": "2026-11-21T05:35:22Z",
+    "changed_file": "scripts/e2e_composer.py",
+    "new_blob": "87750b2965fe11116ee95f00ed4a8eb74eaced8f",
+    "change": "Only the explicit-selection expectation changes next caller to Next caller at line515",
+    "production_Rust_changed": false,
+    "other_assertions_unchanged": true,
+    "source_version_gate_results_claimed": false,
+    "comparison_url": "https://github.com/LIghtJUNction/ssmcp/compare/f42baae1d5227bd6db8315aef778160b80b57274...4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "reviewer": "pr_core_repos",
+    "root_GitHub_complete_compare_verified": true
+  }
+}

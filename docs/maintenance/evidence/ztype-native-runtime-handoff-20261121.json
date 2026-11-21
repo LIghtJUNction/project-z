@@ -1,0 +1,214 @@
+{
+  "schema": "ztype.native-runtime-handoff.v1",
+  "version": "0.4.2",
+  "source_head": "677d7ca9a895a16a790759fa741d635baa1b704d",
+  "source_tree": "930b79b4c49f21e252087e81f66494d4b4a1d7cc",
+  "source_worktree": "/home/lightjunction/Documents/GITHUB/project_z/dist/ztype-ztty-ui-20261121",
+  "runtime_source_commit": "053eb39eb115decc0cb046e901598cf0bc4645fb",
+  "runtime_source_hashes": {
+    "Cargo.toml": "e097cfadfbd772cc6ceae004134b26c0a582af998844e984710373acc2c3eb95",
+    "Cargo.lock": "ccd77d7e26735530f261c122995478173e15f4319b77bbd40c7b599b04a52052",
+    "src/popup.rs": "c0d10847d6e5bc8a4331a70ef0db6665e6a054e60c3ee47dff995d453dce336b"
+  },
+  "validation_scripts": {
+    "scripts/test_wayland_nested.py": "6a1f1fe9fd53024f29045f68e8c87ecbc87c943ebbfb9e85e65b3347982340ee",
+    "scripts/test_ztty_wayland.py": "689e059877cff0a895f747ddf15ed339658e4508a34214b0c78c4b2e32ddc938",
+    "scripts/test_wayland_popup.py": "5dba29ec91233ce901b7636d5674ca19f798e33e6470fe87c1c7eefcc7c2ea36"
+  },
+  "ztype_binary": {
+    "version": "0.4.2",
+    "bytes": 1214472,
+    "sha256": "1a2b96c03aa5129ea1935216da7b8696ef330a4a2ec49f0139027a4a9c0c82ae",
+    "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/artifacts/ztype"
+  },
+  "ztty_fix": {
+    "head": "076bc6ac8ff9ca17effe25decac7a4dbc4ec0c43",
+    "tree": "a7a99b41c9bfef6f4f617914b6c67466f5d3a7c8",
+    "base": "febc90654e5fc680b0660f0874296e17eb389acf",
+    "pull_request": "https://github.com/LIghtJUNction/ztty/pull/23",
+    "binary": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/artifacts/ztty-fixed",
+      "bytes": 1406392,
+      "sha256": "c5debb5f35d2563e1a3cdf7eeb18bb064439c864ad020fd452f0c730afc61197"
+    },
+    "build_receipt_sha256": "0052b1f2831464b56f7d906abdeac0283042bd0fad034dd57d7d99c77b283647",
+    "build_receipt_bytes": 36088
+  },
+  "final_native_batch": [
+    {
+      "gate": "wayland-fixed",
+      "exit_code": 0,
+      "seconds": 12.566,
+      "binary_bookends_match": true,
+      "passed": true,
+      "gtk_passed": true,
+      "gtk_checks": 28,
+      "ztty_passed": true,
+      "ztty_checks": [
+        {
+          "name": "private_compositor_identity",
+          "passed": true,
+          "pid": 1196620,
+          "state": "S",
+          "ppid": 1196593,
+          "start_ticks": 14816297
+        },
+        {
+          "name": "authenticated_native_wayland_window",
+          "passed": true,
+          "broker_pid": 1199792,
+          "address": "0x55d7c5433bb0",
+          "xwayland": false
+        },
+        {
+          "name": "receiver_is_broker_descendant",
+          "passed": true,
+          "receiver_pid": 1199813
+        },
+        {
+          "name": "receiver_stdin_is_a_real_tty",
+          "passed": true,
+          "tty_name": "/dev/pts/24"
+        },
+        {
+          "name": "fresh_candidate_presentation_metadata",
+          "passed": true,
+          "schema": "ztype.popup-state.v1",
+          "sequence": 302,
+          "requested_visible": true,
+          "selected": 0,
+          "candidate_count": 1,
+          "generation": 31,
+          "width": 248,
+          "height": 112,
+          "presentation_result": "presented"
+        },
+        {
+          "name": "candidate_hidden_after_commit_metadata",
+          "passed": true,
+          "schema": "ztype.popup-state.v1",
+          "sequence": 303,
+          "requested_visible": false,
+          "selected": 0,
+          "candidate_count": 0,
+          "generation": 31,
+          "width": 0,
+          "height": 0,
+          "presentation_result": "hidden"
+        },
+        {
+          "name": "native_chinese_text_reached_owned_pty",
+          "passed": true
+        }
+      ],
+      "stdin_receipt": {
+        "schema": "ztype.ztty-terminal-stdin.v1",
+        "pid": 1199813,
+        "ppid": 1199792,
+        "stdin_isatty": true,
+        "tty_name": "/dev/pts/24",
+        "text": "你好世界",
+        "received_utf8_hex": "e4bda0e5a5bde4b896e7958c0a"
+      },
+      "error": null,
+      "owned_processes_stopped": true,
+      "ztty_proof": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/wayland-fixed/ztty/run-mfbp7zyf"
+    },
+    {
+      "gate": "xim-current",
+      "exit_code": 0,
+      "seconds": 4.498,
+      "binary_bookends_match": true,
+      "passed": true,
+      "checks": 13,
+      "owned_processes_remaining": 0
+    }
+  ],
+  "evidence": {
+    "build-gates.json": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/build-gates.json",
+      "sha256": "8b5147dc3b7887db41e2fd07eee8310971f82cf4c6f8f3e03203eef95239aee0",
+      "bytes": 20709
+    },
+    "ui-candidate-identity.json": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/ui-candidate-identity.json",
+      "sha256": "bf995d663b2ce8e7d002613eaef6b042f15aac71459a9397210a55488590925a",
+      "bytes": 710
+    },
+    "wayland-trace/receipt.json": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/wayland-trace/receipt.json",
+      "sha256": "fd7915dd1bbf3f0efc74ff328b93c9f1f67e5241d270eeacffadcf66c4e964c7",
+      "bytes": 2558
+    },
+    "wayland-latest/receipt.json": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/wayland-latest/receipt.json",
+      "sha256": "023e97868e74f15b13817e1c5fb24657e828aff94c936efe3c9e6297a5eb1edf",
+      "bytes": 2574
+    },
+    "wayland-fixed/receipt.json": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/wayland-fixed/receipt.json",
+      "sha256": "35bd7119b1d5dfb39ccadb41eaf25fed91000af819007f629bcb15754bb86880",
+      "bytes": 2643
+    },
+    "wayland-fixed/nested-report.json": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/wayland-fixed/nested-report.json",
+      "sha256": "05161924fe8c55e4f2610dbbca758e9bd8d999b5111b55f0239a174afecb029d",
+      "bytes": 10242
+    },
+    "wayland-fixed/report.json": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/wayland-fixed/report.json",
+      "sha256": "4c91797b0a6e82a1dfc67b9c7b629fc697d1f4897af8fcbd410a269dd8411cdf",
+      "bytes": 25173
+    },
+    "xim-current/receipt.json": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/xim-current/receipt.json",
+      "sha256": "9f17cc52949e314186da8d1294d0011cce49ef394a7d6aaa5a66c166f041f77b",
+      "bytes": 3096
+    },
+    "xim-current/report.json": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/xim-current/report.json",
+      "sha256": "d137e81cbbc350cd94ff056be5849538a7a3a60f9a7f72185d7d2156df660aba",
+      "bytes": 3274
+    },
+    "ztty-fixed-build-validation.json": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/ztty-fixed-build-validation.json",
+      "sha256": "0052b1f2831464b56f7d906abdeac0283042bd0fad034dd57d7d99c77b283647",
+      "bytes": 36088
+    },
+    "receipt-script-coverage-addendum.json": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/receipt-script-coverage-addendum.json",
+      "sha256": "5ac48b5bb88e66a2f926fa44f06c80e3f5c3914ceb6224cee084d1dfd917ab62",
+      "bytes": 2241
+    }
+  },
+  "known_visual_scope": "Native Wayland terminal inline preedit overlaps the prompt row in the precommit screenshot; actual PTY text is correct. Receiver readiness and terminal frame timing remain a possible confounder; root cause not established.",
+  "merge_owner": "Project Z root for ztype PR3; Personal for ztty PR23; aggregate PR7 owner unchanged",
+  "archive_report": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/ztype-0.4.2-native-acceptance-20261121.md",
+    "sha256": "812322255ed66f14ba679b7efa4fd52b366be2661ad45b0f12b7dbe6a10cee02",
+    "drive": {
+      "file_id": "1fviqFflPCNm7p9qW2PRDkVwxmvfy7wjk",
+      "url": "https://docs.google.com/document/d/1fviqFflPCNm7p9qW2PRDkVwxmvfy7wjk/edit?usp=drivesdk&ouid=112514559335332028622&rtpof=true&sd=true",
+      "parent_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+      "name": "ztype-0.4.2-native-acceptance-20261121.md",
+      "mime_type": "text/markdown",
+      "bytes": 6785,
+      "local_sha256": "812322255ed66f14ba679b7efa4fd52b366be2661ad45b0f12b7dbe6a10cee02",
+      "metadata_readback_confirmed": true,
+      "provider_content_hash_not_exposed": true
+    }
+  },
+  "original_receipts_preserved": true,
+  "no_active_owned_native_jobs": true,
+  "host_ime_not_activated": true,
+  "updated_at": "2026-11-21T06:21:49.538090+08:00",
+  "integration": {
+    "ztype_main": "e3e8c1014e29653da587cc993076cb02e469b456",
+    "ztype_merged_tree": "930b79b4c49f21e252087e81f66494d4b4a1d7cc",
+    "ztype_pull_request": "https://github.com/LIghtJUNction/ztype/pull/3",
+    "ztty_main": "01e8b573bc787e982f96db2b1e6ec9151d321284",
+    "ztty_pull_request": "https://github.com/LIghtJUNction/ztty/pull/23",
+    "verification": "Root expected-head merge and remote API readback; own remote PR state independently read back as MERGED"
+  },
+  "worktree_state": "Clean at tested-source plus documentation head; retained at root request pending downstream handoff."
+}

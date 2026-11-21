@@ -1,0 +1,21 @@
+
+running 6 tests
+test client::local::socket::tests::dropping_the_host_cleans_its_socket_without_explicit_shutdown ... ok
+test client::local::socket::tests::http_socket_uses_the_same_origin_and_authenticated_mcp_router ... ts_ms=1795227135283 level=warn target=ssmcpd::health event="http_complete" request_id="758401-2" method="GET" status="403" duration_ms="0"
+ts_ms=1795227135284 level=warn target=ssmcpd::health event="http_complete" request_id="758401-3" method="GET" status="403" duration_ms="0"
+ts_ms=1795227135284 level=warn target=ssmcpd::mcp event="http_complete" request_id="758401-4" method="GET" status="401" duration_ms="0"
+ts_ms=1795227135284 level=info target=ssmcpd::mcp event="http_complete" request_id="758401-5" method="GET" status="404" duration_ms="0"
+ok
+test client::local::tests::bundled_runner_is_private_and_removed_after_failed_startup ... ok
+test client::local::tests::bundled_runner_never_overwrites_or_removes_a_replaced_file ... ok
+test client::local::tests::gateway_checks_all_origins_and_has_no_portal_routes ... ts_ms=1795227135286 level=warn target=ssmcpd::health event="http_complete" request_id="758401-7" method="GET" status="403" duration_ms="0"
+ts_ms=1795227135287 level=warn target=ssmcpd::health event="http_complete" request_id="758401-8" method="GET" status="403" duration_ms="0"
+ts_ms=1795227135287 level=warn target=ssmcpd::oauth event="http_complete" request_id="758401-10" method="GET" status="403" duration_ms="0"
+ts_ms=1795227135287 level=info target=ssmcpd::identity event="http_complete" request_id="758401-11" method="GET" status="404" duration_ms="0"
+ts_ms=1795227135288 level=info target=ssmcpd::mcp event="http_complete" request_id="758401-12" method="GET" status="404" duration_ms="0"
+ts_ms=1795227135288 level=info target=ssmcpd::mcp event="http_complete" request_id="758401-13" method="GET" status="404" duration_ms="0"
+ok
+test client::local::tests::private_socket_rejects_symlinks_and_exposed_permissions ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 2073 filtered out; finished in 0.01s
+

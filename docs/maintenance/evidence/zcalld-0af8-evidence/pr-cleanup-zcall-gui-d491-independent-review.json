@@ -1,0 +1,207 @@
+{
+  "schema": "project-z.zcall-gui-d491-scope-review.v1",
+  "observed_at_utc": "2026-11-21T00:42:03.271Z",
+  "scope": "Independent read-only GitHub compare/tree and current listener launcher review; no product gate/build/AUR/GUI/native execution, source/ref changes or PR7 draft edit.",
+  "base": "ca35a306088a85e49e9e851aab24329deed20056",
+  "head": "d491b627223807da7b2929f3feea7461393d124c",
+  "base_tree": "4dbcb07eb98b59f36f386fd9dec08291b78ae632",
+  "head_tree": "ac034c7e5fa9b7e7a4319dbb62c4ccc0f725118e",
+  "parents": [
+    "ca35a306088a85e49e9e851aab24329deed20056"
+  ],
+  "ahead_by": 1,
+  "behind_by": 0,
+  "base_leaf_count": 86,
+  "head_leaf_count": 88,
+  "unchanged_old_leaf_count": 82,
+  "changed_paths": [
+    {
+      "path": ".github/workflows/aur.yml",
+      "before": null,
+      "after": {
+        "sha": "c12fbbf8604b4d3c154f920175d541e5f173eb12",
+        "type": "blob",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": ".github/workflows/native.yml",
+      "before": {
+        "sha": "b10c041f683ccc2d3dbbaf2e0cff73ca6b7a8743",
+        "type": "blob",
+        "mode": "100644"
+      },
+      "after": {
+        "sha": "2d5e4e4bb47ddfaa470a390211788a4420112e66",
+        "type": "blob",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "packaging/aur/zcall-gui/PKGBUILD.in",
+      "before": {
+        "sha": "6d071bacfff2f799eedf7d4f468a372f9bb6c878",
+        "type": "blob",
+        "mode": "100644"
+      },
+      "after": {
+        "sha": "44fc997f73a19325f0391f703834f6dd3ab2e815",
+        "type": "blob",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "scripts/aur.py",
+      "before": {
+        "sha": "18326521082eb27a012d32f511b87c864d988d87",
+        "type": "blob",
+        "mode": "100644"
+      },
+      "after": {
+        "sha": "8767db04034b4d67edf90d908eae6781ed2f2cf4",
+        "type": "blob",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "scripts/test_aur_source.py",
+      "before": null,
+      "after": {
+        "sha": "70a9550f142eaf4a718c34187252f16bdd8f53d4",
+        "type": "blob",
+        "mode": "100644"
+      }
+    },
+    {
+      "path": "scripts/test_release.py",
+      "before": {
+        "sha": "e8f286ccaea6326cf1e5eb6799d25b60782c345e",
+        "type": "blob",
+        "mode": "100644"
+      },
+      "after": {
+        "sha": "af7e67d1fc83baf8843ac5084fe5ce9ce0946704",
+        "type": "blob",
+        "mode": "100644"
+      }
+    }
+  ],
+  "preserved": {
+    "rust": {
+      "count": 16,
+      "paths": [
+        "build.rs",
+        "src/backend.rs",
+        "src/core_install.rs",
+        "src/core_install_io.rs",
+        "src/core_install_ui.rs",
+        "src/core_install_windows.rs",
+        "src/dialogs.rs",
+        "src/i18n.rs",
+        "src/ink.rs",
+        "src/json.rs",
+        "src/main.rs",
+        "src/package_update.rs",
+        "src/pages.rs",
+        "src/settings.rs",
+        "src/updater.rs",
+        "src/view_state.rs"
+      ],
+      "all_same_sha_mode_type": true
+    },
+    "cargo": {
+      "count": 2,
+      "paths": [
+        "Cargo.lock",
+        "Cargo.toml"
+      ],
+      "all_same_sha_mode_type": true
+    },
+    "gitlinks": {
+      "count": 1,
+      "paths": [
+        "vendor/zgpui"
+      ],
+      "all_same_sha_mode_type": true
+    },
+    "ui_native_assets": {
+      "count": 19,
+      "paths": [
+        "assets/brand/README.md",
+        "assets/brand/zcall-icon.svg",
+        "assets/brand/zcall-mark-dark.svg",
+        "assets/brand/zcall-mark.svg",
+        "src/backend.rs",
+        "src/core_install.rs",
+        "src/core_install_io.rs",
+        "src/core_install_ui.rs",
+        "src/core_install_windows.rs",
+        "src/dialogs.rs",
+        "src/i18n.rs",
+        "src/ink.rs",
+        "src/json.rs",
+        "src/main.rs",
+        "src/package_update.rs",
+        "src/pages.rs",
+        "src/settings.rs",
+        "src/updater.rs",
+        "src/view_state.rs"
+      ],
+      "all_same_sha_mode_type": true
+    }
+  },
+  "classification": "Packaging/source-release validation and manual source-AUR publication changes, not docs-only.",
+  "semantics": [
+    {
+      "path": "packaging/aur/zcall-gui/PKGBUILD.in",
+      "summary": "AUR source prepare validates bundled zgpui manifest name/version, canonical Git dependency shape and single locked package; substitutes the development Git source with vendor/zgpui only in the extracted release archive, then generates an offline path lock. Existing frozen build/test steps are retained."
+    },
+    {
+      "path": "scripts/aur.py",
+      "summary": "Adds strictly positive source pkgrel and source-only rendering/publication; source revision changes do not change binary package pkgrel; render/publish use the exact selected recipes."
+    },
+    {
+      "path": "scripts/test_aur_source.py",
+      "summary": "New cold-cache helper validates archive paths, exact generated recipe/.SRCINFO and archive checksum, executes prepare, compares package/version/dependency graph, then requests frozen metadata confined to archive paths with empty Git/registry cache. This describes code, not a test run in this review."
+    },
+    {
+      "path": "scripts/test_release.py",
+      "summary": "Adds source revision/source-only/binary-revision and invalid-value checks."
+    },
+    {
+      "path": ".github/workflows/native.yml",
+      "summary": "Adds an x86_64 Linux source-archive cold-cache metadata check before existing fetch/native validation."
+    },
+    {
+      "path": ".github/workflows/aur.yml",
+      "summary": "New manual workflow_dispatch-only source AUR revision workflow checks existing stable release/source archive, validates exact recipe, then explicitly publishes that verified source recipe. No workflow executed or AUR publication verified here."
+    }
+  ],
+  "listener_scope": {
+    "zcalld_fixed_head": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+    "workspace_explicitly_excludes_apps_zcall_gui": true,
+    "planned_gate_uses": [
+      "locked workspace metadata/freshness",
+      "workspace fmt/tests including7 listener tests as subset",
+      "strict root Clippy",
+      "actual release zcalld compiler-artifact/cwd/argv and owned copy",
+      "8 real TCP/Unix cancellation cases"
+    ],
+    "planned_gate_does_not_invoke": [
+      "GUI Rust or native runtime",
+      "GUI AUR helper",
+      "GUI release workflow",
+      "AUR build/publication"
+    ],
+    "minimum_successor": "Change only apps/zcall-gui gitlink from ca35 to d491 on E1; preserve every other leaf. Bind new source/tree/wrapper/metadata and exact changed-path/GUI pin assertions before first actual product gate.",
+    "judgment": "No added listener/runtime blocker found. The GUI pin update does not change the planned listener Rust/eight-curl gate scope. Packaging validation remains a separate scope whose owner evidence is not re-certified by this review.",
+    "final_p1_or44_claimed": false
+  },
+  "source_urls": [
+    "https://api.github.com/repos/LIghtJUNction/zcall-gui/compare/ca35a306088a85e49e9e851aab24329deed20056...d491b627223807da7b2929f3feea7461393d124c",
+    "https://api.github.com/repos/LIghtJUNction/zcall-gui/git/trees/4dbcb07eb98b59f36f386fd9dec08291b78ae632?recursive=1",
+    "https://api.github.com/repos/LIghtJUNction/zcall-gui/git/trees/ac034c7e5fa9b7e7a4319dbb62c4ccc0f725118e?recursive=1",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/contents/Cargo.toml?ref=e1e23cf62402780bf934c4e187d98b78aa26b825"
+  ],
+  "blocking_findings": []
+}

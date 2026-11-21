@@ -1,0 +1,91 @@
+{
+  "observed_utc": "2026-11-21T07:25:36.117Z",
+  "commit": "892b9d1eecbc8a7ac2bee724749e9bf8f07322c0",
+  "tree": "03d67141b18a4b85b87343736bc0b247b69c611c",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "fulltext_equal": true
+    },
+    {
+      "path": "README.md",
+      "fulltext_equal": true
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "fulltext_equal": true
+    },
+    {
+      "path": "docs/release-projection.md",
+      "fulltext_equal": true
+    },
+    {
+      "path": "scripts/project_z.py",
+      "fulltext_equal": true
+    },
+    {
+      "path": "tests/test_project_z.py",
+      "fulltext_equal": true
+    }
+  ],
+  "PR": {
+    "url": "https://github.com/LIghtJUNction/project-z/pull/7",
+    "head": "892b9d1eecbc8a7ac2bee724749e9bf8f07322c0",
+    "base": "be64e5ab88a8d72fe81956f6ba64a363e2299fde",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "body_exact": true,
+    "old_body_exact_prefix": true
+  },
+  "passed": true,
+  "tree_proof": {
+    "base": "2f63fbb9c539cad4a2e7331dd2df0b6668045b27",
+    "tree": "03d67141b18a4b85b87343736bc0b247b69c611c",
+    "truncated": false,
+    "base_leaves": 453,
+    "final_leaves": 453,
+    "changes": [
+      {
+        "path": "AGENTS.md",
+        "before": "f1e9837fc360b568ed9b6947096c1dae6c0e3607",
+        "after": "70f6c8b805be7059fafc2dd3266adde00ad545ac",
+        "mode": "100644"
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "before": "a2c127f443c4b3d8e57372cd6bf81602941873c9",
+        "after": "44c316b3f3831354cb2e73319763690b99eddcde",
+        "mode": "100644"
+      },
+      {
+        "path": "README.md",
+        "before": "0833b9e779c73ee6c7687005ceedca3846d7491e",
+        "after": "8c0ad841985fc8b7951a7d24725fd0d53f65a137",
+        "mode": "100644"
+      },
+      {
+        "path": "docs/release-projection.md",
+        "before": "4461f954fe94defb8055e4e3deb434fcb38b7a6f",
+        "after": "52b13d230ab707398494e27bdc2e18ae36047369",
+        "mode": "100644"
+      },
+      {
+        "path": "scripts/project_z.py",
+        "before": "acfa1440286ea059b5b3bf7e679d161d939f45c4",
+        "after": "aaaf7a5637c31d319fc021b377ff189f45cd717b",
+        "mode": "100644"
+      },
+      {
+        "path": "tests/test_project_z.py",
+        "before": "f2966841f843e0d51a01dc568f7d484184ddfbf2",
+        "after": "4221c929f03038039058e34ba0282e17defe4084",
+        "mode": "100644"
+      }
+    ],
+    "added": [],
+    "deleted": [],
+    "unchanged": 447,
+    "passed": true
+  }
+}

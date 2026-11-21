@@ -1,0 +1,612 @@
+{
+  "schema": "project-z.git-only-policy-and-consumers.v1",
+  "snapshot_utc": "2026-11-21T07:30:11Z",
+  "snapshot_taipei": "2026-11-21T15:30:11+08:00",
+  "status": "bounded_progress_snapshot; consumer_acceptance_and_final44_pending",
+  "base": {
+    "commit": "892b9d1eecbc8a7ac2bee724749e9bf8f07322c0",
+    "tree": "03d67141b18a4b85b87343736bc0b247b69c611c",
+    "parent": "c9de7a60351b277a4903c9f40781cbae69cd6e5c",
+    "existing_leaves": 453,
+    "all_existing_paths_to_preserve": true
+  },
+  "policy": {
+    "published": true,
+    "commit": "892b9d1eecbc8a7ac2bee724749e9bf8f07322c0",
+    "tree": "03d67141b18a4b85b87343736bc0b247b69c611c",
+    "changed_files": [
+      "AGENTS.md",
+      "CONTRIBUTING.md",
+      "README.md",
+      "docs/release-projection.md",
+      "scripts/project_z.py",
+      "tests/test_project_z.py"
+    ],
+    "unchanged_leaves": 447,
+    "rule": "Canonical default-branch Git sources for cross-repository internal development dependencies, without explicit version (including '*'), rev, tag or branch selectors. Sync records resolved source identities; package/lock versions, same-repository paths and external dependencies keep their distinct semantics. Registry versions are derived for external publication.",
+    "coverage": [
+      "normal/dev/build/target/workspace inheritance",
+      "same-repository path and external dependencies preserved",
+      "unknown internal packages still rejected",
+      "canonical sources and actual locked SHA/version checks retained",
+      "88fa release projection compatibility retained"
+    ],
+    "original_red": {
+      "methods": 5,
+      "failed_parent_methods": 3,
+      "failed_subtests": 38,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 1,
+      "job": "b879919be66280447132d5d616be9361-4a4"
+    },
+    "original_green": {
+      "methods": 24,
+      "policy_methods": 15,
+      "declaration_methods": 4,
+      "unchanged_projection_methods": 5,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0,
+      "job": "b879919be66280447132d5d616be9361-4a6"
+    },
+    "same_test_sha256": "d215418947d5e1bd02e9010256611597a7ff899d8c8d18c5823f4a00e78e17a4",
+    "review_blockers": 0,
+    "not_executed": [
+      "real Cargo integration fixtures",
+      "release offline metadata",
+      "complete test suite",
+      "consumer gates",
+      "final44"
+    ],
+    "evidence_ids": [
+      "policy/handoff.json",
+      "policy/publication-readback.json",
+      "policy/red.json",
+      "policy/green.json",
+      "policy/project-z-git-only-independent-review.json"
+    ]
+  },
+  "zuse": {
+    "PR2": {
+      "url": "https://github.com/LIghtJUNction/zuse/pull/2",
+      "state": "closed",
+      "merged": true,
+      "merged_at": "2026-11-21T06:46:06Z",
+      "API_draft_field_true_not_remaining_blocker": true
+    },
+    "main": {
+      "commit": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+      "tree": "3c110034f10ba5f35b0e18ac6b890d533121a473",
+      "package_version": "0.3.0"
+    },
+    "reviewed_identical_tree": {
+      "feature": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+      "tested_commit": "67e2d6a4cee0d106f46bdf064013e163c0aa3337",
+      "actual_CI_checkout": "cf9d3973db10a8639cdfbc3460af8b9230cf1e5c",
+      "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+      "run": 44860554142
+    },
+    "full_original_CI_logs": [
+      {
+        "platform": "ubuntu",
+        "bytes": 86917,
+        "sha256": "8bb23119f5b945a2a2bb87049b929737e3c6f22ff390a92e260d0fe150b3586d",
+        "summary_rows": 22,
+        "passed": 289,
+        "failed": 0,
+        "ignored": 5
+      },
+      {
+        "platform": "macos",
+        "bytes": 73437,
+        "sha256": "4f4b88877c9e9c2955c293b0f21542729e068f747a04273415f1cc2f0969b1d0",
+        "summary_rows": 22,
+        "passed": 267,
+        "failed": 0,
+        "ignored": 3
+      },
+      {
+        "platform": "windows",
+        "bytes": 74160,
+        "sha256": "198614e9e81662be027e22f5dc97c7fbaef74e2fd86aff1d2366598d2cb0d742",
+        "summary_rows": 22,
+        "passed": 263,
+        "failed": 0,
+        "ignored": 2
+      }
+    ],
+    "no_cross_platform_count_sum": true,
+    "private_MPX_or_physical_device_execution_claimed": false,
+    "main_830_delta": {
+      "paths": 5,
+      "unchanged_leaves": 154,
+      "total_leaves": 159,
+      "Rust_files_unchanged": true,
+      "classification": "manifest/lock/version/workflow/documentation, not docs-only",
+      "zcall_source_before": "564ede15db66530a6dbb78e8b1f4a85998b6f0d8",
+      "zcall_source_after": "317c52f101f112c6af671a629d8406305a168e4a",
+      "internal_development_version_selectors_removed": 4,
+      "registry_publication_removed": true
+    },
+    "main_830_checks": {
+      "count": 10,
+      "all_success": true,
+      "scope": "status-only; no complete 830 log or asset audit in this report"
+    },
+    "downstream": "Assess each consumer; adapt code only where the actual entry is incompatible, then validate the fixed new dependency combination. Historical W/r14 a1 results are not transferred.",
+    "evidence_ids": [
+      "zuse/zuse-pr2-admission-readonly-review.json",
+      "zuse/ci-original-log-readback.json",
+      "github-reference-observation.json"
+    ]
+  },
+  "ztype": {
+    "PR": 4,
+    "url": "https://github.com/LIghtJUNction/ztype/pull/4",
+    "draft": true,
+    "head": "bd26b5bea1a45aa3a0f2b67b85b507472b4fd890",
+    "tree": "80efad744bd91f41e7567f5bb352a352e45774ff",
+    "base": "e3e8c1014e29653da587cc993076cb02e469b456",
+    "changed_paths": [
+      "Cargo.toml",
+      "Cargo.lock"
+    ],
+    "unchanged_leaves": 110,
+    "Rust_files_unchanged": 20,
+    "gitlinks_unchanged": 2,
+    "version_selectors_removed": 7,
+    "lock_delta": {
+      "zuse": {
+        "source": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+        "version": "0.3.0"
+      },
+      "zcall": {
+        "source": "317c52f101f112c6af671a629d8406305a168e4a",
+        "version": "0.4.0"
+      }
+    },
+    "validation": {
+      "static_TOML_and_tree": true,
+      "Cargo_generated_lock": false,
+      "Cargo_resolution": false,
+      "product": false,
+      "UI": false,
+      "merge": false,
+      "other_locked_sources_claimed_latest": false
+    },
+    "authored_PR_body_prefix_preserved": true,
+    "remote_summary_appendix_observed": true,
+    "evidence_ids": [
+      "ztype/source-preparation-public.json",
+      "ztype/readback-proof-public.json",
+      "ztype/minimal.diff",
+      "ztype/publication-readback.json"
+    ]
+  },
+  "ssmcp": {
+    "PR164": {
+      "url": "https://github.com/LIghtJUNction/ssmcp/pull/164",
+      "merged": true,
+      "merged_at": "2026-11-21T06:41:36Z",
+      "C2": "cb3d51c90e82a2d116c77782f9da146b98744af2",
+      "P2": "3f678a7fca7ea64d220454f1723189e43d3b5546",
+      "same_tree": "51a73774a9880fcb2b62be3c3d95e719e349c761",
+      "new_product_acceptance_claimed": false
+    },
+    "successor": {
+      "head": "9e1a06c4c6a04fe6a7ac7919c9cee9ab497ac95b",
+      "tree": "6e6c0024c494d37b736432ae7d5ea91ad8783310",
+      "parent": "1a2f7591ad0abb53907c048dcaed028434e17c47",
+      "branch": "work/local-startup-zuse-20261121",
+      "base": "3f678a7fca7ea64d220454f1723189e43d3b5546",
+      "source_only": true,
+      "new_Gate35_reported": false,
+      "new_runtime_UI_P1_passed": false
+    },
+    "evidence_ids": [
+      "github-reference-observation.json",
+      "coordination-status-observation.json"
+    ]
+  },
+  "W_account_diagnostic": {
+    "source": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+    "old_checks": 36,
+    "W_checks": 33,
+    "total": 69,
+    "passed": 69,
+    "executions": 1,
+    "job_exit": 0,
+    "both_EOF": true,
+    "original_failure_reproduced": false,
+    "root_cause_established": false,
+    "strict_404_predicate_preserved": true,
+    "raw_404_value_separately_logged": false,
+    "reviewer_ELF_rehash": false,
+    "old_503_or_W_UI_failure_overwritten": false,
+    "full_UI_or_P1_pass_claimed": false,
+    "evidence_ids": [
+      "account-diagnostic/account-diagnostic-independent-readback.json",
+      "account-diagnostic/actual-job-readback-public.json"
+    ]
+  },
+  "Linux_multiuser": {
+    "scope": "Read-only permission/path/package observations",
+    "old_system_binary_bytes": 9885680,
+    "old_system_binary_sha256": "59f29540db09e78dc21d49e17bedc279f7c0721bf5aba8939a7d1ef99d13bc13",
+    "pacman_mtree_matches": true,
+    "x_actual_selected_executable_established": false,
+    "local_access_denial_respected": true,
+    "no_product_or_identity_switch_or_permission_change": true,
+    "evidence_ids": [
+      "linux-multiuser/facts-and-boundaries.json",
+      "linux-multiuser/execution-receipts-public.json"
+    ]
+  },
+  "current_entry_socket_smoke": {
+    "scope": "Installed entry in isolated local namespace, not final source or missing historical session",
+    "job": "26c4545eae1eab8d27485f4a48077d3c-d3d",
+    "exit_code": 0,
+    "running": false,
+    "both_EOF": true,
+    "version": "ssmcp 0.10.25",
+    "entry_bytes": 15751344,
+    "entry_sha256": "54651b3fd9611210a838ffa5ddc1e032dc40d7b71ea2cf163487e4b32085c7b9",
+    "entry_before_after_equal": true,
+    "product_launches": 1,
+    "socket_sends": 1,
+    "Python_fixture_invocations": 1,
+    "model_used": false,
+    "full_input_preserved": true,
+    "missing_file_warnings": 1,
+    "missing_skill_warnings": 1,
+    "completed_JSON_and_EOF": true,
+    "client_and_outer_exit0_reaped": true,
+    "private_endpoint_absent": true,
+    "host_default_socket_touched": false,
+    "reload_install_deploy": false,
+    "not_final_source_UI_or_P1": true,
+    "evidence_ids": [
+      "current-entry-smoke/root-actual-execution.json",
+      "current-entry-smoke/launch-result.json",
+      "current-entry-smoke/report.json",
+      "current-entry-smoke/socket-receipt.jsonl"
+    ]
+  },
+  "required_followup": [
+    {
+      "request": "ssmcp --version --all should display dependency versions as a tree",
+      "state": "accepted for source follow-up; no acceptance result in this snapshot"
+    },
+    {
+      "request": "Evaluate and enforce Computer Use off for direct zuse CLI as well as the Ctrl-Super-C entry",
+      "state": "user-reported bypass; not independently reproduced or fixed in this report"
+    },
+    {
+      "request": "Use a unified Computer Use On/Off model instead of foreground/background terminology",
+      "state": "accepted requirement; no finished product result claimed"
+    }
+  ],
+  "machine_health": {
+    "observed_utc": "2026-11-21T07:24:03.668926+00:00",
+    "memory": {
+      "MemTotal": 16476704768,
+      "MemAvailable": 5679116288,
+      "SwapTotal": 40529100800,
+      "SwapFree": 25506353152
+    },
+    "disks": {
+      "workspace": {
+        "path": "/home/lightjunction/Documents/GITHUB/ssmcp",
+        "available_bytes": 388672176128,
+        "total_bytes": 1000203091968
+      },
+      "shared_target": {
+        "path": "/var/tmp/project-z-cargo-target",
+        "available_bytes": 737576796160,
+        "total_bytes": 1023133351936
+      }
+    },
+    "loadavg": "4.58 4.99 5.38 2/3352 960245",
+    "visible_process_name_counts": {
+      "ssmcp": 30,
+      "codex": 3
+    },
+    "scope": "read-only point observation; no target lock probe, product, reload or global idle claim"
+  },
+  "original_85": {
+    "total": 85,
+    "merged": 56,
+    "closed": 14,
+    "archived": 9,
+    "blocked": 5,
+    "integration_pending": 1,
+    "pending_item": "LIghtJUNction/zcalld PR #1",
+    "followups_not_added_to_original85": true
+  },
+  "zcalld_PR1": {
+    "draft": true,
+    "head": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+    "base": "7da4b28511a1550c993f09cfb2601149a82c785b",
+    "still_initial85_integration_item": true
+  },
+  "final44": {
+    "started": false,
+    "window_returned": false,
+    "cohort_not_claimed_latest": true
+  },
+  "history": {
+    "old_report_commit": "c9de7a60351b277a4903c9f40781cbae69cd6e5c",
+    "old_report_and_Doc8_cutoff_utc": "2026-11-21T06:23:03Z",
+    "Doc_url": "https://docs.google.com/document/d/1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+    "old_reports_Doc_and_raw_Drive_unchanged": true,
+    "evidence_ids": [
+      "doc8/delivery-v8.json"
+    ]
+  },
+  "report_preparation": {
+    "Cargo": 0,
+    "product": 0,
+    "GUI": 0,
+    "CI_trigger": 0,
+    "target_lock": 0,
+    "Git_ref_write": 0,
+    "Google_Doc_or_Drive_write": 0,
+    "only_own_new_report_files_written": true
+  },
+  "public_evidence_policy": {
+    "full_checkpoint_or_private_user_conversations_published": false,
+    "raw_client_stderr_read_or_published": false,
+    "redacted_copies_labelled_and_original_hashes_preserved": true,
+    "raw_originals_not_modified": true,
+    "derivative_files": [
+      "ztype/source-preparation-public.json",
+      "ztype/readback-proof-public.json",
+      "account-diagnostic/actual-job-readback-public.json",
+      "linux-multiuser/execution-receipts-public.json"
+    ]
+  },
+  "evidence": {
+    "policy/handoff.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/handoff.json",
+      "bytes": 10587,
+      "sha256": "a5fea730230faa9d1239ad0893048a9da6aef338fdf0510010ca218a2cb1f6d7",
+      "git_blob": "4f08daec83d9240faa1df1945b3312ea95926522",
+      "classification": "byte_exact_original"
+    },
+    "policy/candidate.diff": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/candidate.diff",
+      "bytes": 18709,
+      "sha256": "5cc13782cd17aca4e177fde7b190643be5c72de9a622157f89b32f5abe25a8fb",
+      "git_blob": "9731a9a0e7734a7ac0a579ae8bf36a5f85f45fe8",
+      "classification": "byte_exact_original"
+    },
+    "policy/run_pure_tests.py": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/run_pure_tests.py",
+      "bytes": 5174,
+      "sha256": "07d0bcf88fdc6ce63229e9dd4e627919cf649c069ca9f20bf57c8534b49ac90a",
+      "git_blob": "c6c0099d027d1aaa6ce3b7c10072947ff3506e38",
+      "classification": "byte_exact_original"
+    },
+    "policy/red.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/red.json",
+      "bytes": 7395,
+      "sha256": "ffa19aeb20e8ff1b29050afac28dc6cc752ae0ba7a604c41d14b6ffeb61e2100",
+      "git_blob": "6b2d0eb8344a7757dda034e50aef900edfcb680d",
+      "classification": "byte_exact_original"
+    },
+    "policy/red.log": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/red.log",
+      "bytes": 40231,
+      "sha256": "1eec518443b8966a446d61fa7264f07b7b339aa0436caf925a8db20c7e71992d",
+      "git_blob": "cd0783ba0456d0050afbf1767f788ef45656c011",
+      "classification": "byte_exact_original"
+    },
+    "policy/red.job.stdout.log": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/red.job.stdout.log",
+      "bytes": 40903,
+      "sha256": "51921ffb17d024c48da4a03f7a65598588b297c41b1a68129083f2257a97e33b",
+      "git_blob": "65113ac2898a82d59760d434f55fc6c6ce1833d0",
+      "classification": "byte_exact_original"
+    },
+    "policy/red.job.stderr.log": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/red.job.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "classification": "byte_exact_original"
+    },
+    "policy/green.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/green.json",
+      "bytes": 8671,
+      "sha256": "de21123e7dbdbdbca2f2d582a4dd1738312267807f9c1f168c5723a867f02ccb",
+      "git_blob": "ddb0797c5921bcd3a89ad15c89cee057af727b7e",
+      "classification": "byte_exact_original"
+    },
+    "policy/green.log": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/green.log",
+      "bytes": 4066,
+      "sha256": "b138fcfae58c32ef45b81eadc28219c0539d00aa8d33c2a98ca15e7d26667ae8",
+      "git_blob": "2d29388966f4e6b9f4ad9378847398c347880131",
+      "classification": "byte_exact_original"
+    },
+    "policy/green.job.stdout.log": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/green.job.stdout.log",
+      "bytes": 4463,
+      "sha256": "163b31400c7ac21adcbaede8530a096ddfe40b0efe87c850758c4d0e3d9671cf",
+      "git_blob": "a4fc2d487c72403436c88b20ee563a709646a31b",
+      "classification": "byte_exact_original"
+    },
+    "policy/green.job.stderr.log": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/green.job.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "classification": "byte_exact_original"
+    },
+    "policy/publication-readback.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/publication-readback.json",
+      "bytes": 2486,
+      "sha256": "454e54a084d48c705a87d0db1d7c09d2044948621bcb6a6583db84ef35ac7968",
+      "git_blob": "a7928deb3fd5e304dd05ba105675e2071e520d38",
+      "classification": "byte_exact_original"
+    },
+    "policy/project-z-git-only-independent-review.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/project-z-git-only-independent-review.json",
+      "bytes": 14816,
+      "sha256": "f11552268305c68cf1fe03025ae894fc6a28d8a61f2bd06337d4a4a3640eef7e",
+      "git_blob": "fb0a8f73d3336f1e956d56599a32ce641444af77",
+      "classification": "byte_exact_original"
+    },
+    "policy/project-z-git-only-independent-review.md": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/project-z-git-only-independent-review.md",
+      "bytes": 2205,
+      "sha256": "ec6a2fce0735ddb0b870335a75d1c82ef36222091ce882b8a2d6b15c9a482743",
+      "git_blob": "e8fdd95d39fa47062596b5387dae3672337bd868",
+      "classification": "byte_exact_original"
+    },
+    "policy/independent-delivery.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/policy/independent-delivery.json",
+      "bytes": 1400,
+      "sha256": "8e502f44e1f156dd81d16ad37a1e2017895556c337add9a92dde6293e8a0d72b",
+      "git_blob": "235fc9974f6f0025b03c6cf4dd07c37929e1b93e",
+      "classification": "byte_exact_original"
+    },
+    "ztype/source-preparation-public.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/ztype/source-preparation-public.json",
+      "bytes": 5142,
+      "sha256": "f199b54a9a5feb10e3ebeb0759b69dd67dabc5af48e1acbfc53cf820dc89b943",
+      "git_blob": "af79d477575aa505dc74b2156c72e36806e0fa5b",
+      "classification": "public_derivative"
+    },
+    "ztype/readback-proof-public.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/ztype/readback-proof-public.json",
+      "bytes": 7131,
+      "sha256": "6ca5ffcf9efd0e895a9420af72abaebd79adb67fddaad815f2dcc8a08da658e9",
+      "git_blob": "5a2285301357b7cfeb5394d93a59d5b85f59b50d",
+      "classification": "public_derivative"
+    },
+    "ztype/minimal.diff": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/ztype/minimal.diff",
+      "bytes": 2400,
+      "sha256": "54366b545fe79467b5f3874a033212ab22b69941ca971baf3325055714db5760",
+      "git_blob": "1a59e8f3dba50df16ce50dac78ff38250c22939f",
+      "classification": "byte_exact_original"
+    },
+    "ztype/publication-readback.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/ztype/publication-readback.json",
+      "bytes": 2336,
+      "sha256": "5841fab77d3a9f7a77b305a420a0c804ad356c08ee95620bf8e2b3d4f31de5f8",
+      "git_blob": "7a9ab3ca93e529497adf4ccbc8a55eb082d74a70",
+      "classification": "byte_exact_original"
+    },
+    "zuse/zuse-pr2-admission-readonly-review.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/zuse/zuse-pr2-admission-readonly-review.json",
+      "bytes": 18032,
+      "sha256": "b6583d762214b4576e073fe565be9fb45f8a6f014508e96b8d0219f744b77825",
+      "git_blob": "6b98af45b98b94edb03ba39c4d148370a19c9156",
+      "classification": "byte_exact_original"
+    },
+    "zuse/zuse-pr2-admission-readonly-review.md": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/zuse/zuse-pr2-admission-readonly-review.md",
+      "bytes": 3221,
+      "sha256": "4bb41f3b60b3bc69b5cc1abf417eea59f5bf98ce41715a117545706229e373c8",
+      "git_blob": "adae2d0679c784e17f8b9a8dfbcc7de1f1038e04",
+      "classification": "byte_exact_original"
+    },
+    "zuse/ci-original-log-readback.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/zuse/ci-original-log-readback.json",
+      "bytes": 4685,
+      "sha256": "e7c4d6edeba52043dad713625f66fd352cbc2e61922ec676e37602dc86a8a17f",
+      "git_blob": "2ca5f58cefcb3638947d55706e8e4ccb0acc3689",
+      "classification": "byte_exact_original"
+    },
+    "zuse/delivery.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/zuse/delivery.json",
+      "bytes": 2448,
+      "sha256": "67e20c11b54fc9e831543938351a8617ca4bbbb6799d3ebb4be9445a0fdd071c",
+      "git_blob": "003956bc1d729bc46badb9594740250c00a1f39b",
+      "classification": "byte_exact_original"
+    },
+    "account-diagnostic/account-diagnostic-independent-readback.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/account-diagnostic/account-diagnostic-independent-readback.json",
+      "bytes": 15068,
+      "sha256": "43ebf94301a6b83fa43dcf09360b2c9453062815dfb057e8f65600b3382f1c92",
+      "git_blob": "e0481fdf6b18b8c26ba5311f3f0cf8492573260d",
+      "classification": "byte_exact_original"
+    },
+    "account-diagnostic/actual-job-readback-public.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/account-diagnostic/actual-job-readback-public.json",
+      "bytes": 16435,
+      "sha256": "bfc3731789b07dcb0c19aa1e399e108f7be96ea38da0544dfcd01b883ab6e5b8",
+      "git_blob": "12bc13f024324e21a0631428d73834e84b5ddd7c",
+      "classification": "public_derivative"
+    },
+    "linux-multiuser/facts-and-boundaries.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/linux-multiuser/facts-and-boundaries.json",
+      "bytes": 5833,
+      "sha256": "9eefcfb9341404ca9a5c5f3a764e4ca3e2c1ee1fbe768c77f4b25419cf8da494",
+      "git_blob": "7d859d61666c233beb3ca741b35508eebdabd7bc",
+      "classification": "byte_exact_original"
+    },
+    "linux-multiuser/execution-receipts-public.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/linux-multiuser/execution-receipts-public.json",
+      "bytes": 9999,
+      "sha256": "2613c36612d81944468e80f6cdab0bc60f7446da99b9b39445e8bd05bbf24177",
+      "git_blob": "7c26ab00f41161b8f59b43e8bce860c9ba93a7f8",
+      "classification": "public_derivative"
+    },
+    "current-entry-smoke/root-actual-execution.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/current-entry-smoke/root-actual-execution.json",
+      "bytes": 4462,
+      "sha256": "06fbc49233e47108ce49ab9ffaf9d29258757aa588cd96bc05ee5a72408abffe",
+      "git_blob": "b2860f4e04f89d7b8c50c743bf99b273704ceef4",
+      "classification": "byte_exact_original"
+    },
+    "current-entry-smoke/launch-result.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/current-entry-smoke/launch-result.json",
+      "bytes": 2124,
+      "sha256": "7be51e0a9a2765e61968606bd8ed3d0e153be3066f8d4fe9ee906c16f104dbfb",
+      "git_blob": "6f57ccb2208616bf4f1262a94ff5b984040ab45a",
+      "classification": "byte_exact_original"
+    },
+    "current-entry-smoke/report.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/current-entry-smoke/report.json",
+      "bytes": 2718,
+      "sha256": "7b2b5c68dcb490ac82960a837a11e89023119aba821621f5d197ea5d05c912b5",
+      "git_blob": "3e4a135ba6aa9e3cd8eecbb5977f6938c29429fd",
+      "classification": "byte_exact_original"
+    },
+    "current-entry-smoke/socket-receipt.jsonl": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/current-entry-smoke/socket-receipt.jsonl",
+      "bytes": 285,
+      "sha256": "3f3e1ef56253c9cdccc023d7efddbabf781da11f382ca57aa37e724488b76340",
+      "git_blob": "d20a03581c377b266b7cfe9627fbe3e55e4cb992",
+      "classification": "byte_exact_original"
+    },
+    "doc8/delivery-v8.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/doc8/delivery-v8.json",
+      "bytes": 9696,
+      "sha256": "d825da7a1be3c93d0debbecc6d11c9a267984d2f0a567eec86dfd3b068edee28",
+      "git_blob": "bbcb7a1c146c2c6c1b71c6d8714bd957c5da9391",
+      "classification": "byte_exact_original"
+    },
+    "github-reference-observation.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/github-reference-observation.json",
+      "bytes": 6873,
+      "sha256": "df6a83139d293cd196800ef8d2dd91ddff4c963f6b385332c93f5f68bf7b33c1",
+      "git_blob": "926af286a4d5d0628c44ead217db366e6495cb29",
+      "classification": "derived_bounded_observation"
+    },
+    "coordination-status-observation.json": {
+      "file": "evidence/git-only-policy-and-consumers-20261121/coordination-status-observation.json",
+      "bytes": 4349,
+      "sha256": "7bb76fcd49900318485eda9ac384c8b5cb573dc1b5ddae9d505e6e138fea7185",
+      "git_blob": "0b46eb8a56c4b89e84228861c4c2d633276b5cdf",
+      "classification": "derived_bounded_observation"
+    }
+  },
+  "evidence_reference_boundary": "Public evidence IDs and Markdown links resolve within this batch. Original forensic receipts may retain native source paths or descriptors for larger original material deliberately not copied; those are original provenance, not claimed public file links."
+}

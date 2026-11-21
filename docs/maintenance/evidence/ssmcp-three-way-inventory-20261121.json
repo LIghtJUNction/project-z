@@ -1,0 +1,3091 @@
+{
+  "base": "cf0ab581700918a37fcccbebb93de2e0cab02841",
+  "candidate": "781b87df1d364137b6885f17f631a3e9e991bd58",
+  "main": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+  "trees": [
+    "bd2bcce33baffa69b82d69d9cff3abdb85baa0fb",
+    "6bf7beb143cfdce3878df856c27785164695430f",
+    "7eeb434be1d24e14b453488f5fbca90d933e12b9"
+  ],
+  "tree_entry_counts": [
+    1291,
+    1304,
+    1303
+  ],
+  "all_tree_responses_complete": true,
+  "changed_union": 119,
+  "counts": {
+    "both_same": 10,
+    "candidate_only": 19,
+    "main_only": 63,
+    "both_different": 27
+  },
+  "rows": [
+    {
+      "path": ".github/workflows/release.yml",
+      "classification": "main_only",
+      "base": {
+        "path": ".github/workflows/release.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9c3a8fe1cf0acc6b6b18d7ca3b6683eeac24fa6b",
+        "size": 18409,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/9c3a8fe1cf0acc6b6b18d7ca3b6683eeac24fa6b"
+      },
+      "candidate": {
+        "path": ".github/workflows/release.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9c3a8fe1cf0acc6b6b18d7ca3b6683eeac24fa6b",
+        "size": 18409,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/9c3a8fe1cf0acc6b6b18d7ca3b6683eeac24fa6b"
+      },
+      "main": {
+        "path": ".github/workflows/release.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3129dee8fff0e26b451be5bd5ad436c3b709efe7",
+        "size": 18527,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/3129dee8fff0e26b451be5bd5ad436c3b709efe7"
+      }
+    },
+    {
+      "path": "Cargo.lock",
+      "classification": "main_only",
+      "base": {
+        "path": "Cargo.lock",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bf795de216ef37236b8ca4852a72b443dde6b5e3",
+        "size": 66476,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/bf795de216ef37236b8ca4852a72b443dde6b5e3"
+      },
+      "candidate": {
+        "path": "Cargo.lock",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bf795de216ef37236b8ca4852a72b443dde6b5e3",
+        "size": 66476,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/bf795de216ef37236b8ca4852a72b443dde6b5e3"
+      },
+      "main": {
+        "path": "Cargo.lock",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d300697d38f26b66d24787e2ca62ab71ba7b3eab",
+        "size": 66476,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/d300697d38f26b66d24787e2ca62ab71ba7b3eab"
+      }
+    },
+    {
+      "path": "Cargo.toml",
+      "classification": "both_different",
+      "base": {
+        "path": "Cargo.toml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "90d2fef3bbc2cad2bbc7233fa5d731369135e6de",
+        "size": 9873,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/90d2fef3bbc2cad2bbc7233fa5d731369135e6de"
+      },
+      "candidate": {
+        "path": "Cargo.toml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "077b28e987508a5fedc02d9f5d6fc83e2b758e5e",
+        "size": 9985,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/077b28e987508a5fedc02d9f5d6fc83e2b758e5e"
+      },
+      "main": {
+        "path": "Cargo.toml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c98818fb86a74041379050b741cbb233326f794a",
+        "size": 10148,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/c98818fb86a74041379050b741cbb233326f794a"
+      }
+    },
+    {
+      "path": "README.md",
+      "classification": "main_only",
+      "base": {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c710ff89843f356da6fed78865b4cf51365e6b24",
+        "size": 20635,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/c710ff89843f356da6fed78865b4cf51365e6b24"
+      },
+      "candidate": {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c710ff89843f356da6fed78865b4cf51365e6b24",
+        "size": 20635,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/c710ff89843f356da6fed78865b4cf51365e6b24"
+      },
+      "main": {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7e08bb3e8730288d3a131310703eae2b7a34e14d",
+        "size": 21245,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/7e08bb3e8730288d3a131310703eae2b7a34e14d"
+      }
+    },
+    {
+      "path": "docs/agent-collaboration.md",
+      "classification": "main_only",
+      "base": {
+        "path": "docs/agent-collaboration.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0b16798ba114804057b0b5d8f99ef73e3867049d",
+        "size": 15904,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/0b16798ba114804057b0b5d8f99ef73e3867049d"
+      },
+      "candidate": {
+        "path": "docs/agent-collaboration.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0b16798ba114804057b0b5d8f99ef73e3867049d",
+        "size": 15904,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/0b16798ba114804057b0b5d8f99ef73e3867049d"
+      },
+      "main": {
+        "path": "docs/agent-collaboration.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c316b1724cfb0ffdbfe913094bf14267d4f22e54",
+        "size": 15808,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/c316b1724cfb0ffdbfe913094bf14267d4f22e54"
+      }
+    },
+    {
+      "path": "docs/agent-entry.md",
+      "classification": "main_only",
+      "base": null,
+      "candidate": null,
+      "main": {
+        "path": "docs/agent-entry.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "43412506795ce436f45aeb95129ab27780d9465e",
+        "size": 6736,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/43412506795ce436f45aeb95129ab27780d9465e"
+      }
+    },
+    {
+      "path": "docs/await.md",
+      "classification": "main_only",
+      "base": {
+        "path": "docs/await.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "44e0597292b81b445c92a71b61b8a6520ef4dd52",
+        "size": 7537,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/44e0597292b81b445c92a71b61b8a6520ef4dd52"
+      },
+      "candidate": {
+        "path": "docs/await.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "44e0597292b81b445c92a71b61b8a6520ef4dd52",
+        "size": 7537,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/44e0597292b81b445c92a71b61b8a6520ef4dd52"
+      },
+      "main": {
+        "path": "docs/await.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "99fd41586ae74fe119f75c48eeb63f01c7b7a79f",
+        "size": 6768,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/99fd41586ae74fe119f75c48eeb63f01c7b7a79f"
+      }
+    },
+    {
+      "path": "docs/backends.md",
+      "classification": "main_only",
+      "base": {
+        "path": "docs/backends.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f9c5cf400a4fa728494e2a181382a70c1ffb3f9c",
+        "size": 42980,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f9c5cf400a4fa728494e2a181382a70c1ffb3f9c"
+      },
+      "candidate": {
+        "path": "docs/backends.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f9c5cf400a4fa728494e2a181382a70c1ffb3f9c",
+        "size": 42980,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f9c5cf400a4fa728494e2a181382a70c1ffb3f9c"
+      },
+      "main": {
+        "path": "docs/backends.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d535e7e3eae20426db16ce50644262934ed794d4",
+        "size": 42791,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/d535e7e3eae20426db16ce50644262934ed794d4"
+      }
+    },
+    {
+      "path": "docs/client-input.md",
+      "classification": "both_different",
+      "base": {
+        "path": "docs/client-input.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f307f34c0c77a281df2f86b0522dac67e1888dd2",
+        "size": 29473,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f307f34c0c77a281df2f86b0522dac67e1888dd2"
+      },
+      "candidate": {
+        "path": "docs/client-input.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a6750d3110f25bc291af56f04cb76913aaa5299f",
+        "size": 35225,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/a6750d3110f25bc291af56f04cb76913aaa5299f"
+      },
+      "main": {
+        "path": "docs/client-input.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3866bbb5da4c6aa23c3a59e860b1f431b3ea90f3",
+        "size": 29416,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/3866bbb5da4c6aa23c3a59e860b1f431b3ea90f3"
+      }
+    },
+    {
+      "path": "docs/code-mode.md",
+      "classification": "both_different",
+      "base": {
+        "path": "docs/code-mode.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fa0b46e8737b1065ae1f5f892770facc5269c182",
+        "size": 26052,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/fa0b46e8737b1065ae1f5f892770facc5269c182"
+      },
+      "candidate": {
+        "path": "docs/code-mode.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0a07fdd452c0e0863b27142c83b2d5f17b9d20c1",
+        "size": 26318,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/0a07fdd452c0e0863b27142c83b2d5f17b9d20c1"
+      },
+      "main": {
+        "path": "docs/code-mode.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "01ca2f6c89cf054edad872fee998b748b75bd4a9",
+        "size": 25111,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/01ca2f6c89cf054edad872fee998b748b75bd4a9"
+      }
+    },
+    {
+      "path": "docs/finish-and-questions.md",
+      "classification": "main_only",
+      "base": {
+        "path": "docs/finish-and-questions.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "af3ec149b3f51d1dcfdefa6877d7801e0da42981",
+        "size": 8377,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/af3ec149b3f51d1dcfdefa6877d7801e0da42981"
+      },
+      "candidate": {
+        "path": "docs/finish-and-questions.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "af3ec149b3f51d1dcfdefa6877d7801e0da42981",
+        "size": 8377,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/af3ec149b3f51d1dcfdefa6877d7801e0da42981"
+      },
+      "main": {
+        "path": "docs/finish-and-questions.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cbdb6100b7c155015d5eb93d99f16cfbf6e808bd",
+        "size": 4844,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/cbdb6100b7c155015d5eb93d99f16cfbf6e808bd"
+      }
+    },
+    {
+      "path": "docs/local-mode.md",
+      "classification": "both_same",
+      "base": {
+        "path": "docs/local-mode.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a31a3413500fab8e33990d82def43e78e4da6eb5",
+        "size": 9395,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/a31a3413500fab8e33990d82def43e78e4da6eb5"
+      },
+      "candidate": {
+        "path": "docs/local-mode.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fb32d6a885f654dbba279893bcf913611680f7a1",
+        "size": 12893,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/fb32d6a885f654dbba279893bcf913611680f7a1"
+      },
+      "main": {
+        "path": "docs/local-mode.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fb32d6a885f654dbba279893bcf913611680f7a1",
+        "size": 12893,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/fb32d6a885f654dbba279893bcf913611680f7a1"
+      }
+    },
+    {
+      "path": "docs/optional-harnesses.md",
+      "classification": "main_only",
+      "base": {
+        "path": "docs/optional-harnesses.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f1a2c78b139b87dad6532f38717f14a611685864",
+        "size": 3778,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f1a2c78b139b87dad6532f38717f14a611685864"
+      },
+      "candidate": {
+        "path": "docs/optional-harnesses.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f1a2c78b139b87dad6532f38717f14a611685864",
+        "size": 3778,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f1a2c78b139b87dad6532f38717f14a611685864"
+      },
+      "main": {
+        "path": "docs/optional-harnesses.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2b8611f91ef87393522ab8934485e0df5d68e3c1",
+        "size": 4212,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/2b8611f91ef87393522ab8934485e0df5d68e3c1"
+      }
+    },
+    {
+      "path": "docs/release-notes-0.10.21.md",
+      "classification": "main_only",
+      "base": {
+        "path": "docs/release-notes-0.10.21.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "688d1f1b36382b95a077da3768fea4537de908b3",
+        "size": 7806,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/688d1f1b36382b95a077da3768fea4537de908b3"
+      },
+      "candidate": {
+        "path": "docs/release-notes-0.10.21.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "688d1f1b36382b95a077da3768fea4537de908b3",
+        "size": 7806,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/688d1f1b36382b95a077da3768fea4537de908b3"
+      },
+      "main": {
+        "path": "docs/release-notes-0.10.21.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "70cdf7dc965cef55a5bf011f59bfd37ad37922e9",
+        "size": 9205,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/70cdf7dc965cef55a5bf011f59bfd37ad37922e9"
+      }
+    },
+    {
+      "path": "docs/release-notes-0.10.22.md",
+      "classification": "main_only",
+      "base": null,
+      "candidate": null,
+      "main": {
+        "path": "docs/release-notes-0.10.22.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d58a338db19657aede5983fe8bc70510c7deb441",
+        "size": 9509,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/d58a338db19657aede5983fe8bc70510c7deb441"
+      }
+    },
+    {
+      "path": "docs/releases.md",
+      "classification": "main_only",
+      "base": {
+        "path": "docs/releases.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4ebe8578116ec72d838de55d5302a1c35ca61087",
+        "size": 20351,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/4ebe8578116ec72d838de55d5302a1c35ca61087"
+      },
+      "candidate": {
+        "path": "docs/releases.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4ebe8578116ec72d838de55d5302a1c35ca61087",
+        "size": 20351,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/4ebe8578116ec72d838de55d5302a1c35ca61087"
+      },
+      "main": {
+        "path": "docs/releases.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c4193f42265dcfa2d45ed6e6317ad30bc676d359",
+        "size": 20351,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/c4193f42265dcfa2d45ed6e6317ad30bc676d359"
+      }
+    },
+    {
+      "path": "docs/thread-listeners.md",
+      "classification": "main_only",
+      "base": {
+        "path": "docs/thread-listeners.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "009c59d3d48083f52c17b1528eb150215126fed2",
+        "size": 9436,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/009c59d3d48083f52c17b1528eb150215126fed2"
+      },
+      "candidate": {
+        "path": "docs/thread-listeners.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "009c59d3d48083f52c17b1528eb150215126fed2",
+        "size": 9436,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/009c59d3d48083f52c17b1528eb150215126fed2"
+      },
+      "main": {
+        "path": "docs/thread-listeners.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "48fc5c3b4a0a7f63b5ac0f49a8ddee1b16898f40",
+        "size": 9446,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/48fc5c3b4a0a7f63b5ac0f49a8ddee1b16898f40"
+      }
+    },
+    {
+      "path": "docs/time-primitives.md",
+      "classification": "main_only",
+      "base": null,
+      "candidate": null,
+      "main": {
+        "path": "docs/time-primitives.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bbc9e1e45c8002f2526806d7907b8945a8b84521",
+        "size": 6542,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/bbc9e1e45c8002f2526806d7907b8945a8b84521"
+      }
+    },
+    {
+      "path": "docs/user-wait.md",
+      "classification": "main_only",
+      "base": {
+        "path": "docs/user-wait.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f8253bd077a425c445ee76ce0f051e5c54357d1c",
+        "size": 9775,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f8253bd077a425c445ee76ce0f051e5c54357d1c"
+      },
+      "candidate": {
+        "path": "docs/user-wait.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f8253bd077a425c445ee76ce0f051e5c54357d1c",
+        "size": 9775,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f8253bd077a425c445ee76ce0f051e5c54357d1c"
+      },
+      "main": {
+        "path": "docs/user-wait.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "68c3075434467d1631933e06e205646ffcc551cf",
+        "size": 9874,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/68c3075434467d1631933e06e205646ffcc551cf"
+      }
+    },
+    {
+      "path": "docs/zcalld-listener.md",
+      "classification": "main_only",
+      "base": {
+        "path": "docs/zcalld-listener.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "26daee4de658db06075d075da94bf8baee515784",
+        "size": 5355,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/26daee4de658db06075d075da94bf8baee515784"
+      },
+      "candidate": {
+        "path": "docs/zcalld-listener.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "26daee4de658db06075d075da94bf8baee515784",
+        "size": 5355,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/26daee4de658db06075d075da94bf8baee515784"
+      },
+      "main": {
+        "path": "docs/zcalld-listener.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b1090f05b434676b3bd5354d5e391d8c6a69df4c",
+        "size": 5357,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/b1090f05b434676b3bd5354d5e391d8c6a69df4c"
+      }
+    },
+    {
+      "path": "scripts/benchmark_client_memory.py",
+      "classification": "both_same",
+      "base": {
+        "path": "scripts/benchmark_client_memory.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "ec6dc35664c748b6b679ab8d89e17f62a0fa5cba",
+        "size": 26487,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ec6dc35664c748b6b679ab8d89e17f62a0fa5cba"
+      },
+      "candidate": {
+        "path": "scripts/benchmark_client_memory.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "5eb790f5b14444166f5a496e0ca1593745497d5e",
+        "size": 40313,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/5eb790f5b14444166f5a496e0ca1593745497d5e"
+      },
+      "main": {
+        "path": "scripts/benchmark_client_memory.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "5eb790f5b14444166f5a496e0ca1593745497d5e",
+        "size": 40313,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/5eb790f5b14444166f5a496e0ca1593745497d5e"
+      }
+    },
+    {
+      "path": "scripts/e2e.py",
+      "classification": "main_only",
+      "base": {
+        "path": "scripts/e2e.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9330396e876406a4c259b30dab67afff3eae8f78",
+        "size": 49768,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/9330396e876406a4c259b30dab67afff3eae8f78"
+      },
+      "candidate": {
+        "path": "scripts/e2e.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9330396e876406a4c259b30dab67afff3eae8f78",
+        "size": 49768,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/9330396e876406a4c259b30dab67afff3eae8f78"
+      },
+      "main": {
+        "path": "scripts/e2e.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4acd09b781a82503eb1e2ad8f4775a3de80f33c0",
+        "size": 49685,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/4acd09b781a82503eb1e2ad8f4775a3de80f33c0"
+      }
+    },
+    {
+      "path": "scripts/e2e_account_relay.py",
+      "classification": "main_only",
+      "base": {
+        "path": "scripts/e2e_account_relay.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2ffcec90038be088082085543e06e4a3d411e394",
+        "size": 30464,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/2ffcec90038be088082085543e06e4a3d411e394"
+      },
+      "candidate": {
+        "path": "scripts/e2e_account_relay.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2ffcec90038be088082085543e06e4a3d411e394",
+        "size": 30464,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/2ffcec90038be088082085543e06e4a3d411e394"
+      },
+      "main": {
+        "path": "scripts/e2e_account_relay.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "27d03da95168b377dee81796aca032a7d3053c92",
+        "size": 30779,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/27d03da95168b377dee81796aca032a7d3053c92"
+      }
+    },
+    {
+      "path": "scripts/e2e_agent_entry.py",
+      "classification": "main_only",
+      "base": null,
+      "candidate": null,
+      "main": {
+        "path": "scripts/e2e_agent_entry.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8a1d624886d7415bb3a92f47e6024c4e72323f07",
+        "size": 14966,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8a1d624886d7415bb3a92f47e6024c4e72323f07"
+      }
+    },
+    {
+      "path": "scripts/e2e_agents.py",
+      "classification": "main_only",
+      "base": {
+        "path": "scripts/e2e_agents.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "8c17d45244d3c33408c6ed676606d428b3f30837",
+        "size": 54868,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8c17d45244d3c33408c6ed676606d428b3f30837"
+      },
+      "candidate": {
+        "path": "scripts/e2e_agents.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "8c17d45244d3c33408c6ed676606d428b3f30837",
+        "size": 54868,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8c17d45244d3c33408c6ed676606d428b3f30837"
+      },
+      "main": {
+        "path": "scripts/e2e_agents.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "c661d1e6e73441998495a265c776f58635941e65",
+        "size": 54847,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/c661d1e6e73441998495a265c776f58635941e65"
+      }
+    },
+    {
+      "path": "scripts/e2e_computer_controls.py",
+      "classification": "both_different",
+      "base": {
+        "path": "scripts/e2e_computer_controls.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "a0bf18098f3b9db2b1402cd51fbc10dc4ed4fd4f",
+        "size": 18616,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/a0bf18098f3b9db2b1402cd51fbc10dc4ed4fd4f"
+      },
+      "candidate": {
+        "path": "scripts/e2e_computer_controls.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "7b4fde794acc4149cfb6b8e92834f92345dfa8ad",
+        "size": 18677,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/7b4fde794acc4149cfb6b8e92834f92345dfa8ad"
+      },
+      "main": {
+        "path": "scripts/e2e_computer_controls.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "57fa5495a145adc019733259d731ade83fb0cd58",
+        "size": 18895,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/57fa5495a145adc019733259d731ade83fb0cd58"
+      }
+    },
+    {
+      "path": "scripts/e2e_connection_context_reload.py",
+      "classification": "main_only",
+      "base": {
+        "path": "scripts/e2e_connection_context_reload.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b8152c6d53227f9f990c22cefbe576f025570764",
+        "size": 9594,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/b8152c6d53227f9f990c22cefbe576f025570764"
+      },
+      "candidate": {
+        "path": "scripts/e2e_connection_context_reload.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b8152c6d53227f9f990c22cefbe576f025570764",
+        "size": 9594,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/b8152c6d53227f9f990c22cefbe576f025570764"
+      },
+      "main": {
+        "path": "scripts/e2e_connection_context_reload.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f0fe1f46f9324c8d3b54a1508716d74a10623109",
+        "size": 14898,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f0fe1f46f9324c8d3b54a1508716d74a10623109"
+      }
+    },
+    {
+      "path": "scripts/e2e_daemon.py",
+      "classification": "main_only",
+      "base": {
+        "path": "scripts/e2e_daemon.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dcee1a0694becee968391d89569367095998557f",
+        "size": 43389,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/dcee1a0694becee968391d89569367095998557f"
+      },
+      "candidate": {
+        "path": "scripts/e2e_daemon.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dcee1a0694becee968391d89569367095998557f",
+        "size": 43389,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/dcee1a0694becee968391d89569367095998557f"
+      },
+      "main": {
+        "path": "scripts/e2e_daemon.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "72884efe93784a7cb2d697c8c082ab9c1f4af9c9",
+        "size": 43355,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/72884efe93784a7cb2d697c8c082ab9c1f4af9c9"
+      }
+    },
+    {
+      "path": "scripts/e2e_human_finish.py",
+      "classification": "main_only",
+      "base": {
+        "path": "scripts/e2e_human_finish.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "97a27b7a32e260ba446f5dc9fc583070206e98ce",
+        "size": 24297,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/97a27b7a32e260ba446f5dc9fc583070206e98ce"
+      },
+      "candidate": {
+        "path": "scripts/e2e_human_finish.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "97a27b7a32e260ba446f5dc9fc583070206e98ce",
+        "size": 24297,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/97a27b7a32e260ba446f5dc9fc583070206e98ce"
+      },
+      "main": {
+        "path": "scripts/e2e_human_finish.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "d0e358a892dc0841bc3d4441f5ac83e2dc2a6ba2",
+        "size": 544,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/d0e358a892dc0841bc3d4441f5ac83e2dc2a6ba2"
+      }
+    },
+    {
+      "path": "scripts/e2e_input_history.py",
+      "classification": "main_only",
+      "base": {
+        "path": "scripts/e2e_input_history.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "4ae2315293b75d7910f76176c3f5d1a879484292",
+        "size": 48025,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/4ae2315293b75d7910f76176c3f5d1a879484292"
+      },
+      "candidate": {
+        "path": "scripts/e2e_input_history.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "4ae2315293b75d7910f76176c3f5d1a879484292",
+        "size": 48025,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/4ae2315293b75d7910f76176c3f5d1a879484292"
+      },
+      "main": {
+        "path": "scripts/e2e_input_history.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "e3ccf6c5bb31c1d6f81af3fc9a4c54ebcaccdf21",
+        "size": 48202,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/e3ccf6c5bb31c1d6f81af3fc9a4c54ebcaccdf21"
+      }
+    },
+    {
+      "path": "scripts/e2e_interactions.py",
+      "classification": "main_only",
+      "base": {
+        "path": "scripts/e2e_interactions.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "f4cee53350a52ea9239264d16ad581c09bccca9b",
+        "size": 49247,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f4cee53350a52ea9239264d16ad581c09bccca9b"
+      },
+      "candidate": {
+        "path": "scripts/e2e_interactions.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "f4cee53350a52ea9239264d16ad581c09bccca9b",
+        "size": 49247,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f4cee53350a52ea9239264d16ad581c09bccca9b"
+      },
+      "main": {
+        "path": "scripts/e2e_interactions.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "0f92d17d50efc5b9409057e4aa7a77fabfd8f605",
+        "size": 44311,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/0f92d17d50efc5b9409057e4aa7a77fabfd8f605"
+      }
+    },
+    {
+      "path": "scripts/e2e_local.py",
+      "classification": "main_only",
+      "base": {
+        "path": "scripts/e2e_local.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e3984bf81edd01e334296bc1b8ddf806ffd512b2",
+        "size": 39784,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/e3984bf81edd01e334296bc1b8ddf806ffd512b2"
+      },
+      "candidate": {
+        "path": "scripts/e2e_local.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e3984bf81edd01e334296bc1b8ddf806ffd512b2",
+        "size": 39784,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/e3984bf81edd01e334296bc1b8ddf806ffd512b2"
+      },
+      "main": {
+        "path": "scripts/e2e_local.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "27ff8476e38c75324dbf7d00ba90db6be657f008",
+        "size": 39782,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/27ff8476e38c75324dbf7d00ba90db6be657f008"
+      }
+    },
+    {
+      "path": "scripts/e2e_local_socket.py",
+      "classification": "both_same",
+      "base": null,
+      "candidate": {
+        "path": "scripts/e2e_local_socket.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2fd4ebeb84f3c17cc801708290bb0fb8d083853f",
+        "size": 8774,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/2fd4ebeb84f3c17cc801708290bb0fb8d083853f"
+      },
+      "main": {
+        "path": "scripts/e2e_local_socket.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2fd4ebeb84f3c17cc801708290bb0fb8d083853f",
+        "size": 8774,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/2fd4ebeb84f3c17cc801708290bb0fb8d083853f"
+      }
+    },
+    {
+      "path": "scripts/e2e_presentations.py",
+      "classification": "main_only",
+      "base": {
+        "path": "scripts/e2e_presentations.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "1dbcfa96a4e79dd6f68043a277f8529efe81a4e9",
+        "size": 26056,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/1dbcfa96a4e79dd6f68043a277f8529efe81a4e9"
+      },
+      "candidate": {
+        "path": "scripts/e2e_presentations.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "1dbcfa96a4e79dd6f68043a277f8529efe81a4e9",
+        "size": 26056,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/1dbcfa96a4e79dd6f68043a277f8529efe81a4e9"
+      },
+      "main": {
+        "path": "scripts/e2e_presentations.py",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "0eefbfbe2a4e341af5eab491e2c72b1ca852f1b5",
+        "size": 23750,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/0eefbfbe2a4e341af5eab491e2c72b1ca852f1b5"
+      }
+    },
+    {
+      "path": "scripts/e2e_service_portable.py",
+      "classification": "candidate_only",
+      "base": {
+        "path": "scripts/e2e_service_portable.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "93477a528aa361e95826466e09e0aeee3ae2cc3c",
+        "size": 28316,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/93477a528aa361e95826466e09e0aeee3ae2cc3c"
+      },
+      "candidate": {
+        "path": "scripts/e2e_service_portable.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "75bb7ec4cebafa855760a7abd2948790f6c7d2a1",
+        "size": 28327,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/75bb7ec4cebafa855760a7abd2948790f6c7d2a1"
+      },
+      "main": {
+        "path": "scripts/e2e_service_portable.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "93477a528aa361e95826466e09e0aeee3ae2cc3c",
+        "size": 28316,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/93477a528aa361e95826466e09e0aeee3ae2cc3c"
+      }
+    },
+    {
+      "path": "scripts/e2e_time_primitives.py",
+      "classification": "main_only",
+      "base": null,
+      "candidate": null,
+      "main": {
+        "path": "scripts/e2e_time_primitives.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b780794d0d01ffe3deedf3f2e77dbab877bc179e",
+        "size": 18084,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/b780794d0d01ffe3deedf3f2e77dbab877bc179e"
+      }
+    },
+    {
+      "path": "scripts/e2e_unified.py",
+      "classification": "main_only",
+      "base": {
+        "path": "scripts/e2e_unified.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "71a310c72f325f37f326138a90c9b8984fb2df9e",
+        "size": 50649,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/71a310c72f325f37f326138a90c9b8984fb2df9e"
+      },
+      "candidate": {
+        "path": "scripts/e2e_unified.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "71a310c72f325f37f326138a90c9b8984fb2df9e",
+        "size": 50649,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/71a310c72f325f37f326138a90c9b8984fb2df9e"
+      },
+      "main": {
+        "path": "scripts/e2e_unified.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5dcc59f34938455203985f1d0816af339cd86801",
+        "size": 50606,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/5dcc59f34938455203985f1d0816af339cd86801"
+      }
+    },
+    {
+      "path": "scripts/e2e_user_wait.py",
+      "classification": "main_only",
+      "base": {
+        "path": "scripts/e2e_user_wait.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "042a87c450cb32c39ee9901134cacb02772f2131",
+        "size": 25310,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/042a87c450cb32c39ee9901134cacb02772f2131"
+      },
+      "candidate": {
+        "path": "scripts/e2e_user_wait.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "042a87c450cb32c39ee9901134cacb02772f2131",
+        "size": 25310,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/042a87c450cb32c39ee9901134cacb02772f2131"
+      },
+      "main": {
+        "path": "scripts/e2e_user_wait.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "252d16a53d6972deb641ad4f997ef71d0411b366",
+        "size": 25272,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/252d16a53d6972deb641ad4f997ef71d0411b366"
+      }
+    },
+    {
+      "path": "scripts/test_release.py",
+      "classification": "main_only",
+      "base": {
+        "path": "scripts/test_release.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "321329393d0dd5db2fe7faa73e99f85a9e78428f",
+        "size": 92838,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/321329393d0dd5db2fe7faa73e99f85a9e78428f"
+      },
+      "candidate": {
+        "path": "scripts/test_release.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "321329393d0dd5db2fe7faa73e99f85a9e78428f",
+        "size": 92838,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/321329393d0dd5db2fe7faa73e99f85a9e78428f"
+      },
+      "main": {
+        "path": "scripts/test_release.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bfb3b46b8c3a7020a452f788dffaebe3f3334789",
+        "size": 92849,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/bfb3b46b8c3a7020a452f788dffaebe3f3334789"
+      }
+    },
+    {
+      "path": "src/backend.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/backend.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7af7dc0ae7288ab63015ea99b56030076b4ab0aa",
+        "size": 6183,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/7af7dc0ae7288ab63015ea99b56030076b4ab0aa"
+      },
+      "candidate": {
+        "path": "src/backend.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7af7dc0ae7288ab63015ea99b56030076b4ab0aa",
+        "size": 6183,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/7af7dc0ae7288ab63015ea99b56030076b4ab0aa"
+      },
+      "main": {
+        "path": "src/backend.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ca65c92b462a5fa75e3cfaac7bbcf0c5996fae0a",
+        "size": 6204,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ca65c92b462a5fa75e3cfaac7bbcf0c5996fae0a"
+      }
+    },
+    {
+      "path": "src/backend/events.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/backend/events.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "557574f3b27dd4513938c95d2f9f77e1c4ecdebd",
+        "size": 28099,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/557574f3b27dd4513938c95d2f9f77e1c4ecdebd"
+      },
+      "candidate": {
+        "path": "src/backend/events.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "557574f3b27dd4513938c95d2f9f77e1c4ecdebd",
+        "size": 28099,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/557574f3b27dd4513938c95d2f9f77e1c4ecdebd"
+      },
+      "main": {
+        "path": "src/backend/events.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2a78fc26ddd24ae6e9899720c560308a97e18d1c",
+        "size": 28751,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/2a78fc26ddd24ae6e9899720c560308a97e18d1c"
+      }
+    },
+    {
+      "path": "src/backend/peer.rs",
+      "classification": "main_only",
+      "base": null,
+      "candidate": null,
+      "main": {
+        "path": "src/backend/peer.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cfc586ba0932ea08741d7742f918e9fc41bbcd54",
+        "size": 36249,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/cfc586ba0932ea08741d7742f918e9fc41bbcd54"
+      }
+    },
+    {
+      "path": "src/backend/shell.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/backend/shell.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "737f5174cf3e55cb1e377b27d302293bba15db39",
+        "size": 93023,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/737f5174cf3e55cb1e377b27d302293bba15db39"
+      },
+      "candidate": {
+        "path": "src/backend/shell.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "737f5174cf3e55cb1e377b27d302293bba15db39",
+        "size": 93023,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/737f5174cf3e55cb1e377b27d302293bba15db39"
+      },
+      "main": {
+        "path": "src/backend/shell.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "933e96de2a51d0ac9e75761f54b63d5751517e7f",
+        "size": 93343,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/933e96de2a51d0ac9e75761f54b63d5751517e7f"
+      }
+    },
+    {
+      "path": "src/broker.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/broker.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dd13f4fd9dd6684d72bfa9cd004853942c21f6eb",
+        "size": 117677,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/dd13f4fd9dd6684d72bfa9cd004853942c21f6eb"
+      },
+      "candidate": {
+        "path": "src/broker.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f120ebab700c3a1356f3eb37d7fdf7ca2c5d4ac4",
+        "size": 118587,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f120ebab700c3a1356f3eb37d7fdf7ca2c5d4ac4"
+      },
+      "main": {
+        "path": "src/broker.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0e651ca55d2aae8067739bfc8e0d5e55b730b6ca",
+        "size": 117015,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/0e651ca55d2aae8067739bfc8e0d5e55b730b6ca"
+      }
+    },
+    {
+      "path": "src/broker/session_io.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/broker/session_io.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6db67a3e43d9c8709b41df4ec6d4b02a13ff0749",
+        "size": 48693,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/6db67a3e43d9c8709b41df4ec6d4b02a13ff0749"
+      },
+      "candidate": {
+        "path": "src/broker/session_io.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "908acae13ab2246a8471012a21dde0b3b6790ddd",
+        "size": 48785,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/908acae13ab2246a8471012a21dde0b3b6790ddd"
+      },
+      "main": {
+        "path": "src/broker/session_io.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d442aefb7eeaf721c1c8f82864af8d5d38c0ceed",
+        "size": 48686,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/d442aefb7eeaf721c1c8f82864af8d5d38c0ceed"
+      }
+    },
+    {
+      "path": "src/client.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/client.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8869675721cc5e50e5711889a579cbe2e08e303f",
+        "size": 149819,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8869675721cc5e50e5711889a579cbe2e08e303f"
+      },
+      "candidate": {
+        "path": "src/client.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6e29548a013b5292f98f2e95152dffa1554e750e",
+        "size": 161420,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/6e29548a013b5292f98f2e95152dffa1554e750e"
+      },
+      "main": {
+        "path": "src/client.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bc83224f61a0489546a3a19dfcd433a202ea1ee3",
+        "size": 156293,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/bc83224f61a0489546a3a19dfcd433a202ea1ee3"
+      }
+    },
+    {
+      "path": "src/client/account.rs",
+      "classification": "candidate_only",
+      "base": {
+        "path": "src/client/account.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a54a769ca7bc594701fb8602d42700145f2914ad",
+        "size": 70461,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/a54a769ca7bc594701fb8602d42700145f2914ad"
+      },
+      "candidate": {
+        "path": "src/client/account.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8762977e159704044a7fd7bf82f813a14f603ccd",
+        "size": 70491,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8762977e159704044a7fd7bf82f813a14f603ccd"
+      },
+      "main": {
+        "path": "src/client/account.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a54a769ca7bc594701fb8602d42700145f2914ad",
+        "size": 70461,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/a54a769ca7bc594701fb8602d42700145f2914ad"
+      }
+    },
+    {
+      "path": "src/client/account/send.rs",
+      "classification": "both_same",
+      "base": {
+        "path": "src/client/account/send.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3338b3892eacf8aefcfaa0f396c0adb79afb4925",
+        "size": 7182,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/3338b3892eacf8aefcfaa0f396c0adb79afb4925"
+      },
+      "candidate": {
+        "path": "src/client/account/send.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "623ed77bf57684b75cbdbbea6fc4f42b90a9269e",
+        "size": 7170,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/623ed77bf57684b75cbdbbea6fc4f42b90a9269e"
+      },
+      "main": {
+        "path": "src/client/account/send.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "623ed77bf57684b75cbdbbea6fc4f42b90a9269e",
+        "size": 7170,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/623ed77bf57684b75cbdbbea6fc4f42b90a9269e"
+      }
+    },
+    {
+      "path": "src/client/activity.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/client/activity.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ef969e50d6fd10a4688c21149e501ff6dd13abec",
+        "size": 19659,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ef969e50d6fd10a4688c21149e501ff6dd13abec"
+      },
+      "candidate": {
+        "path": "src/client/activity.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ef969e50d6fd10a4688c21149e501ff6dd13abec",
+        "size": 19659,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ef969e50d6fd10a4688c21149e501ff6dd13abec"
+      },
+      "main": {
+        "path": "src/client/activity.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e30613d87ea8ccd63e5e99c821b28294e4ae6bd3",
+        "size": 19990,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/e30613d87ea8ccd63e5e99c821b28294e4ae6bd3"
+      }
+    },
+    {
+      "path": "src/client/agent.rs",
+      "classification": "main_only",
+      "base": null,
+      "candidate": null,
+      "main": {
+        "path": "src/client/agent.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "826b15240d9b4fc54c64d9fd25fb56615b24b274",
+        "size": 9633,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/826b15240d9b4fc54c64d9fd25fb56615b24b274"
+      }
+    },
+    {
+      "path": "src/client/chat_io.rs",
+      "classification": "candidate_only",
+      "base": null,
+      "candidate": {
+        "path": "src/client/chat_io.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c077c7950b8623b0034521004c594c6e1977c977",
+        "size": 14775,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/c077c7950b8623b0034521004c594c6e1977c977"
+      },
+      "main": null
+    },
+    {
+      "path": "src/client/chat_io/options.rs",
+      "classification": "candidate_only",
+      "base": null,
+      "candidate": {
+        "path": "src/client/chat_io/options.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ca11e1ccfa70186c3237dafbffce9adacfa1b8c9",
+        "size": 11651,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ca11e1ccfa70186c3237dafbffce9adacfa1b8c9"
+      },
+      "main": null
+    },
+    {
+      "path": "src/client/chat_io/process.rs",
+      "classification": "candidate_only",
+      "base": null,
+      "candidate": {
+        "path": "src/client/chat_io/process.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "325125940ec44419d2535613be76469abe94f1b1",
+        "size": 9038,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/325125940ec44419d2535613be76469abe94f1b1"
+      },
+      "main": null
+    },
+    {
+      "path": "src/client/chat_io/transport.rs",
+      "classification": "candidate_only",
+      "base": null,
+      "candidate": {
+        "path": "src/client/chat_io/transport.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "afb3c11b4ad5b6c5a6a9ca137ae49fe8495500b3",
+        "size": 19746,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/afb3c11b4ad5b6c5a6a9ca137ae49fe8495500b3"
+      },
+      "main": null
+    },
+    {
+      "path": "src/client/chat_io/transport/socket.rs",
+      "classification": "candidate_only",
+      "base": null,
+      "candidate": {
+        "path": "src/client/chat_io/transport/socket.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b44178bc876879b2e9d96a2d0073170ff2ea99ab",
+        "size": 8718,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/b44178bc876879b2e9d96a2d0073170ff2ea99ab"
+      },
+      "main": null
+    },
+    {
+      "path": "src/client/chat_io/transport/stdio.rs",
+      "classification": "candidate_only",
+      "base": null,
+      "candidate": {
+        "path": "src/client/chat_io/transport/stdio.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5807de38cf74b74558f4c20eaffc02c895c5aedb",
+        "size": 8662,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/5807de38cf74b74558f4c20eaffc02c895c5aedb"
+      },
+      "main": null
+    },
+    {
+      "path": "src/client/composer.rs",
+      "classification": "both_same",
+      "base": {
+        "path": "src/client/composer.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "34feac50c21c34e6df5bb688b75ac1251d5a9939",
+        "size": 52598,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/34feac50c21c34e6df5bb688b75ac1251d5a9939"
+      },
+      "candidate": {
+        "path": "src/client/composer.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1aaf0b0ef3e497489c667a485d8a9a518688f81d",
+        "size": 52609,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/1aaf0b0ef3e497489c667a485d8a9a518688f81d"
+      },
+      "main": {
+        "path": "src/client/composer.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1aaf0b0ef3e497489c667a485d8a9a518688f81d",
+        "size": 52609,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/1aaf0b0ef3e497489c667a485d8a9a518688f81d"
+      }
+    },
+    {
+      "path": "src/client/computer_control.rs",
+      "classification": "both_same",
+      "base": {
+        "path": "src/client/computer_control.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6be1b1dad65339f30335aec37ef4a66266f3cfdd",
+        "size": 3829,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/6be1b1dad65339f30335aec37ef4a66266f3cfdd"
+      },
+      "candidate": {
+        "path": "src/client/computer_control.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1ef9a23c80273de046f22f6fb37eff977bdeac77",
+        "size": 3800,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/1ef9a23c80273de046f22f6fb37eff977bdeac77"
+      },
+      "main": {
+        "path": "src/client/computer_control.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1ef9a23c80273de046f22f6fb37eff977bdeac77",
+        "size": 3800,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/1ef9a23c80273de046f22f6fb37eff977bdeac77"
+      }
+    },
+    {
+      "path": "src/client/interface.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/client/interface.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0c85366e24c2b5a8238d7a70f99434acd7daf3b9",
+        "size": 51216,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/0c85366e24c2b5a8238d7a70f99434acd7daf3b9"
+      },
+      "candidate": {
+        "path": "src/client/interface.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7e6a521704283486ce3fd366edbbc117b699fa5f",
+        "size": 51501,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/7e6a521704283486ce3fd366edbbc117b699fa5f"
+      },
+      "main": {
+        "path": "src/client/interface.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3f4224f5bf1ace7e7dfb14abc225b0c5b22fa383",
+        "size": 51083,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/3f4224f5bf1ace7e7dfb14abc225b0c5b22fa383"
+      }
+    },
+    {
+      "path": "src/client/interface/computer.rs",
+      "classification": "both_same",
+      "base": {
+        "path": "src/client/interface/computer.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3c4b9cc1b68b918b76cf8aaeb4d91f292e0d4444",
+        "size": 3392,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/3c4b9cc1b68b918b76cf8aaeb4d91f292e0d4444"
+      },
+      "candidate": {
+        "path": "src/client/interface/computer.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "536ca7413ac474860132ca8d46b346c62818e39e",
+        "size": 3439,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/536ca7413ac474860132ca8d46b346c62818e39e"
+      },
+      "main": {
+        "path": "src/client/interface/computer.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "536ca7413ac474860132ca8d46b346c62818e39e",
+        "size": 3439,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/536ca7413ac474860132ca8d46b346c62818e39e"
+      }
+    },
+    {
+      "path": "src/client/interface/history.rs",
+      "classification": "candidate_only",
+      "base": {
+        "path": "src/client/interface/history.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dbe16a5ff6643adad7dc9ba567f43af6e476026c",
+        "size": 85368,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/dbe16a5ff6643adad7dc9ba567f43af6e476026c"
+      },
+      "candidate": {
+        "path": "src/client/interface/history.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "267df707651c850fd4f245aacb62e24a73acbaf6",
+        "size": 85396,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/267df707651c850fd4f245aacb62e24a73acbaf6"
+      },
+      "main": {
+        "path": "src/client/interface/history.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dbe16a5ff6643adad7dc9ba567f43af6e476026c",
+        "size": 85368,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/dbe16a5ff6643adad7dc9ba567f43af6e476026c"
+      }
+    },
+    {
+      "path": "src/client/interface/history/ownership.rs",
+      "classification": "candidate_only",
+      "base": {
+        "path": "src/client/interface/history/ownership.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ea7947a85476575402a574eaab3200856a94ee60",
+        "size": 16392,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ea7947a85476575402a574eaab3200856a94ee60"
+      },
+      "candidate": {
+        "path": "src/client/interface/history/ownership.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2104a1e2bcb78bbcd875ce64ece6a844df793944",
+        "size": 18856,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/2104a1e2bcb78bbcd875ce64ece6a844df793944"
+      },
+      "main": {
+        "path": "src/client/interface/history/ownership.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ea7947a85476575402a574eaab3200856a94ee60",
+        "size": 16392,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ea7947a85476575402a574eaab3200856a94ee60"
+      }
+    },
+    {
+      "path": "src/client/interface/listener.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/client/interface/listener.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0e76078f7ac56b5553d32d584cffcc0a8ae275f4",
+        "size": 45983,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/0e76078f7ac56b5553d32d584cffcc0a8ae275f4"
+      },
+      "candidate": {
+        "path": "src/client/interface/listener.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0e76078f7ac56b5553d32d584cffcc0a8ae275f4",
+        "size": 45983,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/0e76078f7ac56b5553d32d584cffcc0a8ae275f4"
+      },
+      "main": {
+        "path": "src/client/interface/listener.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "95115b6df9b7016e5a13c0994dbaf65c8f21b9c5",
+        "size": 45994,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/95115b6df9b7016e5a13c0994dbaf65c8f21b9c5"
+      }
+    },
+    {
+      "path": "src/client/interface/messages.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/client/interface/messages.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8f996f0c0a140bc1f34c66c23be5faae2a94d41b",
+        "size": 15548,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8f996f0c0a140bc1f34c66c23be5faae2a94d41b"
+      },
+      "candidate": {
+        "path": "src/client/interface/messages.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8f996f0c0a140bc1f34c66c23be5faae2a94d41b",
+        "size": 15548,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8f996f0c0a140bc1f34c66c23be5faae2a94d41b"
+      },
+      "main": {
+        "path": "src/client/interface/messages.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "60c639d0739451104e6e889e9ab7f5653f4523d1",
+        "size": 18319,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/60c639d0739451104e6e889e9ab7f5653f4523d1"
+      }
+    },
+    {
+      "path": "src/client/interface/questions.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/client/interface/questions.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f872aff57ebb19c04039959a3b45d085448d350e",
+        "size": 42676,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f872aff57ebb19c04039959a3b45d085448d350e"
+      },
+      "candidate": {
+        "path": "src/client/interface/questions.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f872aff57ebb19c04039959a3b45d085448d350e",
+        "size": 42676,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f872aff57ebb19c04039959a3b45d085448d350e"
+      },
+      "main": {
+        "path": "src/client/interface/questions.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f218115c9a57c169e71d1c718398f1abfd5cb33d",
+        "size": 42619,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f218115c9a57c169e71d1c718398f1abfd5cb33d"
+      }
+    },
+    {
+      "path": "src/client/interface/questions/delivery.rs",
+      "classification": "candidate_only",
+      "base": {
+        "path": "src/client/interface/questions/delivery.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7221e01c669549ba33616b52259cbb123b4814be",
+        "size": 7235,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/7221e01c669549ba33616b52259cbb123b4814be"
+      },
+      "candidate": {
+        "path": "src/client/interface/questions/delivery.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3580f4a15fc888e7dc4164eb73228859e0699719",
+        "size": 7321,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/3580f4a15fc888e7dc4164eb73228859e0699719"
+      },
+      "main": {
+        "path": "src/client/interface/questions/delivery.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7221e01c669549ba33616b52259cbb123b4814be",
+        "size": 7235,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/7221e01c669549ba33616b52259cbb123b4814be"
+      }
+    },
+    {
+      "path": "src/client/interface/questions/requests.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/client/interface/questions/requests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6d88b1d50d406b6ef1393c2dc577824fe67097e9",
+        "size": 27674,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/6d88b1d50d406b6ef1393c2dc577824fe67097e9"
+      },
+      "candidate": {
+        "path": "src/client/interface/questions/requests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6d88b1d50d406b6ef1393c2dc577824fe67097e9",
+        "size": 27674,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/6d88b1d50d406b6ef1393c2dc577824fe67097e9"
+      },
+      "main": {
+        "path": "src/client/interface/questions/requests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "34fa89e4f97aa196077f35442a586ec271408e30",
+        "size": 27840,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/34fa89e4f97aa196077f35442a586ec271408e30"
+      }
+    },
+    {
+      "path": "src/client/interface/questions/workflow.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/client/interface/questions/workflow.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e2ab6f139e2df8f1a9687343e4aa5e4670c7ebef",
+        "size": 22501,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/e2ab6f139e2df8f1a9687343e4aa5e4670c7ebef"
+      },
+      "candidate": {
+        "path": "src/client/interface/questions/workflow.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e2ab6f139e2df8f1a9687343e4aa5e4670c7ebef",
+        "size": 22501,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/e2ab6f139e2df8f1a9687343e4aa5e4670c7ebef"
+      },
+      "main": {
+        "path": "src/client/interface/questions/workflow.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0c0a8c8b7f3f59962165f46e67ca23eacab9b32e",
+        "size": 702,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/0c0a8c8b7f3f59962165f46e67ca23eacab9b32e"
+      }
+    },
+    {
+      "path": "src/client/interface/reply.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/client/interface/reply.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e48722d628332702a89930834eea86b4581a140d",
+        "size": 5793,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/e48722d628332702a89930834eea86b4581a140d"
+      },
+      "candidate": {
+        "path": "src/client/interface/reply.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e48722d628332702a89930834eea86b4581a140d",
+        "size": 5793,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/e48722d628332702a89930834eea86b4581a140d"
+      },
+      "main": {
+        "path": "src/client/interface/reply.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f5ffba244d54b88e22ce3e277c4b2ab2353ee463",
+        "size": 5796,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f5ffba244d54b88e22ce3e277c4b2ab2353ee463"
+      }
+    },
+    {
+      "path": "src/client/interface/user_wait.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/client/interface/user_wait.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e0299921f7923ec1a8c7923f2d3668d01ad4fea4",
+        "size": 26907,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/e0299921f7923ec1a8c7923f2d3668d01ad4fea4"
+      },
+      "candidate": {
+        "path": "src/client/interface/user_wait.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e0299921f7923ec1a8c7923f2d3668d01ad4fea4",
+        "size": 26907,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/e0299921f7923ec1a8c7923f2d3668d01ad4fea4"
+      },
+      "main": {
+        "path": "src/client/interface/user_wait.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ffda3d0251407a47ed2b0e6717c74fa58b1ea63d",
+        "size": 26771,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ffda3d0251407a47ed2b0e6717c74fa58b1ea63d"
+      }
+    },
+    {
+      "path": "src/client/local.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/client/local.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4a6d11389b41d0869b79cd25d8b1338874391f38",
+        "size": 18652,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/4a6d11389b41d0869b79cd25d8b1338874391f38"
+      },
+      "candidate": {
+        "path": "src/client/local.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1ae3ba2d1002157d4ecf43efbe71f8548ae33d04",
+        "size": 20916,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/1ae3ba2d1002157d4ecf43efbe71f8548ae33d04"
+      },
+      "main": {
+        "path": "src/client/local.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fa610a268cfcf30b824d6fcc7ca543fa23c48ce9",
+        "size": 20836,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/fa610a268cfcf30b824d6fcc7ca543fa23c48ce9"
+      }
+    },
+    {
+      "path": "src/client/local/socket.rs",
+      "classification": "both_same",
+      "base": null,
+      "candidate": {
+        "path": "src/client/local/socket.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "da6851e0401fd9371580f0d87e4e252b34972f76",
+        "size": 5131,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/da6851e0401fd9371580f0d87e4e252b34972f76"
+      },
+      "main": {
+        "path": "src/client/local/socket.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "da6851e0401fd9371580f0d87e4e252b34972f76",
+        "size": 5131,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/da6851e0401fd9371580f0d87e4e252b34972f76"
+      }
+    },
+    {
+      "path": "src/client/local/socket/tests.rs",
+      "classification": "both_different",
+      "base": null,
+      "candidate": {
+        "path": "src/client/local/socket/tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4cede1e46fc07ea039ed3af14c045501cd5be961",
+        "size": 8312,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/4cede1e46fc07ea039ed3af14c045501cd5be961"
+      },
+      "main": {
+        "path": "src/client/local/socket/tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c111f324859c448619f59e774ce44a23a25fa316",
+        "size": 8298,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/c111f324859c448619f59e774ce44a23a25fa316"
+      }
+    },
+    {
+      "path": "src/client/messaging.rs",
+      "classification": "candidate_only",
+      "base": {
+        "path": "src/client/messaging.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "583f8ce745bc6ca0e5a9c8329210b61ba2354a58",
+        "size": 17739,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/583f8ce745bc6ca0e5a9c8329210b61ba2354a58"
+      },
+      "candidate": {
+        "path": "src/client/messaging.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a71ff53f3fe8ee9240d9143ea64a50c588ac9c2e",
+        "size": 18001,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/a71ff53f3fe8ee9240d9143ea64a50c588ac9c2e"
+      },
+      "main": {
+        "path": "src/client/messaging.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "583f8ce745bc6ca0e5a9c8329210b61ba2354a58",
+        "size": 17739,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/583f8ce745bc6ca0e5a9c8329210b61ba2354a58"
+      }
+    },
+    {
+      "path": "src/client/panel.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/client/panel.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8fce2860c3902618f171d12fc4c46563dfb04dfc",
+        "size": 40462,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8fce2860c3902618f171d12fc4c46563dfb04dfc"
+      },
+      "candidate": {
+        "path": "src/client/panel.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8fce2860c3902618f171d12fc4c46563dfb04dfc",
+        "size": 40462,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8fce2860c3902618f171d12fc4c46563dfb04dfc"
+      },
+      "main": {
+        "path": "src/client/panel.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f5149ee3a320c9a4abbdaaa008741d4c37249e93",
+        "size": 40601,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f5149ee3a320c9a4abbdaaa008741d4c37249e93"
+      }
+    },
+    {
+      "path": "src/client/relay.rs",
+      "classification": "candidate_only",
+      "base": {
+        "path": "src/client/relay.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8873cc7411bde06a4126040fcfdf1570bbc335d5",
+        "size": 21157,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8873cc7411bde06a4126040fcfdf1570bbc335d5"
+      },
+      "candidate": {
+        "path": "src/client/relay.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dbd6c505dd3c6376e8a76695996fc7ccc21c8bdb",
+        "size": 21673,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/dbd6c505dd3c6376e8a76695996fc7ccc21c8bdb"
+      },
+      "main": {
+        "path": "src/client/relay.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8873cc7411bde06a4126040fcfdf1570bbc335d5",
+        "size": 21157,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8873cc7411bde06a4126040fcfdf1570bbc335d5"
+      }
+    },
+    {
+      "path": "src/client/reload.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/client/reload.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "db0e73f512f3393ff79df9c0ff6fbbb82817d5b1",
+        "size": 19660,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/db0e73f512f3393ff79df9c0ff6fbbb82817d5b1"
+      },
+      "candidate": {
+        "path": "src/client/reload.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "356ee095a52b99189bdf45b631a62bb0d92f0c88",
+        "size": 21198,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/356ee095a52b99189bdf45b631a62bb0d92f0c88"
+      },
+      "main": {
+        "path": "src/client/reload.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bc6a6ecd0f27d46c0db0ae916f7a0b4d26752322",
+        "size": 23382,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/bc6a6ecd0f27d46c0db0ae916f7a0b4d26752322"
+      }
+    },
+    {
+      "path": "src/client/render.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/client/render.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "08d1f8c609703e122733ef3ebd185bfa1eef6942",
+        "size": 194340,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/08d1f8c609703e122733ef3ebd185bfa1eef6942"
+      },
+      "candidate": {
+        "path": "src/client/render.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "97d8a619e4f71912913db930c0f398808307b6a5",
+        "size": 195035,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/97d8a619e4f71912913db930c0f398808307b6a5"
+      },
+      "main": {
+        "path": "src/client/render.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5f800394c07f1125579f2b2dfffb33e2a5410050",
+        "size": 197113,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/5f800394c07f1125579f2b2dfffb33e2a5410050"
+      }
+    },
+    {
+      "path": "src/client/steering.rs",
+      "classification": "candidate_only",
+      "base": {
+        "path": "src/client/steering.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ebc27c2efefb042c3bec96125711b28048c5e044",
+        "size": 153627,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ebc27c2efefb042c3bec96125711b28048c5e044"
+      },
+      "candidate": {
+        "path": "src/client/steering.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1293b1aade6276146da702c382c8590e66e78bf9",
+        "size": 160180,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/1293b1aade6276146da702c382c8590e66e78bf9"
+      },
+      "main": {
+        "path": "src/client/steering.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ebc27c2efefb042c3bec96125711b28048c5e044",
+        "size": 153627,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ebc27c2efefb042c3bec96125711b28048c5e044"
+      }
+    },
+    {
+      "path": "src/client/terminal.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/client/terminal.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cbb2fb2d46e1a09427c4f588bc65bbb4d887b6cd",
+        "size": 168390,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/cbb2fb2d46e1a09427c4f588bc65bbb4d887b6cd"
+      },
+      "candidate": {
+        "path": "src/client/terminal.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d5a997f7299fd9009f7ef899c283529d4fee168a",
+        "size": 168494,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/d5a997f7299fd9009f7ef899c283529d4fee168a"
+      },
+      "main": {
+        "path": "src/client/terminal.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "779946462185665af8f5aa08dda89b326b79371a",
+        "size": 169339,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/779946462185665af8f5aa08dda89b326b79371a"
+      }
+    },
+    {
+      "path": "src/client/terminal/computer.rs",
+      "classification": "both_same",
+      "base": {
+        "path": "src/client/terminal/computer.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3027cabef6b09485053d8e57326e2a6edadf494b",
+        "size": 10765,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/3027cabef6b09485053d8e57326e2a6edadf494b"
+      },
+      "candidate": {
+        "path": "src/client/terminal/computer.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ef22a7b061c3e4d615bd42808f2926b7d01d3aa6",
+        "size": 10681,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ef22a7b061c3e4d615bd42808f2926b7d01d3aa6"
+      },
+      "main": {
+        "path": "src/client/terminal/computer.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ef22a7b061c3e4d615bd42808f2926b7d01d3aa6",
+        "size": 10681,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ef22a7b061c3e4d615bd42808f2926b7d01d3aa6"
+      }
+    },
+    {
+      "path": "src/client/terminal/conversation.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/client/terminal/conversation.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "acc8fe2c782257361dfb8be401c79bba02ee9f11",
+        "size": 254298,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/acc8fe2c782257361dfb8be401c79bba02ee9f11"
+      },
+      "candidate": {
+        "path": "src/client/terminal/conversation.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b502924e42a799a8a6229d2ceae0c630b5e5d1a9",
+        "size": 259897,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/b502924e42a799a8a6229d2ceae0c630b5e5d1a9"
+      },
+      "main": {
+        "path": "src/client/terminal/conversation.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eb3794d930a009dfad69ce6445b508a268d458e8",
+        "size": 254589,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/eb3794d930a009dfad69ce6445b508a268d458e8"
+      }
+    },
+    {
+      "path": "src/client/terminal/conversation/history.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/client/terminal/conversation/history.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d37edc06500afe97f6672469a589f04b87b3c559",
+        "size": 42081,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/d37edc06500afe97f6672469a589f04b87b3c559"
+      },
+      "candidate": {
+        "path": "src/client/terminal/conversation/history.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d84abd4297edacd391d56d485b35f6dab66f12f2",
+        "size": 42254,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/d84abd4297edacd391d56d485b35f6dab66f12f2"
+      },
+      "main": {
+        "path": "src/client/terminal/conversation/history.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2fa9c99110440b09f32de63b4c96e3634fc9c9a6",
+        "size": 42062,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/2fa9c99110440b09f32de63b4c96e3634fc9c9a6"
+      }
+    },
+    {
+      "path": "src/client/terminal/conversation/timing.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/client/terminal/conversation/timing.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7b416000d1294e3a051f7cbeb79a261030176621",
+        "size": 3905,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/7b416000d1294e3a051f7cbeb79a261030176621"
+      },
+      "candidate": {
+        "path": "src/client/terminal/conversation/timing.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f2ad7f6e9d19db0c81e59f596b59127bef5b4ae4",
+        "size": 3709,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f2ad7f6e9d19db0c81e59f596b59127bef5b4ae4"
+      },
+      "main": {
+        "path": "src/client/terminal/conversation/timing.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b38845f0134b4d4ea10fa3d63a1af8f8647a3d4f",
+        "size": 7058,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/b38845f0134b4d4ea10fa3d63a1af8f8647a3d4f"
+      }
+    },
+    {
+      "path": "src/client/terminal/conversation/timing/tests.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/client/terminal/conversation/timing/tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f262e1d7644c004c92f88da3e9c0034fe04a7c7a",
+        "size": 3839,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f262e1d7644c004c92f88da3e9c0034fe04a7c7a"
+      },
+      "candidate": {
+        "path": "src/client/terminal/conversation/timing/tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8def18b181cfb145da1a67cebee4ac556203d99b",
+        "size": 4252,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8def18b181cfb145da1a67cebee4ac556203d99b"
+      },
+      "main": {
+        "path": "src/client/terminal/conversation/timing/tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ff4e7fe86085ff4ce3e4c1e86e95f20ddcdd2f7e",
+        "size": 7942,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ff4e7fe86085ff4ce3e4c1e86e95f20ddcdd2f7e"
+      }
+    },
+    {
+      "path": "src/client/terminal/conversation/user_wait.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/client/terminal/conversation/user_wait.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7f9ad292d56731607cb4507c897b7e5096f542c1",
+        "size": 18482,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/7f9ad292d56731607cb4507c897b7e5096f542c1"
+      },
+      "candidate": {
+        "path": "src/client/terminal/conversation/user_wait.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7f9ad292d56731607cb4507c897b7e5096f542c1",
+        "size": 18482,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/7f9ad292d56731607cb4507c897b7e5096f542c1"
+      },
+      "main": {
+        "path": "src/client/terminal/conversation/user_wait.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d114bbe21361b778a0191d5ef0732002e50a7111",
+        "size": 17823,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/d114bbe21361b778a0191d5ef0732002e50a7111"
+      }
+    },
+    {
+      "path": "src/code_mode.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/code_mode.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fc54b3dd2ef7e2e3537ecfaa858f1ed39f098aff",
+        "size": 109520,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/fc54b3dd2ef7e2e3537ecfaa858f1ed39f098aff"
+      },
+      "candidate": {
+        "path": "src/code_mode.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "33c7039db738fe48bd0ce9fd5ca55622036e0b97",
+        "size": 109593,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/33c7039db738fe48bd0ce9fd5ca55622036e0b97"
+      },
+      "main": {
+        "path": "src/code_mode.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5c209e1d4a904adaee17cb59776328441494f8db",
+        "size": 108574,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/5c209e1d4a904adaee17cb59776328441494f8db"
+      }
+    },
+    {
+      "path": "src/code_mode/reminders.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/code_mode/reminders.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "428dcbc6ef4672a518f2182ded8ef1d911c59f29",
+        "size": 16133,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/428dcbc6ef4672a518f2182ded8ef1d911c59f29"
+      },
+      "candidate": {
+        "path": "src/code_mode/reminders.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "428dcbc6ef4672a518f2182ded8ef1d911c59f29",
+        "size": 16133,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/428dcbc6ef4672a518f2182ded8ef1d911c59f29"
+      },
+      "main": null
+    },
+    {
+      "path": "src/code_mode/user_wait.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/code_mode/user_wait.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3199f97e2fe9b3de84602dfbda25ba5cf9c4b530",
+        "size": 18960,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/3199f97e2fe9b3de84602dfbda25ba5cf9c4b530"
+      },
+      "candidate": {
+        "path": "src/code_mode/user_wait.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3199f97e2fe9b3de84602dfbda25ba5cf9c4b530",
+        "size": 18960,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/3199f97e2fe9b3de84602dfbda25ba5cf9c4b530"
+      },
+      "main": {
+        "path": "src/code_mode/user_wait.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9762e440f27311ad59be6ef91444750b0965b4f9",
+        "size": 15781,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/9762e440f27311ad59be6ef91444750b0965b4f9"
+      }
+    },
+    {
+      "path": "src/device.rs",
+      "classification": "candidate_only",
+      "base": {
+        "path": "src/device.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "27801fa31a6d5b19dad66486aae7a5a26f50af8f",
+        "size": 93412,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/27801fa31a6d5b19dad66486aae7a5a26f50af8f"
+      },
+      "candidate": {
+        "path": "src/device.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5d2b0d2432c4533aa09fe30df48d3d2afd71521e",
+        "size": 93562,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/5d2b0d2432c4533aa09fe30df48d3d2afd71521e"
+      },
+      "main": {
+        "path": "src/device.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "27801fa31a6d5b19dad66486aae7a5a26f50af8f",
+        "size": 93412,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/27801fa31a6d5b19dad66486aae7a5a26f50af8f"
+      }
+    },
+    {
+      "path": "src/http.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/http.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0d6059385bff9cac79e912f351f07f9848152a19",
+        "size": 155385,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/0d6059385bff9cac79e912f351f07f9848152a19"
+      },
+      "candidate": {
+        "path": "src/http.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f3fb54ab380f2e8290c6dbf67e5249b7be4b9cbe",
+        "size": 155934,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f3fb54ab380f2e8290c6dbf67e5249b7be4b9cbe"
+      },
+      "main": {
+        "path": "src/http.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3aeea065a292384ba9aac690b031f0a725b7a0ec",
+        "size": 149626,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/3aeea065a292384ba9aac690b031f0a725b7a0ec"
+      }
+    },
+    {
+      "path": "src/http/await_tool.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/http/await_tool.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ffc819968f5d8c16e2532c1f845b023a1512e740",
+        "size": 45361,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ffc819968f5d8c16e2532c1f845b023a1512e740"
+      },
+      "candidate": {
+        "path": "src/http/await_tool.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9040236a7a3d17fd07267179b7d8fbcd02530f0a",
+        "size": 45639,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/9040236a7a3d17fd07267179b7d8fbcd02530f0a"
+      },
+      "main": {
+        "path": "src/http/await_tool.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "19aaeff78861cd799a00112f04a5089e665ce054",
+        "size": 44133,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/19aaeff78861cd799a00112f04a5089e665ce054"
+      }
+    },
+    {
+      "path": "src/http/await_tool/tests.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/http/await_tool/tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f656224cdb430abb9ca3fcf5940e4fa287f1e50c",
+        "size": 20334,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f656224cdb430abb9ca3fcf5940e4fa287f1e50c"
+      },
+      "candidate": {
+        "path": "src/http/await_tool/tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f656224cdb430abb9ca3fcf5940e4fa287f1e50c",
+        "size": 20334,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/f656224cdb430abb9ca3fcf5940e4fa287f1e50c"
+      },
+      "main": {
+        "path": "src/http/await_tool/tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "beb01a38bcee21ea3bb2c325c3b181015bb0488b",
+        "size": 20761,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/beb01a38bcee21ea3bb2c325c3b181015bb0488b"
+      }
+    },
+    {
+      "path": "src/http/finish_request.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/http/finish_request.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "807115d8203c0de40c155b2177436613ef193b24",
+        "size": 17262,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/807115d8203c0de40c155b2177436613ef193b24"
+      },
+      "candidate": {
+        "path": "src/http/finish_request.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5000496b82424b505488d1200dccb949449fddd8",
+        "size": 17316,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/5000496b82424b505488d1200dccb949449fddd8"
+      },
+      "main": null
+    },
+    {
+      "path": "src/http/question_delivery_tests.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/http/question_delivery_tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cfb82c712c6d6c8b2cfa78d610be10d2379042d7",
+        "size": 42959,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/cfb82c712c6d6c8b2cfa78d610be10d2379042d7"
+      },
+      "candidate": {
+        "path": "src/http/question_delivery_tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cfb82c712c6d6c8b2cfa78d610be10d2379042d7",
+        "size": 42959,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/cfb82c712c6d6c8b2cfa78d610be10d2379042d7"
+      },
+      "main": {
+        "path": "src/http/question_delivery_tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dec92b128fc258337b4b443dbc5d86d3f5e37f11",
+        "size": 42957,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/dec92b128fc258337b4b443dbc5d86d3f5e37f11"
+      }
+    },
+    {
+      "path": "src/http/question_delivery_tests/finish_receipts.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/http/question_delivery_tests/finish_receipts.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bbcf1e3966299a6d77fd43372a32b1d80d1ddde5",
+        "size": 5795,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/bbcf1e3966299a6d77fd43372a32b1d80d1ddde5"
+      },
+      "candidate": {
+        "path": "src/http/question_delivery_tests/finish_receipts.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bbcf1e3966299a6d77fd43372a32b1d80d1ddde5",
+        "size": 5795,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/bbcf1e3966299a6d77fd43372a32b1d80d1ddde5"
+      },
+      "main": null
+    },
+    {
+      "path": "src/http/question_delivery_tests/retired_hooks.rs",
+      "classification": "main_only",
+      "base": null,
+      "candidate": null,
+      "main": {
+        "path": "src/http/question_delivery_tests/retired_hooks.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0259b79cdefc9defc42b618edc4bfbc59f95d573",
+        "size": 3600,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/0259b79cdefc9defc42b618edc4bfbc59f95d573"
+      }
+    },
+    {
+      "path": "src/http/user_wait.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/http/user_wait.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d8187ca67f605cd05a8171eebc9483530de953d4",
+        "size": 32330,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/d8187ca67f605cd05a8171eebc9483530de953d4"
+      },
+      "candidate": {
+        "path": "src/http/user_wait.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8214ceaa41ff6b0439fc72b4efe5aeb3c91aa78c",
+        "size": 33529,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8214ceaa41ff6b0439fc72b4efe5aeb3c91aa78c"
+      },
+      "main": {
+        "path": "src/http/user_wait.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4af935b4985cd3dc43b4bb008d414c14957e53d4",
+        "size": 32214,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/4af935b4985cd3dc43b4bb008d414c14957e53d4"
+      }
+    },
+    {
+      "path": "src/oauth_github_tests.rs",
+      "classification": "candidate_only",
+      "base": {
+        "path": "src/oauth_github_tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fab8ddf6edc7087de38891db303620582ac5bd0d",
+        "size": 27876,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/fab8ddf6edc7087de38891db303620582ac5bd0d"
+      },
+      "candidate": {
+        "path": "src/oauth_github_tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a3bf0625f8d7dc4f09e098727673decd2b19e511",
+        "size": 27914,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/a3bf0625f8d7dc4f09e098727673decd2b19e511"
+      },
+      "main": {
+        "path": "src/oauth_github_tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fab8ddf6edc7087de38891db303620582ac5bd0d",
+        "size": 27876,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/fab8ddf6edc7087de38891db303620582ac5bd0d"
+      }
+    },
+    {
+      "path": "src/registry.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/registry.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "29941039e9730f5234c2a303ae71cea0a1f50ca8",
+        "size": 21700,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/29941039e9730f5234c2a303ae71cea0a1f50ca8"
+      },
+      "candidate": {
+        "path": "src/registry.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "29941039e9730f5234c2a303ae71cea0a1f50ca8",
+        "size": 21700,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/29941039e9730f5234c2a303ae71cea0a1f50ca8"
+      },
+      "main": {
+        "path": "src/registry.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c0d5e03c089e4a57b839d0c23b8b7b3c6e18abd4",
+        "size": 22165,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/c0d5e03c089e4a57b839d0c23b8b7b3c6e18abd4"
+      }
+    },
+    {
+      "path": "src/resources.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/resources.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "36af17d8411c46a6fe8679c7ba78713d8ec99e5f",
+        "size": 38846,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/36af17d8411c46a6fe8679c7ba78713d8ec99e5f"
+      },
+      "candidate": {
+        "path": "src/resources.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "db0acb163e3a2aad8f67fbda2183de3c2f4f50be",
+        "size": 38882,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/db0acb163e3a2aad8f67fbda2183de3c2f4f50be"
+      },
+      "main": {
+        "path": "src/resources.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9395236a970f8222d8a254dee1547dcf01156b05",
+        "size": 38445,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/9395236a970f8222d8a254dee1547dcf01156b05"
+      }
+    },
+    {
+      "path": "src/runtime.rs",
+      "classification": "candidate_only",
+      "base": {
+        "path": "src/runtime.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "46b2fbfea30ae69c48a4d0183f2be5280c9a96ee",
+        "size": 48716,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/46b2fbfea30ae69c48a4d0183f2be5280c9a96ee"
+      },
+      "candidate": {
+        "path": "src/runtime.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fbe763c72120a1fd436372cbd05728041ae6cb18",
+        "size": 49113,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/fbe763c72120a1fd436372cbd05728041ae6cb18"
+      },
+      "main": {
+        "path": "src/runtime.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "46b2fbfea30ae69c48a4d0183f2be5280c9a96ee",
+        "size": 48716,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/46b2fbfea30ae69c48a4d0183f2be5280c9a96ee"
+      }
+    },
+    {
+      "path": "src/runtime/capabilities.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/runtime/capabilities.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "30be0f4442ceb11a02ba30d0f83f368d125d6159",
+        "size": 42050,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/30be0f4442ceb11a02ba30d0f83f368d125d6159"
+      },
+      "candidate": {
+        "path": "src/runtime/capabilities.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "855c6035b3dba985b7d1f8b1289b8ba2ca0e728b",
+        "size": 41892,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/855c6035b3dba985b7d1f8b1289b8ba2ca0e728b"
+      },
+      "main": {
+        "path": "src/runtime/capabilities.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "aa1f28fc5317fbd390e601b7a7ef65ba4bc9f5ed",
+        "size": 41834,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/aa1f28fc5317fbd390e601b7a7ef65ba4bc9f5ed"
+      }
+    },
+    {
+      "path": "src/runtime/native_plugins/process.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/runtime/native_plugins/process.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eb513e79422f7093f00bc080783248036bf642b9",
+        "size": 25208,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/eb513e79422f7093f00bc080783248036bf642b9"
+      },
+      "candidate": {
+        "path": "src/runtime/native_plugins/process.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9baee8ff6f02168ccb25f530acfcb99fe7699b04",
+        "size": 26081,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/9baee8ff6f02168ccb25f530acfcb99fe7699b04"
+      },
+      "main": {
+        "path": "src/runtime/native_plugins/process.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "54dd94c99e24c0dec7582ae2a5211a9276f97352",
+        "size": 29116,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/54dd94c99e24c0dec7582ae2a5211a9276f97352"
+      }
+    },
+    {
+      "path": "src/runtime/native_plugins/process/lazy.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/runtime/native_plugins/process/lazy.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7535e2e732f7a8a3ad7e9abeaf1f7459a68bf297",
+        "size": 13617,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/7535e2e732f7a8a3ad7e9abeaf1f7459a68bf297"
+      },
+      "candidate": {
+        "path": "src/runtime/native_plugins/process/lazy.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7535e2e732f7a8a3ad7e9abeaf1f7459a68bf297",
+        "size": 13617,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/7535e2e732f7a8a3ad7e9abeaf1f7459a68bf297"
+      },
+      "main": {
+        "path": "src/runtime/native_plugins/process/lazy.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9d842833ccd4ff7226647470ec1187151694debc",
+        "size": 13473,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/9d842833ccd4ff7226647470ec1187151694debc"
+      }
+    },
+    {
+      "path": "src/runtime/time.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/runtime/time.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "14ec8deaa64a16e90ca723f5c36b3cdbeea3cd2b",
+        "size": 26439,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/14ec8deaa64a16e90ca723f5c36b3cdbeea3cd2b"
+      },
+      "candidate": {
+        "path": "src/runtime/time.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "14ec8deaa64a16e90ca723f5c36b3cdbeea3cd2b",
+        "size": 26439,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/14ec8deaa64a16e90ca723f5c36b3cdbeea3cd2b"
+      },
+      "main": {
+        "path": "src/runtime/time.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8052f097aa481c9904b7b78adafab5312f3c5937",
+        "size": 32013,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8052f097aa481c9904b7b78adafab5312f3c5937"
+      }
+    },
+    {
+      "path": "src/runtime/time/civil.rs",
+      "classification": "main_only",
+      "base": null,
+      "candidate": null,
+      "main": {
+        "path": "src/runtime/time/civil.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4ad88d33e2cce05585d8d0f1b80735ad48b5cc1a",
+        "size": 10547,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/4ad88d33e2cce05585d8d0f1b80735ad48b5cc1a"
+      }
+    },
+    {
+      "path": "src/runtime/time/execution.rs",
+      "classification": "main_only",
+      "base": null,
+      "candidate": null,
+      "main": {
+        "path": "src/runtime/time/execution.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0ac861ee1b87d36622ad8c946a7c7fbad73817cb",
+        "size": 1974,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/0ac861ee1b87d36622ad8c946a7c7fbad73817cb"
+      }
+    },
+    {
+      "path": "src/runtime/time/relay.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/runtime/time/relay.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "263789373109ba439ed732fa9cab1c1e8ebadef0",
+        "size": 7430,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/263789373109ba439ed732fa9cab1c1e8ebadef0"
+      },
+      "candidate": {
+        "path": "src/runtime/time/relay.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "263789373109ba439ed732fa9cab1c1e8ebadef0",
+        "size": 7430,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/263789373109ba439ed732fa9cab1c1e8ebadef0"
+      },
+      "main": {
+        "path": "src/runtime/time/relay.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "13edb3969a98f83a254b0ab0771044782f7454eb",
+        "size": 7508,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/13edb3969a98f83a254b0ab0771044782f7454eb"
+      }
+    },
+    {
+      "path": "src/runtime/time/tests.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/runtime/time/tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "37a082865d9677e1ac851264b6c3c770ab1ea255",
+        "size": 15931,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/37a082865d9677e1ac851264b6c3c770ab1ea255"
+      },
+      "candidate": {
+        "path": "src/runtime/time/tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "27bfcc10815982bea892776ce06e3e26bcee49a9",
+        "size": 17522,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/27bfcc10815982bea892776ce06e3e26bcee49a9"
+      },
+      "main": {
+        "path": "src/runtime/time/tests.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d49cb42407ea4a5f5aacfbb2581a44c5aff45a1f",
+        "size": 20561,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/d49cb42407ea4a5f5aacfbb2581a44c5aff45a1f"
+      }
+    },
+    {
+      "path": "src/session/attach.rs",
+      "classification": "candidate_only",
+      "base": {
+        "path": "src/session/attach.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ff795c9845786456e01c9d0a33892c32b0187ddb",
+        "size": 50987,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ff795c9845786456e01c9d0a33892c32b0187ddb"
+      },
+      "candidate": {
+        "path": "src/session/attach.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bcfbe4e2f5d62c827729e133066fead87a20def6",
+        "size": 51162,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/bcfbe4e2f5d62c827729e133066fead87a20def6"
+      },
+      "main": {
+        "path": "src/session/attach.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ff795c9845786456e01c9d0a33892c32b0187ddb",
+        "size": 50987,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/ff795c9845786456e01c9d0a33892c32b0187ddb"
+      }
+    },
+    {
+      "path": "src/session/service.rs",
+      "classification": "candidate_only",
+      "base": {
+        "path": "src/session/service.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "99237d042de241bc527c27a2624e36dd972abe44",
+        "size": 49315,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/99237d042de241bc527c27a2624e36dd972abe44"
+      },
+      "candidate": {
+        "path": "src/session/service.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2dd30f898276cc991d7ed6984ceed2d4136ee879",
+        "size": 50761,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/2dd30f898276cc991d7ed6984ceed2d4136ee879"
+      },
+      "main": {
+        "path": "src/session/service.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "99237d042de241bc527c27a2624e36dd972abe44",
+        "size": 49315,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/99237d042de241bc527c27a2624e36dd972abe44"
+      }
+    },
+    {
+      "path": "src/steering.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/steering.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "db9e9ddb4ec1bceb59e0bf0eb541a71f21875228",
+        "size": 26950,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/db9e9ddb4ec1bceb59e0bf0eb541a71f21875228"
+      },
+      "candidate": {
+        "path": "src/steering.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "db9e9ddb4ec1bceb59e0bf0eb541a71f21875228",
+        "size": 26950,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/db9e9ddb4ec1bceb59e0bf0eb541a71f21875228"
+      },
+      "main": {
+        "path": "src/steering.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fadeb40c53fb46c7284faa6dadcb4e277afd929f",
+        "size": 26587,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/fadeb40c53fb46c7284faa6dadcb4e277afd929f"
+      }
+    },
+    {
+      "path": "src/steering/waiting.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/steering/waiting.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d567623e9328178ebfd33f1008a162f999281c7b",
+        "size": 13613,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/d567623e9328178ebfd33f1008a162f999281c7b"
+      },
+      "candidate": {
+        "path": "src/steering/waiting.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d567623e9328178ebfd33f1008a162f999281c7b",
+        "size": 13613,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/d567623e9328178ebfd33f1008a162f999281c7b"
+      },
+      "main": {
+        "path": "src/steering/waiting.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8d3a6dd0e207c50e44b1f4a47befdc66a2a98593",
+        "size": 13199,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/8d3a6dd0e207c50e44b1f4a47befdc66a2a98593"
+      }
+    },
+    {
+      "path": "src/username.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "src/username.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9ec72564e63a7ac999fc73092a8d13e5282d5a26",
+        "size": 2253,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/9ec72564e63a7ac999fc73092a8d13e5282d5a26"
+      },
+      "candidate": {
+        "path": "src/username.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9ec72564e63a7ac999fc73092a8d13e5282d5a26",
+        "size": 2253,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/9ec72564e63a7ac999fc73092a8d13e5282d5a26"
+      },
+      "main": {
+        "path": "src/username.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b8927c206713045c516546ec555764ba8b7d25e2",
+        "size": 2694,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/b8927c206713045c516546ec555764ba8b7d25e2"
+      }
+    },
+    {
+      "path": "src/wire.rs",
+      "classification": "both_different",
+      "base": {
+        "path": "src/wire.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "86aa23244e8a54fba617e6f92b08c320d8f6e10e",
+        "size": 37897,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/86aa23244e8a54fba617e6f92b08c320d8f6e10e"
+      },
+      "candidate": {
+        "path": "src/wire.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0050cf2036b73a03f43e4098f53296e41653cc6e",
+        "size": 38553,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/0050cf2036b73a03f43e4098f53296e41653cc6e"
+      },
+      "main": {
+        "path": "src/wire.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e912b5afc0b3297018cfd6b779e3789906db3d40",
+        "size": 39583,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/e912b5afc0b3297018cfd6b779e3789906db3d40"
+      }
+    },
+    {
+      "path": "tests/connection_context.rs",
+      "classification": "both_same",
+      "base": {
+        "path": "tests/connection_context.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d785ef2e46625850fccd9f26af1af2faa99a2d7c",
+        "size": 14251,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/d785ef2e46625850fccd9f26af1af2faa99a2d7c"
+      },
+      "candidate": {
+        "path": "tests/connection_context.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3307573cc4b1a33f847abd67be362e983ea44f6c",
+        "size": 15004,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/3307573cc4b1a33f847abd67be362e983ea44f6c"
+      },
+      "main": {
+        "path": "tests/connection_context.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3307573cc4b1a33f847abd67be362e983ea44f6c",
+        "size": 15004,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/3307573cc4b1a33f847abd67be362e983ea44f6c"
+      }
+    },
+    {
+      "path": "tests/resources.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "tests/resources.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b47f769f59c35a1fa485c7e35251f516b533e5cf",
+        "size": 51193,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/b47f769f59c35a1fa485c7e35251f516b533e5cf"
+      },
+      "candidate": {
+        "path": "tests/resources.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b47f769f59c35a1fa485c7e35251f516b533e5cf",
+        "size": 51193,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/b47f769f59c35a1fa485c7e35251f516b533e5cf"
+      },
+      "main": {
+        "path": "tests/resources.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1fa32688f62326212fac37d4047870d88e524b56",
+        "size": 50903,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/1fa32688f62326212fac37d4047870d88e524b56"
+      }
+    },
+    {
+      "path": "tests/two_tools.rs",
+      "classification": "main_only",
+      "base": {
+        "path": "tests/two_tools.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "029e646f219f1c498bce7252473f8d2d381829cb",
+        "size": 45987,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/029e646f219f1c498bce7252473f8d2d381829cb"
+      },
+      "candidate": {
+        "path": "tests/two_tools.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "029e646f219f1c498bce7252473f8d2d381829cb",
+        "size": 45987,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/029e646f219f1c498bce7252473f8d2d381829cb"
+      },
+      "main": {
+        "path": "tests/two_tools.rs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1b96821e08e74b1d8aa9302a87a994fb13c17881",
+        "size": 45825,
+        "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/git/blobs/1b96821e08e74b1d8aa9302a87a994fb13c17881"
+      }
+    }
+  ]
+}

@@ -26,7 +26,7 @@ name = "ssmcp"
 version = "0.10.14"
 edition = "2024"
 [dependencies]
-zuse = { git = "https://github.com/LIghtJUNction/zuse.git", package = "zuse-computer", default-features = false }
+zuse = { git = "https://github.com/LIghtJUNction/zuse.git", version = "^0.2.2", package = "zuse-computer", default-features = false }
 '''
 LOCK = f'''version = 4
 [[package]]
@@ -107,6 +107,28 @@ class ReceiptTests(unittest.TestCase):
                                   "git_sha": LOCKED, "archive_sha256": hashlib.sha256(candidate).hexdigest()})
         self.assertEqual((self.repo / "Cargo.toml").read_bytes(), DEP)
         self.assertEqual((self.repo / "Cargo.lock").read_bytes(), LOCK)
+
+    def test_source_plan_rejects_mismatched_or_invalid_version_metadata(self):
+        for requirement, reason in (
+            ("=0.2.3", "does not satisfy"),
+            ("not-a-version", "invalid version requirement"),
+            (True, "invalid version requirement"),
+        ):
+            with self.subTest(requirement=requirement):
+                manifest = DEP.replace(b'version = "^0.2.2",',
+                                       b"version = " + json.dumps(requirement).encode() + b",")
+                (self.repo / "Cargo.toml").write_bytes(manifest)
+                git = ["git", "-C", str(self.repo)]
+                subprocess.run([*git, "add", "Cargo.toml"], check=True)
+                subprocess.run([*git, "-c", "user.name=Fixture", "-c",
+                                "user.email=fixture@example.invalid", "-c",
+                                "commit.gpgsign=false", "-c", "core.hooksPath=/dev/null",
+                                "commit", "-qm", "version requirement fixture"], check=True)
+                commit = subprocess.check_output([*git, "rev-parse", "HEAD"], text=True).strip()
+                with self.assertRaisesRegex(verifier.ProjectionError, reason):
+                    verifier.source_plan(self.repo, commit, "Cargo.toml", (), {URL})
+                self.assertEqual((self.repo / "Cargo.toml").read_bytes(), manifest)
+                self.assertEqual((self.repo / "Cargo.lock").read_bytes(), LOCK)
 
     def test_archive_swap_and_receipt_swap_are_rejected(self):
         original = fixture_archive(LOCKED, new_motion=True)

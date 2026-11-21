@@ -1,0 +1,64 @@
+{
+  "schema": "project-z.zuse-pr2-provenance-and-356-plan.delivery.v1",
+  "completed_at": "2026-11-20T23:28:56.372Z",
+  "scope": "Archive existing text evidence and read-only plan only; no new validation execution.",
+  "identities": {
+    "original_pr2_head": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+    "validation_plan_head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "validation_plan_tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "downstream_a1_unchanged": true
+  },
+  "drive": {
+    "file_id": "1AV7fFGqPwhVezRx1OVF9OtqvqqEHRxMU",
+    "url": "https://drive.google.com/file/d/1AV7fFGqPwhVezRx1OVF9OtqvqqEHRxMU/view?usp=drivesdk",
+    "parent_folder_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+    "file_name": "zuse-pr2-provenance-and-356-plan-20261121-evidence.zip",
+    "mime_type": "application/zip",
+    "bytes": 30818,
+    "sha256": "e306ebed35fb18eb3e29d1aacf111137966fa0f6402e958edc2b4e8938104eac",
+    "metadata_readback": true,
+    "complete_download_sha256_matches": true,
+    "all_17_payload_hashes_match": true,
+    "duplicate_name_search_before_upload": "no matches",
+    "upload_count": 1
+  },
+  "contents": {
+    "original_text_files": 12,
+    "original_manifest_files": 1,
+    "provenance_documents": 2,
+    "validation_plan_documents": 2,
+    "payload_files": 17,
+    "bundle_manifest_files": 1,
+    "archive_members": 18,
+    "all_payloads_utf8_text": true,
+    "product_binaries_included": 0,
+    "credential_or_configuration_bodies_included": 0,
+    "prior_failure_logs_retained": true
+  },
+  "cloud": {
+    "zip": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-provenance-and-356-plan-20261121-evidence.zip",
+    "package_manifest": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-provenance-and-356-plan-package.json",
+    "download_verification": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-provenance-and-356-plan-download-verification.json",
+    "downloaded_zip": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-pr2-provenance-and-356-plan-drive-readback/zuse-pr2-provenance-and-356-plan-20261121-evidence.zip"
+  },
+  "native": {
+    "directory": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/zuse-pr2-provenance-356-plan-20261121",
+    "zip_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/zuse-pr2-provenance-356-plan-20261121/zuse-pr2-provenance-and-356-plan-20261121-evidence.zip",
+    "zip_sha256": "e306ebed35fb18eb3e29d1aacf111137966fa0f6402e958edc2b4e8938104eac",
+    "all_17_payload_hashes_match": true,
+    "extracted_payload_directory": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/zuse-pr2-provenance-356-plan-20261121/payloads",
+    "receipt_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/zuse-pr2-provenance-356-plan-20261121/native-verification.json",
+    "receipt_bytes": 6557,
+    "receipt_sha256": "8991fc99f17498dca0fdd5722bbe245ceda6ea394a6fa50e958769f39bc1c4bc",
+    "write_and_verify_job": "26c4545eae1eab8d27485f4a48077d3c-698",
+    "source": "Independent complete download of the same authenticated Drive file reference; no original native files were edited."
+  },
+  "actions": {
+    "github_refs_changed": 0,
+    "main_report_changes": 0,
+    "builds": 0,
+    "tests": 0,
+    "gui_or_input": 0,
+    "models_started": 0
+  }
+}

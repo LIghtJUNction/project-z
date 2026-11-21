@@ -1,0 +1,291 @@
+{
+  "schema": "project-z.git-only-independent-static-review.v1",
+  "reviewed_at_utc": "2026-11-21T07:26:19Z",
+  "base": "c9de7a60351b277a4903c9f40781cbae69cd6e5c",
+  "candidate_tree": "03d67141b18a4b85b87343736bc0b247b69c611c",
+  "verdict": {
+    "blockers": [],
+    "blocker_count": 0,
+    "material_inconsistencies": [],
+    "material_inconsistency_count": 0,
+    "conclusion": "No blocking defect found within the six-file Git-only policy change and the inspected declaration-to-validation path. This is not a final44 or consumer acceptance result."
+  },
+  "source_identity": {
+    "handoff": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/handoff.json",
+      "bytes": 10587,
+      "sha256": "a5fea730230faa9d1239ad0893048a9da6aef338fdf0510010ca218a2cb1f6d7"
+    },
+    "candidate_diff": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/candidate.diff",
+      "bytes": 18709,
+      "sha256": "5cc13782cd17aca4e177fde7b190643be5c72de9a622157f89b32f5abe25a8fb"
+    },
+    "changed_files": [
+      {
+        "repository_path": "AGENTS.md",
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/files/AGENTS.md",
+        "bytes": 3831,
+        "sha256": "5fba8646d5ff15f168da3141d1e78577de979f0d7dba7b58d2bfe7b12ce59679",
+        "git_blob": "70f6c8b805be7059fafc2dd3266adde00ad545ac",
+        "mode": "100644",
+        "base_git_blob": "f1e9837fc360b568ed9b6947096c1dae6c0e3607"
+      },
+      {
+        "repository_path": "CONTRIBUTING.md",
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/files/CONTRIBUTING.md",
+        "bytes": 2444,
+        "sha256": "3695205e01ed5d33f027c62d3e7f0ee8f17c79ef03fec490090e11b9bd9acffb",
+        "git_blob": "44c316b3f3831354cb2e73319763690b99eddcde",
+        "mode": "100644",
+        "base_git_blob": "a2c127f443c4b3d8e57372cd6bf81602941873c9"
+      },
+      {
+        "repository_path": "README.md",
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/files/README.md",
+        "bytes": 5117,
+        "sha256": "bfcdbcbd8f6b4739f4f132254e5c704ba869a34c7a0feac48a1fe599f1679f33",
+        "git_blob": "8c0ad841985fc8b7951a7d24725fd0d53f65a137",
+        "mode": "100644",
+        "base_git_blob": "0833b9e779c73ee6c7687005ceedca3846d7491e"
+      },
+      {
+        "repository_path": "docs/release-projection.md",
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/files/docs/release-projection.md",
+        "bytes": 5750,
+        "sha256": "73a91beab71173c137c41bd18f045add312d3e634cd214355f30960b9d25c003",
+        "git_blob": "52b13d230ab707398494e27bdc2e18ae36047369",
+        "mode": "100644",
+        "base_git_blob": "4461f954fe94defb8055e4e3deb434fcb38b7a6f"
+      },
+      {
+        "repository_path": "scripts/project_z.py",
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/files/scripts/project_z.py",
+        "bytes": 39435,
+        "sha256": "3bc2108f47b6c766f654d80f5c811c13aceaa57908aee1f35ed30f12d7de86b8",
+        "git_blob": "aaaf7a5637c31d319fc021b377ff189f45cd717b",
+        "mode": "100644",
+        "base_git_blob": "acfa1440286ea059b5b3bf7e679d161d939f45c4"
+      },
+      {
+        "repository_path": "tests/test_project_z.py",
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/files/tests/test_project_z.py",
+        "bytes": 38829,
+        "sha256": "d215418947d5e1bd02e9010256611597a7ff899d8c8d18c5823f4a00e78e17a4",
+        "git_blob": "4221c929f03038039058e34ba0282e17defe4084",
+        "mode": "100644",
+        "base_git_blob": "f2966841f843e0d51a01dc568f7d484184ddfbf2"
+      }
+    ],
+    "independent_tree_and_AST_proof": {
+      "base": "c9de7a60351b277a4903c9f40781cbae69cd6e5c",
+      "candidate_tree": "03d67141b18a4b85b87343736bc0b247b69c611c",
+      "leaves": {
+        "base": 453,
+        "candidate": 453,
+        "changed_paths": [
+          "AGENTS.md",
+          "CONTRIBUTING.md",
+          "README.md",
+          "docs/release-projection.md",
+          "scripts/project_z.py",
+          "tests/test_project_z.py"
+        ],
+        "unchanged": 447
+      },
+      "only_changed_production_AST": [
+        "validate"
+      ],
+      "preserved_release_files": [
+        {
+          "path": "scripts/cargo_versions.py",
+          "git_blob": "47a86e8016051616d547d5e5b401e6d4b1f42a79",
+          "bytes": 6810,
+          "sha256": "e8a39156886eee6279c7437fd6005bcea8483febf6aa8a4822716a3cbc201986",
+          "base_candidate_and_worktree_equal": true
+        },
+        {
+          "path": "scripts/release.py",
+          "git_blob": "d9148bfdbdcfe8b64c007d31a209846912d7e29d",
+          "bytes": 2906,
+          "sha256": "613995f0979066376388ac1a5d4f68763103c2403359e1e416d14dde52f960f4",
+          "base_candidate_and_worktree_equal": true
+        },
+        {
+          "path": "scripts/release_projection.py",
+          "git_blob": "ee12250feb7c0cd12c7350ca5574c5b974a89318",
+          "bytes": 14539,
+          "sha256": "7df4df89eb8401aefa8124b45461a7c35df17fa0f7d6733f6eccf4a00cae63f2",
+          "base_candidate_and_worktree_equal": true
+        },
+        {
+          "path": "scripts/release_receipts.py",
+          "git_blob": "903fba6a64ed267a3581a09358caf52639a30110",
+          "bytes": 7706,
+          "sha256": "2fb7c5949900879de718022a17eddb82d0d5645d9f3752a881e5d24e493802f6",
+          "base_candidate_and_worktree_equal": true
+        },
+        {
+          "path": "tests/test_release.py",
+          "git_blob": "04a79e52b918cc8af17c65e457e5a401e446f8c7",
+          "bytes": 5919,
+          "sha256": "391e9361a1a5efef6fba26f482cc62554eb5c4b4cd6c8dc27f4a175baf4e7896",
+          "base_candidate_and_worktree_equal": true
+        },
+        {
+          "path": "tests/test_release_projection.py",
+          "git_blob": "44f0a71b44ce4ce1a7e7823943aab752be815d74",
+          "bytes": 11080,
+          "sha256": "3e81f32fe63b2a2265444676034b7caee64d6a3259fff6effd17774027bfcd37",
+          "base_candidate_and_worktree_equal": true
+        },
+        {
+          "path": "tests/test_release_receipts.py",
+          "git_blob": "b06534747913b6239809fa07388abcba8d6eaca2",
+          "bytes": 7563,
+          "sha256": "d0bbbc25f8d3b894f4315454625cba409da28dde010fbdc7a9c19fef0a92e084",
+          "base_candidate_and_worktree_equal": true
+        }
+      ],
+      "red_and_green_inputs_unchanged": true,
+      "red_production_is_base": true,
+      "green_six_files_match": true,
+      "same_tests_red_green": true,
+      "red_test_IDs_subset_green": true,
+      "candidate_import_or_execution": false,
+      "subprocess_scope": "read-only git ls-tree and git show"
+    }
+  },
+  "checks": [
+    {
+      "subject": "All internal cross-repository declaration kinds",
+      "source": "scripts/project_z.py:164-179,211-235,427-455",
+      "result": "explicit_version is derived from declaration key presence, not from whether Cargo's normalized requirement looks restrictive. An explicit '*' remains true. validate applies the omission rule in the cross-repository branch without publish/kind/target/optional exemptions."
+    },
+    {
+      "subject": "Aliases, target tables and workspace inheritance",
+      "source": "scripts/project_z.py:164-179; tests/test_project_z.py:420-449",
+      "result": "The extractor maps normal/dev/build tables, normalizes target cfg whitespace while preserving string literals, follows the Cargo alias, and reads the inherited workspace.dependencies entry. Direct and inherited target-alias declarations reach the same rejection, then become valid after only the version field is removed."
+    },
+    {
+      "subject": "Same-repository path semantics",
+      "source": "scripts/project_z.py:438-449; tests/test_project_z.py:174-211,388-403",
+      "result": "Existing explicit version compatibility checks remain in the same-repository branch, including invalid/mismatched requirements. Path-only prerelease dependencies and exact intended workspace paths remain accepted; no blanket version ban is applied to same-repository dependencies."
+    },
+    {
+      "subject": "External and unknown internal packages",
+      "source": "scripts/project_z.py:431-437,577-632; tests/test_project_z.py:405-408,451-483",
+      "result": "External packages not owned by the catalog retain their source/version policy. Unknown packages from a registered GitHub repository still fail, including alternate URL spelling, and the unchanged lock/resolution checks also reject them."
+    },
+    {
+      "subject": "Source pin and lock constraints",
+      "source": "scripts/project_z.py:451-453,577-632",
+      "result": "Canonical default-branch Git URL, no cross-repository path/selectors, exact locked Git SHA and package-version identity checks remain unchanged. Removing development version selectors does not remove the lock's version or source validation."
+    },
+    {
+      "subject": "88fa external release projection",
+      "source": "scripts/release_projection.py:rewrite and MatchTests",
+      "result": "All seven release implementation/test blobs are identical in base, candidate and inspected worktree. Compatible historical version+git requirements are still checked against the locked version before conversion to exact registry version; invalid/mismatched requirements and selectors are rejected. The changed docs distinguish development policy from historical staging compatibility."
+    },
+    {
+      "subject": "Documentation scope",
+      "source": "AGENTS.md; CONTRIBUTING.md; README.md; docs/release-projection.md",
+      "result": "All four documents agree that only cross-repository internal development dependency declarations lose version. Package/lock versions, same-repository paths and external sources remain. Staging stays separate, unverified and non-publishing by default."
+    }
+  ],
+  "existing_execution_evidence": {
+    "independent_reviewer_did_not_run_tests": true,
+    "red": {
+      "receipt": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/red.json",
+        "bytes": 7395,
+        "sha256": "ffa19aeb20e8ff1b29050afac28dc6cc752ae0ba7a604c41d14b6ffeb61e2100"
+      },
+      "raw_log": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/red.log",
+        "bytes": 40231,
+        "sha256": "1eec518443b8966a446d61fa7264f07b7b339aa0436caf925a8db20c7e71992d"
+      },
+      "actual_job": "b879919be66280447132d5d616be9361-4a4",
+      "exit_code": 1,
+      "stdout_eof": true,
+      "stderr_eof": true,
+      "tests_run": 5,
+      "failed_parent_methods": 3,
+      "failed_subtests": 38,
+      "errors": 0,
+      "skips": 0,
+      "explanation": "These are unittest subtest failures for the changed acceptance/rejection contract, not 38 independent vulnerabilities or setup failures."
+    },
+    "green": {
+      "receipt": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/green.json",
+        "bytes": 8671,
+        "sha256": "de21123e7dbdbdbca2f2d582a4dd1738312267807f9c1f168c5723a867f02ccb"
+      },
+      "raw_log": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/green.log",
+        "bytes": 4066,
+        "sha256": "b138fcfae58c32ef45b81eadc28219c0539d00aa8d33c2a98ca15e7d26667ae8"
+      },
+      "actual_job": "b879919be66280447132d5d616be9361-4a6",
+      "exit_code": 0,
+      "stdout_eof": true,
+      "stderr_eof": true,
+      "tests_run": 24,
+      "policy_methods": 15,
+      "declaration_methods": 4,
+      "unchanged_projection_methods": 5,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    "original_receipts_and_streams_hash_verified": true,
+    "red_uses_base_production_source": true,
+    "same_test_file_hash_in_red_and_green": "d215418947d5e1bd02e9010256611597a7ff899d8c8d18c5823f4a00e78e17a4",
+    "red_test_ids_subset_of_green": true,
+    "inputs_before_equal_inputs_after_both": true,
+    "selected_runner_read": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/run_pure_tests.py",
+      "bytes": 5174,
+      "sha256": "07d0bcf88fdc6ce63229e9dd4e627919cf649c069ca9f20bf57c8534b49ac90a"
+    },
+    "observed_test_subprocess_events_in_original_receipts": 0,
+    "counts_are_existing_owner_runs_not_new_execution": true
+  },
+  "limitations": [
+    "No candidate import or execution by this reviewer.",
+    "No new Cargo, product, GUI, CI, shared-target/lock, source/ref or final44 operation.",
+    "The original targeted run did not execute GitSourceIntegrationTests, release offline metadata, receipt Git fixtures, the full test suite or consumer gates.",
+    "The two Git-only integration fixture declarations were read and are consistent with the new policy, but their real Cargo fixture was not rerun in this batch.",
+    "Review covers the registered Cargo member/dependency inventory and inherited workspace declarations; no broader historical manifest scan or final source freshness claim is made."
+  ],
+  "review_read_jobs": [
+    {
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-d37",
+      "scope": "read fixed handoff",
+      "exit_code": 0,
+      "stdout_eof": true,
+      "stderr_eof": true
+    },
+    {
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-d39",
+      "scope": "read and hash six files, diff and existing execution evidence",
+      "exit_code": 0,
+      "stdout_eof": true,
+      "stderr_eof": true
+    },
+    {
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-d3e",
+      "scope": "read-only Git tree/blob comparison and AST parse; inspect preserved release code",
+      "exit_code": 0,
+      "stdout_eof": true,
+      "stderr_eof": true
+    }
+  ],
+  "publication": {
+    "remote_write_by_reviewer": false,
+    "root_is_publisher": true,
+    "final44_remains_paused": true
+  }
+}

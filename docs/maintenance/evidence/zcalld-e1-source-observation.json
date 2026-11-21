@@ -1,0 +1,31 @@
+{
+  "schema": "project-z.zcalld-e1-source-publication-observation.v1",
+  "observed_at_utc": "2026-11-21 00:39:09 UTC",
+  "head": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+  "tree": "34795b388520d9a0587f0543ba5763d37b1aeb84",
+  "parents": [
+    "8fe9b42e8b25fc78328ac50e4bd2fc9b9faf438f"
+  ],
+  "base": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+  "draft": true,
+  "mergeable": true,
+  "comparison": {
+    "status": "ahead",
+    "ahead": 1,
+    "behind": 0,
+    "files": [
+      {
+        "path": "extensions/compat",
+        "sha": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+        "status": "modified",
+        "patch": "@@ -1 +1 @@\n-Subproject commit c521d1fb1ce8eac173ea2bb481816d3cd1df82d3\n+Subproject commit 56a15b330384531b3a6c444190f53b6d3720bd5e"
+      }
+    ]
+  },
+  "independent_reviews": [
+    "zcalld-e1-pin-independent-review.json",
+    "zcalld-e1-parameters-independent-review.json"
+  ],
+  "gate_state_at_observation": "Existing executor preparing source/window/helper guards. No E1 product gate result claimed; previous806 sourceguard stop remains separate.",
+  "scope": "One gitlink-only successor of8fe; no unrelated source mutation or prior179/8 acceptance promotion."
+}

@@ -1,0 +1,195 @@
+{
+  "schema": "project-z.ztype-ztty-xim-checkpoint.v1",
+  "status": "xim_passed_native_wayland_pending_fix",
+  "recorded_utc": "2026-11-20T21:50:41Z",
+  "candidate": {
+    "base": "da6feb1a3c5488f3854c63d5e5db173ca250dba4",
+    "version": "0.4.2",
+    "sha256": "1a2b96c03aa5129ea1935216da7b8696ef330a4a2ec49f0139027a4a9c0c82ae",
+    "publication": "draft being prepared by existing owner; immutable commit not yet received"
+  },
+  "xim_records": [
+    {
+      "file": "xim/receipt.json",
+      "bytes": 2171,
+      "sha256": "1efce6da19108ba71b87d929024fbc82b463d179b75a4a641157ecf2dbfd0e11",
+      "content": {
+        "command": [
+          "python3",
+          "/home/lightjunction/.cargo/git/checkouts/zinput-9047248c55647fd3/fe1cbae/native/x11/tests/check_ztty.py",
+          "--ztty",
+          "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/artifacts/ztty",
+          "--ztty-source",
+          "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/ztty-c7-fixtures",
+          "--server",
+          "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/artifacts/ztype",
+          "--server-mode",
+          "ztype",
+          "--name",
+          "ztype",
+          "--dictionary",
+          "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/xim/acceptance.tsv",
+          "--config",
+          "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/xim/config",
+          "--expect-commit",
+          "nihaoshijie ",
+          "你好世界",
+          "--expect-commit",
+          "ni2",
+          "呢",
+          "--output",
+          "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/xim/report.json",
+          "--screenshot",
+          "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/xim/candidate.png"
+        ],
+        "exit_code": 0,
+        "seconds": 4.552,
+        "binary_hashes_before": {
+          "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/artifacts/ztty": "239aa74c8952d272832188ccde80c4805505faf892bb4247904aaafbba1e1e8c",
+          "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/artifacts/ztype": "1a2b96c03aa5129ea1935216da7b8696ef330a4a2ec49f0139027a4a9c0c82ae"
+        },
+        "binary_hashes_after": {
+          "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/artifacts/ztty": "239aa74c8952d272832188ccde80c4805505faf892bb4247904aaafbba1e1e8c",
+          "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/artifacts/ztype": "1a2b96c03aa5129ea1935216da7b8696ef330a4a2ec49f0139027a4a9c0c82ae"
+        },
+        "binary_bookends_match": true,
+        "ztty_runtime_source": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25",
+        "ztty_build_scope": "existing independently frozen runtime baseline, not rebuilt this run",
+        "fixture_source": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25"
+      }
+    },
+    {
+      "file": "xim/report.json",
+      "bytes": 3259,
+      "sha256": "0e9260aeb7ac29d1448e4ec0855287548720dada56ddf825d82fbe34d55f09b4",
+      "content": {
+        "ok": true,
+        "scope": "installed Ztty, owned Xvfb, XTEST keys, XIM commit and raw PTY",
+        "ztty": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/artifacts/ztty",
+        "server": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/artifacts/ztype",
+        "server_mode": "ztype",
+        "xim_name": "ztype",
+        "checks": [
+          {
+            "name": "ASCII before XIM starts",
+            "ok": true,
+            "actual": "abc",
+            "expected": "abc"
+          },
+          {
+            "name": "existing Ztty reconnects after XIM starts",
+            "ok": true,
+            "actual": "你好",
+            "expected": "你好"
+          },
+          {
+            "name": "multi-codepoint native commit reaches raw PTY",
+            "ok": true,
+            "actual": "世界",
+            "expected": "世界"
+          },
+          {
+            "name": "additional native commit: nihaoshijie",
+            "ok": true,
+            "actual": "你好世界",
+            "expected": "你好世界"
+          },
+          {
+            "name": "additional native commit: ni2",
+            "ok": true,
+            "actual": "呢",
+            "expected": "呢"
+          },
+          {
+            "name": "second window shares existing broker",
+            "ok": true
+          },
+          {
+            "name": "second Ztty receives its own XIM commit",
+            "ok": true,
+            "actual": "你好",
+            "expected": "你好"
+          },
+          {
+            "name": "focus returns to original terminal",
+            "ok": true,
+            "actual": "你好",
+            "expected": "你好"
+          },
+          {
+            "name": "candidate popup is visible within private screen",
+            "ok": true,
+            "geometry": [
+              8,
+              588,
+              248,
+              112
+            ]
+          },
+          {
+            "name": "candidate popup text is painted on screen",
+            "ok": true
+          },
+          {
+            "name": "candidate popup hides after commit or cancellation",
+            "ok": true
+          },
+          {
+            "name": "ordinary keys remain usable while XIM is stopped",
+            "ok": true,
+            "actual": "abc",
+            "expected": "abc"
+          },
+          {
+            "name": "existing terminal reconnects after XIM restart",
+            "ok": true,
+            "actual": "你好",
+            "expected": "你好"
+          }
+        ],
+        "server_sha256": "1a2b96c03aa5129ea1935216da7b8696ef330a4a2ec49f0139027a4a9c0c82ae",
+        "ztty_sha256": "239aa74c8952d272832188ccde80c4805505faf892bb4247904aaafbba1e1e8c",
+        "dictionary_sha256": "c73934cff6d084729c700121e90942743cd17f10fd74eeaa480e16de28d39ae7",
+        "private_display": {
+          "display": ":11670",
+          "pid": 764004,
+          "pid_lock_verified": true,
+          "owned_listeners": [
+            {
+              "path": "/tmp/.X11-unix/X11670",
+              "inode": 213518817,
+              "state": "01",
+              "type": "0001"
+            },
+            {
+              "path": "@/tmp/.X11-unix/X11670",
+              "inode": 213518816,
+              "state": "01",
+              "type": "0001"
+            }
+          ],
+          "filesystem_peer_pid_verified": true,
+          "allocation": "guarded explicit random display 100..30000"
+        },
+        "screenshot": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/xim/candidate.png",
+        "owned_processes_remaining": 0,
+        "process_log": "ztype: native XIM input method ready; XMODIFIERS=@im=ztype; Ctrl+Space toggles input, Tab changes candidate, Space confirms\nztype: native XIM input method ready; XMODIFIERS=@im=ztype; Ctrl+Space toggles input, Tab changes candidate, Space confirms\n"
+      }
+    },
+    {
+      "file": "xim/candidate.png",
+      "bytes": 12454,
+      "sha256": "5dc07afc96c3c9b4eaf6fc8497d4db58ff4869a289aa6c00aba3b1fd5a081efe"
+    }
+  ],
+  "wayland": {
+    "status": "failed_actual_ztty_receiver",
+    "observed_pty": "ihaoshijie\\n",
+    "expected_pty": "你好世界",
+    "source": "existing authenticated source owner foreground collab seq155",
+    "checks": "native xwayland:false plus SO_PEERCRED/broker/exe/startticks; popup presented/hidden; cleanup succeeded",
+    "receipt_root": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/wayland",
+    "new_ztty_frozen_input_sent": "febc merge, bfee tested tree, ELF01269c72f7a56f273ad33c8c19b303c00310567ed79abb5b256b68e84e90bef6"
+  },
+  "scope": "XIM report fixture labels its executable installed Ztty, but actual argv and bookends bind a private copied c7 ELF. No host installation or input-method activation."
+}

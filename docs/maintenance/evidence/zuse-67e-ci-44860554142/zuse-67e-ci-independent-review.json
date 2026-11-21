@@ -1,0 +1,532 @@
+{
+  "schema": "zuse-pr4-67e-complete-CI-independent-review-v1",
+  "verdict": "all_three_platform_CI_jobs_passed_no_material_merge_evidence_blocker",
+  "source": {
+    "head": "67e2d6a4cee0d106f46bdf064013e163c0aa3337",
+    "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+    "sole_parent": "2ffe0d62b0586ecc2fb040b28efd13ede62cb152",
+    "full_leaf_count": 159,
+    "delta_from_parent": [
+      {
+        "path": "src/mouse.rs",
+        "before": {
+          "path": "src/mouse.rs",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2c803065931b116f13d56a20ee5df0748a33d493",
+          "size": 15345,
+          "url": "https://api.github.com/repos/LIghtJUNction/zuse/git/blobs/2c803065931b116f13d56a20ee5df0748a33d493"
+        },
+        "after": {
+          "path": "src/mouse.rs",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "c4cad7eeaea33ff6d69a621d0a986ecfe0b36a61",
+          "size": 15434,
+          "url": "https://api.github.com/repos/LIghtJUNction/zuse/git/blobs/c4cad7eeaea33ff6d69a621d0a986ecfe0b36a61"
+        }
+      }
+    ],
+    "unchanged_parent_leaves": 158,
+    "only_src_mouse_changed": true,
+    "actual_checkout": "cf9d3973db10a8639cdfbc3460af8b9230cf1e5c",
+    "actual_checkout_tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+    "actual_checkout_parents": [
+      "83663988ebf736ec8de05d6372eef485c3d9ebac",
+      "67e2d6a4cee0d106f46bdf064013e163c0aa3337"
+    ],
+    "checkout_tree_equals_head_tree": true
+  },
+  "scope": "Independent read-only review of existing GitHub CI logs and fixed Git objects. No native product execution or Git mutation.",
+  "CI": {
+    "run_id": 44860554142,
+    "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44860554142",
+    "attempt": 1,
+    "head_sha": "67e2d6a4cee0d106f46bdf064013e163c0aa3337",
+    "event": "pull_request",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-11-21T03:19:52Z",
+    "updated_at": "2026-11-21T03:21:30Z",
+    "workflow": ".github/workflows/ci.yml",
+    "all_platform_logs_read_in_full": true,
+    "platforms": [
+      {
+        "platform": "check (ubuntu-24.04)",
+        "job_id": 136712704265,
+        "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44860554142/job/136712704265",
+        "status": "completed",
+        "conclusion": "success",
+        "check_py_step": {
+          "name": "Run python scripts/check.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-21T03:20:09Z",
+          "completed_at": "2026-11-21T03:20:35Z"
+        },
+        "library": {
+          "line": 501,
+          "status": "ok",
+          "passed": 134,
+          "failed": 0,
+          "ignored": 1,
+          "measured": 0,
+          "filtered": 0,
+          "seconds": 1.64
+        },
+        "default_results": {
+          "summary_rows": 22,
+          "passed": 289,
+          "failed": 0,
+          "ignored": 5,
+          "numbers_are_per_platform_not_cross_platform_unique_tests": true
+        },
+        "commands": [
+          {
+            "command": "cargo fmt --all -- --check",
+            "line": 346,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": []
+          },
+          {
+            "command": "cargo test --locked",
+            "line": 347,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": [
+              {
+                "line": 361,
+                "text": "    Finished `test` profile [unoptimized + debuginfo] target(s) in 16.04s"
+              }
+            ]
+          },
+          {
+            "command": "cargo check --locked --no-default-features --lib",
+            "line": 788,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": [
+              {
+                "line": 790,
+                "text": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.07s"
+              }
+            ]
+          },
+          {
+            "command": "cargo check --locked --no-default-features --lib --target wasm32-unknown-unknown",
+            "line": 791,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": [
+              {
+                "line": 793,
+                "text": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.08s"
+              }
+            ]
+          },
+          {
+            "command": "cargo clippy --locked --all-targets -- -D warnings",
+            "line": 794,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": [
+              {
+                "line": 802,
+                "text": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.74s"
+              }
+            ]
+          }
+        ],
+        "android_capture_passed": 5,
+        "android_review_passed": 3,
+        "android_browser_passed": 15,
+        "android_browser_and_ios_are_library_subsets": true,
+        "prior_two_ios_cases_passed": 2,
+        "strict_Clippy_passed": true,
+        "Clippy_drop_non_drop_present": false,
+        "existing_ignored_test_lines": [
+          "test script::interrupt::platform::tests::signal_fixture ... ignored, process-global signals; invoked only by the subprocess test",
+          "test native_atspi_observe_edit_action_and_redaction ... ignored, run through python3 tests/run_accessibility_native.py for an isolated fixture",
+          "test native_chromium_isolated_profile ... ignored, requires a local sandboxed Chromium; run explicitly with --ignored",
+          "test native_selection_preserves_document_and_input ... ignored, requires a local sandboxed Chromium; run explicitly with --ignored",
+          "test input ... ignored, run python3 tests/native_x11_utf8.py"
+        ],
+        "conditional_steps": [
+          {
+            "number": 5,
+            "name": "Install isolated USB fixture build dependencies",
+            "conclusion": "success",
+            "condition": "runner.os == 'Linux' (unchanged workflow)"
+          },
+          {
+            "number": 6,
+            "name": "Exercise Linux PTY and isolated libusb boundaries",
+            "conclusion": "success",
+            "condition": "runner.os == 'Linux' (unchanged workflow)"
+          }
+        ],
+        "additional_native_fixture_groups": {
+          "PTY": 5,
+          "synthetic_USB": 11,
+          "counting": "Separate helper groups, not added to Rust tests"
+        }
+      },
+      {
+        "platform": "check (macos-15)",
+        "job_id": 136712704344,
+        "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44860554142/job/136712704344",
+        "status": "completed",
+        "conclusion": "success",
+        "check_py_step": {
+          "name": "Run python scripts/check.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-21T03:20:03Z",
+          "completed_at": "2026-11-21T03:20:42Z"
+        },
+        "library": {
+          "line": 469,
+          "status": "ok",
+          "passed": 114,
+          "failed": 0,
+          "ignored": 1,
+          "measured": 0,
+          "filtered": 0,
+          "seconds": 2.45
+        },
+        "default_results": {
+          "summary_rows": 22,
+          "passed": 267,
+          "failed": 0,
+          "ignored": 3,
+          "numbers_are_per_platform_not_cross_platform_unique_tests": true
+        },
+        "commands": [
+          {
+            "command": "cargo fmt --all -- --check",
+            "line": 332,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": []
+          },
+          {
+            "command": "cargo test --locked",
+            "line": 333,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": [
+              {
+                "line": 347,
+                "text": "    Finished `test` profile [unoptimized + debuginfo] target(s) in 28.18s"
+              }
+            ]
+          },
+          {
+            "command": "cargo check --locked --no-default-features --lib",
+            "line": 750,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": [
+              {
+                "line": 752,
+                "text": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.27s"
+              }
+            ]
+          },
+          {
+            "command": "cargo check --locked --no-default-features --lib --target wasm32-unknown-unknown",
+            "line": 753,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": [
+              {
+                "line": 755,
+                "text": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.37s"
+              }
+            ]
+          },
+          {
+            "command": "cargo clippy --locked --all-targets -- -D warnings",
+            "line": 756,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": [
+              {
+                "line": 764,
+                "text": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 4.53s"
+              }
+            ]
+          }
+        ],
+        "android_capture_passed": 5,
+        "android_review_passed": 3,
+        "android_browser_passed": 15,
+        "android_browser_and_ios_are_library_subsets": true,
+        "prior_two_ios_cases_passed": 2,
+        "strict_Clippy_passed": true,
+        "Clippy_drop_non_drop_present": false,
+        "existing_ignored_test_lines": [
+          "test script::interrupt::platform::tests::signal_fixture ... ignored, process-global signals; invoked only by the subprocess test",
+          "test native_chromium_isolated_profile ... ignored, requires a local sandboxed Chromium; run explicitly with --ignored",
+          "test native_selection_preserves_document_and_input ... ignored, requires a local sandboxed Chromium; run explicitly with --ignored"
+        ],
+        "conditional_steps": [
+          {
+            "number": 5,
+            "name": "Install isolated USB fixture build dependencies",
+            "conclusion": "skipped",
+            "condition": "runner.os == 'Linux' (unchanged workflow)"
+          },
+          {
+            "number": 6,
+            "name": "Exercise Linux PTY and isolated libusb boundaries",
+            "conclusion": "skipped",
+            "condition": "runner.os == 'Linux' (unchanged workflow)"
+          }
+        ],
+        "additional_native_fixture_groups": null
+      },
+      {
+        "platform": "check (windows-2025)",
+        "job_id": 136712704368,
+        "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44860554142/job/136712704368",
+        "status": "completed",
+        "conclusion": "success",
+        "check_py_step": {
+          "name": "Run python scripts/check.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-21T03:20:38Z",
+          "completed_at": "2026-11-21T03:21:25Z"
+        },
+        "library": {
+          "line": 464,
+          "status": "ok",
+          "passed": 110,
+          "failed": 0,
+          "ignored": 0,
+          "measured": 0,
+          "filtered": 0,
+          "seconds": 1.12
+        },
+        "default_results": {
+          "summary_rows": 22,
+          "passed": 263,
+          "failed": 0,
+          "ignored": 2,
+          "numbers_are_per_platform_not_cross_platform_unique_tests": true
+        },
+        "commands": [
+          {
+            "command": "cargo fmt --all -- --check",
+            "line": 334,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": []
+          },
+          {
+            "command": "cargo test --locked",
+            "line": 335,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": [
+              {
+                "line": 349,
+                "text": "    Finished `test` profile [unoptimized + debuginfo] target(s) in 30.89s"
+              }
+            ]
+          },
+          {
+            "command": "cargo check --locked --no-default-features --lib",
+            "line": 747,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": [
+              {
+                "line": 749,
+                "text": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.17s"
+              }
+            ]
+          },
+          {
+            "command": "cargo check --locked --no-default-features --lib --target wasm32-unknown-unknown",
+            "line": 750,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": [
+              {
+                "line": 752,
+                "text": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.24s"
+              }
+            ]
+          },
+          {
+            "command": "cargo clippy --locked --all-targets -- -D warnings",
+            "line": 753,
+            "completion": "success",
+            "basis": "Actual command plus sequential subprocess.run(check=True) and successful check.py step",
+            "finished_lines": [
+              {
+                "line": 761,
+                "text": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 6.18s"
+              }
+            ]
+          }
+        ],
+        "android_capture_passed": 5,
+        "android_review_passed": 3,
+        "android_browser_passed": 15,
+        "android_browser_and_ios_are_library_subsets": true,
+        "prior_two_ios_cases_passed": 2,
+        "strict_Clippy_passed": true,
+        "Clippy_drop_non_drop_present": false,
+        "existing_ignored_test_lines": [
+          "test native_chromium_isolated_profile ... ignored, requires a local sandboxed Chromium; run explicitly with --ignored",
+          "test native_selection_preserves_document_and_input ... ignored, requires a local sandboxed Chromium; run explicitly with --ignored"
+        ],
+        "conditional_steps": [
+          {
+            "number": 5,
+            "name": "Install isolated USB fixture build dependencies",
+            "conclusion": "skipped",
+            "condition": "runner.os == 'Linux' (unchanged workflow)"
+          },
+          {
+            "number": 6,
+            "name": "Exercise Linux PTY and isolated libusb boundaries",
+            "conclusion": "skipped",
+            "condition": "runner.os == 'Linux' (unchanged workflow)"
+          }
+        ],
+        "additional_native_fixture_groups": null
+      }
+    ]
+  },
+  "private_and_no_std_boundaries": {
+    "no_std_native_and_Wasm_checks_both_actually_executed_on_all_three": true,
+    "separate_no_std_test_suite_run_in_this_CI": false,
+    "old_20_no_std_results_transferred": false,
+    "private_X11_cases_in_Linux_default": 2,
+    "private_X11_source": {
+      "path": "src/platform/pointer_x11.rs",
+      "blob": "d04265e5f4284d0fc82f5db6cff9d835c6e87ce6",
+      "guard_lines": [
+        1059,
+        1224
+      ],
+      "required_environment": "ZUSE_TEST_PRIVATE_X11=1"
+    },
+    "private_X11_actual_MPX_claimed": false,
+    "private_X11_reason": "The fixed workflow does not set the opt-in flag or launch private Xvfb. Ordinary ok lines are not evidence that the guarded native bodies executed.",
+    "native_accessibility_Chromium_X11_GUI_claimed": false,
+    "linux_serial_boundary": "Private PTY, not physical serial hardware",
+    "linux_USB_boundary": "Isolated synthetic libusb, not physical USB hardware",
+    "no_new_physical_input_or_desktop_or_P1_acceptance_claim": true
+  },
+  "merge_evidence": {
+    "base_is_actual_feature_ref": true,
+    "CI_merge_parents_are_feature_base_and_reviewed_head": true,
+    "CI_tree_equals_reviewed_head_tree": true,
+    "ready_or_merge_performed_by_reviewer": false,
+    "main_or_frozen_a1_downstream_selection_changed": false,
+    "formal_release_approval": false,
+    "actual_merge_verified": true
+  },
+  "prior_rounds": {
+    "source_368_and_2ffe_logs_retained_separately": true,
+    "2ffe_was_tests_pass_Clippy_fail_not_CI_pass": true,
+    "prior_Mac_EINVAL_did_not_recur_in_this_run": true,
+    "precise_EINVAL_syscall_root_cause_claimed": false,
+    "initial85_counts_changed": false,
+    "old356_or_a1_gate_results_relabelled_for_67": false
+  },
+  "collection": {
+    "complete_decoded_log_texts_preserved": true,
+    "original_BOM_and_CRLF_preserved": true,
+    "source_refs_build_CI_dispatch_Drive_changed": false,
+    "native_Cargo_or_tests_or_GUI_run": false
+  },
+  "details_file": "ci-extracted-results.json",
+  "originals_manifest": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/originals-manifest.json",
+    "bytes": 12606,
+    "sha256": "423bcf72136699dd53d9c466efbfeef7832b678cf96833a420facdc290b00133",
+    "git_blob_sha1": "98ee9fa8903ef0f6da35ed3d0aeb318451f157c6"
+  },
+  "pre_merge_observations": {
+    "PR4": {
+      "head": "67e2d6a4cee0d106f46bdf064013e163c0aa3337",
+      "base_sha_from_PR": "83663988ebf736ec8de05d6372eef485c3d9ebac",
+      "base_ref": "feat/scoped-mice-20261121",
+      "state": "open",
+      "draft": true,
+      "mergeable": true,
+      "mergeable_state": "clean"
+    },
+    "fresh_feature_ref": "83663988ebf736ec8de05d6372eef485c3d9ebac",
+    "fresh_main_ref": "a1bb8fd2cbce0a9d85134999883c578358065242",
+    "not_using_PR_base_sha_as_live_ref": true
+  },
+  "publication": {
+    "merge_commit": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+    "parents": [
+      "83663988ebf736ec8de05d6372eef485c3d9ebac",
+      "67e2d6a4cee0d106f46bdf064013e163c0aa3337"
+    ],
+    "merged_at": "2026-11-21T03:28:10Z",
+    "PR4_merged": true,
+    "PR2_head": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "PR2_open_draft": true,
+    "main": "a1bb8fd2cbce0a9d85134999883c578358065242",
+    "merge_tree_equals_CI_and_head_tree": true,
+    "performed_by_reviewer": false,
+    "frozen_a1_downstream_scope_unchanged": true
+  },
+  "reviewed_at_utc": "2026-11-21T03:32:26.015174+00:00",
+  "extracted_results": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/ci-extracted-results.json",
+    "bytes": 32092,
+    "sha256": "caee487d2c9874bebc6f9a4dbfccb94e3b1906a127f3c5df6a780b16eb34c1c5",
+    "git_blob_sha1": "8bbbe3ec4dbb97a3462094a1bd99e7d25609218d"
+  },
+  "original_log_files": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/ubuntu-job-136712704265.log",
+      "bytes": 86917,
+      "sha256": "8bb23119f5b945a2a2bb87049b929737e3c6f22ff390a92e260d0fe150b3586d",
+      "git_blob_sha1": "f679f072e8d79b8721ce83ab8f217ef3a84e83ee",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/actions/jobs/136712704265/logs",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": true,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/macos-job-136712704344.log",
+      "bytes": 73437,
+      "sha256": "4f4b88877c9e9c2955c293b0f21542729e068f747a04273415f1cc2f0969b1d0",
+      "git_blob_sha1": "148e7cac2bf87dda83a0fd6ef56270aa08ae72d7",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/actions/jobs/136712704344/logs",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": true,
+      "CRLF_count": 0,
+      "transfer_parts_verified": true
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/windows-job-136712704368.log",
+      "bytes": 74160,
+      "sha256": "198614e9e81662be027e22f5dc97c7fbaef74e2fd86aff1d2366598d2cb0d742",
+      "git_blob_sha1": "de431dc859f596003af77c124fe12faf4ee51e30",
+      "source_url": "https://api.github.com/repos/LIghtJUNction/zuse/actions/jobs/136712704368/logs",
+      "source_kind": "complete decoded GitHub plugin content encoded as UTF-8",
+      "UTF8_BOM": true,
+      "CRLF_count": 795,
+      "transfer_parts_verified": true
+    }
+  ]
+}

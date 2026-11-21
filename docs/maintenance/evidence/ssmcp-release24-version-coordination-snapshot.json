@@ -1,0 +1,37 @@
+{
+  "schema": "project-z.ssmcp-version-coordination-public-snapshot.v1",
+  "source_observed_at_utc": "2026-11-21T00:51:06.452603+00:00",
+  "source_record": {
+    "bytes": 3530,
+    "sha256": "40a67af5e0c8c62e70e7b4b83539b32ce680dd95fa897207e15630e1317db455",
+    "provenance": "Root's read-only existing release checkpoint and source observation; this is a selected-field projection, not the raw checkpoint."
+  },
+  "other_release_source": {
+    "head": "35de95d2924184daf994710b6f54a5c2a89b1218",
+    "tree": "8731180414b41beb63220acf43a22957ad457127",
+    "manifest_version": "0.10.24",
+    "base": "f33ed8f14fc14aff05a2e4098743eb07e8527c06",
+    "clean_status_observed": true,
+    "status": "blocked_on_confirmed_native_image_card_regression",
+    "release_build": "Owner cancelled after the native image-card regression; no final artifact or completed release claimed by this snapshot.",
+    "image_fix": "Existing release workstream preparing its own fix; no published fixed patch established by this snapshot."
+  },
+  "pr159": {
+    "head": "be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1",
+    "tree": "5e8ea273c8f8bd8b0e7b1f87ccc0d19fd594601b",
+    "manifest_version": "0.10.24",
+    "source_only": true,
+    "source_observation": {
+      "path": "evidence/ssmcp-B-public-source-observation.json",
+      "bytes": 2265,
+      "sha256": "239fcbfccd299cc6f4b23df499e603e928a8593f891bb7a0f245ac6278271478"
+    }
+  },
+  "coordination": {
+    "issue": "Two source workstreams currently declare0.10.24; this describes version allocation and source integration, not an independently demonstrated textual merge conflict.",
+    "proposed_successor_version": "0.10.25",
+    "successor_frozen_or_published": false,
+    "next": "Existing source owners coordinate version/source ownership and publish the image fix before final PR159 source binding and acceptance."
+  },
+  "scope": "No private owner identifiers or credentials included; no other worktree was accessed by this report preparer. No foreign gate counts are applied to B. Old tags and production deployment are outside this update."
+}

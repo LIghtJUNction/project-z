@@ -1,0 +1,68 @@
+{
+  "author_exit": {
+    "bytes": 1463,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-d4-union/author-exit.json",
+    "sha256": "d2e8a2b14c305959fa7938d1ab0b1584833e4e9357f4c87d7bfb223b20005062"
+  },
+  "cargo_lock": {
+    "bytes": 66476,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final/Cargo.lock",
+    "sha256": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608"
+  },
+  "checkout": {
+    "argv": [
+      "git",
+      "-C",
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+      "-c",
+      "submodule.recurse=false",
+      "checkout",
+      "--detach",
+      "d29dae7e2b9ff6794f17f3c96c0cc37977936084"
+    ],
+    "exit_code": 0,
+    "stderr": "之前的 HEAD 位置是 be6da5b test: assert audit focus when Escape closes the filter [skip ci]\nHEAD 目前位于 d29dae7 docs: record image and Unix input lease repairs for 0.10.25 [skip ci]\n",
+    "stdout": ""
+  },
+  "clean": true,
+  "github_readback": {
+    "bytes": 310,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-d4-union/github-C-readback.json",
+    "sha256": "a4fb171092c22127c4cd3f651bbe2daa88b5fe429b26126c6e60c163c93c8ad2"
+  },
+  "heads": {
+    "bytes": 15491,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/git-heads-v25.json",
+    "sha256": "3cdd40cc24b4d51088bdf34f9ace60ab5c90d8e280ce8864a4eab920dbb53ed4"
+  },
+  "historic_B_gate_untouched": true,
+  "independent_review": {
+    "bytes": 7270,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-d4-union/independent-source-union-review.json",
+    "sha256": "a7d3aa0a0a7c0ef8b3069e8a09e1098bb5ef3d1c9d13667487d58f04e7b0bf86"
+  },
+  "new_build_not_started": true,
+  "normal_push": {
+    "bytes": 746,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-d4-union/root-normal-push-receipt.json",
+    "sha256": "ed1d08a2397bb7133e6090747a8a73f8ded17e7919b02cdf8940677709d784f4"
+  },
+  "owner_agreement": {
+    "bytes": 3996,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/shared-target-agreement.json",
+    "sha256": "cd995a33b1b2e3865adfb54c51577944dce09b1a4103a59aa81e2a77bfdf2da8"
+  },
+  "previous_source": "be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1",
+  "schema": "ssmcp-source-freeze-v1",
+  "source_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+  "source_review": {
+    "bytes": 1779,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-d4-union/root-static-review.json",
+    "sha256": "9db2e12c4707692ff979b6df849434d23bcdf15d03b1ccacafc91cfde0083824"
+  },
+  "source_revision": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+  "source_tree": "bf393700928fd9aa37f2dea8b8683ebe13b114cd",
+  "status": "frozen",
+  "utc": "2026-11-21T01:46:07.352796+00:00",
+  "version": "0.10.25"
+}

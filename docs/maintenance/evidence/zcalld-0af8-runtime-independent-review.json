@@ -1,0 +1,381 @@
+{
+  "schema": "project-z.zcalld-0af8-runtime-independent-review.v1",
+  "reviewed_at_utc": "2026-11-21T01:04:25.733828+00:00",
+  "result": "no_material_inconsistency_or_blocker_in_recorded_local_gate",
+  "blocking_findings": [],
+  "scope": "Independent read-only original text/archive/GitHub source review. No product command, Cargo/build/test/GUI/AUR, new input, ELF copy/rehash, shared-target mutation, source/ref write or fresh lock acquisition.",
+  "source": {
+    "head": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+    "parents": [
+      "e1e23cf62402780bf934c4e187d98b78aa26b825"
+    ],
+    "base": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+    "version": "0.4.4",
+    "gui": "d491b627223807da7b2929f3feea7461393d124c",
+    "compat": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+    "source_root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source",
+    "leaves_independently_equal_to_github_tree": 220,
+    "source_manifest_at_prepare_matches_runtime_raw": true,
+    "before_after_head_and_clean_recorded": true,
+    "cargo_lock_git_blob": "533c2a374b6a833d6637dff69a2cea7f76dedc18",
+    "cargo_lock_sha256": "23fd8fbbefe0232b60749d048d09f4d2a7d6783ea2e85deac160c172e5a4ffca",
+    "locked_git_packages": [
+      {
+        "name": "zcall",
+        "version": "0.4.0",
+        "source": "git+https://github.com/LIghtJUNction/zcall.git#317c52f101f112c6af671a629d8406305a168e4a"
+      },
+      {
+        "name": "zconv",
+        "version": "0.4.0",
+        "source": "git+https://github.com/LIghtJUNction/zconv.git#0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1"
+      },
+      {
+        "name": "zplugin",
+        "version": "0.3.1",
+        "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+      },
+      {
+        "name": "zplugin-macros",
+        "version": "0.3.1",
+        "source": "git+https://github.com/LIghtJUNction/zplugin.git#cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+      },
+      {
+        "name": "zsys",
+        "version": "0.1.1",
+        "source": "git+https://github.com/LIghtJUNction/zsys.git#808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+      }
+    ],
+    "fresh_remote_reads": "All4 Git repository sources plus main/GUI/compat matched their fixed pins at this run. These observations do not assert current HEADs at later publication."
+  },
+  "archive": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-text-evidence.zip",
+    "bytes": 163136,
+    "sha256": "0607343a03c0316c05d5813a4dbdbf2d873ba83a5329c459681d3d8cd5cc0172",
+    "members": 70,
+    "payloads": 69,
+    "manifests": 1,
+    "crc_verified": true,
+    "every_payload_size_sha256_and_utf8_verified": true,
+    "all_expanded_bytes_match_archive": true,
+    "binary_bytes_in_archive": false
+  },
+  "execution": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-882",
+    "exit_code": 0,
+    "running": false,
+    "both_output_streams_eof": true,
+    "timed_out": false,
+    "supervisor_seconds": 71.635,
+    "driver_interval_seconds": 71.552365,
+    "sum_recorded_command_seconds": 71.478,
+    "command_count": 22,
+    "all_command_exit_codes_zero": true,
+    "all_ordered_log_hashes_and_intervals_verified": true,
+    "these_three_timings_are_different_boundaries_of_one_run": true
+  },
+  "rust": {
+    "suite_count": 13,
+    "suite_passed_counts": [
+      93,
+      7,
+      15,
+      0,
+      3,
+      0,
+      0,
+      32,
+      15,
+      3,
+      2,
+      9,
+      3
+    ],
+    "passed": 182,
+    "failed": 0,
+    "ignored": 0,
+    "actual_ok_lines": 182,
+    "listener_subset_count": 7,
+    "listener_names": [
+      "listener::local::generation::tests::native_listener_model_result_preserves_text_and_rejects_tools_and_controls",
+      "listener::local::generation::tests::native_listener_request_keeps_exact_user_text_and_does_not_restore_context",
+      "listener::local::generation::tests::native_listener_response_is_bounded_before_json_parsing",
+      "listener::local::tests::native_listener_delivery_keeps_literal_text_and_requires_exact_scope",
+      "listener::local::tests::native_listener_private_socket_uses_one_bounded_frame_and_no_half_close",
+      "listener::local::tests::native_listener_rejects_oversized_response_before_allocating_body",
+      "listener::local::tests::native_listener_requires_an_explicit_socket_and_route_and_rejects_duplicate_options"
+    ],
+    "listener_subset_already_in182": true,
+    "old_d531179_not_transferred_or_added": true
+  },
+  "clippy": {
+    "elapsed_seconds": 5.776,
+    "actual_root_calls": 2,
+    "fresh_false_root_artifacts": 2,
+    "strictness_evidence": "Recorded Cargo argv includes -- -D warnings and unique -Cmetadata; raw Running lines show2 actual root clippy-driver invocations at this manifest. Flags are not claimed to appear literally in every child log line.",
+    "argv": [
+      "cargo",
+      "clippy",
+      "--workspace",
+      "--all-targets",
+      "--offline",
+      "--locked",
+      "--message-format=json-render-diagnostics",
+      "-vv",
+      "--",
+      "-D",
+      "warnings",
+      "-Cmetadata=zcalld_listener_0af8f656"
+    ]
+  },
+  "release_and_binary": {
+    "elapsed_seconds": 35.186,
+    "actual_root_compiler_calls": 1,
+    "actual_cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source",
+    "actual_manifest_dir": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source",
+    "actual_source_argument": "src/main.rs",
+    "actual_compiler_emission": "dep-info,link",
+    "actual_out_dir_from_argv": "/var/tmp/project-z-cargo-target/release/build/zcalld/1b818d4c10358fa5/out",
+    "private_workspace_wrapper": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/workspace-rustc-0af8.py",
+      "bytes": 590,
+      "sha256": "a9be4be225cfab383d84273889332e0d600882127304d6f3f98d68ba0187fb37"
+    },
+    "global_wrapper_retained": "/home/lightjunction/.cargo/rustc-serial",
+    "root_wrapper_argv_exactly_matches_cargo_running_line": true,
+    "cargo_compiler_artifact": {
+      "reason": "compiler-artifact",
+      "package_id": "path+file:///home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source#zcalld@0.4.4",
+      "manifest_path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source/Cargo.toml",
+      "target": {
+        "kind": [
+          "bin"
+        ],
+        "crate_types": [
+          "bin"
+        ],
+        "name": "zcalld",
+        "src_path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source/src/main.rs",
+        "edition": "2024",
+        "doc": true,
+        "doctest": false,
+        "test": true
+      },
+      "profile": {
+        "opt_level": "3",
+        "debuginfo": 0,
+        "debug_assertions": false,
+        "overflow_checks": false,
+        "test": false
+      },
+      "features": [],
+      "filenames": [
+        "/var/tmp/project-z-cargo-target/release/zcalld"
+      ],
+      "executable": "/var/tmp/project-z-cargo-target/release/zcalld",
+      "fresh": false
+    },
+    "owned_binary": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/zcalld",
+      "sha256": "dbe2db6d7130a7751616162fe503468c5f77df0ee7b9c517cd690c2d0e95c63b",
+      "bytes": 2964896,
+      "source_commit": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+      "source_tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+      "profile": "release",
+      "copied_under_outer_lock": true
+    },
+    "observed_copy_chain": "Driver copies Cargo-reported executable while its actual parent flock/kernel row/matching fd are observed, checks public and owned bytes equal, then records owned size/SHA. Driver finishes with the same owned SHA; collector rechecks the owned descriptor.",
+    "independent_out_dir_elf_stat_or_hash_recorded": false,
+    "reviewer_rehashed_or_copied_any_elf": false,
+    "limitation": "No separate contemporaneous byte hash of the rustc/link out-dir ELF is present. This review does not replace it with a later shared-target read or claim three independent ELF hashes."
+  },
+  "curl": {
+    "passed": 8,
+    "skipped": 0,
+    "raw_unittest_seconds": 5.008,
+    "command_wall_seconds": 5.176,
+    "argv": [
+      "python3",
+      "scripts/test-generation-cancellation.py",
+      "--binary",
+      "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/zcalld",
+      "GenerationCancellationTests.test_cancel_curl_tcp_pending_head",
+      "GenerationCancellationTests.test_cancel_curl_tcp_pending_body",
+      "GenerationCancellationTests.test_cancel_curl_unix_pending_head",
+      "GenerationCancellationTests.test_cancel_curl_unix_pending_body",
+      "GenerationCancellationTests.test_half_close_curl_tcp_pending_head",
+      "GenerationCancellationTests.test_half_close_curl_tcp_pending_body",
+      "GenerationCancellationTests.test_half_close_curl_unix_pending_head",
+      "GenerationCancellationTests.test_half_close_curl_unix_pending_body"
+    ],
+    "names": [
+      "GenerationCancellationTests.test_cancel_curl_tcp_pending_head",
+      "GenerationCancellationTests.test_cancel_curl_tcp_pending_body",
+      "GenerationCancellationTests.test_cancel_curl_unix_pending_head",
+      "GenerationCancellationTests.test_cancel_curl_unix_pending_body",
+      "GenerationCancellationTests.test_half_close_curl_tcp_pending_head",
+      "GenerationCancellationTests.test_half_close_curl_tcp_pending_body",
+      "GenerationCancellationTests.test_half_close_curl_unix_pending_head",
+      "GenerationCancellationTests.test_half_close_curl_unix_pending_body"
+    ],
+    "same_owned_binary_as_help_and_descriptor": true,
+    "fixed_fixture_git_blob": "4371347985ccc2c1292ab77a8b5be0f53af3d518",
+    "fixed_fixture_sha256": "d254dd4bb1f84c5e9499dabbd5d03b417b22dae25920976ba1edf308bdbb619e",
+    "fixture_semantics_read": "Each case launches the supplied ownedCLI serve with temporary config and local HTTP mock provider. Actual loopback TCP/Unix callers cover cancel and write-half-close while headers/body are held; cancellation requires observed FIN/RST, health/sole-worker recovery and successful follow-up with no replay. No external model/provider was used."
+  },
+  "lock_and_cleanup": {
+    "actualstart_has_one_nonblocking_flock": true,
+    "outer_path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "scope": "zcalld-listener-0af8-20261121.scope",
+    "initial_invocation_id": "1018aea0b906485888a3871b87cd652a",
+    "launcher_pid": 3732614,
+    "flock_pid": 3732615,
+    "device": 34,
+    "inode": 63537699,
+    "initial_copy_final_observations_same_parent_argv_kernel_row_and_fd": true,
+    "additional_acquisition_attempted": false,
+    "postflight_at": "2026-11-21T00:52:44.278392+00:00",
+    "owned_scope": "inactive/dead; empty ControlGroup",
+    "owned_pids_gone": [
+      3732614,
+      3732615
+    ],
+    "owned_scope_and_lock_released": true,
+    "global_lock_free_at_postflight": false,
+    "foreign_holder_at_postflight": 3756319,
+    "later_foreign_pid_observation": {
+      "observed_at": "2026-11-21T00:55:51.311241+00:00",
+      "historical_postflight_holder_pid": 3756319,
+      "signals_sent": false,
+      "lock_acquisition_attempted": false,
+      "exists": false
+    },
+    "current_global_lock_availability_claimed": false,
+    "foreign_process_signalled_or_changed": false
+  },
+  "historical_attempts": [
+    {
+      "source": "8fe9b42e8b25fc78328ac50e4bd2fc9b9faf438f",
+      "job_suffix": "806",
+      "outcome": "compat freshness assertion stopped the attempt after11 successful source/metadata/Git commands; no fmt/Rust/Clippy/release/curl started",
+      "receipt": "historical/8fe/candidate-validation.json"
+    },
+    {
+      "source": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+      "outcome": "GUI moved to d491 during read-only preparation; no product gate started",
+      "receipt": "historical/e1/gui-freshness-hold.json"
+    },
+    {
+      "source": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+      "outcome": "First0af prelaunch observed SSMCP release validator holding the outer lock and stopped before gate/queue/acquisition; later actual882 is separately recorded",
+      "receipt": "prelaunch.json"
+    }
+  ],
+  "not_established_here": [
+    "Final SSMCP Gate10/P1 or old selected32 suite",
+    "Final44 dependency graph",
+    "GUI AUR execution or publication",
+    "Physical GPU/platform runtime coverage",
+    "Formal release or current-main merge"
+  ],
+  "sources": {
+    "fixed_tree_url": "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/ca3cdf4a464543a1323b057d241d45983cba6a05?recursive=1",
+    "fixed_curl_fixture_url": "https://github.com/LIghtJUNction/zcalld/blob/0af8f65653bc4035888380b8b2f390d774fd30fd/scripts/test-generation-cancellation.py",
+    "original_native_directory": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121",
+    "original_text_evidence_files": [
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/candidate-validation.json",
+        "bytes": 30016,
+        "sha256": "3fe0f9676a5500296c11560835f9353047e64fdb5913291d2321b6090ce72313"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/source-manifest.json",
+        "bytes": 59392,
+        "sha256": "022e49f7878e2f460da596e5f7a7e82c587964bb9c6d685ec61debc0a2d09c8e"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/source-manifest.raw.txt",
+        "bytes": 18172,
+        "sha256": "34e70010c1d9b86cbe88f3fc78857e06897446f8f3c50cbd4e5d8eb66ae9fd25"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/source-Cargo.lock",
+        "bytes": 3129,
+        "sha256": "23fd8fbbefe0232b60749d048d09f4d2a7d6783ea2e85deac160c172e5a4ffca"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/execution-gate-start.json",
+        "bytes": 1419,
+        "sha256": "701679d1550be51a8805c10468fc2db8057c5aed864d5c87f63542019531d884"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/execution-gate-status.json",
+        "bytes": 1340,
+        "sha256": "12ea3d5e1dc5a9c59befb1ec3765071485fa554b9d438e976c3b62a21176f92f"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/execution-gate-initial-scope.json",
+        "bytes": 520,
+        "sha256": "3ab3407269cdcbdb3891c7e533695504db31c8abaffc0c24002006b1bed507d9"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/postflight.json",
+        "bytes": 1080,
+        "sha256": "5a361d61ff5b7866195589b1b31ca7de8c3665bd98755d7e2a577b58c41ab6f8"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/postflight-foreign-holder-observation.json",
+        "bytes": 186,
+        "sha256": "7d55652c60d8b1610322695401165da7d71134a28643343c8969d2bde08b96d5"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/handoff.json",
+        "bytes": 17117,
+        "sha256": "5dd323b66fbbb44c0b0944c46f0bba93a8be3e3fe05ce70ddd0fe8025ecf0c07"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/validate_0af8_candidate.py",
+        "bytes": 14868,
+        "sha256": "4b40fbfd0eded716ec62630497fa5653cce8bbdc1285aafb71d1a940df52c470"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/workspace-rustc-0af8.py",
+        "bytes": 590,
+        "sha256": "a9be4be225cfab383d84273889332e0d600882127304d6f3f98d68ba0187fb37"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/gates/20261121T005053Z/15-workspace-tests.log",
+        "bytes": 102136,
+        "sha256": "fc3db345adc7e055d434feac06d3db09a6d1e7b536e9a9e1ad5b04f1b38d6ec6"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/gates/20261121T005053Z/16-clippy.log",
+        "bytes": 92065,
+        "sha256": "f01e6c346ce281c23ac0611972d89d280ef26e56cda5c51f8444c05fef6d87cc"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/gates/20261121T005053Z/17-release-cli.log",
+        "bytes": 25396,
+        "sha256": "f7294adaa2ea43260c1f26dcbb42de7bd2560f3e3c2df6d76a601a52e8a4a43d"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/gates/20261121T005053Z/19-curl-cancellation.log",
+        "bytes": 1050,
+        "sha256": "b63e16de7a26adabc9a75950113b8748f70d299360dbe9a1afe2f91e3c93fd36"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/gates/20261121T005053Z/rustc-invocations.jsonl",
+        "bytes": 37660,
+        "sha256": "f239a868cb63a40529cb58bcb8811f96567bc507f230bbe02136086430a441f5"
+      },
+      {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/text-evidence-manifest.json",
+        "bytes": 21243,
+        "sha256": "b9fb7bf92e0e0e5ff6eecc7a27cbac80ec91c9069c3289b044ed66bfa2336ea8"
+      }
+    ]
+  },
+  "reviewer_note": "Initial reviewer assertion used fixed argv index10 for flock. Corrected to locate /usr/bin/flock (actualindex9); all3 actualparent argv match. No original evidence or product execution changed.",
+  "native_mirror_target": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/zcalld-0af8-runtime-independent-review.json"
+}

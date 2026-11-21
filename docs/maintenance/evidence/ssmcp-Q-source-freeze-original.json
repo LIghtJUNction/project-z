@@ -1,0 +1,68 @@
+{
+  "author_exit": {
+    "bytes": 1508,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-session-fixture-fix/author-exit.json",
+    "sha256": "44c5b995fcfd741eaa08e30c7170893ec0dac6f2216efc2064aeca531a0be863"
+  },
+  "cargo_lock": {
+    "bytes": 66476,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final/Cargo.lock",
+    "sha256": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608"
+  },
+  "checkout": {
+    "argv": [
+      "git",
+      "-C",
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+      "-c",
+      "submodule.recurse=false",
+      "checkout",
+      "--detach",
+      "647bce2ec9cf74beab43adea831c2e0712d28ea8"
+    ],
+    "exit_code": 0,
+    "stderr": "之前的 HEAD 位置是 d29dae7 docs: record image and Unix input lease repairs for 0.10.25 [skip ci]\nHEAD 目前位于 647bce2 test: make the foreground session fixture explicit [skip ci]\n",
+    "stdout": ""
+  },
+  "clean": true,
+  "github_readback": {
+    "bytes": 310,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-session-fixture-fix/github-Q-readback.json",
+    "sha256": "1468024bf6ce2a13a5de8a35afa8bd9c2c3be76bd9b6157a0e4c1568bd0019f8"
+  },
+  "heads": {
+    "bytes": 15489,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/git-heads-v25-r11.json",
+    "sha256": "e9a5366eb04267e66d09c512f955aa59423330de029a85e5f4d6cbdae4e8db90"
+  },
+  "historic_C_failed_gate_untouched": true,
+  "independent_review": {
+    "bytes": 5680,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-session-fixture-fix/independent-fix-and-host-partition-review.json",
+    "sha256": "19f5acd8063d92259c03af8cc32a36db146bf7db9f080bca3cbf2df1230035e5"
+  },
+  "new_build_not_started": true,
+  "normal_push": {
+    "bytes": 760,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-session-fixture-fix/root-normal-push-receipt.json",
+    "sha256": "cdd8987e8c3cf9ebd6bbcf5133cc100f2b3bd4d928ca43e99bd085460af25e73"
+  },
+  "owner_agreement": {
+    "bytes": 3193,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/shared-target-agreement-v25-r11.json",
+    "sha256": "b8559d1d1005fe2a22c295bc57f97d6e2c562cad260cbc1a2f161119fe32fcf6"
+  },
+  "previous_source": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+  "schema": "ssmcp-source-freeze-v1",
+  "source_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+  "source_review": {
+    "bytes": 1319,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-session-fixture-fix/root-static-review.json",
+    "sha256": "c3e5f8bd471110abc87a235f7f07e380291d901c28f8daf72481bcf80c78875b"
+  },
+  "source_revision": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+  "source_tree": "5143f90c05066c95b2df58a9eab1831e05888a62",
+  "status": "frozen",
+  "utc": "2026-11-21T02:07:14.989741+00:00",
+  "version": "0.10.25"
+}

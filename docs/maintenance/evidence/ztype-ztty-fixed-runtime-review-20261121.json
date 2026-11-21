@@ -1,0 +1,340 @@
+{
+  "schema": "project-z.ztype-ztty-fixed-runtime-independent-read.v1",
+  "status": "passed",
+  "recorded_utc": "2026-11-20T22:15:00Z",
+  "ztype": {
+    "head": "053eb39eb115decc0cb046e901598cf0bc4645fb",
+    "tree": "2c7bcdf4cdd7695dc50821e9c57033dc14d3640a",
+    "version": "0.4.2",
+    "elf_sha256": "1a2b96c03aa5129ea1935216da7b8696ef330a4a2ec49f0139027a4a9c0c82ae"
+  },
+  "ztty": {
+    "head": "076bc6ac8ff9ca17effe25decac7a4dbc4ec0c43",
+    "tree": "a7a99b41c9bfef6f4f617914b6c67466f5d3a7c8",
+    "elf_sha256": "c5debb5f35d2563e1a3cdf7eeb18bb064439c864ad020fd452f0c730afc61197"
+  },
+  "native_root": "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1",
+  "raw_receipts": [
+    {
+      "file": "wayland-fixed/receipt.json",
+      "bytes": 2643,
+      "sha256": "35bd7119b1d5dfb39ccadb41eaf25fed91000af819007f629bcb15754bb86880"
+    },
+    {
+      "file": "wayland-fixed/nested-report.json",
+      "bytes": 10242,
+      "sha256": "05161924fe8c55e4f2610dbbca758e9bd8d999b5111b55f0239a174afecb029d"
+    },
+    {
+      "file": "xim-current/receipt.json",
+      "bytes": 3096,
+      "sha256": "9f17cc52949e314186da8d1294d0011cce49ef394a7d6aaa5a66c166f041f77b"
+    },
+    {
+      "file": "xim-current/report.json",
+      "bytes": 3274,
+      "sha256": "d137e81cbbc350cd94ff056be5849538a7a3a60f9a7f72185d7d2156df660aba"
+    }
+  ],
+  "gtk": {
+    "passed": 28,
+    "raw_report_sha256": "4c91797b0a6e82a1dfc67b9c7b629fc697d1f4897af8fcbd410a269dd8411cdf",
+    "checks": [
+      {
+        "name": "native-wayland-receiver",
+        "passed": true
+      },
+      {
+        "name": "composition-is-preedit-before-commit",
+        "passed": true
+      },
+      {
+        "name": "candidate-popup-visible-pixels",
+        "passed": true
+      },
+      {
+        "name": "pinyin-text-commit",
+        "passed": true
+      },
+      {
+        "name": "enter-commits-raw-pinyin",
+        "passed": true
+      },
+      {
+        "name": "chinese-comma-commits-composition",
+        "passed": true
+      },
+      {
+        "name": "insert-inside-composition",
+        "passed": true
+      },
+      {
+        "name": "backspace-edits-composition",
+        "passed": true
+      },
+      {
+        "name": "escape-cancels-without-commit",
+        "passed": true
+      },
+      {
+        "name": "pinyin-phrase-combination",
+        "passed": true
+      },
+      {
+        "name": "tab-selects-next-candidate",
+        "passed": true
+      },
+      {
+        "name": "number-selects-candidate",
+        "passed": true
+      },
+      {
+        "name": "password-bypasses-composition",
+        "passed": true
+      },
+      {
+        "name": "focus-change-discards-old-preedit",
+        "passed": true
+      },
+      {
+        "name": "ctrl-a-shortcut-and-replacement",
+        "passed": true
+      },
+      {
+        "name": "ctrl-space-latin-input",
+        "passed": true
+      },
+      {
+        "name": "ctrl-space-restores-pinyin",
+        "passed": true
+      },
+      {
+        "name": "readonly-field-unchanged",
+        "passed": true
+      },
+      {
+        "name": "popup-visible-keeps-application-focus",
+        "passed": true
+      },
+      {
+        "name": "popup-follows-input-position",
+        "passed": true
+      },
+      {
+        "name": "popup-cycle-selects-and-commits",
+        "passed": true
+      },
+      {
+        "name": "popup-number-commit-hides",
+        "passed": true
+      },
+      {
+        "name": "popup-page-relative-number-commit",
+        "passed": true
+      },
+      {
+        "name": "popup-escape-clears-pending-frame",
+        "passed": true
+      },
+      {
+        "name": "popup-delete-empty-hides",
+        "passed": true
+      },
+      {
+        "name": "popup-password-hides",
+        "passed": true
+      },
+      {
+        "name": "popup-readonly-hides",
+        "passed": true
+      },
+      {
+        "name": "popup-window-change-discards",
+        "passed": true
+      }
+    ]
+  },
+  "ztty_native": {
+    "passed": 7,
+    "checks": [
+      {
+        "name": "private_compositor_identity",
+        "passed": true,
+        "pid": 1196620,
+        "state": "S",
+        "ppid": 1196593,
+        "start_ticks": 14816297
+      },
+      {
+        "name": "authenticated_native_wayland_window",
+        "passed": true,
+        "broker_pid": 1199792,
+        "address": "0x55d7c5433bb0",
+        "xwayland": false
+      },
+      {
+        "name": "receiver_is_broker_descendant",
+        "passed": true,
+        "receiver_pid": 1199813
+      },
+      {
+        "name": "receiver_stdin_is_a_real_tty",
+        "passed": true,
+        "tty_name": "/dev/pts/24"
+      },
+      {
+        "name": "fresh_candidate_presentation_metadata",
+        "passed": true,
+        "schema": "ztype.popup-state.v1",
+        "sequence": 302,
+        "requested_visible": true,
+        "selected": 0,
+        "candidate_count": 1,
+        "generation": 31,
+        "width": 248,
+        "height": 112,
+        "presentation_result": "presented"
+      },
+      {
+        "name": "candidate_hidden_after_commit_metadata",
+        "passed": true,
+        "schema": "ztype.popup-state.v1",
+        "sequence": 303,
+        "requested_visible": false,
+        "selected": 0,
+        "candidate_count": 0,
+        "generation": 31,
+        "width": 0,
+        "height": 0,
+        "presentation_result": "hidden"
+      },
+      {
+        "name": "native_chinese_text_reached_owned_pty",
+        "passed": true
+      }
+    ],
+    "stdin_receipt": {
+      "schema": "ztype.ztty-terminal-stdin.v1",
+      "pid": 1199813,
+      "ppid": 1199792,
+      "stdin_isatty": true,
+      "tty_name": "/dev/pts/24",
+      "text": "你好世界",
+      "received_utf8_hex": "e4bda0e5a5bde4b896e7958c0a"
+    }
+  },
+  "xim": {
+    "passed": 13,
+    "checks": [
+      {
+        "name": "ASCII before XIM starts",
+        "ok": true,
+        "actual": "abc",
+        "expected": "abc"
+      },
+      {
+        "name": "existing Ztty reconnects after XIM starts",
+        "ok": true,
+        "actual": "你好",
+        "expected": "你好"
+      },
+      {
+        "name": "multi-codepoint native commit reaches raw PTY",
+        "ok": true,
+        "actual": "世界",
+        "expected": "世界"
+      },
+      {
+        "name": "additional native commit: nihaoshijie",
+        "ok": true,
+        "actual": "你好世界",
+        "expected": "你好世界"
+      },
+      {
+        "name": "additional native commit: ni2",
+        "ok": true,
+        "actual": "呢",
+        "expected": "呢"
+      },
+      {
+        "name": "second window shares existing broker",
+        "ok": true
+      },
+      {
+        "name": "second Ztty receives its own XIM commit",
+        "ok": true,
+        "actual": "你好",
+        "expected": "你好"
+      },
+      {
+        "name": "focus returns to original terminal",
+        "ok": true,
+        "actual": "你好",
+        "expected": "你好"
+      },
+      {
+        "name": "candidate popup is visible within private screen",
+        "ok": true,
+        "geometry": [
+          8,
+          588,
+          248,
+          112
+        ]
+      },
+      {
+        "name": "candidate popup text is painted on screen",
+        "ok": true
+      },
+      {
+        "name": "candidate popup hides after commit or cancellation",
+        "ok": true
+      },
+      {
+        "name": "ordinary keys remain usable while XIM is stopped",
+        "ok": true,
+        "actual": "abc",
+        "expected": "abc"
+      },
+      {
+        "name": "existing terminal reconnects after XIM restart",
+        "ok": true,
+        "actual": "你好",
+        "expected": "你好"
+      }
+    ]
+  },
+  "fixture_comparison": {
+    "native_runner_hash": "6a1f1fe9fd53024f29045f68e8c87ecbc87c943ebbfb9e85e65b3347982340ee",
+    "native_ztty_harness_hash": "689e059877cff0a895f747ddf15ed339658e4508a34214b0c78c4b2e32ddc938",
+    "both_match_failed_bfee_run": true,
+    "command_changes": [
+      "output directory",
+      "frozen ztty executable path"
+    ],
+    "third_manifest_entry_difference": "Earlier receipt covers test_wayland.py; fixed receipt covers the selected --popup script test_wayland_popup.py. Do not claim both complete dictionaries identical; original owner is preserving the coverage explanation separately."
+  },
+  "identity_and_cleanup": {
+    "fixed_bookends": true,
+    "xim_bookends": true,
+    "hashes": {
+      "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/artifacts/ztype": "1a2b96c03aa5129ea1935216da7b8696ef330a4a2ec49f0139027a4a9c0c82ae",
+      "/home/lightjunction/.local/state/work-maintainer/ztype-ztty-ui-20261121-c7a1/artifacts/ztty-fixed": "c5debb5f35d2563e1a3cdf7eeb18bb064439c864ad020fd452f0c730afc61197",
+      "/usr/bin/Hyprland": "2d4d863fa3c1d4c1243324674a9e97fe3cad0203a3715b8054a02953d03988b4",
+      "/usr/lib/libaquamarine.so.0.16.0": "eb503aec479c97e01ed1aed4db475f84a968eceeda55a32c58398c92994384a0",
+      "/home/lightjunction/.local/bin/ztype": "7708a88b2a8b914a52abe2f10395378fb33c731621fdde9301a6679a83dc10c8"
+    },
+    "private_aquamarine_unchanged": true,
+    "owned_processes_stopped": true,
+    "owned_proc_paths": {
+      "1196595": false,
+      "1196620": false,
+      "1196741": false,
+      "1199788": false,
+      "1199792": false,
+      "1199813": false
+    },
+    "cleanup_errors": []
+  },
+  "scope": "Read original completed native receipts, raw checks, fixed executable hashes, script identities and live cleanup state. No new compilation or GUI run by this reviewer; no physical desktop input-method activation."
+}

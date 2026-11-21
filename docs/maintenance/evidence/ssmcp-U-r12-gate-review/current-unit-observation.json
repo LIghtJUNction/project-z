@@ -1,0 +1,27 @@
+{
+  "observed_at_utc": "2026-11-21T03:17:20.877110+00:00",
+  "unit": "ssmcp-release25-gate35-r12-20261121.service",
+  "command": [
+    "systemctl",
+    "--user",
+    "show",
+    "ssmcp-release25-gate35-r12-20261121.service",
+    "--property=Id,LoadState,ActiveState,SubState,ControlGroup,MainPID,Result,ExecMainStatus,InvocationID"
+  ],
+  "exit_code": 0,
+  "stdout": "Id=ssmcp-release25-gate35-r12-20261121.service\nLoadState=not-found\nActiveState=inactive\nSubState=dead\nInvocationID=\nMainPID=0\nResult=success\nExecMainStatus=0\nControlGroup=\n",
+  "stderr": "",
+  "original_pids": [
+    {
+      "pid": 1184034,
+      "proc_present": false
+    },
+    {
+      "pid": 1184045,
+      "proc_present": false
+    }
+  ],
+  "locks_acquired": false,
+  "signals_sent": false,
+  "global_lock_free_claim": false
+}

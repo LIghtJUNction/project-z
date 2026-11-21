@@ -1,0 +1,164 @@
+{
+  "all_17_explicit_ok": true,
+  "cases": [
+    {
+      "explicit_ok": true,
+      "goal": "native",
+      "raw_lines": [
+        "test client::terminal::conversation::messaging::tests::native_mentions_require_selection_and_file_syntax_remains_literal ... ok"
+      ],
+      "test": "native_mentions_require_selection_and_file_syntax_remains_literal"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "native",
+      "raw_lines": [
+        "test client::terminal::conversation::messaging::tests::missing_native_recipients_never_fall_back_to_next_caller ... ok"
+      ],
+      "test": "missing_native_recipients_never_fall_back_to_next_caller"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "native",
+      "raw_lines": [
+        "test client::terminal::conversation::messaging::tests::service_receipt_clears_only_the_exact_submitted_native_draft ... ok"
+      ],
+      "test": "service_receipt_clears_only_the_exact_submitted_native_draft"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "native",
+      "raw_lines": [
+        "test client::terminal::conversation::messaging::tests::a_mismatched_or_failed_native_receipt_never_clears_the_draft ... ok"
+      ],
+      "test": "a_mismatched_or_failed_native_receipt_never_clears_the_draft"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "native",
+      "raw_lines": [
+        "test client::messaging::tests::mismatched_receipt_preserves_draft_and_idempotent_retry_cannot_change_target ... ok"
+      ],
+      "test": "mismatched_receipt_preserves_draft_and_idempotent_retry_cannot_change_target"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "ownership",
+      "raw_lines": [
+        "test client::interface::history::ownership::tests::program_reply_keeps_original_owner_and_one_copy_after_selection_changes ... ok"
+      ],
+      "test": "program_reply_keeps_original_owner_and_one_copy_after_selection_changes"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "ownership",
+      "raw_lines": [
+        "test client::interface::messages::tests::final_reply_retry_receipts_cannot_be_borrowed_by_another_thread ... ok"
+      ],
+      "test": "final_reply_retry_receipts_cannot_be_borrowed_by_another_thread"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "file",
+      "raw_lines": [
+        "test client::references::tests::unavailable_files_keep_source_and_warn_without_read_actions ... ok"
+      ],
+      "test": "unavailable_files_keep_source_and_warn_without_read_actions"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "file",
+      "raw_lines": [
+        "test client::references::tests::full_budget_unavailable_references_keep_exact_text_and_local_warnings ... ok"
+      ],
+      "test": "full_budget_unavailable_references_keep_exact_text_and_local_warnings"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "file",
+      "raw_lines": [
+        "test client::references::tests::unavailable_metadata_cannot_crowd_out_readable_reference_contents ... ok"
+      ],
+      "test": "unavailable_metadata_cannot_crowd_out_readable_reference_contents"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "file",
+      "raw_lines": [
+        "test client::references::tests::missing_reference_retries_remain_frozen_until_source_is_edited ... ok"
+      ],
+      "test": "missing_reference_retries_remain_frozen_until_source_is_edited"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "file",
+      "raw_lines": [
+        "test client::steering::tests::full_budget_missing_reference_reaches_real_queue_once_with_ack_notice ... ok"
+      ],
+      "test": "full_budget_missing_reference_reaches_real_queue_once_with_ack_notice"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "skill",
+      "raw_lines": [
+        "test client::references::tests::skill_names_use_effective_precedence_and_explicit_roots ... ok"
+      ],
+      "test": "skill_names_use_effective_precedence_and_explicit_roots"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "skill",
+      "raw_lines": [
+        "test client::completion::tests::send_body_completes_references_without_changing_the_command ... ok"
+      ],
+      "test": "send_body_completes_references_without_changing_the_command"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "skill",
+      "raw_lines": [
+        "test client::completion::tests::send_completion_rejects_commands_shell_currency_and_code ... ok"
+      ],
+      "test": "send_completion_rejects_commands_shell_currency_and_code"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "skill",
+      "raw_lines": [
+        "test client::terminal::conversation::skill_picker_tests::skill_picker_keys_only_deliver_the_explicitly_sent_selection ... ok"
+      ],
+      "test": "skill_picker_keys_only_deliver_the_explicitly_sent_selection"
+    },
+    {
+      "explicit_ok": true,
+      "goal": "skill",
+      "raw_lines": [
+        "test client::terminal::conversation::skill_picker_tests::send_reference_picker_preserves_drafts_and_delivers_only_after_explicit_send ... ok"
+      ],
+      "test": "send_reference_picker_preserves_drafts_and_delivers_only_after_explicit_send"
+    }
+  ],
+  "gate_run_id": "ecfe8f69dcb362096018be9a632ff96c",
+  "gate_status_at_read": "running",
+  "log": {
+    "bytes": 557308,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/logs/candidate2-library-private.log",
+    "sha256": "3294ceafe0afe1a59db4a985c42a67b2fc0d3a498dd8764621d8b3513c3735c6"
+  },
+  "observed_utc": "2026-11-21T02:15:28.183025+00:00",
+  "schema": "ssmcp-Q-original-goal-library-result-map-v1",
+  "scope": "Existing library test execution only; does not assert whole Gate/UI/runtime/P1 completion. Native inbox routes preserve literal @/$ text rather than expanding local attachments.",
+  "source_revision": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+  "stage": "library-private",
+  "stage_exit_code": 0,
+  "stage_test_results": [
+    {
+      "failed": 0,
+      "filtered": 6,
+      "ignored": 23,
+      "measured": 0,
+      "passed": 2050,
+      "result": "ok"
+    }
+  ]
+}

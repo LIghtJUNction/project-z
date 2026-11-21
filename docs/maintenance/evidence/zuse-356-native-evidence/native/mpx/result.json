@@ -1,0 +1,36 @@
+{
+  "test_binary": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/lib_test-e36daa4146c197cd",
+  "test_binary_sha256": "e36daa4146c197cdbf7822d06220561543dd8d168c4f8810e5966c202568e4fb",
+  "fixture": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/tests/private_xvfb.py",
+  "status": "passed",
+  "selected_tests": [
+    "platform::pointer_x11::tests::private_x11_pointer_lifetime_events_and_cursor_isolation",
+    "platform::pointer_x11::tests::private_x11_script_parallel_scopes_errors_and_cancellation"
+  ],
+  "xvfb_pid": 3188355,
+  "display": ":18292",
+  "authenticated_ready": true,
+  "authority_path": "/tmp/zuse356-mpx-eu0l14ai/Xauthority",
+  "authority_mode": "0o600",
+  "lease": "/tmp/project-z-xvfb-1000-18292.lock",
+  "environment": {
+    "DISPLAY": ":18292",
+    "XAUTHORITY": "/tmp/zuse356-mpx-eu0l14ai/Xauthority",
+    "ZUSE_TEST_PRIVATE_X11": "1",
+    "WAYLAND_DISPLAY": null
+  },
+  "argv": [
+    "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/lib_test-e36daa4146c197cd",
+    "private_x11_",
+    "--test-threads=1",
+    "--nocapture"
+  ],
+  "exit": 0,
+  "seconds": 1.046,
+  "cleanup": {
+    "owned_xvfb_exited": true,
+    "lease_absent": true,
+    "authority_absent": true
+  },
+  "binary_unchanged": true
+}

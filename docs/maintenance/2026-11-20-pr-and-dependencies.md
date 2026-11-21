@@ -1,37 +1,281 @@
 # Project Z 维护进展
 
-更新：2026-11-21 00:18（Asia/Taipei）。
+更新：2026-11-21 11:42:51（Asia/Taipei；UTC 2026-11-21 03:42:51；本批 UI 状态固定于首次失败回执，后继诊断另行记录）。
 
-## 主要结果
+## 当前结果
 
-**源码依赖图已通过。** 43 个仓库、67 个包，38 个 Rust 仓库完成实际解析；`sync`、`check`、`resolve --all` 和影响范围检查全部成功。各组件提交、干净状态与共享源码固定点已核对，临时锁文件和 Cargo 配置均已还原。
+**U／r12 的 35 阶段门禁与后续 18 项 runtime 检查已完成；UI 首轮尚未通过。** 固定源码为 784370b5／2c60d011。独立复核确认 U 自身的编译、测试与五个受控产物；runtime 的原始完成回执另由 root 核对。UI 已通过前三组，第四组在私有 Xvfb 就绪前退出，尚未执行该组产品检查；alias、P1、最终 44 仓图及正式发布仍待完成。[U 门禁复核](evidence/ssmcp-U-r12-gate-review/ssmcp-U-r12-gate-review-summary.json) · [runtime 回执核对](evidence/ssmcp-U-r12-runtime18/runtime18-root-receipt-read.json) · [UI 首次失败](evidence/ssmcp-U-ui24-first-attempt/ui-first-failure-root-receipt-read.json)
 
-验证源码树：`4c76d171ef7322680281bbd1bbbc18f85c394d36`。本次更新 22 个组件引用及 3 个生成文件，影响 24 个仓库。发布入口：[Project Z PR #6](https://github.com/LIghtJUNction/project-z/pull/6)。
+**内部 Git 源迁移已完成本页列出的 19 个仓库本轮发布；受控 Git 历史中的生成附件清理已完成 14 个完整核实的仓库。** oh-my-ztty 的 23 个引用、74 个原提交和 14 份历史图片也已完成独立复核。开发机首批 129 个闲置 Cargo 目录、另外 3 个 LMM 缓存和 4 个 WGT 缓存均已处理完成。当前继续推进其余消费者、上游新提交的定向传播、最新组合的原生验收、完整 44 仓依赖图及新版本发布。
 
-初始 85 项 PR：已合并 54 项、已关闭 14 项、仓库已归档 9 项、具体阻塞 5 项、验收／集成中 3 项。每个 PR 只计一次，后续集成 PR 单独记录。[完整清单与证据](2026-11-20-pr-and-dependencies.json)保留全部条目。
+初始 85 项 PR 仍按原清单去重计数：**已合并 56、已关闭 14、仓库已归档 9、具体阻塞 5、验收／集成中 1**。新建的依赖迁移 PR 单独记录。[完整清单与逐项证据](2026-11-20-pr-and-dependencies.json)保留全部 85 项条目和历史验证范围。
 
-## 本轮改动
+[Project Z PR #6](https://github.com/LIghtJUNction/project-z/pull/6) 已合并，其 43 仓、67 包、38 个 Rust 仓库的结果适用于原提交。[后续 PR #7](https://github.com/LIghtJUNction/project-z/pull/7) 引入新的 Git 来源规则和第 44 仓独立 LMM CLI，完整新图仍待最终组件提交就位后验收。
 
-- **共享依赖。** 合入 zgpui 字体位图边界修复和独立 raster 包，同步 ztty、zmcl、zcall-gui、ztype 的固定源码；新增的 raster 与 zcalld-installer 均为 `publish=false`，仍纳入完整依赖图检查。
-- **补齐独立锁。** 全图解析发现 zterm 的已提交锁仍选中 zgpui 0.1.2，已由 [zterm #1](https://github.com/LIghtJUNction/zterm/pull/1) 修正，并经 [ztty #20](https://github.com/LIghtJUNction/ztty/pull/20) 传播。当前 zterm [`cd9abc5`](https://github.com/LIghtJUNction/zterm/commit/cd9abc560d28c2d8ad6ed2073e8d9a7c27810da1)、ztty [`66d39d0`](https://github.com/LIghtJUNction/ztty/commit/66d39d021d195d981c50ca88a7715a2b37552854)。ztty 保留新合入的 GPU 文本缓存优化；锁变更前后完整解析图相同。新 GPU 实验、旧 UI 验收和这次锁检查分别保留来源。
-- **服务消费者。** zcalld [`1c14414`](https://github.com/LIghtJUNction/zcalld/commit/1c1441404ddc54416cf24b57d276958a8b98b811) 已接入新 GUI 固定点；当前 core、CLI、Linux 安装器/打包及 compat helper 检查通过。这些结果不替代 native P1 的独立验收。
-- **积压与开发机。** 完成多组依赖适配和冲突修复，包括 sing-box、Magpie、LMM、LightFlow/Flux、Weyriva 与 MSG；各自的提交、检查结果和限制保留在 JSON。SSMCP 本地子模块与既有 gitlink 的错位已修复，未替换运行中的服务。
+### 本轮新增验收
 
-## 真实剩余
+| 固定来源 | 已完成 | 仍需完成 |
+| --- | --- | --- |
+| SSMCP U／r12 | 35 阶段退出 0；212 份原始文本、26 个真实编译记录、5 个受控产物完成独立核对 | UI 全组、alias、最终 P1 与发布 |
+| U 的 runtime18 | 12 项 private MCP 与 6 项 transport 通过；输入前后一致、清理成功 | 不代替 UI 或 P1 |
+| U 的 UI 首轮 | message_references 53、force_send 137、listener_transports 74 检查通过 | zuse_worker 在 Xvfb 就绪前失败，检查数 0；其余 20 组未运行，alias 覆盖 0 |
+| zcalld bd7 | 新 release、help、8 项真实 TCP／Unix 取消检查通过 | PR #1 仍为草稿，最终 SSMCP P1 |
+| zuse PR #4 | 67e 的三平台 CI 通过，合并为功能分支 fe47，合并树与被测树一致 | PR #2 仍为草稿；zuse main 保持 a1，SSMCP U 的 zuse 依赖也保持 a1 |
 
-- [KernelSU #1](https://github.com/LIghtJUNction/KernelSU/pull/1)：包含大范围上游迁移及文档移动，缺少对应设备适配和真实设备验证。
-- [MagicBox #4](https://github.com/LIghtJUNction/MagicBox/pull/4)：旧 `8d6723d` 已通过 Android 模拟器验收；当前正按要求重写极简 UI，PR 保持 draft，新候选的验收另记。
-- [video-work-api #11](https://github.com/LIghtJUNction/video-work-api/pull/11)：torch/torchaudio 与固定 FunClip/CosyVoice 约束冲突，仍需模型和 CUDA 验证。
-- [zcalld #1](https://github.com/LIghtJUNction/zcalld/pull/1)：原负责人仍在完成固定组合的 native P1；旧 ef439/be72 的 32 项记录不能作为当前聚合源码通过的依据。
-- [codewhale-lmm-provider #3](https://github.com/TokenNotIncluded/codewhale-lmm-provider/pull/3)：按用户组隔离的后端接口、客户端注册及真实宿主验收条件尚未齐备。
-- [hireferry #21](https://github.com/TokenNotIncluded/hireferry/pull/21)：当前 Android 返回桌面以及 WebView/服务组合验收仍在推进。
-- [lmm-api-source #10](https://github.com/TokenNotIncluded/lmm-api-source/pull/10)：数据库升级门禁仍受其他连接或预备事务阻塞，具体来源未定位。
-- [lmm-api-source #11](https://github.com/TokenNotIncluded/lmm-api-source/pull/11)：流式请求出现已预留但未结算；锁超时与失败的因果关系尚未确认。
+**U／r12 的成绩来自它自己的完整原件。** library-private 为 2050 passed、23 ignored、6 filtered；HOST6 为独立 6 passed。19 个普通集成 target 合计 101 passed，另一个 worker ignored-exact 为 1，20 个 target 合计 102；四个额外强制 ignored 阶段合计 14。原需求 17 例全部包含于 2050，不另相加。两个 Clippy 命令退出 0，原 Cargo unused qrcodegen／manifest warning 保留。独立核对重新读取了 U 的五个受控副本，没有因与 Q 同 hash 就继承 Q 的编译证明。[完整复核](evidence/ssmcp-U-r12-gate-review/ssmcp-U-r12-gate-independent-review.json) · [可读说明](evidence/ssmcp-U-r12-gate-review/ssmcp-U-r12-gate-independent-review.md)
 
-SSMCP 聚合来源保持 `2126b7b7f09e`；原负责人后续合入的提交不自动进入本批已验收源码图。oh-my-ztty 继续使用已发布 ztty v0.5.2、SSMCP v0.10.20 的制品摘要。开发源码更新不代表新安装包已经发布或安装。
+**runtime 与 UI 分别记录。** runtime18 于 03:27:15—03:27:27 UTC 完成；root 核对其原报告、launcher、18 项结果、输入身份和清理记录，未重跑产品或把这次检查称为完整 driver 语义审查。[安全摘要](evidence/ssmcp-U-r12-runtime18/runtime18-root-receipt-read.json)保留原件位置及摘要，不公开测试账号目录。随后 UI 首轮实际作业 ae2 退出 1、双 EOF；四个已启动子进程均已回收，输入集合未变。[失败原日志](evidence/ssmcp-U-ui24-first-attempt/run.log)显示私有 Xvfb 未达到就绪；本批不推断环境或产品根因，也不把前三组通过扩大为全部 UI 通过。
 
-## 证据链接
+**zcalld bd7 单独重建并验证。** 固定 bd7a30c0／cbd4a29e 保留前一候选 218 个叶，仅更新 GUI 指针与发布文档。唯一 a64 作业实际执行 87 条命令；这个数字包含源码和身份读取，不是 87 个产品测试。release 用时 34.387 秒，主程序记录 fresh=false；help 与 8 项 curl 取消检查通过。实际 link 输出、Cargo executable、外锁内自有副本字节相同；自有 CLI 为 2,964,896 B，SHA256 d5464f6f24da08204840d5c84f1780249d3635aa18ffd696dd5f6060c5621ecb。[本轮交接](evidence/zcalld-bd7-20261121/handoff.json) · [实际回执](evidence/zcalld-bd7-20261121/candidate-validation.json)。[metadata 对照](evidence/zcalld-bd7-20261121/locked-metadata-comparison.json)只证明显式归一化检出根路径后的依赖图相同，不证明二进制或 GUI 等价。本批没有重跑 0af8 的 182 项 Rust／Clippy；它们继续保留原身份。[退出观察](evidence/zcalld-bd7-20261121/postflight.json)只证明当时的自有清理状态，不声称后续全局锁空闲。
 
-- [完整维护 JSON](2026-11-20-pr-and-dependencies.json)：85 项清单、43 个固定源码、逐项门禁、失败修复记录和消费者验证。
-- [ztty 锁传播报告](https://github.com/LIghtJUNction/ztty/blob/66d39d021d195d981c50ca88a7715a2b37552854/docs/reports/dependency-lock-propagation-20261120/README.md)与[GPU 实验报告](https://github.com/LIghtJUNction/ztty/blob/d9d4ce40b10dd427ce4b59c901c8b03e2fc0ed70/docs/benchmarks/text-run-scratch-20261120/report.zh-CN.md)：分别标明固定源码和覆盖范围。
-- [MagicBox PR #4](https://github.com/LIghtJUNction/MagicBox/pull/4)：旧源码的模拟器结果保存在 JSON 的 `magicbox_prior_emulator_validation`，新 UI 继续单独验证。
+**zuse PR #4 已合入 PR #2 功能分支。** 03:28:10 UTC 的合并为 fe47f963，父提交是 83663988 与 67e2d6a4；tree af46f28f 与被测 head、CI checkout 完全一致。[三平台 CI 独立审查](evidence/zuse-67e-ci-44860554142/zuse-67e-ci-independent-review.json)读取了 run 44860554142 的全部三份日志；默认 Rust 结果分别为 Linux 289／5 ignored、macOS 267／3 ignored、Windows 263／2 ignored，三平台均无失败。各平台结果不跨平台相加，也不移用旧 356 原生门禁。普通 CI 的 private_x11 提前返回不能算真实 MPX；no_std 为本轮编译检查。PR #2 仍为草稿，zuse main 仍为 a1bb8fd2，SSMCP 自身源码仍是 U784370b5；U 使用的 zuse 依赖 a1bb8fd2 未改。[合并与交付记录](evidence/zuse-67e-ci-44860554142/delivery.json)
+
+[Google Docs 可读进度](https://docs.google.com/document/d/1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw)已完成正文、表格、链接及目标文件夹读回；其状态截点为 03:38:30 UTC，GitHub／Drive 的原始 MD、JSON 档案继续保留。[交付核对](evidence/project-z-google-doc-20261121/delivery-v4.json)
+
+## Git 依赖迁移
+
+规则已写入维护工具和文档：内部跨仓依赖使用规范 GitHub `.git` 地址并跟随默认分支；同步时刷新真实 Cargo.lock 和内部 gitlink，保留供外部 crates.io 用户使用的版本信息。同仓 workspace/path 关系以及历史报告中的源码副本按各自用途保留。
+
+| 仓库 | 已发布提交／PR | 当前结果 |
+| --- | --- | --- |
+| zcall | [`564ede15db`](https://github.com/LIghtJUNction/zcall/pull/1) | 已合并，源码树与门禁记录一致 |
+| zplugin | [`cf02c1d9db`](https://github.com/LIghtJUNction/zplugin/pull/1) | 已合并，源码树与门禁记录一致 |
+| zclick | [`b90a118e8a`](https://github.com/LIghtJUNction/zclick/pull/1) | 已合并，源码树与门禁记录一致 |
+| zinput | [`fe1cbaec74`](https://github.com/LIghtJUNction/zinput/pull/1) | 已合并，源码树与门禁记录一致 |
+| zharness | [`cb63a9a0aa`](https://github.com/LIghtJUNction/zharness/pull/9) | 已合并，源码树与门禁记录一致 |
+| zmcpio | [`84fc4978a2`](https://github.com/LIghtJUNction/zmcpio/pull/3) | 已合并，源码树与门禁记录一致 |
+| zterm | [`1a761334f0`](https://github.com/LIghtJUNction/zterm/commit/1a761334f0b9cf26da700426a5b82778f0d48c3d) | 后续已同步 zgraphics aa0，193 项独立 Rust 检查通过，1 项原有忽略 |
+| zuse | [`0fc2d9cb61`](https://github.com/LIghtJUNction/zuse/pull/1) | 已合并，源码树与门禁记录一致 |
+| zcall-gui | [`9a7eab6fa9`](https://github.com/LIghtJUNction/zcall-gui/pull/2) | 已发布，完整本地门禁通过 |
+| zmcl | [`a3858a0f73`](https://github.com/LIghtJUNction/zmcl/commit/a3858a0f731ba08cae45bc1672f161218ca4a190) | 已发布，完整本地门禁通过 |
+| zcalld | [`4eaef52ce0`](https://github.com/LIghtJUNction/zcalld/pull/3) | 已发布，完整本地门禁通过 |
+| zrc | [`2f10ea8dcf`](https://github.com/LIghtJUNction/zrc/pull/1) | 已发布，各自适用门禁通过 |
+| zdot | [`a3c6a75b1e`](https://github.com/LIghtJUNction/zdot/pull/1) | 已发布，各自适用门禁通过 |
+| lmm | [`7ba45df943`](https://github.com/TokenNotIncluded/lmm/pull/4) | 已发布，各自适用门禁通过 |
+| OniMods | [`9d2ffb4f74`](https://github.com/LIghtJUNction/OniMods/commit/9d2ffb4f749919f513313d603daeed5a6767195b) | 已发布，各自适用门禁通过 |
+| mechrevo-drivers | [`eb2959aac4`](https://github.com/LIghtJUNction/mechrevo-drivers/pull/10) | 已合并，原正式四项门禁通过 |
+| ztype | [`76c43579b9`](https://github.com/LIghtJUNction/ztype/pull/2) | 已合并，原迁移门禁保留；0.4.2 PR #3 与真实 ztty 输入兼容验收已完成，见下文 |
+| ztty | [`be29c6763d`](https://github.com/LIghtJUNction/ztty/commit/be29c6763d3f63832f77c21746d7d62aa70e7d62) | 原迁移门禁通过；内存 PR #22、输入 PR #23、光标 PR #24 分别合入；最新 99ef7a0f 与光标测试树一致 |
+| API | [`304f49d87d`](https://github.com/TokenNotIncluded/lmm-api-source/commit/304f49d87df1c2fb83d4145386c569d237af8c90) | 已发布，13 项定向单元测试与源码、锁文件等价核对通过 |
+
+8 个核心仓库各自的 fmt、测试、严格 Clippy 及适用的 no_std/Wasm 检查已通过，固定提交、源码树、命令和日志摘要在 JSON 的 `core_git_source_migrations` 中。不同 feature 配置的重复运行不计作新增独立测试。
+
+三个应用仓库同时修正了共享 Cargo 构建目录的使用方式。安装、打包和验收脚本通过 Cargo metadata 找到真实产物路径；`zcalld` 保留并发更新的 `f32a25bb` 业务修复，完整官方门禁、私有原生包和安装器夹具通过。其监听功能仍由 [PR #1](https://github.com/LIghtJUNction/zcalld/pull/1) 单独集成和验收。
+
+ztype 原迁移完成 28 项私有 Wayland 验收，接收端为 GTK；对应 ELF 与该轮 Rust、Clippy、CLI、私有安装和 Xvfb 检查一致，[PR #2](https://github.com/LIghtJUNction/ztype/pull/2) 的合并树也与测试树一致。这些结果保持原源码和接收端范围。新增真实 ztty 窗口的兼容验收已经完成，按其实际源码与产物单独记录。
+
+ztty 采用原维护者已发布的 be29c676：规范 Git 源、实际 Cargo compiler-artifact 路径、独立插件夹具和锁文件一起完成迁移。[已发布验收记录](https://github.com/LIghtJUNction/ztty/blob/be29c6763d3f63832f77c21746d7d62aa70e7d62/docs/reports/default-branch-sources-20261121/results.json)包含 530 项 Rust 通过、9 项原有忽略、22 项插件 CLI 检查，以及软件和 GPU 两种模式各 12 次 reload 尝试。GPU 使用私有 Xvfb 下的 Mesa llvmpipe；这轮是源码集成，未更新桌面安装或发行版。验收脚本的 Cargo 配置目录解析补丁也已随 [PR #21](https://github.com/LIghtJUNction/ztty/pull/21) 合入 c7c2a3e8。仅共享配置、绝对环境路径、异地启动的相对环境路径三种真实 metadata 场景均通过，8 组 GUI／Wayland 命令参数全部指向实际产物。该补丁只改一个 Python 文件；此前完整运行门禁仍保留 be29 的源码身份。
+
+用户追加的 ztty 迭代已完成两种模式各七阶段的内存基线。固定 c7c2a3e8 源码和同一 ELF，在私有 Xvfb 中从一个窗口增至十个，再关闭九个：软件模式的 broker PSS 从 6.5 MB 变为 8.4 MB；GPU 代码路径从 138.8 MB 变为 289.5 MB。这里的 GPU 使用 Mesa llvmpipe，不能外推硬件显存或真实 GPU 延迟。[完整基线](https://drive.google.com/file/d/12PscZCsQ0KP0I2jYPLLhS8vp2jjnbzXk/view)已下载逐字节核对，既有 72 个 worktree 保持原样。
+
+后续[分配器诊断](evidence/ztty-allocator-diagnosis-20261121.json)确认，渲染 context 和 surface 均正常销毁；关闭九个窗口后，活跃分配回到约 42.4 MB，但分配器仍保留约 335.4 MB 空闲块。诊断性归还空闲页后，匿名 PSS 回到 43.85 MB，活跃分配量保持不变。因此修复放在实际窗口视图销毁、布局移除之后，由 GNU libc 尽力归还空闲页；其他 libc 保留原行为。
+
+[ztty PR #22](https://github.com/LIghtJUNction/ztty/pull/22) 已合并为 **febc9065**，合并树 ca160bd3 与实际验证的 **bfee445f** 完全一致。该提交保留并行主线 c6dc42c8 的搜索缓存更新，仅新增三个文件中的 19 行。固定产物完成实际源码 Clippy、release 编译、34 项窗口生命周期检查、6 组共 66 个采样阶段和 162 次关闭 RPC。对照使用软件模式 AB、GPU 代码路径 ABBA 顺序；后者在私有 Xvfb、Mesa llvmpipe、两个渲染线程下运行。
+
+| 最终对照指标 | 主线 c6dc42c8 | 内存修复 bfee445f |
+| --- | ---: | ---: |
+| GPU 代码路径第三轮关闭后 broker 匿名 PSS，两次运行 | 323.8–324.3 MB | 44.3–44.6 MB |
+| GPU 代码路径关闭 RPC 中位耗时，54 次 | 1.995 ms | 3.021 ms |
+| GPU 代码路径关闭 RPC 最大耗时 | 3.530 ms | 4.192 ms |
+| 软件模式关闭 RPC 中位耗时，27 次 | 0.132 ms | 0.181 ms |
+
+内存采用十进制 MB，取 broker 进程每阶段三次 `Pss_Anon` 采样的中位数。时间覆盖整个关闭请求的协议、销毁、内存回收和调度；物理 GPU、显存、帧时间与键盘输入延迟留待各自环境测量。[最终验证](evidence/ztty-memory-bfee-20261121.json)、[合并来源](evidence/ztty-memory-publication-20261121.json)、[逐项独立复核](evidence/ztty-bfee-independent-review-20261121.json)及[131 份文本证据包](https://drive.google.com/file/d/1kbVMmeWDPEmuYPJRlofrjwE06zTv0ARV/view)均已保存。GNU／musl 模块探针复用字节相同的代码与同一编译器的已通过结果。全部自有进程已回收；当前发布结果是源码合并。
+
+**ztty 的 Wayland 输入修复已随 [PR #23](https://github.com/LIghtJUNction/ztty/pull/23) 合并为 01e8b573**，其 a7a99b41 源码树与实际测试的 076bc6ac 完全一致。改动限于 `native/wayland_services.c`，保留首次启用、外部编辑、焦点与序号保护。独立核对已把实际 C 编译输入、object、archive、rlib 和最终 ELF c5debb5f 连到同一源码，并确认主程序真实编译。与固定 ztype 产物配对的原生中文输入已通过；[合并与验收来源](evidence/ztty-ime-publication-20261121.json)、[构建身份复核](evidence/ztty-pr23-build-independent-review-20261121.json)分别记录证据。此前 PR #22 的 66 阶段内存结果仍属于 bfee 候选，本次没有重跑或改标其来源。
+
+zcalld 的历史监听器候选 **d5314fe9** 曾完整吸收当时 c4b4bbab 主线的安装器修复和 0.4.3 改动，同时刷新 zcall-gui 文档提交。逐叶比较确认保留 212 个其余主线条目，五个监听器文件与已审查版本一致。该历史候选实际通过 **179 项 Rust 测试、严格 Clippy、release 构建和 8 项 TCP／Unix curl 取消测试**，共 22 条命令、零跳过；实际外锁、构建来源和固定二进制摘要均保留在[完整回执](evidence/zcalld-listener-d531-20261121.json)及[云盘副本](https://drive.google.com/file/d/1lVa3-tGuOzOwhsOSooMiUX51kD4i0p_d/view)。这些验收保留 d531 身份。下文保留 0af8 的历史本地产品门禁；当前 bd7 的新编译与取消检查单独列于本轮增量，PR #1 仍为草稿，最终 SSMCP Gate10/P1 另行记录。原 97d 的 177 项测试与找回的 job39a 启动审计保持原身份；最终联调仍要求真实跨进程阻塞生成取消，不把旧 32 项集合中无关的 shared-library、Go、打包／安装检查计成本轮通过。
+
+`zrc`、`zdot`、`LMM`、`Oni` 和 `mechrevo-drivers` 也已发布；API 的三个 Git 源与最新 LMM gitlink 已随 304f49d8 发布，合计 13 项目标单元测试通过：1 项 hex、3 项流兼容和 9 项 CLI 参数解析。锁文件、26 份源码／feature 等价和格式检查也已保留。首轮 3 GiB 内存不足与续跑时误选 5 项缺少 DATABASE_URL 的 SQLx 测试均如实记录；之后以精确解析器选择器完成剩余检查，未连接数据库。聚合工具最初通过 80 项测试，规范 Git URL 修正另通过 21 项定向真实 Git/Cargo 测试，均零跳过；它们不替代各应用和新 44 仓完整图的验收。最终图将显式登记已确认活跃的独立 fuzz／插件测试工作区，并保留比较基准的有意旧版本来源。
+
+**递归源码检查已修复**：[Project Z PR #9](https://github.com/LIghtJUNction/project-z/pull/9) 已合入 PR #7 的协调分支，提交为 9d725a15。检查器逐层核对实际 Git 仓库、所固定的提交和工作区改动，并在整个子树通过后缓存结果；同步前先完成检查，保护已有文件。四层真实 Git 夹具覆盖深层修改、旧提交和缺失检出，最终 **91 项测试通过**，其中已包含 8 项递归检查和 9 项 SourceLink 检查。[合并核对](evidence/project-z-pr9-merge-20261121.json)与[原始证据包](https://drive.google.com/file/d/1r5nus_vSPZDMid_TMDYsuzxGdrPMJe9a/view)保留源码及原始测试结果。完整 44 仓图将使用更新后的检查器，在最终组件版本就位后执行。
+
+## 历史附件清理
+
+以下提交是已核实的清理基线，后续业务或依赖更新可以继续推进分支。生成附件先备份并校验，再以精确引用和旧 SHA 租约更新受控分支及标签。必要的运行时品牌图、Gradle wrapper、嵌入式 BPF／驱动对象和实际测试夹具均按引用保留。
+
+| 仓库 | 已核实清理基线 |
+| --- | --- |
+| LIghtJUNction/ztty | [`d8845547b4`](https://github.com/LIghtJUNction/ztty/commit/d8845547b4da8fbc1fb6437c2765cf11981e598c) |
+| LIghtJUNction/zmcl | [`c6f83236bd`](https://github.com/LIghtJUNction/zmcl/commit/c6f83236bd7fcaa89aa3404d34890ac86ced1eaa) |
+| LIghtJUNction/ztype | [`bd1b0b3b28`](https://github.com/LIghtJUNction/ztype/commit/bd1b0b3b28401b4f52b1cec148e5477d84152529) |
+| LIghtJUNction/zcalld | [`9baad8ccab`](https://github.com/LIghtJUNction/zcalld/commit/9baad8ccabce51e8625883162d70a7b78823330b) |
+| LIghtJUNction/magpie-context-folding | [`cf571b9733`](https://github.com/LIghtJUNction/magpie-context-folding/commit/cf571b9733f7ac68d5233db6d37b828d8350e893) |
+| LIghtJUNction/sing-box | [`4e81e25789`](https://github.com/LIghtJUNction/sing-box/commit/4e81e2578948203fff5f017f8c00879a904ae90f) |
+| TokenNotIncluded/hireferry | [`dd3c20e400`](https://github.com/TokenNotIncluded/hireferry/commit/dd3c20e40093892cf14f50fe09cd8c6c93350525) |
+| TokenNotIncluded/msg | [`35952527e5`](https://github.com/TokenNotIncluded/msg/commit/35952527e58f5b2c5b540944bdcc7e92dfb7c5dd) |
+| LIghtJUNction/zcall-gui | [`2cc7b2bdb4`](https://github.com/LIghtJUNction/zcall-gui/commit/2cc7b2bdb479b29e5e687d2a9bc5f3c8db1dd104) |
+| LIghtJUNction/mechrevo-drivers | [`175b33cfbe`](https://github.com/LIghtJUNction/mechrevo-drivers/commit/175b33cfbe996e1a2044d98ba5fd16126c15de63) |
+| LIghtJUNction/video-work-api | [`b89ab69263`](https://github.com/LIghtJUNction/video-work-api/commit/b89ab69263a7f27791b16ddb5372c45edd6fc0f9) |
+| TokenNotIncluded/lmm-api-source | [`56b5123684`](https://github.com/TokenNotIncluded/lmm-api-source/commit/56b512368440a6bddbe45daafd4fa787cf744e8d) |
+| LIghtJUNction/ssmcp | [`ccb91955c2`](https://github.com/LIghtJUNction/ssmcp/commit/ccb91955c25969f4779588d4cebb09b72c00f829)（两轮清理及文档归档完成） |
+| LIghtJUNction/oh-my-ztty | [`dbc1aed325`](https://github.com/LIghtJUNction/oh-my-ztty/commit/dbc1aed3259c0f665affba220b6e2e1ce1d45d50)（全部 74 个旧提交独立复核） |
+
+SSMCP 两轮共移除 **152 个生成附件路径**。第二轮核对 1,150 个历史源码树的保留条目，原子更新 112 个分支和 29 个标签；116 份原始媒体内容已归档并下载校验。5 个旧公开版本的发布清单保持原始构建身份，新的部署辅助逻辑只接受经证明的固定源码映射。详见[完整清理报告](https://github.com/LIghtJUNction/ssmcp/blob/ccb91955c25969f4779588d4cebb09b72c00f829/docs/reports/generated-history-cleanup-20261121.json)及[媒体归档](https://drive.google.com/file/d/1Rr9t9SpoMdwQJuHbW3eYRbgtg-krhUkF/view)。
+
+oh-my-ztty 已发布清理后主线 [dbc1aed3](https://github.com/LIghtJUNction/oh-my-ztty/commit/dbc1aed3259c0f665affba220b6e2e1ce1d45d50)。 [历史证明](https://github.com/LIghtJUNction/oh-my-ztty/blob/dbc1aed3259c0f665affba220b6e2e1ce1d45d50/docs/reports/history-cleanup-20261121.json)和[源码验收](https://github.com/LIghtJUNction/oh-my-ztty/blob/dbc1aed3259c0f665affba220b6e2e1ce1d45d50/docs/reports/source-acceptance-20261121.json)均已发布。原维护者记录 13 个分支、10 个标签、74 份保留源码等价证明及 112 项检查，并保护 3 个工作区和 2 处未提交源码。独立复核已从原始恢复 bundle 补齐全部 74 个旧提交，逐项核对保留路径、文件模式、blob、gitlink、父顺序和提交内容，确认 10 个附注标签仅更换目标对象行。全部 23 个可写引用已读回，新历史不含这 14 个目标路径；原始 bundle 校验值保持不变。[14 份历史图片归档](https://drive.google.com/file/d/1CV-2aZmRSPvoEy59w0xv-jViiMpdz8Be/view)也已完整下载核对内容与 SHA-256。随后原维护者通过普通源码更新将主线推进到 [d671295f](https://github.com/LIghtJUNction/oh-my-ztty/commit/d671295f63e5d72e8e8b683fd0c75dc0b1395072)，消费 SSMCP cbe／ztty be29，并记录 112 项检查、实际 bundle 与隔离安装验收。仅补充 ztty c7c 工具提交的 [草稿 PR #7](https://github.com/LIghtJUNction/oh-my-ztty/pull/7) 又完成了精确 a8c 候选的 112 项检查及六组件源码验证，[回执已归档](https://drive.google.com/file/d/17T3wOD6ZNRDX-H6STHcGcHtCcW8wbMrC/view)；该小补丁未重新构建 bundle，最终 SSMCP 来源传播由同一维护链接力。
+
+完成范围是已核对的受控 Git 引用。GitHub 管理的 PR 引用、缓存和服务端物理垃圾回收不属于本次可写及可验证范围；旧 tag 自带的旧打包脚本也不会自动获得新辅助逻辑。
+
+## 开发机与磁盘
+
+Cargo 默认共用 `/var/tmp/project-z-cargo-target`，多步构建通过同一外层锁保护。首批 129 个闲置目标目录处理完成后，`/home` 的可用空间实测从 **33.50 GB 增至 289.69 GB**。续跑回执为 128 个已删除、1 个在先前尝试中已删除。
+
+另外 3 个 LMM 缓存也已删除；这段操作前后可用空间实测 **289.19 GB → 291.38 GB**，净变化约 **2.19 GB**。目录 `du` 合计约 8.55 GB，受共享块和并发活动影响，不能把该合计当作实测释放空间。
+
+WGT 的 4 个精确 Cargo 缓存目录已全部删除并逐项验证。执行前重新取得共享锁及各目录 Cargo 锁，复核 inode、进程、挂载和容器；执行后源码提交、状态、权重和 8 个保留缓存目录身份一致。操作窗口可用空间实测 **288.87 GB → 344.75 GB**，净增 **55.88 GB（52.04 GiB）**；目录 du 合计 89.62 GB 仅表示目录统计值。[完整删除回执](https://drive.google.com/file/d/1nc-aFcN4c58WQP_4S0nVCnQmZNJV892d/view)已下载核对 SHA-256，首轮只等锁的记录也保留。SSMCP 当前源码、发布证明、活动构建以及整个共享 Cargo 目录仍在保护范围内。
+
+**00:27:50 UTC 的开发机只读快照**记录 `/home` 可用 391.14 GB、可用内存 6.73 GB、1 分钟 load 2.13，当时未观察到 Cargo／rustc 进程。[原始观察](evidence/developer-machine-observation-20261121-0027.json)只描述该时间点；空间变化不全归因于本轮清理，也不代替下一批任务的实际外锁检查。
+
+## 产品与发布
+
+**MagicBox** 的极简界面和文档已随 [PR #4](https://github.com/LIghtJUNction/MagicBox/pull/4) 合并。两个构建各 96 项 JVM 检查、APK 完整性、5 项 Android 模拟器流程和真实两跳代理验收通过；明暗界面已实际查看。rooted 实机 TUN/eBPF 验证仍未执行。
+
+**SSMCP 新版本**由现有发布维护者继续处理。[PR #152](https://github.com/LIghtJUNction/ssmcp/pull/152) 已合并至 cbe3d0ef；发布前的固定基线构建、六个粘贴场景、后续粘贴补丁和最新 zcalld 监听组合的最终 Gate10/P1 分别保留各自证据。旧候选的 277 个包源码审计与 100 项 Python 检查保持原提交范围，该候选的最终发布验收尚未完成；另一条后续 main 发布链在下文分别记录。
+
+追加的 **Docker context 式本地／远程统一化** 已随 [PR #153](https://github.com/LIghtJUNction/ssmcp/pull/153) 合入。独立验收又发现两个问题：前台 reload 重新解析旧 context，会在配置切换或删除后改变目标或失败；UI 的严格配置结构遗漏共享 config.toml 中的 contexts 表，导致启动失败。[PR #155](https://github.com/LIghtJUNction/ssmcp/pull/155) 已修复并由原主线负责人于 21:02 UTC 合入 cf0ab581。重载固定使用启动时已解析的本地／HTTPS 目标，保留字面参数、保存会话入口、cwd 和环境；UI 复用现有 typed context 校验，继续拒绝未知字段和凭据字段。
+
+固定 bbebfaef 候选实际通过 **84 项单元测试、17 项 CLI 检查、严格 Clippy，以及 3 次真实本地前台重载**。三个场景分别从命令行、环境变量、持久默认配置选择 context，随后更改或删除配置，再验证实际重载保持原目标。终端重连曾在 101 项 Rust 测试完成后中断构建；续跑先校验同一源码、锁文件、Git 来源和完整日志，再只补完产物构建与三次重载。原中断和更早失败记录均保留。已测试 tree 为 1356b94a，合并 tree 为 bd2bcce3，后者含并行主线改动，因此没有把此门禁标作整个新主线或最终 P1 的通过结果。[完整来源与验收回执](evidence/ssmcp-context-bbeb-20261121.json)和[原始证据包](https://drive.google.com/file/d/1I39T3KPk6004lvbh5HSOJOJNE_YrBo6m/view)已经校验归档。配置优先级、按 origin 隔离凭据及保存会话固定目标的规则保留；现行运行代码不提供 SSH 设备连接。
+
+**开发机证据恢复**：19:32–19:34 UTC，多个现有维护者检查发现部分 `GITHUB/ssmcp-*` 源码／验收目录已不存在，根因尚未确定。本轮有回执的缓存删除没有包含这些路径。主 SSMCP Git 仓库、Project Z 内的 context 隔离树和 zcalld 交接目录仍在；原发布维护者正在从已有副本恢复源码与证据。当时缺失的五个基线二进制已在固定 781b87df 上重新构建完成，运行验收继续推进；旧测试记录保持原身份。
+
+**HireFerry 移动端**的 [PR #21](https://github.com/TokenNotIncluded/hireferry/pull/21) 已合并为 **0d900c29**，合并树 b6e3e543 与实际通过验收的 5d9313df 候选完全一致。原先在界面线程同步查询 WebView URL 导致的 Focus ANR／SendError／SIGABRT 已修复，原 45 秒基线全部通过。随后在私有 Android 模拟器上实际完成 WebView → Chrome 明确授权 → 应用返回的流程，验证了授权前未勾选、确认码一致、独立应用会话、浏览器原会话保持、生命周期保持、拒绝重复兑换和返回本地设置页。新的流程没有 ANR 或崩溃，私有服务器、数据库与模拟器均已关闭。[最终验收回执](evidence/hireferry-21-final-20261121.json)及[云盘副本](https://drive.google.com/file/d/1j3JXDIKZQl9zzB_aLbWO06TLzOC85QDv/view)保留先前失败和修复边界；iOS 仍仅引用原历史验证，没有新增实机或正式签名／商店发布声明。
+
+**zuse 的既有来源与新分支保持分开。** 当前冻结组合继续使用 [a1bb8fd2](https://github.com/LIghtJUNction/zuse/commit/a1bb8fd2cbce0a9d85134999883c578358065242)。旧反向审计中的直接 Cargo 消费者为 SSMCP 和 ztype，oh-my-ztty 通过套件 gitlink、zrc 通过运行时关系间接受影响；在完整初始化 checkout 上执行的[只读 impact](evidence/zuse-existing-impact-20261121.json)实际返回 `oh-my-ztty / ssmcp / zrc / ztype / zuse`，耗时 0.69 秒、exit 0。它没有刷新来源或执行 sync/check/resolve，因此不替代最终 44 仓图。
+
+后续多鼠标、脚本作用域、串并行取消和 NumLock 改动先单独推送至 [zuse 草稿 PR #2](https://github.com/LIghtJUNction/zuse/pull/2)，当时 head 为 bb838b35、树为 285dcbe6；完成下述修复与新候选验收后，功能分支已推进至 83663988／0d1d1900。作者报告了 Rust、no_std、跨平台及原生检查结果，其原始运行门禁的独立核对仍待完成；这些结果没有并入当前 a1bb 验收组合。[本轮跟进状态](evidence/input-ui-followups-20261121.json)保留作者报告与已独立核对事实的区别。
+
+该固定草稿的[独立静态审查](evidence/zuse-pr2-static-review-20261121.md)发现一项回执容量问题：显式提高脚本步数后，合法能力查询生成的结果可能超过后续 JSON token 或 MCP 转义输出容量，使完成回执丢失或被误判为失败。独立 [PR #3](https://github.com/LIghtJUNction/zuse/pull/3) 先在生产源码未改的 44ffb599 上实际复现三个失败，再于修复提交 **35664746／0d1d1900** 通过 6 项 CLI／MCP 入口测试、10 项调度器测试，以及格式、锁定 metadata 和对应严格 Clippy。[RED 原件](evidence/zuse-pr3-red-20261121.json)、[GREEN 原件](evidence/zuse-pr3-green-20261121.json)和[回执复核](evidence/zuse-pr3-targeted-root-review-20261121.json)保留真实命令、退出码、源码与锁持有者。
+
+修复只在容量不足时省略后续事件明细，并明确记录省略数和清理结果；动作仍按原步数、等待、所有权与取消规则执行。错误、取消、动作与清理同时失败均保留失败语义。输出大小不足时只重新编码一次，不重放动作；默认 256 步和 32 MiB 上限不变。[固定实现的独立审查](evidence/zuse-pr3-independent-review-20261121.md)未发现新增阻塞；[定向修复证据包](https://drive.google.com/file/d/15KpLTU4BgQl76r71kcI7Gppskl_T7eje/view)已下载核对哈希。原 PR #2 的[历史来源核对](evidence/zuse-pr2-original-provenance-20261121.md)已恢复 12 份原始文本，确认存在 7 组 Hyprland 结果、CLI 原生输出和 1 项 AT-SPI 原始 Cargo 测试；286 Rust、20 no_std、2 项 MPX 等完整原始命令记录及源码到原 ELF 的构建清单仍缺失。共享目录中的当前二进制哈希已经不同于原记录，不能据其旁边的依赖文件补认原产物。这些缺失属于原 PR #2 的历史证据；本轮固定 356 的新验收独立记录。当前 main／a1bb 和下游冻结来源保持原样。
+
+**固定 356 的新 portable 验收已完成。** 唯一作业 6dc 运行 61.129 秒并 exit 0。默认测试 harness 记录 **289 通过、0 失败、5 忽略**；其中两项 private X11 测试在未开启环境开关时提前返回，不能计作真实 MPX 输入验证。no_std 的 **20 项通过**包含 tests/core.rs 的 17 项；此前 16 项定向修复与默认套件存在重叠，不相加。native 与 wasm32 no_std、Windows GNU、macOS x86/ARM、Linux ARM 的 all-targets 检查及严格 all-targets Clippy 均实际 exit 0；缺失的 Linux ARM target 在本次有界窗口内安装成功。
+
+[原始 portable 回执](evidence/zuse-356-portable-result-20261121.json)与[完整交接](evidence/zuse-356-portable-handoff-20261121.md)保留固定 source356/tree0d1、未变化锁文件、真实编译产物到自有副本的映射，以及 25 次候选根目标的 Clippy 调用。执行结束后 scope inactive/dead、进程组为空、外层锁无持有者或等待者。包含 39 份原始文本、driver 和编译日志，加一份清单（共 40 个成员）的[云盘证据包](https://drive.google.com/file/d/1I_8ldn-U5A1yb-22o4nEYYldTotgfdf8/view)已完整下载复核整包哈希；不包含二进制。[独立复核](evidence/zuse-356-portable-independent-review-20261121.json)已从原始日志重新求和，并核对整包与逐文件哈希；25 次 Clippy 根调用涉及 23 个不同源码路径。随后同一执行者完成了下述私有原生批次。[原 PR #2 来源与当前计划归档](https://drive.google.com/file/d/1AV7fFGqPwhVezRx1OVF9OtqvqqEHRxMU/view)也已完成下载与逐文件校验；它不补认原 PR #2 缺失的完整门禁。
+
+
+**固定 356 的私有原生批次已闭合。** 唯一作业 **7c9** 实际 exit 0、双 EOF，用时 13.107 秒，六条驱动命令全部通过：认证私有 Xvfb 中两项 MPX 真实启用测试、私有 X11 CLI 正常退出和取消回收、一个显式 AT-SPI 测试、七组私有 Wayland、五组自有 PTY 与十一组合成 USB。两项 MPX 已在 portable 289 的条目中，本次补齐真实环境执行，不累计为 291；AT-SPI 只补齐原五项 ignored 中的一项。各原生夹具组数也不累计为 Rust 测试总数。[原始执行](evidence/zuse-356-native-evidence/native/result.json)、[完整交接](evidence/zuse-356-native-handoff.md)与[独立复核](evidence/zuse-356-native-independent-review.md)保留实际命令、源码与产物链。
+
+运行使用 portable 中真实编译并保留的 CLI **7a6a6d99**、库测试 **e36daa41**，AT-SPI 实际产物也与编译记录和保留副本一致；运行前后源码、Cargo.lock 和产物哈希不变。AT-SPI 原辅助脚本的嵌套 Cargo 实际没有 `--locked`，只确认离线运行及锁文件未变。Wayland 使用自有 headless Cage 0.3.1 和私有 Hyprland 0.57.2，记录零物理 input/KMS 文件描述符及无宿主连接；本轮没有保留 GL renderer 名，不能称重新验证了 llvmpipe 或物理 GPU。串口与 USB 分别使用自有内核 PTY 和合成 ABI。
+
+结束后的[独立清理回执](evidence/zuse-356-native-evidence/native-postflight.json)确认 scope inactive/dead、ControlGroup 为空、九个记录的自有 PID 消失、外锁记录为空。先前因另一合法验收持锁而未启动的[窗口观察](evidence/zuse-356-native-window-blocked.json)仍保留。包含 **73 份文本与一份清单，共 74 个成员**的[云盘原件包](https://drive.google.com/file/d/1_4o5_1MuigO8fMdlw7hOd67TZvW6yP6l/view)已下载逐字节并逐项核对，未重复 portable 或原生门禁。
+
+随后 [PR #3](https://github.com/LIghtJUNction/zuse/pull/3) 合入 PR #2 功能分支为 **83663988**，实际父提交为 bb838b35 与被测 35664746，树精确等于 **0d1d1900**。[GitHub 合并读回](evidence/zuse-pr3-merge-publication-20261121.json)确认 PR #2 仍为草稿，main 仍为 a1bb8fd2；这一步没有刷新 SSMCP／ztype 的依赖或代替下游联调。
+
+
+**ztype 0.4.2 已随 [PR #3](https://github.com/LIghtJUNction/ztype/pull/3) 合并为 e3e8c101。** 最终 head 为 677d7ca9、树为 930b79b4；实际运行产物来自 053eb39e／2c7bcdf4，ELF 为 1a2b96c0。最终提交只补文档与三份验收辅助脚本，运行源码保持同一内容，辅助脚本哈希也与实际执行记录逐项匹配。[发布来源](evidence/ztype-pr3-publication-20261121.json)与[原始运行交接](evidence/ztype-native-runtime-handoff-20261121.json)明确区分最终提交和实际编译来源。
+
+| 本轮实际验收 | 结果 | 接收端及范围 |
+| --- | ---: | --- |
+| Rust／CLI／私有安装 | 72 项 Rust 通过，1 项原有可选忽略；CLI 8 项、安装 15 项通过 | 固定 ztype 0.4.2 ELF；严格 Clippy、实际 release 编译通过 |
+| GTK Wayland | 28 项通过 | 私有嵌套 compositor 与 GTK 接收端 |
+| 原生 ztty Wayland | 7 项通过 | 固定 076bc6ac／c5debb5f 接收端，真实 PTY 收到“你好世界” |
+| X11／XIM ztty | 13 项通过 | 固定二进制配对，含多字提交、非首候选、多窗口、焦点及重连 |
+
+原先 PTY 收到 `ihaoshijie` 的失败已经保留为历史，接收端修复后的记录确认收到完整中文。两次运行实际使用的入口与 terminal 辅助脚本字节相同；旧回执第三项覆盖的是未调用的通用脚本，新回执登记实际调用的 popup 脚本，不能把整份脚本清单说成完全相同。[独立原始回执核对](evidence/ztype-ztty-fixed-runtime-review-20261121.json)及[218 份原始文件与清单组成的证据包](https://drive.google.com/file/d/141WFsEjk1e_TK64v6H6K4odz1Vyc19Nq/view)均已完成哈希核对，云盘整包下载与源文件一致。
+
+候选窗采用浅色界面、16/12/14 像素字号和 20 像素左右留白；选中项有浅蓝底与加粗提示，四组文字对比度最低为 4.919:1。视觉省略只作用于显示副本，完整提交路径保持独立。[只读 UI 审查](evidence/ztype-ui-independent-review-20261121.json)限于浅色、scale 1 和现有截图，不扩大为全面无障碍认证。用户已安装的 0.4.1、输入法配置与系统 compositor 库均保持原样。
+
+**行内预编辑定位修复已合并。** 光标闪烁隐藏时，原 `last_cursor` 会变为 `None`，使预编辑文字回到 `(0,0)`。 [ztty PR #24](https://github.com/LIghtJUNction/ztty/pull/24) 将输入法使用的逻辑光标与闪烁绘制状态分开，实际运行补丁在三个文件增 8 行、删 2 行。运行源码 **49c8024b／27dbb8a5** 完成实际主程序 Clippy、release 编译及构建身份检查，ELF 为 **73e9a96c**。后续 9eaed366 只调整验收脚本；合并提交 **99ef7a0f** 的 **79b48dbf** 树与实际测试树完全一致。
+
+本次私有 Sway 1.12／软件 Mesa EGL 回归共 **16 项通过**：在两处非零行列分别确认初始光标亮／灭，各采样 17 帧、持续超过 1.3 秒，预编辑下划线位置、左上角标记和提示文字稳定；隐藏光标、滚动历史、焦点切换和恢复均符合预期，中文“你好世界”只提交到原有 PTY 一次。位置由真实 PTY 的 DSR 与 CSI16t 响应和画面像素共同核对；没有声称捕获合成器光标矩形协议，也没有给每一合成帧单独标记闪烁相位。四个已知自有进程均退出，scope 已结束、进程组为空、外锁可获取。包含固定 ELF、截图和全部历史尝试的[148 份原始证据包](https://drive.google.com/file/d/1byru2K-yBHIZCPlS9zQCZsmapGML2I7n/view)已完整下载，并逐文件核对大小与哈希。[原始检查](evidence/ztty-pr24-gui-checks-20261121.json)、[构建与合并来源](evidence/ztty-pr24-publication-20261121.json)及[独立复核](evidence/ztty-pr24-independent-review-20261121.json)均已保留。早期两次验收启动问题保持原记录：一次缺少私有合成器路径，一次未能读取已守护化 broker 的标准错误；它们均发生在光标位置断言之前。
+
+**SSMCP 输入与消息处理**：完整原始记录确认这是两个独立参数。`--input` 选择输入来源，默认 `terminal`，并支持 web 的 host／port、MCP 的 stdio／HTTP、默认或自定义 sock 路径及管道输入；用户最新补充，显式 `--input none` 禁用聊天框。`--agent` 指定聊天框消息的处理者，支持 Codex、Claude Code、其他 coding agent 或另一个 SSMCP，默认名称最终更正为 `next-caller`，表示交付到下一次符合条件的工具调用结果。当前源码负责人及原 CLI 线程统一实现。[只读架构核对](evidence/ssmcp-input-agent-contract-20261121.md)已明确输入、处理方、现有消息队列及保存重载的边界，并列出八组建议验收；建议尚未当作已运行结果。前一版报告把 input 解释为处理目标的错误已纠正，未据此修改源码。
+
+[SSMCP 草稿 PR #159](https://github.com/LIghtJUNction/ssmcp/pull/159) 已完成基线的源码为 **781b87df／6bf7beb1**。随后原作者发布了性能候选 **fc06728a／088fe1cd**，其唯一父提交为 781，仅改动四个终端、测试与性能辅助脚本路径，依赖和锁文件未变。[当时的 GitHub 来源读回](evidence/ssmcp-fc-source-observation-20261121.json)确认 PR head 已到 FC；原负责人已用相同构建方法和冻结 r3 夹具完成 FC 的独立构建与配对运行。下列原基线五产物仍专属 781；FC 的构建与运行原件单独保存，二者在下表配对。此前阶段补齐了 `--input none` 的 reload 保持、三种 UI 及 portable attach `--local`；独立 GitHub 差异核对确认，781 只修改一个 `Cargo.toml`，为三个已有文件增加 include 声明，运行源码、脚本、依赖和 gitlink 均未变化。
+
+[实际构建回执](evidence/ssmcp-781-baseline-build-20261121.json)记录三条构建命令全部 exit 0，library test fixture、ssmcp、ssmcp-frontend、ssmcpd 和 vt_snapshot 五个目标均实际重新编译，链接输出、公开目标路径和保留副本大小、哈希一致。协调者此前已重新读取五份保留产物并独立计算哈希。本轮运行报告另外记录四个实际使用产物的前后哈希；没有声称此套件运行了第五个 frontend。
+
+随后实际作业 **6c1** 在同一固定源码与产物上完成全部基线，执行 exit 0、耗时 27.38 秒，quiet lock 正常释放。六个粘贴样本的 **80 项夹具检查**与私有 Ctrl+V 的 **31 项夹具检查**全部通过，输入前后保持一致；这些数字不作为 Rust 单元测试数量。[原始执行回执](evidence/ssmcp-781-complete-baseline/execution-receipt.json)、[六样本报告](evidence/ssmcp-781-complete-baseline/six-cases-report.json)、[Ctrl+V 报告](evidence/ssmcp-781-complete-baseline/ctrlv-report.json)及[独立复核](evidence/ssmcp-781-complete-independent-review-20261121.md)保留完整来源和时钟定义。
+
+FC 的实际构建作业 **73a** 完成三条命令，五个目标均有真实编译及 `fresh=false` 记录；其运行作业 **770** 也已实际 exit 0、双 EOF，六样本 80 项及 Ctrl+V 31 项检查均通过。两版依赖与工具链、输入、断言顺序和冻结夹具哈希一致；源码分别固定为 781 与 FC，后者有上述四路径变化。CLI 与库测试产物变化，frontend、daemon 和 VT decoder 虽真实重编译，字节仍相同。运行套件实际使用四个产物，frontend 只在构建证据范围内。 [新增 Rust 回归范围核对](evidence/ssmcp-fc-new-tests-execution-scope.json)确认七个新测试函数本轮只随 `cargo test --lib --no-run` 编译，尚未取得执行通过结论；80＋31 项输入夹具检查仍单独计数。[候选构建](evidence/ssmcp-fc-complete-candidate/build-receipt.json)与[候选执行](evidence/ssmcp-fc-complete-candidate/execution-receipt.json)保留完整身份链。
+
+| 样本 | 781：首次 PTY 写入至可见完成 | FC：同一定义 |
+| --- | ---: | ---: |
+| 多行 2,738 B | 67.904495 ms | 14.919875 ms |
+| 多行 64 KiB | 34.839222 ms | 28.644784 ms |
+| 多行 4 MiB 接受 | 370.222459 ms | 55.933765 ms |
+| 4 MiB＋1 B 拒绝 | 337.795869 ms | 44.152384 ms |
+| 普通 16 KiB | **2439.160607 ms** | **27.853111 ms** |
+| Busy 多行 2,738 B | 43.186361 ms | 29.151625 ms |
+| 私有 Ctrl+V 2,738 B | 50.066292 ms | 46.399351 ms |
+
+[独立配对复核](evidence/ssmcp-781-fc-independent-comparison.md)从原始单调时钟时间戳重新计算七项结果，未发现实质不一致。**每类每版只有一次记录**，不能外推统计置信或整套系统稳定倍数。忙碌样本首次反馈 **5.377071 → 29.151625 ms**，超限拒绝的最后写入到完成 **9.789428 → 21.776079 ms**，均变慢；Ctrl+V 的 Preparing 到完成 **34.330081 → 34.711120 ms**。三项 PTY 写入差别仅微秒量级，不据此断言稳定退化。Ctrl+V 整步墙钟 **3.975164 → 5.381131 秒**包含准备、校验和回收，不能与输入完成延迟混用。
+
+Ctrl+V 使用私有假 `wl-paste`，不代表系统剪贴板。Busy 的 producer 在输入前后均继续运行；tick 为 20 → 14，但观察窗口不同，不能解释成吞吐退化。770 总墙钟 193.300145 秒中，169.038702 秒是在等另一合法任务释放 quiet lock；拿锁后至回执完成 24.261430 秒，锁于 **00:02:29.965308 UTC** 释放，等待不计入表中时间。两版八份原始构建／运行 JSON、两份原始 ZIP 及复核组成的 **20 份载荷加一份清单**已[配对归档](https://drive.google.com/file/d/1exRBgnPGqpC9E6j5exa1-1tAOpizbK0V/view)，云盘下载、逐文件及开发机镜像均已核对；[交付证明](evidence/ssmcp-781-fc-paired-evidence-delivery.json)给出完整哈希。
+
+
+三个早期失败均保留原身份：首轮旧 Next-caller 路由断言停止，第二轮在队列结果转为附件后停止，第三轮五个样本通过但 busy 物理标记未出现在折叠预览中。继任夹具分别修正显式 `target == "next"` 且 `native_recipient == null`、精确完整队列投影，以及相同输出负载中的标记顺序；未放宽输入、超时或完整结果断言。[第三次运行原始观察](evidence/ssmcp-781-third-baseline-observation-20261121.json)没有被覆盖。四路径性能候选的上述对照已闭合；最终主线整合后的运行验收仍按新源码身份执行。
+
+**新主线整合是独立的后续步骤。** 此前 GitHub 固定观察中的 main 为 **f208a03b／7eeb434b**，当时 PR #159 的 781 与它分叉；实际最近共同祖先是 a19ac040。相对该祖先，110 个变化路径中 1 个最终 blob 相同、21 个仅候选变化、64 个仅 main 变化、24 个双方最终 blob 不同。这是对象分类，不是文本冲突数量。[三方审查](evidence/ssmcp-three-way-review-20261121.md)指出：候选 `--agent` 表示聊天消息处理者，main 同名参数表示启动协议加载；必须由原负责人统一命令契约，同时保留 none 的完整消息与重载行为、main 已退休的结束钩子、真实计时和 peer 实现，以及新 Cargo/lock 来源。
+
+既有 v0.10.21 tag 指向 147dae30，属于另一条发布来源，未重指标签。23:48 UTC 的 [v0.10.22 工作流观察](evidence/ssmcp-v22-run-observation-20261121.json)中，总体仍 in_progress，已有两个 Linux 账号流程作业和 Windows ARM 检查失败；其余具体状态逐项记录。原开发机检查点另记录以 f208 为基线的 0.10.23 工作树正在修复这些问题，协调者已将来源差异发给现有负责人。该发布链的结果、781 基线和后续整合候选各自保留身份。 随后的 **00:23:39 UTC** [公开来源观察](evidence/ssmcp-main-f33-observation.json)确认 PR #162 已将 main 推进至 **f33ed8f1／f9bc35bf**，相对 f208 增九个提交、17 个路径，包括 0.10.23 版本／锁、Windows 状态锁和私有显示、验证脚本修正。原负责人先发布了仅源码整合候选 **24c32869／d8cb76ce**；随后固定为 **B：be6da5bf／5e8ea273**。**01:05:05 UTC** 的 [GitHub 来源读回](evidence/ssmcp-B-public-source-observation.json)确认 PR #159 仍为草稿，base 与公开 main 均为 f33，B 的 Cargo 版本为 **0.10.24**。[00:43 的原始冻结回执](evidence/ssmcp-B-source-freeze-original.json)确认源码干净、尚未开始新构建，并保留原 781／FC 导出与产物。源码冻结不等于执行验收：本快照没有 B 的新构建、运行或最终 P1 通过结果。
+
+**此前的版本协调记录保留。** 另一条发布工作链在 **00:51:06 UTC** 同样记录 0.10.24，源码为 35de95d2／87311804；其负责人发现图像卡片回归后取消 release 构建并继续修复。[当时的公开范围摘录](evidence/ssmcp-release24-version-coordination-snapshot.json)不把该工作链的结果归给 B。后续 V 和 C 的实际变化分别记录如下，旧标签与生产服务没有因本报告被改动。
+
+[固定 B 与 f33 的独立静态核对](evidence/ssmcp-B-image-summary-propagation-review.json)确认八个相关文件 blob 相同，terminal.rs 虽整体不同，两个图像入口函数逐字节一致。当图像携带的调用来源匹配既有摘要行时，占位文字会合并进旧事件而不分配新 ID，随后附件 guard 跳过预览挂载；现有归属测试使用 call:None，没有覆盖该分支。此处只确认源码机制，未新增运行复现，也未认定原始工具图像数据丢失。后续原负责人已将 D4 的相关修复带入 C；下文分别列出源码审查和实际失败，未用静态修复推断运行通过。FC 性能配对仍属于固定 FC；它与另一个发布工作链的检查均不代替修正后源码的验收。
+
+**0.10.25 已有元数据检查点 V。** [`f4e6ff04／d6546dd4`](https://github.com/LIghtJUNction/ssmcp/commit/f4e6ff043eef6686a9013750ffcb8ab66926b9d4) 相对 B 只改六个路径，锁文件仅推进 SSMCP 自身版本，其他 276 条包记录与四条 gitlink 不变。版本 25 已加入生产 relay 延后部署列表，原策略测试的非 deferred 对照改为版本 26，断言保留。原 job **8d7** 的 **11 项策略测试实际通过、零跳过**，测试前后均为干净 V 源码；[独立复核](evidence/ssmcp-v25-metadata-independent-review.json)与[原始回执](evidence/ssmcp-v25-policy/receipt.json)绑定同一工作流和脚本。这只证明元数据与部署选择策略，不代表产品验收或正式发布。[云盘原件](https://drive.google.com/file/d/1CxxtroyjbkWwXCmEWoYxbvbnJmsSoG4V/view)已完整下载核对，见[交付记录](evidence/ssmcp-v25-evidence-delivery.json)。
+
+**公开 D4 修复已合入固定 C。** [D4 静态审查](evidence/ssmcp-D4-input-lease-fix-static-review.json)确认 Unix 输入租约对象销毁时显式解锁，保留原取消与 guard 顺序，并带有一项新回归定义；该审查没有补认 D4 的运行数字。C 为 **d29dae7e／bf393700**，在 **01:46:07 UTC** 的[原始冻结记录](evidence/ssmcp-C-source-freeze-original.json)中干净，版本为 0.10.25；它保留 V 的 Cargo／锁文件／延后部署规则及原 FC 改动，同时纳入 D4 图片与租约修复。[完整源码审查](evidence/ssmcp-C-merge-source-static-review.json)确认合并后共有 **1114 个叶条目**，其中 1098 个与 V 相同；这不是“保留了 1114 个 V 条目”。另有明确列名的[25 路径子集](evidence/ssmcp-C-subset25-static-supplement.json)：18 个源码路径同 B，七个 helper 中五个同 B、两个采用 D4；此子集不代表全仓没有其他变化。
+
+**C 的第一轮实际 Gate35 未通过。** 固定运行 **47ff4beb94d03df6834a6460b493a5d7** 的前四阶段 release-policy、deployment-policy、fmt、library-compile 均 exit 0；第 5 阶段 library-private 为 **exit 101**，原测试汇总是 **2049 passed、3 failed、23 ignored、4 filtered，35.62 秒**。[原件抽取](evidence/ssmcp-C-gate-failure-original-extract.json)保留阶段与源码身份；[完整失败段](evidence/ssmcp-C-gate-failure-test-blocks.json)记录两项 socket 用例报告 `/tmp` 父目录权限不安全，另一项前台聊天模式拒绝用例的错误文本断言失败。该失败保留于原 02:02:30 UTC 报告；它没有 C 全部门禁、五个受控验证产物、完整 runtime、P1 或发布通过结论。Q 与 U 后续记录分别列于下文。V 的 11 项、D4 的作者结果和旧 781／FC 验收均不能补作 C 的通过证明。
+
+**Q 只修测试夹具，HOST6 保留两项 socket 检查。** [源码审查](evidence/ssmcp-Q-fixture-static-review.json)确认 Q 相对 C 只在 `src/session/service.rs` 的测试中显式加入 `--input terminal`，原错误和无残留会话断言保留；1113 个其他叶条目、生产代码、Cargo.lock 与 gitlinks 未变。Q 为 [`647bce2e／5143f90c`](https://github.com/LIghtJUNction/ssmcp/commit/647bce2ec9cf74beab43adea831c2e0712d28ea8)，[冻结记录](evidence/ssmcp-Q-source-freeze-original.json)的版本为 0.10.25。[HOST6 producer 静态审查](evidence/ssmcp-HOST6-prepared-independent-static-review.json)确认原四项 host 用例加上两项 socket 用例全部强制执行，private／host 两组保持完整且互斥。
+
+**Q 的实际 r11 Gate35 已通过。** 固定运行 `ecfe8f69dcb362096018be9a632ff96c` 的 35 个阶段全部 exit 0，其中 26 个阶段产生 Rust 父测试结果。[完整独立复核](evidence/ssmcp-Q-r11-gate-independent-review.json)逐字节核对 202 份文本，核通 26 个 `fresh=false` 编译产物选择和五份自有副本的来源链。五份产物为一个 debug 测试可执行文件、三个 release 二进制和一个 release 示例；并非五个 release ELF。两条 Clippy 命令虽成功，日志仍保留 Cargo 的 `unused dependency qrcodegen` 警告。
+
+| 真实执行范围 | 通过数 | 计数边界 |
+|---|---:|---|
+| library-private | 2050 | 另有 23 ignored、6 filtered；[原需求的 17 项](evidence/ssmcp-Q-original-goals-library-result-map.json)已经包含在 2050 中 |
+| library-host | 6 | [原始日志](evidence/ssmcp-Q-r11-library-host-original.log)包含两项移入的 socket 用例 |
+| 19 个 ordinary integration targets | 101 | 与下一行分开 |
+| zuse_worker_entry ignored-exact | 1 | 两行合计 20 个 integration targets、102 项通过 |
+| 四个 mandatory ignored stages | 14 | 单独记录，没有声称所有 ignored 都已运行 |
+
+[原作者完成复核](evidence/ssmcp-Q-r11-owner-completed-gate-review-original.json)曾将 102 全部标为 ordinary；[计数更正原件](evidence/ssmcp-Q-r11-owner-count-clarification-original.json)明确为 101 ordinary 加 1 ignored-exact worker。两份原件保持原字节，执行和总通过数未改变；嵌套子进程结果没有再次累加。
+
+源清单共 1849 个条目：1545 个文件、304 个目录。locked metadata 的 277 包由 264 个 registry 包、12 个 Git 包及一个根 path 包组成；11 是 Git checkout 数。[根读取原件](evidence/ssmcp-Q-r11-final-gate-root-read.json)绑定 G **1,282,803 B／645dd189…**；大 G 继续保留在原目录，本报告只引用其身份与已有复核，不内嵌主 summary。
+
+[实际 unit 提交](evidence/ssmcp-Q-r11-unit-start-original.json)、[outer exit](evidence/ssmcp-Q-r11-outer-exit-original.json)、[launcher exit](evidence/ssmcp-Q-r11-launcher-exit-original.json)和 G 属于同一 invocation。96f 的异步提交退出 0 只证明提交成功；完成结论由完整退出链和 G 支持。代码核查表明 outer 只持 source-author lock，launcher 单次非阻塞获取 target lock 并在结束后关闭自己的 fd。02:34:55 UTC 的独立观察显示 unit 已 collect、原两个 PID 不存在；这不是历史 systemd 退出或全期内核锁记录，也不证明全局锁当前空闲。[复核说明](evidence/ssmcp-Q-r11-gate-independent-review.md)
+
+**U／r12 的早期进度（历史观察）。** [U 原件](evidence/ssmcp-U-source-freeze-original-20261121.json)记录 `784370b5fe1b817c788273a5f7b1ab826c743965`／tree `2c60d011da8c2b31aefd80367bf7f19e28f10b62` 于 **02:40:24 UTC** 冻结，前一来源为 Q。原只读作业 9fd 在 **02:47:27 UTC** [观察到](evidence/ssmcp-U-r12-progress-9fd-original-20261121.json)：运行 `f38d16ea5cc34c21c5a56313245625a1` 于 02:42:31 UTC 开始，已有 19 个阶段退出 0，整体仍 running、finished_at 为 null、没有最终 launcher exit。这里记录的是该时点的进度，不据此补认完整 Gate35、五个受控产物或后续 UI／runtime／P1 通过。
+
+[HOST6 consumer 静态审查](evidence/ssmcp-HOST6-r11-consumer-independent-static-review.json)仍是未绑定准备包的审查，原 `False`／`None` 守卫保持。Q 的结果不移用到 U；本轮 U 的完整门禁、runtime18 与 UI 首次失败另有各自原件，最终 consumer／UI／P1 与完整 44 仓图仍未完成。旧 C 失败与 0af8／882／92c／92e 的证据保持原身份。
+
+
+
+
+退役结束钩子的[原始影响清单](evidence/ssmcp-retired-finish-contract-impact-original.json)已保存：保持 main 对强制续跑、`request_finish`、`ui.finish`、`ui.answer` 的退休，同时保留实际 `ui.reply` 线程结果与普通消息。旧 final25 和 runtime smoke 的预期目录、参数及结束契约需要一致更新，不能恢复旧接口只为通过夹具；P1 自身没有退役 finish 依赖。此清单是只读源码／验收合同审查，未执行新门禁。原件中一处 quiet-wait 文字是生成时的历史观察，当前运行状态以上述 770 实际结束回执为准。
+
+**441 的 CI 成功与本地基线失败分别保留。** 已从 GitHub 独立读取 [run 44826521363](https://github.com/LIghtJUNction/ssmcp/actions/runs/44826521363) 的 completed/success，绑定的 head 是 441814bf；平台明细计数来自作者完整日志读回。该提交的本地 4be 作业中，Cargo library 与 release 均 exit 0，但原始回执在 `preserve-build-release-bins` 阶段因旧输出目录的路径拼接失败，只保留一个 library fixture，产品运行测试为 0。负责人修正产物证明与 recorder 后完成上述唯一 781 r4 构建。22:48 的[进程与锁观察](evidence/ssmcp-781-shared-lock-observation-20261121.json)仍是当时 library 已完成、release 正在编译的历史快照，未改写成最终结果。
+
+更早的 cae35a82 因测试调用缺少布尔参数编译失败，c248d42 修正编译后又因禁用聊天的 reload 回归被负责人取消，均为历史记录。[只读锁诊断](evidence/ssmcp-shared-lock-diagnosis-20261121.json)确认先前 91a 验证进程已退出、外锁曾交给 441；91a 与 441 源码分叉，锁文件相同也不能互换测试结果。781 五产物、完整基线及 FC 性能配对均已完成；zcalld 固定 0af8 的本地门禁也已通过。C 首轮失败与 Q／r11 成功保留原记录；U／r12 Gate35 与 runtime18 已完成，UI 首轮在第四组就绪阶段失败，剩余 UI、alias 与 Gate10/P1 继续等待实际结果。本轮候选没有获得正式发布通过结论。
+
+
+**下游最新来源已重新检查。** 23:43:44 UTC 的[只读快照](evidence/zcalld-ohmy-upstream-observation-20261121.json)确认 zcalld main 已到 **0a0a62cd／69f60a24**，包含安装器验证快照、Windows TCP/ACL/进程处理、0.4.4 版本和内部锁定来源更新。它与 PR #1 的 d531 各有 11 个独有提交，PR 当时 mergeable=false。原 179 项 Rust 和 8 项取消测试仍只属于 d531；[固定三树静态核对](evidence/zcalld-d531-main0a-cross-review-20261121.json)确认唯一交集是 GUI gitlink，原五个监听器 Rust 路径在 main 中保持旧基线内容；新 ca35 又是旧 d357 的后继并适配私有目录权限。因此本轮由原监听器集成者继续作为唯一源码负责人，保留新 main 的完整树和 ca35，再带入五个监听器文件；该来源并入候选 **4cc2fd1c／262cb876**，双父为 d531 与 0a，并已通过 GitHub 插件发布和[逐叶独立核对](evidence/zcalld-262-tree-independent-review.json)。随后 main 的 **37c82ee7** 只新增一份 0.4.4 发布文档；后继对象 **8fe9b42e／65c4d7a3** 已准备并[静态复核](evidence/zcalld-8fe-tree-launcher-independent-review.json)：保留原 219 个叶条目、增加同一文档，相对新 main 仍仅五个监听器 Rust 路径不同。验证启动器只替换六类来源／路径身份，门禁断言和资源约束未变。**8fe 已实际发布**。首次作业 **806** 在 11 个源码／locked metadata／Git 读取命令全部 exit 0 后，因 compat 默认分支从 c521 推进至 56a 而触发来源新鲜度断言，整体 exit 1、双 EOF；尚未进入 fmt、Rust 测试、Clippy、release 构建或八项 curl 测试，产物为 null。[原始回执](evidence/zcalld-8fe-source-guard-original.json)与[差异及清理证明](evidence/zcalld-listener-8fe-source-guard-stop.json)均已保留，scope 和外锁已释放。独立 GitHub 比较确认这一个上游提交只修改 README 中三个 helper 的名称；Core 随后只更新这一 gitlink，已发布 **E1 e1e23cf6／34795b38**，唯一父提交为 8fe。[GitHub 来源读回](evidence/zcalld-e1-source-observation.json)确认差异恰为 compat 指针；[源码复核](evidence/zcalld-e1-pin-independent-review.json)和[启动器参数复核](evidence/zcalld-e1-parameters-independent-review.json)均无阻塞。E1 的预检随后发现 GUI 默认分支已到 d491，因此没有启动产品门禁；[原始未启动记录](evidence/zcalld-0af8-evidence/historical/e1/gui-freshness-hold.json)完整保留。原执行者只推进 apps/zcall-gui，发布 **0af8f656／ca3cdf4a**，其余 219 个叶条目保持不变，合计 220 个叶条目。GUI d491 属于源 AUR 打包准备、验证脚本和工作流改动，**不是纯文档更新**；其 Rust、UI、Cargo、锁文件与 gitlink 未变。[GUI 范围静态审查](evidence/zcalld-0af8-evidence/pr-cleanup-zcall-gui-d491-independent-review.json)与[单 gitlink 核对](evidence/zcalld-0af8-evidence/pr-cleanup-zcalld-0af-gui-pin-independent-review.json)没有把 GUI AUR 执行或发布认定为已通过。0af 的首次预检因已有合法任务占锁而停止，没有启动、排队或抢占产品门禁；[原件](evidence/zcalld-0af8-evidence/prelaunch.json)同样保留。
+
+**0af8 的历史本地门禁已通过。** 唯一作业 **882** 实际 exit 0、双 EOF，用时 **71.635 秒**；22 条命令全部 exit 0。结果为 **182 项 Rust 测试、0 ignored**，其中七项监听器测试是子集；严格 workspace Clippy 记录了两次实际根目标调用，release CLI 真实编译 **35.186 秒**且 compiler-artifact 为 fresh=false，八项真实 TCP／Unix 取消与半关闭测试全部通过、零跳过。[原始回执](evidence/zcalld-0af8-evidence/candidate-validation.json)、[完整交接](evidence/zcalld-listener-0af8-handoff.json)和[独立原件复核](evidence/zcalld-0af8-runtime-independent-review.json)绑定同一个 head／tree、Cargo.lock、220 个源码叶条目及实际编译来源；历史 d531 的 179＋8 未被迁移到新源码。
+
+实际 release executable 在外锁内复制为自有只读 CLI，大小 **2,964,896 B**，SHA-256 为 **dbe2db6d7130a7751616162fe503468c5f77df0ee7b9c517cd690c2d0e95c63b**，并用于上述八项 curl 检查。证明链连接实际编译调用、Cargo executable 与自有副本；未声称独立重新散列内部 out-dir ELF。[原始启动](evidence/zcalld-0af8-evidence/execution-gate-start.json)、[运行中 scope](evidence/zcalld-0af8-evidence/execution-gate-initial-scope.json)及[完成状态](evidence/zcalld-0af8-evidence/execution-gate-status.json)保留实际命令与 InvocationID **1018aea0b906485888a3871b87cd652a**。自有 scope 已 inactive/dead、cgroup 为空，launcher 与 flock 均退出；但 **00:52:44 UTC** 的[清理回执](evidence/zcalld-0af8-evidence/postflight.json)同时记录另一个 PID **3756319** 已持有共享锁。其后该 PID 消失也不证明当前全局锁空闲。
+
+全部原始文本已归入[云盘证据 ZIP](https://drive.google.com/file/d/1IORVjkB4CW7XcozZeSxYXHuuE8_qAb7c/view)：**69 份载荷＋1 份清单**，163,136 B，SHA-256 **0607343a03c0316c05d5813a4dbdbf2d873ba83a5329c459681d3d8cd5cc0172**。交付者已将 ZIP、JSON 和 Markdown 三份文件完整下载并核对原字节；[交付证明](evidence/zcalld-listener-0af8-delivery.json)列出三个位置及完整哈希。本报告仓库只收必要文本回执，不加入 ZIP 或 ELF。该轮 PR #1 的[正文与状态读回](evidence/zcalld-listener-0af8-pr-readback.json)为 draft／0af8／base37c。后继 bd7 的源码与 CLI 已在本轮重新构建、验证并单独记录；最终 SSMCP Gate10/P1 仍由既有负责人完成，root 再决定合并。
+
+**新增的是证据校验，不是重跑产品门禁。** 0af8 adapter 先经过[完整静态审查](evidence/native-0af8-binding-independent-static-review.json)和[三个负例的独立窄审](evidence/native-0af8-schema-contracts-static-review.json)。随后原 owner 在一个地点执行 **92c：三项 schema 合同通过**，以及 **92e：一次只读原件验证通过**；[实际独立复核](evidence/native-0af8-binding-actual-result-review.json)核对完整请求、启动、终态和流内容。[回执](evidence/native-0af8-readonly-actual-result-evidence/receipt.json)绑定 213 个源码 blob、251 个内容文件和 252 个证据文件，三项控制文件前后相同。它读取文件和原日志来确认身份，没有再运行原 182 项 Rust 或八项 curl，也没有新增当前全局锁空闲、连续整树不变或内部 out-dir ELF 哈希证明。
+
+这次只读结果的 **P1 仍为 false，FINAL_BINDING 仍为 null**；未调用 SSMCP 验证器，也不授予 PR #1 合并结论。[完整结果包](https://drive.google.com/file/d/15iPC2lwbFIrBmsdVJJXuIb7h2tpxzGY-/view)为 **66,351 B**，18 份文本载荷加一份清单，SHA-256 **2f9f806e44fd8c1530bd75aa69446ba2e70a0b6ddcb2c39b664a600d9266b1c8**；完整下载与逐载荷核对已由独立审查确认。详细 proof 保留在该包中，主汇总只引用[清单](evidence/native-0af8-readonly-actual-result-evidence/manifest.json)和必要文本。
+
+
+此前 oh-my-ztty 来源快照中的 main 为 f04f6ea8、草稿 PR #7 为 a8c97dda；后续传播必须保留 main 的 SSMCP4237 gitlink 与新增验证文档，再纳入最终组件。其旧 112 项检查仍只适用于原 a8 候选。
+
+## 仍需闭合的初始 PR
+
+| 项目 | 当前剩余 |
+| --- | --- |
+| [KernelSU #1](https://github.com/LIghtJUNction/KernelSU/pull/1) | 大范围上游迁移、设备适配与真实设备验证。 |
+| [video-work-api #11](https://github.com/LIghtJUNction/video-work-api/pull/11) | torch/torchaudio 与固定 FunClip/CosyVoice 约束及模型、CUDA 验证。 |
+| [zcalld #1](https://github.com/LIghtJUNction/zcalld/pull/1) | 当前 bd7 已完成实际 release、help 与八项 TCP／Unix 取消检查；PR 仍为草稿，最终 SSMCP Gate10/P1 待闭合。0af8 的 182 项 Rust／Clippy 和旧 806／E1／占锁预检保留原身份。 |
+| [codewhale-lmm-provider #3](https://github.com/TokenNotIncluded/codewhale-lmm-provider/pull/3) | 按用户组隔离的后端接口、客户端注册及真实宿主验收材料。 |
+| [lmm-api-source #10](https://github.com/TokenNotIncluded/lmm-api-source/pull/10) | 原定向回归已修复，最终组合验证及真实生产升级材料仍待闭合。 |
+| [lmm-api-source #11](https://github.com/TokenNotIncluded/lmm-api-source/pull/11) | 预留未结算与锁超时之间的实际因果关系。 |
+
+维护报告与归档位置：[GitHub PR #7](https://github.com/LIghtJUNction/project-z/pull/7)、[Google 云盘目录](https://drive.google.com/drive/folders/1vjkFko8onQm9WiScrw7QBopK9vNGTLx0)。完整 JSON 保留每个结果对应的源码、命令、日志和验证边界。

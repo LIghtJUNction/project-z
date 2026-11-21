@@ -1,0 +1,269 @@
+{
+  "schema": "project-z.zcalld-listener-4cc2-source-handoff.v1",
+  "status": "source_integrated_draft_new_tree_validation_pending",
+  "observed_at": "2026-11-20T23:57:54.705997+00:00",
+  "repository": "LIghtJUNction/zcalld",
+  "pr": {
+    "number": 1,
+    "url": "https://github.com/LIghtJUNction/zcalld/pull/1",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "mergeable": true,
+    "mergeable_state": "clean",
+    "head": "4cc2fd1cfb6eb49dacc022af6c15cc0f7825e409",
+    "actual_base": "0a0a62cdca25bbdf289a17f03dfeed1acc945595"
+  },
+  "candidate": {
+    "commit": "4cc2fd1cfb6eb49dacc022af6c15cc0f7825e409",
+    "tree": "262cb876bcf4f83ef2c66912863629f0401db89d",
+    "parents": [
+      "d5314fe930b0932bbce076ff578474d3ef084695",
+      "0a0a62cdca25bbdf289a17f03dfeed1acc945595"
+    ],
+    "source_path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-0a0-20261121/source",
+    "clean": true,
+    "binary": null
+  },
+  "main": {
+    "commit": "0a0a62cdca25bbdf289a17f03dfeed1acc945595",
+    "tree": "69f60a24c0924b58d33cce4354fc3dc6a82210ed",
+    "moved": false,
+    "workspace_version": "0.4.4"
+  },
+  "source_proof": {
+    "base_leaves": 216,
+    "candidate_leaves": 219,
+    "preserved_main_leaves": 214,
+    "all_nonlistener_main_leaves_preserved": true,
+    "all_five_listener_blobs_preserved": true,
+    "changed_paths": [
+      "src/curl.rs",
+      "src/listener.rs",
+      "src/listener/local.rs",
+      "src/listener/local/generation.rs",
+      "src/main.rs"
+    ],
+    "listener_preimages": [
+      {
+        "path": "src/curl.rs",
+        "before": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ec2e014c49ee194ff2ddc8c6538371ff72a55d34"
+        },
+        "main": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ec2e014c49ee194ff2ddc8c6538371ff72a55d34"
+        },
+        "listener": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9365406b23b9744bba9b21dae999e82d19683357"
+        }
+      },
+      {
+        "path": "src/listener.rs",
+        "before": null,
+        "main": null,
+        "listener": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "8451bacea5c3c297ee49819fefbf505fc45fdfc8"
+        }
+      },
+      {
+        "path": "src/listener/local.rs",
+        "before": null,
+        "main": null,
+        "listener": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3a88768ec95e5b0dbad07db72d65c4e7d9ba97c5"
+        }
+      },
+      {
+        "path": "src/listener/local/generation.rs",
+        "before": null,
+        "main": null,
+        "listener": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "80ee8557e5e7291794e953bf695ddc884b4b21ca"
+        }
+      },
+      {
+        "path": "src/main.rs",
+        "before": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "52368bd765db740431d5bbc0949ee5ca5b3527e0"
+        },
+        "main": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "52368bd765db740431d5bbc0949ee5ca5b3527e0"
+        },
+        "listener": {
+          "mode": "100644",
+          "type": "blob",
+          "sha": "efae67a5b9ee61bfeb36052aa286b63d9201db64"
+        }
+      }
+    ],
+    "gitlinks": {
+      "apps/zcall-gui": {
+        "mode": "160000",
+        "type": "commit",
+        "sha": "ca35a306088a85e49e9e851aab24329deed20056"
+      },
+      "apps/zcall-omarchy": {
+        "mode": "160000",
+        "type": "commit",
+        "sha": "7db52e74ceb6c9d398791406e01265eecc127f87"
+      },
+      "extensions/compat": {
+        "mode": "160000",
+        "type": "commit",
+        "sha": "c521d1fb1ce8eac173ea2bb481816d3cd1df82d3"
+      },
+      "vendor/zcall": {
+        "mode": "160000",
+        "type": "commit",
+        "sha": "317c52f101f112c6af671a629d8406305a168e4a"
+      },
+      "vendor/zconv": {
+        "mode": "160000",
+        "type": "commit",
+        "sha": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1"
+      },
+      "vendor/zplugin": {
+        "mode": "160000",
+        "type": "commit",
+        "sha": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+      },
+      "vendor/zsys": {
+        "mode": "160000",
+        "type": "commit",
+        "sha": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+      }
+    },
+    "protected_main_files": {
+      "Cargo.toml": {
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8d30c76381b9f6ad72382f06a87bb8aa7a5f2970"
+      },
+      "Cargo.lock": {
+        "mode": "100644",
+        "type": "blob",
+        "sha": "533c2a374b6a833d6637dff69a2cea7f76dedc18"
+      },
+      "apps/zcall-gui": {
+        "mode": "160000",
+        "type": "commit",
+        "sha": "ca35a306088a85e49e9e851aab24329deed20056"
+      },
+      "extensions/compat": {
+        "mode": "160000",
+        "type": "commit",
+        "sha": "c521d1fb1ce8eac173ea2bb481816d3cd1df82d3"
+      },
+      "vendor/zcall": {
+        "mode": "160000",
+        "type": "commit",
+        "sha": "317c52f101f112c6af671a629d8406305a168e4a"
+      }
+    },
+    "native_staged_tree_equals_github_tree": true,
+    "no_main_leaves_deleted": true
+  },
+  "instructions": {
+    "parent_path": "/home/lightjunction/AGENTS.md",
+    "parent_sha256": "cf0f7381bb0218465602c668b94ce6ac8318cca69249638edb5d672679b5e27f",
+    "repository_agents_paths": [],
+    "note": "The sibling GITHUB/AGENTS.md is a directory/repository rather than an ancestor instruction file."
+  },
+  "static_review": {
+    "source_preparation": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-0a0-20261121/preparation-summary.json",
+      "bytes": 7244,
+      "sha256": "f246f1b812d1e0937893b6e27308c831b379709d46635e94afa8d937bc8ce284"
+    },
+    "raw_preparation": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-0a0-20261121/preparation-result.json",
+      "bytes": 131541,
+      "sha256": "abedcb97dd34d5f0cae261ad0e28eae1ec1f911b225d15b8e12dff4b65ad02de"
+    },
+    "git_diff_cached_check_exit": 0,
+    "listener_linux_only": true,
+    "cancellation_and_no_proxy_blobs_unchanged": true,
+    "new_main_system_transport_delta": "Only Windows tcp_reset/disconnect code changes these interfaces; the Linux listener paths and preimages are unchanged. All main privacy/installer changes are retained.",
+    "independent_review": {
+      "cloud_path": "/workspace/scratch/3cc863eec631/pr-cleanup-zcalld-262-tree-independent-review.json",
+      "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/zcalld-262-tree-independent-review.json",
+      "bytes": 8298,
+      "sha256": "84f34a5c129682dc7de70410b3fdc86b59896e17d80b8446ae9b835dc0a32c79",
+      "finding": "No static source-preservation blocker; no build or runtime executed by reviewer."
+    }
+  },
+  "publication": {
+    "tool": "GitHub plugin create_tree/create_commit/update_ref/update_pull_request",
+    "branch": "feat/ssmcp-listener-p1-20261120",
+    "expected_old_head": "d5314fe930b0932bbce076ff578474d3ef084695",
+    "new_head": "4cc2fd1cfb6eb49dacc022af6c15cc0f7825e409",
+    "force": false,
+    "fast_forward": true,
+    "main_and_branch_fresh_before_cas": true,
+    "initial_pr_snapshot_lagged_ref": true,
+    "final_ref_pr_and_native_readbacks_match": true,
+    "commit_message_includes_skip_ci": true,
+    "formal_release_workflow": "Only push tags v*, manual dispatch, or reusable workflow_call; no tag or release workflow dispatched."
+  },
+  "validation": {
+    "kind": "Static source integration only",
+    "cargo_or_rust_commands_run": false,
+    "cli_build_run": false,
+    "native_runtime_run": false,
+    "final_ssmcp_p1_run": false,
+    "new_binary_provided": false,
+    "old_gate_results_relabelled": false,
+    "scope_lock_acquired": false,
+    "next_step_owner": "Root coordinates a separately authorized new-tree acceptance window and owns final PR1 merge."
+  },
+  "historical_only": [
+    {
+      "commit": "d5314fe930b0932bbce076ff578474d3ef084695",
+      "tree": "06826bbb2eb2857ea1f0e9cc834abe9b149d3625",
+      "recorded_rust_passed": 179,
+      "recorded_curl_cases": 8,
+      "binary_sha256": "8f9e63d1b9baede087fe7c7542e73852b4b078e7ebdbe03b3d8cc1e18a9185ed",
+      "handoff": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-listener-d531-handoff.json",
+      "drive": "https://drive.google.com/file/d/1lVa3-tGuOzOwhsOSooMiUX51kD4i0p_d/view"
+    },
+    {
+      "commit": "97d97e39c31dc08ce85fae871c95389165c6ddf7",
+      "tree": "44a491171f0fb28d163ce21c1b22ba8a5ba4121c",
+      "recorded_rust_passed": 177,
+      "recorded_curl_cases": 8
+    }
+  ],
+  "native_clean_readback": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-0a0-20261121/candidate-clean-readback.json",
+    "bytes": 3591,
+    "sha256": "d917c1782d4bbf54a1db18d1a0e400dc7f3a44d814036745a396162e549c15a3"
+  },
+  "source_preparation_job": {
+    "id": "26c4545eae1eab8d27485f4a48077d3c-752",
+    "exit": 0,
+    "script_sha256": "0cf59b6ceb0c4df66e8ed85f143d14b87c5d46d288b960aeaa9bd35178911046",
+    "scope": "Git clone/fetch/checkout/stage/leaf comparisons only; no Cargo or runtime."
+  },
+  "sources": [
+    "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/262cb876bcf4f83ef2c66912863629f0401db89d?recursive=1",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/git/commits/4cc2fd1cfb6eb49dacc022af6c15cc0f7825e409",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/compare/c4b4bbabe0c718430ffe2f46936408e9bdef4885...0a0a62cdca25bbdf289a17f03dfeed1acc945595",
+    "https://github.com/LIghtJUNction/zcalld/pull/1"
+  ]
+}

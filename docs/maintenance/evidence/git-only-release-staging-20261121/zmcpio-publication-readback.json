@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "observed_at_utc": "2026-11-21T08:46:15.687Z",
+  "repository": "LIghtJUNction/zmcpio",
+  "branch": "fix/git-only-release-staging-20261121",
+  "pull_request": "https://github.com/LIghtJUNction/zmcpio/pull/4",
+  "pr_number": 4,
+  "commit": "20c08e93055c0d977824b9f5e102f490a9267c1d",
+  "tree": "d0646243c6feabd765e150186967530dd38f2482",
+  "parent": "04bb6cd05c5295ab41a892a76cbef10b8ac07402",
+  "main_unchanged": "04bb6cd05c5295ab41a892a76cbef10b8ac07402",
+  "open": true,
+  "draft": true,
+  "merged": false,
+  "authored_PR_body_exact_prefix": true,
+  "PR_appendix_present": true,
+  "base_leaf_count": 80,
+  "candidate_leaf_count": 80,
+  "unchanged_leaf_count": 73,
+  "whole_untruncated_tree_verified": true,
+  "files": [
+    {
+      "path": "scripts/audit.py",
+      "bytes": 7239,
+      "sha256": "9cb6211a28bff2644cbe9ae047ea4d312c7e6ba8a0033170a655b5b568567dab",
+      "git_blob": "c100b0a8cd80aea5258658a80a3edde361330dec"
+    },
+    {
+      "path": "scripts/release.py",
+      "bytes": 21709,
+      "sha256": "9b3321822132eb8f81042d1b42bc1d6d29e5b7c75f3d7597725987d1aaa28983",
+      "git_blob": "7d0d8b6fc431e398ac8d9a5b1c858d69c634c465"
+    },
+    {
+      "path": "scripts/test_release.py",
+      "bytes": 25057,
+      "sha256": "1aca625ca7b42e7f0fd0db4b76c83018d22e9f71c6b266fc790132017562ac67",
+      "git_blob": "5c170f8ea5adb9117a8fe7a3510bbd95b2d017b0"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 2637,
+      "sha256": "14cd4137c0c3dbbedaddb5975bba1023cfeac237f63b563cbb903aee5d3991ef",
+      "git_blob": "1c08c043ac0c8587f1c9be97af95b21c69f69778"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "bytes": 8029,
+      "sha256": "1d82ba0860898a8c9f10f8603f758bd829dde168491457c0d658485750b330cb",
+      "git_blob": "12d0e5b3c0e24342b797c6f7551df0d2a3b1b261"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6575,
+      "sha256": "fb58cae079bd39b3fdf02da706489b0ab6ed512352d51df13fdbfb4430795534",
+      "git_blob": "b6c355bea0821e1ab68bcc946215e178d7dea01c"
+    },
+    {
+      "path": "docs/RELEASE.md",
+      "bytes": 4668,
+      "sha256": "70e6be9a95223ab440589e77e0741e042458fe80c561d0629885921a5489c288",
+      "git_blob": "b6c07156c1bcefa7d42d789d8ff5c1d944752400"
+    }
+  ],
+  "raw_files_exact_readback": true,
+  "actual_test_jobs": [
+    {
+      "label": "red",
+      "job_id": "b879919be66280447132d5d616be9361-4f5",
+      "exit_code": 1,
+      "both_eof": true,
+      "tests_run": 2,
+      "failures": 0,
+      "errors": 1,
+      "skips": 0,
+      "source_head": "04bb6cd05c5295ab41a892a76cbef10b8ac07402",
+      "cargo_executed": false,
+      "network_executed": false,
+      "target_lock_acquired": false,
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zmcpio-git-only-release-20261121/r2/red-crlf-fresh-clone/unittest.log",
+        "bytes": 2290,
+        "sha256": "0a90aa77795463bca14c3156e3fb913097e9ba3fc01683e37e25c642d9345da8"
+      }
+    },
+    {
+      "label": "green",
+      "job_id": "b879919be66280447132d5d616be9361-4f7",
+      "exit_code": 0,
+      "both_eof": true,
+      "tests_run": 21,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "source_head": "04bb6cd05c5295ab41a892a76cbef10b8ac07402",
+      "cargo_executed": false,
+      "network_executed": false,
+      "target_lock_acquired": false,
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-zmcpio-git-only-release-20261121/r2/green/unittest.log",
+        "bytes": 2784,
+        "sha256": "32d5ef62b063383185615e3de6cb61af5468d8bf1b4cfac98aebd5b218053aa3"
+      }
+    }
+  ],
+  "independent_review": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/zmcpio-r2-org-independent-review-20261121/review.json",
+    "bytes": 9613,
+    "sha256": "4a725f0d9a99fda64757c64ca3f39b7a1aaa9dc0d33190d76457423cd355e043",
+    "material_blockers": 0,
+    "root_full_read": true
+  },
+  "not_executed": [
+    "Cargo",
+    "registry network",
+    "native CI",
+    "Windows runner",
+    "merge",
+    "tag",
+    "release",
+    "target lock"
+  ]
+}

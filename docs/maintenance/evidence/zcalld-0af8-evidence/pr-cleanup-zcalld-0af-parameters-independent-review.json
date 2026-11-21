@@ -1,0 +1,46 @@
+{
+  "schema": "project-z.zcalld-0af-parameter-independent-review.v1",
+  "observed_at_utc": "2026-11-21T00:43:15.209603+00:00",
+  "scope": "Only local helper bytes/JSON review; no helper invocation, build, gate, native or source/ref changes.",
+  "head": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+  "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+  "driver_bytes": 14868,
+  "driver_sha256": "4b40fbfd0eded716ec62630497fa5653cce8bbdc1285aafb71d1a940df52c470",
+  "approved_substitutions": {
+    "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-compat56a-20261121": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121",
+    "e1e23cf62402780bf934c4e187d98b78aa26b825": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "34795b388520d9a0587f0543ba5763d37b1aeb84": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+    "workspace-rustc-e1e2.py": "workspace-rustc-0af8.py",
+    "zcalld_listener_e1e23cf": "zcalld_listener_0af8f656",
+    "ca35a306088a85e49e9e851aab24329deed20056": "d491b627223807da7b2929f3feea7461393d124c",
+    "assert paths == ['extensions/compat',": "assert paths == ['apps/zcall-gui', 'extensions/compat',"
+  },
+  "exact_byte_equality_after_7_substitutions": true,
+  "wrapper_identical": true,
+  "wrapper_sha256": "a9be4be225cfab383d84273889332e0d600882127304d6f3f98d68ba0187fb37",
+  "request_only_unit_path_title_changed": true,
+  "request": {
+    "command": [
+      "systemd-run",
+      "--user",
+      "--scope",
+      "--quiet",
+      "--unit=zcalld-listener-0af8-20261121",
+      "--property=MemoryMax=2G",
+      "--property=MemorySwapMax=4G",
+      "--property=CPUQuota=100%",
+      "--property=RuntimeMaxSec=840",
+      "/usr/bin/flock",
+      "--nonblock",
+      "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "python3",
+      "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validate_0af8_candidate.py"
+    ],
+    "cwd": "/home/lightjunction/Documents/GITHUB",
+    "timeout_ms": 900000,
+    "title": "Validate fixed zcalld 0af8 listener candidate"
+  },
+  "prelaunch_observation": "Readiness records Path(sys.executable).resolve() of the running interpreter; this observation is not a fresh native mode/hash/execution receipt.",
+  "blocking_findings": [],
+  "runtime_validation_claimed": false
+}

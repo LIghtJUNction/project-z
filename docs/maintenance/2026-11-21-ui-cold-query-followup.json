@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "scope": "Bounded follow-up to the 2026-11-21 03:42:51 UTC report. Original report and immutable failed-run evidence remain unchanged.",
+  "project_z": {
+    "prior_report_commit": "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+    "branch_head_before_followup": "efe912eb54a8240fab39126d1f2f6a464cc67f8b",
+    "main_merged_into_branch": "be64e5ab88a8d72fe81956f6ba64a363e2299fde",
+    "main_merge_tree": "dd9345a7bf252832ce46878e0a50c7a27df5e8c9",
+    "pull_request": "https://github.com/LIghtJUNction/project-z/pull/7",
+    "pull_request_state": "open_draft",
+    "main_release_files_preserved": true
+  },
+  "ssmcp": {
+    "source_commit": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "source_tree": "2c60d011da8c2b31aefd80367bf7f19e28f10b62",
+    "gate35": "passed with independent receipt review; details in prior c08 report",
+    "runtime18": "passed; root bounded original-receipt review, not a new semantic driver audit",
+    "second_UI": {
+      "native_job_id": "26c4545eae1eab8d27485f4a48077d3c-b37",
+      "started_utc": "2026-11-21T03:53:48Z",
+      "finished_utc": "2026-11-21T03:56:39Z",
+      "job_exit_code": 1,
+      "both_streams_eof": true,
+      "planned_independent_suites": 24,
+      "executed_independent_suites": 10,
+      "passed_independent_suites": 9,
+      "alias_coverage": 1,
+      "not_run_independent_suites": 14,
+      "passed_suites": [
+        {
+          "name": "message_references",
+          "checks": 53
+        },
+        {
+          "name": "force_send",
+          "checks": 137
+        },
+        {
+          "name": "listener_transports",
+          "checks": 74
+        },
+        {
+          "name": "zuse_worker",
+          "checks": 31
+        },
+        {
+          "name": "interactions",
+          "checks": 172
+        },
+        {
+          "name": "private_desktop",
+          "checks": 35
+        },
+        {
+          "name": "account_compat",
+          "checks": 69
+        },
+        {
+          "name": "input_history",
+          "checks": 150
+        },
+        {
+          "name": "reload_state",
+          "checks": 37
+        }
+      ],
+      "passed_suite_check_total": 758,
+      "failed_suite": {
+        "name": "session_groups",
+        "wrapper_checks": 0,
+        "producer_setup_checks_passed": 21,
+        "producer_frames": 0,
+        "producer_elapsed_seconds": 9.768,
+        "group_selection_delivery_and_receipt_assertions_reached": false,
+        "wrapper_zero_provenance": "The wrapper's stdout contains checks=0. The acceptance.json failed-suite object itself has no checks key. The original run.log producer summary records checks=21."
+      },
+      "acceptance_original": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-mesa-v1/acceptance.json",
+        "bytes": 921146,
+        "sha256": "8821744cc88365371f588aed69862029195a3295d6cd9d88981991dc9c2d9fd3"
+      },
+      "failed_log_original": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-mesa-v1/suites/session_groups/run.log",
+        "bytes": 10563,
+        "sha256": "18f2fed2e00bff5823288f6a2d089ef37b85a048f7c48400c3f4a68fe2c41fe4"
+      },
+      "lifecycle_review": {
+        "scope": "Personal independently read only the two named original files; root earlier read the actual b37 exec streams and selected receipt/log.",
+        "executed_children_recorded_reaped": 10,
+        "executed_children": 10,
+        "complete_input_records_equal_before_after_for_all_executed_suites": true,
+        "input_set_hash_before_and_after": "19e4cefb584e1ec5fc0d01274f517e4794c21c18dad74879656dad9ffc320907",
+        "current_ELF_rehash_or_product_rerun_performed": false,
+        "failed_suite_inner_cleanup_summary_present": false,
+        "current_process_table_or_all_descendant_cleanup_independently_checked": false
+      },
+      "passed_suite_check_total_is_arithmetic_sum_not_unique_test_count": true,
+      "alias_name": "human_finish",
+      "alias_covered_by": "interactions",
+      "alias_is_extra_independent_test_or_pass": false
+    },
+    "disposition": {
+      "observed_code_behavior": "Picker requests an asynchronous directory refresh and immediately matches the current snapshot. A later List reply updates recipients but does not replay a failed picker query.",
+      "runtime_cache_snapshot_recorded": false,
+      "runtime_root_cause_claim": "Static source supports a refresh-order explanation; the exact failed-run cache/reply sequence was not recorded.",
+      "fixture_prewarm_proposal": "not adopted, not applied, not executed",
+      "adopted_direction": "Original source owner repairs first cold-query product behavior; unchanged original session_groups remains the regression case.",
+      "new_product_patch_applied_or_validated_by_this_report": false,
+      "owner_messages": [
+        887,
+        889
+      ],
+      "single_source_writer_retained": true,
+      "single_UI_P1_executor_retained": true
+    }
+  },
+  "pending": {
+    "UI_full_pass": false,
+    "P1": "not run",
+    "zcalld_PR1": "bd7 narrow build/help/curl gate passed; P1 still required before merge",
+    "SSMCP_PR159": "open draft on U at last read",
+    "zuse_PR4": "merged fe47 into feature branch",
+    "zuse_PR2": "open draft; zuse main/current SSMCP zuse dependency remains a1",
+    "final44": "not run; begin from latest actual maintenance branch after prerequisite integration"
+  },
+  "existing_85_PR_tally": {
+    "merged": 56,
+    "closed": 14,
+    "archived": 9,
+    "blocked": 5,
+    "integration": 1
+  },
+  "raw_Drive_files": {
+    "current_byte_mirror_report": "0d73",
+    "not_updated_to_c08_or_this_followup": true
+  },
+  "developer_machine_health": {
+    "observed_utc": "2026-11-21T04:13:02.559036+00:00",
+    "memory_bytes": {
+      "MemTotal": 16476704768,
+      "MemAvailable": 6795669504,
+      "SwapTotal": 40529100800,
+      "SwapFree": 24979849216
+    },
+    "loadavg": [
+      9.0693359375,
+      5.70166015625,
+      3.8291015625
+    ],
+    "filesystems": {
+      "/home/lightjunction/Documents/GITHUB": {
+        "available_bytes": 390246944768,
+        "total_bytes": 1000203091968
+      },
+      "/var/tmp/project-z-cargo-target": {
+        "available_bytes": 737689149440,
+        "total_bytes": 1023133351936
+      }
+    }
+  },
+  "snapshot_utc": "2026-11-21T04:15:48Z",
+  "evidence": [
+    {
+      "repository_path": "docs/maintenance/evidence/ssmcp-U-session-groups-python-fixture-diagnosis.json",
+      "original_native_path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/U-session-groups-python-diagnosis/ssmcp-U-session-groups-python-fixture-diagnosis.json",
+      "bytes": 14080,
+      "sha256": "670affec729908ac1169a8566ab3a5b86a1527c52dadfaf8588ba796f3abb67f",
+      "git_blob_sha": "35be6135a78da65b1faeaa3df3cef55edafdd64c"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/ssmcp-U-session-groups-python-fixture-diagnosis.md",
+      "original_native_path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/U-session-groups-python-diagnosis/ssmcp-U-session-groups-python-fixture-diagnosis.md",
+      "bytes": 5619,
+      "sha256": "e70df347505afd3e8c8a31eed7e7613fb2030f4889c5d9080c34bffe1379a837",
+      "git_blob_sha": "4707784f5ef57e3f9a584fde32a5d33ac1bb732a"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/ssmcp-U-ui24-second-attempt/ui-second-failure-independent-read.json",
+      "original_native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-U-r12-ui-second-failure-read-20261121/ui-second-failure-independent-read.json",
+      "bytes": 18838,
+      "sha256": "5185cf3aa092bdaaec85ad0cc80ee096d30957f0e5a8ea7cc6a67ec938330f99",
+      "git_blob_sha": "a29d0255a3ca116020514b8744ed24d7ec5dbcd8"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/ssmcp-U-ui24-second-attempt/ui-second-failure-independent-read.md",
+      "original_native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-U-r12-ui-second-failure-read-20261121/ui-second-failure-independent-read.md",
+      "bytes": 3239,
+      "sha256": "9ab388639c3ec117ed975e328b53dce622dbebfcd01f0283e825e040491d1df7",
+      "git_blob_sha": "b93b944b281e1f1c075a6b5157cb3998cfbab446"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/ssmcp-U-ui24-second-attempt/delivery.json",
+      "original_native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-U-r12-ui-second-failure-read-20261121/delivery.json",
+      "bytes": 1883,
+      "sha256": "b1500f7c54c167f3271ac45d712c25fd637c784110f1c2b59b038c4b70432077",
+      "git_blob_sha": "7539b1853b49c14ec60915467e8bd96d27d7023a"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/ssmcp-U-ui24-second-attempt/run.log",
+      "original_native_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-mesa-v1/suites/session_groups/run.log",
+      "bytes": 10563,
+      "sha256": "18f2fed2e00bff5823288f6a2d089ef37b85a048f7c48400c3f4a68fe2c41fe4",
+      "git_blob_sha": "aca83e828a09fb8b5d4b3c13a2d1817d5fb2debd"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/project-z-google-doc-20261121/delivery-v5.json",
+      "original_native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/delivery-v5.json",
+      "bytes": 6200,
+      "sha256": "2db7230ecdc55ea19b623b041df8f605cd95f6e8e5424d78a8dbdcf1dd9c8e4f"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/project-z-google-doc-20261121/readback-verification-v5.json",
+      "original_native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/readback-verification-v5.json",
+      "bytes": 21494,
+      "sha256": "a53e2c02f2cf6b0037f2b0484c02c84e6048918cac6a26d760556f6d8eff4450"
+    }
+  ],
+  "GoogleDoc": {
+    "id": "1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+    "url": "https://docs.google.com/document/d/1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+    "folder_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+    "version": 5,
+    "status_cutoff_utc": "2026-11-21T04:13:20.268Z",
+    "root_fresh_full_text_and_parent_readback": true,
+    "core_complete_resource_content_table_style_link_readback": true,
+    "visual_browser_render_performed": false,
+    "raw_Drive_MD_JSON_version": "0d73",
+    "root_all_48_text_paragraphs_including_21_table_cells_exactly_match_saved_projection": true
+  },
+  "evidence_review_times": {
+    "GoogleDoc_status_cutoff": "2026-11-21T04:13:20.268Z",
+    "Python_diagnosis": "2026-11-21T04:12:17Z",
+    "second_UI_original_receipt_review": "2026-11-21T04:17:31.049474+00:00",
+    "later_evidence_readback_does_not_change_status_snapshot": true
+  }
+}

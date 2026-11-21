@@ -1,0 +1,46 @@
+{
+  "schema": "project-z.zcalld-e1-parameter-independent-review.v1",
+  "observed_at_utc": "2026-11-21T00:36:32.211250+00:00",
+  "scope": "Read-only bytes/JSON comparison; no gate/build/native or source/ref write.",
+  "head": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+  "tree": "34795b388520d9a0587f0543ba5763d37b1aeb84",
+  "approved_substitutions": {
+    "pr-core-zcalld-listen-37c-20261121": "pr-core-zcalld-listen-compat56a-20261121",
+    "8fe9b42e8b25fc78328ac50e4bd2fc9b9faf438f": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+    "65c4d7a3ac4af29427510edbf1e407a5ef6f307d": "34795b388520d9a0587f0543ba5763d37b1aeb84",
+    "workspace-rustc-8fe9.py": "workspace-rustc-e1e2.py",
+    "zcalld_listener_8fe9b42": "zcalld_listener_e1e23cf",
+    "c521d1fb1ce8eac173ea2bb481816d3cd1df82d3": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+    "assert paths == ['src/curl.rs'": "assert paths == ['extensions/compat', 'src/curl.rs'"
+  },
+  "driver_identical_after_only_approved_substitutions": true,
+  "driver_bytes": 14850,
+  "driver_sha256": "fe23a634b285222be20717eded06e128879c74ba1cd9d35dfea8b60d60e141ba",
+  "wrapper_identical": true,
+  "wrapper_sha256": "a9be4be225cfab383d84273889332e0d600882127304d6f3f98d68ba0187fb37",
+  "request_diff_only_unit_path_title": true,
+  "request": {
+    "command": [
+      "systemd-run",
+      "--user",
+      "--scope",
+      "--quiet",
+      "--unit=zcalld-listener-e1e2-20261121",
+      "--property=MemoryMax=2G",
+      "--property=MemorySwapMax=4G",
+      "--property=CPUQuota=100%",
+      "--property=RuntimeMaxSec=840",
+      "/usr/bin/flock",
+      "--nonblock",
+      "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "python3",
+      "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-compat56a-20261121/validate_e1e2_candidate.py"
+    ],
+    "cwd": "/home/lightjunction/Documents/GITHUB",
+    "timeout_ms": 900000,
+    "title": "Validate fixed zcalld e1e2 listener candidate"
+  },
+  "blocking_findings": [],
+  "runtime_gate_claimed": false,
+  "remaining_readiness": "Executor must read new native helper mode/hash and actual clean source identity; actual scope/PID/lock postflight is required after run."
+}

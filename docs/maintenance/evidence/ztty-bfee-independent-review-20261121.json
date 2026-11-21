@@ -1,0 +1,383 @@
+{
+  "schema": "project-z.ztty-bfee-independent-evidence-review.v1",
+  "status": "passed",
+  "reviewed_at": "2026-11-20T21:52:26.418725+00:00",
+  "method": "Read-only archive and receipt audit; no compiler, GUI, device or service rerun. Recomputed every stage median from the three raw broker samples and every close-RPC statistic from raw elapsed_ns values.",
+  "inputs": [
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-ztty-memory-final-validation.json",
+      "bytes": 73251,
+      "sha256": "587ec15fdf4a1001cad71a58c517a5f54798e6af96d0edc5e9fabbfc5d792152"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-ztty-memory-publication.json",
+      "bytes": 4406,
+      "sha256": "fae413afb291fcf2f29b7f59efa2b79d485dc7f1d2657451af68fc9d6ccd6d5e"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-ztty-view-reclamation-evidence.zip",
+      "bytes": 502187,
+      "sha256": "583d389c61cb32a693e4539382b5e07506ae4775abd31bca3e396d73bbd2685b"
+    }
+  ],
+  "archive_integrity": {
+    "hashed_manifest_files": 131,
+    "missing_or_unlisted_files": 0,
+    "compact_exactly_matches_archived_copy": true
+  },
+  "source": {
+    "candidate_head": "bfee445fb6d4bae932674c2d65c840513962ada7",
+    "candidate_tree": "ca160bd3e90ea35627df54c00bb9638d1292fa1d",
+    "baseline_head": "c6dc42c882d77d96dba96adb5b09ce177b579dfe",
+    "baseline_tree": "35a6535bb4e2a1e2ce6c2d2634a7c86c6ecb4ecd",
+    "merge": "febc90654e5fc680b0660f0874296e17eb389acf",
+    "merge_tree_equals_tested_tree": true,
+    "merge_verification_scope": "Receipt equality checked here; independent live GitHub readback already performed by root.",
+    "changed_paths": [
+      "src/os.rs",
+      "src/session/requests.rs",
+      "src/session/workspaces.rs"
+    ],
+    "insertions": 19,
+    "deletions": 0
+  },
+  "build_identity": {
+    "candidate_elf_sha256": "01269c72f7a56f273ad33c8c19b303c00310567ed79abb5b256b68e84e90bef6",
+    "baseline_elf_sha256": "748da679b89394d8f7a70ffb5872023ea7c4c02e3dc9563a22bff7bd1f133fa7",
+    "candidate_elf_bytes": 1406272,
+    "actual_root_clippy_fresh": false,
+    "actual_root_release_fresh": false,
+    "root_clippy_command_in_raw_stderr": true,
+    "root_release_argv_cwd_verified": true,
+    "release_main_invocations": 1,
+    "release_source_cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ztty-memory-iteration-20261120/source",
+    "actual_release_output": "/var/tmp/project-z-cargo-target/release/build/ztty/3b2aefcb9e4e1761/out/ztty",
+    "release_flags": [
+      "opt-level=3",
+      "lto=fat",
+      "codegen-units=1"
+    ],
+    "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+    "gnu_malloc_trim_symbol_present": true,
+    "needed_libraries_unchanged": true,
+    "before_after_source_identity_unchanged": true,
+    "c6_owner_source_hashes_matched": 9,
+    "gnu_musl_boundary": "Reused matching os.rs module and compiler receipt; GNU references malloc_trim, musl does not; no complete musl application claim."
+  },
+  "checks": {
+    "lifecycle": [
+      {
+        "renderer": "software",
+        "checks": 17,
+        "exit_code": 0,
+        "raw_report_sha256": "1fcac9a81447376cf68348ec09425cdeaf5f7c3554d6a17e79541965661becb8"
+      },
+      {
+        "renderer": "gpu",
+        "checks": 17,
+        "exit_code": 0,
+        "raw_report_sha256": "8dc8596144bb50c8b31f1028630848693a823ea0ca61b5cb70b51dd6bf684542"
+      }
+    ],
+    "lifecycle_total": 34,
+    "profiles": 6,
+    "stages_recomputed": 66,
+    "raw_stage_samples": 198,
+    "close_rpcs_recomputed": 162,
+    "all_raw_stage_values_match_compact": true,
+    "all_raw_rpc_statistics_match_compact": true,
+    "gpu_order": "A B B A; A=baseline, B=candidate",
+    "profiles_sequential_nonoverlapping": true,
+    "candidate_post_close_limit": "Each of three close-stage medians <= own initial broker anonymous median + 16 MiB; 9 of 9 passed",
+    "stage_vector_sha256": "ed9c547adfd520d14e1e53091d32996f9d4e09b94c8df168a96c665c6c6e2a3d"
+  },
+  "memory_metric": "Per-stage median of samples[].broker.Pss_Anon_bytes. Broker process anonymous proportional-set memory; not whole-application RSS, PTY memory, Xvfb memory or physical GPU VRAM.",
+  "close_stage_order": [
+    "nine_closed_one_blank_remains",
+    "reclosed_one_cycle_1",
+    "reclosed_one_cycle_2"
+  ],
+  "profiles": [
+    {
+      "name": "memory-0-software-baseline",
+      "renderer": "software",
+      "treatment": "baseline",
+      "initial_broker_anonymous_bytes": 3090432,
+      "three_close_raw_samples_bytes": [
+        [
+          4913152,
+          4913152,
+          4913152
+        ],
+        [
+          4913152,
+          4913152,
+          4913152
+        ],
+        [
+          4913152,
+          4913152,
+          4913152
+        ]
+      ],
+      "three_close_median_bytes": [
+        4913152,
+        4913152,
+        4913152
+      ],
+      "third_close_minus_initial_bytes": 1822720,
+      "started_unix": 1795210722.8102207,
+      "elapsed_seconds": 16.695192337036133
+    },
+    {
+      "name": "memory-1-software-candidate",
+      "renderer": "software",
+      "treatment": "candidate",
+      "initial_broker_anonymous_bytes": 3094528,
+      "three_close_raw_samples_bytes": [
+        [
+          3368960,
+          3368960,
+          3368960
+        ],
+        [
+          3405824,
+          3405824,
+          3405824
+        ],
+        [
+          3434496,
+          3434496,
+          3434496
+        ]
+      ],
+      "three_close_median_bytes": [
+        3368960,
+        3405824,
+        3434496
+      ],
+      "third_close_minus_initial_bytes": 339968,
+      "started_unix": 1795210739.5094113,
+      "elapsed_seconds": 16.643977880477905
+    },
+    {
+      "name": "memory-2-gpu-baseline",
+      "renderer": "gpu",
+      "treatment": "baseline",
+      "initial_broker_anonymous_bytes": 43810816,
+      "three_close_raw_samples_bytes": [
+        [
+          194134016,
+          194134016,
+          194134016
+        ],
+        [
+          276639744,
+          276639744,
+          276639744
+        ],
+        [
+          323821568,
+          323821568,
+          323821568
+        ]
+      ],
+      "three_close_median_bytes": [
+        194134016,
+        276639744,
+        323821568
+      ],
+      "third_close_minus_initial_bytes": 280010752,
+      "started_unix": 1795210756.1585567,
+      "elapsed_seconds": 17.57404613494873
+    },
+    {
+      "name": "memory-3-gpu-candidate",
+      "renderer": "gpu",
+      "treatment": "candidate",
+      "initial_broker_anonymous_bytes": 43763712,
+      "three_close_raw_samples_bytes": [
+        [
+          43993088,
+          43993088,
+          43993088
+        ],
+        [
+          44242944,
+          44242944,
+          44242944
+        ],
+        [
+          44300288,
+          44300288,
+          44300288
+        ]
+      ],
+      "three_close_median_bytes": [
+        43993088,
+        44242944,
+        44300288
+      ],
+      "third_close_minus_initial_bytes": 536576,
+      "started_unix": 1795210773.7369428,
+      "elapsed_seconds": 17.596723556518555
+    },
+    {
+      "name": "memory-4-gpu-candidate",
+      "renderer": "gpu",
+      "treatment": "candidate",
+      "initial_broker_anonymous_bytes": 44054528,
+      "three_close_raw_samples_bytes": [
+        [
+          44242944,
+          44242944,
+          44242944
+        ],
+        [
+          44529664,
+          44529664,
+          44529664
+        ],
+        [
+          44615680,
+          44615680,
+          44615680
+        ]
+      ],
+      "three_close_median_bytes": [
+        44242944,
+        44529664,
+        44615680
+      ],
+      "third_close_minus_initial_bytes": 561152,
+      "started_unix": 1795210791.337934,
+      "elapsed_seconds": 17.750732898712158
+    },
+    {
+      "name": "memory-5-gpu-baseline",
+      "renderer": "gpu",
+      "treatment": "baseline",
+      "initial_broker_anonymous_bytes": 43640832,
+      "three_close_raw_samples_bytes": [
+        [
+          194238464,
+          194238464,
+          194238464
+        ],
+        [
+          277682176,
+          277682176,
+          277682176
+        ],
+        [
+          324331520,
+          324331520,
+          324331520
+        ]
+      ],
+      "three_close_median_bytes": [
+        194238464,
+        277682176,
+        324331520
+      ],
+      "third_close_minus_initial_bytes": 280690688,
+      "started_unix": 1795210809.0926108,
+      "elapsed_seconds": 17.496914863586426
+    }
+  ],
+  "timing_groups_recomputed": {
+    "software-baseline": {
+      "samples": 27,
+      "median_ms": 0.132022,
+      "p95_nearest_rank_ms": 0.275997,
+      "max_ms": 0.498895
+    },
+    "software-candidate": {
+      "samples": 27,
+      "median_ms": 0.180873,
+      "p95_nearest_rank_ms": 0.438645,
+      "max_ms": 0.486422
+    },
+    "gpu-baseline": {
+      "samples": 54,
+      "median_ms": 1.994955,
+      "p95_nearest_rank_ms": 2.646899,
+      "max_ms": 3.530052
+    },
+    "gpu-candidate": {
+      "samples": 54,
+      "median_ms": 3.0207035,
+      "p95_nearest_rank_ms": 3.480807,
+      "max_ms": 4.191991
+    }
+  },
+  "derived": {
+    "gpu_third_close_bytes": {
+      "baseline": [
+        323821568,
+        324331520
+      ],
+      "candidate": [
+        44300288,
+        44615680
+      ]
+    },
+    "gpu_third_close_mib": {
+      "baseline": [
+        308.8203125,
+        309.306640625
+      ],
+      "candidate": [
+        42.248046875,
+        42.548828125
+      ]
+    },
+    "gpu_paired_third_close_reduction_percent": [
+      86.31953755470667,
+      86.2438038708048
+    ],
+    "gpu_close_rpc_median_increase_ms": 1.0257485000000002
+  },
+  "cleanup": {
+    "all_18_close_batches_reaped_removed_children": true,
+    "all_18_preserved_surviving_session_identity": true,
+    "all_6_remaining_owned_pid_lists_empty": true,
+    "all_6_private_xserver_cleanup_exit_codes_zero": true,
+    "gui_scope_after": "inactive/dead; empty ControlGroup",
+    "outer_lock_recorded_and_runner_releases_in_finally": true
+  },
+  "retained_failed_attempts": [
+    {
+      "attempt": "candidate-build-cad4",
+      "exit_code": 1,
+      "error": "AssertionError('GNU binary does not link the intended libc symbol')"
+    },
+    {
+      "attempt": "candidate-build-cad4-r2",
+      "exit_code": 1,
+      "error": "AssertionError('expected actual Clippy and release compilation of source/src/main.rs')"
+    },
+    {
+      "attempt": "candidate-build-cad4-r3",
+      "exit_code": 1,
+      "error": "AssertionError('Expected an actual current-root Clippy invocation')"
+    },
+    {
+      "attempt": "candidate-build-cad4-r4",
+      "exit_code": 1,
+      "error": "RuntimeError('boundary-x86_64-unknown-linux-gnu failed: error: environment variable `CARGO_PKG_VERSION` not defined at compile time"
+    }
+  ],
+  "diagnosis_separation": {
+    "initial_candidate_head": "cad4d90fabfd1a9a0abf4e419dd8683047fa6347",
+    "diagnostic_head": "c7c2a3e887a2f132f3e1e3d9e18cc0ebc16bae25",
+    "diagnostic_claimed_as_production_validation": false
+  },
+  "limitations": [
+    "Memory/timing results apply to private Xvfb, Mesa llvmpipe and LP_NUM_THREADS=2; no physical GPU, VRAM or native Wayland performance inference.",
+    "RPC timings include protocol, teardown, reclamation and scheduling; they are not isolated malloc_trim duration, frame time or input latency.",
+    "GPU timing has two profiles per treatment and software timing one; samples within a run are repeated measurements, not independent machines or deployments.",
+    "This review verifies recorded source/binary/log identity and statistics, not new runtime execution or live process inspection.",
+    "GNU/musl evidence covers the matching os.rs module only; no full musl app acceptance."
+  ]
+}

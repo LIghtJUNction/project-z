@@ -1,0 +1,526 @@
+{
+  "schema": 1,
+  "base_commit": "0d73a83668ea8efb424a0d6536d2bd4f8d1e547a",
+  "base_tree": "a788332b8c3e1c2d68248f57725bfdc7f924cf3d",
+  "generated_at": "2026-11-21T02:02:30+00:00",
+  "current_snapshot_scope": "Fixed C d29/treebf3937 source and first Gate35 attempt: first four stages exit0; library-private exits101 with2049passed/3failed/23ignored/4filtered. No C full-gate/five-ELF/runtime/P1/release pass. V metadata policy11passed remains V-specific. 92c three schema contracts and92e one read-only input validation passed; they bind original0af8/882 evidence, not new182+8 product runs. Historical781/FC, zuse356, original85 and old graphs retain their identities. Final44 not executed.",
+  "ssmcp_release": {
+    "status": "C_gate35_failed_library_private_owner_repair_pending",
+    "main_verified": "f33ed8f14fc14aff05a2e4098743eb07e8527c06",
+    "candidate": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+    "new_formal_release": false,
+    "current_public_tree": "f9bc35bf497c80d9d93d668f5d6e339c3d19c802",
+    "scope_note": "V metadata and11deployment-policy tests are separate from C. C merges D4 repairs and retains V metadata and existing FC changes, but its first library-private stage failed. Fixed781/FC timing, seven originally compile-only FC unit functions and D4 owner-reported results are not promoted to C acceptance. Final P1 and44-source graph remain pending.",
+    "previous_final_gate_plan_text": "pending on final fixed SSMCP cohort plus zcalld97d; original build commits and evidence stay separate",
+    "current_final_gate_plan": {
+      "status": "C_gate35_failure_must_be_resolved_before_final_P1",
+      "plan": "Preserve the exact failed C attempt, obtain reviewed successor source and real remaining gates from the original owner, then close final P1 using the fixed0af8 CLI. The new read-only adapter proof alone grants no P1 execution or merge.",
+      "original_32_scope": "The historical32 set included five shared-library checks, two Go checks and package/install work outside this P1 path. Those unrelated checks are not rerun or reported as new32 passes.",
+      "merge_owner": "Project Z root, after native final acceptance and fresh main/candidate tree verification",
+      "draft": true,
+      "historical_d531_evidence": "evidence/zcalld-listener-d531-20261121.json",
+      "source_writers": "SSMCP existing native owner; zcalld successor delegated by root to original builtin Core; root remains PR1 merge owner.",
+      "current_listener_evidence": {
+        "path": "evidence/zcalld-listener-0af8-handoff.json",
+        "bytes": 17117,
+        "sha256": "5dd323b66fbbb44c0b0944c46f0bba93a8be3e3fe05ce70ddd0fe8025ecf0c07"
+      }
+    },
+    "path_loss_observation": {
+      "observed_window_utc": "2026-11-20T19:32:00Z/2026-11-20T19:34:00Z",
+      "observation": "Multiple existing native owners confirmed that several top-level GITHUB/ssmcp-* source/evidence directories no longer existed. Root also received ENOENT for the previously recorded current-status.json. Primary ssmcp Git source, the isolated Project Z context worktree and zcalld97d handoff survived.",
+      "cause": "Not established. Project Z root/Core/Org/Personal report no deletion or move of these paths; their exact receipted cache deletions were the129+3LMM+4WGT batches.",
+      "recovery_owner": "Existing sole native SSMCP source/release owner",
+      "recovery_status": "Recovering source patch and retained evidence from existing copies. Missing five baseline binaries require real rebuilds. No previous runtime receipt will be relabelled as a new build.",
+      "new_recovery_archive_root": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/archives/"
+    },
+    "controls_publication": {
+      "pr": 156,
+      "merge": "90c497007f6d6f16c3dd2da6a4599c48787e5ee1",
+      "tree": "b66c011c488b79972760848abee8427b4bbfe706",
+      "owner_reported_scope": "178 unit /14 CLI/10 isolated PTY passed;10 helper fixtures ignored; no root rerun"
+    },
+    "main_observation_scope": "Fixed public f33 snapshot at00:23:39UTC; PR162 is a separate release-source line. FC input gates do not validate the main union or the other release owner results.",
+    "candidate_tree": "bf393700928fd9aa37f2dea8b8683ebe13b114cd",
+    "prior_source_audit_and_python_counts": {
+      "path": "evidence/input-ui-prior-status-c2c-20261121.json",
+      "bytes": 8683,
+      "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
+    },
+    "current_progress": {
+      "phase": "C first attempt failed; original source owner is handling the three recorded failures. No successor acceptance is claimed by this snapshot.",
+      "source_owner": "Existing native SSMCP source author and acceptance owner",
+      "parallel_product_writer_created": false,
+      "build_or_runtime_on_union_claimed": false
+    },
+    "current_native_observation": {
+      "path": "evidence/ssmcp-C-gate-failure-original-extract.json",
+      "bytes": 22941,
+      "sha256": "96eb6d9020a272435a7d9a285299ad54a35ae0332a47da81e466b3ac6f178559"
+    },
+    "prior_status_794": {
+      "path": "evidence/runtime-followup-prior-status-794-20261121.json",
+      "bytes": 13850,
+      "sha256": "a22bd6eaf613255bb81e5b6ce03201949819e1091b7cc4ef81b9be9cc0f4b901"
+    },
+    "build_receipt": {
+      "path": "evidence/ssmcp-781-baseline-build-20261121.json",
+      "bytes": 79446,
+      "sha256": "d2204375614807af510f6c7fd08ec657d212a98f18f504cb21376c63f47ea7c0"
+    },
+    "build_independent_review": {
+      "path": "evidence/ssmcp-781-baseline-independent-review-20261121.json",
+      "bytes": 11032,
+      "sha256": "b3af65610a8b9f78077ef89c2e857a0ab8df7a6a04f59e2957f5f582cd63955a"
+    },
+    "preserved_artifact_readback": {
+      "path": "evidence/ssmcp-781-preserved-artifacts-20261121.json",
+      "bytes": 4442,
+      "sha256": "1a3a1ff057228a7b7b8bc92dbd911622bc815aaecd957254fd48df063f9713ad"
+    },
+    "first_runtime_attempt": {
+      "job": "26c4545eae1eab8d27485f4a48077d3c-5e0",
+      "exit_code": 1,
+      "receipt_bytes": 23288,
+      "receipt_sha256": "23cf70065f3b4aa72beaeb45fefe0a6006da6fa5d5d1b4667249081db1348cb4",
+      "inputs_unchanged": true,
+      "samples": 0,
+      "frames": 0,
+      "ctrlv_executed": false,
+      "owner_diagnosis": "Explicit member:next sets target==next and leaves native_recipient null; old route-ready fixture assertion must follow that exact contract.",
+      "narrow_correction_owner": "Existing native source/release and original review_chat_followups owner; no second writer or artifact rebuild."
+    },
+    "second_runtime_attempt": {
+      "source": "authenticated native collab source owner feaba",
+      "seq": 332,
+      "sent_at_ms": 1795216580787,
+      "source_revision": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-60e",
+      "exit_code": 1,
+      "both_eof": true,
+      "inputs_unchanged": true,
+      "completed_samples": [
+        "2738",
+        "64k",
+        "4MiB",
+        "4MiB+1 rejection"
+      ],
+      "ordinary16k": "Reached physical ready; ui.queue response spilled at33730 bytes, then postcheck failed",
+      "busy_executed": false,
+      "ctrlv_executed": false,
+      "full_baseline_passed": false,
+      "successor": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/handoffs/paste-readiness-r2",
+        "scope": "Exact /steering/queue projection retains full array equality and rejects partial data; fixed original case bytes/timeouts; reuse same five artifacts; no product source change",
+        "reported_driver_sha256_prefix": "4d104705",
+        "reported_ctrlv_sha256_prefix": "25f200a6",
+        "reported_consumer_sha256_prefix": "eb062bf2"
+      },
+      "verification_scope": "Owner progress handoff; raw second execution receipt and successor full hashes requested, not yet independently read by Project Z root."
+    },
+    "prior_status_a9ed": {
+      "path": "evidence/baseline-followup-prior-status-a9ed-20261121.json",
+      "bytes": 15887,
+      "sha256": "378bcd8b0d8e0dfa7537a0293a0a105ad93e96bec39163854494918c8b93b427"
+    },
+    "third_runtime_attempt": {
+      "path": "evidence/ssmcp-781-third-baseline-observation-20261121.json",
+      "bytes": 6862,
+      "sha256": "83240f63ac52d8d1490457e35fabce311a49ffa6fc9f2caece39c77fe1ebf692"
+    },
+    "complete_baseline": {
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-6c1",
+      "exit_code": 0,
+      "source": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "tree": "6bf7beb143cfdce3878df856c27785164695430f",
+      "six_samples": 6,
+      "six_fixture_checks": 80,
+      "ctrlv_fixture_checks": 31,
+      "ordinary_16k_ready_ms": 2439.160607,
+      "ctrlv_ready_ms": 50.066292,
+      "clipboard_provider": "private owned fake wl-paste, not real OS clipboard",
+      "busy_tick_boundary": "20 recorded producer ticks; post-ready observation748.808433ms, not20ticks/43ms throughput",
+      "execution": {
+        "path": "evidence/ssmcp-781-complete-baseline/execution-receipt.json",
+        "bytes": 29263,
+        "sha256": "aefc6b8a20c8bec808057acae758c60fb44630c5912cb1851cced2a7dc2eef63"
+      },
+      "six_cases": {
+        "path": "evidence/ssmcp-781-complete-baseline/six-cases-report.json",
+        "bytes": 19660,
+        "sha256": "7b7c9081616aca563d74efe883cd716e6be8da594e2671e283c904a7b096c64c"
+      },
+      "ctrlv": {
+        "path": "evidence/ssmcp-781-complete-baseline/ctrlv-report.json",
+        "bytes": 13333,
+        "sha256": "df1d570ed1bbcf8e47d6a4e99c94d06357319ebc0ca22a9c5e9d3d82b05498d4"
+      },
+      "archive_manifest": {
+        "path": "evidence/ssmcp-781-complete-archive-manifest-20261121.json",
+        "bytes": 1246,
+        "sha256": "b71d834e494bcaf8eb0e44412b8d984a7778f09fa9e8f8bad378c890186c1c0f"
+      },
+      "independent_review": {
+        "path": "evidence/ssmcp-781-complete-independent-review-20261121.json",
+        "bytes": 14968,
+        "sha256": "633740c4eb75668806c36e6c32244b94c037afd4a7ef591ee514b6aa293ff07c"
+      },
+      "performance_improvement_claimed": false
+    },
+    "main_reconciliation": {
+      "actual_merge_base": "a19ac040b1c7e9daa6a2144db79cfaa1bee09954",
+      "summary": {
+        "path": "evidence/ssmcp-three-way-summary-20261121.json",
+        "bytes": 7982,
+        "sha256": "1ee8bf32684177c4b9768983b7b1b212f19cd537d0390d266e8dcc1de8ea7b09"
+      },
+      "review": {
+        "path": "evidence/ssmcp-three-way-review-20261121.md",
+        "bytes": 7678,
+        "sha256": "7d628b116952389116075b45b4121ee3363f9a201a191595ccf3e8a2fdfbb09f"
+      },
+      "boundary": "110 paths from actual merge-base:1 sameblob/21candidate-only/64main-only/24both-different; not textual conflict count. Reconcile chat-recipient --agent/default next-caller with main bootstrap semantics, none lifecycle, retired hooks, typed time/peer, Cargo0.10.22 and zcall317.",
+      "main_observation": {
+        "path": "evidence/ssmcp-main-f208-observation-20261121.json",
+        "bytes": 24465,
+        "sha256": "b6cc2be91ef5118c084c6592238ebb153aaa03ea22d23189b838e6d2a4336f1d"
+      },
+      "tag_v21_observation": {
+        "path": "evidence/ssmcp-v21-tag-observation-20261121.json",
+        "bytes": 1701,
+        "sha256": "0575deb5a36fafed901ce599544713e92e6e35ba4f78bbd821de3595f4ea5a65"
+      },
+      "other_v22_run": {
+        "path": "evidence/ssmcp-v22-run-observation-20261121.json",
+        "bytes": 6378,
+        "sha256": "47677cfdc70f8c6e8c3b070fa12a7a0c1be00bf6b89f9e726e0340f4a08753e1"
+      },
+      "other_native_worktree_observed": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release-0-10-23-integration-20261120",
+      "other_worktree_scope": "Native owner checkpoint23:35:36 reports Windows state-locking/accountE2E work; no ownership takeover, build, ref/tag edit or production change by root.",
+      "current_main_observation": {
+        "path": "evidence/ssmcp-main-f33-observation.json",
+        "bytes": 4093,
+        "sha256": "91fe794f6e74b57cbd5c59b7a32622fbc58d08a40bc22b718b83f2fc604a2627"
+      },
+      "prior_f208_analysis_scope": "The previous110-path three-way analysis remains tied to781/f208, not a recomputedFC/f33 conflict inventory.",
+      "retired_contract_impact": {
+        "path": "evidence/ssmcp-retired-finish-contract-impact-original.json",
+        "bytes": 8345,
+        "sha256": "2e2b6f0fec80fe799eeaee9a09a1b3172ace57e62c096426dd8c56a3e4e47cde"
+      },
+      "impact_provenance_note": "Immutable8345B/2e2b original includes a stale quiet-wait sentence; actual770 completed and released lock00:02:29.965308. This source/fixture audit ran no product gate.",
+      "retired_contract_boundary": "Keep main retirement of forced continuation/request_finish/ui.finish/ui.answer. Preserve actual native ui.reply thread results and ordinary messages. Oldfinal25/runtime smoke contracts need coherent successor expectations; P1 itself has no retired-finish dependency. No skipped/renamed test is counted as passed.",
+      "current_B_source_observation": {
+        "path": "evidence/ssmcp-B-public-source-observation.json",
+        "bytes": 2265,
+        "sha256": "239fcbfccd299cc6f4b23df499e603e928a8593f891bb7a0f245ac6278271478"
+      },
+      "current_B_scope": "B already binds publicf33 in the source workstream. The older110-path781/f208 static comparison remains historical, not currentB acceptance."
+    },
+    "build_receipt_scope": "Existing d220 is fixed781 baseline; FC has a separate actual build8e615 receipt. Both were rebuilt; frontend/daemon/decoder byte equality does not negate fresh=false compilation.",
+    "performance_successor_source": {
+      "path": "evidence/ssmcp-fc-source-observation-20261121.json",
+      "bytes": 2079,
+      "sha256": "cda65fcdee12c23b804275340dab009db47d363664f8b2a2f059b055e8838963",
+      "historical_source_scope": "FixedFC source/build/A-B complete atFC. PublicB is a distinct source-only successor recorded separately."
+    },
+    "prior_status_47d": {
+      "path": "evidence/paired-native-prior-status-47d-20261121.json",
+      "bytes": 28997,
+      "sha256": "3f46d961909791f3155e4e64daf2da265c7794dcf949ab73a78a2d2bb1300f74"
+    },
+    "candidate_build_receipt": {
+      "path": "evidence/ssmcp-fc-complete-candidate/build-receipt.json",
+      "bytes": 79517,
+      "sha256": "8e6154ba2bbb16bab14cfa8d4b0a693775c28656e3dc554ad1e5d5301108ddd7"
+    },
+    "complete_candidate": {
+      "source": "fc06728a36d0b4d2920e1e2bc29885721ced5780",
+      "tree": "088fe1cde36fe63a33df1f9b7cfb619ae5f8ee35",
+      "build_job": "26c4545eae1eab8d27485f4a48077d3c-73a",
+      "runtime_job": "26c4545eae1eab8d27485f4a48077d3c-770",
+      "exit_code": 0,
+      "running": false,
+      "stdout_eof": true,
+      "stderr_eof": true,
+      "execution": {
+        "path": "evidence/ssmcp-fc-complete-candidate/execution-receipt.json",
+        "bytes": 30277,
+        "sha256": "13a685aa21e523c1d42e4c62b4bd61b6fb065fb0d8a5500a819e34218cb1e1bb"
+      },
+      "six_cases": {
+        "path": "evidence/ssmcp-fc-complete-candidate/six-cases-report.json",
+        "bytes": 21212,
+        "sha256": "4ef95978b201f9a3a8d3c42cd4ded2282ff4e7c802a269242027a32691cc6b49"
+      },
+      "ctrlv": {
+        "path": "evidence/ssmcp-fc-complete-candidate/ctrlv-report.json",
+        "bytes": 13247,
+        "sha256": "af2b6f5a996ae60fe2a0bb4bf632e5c1bb39e015111a205deb3b8bf68d88be7f"
+      },
+      "six_fixture_checks": 80,
+      "ctrlv_fixture_checks": 31,
+      "quiet_wait_seconds": 169.038702,
+      "after_lock_seconds": 24.26143,
+      "quiet_lock_released_at_utc": "2026-11-21T00:02:29.965308+00:00",
+      "total_step_seconds_including_wait": 193.300145,
+      "frontend_executed_by_runtime": false,
+      "new_rust_regression_execution_scope": {
+        "path": "evidence/ssmcp-fc-new-tests-execution-scope.json",
+        "bytes": 1670,
+        "sha256": "798ad614c6571587a0e77b7b8bf2d8d0af37e04bf32a22c866aa42740240b73d"
+      },
+      "new_rust_regression_functions_compiled": 7,
+      "new_rust_regression_functions_execution_pass_claimed": false
+    },
+    "paired_input_comparison": {
+      "status": "passed_no_material_receipt_inconsistency",
+      "review": {
+        "path": "evidence/ssmcp-781-fc-independent-comparison.json",
+        "bytes": 32554,
+        "sha256": "b42090be2532fc635f29f00691bf4a13ad9f5928d2955632871c83552b9ec9c3"
+      },
+      "explanation": {
+        "path": "evidence/ssmcp-781-fc-independent-comparison.md",
+        "bytes": 7733,
+        "sha256": "0e966fc10a1f0201de60d7b43b24fdf221bc7326fa6957f6ce6e46c71eb4df31"
+      },
+      "original_hashes": {
+        "path": "evidence/ssmcp-781-fc-independent-comparison-original-hashes.json",
+        "bytes": 3928,
+        "sha256": "128648ec6f7b6d05624f498e2961ea34dbd24dabcec0f8e079c69b41ff2a28d2"
+      },
+      "archive_delivery": {
+        "path": "evidence/ssmcp-781-fc-paired-evidence-delivery.json",
+        "bytes": 4431,
+        "sha256": "da9dab01e8cdd80b0c947ef686c501f3971eef371b26672451a8735b94a5db10"
+      },
+      "drive": "https://drive.google.com/file/d/1exRBgnPGqpC9E6j5exa1-1tAOpizbK0V/view",
+      "archive_bytes": 117191,
+      "archive_sha256": "a3f1dc3c2457d4a12abe4a3da8edb88cc6c6162e6f7105d7c92d291b004b11f0",
+      "payload_files": 20,
+      "archive_members": 21,
+      "ordinary_16k_ready_ms": {
+        "baseline": 2439.160607,
+        "candidate": 27.853111
+      },
+      "slow_busy_first_visible_ms": {
+        "baseline": 5.377071,
+        "candidate": 29.151625
+      },
+      "slow_oversize_last_write_to_ready_ms": {
+        "baseline": 9.789428,
+        "candidate": 21.776079
+      },
+      "replicates_per_case_per_source": 1,
+      "statistical_confidence_claimed": false,
+      "counting": "80+31 are fixture assertions per source;271 reviewer consistency checks are not product tests."
+    },
+    "current_source_observation": {
+      "path": "evidence/ssmcp-C-source-freeze-original.json",
+      "bytes": 3162,
+      "sha256": "6c8bab3f7b542bc29235e04bcd4ddf25c12d9b3051cc7d7a0a3bb284cc3d29f9"
+    },
+    "current_candidate_runtime_pass_claimed": false,
+    "prior_status_cda": {
+      "path": "evidence/listener-followup-prior-status-cda-20261121.json",
+      "bytes": 37359,
+      "sha256": "4def00b1d0ae2e7657b51b322ef994add8aede4f99ba24013056262ee070fd13"
+    },
+    "current_native_observation_scope": "C first actual35-stage attempt stopped at stage5 library-private. First4 commands exited0, including library compilation only. Complete product build/five-ELF/runtime/finalP1 success is not established.",
+    "current_candidate_build_pass_claimed": false,
+    "version_coordination": {
+      "status": "V0.10.25 metadata checkpoint published; C retains its version, exactlock and production-relay deferral.",
+      "V": "f4e6ff043eef6686a9013750ffcb8ab66926b9d4",
+      "V_tree": "d6546dd46464ac1cbb1c3aabc0493638a44649f7",
+      "review": {
+        "path": "evidence/ssmcp-v25-metadata-independent-review.json",
+        "bytes": 13215,
+        "sha256": "191d13a95f322bab28bd7d880dd80e41db2e046a59e86b8d621ced0c68fdd359"
+      },
+      "delivery": {
+        "path": "evidence/ssmcp-v25-evidence-delivery.json",
+        "bytes": 886,
+        "sha256": "a71b0c1e2cb9ae4100b6e3036c6e6a5544b64ed5a88731f3e05cc0f992190d94"
+      },
+      "existing_policy_tests_passed": 11,
+      "not_formal_release_or_product_acceptance": true
+    },
+    "image_regression_static_review": {
+      "path": "evidence/ssmcp-D4-input-lease-fix-static-review.json",
+      "bytes": 9627,
+      "sha256": "065da9246f1b6e2fba928b7dbaac770ae2c8f177db5422df501219527dda0ffd"
+    },
+    "prior_status_b572": {
+      "path": "evidence/C-readonly-prior-status-b572-20261121.json",
+      "bytes": 23699,
+      "sha256": "f35d2ba69243b34247748c8ec9bf8ecb1616cee146af2d94cbc1434b35b52b9f"
+    },
+    "C_source_review": {
+      "review": {
+        "path": "evidence/ssmcp-C-merge-source-static-review.json",
+        "bytes": 23615,
+        "sha256": "ec4c1d11d64990cda56ed0906b338e80e16e7759502160fff0d6d491c8b6acce"
+      },
+      "named_25_path_supplement": {
+        "path": "evidence/ssmcp-C-subset25-static-supplement.json",
+        "bytes": 9785,
+        "sha256": "5053e9f48270b018115e7db197003980878068f4af573df971f0a48de8920616"
+      },
+      "merged_total_leaves": 1114,
+      "same_as_V_leaves": 1098,
+      "named_subset": {
+        "source_paths_same_B": 18,
+        "helper_paths_same_B": 5,
+        "helper_paths_different_B_exact_D4": 2
+      },
+      "subset_is_not_whole_source_universe": true,
+      "product_or_P1_pass_claimed": false
+    },
+    "C_first_gate_attempt": {
+      "run_id": "47ff4beb94d03df6834a6460b493a5d7",
+      "source": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+      "tree": "bf393700928fd9aa37f2dea8b8683ebe13b114cd",
+      "status": "failed",
+      "failed_stage": "library-private",
+      "failed_stage_index": 5,
+      "recorded_stages": [
+        {
+          "name": "release-policy",
+          "exit_code": 0
+        },
+        {
+          "name": "deployment-policy",
+          "exit_code": 0
+        },
+        {
+          "name": "fmt",
+          "exit_code": 0
+        },
+        {
+          "name": "library-compile",
+          "exit_code": 0
+        },
+        {
+          "name": "library-private",
+          "exit_code": 101
+        }
+      ],
+      "library_summary": {
+        "passed": 2049,
+        "failed": 3,
+        "ignored": 23,
+        "filtered": 4,
+        "test_summary_seconds": 35.62
+      },
+      "failure_observations": [
+        "Two local-socket tests reported unsafe ownership or permissions for parent/tmp.",
+        "The foreground-chat rejection test did not match the expected error text."
+      ],
+      "root_cause_or_fix_success_claimed": false,
+      "original_extract": {
+        "path": "evidence/ssmcp-C-gate-failure-original-extract.json",
+        "bytes": 22941,
+        "sha256": "96eb6d9020a272435a7d9a285299ad54a35ae0332a47da81e466b3ac6f178559"
+      },
+      "failure_blocks": {
+        "path": "evidence/ssmcp-C-gate-failure-test-blocks.json",
+        "bytes": 2087,
+        "sha256": "db44ca345e5290e2a13e0ca9b19b945257427f5dde75a422206e64422cc68705"
+      },
+      "full_35_stage_pass": false,
+      "five_owned_artifacts_pass": false,
+      "final_runtime_pass": false,
+      "p1_pass": false,
+      "release_pass": false
+    }
+  },
+  "coordination_current_release": {
+    "status": "C_gate35_failed_library_private_owner_repair_pending",
+    "candidate": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+    "tree": "bf393700928fd9aa37f2dea8b8683ebe13b114cd",
+    "source": {
+      "path": "evidence/ssmcp-C-source-freeze-original.json",
+      "bytes": 3162,
+      "sha256": "6c8bab3f7b542bc29235e04bcd4ddf25c12d9b3051cc7d7a0a3bb284cc3d29f9"
+    },
+    "baseline_781": {
+      "path": "evidence/ssmcp-781-complete-independent-review-20261121.json",
+      "bytes": 14968,
+      "sha256": "633740c4eb75668806c36e6c32244b94c037afd4a7ef591ee514b6aa293ff07c"
+    },
+    "main_reconciliation": {
+      "path": "evidence/ssmcp-three-way-summary-20261121.json",
+      "bytes": 7982,
+      "sha256": "1ee8bf32684177c4b9768983b7b1b212f19cd537d0390d266e8dcc1de8ea7b09"
+    },
+    "final_current_source_gates_pending": true,
+    "new_formal_release_for_current_candidate": false,
+    "paired_input": {
+      "path": "evidence/ssmcp-781-fc-independent-comparison.json",
+      "bytes": 32554,
+      "sha256": "b42090be2532fc635f29f00691bf4a13ad9f5928d2955632871c83552b9ec9c3"
+    },
+    "main_observation": {
+      "path": "evidence/ssmcp-main-f33-observation.json",
+      "bytes": 4093,
+      "sha256": "91fe794f6e74b57cbd5c59b7a32622fbc58d08a40bc22b718b83f2fc604a2627"
+    },
+    "current_source_observation": {
+      "path": "evidence/ssmcp-C-source-freeze-original.json",
+      "bytes": 3162,
+      "sha256": "6c8bab3f7b542bc29235e04bcd4ddf25c12d9b3051cc7d7a0a3bb284cc3d29f9"
+    },
+    "current_candidate_runtime_pass_claimed": false,
+    "current_candidate_build_pass_claimed": false,
+    "version_coordination": {
+      "path": "evidence/ssmcp-v25-metadata-independent-review.json",
+      "bytes": 13215,
+      "sha256": "191d13a95f322bab28bd7d880dd80e41db2e046a59e86b8d621ced0c68fdd359"
+    },
+    "image_static_review": {
+      "path": "evidence/ssmcp-D4-input-lease-fix-static-review.json",
+      "bytes": 9627,
+      "sha256": "065da9246f1b6e2fba928b7dbaac770ae2c8f177db5422df501219527dda0ffd"
+    },
+    "current_gate_failure": {
+      "path": "evidence/ssmcp-C-gate-failure-original-extract.json",
+      "bytes": 22941,
+      "sha256": "96eb6d9020a272435a7d9a285299ad54a35ae0332a47da81e466b3ac6f178559"
+    },
+    "prior_status_b572": {
+      "path": "evidence/C-readonly-prior-status-b572-20261121.json",
+      "bytes": 23699,
+      "sha256": "f35d2ba69243b34247748c8ec9bf8ecb1616cee146af2d94cbc1434b35b52b9f"
+    }
+  },
+  "coordination_pending": [
+    "Original owner repairs the exact C Gate35 failures and closes finalSSMCP/P1; root then decides zcalldPR1. Final fixed44-repository Git-source graph and downstream pins remain pending."
+  ],
+  "latest_upstream_ssmcp_consumer": "Fixed C retains zusea1 and V0.10.25 metadata after D4 image/Unix-lease source propagation. Its first Gate35 failed at library-private; no current product/P1 pass. Historical4237/B and781/FC results retain exact identities. zusePR3 remains feature-merge836 only; no new downstream selection or final44 claim.",
+  "report_preparation": {
+    "source_report_commit": "b57291ca0feae61d691387f5a4f9ab2d9d99dd1d",
+    "source_report_tree": "d88659739eec7332d253fc40efda65470de8492b",
+    "prepared_at_utc": "2026-11-21T02:02:30+00:00",
+    "prepared_at_taipei": "2026-11-21T10:02:30+08:00",
+    "fixed_snapshot": true,
+    "report_only": true,
+    "not_published_by_preparer": true,
+    "prior_status": {
+      "path": "evidence/C-readonly-prior-status-b572-20261121.json",
+      "bytes": 23699,
+      "sha256": "f35d2ba69243b34247748c8ec9bf8ecb1616cee146af2d94cbc1434b35b52b9f"
+    },
+    "serialization": "indent1; old85 and all historical graph/component objects retained exactly; new evidence referenced instead of embedded.",
+    "source_times": {
+      "V_policy_finished_utc": "2026-11-21T01:19:12.721766+00:00",
+      "C_frozen_utc": "2026-11-21T01:46:07.352796+00:00",
+      "C_gate_failure_extract_utc": "2026-11-21T01:56:57.632168+00:00",
+      "C_source_review_utc": "2026-11-21 01:54:37 UTC",
+      "C_named_subset_review_utc": "2026-11-21T01:56:17Z",
+      "readonly_finished_utc": "2026-11-21T01:50:12.423298+00:00",
+      "readonly_independent_review_utc": "2026-11-21T01:59:32.341178+00:00"
+    }
+  },
+  "meaning": "Exact prior active status saved unchanged. C failures, V policy and old 0af8 evidence retain original source identities."
+}

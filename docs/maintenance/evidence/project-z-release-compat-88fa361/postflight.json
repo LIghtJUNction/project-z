@@ -1,0 +1,20 @@
+{
+  "observed_at": 1795236740.382908,
+  "owned_pids": [
+    {
+      "pid": 3004230,
+      "exists": false
+    },
+    {
+      "pid": 3004229,
+      "exists": false
+    }
+  ],
+  "target_lock_inode": 63537699,
+  "target_kernel_rows_at_observation": [],
+  "no_lock_acquisition_performed": true,
+  "source_head": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+  "source_tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+  "status": "M  docs/release-projection.md\nM  scripts/release_projection.py\nM  tests/test_release_projection.py\nM  tests/test_release_receipts.py\n",
+  "temporary_remaining": []
+}

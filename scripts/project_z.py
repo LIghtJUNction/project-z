@@ -1,20 +1,16 @@
 #!/usr/bin/env python3
-"""Inspect and verify the pinned Project Z repositories without Python dependencies."""
+"""Synchronize GitHub default branches and verify locked Project Z sources."""
 
 from __future__ import annotations
 
 import argparse
 import configparser
 import json
-import os
 import re
-import stat
 import subprocess
 import sys
-import tempfile
 import tomllib
 from concurrent.futures import ThreadPoolExecutor
-from contextlib import contextmanager
 from pathlib import Path
 
 from cargo_versions import satisfies
@@ -30,8 +26,8 @@ class CoordinationError(RuntimeError):
     pass
 
 
-def command(argv, cwd=ROOT):
-    result = subprocess.run(argv, cwd=cwd, capture_output=True, text=True)
+def command(argv, cwd=ROOT, timeout=600):
+    result = subprocess.run(argv, cwd=cwd, capture_output=True, text=True, timeout=timeout)
     if result.returncode:
         raise CoordinationError(f"{' '.join(map(str, argv))}:\n{result.stderr.strip()}")
     return result.stdout
@@ -49,12 +45,59 @@ def policy(root=ROOT):
     return tomllib.loads(path.read_text()) if path.exists() else {}
 
 
+def github_url(url):
+    """Use one Cargo identity for a repository, with no branch/tag/revision."""
+    if not re.fullmatch(r"https://github\.com/[A-Za-z0-9-]+/[A-Za-z0-9_.-]+\.git", url):
+        raise CoordinationError(f"noncanonical GitHub URL: {url!r}; use https://github.com/<owner>/<repo>.git")
+    return url
+
+
+def github_identity(url):
+    match = re.fullmatch(r"(?:https://github\.com/|git@github\.com:|ssh://git@github\.com/)"
+                        r"([A-Za-z0-9-]+)/([A-Za-z0-9_.-]+?)(?:\.git)?/?", url, re.IGNORECASE)
+    return tuple(value.lower() for value in match.groups()) if match else None
+
+
+def git_source_identity(source):
+    if not source or not source.startswith("git+"):
+        return None
+    return github_identity(source[4:].split("#", 1)[0].split("?", 1)[0])
+
+
+def default_head(url, root=ROOT, timeout=90):
+    lines = command(["git", "ls-remote", "--symref", "--", url, "HEAD"], root, timeout).splitlines()
+    branches = [line.split()[1].removeprefix("refs/heads/") for line in lines
+                if line.startswith("ref: refs/heads/") and line.split()[-1] == "HEAD"]
+    heads = [line.split()[0] for line in lines if not line.startswith("ref:")
+             and len(line.split()) == 2 and line.split()[1] == "HEAD"]
+    if len(branches) != 1 or len(heads) != 1 or not re.fullmatch(r"[0-9a-f]{40,64}", heads[0]):
+        raise CoordinationError(f"{url}: cannot identify one default branch and HEAD")
+    command(["git", "check-ref-format", "refs/heads/" + branches[0]], root)
+    return {"branch": branches[0], "commit": heads[0]}
+
+
+def latest_heads(repos, root=ROOT):
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        values = list(pool.map(lambda repo: default_head(github_url(repo["url"]), root), repos))
+    return {repo["name"]: value for repo, value in zip(repos, values)}
+
+
+def freshness_errors(data, root=ROOT):
+    heads = latest_heads(data["repositories"], root)
+    return [f"{repo['name']}: snapshot {repo['commit']} ({repo['branch']}) differs from latest default "
+            f"{heads[repo['name']]['commit']} ({heads[repo['name']]['branch']}); run sync and propagate consumers"
+            for repo in data["repositories"]
+            if any(repo[key] != heads[repo["name"]][key] for key in ("branch", "commit"))]
+
+
 def repositories(root=ROOT):
     config = configparser.ConfigParser(interpolation=None)
     if not config.read(root / ".gitmodules"):
         raise CoordinationError("missing .gitmodules")
     result = []
     overrides = policy(root).get("repositories", {})
+    recorded = json.loads((root / CATALOG).read_text()).get("repositories", []) if (root / CATALOG).exists() else []
+    recorded_branches = {repo["name"]: repo.get("branch") for repo in recorded}
     for section in config.sections():
         path = config[section]["path"]
         if Path(path).is_absolute() or ".." in Path(path).parts:
@@ -66,11 +109,12 @@ def repositories(root=ROOT):
             raise CoordinationError(f"{name}: initialize the submodule first")
         options = overrides.get(name, {})
         manifests = options.get("manifests", ["Cargo.toml"] if (source / "Cargo.toml").exists() else [])
+        default_ref = command(["git", "for-each-ref", "--format=%(symref)", "refs/remotes/origin/HEAD"], source).strip()
         result.append({
             "name": name,
             "path": path,
             "url": config[section]["url"],
-            "branch": config[section].get("branch", "main"),
+            "branch": default_ref.removeprefix("refs/remotes/origin/") or recorded_branches.get(name),
             "commit": command(["git", "rev-parse", "HEAD"], source).strip(),
             "role": options.get("role", "library"),
             "manifests": manifests,
@@ -80,6 +124,41 @@ def repositories(root=ROOT):
     if unknown:
         raise CoordinationError(f"policy contains unknown repositories: {', '.join(sorted(unknown))}")
     return sorted(result, key=lambda repo: repo["name"])
+
+
+def sync_sources(root=ROOT):
+    """Advance only clean isolated submodule checkouts; never edit consumers."""
+    repos = repositories(root)
+    errors = checkout_errors({"repositories": repos}, root, allow_uninitialized=True)
+    if errors:
+        raise CoordinationError("\n".join(errors))
+    heads = latest_heads(repos, root)
+    for repo in repos:
+        source = root / repo["path"]
+        if repo["commit"] != heads[repo["name"]]["commit"]:
+            if command(["git", "rev-parse", "--abbrev-ref", "HEAD"], source).strip() != "HEAD":
+                raise CoordinationError(f"{repo['name']}: active branch; use a detached isolated checkout before sync")
+    for repo in repos:
+        source = root / repo["path"]
+        wanted = heads[repo["name"]]
+        branch = wanted["branch"]
+        remote_ref = "refs/remotes/origin/" + branch
+        command(["git", "fetch", "--no-tags", "--no-recurse-submodules", "--", repo["url"],
+                 f"+refs/heads/{branch}:{remote_ref}"], source)
+        if command(["git", "rev-parse", remote_ref], source).strip() != wanted["commit"]:
+            raise CoordinationError(f"{repo['name']}: default branch moved during sync; inspect and synchronize again")
+        command(["git", "symbolic-ref", "refs/remotes/origin/HEAD", remote_ref], source)
+        if repo["commit"] != wanted["commit"]:
+            command(["git", "-c", "submodule.recurse=false", "checkout", "--detach", wanted["commit"]], source)
+    # Check recorded nested pins before recursive fetch can recover old history.
+    data = {"repositories": repositories(root)}
+    errors = source_link_errors(data, policy(root), root, check_checkouts=False)
+    if errors:
+        raise CoordinationError("\n".join(errors))
+    for repo in repos:
+        source = root / repo["path"]
+        command(["git", "submodule", "sync", "--recursive"], source)
+        command(["git", "submodule", "update", "--init", "--recursive", "--jobs", "1"], source)
 
 
 def explicit_version(manifest, workspace, dependency):
@@ -227,32 +306,67 @@ def repository_impact(data, changed):
         affected = expanded
 
 
-def equivalent_source(path, package, data, root=ROOT):
-    """A nested gitlink may reuse exactly the same clean package source."""
-    actual = (root / path).resolve()
-    expected = (root / package["manifest"]).parent.resolve()
-    if actual == expected:
-        return True
-    try:
-        actual_repo = Path(command(["git", "rev-parse", "--show-toplevel"], actual).strip()).resolve()
-        expected_repo = (root / next(repo["path"] for repo in data["repositories"] if repo["name"] == package["repository"])).resolve()
-        if actual.relative_to(actual_repo) != expected.relative_to(expected_repo):
-            return False
-        if command(["git", "rev-parse", "HEAD"], actual_repo).strip() != command(["git", "rev-parse", "HEAD"], expected_repo).strip():
-            return False
-        for repo in [actual_repo, expected_repo]:
-            if command(["git", "status", "--porcelain", "--untracked-files=normal"], repo):
-                return False
-        return True
-    except (CoordinationError, ValueError, StopIteration):
-        return False
+def verify_source_checkout(checkout, wanted, root=ROOT, *, checked=None, allow_uninitialized=False):
+    """Check every recorded gitlink directly; parent status can hide descendants."""
+    source = Path(checkout)
+    checkout = source.resolve()
+    label = relative(checkout, root)
+    checked = set() if checked is None else checked
+    if (checkout, wanted) in checked:
+        return
+    if not (checkout / ".git").exists():
+        if allow_uninitialized and not source.is_symlink() and (
+                not source.exists() or (source.is_dir() and not any(source.iterdir()))):
+            return
+        raise CoordinationError(f"{label}: initialize the source repository first; preserve any local files")
+    actual_root = Path(command(["git", "rev-parse", "--show-toplevel"], checkout).strip()).resolve()
+    if actual_root != checkout:
+        raise CoordinationError(f"{label}: source path is not its own repository")
+    if command(["git", "rev-parse", "HEAD"], checkout).strip() != wanted:
+        raise CoordinationError(f"{label}: checkout differs from its recorded source")
+    entries = command(["git", "ls-tree", "-r", "-z", "HEAD"], checkout)
+    for entry in filter(None, entries.split("\0")):
+        identity, path = entry.split("\t", 1)
+        mode, kind, pinned = identity.split()
+        if mode != "160000":
+            continue
+        nested = checkout / path
+        relative(nested, checkout)
+        if nested.resolve() == checkout or kind != "commit":
+            raise CoordinationError(f"{label}/{path}: invalid nested source repository")
+        verify_source_checkout(nested, pinned, root, checked=checked, allow_uninitialized=allow_uninitialized)
+    if command(["git", "status", "--porcelain", "--untracked-files=normal", "--ignore-submodules=none"], checkout):
+        raise CoordinationError(f"{label}: source checkout is not clean")
+    checked.add((checkout, wanted))
 
 
-def source_link_errors(data, rules, root=ROOT):
-    """Verify explicitly shared source archives, including Cargo-excluded apps."""
+def source_link_errors(data, rules, root=ROOT, *, check_checkouts=True):
+    """Verify every registered cross-repository gitlink, including excluded apps."""
     errors = []
+    checked = set()
     repos = {repo["name"]: repo for repo in data["repositories"]}
-    for owner, options in rules.get("repositories", {}).items():
+    identities = {github_identity(repo["url"]): repo["name"] for repo in repos.values()
+                  if repo.get("url") and github_identity(repo["url"])}
+    link_rules = {name: dict(options) for name, options in rules.get("repositories", {}).items()}
+    for repo in repos.values():
+        module_file = root / repo.get("path", repo["name"]) / ".gitmodules"
+        if not module_file.exists():
+            continue
+        config = configparser.ConfigParser(interpolation=None)
+        config.read(module_file)
+        options = link_rules.setdefault(repo["name"], {})
+        links = options.get("source_links", {})
+        if not isinstance(links, dict):
+            continue
+        options["source_links"] = links = dict(links)
+        for section in config.sections():
+            target = identities.get(github_identity(config[section]["url"]))
+            if target:
+                path = config[section]["path"]
+                if path in links and links[path] != target:
+                    errors.append(f"{repo['name']}/{path}: source_links disagrees with .gitmodules")
+                links[path] = target
+    for owner, options in link_rules.items():
         links = options.get("source_links", {})
         if not isinstance(links, dict):
             errors.append(f"{owner}: source_links must map relative gitlink paths to repository names")
@@ -285,16 +399,10 @@ def source_link_errors(data, rules, root=ROOT):
                 expected = repos[target_name]["commit"]
                 if pinned != expected:
                     raise CoordinationError(f"pinned source {pinned} differs from snapshot {expected}")
+                if not check_checkouts:
+                    continue
                 for checkout, wanted in [(consumer, repos[owner]["commit"]), (nested, pinned), (canonical, expected)]:
-                    if not (checkout / ".git").exists():
-                        raise CoordinationError(f"{relative(checkout, root)}: initialize the source repository first")
-                    actual_root = Path(command(["git", "rev-parse", "--show-toplevel"], checkout).strip()).resolve()
-                    if actual_root != checkout:
-                        raise CoordinationError(f"{relative(checkout, root)}: source path is not its own repository")
-                    if command(["git", "rev-parse", "HEAD"], checkout).strip() != wanted:
-                        raise CoordinationError(f"{relative(checkout, root)}: checkout differs from its recorded source")
-                    if command(["git", "status", "--porcelain", "--untracked-files=normal", "--ignore-submodules=none"], checkout):
-                        raise CoordinationError(f"{relative(checkout, root)}: source checkout is not clean")
+                    verify_source_checkout(checkout, wanted, root, checked=checked)
             except (CoordinationError, ValueError) as error:
                 errors.append(f"{label}: {error}")
     return errors
@@ -305,7 +413,14 @@ def validate(data, rules, root=ROOT):
     errors = source_link_errors(data, rules, root)
     forbidden = set(rules.get("policy", {}).get("forbidden_packages", []))
     repo_names = {repo["name"] for repo in data["repositories"]}
+    repos = {repo["name"]: repo for repo in data["repositories"]}
+    identities = {github_identity(repo.get("url", "")) for repo in repos.values()} - {None}
     for repo in data["repositories"]:
+        if repo.get("url"):
+            try:
+                github_url(repo["url"])
+            except CoordinationError as error:
+                errors.append(f"{repo['name']}: {error}")
         missing = set(repo.get("requires", [])) - repo_names
         if missing:
             errors.append(f"{repo['name']}: unknown required repositories {', '.join(sorted(missing))}")
@@ -317,19 +432,28 @@ def validate(data, rules, root=ROOT):
             if dep["name"] in forbidden:
                 errors.append(f"{package['manifest']}: retired dependency {dep['name']}")
             if target is None:
+                if git_source_identity(dep["source"]) in identities:
+                    errors.append(f"{name} -> {dep['name']}: package from a registered repository is missing from the catalog")
                 continue
-            if dep["explicit_version"] or not dep["path"]:
-                try:
-                    compatible = satisfies(target["version"], dep["requirement"])
-                except ValueError as error:
-                    errors.append(f"{name} -> {dep['name']}: {error}")
-                    continue
-                if not compatible:
-                    errors.append(f"{name} requires {dep['name']} {dep['requirement']}, snapshot has {target['version']}")
-            if dep["source"] and dep["source"].startswith("git+"):
-                errors.append(f"{name} -> {dep['name']}: Git source bypasses the shared crates.io patch; use a registry version or canonical path")
-            if dep["path"] and not equivalent_source(dep["path"], target, data, root):
-                errors.append(f"{name} -> {dep['name']}: noncanonical path {dep['path']} (expected {Path(target['manifest']).parent.as_posix()})")
+            if target["repository"] == package["repository"]:
+                if dep["explicit_version"]:
+                    try:
+                        compatible = satisfies(target["version"], dep["requirement"])
+                    except ValueError as error:
+                        errors.append(f"{name} -> {dep['name']}: {error}")
+                        continue
+                    if not compatible:
+                        errors.append(f"{name} requires {dep['name']} {dep['requirement']}, snapshot has {target['version']}")
+                expected_path = (root / target["manifest"]).parent.resolve()
+                if dep["source"] or not dep["path"] or (root / dep["path"]).resolve() != expected_path:
+                    errors.append(f"{name} -> {dep['name']}: same-repository dependency must use its workspace/path source")
+            else:
+                expected_source = "git+" + repos[target["repository"]]["url"]
+                if dep["source"] != expected_source or dep["path"]:
+                    errors.append(f"{name} -> {dep['name']}: use {expected_source} at its default branch, without path, branch, tag or rev")
+                if dep["explicit_version"]:
+                    errors.append(f"{name} -> {dep['name']}: omit version from internal Git development dependencies; project registry versions only in external release staging")
+    errors.extend(internal_override_errors(data, root))
     try:
         ordered(dependency_graph(data))
     except CoordinationError as error:
@@ -337,107 +461,49 @@ def validate(data, rules, root=ROOT):
     return errors
 
 
-def patch_text(data, paths=None):
-    lines = ["# Generated by scripts/project_z.py sync; paths are relative to the checkout root.", "[patch.crates-io]"]
-    for name, package in sorted(package_map(data).items()):
-        if package["publish"]:
-            path = (paths or {}).get(name, Path(package["manifest"]).parent.as_posix())
-            lines.append(f"{json.dumps(name)} = {{ path = {json.dumps(path)} }}")
-    return "\n".join(lines) + "\n"
-
-
-def workspace_patch_text(data, repo, manifest, root=ROOT):
-    """Unify registry and explicit path dependencies without editing consumers.
-
-    Cargo gives two clean copies different path identities even at the same
-    commit. Explicit paths constrain the source; canonical registry patches
-    are defaults. Select an entire verified repository, including its macros,
-    and propagate the choice through transitive path dependencies.
-    """
-    packages = package_map(data)
-    roots = {item["name"]: (root / item["path"]).resolve() for item in data["repositories"]}
-    requested = relative(root / repo["path"] / manifest, root)
-    workspaces = {item["workspace"] for item in packages.values()
-                  if item["repository"] == repo["name"] and
-                  (item["manifest"] == requested or
-                   (Path(item["workspace"]) / "Cargo.toml").as_posix() == requested)}
-    if len(workspaces) != 1:
-        raise CoordinationError(f"{repo['name']}: cannot identify one workspace for {manifest}")
-    workspace = workspaces.pop()
-    members = {name for name, item in packages.items()
-               if item["repository"] == repo["name"] and item["workspace"] == workspace}
-
-    def dependencies(name):
-        # Dependency workspaces do not pass their test-only packages to callers.
-        return (dep for dep in packages[name]["dependencies"]
-                if dep["kind"] != "dev" or name in members)
-
-    reachable = set(members)
-    pending = list(reachable)
-    while pending:
-        for dep in dependencies(pending.pop()):
-            if dep["name"] in packages and dep["name"] not in reachable:
-                reachable.add(dep["name"])
-                pending.append(dep["name"])
-
-    selected = {repo["name"]: roots[repo["name"]]}
-    seen = set()
-    while True:
-        state = tuple(sorted((name, str(path)) for name, path in selected.items()))
-        if state in seen:
-            raise CoordinationError(f"{repo['name']}: path source choices do not converge")
-        seen.add(state)
-        constraints = {repo["name"]: {roots[repo["name"]]}}
-        for name in sorted(reachable):
-            item = packages[name]
-            owner = item["repository"]
-            actual_root = selected.get(owner, roots[owner])
-            for dep in dependencies(name):
-                target = packages.get(dep["name"])
-                if target is None or not dep["path"]:
-                    continue
-                offset = os.path.relpath(root / dep["path"], roots[owner])
-                actual = (actual_root / offset).resolve()
-                relative(actual, root)
-                if not equivalent_source(actual, target, data, root):
-                    raise CoordinationError(f"{name} -> {dep['name']}: noncanonical path {relative(actual, root)}")
-                target_owner = target["repository"]
-                inner = (root / target["manifest"]).parent.resolve().relative_to(roots[target_owner])
-                source_root = actual
-                for _ in inner.parts:
-                    source_root = source_root.parent
-                # A member-to-member path follows its selected repository and
-                # cannot turn that repository's soft default into a constraint.
-                if target_owner == owner and source_root == actual_root:
-                    continue
-                constraints.setdefault(target_owner, set()).add(source_root)
-        conflicts = {name: paths for name, paths in constraints.items() if len(paths) != 1}
-        updated = {name: next(iter(paths)) for name, paths in constraints.items() if len(paths) == 1}
-        updated.update({name: selected[name] for name in conflicts if name in selected})
-        if updated == selected:
-            if conflicts:
-                detail = "; ".join(f"{name}: {', '.join(sorted(relative(path, root) for path in paths))}"
-                                   for name, paths in sorted(conflicts.items()))
-                raise CoordinationError(f"{repo['name']}: conflicting explicit path sources: {detail}")
-            break
-        selected = updated
-    paths = {}
-    for name, item in packages.items():
-        owner = item["repository"]
-        inner = (root / item["manifest"]).parent.resolve().relative_to(roots[owner])
-        paths[name] = relative(selected.get(owner, roots[owner]) / inner, root)
-    return patch_text(data, paths)
+def internal_override_errors(data, root=ROOT):
+    """Local patches must not hide a stale registry or Git dependency."""
+    names = set(package_map(data))
+    paths = {root / package["workspace"] / "Cargo.toml" for package in data["packages"]}
+    for base in [root, *(root / repo["path"] for repo in data["repositories"] if repo.get("path"))]:
+        paths.update(base / ".cargo" / name for name in ("config", "config.toml"))
+    errors = []
+    for path in sorted(paths):
+        if not path.exists():
+            continue
+        document = tomllib.loads(path.read_text())
+        tables = [document.get("replace", {}), *document.get("patch", {}).values()]
+        for table in tables:
+            for key, value in table.items():
+                name = value.get("package", key.split(":", 1)[0]) if isinstance(value, dict) else key.split(":", 1)[0]
+                if name in names:
+                    errors.append(f"{relative(path, root)}: internal source override for {name}; remove it and update the Git dependency")
+    if (root / PATCH).exists():
+        errors.append(f"{PATCH}: obsolete registry override; run sync to remove it")
+    return errors
 
 
 def generated(data):
     return {CATALOG: json.dumps(data, indent=2, ensure_ascii=False) + "\n",
-            PATCH: patch_text(data), PROJECTS: render_catalog_docs(data)}
+            PROJECTS: render_catalog_docs(data)}
 
 
 def stale_generated(data, root=ROOT):
     return [f"{path}: stale; run python3 scripts/project_z.py sync"
             for path, content in generated(data).items()
             if not (root / path).exists() or (root / path).read_text() != content]
+
+
+def checkout_errors(data, root=ROOT, *, allow_uninitialized=False):
+    errors = []
+    checked = set()
+    for repo in data["repositories"]:
+        try:
+            verify_source_checkout(root / repo["path"], repo["commit"], root,
+                                   checked=checked, allow_uninitialized=allow_uninitialized)
+        except (CoordinationError, ValueError) as error:
+            errors.append(str(error))
+    return errors
 
 
 def cargo_invocation(cargo_args, manifest):
@@ -474,25 +540,14 @@ def resolution_options(cargo_args):
     return options
 
 
-@contextmanager
-def local_config(root=ROOT, content=None):
-    """Make the same overrides visible to Cargo processes spawned by tests."""
-    path = root / ".cargo/config.toml"
-    content = (root / PATCH).read_text() if content is None else content
-    owned = False
-    if path.exists() or path.is_symlink():
-        if path.read_text() != content:
-            raise CoordinationError(".cargo/config.toml already contains another configuration; preserve it and use a separate checkout")
-    else:
-        path.parent.mkdir(parents=True, exist_ok=True)
-        with path.open("x") as stream:
-            stream.write(content)
-        owned = True
-    try:
-        yield
-    finally:
-        if owned and path.exists() and path.read_text() == content:
-            path.unlink()
+def locked_cargo_args(cargo_args):
+    if cargo_args[0] in {"update", "generate-lockfile"}:
+        raise CoordinationError("update lockfiles in each consumer repository, validate and commit them, then sync the aggregate")
+    locked_commands = {"build", "check", "test", "bench", "clippy", "doc", "run", "rustc", "rustdoc", "metadata", "tree", "package", "publish", "fetch"}
+    head = cargo_args[:cargo_args.index("--")] if "--" in cargo_args else cargo_args
+    if cargo_args[0] in locked_commands and not any(flag in head for flag in ("--locked", "--frozen")):
+        return [cargo_args[0], "--locked", *cargo_args[1:]]
+    return cargo_args
 
 
 def selected_repositories(data, names, downstream=False):
@@ -519,98 +574,61 @@ def selected_repositories(data, names, downstream=False):
     return [next(repo for repo in data["repositories"] if repo["name"] == name) for name in order]
 
 
-def _lock_state(path):
-    try:
-        before = path.lstat()
-    except FileNotFoundError:
-        return None
-    if not stat.S_ISREG(before.st_mode):
-        raise CoordinationError(f"{path}: lockfile must be a regular file")
-    content = path.read_bytes()
-    after = path.lstat()
-    fingerprint = lambda item: (item.st_dev, item.st_ino, item.st_size, item.st_mtime_ns, item.st_ctime_ns)
-    if fingerprint(before) != fingerprint(after):
-        raise CoordinationError(f"{path}: lockfile changed while being read; use a separate checkout")
-    return content, stat.S_IMODE(after.st_mode), fingerprint(after)
-
-
-@contextmanager
-def preserved_workspace_locks(data, repo, root=ROOT):
-    """Discard local-patch resolutions while preserving pre-existing user edits.
-
-    Workspace roots come from Cargo's inventory, including virtual workspaces
-    and member manifests. Use an isolated checkout for concurrent Cargo work.
-    """
-    workspaces = {package["workspace"] for package in data["packages"]
-                  if package["repository"] == repo["name"]}
-    snapshots = []
-    for workspace in sorted(workspaces):
-        path = root / workspace / "Cargo.lock"
-        relative(path, root / repo["path"])
-        snapshots.append((path, _lock_state(path)))
-
-    def backup_original(path, original):
-        descriptor, backup = tempfile.mkstemp(prefix=".Cargo.lock.project-z-", dir=path.parent)
-        try:
-            with os.fdopen(descriptor, "wb") as stream:
-                stream.write(original[0])
-            os.chmod(backup, original[1])
-        except BaseException:
-            Path(backup).unlink(missing_ok=True)
-            raise
-        return backup
-
-    try:
-        yield
-    finally:
-        errors = []
-        for path, original in snapshots:
-            backup = None
-            backup_attempted = False
-            try:
-                observed = _lock_state(path)
-                if (original[:2] if original else None) == (observed[:2] if observed else None):
+def locked_source_errors(data, repos, root=ROOT):
+    canonical = package_map(data)
+    sources = {repo["name"]: repo for repo in data["repositories"]}
+    identities = {github_identity(repo.get("url", "")) for repo in sources.values()} - {None}
+    errors = []
+    for repo in repos:
+        workspaces = {package["workspace"] for package in data["packages"] if package["repository"] == repo["name"]}
+        for workspace in sorted(workspaces):
+            lock = root / workspace / "Cargo.lock"
+            relative(lock, root / repo["path"])
+            if lock.is_symlink() or not lock.is_file():
+                errors.append(f"{workspace}/Cargo.lock: missing regular lockfile; refresh and commit it in the consumer repository")
+                continue
+            document = tomllib.loads(lock.read_text())
+            for package in [*document.get("package", []), *document.get("patch", {}).get("unused", [])]:
+                expected = canonical.get(package["name"])
+                if not expected:
+                    if git_source_identity(package.get("source")) in identities:
+                        errors.append(f"{workspace}/Cargo.lock: internal package {package['name']} is missing from the catalog")
                     continue
-                if original is None:
-                    if _lock_state(path) != observed:
-                        raise CoordinationError(f"{path}: concurrent lockfile change; refusing to remove it")
-                    path.unlink()
-                    continue
-                backup_attempted = True
-                backup = backup_original(path, original)
-                if _lock_state(path) != observed:
-                    raise CoordinationError(f"{path}: concurrent lockfile change")
-                os.replace(backup, path)
-                backup = None
-            except (CoordinationError, OSError) as error:
-                detail = str(error)
-                if original is not None:
-                    if not backup_attempted:
-                        try:
-                            backup = backup_original(path, original)
-                        except OSError as backup_error:
-                            detail += f"; backup failed: {backup_error}"
-                    if backup is not None:
-                        detail += f"; original preserved at {backup}"
-                    else:
-                        detail += f"; original lockfile backup unavailable for {path}"
-                errors.append(detail)
-        if errors:
-            raise CoordinationError("\n".join(errors))
+                owner = sources[expected["repository"]]
+                source = None if owner["name"] == repo["name"] else f"git+{owner['url']}#{owner['commit']}"
+                if package.get("source") != source or package["version"] != expected["version"]:
+                    errors.append(f"{workspace}/Cargo.lock: stale internal {package['name']} {package['version']} from {package.get('source')!r}; "
+                                  f"expected {expected['version']} from {source!r}; update and commit the consumer lock")
+    return errors
 
 
 def resolved_paths(data, repos, root=ROOT, options=()):
     canonical = package_map(data)
-    errors = []
+    sources = {repo["name"]: repo for repo in data["repositories"]}
+    identities = {github_identity(repo.get("url", "")) for repo in sources.values()} - {None}
+    errors = locked_source_errors(data, repos, root)
+    if errors:
+        return errors
+    options = list(options)
+    if not any(flag in options for flag in ("--locked", "--frozen")):
+        options.append("--locked")
     for repo in repos:
         for manifest in repo["manifests"]:
-            with local_config(root, workspace_patch_text(data, repo, manifest, root)):
-                with preserved_workspace_locks(data, repo, root):
-                    resolved = metadata(repo, manifest, root, resolve=True, options=options)
+            resolved = metadata(repo, manifest, root, resolve=True, options=options)
             for package in resolved["packages"]:
                 expected = canonical.get(package["name"])
-                if expected and not equivalent_source(Path(package["manifest_path"]).parent, expected, data, root):
-                    errors.append(f"{repo['name']}: Cargo resolved {package['name']} {package['version']} outside the canonical checkout")
+                if expected:
+                    owner = sources[expected["repository"]]
+                    if owner["name"] == repo["name"]:
+                        matches = (package.get("source") is None and
+                                   Path(package["manifest_path"]).resolve() == (root / expected["manifest"]).resolve())
+                    else:
+                        matches = package.get("source") == f"git+{owner['url']}#{owner['commit']}"
+                    if not matches or package["version"] != expected["version"]:
+                        errors.append(f"{repo['name']}: Cargo resolved {package['name']} {package['version']} from "
+                                      f"{package.get('source')!r}, outside the recorded Git source")
+                elif git_source_identity(package.get("source")) in identities:
+                    errors.append(f"{repo['name']}: resolved internal package {package['name']} is missing from the catalog")
     return errors
 
 
@@ -618,8 +636,9 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=ROOT)
     commands = parser.add_subparsers(dest="action", required=True)
-    commands.add_parser("sync", help="Regenerate inventory and every local registry patch")
-    check = commands.add_parser("check", help="Check package names, version constraints, cycles and generated files")
+    sync = commands.add_parser("sync", help="Fetch latest default branches and record their exact source identities")
+    sync.add_argument("--record", action="store_true", help="Only record already selected sources; check still verifies remote freshness")
+    check = commands.add_parser("check", help="Check Git source policy, locked commits, remote freshness and generated files")
     check.add_argument("--skip-generated", action="store_true")
     commands.add_parser("inventory", help="Print the current machine-readable inventory")
     commands.add_parser("order", help="List publishable packages in dependency order")
@@ -628,7 +647,7 @@ def main(argv=None):
     affected = commands.add_parser("impact", help="Find transitive downstream packages")
     affected.add_argument("--repositories", action="store_true", help="Include runtime and installer consumers")
     affected.add_argument("names", nargs="+")
-    resolve = commands.add_parser("resolve", help="Verify Cargo actually resolves local Project Z packages")
+    resolve = commands.add_parser("resolve", help="Verify Cargo --locked resolves the recorded GitHub sources")
     resolve.add_argument("--all", action="store_true", help="Resolve every Rust workspace, including applications")
     resolve.add_argument("names", nargs="*")
     run = commands.add_parser("run", help="Run explicit Cargo arguments across selected repositories")
@@ -638,24 +657,34 @@ def main(argv=None):
     args = parser.parse_args(argv)
     root = args.root.resolve()
     try:
+        if args.action == "sync" and not args.record:
+            sync_sources(root)
         data = inventory(root)
         if args.action == "inventory":
             print(json.dumps(data, indent=2, ensure_ascii=False))
             return 0
         if args.action == "sync":
+            legacy = root / PATCH
+            if legacy.exists():
+                if not legacy.read_text().startswith("# Generated by scripts/project_z.py sync;"):
+                    raise CoordinationError(f"{PATCH}: unrecognized configuration; preserve it and remove internal overrides explicitly")
+                legacy.unlink()
             for path, content in generated(data).items():
                 destination = root / path
                 destination.parent.mkdir(parents=True, exist_ok=True)
                 destination.write_text(content)
-            print(f"Updated {len(data['repositories'])} repositories and {len(data['packages'])} packages")
+            print(f"Recorded {len(data['repositories'])} repositories and {len(data['packages'])} packages; run check and resolve --all")
             return 0
         if args.action == "check":
-            errors = validate(data, policy(root), root)
+            errors = validate(data, policy(root), root) + checkout_errors(data, root)
+            errors.extend(locked_source_errors(data, selected_repositories(data, [repo['name'] for repo in data['repositories'] if repo['manifests']]), root))
             if not args.skip_generated:
                 errors.extend(stale_generated(data, root))
+            if not errors:
+                errors.extend(freshness_errors(data, root))
             if errors:
                 raise CoordinationError("\n".join(errors))
-            print(f"OK: {len(data['repositories'])} repositories, {len(data['packages'])} packages; versions and graph agree")
+            print(f"OK: {len(data['repositories'])} repositories, {len(data['packages'])} packages; Git sources, locks and latest default heads agree")
         elif args.action == "order":
             packages = package_map(data)
             for name in ordered(dependency_graph(data)):
@@ -679,7 +708,7 @@ def main(argv=None):
         elif args.action == "resolve":
             if args.all and args.names:
                 raise CoordinationError("choose --all or explicit package/repository names")
-            errors = validate(data, policy(root), root) + stale_generated(data, root)
+            errors = validate(data, policy(root), root) + stale_generated(data, root) + checkout_errors(data, root)
             if errors:
                 raise CoordinationError("\n".join(errors))
             names = [repo["name"] for repo in data["repositories"] if repo["manifests"]] if args.all else args.names
@@ -687,11 +716,12 @@ def main(argv=None):
             errors = resolved_paths(data, repos, root)
             if errors:
                 raise CoordinationError("\n".join(errors))
-            print(f"OK: local dependencies resolved in {len(repos)} repositories")
+            print(f"OK: locked Git sources resolved in {len(repos)} repositories")
         elif args.action == "run":
             cargo_args = args.cargo_args[1:] if args.cargo_args[:1] == ["--"] else args.cargo_args
             if not cargo_args:
                 raise CoordinationError("provide Cargo arguments after --, for example -- test --lib")
+            cargo_args = locked_cargo_args(cargo_args)
             if args.repo and args.affected:
                 raise CoordinationError("choose --repo or --affected")
             errors = validate(data, policy(root), root) + stale_generated(data, root)
@@ -706,16 +736,14 @@ def main(argv=None):
             failures = []
             for repo in repos:
                 for manifest in repo["manifests"]:
-                    with local_config(root, workspace_patch_text(data, repo, manifest, root)):
-                        print(f"[{repo['name']}] cargo {' '.join(cargo_args)}", flush=True)
-                        invocation = cargo_invocation(cargo_args, root / repo["path"] / manifest)
-                        with preserved_workspace_locks(data, repo, root):
-                            result = subprocess.run(invocation, cwd=root)
-                        if result.returncode:
-                            failures.append(f"{repo['name']}: exit {result.returncode}")
+                    print(f"[{repo['name']}] cargo {' '.join(cargo_args)}", flush=True)
+                    invocation = cargo_invocation(cargo_args, root / repo["path"] / manifest)
+                    result = subprocess.run(invocation, cwd=root)
+                    if result.returncode:
+                        failures.append(f"{repo['name']}: exit {result.returncode}")
             if failures:
                 raise CoordinationError("\n".join(failures))
-    except (CoordinationError, OSError, ValueError, KeyError) as error:
+    except (CoordinationError, OSError, ValueError, KeyError, configparser.Error, subprocess.TimeoutExpired) as error:
         print(f"project-z: {error}", file=sys.stderr)
         return 1
     return 0

@@ -1,0 +1,137 @@
+{
+  "schema": "project-z.zuse356-native-independent-original-hashes.v1",
+  "archive": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-native-text-evidence.zip",
+    "bytes": 50905,
+    "sha256": "6e2822aabf6f730d60582eb22feff4d025d607fcc0bb81d0be3a4fd31beda3c5"
+  },
+  "raw_root": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zuse-356-native-evidence",
+  "files": [
+    {
+      "path": "manifest.json",
+      "bytes": 12044,
+      "sha256": "95d9a7bdb23ee415f9a5fb8475a5e4e042ba8bec5436cfe900de3bd5118155c4"
+    },
+    {
+      "path": "native/result.json",
+      "bytes": 14627,
+      "sha256": "ada3df93162ce40412aecda93c84023904a12f3539e22a307046489936fdc9df"
+    },
+    {
+      "path": "native-postflight.json",
+      "bytes": 1993,
+      "sha256": "be6999cd7c704d29c896562cb03d1d12dc3fe272502588cd5309fd54bde9b6fc"
+    },
+    {
+      "path": "execution-native-start.json",
+      "bytes": 1451,
+      "sha256": "79ac847ba6848a1acf4e33282929ef7abc97e727197b9feae1d555e026f360b3"
+    },
+    {
+      "path": "execution-native-status.json",
+      "bytes": 1371,
+      "sha256": "a0263449f3b3c7b0a5965fde000729a0b8ff4946f13fe69f67ec0d6ce2ee4a12"
+    },
+    {
+      "path": "native-start-preflight-r2.json",
+      "bytes": 15436,
+      "sha256": "9f615d88a7130cf349017939ea11907d929c9e3eeec8cc09e08be0eaafb51f07"
+    },
+    {
+      "path": "native/mpx/result.json",
+      "bytes": 1359,
+      "sha256": "047ea0b382065f1fc78eceb5aab0c5553cbd771bd204f48e70f01bb56ea979d7"
+    },
+    {
+      "path": "native/mpx/selected-tests.log",
+      "bytes": 211,
+      "sha256": "6cb73b621b1b06985bd40cb1b0704e26a3e7eccc87df641f7fe1e77c7352c247"
+    },
+    {
+      "path": "native/mpx/tests.log",
+      "bytes": 315,
+      "sha256": "fa7ded707bca3fbf3ee02dd6e4955b67be3c15601c15fa37ace6e067e15e443d"
+    },
+    {
+      "path": "native/private-mpx.log",
+      "bytes": 302,
+      "sha256": "c9ddff91e9a15ceff6b1c7ee474ef300cfbe99cdfbfb0b35ceb47d31d2e954f9"
+    },
+    {
+      "path": "native/private-cli.log",
+      "bytes": 301,
+      "sha256": "b2aa03c36a964b51954c4b693553ca4ce37ad9b9ab247b60ca58504612d3d33c"
+    },
+    {
+      "path": "native/private-accessibility.log",
+      "bytes": 862,
+      "sha256": "d2f80af26774db812b36cd8b7342b1d889e6ad96f9478b6269a209d154794462"
+    },
+    {
+      "path": "native/private-wayland.log",
+      "bytes": 1987,
+      "sha256": "51de38feb12bd75596d9a30ffc322b6712f2dc8dc54ff679cdb1f6f6d1b47e85"
+    },
+    {
+      "path": "native/private-serial.log",
+      "bytes": 806,
+      "sha256": "461d40fcb7572fbd83dc5907735aead05dbef4656e0e58a8505c93133f209818"
+    },
+    {
+      "path": "native/private-usb.log",
+      "bytes": 1762,
+      "sha256": "f53fb1331acf2eda8ab7bb849d845feb6880b427aceffb2019769000cd3554f1"
+    },
+    {
+      "path": "native/cargo-invocations.jsonl",
+      "bytes": 331,
+      "sha256": "413bce3c73b6d48d7b26d83a8356714c9b98b48140a8a9fdb515f9166839cd4d"
+    },
+    {
+      "path": "native/rustc-invocations.jsonl",
+      "bytes": 7345,
+      "sha256": "d64191a754259387e482b3e3adc9be0f3b7ba0fc5b99a4bacd8eaf3860f7048e"
+    },
+    {
+      "path": "native/wayland.json",
+      "bytes": 3598,
+      "sha256": "e2bc3c4c40313b44bcc0719da99fcdbe4cdd2ac111ca86e245dcbc9bbb40be4c"
+    },
+    {
+      "path": "native/serial/report.json",
+      "bytes": 1355,
+      "sha256": "b269889234abd10700b65de91675eefe90f511cb1ae0d4d0cf09c0ddb038cc44"
+    },
+    {
+      "path": "native/usb/report.json",
+      "bytes": 2820,
+      "sha256": "6a9b95863908c65135f7f3dc5ccb95529d5c5c9ecec710fe4d184ac8fc58eac1"
+    },
+    {
+      "path": "portable/result.json",
+      "bytes": 24696,
+      "sha256": "53eda19a7a10de808b81ef99f56b454e2cf82bef6b468ee13f2f89222d5f7456"
+    },
+    {
+      "path": "portable/default-tests-compiler-artifacts.json",
+      "bytes": 33009,
+      "sha256": "c67929726258460ed19e54e686e41b80f34bb9ea3f9317f0281b461c71d667e3"
+    },
+    {
+      "path": "native-source-fixtures.json",
+      "bytes": 2966,
+      "sha256": "2064a57b5b295087665d2318794b8817533495b6a04743be953bbfbcde5becdc"
+    },
+    {
+      "path": "gate.py",
+      "bytes": 13370,
+      "sha256": "8712f55de634c6cf47d13ac5b88984c4536317ad01fa064db3c8d4679eaaa231"
+    },
+    {
+      "path": "private_mpx_356.py",
+      "bytes": 5075,
+      "sha256": "683faf353dc70c86e062a92f377956c6adfba6a2dbf3eb5da3896fbb49a3a0a1"
+    }
+  ],
+  "complete_payload_index": "manifest.json (73 payload entries; all independently matched)"
+}

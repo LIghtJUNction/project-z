@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "title": "SSMCP C: exact 18-source / 7-helper subset supplement",
+  "reviewed_at_utc": "2026-11-21T01:56:17Z",
+  "source_of_path_set": "Exact 25-path list relayed by root from c906 actual job926; no inferred membership",
+  "method": "Lookup only in the already retrieved immutable, nontruncated B/C/D4 Git trees; equality includes path, object type, mode and full Git blob SHA. No repeated repository read or product command.",
+  "identity": {
+    "B": "be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1",
+    "B_tree": "5e8ea273c8f8bd8b0e7b1f87ccc0d19fd594601b",
+    "C": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+    "C_tree": "bf393700928fd9aa37f2dea8b8683ebe13b114cd",
+    "D4": "d4c4b9c6fe09a4d7b246ca54a08f5c7b258289fb",
+    "D4_tree": "c64ea74cfb85474f05dd2c8bb3c834c73d10b08e"
+  },
+  "verdict": {
+    "all_25_paths_present": true,
+    "source_paths_exact_same_B": 18,
+    "helper_paths_exact_same_B": 5,
+    "helper_paths_different_B_and_exact_D4": 2,
+    "material_mapping_mismatches": 0,
+    "claimed_partition_verified": true,
+    "product_gate_pass": false
+  },
+  "sources": [
+    {
+      "path": "src/backend/shell.rs",
+      "common_B_C_blob": "933e96de2a51d0ac9e75761f54b63d5751517e7f",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/broker.rs",
+      "common_B_C_blob": "633e95a1b38e0bfbf41539813feef06c89ce2453",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/client.rs",
+      "common_B_C_blob": "8c105204c063d2f6b5d35c053a5f0a4908d81b6a",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/client/chat_io.rs",
+      "common_B_C_blob": "c077c7950b8623b0034521004c594c6e1977c977",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/client/chat_io/options.rs",
+      "common_B_C_blob": "ca11e1ccfa70186c3237dafbffce9adacfa1b8c9",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/client/chat_io/process.rs",
+      "common_B_C_blob": "325125940ec44419d2535613be76469abe94f1b1",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/client/chat_io/transport.rs",
+      "common_B_C_blob": "afb3c11b4ad5b6c5a6a9ca137ae49fe8495500b3",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/client/chat_io/transport/socket.rs",
+      "common_B_C_blob": "b44178bc876879b2e9d96a2d0073170ff2ea99ab",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/client/chat_io/transport/stdio.rs",
+      "common_B_C_blob": "5807de38cf74b74558f4c20eaffc02c895c5aedb",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/client/interface.rs",
+      "common_B_C_blob": "0937c2bd7c21bf1212e96133ea89c7c1044d6b12",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/client/interface/reply.rs",
+      "common_B_C_blob": "f5ffba244d54b88e22ce3e277c4b2ab2353ee463",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/client/interface/user_wait.rs",
+      "common_B_C_blob": "ffda3d0251407a47ed2b0e6717c74fa58b1ea63d",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/http.rs",
+      "common_B_C_blob": "0f9c063ae63baceda9f765cd69749fb7b99f398b",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/runtime.rs",
+      "common_B_C_blob": "fbe763c72120a1fd436372cbd05728041ae6cb18",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/runtime/native_plugins/process.rs",
+      "common_B_C_blob": "631945076698a5bd247bf94a81c4b3861857cd06",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/runtime/time.rs",
+      "common_B_C_blob": "c41aa2a01fc621b383f4d297b39bbe7aceb26db2",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/wire.rs",
+      "common_B_C_blob": "c65445f245732e759f693b42b5607906c0b013d7",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    },
+    {
+      "path": "src/wire/messages.rs",
+      "common_B_C_blob": "92418ab1176b4e770d38f17c8d8838db1bbfe88c",
+      "type": "blob",
+      "mode": "100644",
+      "exact_same_B": true
+    }
+  ],
+  "helpers": [
+    {
+      "path": "scripts/e2e.py",
+      "B": "af4d2b021e060986bbffeaca2a0d83dc93902c41",
+      "C": "af4d2b021e060986bbffeaca2a0d83dc93902c41",
+      "D4": "af4d2b021e060986bbffeaca2a0d83dc93902c41",
+      "type": "blob",
+      "mode": "100644",
+      "all_three_modes_equal": true,
+      "all_three_types_equal": true,
+      "exact_same_B": true,
+      "exact_same_D4": true,
+      "partition": "same_B"
+    },
+    {
+      "path": "scripts/e2e_account_gateway.py",
+      "B": "65d46dd51970d86467c1133e99dece0f37342d81",
+      "C": "65d46dd51970d86467c1133e99dece0f37342d81",
+      "D4": "65d46dd51970d86467c1133e99dece0f37342d81",
+      "type": "blob",
+      "mode": "100644",
+      "all_three_modes_equal": true,
+      "all_three_types_equal": true,
+      "exact_same_B": true,
+      "exact_same_D4": true,
+      "partition": "same_B"
+    },
+    {
+      "path": "scripts/e2e_account_relay.py",
+      "B": "27d03da95168b377dee81796aca032a7d3053c92",
+      "C": "27d03da95168b377dee81796aca032a7d3053c92",
+      "D4": "27d03da95168b377dee81796aca032a7d3053c92",
+      "type": "blob",
+      "mode": "100644",
+      "all_three_modes_equal": true,
+      "all_three_types_equal": true,
+      "exact_same_B": true,
+      "exact_same_D4": true,
+      "partition": "same_B"
+    },
+    {
+      "path": "scripts/e2e_client_ui.py",
+      "B": "2e57c878e9d97708a63d25830088f597cc7a5732",
+      "C": "5c7b394823fa4b840be41f7f12a432615ec85815",
+      "D4": "5c7b394823fa4b840be41f7f12a432615ec85815",
+      "type": "blob",
+      "mode": "100644",
+      "all_three_modes_equal": true,
+      "all_three_types_equal": true,
+      "exact_same_B": false,
+      "exact_same_D4": true,
+      "partition": "different_B_exact_D4"
+    },
+    {
+      "path": "scripts/e2e_composer.py",
+      "B": "75371e60a01ca2f782be5a49e3f41da77a752580",
+      "C": "75371e60a01ca2f782be5a49e3f41da77a752580",
+      "D4": "020d371b92136b83b662f0c8ee1a7efdd3df86cf",
+      "type": "blob",
+      "mode": "100644",
+      "all_three_modes_equal": true,
+      "all_three_types_equal": true,
+      "exact_same_B": true,
+      "exact_same_D4": false,
+      "partition": "same_B"
+    },
+    {
+      "path": "scripts/e2e_dashboard.py",
+      "B": "f545559421ffffd41d97655cd0d8242e845b17d9",
+      "C": "12381f644f81cb458151e4f3872968e2d1362e60",
+      "D4": "12381f644f81cb458151e4f3872968e2d1362e60",
+      "type": "blob",
+      "mode": "100644",
+      "all_three_modes_equal": true,
+      "all_three_types_equal": true,
+      "exact_same_B": false,
+      "exact_same_D4": true,
+      "partition": "different_B_exact_D4"
+    },
+    {
+      "path": "scripts/e2e_input_history.py",
+      "B": "e3ccf6c5bb31c1d6f81af3fc9a4c54ebcaccdf21",
+      "C": "e3ccf6c5bb31c1d6f81af3fc9a4c54ebcaccdf21",
+      "D4": "e3ccf6c5bb31c1d6f81af3fc9a4c54ebcaccdf21",
+      "type": "blob",
+      "mode": "100755",
+      "all_three_modes_equal": true,
+      "all_three_types_equal": true,
+      "exact_same_B": true,
+      "exact_same_D4": true,
+      "partition": "same_B"
+    }
+  ],
+  "interpretation": {
+    "two_changed_helpers": [
+      "scripts/e2e_client_ui.py",
+      "scripts/e2e_dashboard.py"
+    ],
+    "remaining_five_same_B": [
+      "scripts/e2e.py",
+      "scripts/e2e_account_gateway.py",
+      "scripts/e2e_account_relay.py",
+      "scripts/e2e_composer.py",
+      "scripts/e2e_input_history.py"
+    ],
+    "not_an_exclusive_all_D4_count": "Four of the five B-retained helpers also happen to equal D4. Thus six of seven match D4 by blob, but only two differ from B and take the D4 version. The requested 2+5 partition is correct.",
+    "subset_boundary": "This named set excludes e2e_canvas_logs.py, scripts/test_release.py and the three D4 production/test source repair files. Do not generalize the subset into an all-source/no-change claim.",
+    "prior_missing_scope_closed": true
+  },
+  "runtime_state_separate": {
+    "status": "C Gate35 FAILED",
+    "evidence_level": "Root-relayed actual run result; not re-inspected or rerun by this static supplement",
+    "passed": 2049,
+    "failed": 3,
+    "ignored": 23,
+    "filtered": 4,
+    "failure_groups_as_relayed": [
+      "two socket cases",
+      "session foreground error"
+    ],
+    "owner_handling": "Existing native owner assigned the two builtin diagnostic tasks; this reviewer does not diagnose or run them.",
+    "scope": "Static retention/mapping success is not product-gate success, and does not grant C P1 acceptance."
+  },
+  "prior_review_retained": {
+    "json": {
+      "path": "ssmcp-C-merge-source-static-review.json",
+      "bytes": 23615,
+      "sha256": "ec4c1d11d64990cda56ed0906b338e80e16e7759502160fff0d6d491c8b6acce"
+    },
+    "markdown": {
+      "path": "ssmcp-C-merge-source-static-review.md",
+      "bytes": 4277,
+      "sha256": "d13e70323d92b9b19c56a65b85688cf8c69c35d0be04285a200bf9e2e3f75f16"
+    },
+    "both_rehashed_unchanged": true
+  },
+  "operations": {
+    "product_tests": 0,
+    "builds": 0,
+    "GUI_or_input": 0,
+    "native_process_or_lock_operations": 0,
+    "source_or_refs_modified": 0,
+    "existing_review_modified": false,
+    "full_repository_reads": 0
+  }
+}

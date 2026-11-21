@@ -1,0 +1,207 @@
+{
+  "schema": "project-z.U-r12-UI-first-failure-root-receipt-read.v1",
+  "recorded_utc": "2026-11-21T03:41:11.522125+00:00",
+  "source_revision": "784370b5fe1b817c788273a5f7b1ab826c743965",
+  "expected_version": "0.10.25",
+  "started_utc": "2026-11-21T03:33:38Z",
+  "finished_utc": "2026-11-21T03:34:34Z",
+  "status": "failed",
+  "original_acceptance": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-v1/acceptance.json",
+    "bytes": 792541,
+    "sha256": "ce8a1613666c1a796310d20b32368c44d72634b7af19b8873a54fbf23a75a208"
+  },
+  "failure_log": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-v1/suites/zuse_worker/run.log",
+    "bytes": 1517,
+    "sha256": "13928db4a2e0f25aa81fe45325fb57643ec23b12f6bdc4997e59d924593de389"
+  },
+  "root_direct_actual_job_read": {
+    "exit_code": 1,
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-ae2",
+    "running": false,
+    "stderr": "",
+    "stderr_cursor": 0,
+    "stderr_eof": true,
+    "stderr_truncated": false,
+    "stdout": "{\"started\": \"message_references\", \"log\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-v1/suites/message_references/run.log\"}\n{\"finished\": \"message_references\", \"status\": \"passed\", \"seconds\": 14.579, \"checks\": 53}\n{\"started\": \"force_send\", \"log\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-v1/suites/force_send/run.log\"}\n{\"finished\": \"force_send\", \"status\": \"passed\", \"seconds\": 19.987, \"checks\": 137}\n{\"started\": \"listener_transports\", \"log\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-v1/suites/listener_transports/run.log\"}\n{\"finished\": \"listener_transports\", \"status\": \"passed\", \"seconds\": 7.669, \"checks\": 74}\n{\"started\": \"zuse_worker\", \"log\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-v1/suites/zuse_worker/run.log\"}\n{\"finished\": \"zuse_worker\", \"status\": \"failed\", \"seconds\": 1.552, \"checks\": 0}\n{\"status\": \"failed\", \"receipt\": \"/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-v1/acceptance.json\", \"actual_execution_count\": 4, \"independent_pass_count\": 3, \"alias_coverage_count\": 0}\n",
+    "stdout_cursor": 1281,
+    "stdout_eof": true,
+    "stdout_truncated": false
+  },
+  "planned_logical_suite_count": 25,
+  "planned_execution_count": 24,
+  "actual_execution_count": 4,
+  "independent_pass_count": 3,
+  "alias_coverage_count": 0,
+  "suite_states": [
+    {
+      "name": "message_references",
+      "status": "passed",
+      "process_started": true,
+      "exit_code": 0,
+      "checks": 53,
+      "owned_child_reaped": true,
+      "seconds": 14.579,
+      "log_sha256": "1a8d42f54274b631dee9d2eddc084b15faaca886775d72a8f4bde7d5203923ab",
+      "report_sha256": "b43813538a04807a6eccb672ab78cf60a2288b10a7a14bbe5e50c0bd33d272ba",
+      "report_inputs_unchanged": true,
+      "report_source_revision": "784370b5fe1b817c788273a5f7b1ab826c743965"
+    },
+    {
+      "name": "force_send",
+      "status": "passed",
+      "process_started": true,
+      "exit_code": 0,
+      "checks": 137,
+      "owned_child_reaped": true,
+      "seconds": 19.987,
+      "log_sha256": "d31953d4db980ae9a7f38bd16892cb1312e513d9c8198fbf8d88c734f9eb5460",
+      "report_sha256": "25295578d076f861242d21916ce6e8624f51dbaf7b96cdf6f0fc835e73dcd413",
+      "report_inputs_unchanged": null,
+      "report_source_revision": null
+    },
+    {
+      "name": "listener_transports",
+      "status": "passed",
+      "process_started": true,
+      "exit_code": 0,
+      "checks": 74,
+      "owned_child_reaped": true,
+      "seconds": 7.669,
+      "log_sha256": "23424fc51571e57a86024ca47d5345c80b2b728256b797e5f079aff01fe85b91",
+      "report_sha256": "2b935d04edca9728db697371deaa3deb46ac5275fb0880336e77b30becf07345",
+      "report_inputs_unchanged": null,
+      "report_source_revision": null
+    },
+    {
+      "name": "zuse_worker",
+      "status": "failed",
+      "process_started": true,
+      "exit_code": 1,
+      "owned_child_reaped": true,
+      "seconds": 1.552,
+      "error": "RuntimeError: suite process did not complete successfully",
+      "log_sha256": "13928db4a2e0f25aa81fe45325fb57643ec23b12f6bdc4997e59d924593de389"
+    },
+    {
+      "name": "interactions",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "private_desktop",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "account_compat",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "input_history",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "reload_state",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "session_groups",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "client_ui",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "canvas_logs",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "composer",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "questions",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "presentations",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "context_memory",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "file_paste",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "relay_composer",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "goal_startup",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "tool_summaries",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "readable_commands",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "summary_commands",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "physical_latency",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    },
+    {
+      "name": "time_wait",
+      "status": "not_run",
+      "reason": "acceptance stopped before this suite"
+    }
+  ],
+  "aliases": [
+    {
+      "name": "human_finish",
+      "status": "not_covered",
+      "covered_by": "interactions",
+      "independently_executed": false,
+      "independent_pass": false
+    }
+  ],
+  "inputs_unchanged": {
+    "unchanged": true,
+    "input_set_sha256": "be46a3aac70149c9831471115dadb79ca70e17fb00e6ea432104c31693133bb8",
+    "changed": []
+  },
+  "all_four_owned_children_reaped": true,
+  "failure_boundary": "Fourth suite zuse_worker failed during private Xvfb readiness before any check (0 checks in actual job stdout). Original exact Xvfb error is not established by this trace.",
+  "scope": "Read of original failed acceptance receipt, complete failure traceback and actual existing job output; no product rerun, no code mutation and no full independent UI semantics review.",
+  "P1_passed_claimed": false,
+  "runtime18_or_Gate35_results_changed": false
+}

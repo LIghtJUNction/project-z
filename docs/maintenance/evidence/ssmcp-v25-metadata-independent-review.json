@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "title": "Independent fixed V version 0.10.25 metadata and original deployment-policy validation review",
+  "reviewed_at_utc": "2026-11-21T01:31:54.859606+00:00",
+  "conclusion": {
+    "blocking_findings": [],
+    "material_inconsistencies": [],
+    "decision": "No blocker for retaining V as a source/version-metadata checkpoint. This does not establish a formal release or B/V product runtime acceptance."
+  },
+  "source": {
+    "repository": "LIghtJUNction/ssmcp",
+    "pr": 159,
+    "candidate": "f4e6ff043eef6686a9013750ffcb8ab66926b9d4",
+    "tree": "d6546dd46464ac1cbb1c3aabc0493638a44649f7",
+    "single_parent": "be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1",
+    "fixed_compare_url": "https://github.com/LIghtJUNction/ssmcp/compare/be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1...f4e6ff043eef6686a9013750ffcb8ab66926b9d4",
+    "commit_url": "https://github.com/LIghtJUNction/ssmcp/commit/f4e6ff043eef6686a9013750ffcb8ab66926b9d4",
+    "changed_paths": [
+      ".github/workflows/release.yml",
+      "Cargo.lock",
+      "Cargo.toml",
+      "docs/release-notes-0.10.25.md",
+      "docs/releases.md",
+      "scripts/test_release.py"
+    ],
+    "base_leaf_count": 1105,
+    "candidate_leaf_count": 1106,
+    "unchanged_old_leaf_count": 1100,
+    "unchanged_src_leaf_count": 366,
+    "unchanged_gitlinks": [
+      {
+        "path": "crates/zharness",
+        "commit": "cb63a9a0aa163214c6062664cd62fefb357be5a8"
+      },
+      {
+        "path": "crates/zplugin",
+        "commit": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+      },
+      {
+        "path": "crates/ztuio",
+        "commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e"
+      },
+      {
+        "path": "crates/zuse",
+        "commit": "a1bb8fd2cbce0a9d85134999883c578358065242"
+      }
+    ],
+    "ordinary_push_receipt": {
+      "remote_ref": "refs/heads/work/release21-recovery-20261121",
+      "before": "be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1",
+      "after": "f4e6ff043eef6686a9013750ffcb8ab66926b9d4",
+      "exit_code": 0,
+      "force": false
+    },
+    "source_final_boundary": "Original owner/root report source-final remains B. This reviewer did not update or revalidate the source-final checkout; the author-tree V metadata tests are separate."
+  },
+  "static_findings": {
+    "version": "Cargo.toml and the sole ssmcp Cargo.lock record both change 0.10.24 to 0.10.25; normalized full TOML objects and exact lock bytes prove no dependency or feature edits.",
+    "lock": {
+      "bytes": 66476,
+      "sha256": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608",
+      "total_package_records": 277,
+      "other_package_records_unchanged": 276,
+      "ssmcp_dependency_list_unchanged": true
+    },
+    "workflow": "Exactly one deferred_versions entry for 0.10.25 is added. Existing publication/build-only handling, invalid-input guards and deployment selection logic are retained.",
+    "test_changes": "Exact whole-file comparison finds only 0.10.25 added to deferred test versions and the nondeferred control changed from 0.10.25 to 0.10.26. All original assertions and existing 0.10.24-rc.1 control remain byte-identical.",
+    "documentation": "The new release note explicitly identifies source preparation and leaves final integration/build/runtime/publication/install unconfirmed; releases.md only extends the documented deferral range to 0.10.25.",
+    "implementation_boundary": "All 366 src leaves and four gitlinks are unchanged. This does not imply a future V executable is byte-identical to B: the embedded package version is new."
+  },
+  "original_policy_execution": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-8d7",
+    "title": "Validate version 25 deployment policy using existing isolated fixtures",
+    "snapshot_exit_code": 0,
+    "running": false,
+    "stdout_eof": true,
+    "stderr_eof": true,
+    "output_truncated": false,
+    "started_utc": "2026-11-21T01:19:09.943543+00:00",
+    "finished_utc": "2026-11-21T01:19:12.721766+00:00",
+    "argv": [
+      "python3",
+      "-I",
+      "-B",
+      "-c",
+      "import runpy,sys;sys.path.insert(0,'/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/scripts');sys.argv=['/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/scripts/test_release.py','DeploymentPolicyTests','-v'];runpy.run_path('/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/scripts/test_release.py',run_name='__main__')"
+    ],
+    "native_worktree": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121",
+    "test_class": "DeploymentPolicyTests",
+    "tests_passed": 11,
+    "tests_failed": 0,
+    "tests_skipped": 0,
+    "test_names": [
+      "test_build_only_never_deploys_even_when_requested",
+      "test_deferred_version_cannot_be_deployed_by_tag_or_dispatch",
+      "test_dispatch_accepts_exact_boolean_choices_for_old_or_new_tags",
+      "test_invalid_deployment_inputs_fail_before_writing_an_output",
+      "test_legacy_tag_without_deployment_output_keeps_the_default",
+      "test_malformed_input_containers_fail_before_writing_an_output",
+      "test_missing_or_invalid_publication_output_never_enables_deployment",
+      "test_missing_or_malformed_version_cannot_bypass_deferral",
+      "test_other_versions_keep_existing_deployment_selection",
+      "test_policy_appends_one_result_without_replacing_existing_outputs",
+      "test_tag_push_preserves_automatic_deployment"
+    ],
+    "unittest_report_seconds": 2.587,
+    "receipt_seconds": 2.778227721020812,
+    "supervisor_seconds": 4.017,
+    "timing_boundary": "Three timings describe nested boundaries of the same original execution; they are not separate samples.",
+    "source_before_after": {
+      "commit": "f4e6ff043eef6686a9013750ffcb8ab66926b9d4",
+      "tree": "d6546dd46464ac1cbb1c3aabc0493638a44649f7",
+      "status": "",
+      "equal": true,
+      "four_inputs": {
+        "scripts/test_release.py": {
+          "path": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/scripts/test_release.py",
+          "bytes": 92882,
+          "sha256": "f1351c31ddeaa9f77808fd4580ed5d7518c8f346421caa263527d63a353a9259"
+        },
+        "scripts/release.py": {
+          "path": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/scripts/release.py",
+          "bytes": 54070,
+          "sha256": "43e995d675689f3c881f4452172796f4e2f7b195dbceef3dbb9b1ed1d9f95be4"
+        },
+        ".github/workflows/release.yml": {
+          "path": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/.github/workflows/release.yml",
+          "bytes": 18881,
+          "sha256": "6dd28b97b77386edb6fa8d6538ed9954f0ed00b1b97e1baa2651f339415c2295"
+        },
+        "Cargo.lock": {
+          "path": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121/Cargo.lock",
+          "bytes": 66476,
+          "sha256": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608"
+        }
+      }
+    },
+    "provenance": "Recovered actual job8d7 snapshot command executes the existing test class through isolated Python/runpy. Its stdout result equals the original receipt and original stderr bytes. The test class reads and extracts the actual fixed workflow policy, then executes it using private temporary event/output files.",
+    "lock_boundary": "The original job uses source-author.lock with exclusive/nonblocking acquisition; it did not acquire the shared Cargo target lock. The reviewer acquired no lock and signaled no process.",
+    "coverage": "Release deployment selection policy only. Eleven named unittest cases include their existing subTests; no additional unique count is claimed."
+  },
+  "review_operations": {
+    "github_reads": "Fixed commit, complete B/V trees, complete compare, and exact Cargo/workflow/test/helper content",
+    "native_reads": "Original six text files plus read-only recovery of existing job8d7; no rerun",
+    "local_work": "Byte/hash, Git blob, TOML/AST and log comparison only",
+    "source_ref_lock_or_workflow_mutations": false,
+    "cargo_or_product_or_policy_reexecuted": false,
+    "models_or_ssmcp_agents_spawned": false,
+    "aggregate_44_modified_or_executed": false,
+    "frozen_b572_report_modified": false
+  },
+  "not_established": [
+    "Formal release, release assets, deployment or client installation",
+    "B or V final image/host-fix integration, product build/runtime acceptance, or final P1",
+    "Final 44-repository dependency snapshot/freshness/resolve"
+  ],
+  "source_hashes": [
+    {
+      "revision": "V",
+      "path": "scripts/test_release.py",
+      "bytes": 92882,
+      "sha256": "f1351c31ddeaa9f77808fd4580ed5d7518c8f346421caa263527d63a353a9259",
+      "git_blob": "95d1f060e02384efcb89a16917f78b5e24e4a1d5"
+    },
+    {
+      "revision": "B",
+      "path": "scripts/test_release.py",
+      "bytes": 92871,
+      "sha256": "9118c50a592e3701a3c9dc568928a6c8829187f96e5a18f5d5129e86b0182478",
+      "git_blob": "d5dc039f83e6ff58fd1b31fbfcc69361a2883312"
+    },
+    {
+      "revision": "V",
+      "path": ".github/workflows/release.yml",
+      "bytes": 18881,
+      "sha256": "6dd28b97b77386edb6fa8d6538ed9954f0ed00b1b97e1baa2651f339415c2295",
+      "git_blob": "f085a990058d6b5fe76fd5f08ce37a3deffcadf0"
+    },
+    {
+      "revision": "B",
+      "path": ".github/workflows/release.yml",
+      "bytes": 18763,
+      "sha256": "46139172c34b3984e4dcbbc7e0c1f7cb6a2b8d14eef01e3831619bf452bf3256",
+      "git_blob": "001f26514d79bc78d251d4b5ddbd35b476e54de4"
+    },
+    {
+      "revision": "V",
+      "path": "Cargo.toml",
+      "bytes": 10189,
+      "sha256": "42d7386d69e899bc0ca562b688835a34eebeab5da80861d7db42382509f994bf",
+      "git_blob": "9f9d656ad9a19c5acd5d893d9e243040b09820fc"
+    },
+    {
+      "revision": "B",
+      "path": "Cargo.toml",
+      "bytes": 10189,
+      "sha256": "9f1b4a62a69a986c40b12af4915f64f4091d88eb166ee174b4e504f057c00cbd",
+      "git_blob": "668495f5431916f570e37f887c4c93affb98d09a"
+    },
+    {
+      "revision": "V",
+      "path": "Cargo.lock",
+      "bytes": 66476,
+      "sha256": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608",
+      "git_blob": "c2a982f5f06fdab726b969495647515b130fe8f1"
+    },
+    {
+      "revision": "B",
+      "path": "Cargo.lock",
+      "bytes": 66476,
+      "sha256": "e8578cea449acae5281fc723f30bbaba56774cc3f460dd4e449b8381c21be53b",
+      "git_blob": "3b71ea185e01567058877b5d6767ffc2dccc759c"
+    },
+    {
+      "revision": "V",
+      "path": "scripts/release.py",
+      "bytes": 54070,
+      "sha256": "43e995d675689f3c881f4452172796f4e2f7b195dbceef3dbb9b1ed1d9f95be4",
+      "git_blob": "7b5b1f8bfb68665af8ac2475e5580416b20b28c7"
+    },
+    {
+      "revision": "V",
+      "path": "docs/release-notes-0.10.25.md",
+      "bytes": 1871,
+      "sha256": "fd5ae55b1b6da576e1c371519e9f589493b484d0e1f4a67982719b42dbf5612a",
+      "git_blob": "346ed902ccb2fee0100daf6cfa74bf5d2acded55"
+    }
+  ],
+  "original_files": [
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-ssmcp-v25-review/native/deployment-policy-validation/receipt.json",
+      "bytes": 4079,
+      "sha256": "4283a9f76824f70d6a8e197c744845b94683019e8652be9def486d8be3611098"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-ssmcp-v25-review/native/deployment-policy-validation/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-ssmcp-v25-review/native/deployment-policy-validation/stderr.log",
+      "bytes": 1835,
+      "sha256": "0857ddd4511c4b90e29c5b841e753c1aed6be3f36a86c2bfd55fd66e8203a075"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-ssmcp-v25-review/native/root-normal-push-receipt.json",
+      "bytes": 837,
+      "sha256": "f3aa4a1a7c48a67e242829cb8a074d03efb8b9c500c73752b274acc26b35c48d"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-ssmcp-v25-review/native/root-static-review.json",
+      "bytes": 1052,
+      "sha256": "079778cbb8f4ef02f9ec5ce7d0c8270eaca94615660673c49adc2e9b47c96a38"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-ssmcp-v25-review/native/full.diff",
+      "bytes": 7093,
+      "sha256": "87479495084fcce515894a4e66ca53368aa651b90b65f4e083ce9c0401d96e8d"
+    }
+  ],
+  "supporting_computation": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-ssmcp-v25-review/static-and-original-log-computation.json",
+    "bytes": 6434,
+    "sha256": "112fa8fb2a68bc39d5490bce8483d11e4b99c132bce3aaf9450cd62381cce50b"
+  },
+  "existing_job_capture": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-ssmcp-v25-review/existing-job-8d7.json",
+    "bytes": 18637,
+    "sha256": "5854fb76b0def0df5632a3548e0f077d20b8db3bf051c534568c393f5f2edb81"
+  },
+  "native_original_root": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-version25-preparation",
+  "native_review_mirror": "/home/lightjunction/Documents/GITHUB/project_z/dist/pr-cleanup-20261120-personal/ssmcp-v25-metadata-independent-review.json"
+}

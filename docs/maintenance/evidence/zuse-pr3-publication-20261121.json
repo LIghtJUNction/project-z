@@ -1,0 +1,69 @@
+{
+  "schema": "project-z.zuse-pr3-publication.v1",
+  "head": "35664746549c482c99082e6180419b2c0f5ff532",
+  "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+  "github": [
+    {
+      "number": 3,
+      "url": "https://github.com/LIghtJUNction/zuse/pull/3",
+      "state": "open",
+      "draft": true,
+      "head": "35664746549c482c99082e6180419b2c0f5ff532",
+      "head_ref": "fix/scoped-receipt-budget-20261121",
+      "base": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "base_ref": "feat/scoped-mice-20261121",
+      "merged": false,
+      "updated_at": "2026-11-20T23:17:23Z"
+    },
+    {
+      "number": 2,
+      "url": "https://github.com/LIghtJUNction/zuse/pull/2",
+      "state": "open",
+      "draft": true,
+      "head": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "head_ref": "feat/scoped-mice-20261121",
+      "base": "a1bb8fd2cbce0a9d85134999883c578358065242",
+      "base_ref": "main",
+      "merged": false,
+      "updated_at": "2026-11-20T22:14:06Z"
+    }
+  ],
+  "body_readback_exact": true,
+  "body_file": "zuse-pr3-published-body.md",
+  "drive": {
+    "verified_at": "2026-11-20T23:16:52.673481+00:00",
+    "files": [
+      {
+        "file_id": "15KpLTU4BgQl76r71kcI7Gppskl_T7eje",
+        "url": "https://drive.google.com/file/d/15KpLTU4BgQl76r71kcI7Gppskl_T7eje",
+        "parent_ids": [
+          "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0"
+        ],
+        "bytes": 51643,
+        "sha256": "7bcd05aae954037a5611a9e8d765b4dec698226347a4d784130f16b3349b40db",
+        "download_sha256_matches": true
+      },
+      {
+        "file_id": "18hcIr-VdDQ_AQaW3gDTzCCmgaD_NKdPs",
+        "url": "https://drive.google.com/file/d/18hcIr-VdDQ_AQaW3gDTzCCmgaD_NKdPs",
+        "parent_ids": [
+          "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0"
+        ],
+        "bytes": 5660,
+        "sha256": "a21a80c69c7281b5a9d3bd775c3f2346e0bdf544ea82750d17da984aeb8d1a25",
+        "download_sha256_matches": true
+      }
+    ]
+  },
+  "handoff": {
+    "json": "zuse-pr3-receipt-fix.json",
+    "json_bytes": 27363,
+    "json_sha256": "8d946d84432203d9f6285eab9ed690204e5f225c2d4f5d4c526041e9dbdfabcb",
+    "markdown": "zuse-pr3-receipt-fix.md",
+    "markdown_bytes": 5660,
+    "markdown_sha256": "a21a80c69c7281b5a9d3bd775c3f2346e0bdf544ea82750d17da984aeb8d1a25",
+    "native_dir": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/final-handoff"
+  },
+  "integration_state": "Draft remains unmerged for original author/source owner; PR2 unchanged."
+}
+

@@ -1,0 +1,404 @@
+{
+  "schema_version": 1,
+  "kind": "independent_read_only_static_review",
+  "generated_at": "2026-11-20T22:40:22Z",
+  "repository": "LIghtJUNction/zuse",
+  "pull_request": 2,
+  "url": "https://github.com/LIghtJUNction/zuse/pull/2",
+  "identity": {
+    "base": "a1bb8fd2cbce0a9d85134999883c578358065242",
+    "implementation": "81b5225644e971019d1e8e61e89ffe6694c45a8d",
+    "head": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+    "tree": "285dcbe660ee410338a3bbeaf2153bd43862b77b",
+    "observed_state": "open",
+    "observed_draft": true,
+    "comparison_files": 40,
+    "commits": 2,
+    "second_commit": "documentation-only downstream handoff",
+    "cargo_manifest_or_lock_changed": false
+  },
+  "decision": {
+    "recommendation": "request_changes_before_next_cohort_integration",
+    "blocking_findings": 1,
+    "severity": "P2",
+    "reason": "A valid bounded scoped script can complete successfully but lose or misclassify its completion receipt at the CLI/MCP boundary."
+  },
+  "review_constraints": {
+    "product_executions": 0,
+    "builds": 0,
+    "tests_run": 0,
+    "native_gui_runs": 0,
+    "source_or_lock_edits": 0,
+    "github_writes": 0,
+    "report_files_only": true,
+    "ssmcp_frozen_441_a1_cohort": "untouched",
+    "native_author_gate_replay": false
+  },
+  "findings": [
+    {
+      "id": "ZUSE-PR2-RECEIPT-BUDGET",
+      "severity": "P2",
+      "title": "Align scoped receipt bounds with JSON tokens and escaped MCP envelope size",
+      "location": {
+        "path": "src/script/scheduler.rs",
+        "lines": [
+          99,
+          105
+        ],
+        "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/src/script/scheduler.rs#L99-L105"
+      },
+      "proof_method": "Static source arithmetic and control-flow review, including the exact locked zmcpio parser/writer. No product execution.",
+      "preconditions": "Caller intentionally configures max_steps above its default 256; the supported CLI option and Engine Options permit the examples below.",
+      "variants": [
+        {
+          "name": "token_limit",
+          "source": "repeat 2500 { touchpad.capabilities(); }",
+          "max_steps": 2500,
+          "requires_display": false,
+          "native_inputs": 0,
+          "validity": {
+            "repeat_limit": 4096,
+            "steps": 2500,
+            "expanded_nodes": 5002,
+            "expanded_node_limit": 16384,
+            "static_wait_ms": 0
+          },
+          "arithmetic": {
+            "tokens_per_event": 27,
+            "event_tokens_alone": 67500,
+            "parser_token_capacity": 65536,
+            "event_bytes_with_one_digit_time": 271,
+            "event_budget_upper_bound_using_39_digit_u128_time": 775000,
+            "scheduler_event_byte_limit": 786432
+          },
+          "result_inferred": "The scheduler returns status=completed after cleanup. runtime::failed treats the parser Tokens error as failure, so CLI prints completed JSON but exits 1. MCP reparsing returns Err; stdio serve_lines exits without the tool completion response."
+        },
+        {
+          "name": "escaped_envelope_limit",
+          "source": "repeat 2200 { touchpad.capabilities(); }",
+          "max_steps": 2200,
+          "requires_display": false,
+          "native_inputs": 0,
+          "arithmetic": {
+            "event_tokens": 59400,
+            "total_receipt_tokens": 59423,
+            "parser_token_capacity": 65536,
+            "quotes_per_event": 30,
+            "extra_bytes_from_event_quote_escaping_alone": 66000,
+            "mcp_capacity_extra_bytes": 65536,
+            "event_byte_upper_bound": 682000
+          },
+          "result_inferred": "The receipt fits the parser and scheduler limits, but emitting both JSON-string text and raw structuredContent requires 2*result.len()+at least 66,000 bytes plus framing. The writer therefore returns Buffer; the stdio caller again receives no completed tool result."
+        }
+      ],
+      "impact": "These are pure, valid scripts: a display, input device, malformed argument, or failing backend is not needed. If an allowed input action precedes the repeated observations, its effects would already have occurred before response serialization. No automatic retry, rollback, or observed input duplication is asserted.",
+      "suggested_fix": "Make the accepted receipt shape compatible with all downstream limits. Bound tokens and encoded envelope bytes or produce an explicit bounded summary preserving status, submitted/partial-effect information and cleanup outcome. Size the MCP envelope using escaping-aware accounting or a bounded exact-capacity retry. Do not terminate the server solely because a completed tool receipt cannot be encoded.",
+      "suggested_targeted_regressions_not_run": [
+        "Pure 2500-capability script through CLI/output status and configured Engine.",
+        "Pure 2200-capability script through an initialized MCP tool request, with a second request proving the stdio server remains usable.",
+        "If a summary/truncation policy is chosen, a MockHost action prefix verifies truthful completion/partial-effect and cleanup reporting without native GUI."
+      ],
+      "evidence": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S15",
+        "S16",
+        "S17"
+      ]
+    }
+  ],
+  "other_review_results": [
+    {
+      "topic": "Mouse ownership and normal/cooperative cleanup",
+      "result": "No additional confirmed blocker in the inspected paths.",
+      "basis": "Creation records a unique master name before hierarchy mutation. Native operations validate the exact name under the server grab; close releases attempted held buttons and removes the owned pair. Mouse/UserLease and the scheduler retain normal-error cleanup ownership.",
+      "limits": "Static inspection is not a native cleanup pass; crash, SIGKILL and display-loss guarantees are not asserted.",
+      "evidence": [
+        "S12"
+      ]
+    },
+    {
+      "topic": "Lexical aliases, functions and parallel cancellation",
+      "result": "No additional confirmed blocker.",
+      "basis": "Aliases/parameters retain MouseId, scope-owned lists contain constructors only, and parallel branches conflict on resolved MouseId or the single User resource. Error/cancel exits collect all live handles before returning.",
+      "limits": "MCP zuse.script currently invokes execute with an always-false cancellation callback. CLI signal and Rust CancellationToken claims must not be presented as MCP cancellation-notification support.",
+      "evidence": [
+        "S2",
+        "S10",
+        "S11"
+      ]
+    },
+    {
+      "topic": "Touchpad preflight and capability truth",
+      "result": "The inspected capability/preflight contract is consistent.",
+      "basis": "All native touchpad flags are false. Gesture/cancel nodes are rejected by a recursive whole-program walk before scheduling any earlier mouse action. Planning and capabilities remain pure; no wheel fallback was found.",
+      "evidence": [
+        "S3",
+        "S10"
+      ]
+    },
+    {
+      "topic": "Full strings, Num Lock and error semantics",
+      "result": "No additional confirmed blocker in the fixed changed paths.",
+      "basis": "Foreground text validates the complete string; background input resolves the complete string against the captured keymap before dispatch. Num-on input is limited to verified ordinary foreground chords with no held key, Caps off, group 0, same restorable main keyboard and stable canonical map. Text/background remain rejected with Num on.",
+      "limits": "Submission/cleanup errors can follow partial external effects and do not justify blind replay. We did not perform native fault injection or prove arbitrary modifier restoration.",
+      "evidence": [
+        "S13"
+      ]
+    },
+    {
+      "topic": "Existing Desktop consumers",
+      "result": "Static public signatures/exports remain compatible; new Runtime behavior is intentionally different.",
+      "basis": "The platform module adds a private X11 pointer implementation. Existing Desktop public methods are not removed or given new arguments. Runtime now defaults to independent mice and fresh mouse.position requires a selected handle. Explicit user/system selection is needed to retain deliberate user-pointer behavior.",
+      "limits": "No compile compatibility or downstream adapter pass is claimed. SSMCP/ztype Desktop facades do not acquire new scoped-mouse API merely by updating a dependency."
+    }
+  ],
+  "author_evidence": {
+    "classification": "author_reported_only",
+    "validation_url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/docs/validation-scoped-mice.md",
+    "machine_summary_url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/docs/evidence/scoped-mice-native-2026-11-21.json",
+    "claimed": {
+      "rust_all_targets_passed": 286,
+      "rust_all_targets_failed": 0,
+      "rust_all_targets_ignored": 5,
+      "no_default_features_passed": 20,
+      "format_and_clippy": "passed",
+      "cross_target_checks": "compile-only wasm32, Windows GNU, both macOS architectures, Linux aarch64",
+      "private_native": "Xvfb MPX ownership/cancel and GTK/AT-SPI; private Hyprland 0.57.2 seven fixture groups",
+      "native_binary_sha256": "17d0a6867ee3dc9d176b5d8c3921069e51f06648c29459083cee16084f326c0b"
+    },
+    "independently_read": "Fixed Git validation document and sanitized evidence summary, plus related implementation/test source.",
+    "not_independently_read": "Raw command/exit logs, original compiler-artifact/source-to-binary manifest and original native fixture reports.",
+    "not_claimed": "No author gate was executed, adopted as this review's pass, summed into an independent count or applied to a newer cohort."
+  },
+  "downstream": {
+    "status": "pending_next_cohort",
+    "current_ssmcp_release": "441+a1 remains unchanged",
+    "owners": "Existing native source/release owner retains SSMCP adapter integration; existing ztype writer retains its consumer; aggregate coordinator retains the source graph.",
+    "historical_impact_snapshot": "83e6325893ac1603524176552e30ef297e08a35a",
+    "historical_impact_repositories": [
+      "oh-my-ztty",
+      "ssmcp",
+      "zrc",
+      "ztype",
+      "zuse"
+    ],
+    "scope_warning": "Author impact receipt is a historical observation, not a fresh complete graph or candidate compatibility proof."
+  },
+  "review_limitations": [
+    "This review used fixed GitHub source and static arithmetic only.",
+    "Two read-only child reviews were stopped after their substantive findings to release team capacity; no further children were started. The receipt finding and key ownership/preflight/control-flow paths were independently checked by the owning reviewer.",
+    "No confirmed second blocker is asserted for hypothetical native cleanup I/O failures."
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "path": "src/script/scheduler.rs",
+      "lines": [
+        81,
+        107
+      ],
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/src/script/scheduler.rs#L81-L107",
+      "supports": "Event receipts have a byte budget, without token or escaped-envelope budgeting."
+    },
+    {
+      "id": "S2",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "path": "src/script/scheduler.rs",
+      "lines": [
+        475,
+        530
+      ],
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/src/script/scheduler.rs#L475-L530",
+      "supports": "Cleanup completes and the successful JSON receipt is returned before entrypoint parsing/encoding."
+    },
+    {
+      "id": "S3",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "path": "src/touchpad.rs",
+      "lines": [
+        252,
+        273
+      ],
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/src/touchpad.rs#L252-L273",
+      "supports": "The pure capability event has nine detail members and a fixed ASCII reason."
+    },
+    {
+      "id": "S4",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "path": "src/json.rs",
+      "lines": [
+        32,
+        48
+      ],
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/src/json.rs#L32-L48",
+      "supports": "Result parsing allocates at most 65,536 tokens."
+    },
+    {
+      "id": "S5",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "path": "src/runtime.rs",
+      "lines": [
+        1646,
+        1652
+      ],
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/src/runtime.rs#L1646-L1652",
+      "supports": "A result parse error is treated as failed."
+    },
+    {
+      "id": "S6",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "path": "src/main.rs",
+      "lines": [
+        89,
+        94
+      ],
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/src/main.rs#L89-L94",
+      "supports": "CLI prints the receipt and chooses exit status using runtime::failed."
+    },
+    {
+      "id": "S7",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "path": "src/mcp.rs",
+      "lines": [
+        560,
+        588
+      ],
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/src/mcp.rs#L560-L588",
+      "supports": "MCP reserves 2*result.len()+65,536 and emits both text and structured content."
+    },
+    {
+      "id": "S8",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "path": "src/mcp.rs",
+      "lines": [
+        614,
+        645
+      ],
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/src/mcp.rs#L614-L645",
+      "supports": "serve_lines propagates Engine::handle errors before writing a tool response."
+    },
+    {
+      "id": "S9",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "path": "src/script/compile.rs",
+      "lines": [
+        465,
+        477
+      ],
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/src/script/compile.rs#L465-L477",
+      "supports": "Repeat expands scopes; the compiler allows 16,384 nodes and the configured step count."
+    },
+    {
+      "id": "S10",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "path": "src/script/mod.rs",
+      "lines": [
+        40,
+        59
+      ],
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/src/script/mod.rs#L40-L59",
+      "supports": "Whole-program native capability preflight precedes scheduler execution; execute has no external cancellation callback."
+    },
+    {
+      "id": "S11",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "path": "src/script/compile.rs",
+      "lines": [
+        490,
+        521
+      ],
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/src/script/compile.rs#L490-L521",
+      "supports": "Parallel conflicts are checked by resolved native resource identity."
+    },
+    {
+      "id": "S12",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "path": "src/platform/pointer_x11.rs",
+      "lines": [
+        806,
+        905
+      ],
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/src/platform/pointer_x11.rs#L806-L905",
+      "supports": "Close releases attempted buttons and removes the exact named owned master, with error reporting."
+    },
+    {
+      "id": "S13",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "path": "src/platform/wayland.rs",
+      "lines": [
+        338,
+        422
+      ],
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/src/platform/wayland.rs#L338-L422",
+      "supports": "Num-on chord gates and whole-string background mapping precede dispatch."
+    },
+    {
+      "id": "S14",
+      "repository": "LIghtJUNction/zuse",
+      "revision": "bb838b3573d36ff559c4c901ae7a64a0dd30a2bd",
+      "path": "docs/validation-scoped-mice.md",
+      "lines": null,
+      "url": "https://github.com/LIghtJUNction/zuse/blob/bb838b3573d36ff559c4c901ae7a64a0dd30a2bd/docs/validation-scoped-mice.md",
+      "supports": "Author-authored validation and downstream handoff, not independently replayed gates."
+    },
+    {
+      "id": "S15",
+      "repository": "LIghtJUNction/zmcpio",
+      "revision": "84fc4978a248c2a3e2dd110f4f26fa52dd8b6890",
+      "path": "src/json.rs",
+      "lines": [
+        400,
+        449
+      ],
+      "url": "https://github.com/LIghtJUNction/zmcpio/blob/84fc4978a248c2a3e2dd110f4f26fa52dd8b6890/src/json.rs#L400-L449",
+      "supports": "The locked parser charges a token for each container, key and value."
+    },
+    {
+      "id": "S16",
+      "repository": "LIghtJUNction/zmcpio",
+      "revision": "84fc4978a248c2a3e2dd110f4f26fa52dd8b6890",
+      "path": "src/tools.rs",
+      "lines": [
+        169,
+        237
+      ],
+      "url": "https://github.com/LIghtJUNction/zmcpio/blob/84fc4978a248c2a3e2dd110f4f26fa52dd8b6890/src/tools.rs#L169-L237",
+      "supports": "The locked MCP encoder serializes escaped text and raw structured JSON."
+    },
+    {
+      "id": "S17",
+      "repository": "LIghtJUNction/zmcpio",
+      "revision": "84fc4978a248c2a3e2dd110f4f26fa52dd8b6890",
+      "path": "src/writer.rs",
+      "lines": [
+        18,
+        70
+      ],
+      "url": "https://github.com/LIghtJUNction/zmcpio/blob/84fc4978a248c2a3e2dd110f4f26fa52dd8b6890/src/writer.rs#L18-L70",
+      "supports": "JSON quotes/backslashes are escaped; finish reports insufficient buffer capacity."
+    }
+  ]
+}
+

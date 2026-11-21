@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "knowledge_cutoff_utc": "2026-11-21T09:03:55.489Z",
+  "repository": "LIghtJUNction/ssmcp",
+  "merged_main": "4b4cbff311e930a8c8280ff1989a7f036ce7a892",
+  "merged_tree": "16c341e1e5f828be0a4b4ee1ef0fe9f2945afe26",
+  "owner_report_received_utc": "2026-11-21T08:58:37.587Z",
+  "report_attribution": "original SSMCP source/validation owner",
+  "Gate15_bound": false,
+  "Gate15_executed": false,
+  "reported_followup": {
+    "kind": "test fixture and release-note correction",
+    "finding": "Closing only the live Python child stdout may not produce EOF while the Linux guardian retains stdout; the 10-second case could time out first.",
+    "evidence_scope": "static finding confirmed by the source owner; no executed reproduction reported",
+    "planned_change": "Inject flushed invalid JSON, preserve On/unknown/replay_safe=false/cleanup assertions and the original 10-second bound; clarify two note statements.",
+    "source_or_merge_of_followup": "pending"
+  },
+  "next_source_freeze": "await actual follow-up merge and fresh owner agreement",
+  "full_Gate_runtime_UI_P1": "not established for the current source",
+  "Project_Z_group": {
+    "Cargo": 0,
+    "build": 0,
+    "metadata": 0,
+    "product": 0,
+    "target_writer": 0,
+    "queued": 0,
+    "ztype_v2_started": false,
+    "window_retained_by_original_owner": true
+  },
+  "four_upstream_main": {
+    "zcall": "199678d08104bed588e5d10b2c0634a47d7c8417",
+    "zplugin": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+    "zmcpio": "04bb6cd05c5295ab41a892a76cbef10b8ac07402",
+    "zharness": "fb2948f78467dd92b216aabda6f18a5645f0e7f6"
+  },
+  "old_observations_preserved": true
+}

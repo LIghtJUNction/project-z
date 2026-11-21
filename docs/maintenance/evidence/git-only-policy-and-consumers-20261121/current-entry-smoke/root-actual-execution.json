@@ -1,0 +1,134 @@
+{
+  "schema": "ssmcp.root-current-entry-socket-actual.v1",
+  "scope": "current native PATH binary, isolated local exec-agent socket smoke; not the missing historical live user session and not final-source acceptance",
+  "native_job": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-d3d",
+    "exit_code": 0,
+    "running": false,
+    "stdout_eof": true,
+    "stderr_eof": true,
+    "stdout": "{\"passed\":true,\"report\":\"/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/live-input-sock-20261121/current-entry-smoke-run-v1/launch-result.json\",\"elapsed_seconds\":0.3789758649945725}\n",
+    "stderr": "",
+    "snapshot": {
+      "cancelled": false,
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/live-input-sock-20261121/current-entry-smoke-prepared/driver-reviewed.py",
+        "--run-reviewed-once"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/ssmcp/.worktrees/release21-recovery-20261121",
+      "duration_ms": 422,
+      "error": null,
+      "exit_code": 0,
+      "exit_signal": null,
+      "id": "26c4545eae1eab8d27485f4a48077d3c-d3d",
+      "job_id": "26c4545eae1eab8d27485f4a48077d3c-d3d",
+      "output_mode": "pipes",
+      "pid": 962066,
+      "pid_role": "supervisor",
+      "running": false,
+      "state": "completed",
+      "stderr": {
+        "artifact": null,
+        "eof": true,
+        "error": null,
+        "next_cursor": 0,
+        "start_cursor": 0,
+        "truncated": false
+      },
+      "stdin": {
+        "bytes_written": 0,
+        "mode": "null",
+        "open": false
+      },
+      "stdout": {
+        "artifact": null,
+        "eof": true,
+        "error": null,
+        "next_cursor": 219,
+        "start_cursor": 0,
+        "truncated": false
+      },
+      "timed_out": false,
+      "title": "Run single isolated current-entry socket smoke",
+      "tty_slot": null
+    }
+  },
+  "driver": {
+    "bytes": 17452,
+    "sha256": "86f2f4958d3d22ce3a0c390ad186db200186f54389ff3b5e4fdfd6753257602d"
+  },
+  "entry": {
+    "path": "/home/lightjunction/.cargo/bin/ssmcp",
+    "reported_version": "ssmcp 0.10.25",
+    "bytes": 15751344,
+    "sha256": "54651b3fd9611210a838ffa5ddc1e032dc40d7b71ea2cf163487e4b32085c7b9"
+  },
+  "claim": {
+    "one_product_launch": true,
+    "one_socket_message": true,
+    "one_exec_fixture_invocation": true,
+    "model_used": false,
+    "default_host_socket_touched": false,
+    "production_deployment": false,
+    "installed_entry_modified": false
+  },
+  "public_report_policy": "Publish sanitized receipts and hashes only; private raw client.stderr includes an isolated local OAuth login value.",
+  "observed_at_utc": "2026-11-21T07:25:28.141230+00:00",
+  "source_entry_sha256_after": "54651b3fd9611210a838ffa5ddc1e032dc40d7b71ea2cf163487e4b32085c7b9",
+  "endpoint_absent": true,
+  "outer_process_absent": true,
+  "files": {
+    "launch-result.json": {
+      "bytes": 2124,
+      "sha256": "7be51e0a9a2765e61968606bd8ed3d0e153be3066f8d4fe9ee906c16f104dbfb"
+    },
+    "namespace-tmp/evidence/report.json": {
+      "bytes": 2718,
+      "sha256": "7b2b5c68dcb490ac82960a837a11e89023119aba821621f5d197ea5d05c912b5"
+    },
+    "namespace-tmp/evidence/socket-receipt.jsonl": {
+      "bytes": 285,
+      "sha256": "3f3e1ef56253c9cdccc023d7efddbabf781da11f382ca57aa37e724488b76340"
+    },
+    "namespace-tmp/evidence/actual-input.txt": {
+      "bytes": 885,
+      "sha256": "5d2260359ed2ad9437257a6fd121c930f9df14d7f15f2ee1d3024a0615e1e9d3"
+    },
+    "namespace-tmp/evidence/launch-input.json": {
+      "bytes": 489,
+      "sha256": "245ff96e695640cd56ddef457e7c85c4ff0301d7c597be09f9425bdd2cc6d32d"
+    }
+  },
+  "actual_receipt": {
+    "output": "SOCKET_SMOKE_OK\n完整输入已保存",
+    "request_id": "chat-b5f74864f70171b7ab6b36a49404a93f",
+    "status": "completed",
+    "warnings": [
+      "@missing-socket-smoke.txt: No such file or directory (os error 2)",
+      "$missing_socket_smoke_skill: skill not found in the configured directories."
+    ]
+  },
+  "cleanup": {
+    "outer": {
+      "started": true,
+      "pid": 962164,
+      "exit_code": 0,
+      "reaped": true,
+      "errors": [],
+      "endpoint_absent": true
+    },
+    "client": {
+      "started": true,
+      "pid": 4,
+      "exit_code": 0,
+      "reaped": true,
+      "errors": [],
+      "endpoint": {
+        "state": "absent",
+        "absent": true
+      }
+    }
+  }
+}

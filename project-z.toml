@@ -9,6 +9,7 @@ role = "application"
 
 [repositories.ztty]
 role = "application"
+manifests = ["Cargo.toml", "examples/dedent-plugin/Cargo.toml", "tests/fixtures/text-plugin/Cargo.toml"]
 
 [repositories.zcalld]
 role = "application"
@@ -19,6 +20,15 @@ source_links = { "apps/zcall-gui" = "zcall-gui" }
 
 [repositories.zuse]
 role = "application"
+
+[repositories.zcall]
+manifests = ["Cargo.toml", "fuzz/Cargo.toml"]
+
+[repositories.zconv]
+manifests = ["Cargo.toml", "fuzz/Cargo.toml"]
+
+[repositories.zdwire]
+manifests = ["Cargo.toml", "fuzz/Cargo.toml"]
 
 [repositories.zdot]
 role = "application"
@@ -43,7 +53,11 @@ requires = ["zcalld", "zgpui"]
 
 [repositories.lmm-api-source]
 role = "application"
-manifests = ["services/core/Cargo.toml", "apps/cli/Cargo.toml"]
+manifests = ["services/core/Cargo.toml"]
+source_links = { "apps/cli" = "lmm" }
+
+[repositories.lmm]
+role = "application"
 
 [repositories.ztype]
 role = "application"

@@ -1,0 +1,22 @@
+{
+  "observed_at_utc": "2026-11-21T00:27:50.783527+00:00",
+  "home_free_bytes": 391138848768,
+  "home_total_bytes": 1000203091968,
+  "memory_bytes": {
+    "MemTotal": 16476704768,
+    "MemAvailable": 6727753728,
+    "SwapTotal": 40529100800,
+    "SwapFree": 25353678848
+  },
+  "load_average": [
+    2.12548828125,
+    2.349609375,
+    3.38232421875
+  ],
+  "build_processes": [],
+  "scope": "read-only process names and filesystem metadata; no source writes/builds",
+  "job_id": "26c4545eae1eab8d27485f4a48077d3c-7fa",
+  "exit_code": 0,
+  "stdout_eof": true,
+  "stderr_eof": true
+}

@@ -1,0 +1,280 @@
+{
+  "schema": 2,
+  "generated_at": "2026-11-20T20:34:13.247274+00:00",
+  "status": "merged_and_verified",
+  "publication": {
+    "repository": "TokenNotIncluded/hireferry",
+    "number": 21,
+    "url": "https://github.com/TokenNotIncluded/hireferry/pull/21",
+    "original_source_sha": "130d89ef9879308413d63e472256ed6fff63887f",
+    "validated_head": "5d9313df5dc9c295a2ab575107ed665b3a92dc19",
+    "validated_tree": "b6e3e5439705b6c94e04180734c8bfeb49c33e53",
+    "base_sha": "dd3c20e40093892cf14f50fe09cd8c6c93350525",
+    "merge_sha": "0d900c29de645bafbf6a858632c6506c91e6426a",
+    "merge_tree": "b6e3e5439705b6c94e04180734c8bfeb49c33e53",
+    "parents": [
+      "dd3c20e40093892cf14f50fe09cd8c6c93350525",
+      "5d9313df5dc9c295a2ab575107ed665b3a92dc19"
+    ],
+    "merged_at": "2026-11-20T20:28:54Z",
+    "expected_head_sha": "5d9313df5dc9c295a2ab575107ed665b3a92dc19",
+    "merge_method": "merge",
+    "skip_ci": true,
+    "github_pr_closed_merged_readback": true,
+    "github_main_ref_readback": "0d900c29de645bafbf6a858632c6506c91e6426a",
+    "github_body_exact_readback": true
+  },
+  "application_change": "Move only existing guarded login-return WebView lookup/URL query/fixed payload-free event into spawn_blocking; retain incoming whitelist, selected origin, /auth/app check, and cold local launcher.",
+  "artifact": {
+    "apk": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/android-fixed-verified/hireferry-android-x86_64-debug.apk",
+    "apk_sha256": "935fc98fa8aa62ef84b6d12205f9216c6e8eaf2c9ffd3389bbe54a95a83c9b23",
+    "apk_bytes": 42747530,
+    "abis": [
+      "x86_64"
+    ],
+    "source_head": "5d9313df5dc9c295a2ab575107ed665b3a92dc19",
+    "tree": "b6e3e5439705b6c94e04180734c8bfeb49c33e53",
+    "rust": "1.100.0",
+    "jdk": "21",
+    "sdk": "37.0",
+    "ndk": "29.0.13846066",
+    "build_seconds": 52.525,
+    "postsign_only_no_recompile": true,
+    "original_debug_certificate_restored": true,
+    "non_signing_payloads_identical": true,
+    "unchanged_payload_count": 934
+  },
+  "debug_certificate_sha256": "a962600c77779c945561133d0f3e2d1a3fb06258ea579c52d5feda4351eed811",
+  "baseline": {
+    "package_id": "best.lmm.hireferry.debug",
+    "sha256": "935fc98fa8aa62ef84b6d12205f9216c6e8eaf2c9ffd3389bbe54a95a83c9b23",
+    "installed": true,
+    "launcher_rendered": true,
+    "remote_loaded": true,
+    "remote_native_command": "denied",
+    "feedback_clickable": true,
+    "controls_do_not_overlap": true,
+    "returned_to_launcher": true,
+    "warm_login_return_preserved_page": true,
+    "cold_login_return_stayed_local": true,
+    "fixture_only": true
+  },
+  "joint": {
+    "status": "passed",
+    "source": "5d9313df5dc9c295a2ab575107ed665b3a92dc19",
+    "serial": "emulator-5582",
+    "started": "2026-11-20T20:25:31.999Z",
+    "phases": [
+      {
+        "name": "private-real-server-ready",
+        "at": "2026-11-20T20:25:32.627Z",
+        "origin": "http://localhost:43281",
+        "initial_sessions": 1
+      },
+      {
+        "name": "native-app-request-isolated",
+        "at": "2026-11-20T20:26:06.931Z",
+        "proof_http_only": true,
+        "proof_strict": true,
+        "public_url_has_only_request_id": true
+      },
+      {
+        "name": "system-chrome-consent-isolated",
+        "at": "2026-11-20T20:26:15.159Z",
+        "unchecked_consent": true,
+        "code_matches": true,
+        "no_app_proof_in_browser": true
+      },
+      {
+        "name": "native-browser-return-completed",
+        "at": "2026-11-20T20:26:22.964Z",
+        "separate_app_session": true,
+        "source_browser_preserved": true,
+        "source_lifetime_preserved": true,
+        "replay_rejected": true
+      },
+      {
+        "name": "native-settings-return-passed",
+        "at": "2026-11-20T20:26:25.376Z"
+      }
+    ],
+    "fixture_only": true,
+    "real_external_identity_used": false,
+    "ui_deadline_ms": 45000,
+    "transport": "Observed owned Android WebView and Chrome DevTools sockets forwarded for this test only",
+    "chrome_environment": {
+      "package": "com.android.chrome",
+      "requested_socket": "hf21_1795206332627_devtools_remote",
+      "flags": "_ --disable-fre --no-first-run --no-default-browser-check --disable-background-networking --disable-component-update --remote-debugging-socket-name=hf21_1795206332627_devtools_remote",
+      "package_metadata": [
+        "versionCode=636771938 minSdk=29 targetSdk=34",
+        "versionName=124.0.6367.219",
+        "versionCode=636771938 minSdk=26 targetSdk=34",
+        "versionName=124.0.6367.219"
+      ],
+      "prior_attempt": "android-fixed-smoke-1795205175",
+      "android_sync_switch_omitted": true,
+      "launch_stdout": "Starting: Intent { act=android.intent.action.VIEW dat=about: pkg=com.android.chrome }\n",
+      "launch_stderr": "",
+      "requested_socket_observed": true
+    },
+    "temporary_server_database_closed": true,
+    "external_authentication_requests": [],
+    "finished": "2026-11-20T20:26:25.755Z"
+  },
+  "joint_run": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-114",
+    "seconds": 113.911,
+    "boot_seconds": 38.032,
+    "scope": "hf21-joint-api35-1795206290.scope",
+    "scope_before_cleanup": "ActiveState=active\nSubState=running\nResult=success\nControlGroup=/user.slice/user-1000.slice/user@1000.service/app.slice/hf21-joint-api35-1795206290.scope\nMemoryPeak=4295622656",
+    "independent_final_scope": "ActiveState=inactive\nSubState=dead\nControlGroup=",
+    "owned_emulator_stopped": true,
+    "application_ui_wait_seconds": 45,
+    "baseline_rerun": false
+  },
+  "merge_tree_proof": {
+    "head": {
+      "exit_code": 0,
+      "stdout": "5d9313df5dc9c295a2ab575107ed665b3a92dc19",
+      "stderr": ""
+    },
+    "status": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "base_ancestor": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "merge_tree": {
+      "exit_code": 0,
+      "stdout": "b6e3e5439705b6c94e04180734c8bfeb49c33e53",
+      "stderr": ""
+    },
+    "delta_from_validated": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "evidence": [
+    {
+      "role": "reproduced original application ANR/SIGABRT",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/android-root-smoke.json",
+      "bytes": 6043,
+      "sha256": "930274192c7adb3ac0855248aeca5c6c21bee197399c2c946cc7be54e014de12"
+    },
+    {
+      "role": "deadlock diagnosis",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/android-deep-link-anr-diagnosis.json",
+      "bytes": 2172,
+      "sha256": "139a0830381903e2363a8e2e99a84739571fd9864a0852d8e177c2fc8d673bc6"
+    },
+    {
+      "role": "minimal product fix publication",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/android-deep-link-fix-publication.json",
+      "bytes": 445,
+      "sha256": "caab03ddd4ab5effb9d5754f057cc03e9b869f1668ae544a85217e4d9200beba"
+    },
+    {
+      "role": "compiled and re-signed identical APK payloads",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/android-fixed-build-final.json",
+      "bytes": 4534,
+      "sha256": "bb912764ce50039c2fe66070e83c9dbcfe8e21d11e654abfa0af6f5d84b10edd"
+    },
+    {
+      "role": "14 passing Python harness tests at preserved source",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/android-harness-ready.json",
+      "bytes": 1038,
+      "sha256": "aa6facc9e943644bc159aa98cdb1fba1ba7c9c58f4d18170a9c5d641d779bf52"
+    },
+    {
+      "role": "passed original fixed-APK baseline",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/android-fixed-smoke-1795205175/smoke/android-smoke.json",
+      "bytes": 446,
+      "sha256": "6991b9a95c394eb6fb0740ff3fa0c3dfd9598089bb17c092521aa189ad3dd599"
+    },
+    {
+      "role": "baseline pass plus initial Chrome fixture failure",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/android-fixed-smoke.json",
+      "bytes": 4553,
+      "sha256": "14750559f082b56ecbc5fc9db06d1923b13675c29d7d385f51e8665d60503c05"
+    },
+    {
+      "role": "preserved Chrome SIGSEGV and one-flag fixture correction",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/android-chrome-preparation-diagnosis.json",
+      "bytes": 6102,
+      "sha256": "7d81283e6e33c58fab36df71dfa255236ec03cd24cc5d69b6b2ead6da7a6a6e2"
+    },
+    {
+      "role": "actual joint assertion harness",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/native_app_login_acceptance_chrome_fixed.mjs",
+      "bytes": 18998,
+      "sha256": "4bbea3feceb438fdefcaa8fb246d37698b7c7d58073bf654d02bd898a8f16a77"
+    },
+    {
+      "role": "bounded joint-only wrapper",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/android_joint_only_acceptance.py",
+      "bytes": 13462,
+      "sha256": "338b9530f3e199b302072cd4aa7c2f2715cabc9548946f003f2b507aa712151b"
+    },
+    {
+      "role": "passed joint wrapper",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/android-fixed-joint.json",
+      "bytes": 6223,
+      "sha256": "faab8e9375bb15611914120786a360f0e201d4f2e7a6117e0f241dd89c2637a8"
+    },
+    {
+      "role": "passed actual native/Chrome/server flow",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/android-fixed-joint-1795206290/joint/native-app-login.json",
+      "bytes": 2222,
+      "sha256": "d5ded8a35f0b92fe9e3a90ca0e188da32d0c7bb914ed850d28f196e2cbc41f5b"
+    },
+    {
+      "role": "no ANR since current boot",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/android-fixed-joint-1795206290/final-last-anr.log",
+      "bytes": 88,
+      "sha256": "42cf4931006fd0ff42d3522af31f9346431b409aa22a793ecc16b5aedeed28a1"
+    },
+    {
+      "role": "no native crash in joint run",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/android-fixed-joint-1795206290/final-logcat.log",
+      "bytes": 7493362,
+      "sha256": "8a23b1cf9bb1fb28d09eb2cf4f5d42064e9e450ded77bb6e3e7afb0d4cab57b6"
+    },
+    {
+      "role": "GitHub PR body exact readback",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-cleanup-org-20261120/evidence-hf21/pr21-body-final.md",
+      "bytes": 6951,
+      "sha256": "98d9fc949eafaebe329768ad96cd00c63c63081dada9a3b65f6236f1fa918b28"
+    }
+  ],
+  "prior_failures_preserved": [
+    "Original old Android gate",
+    "Current 42d application ANR/SIGABRT",
+    "SDK/cache/signature preflight failures",
+    "Private AVD boot timeout",
+    "Fixed baseline passed but first Chrome preparation SIGSEGV"
+  ],
+  "chrome_fixture_change": {
+    "old_script": "ffcba3b581f19bd41a8d57b9df16221331643e261eed3c75879d0e70fa08d92d",
+    "new_script": "4bbea3feceb438fdefcaa8fb246d37698b7c7d58073bf654d02bd898a8f16a77",
+    "change": "Remove Android --disable-sync only; add diagnostics, preserve exact application assertion suffix and 45-second deadline.",
+    "actual_version": "124.0.6367.219",
+    "symbolization_limit": "Null-pointer native PCs preserved; IdentityManager identification is an upstream-informed inference rather than a symbolized stack."
+  },
+  "qualification_limits": [
+    "Historical iOS simulator evidence is bound to its original source; no fresh current-source iOS/device test.",
+    "Engineering debug key only; no real maintainer signing, version/tag/release/store publication.",
+    "Private server, synthetic ordinary member and isolated SQLite only; no production account/database/payment or physical phone."
+  ],
+  "workflow_review": {
+    "main_push_formal_release": false,
+    "mobile_signing": "workflow_dispatch only",
+    "server_cli_desktop_release": "matching release tags or explicit manual dispatch",
+    "merge_skip_ci": true
+  }
+}

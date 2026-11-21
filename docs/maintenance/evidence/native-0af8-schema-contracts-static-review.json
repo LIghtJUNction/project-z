@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "title": "Independent static review of three prepared native-0af8 schema contracts",
+  "reviewed_at_utc": "2026-11-21T01:40:47.892393+00:00",
+  "conclusion": {
+    "blocking_findings": [],
+    "material_inconsistencies": [],
+    "decision": "No static blocker found in the three negative-case definitions and their specified rejection paths. Actual contract execution remains pending."
+  },
+  "scope": {
+    "files": {
+      "contracts": {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-binding-readonly-prepared-v1/candidate/test_new_schema_contracts.py",
+        "bytes": 6580,
+        "sha256": "feb83d95e964610cb4ceea9be046914c4f4857a2f7da43b14d3f6a712046f9e1"
+      },
+      "adapter": {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-binding-readonly-prepared-v1/candidate/native_git_binding.py",
+        "bytes": 56548,
+        "sha256": "d131dbc547846b8a5ae9cfd2af10d630ff4fcc59cf6b8310a112cc04e57c8116"
+      },
+      "run_plan": {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-binding-readonly-prepared-v1/readonly-run-plan.json",
+        "bytes": 6510,
+        "sha256": "568c4103d483af485a6b5c891a08fb37c39956cb2515857316e708f31bbcc40f"
+      },
+      "reader_read_primitive_only": {
+        "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-binding-readonly-prepared-v1/candidate/reviewed_evidence_reader_25c59.py",
+        "bytes": 41707,
+        "sha256": "25c59c56aef77ea780ce396d684bc40e727a49c0e0e55daf8f4df97aaa4e2bea"
+      }
+    },
+    "adapter_functions": [
+      "validate_rust_log",
+      "validate_source_files",
+      "validate_execution_projection"
+    ],
+    "reader_scope": "Hash identity and Evidence.read primitive only, to inspect the test file-read preconditions. The complete adapter/runner/original-input review belongs to Core.",
+    "candidate_modules_imported": false,
+    "candidate_or_contract_code_executed": false,
+    "product_or_cargo_or_native_validator_run": false,
+    "native_actions": false,
+    "source_ref_lock_or_output_directory_modified": false,
+    "new_runtime_or_test_results": 0,
+    "only_output_written": "This independent reviewer JSON, outside the prepared package and its planned output directory."
+  },
+  "inventory": {
+    "prepared_contract_count": 3,
+    "names": [
+      "test_verbose_test_execution_cannot_borrow_another_artifact",
+      "test_manifest_byte_claim_must_match_the_same_blob_read",
+      "test_complete_job_snapshot_cannot_cover_truncated_stream_bytes"
+    ],
+    "ast_class_inventory_equals_constant_and_run_plan": true,
+    "adapter_and_reader_hash_constants_equal_actual_files": true,
+    "status": "definitions_prepared_not_run",
+    "pure_contract_receipt": null,
+    "execution_authorized_by_plan": false,
+    "run_one_location_only": true
+  },
+  "common_setup_and_control": [
+    "Hash-checked module loading, explicit fixture-root resolution and every fixture read occur outside all assertRaisesRegex blocks. Missing files, hash mismatch or setup errors cannot be accepted as a negative-case success.",
+    "Every test calls the same validator first with the original correct input before constructing the negative mutation. A failed positive control is an ordinary test error, not an expected rejection.",
+    "Each expected-error context contains exactly one validator call and requires ValueError with the case-specific message. The baseline calls, next() lookups, display-count assertion and mutation operations are outside those contexts.",
+    "The entry point fixes the three named methods and returns success only when unittest.wasSuccessful() is true. A missing evidence-root argument or setUpClass failure cannot produce a successful suite."
+  ],
+  "cases": [
+    {
+      "name": "test_verbose_test_execution_cannot_borrow_another_artifact",
+      "baseline": "Pinned original verbose Rust log plus pinned locked metadata are accepted by validate_rust_log before mutation; the test then requires exactly one display for the root zcalld artifact.",
+      "mutation": "Keep raw compiler artifacts and the root parent environment; replace the selected root display executable with the known zcalld_compat_client test executable.",
+      "static_branch_path": "The original successful control establishes the ordered root parent. In its first iteration, the alternative executable is a known unused artifact, so the unique-artifact guard is satisfied. Its package is zcalld-compat-client while the expected first package is zcalld, reaching the named package/source/profile rejection before the later execution-environment or test-count guards.",
+      "required_rejection": "Rust parent package/source/compiler profile differs",
+      "scope_boundary": "This definition catches borrowing another valid artifact; it is not an executed result and does not replace Core original-fixture validation."
+    },
+    {
+      "name": "test_manifest_byte_claim_must_match_the_same_blob_read",
+      "baseline": "The test writes one private regular nonexecutable file containing body\\n (five bytes), computes its correct Git blob and SHA-256, and validates the correct declaration first.",
+      "mutation": "Only the declared byte count changes 5 to 6; the same file, SHA-256 and Git object remain. Each call receives a fresh Evidence object.",
+      "static_branch_path": "The unchanged file passes root/path/type/mode/stability/Git-blob checks. The bytes declaration then disagrees with len(data) from that same verified read, triggering the required byte-declaration error. File setup and the successful-control call are outside the expected-error context.",
+      "required_rejection": "source byte declaration differs from the same verified Git-blob read",
+      "scope_boundary": "Only a private TemporaryDirectory synthetic input would be created during the authorized future contract execution; this reviewer created none."
+    },
+    {
+      "name": "test_complete_job_snapshot_cannot_cover_truncated_stream_bytes",
+      "baseline": "The fixed original start/completion/handoff/gate/scope and hash-bound job882 readback are first accepted together.",
+      "mutation": "Keep original completed snapshot and EOF claims; shorten stdout, and update only its base64 encoding and cursor to the shortened stream.",
+      "static_branch_path": "Earlier command/identity/snapshot checks see the same accepted records. The stdout branch requires the original fixed 2000-byte stream and cursor before JSON gate-projection parsing; the shortened text/cursor fails the specified completeness condition despite the successful snapshot and EOF claims.",
+      "required_rejection": "original completion stream is incomplete",
+      "scope_boundary": "The prepared case is a raw-stream completeness contract, not a new job882/product execution."
+    }
+  ],
+  "run_plan_alignment": {
+    "test_script_hash": "feb83d95e964610cb4ceea9be046914c4f4857a2f7da43b14d3f6a712046f9e1",
+    "native_argv": [
+      "/usr/bin/python3",
+      "-I",
+      "-B",
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/native-0af8-binding-readonly-prepared-v1/candidate/test_new_schema_contracts.py",
+      "--evidence-root",
+      "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121"
+    ],
+    "required_rejection_messages_match_source": true,
+    "native_package_created_in_plan": false,
+    "output_directory_created_in_plan": false,
+    "constraints_preserved": "The plan still requires static approval and an authorized copy/readback before one-location execution; all three successful controls and exact rejection expectations remain. It does not grant execution by itself."
+  },
+  "not_established": [
+    "The three contracts have passed at runtime",
+    "The complete new adapter/runner is admissible; Core is reviewing that separately",
+    "A new native binding, SSMCP P1, product gate, release or final44 result"
+  ],
+  "links": {
+    "prepared_package": "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-binding-readonly-prepared-v1",
+    "test_script": "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-binding-readonly-prepared-v1/candidate/test_new_schema_contracts.py",
+    "run_plan": "/workspace/scratch/3cc863eec631/pr-cleanup-root/native-0af8-binding-readonly-prepared-v1/readonly-run-plan.json"
+  }
+}

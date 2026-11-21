@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "recorded_at_utc": "2026-11-21T04:17:31.049474+00:00",
+  "status": "completed_bounded_read_no_evidence_inconsistency_batch_failed",
+  "outputs": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-U-r12-ui-second-failure-read-20261121/ui-second-failure-independent-read.json",
+      "bytes": 18838,
+      "sha256": "5185cf3aa092bdaaec85ad0cc80ee096d30957f0e5a8ea7cc6a67ec938330f99",
+      "git_blob_sha1": "a29d0255a3ca116020514b8744ed24d7ec5dbcd8"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-U-r12-ui-second-failure-read-20261121/ui-second-failure-independent-read.md",
+      "bytes": 3239,
+      "sha256": "9ab388639c3ec117ed975e328b53dce622dbebfcd01f0283e825e040491d1df7",
+      "git_blob_sha1": "b93b944b281e1f1c075a6b5157cb3998cfbab446"
+    }
+  ],
+  "originals": {
+    "acceptance": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-mesa-v1/acceptance.json",
+      "bytes": 921146,
+      "sha256": "8821744cc88365371f588aed69862029195a3295d6cd9d88981991dc9c2d9fd3",
+      "git_blob_sha1": "ae0d121e199e358983af54ebbd35623a2bcb88bb"
+    },
+    "redacted_session_groups_log": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/u-ui24-acceptance-mesa-v1/suites/session_groups/run.log",
+      "bytes": 10563,
+      "sha256": "18f2fed2e00bff5823288f6a2d089ef37b85a048f7c48400c3f4a68fe2c41fe4",
+      "git_blob_sha1": "aca83e828a09fb8b5d4b3c13a2d1817d5fb2debd"
+    }
+  },
+  "originals_unchanged": true,
+  "wrapper_zero_is_not_zero_assertions": true,
+  "canonical_report_or_remote_publication": false,
+  "product_tests_Cargo_locks_ELFs_final44": false
+}

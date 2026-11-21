@@ -1,0 +1,68 @@
+{
+  "schema": "project-z.git-only-single-selector-publication.v1",
+  "observed_at_utc": "2026-11-21T09:27:01.816Z",
+  "repository": "LIghtJUNction/zdot",
+  "commit": "f78bd895de698cf8c8f7689fea5ebbc6cba27230",
+  "parent": "a3c6a75b1e66747822b9b69d9e046d2aac249210",
+  "tree": "fe42f18d78f2cfebd87e1ae02fcb9fbdf1a70904",
+  "branch": "chore/git-only-zclap-20261121",
+  "pull_request": {
+    "number": 2,
+    "url": "https://github.com/LIghtJUNction/zdot/pull/2",
+    "head": "f78bd895de698cf8c8f7689fea5ebbc6cba27230",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "authored_body_prefix_exact": true,
+    "bot_appendix_preserved": true
+  },
+  "default_main_unchanged": "a3c6a75b1e66747822b9b69d9e046d2aac249210",
+  "changed_paths": [
+    "Cargo.toml"
+  ],
+  "semantic_difference": [
+    {
+      "operation": "remove",
+      "path": [
+        "dependencies",
+        "zclap",
+        "version"
+      ],
+      "old_value": "=0.1.4"
+    }
+  ],
+  "manifest": {
+    "path": "zdot/files/Cargo.toml",
+    "bytes": 687,
+    "sha256": "366bdb89ebb2e53f9d6d37d5b2ebc679de48209fd57dda403fbffdae72bfb1da",
+    "git_blob": "0b6da0a9a38ca66f1f51d38e4eec3d0b684541cd",
+    "raw_github_exact": true
+  },
+  "base_leaves": 27,
+  "candidate_leaves": 27,
+  "unchanged_leaves": 26,
+  "lock_unchanged": {
+    "path": "Cargo.lock",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4052e2e845b9dc511780125b046c2e44d828fbaa",
+    "size": 322
+  },
+  "complete_recursive_tree_checked": true,
+  "root_independent_exact_one_field_comparison": true,
+  "validation": {
+    "python_stdlib_toml_parse": true,
+    "exact_semantic_comparison": true,
+    "git_blob_and_root_tree_hashing": true,
+    "cargo": false,
+    "cargo_metadata": false,
+    "product_tests": false,
+    "ci": false,
+    "registry": false,
+    "target_lock": false,
+    "queued": false
+  },
+  "source_policy": "Git-only internal development source; lock refresh and real publication readiness are separate pending gates",
+  "knowledge_after_fixed_report_cutoff": true,
+  "fixed_14cd_report_unchanged": true
+}

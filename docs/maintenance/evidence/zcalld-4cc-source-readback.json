@@ -1,0 +1,18 @@
+{
+  "observed_at": "2026-11-21 00:00:36 UTC",
+  "pr": 1,
+  "head": "4cc2fd1cfb6eb49dacc022af6c15cc0f7825e409",
+  "base": "0a0a62cdca25bbdf289a17f03dfeed1acc945595",
+  "head_ref": "feat/ssmcp-listener-p1-20261120",
+  "draft": true,
+  "state": "open",
+  "mergeable": null,
+  "mergeable_state": "unknown",
+  "commit": "4cc2fd1cfb6eb49dacc022af6c15cc0f7825e409",
+  "tree": "262cb876bcf4f83ef2c66912863629f0401db89d",
+  "parents": [
+    "d5314fe930b0932bbce076ff578474d3ef084695",
+    "0a0a62cdca25bbdf289a17f03dfeed1acc945595"
+  ],
+  "boundary": "Source-only integration; no new cohort build/runtime/P1 acceptance inferred from clean mergeability."
+}
