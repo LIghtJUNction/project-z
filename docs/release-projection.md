@@ -89,3 +89,7 @@ internal cross-repository declarations use Git without a version selector. The
 projection retains compatibility with historical multiple-location declarations
 and still requires an exact source receipt before accepting a registry archive
 for release.
+
+## 不带 Git 元数据的 staging 制品
+
+严格的 schema 1 回执继续要求干净的 Cargo VCS 信息。对于从 Git-only 开发源码生成、没有 `.git` 的 staging 制品，使用独立的 [schema 2 重建回执](release-projection-receipts.md)：固定源码及工具提交、独立信任回执摘要，并真实重建每个包以比对完整 archive 摘要。不要为 staging 伪造 `.cargo_vcs_info.json`。
