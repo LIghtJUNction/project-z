@@ -17,10 +17,10 @@
 | zterm | `15174fecfb441011e4ae35d0e361b88eec29bd7a` |
 | zrc | `c127bd2965525adc05c46c6fba492aa1e45460f1` |
 | zcalld | `61df8ac1c4e135f07313e6984dc389f49acc5afe` |
-| ztty | `c63dbd52e9fb597b77245403460972ecb699f096` |
-| oh-my-ztty | `c85baf956bbc840a2152b1362dc3b22387ce167a` |
+| ztty | `404864fa7f32ea485090cf331f3e96788a49cc8f` |
+| oh-my-ztty | `2fa1b47d41fbc441b482d7c4c23beac0c1e903e4` |
 
-本轮 ztty 依赖同步提交为 `094085e90eda4df1e696bbc16283527445ee5a8d`。同步期间，上游在其后发布了 0.6.0 的 SSH/mux 改动；快照采用表中的最新默认分支提交，其 zterm、zgpui 来源保持一致。
+本轮 ztty 依赖同步提交为 `094085e90eda4df1e696bbc16283527445ee5a8d`。同步期间，上游先发布 0.6.0 的 SSH/mux 改动，又完成 0.6.1 的发行准备及验收记录。后续提交只调整版本、发行文档和 CI 验证配置，运行代码及 zterm、zgpui 来源保持一致。
 
 ## Zuse 0.5.0 发行与安装
 
@@ -40,9 +40,9 @@ Zuse 0.5.0 已由上述源码正式发行。[GitHub 正式发行运行 449247311
 | Zuse 其它门禁 | all-targets Clippy、no_std 检查及 updater 12 项测试通过。 |
 | ssmcp | native 摘要记录 30 项通过；zuse_backend 28 项通过、4 项 ignored；不重播测试 1 项通过。 |
 | ztype | 原生 `cargo test` 通过。 |
-| ztty 0.6.0 | 对本次锁定提交重新运行原生 `cargo test`，255 passed、8 ignored。 |
+| ztty | 在 `c63dbd5` 上运行原生 `cargo test`，255 passed、8 ignored；当前锁定的 `404864f` 与其运行代码一致。 |
 | zuse-skills | 代码提供 14 个函数，native 验证 34 项通过。 |
-| oh-my-ztty | 套件检查 181 项全部通过；六个组件的递归源码与来源锁一致。 |
+| oh-my-ztty | 套件检查 181 项全部通过；采用 ztty 0.6.1 后，37 项来源契约复测通过，六个组件的递归源码与来源锁一致。 |
 | Project Z | 115 项测试通过。 |
 
 ssmcp 的 `exec.read` 已支持展开有界、脱敏的详细结果。生产渲染器生成的两帧夹具图已由 reviewer 看图验收；证据范围是 fixture 输出，未作为 live 桌面截图验收。开发机 CLI 已安装本轮修复提交，版本号仍为 0.10.25；当前运行会话保持运行，新启动的 CLI 使用该修复。

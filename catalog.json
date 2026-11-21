@@ -54,7 +54,7 @@
       "path": "oh-my-ztty",
       "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
       "branch": "main",
-      "commit": "c85baf956bbc840a2152b1362dc3b22387ce167a",
+      "commit": "2fa1b47d41fbc441b482d7c4c23beac0c1e903e4",
       "role": "suite",
       "manifests": [],
       "requires": [
@@ -494,7 +494,7 @@
       "path": "ztty",
       "url": "https://github.com/LIghtJUNction/ztty.git",
       "branch": "main",
-      "commit": "c63dbd52e9fb597b77245403460972ecb699f096",
+      "commit": "404864fa7f32ea485090cf331f3e96788a49cc8f",
       "role": "application",
       "manifests": [
         "Cargo.toml",
@@ -4786,7 +4786,7 @@
     },
     {
       "name": "ztty",
-      "version": "0.6.0",
+      "version": "0.6.1",
       "repository": "ztty",
       "manifest": "ztty/Cargo.toml",
       "workspace": "ztty",
