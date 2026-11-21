@@ -6,7 +6,7 @@
       "path": "OniMods",
       "url": "https://github.com/LIghtJUNction/OniMods.git",
       "branch": "main",
-      "commit": "1b93643d3ec683aa2e512c7a5b42ae1177db5b33",
+      "commit": "53f9396fa0ea1c62c71f6effc45feb59de72c9d5",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -18,7 +18,7 @@
       "path": "lmm",
       "url": "https://github.com/TokenNotIncluded/lmm.git",
       "branch": "main",
-      "commit": "260a1eff2400aa64fc697028a406a8017ed6259c",
+      "commit": "b97b5c26b0304d4ffe5a668027149b42347999b1",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -30,7 +30,7 @@
       "path": "lmm-api-source",
       "url": "https://github.com/TokenNotIncluded/lmm-api-source.git",
       "branch": "main",
-      "commit": "fa57cd2049ccd9138cdc0b4104db36b5b6c53ae5",
+      "commit": "0e8962cb1a890d30b4b087fac9f161608b73e66b",
       "role": "application",
       "manifests": [
         "services/core/Cargo.toml"
@@ -42,7 +42,7 @@
       "path": "mechrevo-drivers",
       "url": "https://github.com/LIghtJUNction/mechrevo-drivers.git",
       "branch": "main",
-      "commit": "e522bf8c612865043fdf766726b93066249fb6f8",
+      "commit": "93a7614c79895fc7dcc5b1e7e1291800cc9de1d0",
       "role": "application",
       "manifests": [
         "console/Cargo.toml"
@@ -54,7 +54,7 @@
       "path": "oh-my-ztty",
       "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
       "branch": "main",
-      "commit": "2fa1b47d41fbc441b482d7c4c23beac0c1e903e4",
+      "commit": "9ef19ba20e8b4ea9f380d08085e417d63eb5a3d6",
       "role": "suite",
       "manifests": [],
       "requires": [
@@ -71,12 +71,14 @@
       "path": "ssmcp",
       "url": "https://github.com/LIghtJUNction/ssmcp.git",
       "branch": "main",
-      "commit": "dde2938e050e1d9f8186a600f57dbb67e12de211",
+      "commit": "add39e18ff92680ff3ac0c3e911407956e20b228",
       "role": "application",
       "manifests": [
         "Cargo.toml"
       ],
-      "requires": []
+      "requires": [
+        "zuse"
+      ]
     },
     {
       "name": "z58",
@@ -107,7 +109,7 @@
       "path": "zcall",
       "url": "https://github.com/LIghtJUNction/zcall.git",
       "branch": "main",
-      "commit": "8dd30a922a0aedbe821f610649b1ab26078d1882",
+      "commit": "aaac54236f7ce0f4e1559c6e3b78d680d9dabf41",
       "role": "library",
       "manifests": [
         "Cargo.toml",
@@ -120,7 +122,7 @@
       "path": "zcall-gui",
       "url": "https://github.com/LIghtJUNction/zcall-gui.git",
       "branch": "main",
-      "commit": "95cbe443f06cd7d7e922ca498d916f970e712d4b",
+      "commit": "daa540307573d86838b108f4a76aa45230fca5f5",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -148,7 +150,7 @@
       "path": "zcalld",
       "url": "https://github.com/LIghtJUNction/zcalld.git",
       "branch": "main",
-      "commit": "61df8ac1c4e135f07313e6984dc389f49acc5afe",
+      "commit": "8e52d791c305a3730d2ea876b8dffb6be2e2c04c",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -176,7 +178,7 @@
       "path": "zclap",
       "url": "https://github.com/LIghtJUNction/zclap.git",
       "branch": "main",
-      "commit": "4d87f3ae3743e81509d5ac5500909955667c860f",
+      "commit": "a4c7e6f3e0ff860de701573117248fe8538c71e5",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -188,7 +190,7 @@
       "path": "zclick",
       "url": "https://github.com/LIghtJUNction/zclick.git",
       "branch": "main",
-      "commit": "732f958299e0e7b3522e4e85264083f8a0acafdc",
+      "commit": "c437230dcf9467b9d1decaf0142215ea054bcf07",
       "role": "bindings",
       "manifests": [
         "Cargo.toml"
@@ -223,7 +225,7 @@
       "path": "zdot",
       "url": "https://github.com/LIghtJUNction/zdot.git",
       "branch": "main",
-      "commit": "f540adcd11a7ed56339895d3d52e0a9e5e3506c6",
+      "commit": "645fa9a5504672cf7f1ffee522c9889cabb111f3",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -260,7 +262,7 @@
       "path": "zgpui",
       "url": "https://github.com/LIghtJUNction/zgpui.git",
       "branch": "main",
-      "commit": "174a8b73087deeac2ecfa036cad8bddba71c612f",
+      "commit": "eeb909e956ed0cff05e14525d4f29f5a78c553ec",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -296,7 +298,7 @@
       "path": "zharness",
       "url": "https://github.com/LIghtJUNction/zharness.git",
       "branch": "main",
-      "commit": "5f9a9f58f090326bf2d43f4df2cc90c1bc674c21",
+      "commit": "8907262ce6c8494f2849f8e5abd84f7a3da2e405",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -308,7 +310,7 @@
       "path": "zhex",
       "url": "https://github.com/LIghtJUNction/zhex.git",
       "branch": "main",
-      "commit": "09dfaa0adee628d0714e2f9e96921555e619b2f6",
+      "commit": "9fc8de3901b2726e650537f4a6330355e8a965e7",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -320,7 +322,7 @@
       "path": "zi18n",
       "url": "https://github.com/LIghtJUNction/zi18n.git",
       "branch": "main",
-      "commit": "cdff8dea19e97268d296afa827767ea689420591",
+      "commit": "755549f82fa513c4e4f2f5aaf6fdeea8da4a6347",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -356,7 +358,7 @@
       "path": "zmcl",
       "url": "https://github.com/LIghtJUNction/zmcl.git",
       "branch": "main",
-      "commit": "a2f9afe41d8013a32c2f928b9126e9f96e76f4db",
+      "commit": "6a83e6215d583a4e03c02a3e07df576cc599081d",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -373,7 +375,7 @@
       "path": "zmcpio",
       "url": "https://github.com/LIghtJUNction/zmcpio.git",
       "branch": "main",
-      "commit": "c114a5ae9f925c64f3b090b8524016cbb90b6cff",
+      "commit": "89a247ac274bcd96b760dd9e7dcb0d4d924a901e",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -421,7 +423,7 @@
       "path": "zrc",
       "url": "https://github.com/LIghtJUNction/zrc.git",
       "branch": "main",
-      "commit": "c127bd2965525adc05c46c6fba492aa1e45460f1",
+      "commit": "31f37e9bb8f5c5adcf195f68692c47ec7ea26705",
       "role": "configuration",
       "manifests": [
         "Cargo.toml"
@@ -482,7 +484,7 @@
       "path": "zterm",
       "url": "https://github.com/LIghtJUNction/zterm.git",
       "branch": "main",
-      "commit": "15174fecfb441011e4ae35d0e361b88eec29bd7a",
+      "commit": "c0860ae44dbf5dedeaea5719449004b8bb1ec65f",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -494,7 +496,7 @@
       "path": "ztty",
       "url": "https://github.com/LIghtJUNction/ztty.git",
       "branch": "main",
-      "commit": "404864fa7f32ea485090cf331f3e96788a49cc8f",
+      "commit": "c0f195d9b93065040b4efef35f3615831db11b38",
       "role": "application",
       "manifests": [
         "Cargo.toml",
@@ -520,7 +522,7 @@
       "path": "ztype",
       "url": "https://github.com/LIghtJUNction/ztype.git",
       "branch": "main",
-      "commit": "bb2c1dc71a0f1dc77b56b0bc1bc7fd3cdb2501f8",
+      "commit": "1b08bedd4ffb1ef68effa5aea32c31775e51d268",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -534,7 +536,7 @@
       "path": "zuse",
       "url": "https://github.com/LIghtJUNction/zuse.git",
       "branch": "main",
-      "commit": "b5ebbd3679af215706cbd73b17045e014f5e0524",
+      "commit": "6e88dd885eb73545a1ab6a9cd50097ef63fba423",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -546,7 +548,19 @@
       "path": "zuse-skills",
       "url": "https://github.com/LIghtJUNction/zuse-skills.git",
       "branch": "main",
-      "commit": "fce48d78dcbedbecaaa56a09fdf11b12b9a6b09a",
+      "commit": "201a7508d3ed2928295ebaf0853ea4528212b980",
+      "role": "extension",
+      "manifests": [],
+      "requires": [
+        "zuse"
+      ]
+    },
+    {
+      "name": "zuse-std",
+      "path": "zuse-std",
+      "url": "https://github.com/LIghtJUNction/zuse-std.git",
+      "branch": "main",
+      "commit": "d79f43f8f3c2a1bff05962420f014b6c16403c5c",
       "role": "extension",
       "manifests": [],
       "requires": [
@@ -2529,6 +2543,21 @@
           "path": null
         },
         {
+          "name": "flate2",
+          "alias": null,
+          "requirement": "^1.1.11",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "rust_backend"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
           "name": "futures-util",
           "alias": null,
           "requirement": "^0.3",
@@ -2763,6 +2792,19 @@
           "path": null
         },
         {
+          "name": "tar",
+          "alias": null,
+          "requirement": "^0.4.46",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
           "name": "tokio",
           "alias": null,
           "requirement": "^1.54",
@@ -2940,6 +2982,21 @@
           "path": null
         },
         {
+          "name": "zip",
+          "alias": null,
+          "requirement": "^6.0.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "deflate-flate2"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
           "name": "zplugin",
           "alias": null,
           "requirement": "*",
@@ -2966,21 +3023,6 @@
           "default_features": true,
           "features": [],
           "source": "git+https://github.com/LIghtJUNction/ztuio.git",
-          "path": null
-        },
-        {
-          "name": "zuse-computer",
-          "alias": "zuse",
-          "requirement": "*",
-          "explicit_version": false,
-          "kind": "normal",
-          "target": null,
-          "optional": false,
-          "default_features": false,
-          "features": [
-            "std"
-          ],
-          "source": "git+https://github.com/LIghtJUNction/zuse.git",
           "path": null
         }
       ]
@@ -3020,7 +3062,7 @@
     },
     {
       "name": "zcall",
-      "version": "0.4.1",
+      "version": "0.4.2",
       "repository": "zcall",
       "manifest": "zcall/Cargo.toml",
       "workspace": "zcall",
@@ -3884,7 +3926,7 @@
     },
     {
       "name": "zgpui",
-      "version": "0.1.6",
+      "version": "0.1.8",
       "repository": "zgpui",
       "manifest": "zgpui/Cargo.toml",
       "workspace": "zgpui",
@@ -4280,7 +4322,7 @@
     },
     {
       "name": "zmcpio",
-      "version": "0.5.0",
+      "version": "0.5.3",
       "repository": "zmcpio",
       "manifest": "zmcpio/Cargo.toml",
       "workspace": "zmcpio",
@@ -5187,7 +5229,7 @@
     },
     {
       "name": "zuse-computer",
-      "version": "0.5.0",
+      "version": "0.6.0",
       "repository": "zuse",
       "manifest": "zuse/Cargo.toml",
       "workspace": "zuse",

@@ -6,6 +6,8 @@ forbidden_packages = ["ztty-ui", "ztui-core", "zui", "zui-native"]
 
 [repositories.ssmcp]
 role = "application"
+# Manages the standalone Zuse CLI at runtime; it is not a linked Cargo dependency.
+requires = ["zuse"]
 
 [repositories.ztty]
 role = "application"
@@ -93,6 +95,11 @@ role = "application"
 manifests = ["console/Cargo.toml"]
 
 [repositories.zuse-skills]
+role = "extension"
+manifests = []
+requires = ["zuse"]
+
+[repositories.zuse-std]
 role = "extension"
 manifests = []
 requires = ["zuse"]
