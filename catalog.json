@@ -18,7 +18,7 @@
       "path": "bilibilive",
       "url": "https://github.com/LIghtJUNction/bilibilive.git",
       "branch": "main",
-      "commit": "0f97b0e59240fd1230878371c4b9126f0955b70f",
+      "commit": "6a6801492e0d70ca6cc8103f92fe76ac7f2da2df",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -546,7 +546,7 @@
       "path": "zuse",
       "url": "https://github.com/LIghtJUNction/zuse.git",
       "branch": "main",
-      "commit": "0016f96067d1e4672c62be9d8008d210edcdae2d",
+      "commit": "d67e47c5dcd443ad9121a908ca57059160249051",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -696,7 +696,7 @@
     },
     {
       "name": "bilibilive",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "repository": "bilibilive",
       "manifest": "bilibilive/Cargo.toml",
       "workspace": "bilibilive",
@@ -5523,7 +5523,7 @@
     },
     {
       "name": "zuse-computer",
-      "version": "0.4.0",
+      "version": "0.4.2",
       "repository": "zuse",
       "manifest": "zuse/Cargo.toml",
       "workspace": "zuse",
