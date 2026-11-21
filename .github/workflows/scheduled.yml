@@ -126,6 +126,7 @@ jobs:
         id: record
         env:
           GH_TOKEN: ${{ github.token }}
+          PROJECT_Z_SCHEDULED_WRITES: ${{ vars.PROJECT_Z_SCHEDULED_WRITES }}
           CANDIDATE: ${{ needs.prepare.outputs.sha }}
           RELEASE_TAG: ${{ needs.package.outputs.tag }}
           ARCHIVE_DIGEST: ${{ needs.package.outputs.archive_digest }}

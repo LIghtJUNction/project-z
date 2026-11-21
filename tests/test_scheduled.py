@@ -53,6 +53,28 @@ class ScheduledTests(unittest.TestCase):
         s.git("commit", "-qm", f"fixture {digit}")
         return s.git("rev-parse", "HEAD")
 
+    def test_dry_run_or_wrong_push_destination_denies_writer(self):
+        with self.assertRaisesRegex(ValueError, "canonical main"):
+            s.authorize_writer()
+        with patch.dict(os.environ, dict(GITHUB_EVENT_NAME="schedule", PROJECT_Z_SCHEDULED_WRITES="true",
+                                         GITHUB_REF="refs/heads/main", GITHUB_REPOSITORY="LIghtJUNction/project-z")):
+            with self.assertRaisesRegex(ValueError, "canonical main"):
+                s.authorize_writer()
+
+    def test_verified_bundle_replays_on_shallow_base(self):
+        sha = self.snapshot("2", "0.1.1")
+        audit = Path("dist/maintenance")
+        audit.mkdir(parents=True)
+        (audit / "audit.json").write_text(json.dumps({"errors": [], "snapshot": {"status": "ready", "commit": sha}}))
+        with patch.dict(os.environ, {"GITHUB_SHA": self.base}):
+            s.bundle()
+        clone = self.dir / "runner"
+        s.git("clone", "--depth", "1", "--branch", "main", (self.dir / "remote.git").as_uri(), str(clone))
+        with chdir(clone):
+            s.git("fetch", "--no-tags", str(self.dir / "cohort.bundle"), "refs/heads/cohort")
+            self.assertEqual(s.git("rev-parse", "FETCH_HEAD"), sha)
+            self.assertEqual(s.verify(self.base, sha), {"child"})
+
     def test_no_changes_do_not_emit_candidate_or_create_tag(self):
         audit = Path("dist/maintenance")
         audit.mkdir(parents=True)
@@ -100,6 +122,7 @@ class ScheduledTests(unittest.TestCase):
         manifest.write_text(f"Project Z {tag}\nproject_z\t{sha}\n")
         self.ctx.enter_context(patch.dict(os.environ, dict(GITHUB_SHA=self.base, CANDIDATE=sha,
             RELEASE_TAG=tag, ARCHIVE_DIGEST=s.digest(archive), MANIFEST_DIGEST=s.digest(manifest))))
+        self.ctx.enter_context(patch.object(s, "authorize_writer"))
         self.ctx.enter_context(patch.object(s, "fresh"))
         self.ctx.enter_context(patch.object(registry, "child_targets", return_value=[]))
         fake = {"draft": None, "assets": {}, "fail": True, "published": 0}
@@ -150,7 +173,7 @@ class ScheduledTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "remote refs changed"):
             s.compare_push([f"HEAD {sha} refs/heads/main {'9'*40}"], self.base, sha, "")
         with patch.dict(os.environ, dict(GITHUB_SHA=self.base, CANDIDATE=sha, RELEASE_TAG="")), \
-             patch.object(s, "freshness_errors", return_value=["child moved"]), self.assertRaisesRegex(ValueError, "child moved"):
+             patch.object(s, "authorize_writer"), patch.object(s, "freshness_errors", return_value=["child moved"]), self.assertRaisesRegex(ValueError, "child moved"):
             s.record()
         Path("unauthorized").write_text("fixture")
         s.git("add", "unauthorized")

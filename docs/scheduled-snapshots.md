@@ -6,12 +6,12 @@ The scheduled workflow observes all repositories registered in `.gitmodules` at 
 | --- | --- |
 | No gitlink changed | Stop after audit. Registry availability or a documentation edit cannot start a release. |
 | A lock, nested source, generated index or default branch disagrees | Fail with the coordinator's consumer and source diagnostic. |
-| A clean candidate exists | Transfer its commit in a Git bundle. The reusable CI checks that exact parent and SHA, validates dependency locks and runs its existing Linux, Windows and macOS matrix. |
+| A clean candidate exists | Transfer its commit in a Git bundle. The reusable CI checks that exact parent and SHA, validates dependency locks and runs its existing Linux, Windows and macOS matrix. Linux also tests affected Rust consumers and runs the suite’s own check when impacted. |
 | Full CI passed, source changed, package versions stayed the same | Stage the verified gitlink update. When writes are enabled, fast-forward the aggregate without a tag. |
 | Full CI passed and a changed repository introduces a new package version | Check historical stable tags for the version and source cohort. Stage one aggregate patch with the official release packager, including the source archive and `commits.txt`. A decrease blocks. Build metadata alone does not qualify. |
 | A required check, permission or source identity fails | Stop the affected transition. The job log identifies the failed gate. |
 
-Project Z has no root crate. Its patch tag identifies a GitHub source snapshot. A version change in a registered package can qualify that snapshot, including an internal package. The coordinator never edits a child version or lockfile.
+Project Z has no root crate. Its patch tag identifies a GitHub source snapshot. Package versions come from Cargo metadata and the non-Cargo version manifests explicitly registered in `project-z.toml`. Other Git-only components still synchronize. A version change in a registered package can qualify that snapshot, including an internal package. The coordinator never edits a child version or lockfile.
 
 ## Enabling scheduled writes
 

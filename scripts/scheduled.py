@@ -1,5 +1,7 @@
 """Prepare, test and record a scheduled Project Z GitHub snapshot."""
 import argparse
+import base64
+from functools import cache
 import hashlib
 import json
 import os
@@ -8,10 +10,11 @@ import re
 import subprocess
 import sys
 import tempfile
+import tomllib
 
 import maintenance
 from cargo_versions import version_key
-from project_z import freshness_errors
+from project_z import freshness_errors, repository_impact
 import release
 
 
@@ -83,16 +86,44 @@ def bundle():
     output(sha=sha, bundle="cohort-" + os.environ["GITHUB_RUN_ATTEMPT"])
 
 
-def versions(ref):
-    return {(p["repository"], p["name"]): p["version"] for p in catalog(ref)["packages"]}
+@cache
+def native_version(url, sha, manifest):
+    owner, repo = maintenance.github_identity(url)
+    blob = json.loads(gh("api", f"repos/{owner}/{repo}/contents/{manifest}?ref={sha}"))
+    require(blob["type"] == "file" and blob["encoding"] == "base64", "invalid version manifest")
+    text = base64.b64decode(blob["content"]).decode("utf-8")
+    if manifest == "VERSION":
+        return text.strip()
+    if manifest == "pyproject.toml":
+        return tomllib.loads(text)["project"]["version"]
+    require(manifest == "zuse.json", "unknown version manifest")
+    return json.loads(text)["version"]
+
+
+def packages(ref, changed):
+    data = catalog(ref)
+    result = [p for p in data["packages"] if p["repository"] in changed]
+    policy = tomllib.loads(Path("project-z.toml").read_text(encoding="utf-8"))
+    manifests = policy.get("scheduled", {}).get("version_manifests", {})
+    for repo in data["repositories"]:
+        name = repo["name"]
+        if name in changed and name in manifests:
+            version = native_version(repo["url"], repo["commit"], manifests[name])
+            version_key(version)
+            result.append(dict(repository=name, name=name, version=version, publish=False))
+    return result
+
+
+def versions(ref, changed):
+    return {(p["repository"], p["name"]): p["version"] for p in packages(ref, changed)}
 
 
 def version_changes(base, sha, changed):
-    old = versions(base)
+    old = versions(base, changed)
     result = []
-    for p in catalog(sha)["packages"]:
+    for p in packages(sha, changed):
         key = (p["repository"], p["name"])
-        if p["repository"] not in changed or old.get(key) == p["version"]:
+        if old.get(key) == p["version"]:
             continue
         if key in old:
             previous, current = version_key(old[key]), version_key(p["version"])
@@ -118,7 +149,7 @@ def plan(base, sha):
     for _, tag in tags:
         if links(tag) == cohort:
             return "", []
-        seen.update((repo, name, v) for (repo, name), v in versions(tag).items())
+        seen.update((repo, name, v) for (repo, name), v in versions(tag, changed).items())
     updates = [p for p in updates if (p["repository"], p["name"], p["version"]) not in seen]
     if not updates:
         return "", []
@@ -223,7 +254,18 @@ def fresh(sha):
     require(not errors, "\n".join(errors))
 
 
+def authorize_writer():
+    repo = "LIghtJUNction/project-z"
+    require(os.environ.get("GITHUB_EVENT_NAME") == "schedule" and
+            os.environ.get("PROJECT_Z_SCHEDULED_WRITES") == "true" and
+            os.environ.get("GITHUB_REF") == "refs/heads/main" and
+            os.environ.get("GITHUB_REPOSITORY") == repo and
+            maintenance.github_identity(git("remote", "get-url", "--push", "origin")) == tuple(repo.split("/")),
+            "production writes require the enabled schedule on the canonical main repository")
+
+
 def record():
+    authorize_writer()
     base, sha, tag = (os.environ[k] for k in ("GITHUB_SHA", "CANDIDATE", "RELEASE_TAG"))
     verify(base, sha)
     require(not tag or release.VERSION.fullmatch(tag), "invalid tag")
@@ -258,15 +300,29 @@ def record():
                 "reserved release refs disagree")
         finish_release(tag, files)
         from scheduled_registry import child_targets
-        updates = version_changes(base, sha, verify(base, sha))
+        changed = verify(base, sha)
+        updates = version_changes(base, sha, changed)
         # The write job reads policy and executes code only from the trusted
         # base. Environment names for dispatch are never accepted from CI.
         historical = {(*key, v) for old_tag in git("tag", "--list").splitlines()
                       if old_tag != tag and release.VERSION.fullmatch(old_tag)
-                      for key, v in versions(old_tag).items()}
+                      for key, v in versions(old_tag, changed).items()}
         pending = [p for p in updates if (p["repository"], p["name"], p["version"]) not in historical]
         targets = child_targets(pending, catalog(sha)["repositories"], Path.cwd())
         output(children=json.dumps(targets, separators=(",", ":")))
+
+
+def affected_tests():
+    sha = git("rev-parse", "HEAD")
+    changed = verify(os.environ["GITHUB_SHA"], sha)
+    data = catalog(sha)
+    affected = set(repository_impact(data, changed))
+    if any(p["repository"] in affected for p in data["packages"]):
+        selection = [arg for name in sorted(changed) for arg in ("--affected", name)]
+        subprocess.run([sys.executable, "scripts/project_z.py", "run", *selection, "--", "test", "--tests"],
+                       check=True)
+    if "oh-my-ztty" in affected:
+        subprocess.run(["make", "-C", "oh-my-ztty", "check"], check=True)
 
 
 def main():
@@ -275,7 +331,7 @@ def main():
     verify_cmd = sub.add_parser("verify")
     verify_cmd.add_argument("base")
     verify_cmd.add_argument("sha")
-    for cmd in ["bundle", "package", "record", "pre-push"]:
+    for cmd in ["bundle", "package", "record", "pre-push", "affected-tests"]:
         sub.add_parser(cmd)
     args = parser.parse_args()
     if args.cmd == "verify":
@@ -283,7 +339,7 @@ def main():
     elif args.cmd == "pre-push":
         compare_push(sys.stdin, os.environ["GITHUB_SHA"], os.environ["CANDIDATE"], os.environ["RELEASE_TAG"])
     else:
-        {"bundle": bundle, "package": package, "record": record}[args.cmd]()
+        {"bundle": bundle, "package": package, "record": record, "affected-tests": affected_tests}[args.cmd]()
 
 
 if __name__ == "__main__":

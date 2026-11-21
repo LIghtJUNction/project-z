@@ -56,7 +56,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 30
+    timeout-minutes: ${{ inputs.candidate_artifact && 90 || 30 }}
     steps:
       - uses: actions/checkout@v6
         with:
@@ -82,3 +82,8 @@ jobs:
         uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756
       - name: Test libraries against the same local dependency snapshot
         run: python3 scripts/project_z.py run -- test --tests
+      - name: Test affected Rust consumers and suite on Linux
+        if: runner.os == 'Linux' && inputs.candidate_artifact != ''
+        run: |
+          sudo apt-get install -y zsh
+          python3 scripts/scheduled.py affected-tests

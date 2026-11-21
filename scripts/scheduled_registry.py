@@ -8,7 +8,7 @@ import tomllib
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
-from maintenance import github_identity, registry_status
+from maintenance import MaintenanceError, github_identity, registry_status
 
 
 def gh_api(endpoint):
@@ -63,11 +63,14 @@ def child_targets(updates, repositories, root):
     result = []
     for p in updates:
         target = approved_target(p, repos, rules)
-        if target and eligible(target):
-            result.append(target)
-        elif p["publish"] and not target:
-            status = registry_status(p)["status"]
-            print(f"{p['name']}@{p['version']}: crates.io {status}; no approved owner handoff")
+        try:
+            if target and eligible(target):
+                result.append(target)
+            elif p["publish"] and not target:
+                status = registry_status(p)["status"]
+                print(f"{p['name']}@{p['version']}: crates.io {status}; no approved owner handoff")
+        except (MaintenanceError, OSError, subprocess.CalledProcessError, ValueError, KeyError) as error:
+            print(f"{p['name']}@{p['version']}: could not verify registry handoff; skipping ({error})")
     return result
 
 
