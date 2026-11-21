@@ -2499,7 +2499,7 @@
         },
         {
           "slug": "skills-zuse-skill-creator-skill",
-          "title": "description: Create importable Zuse GUI modules with native function descriptions, explicit application scope, Zuse 0.5 guarded draft writes, bounded output, and tests for independent calls and honest application support metadata.",
+          "title": "zuse-skill-creator",
           "file": "content/projects/zuse-skills/skills-zuse-skill-creator-skill.md",
           "source": "https://github.com/LIghtJUNction/zuse-skills/blob/201a7508d3ed2928295ebaf0853ea4528212b980/skills/zuse-skill-creator/SKILL.md",
           "path": "skills/zuse-skill-creator/SKILL.md"

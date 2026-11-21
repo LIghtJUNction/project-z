@@ -7,9 +7,14 @@ from pathlib import Path
 import tempfile
 from unittest.mock import patch
 import build
+from collect_docs import title_from
 
 
 def rendering_regressions():
+    assert title_from(
+        b"---\nname: zuse-skill-creator\ndescription: A long description.\n---\n\n1. A step.\n",
+        "skills/zuse-skill-creator/SKILL.md",
+    ) == "zuse-skill-creator", "Frontmatter must not become a document heading"
     project = {
         "id": "ztest",
         "repository": "https://github.com/example/ztest",

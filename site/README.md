@@ -44,6 +44,8 @@ The build checks every local page, asset and fragment before replacing the previ
 
 Browser acceptance covers the catalog, category and text filtering, global search and empty results, code copying, keyboard access, dark/light theme persistence, project switching and mobile navigation. Review representative short and long pages at desktop and narrow widths. Generated screenshots belong in ignored `site/_validation/`, never in source history.
 
+The [2026-11-22 acceptance record](evidence/documentation-20261122.json) records the 49-project coverage, source hashes, static checks, observed browser interactions and the limits of the narrow-screen check.
+
 ## Publish
 
 The source and build tools live in `LIghtJUNction/project-z`. The generated site is published from `LIghtJUNction/project-z-site`, whose GitHub Pages source is the root of `main`.

@@ -276,6 +276,15 @@ def doc_priority(path: str) -> tuple[int, str]:
 
 def title_from(data: bytes, path: str) -> str:
     text = data.decode("utf-8")
+    metadata_title = None
+    frontmatter = re.match(r"\A\ufeff?---\r?\n(.*?)\r?\n---(?:\r?\n|$)", text, re.S)
+    if frontmatter:
+        text = text[frontmatter.end():]
+        for key in ("title", "name"):
+            value = re.search(rf"^{key}:\s*(.+?)\s*$", frontmatter[1], re.M)
+            if value and value[1] not in {"|", ">"}:
+                metadata_title = value[1].strip("\"'")
+                break
     match = re.search(r"^#{1,6}\s+(.+?)(?:\s+#+)?\s*$", text, re.M)
     if match:
         return re.sub(r"[*`_]", "", match.group(1)).strip()
@@ -283,7 +292,7 @@ def title_from(data: bytes, path: str) -> str:
     for index, line in enumerate(lines[1:], 1):
         if re.fullmatch(r"\s*[=-]{3,}\s*", line) and lines[index - 1].strip():
             return lines[index - 1].strip()
-    return PurePosixPath(path).stem.replace("-", " ")
+    return metadata_title or PurePosixPath(path).stem.replace("-", " ")
 
 
 def slug_for(path: str, used: set[str]) -> str:
