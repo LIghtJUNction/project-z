@@ -1,0 +1,1350 @@
+{
+  "schema_version": 7,
+  "document_id": "1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+  "title": "Project Z 进度报告（2026-11-21）",
+  "url": "https://docs.google.com/document/d/1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+  "revision_id": "AHj4eMStxPJE5v7kHzsuHgLizBvpa5gc1ZZIQMvmSZKjyGOIBP0KYKTu3_hZr3n3rl1ico-GZhSs9P8FyH4Y0YJ24F9BQVbItzx7tlpKK-I",
+  "parent_ids": [
+    "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0"
+  ],
+  "mime_type": "application/vnd.google-apps.document",
+  "status_cutoff_utc": "2026-11-21T05:46:09Z",
+  "immutable_archive_commit": "1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d",
+  "final_readback_verified": true,
+  "checks": [
+    {
+      "name": "same document ID",
+      "passed": true
+    },
+    {
+      "name": "same title",
+      "passed": true
+    },
+    {
+      "name": "native Google Doc and original folder",
+      "passed": true
+    },
+    {
+      "name": "one original tab",
+      "passed": true
+    },
+    {
+      "name": "applied revision returned by batch",
+      "passed": true
+    },
+    {
+      "name": "complete paragraph count",
+      "passed": true
+    },
+    {
+      "name": "paragraph 0 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 0 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 0 native style",
+      "passed": true
+    },
+    {
+      "name": "heading effective font 0",
+      "passed": true
+    },
+    {
+      "name": "paragraph 1 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 1 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 1 native style",
+      "passed": true
+    },
+    {
+      "name": "heading effective font 1",
+      "passed": true
+    },
+    {
+      "name": "paragraph 2 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 2 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 2 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 3 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 3 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 3 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 4 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 4 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 4 native style",
+      "passed": true
+    },
+    {
+      "name": "heading effective font 4",
+      "passed": true
+    },
+    {
+      "name": "paragraph 5 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 5 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 5 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 6 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 6 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 6 native style",
+      "passed": true
+    },
+    {
+      "name": "heading effective font 6",
+      "passed": true
+    },
+    {
+      "name": "paragraph 7 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 7 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 7 native style",
+      "passed": true
+    },
+    {
+      "name": "heading effective font 7",
+      "passed": true
+    },
+    {
+      "name": "paragraph 8 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 8 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 8 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 9 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 9 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 9 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 10 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 10 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 10 native style",
+      "passed": true
+    },
+    {
+      "name": "heading effective font 10",
+      "passed": true
+    },
+    {
+      "name": "paragraph 11 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 11 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 11 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 12 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 12 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 12 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 13 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 13 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 13 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 14 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 14 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 14 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 15 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 15 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 15 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 16 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 16 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 16 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 17 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 17 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 17 native style",
+      "passed": true
+    },
+    {
+      "name": "heading effective font 17",
+      "passed": true
+    },
+    {
+      "name": "paragraph 18 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 18 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 18 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 19 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 19 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 19 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 20 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 20 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 20 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 21 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 21 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 21 native style",
+      "passed": true
+    },
+    {
+      "name": "heading effective font 21",
+      "passed": true
+    },
+    {
+      "name": "paragraph 22 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 22 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 22 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 23 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 23 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 23 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 24 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 24 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 24 native style",
+      "passed": true
+    },
+    {
+      "name": "heading effective font 24",
+      "passed": true
+    },
+    {
+      "name": "paragraph 25 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 25 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 25 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 25 native ordered list",
+      "passed": true
+    },
+    {
+      "name": "paragraph 26 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 26 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 26 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 26 native ordered list",
+      "passed": true
+    },
+    {
+      "name": "paragraph 27 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 27 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 27 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 27 native ordered list",
+      "passed": true
+    },
+    {
+      "name": "paragraph 28 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 28 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 28 native style",
+      "passed": true
+    },
+    {
+      "name": "heading effective font 28",
+      "passed": true
+    },
+    {
+      "name": "paragraph 29 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 29 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 29 native style",
+      "passed": true
+    },
+    {
+      "name": "paragraph 30 full text",
+      "passed": true
+    },
+    {
+      "name": "paragraph 30 final index",
+      "passed": true
+    },
+    {
+      "name": "paragraph 30 native style",
+      "passed": true
+    },
+    {
+      "name": "one native table",
+      "passed": true
+    },
+    {
+      "name": "native table 7 by 3",
+      "passed": true
+    },
+    {
+      "name": "table full text 0,0",
+      "passed": true
+    },
+    {
+      "name": "table full text 0,1",
+      "passed": true
+    },
+    {
+      "name": "table full text 0,2",
+      "passed": true
+    },
+    {
+      "name": "table full text 1,0",
+      "passed": true
+    },
+    {
+      "name": "table full text 1,1",
+      "passed": true
+    },
+    {
+      "name": "table full text 1,2",
+      "passed": true
+    },
+    {
+      "name": "table full text 2,0",
+      "passed": true
+    },
+    {
+      "name": "table full text 2,1",
+      "passed": true
+    },
+    {
+      "name": "table full text 2,2",
+      "passed": true
+    },
+    {
+      "name": "table full text 3,0",
+      "passed": true
+    },
+    {
+      "name": "table full text 3,1",
+      "passed": true
+    },
+    {
+      "name": "table full text 3,2",
+      "passed": true
+    },
+    {
+      "name": "table full text 4,0",
+      "passed": true
+    },
+    {
+      "name": "table full text 4,1",
+      "passed": true
+    },
+    {
+      "name": "table full text 4,2",
+      "passed": true
+    },
+    {
+      "name": "table full text 5,0",
+      "passed": true
+    },
+    {
+      "name": "table full text 5,1",
+      "passed": true
+    },
+    {
+      "name": "table full text 5,2",
+      "passed": true
+    },
+    {
+      "name": "table full text 6,0",
+      "passed": true
+    },
+    {
+      "name": "table full text 6,1",
+      "passed": true
+    },
+    {
+      "name": "table full text 6,2",
+      "passed": true
+    },
+    {
+      "name": "source link 本轮完整报告",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/2026-11-21-release-and-v2-gates.md"
+      }
+    },
+    {
+      "name": "source link 机器清单",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/2026-11-21-release-and-v2-gates.json"
+      }
+    },
+    {
+      "name": "source link efe912eb",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/project-z/commit/efe912eb54a8240fab39126d1f2f6a464cc67f8b"
+      }
+    },
+    {
+      "name": "source link ba666696",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/project-z/commit/ba666696e38c350c7bf3cdcc01fd940fcfa69145"
+      }
+    },
+    {
+      "name": "source link 88fa3610",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/project-z/commit/88fa3610f24cc21705107bff4917a6ec26c022d0"
+      }
+    },
+    {
+      "name": "source link PR7",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/project-z/pull/7"
+      }
+    },
+    {
+      "name": "source link 修复 88fa3610",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/project-z/commit/88fa3610f24cc21705107bff4917a6ec26c022d0"
+      }
+    },
+    {
+      "name": "source link Q/r11",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/ssmcp/commit/647bce2ec9cf74beab43adea831c2e0712d28ea8"
+      }
+    },
+    {
+      "name": "source link U/r12",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/ssmcp/commit/784370b5fe1b817c788273a5f7b1ab826c743965"
+      }
+    },
+    {
+      "name": "source link V2 固定源码 f42baae1",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/ssmcp/commit/f42baae1d5227bd6db8315aef778160b80b57274"
+      }
+    },
+    {
+      "name": "source link 独立复核",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/evidence/ssmcp-V2-r13/independent-review/ssmcp-V2-r13-gate-independent-review.md"
+      }
+    },
+    {
+      "name": "source link 原件核对",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/evidence/ssmcp-V2-r13-runtime/root-runtime-readback.json"
+      }
+    },
+    {
+      "name": "source link UI 于 05:27:26—05:31:00 UTC",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/evidence/ssmcp-V2-r13-ui/root-ui-readback.json"
+      }
+    },
+    {
+      "name": "source link 第 515 行",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/ssmcp/blob/f42baae1d5227bd6db8315aef778160b80b57274/scripts/e2e_composer.py#L515"
+      }
+    },
+    {
+      "name": "source link 单父后继 4de17310",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/ssmcp/commit/4de17310ce2ecdbc8b6c6ab86ee365653f753ee8"
+      }
+    },
+    {
+      "name": "source link PR159",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/ssmcp/pull/159"
+      }
+    },
+    {
+      "name": "source link 候选 bd7a30c0",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/zcalld/commit/bd7a30c0a9e3865f137af229d5883e8fb984f518"
+      }
+    },
+    {
+      "name": "source link GUI 259 的既有官方 CI",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/zcall-gui/actions/runs/44853641350"
+      }
+    },
+    {
+      "name": "source link 修复 67e2d6a4",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/zuse/commit/67e2d6a4cee0d106f46bdf064013e163c0aa3337"
+      }
+    },
+    {
+      "name": "source link CI 44860554142",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/zuse/actions/runs/44860554142"
+      }
+    },
+    {
+      "name": "source link PR2",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/zuse/pull/2"
+      }
+    },
+    {
+      "name": "source link SSMCP Q／U 历史",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/project-z/blob/33fd62fdbb376b6b64f14e604a63452abc654a1b/docs/maintenance/evidence/ssmcp-Q-r11-gate-independent-review.json"
+      }
+    },
+    {
+      "name": "source link zcalld PR1",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/zcalld/pull/1"
+      }
+    },
+    {
+      "name": "source link 发行工具与最终 44 仓图",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/project-z/pull/7"
+      }
+    },
+    {
+      "name": "source link PR4",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/zuse/pull/4"
+      }
+    },
+    {
+      "name": "source link fe47f963",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/LIghtJUNction/zuse/commit/fe47f963e604c13a2646baf5d391df5a7c69fc36"
+      }
+    },
+    {
+      "name": "no publication placeholders",
+      "passed": true
+    },
+    {
+      "name": "V2 completed and composer failure retained",
+      "passed": true
+    },
+    {
+      "name": "successor not promoted to pass",
+      "passed": true
+    },
+    {
+      "name": "exact cutoff retained",
+      "passed": true
+    }
+  ],
+  "effective_font_checks": [
+    {
+      "paragraph": 0,
+      "expected": 22,
+      "effective": 22,
+      "inherited": false
+    },
+    {
+      "paragraph": 1,
+      "expected": 13,
+      "effective": 13,
+      "inherited": false
+    },
+    {
+      "paragraph": 4,
+      "expected": 18,
+      "effective": 18,
+      "inherited": false
+    },
+    {
+      "paragraph": 6,
+      "expected": 18,
+      "effective": 18,
+      "inherited": false
+    },
+    {
+      "paragraph": 7,
+      "expected": 16,
+      "effective": 16,
+      "inherited": true
+    },
+    {
+      "paragraph": 10,
+      "expected": 16,
+      "effective": 16,
+      "inherited": true
+    },
+    {
+      "paragraph": 17,
+      "expected": 16,
+      "effective": 16,
+      "inherited": true
+    },
+    {
+      "paragraph": 21,
+      "expected": 16,
+      "effective": 16,
+      "inherited": true
+    },
+    {
+      "paragraph": 24,
+      "expected": 18,
+      "effective": 18,
+      "inherited": false
+    },
+    {
+      "paragraph": 28,
+      "expected": 18,
+      "effective": 18,
+      "inherited": false
+    }
+  ],
+  "complete_text_projection": "# Project Z 进度报告\n\n2026年11月20—21日，本轮进展与验收边界\n\n发行工具修复的 18 项测试已通过。SSMCP V2 的 r13 完成 35 阶段并通过独立复核，18 项运行时检查通过；UI 已执行 13/24 组，12 组通过，第 13 组 composer 失败。对应的单行预期文字修正已推送，r14 结果本版尚未确立。最终 P1 与 44 仓新图仍待完成。\n\n[本轮完整报告](https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/2026-11-21-release-and-v2-gates.md)和[机器清单](https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/2026-11-21-release-and-v2-gates.json)已固定在提交 1154d2e7：新增 27 份证据和 2 份摘要，原 400 个叶对象保持。这份报告按 05:31:38 UTC 的状态收录迟到的 UI 失败原件，并单列后继源码。此前主线合入 [efe912eb](https://github.com/LIghtJUNction/project-z/commit/efe912eb54a8240fab39126d1f2f6a464cc67f8b)、[ba666696](https://github.com/LIghtJUNction/project-z/commit/ba666696e38c350c7bf3cdcc01fd940fcfa69145) 的 10 份证据和 [88fa3610](https://github.com/LIghtJUNction/project-z/commit/88fa3610f24cc21705107bff4917a6ec26c022d0) 的发行工具修复均保留，[PR7](https://github.com/LIghtJUNction/project-z/pull/7) 仍为草稿。既有云盘原始 Markdown、JSON 仍为 0d73；本 Doc 是继续更新的阅读副本。\n\n## 状态概览\n\n| 事项 | 已核实状态 | 收口边界 |\n| --- | --- | --- |\n| 初始 85 项 PR | 56 已合并，14 已关闭，9 仓库已归档，5 具体阻塞，1 验收／集成中。 | 原清单去重口径保持；新增 PR 另列。 |\n| [SSMCP Q／U 历史](https://github.com/LIghtJUNction/project-z/blob/33fd62fdbb376b6b64f14e604a63452abc654a1b/docs/maintenance/evidence/ssmcp-Q-r11-gate-independent-review.json) | 各自的 35 阶段独审完成；U 的 runtime 18 项通过。 | 保留 U 两轮 UI 失败记录，不转挂新源码。 |\n| SSMCP V2 与后继 | f42 的 r13 35/35 阶段与 runtime 18 项通过；UI 12/24 组独立通过。 | composer 第 13 组失败，11 组未跑；4de 单行修正已推，r14 结果未确立，P1 未运行。 |\n| [zcalld PR1](https://github.com/LIghtJUNction/zcalld/pull/1) | bd7 新 CLI release 构建、帮助检查与原 8 个 curl 场景通过。 | PR1 仍为草稿；历史 0af8 Rust／Clippy 不转挂。 |\n| zuse 跨平台修复 | 67e 修复已发布，三平台 CI 通过。 | [PR4](https://github.com/LIghtJUNction/zuse/pull/4) 已合入功能分支 [fe47f963](https://github.com/LIghtJUNction/zuse/commit/fe47f963e604c13a2646baf5d391df5a7c69fc36)；PR2 仍为草稿，main 与 SSMCP 组合仍使用 a1。 |\n| [发行工具与最终 44 仓图](https://github.com/LIghtJUNction/project-z/pull/7) | 88fa 发行修复的 18/18 测试通过；PR7 仍为草稿。 | 仅一次临时离线 metadata；最终新图与 Rust 产品验收未执行。 |\n\n初始 85 项按原清单去重统计；新增依赖迁移和修复 PR 单独记录，不改旧清单的分母。本轮已发布的 19 仓内部 Git 源迁移与 14 仓受控历史附件清理，详见固定归档。\n\n## 本轮结果如何使用\n\n### 发行工具：兼容版本元数据，18 项测试通过\n\n[修复 88fa3610](https://github.com/LIghtJUNction/project-z/commit/88fa3610f24cc21705107bff4917a6ec26c022d0) 接受合法的 version + git 依赖声明，复用现有 Cargo 版本匹配函数，先核对锁定版本满足约束，再投影为锁中的 =exact 版本。非法或不兼容的约束仍会拒绝，提交选择器及其他来源混用的限制保持，别名、features、optional、target 和 workspace 继承不变。receipts 也走同一校验入口，并继续核对确切提交与归档哈希。\n\n旧代码先在两个针对性方法中实际失败；修复后的 release 4 项、projection 8 项、receipts 6 项共 18 项通过，0 失败、0 跳过。原有 cargo metadata --offline --no-deps --format-version=1 在私有临时夹具中真实执行一次并退出 0，没有隐藏 PATH 或跳过断言。批次只取一次非阻塞共享锁，结束后子进程和夹具已清理；这不等于 Rust 产品验收，也不等于最终 44 仓图通过。\n\n### SSMCP：V2 门禁通过，UI 在 composer 停止\n\nQ 和 U 的结果继续作为各自源码的历史记录：[Q/r11](https://github.com/LIghtJUNction/ssmcp/commit/647bce2ec9cf74beab43adea831c2e0712d28ea8) 与 [U/r12](https://github.com/LIghtJUNction/ssmcp/commit/784370b5fe1b817c788273a5f7b1ab826c743965) 均完成 35 阶段独立复核，U 的 18 项运行时检查通过。U 的 UI 第一轮在私有 Xvfb 就绪前失败；修正 Mesa 环境后，第二轮通过 9 组，session_groups 在已完成 21 项 setup 检查后失败，另有 14 组未运行。这些失败记录保留，成绩不会转挂后继源码。\n\n[V2 固定源码 f42baae1](https://github.com/LIghtJUNction/ssmcp/commit/f42baae1d5227bd6db8315aef778160b80b57274) 的 r13 于 05:09:54 UTC 完成 35/35 阶段，[独立复核](https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/evidence/ssmcp-V2-r13/independent-review/ssmcp-V2-r13-gate-independent-review.md)无阻断。复核覆盖 213 份文本原件、26 个 Rust 测试父进程汇总、26 份实际 fresh=false 编译产物，以及重新核算哈希的 5 份受控副本。私有单测 2,057 项已包含新增 7 项与原 17 项针对性检查；另有 host 6 项、ordinary integration 101 项和 worker 1 项、必须显式执行的 14 项 ignored 检查。阶段数与用例数分开记录，子集不重复相加。\n\nV2 的 18 项运行时检查于 05:25:12—05:25:19 UTC 实际通过，包含 private MCP 12 项和 transport 6 项；[原件核对](https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/evidence/ssmcp-V2-r13-runtime/root-runtime-readback.json)确认输入前后身份及清理记录一致。这份结果绑定 f42baae1，与 U 的历史 18 项回执分别保存，不能替代 TLS、实际模型启动、UI 或 P1 验收。V2/r13 的门禁与运行时成绩均不转给后继 4de17310。\n\nV2 的 [UI 于 05:27:26—05:31:00 UTC](https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/evidence/ssmcp-V2-r13-ui/root-ui-readback.json) 实际执行 13/24 组：12 组独立通过，composer 第 13 组失败，剩余 11 组未运行。此前失败的 session_groups 已通过，producer 记录 108 项检查、8 帧。human_finish 仍只是 interactions 覆盖的 1 个 alias，不另计独立通过组。composer 原日志有 61 条 PASS，producer 报告同样记录 61 checks；wrapper 的 0 和 acceptance 缺失 checks 字段，不能解释为未执行断言。UI 整体未通过，P1 未运行。\n\ncomposer 的失败来自一处过时的预期文字：显式选择后的产品标题是“Next caller”，[第 515 行](https://github.com/LIghtJUNction/ssmcp/blob/f42baae1d5227bd6db8315aef778160b80b57274/scripts/e2e_composer.py#L515)仍按完整标题、区分大小写等待“next caller”。[单父后继 4de17310](https://github.com/LIghtJUNction/ssmcp/commit/4de17310ce2ecdbc8b6c6ab86ee365653f753ee8)（tree 5be29af4）只修正这一处字面值；完整文件差异已核对，页面位置、光标、请求身份、正文、目标和后续投递断言保持，生产 Rust 未改。默认目标场景原有的小写期望也保留。\n\n[PR159](https://github.com/LIghtJUNction/ssmcp/pull/159) 仍为草稿，4de17310 已推送。截至本版截止时间，r14 的新一轮门禁结果尚未确立，后续 UI、runtime 与 P1 继续由原负责人执行。本页只报告各固定源码已经形成的实际回执；单行修正的静态核对不等于新候选已通过。\n\n### zcalld：bd7 的 CLI 验证与旧 0af8 分开记录\n\n[候选 bd7a30c0](https://github.com/LIghtJUNction/zcalld/commit/bd7a30c0a9e3865f137af229d5883e8fb984f518) 把当时主线更新合入原功能分支，保留双父历史。220 个叶对象中，218 个与 0af8 原物一致，仅更新 GUI 固定源和发行说明。该候选于 03:05:38—03:06:31 UTC 完成一次实际窄验证：release 构建 34.387 秒，帮助断言通过，原 8 个 TCP／Unix curl 取消和半关闭场景全部通过。\n\n87 条实际命令包含源码、依赖与清理读取，并非 87 项产品测试。新 CLI 的真实编译、链接输出、Cargo 产物和私有副本已连成同一字节证明链；独立清理观察确认本批进程与控制组退出。旧 0af8 的 182 项 Rust（内含 7 个 listener）、2 次实际 Clippy 和 8 个 curl，仍属于旧源码，本次没有重跑或重复计入。\n\n[GUI 259 的既有官方 CI](https://github.com/LIghtJUNction/zcall-gui/actions/runs/44853641350) 还提供私有 Xvfb 导航证据；其合成夹具与模拟安装的范围保持，不外推真实供应商或物理桌面验收。PR1 继续草稿，等待同一新 CLI 的最终 P1。\n\n### zuse：跨平台收尾问题已定位并修复\n\n历史 2ffe 候选在 macOS、Windows 的 Rust 测试已通过，最后的 Clippy 检查因 Mouse.close 显式释放一个无 Drop 类型而失败。[修复 67e2d6a4](https://github.com/LIghtJUNction/zuse/commit/67e2d6a4cee0d106f46bdf064013e163c0aa3337) 将 Backend 放进更小的词法作用域，仍先完成资源清理，再释放用户鼠标租约；独立静态复核未发现阻断，也没有放宽断言或跳过测试。\n\n[CI 44860554142](https://github.com/LIghtJUNction/zuse/actions/runs/44860554142) 已成功完成，Linux、macOS、Windows 的格式、测试、适用 no_std／Wasm 与严格 Clippy 均通过；Linux 另有私有 PTY 和合成 USB 检查。功能分支、主线准入与消费者传播仍分步处理。[PR2](https://github.com/LIghtJUNction/zuse/pull/2) 保持草稿隔离，当前 SSMCP 固定组合仍使用 a1bb8fd2，不能把本次 CI 成绩写成下游已经完成升级。\n\n## 接续工作\n\n1. 由原负责人完成 4de 后继源码的 r14 与原有 runtime／UI／P1 验收，保留原失败记录和断言；f42 的成绩保持原源码身份。\n\n2. 按功能分支、主线、消费者的顺序推进 zuse，核对各消费者的真实锁文件和 Git 来源；冻结组合的变化另记实际验收。\n\n3. 最终组件提交就位后，刷新 44 仓来源映射并执行完整 sync／check／resolve。当前尚未执行这一新图，旧图和局部门禁不能替代它。\n\n## 证据与时间范围\n\n本页状态固定截至 2026-11-21 05:46:09 UTC（台北时间 13:46:09），为 v7 阅读快照。迟到的 UI 原件记录的是 05:31:00 已结束的实际失败，已纳入本版；截止时间后的 r14 或产品结果不在本版结论内。完整历史以本页链接的不可变 GitHub 归档为准。\n\n源码、原始日志、编译产物身份和清理回执均保留在各自证据链中。旧 85 项清单、各阶段的测试子集和不同源码的验收结果分别记录，不合并成一个累计通过数。既有云盘原始 Markdown、JSON 仍为 0d73；本 Doc 是可读进度副本。\n\n",
+  "maintenance_publication": {
+    "report_commit": "1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d",
+    "report_changed_text_files": 29,
+    "snapshot_utc": "2026-11-21T05:31:38.652772Z",
+    "merge_commit": "efe912eb54a8240fab39126d1f2f6a464cc67f8b",
+    "merge_tree": "dd9345a7bf252832ce46878e0a50c7a27df5e8c9",
+    "merge_parents": [
+      "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+      "be64e5ab88a8d72fe81956f6ba64a363e2299fde"
+    ],
+    "pr7_draft": true,
+    "independent_GitHub_object_reads": true,
+    "evidence_commit": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "evidence_added_text_files": 10,
+    "evidence_code_changes": false,
+    "release_fix_commit": "88fa3610f24cc21705107bff4917a6ec26c022d0",
+    "release_fix_tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+    "release_fix_parent": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "maintenance_branch_head": "1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d",
+    "previous_report_commit": "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+    "report_added_text_files": 29,
+    "report_code_changes": false
+  },
+  "release_fix": {
+    "commit": "88fa3610f24cc21705107bff4917a6ec26c022d0",
+    "tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+    "base": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "files_changed": 4,
+    "leaf_count": 400,
+    "unchanged_leaves": 396,
+    "tests": {
+      "total": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "modules": {
+        "release": 4,
+        "projection": 8,
+        "receipts": 6
+      }
+    },
+    "original_offline_fixture_metadata": {
+      "executions": 1,
+      "exit_code": 0,
+      "argv": [
+        "cargo",
+        "metadata",
+        "--offline",
+        "--no-deps",
+        "--format-version=1"
+      ]
+    },
+    "actual_job": "26c4545eae1eab8d27485f4a48077d3c-bc6",
+    "actual_exit": 0,
+    "both_eof": true,
+    "original_helper_reused": true,
+    "independent_static_review_no_blocker": true,
+    "not_final44_or_Rust_product_validation": true,
+    "handoff": {
+      "bytes": 11863,
+      "sha256": "257bad369feed9b69d6a238d655308ca919ac8ea76dbe3def603f3c924aef14e"
+    }
+  },
+  "v2_r13": {
+    "public_source": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "public_tree": "64b40eb8a3e0188076cf376229d3d87074d27dcc",
+    "pr": 159,
+    "pr_draft": true,
+    "source_owner_reports_pushed_and_frozen": true,
+    "complete_freeze_readback_pending": false,
+    "root_actual_unit_observation": {
+      "observed_at_utc": "2026-11-21T05:05:08.550567Z",
+      "job_suffix": "be8",
+      "load_state": "loaded",
+      "active_state": "active",
+      "sub_state": "running",
+      "main_pid": 3115830,
+      "invocation_id": "4da7a4c9e0074782aa7d375610b04163"
+    },
+    "new_gate35_pass_not_established": false,
+    "U_results_not_transferred": true,
+    "gate_finished_utc": "2026-11-21T05:09:54Z",
+    "gate35_pass": true,
+    "independent_review": {
+      "blockers": 0,
+      "text_originals": 213,
+      "rust_parent_test_aggregates": 26,
+      "fresh_false_compiler_artifacts": 26,
+      "owned_copies_rehashed": 5
+    },
+    "counts": {
+      "private": 2057,
+      "private_includes_new7_and_existing17": true,
+      "host": 6,
+      "ordinary_integration": 101,
+      "worker_ignored_exact": 1,
+      "mandatory_ignored": 14
+    },
+    "runtime18_source_bound": true,
+    "ui_overall_passed": false,
+    "P1_not_run": true,
+    "next_source_acceptance_pending_as_of_cutoff": true
+  },
+  "v2_runtime18": {
+    "source": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "passed": 18,
+    "source_of_status": "Root actual original readback published at fixed report commit; Docs writer read complete published summary.",
+    "descriptor_pending": false,
+    "U_receipt_not_reused": true,
+    "successor_receipt_not_inferred": true,
+    "evidence": {
+      "path": "docs/maintenance/evidence/ssmcp-V2-r13-runtime/root-runtime-readback.json",
+      "bytes": 11093,
+      "sha256": "988bedd22deca4f81af8b1ab4fae4c8698050aff7ce2b52f4a34c5c9c1edaf4b",
+      "publication_commit_pending": false,
+      "publication_commit": "1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d",
+      "url": "https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/evidence/ssmcp-V2-r13-runtime/root-runtime-readback.json",
+      "git_blob": "09e1c1dba6fbc9938a9a934f2089da91dc85bc67"
+    }
+  },
+  "v2_ui_actual_failure": {
+    "source": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "job": "92eb2e0c47ccd1044fd6f6414c55af55-1a4",
+    "actual_exit": 1,
+    "both_eof": true,
+    "started_utc": "2026-11-21T05:27:26Z",
+    "finished_utc": "2026-11-21T05:31:00Z",
+    "planned": 24,
+    "executed": 13,
+    "passed_independent_suites": 12,
+    "remaining_not_run": 11,
+    "coverage_aliases": 1,
+    "alias_not_independent_pass": true,
+    "session_groups": {
+      "checks": 108,
+      "frames": 8
+    },
+    "composer": {
+      "log_PASS_lines": 61,
+      "producer_report_checks": 61,
+      "wrapper_checks": 0,
+      "acceptance_row_has_checks": false,
+      "failure": "Timed out waiting for the explicit Next caller choice returning to the active edit"
+    },
+    "P1_not_run": true,
+    "original_acceptance": {
+      "bytes": 984372,
+      "sha256": "da801f5209b688130332f3916804fd68ecc4e3643e34db5e6ddc2c4b3fe8eb63"
+    },
+    "composer_log": {
+      "bytes": 11503,
+      "sha256": "5be585269dab282876c95946da2ced078a9bbc30098e1e046ac392533a328544"
+    }
+  },
+  "composer_successor": {
+    "commit": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+    "parent": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "changed_paths": [
+      "scripts/e2e_composer.py"
+    ],
+    "changed_lines": 1,
+    "old_literal": "next caller",
+    "new_literal": "Next caller",
+    "line": 515,
+    "full_file_single_replacement_verified": true,
+    "production_Rust_unchanged": true,
+    "r14_pass_not_established_as_of_cutoff": true
+  },
+  "runtime_followup_historical_U": {
+    "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "actual_job_suffix": "ac8",
+    "actual_exit": 0,
+    "both_eof": true,
+    "case_counts": {
+      "private": 12,
+      "transport": 6,
+      "total": 18
+    },
+    "start_utc": "2026-11-21T03:27:15Z",
+    "end_utc": "2026-11-21T03:27:27Z",
+    "report": {
+      "bytes": 62335,
+      "sha256": "ff972401586a41dba8a803a17f229098b1bed9f52c9de8aeff61aff2a6440cf9"
+    },
+    "launcher": {
+      "bytes": 12641,
+      "sha256": "128d30c191226ec1d2fcb2532569f7ae32f6802c3e69499c8eb6f916c257b947"
+    },
+    "direct_source": "Original source owner readback followed by Root's completed independent raw receipt review; the fixed summary descriptor below records the latter.",
+    "ui_alias_p1_pass_not_claimed": true,
+    "root_independent_raw_read": {
+      "completed": true,
+      "summary_bytes": 7672,
+      "summary_sha256": "78545fb5b089e32626cc351156d9c30a112a74942ea7d1f902ea4f987c067fcf",
+      "scope": "12+6 passed; cleanup/errors; launcher completion/reaped; input identity before/after; five U owned binaries; evidence module/driver hashes"
+    }
+  },
+  "ui_first_actual_failure": {
+    "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "root_actual_read_ref": "ae2",
+    "exit_code": 1,
+    "both_eof": true,
+    "passed_suites": [
+      {
+        "name": "message_references",
+        "checks": 53
+      },
+      {
+        "name": "force_send",
+        "checks": 137
+      },
+      {
+        "name": "listener_transports",
+        "checks": 74
+      }
+    ],
+    "failed_suite": {
+      "name": "zuse_worker",
+      "completed_checks": 0,
+      "error": "private Xvfb exited without readiness",
+      "location": "private_xvfb.py:109"
+    },
+    "ui_overall_passed": false,
+    "alias_pending": true,
+    "p1_not_run": true,
+    "source_of_status": "Root actual exec.read observation; no additional gate by Docs writer"
+  },
+  "ui_second_actual_failure": {
+    "run_reference": "b37",
+    "first_nine_suites_passed": 9,
+    "selected_passing_checks": {
+      "interactions": 172,
+      "zuse_worker": 31,
+      "private_desktop": 35
+    },
+    "failed_suite": "session_groups",
+    "actual_setup_checks_passed": 21,
+    "remaining_suites_not_run": 14,
+    "ui_overall_passed": false,
+    "p1_not_run": true,
+    "first_round_preserved": true,
+    "mesa_environment_fixture_fix_applied_by_original_owner": true,
+    "known_code_behavior": "The async recipient list refresh is enqueued, then the existing client snapshot is immediately matched before changing to Agents view.",
+    "cache_at_failure_not_recorded": true,
+    "cause_limit": "Source supports the timing explanation; no claim that the actual b37 cache was empty or stale.",
+    "owner_decision": "Fix the product cold exact-ID query and retain original session_groups fixture; no fixture prewarming patch adopted.",
+    "product_patch_and_new_acceptance_pending": true,
+    "source_of_status": "Root source/acceptance owner updates plus Core fixed U static source review; no new validation by Docs writer",
+    "alias_coverage": {
+      "name": "human_finish",
+      "covered_by": "interactions",
+      "independently_executed": false,
+      "independent_pass": false,
+      "counted_as_additional_passing_suite": false
+    }
+  },
+  "pr4_merge": {
+    "commit": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+    "base_kind": "feature_branch",
+    "main_unchanged": "a1bb8fd2cbce0a9d85134999883c578358065242"
+  },
+  "created_once": true,
+  "original_raw_MD_JSON_unchanged": true,
+  "raw_drive_MD_JSON_version": "0d73",
+  "document_update_tests_builds_target_locks_not_executed": true,
+  "previous_delivery": {
+    "schema_version": 6,
+    "state": "published_and_fully_read_back",
+    "document_id": "1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+    "title": "Project Z 进度报告（2026-11-21）",
+    "url": "https://docs.google.com/document/d/1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+    "folder_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+    "revision_id": "AHj4eMSYznfr2ZpqVgnonrUxzftsiSwkW_Sq9rkqP7D0GBtOOUePoov5TY1z15eMQoK_aRZxUo22iqFHc6p6lHLIDc9QOSDqCLZkzKrnbTU",
+    "status_cutoff_utc": "2026-11-21T05:07:21Z",
+    "immutable_archive_commit": "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+    "maintenance_publication": {
+      "report_commit": "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+      "report_changed_text_files": 34,
+      "snapshot_utc": "2026-11-21T03:42:51Z",
+      "merge_commit": "efe912eb54a8240fab39126d1f2f6a464cc67f8b",
+      "merge_tree": "dd9345a7bf252832ce46878e0a50c7a27df5e8c9",
+      "merge_parents": [
+        "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+        "be64e5ab88a8d72fe81956f6ba64a363e2299fde"
+      ],
+      "pr7_draft": true,
+      "independent_GitHub_object_reads": true,
+      "evidence_commit": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+      "evidence_added_text_files": 10,
+      "evidence_code_changes": false,
+      "release_fix_commit": "88fa3610f24cc21705107bff4917a6ec26c022d0",
+      "release_fix_tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+      "release_fix_parent": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+      "maintenance_branch_head": "88fa3610f24cc21705107bff4917a6ec26c022d0"
+    },
+    "created_once": true,
+    "original_raw_drive_MD_JSON_unchanged": true,
+    "raw_drive_MD_JSON_version": "0d73",
+    "nonempty_paragraphs_including_native_headings": 31,
+    "native_table": {
+      "count": 1,
+      "rows": 7,
+      "columns": 3,
+      "cells": 21
+    },
+    "source_hyperlinks": 22,
+    "full_title_content_table_style_links_parent_readback": true,
+    "visual_browser_render_not_performed": true,
+    "document_update_tests_builds_target_locks_not_executed": true,
+    "release_fix": {
+      "commit": "88fa3610f24cc21705107bff4917a6ec26c022d0",
+      "tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+      "base": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+      "files_changed": 4,
+      "leaf_count": 400,
+      "unchanged_leaves": 396,
+      "tests": {
+        "total": 18,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "modules": {
+          "release": 4,
+          "projection": 8,
+          "receipts": 6
+        }
+      },
+      "original_offline_fixture_metadata": {
+        "executions": 1,
+        "exit_code": 0,
+        "argv": [
+          "cargo",
+          "metadata",
+          "--offline",
+          "--no-deps",
+          "--format-version=1"
+        ]
+      },
+      "actual_job": "26c4545eae1eab8d27485f4a48077d3c-bc6",
+      "actual_exit": 0,
+      "both_eof": true,
+      "original_helper_reused": true,
+      "independent_static_review_no_blocker": true,
+      "not_final44_or_Rust_product_validation": true,
+      "handoff": {
+        "bytes": 11863,
+        "sha256": "257bad369feed9b69d6a238d655308ca919ac8ea76dbe3def603f3c924aef14e"
+      }
+    },
+    "v2_r13": {
+      "public_source": "f42baae1d5227bd6db8315aef778160b80b57274",
+      "public_tree": "64b40eb8a3e0188076cf376229d3d87074d27dcc",
+      "pr": 159,
+      "pr_draft": true,
+      "source_owner_reports_pushed_and_frozen": true,
+      "complete_freeze_readback_pending": true,
+      "root_actual_unit_observation": {
+        "observed_at_utc": "2026-11-21T05:05:08.550567Z",
+        "job_suffix": "be8",
+        "load_state": "loaded",
+        "active_state": "active",
+        "sub_state": "running",
+        "main_pid": 3115830,
+        "invocation_id": "4da7a4c9e0074782aa7d375610b04163"
+      },
+      "new_gate35_pass_not_established": true,
+      "U_results_not_transferred": true,
+      "new_UI_P1_pending": true
+    },
+    "runtime_followup": {
+      "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+      "actual_job_suffix": "ac8",
+      "actual_exit": 0,
+      "both_eof": true,
+      "case_counts": {
+        "private": 12,
+        "transport": 6,
+        "total": 18
+      },
+      "start_utc": "2026-11-21T03:27:15Z",
+      "end_utc": "2026-11-21T03:27:27Z",
+      "report": {
+        "bytes": 62335,
+        "sha256": "ff972401586a41dba8a803a17f229098b1bed9f52c9de8aeff61aff2a6440cf9"
+      },
+      "launcher": {
+        "bytes": 12641,
+        "sha256": "128d30c191226ec1d2fcb2532569f7ae32f6802c3e69499c8eb6f916c257b947"
+      },
+      "direct_source": "Original source owner readback followed by Root's completed independent raw receipt review; the fixed summary descriptor below records the latter.",
+      "ui_alias_p1_pass_not_claimed": true,
+      "root_independent_raw_read": {
+        "completed": true,
+        "summary_bytes": 7672,
+        "summary_sha256": "78545fb5b089e32626cc351156d9c30a112a74942ea7d1f902ea4f987c067fcf",
+        "scope": "12+6 passed; cleanup/errors; launcher completion/reaped; input identity before/after; five U owned binaries; evidence module/driver hashes"
+      }
+    },
+    "ui_first_actual_failure": {
+      "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+      "root_actual_read_ref": "ae2",
+      "exit_code": 1,
+      "both_eof": true,
+      "passed_suites": [
+        {
+          "name": "message_references",
+          "checks": 53
+        },
+        {
+          "name": "force_send",
+          "checks": 137
+        },
+        {
+          "name": "listener_transports",
+          "checks": 74
+        }
+      ],
+      "failed_suite": {
+        "name": "zuse_worker",
+        "completed_checks": 0,
+        "error": "private Xvfb exited without readiness",
+        "location": "private_xvfb.py:109"
+      },
+      "ui_overall_passed": false,
+      "alias_pending": true,
+      "p1_not_run": true,
+      "source_of_status": "Root actual exec.read observation; no additional gate by Docs writer"
+    },
+    "ui_second_actual_failure": {
+      "run_reference": "b37",
+      "first_nine_suites_passed": 9,
+      "selected_passing_checks": {
+        "interactions": 172,
+        "zuse_worker": 31,
+        "private_desktop": 35
+      },
+      "failed_suite": "session_groups",
+      "actual_setup_checks_passed": 21,
+      "remaining_suites_not_run": 14,
+      "ui_overall_passed": false,
+      "p1_not_run": true,
+      "first_round_preserved": true,
+      "mesa_environment_fixture_fix_applied_by_original_owner": true,
+      "known_code_behavior": "The async recipient list refresh is enqueued, then the existing client snapshot is immediately matched before changing to Agents view.",
+      "cache_at_failure_not_recorded": true,
+      "cause_limit": "Source supports the timing explanation; no claim that the actual b37 cache was empty or stale.",
+      "owner_decision": "Fix the product cold exact-ID query and retain original session_groups fixture; no fixture prewarming patch adopted.",
+      "product_patch_and_new_acceptance_pending": true,
+      "source_of_status": "Root source/acceptance owner updates plus Core fixed U static source review; no new validation by Docs writer",
+      "alias_coverage": {
+        "name": "human_finish",
+        "covered_by": "interactions",
+        "independently_executed": false,
+        "independent_pass": false,
+        "counted_as_additional_passing_suite": false
+      }
+    },
+    "pr4_feature_merge": {
+      "commit": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+      "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+      "base_kind": "feature_branch",
+      "main_unchanged": "a1bb8fd2cbce0a9d85134999883c578358065242"
+    },
+    "raw_readback_descriptors": [
+      {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-final-readback-v6.json",
+        "bytes": 126697,
+        "sha256": "72b9e5638fa158d616355ad27528fcedb9e6b32fd6ca64f19946745ae278fa4e"
+      },
+      {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/metadata-final-readback-v6.json",
+        "bytes": 758,
+        "sha256": "8c3e7269b661c7465b0e133fd344089a6b98cef5f158d29b8578bf9378b85ae1"
+      }
+    ],
+    "prior_revision_delivery": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/delivery-v5.json",
+      "bytes": 6200,
+      "sha256": "2db7230ecdc55ea19b623b041df8f605cd95f6e8e5424d78a8dbdcf1dd9c8e4f"
+    },
+    "snapshot_boundary": "Fixed at 05:07:21 UTC; does not incorporate the owner's later 05:09:54 r13 completion report.",
+    "text_projection_descriptor": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-text-v6.md",
+      "bytes": 10389,
+      "sha256": "4938d40e7a7e1cce88febbe5099defd43e326235e8d888011df40ee9ee38dc96"
+    },
+    "verification_descriptor": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/readback-verification-v6.json",
+      "bytes": 29105,
+      "sha256": "40d6cf3cd93dbe3594b5b2cd8ffb0ae68cf027b17c44e56370886d08247cddf1"
+    },
+    "delivery_descriptor": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/delivery-v6.json",
+      "bytes": 9046,
+      "sha256": "f15b9b8643d3a5d59bebf102ec844c301f7180d6a04707c600caf2f128842d7e"
+    }
+  },
+  "source_readbacks": [
+    {
+      "url": "https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/2026-11-21-release-and-v2-gates.md",
+      "blob": "a8d7eeddd4a52934403d686a2f6856e65be35dcc"
+    },
+    {
+      "url": "https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/evidence/ssmcp-V2-r13-runtime/root-runtime-readback.json",
+      "blob": "09e1c1dba6fbc9938a9a934f2089da91dc85bc67"
+    }
+  ],
+  "visual_browser_render_not_performed": true,
+  "batch_request_validation_error": {
+    "code": "INVALID_ARGUMENT",
+    "cause": "fontSize unit initially omitted",
+    "atomic_rejection": true,
+    "corrected_before_successful_update": "PT added; same revision guard accepted"
+  },
+  "raw_readback_descriptors": {
+    "document-final-readback-v7.json": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-final-readback-v7.json",
+      "bytes": 132160,
+      "sha256": "96ab6d56ce766c679ccfc6fc08b6bf110258b8e22cd93e84108cd59ddbe263a9"
+    },
+    "metadata-final-readback-v7.json": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/metadata-final-readback-v7.json",
+      "bytes": 758,
+      "sha256": "cd408fa1e1fe545dd1bce38072fe1e5d26694e3982bda8d3148e667cffd99dad"
+    }
+  },
+  "text_projection_descriptor": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-text-v7.md",
+    "bytes": 11145,
+    "sha256": "4d7ea360f2b39ebb251d6e8db5dd48652999006916f272bb8d51cb2327a1a67a"
+  }
+}

@@ -1,0 +1,567 @@
+{
+  "schema": "project-z.W-r14.source-controls-coverage.v1",
+  "source_revision": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+  "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+  "parent": "f42baae1d5227bd6db8315aef778160b80b57274",
+  "github_commit": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/github-W-commit-original.json",
+    "bytes": 1813,
+    "sha256": "cbee547e30f78fa7378267f3712d4cf2c416ec089c5a922e5f4479e85aacfdfe",
+    "git_blob": "7e95a9ccae29bf92cae326e9cf05f873b820efc8"
+  },
+  "github_compare": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/github-V2-to-W-compare-original.json",
+    "bytes": 14981,
+    "sha256": "e9081b397733d76b466951298f179d4af890a60ec221a109fe0dca7999c61183",
+    "git_blob": "1ab1f1ad5e74c9d15fbfb743583b8f188e1e0e6d"
+  },
+  "source_change": {
+    "path": "scripts/e2e_composer.py",
+    "old_blob": "6dc1f4495dca1d4a213cacc058344aa75b695dfe",
+    "new_blob": "87750b2965fe11116ee95f00ed4a8eb74eaced8f",
+    "one_literal_change_exact_bytes_verified": true,
+    "before": "editing_queue(shot, \"next caller\")",
+    "after": "editing_queue(shot, \"Next caller\")",
+    "column_hide_cursor_and_other_bytes_preserved": true,
+    "remaining_1113_leaves_and_four_gitlinks": {
+      "schema": "project-z.W-fixed-source-peer-review.v1",
+      "reviewer": "/root/pr_org_repos",
+      "scope": "Independent read-only GitHub immutable commit, compare and two complete recursive trees. No native, product, Cargo, source or ref operations.",
+      "source": {
+        "commit": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+        "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+        "sole_parent": "f42baae1d5227bd6db8315aef778160b80b57274",
+        "parent_tree": "64b40eb8a3e0188076cf376229d3d87074d27dcc"
+      },
+      "trees": {
+        "truncated": false,
+        "entries_each": 1325,
+        "leaves_each": 1114,
+        "modified": 1,
+        "added": 0,
+        "deleted": 0,
+        "unchanged_leaves": 1113,
+        "unchanged_gitlinks": 4
+      },
+      "change": {
+        "path": "scripts/e2e_composer.py",
+        "mode": "100644",
+        "old_blob": "6dc1f4495dca1d4a213cacc058344aa75b695dfe",
+        "new_blob": "87750b2965fe11116ee95f00ed4a8eb74eaced8f",
+        "removed": "editing_queue(shot, \"next caller\")",
+        "added": "editing_queue(shot, \"Next caller\")",
+        "remaining_column_and_hide_cursor_assertions_preserved": true
+      },
+      "source_urls": [
+        "https://api.github.com/repos/LIghtJUNction/ssmcp/git/commits/4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+        "https://api.github.com/repos/LIghtJUNction/ssmcp/git/trees/5be29af415b915ef3307bfed08c6cefec2798898?recursive=1",
+        "https://api.github.com/repos/LIghtJUNction/ssmcp/git/trees/64b40eb8a3e0188076cf376229d3d87074d27dcc?recursive=1",
+        "https://api.github.com/repos/LIghtJUNction/ssmcp/compare/f42baae1d5227bd6db8315aef778160b80b57274...4de17310ce2ecdbc8b6c6ab86ee365653f753ee8"
+      ],
+      "blocking_findings": 0,
+      "boundary": "This is a structured transcript of the peer's explicit immutable-source review, not a raw GitHub response or runtime result."
+    }
+  },
+  "same_35_stage_order": true,
+  "same_library_and_20_integration_test_inventories": true,
+  "same_26_test_selections_and_skipped_ignored": true,
+  "comparison_scope": "Coverage identity only. r14 outcomes and artifacts are independently derived from its own original files.",
+  "control_code_normalization": {
+    "replacement_map": {
+      "release25-final13": "release25-final14",
+      "final-v25-r13-binding": "final-v25-r14-binding",
+      "git-heads-v25-r13.json": "git-heads-v25-r14.json",
+      "shared-target-agreement-v25-r13.json": "shared-target-agreement-v25-r14.json",
+      "f42baae1d5227bd6db8315aef778160b80b57274": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+      "64b40eb8a3e0188076cf376229d3d87074d27dcc": "5be29af415b915ef3307bfed08c6cefec2798898",
+      "50faf99702ee39bf1d893025a98bc429b907af307a443fbf304c1386a4de28ba": "91f716677999ce6692e8a82f02a010eceae195156781288ec47ae8c30a691185",
+      "f5d603af9faee8ea64b562c5457d6e683bc85950218db6533c8d314841e42e28": "03e3e5f194320ce325fc8be8f079ee0705df9abaffab5ee9cc683cfc8c71e67c",
+      "965467ce452a4899201d7ddd1ca239fa84d2f4604fcf1123eccd93150866227e": "03b14a6be75847c902575aa034d59420f14403d96ca7e907a1e8b713df0a8cf6"
+    },
+    "files": [
+      {
+        "name": "owned",
+        "previous": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r13-binding/run_owned.py",
+          "bytes": 2457,
+          "sha256": "3c8b7cef3496770ee3cfd1d472b5b93d7933b1ea1651c06e683273066d8d8578",
+          "git_blob": "5fb4152bdd0981e38afb05a32255132b9d3f92be"
+        },
+        "current": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r14-binding/run_owned.py",
+          "bytes": 2457,
+          "sha256": "d3ac9dd1873a04653c7f4601df32977fbcc9da2143564b4639162e17cba796db",
+          "git_blob": "5e23188f1f1e8b20ce74e32c4fed7f1249d1a252"
+        },
+        "exact_bytes_equal_after_explicit_binding_replacements": true
+      },
+      {
+        "name": "launcher",
+        "previous": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r13-binding/run_bound.py",
+          "bytes": 7785,
+          "sha256": "085e6b5300f040ad6be77bed5d0481c8fdd5dd142a61930de56c54b1d7ef327e",
+          "git_blob": "6eddafabb9d9a661cc4e24b42ef4fb846fd082c4"
+        },
+        "current": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r14-binding/run_bound.py",
+          "bytes": 7785,
+          "sha256": "3a307c26d1c099b08fd8609c0dc2e9bdf2e7476ffaa650a5feacda7b878187a4",
+          "git_blob": "5966064e53b83006453762e0d2af1bac799dc4c3"
+        },
+        "exact_bytes_equal_after_explicit_binding_replacements": true
+      },
+      {
+        "name": "driver",
+        "previous": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/run_gates.py",
+          "bytes": 83560,
+          "sha256": "50faf99702ee39bf1d893025a98bc429b907af307a443fbf304c1386a4de28ba",
+          "git_blob": "eb54c259e11224cad95cecdee33a94cf5265da86"
+        },
+        "current": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/run_gates.py",
+          "bytes": 83560,
+          "sha256": "91f716677999ce6692e8a82f02a010eceae195156781288ec47ae8c30a691185",
+          "git_blob": "19f53dc2a497272cc951ef22a17ff925a859a7bc"
+        },
+        "exact_bytes_equal_after_explicit_binding_replacements": true
+      }
+    ],
+    "no_code_import_or_execution": true,
+    "r13_lock_semantics_unchanged": true
+  },
+  "lock_boundary": "Owned controller takes source-author lock only; launcher takes target lock. Both are NONBLOCK. Both exit files are written before descriptor close; neither booleans nor collected unit state alone proves the historical lock-release instant.",
+  "historical_exit_chain": {
+    "unit_start": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r14-binding/start-unit.json",
+      "bytes": 1186,
+      "sha256": "682e136b356f80831151a89cd86f8c03190cdd54542efa5126cfbac92d4eb008",
+      "mode": 384
+    },
+    "outer_claim": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r14-binding/owned/claim.json",
+      "bytes": 972,
+      "sha256": "ba850041140a00b6686fd801d2aa9f92794ed943fe33790998648f41876ec00d",
+      "mode": 420
+    },
+    "outer_launch": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r14-binding/owned/launch.json",
+      "bytes": 1004,
+      "sha256": "b48bf967fcab04d85866e7637dfa071af0e24910388caa21f752209766c444dc",
+      "mode": 420
+    },
+    "outer_exit": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r14-binding/owned/exit.json",
+      "bytes": 1168,
+      "sha256": "6c5c5d17c5dca26345694dedf5b932572ff8099ae8dec1d8da1ffb1ed1553b6c",
+      "mode": 420
+    },
+    "launcher_claim": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14-launch/claim.json",
+      "bytes": 122,
+      "sha256": "b4369223046a54a1b76f3eb1ec6a582fd1c4daa3b767bcfa15115ebd2d14db2a",
+      "mode": 420
+    },
+    "launcher_launch": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14-launch/launch.json",
+      "bytes": 3624,
+      "sha256": "5e1aa698b49bef0731289cd6efd19b3488f231bcf3a295b6e2ca250f55ab9adf",
+      "mode": 420
+    },
+    "launcher_exit": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14-launch/exit.json",
+      "bytes": 4793,
+      "sha256": "6468c5b03875fa10170dbfbcfb95da7414d1a1e15b0e84ee2383f397746cb80e",
+      "mode": 420
+    },
+    "invocation_id": "96256392e87944e2a00cb78d6c8aff9b",
+    "original_pids": [
+      3740883,
+      3740895
+    ],
+    "outer_started_utc": "2026-11-21T05:42:50.565070+00:00",
+    "outer_finished_utc": "2026-11-21T05:56:01.331566+00:00",
+    "gate_started_at": 1795239771.1128738,
+    "gate_finished_at": 1795240561.2126365
+  },
+  "owner_unit_postflight": "ActiveState=inactive\nSubState=dead\nMainPID=0\nExecMainStatus=0\n",
+  "current_point_observation": {
+    "observed_at_utc": "2026-11-21T06:09:54.000293+00:00",
+    "command": [
+      "systemctl",
+      "--user",
+      "show",
+      "ssmcp-release25-gate35-r14-20261121.service",
+      "--property=LoadState,ActiveState,SubState,MainPID,InvocationID,Result,ExecMainStatus"
+    ],
+    "exit_code": 0,
+    "stdout": "LoadState=not-found\nActiveState=inactive\nSubState=dead\nInvocationID=\nMainPID=0\nResult=success\nExecMainStatus=0\n",
+    "stderr": "",
+    "owned_pids": [
+      {
+        "pid": 3740883,
+        "exists": false
+      },
+      {
+        "pid": 3740895,
+        "exists": false
+      }
+    ],
+    "lock_inode_observations": [
+      {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-author.lock",
+        "dev": 68,
+        "inode": 187280005,
+        "rows": []
+      },
+      {
+        "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "dev": 34,
+        "inode": 63537699,
+        "rows": []
+      }
+    ]
+  },
+  "global_lock_free_or_continuous_lock_trace_claim": false,
+  "wrapper_records_within_original_Gate": [
+    {
+      "stage": "library-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/library-compile/invocation-3746850-1795239787736818113.json",
+      "pid": 3746850,
+      "timestamp_ns": 1795239787736818113,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "library-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/library-compile/invocation-3746861-1795239787768692669.json",
+      "pid": 3746861,
+      "timestamp_ns": 1795239787768692669,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "library-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/library-compile/invocation-3746874-1795239787877683275.json",
+      "pid": 3746874,
+      "timestamp_ns": 1795239787877683275,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "library-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/library-compile/invocation-3746888-1795239787952856969.json",
+      "pid": 3746888,
+      "timestamp_ns": 1795239787952856969,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3814464-1795240080565613350.json",
+      "pid": 3814464,
+      "timestamp_ns": 1795240080565613350,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3814483-1795240080621822090.json",
+      "pid": 3814483,
+      "timestamp_ns": 1795240080621822090,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3815408-1795240084245560855.json",
+      "pid": 3815408,
+      "timestamp_ns": 1795240084245560855,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3815415-1795240084555748687.json",
+      "pid": 3815415,
+      "timestamp_ns": 1795240084555748687,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3828704-1795240143764878586.json",
+      "pid": 3828704,
+      "timestamp_ns": 1795240143764878586,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3830325-1795240149629063017.json",
+      "pid": 3830325,
+      "timestamp_ns": 1795240149629063017,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3830392-1795240150644034375.json",
+      "pid": 3830392,
+      "timestamp_ns": 1795240150644034375,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3830699-1795240151352388011.json",
+      "pid": 3830699,
+      "timestamp_ns": 1795240151352388011,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3830907-1795240151859602490.json",
+      "pid": 3830907,
+      "timestamp_ns": 1795240151859602490,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3830954-1795240152494514187.json",
+      "pid": 3830954,
+      "timestamp_ns": 1795240152494514187,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3831378-1795240153831615267.json",
+      "pid": 3831378,
+      "timestamp_ns": 1795240153831615267,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3831554-1795240154857875689.json",
+      "pid": 3831554,
+      "timestamp_ns": 1795240154857875689,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3831925-1795240156017380133.json",
+      "pid": 3831925,
+      "timestamp_ns": 1795240156017380133,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3832090-1795240156450640688.json",
+      "pid": 3832090,
+      "timestamp_ns": 1795240156450640688,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3832136-1795240156758126242.json",
+      "pid": 3832136,
+      "timestamp_ns": 1795240156758126242,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3832186-1795240157018342909.json",
+      "pid": 3832186,
+      "timestamp_ns": 1795240157018342909,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3832271-1795240157489148267.json",
+      "pid": 3832271,
+      "timestamp_ns": 1795240157489148267,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3832445-1795240158110461843.json",
+      "pid": 3832445,
+      "timestamp_ns": 1795240158110461843,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3832774-1795240159158187904.json",
+      "pid": 3832774,
+      "timestamp_ns": 1795240159158187904,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3832882-1795240159673348627.json",
+      "pid": 3832882,
+      "timestamp_ns": 1795240159673348627,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3833192-1795240160549042125.json",
+      "pid": 3833192,
+      "timestamp_ns": 1795240160549042125,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3833464-1795240161774746108.json",
+      "pid": 3833464,
+      "timestamp_ns": 1795240161774746108,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3833526-1795240162419075277.json",
+      "pid": 3833526,
+      "timestamp_ns": 1795240162419075277,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3833926-1795240163109334910.json",
+      "pid": 3833926,
+      "timestamp_ns": 1795240163109334910,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3834069-1795240164199292509.json",
+      "pid": 3834069,
+      "timestamp_ns": 1795240164199292509,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3834497-1795240165373567819.json",
+      "pid": 3834497,
+      "timestamp_ns": 1795240165373567819,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "integration-compile",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/integration-compile/invocation-3834696-1795240166930010174.json",
+      "pid": 3834696,
+      "timestamp_ns": 1795240166930010174,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "release",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/release/invocation-3848096-1795240216428885228.json",
+      "pid": 3848096,
+      "timestamp_ns": 1795240216428885228,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "release",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/release/invocation-3871160-1795240317694700507.json",
+      "pid": 3871160,
+      "timestamp_ns": 1795240317694700507,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "release",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/release/invocation-3873293-1795240326400347291.json",
+      "pid": 3873293,
+      "timestamp_ns": 1795240326400347291,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "release",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/release/invocation-3882664-1795240368770494063.json",
+      "pid": 3882664,
+      "timestamp_ns": 1795240368770494063,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "decoder",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/decoder/invocation-3900466-1795240448920602801.json",
+      "pid": 3900466,
+      "timestamp_ns": 1795240448920602801,
+      "within_original_gate_interval": true
+    },
+    {
+      "stage": "decoder",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/rustc-invocations/decoder/invocation-3920487-1795240540539432618.json",
+      "pid": 3920487,
+      "timestamp_ns": 1795240540539432618,
+      "within_original_gate_interval": true
+    }
+  ],
+  "wrapper_record_count": 37,
+  "extra_debug_helper": {
+    "artifact": {
+      "bytes": 126784192,
+      "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+      "sha256": "87077b76b6674aba9cec208ca2ef1822715f3e23a5e382f5b5822612436c77c1"
+    },
+    "compiler_artifact": {
+      "executable": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+      "features": [],
+      "filenames": [
+        "/var/tmp/project-z-cargo-target/debug/ssmcp"
+      ],
+      "fresh": false,
+      "manifest_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/Cargo.toml",
+      "package_id": "path+file:///home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source#ssmcp@0.10.25",
+      "profile": {
+        "debug_assertions": true,
+        "debuginfo": 0,
+        "opt_level": "0",
+        "overflow_checks": true,
+        "test": false
+      },
+      "reason": "compiler-artifact",
+      "target": {
+        "crate_types": [
+          "bin"
+        ],
+        "doc": true,
+        "doctest": false,
+        "edition": "2024",
+        "kind": [
+          "bin"
+        ],
+        "name": "ssmcp",
+        "src_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/src/bin/ssmcp.rs",
+        "test": true
+      }
+    },
+    "source_stage": "integration-compile"
+  },
+  "extra_debug_helper_three_recorded_checks": {
+    "integration-connection_context": {
+      "after": {
+        "bytes": 126784192,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "87077b76b6674aba9cec208ca2ef1822715f3e23a5e382f5b5822612436c77c1"
+      },
+      "before": {
+        "bytes": 126784192,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "87077b76b6674aba9cec208ca2ef1822715f3e23a5e382f5b5822612436c77c1"
+      }
+    },
+    "integration-workspace_bridge": {
+      "after": {
+        "bytes": 126784192,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "87077b76b6674aba9cec208ca2ef1822715f3e23a5e382f5b5822612436c77c1"
+      },
+      "before": {
+        "bytes": 126784192,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "87077b76b6674aba9cec208ca2ef1822715f3e23a5e382f5b5822612436c77c1"
+      }
+    },
+    "integration-workspace_bridge-ignored": {
+      "after": {
+        "bytes": 126784192,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "87077b76b6674aba9cec208ca2ef1822715f3e23a5e382f5b5822612436c77c1"
+      },
+      "before": {
+        "bytes": 126784192,
+        "path": "/var/tmp/project-z-cargo-target/debug/ssmcp",
+        "sha256": "87077b76b6674aba9cec208ca2ef1822715f3e23a5e382f5b5822612436c77c1"
+      }
+    }
+  }
+}

@@ -1,0 +1,416 @@
+{
+  "schema": "project-z.runtime-original-readback.v1",
+  "reviewed_at_utc": "2026-11-21T06:10:42.410565+00:00",
+  "status": "passed_with_stated_scope",
+  "blocking_findings": [],
+  "source_revision": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+  "source_tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+  "source_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source",
+  "compiled_source_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source",
+  "originals": [
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/runtime-input-agent-4de1731-r14-20261121/launch-result.json",
+      "bytes": 12612,
+      "sha256": "6fe2ce3b4e5fcfc54224988149214fa793ad9fde7c47b0d74b95b305a1474fdc"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/runtime-input-agent-4de1731-r14-20261121/run/report.json",
+      "bytes": 62203,
+      "sha256": "68566e2b33c55c0a85f7c1179bcc365c749e2788f8666a1178a8d7899006fe45"
+    }
+  ],
+  "producer_job": {
+    "job_id": "92eb2e0c47ccd1044fd6f6414c55af55-1c0",
+    "actual_exit": 0,
+    "nonrunning": true,
+    "both_eof": true,
+    "observation_owner": "Root directly read original native job; this reviewer independently read original launch/report files."
+  },
+  "runtime": {
+    "started_utc": "2026-11-21T06:03:19Z",
+    "finished_utc": "2026-11-21T06:03:27Z",
+    "duration_ms": 7993,
+    "module_count": 2,
+    "checks_passed": 18,
+    "modules": {
+      "transport": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "mcp_stdio_protocol_only",
+            "passed": true
+          },
+          {
+            "name": "pipe_mcp_literal_and_warnings",
+            "passed": true
+          },
+          {
+            "name": "fake_exec_argv_literal",
+            "passed": true
+          },
+          {
+            "name": "fake_exec_nonzero_bounded_diagnostics",
+            "passed": true
+          },
+          {
+            "name": "unix_socket_write_half_close_once",
+            "passed": true
+          },
+          {
+            "name": "terminal_original_history_and_current_draft",
+            "passed": true
+          }
+        ],
+        "cleanup": {
+          "passed": true,
+          "processes": [
+            {
+              "pid": 4,
+              "returncode": 0
+            },
+            {
+              "pid": 9,
+              "returncode": 0
+            },
+            {
+              "pid": 67,
+              "returncode": 0
+            },
+            {
+              "pid": 72,
+              "returncode": 0
+            },
+            {
+              "pid": 117,
+              "returncode": 0
+            },
+            {
+              "pid": 122,
+              "returncode": 0
+            },
+            {
+              "pid": 167,
+              "returncode": 0
+            },
+            {
+              "pid": 172,
+              "returncode": 0
+            },
+            {
+              "pid": 216,
+              "returncode": 0
+            },
+            {
+              "pid": 222,
+              "returncode": 0
+            }
+          ],
+          "decoders": [
+            {
+              "pid": 221,
+              "returncode": 0
+            }
+          ],
+          "fake_processes": [
+            {
+              "pid": 40,
+              "start_time_ticks": "17676668",
+              "exited": true,
+              "cleanup_signalled": false
+            },
+            {
+              "pid": 103,
+              "start_time_ticks": "17676713",
+              "exited": true,
+              "cleanup_signalled": false
+            },
+            {
+              "pid": 153,
+              "start_time_ticks": "17676746",
+              "exited": true,
+              "cleanup_signalled": false
+            },
+            {
+              "pid": 202,
+              "start_time_ticks": "17676780",
+              "exited": true,
+              "cleanup_signalled": false
+            },
+            {
+              "pid": 289,
+              "start_time_ticks": "17676844",
+              "exited": true,
+              "cleanup_signalled": false
+            }
+          ],
+          "errors": [],
+          "socket_directories_removed": true
+        }
+      },
+      "private_mcp": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "private_mcp.owned_account_and_two_clients",
+            "passed": true
+          },
+          {
+            "name": "private_mcp.chat_history_draft_queue_baseline",
+            "passed": true
+          },
+          {
+            "name": "private_mcp.globally_retired_native_tools_absent",
+            "passed": true
+          },
+          {
+            "name": "private_mcp.none_remaining_human_tools_hidden",
+            "passed": true
+          },
+          {
+            "name": "private_mcp.concurrent_chat_remaining_human_tools_present",
+            "passed": true
+          },
+          {
+            "name": "private_mcp.none_stale_human_reply_rejected",
+            "passed": true
+          },
+          {
+            "name": "private_mcp.none_stale_human_wait_rejected",
+            "passed": true
+          },
+          {
+            "name": "private_mcp.none_exec_roundtrip",
+            "passed": true
+          },
+          {
+            "name": "private_mcp.none_time_roundtrip",
+            "passed": true
+          },
+          {
+            "name": "private_mcp.none_native_messages_roundtrip",
+            "passed": true
+          },
+          {
+            "name": "private_mcp.none_reload_reconnect_preserves_none",
+            "passed": true
+          },
+          {
+            "name": "private_mcp.chat_history_draft_queue_unchanged",
+            "passed": true
+          }
+        ],
+        "cleanup": {
+          "passed": true,
+          "errors": [],
+          "owned_processes": [
+            {
+              "pid": 348,
+              "exited": true,
+              "exit_code": 0
+            },
+            {
+              "pid": 354,
+              "exited": true,
+              "exit_code": 0
+            },
+            {
+              "pid": 694,
+              "exited": true,
+              "exit_code": 0
+            },
+            {
+              "pid": 794,
+              "exited": true,
+              "exit_code": 0
+            },
+            {
+              "pid": 353,
+              "exited": true,
+              "exit_code": 0
+            },
+            {
+              "pid": 693,
+              "exited": true,
+              "exit_code": 0
+            },
+            {
+              "pid": 793,
+              "exited": true,
+              "exit_code": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "outer": {
+    "duration_ms": 8289,
+    "started_unix_ns_decimal": "1795240999787735902",
+    "finished_unix_ns_decimal": "1795241008076496797",
+    "exit_code": 0,
+    "passed": true,
+    "errors": [],
+    "timed_out": false,
+    "cleanup": {
+      "exit_code": 0,
+      "pid": 4025986,
+      "reaped": true,
+      "spawned": true,
+      "termination_requested": false
+    }
+  },
+  "inputs": {
+    "before_equals_after_exact_Python_comparison": true,
+    "transport_helper_bindings_before_equals_after": true,
+    "seven_helper_text_inputs_match_fixed_source": {
+      "scripts/e2e.py": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/scripts/e2e.py",
+        "bytes": 49707,
+        "sha256": "6d9ac0b14416e034e171cff3697dac8e1bd9203ccfb6b18fff9691429230505a",
+        "matches_recorded_before_and_after": true
+      },
+      "scripts/e2e_account_gateway.py": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/scripts/e2e_account_gateway.py",
+        "bytes": 20488,
+        "sha256": "54d94dd8768c4dbbf32ccf277061935163f98fccf0bed8946e27aa8d6bfd697a",
+        "matches_recorded_before_and_after": true
+      },
+      "scripts/e2e_account_relay.py": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/scripts/e2e_account_relay.py",
+        "bytes": 30779,
+        "sha256": "b1c7b1de43d169fb465bf187b55e5364badadb2f2b08d9ba0bda65ca3072dec3",
+        "matches_recorded_before_and_after": true
+      },
+      "scripts/e2e_dashboard.py": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/scripts/e2e_dashboard.py",
+        "bytes": 37916,
+        "sha256": "e9edc9571ff9d8c52549f57838995ff1b26ba1790e8b0703f3a611e59c7fb569",
+        "matches_recorded_before_and_after": true
+      },
+      "scripts/e2e_client_ui.py": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/scripts/e2e_client_ui.py",
+        "bytes": 37110,
+        "sha256": "8fd761329b664f11080ad265051d7c7ccfb9f8dc0fb9738315d755e982487951",
+        "matches_recorded_before_and_after": true
+      },
+      "scripts/e2e_composer.py": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/scripts/e2e_composer.py",
+        "bytes": 39178,
+        "sha256": "f7cf835ac145e293555b4c4cfe2111947bce664e490be42e5fc3890f84d82e41",
+        "matches_recorded_before_and_after": true
+      },
+      "scripts/e2e_input_history.py": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/scripts/e2e_input_history.py",
+        "bytes": 48202,
+        "sha256": "8c364314553954ab37618dac7d464b0654522aa7da13d4d5f8720d8395dd3493",
+        "matches_recorded_before_and_after": true
+      }
+    },
+    "source_files_reported": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source",
+      "entries": 1545,
+      "normalized_manifest_sha256": "fcab7aacf0a5ff03ce2768fbe8443319231ca42d7ca7ed9e0cd4666f65b4701f"
+    },
+    "source_and_compiled_source_and_proof_paths_equal": true,
+    "four_text_inputs_rehashed": [
+      {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/input-agent-runtime-w-r14-final-review-20261121/driver.py",
+        "bytes": 25575,
+        "sha256": "f2563c286fbef15739d867787e1528ab43689830da5801b9f3dca6b0640cd5d5"
+      },
+      {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-r14-gate-readonly-validation-v1/out-once/proof.json",
+        "bytes": 624100,
+        "sha256": "97edb0c2e290c8a99532b9bd277c26c789af62a077fe7d6e36a5d79b73e042db"
+      },
+      {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-r14-bound-acceptance-prepared-20261121/runtime/transport_smoke.py",
+        "bytes": 53245,
+        "sha256": "786d8505e1d81f59ead180abd75cc83ec718b6b1efcaffed8e55a51c5bd6bf92"
+      },
+      {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-r14-bound-acceptance-prepared-20261121/runtime/private_mcp_smoke.py",
+        "bytes": 59433,
+        "sha256": "b56fcc616a829e3583fc93bb803e3749fabde87a936d9b642040c9ce549e6ee4"
+      }
+    ],
+    "five_binary_descriptors_match_W_gate": {
+      "library": {
+        "recorded_descriptor": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/library-compile/library-test-fixture",
+          "bytes": 166677776,
+          "sha256": "57fb20efb29b2eefabf9dfe0f3b88b0fb58db6e35efce2fb6feec4b3d625fab3",
+          "executable": true
+        },
+        "matches_W_gate_proof": true,
+        "proof_field": "compilation.library"
+      },
+      "ssmcp": {
+        "recorded_descriptor": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/release/ssmcp",
+          "bytes": 15750352,
+          "sha256": "d654703a12f9479e97b9807ac8d61f370bd5c413963bf6e5b6e45dfbd8434f41",
+          "executable": true
+        },
+        "matches_W_gate_proof": true,
+        "proof_field": "binaries.ssmcp"
+      },
+      "ssmcp-frontend": {
+        "recorded_descriptor": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/release/ssmcp-frontend",
+          "bytes": 1386584,
+          "sha256": "2e19f8ad2fea673f899bbfc44449161e072381571946b85e3c6a5dc7e8325a06",
+          "executable": true
+        },
+        "matches_W_gate_proof": true,
+        "proof_field": "binaries.ssmcp-frontend"
+      },
+      "ssmcpd": {
+        "recorded_descriptor": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/release/ssmcpd",
+          "bytes": 8176168,
+          "sha256": "c1991fac3c0c6aa0a229781c87fe67ef24c028fd5ffc88b0c50dc413baaa5527",
+          "executable": true
+        },
+        "matches_W_gate_proof": true,
+        "proof_field": "binaries.ssmcpd"
+      },
+      "vt_snapshot": {
+        "recorded_descriptor": {
+          "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/decoder/vt_snapshot",
+          "bytes": 440984,
+          "sha256": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f",
+          "executable": true
+        },
+        "matches_W_gate_proof": true,
+        "proof_field": "binaries.vt_snapshot"
+      }
+    }
+  },
+  "short_temp_cleanup": {
+    "removed": true
+  },
+  "reference_review": {
+    "url": "https://github.com/LIghtJUNction/project-z/blob/1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d/docs/maintenance/evidence/ssmcp-V2-r13-runtime/root-runtime-readback.json",
+    "bytes": 11093,
+    "sha256": "988bedd22deca4f81af8b1ab4fae4c8698050aff7ce2b52f4a34c5c9c1edaf4b",
+    "scope_reused_not_results": true
+  },
+  "scope": {
+    "product_reexecution_by_reviewer": false,
+    "Cargo_or_target_lock": false,
+    "candidate_or_validator_import_or_execution": false,
+    "ELF_rehash_by_reviewer": false,
+    "namespace_PIDs_queried_in_host_proc": false,
+    "full_harness_semantic_reaudit": false,
+    "full_source_inventory_recomputed": false,
+    "original_18_results_not_added_to_Gate_or_historical_U_or_f42": true,
+    "source_refs_or_current_worktrees_modified": false,
+    "current_user_client_reloaded": false,
+    "models_started": false,
+    "TLS_verified": false,
+    "UI_P1_final44_certified": false,
+    "W_results_not_transferred_to_new_main_c12": true,
+    "cleanup_claim": "Recorded module cleanup and original outer spawned/reaped/exit0 checked; no new full descendant-process inspection or lock-free claim."
+  }
+}

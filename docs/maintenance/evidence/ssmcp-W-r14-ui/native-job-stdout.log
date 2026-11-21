@@ -1,0 +1,15 @@
+{"started": "message_references", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/suites/message_references/run.log"}
+{"finished": "message_references", "status": "passed", "seconds": 17.132, "checks": 53}
+{"started": "force_send", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/suites/force_send/run.log"}
+{"finished": "force_send", "status": "passed", "seconds": 25.077, "checks": 137}
+{"started": "listener_transports", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/suites/listener_transports/run.log"}
+{"finished": "listener_transports", "status": "passed", "seconds": 10.91, "checks": 74}
+{"started": "zuse_worker", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/suites/zuse_worker/run.log"}
+{"finished": "zuse_worker", "status": "passed", "seconds": 4.501, "checks": 32}
+{"started": "interactions", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/suites/interactions/run.log"}
+{"finished": "interactions", "status": "passed", "seconds": 62.787, "checks": 172}
+{"started": "private_desktop", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/suites/private_desktop/run.log"}
+{"finished": "private_desktop", "status": "passed", "seconds": 5.611, "checks": 35}
+{"started": "account_compat", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/suites/account_compat/run.log"}
+{"finished": "account_compat", "status": "failed", "seconds": 3.683, "checks": 0}
+{"status": "failed", "receipt": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/acceptance.json", "actual_execution_count": 7, "independent_pass_count": 6, "alias_coverage_count": 1}

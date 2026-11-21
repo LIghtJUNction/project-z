@@ -1,0 +1,1235 @@
+{
+  "schema": "project-z.ssmcp-W-r14-gate-independent-review.v1",
+  "reviewed_at_utc": "2026-11-21T06:09:54.033330+00:00",
+  "blocking_findings": 0,
+  "material_evidence_inconsistencies": 0,
+  "conclusion": "Completed fixed W/r14 Gate35 independently verified. No r13 pass or equal output hash is substituted for this run.",
+  "source": {
+    "commit": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+    "parent": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "version": "0.10.25",
+    "delta": {
+      "path": "scripts/e2e_composer.py",
+      "old_blob": "6dc1f4495dca1d4a213cacc058344aa75b695dfe",
+      "new_blob": "87750b2965fe11116ee95f00ed4a8eb74eaced8f",
+      "one_literal_change_exact_bytes_verified": true,
+      "before": "editing_queue(shot, \"next caller\")",
+      "after": "editing_queue(shot, \"Next caller\")",
+      "column_hide_cursor_and_other_bytes_preserved": true,
+      "remaining_1113_leaves_and_four_gitlinks": {
+        "schema": "project-z.W-fixed-source-peer-review.v1",
+        "reviewer": "/root/pr_org_repos",
+        "scope": "Independent read-only GitHub immutable commit, compare and two complete recursive trees. No native, product, Cargo, source or ref operations.",
+        "source": {
+          "commit": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+          "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+          "sole_parent": "f42baae1d5227bd6db8315aef778160b80b57274",
+          "parent_tree": "64b40eb8a3e0188076cf376229d3d87074d27dcc"
+        },
+        "trees": {
+          "truncated": false,
+          "entries_each": 1325,
+          "leaves_each": 1114,
+          "modified": 1,
+          "added": 0,
+          "deleted": 0,
+          "unchanged_leaves": 1113,
+          "unchanged_gitlinks": 4
+        },
+        "change": {
+          "path": "scripts/e2e_composer.py",
+          "mode": "100644",
+          "old_blob": "6dc1f4495dca1d4a213cacc058344aa75b695dfe",
+          "new_blob": "87750b2965fe11116ee95f00ed4a8eb74eaced8f",
+          "removed": "editing_queue(shot, \"next caller\")",
+          "added": "editing_queue(shot, \"Next caller\")",
+          "remaining_column_and_hide_cursor_assertions_preserved": true
+        },
+        "source_urls": [
+          "https://api.github.com/repos/LIghtJUNction/ssmcp/git/commits/4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+          "https://api.github.com/repos/LIghtJUNction/ssmcp/git/trees/5be29af415b915ef3307bfed08c6cefec2798898?recursive=1",
+          "https://api.github.com/repos/LIghtJUNction/ssmcp/git/trees/64b40eb8a3e0188076cf376229d3d87074d27dcc?recursive=1",
+          "https://api.github.com/repos/LIghtJUNction/ssmcp/compare/f42baae1d5227bd6db8315aef778160b80b57274...4de17310ce2ecdbc8b6c6ab86ee365653f753ee8"
+        ],
+        "blocking_findings": 0,
+        "boundary": "This is a structured transcript of the peer's explicit immutable-source review, not a raw GitHub response or runtime result."
+      }
+    },
+    "freeze": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-composer-next-label/source-freeze-4de1731.json",
+      "bytes": 3287,
+      "sha256": "866c1cae14179dbf6a633121325885ddd1ff2a3a763a781851b8d2e2150828e4",
+      "mode": 384
+    },
+    "manifest": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source-manifest.json",
+      "bytes": 320140,
+      "sha256": "6ebe935d8f04d92450159bb2251297f12e0bf894a97cf7b440211159e99a69e8",
+      "mode": 384
+    },
+    "entries": 1849,
+    "types": {
+      "directory": 304,
+      "file": 1545
+    },
+    "observed_bytes_modes_path_set_match": true,
+    "observation_ended_at": "2026-11-21T06:05:11.633988+00:00",
+    "source_archives": [
+      {
+        "label": "main",
+        "commit": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+        "pax_commit": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/archives/main.tar",
+        "bytes": 17797120,
+        "sha256": "834878ac1f8ad1cb911320a15d79db425b89f5d1800d6bc8c45a92650cc64922",
+        "mode": 420
+      },
+      {
+        "label": "crates/zharness",
+        "commit": "cb63a9a0aa163214c6062664cd62fefb357be5a8",
+        "pax_commit": "cb63a9a0aa163214c6062664cd62fefb357be5a8",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/archives/zharness.tar",
+        "bytes": 1085440,
+        "sha256": "611a96aea977134d09bfe078d8985e1b5ed8de8f8353ad75a1a724d5d8a2fd29",
+        "mode": 420
+      },
+      {
+        "label": "crates/zplugin",
+        "commit": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4",
+        "pax_commit": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/archives/zplugin.tar",
+        "bytes": 983040,
+        "sha256": "73d03620fb51d292b080aea0eab253dd5d0600aa9c82a4e5286334dcab6f157f",
+        "mode": 420
+      },
+      {
+        "label": "crates/ztuio",
+        "commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+        "pax_commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/archives/ztuio.tar",
+        "bytes": 92160,
+        "sha256": "0322272bfee9152f5944a45fb23b6d8957ea4800dd985e80f62b6939f3ee2706",
+        "mode": 420
+      },
+      {
+        "label": "crates/zuse",
+        "commit": "a1bb8fd2cbce0a9d85134999883c578358065242",
+        "pax_commit": "a1bb8fd2cbce0a9d85134999883c578358065242",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/archives/zuse.tar",
+        "bytes": 1740800,
+        "sha256": "ec27aeda53bf6ed948c6d7b743a997fc73977ff27f7494653429d6db6dfc9b42",
+        "mode": 420
+      }
+    ],
+    "root_worktree_heads": {
+      "after_export": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+      "before_export": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+      "final": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8"
+    }
+  },
+  "run": {
+    "run_id": "3e89242560e0a243bde3d8442ce7e1db",
+    "unit": "ssmcp-release25-gate35-r14-20261121.service",
+    "invocation_id": "96256392e87944e2a00cb78d6c8aff9b",
+    "gate_started_at_utc": "2026-11-21T05:42:51.112874+00:00",
+    "gate_finished_at_utc": "2026-11-21T05:56:01.212636+00:00",
+    "duration_seconds": 790.099763,
+    "owned_finished_at_utc": "2026-11-21T05:56:01.331566+00:00",
+    "all_35_exit_codes_zero": true,
+    "original_gate": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/candidate-gates.json",
+      "bytes": 1286360,
+      "sha256": "423e7072304bcc191da324b0233a00f704c31710f7120522ef16c6e58026ff3c",
+      "mode": 384
+    },
+    "launcher_exit": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14-launch/exit.json",
+      "bytes": 4793,
+      "sha256": "6468c5b03875fa10170dbfbcfb95da7414d1a1e15b0e84ee2383f397746cb80e",
+      "mode": 420
+    },
+    "owned_exit": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r14-binding/owned/exit.json",
+      "bytes": 1168,
+      "sha256": "6c5c5d17c5dca26345694dedf5b932572ff8099ae8dec1d8da1ffb1ed1553b6c",
+      "mode": 420
+    }
+  },
+  "counts": {
+    "stage_count": 35,
+    "rust_parent_stages": 26,
+    "library_inventory": 2086,
+    "library_private": {
+      "failed": 0,
+      "filtered": 6,
+      "ignored": 23,
+      "measured": 0,
+      "passed": 2057,
+      "result": "ok"
+    },
+    "library_host": {
+      "failed": 0,
+      "filtered": 2080,
+      "ignored": 0,
+      "measured": 0,
+      "passed": 6,
+      "result": "ok"
+    },
+    "ordinary_integration_targets": 19,
+    "ordinary_integration_passed": 101,
+    "worker_ignored_exact_passed": 1,
+    "integration_total_targets": 20,
+    "integration_total_passed": 102,
+    "additional_mandatory_ignored_stages": 4,
+    "additional_mandatory_ignored_passed": 14,
+    "V2_regression_subset": {
+      "historical_name_index": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/V2-native-picker-library-result-map.json",
+        "bytes": 6065,
+        "sha256": "500d837c0d6402db35367a84f52fcd68d94ab69ef0045ab146a2c692af5f4ab6",
+        "mode": 292
+      },
+      "cases": [
+        {
+          "name": "client::messaging::tests::lookup_waits_for_the_coalesced_quiet_list_even_when_the_directory_is_unchanged",
+          "line_number": 5325,
+          "explicit_ok": true,
+          "source_file": "src/client/messaging/tests.rs"
+        },
+        {
+          "name": "client::messaging::tests::lookup_rejects_invalid_and_timed_out_replies_and_does_not_cross_connections",
+          "line_number": 5323,
+          "explicit_ok": true,
+          "source_file": "src/client/messaging/tests.rs"
+        },
+        {
+          "name": "client::terminal::conversation::messaging::tests::cold_exact_lookup_highlights_merged_process_row_without_selecting_or_sending",
+          "line_number": 5639,
+          "explicit_ok": true,
+          "source_file": "src/client/terminal/conversation/messaging.rs"
+        },
+        {
+          "name": "client::terminal::conversation::messaging::tests::explicit_lookup_reports_fresh_miss_or_failure_without_clearing_the_command",
+          "line_number": 5640,
+          "explicit_ok": true,
+          "source_file": "src/client/terminal/conversation/messaging.rs"
+        },
+        {
+          "name": "client::terminal::conversation::messaging::tests::coalesced_miss_joins_a_query_after_list_and_finishes_on_its_empty_reply",
+          "line_number": 5638,
+          "explicit_ok": true,
+          "source_file": "src/client/terminal/conversation/messaging.rs"
+        },
+        {
+          "name": "client::terminal::conversation::messaging::tests::queued_lookup_reply_cannot_override_escape_navigation_or_a_newer_draft",
+          "line_number": 5646,
+          "explicit_ok": true,
+          "source_file": "src/client/terminal/conversation/messaging.rs"
+        },
+        {
+          "name": "client::terminal::conversation::messaging::tests::newer_query_coalesces_the_list_and_consumes_only_its_own_command",
+          "line_number": 5645,
+          "explicit_ok": true,
+          "source_file": "src/client/terminal/conversation/messaging.rs"
+        }
+      ],
+      "count": 7,
+      "subset_of_r14_private_2057": true,
+      "added_to_total": false,
+      "r13_results_not_reused": true,
+      "final_r14_log_independently_matched": true
+    },
+    "original_goals": {
+      "historical_name_index": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/U-original-goals-library-result-map.json",
+        "bytes": 11392,
+        "sha256": "aebc5950d178b30d662a7007f750c7a574b5f7559cbeaff91558ad53df7a906c",
+        "mode": 384
+      },
+      "cases": [
+        {
+          "name": "client::terminal::conversation::messaging::tests::native_mentions_require_selection_and_file_syntax_remains_literal",
+          "r14_line_number": 5642,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::terminal::conversation::messaging::tests::missing_native_recipients_never_fall_back_to_next_caller",
+          "r14_line_number": 5641,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::terminal::conversation::messaging::tests::service_receipt_clears_only_the_exact_submitted_native_draft",
+          "r14_line_number": 5647,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::terminal::conversation::messaging::tests::a_mismatched_or_failed_native_receipt_never_clears_the_draft",
+          "r14_line_number": 5636,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::messaging::tests::mismatched_receipt_preserves_draft_and_idempotent_retry_cannot_change_target",
+          "r14_line_number": 5326,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::interface::history::ownership::tests::program_reply_keeps_original_owner_and_one_copy_after_selection_changes",
+          "r14_line_number": 5152,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::interface::messages::tests::final_reply_retry_receipts_cannot_be_borrowed_by_another_thread",
+          "r14_line_number": 5205,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::references::tests::unavailable_files_keep_source_and_warn_without_read_actions",
+          "r14_line_number": 5405,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::references::tests::full_budget_unavailable_references_keep_exact_text_and_local_warnings",
+          "r14_line_number": 5384,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::references::tests::unavailable_metadata_cannot_crowd_out_readable_reference_contents",
+          "r14_line_number": 5414,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::references::tests::missing_reference_retries_remain_frozen_until_source_is_edited",
+          "r14_line_number": 5389,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::steering::tests::full_budget_missing_reference_reaches_real_queue_once_with_ack_notice",
+          "r14_line_number": 5544,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::references::tests::skill_names_use_effective_precedence_and_explicit_roots",
+          "r14_line_number": 5409,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::completion::tests::send_body_completes_references_without_changing_the_command",
+          "r14_line_number": 5016,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::completion::tests::send_completion_rejects_commands_shell_currency_and_code",
+          "r14_line_number": 5017,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::terminal::conversation::skill_picker_tests::skill_picker_keys_only_deliver_the_explicitly_sent_selection",
+          "r14_line_number": 5674,
+          "explicit_r14_ok": true
+        },
+        {
+          "name": "client::terminal::conversation::skill_picker_tests::send_reference_picker_preserves_drafts_and_delivers_only_after_explicit_send",
+          "r14_line_number": 5673,
+          "explicit_r14_ok": true
+        }
+      ],
+      "count": 17,
+      "subset_of_r14_private_2057": true,
+      "added_to_total": false,
+      "older_pass_results_not_reused": true
+    },
+    "nested_results_added": false
+  },
+  "stage_results": [
+    {
+      "name": "release-policy",
+      "exit_code": 0,
+      "seconds": 7.11,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-release-policy.log",
+        "bytes": 19894,
+        "sha256": "bca9d33071c42cd49f093cac96d77040e828a88bc5924dd58b326a9a4ecd2b06",
+        "mode": 420
+      },
+      "python_result": "Ran 100 tests in 6.962s"
+    },
+    {
+      "name": "deployment-policy",
+      "exit_code": 0,
+      "seconds": 0.3,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-deployment-policy.log",
+        "bytes": 5660,
+        "sha256": "e31b3e7d8116f05ec08023940af10d270527c943b4b016ab5442a63891677dd1",
+        "mode": 420
+      },
+      "python_result": "Ran 35 tests in 0.167s"
+    },
+    {
+      "name": "fmt",
+      "exit_code": 0,
+      "seconds": 2.53,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-fmt.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "mode": 420
+      }
+    },
+    {
+      "name": "library-compile",
+      "exit_code": 0,
+      "seconds": 74.85,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-library-compile.log",
+        "bytes": 213954,
+        "sha256": "dbbbd982ff8c22a7961a74eeef24d31336545eac845647183991efaa4f9935ea",
+        "mode": 420
+      }
+    },
+    {
+      "name": "library-private",
+      "exit_code": 0,
+      "seconds": 36.65,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-library-private.log",
+        "bytes": 558263,
+        "sha256": "fe9de2041cbfbce0c7610e854d8a25955d86cd41303827dfdb3eac30de404cfe",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 6,
+        "ignored": 23,
+        "measured": 0,
+        "passed": 2057,
+        "result": "ok"
+      },
+      "selected_count": 2057,
+      "skipped_ignored_count": 23
+    },
+    {
+      "name": "library-host",
+      "exit_code": 0,
+      "seconds": 0.02,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-library-host.log",
+        "bytes": 2079,
+        "sha256": "69b227aad8a9530ed4e506bc0f885224d4e06916619f98a412670125a955af09",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 2080,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 6,
+        "result": "ok"
+      },
+      "selected_count": 6,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "clippy",
+      "exit_code": 0,
+      "seconds": 80.1,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-clippy.log",
+        "bytes": 497,
+        "sha256": "b58d1f5b5524a69bf1e1a07c3a5558a592fabc488fb47be035836a28287f72dd",
+        "mode": 420
+      },
+      "warnings": [
+        "warning: unused dependency `qrcodegen`",
+        "warning: `ssmcp` (manifest) generated 1 warning"
+      ]
+    },
+    {
+      "name": "windows-gnu-clippy",
+      "exit_code": 0,
+      "seconds": 96.01,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-windows-gnu-clippy.log",
+        "bytes": 497,
+        "sha256": "37b27b1b0a1c478e8bca70793464e7980c00023594a25994dadeb6f367f4bc80",
+        "mode": 420
+      },
+      "warnings": [
+        "warning: unused dependency `qrcodegen`",
+        "warning: `ssmcp` (manifest) generated 1 warning"
+      ]
+    },
+    {
+      "name": "integration-compile",
+      "exit_code": 0,
+      "seconds": 87.94,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-compile.log",
+        "bytes": 235554,
+        "sha256": "2a20f2d26ff600d5afe445cdf0511fa0d0a88cee94422fc098452c94e7c98422",
+        "mode": 420
+      }
+    },
+    {
+      "name": "integration-allow_account",
+      "exit_code": 0,
+      "seconds": 0.06,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-allow_account.log",
+        "bytes": 331,
+        "sha256": "21c433abd0331037fcde032caaf5f620ff150b3d54a123709032bd58d6353b8b",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 3,
+        "result": "ok"
+      },
+      "selected_count": 3,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-cc_backend",
+      "exit_code": 0,
+      "seconds": 1.54,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-cc_backend.log",
+        "bytes": 2053,
+        "sha256": "7be7498fa5674c0d981d072bb48f808a7c6ed2b25f23bd3e91e6a27aada59129",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 1,
+        "measured": 0,
+        "passed": 6,
+        "result": "ok"
+      },
+      "selected_count": 6,
+      "skipped_ignored_count": 1
+    },
+    {
+      "name": "integration-client_resources",
+      "exit_code": 0,
+      "seconds": 0.11,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-client_resources.log",
+        "bytes": 243,
+        "sha256": "01e5b234c8a107548b9e797d9c92f9506b7c1d666773d046f17d4ba4ea63713f",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 1,
+        "result": "ok"
+      },
+      "selected_count": 1,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-client_server_config",
+      "exit_code": 0,
+      "seconds": 1.26,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-client_server_config.log",
+        "bytes": 512,
+        "sha256": "45012662e2e7313855dd7989ffc0be19847df7c6a9ec2a7b7d80661084533cac",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 5,
+        "result": "ok"
+      },
+      "selected_count": 5,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-codex_backend",
+      "exit_code": 0,
+      "seconds": 20.94,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-codex_backend.log",
+        "bytes": 9741,
+        "sha256": "4ba9fb8e7fb7135011208fddae292b78f13fc95efb98c7dd94f8d2213b898059",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 2,
+        "measured": 0,
+        "passed": 14,
+        "result": "ok"
+      },
+      "selected_count": 14,
+      "skipped_ignored_count": 2
+    },
+    {
+      "name": "integration-collaboration",
+      "exit_code": 0,
+      "seconds": 0.14,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-collaboration.log",
+        "bytes": 24261,
+        "sha256": "e28e36289a2a9fb63bfecb0e53609ad413c013dfcecb5700142949fd7d7256a5",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 3,
+        "result": "ok"
+      },
+      "selected_count": 3,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-connection_context",
+      "exit_code": 0,
+      "seconds": 0.15,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-connection_context.log",
+        "bytes": 893,
+        "sha256": "ae2d6eb0c9896edc6ecc12fc8b21380318bcfedfa4ca302574d1e218541674fa",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 10,
+        "result": "ok"
+      },
+      "selected_count": 10,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-context",
+      "exit_code": 0,
+      "seconds": 0.09,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-context.log",
+        "bytes": 9635,
+        "sha256": "de418d1e26966cbee34bed3f556717a5e59608d68dd0d0da9f466b2ec85d3929",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 12,
+        "result": "ok"
+      },
+      "selected_count": 12,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-context_helpers",
+      "exit_code": 0,
+      "seconds": 0.0,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-context_helpers.log",
+        "bytes": 470,
+        "sha256": "d97772d6536da9b8f88482e90b8e19d8e60b8dca14361909d1e1e7ba08fe8512",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 2,
+        "measured": 0,
+        "passed": 0,
+        "result": "ok"
+      },
+      "selected_count": 0,
+      "skipped_ignored_count": 2
+    },
+    {
+      "name": "integration-context_runtime",
+      "exit_code": 0,
+      "seconds": 0.1,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-context_runtime.log",
+        "bytes": 387,
+        "sha256": "6953f0fae43437da5decf70f15df7d37d5aa4a1b49e0c369703680999ed20efc",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 1,
+        "result": "ok"
+      },
+      "selected_count": 1,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-oauth_security",
+      "exit_code": 0,
+      "seconds": 1.13,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-oauth_security.log",
+        "bytes": 24291,
+        "sha256": "e108319f244bc8d7a51e3e6028a8e3a2c208b82dd1e943f7eaadc29d0b71dcbd",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 11,
+        "result": "ok"
+      },
+      "selected_count": 11,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-pi_backend",
+      "exit_code": 0,
+      "seconds": 0.19,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-pi_backend.log",
+        "bytes": 5283,
+        "sha256": "dc592825594f66bff70121c0f24676295991a4135330d68bbf94d2fc0fb16300",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 1,
+        "measured": 0,
+        "passed": 9,
+        "result": "ok"
+      },
+      "selected_count": 9,
+      "skipped_ignored_count": 1
+    },
+    {
+      "name": "integration-release_client",
+      "exit_code": 0,
+      "seconds": 0.05,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-release_client.log",
+        "bytes": 2846,
+        "sha256": "03bf71e51f2ccac399a4af97bbe79c0a771dbb5196c6150ea1f875f823bb63b5",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 4,
+        "result": "ok"
+      },
+      "selected_count": 4,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-resources",
+      "exit_code": 0,
+      "seconds": 0.14,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-resources.log",
+        "bytes": 65442,
+        "sha256": "d4727c724a20c974267a94a7c3b61a2e74a013f157545907a931923d74f936d6",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 10,
+        "result": "ok"
+      },
+      "selected_count": 10,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-rsync",
+      "exit_code": 0,
+      "seconds": 0.16,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-rsync.log",
+        "bytes": 309,
+        "sha256": "41edc7357461b874d6e6409be89d60bc37d7c11048cb8a3186121564c5f39668",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 3,
+        "result": "ok"
+      },
+      "selected_count": 3,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-server_runtime",
+      "exit_code": 0,
+      "seconds": 0.01,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-server_runtime.log",
+        "bytes": 484,
+        "sha256": "eae88079efd75e981f4b9e44d76603b64317ae789264741fa1749cd9b9090d3a",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 1,
+        "measured": 0,
+        "passed": 3,
+        "result": "ok"
+      },
+      "selected_count": 3,
+      "skipped_ignored_count": 1
+    },
+    {
+      "name": "integration-terminals",
+      "exit_code": 0,
+      "seconds": 0.43,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-terminals.log",
+        "bytes": 1003,
+        "sha256": "a58e5b66889715b2b6f099419f653ff39dbbf40b9b34818ac15fb5fc62cca672",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 4,
+        "result": "ok"
+      },
+      "selected_count": 4,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-two_tools",
+      "exit_code": 0,
+      "seconds": 0.04,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-two_tools.log",
+        "bytes": 7535,
+        "sha256": "13c34620c0de8de96dcc49489c67838a60b4b9898f6dcaf87afe6f4eadf65d08",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 7,
+        "measured": 0,
+        "passed": 2,
+        "result": "ok"
+      },
+      "selected_count": 2,
+      "skipped_ignored_count": 7
+    },
+    {
+      "name": "integration-workspace_bridge",
+      "exit_code": 0,
+      "seconds": 0.01,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-workspace_bridge.log",
+        "bytes": 574,
+        "sha256": "a016ef16e661a8133328e13bbf46a3c8360c174db26c22b61328bd62e02b6bbd",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 3,
+        "measured": 0,
+        "passed": 0,
+        "result": "ok"
+      },
+      "selected_count": 0,
+      "skipped_ignored_count": 3
+    },
+    {
+      "name": "integration-zuse_worker_entry",
+      "exit_code": 0,
+      "seconds": 0.27,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-zuse_worker_entry.log",
+        "bytes": 198,
+        "sha256": "ad8d9f6a3411d2653ca7b0cff330c1de03c58c6e3735f42531ccbc879bd7ed4d",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 1,
+        "result": "ok"
+      },
+      "selected_count": 1,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "library-code-mode-ignored",
+      "exit_code": 0,
+      "seconds": 0.29,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-library-code-mode-ignored.log",
+        "bytes": 272,
+        "sha256": "df9ecc4b9edf7b746075766cc92040db50c8957657aa14350e9945682e25557c",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 2084,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 2,
+        "result": "ok"
+      },
+      "selected_count": 2,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-two_tools-ignored",
+      "exit_code": 0,
+      "seconds": 1.69,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-two_tools-ignored.log",
+        "bytes": 32139,
+        "sha256": "b195769acaa8e6642ad50468003d4850cc5a8a41ca44baa273dcbab9437c418f",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 2,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 7,
+        "result": "ok"
+      },
+      "selected_count": 7,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-workspace_bridge-ignored",
+      "exit_code": 0,
+      "seconds": 2.21,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-workspace_bridge-ignored.log",
+        "bytes": 12931,
+        "sha256": "459b606f9b5c244c9c24ea0e9e733d2f6f1bc1640325d28c9a9c738f4d5f1e9c",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 3,
+        "result": "ok"
+      },
+      "selected_count": 3,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "integration-context_helpers-ignored",
+      "exit_code": 0,
+      "seconds": 0.16,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-integration-context_helpers-ignored.log",
+        "bytes": 1738,
+        "sha256": "f20c5e0bacbd91ee092f62df038fc9a703e129145662f092f3bac2040ca732a7",
+        "mode": 420
+      },
+      "parent_result": {
+        "failed": 0,
+        "filtered": 0,
+        "ignored": 0,
+        "measured": 0,
+        "passed": 2,
+        "result": "ok"
+      },
+      "selected_count": 2,
+      "skipped_ignored_count": 0
+    },
+    {
+      "name": "release",
+      "exit_code": 0,
+      "seconds": 232.3,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-release.log",
+        "bytes": 217749,
+        "sha256": "d1e8f73e90116db00be874c1626aaefd626c994e54a425d2104bf2a9b05bf070",
+        "mode": 420
+      }
+    },
+    {
+      "name": "decoder",
+      "exit_code": 0,
+      "seconds": 95.94,
+      "log": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/logs/candidate2-decoder.log",
+        "bytes": 216107,
+        "sha256": "6493c313898345d27e35547231738454af37e1eea44190825201005d33731a84",
+        "mode": 420
+      }
+    }
+  ],
+  "verification": {
+    "original_texts_read_and_hashed": 213,
+    "all_35_logs_read": true,
+    "all_55_probes_stdout_stderr_read": true,
+    "all_26_Rust_parent_results_match_raw_and_selection": true,
+    "nested_children_not_added": true,
+    "four_Cargo_JSON_archives_match_raw_build_logs": true,
+    "selected_fresh_false_artifacts": 26,
+    "actual_wrapper_records": 37,
+    "actual_invocation_source_profile_link_Cargo_owned_chain_matched": true,
+    "full_rustc_argv_digest_recomputed": false,
+    "five_owned_outputs_independently_stream_hashed": true,
+    "shared_target_ELFs_read": false,
+    "source_controls_and_coverage": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/source-controls-coverage.json",
+      "bytes": 27093,
+      "sha256": "98b556f38cebf6cf02a0fe9f505f75aedaa0d50b3bf4a2baffc1b40353ef2bf6",
+      "git_blob": "0b688063ac5f577052f2b904a7d86d1e44830d41"
+    },
+    "original_text_index": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/original-text-index.json",
+      "bytes": 64920,
+      "sha256": "c63247dbc04d837c3de4c2e1331ed8b16d5379898a51c23ffac23527e324c30b",
+      "git_blob": "cafaf6ccc4f47d2e3f7ee7961335b81be5aa747f"
+    },
+    "detailed_raw_audit": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/raw-audit.json",
+      "bytes": 325266,
+      "sha256": "01aa728f919745edcf2b8b01be52ebc6454fba737eafadc64d49e8a37494f3d4",
+      "git_blob": "6039b7398998d582abb16955652a170f4382a272"
+    }
+  },
+  "five_controlled_outputs": [
+    {
+      "stage": "library-compile",
+      "label": "library-test-fixture",
+      "actual_current_owned_file": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/library-compile/library-test-fixture",
+        "bytes": 166677776,
+        "sha256": "57fb20efb29b2eefabf9dfe0f3b88b0fb58db6e35efce2fb6feec4b3d625fab3",
+        "mode": 448
+      },
+      "bookends_unchanged_during_read": true,
+      "matches_this_r14_invocation_link_cargo_copy_record": true,
+      "proof_reused_from_r13": false,
+      "r13_sha256_for_comparison_only": "c69dee8ced668ac1bbe39da83b19c9c419d1acb9c1c2b006b8cbc115aa499e0d",
+      "same_hash_as_r13": false,
+      "r14_proof_not_inherited_from_equal_hash": true
+    },
+    {
+      "stage": "release",
+      "label": "ssmcp",
+      "actual_current_owned_file": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/release/ssmcp",
+        "bytes": 15750352,
+        "sha256": "d654703a12f9479e97b9807ac8d61f370bd5c413963bf6e5b6e45dfbd8434f41",
+        "mode": 448
+      },
+      "bookends_unchanged_during_read": true,
+      "matches_this_r14_invocation_link_cargo_copy_record": true,
+      "proof_reused_from_r13": false,
+      "r13_sha256_for_comparison_only": "d654703a12f9479e97b9807ac8d61f370bd5c413963bf6e5b6e45dfbd8434f41",
+      "same_hash_as_r13": true,
+      "r14_proof_not_inherited_from_equal_hash": true
+    },
+    {
+      "stage": "release",
+      "label": "ssmcp-frontend",
+      "actual_current_owned_file": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/release/ssmcp-frontend",
+        "bytes": 1386584,
+        "sha256": "2e19f8ad2fea673f899bbfc44449161e072381571946b85e3c6a5dc7e8325a06",
+        "mode": 448
+      },
+      "bookends_unchanged_during_read": true,
+      "matches_this_r14_invocation_link_cargo_copy_record": true,
+      "proof_reused_from_r13": false,
+      "r13_sha256_for_comparison_only": "2e19f8ad2fea673f899bbfc44449161e072381571946b85e3c6a5dc7e8325a06",
+      "same_hash_as_r13": true,
+      "r14_proof_not_inherited_from_equal_hash": true
+    },
+    {
+      "stage": "release",
+      "label": "ssmcpd",
+      "actual_current_owned_file": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/release/ssmcpd",
+        "bytes": 8176168,
+        "sha256": "c1991fac3c0c6aa0a229781c87fe67ef24c028fd5ffc88b0c50dc413baaa5527",
+        "mode": 448
+      },
+      "bookends_unchanged_during_read": true,
+      "matches_this_r14_invocation_link_cargo_copy_record": true,
+      "proof_reused_from_r13": false,
+      "r13_sha256_for_comparison_only": "c1991fac3c0c6aa0a229781c87fe67ef24c028fd5ffc88b0c50dc413baaa5527",
+      "same_hash_as_r13": true,
+      "r14_proof_not_inherited_from_equal_hash": true
+    },
+    {
+      "stage": "decoder",
+      "label": "vt_snapshot",
+      "actual_current_owned_file": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/workspace-artifact-copies/decoder/vt_snapshot",
+        "bytes": 440984,
+        "sha256": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f",
+        "mode": 448
+      },
+      "bookends_unchanged_during_read": true,
+      "matches_this_r14_invocation_link_cargo_copy_record": true,
+      "proof_reused_from_r13": false,
+      "r13_sha256_for_comparison_only": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f",
+      "same_hash_as_r13": true,
+      "r14_proof_not_inherited_from_equal_hash": true
+    }
+  ],
+  "dependencies": {
+    "metadata_before_after_identical": true,
+    "metadata_sha256": "89eff9ac2e6b90259485e8276d5c2a231c7527c4896c3aa7959f335adc7aa22f",
+    "package_counts": {
+      "registry": 264,
+      "path": 1,
+      "git": 12
+    },
+    "Git_checkout_count": 11,
+    "dependency_manifest": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/dependency-source-manifest.json",
+      "bytes": 4246566,
+      "sha256": "eebcd7e1eb31b2f3601a39487841d88a6326505c45b67804a45b9589bc692e20",
+      "mode": 384
+    },
+    "full_external_dependency_tree_rehashed_by_reviewer": false,
+    "nine_input_hashes_before_after_and_current_match": [
+      {
+        "name": "cargo_config",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/cargo-home/config.toml",
+        "bytes": 925,
+        "sha256": "d664480527bc29872d5c9e9ce844c8a3f1f8cc55d224f9a1867bdee7f0da9bf3",
+        "mode": 384
+      },
+      {
+        "name": "cargo_lock",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final/Cargo.lock",
+        "bytes": 66476,
+        "sha256": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608",
+        "mode": 384
+      },
+      {
+        "name": "dependency_auditor",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/focused-eed621aa/dependency_audit.py",
+        "bytes": 14653,
+        "sha256": "eed621aa874c9accf6f06284f1b7e4c2631f5a99780027450c1102b203b30c1e",
+        "mode": 384
+      },
+      {
+        "name": "driver",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/run_gates.py",
+        "bytes": 83560,
+        "sha256": "91f716677999ce6692e8a82f02a010eceae195156781288ec47ae8c30a691185",
+        "mode": 384
+      },
+      {
+        "name": "git_heads",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/git-heads-v25-r14.json",
+        "bytes": 15489,
+        "sha256": "03e3e5f194320ce325fc8be8f079ee0705df9abaffab5ee9cc683cfc8c71e67c",
+        "mode": 384
+      },
+      {
+        "name": "owner_agreement",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/shared-target-agreement-v25-r14.json",
+        "bytes": 4392,
+        "sha256": "03b14a6be75847c902575aa034d59420f14403d96ca7e907a1e8b713df0a8cf6",
+        "mode": 384
+      },
+      {
+        "name": "reviewed_baseline",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/recovered-gate10/run_gates.py",
+        "bytes": 56086,
+        "sha256": "56d6e26709ee72f53a2a59dad17d5d23182b51d7000af3a5759c974493738c6b",
+        "mode": 384
+      },
+      {
+        "name": "workspace_wrapper",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/context20-preparation/workspace-provenance-r4/workspace_rustc.py",
+        "bytes": 3569,
+        "sha256": "f416c3a75f62e0d2b99b0da099e6b61ef12a17000afb500b70b4a0eb583914f0",
+        "mode": 493
+      },
+      {
+        "name": "wrapper",
+        "path": "/home/lightjunction/.cargo/rustc-serial",
+        "bytes": 272,
+        "sha256": "8b61096a9869fc6e790c963715efded612b17583cee90c830aadda2da8917a43",
+        "mode": 448
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "stage": "clippy",
+      "warnings": [
+        "warning: unused dependency `qrcodegen`",
+        "warning: `ssmcp` (manifest) generated 1 warning"
+      ]
+    },
+    {
+      "stage": "windows-gnu-clippy",
+      "warnings": [
+        "warning: unused dependency `qrcodegen`",
+        "warning: `ssmcp` (manifest) generated 1 warning"
+      ]
+    }
+  ],
+  "boundaries": {
+    "UI_composer_execution_in_Gate35": false,
+    "new_runtime_UI_P1_admitted_by_this_review": false,
+    "release_or_merge_approval": false,
+    "final44_executed": false,
+    "global_lock_free_claim": false,
+    "continuous_kernel_lock_trace_claim": false,
+    "equal_hash_limitation": "Four release/example outputs equal r13, but r14 fresh=false compiler records and actual owned bytes were independently checked. The library-test output hash differs.",
+    "fixture_limitation": "The only repository change corrects the explicit Next caller title in scripts/e2e_composer.py. Gate35 does not execute that native UI case; the new runtime/UI/P1 runs need their own receipts.",
+    "argv_limitation": "Original wrapper stores key compile argv, source arguments, argument count and full-argv digest; original complete argv is not stored. Digest was not independently recomputed.",
+    "exit_limitation": "Owned controller takes source-author lock only; launcher takes target lock. Both are NONBLOCK. Both exit files are written before descriptor close; neither booleans nor collected unit state alone proves the historical lock-release instant."
+  },
+  "operations": {
+    "Cargo_or_tests_or_product_executed": false,
+    "candidate_imported_or_executed": false,
+    "shared_target_written": false,
+    "lock_acquired": false,
+    "source_or_ref_changed": false,
+    "source_existing_r13_evidence_changed": false,
+    "read_started_at": "2026-11-21T06:05:10.679485+00:00",
+    "read_finished_at": "2026-11-21T06:05:11.633988+00:00"
+  }
+}

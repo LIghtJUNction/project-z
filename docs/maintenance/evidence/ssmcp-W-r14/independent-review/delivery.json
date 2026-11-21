@@ -1,0 +1,73 @@
+{
+  "schema": "project-z.W-r14.gate-review-delivery.v1",
+  "created_at_utc": "2026-11-21T06:09:54.033330+00:00",
+  "source": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+  "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+  "run_id": "3e89242560e0a243bde3d8442ce7e1db",
+  "files": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/ssmcp-W-r14-gate-independent-review.json",
+      "bytes": 46930,
+      "sha256": "a308cceb6ac168bb87f61d6209528960b087c67ef926c2b3a7becd2dbdf25dfb",
+      "git_blob": "835c1b07b96c86a81df50cea91a17751337cdaf3"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/ssmcp-W-r14-gate-independent-review.md",
+      "bytes": 3467,
+      "sha256": "c4d0eac61d79e3bbbd656aea74bde6087f1865d397430f4569255364f7c4954f",
+      "git_blob": "91fd4d36873f9d369356ec0039a7e6af26fd0d2b"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/source-controls-coverage.json",
+      "bytes": 27093,
+      "sha256": "98b556f38cebf6cf02a0fe9f505f75aedaa0d50b3bf4a2baffc1b40353ef2bf6",
+      "git_blob": "0b688063ac5f577052f2b904a7d86d1e44830d41"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/original-text-index.json",
+      "bytes": 64920,
+      "sha256": "c63247dbc04d837c3de4c2e1331ed8b16d5379898a51c23ffac23527e324c30b",
+      "git_blob": "cafaf6ccc4f47d2e3f7ee7961335b81be5aa747f"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/github-W-commit-original.json",
+      "bytes": 1813,
+      "sha256": "cbee547e30f78fa7378267f3712d4cf2c416ec089c5a922e5f4479e85aacfdfe",
+      "git_blob": "7e95a9ccae29bf92cae326e9cf05f873b820efc8"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/github-V2-to-W-compare-original.json",
+      "bytes": 14981,
+      "sha256": "e9081b397733d76b466951298f179d4af890a60ec221a109fe0dca7999c61183",
+      "git_blob": "1ab1f1ad5e74c9d15fbfb743583b8f188e1e0e6d"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/source-tree-peer-review.json",
+      "bytes": 1772,
+      "sha256": "6dfa3ffe980d83147136a48dee73fdfcf299db30ca62939725378f2d31f4a1a8",
+      "git_blob": "c6c63c123e6ddd1cf246a09d2465d3fba3e3b77a"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/raw-audit.json",
+      "bytes": 325266,
+      "sha256": "01aa728f919745edcf2b8b01be52ebc6454fba737eafadc64d49e8a37494f3d4",
+      "git_blob": "6039b7398998d582abb16955652a170f4382a272"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/read_originals.py",
+      "bytes": 23732,
+      "sha256": "38fce5f1fa0d13736d90a40fdef52d2468afc9cb97bdb79ce26930493bd23e8b",
+      "git_blob": "f4e1abcafe301b5137b33bbfc39528e89507a298"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-actual-gate-review-20261121/finalize_review-r2.py",
+      "bytes": 17838,
+      "sha256": "9ad8700f863463e8677cb896f2728ac4693f891a5f2ee62801e0d9629b9109ae",
+      "git_blob": "f2a0e759331b4cf39fc67919c6bea381be09d611"
+    }
+  ],
+  "old_r13_report_changed": false,
+  "GitHub_or_Drive_write": false,
+  "final44_executed": false,
+  "aggregate_maintenance_head_preserve": "1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d"
+}

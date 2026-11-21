@@ -1,0 +1,408 @@
+{
+  "schema_version": 1,
+  "status": "prepared_for_root_review_and_publication",
+  "title": "SSMCP W 候选验收与主线整合",
+  "snapshot_utc": "2026-11-21T06:23:03Z",
+  "snapshot_asia_taipei": "2026-11-21T14:23:03+08:00",
+  "known_completed": {
+    "source": {
+      "commit": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+      "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+      "parent": "f42baae1d5227bd6db8315aef778160b80b57274",
+      "change": "scripts/e2e_composer.py 第515行只把显式标题 next caller 改为 Next caller；其余1113叶与四gitlink不变。"
+    },
+    "Gate35": {
+      "status": "passed_fixed_W",
+      "run_id": "3e89242560e0a243bde3d8442ce7e1db",
+      "invocation_id": "96256392e87944e2a00cb78d6c8aff9b",
+      "started_at_utc": "2026-11-21T05:42:51.112874+00:00",
+      "finished_at_utc": "2026-11-21T05:56:01.212636+00:00",
+      "duration_seconds": 790.099763,
+      "all_35_stage_exit_codes_zero": true,
+      "Rust_parent_results": 26,
+      "counts": {
+        "library_private_passed": 2057,
+        "library_private_ignored": 23,
+        "library_HOST_passed": 6,
+        "ordinary_integration_targets": 19,
+        "ordinary_integration_passed": 101,
+        "worker_ignored_exact_passed": 1,
+        "additional_mandatory_ignored_stages": 4,
+        "additional_mandatory_ignored_passed": 14,
+        "new7_and_original17_are_subsets_of_2057": true
+      },
+      "independent_review": {
+        "completed_at_utc": "2026-11-21T06:09:54.033330+00:00",
+        "blockers": 0,
+        "material_inconsistencies": 0,
+        "original_texts": 213,
+        "fresh_false_selected_artifacts": 26,
+        "wrapper_records": 37,
+        "owned_artifacts_rehashed": 5,
+        "source_manifest_entries": 1849,
+        "source_files": 1545,
+        "source_directories": 304
+      },
+      "warnings": [
+        "两个Clippy阶段退出0但保留unused qrcodegen／manifest warning。"
+      ],
+      "limitations": [
+        "Gate35没有执行composer原生UI用例。",
+        "r14五个受控产物分别为一个debug库测试、三个release bin、一个release example。四份release/example哈希与r13相同，仍已核本轮新编译记录和owned字节；library-test哈希不同。",
+        "锁和退出依据对应本轮原始记录，不声称连续内核锁轨迹或当前全局空闲。"
+      ],
+      "evidence": [
+        "evidence/ssmcp-W-r14/root-completed-gate-review.json",
+        "evidence/ssmcp-W-r14/launcher-exit.json",
+        "evidence/ssmcp-W-r14/owned-exit.json",
+        "evidence/ssmcp-W-r14/independent-review/ssmcp-W-r14-gate-independent-review.json"
+      ]
+    },
+    "runtime18": {
+      "status": "passed_fixed_W_bounded_original_review",
+      "source_commit": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+      "source_tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+      "private_mcp_passed": 12,
+      "transport_passed": 6,
+      "actual_job_exit_code": 0,
+      "outer_duration_ms": 8289,
+      "outer_reaped": true,
+      "short_temp_removed": true,
+      "inputs_before_after_equal": true,
+      "text_inputs_rehashed": 4,
+      "binary_descriptors_match_W": 5,
+      "reviewer_ELF_rehash": false,
+      "reviewer_product_execution": false,
+      "models_started": false,
+      "TLS_verified": false,
+      "not_added_to_Gate_or_old_cohorts": true,
+      "not_transferred_to_new_main_c12": true,
+      "evidence": "evidence/ssmcp-W-r14-runtime/root-runtime-readback.json",
+      "not_transferred_as_new_main_P_product_execution": true
+    }
+  },
+  "google_doc_v7": {
+    "status": "published_and_full_readback_verified",
+    "url": "https://docs.google.com/document/d/1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+    "fixed_cutoff_utc": "2026-11-21T05:46:09Z",
+    "immutable_report_commit": "1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d",
+    "nonempty_paragraphs": 31,
+    "table_rows": 7,
+    "table_columns": 3,
+    "source_links": 26,
+    "numbered_steps": 3,
+    "raw_Drive_MD_JSON_version": "0d73",
+    "old_v6_unchanged": true,
+    "W_later_pass_not_backdated": true,
+    "evidence": [
+      "evidence/project-z-google-doc-20261121/delivery-v7.json",
+      "evidence/project-z-google-doc-20261121/readback-verification-v7.json"
+    ]
+  },
+  "scope_preserved": {
+    "initial85": {
+      "merged": 56,
+      "closed": 14,
+      "archived": 9,
+      "blocked": 5,
+      "in_progress": 1,
+      "in_progress_item": {
+        "repository": "LIghtJUNction/zcalld",
+        "PR": 1
+      }
+    },
+    "W_zuse_gitlink": "a1bb8fd2cbce0a9d85134999883c578358065242",
+    "W_other_three_gitlinks_unchanged": true,
+    "P1_candidate_zcalld": "bd7a30c0a9e3865f137af229d5883e8fb984f518",
+    "later_zuse_zcalld_main_consumer_propagation": "separate work, not added to W evidence",
+    "final44_completed": false,
+    "old_reports_and_Doc_unmodified_by_preparer": true
+  },
+  "evidence_index": {
+    "count": 22,
+    "total_bytes": 301276,
+    "files": [
+      {
+        "path": "evidence/project-z-google-doc-20261121/delivery-v7.json",
+        "bytes": 9842,
+        "sha256": "031ced0795a1a3e5f9c5dee52869302826e23da102502941faa45e03665c1ac2",
+        "git_blob": "7d23865277e2a10b72e9afc6e76fc7a94d81165d"
+      },
+      {
+        "path": "evidence/project-z-google-doc-20261121/readback-verification-v7.json",
+        "bytes": 50398,
+        "sha256": "d1d271368f75366af2c8159eef8b1d7f1e65c3723f8854d7c9f2ab0654d34052",
+        "git_blob": "3ac76e948338b1f9ba1010ebf46f59cb24097052"
+      },
+      {
+        "path": "evidence/ssmcp-W-main-integration/github-F-commit.json",
+        "bytes": 1601,
+        "sha256": "cf4509f1e2c704e2f63b80181603c7d0e203dd25e9d3ce672ab80123e8b50e57",
+        "git_blob": "8fee399d7d0e66da4db74d07d652238284413eee"
+      },
+      {
+        "path": "evidence/ssmcp-W-main-integration/github-P-commit.json",
+        "bytes": 8238,
+        "sha256": "7e3388539aeb0b73fabc5b857ac3e621cc12a79c9f0bf6d317c265bead6c7dbf",
+        "git_blob": "6f2b8c45c0213c06979fbc2be82989eda923ff69"
+      },
+      {
+        "path": "evidence/ssmcp-W-main-integration/source-tree-equivalence.json",
+        "bytes": 3082,
+        "sha256": "850df9bb1dd13b52cfedd6a0bdf97bd5658174917738bb611d6e536c108cb5b9",
+        "git_blob": "f19f6399c6074c1ce554fee9d621c3fd262dde09"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14-runtime/root-runtime-readback.json",
+        "bytes": 15078,
+        "sha256": "56555ef6d1bb631b628f4b4bf18d104244e262498348a7bb01d9387b4130ea5c",
+        "git_blob": "449b2b96f171f44486f60d1b5d4111ec5ce5eef8"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14-ui/account-compat-producer-report.json",
+        "bytes": 7896,
+        "sha256": "4e2c2218321320f9905c35d8b3592507deaba9bd430a4c4f95e183337aa03b3b",
+        "git_blob": "282c1b30cf7620e2e0056365253a93af5125f9df"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14-ui/account-compat-run.log",
+        "bytes": 6818,
+        "sha256": "0567b3341d57157d4e2b0c3602d0f133bf943055fd49cab52ee1cfdf9aa9f3a4",
+        "git_blob": "4d9b59e7d8f76f32524b3ffac0cf2e86ffc38c2f"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14-ui/account-compat-wrapper-suite.json",
+        "bytes": 6457,
+        "sha256": "935f0fa9c2e7ced1f580fc1a2f52e4ded4f921babb89ca91bbb1218a0be92a17",
+        "git_blob": "66b84d94bf2e809f3774a970723f6a30467c0529"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14-ui/native-job-stdout.log",
+        "bytes": 2094,
+        "sha256": "e77ec671ab4fc5bb85e834bfb37f257541dbfcf80ba71dff67eaa8e9b6222331",
+        "git_blob": "6b7942ba5b5586ec7d047e322a9f995be34e4de7"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14-ui/root-ui-readback.json",
+        "bytes": 6702,
+        "sha256": "66fac3cd7213c6e33249b050c3b500458905ec9aef5cfed03e2d48e95d97af97",
+        "git_blob": "af3c72efab9c5a57ea417098d6700d3f22dcbb6e"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14/independent-review/delivery.json",
+        "bytes": 4256,
+        "sha256": "db8f3780739ca12a1944e47d3d42e19b2cd6cad6427ae86838abf8844afa8201",
+        "git_blob": "dbe9ca29897a61dc7e901181810d288bcacd50b1"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14/independent-review/github-V2-to-W-compare-original.json",
+        "bytes": 14981,
+        "sha256": "e9081b397733d76b466951298f179d4af890a60ec221a109fe0dca7999c61183",
+        "git_blob": "1ab1f1ad5e74c9d15fbfb743583b8f188e1e0e6d"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14/independent-review/github-W-commit-original.json",
+        "bytes": 1813,
+        "sha256": "cbee547e30f78fa7378267f3712d4cf2c416ec089c5a922e5f4479e85aacfdfe",
+        "git_blob": "7e95a9ccae29bf92cae326e9cf05f873b820efc8"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14/independent-review/original-text-index.json",
+        "bytes": 64920,
+        "sha256": "c63247dbc04d837c3de4c2e1331ed8b16d5379898a51c23ffac23527e324c30b",
+        "git_blob": "cafaf6ccc4f47d2e3f7ee7961335b81be5aa747f"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14/independent-review/source-controls-coverage.json",
+        "bytes": 27093,
+        "sha256": "98b556f38cebf6cf02a0fe9f505f75aedaa0d50b3bf4a2baffc1b40353ef2bf6",
+        "git_blob": "0b688063ac5f577052f2b904a7d86d1e44830d41"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14/independent-review/source-tree-peer-review.json",
+        "bytes": 1772,
+        "sha256": "6dfa3ffe980d83147136a48dee73fdfcf299db30ca62939725378f2d31f4a1a8",
+        "git_blob": "c6c63c123e6ddd1cf246a09d2465d3fba3e3b77a"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14/independent-review/ssmcp-W-r14-gate-independent-review.json",
+        "bytes": 46930,
+        "sha256": "a308cceb6ac168bb87f61d6209528960b087c67ef926c2b3a7becd2dbdf25dfb",
+        "git_blob": "835c1b07b96c86a81df50cea91a17751337cdaf3"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14/independent-review/ssmcp-W-r14-gate-independent-review.md",
+        "bytes": 3467,
+        "sha256": "c4d0eac61d79e3bbbd656aea74bde6087f1865d397430f4569255364f7c4954f",
+        "git_blob": "91fd4d36873f9d369356ec0039a7e6af26fd0d2b"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14/launcher-exit.json",
+        "bytes": 4793,
+        "sha256": "6468c5b03875fa10170dbfbcfb95da7414d1a1e15b0e84ee2383f397746cb80e",
+        "git_blob": "730749db5d2ac59b78477a8d6201ac0710303208"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14/owned-exit.json",
+        "bytes": 1168,
+        "sha256": "6c5c5d17c5dca26345694dedf5b932572ff8099ae8dec1d8da1ffb1ed1553b6c",
+        "git_blob": "1c0efcb11c654ee1d1dffe36bbe440fef198f641"
+      },
+      {
+        "path": "evidence/ssmcp-W-r14/root-completed-gate-review.json",
+        "bytes": 11877,
+        "sha256": "1ec7f6463faf6917ba15aa643dcbf55f8353418cc848d0c99c00e0cc2b09912d",
+        "git_blob": "8d9a7f9968f98ab37892817f027b015a0a2265f4"
+      }
+    ],
+    "selection": "独审选择交付8份、Gate小件3份、runtime摘要1份、Docv7两份、W UI失败与实际job原件5份、main源码等价与F/P原件3份；不是全部native审计原件归档。",
+    "self_hashes_excluded": true
+  },
+  "preparation_only": {
+    "files_not_published_by_preparer": true,
+    "no_product_Cargo_GUI_CI_run": true,
+    "no_lock_target_or_existing_source_modification": true,
+    "fixed_snapshot_received": true,
+    "evidence_payloads_unmodified_by_preparer": true,
+    "no_summary_self_hash_or_future_commit": true
+  },
+  "UI24_attempt": {
+    "status": "failed_fixed_W",
+    "source_revision": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "source_tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+    "started_at_utc": "2026-11-21T06:10:05Z",
+    "finished_at_utc": "2026-11-21T06:12:42Z",
+    "duration_seconds": 156.116,
+    "independent_planned": 24,
+    "independent_executed": 7,
+    "independent_passed": 6,
+    "independent_failed": 1,
+    "not_run": 17,
+    "not_run_names": [
+      "input_history",
+      "reload_state",
+      "session_groups",
+      "client_ui",
+      "canvas_logs",
+      "composer",
+      "questions",
+      "presentations",
+      "context_memory",
+      "file_paste",
+      "relay_composer",
+      "goal_startup",
+      "tool_summaries",
+      "readable_commands",
+      "summary_commands",
+      "physical_latency",
+      "time_wait"
+    ],
+    "alias_coverage_count": 1,
+    "alias_not_independent_execution": true,
+    "failed_suite": "account_compat",
+    "wrapper_child_exit_code": 1,
+    "failed_producer": {
+      "check_records": 62,
+      "passed": 61,
+      "failed": 1,
+      "failed_check": "new-main:another_subject_cannot_list_connection",
+      "failed_HTTP_status_and_body_recorded": false,
+      "root_cause_established": false,
+      "no_permission_breach_conclusion_from_missing_response": true
+    },
+    "counter_boundaries": {
+      "failed_acceptance_row_checks_present": false,
+      "failed_wrapper_checks_present": false,
+      "absent_checks_not_zero_assertions": true,
+      "no_addition_to_Gate_Rust_or_runtime18_counts": true,
+      "wrapper_job_stdout_checks": 0,
+      "wrapper_job_stdout_zero_is_not_zero_assertions": true
+    },
+    "inputs_and_cleanup": {
+      "all7_inputs_before_after_exactly_equal": true,
+      "all7_wrapper_owned_child_reaped": true,
+      "full_input_set_hash_formula_recomputed": false,
+      "full_descendant_process_inspection": false
+    },
+    "overall_native_job": {
+      "id": "92eb2e0c47ccd1044fd6f6414c55af55-1c8",
+      "stdout_and_overall_exit_independently_read_by_root": true,
+      "exit_code": 1,
+      "nonrunning": true,
+      "both_eof": true,
+      "stdout_bytes": 2094
+    },
+    "original_acceptance": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/acceptance.json",
+      "bytes": 865869,
+      "sha256": "d7aad6e79802b14164b0811dd358bcab68312b23245038d1de2166b9575d304c"
+    },
+    "root_readback_utc": "2026-11-21T06:18:22.067770+00:00",
+    "composer": "not_run_in_this_W_attempt",
+    "evidence": [
+      "evidence/ssmcp-W-r14-ui/account-compat-producer-report.json",
+      "evidence/ssmcp-W-r14-ui/account-compat-run.log",
+      "evidence/ssmcp-W-r14-ui/account-compat-wrapper-suite.json",
+      "evidence/ssmcp-W-r14-ui/native-job-stdout.log",
+      "evidence/ssmcp-W-r14-ui/root-ui-readback.json"
+    ],
+    "root_readback_updated_with_actual_job": true
+  },
+  "main_integration": {
+    "status": "merged_by_existing_remote_operation_root_readback",
+    "PR159": {
+      "merged": true,
+      "merged_at_utc": "2026-11-21T06:13:34Z",
+      "merge_method": "squash",
+      "operation_performed_by_this_Project_Z_root": false,
+      "state": "closed"
+    },
+    "candidate_F": {
+      "commit": "f1de4bf70d5406cf9f38347e298a829456b92e57",
+      "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+      "parents": [
+        "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+        "c12fdf1d413501ddeb03a2dd2fb8c47731d2129f"
+      ]
+    },
+    "main_P": {
+      "commit": "ea2bfcae6aea9672d8955f832a8ec5bd1e0749f4",
+      "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+      "sole_parent": "c12fdf1d413501ddeb03a2dd2fb8c47731d2129f"
+    },
+    "W_F_P_exact_tree_equal": true,
+    "compare_W_to_P": {
+      "status": "diverged",
+      "ahead_by": 2,
+      "behind_by": 46,
+      "merge_base": "f33ed8f14fc14aff05a2e4098743eb07e8527c06",
+      "W_is_ancestor_of_P": false
+    },
+    "planned_M_not_published_as_new_commit": true,
+    "author_stopped_before_push_after_observing_F": true,
+    "W_gate_runtime_and_failed_UI_keep_original_source_identity": true,
+    "new_P_product_tests_executed_by_this_evidence": false,
+    "proof_descriptors_pending": false,
+    "evidence": [
+      "evidence/ssmcp-W-main-integration/source-tree-equivalence.json",
+      "evidence/ssmcp-W-main-integration/github-F-commit.json",
+      "evidence/ssmcp-W-main-integration/github-P-commit.json"
+    ]
+  },
+  "pending_and_followup": {
+    "as_of_utc": "2026-11-21T06:23:03Z",
+    "P1": {
+      "status": "not_run_confirmed_by_original_executor",
+      "passed": false,
+      "started": false,
+      "results_not_borrowed": true
+    },
+    "same_W_account_diagnostic": {
+      "description": "原执行者准备一次同W、原断言、原范围与原时限的定点诊断，仅增加脱敏上下文。",
+      "result_received_by_root": false,
+      "no_inference_of_not_started_or_pass": true
+    },
+    "later_dependency_propagation": "zuse、zcalld及main消费者传播单列，不加入W证明。",
+    "final44_completed": false
+  }
+}
