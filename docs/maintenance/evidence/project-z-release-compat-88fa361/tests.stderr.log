@@ -1,0 +1,23 @@
+test_catalog_failure_stops_before_resolution (test_release.ReleaseTests.test_catalog_failure_stops_before_resolution) ... ok
+test_resolution_changes_are_checked_before_packaging (test_release.ReleaseTests.test_resolution_changes_are_checked_before_packaging) ... ok
+test_resolution_failure_prevents_release_artifacts (test_release.ReleaseTests.test_resolution_failure_prevents_release_artifacts) ... ok
+test_validated_snapshot_keeps_tag_manifest_and_archive_contract (test_release.ReleaseTests.test_validated_snapshot_keeps_tag_manifest_and_archive_contract) ... ok
+test_compatible_version_metadata_preserves_options_and_uses_locked_pin (test_release_projection.MatchTests.test_compatible_version_metadata_preserves_options_and_uses_locked_pin) ... ok
+test_exactly_one_git_pin_not_registry_or_other_repo (test_release_projection.MatchTests.test_exactly_one_git_pin_not_registry_or_other_repo) ... ok
+test_mismatched_or_invalid_version_metadata_is_rejected_unchanged (test_release_projection.MatchTests.test_mismatched_or_invalid_version_metadata_is_rejected_unchanged) ... ok
+test_missing_malformed_selector_and_ambiguous_fail_closed (test_release_projection.MatchTests.test_missing_malformed_selector_and_ambiguous_fail_closed) ... ok
+test_preserves_unknown_external_dependency_and_rejects_selectors (test_release_projection.MatchTests.test_preserves_unknown_external_dependency_and_rejects_selectors) ... ok
+test_auto_version_ignores_prereleases_and_other_tag_names (test_release_projection.RepositoryTests.test_auto_version_ignores_prereleases_and_other_tag_names) ... ok
+test_failures_leave_stage_and_checkout_untouched (test_release_projection.RepositoryTests.test_failures_leave_stage_and_checkout_untouched) ... ok
+test_stage_only_clean_snapshot_with_aliases_features_and_targets (test_release_projection.RepositoryTests.test_stage_only_clean_snapshot_with_aliases_features_and_targets) ... ok
+test_archive_swap_and_receipt_swap_are_rejected (test_release_receipts.ReceiptTests.test_archive_swap_and_receipt_swap_are_rejected) ... ok
+test_dirty_archive_and_wrong_repo_are_rejected (test_release_receipts.ReceiptTests.test_dirty_archive_and_wrong_repo_are_rejected) ... ok
+test_even_relabeling_a_valid_archive_hash_cannot_override_commit (test_release_receipts.ReceiptTests.test_even_relabeling_a_valid_archive_hash_cannot_override_commit) ... ok
+test_matching_receipt_bytes_identity_and_commit_accept (test_release_receipts.ReceiptTests.test_matching_receipt_bytes_identity_and_commit_accept) ... ok
+test_rejects_published_zuse_0_2_2_even_with_trusted_old_archive (test_release_receipts.ReceiptTests.test_rejects_published_zuse_0_2_2_even_with_trusted_old_archive) ... ok
+test_source_plan_rejects_mismatched_or_invalid_version_metadata (test_release_receipts.ReceiptTests.test_source_plan_rejects_mismatched_or_invalid_version_metadata) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 1.790s
+
+OK

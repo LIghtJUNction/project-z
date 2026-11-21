@@ -1,0 +1,2738 @@
+{
+  "schema_version": 1,
+  "base": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+  "expected_tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+  "source_root": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/source",
+  "argv": [
+    "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/validate_release.py",
+    "--source",
+    "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/source",
+    "--output",
+    "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green"
+  ],
+  "cwd": "/home/lightjunction/Documents/GITHUB",
+  "python": "/usr/bin/python3",
+  "python_version": "3.14.10 (main, Nov  4 2026, 18:21:50) [GCC 16.2.1 20260810]",
+  "pid": 3004230,
+  "started_at": 1795236690.458125,
+  "modules": [
+    "test_release",
+    "test_release_projection",
+    "test_release_receipts"
+  ],
+  "real_product_execution": false,
+  "real_graph_execution": false,
+  "cargo_target_dir": "/var/tmp/project-z-cargo-target",
+  "status": "passed",
+  "calls": [
+    {
+      "argv": [
+        "git",
+        "init",
+        "--quiet",
+        "--initial-branch=main"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/project-z",
+      "started_at": 1795236690.6943724,
+      "exit_code": 0,
+      "finished_at": 1795236690.697036
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.name",
+        "Project Z tests"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/project-z",
+      "started_at": 1795236690.697096,
+      "exit_code": 0,
+      "finished_at": 1795236690.6984355
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.email",
+        "tests@example.invalid"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/project-z",
+      "started_at": 1795236690.6984828,
+      "exit_code": 0,
+      "finished_at": 1795236690.6997216
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "commit.gpgsign",
+        "false"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/project-z",
+      "started_at": 1795236690.6997776,
+      "exit_code": 0,
+      "finished_at": 1795236690.7010148
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "--quiet",
+        "--initial-branch=main"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/component",
+      "started_at": 1795236690.7010956,
+      "exit_code": 0,
+      "finished_at": 1795236690.7035902
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.name",
+        "Project Z tests"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/component",
+      "started_at": 1795236690.7036452,
+      "exit_code": 0,
+      "finished_at": 1795236690.704933
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.email",
+        "tests@example.invalid"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/component",
+      "started_at": 1795236690.7049775,
+      "exit_code": 0,
+      "finished_at": 1795236690.7060125
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "commit.gpgsign",
+        "false"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/component",
+      "started_at": 1795236690.706052,
+      "exit_code": 0,
+      "finished_at": 1795236690.7069232
+    },
+    {
+      "argv": [
+        "git",
+        "add",
+        "lib.rs"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/component",
+      "started_at": 1795236690.7070067,
+      "exit_code": 0,
+      "finished_at": 1795236690.7081187
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "--quiet",
+        "-m",
+        "Component source"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/component",
+      "started_at": 1795236690.7081535,
+      "exit_code": 0,
+      "finished_at": 1795236690.7110536
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/component",
+      "started_at": 1795236690.711094,
+      "exit_code": 0,
+      "finished_at": 1795236690.7122395
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "protocol.file.allow=always",
+        "submodule",
+        "add",
+        "--quiet",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/component",
+        "component"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/project-z",
+      "started_at": 1795236690.7126248,
+      "exit_code": 0,
+      "finished_at": 1795236690.7527566
+    },
+    {
+      "argv": [
+        "git",
+        "add",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/project-z",
+      "started_at": 1795236690.752895,
+      "exit_code": 0,
+      "finished_at": 1795236690.756011
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "--quiet",
+        "-m",
+        "Source snapshot"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/project-z",
+      "started_at": 1795236690.7560992,
+      "exit_code": 0,
+      "finished_at": 1795236690.759177
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/project-z",
+      "started_at": 1795236690.7592673,
+      "exit_code": 0,
+      "finished_at": 1795236690.7603693
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/project-z/scripts/release.py",
+        "patch",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/dist"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-55phkrh7/project-z",
+      "started_at": 1795236690.7607303,
+      "exit_code": 2,
+      "finished_at": 1795236690.815271
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "--quiet",
+        "--initial-branch=main"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/project-z",
+      "started_at": 1795236690.8175836,
+      "exit_code": 0,
+      "finished_at": 1795236690.8197675
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.name",
+        "Project Z tests"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/project-z",
+      "started_at": 1795236690.8198276,
+      "exit_code": 0,
+      "finished_at": 1795236690.8211267
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.email",
+        "tests@example.invalid"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/project-z",
+      "started_at": 1795236690.8211858,
+      "exit_code": 0,
+      "finished_at": 1795236690.8222444
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "commit.gpgsign",
+        "false"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/project-z",
+      "started_at": 1795236690.8222868,
+      "exit_code": 0,
+      "finished_at": 1795236690.8235085
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "--quiet",
+        "--initial-branch=main"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/component",
+      "started_at": 1795236690.8235676,
+      "exit_code": 0,
+      "finished_at": 1795236690.8258452
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.name",
+        "Project Z tests"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/component",
+      "started_at": 1795236690.8258998,
+      "exit_code": 0,
+      "finished_at": 1795236690.8271275
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.email",
+        "tests@example.invalid"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/component",
+      "started_at": 1795236690.8271832,
+      "exit_code": 0,
+      "finished_at": 1795236690.8282533
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "commit.gpgsign",
+        "false"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/component",
+      "started_at": 1795236690.8282964,
+      "exit_code": 0,
+      "finished_at": 1795236690.829575
+    },
+    {
+      "argv": [
+        "git",
+        "add",
+        "lib.rs"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/component",
+      "started_at": 1795236690.829659,
+      "exit_code": 0,
+      "finished_at": 1795236690.831058
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "--quiet",
+        "-m",
+        "Component source"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/component",
+      "started_at": 1795236690.8310966,
+      "exit_code": 0,
+      "finished_at": 1795236690.8344452
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/component",
+      "started_at": 1795236690.8345425,
+      "exit_code": 0,
+      "finished_at": 1795236690.8357015
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "protocol.file.allow=always",
+        "submodule",
+        "add",
+        "--quiet",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/component",
+        "component"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/project-z",
+      "started_at": 1795236690.8360941,
+      "exit_code": 0,
+      "finished_at": 1795236690.872811
+    },
+    {
+      "argv": [
+        "git",
+        "add",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/project-z",
+      "started_at": 1795236690.8729484,
+      "exit_code": 0,
+      "finished_at": 1795236690.8773592
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "--quiet",
+        "-m",
+        "Source snapshot"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/project-z",
+      "started_at": 1795236690.8774862,
+      "exit_code": 0,
+      "finished_at": 1795236690.881442
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/project-z",
+      "started_at": 1795236690.8815818,
+      "exit_code": 0,
+      "finished_at": 1795236690.8825567
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/project-z/scripts/release.py",
+        "patch",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/dist"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-8drn2s0a/project-z",
+      "started_at": 1795236690.8827724,
+      "exit_code": 2,
+      "finished_at": 1795236690.9602463
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "--quiet",
+        "--initial-branch=main"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/project-z",
+      "started_at": 1795236690.9626677,
+      "exit_code": 0,
+      "finished_at": 1795236690.9642186
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.name",
+        "Project Z tests"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/project-z",
+      "started_at": 1795236690.9642704,
+      "exit_code": 0,
+      "finished_at": 1795236690.9654968
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.email",
+        "tests@example.invalid"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/project-z",
+      "started_at": 1795236690.965555,
+      "exit_code": 0,
+      "finished_at": 1795236690.96657
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "commit.gpgsign",
+        "false"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/project-z",
+      "started_at": 1795236690.966626,
+      "exit_code": 0,
+      "finished_at": 1795236690.9678564
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "--quiet",
+        "--initial-branch=main"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/component",
+      "started_at": 1795236690.96794,
+      "exit_code": 0,
+      "finished_at": 1795236690.9695454
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.name",
+        "Project Z tests"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/component",
+      "started_at": 1795236690.9695938,
+      "exit_code": 0,
+      "finished_at": 1795236690.9708116
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.email",
+        "tests@example.invalid"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/component",
+      "started_at": 1795236690.9708745,
+      "exit_code": 0,
+      "finished_at": 1795236690.9721324
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "commit.gpgsign",
+        "false"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/component",
+      "started_at": 1795236690.97219,
+      "exit_code": 0,
+      "finished_at": 1795236690.973432
+    },
+    {
+      "argv": [
+        "git",
+        "add",
+        "lib.rs"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/component",
+      "started_at": 1795236690.97354,
+      "exit_code": 0,
+      "finished_at": 1795236690.9749792
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "--quiet",
+        "-m",
+        "Component source"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/component",
+      "started_at": 1795236690.9750388,
+      "exit_code": 0,
+      "finished_at": 1795236690.9778965
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/component",
+      "started_at": 1795236690.9779682,
+      "exit_code": 0,
+      "finished_at": 1795236690.9791105
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "protocol.file.allow=always",
+        "submodule",
+        "add",
+        "--quiet",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/component",
+        "component"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/project-z",
+      "started_at": 1795236690.979466,
+      "exit_code": 0,
+      "finished_at": 1795236691.014253
+    },
+    {
+      "argv": [
+        "git",
+        "add",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/project-z",
+      "started_at": 1795236691.0143886,
+      "exit_code": 0,
+      "finished_at": 1795236691.0180008
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "--quiet",
+        "-m",
+        "Source snapshot"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/project-z",
+      "started_at": 1795236691.018125,
+      "exit_code": 0,
+      "finished_at": 1795236691.0221133
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/project-z",
+      "started_at": 1795236691.0222259,
+      "exit_code": 0,
+      "finished_at": 1795236691.0232775
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/project-z/scripts/release.py",
+        "patch",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/dist"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-gtfz3yc5/project-z",
+      "started_at": 1795236691.023478,
+      "exit_code": 2,
+      "finished_at": 1795236691.099521
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "--quiet",
+        "--initial-branch=main"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/project-z",
+      "started_at": 1795236691.1018877,
+      "exit_code": 0,
+      "finished_at": 1795236691.1043067
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.name",
+        "Project Z tests"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/project-z",
+      "started_at": 1795236691.10438,
+      "exit_code": 0,
+      "finished_at": 1795236691.1053572
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.email",
+        "tests@example.invalid"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/project-z",
+      "started_at": 1795236691.1054718,
+      "exit_code": 0,
+      "finished_at": 1795236691.1068125
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "commit.gpgsign",
+        "false"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/project-z",
+      "started_at": 1795236691.106927,
+      "exit_code": 0,
+      "finished_at": 1795236691.1078684
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "--quiet",
+        "--initial-branch=main"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/component",
+      "started_at": 1795236691.1080277,
+      "exit_code": 0,
+      "finished_at": 1795236691.1097314
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.name",
+        "Project Z tests"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/component",
+      "started_at": 1795236691.1098342,
+      "exit_code": 0,
+      "finished_at": 1795236691.1111581
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.email",
+        "tests@example.invalid"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/component",
+      "started_at": 1795236691.111256,
+      "exit_code": 0,
+      "finished_at": 1795236691.1126058
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "commit.gpgsign",
+        "false"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/component",
+      "started_at": 1795236691.112712,
+      "exit_code": 0,
+      "finished_at": 1795236691.1139715
+    },
+    {
+      "argv": [
+        "git",
+        "add",
+        "lib.rs"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/component",
+      "started_at": 1795236691.1141646,
+      "exit_code": 0,
+      "finished_at": 1795236691.115716
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "--quiet",
+        "-m",
+        "Component source"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/component",
+      "started_at": 1795236691.1158164,
+      "exit_code": 0,
+      "finished_at": 1795236691.1190705
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/component",
+      "started_at": 1795236691.1191385,
+      "exit_code": 0,
+      "finished_at": 1795236691.120179
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "protocol.file.allow=always",
+        "submodule",
+        "add",
+        "--quiet",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/component",
+        "component"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/project-z",
+      "started_at": 1795236691.1205897,
+      "exit_code": 0,
+      "finished_at": 1795236691.155114
+    },
+    {
+      "argv": [
+        "git",
+        "add",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/project-z",
+      "started_at": 1795236691.155262,
+      "exit_code": 0,
+      "finished_at": 1795236691.1588821
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "--quiet",
+        "-m",
+        "Source snapshot"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/project-z",
+      "started_at": 1795236691.1589983,
+      "exit_code": 0,
+      "finished_at": 1795236691.1632462
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/project-z",
+      "started_at": 1795236691.1633632,
+      "exit_code": 0,
+      "finished_at": 1795236691.164555
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/project-z/scripts/release.py",
+        "patch",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/dist"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/project-z-release-tests-at3kdg1e/project-z",
+      "started_at": 1795236691.1649072,
+      "exit_code": 0,
+      "finished_at": 1795236691.2824733
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "-q"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.2864869,
+      "exit_code": 0,
+      "finished_at": 1795236691.288387
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.name",
+        "Release Fixture"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.2884598,
+      "exit_code": 0,
+      "finished_at": 1795236691.289637
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.email",
+        "fixture@example.invalid"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.289699,
+      "exit_code": 0,
+      "finished_at": 1795236691.2905762
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "commit.gpgsign",
+        "false"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.2906358,
+      "exit_code": 0,
+      "finished_at": 1795236691.2916002
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "core.hooksPath",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/no-hooks"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.2916489,
+      "exit_code": 0,
+      "finished_at": 1795236691.2926643
+    },
+    {
+      "argv": [
+        "git",
+        "add",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.2929142,
+      "exit_code": 0,
+      "finished_at": 1795236691.2941623
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "-qm",
+        "fixture Git without registry versions"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.2942185,
+      "exit_code": 0,
+      "finished_at": 1795236691.297341
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.297377,
+      "exit_code": 0,
+      "finished_at": 1795236691.298508
+    },
+    {
+      "argv": [
+        "git",
+        "tag",
+        "v0.2.0"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.298643,
+      "exit_code": 0,
+      "finished_at": 1795236691.3001487
+    },
+    {
+      "argv": [
+        "git",
+        "tag",
+        "v0.10.0"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.3002427,
+      "exit_code": 0,
+      "finished_at": 1795236691.3016586
+    },
+    {
+      "argv": [
+        "git",
+        "tag",
+        "v999.0.0-rc.1"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.3017397,
+      "exit_code": 0,
+      "finished_at": 1795236691.302811
+    },
+    {
+      "argv": [
+        "git",
+        "tag",
+        "legacy-v99.0.0"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.3028948,
+      "exit_code": 0,
+      "finished_at": 1795236691.3042383
+    },
+    {
+      "argv": [
+        "git",
+        "tag",
+        "member-v1.2.0"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.304314,
+      "exit_code": 0,
+      "finished_at": 1795236691.3057578
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "rev-parse",
+        "--verify",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3060267,
+      "exit_code": 0,
+      "finished_at": 1795236691.3073113
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "show",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3075876,
+      "exit_code": 0,
+      "finished_at": 1795236691.3087065
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "show",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3089733,
+      "exit_code": 0,
+      "finished_at": 1795236691.3102598
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "tag",
+        "--list"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.310534,
+      "exit_code": 0,
+      "finished_at": 1795236691.3119795
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "rev-parse",
+        "--verify",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.312233,
+      "exit_code": 0,
+      "finished_at": 1795236691.3134887
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "show",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3137095,
+      "exit_code": 0,
+      "finished_at": 1795236691.3151784
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "show",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3154078,
+      "exit_code": 0,
+      "finished_at": 1795236691.3164952
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "tag",
+        "--list"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3167214,
+      "exit_code": 0,
+      "finished_at": 1795236691.3180225
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "rev-parse",
+        "--verify",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3181906,
+      "exit_code": 0,
+      "finished_at": 1795236691.319233
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "show",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434:member/Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3193665,
+      "exit_code": 0,
+      "finished_at": 1795236691.320363
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "show",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.320593,
+      "exit_code": 0,
+      "finished_at": 1795236691.321536
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "tag",
+        "--list"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3217442,
+      "exit_code": 0,
+      "finished_at": 1795236691.323109
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "rev-parse",
+        "--verify",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3232706,
+      "exit_code": 0,
+      "finished_at": 1795236691.324513
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "show",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434:member/Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3248143,
+      "exit_code": 0,
+      "finished_at": 1795236691.3264167
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "show",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3268964,
+      "exit_code": 0,
+      "finished_at": 1795236691.328483
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+        "tag",
+        "--list"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3289144,
+      "exit_code": 0,
+      "finished_at": 1795236691.3301919
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.3302784,
+      "exit_code": 0,
+      "finished_at": 1795236691.3320646
+    },
+    {
+      "argv": [
+        "git",
+        "tag"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp9ahwwlxy/repo",
+      "started_at": 1795236691.3321111,
+      "exit_code": 0,
+      "finished_at": 1795236691.3332489
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "-q"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+      "started_at": 1795236691.334723,
+      "exit_code": 0,
+      "finished_at": 1795236691.3366263
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.name",
+        "Release Fixture"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+      "started_at": 1795236691.336671,
+      "exit_code": 0,
+      "finished_at": 1795236691.337532
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.email",
+        "fixture@example.invalid"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+      "started_at": 1795236691.3375762,
+      "exit_code": 0,
+      "finished_at": 1795236691.3387127
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "commit.gpgsign",
+        "false"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+      "started_at": 1795236691.338752,
+      "exit_code": 0,
+      "finished_at": 1795236691.3397977
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "core.hooksPath",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/no-hooks"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+      "started_at": 1795236691.3398426,
+      "exit_code": 0,
+      "finished_at": 1795236691.3409324
+    },
+    {
+      "argv": [
+        "git",
+        "add",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+      "started_at": 1795236691.3411534,
+      "exit_code": 0,
+      "finished_at": 1795236691.3432136
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "-qm",
+        "fixture Git without registry versions"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+      "started_at": 1795236691.3432531,
+      "exit_code": 0,
+      "finished_at": 1795236691.3472981
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+      "started_at": 1795236691.3473375,
+      "exit_code": 0,
+      "finished_at": 1795236691.3483377
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+        "rev-parse",
+        "--verify",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3485281,
+      "exit_code": 0,
+      "finished_at": 1795236691.3497908
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+        "show",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434:Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3500886,
+      "exit_code": 0,
+      "finished_at": 1795236691.3516312
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.352024,
+      "exit_code": 0,
+      "finished_at": 1795236691.353107
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+        "rev-parse",
+        "--verify",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3535478,
+      "exit_code": 0,
+      "finished_at": 1795236691.3545618
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+        "show",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434:Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3547401,
+      "exit_code": 0,
+      "finished_at": 1795236691.3561378
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.356541,
+      "exit_code": 0,
+      "finished_at": 1795236691.3578043
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+        "ls-tree",
+        "-rz",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3580244,
+      "exit_code": 0,
+      "finished_at": 1795236691.359284
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+        "archive",
+        "--format=tar",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3594873,
+      "exit_code": 0,
+      "finished_at": 1795236691.3606272
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+        "show",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3618665,
+      "exit_code": 0,
+      "finished_at": 1795236691.3632095
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpatl0zqke/repo",
+      "started_at": 1795236691.3637922,
+      "exit_code": 0,
+      "finished_at": 1795236691.3655643
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "-q"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+      "started_at": 1795236691.3665345,
+      "exit_code": 0,
+      "finished_at": 1795236691.3686297
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.name",
+        "Release Fixture"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+      "started_at": 1795236691.368674,
+      "exit_code": 0,
+      "finished_at": 1795236691.3697357
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "user.email",
+        "fixture@example.invalid"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+      "started_at": 1795236691.3697758,
+      "exit_code": 0,
+      "finished_at": 1795236691.3708172
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "commit.gpgsign",
+        "false"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+      "started_at": 1795236691.3708587,
+      "exit_code": 0,
+      "finished_at": 1795236691.371765
+    },
+    {
+      "argv": [
+        "git",
+        "config",
+        "core.hooksPath",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/no-hooks"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+      "started_at": 1795236691.3718064,
+      "exit_code": 0,
+      "finished_at": 1795236691.3730392
+    },
+    {
+      "argv": [
+        "git",
+        "add",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+      "started_at": 1795236691.373249,
+      "exit_code": 0,
+      "finished_at": 1795236691.3748302
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "-qm",
+        "fixture Git without registry versions"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+      "started_at": 1795236691.3748732,
+      "exit_code": 0,
+      "finished_at": 1795236691.3783102
+    },
+    {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+      "started_at": 1795236691.37836,
+      "exit_code": 0,
+      "finished_at": 1795236691.3794456
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+        "rev-parse",
+        "--verify",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.379896,
+      "exit_code": 0,
+      "finished_at": 1795236691.381246
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+        "show",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434:Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.381558,
+      "exit_code": 0,
+      "finished_at": 1795236691.3832176
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+        "rev-parse",
+        "--show-toplevel"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.383625,
+      "exit_code": 0,
+      "finished_at": 1795236691.384817
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+        "ls-tree",
+        "-rz",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3851876,
+      "exit_code": 0,
+      "finished_at": 1795236691.386384
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+        "archive",
+        "--format=tar",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.386587,
+      "exit_code": 0,
+      "finished_at": 1795236691.3882148
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+        "show",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3895388,
+      "exit_code": 0,
+      "finished_at": 1795236691.390574
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/repo",
+        "show",
+        "5be5b0311d35c73ed99aa5fb42dfa9683a782434:member/Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236691.3910646,
+      "exit_code": 0,
+      "finished_at": 1795236691.3925295
+    },
+    {
+      "argv": [
+        "cargo",
+        "metadata",
+        "--offline",
+        "--no-deps",
+        "--format-version=1"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/stage/source",
+      "started_at": 1795236691.393561,
+      "exit_code": 0,
+      "finished_at": 1795236692.342482,
+      "stdout": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/cargo-metadata.stdout.json",
+        "bytes": 3901,
+        "sha256": "9b375f9020936d2731ad43c2aff9278ffb3d12bc2e1922a895dfa218f2e0c27a"
+      },
+      "stderr": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/cargo-metadata.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp58ekkper/source",
+        "init",
+        "-q"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3438942,
+      "exit_code": 0,
+      "finished_at": 1795236692.346466
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp58ekkper/source",
+        "add",
+        "Cargo.toml",
+        "Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3465981,
+      "exit_code": 0,
+      "finished_at": 1795236692.3483922
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp58ekkper/source",
+        "-c",
+        "user.name=Fixture",
+        "-c",
+        "user.email=fixture@example.invalid",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "commit",
+        "-qm",
+        "fixture"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3484626,
+      "exit_code": 0,
+      "finished_at": 1795236692.3516147
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp58ekkper/source",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3516839,
+      "exit_code": 0,
+      "finished_at": 1795236692.3530452
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp58ekkper/source",
+        "rev-parse",
+        "--verify",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3533273,
+      "exit_code": 0,
+      "finished_at": 1795236692.3546708
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp58ekkper/source",
+        "ls-tree",
+        "--full-tree",
+        "-rz",
+        "--name-only",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332",
+        "--",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3548496,
+      "exit_code": 0,
+      "finished_at": 1795236692.3562706
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp58ekkper/source",
+        "show",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332:Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.356587,
+      "exit_code": 0,
+      "finished_at": 1795236692.358233
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp58ekkper/source",
+        "show",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3585517,
+      "exit_code": 0,
+      "finished_at": 1795236692.3600645
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp4rg5jpmy/source",
+        "init",
+        "-q"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3624651,
+      "exit_code": 0,
+      "finished_at": 1795236692.364675
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp4rg5jpmy/source",
+        "add",
+        "Cargo.toml",
+        "Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3647878,
+      "exit_code": 0,
+      "finished_at": 1795236692.3659537
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp4rg5jpmy/source",
+        "-c",
+        "user.name=Fixture",
+        "-c",
+        "user.email=fixture@example.invalid",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "commit",
+        "-qm",
+        "fixture"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3660045,
+      "exit_code": 0,
+      "finished_at": 1795236692.3688345
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp4rg5jpmy/source",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3689177,
+      "exit_code": 0,
+      "finished_at": 1795236692.3700452
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp4rg5jpmy/source",
+        "rev-parse",
+        "--verify",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.370298,
+      "exit_code": 0,
+      "finished_at": 1795236692.3716602
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp4rg5jpmy/source",
+        "ls-tree",
+        "--full-tree",
+        "-rz",
+        "--name-only",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332",
+        "--",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3719437,
+      "exit_code": 0,
+      "finished_at": 1795236692.3733044
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp4rg5jpmy/source",
+        "show",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332:Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3735979,
+      "exit_code": 0,
+      "finished_at": 1795236692.3752809
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp4rg5jpmy/source",
+        "show",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3756318,
+      "exit_code": 0,
+      "finished_at": 1795236692.3772826
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpow9rpkye/source",
+        "init",
+        "-q"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3802285,
+      "exit_code": 0,
+      "finished_at": 1795236692.3818748
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpow9rpkye/source",
+        "add",
+        "Cargo.toml",
+        "Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3819814,
+      "exit_code": 0,
+      "finished_at": 1795236692.3831773
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpow9rpkye/source",
+        "-c",
+        "user.name=Fixture",
+        "-c",
+        "user.email=fixture@example.invalid",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "commit",
+        "-qm",
+        "fixture"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.383262,
+      "exit_code": 0,
+      "finished_at": 1795236692.3869402
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpow9rpkye/source",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.387006,
+      "exit_code": 0,
+      "finished_at": 1795236692.3881185
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpow9rpkye/source",
+        "rev-parse",
+        "--verify",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3884451,
+      "exit_code": 0,
+      "finished_at": 1795236692.389727
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpow9rpkye/source",
+        "ls-tree",
+        "--full-tree",
+        "-rz",
+        "--name-only",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332",
+        "--",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3900285,
+      "exit_code": 0,
+      "finished_at": 1795236692.3914437
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpow9rpkye/source",
+        "show",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332:Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.391757,
+      "exit_code": 0,
+      "finished_at": 1795236692.3930397
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpow9rpkye/source",
+        "show",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3932557,
+      "exit_code": 0,
+      "finished_at": 1795236692.3946927
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpbrnsbrfg/source",
+        "init",
+        "-q"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.3965023,
+      "exit_code": 0,
+      "finished_at": 1795236692.3984694
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpbrnsbrfg/source",
+        "add",
+        "Cargo.toml",
+        "Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.398724,
+      "exit_code": 0,
+      "finished_at": 1795236692.400542
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpbrnsbrfg/source",
+        "-c",
+        "user.name=Fixture",
+        "-c",
+        "user.email=fixture@example.invalid",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "commit",
+        "-qm",
+        "fixture"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4006588,
+      "exit_code": 0,
+      "finished_at": 1795236692.4037607
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpbrnsbrfg/source",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4038928,
+      "exit_code": 0,
+      "finished_at": 1795236692.4052272
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpbrnsbrfg/source",
+        "rev-parse",
+        "--verify",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4053998,
+      "exit_code": 0,
+      "finished_at": 1795236692.406768
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpbrnsbrfg/source",
+        "ls-tree",
+        "--full-tree",
+        "-rz",
+        "--name-only",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332",
+        "--",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.40708,
+      "exit_code": 0,
+      "finished_at": 1795236692.4085128
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpbrnsbrfg/source",
+        "show",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332:Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4088128,
+      "exit_code": 0,
+      "finished_at": 1795236692.410266
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpbrnsbrfg/source",
+        "show",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.410619,
+      "exit_code": 0,
+      "finished_at": 1795236692.412204
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpm_d_k28n/source",
+        "init",
+        "-q"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4149714,
+      "exit_code": 0,
+      "finished_at": 1795236692.4173195
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpm_d_k28n/source",
+        "add",
+        "Cargo.toml",
+        "Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.417568,
+      "exit_code": 0,
+      "finished_at": 1795236692.418793
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpm_d_k28n/source",
+        "-c",
+        "user.name=Fixture",
+        "-c",
+        "user.email=fixture@example.invalid",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "commit",
+        "-qm",
+        "fixture"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4189105,
+      "exit_code": 0,
+      "finished_at": 1795236692.422615
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpm_d_k28n/source",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4227514,
+      "exit_code": 0,
+      "finished_at": 1795236692.4238377
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpm_d_k28n/source",
+        "rev-parse",
+        "--verify",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4240987,
+      "exit_code": 0,
+      "finished_at": 1795236692.4254339
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpm_d_k28n/source",
+        "ls-tree",
+        "--full-tree",
+        "-rz",
+        "--name-only",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332",
+        "--",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4256973,
+      "exit_code": 0,
+      "finished_at": 1795236692.4270945
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpm_d_k28n/source",
+        "show",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332:Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4272728,
+      "exit_code": 0,
+      "finished_at": 1795236692.4284432
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpm_d_k28n/source",
+        "show",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4286337,
+      "exit_code": 0,
+      "finished_at": 1795236692.4298182
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "init",
+        "-q"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4309707,
+      "exit_code": 0,
+      "finished_at": 1795236692.432707
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "add",
+        "Cargo.toml",
+        "Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4328501,
+      "exit_code": 0,
+      "finished_at": 1795236692.43447
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "-c",
+        "user.name=Fixture",
+        "-c",
+        "user.email=fixture@example.invalid",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "commit",
+        "-qm",
+        "fixture"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4345205,
+      "exit_code": 0,
+      "finished_at": 1795236692.438003
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4380774,
+      "exit_code": 0,
+      "finished_at": 1795236692.4390492
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "rev-parse",
+        "--verify",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4393017,
+      "exit_code": 0,
+      "finished_at": 1795236692.4404497
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "ls-tree",
+        "--full-tree",
+        "-rz",
+        "--name-only",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332",
+        "--",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.440604,
+      "exit_code": 0,
+      "finished_at": 1795236692.4418185
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "show",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332:Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4421,
+      "exit_code": 0,
+      "finished_at": 1795236692.4433744
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "show",
+        "9b3ee01f9fd0e933e8f52303575f4d1ec8386332:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4436235,
+      "exit_code": 0,
+      "finished_at": 1795236692.4451118
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "add",
+        "Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4455428,
+      "exit_code": 0,
+      "finished_at": 1795236692.4468067
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "-c",
+        "user.name=Fixture",
+        "-c",
+        "user.email=fixture@example.invalid",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "commit",
+        "-qm",
+        "version requirement fixture"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.446931,
+      "exit_code": 0,
+      "finished_at": 1795236692.4511545
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4512894,
+      "exit_code": 0,
+      "finished_at": 1795236692.4524732
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "rev-parse",
+        "--verify",
+        "5b2a8739264ef2bbdeb192525e2b6352c2a3cc78^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4526517,
+      "exit_code": 0,
+      "finished_at": 1795236692.4540508
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "ls-tree",
+        "--full-tree",
+        "-rz",
+        "--name-only",
+        "5b2a8739264ef2bbdeb192525e2b6352c2a3cc78",
+        "--",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4543355,
+      "exit_code": 0,
+      "finished_at": 1795236692.4557338
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "show",
+        "5b2a8739264ef2bbdeb192525e2b6352c2a3cc78:Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4560754,
+      "exit_code": 0,
+      "finished_at": 1795236692.4574013
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "show",
+        "5b2a8739264ef2bbdeb192525e2b6352c2a3cc78:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4577136,
+      "exit_code": 0,
+      "finished_at": 1795236692.459245
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "add",
+        "Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4597054,
+      "exit_code": 0,
+      "finished_at": 1795236692.4614203
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "-c",
+        "user.name=Fixture",
+        "-c",
+        "user.email=fixture@example.invalid",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "commit",
+        "-qm",
+        "version requirement fixture"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4615314,
+      "exit_code": 0,
+      "finished_at": 1795236692.4647703
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4649038,
+      "exit_code": 0,
+      "finished_at": 1795236692.4657252
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "rev-parse",
+        "--verify",
+        "f11aa5bd8f333ef470bf2d6fa4cfea9df1d3e9e8^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4659028,
+      "exit_code": 0,
+      "finished_at": 1795236692.4667654
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "ls-tree",
+        "--full-tree",
+        "-rz",
+        "--name-only",
+        "f11aa5bd8f333ef470bf2d6fa4cfea9df1d3e9e8",
+        "--",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4669228,
+      "exit_code": 0,
+      "finished_at": 1795236692.4677017
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "show",
+        "f11aa5bd8f333ef470bf2d6fa4cfea9df1d3e9e8:Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4678607,
+      "exit_code": 0,
+      "finished_at": 1795236692.469148
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "show",
+        "f11aa5bd8f333ef470bf2d6fa4cfea9df1d3e9e8:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4693298,
+      "exit_code": 0,
+      "finished_at": 1795236692.4707632
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "add",
+        "Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.471249,
+      "exit_code": 0,
+      "finished_at": 1795236692.4728625
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "-c",
+        "user.name=Fixture",
+        "-c",
+        "user.email=fixture@example.invalid",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "commit",
+        "-qm",
+        "version requirement fixture"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4729733,
+      "exit_code": 0,
+      "finished_at": 1795236692.4761667
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.476288,
+      "exit_code": 0,
+      "finished_at": 1795236692.4772868
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "rev-parse",
+        "--verify",
+        "8564dfbee97e90ff9b8bcef13386cd960b465c0a^{commit}"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.477446,
+      "exit_code": 0,
+      "finished_at": 1795236692.4786148
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "ls-tree",
+        "--full-tree",
+        "-rz",
+        "--name-only",
+        "8564dfbee97e90ff9b8bcef13386cd960b465c0a",
+        "--",
+        "."
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.478754,
+      "exit_code": 0,
+      "finished_at": 1795236692.4798114
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "show",
+        "8564dfbee97e90ff9b8bcef13386cd960b465c0a:Cargo.lock"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4799647,
+      "exit_code": 0,
+      "finished_at": 1795236692.4813414
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmpijnm96yd/source",
+        "show",
+        "8564dfbee97e90ff9b8bcef13386cd960b465c0a:Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB",
+      "started_at": 1795236692.4816904,
+      "exit_code": 0,
+      "finished_at": 1795236692.483217
+    }
+  ],
+  "cargo_calls": [
+    {
+      "argv": [
+        "cargo",
+        "metadata",
+        "--offline",
+        "--no-deps",
+        "--format-version=1"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/temporary/tmp78wrs7xo/stage/source",
+      "started_at": 1795236691.393561,
+      "exit_code": 0,
+      "finished_at": 1795236692.342482,
+      "stdout": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/cargo-metadata.stdout.json",
+        "bytes": 3901,
+        "sha256": "9b375f9020936d2731ad43c2aff9278ffb3d12bc2e1922a895dfa218f2e0c27a"
+      },
+      "stderr": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/cargo-metadata.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "before": {
+    "head": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+    "status": "M  docs/release-projection.md\nM  scripts/release_projection.py\nM  tests/test_release_projection.py\nM  tests/test_release_receipts.py"
+  },
+  "cargo_executable": "/home/lightjunction/.cargo/bin/cargo",
+  "lock": {
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "mode": "LOCK_EX|LOCK_NB",
+    "attempts": 1,
+    "wait_queue": false,
+    "inode": 63537699,
+    "acquired_at": 1795236690.6568081,
+    "kernel_rows_while_held": [
+      "154: FLOCK  ADVISORY  WRITE 3004230 00:20:63537699 0 EOF"
+    ],
+    "kernel_rows_before_unlock": [
+      "154: FLOCK  ADVISORY  WRITE 3004230 00:20:63537699 0 EOF"
+    ],
+    "released_at": 1795236692.5013516
+  },
+  "tests": {
+    "run": 18,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "expected_failures": 0,
+    "unexpected_successes": 0,
+    "successful": true
+  },
+  "after": {
+    "head": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+    "status": "M  docs/release-projection.md\nM  scripts/release_projection.py\nM  tests/test_release_projection.py\nM  tests/test_release_receipts.py"
+  },
+  "children_after_tests": "",
+  "own_lock_rows_after_close": [],
+  "finished_at": 1795236692.501613,
+  "exit_code": 0,
+  "driver": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/validate_release.py",
+    "bytes": 8889,
+    "sha256": "317934cd3e369900b57ee29f3d708d97f0384d55dbb80f1398c27cd817c9ee7b"
+  },
+  "tests.stdout.log": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/tests.stdout.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "tests.stderr.log": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/green/tests.stderr.log",
+    "bytes": 2950,
+    "sha256": "43b7e30bb8595761ba6de58cf8ddf5925b54bae7aafc13a5a62cc7f028f9a989"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "schema": "ssmcp.native-picker.V2-library-result-subset.v1",
+  "observed_at_utc": "2026-11-21T05:09:10.291075+00:00",
+  "source_revision": "f42baae1d5227bd6db8315aef778160b80b57274",
+  "source_tree": "64b40eb8a3e0188076cf376229d3d87074d27dcc",
+  "run_id": "f6121dd70d3f8c4fb3d747a9bf2697bf",
+  "candidate_receipt_observation": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/candidate-gates.json",
+    "bytes": 1221916,
+    "sha256": "d5d8809d33464c5a3279adee3a25fedbff7f72a886e514803e3c6e30f1801ace",
+    "status_at_read": "running",
+    "single_read": true,
+    "native_read_job": "26c4545eae1eab8d27485f4a48077d3c-bf0"
+  },
+  "library_private": {
+    "name": "library-private",
+    "exit_code": 0,
+    "seconds": 33.58,
+    "log": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/logs/candidate2-library-private.log",
+      "bytes": 558691,
+      "sha256": "dddbb2a2259475196cd6f8d32941ff7ea9e65218cdbbcb3d442a511c1fa8553d"
+    },
+    "test_results": [
+      {
+        "failed": 0,
+        "filtered": 6,
+        "ignored": 23,
+        "measured": 0,
+        "passed": 2057,
+        "result": "ok"
+      }
+    ]
+  },
+  "subset": {
+    "expected": 7,
+    "actual_ok": 7,
+    "tests": [
+      {
+        "source_file": "src/client/messaging/tests.rs",
+        "name": "lookup_waits_for_the_coalesced_quiet_list_even_when_the_directory_is_unchanged",
+        "test_path": "client::messaging::tests::lookup_waits_for_the_coalesced_quiet_list_even_when_the_directory_is_unchanged",
+        "selected_in_library_private": true,
+        "actual_ok_count": 1,
+        "matched_lines": [
+          {
+            "line_number": 5327,
+            "line": "test client::messaging::tests::lookup_waits_for_the_coalesced_quiet_list_even_when_the_directory_is_unchanged ... ok"
+          }
+        ]
+      },
+      {
+        "source_file": "src/client/messaging/tests.rs",
+        "name": "lookup_rejects_invalid_and_timed_out_replies_and_does_not_cross_connections",
+        "test_path": "client::messaging::tests::lookup_rejects_invalid_and_timed_out_replies_and_does_not_cross_connections",
+        "selected_in_library_private": true,
+        "actual_ok_count": 1,
+        "matched_lines": [
+          {
+            "line_number": 5326,
+            "line": "test client::messaging::tests::lookup_rejects_invalid_and_timed_out_replies_and_does_not_cross_connections ... ok"
+          }
+        ]
+      },
+      {
+        "source_file": "src/client/terminal/conversation/messaging.rs",
+        "name": "cold_exact_lookup_highlights_merged_process_row_without_selecting_or_sending",
+        "test_path": "client::terminal::conversation::messaging::tests::cold_exact_lookup_highlights_merged_process_row_without_selecting_or_sending",
+        "selected_in_library_private": true,
+        "actual_ok_count": 1,
+        "matched_lines": [
+          {
+            "line_number": 5642,
+            "line": "test client::terminal::conversation::messaging::tests::cold_exact_lookup_highlights_merged_process_row_without_selecting_or_sending ... ok"
+          }
+        ]
+      },
+      {
+        "source_file": "src/client/terminal/conversation/messaging.rs",
+        "name": "explicit_lookup_reports_fresh_miss_or_failure_without_clearing_the_command",
+        "test_path": "client::terminal::conversation::messaging::tests::explicit_lookup_reports_fresh_miss_or_failure_without_clearing_the_command",
+        "selected_in_library_private": true,
+        "actual_ok_count": 1,
+        "matched_lines": [
+          {
+            "line_number": 5643,
+            "line": "test client::terminal::conversation::messaging::tests::explicit_lookup_reports_fresh_miss_or_failure_without_clearing_the_command ... ok"
+          }
+        ]
+      },
+      {
+        "source_file": "src/client/terminal/conversation/messaging.rs",
+        "name": "coalesced_miss_joins_a_query_after_list_and_finishes_on_its_empty_reply",
+        "test_path": "client::terminal::conversation::messaging::tests::coalesced_miss_joins_a_query_after_list_and_finishes_on_its_empty_reply",
+        "selected_in_library_private": true,
+        "actual_ok_count": 1,
+        "matched_lines": [
+          {
+            "line_number": 5641,
+            "line": "test client::terminal::conversation::messaging::tests::coalesced_miss_joins_a_query_after_list_and_finishes_on_its_empty_reply ... ok"
+          }
+        ]
+      },
+      {
+        "source_file": "src/client/terminal/conversation/messaging.rs",
+        "name": "queued_lookup_reply_cannot_override_escape_navigation_or_a_newer_draft",
+        "test_path": "client::terminal::conversation::messaging::tests::queued_lookup_reply_cannot_override_escape_navigation_or_a_newer_draft",
+        "selected_in_library_private": true,
+        "actual_ok_count": 1,
+        "matched_lines": [
+          {
+            "line_number": 5649,
+            "line": "test client::terminal::conversation::messaging::tests::queued_lookup_reply_cannot_override_escape_navigation_or_a_newer_draft ... ok"
+          }
+        ]
+      },
+      {
+        "source_file": "src/client/terminal/conversation/messaging.rs",
+        "name": "newer_query_coalesces_the_list_and_consumes_only_its_own_command",
+        "test_path": "client::terminal::conversation::messaging::tests::newer_query_coalesces_the_list_and_consumes_only_its_own_command",
+        "selected_in_library_private": true,
+        "actual_ok_count": 1,
+        "matched_lines": [
+          {
+            "line_number": 5648,
+            "line": "test client::terminal::conversation::messaging::tests::newer_query_coalesces_the_list_and_consumes_only_its_own_command ... ok"
+          }
+        ]
+      }
+    ]
+  },
+  "scope": "Seven newly added V1/V2 deterministic tests are a subset of this actual R13 library-private execution, not seven additional runs. No test/product/Cargo execution, no full-Gate completion claim, no source mutation.",
+  "status": "all_seven_actual_ok"
+}

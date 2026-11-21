@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "status": "read_only_review_complete",
+  "blocking_findings": [],
+  "material_inconsistencies": [],
+  "scope": "Only r13 source-author/target lock control flow, launch/exit identity, and bounded current unit/PID/kernel lock observations. No re-review of 35 test logs, compiler outputs, source inventory or ELF bytes.",
+  "source": {
+    "revision": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "tree": "64b40eb8a3e0188076cf376229d3d87074d27dcc",
+    "run_id": "f6121dd70d3f8c4fb3d747a9bf2697bf",
+    "invocation_id": "4da7a4c9e0074782aa7d375610b04163",
+    "controller_pid": 3115830,
+    "launcher_pid": 3115841
+  },
+  "assertions": {
+    "source_identity": true,
+    "tree_identity": true,
+    "invocation_identity": true,
+    "controller_and_launcher_hashes": true,
+    "source_pid": true,
+    "launcher_pid": true,
+    "exact_run": true,
+    "exact_gate_receipt_reference": true,
+    "actual_recorded_exit_codes": true,
+    "nine_bound_inputs_equal": true,
+    "head_after_clean": true,
+    "single_source_flock_in_owned": true,
+    "single_target_flock_in_launcher": true,
+    "no_outer_target_lock": true,
+    "current_owned_pids_absent": true
+  },
+  "source_code_locations": {
+    "owned": [
+      {
+        "line": 24,
+        "text": "fcntl.flock(fd,fcntl.LOCK_EX|fcntl.LOCK_NB)"
+      },
+      {
+        "line": 29,
+        "text": "result=subprocess.run(argv,cwd=S,env=os.environ.copy(),stdin=subprocess.DEVNULL,stdout=out,stderr=err)"
+      },
+      {
+        "line": 38,
+        "text": "save(\"exit.json\",r)"
+      },
+      {
+        "line": 39,
+        "text": "if fd is not None:os.close(fd)"
+      }
+    ],
+    "launcher": [
+      {
+        "line": 67,
+        "text": "fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)"
+      },
+      {
+        "line": 107,
+        "text": "result = subprocess.run(command, cwd=worktree, env=env, stdin=subprocess.DEVNULL,"
+      },
+      {
+        "line": 125,
+        "text": "save('exit.json', record)"
+      },
+      {
+        "line": 127,
+        "text": "os.close(lock_fd)"
+      }
+    ]
+  },
+  "lifecycle": [
+    {
+      "step": "Unit admission",
+      "meaning": "start_exit_code=0 records systemd-run admission only, not Gate completion.",
+      "started_utc": "2026-11-21T04:59:22.028228+00:00",
+      "unit": "ssmcp-release25-gate35-r13-20261121.service"
+    },
+    {
+      "step": "Source ownership",
+      "meaning": "run_owned.py takes one nonblocking source-author lock, validates fixed source, then synchronously waits for the bound launcher; it does not acquire the target lock."
+    },
+    {
+      "step": "Target ownership",
+      "meaning": "run_bound.py takes one nonblocking shared-target lock, validates nine bound inputs and clean source, waits for the driver, verifies after hashes and success, then writes exit and closes its descriptor."
+    },
+    {
+      "step": "Recorded completion",
+      "launcher_finished_at": 1795237794.2250454,
+      "owned_finished_utc": "2026-11-21T05:09:54.259829+00:00",
+      "launcher_exit": 0,
+      "owned_exit": 0
+    },
+    {
+      "step": "Independent present observation",
+      "meaning": "Unit has been collected; both recorded process IDs are absent. Both lock inodes have no rows at the observation below."
+    }
+  ],
+  "boundaries": [
+    "Both exit.json files are persisted before their corresponding descriptor close; an exit file alone is not proof that the close has already occurred.",
+    "held_for_entire_batch and source_lock_held_until_child_return are receipt assertions, supported here by control flow and successful child return. This review did not perform continuous kernel lock observation during the historical run.",
+    "The current collected unit has an empty InvocationID; the historical invocation is linked by start-unit and both launch/exit chains, not inferred from the current empty field.",
+    "No global future lock availability or absence of unrelated work is asserted.",
+    "No script was imported or executed, no lock acquired, no product command or Cargo run, no signal sent, and no ELF opened by this reviewer."
+  ],
+  "current_readonly_observation": {
+    "observed_at": 1795238771.0617418,
+    "command": [
+      "systemctl",
+      "--user",
+      "show",
+      "ssmcp-release25-gate35-r13-20261121.service",
+      "--property=LoadState,ActiveState,SubState,MainPID,InvocationID,Result,ExecMainStatus"
+    ],
+    "exit": 0,
+    "stdout": "LoadState=not-found\nActiveState=inactive\nSubState=dead\nInvocationID=\nMainPID=0\nResult=success\nExecMainStatus=0\n",
+    "stderr": "",
+    "pids": [
+      {
+        "pid": 3115830,
+        "exists": false
+      },
+      {
+        "pid": 3115841,
+        "exists": false
+      }
+    ],
+    "locks": [
+      {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-author.lock",
+        "inode": 187280005,
+        "rows": []
+      },
+      {
+        "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "inode": 63537699,
+        "rows": []
+      }
+    ]
+  },
+  "inputs": [
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r13-binding/run_owned.py",
+      "bytes": 2457,
+      "sha256": "3c8b7cef3496770ee3cfd1d472b5b93d7933b1ea1651c06e683273066d8d8578"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r13-binding/run_bound.py",
+      "bytes": 7785,
+      "sha256": "085e6b5300f040ad6be77bed5d0481c8fdd5dd142a61930de56c54b1d7ef327e"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r13-binding/start-unit.json",
+      "bytes": 961,
+      "sha256": "30e7d31ac165fd84eddb9a187b712d6d822b9b7bf9d15a136cf3ca14c42f601f"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r13-binding/owned/claim.json",
+      "bytes": 972,
+      "sha256": "8b2091f04a3b2ee44424c8d29eb1c0db0502d44be259b42a2cf1423fb40e2aba"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r13-binding/owned/launch.json",
+      "bytes": 1004,
+      "sha256": "d77fc96eba1bce2aa58ffd156401c343e8a0dc7cf82fd2562f1e7173a144c3be"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r13-binding/owned/exit.json",
+      "bytes": 1168,
+      "sha256": "b54e0d23c7607084c98ef122cef6fdd69995f2d5a19f5f9e690c9f92a1bf3620"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13-launch/claim.json",
+      "bytes": 122,
+      "sha256": "74277c12612cb23b7a024cf5b3abb3e6fb90351e37dfc1d81927babceeacdafb"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13-launch/launch.json",
+      "bytes": 3624,
+      "sha256": "1fd78d4de349344e05d6fc6bfbc761401fbdc1f96169caca80900df205218f25"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13-launch/exit.json",
+      "bytes": 4793,
+      "sha256": "a0c83d3dcebd1163939f56a476c9782bc46ac1ec00d08c644c05cd6fa9857927"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r13-binding/binding-manifest.json",
+      "bytes": 6715,
+      "sha256": "2e8b179f3f49ba71feaeb3d78b62806a0f9e082e59d3284f2b6a498d1ecc6c14"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r13-binding/root-completed-gate-review.json",
+      "bytes": 18503,
+      "sha256": "83100fd8f0843fed68363bb2570e5bc06f22d0367f5623afb59dbc7e7524cf6a"
+    }
+  ],
+  "owner_postflight_record": {
+    "unit": "ActiveState=inactive\nSubState=dead\nMainPID=0\nExecMainStatus=0\n",
+    "launcher_exit": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13-launch/exit.json",
+      "bytes": 4793,
+      "sha256": "a0c83d3dcebd1163939f56a476c9782bc46ac1ec00d08c644c05cd6fa9857927"
+    },
+    "owned_exit": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r13-binding/owned/exit.json",
+      "bytes": 1168,
+      "sha256": "b54e0d23c7607084c98ef122cef6fdd69995f2d5a19f5f9e690c9f92a1bf3620"
+    }
+  },
+  "read_jobs": [
+    {
+      "job": "26c4545eae1eab8d27485f4a48077d3c-c25",
+      "exit": 0,
+      "both_eof": true
+    },
+    {
+      "job": "26c4545eae1eab8d27485f4a48077d3c-c26",
+      "exit": 0,
+      "both_eof": true
+    },
+    {
+      "job": "26c4545eae1eab8d27485f4a48077d3c-c2a",
+      "exit": 0,
+      "both_eof": true
+    }
+  ]
+}

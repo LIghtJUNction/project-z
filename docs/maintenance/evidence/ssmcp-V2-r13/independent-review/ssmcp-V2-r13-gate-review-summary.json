@@ -1,0 +1,249 @@
+{
+  "schema": "project-z.ssmcp-V2-r13-gate-review-summary.v1",
+  "reviewed_at_utc": "2026-11-21T05:27:55.992049+00:00",
+  "status": "independently_verified_fixed_gate",
+  "blocking_findings": 0,
+  "material_evidence_inconsistencies": 0,
+  "source": {
+    "commit": "f42baae1d5227bd6db8315aef778160b80b57274",
+    "tree": "64b40eb8a3e0188076cf376229d3d87074d27dcc",
+    "parent": "18f43d69715538582ddc2806434009170f188e3c",
+    "version": "0.10.25",
+    "github_commit_url": "https://github.com/LIghtJUNction/ssmcp/commit/f42baae1d5227bd6db8315aef778160b80b57274",
+    "github_original": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-V2-r13-actual-gate-review-20261121/github-V2-commit-original.json",
+      "bytes": 1829,
+      "sha256": "08829e015711f3b3a565edf3af84907563432dab0c17d3f42784f26c151dd804",
+      "git_blob": "2a765598bea807d840c99df22d31efca7fb04202"
+    },
+    "source_freeze": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-native-picker-fresh-followup/source-freeze-f42baae.json",
+      "bytes": 3878,
+      "sha256": "daa27d4b5386a7229cd88c0f973ad0fbf5996d3095736e578a3ed5df3384a602",
+      "mode": 384
+    },
+    "root_worktree": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+    "root_worktree_heads": {
+      "after_export": "f42baae1d5227bd6db8315aef778160b80b57274",
+      "before_export": "f42baae1d5227bd6db8315aef778160b80b57274",
+      "final": "f42baae1d5227bd6db8315aef778160b80b57274"
+    },
+    "recorded_after_gate_clean": true,
+    "exported_source": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/source",
+    "manifest": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/source-manifest.json",
+      "bytes": 320140,
+      "sha256": "c158f4d1760daf203730492568ebe6fecf75e9c44246eb9cadea9fbd7cd5240c",
+      "mode": 384
+    },
+    "manifest_entries": 1849,
+    "files": 1545,
+    "directories": 304,
+    "bytes_modes_and_path_set_match_at_audit_read": true,
+    "audit_read_finished_at_utc": "2026-11-21T05:18:46.975804+00:00",
+    "source_archives_with_PAX_commit_headers": [
+      {
+        "label": "main",
+        "commit": "f42baae1d5227bd6db8315aef778160b80b57274",
+        "pax_commit": "f42baae1d5227bd6db8315aef778160b80b57274",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/archives/main.tar",
+        "bytes": 17797120,
+        "sha256": "a2aafdb6014671a8731b8f56731ebfeb6c59b525037dc8bc2052f7a4f6711fbf",
+        "mode": 420
+      },
+      {
+        "label": "crates/zharness",
+        "commit": "cb63a9a0aa163214c6062664cd62fefb357be5a8",
+        "pax_commit": "cb63a9a0aa163214c6062664cd62fefb357be5a8",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/archives/zharness.tar",
+        "bytes": 1085440,
+        "sha256": "611a96aea977134d09bfe078d8985e1b5ed8de8f8353ad75a1a724d5d8a2fd29",
+        "mode": 420
+      },
+      {
+        "label": "crates/zplugin",
+        "commit": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4",
+        "pax_commit": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/archives/zplugin.tar",
+        "bytes": 983040,
+        "sha256": "73d03620fb51d292b080aea0eab253dd5d0600aa9c82a4e5286334dcab6f157f",
+        "mode": 420
+      },
+      {
+        "label": "crates/ztuio",
+        "commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+        "pax_commit": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/archives/ztuio.tar",
+        "bytes": 92160,
+        "sha256": "0322272bfee9152f5944a45fb23b6d8957ea4800dd985e80f62b6939f3ee2706",
+        "mode": 420
+      },
+      {
+        "label": "crates/zuse",
+        "commit": "a1bb8fd2cbce0a9d85134999883c578358065242",
+        "pax_commit": "a1bb8fd2cbce0a9d85134999883c578358065242",
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/archives/zuse.tar",
+        "bytes": 1740800,
+        "sha256": "ec27aeda53bf6ed948c6d7b743a997fc73977ff27f7494653429d6db6dfc9b42",
+        "mode": 420
+      }
+    ],
+    "Cargo_lock_sha256": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608"
+  },
+  "run": {
+    "run_id": "f6121dd70d3f8c4fb3d747a9bf2697bf",
+    "started_at_utc": "2026-11-21T04:59:22.538104+00:00",
+    "finished_at_utc": "2026-11-21T05:09:54.138883+00:00",
+    "duration_seconds": 631.60078,
+    "unit": "ssmcp-release25-gate35-r13-20261121.service",
+    "invocation_id": "4da7a4c9e0074782aa7d375610b04163",
+    "actual_stages": 35,
+    "actual_Rust_parent_result_stages": 26,
+    "all_35_recorded_exit_codes_zero": true,
+    "gate_receipt": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/candidate-gates.json",
+      "bytes": 1286399,
+      "sha256": "66f3be6c3f0ee4a4bdf9900633b49fa598db8a8545d4b8f67a3ea051b2671b35",
+      "mode": 384
+    },
+    "driver": {
+      "name": "driver",
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/run_gates.py",
+      "bytes": 83560,
+      "sha256": "50faf99702ee39bf1d893025a98bc429b907af307a443fbf304c1386a4de28ba",
+      "mode": 384
+    }
+  },
+  "counts": {
+    "stages": 35,
+    "Rust_parent_stages": 26,
+    "library_private_passed": 2057,
+    "library_private_ignored": 23,
+    "library_HOST_passed": 6,
+    "ordinary_integration_targets": 19,
+    "ordinary_integration_passed": 101,
+    "worker_ignored_exact_passed": 1,
+    "mandatory_ignored_stages": 4,
+    "mandatory_ignored_passed": 14,
+    "new_seven_are_private_subset": true,
+    "original_seventeen_are_private_subset": true
+  },
+  "verification": {
+    "text_inputs": 213,
+    "source_entries": 1849,
+    "source_files": 1545,
+    "source_directories": 304,
+    "selected_fresh_false_artifacts": 26,
+    "owned_outputs_actually_hashed": 5,
+    "nine_inputs_current_and_before_after_match": true,
+    "coverage_comparison": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-V2-r13-actual-gate-review-20261121/contract-comparison.json",
+      "bytes": 8685,
+      "sha256": "150fe7c36ca6de4ca2f1bce56ac7ba24c7094adbfe8034f1cd53e8159ff70ffd",
+      "git_blob": "b471b3e385a40707f8a91b580df0c4d4c5ec7db3"
+    },
+    "lock_and_exit_review": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-V2-r13-actual-gate-review-20261121/lock-exit-independent-review.json",
+      "bytes": 8999,
+      "sha256": "90b031d71fefd90071a65aa6a66ba6bda8e228bd0e17e8d385e27cfd931fc28c",
+      "git_blob": "9af5efda883c7f24e0de7e512ea4958845b12257"
+    }
+  },
+  "controlled_outputs": [
+    {
+      "stage": "library-compile",
+      "label": "library-test-fixture",
+      "actual_current_owned_file": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/workspace-artifact-copies/library-compile/library-test-fixture",
+        "bytes": 166677776,
+        "sha256": "c69dee8ced668ac1bbe39da83b19c9c419d1acb9c1c2b006b8cbc115aa499e0d",
+        "mode": 448
+      },
+      "bookends_unchanged_during_read": true,
+      "matches_this_r13_invocation_link_cargo_copy_record": true,
+      "proof_reused_from_r12": false
+    },
+    {
+      "stage": "release",
+      "label": "ssmcp",
+      "actual_current_owned_file": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/workspace-artifact-copies/release/ssmcp",
+        "bytes": 15750352,
+        "sha256": "d654703a12f9479e97b9807ac8d61f370bd5c413963bf6e5b6e45dfbd8434f41",
+        "mode": 448
+      },
+      "bookends_unchanged_during_read": true,
+      "matches_this_r13_invocation_link_cargo_copy_record": true,
+      "proof_reused_from_r12": false
+    },
+    {
+      "stage": "release",
+      "label": "ssmcp-frontend",
+      "actual_current_owned_file": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/workspace-artifact-copies/release/ssmcp-frontend",
+        "bytes": 1386584,
+        "sha256": "2e19f8ad2fea673f899bbfc44449161e072381571946b85e3c6a5dc7e8325a06",
+        "mode": 448
+      },
+      "bookends_unchanged_during_read": true,
+      "matches_this_r13_invocation_link_cargo_copy_record": true,
+      "proof_reused_from_r12": false
+    },
+    {
+      "stage": "release",
+      "label": "ssmcpd",
+      "actual_current_owned_file": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/workspace-artifact-copies/release/ssmcpd",
+        "bytes": 8176168,
+        "sha256": "c1991fac3c0c6aa0a229781c87fe67ef24c028fd5ffc88b0c50dc413baaa5527",
+        "mode": 448
+      },
+      "bookends_unchanged_during_read": true,
+      "matches_this_r13_invocation_link_cargo_copy_record": true,
+      "proof_reused_from_r12": false
+    },
+    {
+      "stage": "decoder",
+      "label": "vt_snapshot",
+      "actual_current_owned_file": {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final13/workspace-artifact-copies/decoder/vt_snapshot",
+        "bytes": 440984,
+        "sha256": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f",
+        "mode": 448
+      },
+      "bookends_unchanged_during_read": true,
+      "matches_this_r13_invocation_link_cargo_copy_record": true,
+      "proof_reused_from_r12": false
+    }
+  ],
+  "warnings": [
+    {
+      "stage": "clippy",
+      "warnings": [
+        "warning: unused dependency `qrcodegen`",
+        "warning: `ssmcp` (manifest) generated 1 warning"
+      ]
+    },
+    {
+      "stage": "windows-gnu-clippy",
+      "warnings": [
+        "warning: unused dependency `qrcodegen`",
+        "warning: `ssmcp` (manifest) generated 1 warning"
+      ]
+    }
+  ],
+  "limitations": [
+    "This review does not run or certify the subsequent runtime/UI/P1 acceptance, release publication, merge, or final44 dependency graph.",
+    "The two Clippy stages returned 0 with an unused qrcodegen/manifest warning; zero warnings is not claimed.",
+    "The original wrapper preserves selected compiler arguments, original argument count and full-argv hash, not the complete original argv; that full digest was not independently recomputed.",
+    "The original dependency auditor records before/after verification. This review reads its manifest and metadata but does not recursively rehash all 264 registry and 11 Git checkout trees.",
+    "The old 17-goal mapping is used only for names. Their r13 lines are independently matched, and neither those 17 nor the new seven are added to the 2057 private count.",
+    "Historical completion is supported by original run/exit/receipt identity; no continuous kernel lock trace or global-lock-free conclusion is claimed."
+  ],
+  "full_review": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-V2-r13-actual-gate-review-20261121/ssmcp-V2-r13-gate-independent-review.json",
+    "bytes": 251279,
+    "sha256": "f90362963867c0d24a5563ebc043d864b595685ee05c11c255af33ad70999f1d",
+    "git_blob": "aa7eec22fe0aa8e4f80094006650418ae769dcd4"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "base": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+  "source_root": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/source",
+  "tree": "756e841391a840499f61629674e2889545dc75ec",
+  "production_projection_blob": "8d4972d6fad8109a92b2b9f0e34a47ba62729612",
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_release_projection.MatchTests.test_compatible_version_metadata_preserves_options_and_uses_locked_pin",
+        "test_release_receipts.ReceiptTests.test_matching_receipt_bytes_identity_and_commit_accept"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/source/tests",
+      "started_at": 1795236492.6743736,
+      "finished_at": 1795236492.7594876,
+      "exit_code": 1,
+      "stdout": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/red.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      "stderr": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/red.stderr.log",
+        "bytes": 9343,
+        "sha256": "b3c4887c5206c5fbba3cda5858bc31064a324f0ff19e155c5bc4e9bd044da183",
+        "git_blob": "9f497590e218900a8ed9bf95f2f112f34c56937a"
+      }
+    }
+  ],
+  "expected_failure": true,
+  "selected_test_methods": 2,
+  "real_cargo_invoked": false,
+  "source_files": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/source/tests/test_release_projection.py",
+      "bytes": 11080,
+      "sha256": "3e81f32fe63b2a2265444676034b7caee64d6a3259fff6effd17774027bfcd37",
+      "git_blob": "44f0a71b44ce4ce1a7e7823943aab752be815d74"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/source/tests/test_release_receipts.py",
+      "bytes": 7563,
+      "sha256": "d0bbbc25f8d3b894f4315454625cba409da28dde010fbdc7a9c19fef0a92e084",
+      "git_blob": "b06534747913b6239809fa07388abcba8d6eaca2"
+    }
+  ],
+  "diff": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-release-projection-ba6666-20261121/evidence/red-tests.patch",
+    "bytes": 7247,
+    "sha256": "4f2b879c6bcdc56e5fad7fe9887dc13a14fc5003e106183fbbece87ee5996c81",
+    "git_blob": "d654caa030451638e3d4605aa96a94c062798371"
+  },
+  "head_after": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+  "test_child_reaped": true
+}

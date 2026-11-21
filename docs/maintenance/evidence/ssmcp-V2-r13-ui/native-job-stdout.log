@@ -1,0 +1,27 @@
+{"started": "message_references", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/message_references/run.log"}
+{"finished": "message_references", "status": "passed", "seconds": 12.623, "checks": 53}
+{"started": "force_send", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/force_send/run.log"}
+{"finished": "force_send", "status": "passed", "seconds": 21.11, "checks": 137}
+{"started": "listener_transports", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/listener_transports/run.log"}
+{"finished": "listener_transports", "status": "passed", "seconds": 7.675, "checks": 74}
+{"started": "zuse_worker", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/zuse_worker/run.log"}
+{"finished": "zuse_worker", "status": "passed", "seconds": 2.788, "checks": 31}
+{"started": "interactions", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/interactions/run.log"}
+{"finished": "interactions", "status": "passed", "seconds": 50.286, "checks": 172}
+{"started": "private_desktop", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/private_desktop/run.log"}
+{"finished": "private_desktop", "status": "passed", "seconds": 4.039, "checks": 35}
+{"started": "account_compat", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/account_compat/run.log"}
+{"finished": "account_compat", "status": "passed", "seconds": 2.882, "checks": 69}
+{"started": "input_history", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/input_history/run.log"}
+{"finished": "input_history", "status": "passed", "seconds": 23.441, "checks": 150}
+{"started": "reload_state", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/reload_state/run.log"}
+{"finished": "reload_state", "status": "passed", "seconds": 7.569, "checks": 37}
+{"started": "session_groups", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/session_groups/run.log"}
+{"finished": "session_groups", "status": "passed", "seconds": 13.919, "checks": 108}
+{"started": "client_ui", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/client_ui/run.log"}
+{"finished": "client_ui", "status": "passed", "seconds": 7.333, "checks": 58}
+{"started": "canvas_logs", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/canvas_logs/run.log"}
+{"finished": "canvas_logs", "status": "passed", "seconds": 9.871, "checks": 72}
+{"started": "composer", "log": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/suites/composer/run.log"}
+{"finished": "composer", "status": "failed", "seconds": 22.754, "checks": 0}
+{"status": "failed", "receipt": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/v-ui24-acceptance-mesa-v1/acceptance.json", "actual_execution_count": 13, "independent_pass_count": 12, "alias_coverage_count": 1}

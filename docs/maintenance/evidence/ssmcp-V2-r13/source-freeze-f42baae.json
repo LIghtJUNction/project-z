@@ -1,0 +1,78 @@
+{
+  "author_exit": {
+    "bytes": 878,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-native-picker-fresh-followup/author-exit.json",
+    "sha256": "bfce7c97e133e9924317b13ad23ccf092e01e55b05f79bc4df7bcc70384eed9f"
+  },
+  "cargo_lock": {
+    "bytes": 66476,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final/Cargo.lock",
+    "sha256": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608"
+  },
+  "checkout": {
+    "argv": [
+      "git",
+      "-C",
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+      "-c",
+      "submodule.recurse=false",
+      "checkout",
+      "--detach",
+      "f42baae1d5227bd6db8315aef778160b80b57274"
+    ],
+    "exit_code": 0,
+    "stderr": "之前的 HEAD 位置是 784370b test: align explicit Next caller fixture predicates [skip ci]\nHEAD 目前位于 f42baae fix: confirm pre-query native directory misses once [skip ci]\n",
+    "stdout": ""
+  },
+  "clean": true,
+  "github_readback": {
+    "bytes": 562,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-native-picker-fresh-followup/github-V2-readback.json",
+    "sha256": "338b36b279be478c4a087e0492658fd725c682cf3e312ff8a78d165364a28143"
+  },
+  "heads": {
+    "bytes": 15489,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/git-heads-v25-r13.json",
+    "sha256": "f5d603af9faee8ea64b562c5457d6e683bc85950218db6533c8d314841e42e28"
+  },
+  "historic_U_Gate_runtime_and_failed_UI_untouched": true,
+  "independent_review": {
+    "bytes": 1143,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-native-picker-fresh-followup/independent-v2-ui-review.json",
+    "sha256": "d180fa427489b17fbee85aa2af88645fa2d238ac370c0ae83747de151a5f4ea0"
+  },
+  "manager_review": {
+    "bytes": 1425,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-native-picker-fresh-followup/independent-v2-manager-review.json",
+    "sha256": "6a8b3aba8dacb85c9255b7acfcad1362394873f34e97439fed91dc72b1acfb49"
+  },
+  "new_build_not_started": true,
+  "normal_push": {
+    "bytes": 716,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-native-picker-fresh-followup/root-normal-push-receipt.json",
+    "sha256": "711cc3df63509f838b603add585536d3fb16c400e46f1a9fb1563dda6f3079e2"
+  },
+  "owner_agreement": {
+    "bytes": 5065,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/shared-target-agreement-v25-r13.json",
+    "sha256": "965467ce452a4899201d7ddd1ca239fa84d2f4604fcf1123eccd93150866227e"
+  },
+  "previous_source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+  "schema": "ssmcp-source-freeze-v1",
+  "source_checkout_receipt": {
+    "bytes": 2972,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-native-picker-fresh-followup/root-source-checkout-receipt.json",
+    "sha256": "bda00ece2dac633003e7dc06e29961d01f130c06e0e248241adbca100cc31469"
+  },
+  "source_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+  "source_review": {
+    "bytes": 1415,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-native-picker-fresh-followup/root-static-review.json",
+    "sha256": "71ea676958e400ebb353769e06b4b193174b714ae4d4f34487d543768c12e127"
+  },
+  "source_revision": "f42baae1d5227bd6db8315aef778160b80b57274",
+  "source_tree": "64b40eb8a3e0188076cf376229d3d87074d27dcc",
+  "status": "frozen",
+  "utc": "2026-11-21T04:58:57.692379+00:00",
+  "version": "0.10.25"
+}
