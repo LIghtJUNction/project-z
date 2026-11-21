@@ -88,6 +88,7 @@ def bundle():
 
 @cache
 def native_version(url, sha, manifest):
+    require(manifest in {"VERSION", "pyproject.toml", "zuse.json"}, "unknown version manifest")
     owner, repo = maintenance.github_identity(url)
     blob = json.loads(gh("api", f"repos/{owner}/{repo}/contents/{manifest}?ref={sha}"))
     require(blob["type"] == "file" and blob["encoding"] == "base64", "invalid version manifest")
@@ -96,7 +97,6 @@ def native_version(url, sha, manifest):
         return text.strip()
     if manifest == "pyproject.toml":
         return tomllib.loads(text)["project"]["version"]
-    require(manifest == "zuse.json", "unknown version manifest")
     return json.loads(text)["version"]
 
 

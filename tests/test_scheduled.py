@@ -1,4 +1,5 @@
 """Scheduled release state transitions with local Git remotes and a fake registry."""
+import base64
 from contextlib import chdir, ExitStack
 import json
 import os
@@ -91,6 +92,21 @@ class ScheduledTests(unittest.TestCase):
         self.assertEqual(s.plan(self.base, sha)[0], "v0.1.1")
         s.git("tag", "v0.1.1", sha)
         self.assertEqual(s.plan(self.base, sha), ("", []))
+
+    def test_non_cargo_version_qualifies_only_the_github_snapshot(self):
+        Path("project-z.toml").write_text('[scheduled.version_manifests]\nchild="VERSION"\n')
+        def blob(*args):
+            version = "2.1.0" if args[-1].endswith("2"*40) else "2.0.0"
+            return json.dumps(dict(type="file", encoding="base64", content=base64.b64encode(version.encode()).decode()))
+        s.native_version.cache_clear()
+        self.addCleanup(s.native_version.cache_clear)
+        with patch.object(s, "gh", side_effect=blob):
+            tag, updates = s.plan(self.base, self.snapshot("2", "0.1.0"))
+        self.assertEqual(tag, "v0.1.1")
+        self.assertEqual([(p["version"], p["publish"]) for p in updates], [("2.1.0", False)])
+        with patch.object(s, "gh") as remote, self.assertRaisesRegex(ValueError, "unknown version manifest"):
+            s.native_version("https://github.com/test/child.git", "2"*40, "../other")
+        remote.assert_not_called()
 
     def test_historical_version_in_another_snapshot_skips(self):
         sha = self.snapshot("2", "0.1.1")
