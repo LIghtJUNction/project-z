@@ -1,10 +1,10 @@
 # Project Z dependency projection (review only)
 
-Project Z source manifests use GitHub URLs for internal dependencies. Publishable
-crates may also declare a compatible `version` requirement. The committed Git
-lockfile identifies the exact source used to build that snapshot; the requirement
-validates its package version and does not select a different Git commit.
-crates.io does not accept normal/build dependencies that only exist in Git, so
+Project Z development manifests use GitHub default-branch sources for internal
+cross-repository dependencies, without `version`, `branch`, `tag` or `rev`.
+Package versions and the committed Git lockfile remain part of the source identity.
+For external publication, crates.io requires registry versions for normal/build
+dependencies that use Git during development, so
 use a separate staging directory for the registry manifest. This tool does not
 change the source manifest or source lock, create tags, or publish anything.
 
@@ -31,8 +31,9 @@ must start from this same commit.
 Staging archives tracked files from that commit and reads its committed workspace
 Cargo.lock. It rewrites only HTTPS GitHub dependency declarations whose canonical
 repository URL is listed in Project Z's .gitmodules. A unique name + URL Git lock
-entry with a full Git SHA is required. If the declaration includes `version`,
-the locked version must satisfy that Cargo requirement; malformed requirements
+entry with a full Git SHA is required. Historical commits may include `version`
+beside `git`; staging accepts them only when the locked version satisfies that
+Cargo requirement. Malformed requirements
 and mismatches are rejected before conversion. Selectors (`rev`, `branch`,
 `tag`) and mixed path, registry or workspace sources remain rejected. The result
 uses exact =VERSION constraints from the lock, preserving aliases, features,
@@ -83,7 +84,8 @@ availability, yank state, the complete transitive graph, or validate/install
 the staged package. It does not change the staging-only label or enable CI.
 
 Cargo's [multiple locations rule](https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html#multiple-locations)
-permits `version` together with `git`: local development uses Git and checks the
-version requirement; a published manifest uses the registry dependency. The
-projection still requires an exact source receipt before accepting that registry
-archive for release.
+permits `version` together with `git`. Project Z's development policy is stricter:
+internal cross-repository declarations use Git without a version selector. The
+projection retains compatibility with historical multiple-location declarations
+and still requires an exact source receipt before accepting a registry archive
+for release.

@@ -355,10 +355,15 @@ class SourceLinkTests(FilesystemFixture):
 
 class GitPolicyTests(FilesystemFixture):
     def data(self, dep=None):
-        return catalog(package("core"), package("app", deps=[dep or dependency("core")]))
+        return catalog(package("core"), package("app", deps=[dep or dependency("core", requirement="*", explicit=False)]))
 
-    def test_latest_git_with_publish_version_is_allowed(self):
-        self.assertEqual(pz.validate(self.data(), {}, self.root), [])
+    def test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds(self):
+        for publish in (True, False):
+            for kind in ("normal", "build", "dev"):
+                with self.subTest(publish=publish, kind=kind):
+                    data = self.data(dependency("core", kind=kind, requirement="*", explicit=False))
+                    data["packages"][1]["publish"] = publish
+                    self.assertEqual(pz.validate(data, {}, self.root), [])
 
     def test_registry_cross_path_and_every_fixed_git_selector_are_rejected(self):
         for source, path in [
@@ -385,21 +390,71 @@ class GitPolicyTests(FilesystemFixture):
                        package("app", deps=[dependency("core", path="app/core")]))
         self.assertEqual(pz.validate(data, {}, self.root), [])
 
-    def test_git_source_does_not_bypass_current_version_or_missing_package_checks(self):
-        dep = dependency("core", requirement="=0.9.0")
-        self.assertTrue(any("requires core" in error for error in pz.validate(self.data(dep), {}, self.root)))
-        dep = dependency("missing")
+    def test_same_repository_version_requirements_remain_checked(self):
+        for requirement, expected in (("^1", None), ("=0.9.0", "requires core"),
+                                      ("not-a-version", "invalid")):
+            with self.subTest(requirement=requirement):
+                data = catalog(package("core", repo="app", manifest="app/core/Cargo.toml"),
+                               package("app", deps=[dependency("core", path="app/core", requirement=requirement)]))
+                errors = pz.validate(data, {}, self.root)
+                if expected is None:
+                    self.assertEqual(errors, [])
+                else:
+                    self.assertTrue(any(expected in error for error in errors), errors)
+
+    def test_git_source_does_not_bypass_missing_package_checks(self):
+        dep = dependency("missing", requirement="*", explicit=False)
         dep["source"] = "git+https://github.com/ProjectZTests/core.git"
         self.assertTrue(any("missing from the catalog" in error for error in pz.validate(self.data(dep), {}, self.root)))
 
-    def test_publishable_git_dependencies_keep_version_metadata(self):
-        for kind in ("normal", "build"):
-            with self.subTest(kind=kind):
-                data = self.data(dependency("core", kind=kind, explicit=False))
-                self.assertTrue(any("version metadata" in error for error in pz.validate(data, {}, self.root)))
-                data["packages"][1]["publish"] = False
-                self.assertEqual(pz.validate(data, {}, self.root), [])
-        self.assertEqual(pz.validate(self.data(dependency("core", kind="dev", explicit=False)), {}, self.root), [])
+    def test_internal_git_rejects_every_explicit_version(self):
+        for publish in (True, False):
+            for kind in ("normal", "build", "dev"):
+                for requirement in ("*", "^1", "=1.0.0", "=0.9.0", "not-a-version"):
+                    with self.subTest(publish=publish, kind=kind, requirement=requirement):
+                        data = self.data(dependency("core", kind=kind, requirement=requirement))
+                        data["packages"][1]["publish"] = publish
+                        errors = pz.validate(data, {}, self.root)
+                        self.assertTrue(any("omit version" in error for error in errors), errors)
+
+    def test_workspace_target_and_alias_versions_cannot_bypass_git_only(self):
+        for inherited in (False, True):
+            for kind in ("normal", "build", "dev"):
+                with self.subTest(inherited=inherited, kind=kind):
+                    section = {"normal": "dependencies", "build": "build-dependencies",
+                               "dev": "dev-dependencies"}[kind]
+                    options = 'package = "core", git = "https://github.com/ProjectZTests/core.git"'
+                    target = 'cfg(target_os = "windows")'
+                    table = f'[target.\'cfg(target_os="windows")\'.{section}]\n'
+                    if inherited:
+                        version_source = self.write("Cargo.toml",
+                            '[workspace.dependencies]\nengine = { ' + options + ', version = "*" }\n')
+                        declaration = 'engine = { workspace = true }\n'
+                    else:
+                        declaration = 'engine = { ' + options + ', version = "*" }\n'
+                    manifest = self.write("app/Cargo.toml", table + declaration)
+                    if not inherited:
+                        version_source = manifest
+                    metadata = {"name": "core", "rename": "engine", "kind": kind, "target": target}
+                    dep = dependency("core", kind=kind, requirement="*",
+                                     explicit=pz.explicit_version(manifest, self.root, metadata))
+                    dep.update(alias="engine", target=target, optional=kind == "normal")
+                    self.assertTrue(dep["explicit_version"])
+                    errors = pz.validate(self.data(dep), {}, self.root)
+                    self.assertTrue(any("omit version" in error for error in errors), errors)
+
+                    version_source.write_text(version_source.read_text().replace(', version = "*"', ''))
+                    dep["explicit_version"] = pz.explicit_version(manifest, self.root, metadata)
+                    self.assertFalse(dep["explicit_version"])
+                    self.assertEqual(pz.validate(self.data(dep), {}, self.root), [])
+
+    def test_external_version_declarations_remain_allowed(self):
+        for source in ("registry+https://github.com/rust-lang/crates.io-index",
+                       "git+https://github.com/OtherOwner/external.git"):
+            with self.subTest(source=source):
+                dep = dependency("external", requirement="=2.0.0")
+                dep["source"] = source
+                self.assertEqual(pz.validate(self.data(dep), {}, self.root), [])
 
     def test_unknown_internal_package_cannot_hide_behind_alternate_github_spelling(self):
         for source in ("git+https://github.com/ProjectZTests/core",
@@ -513,8 +568,8 @@ class GitSourceFixture(FilesystemFixture):
         (self.app / "src/main.rs").write_text('fn main() {}\n')
         (self.app / "Cargo.toml").write_text(
             '[package]\nname = "tiny-app"\nversion = "1.0.0"\nedition = "2021"\npublish = false\n'
-            '[dependencies]\ntiny-core = { git = "' + self.url + 'shared.git", version = "1.0.0" }\n'
-            'tiny-private = { git = "' + self.url + 'shared.git", version = "1.0.0", optional = true }\n'
+            '[dependencies]\ntiny-core = { git = "' + self.url + 'shared.git" }\n'
+            'tiny-private = { git = "' + self.url + 'shared.git", optional = true }\n'
             '[features]\nexperimental = ["dep:tiny-private"]\n')
         self.cargo(self.app, "generate-lockfile")
         self.app_initial = self.commit(self.app, "initial consumer lock")

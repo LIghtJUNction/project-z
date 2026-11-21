@@ -6,7 +6,7 @@
 
 1. 从 `.gitmodules` 核对来源，读取目标仓库的 `AGENTS.md`，确认现有分支和维护者。使用独立工作区。
 2. 用 `python3 scripts/project_z.py impact --repositories <名称>` 列出直接、间接、运行时和安装消费者，补齐遗漏关系。
-3. 按依赖顺序修复消费者。跨仓 Cargo 依赖使用规范 Git URL，不写 branch/tag/rev；同仓 path 保留。发布用 version 与当前源码兼容。
+3. 按依赖顺序修复消费者。内部跨仓 Cargo 依赖使用规范 Git URL，不写 version/branch/tag/rev，包括可发布 crate 和构建/开发依赖；同仓 workspace/path 与外部依赖保留。版本依赖只在对外发布的独立 staging 中按已提交锁文件生成，不回写开发声明。
 4. 更新并提交各消费者的 Cargo.lock 和嵌套 gitlink。先验证、推送子仓，再执行聚合 `sync`、`check`、`resolve --all`。
 5. 按实际变化验证 GUI、设备、服务、插件 ABI 或安装包。及时提交推送并读回远端，记录真实结果和未覆盖范围。
 

@@ -21,7 +21,7 @@ python3 scripts/project_z.py resolve --all
 | 命令 | 作用 |
 | --- | --- |
 | `sync` | 查询 GitHub 默认分支，更新干净且处于 detached 状态的子仓检出，记录确切提交并生成索引 |
-| `check` | 核对 Git 来源、版本约束、锁文件、嵌套 gitlink、远端新鲜性和生成文件 |
+| `check` | 核对内部 Git 声明、锁文件、嵌套 gitlink、远端新鲜性和生成文件 |
 | `resolve --all` | 用 Cargo `--locked` 解析全部 Rust 工作区，逐包核对 Git URL、提交与版本 |
 | `impact --repositories <名称>` | 列出直接、间接和明确登记的运行时、安装消费者 |
 | `run --affected <名称> -- <Cargo 参数>` | 在记录的源码上运行选定的 Rust 消费者验证 |
@@ -37,7 +37,7 @@ python3 scripts/project_z.py resolve --all
 zconv = { git = "https://github.com/LIghtJUNction/zconv.git" }
 ```
 
-需要发布的 crate 在声明中保留与上游 Cargo.toml 实际版本相符的 `version` 元数据；它校验 Git 源码版本，发布时成为外部使用的注册表依赖。同仓库内的 workspace/path 依赖继续保留。
+跨仓依赖的开发声明不写 `version`；可发布 crate、构建/开发依赖和 workspace 继承也遵循此规则。包自身版本及 Cargo.lock 中的版本继续保留，同仓 workspace/path 和外部依赖保持原有规则。对外发布时，在独立 staging 中按已提交锁文件生成精确版本依赖，见[发布投影](docs/release-projection.md)。
 
 Cargo.lock 保存本轮解析的具体 Git 提交。维护者通过 `cargo update -p <包名>` 更新内部依赖，验证后提交锁文件；日常构建使用 `--locked`。这样既能在每次同步时使用最新源码，也能复现某次验证。版本号相同但 Git 提交不同，仍会被视为不同源码。
 

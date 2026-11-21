@@ -435,15 +435,15 @@ def validate(data, rules, root=ROOT):
                 if git_source_identity(dep["source"]) in identities:
                     errors.append(f"{name} -> {dep['name']}: package from a registered repository is missing from the catalog")
                 continue
-            if dep["explicit_version"]:
-                try:
-                    compatible = satisfies(target["version"], dep["requirement"])
-                except ValueError as error:
-                    errors.append(f"{name} -> {dep['name']}: {error}")
-                    continue
-                if not compatible:
-                    errors.append(f"{name} requires {dep['name']} {dep['requirement']}, snapshot has {target['version']}")
             if target["repository"] == package["repository"]:
+                if dep["explicit_version"]:
+                    try:
+                        compatible = satisfies(target["version"], dep["requirement"])
+                    except ValueError as error:
+                        errors.append(f"{name} -> {dep['name']}: {error}")
+                        continue
+                    if not compatible:
+                        errors.append(f"{name} requires {dep['name']} {dep['requirement']}, snapshot has {target['version']}")
                 expected_path = (root / target["manifest"]).parent.resolve()
                 if dep["source"] or not dep["path"] or (root / dep["path"]).resolve() != expected_path:
                     errors.append(f"{name} -> {dep['name']}: same-repository dependency must use its workspace/path source")
@@ -451,8 +451,8 @@ def validate(data, rules, root=ROOT):
                 expected_source = "git+" + repos[target["repository"]]["url"]
                 if dep["source"] != expected_source or dep["path"]:
                     errors.append(f"{name} -> {dep['name']}: use {expected_source} at its default branch, without path, branch, tag or rev")
-                if package["publish"] and dep["kind"] != "dev" and not dep["explicit_version"]:
-                    errors.append(f"{name} -> {dep['name']}: keep version metadata beside Git for a publishable normal/build dependency")
+                if dep["explicit_version"]:
+                    errors.append(f"{name} -> {dep['name']}: omit version from internal Git development dependencies; project registry versions only in external release staging")
     errors.extend(internal_override_errors(data, root))
     try:
         ordered(dependency_graph(data))
