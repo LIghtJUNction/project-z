@@ -14,6 +14,18 @@
       "requires": []
     },
     {
+      "name": "bilibilive",
+      "path": "bilibilive",
+      "url": "https://github.com/LIghtJUNction/bilibilive.git",
+      "branch": "main",
+      "commit": "6a6801492e0d70ca6cc8103f92fe76ac7f2da2df",
+      "role": "application",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
       "name": "lmm",
       "path": "lmm",
       "url": "https://github.com/TokenNotIncluded/lmm.git",
@@ -679,6 +691,330 @@
           ],
           "source": null,
           "path": "zplugin"
+        }
+      ]
+    },
+    {
+      "name": "bilibilive",
+      "version": "0.1.2",
+      "repository": "bilibilive",
+      "manifest": "bilibilive/Cargo.toml",
+      "workspace": "bilibilive",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {
+        "default": [
+          "gui"
+        ],
+        "gui": [
+          "zgpui/native",
+          "dep:qrcodegen",
+          "dep:image",
+          "dep:tray-icon"
+        ],
+        "linux-software": [
+          "gui",
+          "zgpui/linux-software"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "base64",
+          "alias": null,
+          "requirement": "^0.23.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "brotli",
+          "alias": null,
+          "requirement": "^9.1.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "flate2",
+          "alias": null,
+          "requirement": "^1.1.11",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "getrandom",
+          "alias": null,
+          "requirement": "^0.4.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "hmac",
+          "alias": null,
+          "requirement": "^0.13.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "image",
+          "alias": null,
+          "requirement": "^0.25.10",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": false,
+          "features": [
+            "jpeg",
+            "png",
+            "webp"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "keyring",
+          "alias": null,
+          "requirement": "^4.2.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "libc",
+          "alias": null,
+          "requirement": "^0.2.191",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "md5",
+          "alias": null,
+          "requirement": "^0.8.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "qrcodegen",
+          "alias": null,
+          "requirement": "^1.8.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "reqwest",
+          "alias": null,
+          "requirement": "^0.13.5",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "blocking",
+            "brotli",
+            "form",
+            "gzip",
+            "json",
+            "multipart",
+            "query",
+            "rustls",
+            "system-proxy"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde",
+          "alias": null,
+          "requirement": "^1.0.229",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "derive"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde_json",
+          "alias": null,
+          "requirement": "^1.0.154",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "sha2",
+          "alias": null,
+          "requirement": "^0.11.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tray-icon",
+          "alias": null,
+          "requirement": "^0.26.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": false,
+          "features": [
+            "ksni"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tungstenite",
+          "alias": null,
+          "requirement": "^0.30.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "rustls-tls-native-roots"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zclap",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "git+https://github.com/LIghtJUNction/zclap.git",
+          "path": null
+        },
+        {
+          "name": "zgpui",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "git+https://github.com/LIghtJUNction/zgpui.git",
+          "path": null
+        },
+        {
+          "name": "zmcpio",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "std"
+          ],
+          "source": "git+https://github.com/LIghtJUNction/zmcpio.git",
+          "path": null
+        },
+        {
+          "name": "zsys",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "dylib"
+          ],
+          "source": "git+https://github.com/LIghtJUNction/zsys.git",
+          "path": null
+        },
+        {
+          "name": "zuse-computer",
+          "alias": "zuse",
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "git+https://github.com/LIghtJUNction/zuse.git",
+          "path": null
         }
       ]
     },
