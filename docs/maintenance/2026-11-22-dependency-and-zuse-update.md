@@ -51,4 +51,4 @@ GTK 验证覆盖自有夹具中的编辑与取消，不代表真实 ChatGPT 桌�
 
 Project Z 首次初始化时先获取各仓库当前默认分支，避免被不可获取的历史子模块提交阻塞，再记录实际提交。正式 CI 测试命令移除 `--lib`，适配 3 个不包含库目标的 fuzz manifest；库单元测试和集成测试仍由 `--tests` 执行。
 
-Project Z 聚合 `check` 通过：45 个仓库、72 个包的 Git 来源、锁文件及当前默认分支一致。`resolve --all` 在 39 个仓库通过锁定依赖解析。聚合源码快照通过 `release.yml` 的正式发行流程发布，流水线会再次验证来源、解析依赖，并执行 Linux、Windows、macOS 的核心库测试；发行状态和产物见 [Project Z Releases](https://github.com/LIghtJUNction/project_z/releases)。
+Project Z 聚合 `check` 通过：45 个仓库、72 个包的 Git 来源、锁文件及当前默认分支一致。`resolve --all` 在 39 个仓库通过锁定依赖解析。聚合源码快照通过 `release.yml` 的正式发行流程发布，流水线会再次验证来源、解析依赖，并执行 Linux、Windows、macOS 的核心库测试；发行状态和产物见 [Project Z Releases](https://github.com/LIghtJUNction/project-z/releases)。
