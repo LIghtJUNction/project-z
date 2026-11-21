@@ -1,0 +1,193 @@
+# 历史资料索引
+
+本页集中保存已移除专题的固定 Git 原文，不再为每个旧文件保留占位页。当前安装、架构和测试从[文档目录](README.md)开始；仍有效的前端、资金和商店边界分别合入[前端规范](../apps/web/DESIGN.md)、[资金契约](payment-money-contract.md)及[商店模块](../services/extensions/internal/modules/store/README.md)。
+
+历史命令和接口只适用于对应提交，不是本分支的安装、迁移或生产恢复步骤。旧部署工具、数据库转换、writer gate 和财务恢复流程不得据此重新启用；历史付款、退款和提货义务仍须保存原始证据，未知结果不能当作失败重放。
+
+## 2026-11-08 文档整理
+
+当前动态状态只维护在[新架构进度](progress.md)。[新旧架构审计](history/architecture-parity-audit-2026-11-08.md)保留为固定证据快照；旧任务表不再继续填写。以下原文保存在不可变提交中，删除当前副本不删除其来源、失败证据或有效产品要求。
+
+| 历史内容 | 固定原文 |
+| --- | --- |
+| 旧任务提示词与滚动核查 | [architecture-completion-prompts.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/architecture-completion-prompts.md) · [main-wip-parity-audit.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/main-wip-parity-audit.md) |
+| 旧配置、部署前与集成状态 | [frontend-configuration-status.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/frontend-configuration-status.md) · [predeployment-status.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/predeployment-status.md) · [integration-verification.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/integration-verification.md) |
+| 旧请求运维交付与联合验收叙事 | [request-operations-completion.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/request-operations-completion.md) · [microkernel-business-acceptance.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/microkernel-business-acceptance.md) |
+| 旧单体市场审核与 Pancake | [market-ai-review.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/market-ai-review.md) · [waffo-pancake.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/waffo-pancake.md) · [waffo-pancake-portal.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/waffo-pancake-portal.md) |
+| 2026-10 插件兼容快照 | [dsh-compatibility-2026-10-10.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/dsh-compatibility-2026-10-10.md) · [plugin-compatibility-2026-10-06.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/plugin-compatibility-2026-10-06.md) |
+| 专题指南的旧交付记录 | [nonpayment-completion.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/nonpayment-completion.md) · [wallet-history-read-handoff.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/wallet-history-read-handoff.md) · [extore-shop-binding-followup.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/extore-shop-binding-followup.md) |
+| 历史质量执行与失败记录 | [quality.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/0eae39f10ce8a1d80744ad44e88807e01facfda5/docs/quality.md) |
+
+供应商计费、钱包历史和 Extore 的稳定说明分别迁入 [model-billing.md](model-billing.md)、[wallet-history.md](wallet-history.md)、[extore.md](extore.md)。完整要求由[配方产品要求](https://github.com/TokenNotIncluded/lmm-api/blob/main/recipes/lmm-api/PRODUCT_REQUIREMENTS.md)维护，历史实现不能自动变成新架构已完成。
+
+
+## 审计与证据边界
+
+以下审计包含部分完成、受阻和未通过验收的项目。原始记录只证明对应基线和检查范围，不证明当前账本、真实业务兼容或生产部署通过。
+- [bi-06-refunds-20261010](https://github.com/TokenNotIncluded/lmm-api/blob/79b539abacace5297952274620ec938a8e9da34f/docs/audits/bi-06-refunds-20261010.md)
+- [bi-08-store-delivery-20261010](https://github.com/TokenNotIncluded/lmm-api/blob/7dc467bc50d8e78964e0cb7a8b892a171b5b4211/docs/audits/bi-08-store-delivery-20261010.md)
+- [rt-17-request-ambiguity](https://github.com/TokenNotIncluded/lmm-api/blob/b25293a1157782a77ad2244b4a3f4e563a0e2ed2/docs/audits/rt-17-request-ambiguity.md)
+- [rt19-async-task-state](https://github.com/TokenNotIncluded/lmm-api/blob/67559bc41ae15e7204396140e52fac5436d59fe4/docs/audits/rt19-async-task-state.md)
+- [BI-01 旧单体计价验证](https://github.com/TokenNotIncluded/lmm-api/blob/b8f775b7a2753c4e374101edf5dfe6c0b066332e/scripts/business-audit/BI-01-tier-pricing.md)
+- [RT-15 旧浏览器来源边界审计](https://github.com/TokenNotIncluded/lmm-api/blob/b8f775b7a2753c4e374101edf5dfe6c0b066332e/scripts/security-audit/rt15-browser-origin.md)
+- [RT-20 旧准入组件资源探针与证据](https://github.com/TokenNotIncluded/lmm-api/blob/b8f775b7a2753c4e374101edf5dfe6c0b066332e/scripts/resource-audit/rt20.md)
+
+上述脚本审计原文保留对应的源码基线和未完成项；已移除的旧单体探针不是当前测试入口。仍适用的前端、安全及金融回归输入继续保留在仓库中。
+
+## 旧部署和数据维护
+
+- [backend-cli-deployment-contract.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/backend-cli-deployment-contract.md)
+- [controller-only-backup-format.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/controller-only-backup-format.md)
+- [credit-balance-rebase.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/credit-balance-rebase.md)
+- [credit-financial-coordinator.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/credit-financial-coordinator.md)
+- [credit-financial-plan-builder.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/credit-financial-plan-builder.md)
+- [credit-financial-transition.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/credit-financial-transition.md)
+- [credit-original-table-fingerprints.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/credit-original-table-fingerprints.md)
+- [deployment-workflow.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/deployment-workflow.md)
+- [fixed-credit-price-recovery.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/fixed-credit-price-recovery.md)
+- [manual-systemd-deployment.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/manual-systemd-deployment.md)
+- [native-decisions.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/native-decisions.md)
+- [native-merchant-writer-guard.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/native-merchant-writer-guard.md)
+- [postgresql-cutover.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/postgresql-cutover.md)
+- [postgresql-migration.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/postgresql-migration.md)
+- [postgresql-scanner-leadership.md](https://github.com/TokenNotIncluded/lmm-api/blob/de1c3c15bc5e19632fe8b2375a0760b6a38c26f6/docs/postgresql-scanner-leadership.md)
+- [production-release-transaction.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/production-release-transaction.md)
+- [seamless-upgrades.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/seamless-upgrades.md)
+- [server-ops.md](https://github.com/TokenNotIncluded/lmm-api/blob/c9475c96b5a6d9601444cb9f2ccfbbfdc3b1f663/docs/server-ops.md)
+- [setup-startup.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/setup-startup.md)
+- [shared-postgres-maintenance.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/shared-postgres-maintenance.md)
+- [standalone-deployment-tool.md](https://github.com/TokenNotIncluded/lmm-api/blob/35c5952ab24ea6b9a2ae9a935a75f51485549c32/docs/standalone-deployment-tool.md)
+- [three-node-deployment.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/three-node-deployment.md)
+- [valkey-lmm-api.md](https://github.com/TokenNotIncluded/lmm-api/blob/72667564c0431754d4856dc2e0db55f360bd2745/docs/valkey-lmm-api.md)
+
+## 旧接口和设计
+
+- [advanced-custom-balance.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/advanced-custom-balance.md)
+- [ali-image-polling.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/ali-image-polling.md)
+- [assistant-admin-control.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/assistant-admin-control.md)
+- [assistant-coupon-regression.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/assistant-coupon-regression.md)
+- [assistant-efficiency-audit.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/assistant-efficiency-audit.md)
+- [assistant-reward-autonomy.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/assistant-reward-autonomy.md)
+- [async-task-performance-metrics.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/async-task-performance-metrics.md)
+- [authentication.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/authentication.md)
+- [channel-marketplace.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/channel-marketplace.md)
+- [other_setting.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/channel/other_setting.md)
+- [editor-providers.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/editor-providers.md)
+- [github-oauth-migration.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/github-oauth-migration.md)
+- [go-memory-management.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/go-memory-management.md)
+- [ionet-client.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/ionet-client.md)
+- [model-price-locks.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/model-price-locks.md)
+- [model-pricing-currency.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/model-pricing-currency.md)
+- [openai-native-models.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/openai-native-models.md)
+- [api.json](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/openapi/api.json)
+- [relay.json](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/openapi/relay.json)
+- [pprof-diagnostics.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/pprof-diagnostics.md)
+- [profile-usage-aggregation.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/profile-usage-aggregation.md)
+- [read-only-query-api.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/read-only-query-api.md)
+- [relay-response-model.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/relay-response-model.md)
+- [responses-websocket-channels.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/responses-websocket-channels.md)
+- [service-tier-pricing.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/service-tier-pricing.md)
+- [stream-commit-boundaries.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/stream-commit-boundaries.md)
+- [task-plugin-host-decision.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/task-plugin-host-decision.md)
+- [token-log-pagination.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/token-log-pagination.md)
+
+## 前端专题
+
+- [assistant-human-support.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/assistant-human-support.md)
+- [assistant-openui.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/assistant-openui.md)
+- [assistant-tool-policy.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/assistant-tool-policy.md)
+- [assistant-ui-preferences.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/assistant-ui-preferences.md)
+- [frontend-design.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/frontend-design.md)
+- [signal-path.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/games/signal-path.md)
+- [home-directory-navigation.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/home-directory-navigation.md)
+- [mobile-scroll-chrome.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/mobile-scroll-chrome.md)
+- [shaders.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/shaders.md)
+- [tool-market-connections.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/tool-market-connections.md)
+- [tool-market-guide.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/tool-market-guide.md)
+- [tool-market-metamcp.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/tool-market-metamcp.md)
+- [tool-market-metering.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/tool-market-metering.md)
+- [tool-market-paid-test-mcp.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/tool-market-paid-test-mcp.md)
+- [tool-market-provider-presets.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/tool-market-provider-presets.md)
+- [waiting-experience.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/waiting-experience.md)
+
+## 资金和权限专题
+
+- [browser-credit-unit-handshake.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/browser-credit-unit-handshake.md)
+- [moderation-security-review.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/moderation-security-review.md)
+- [price-lock-snapshot-consistency.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/price-lock-snapshot-consistency.md)
+- [referral-rewards.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/referral-rewards.md)
+- [waffo-plan-products.sql](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/sql/waffo-plan-products.sql)
+- [team-accounts.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/team-accounts.md)
+- [user-risk.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/user-risk.md)
+- [wallet-mcp.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/wallet-mcp.md)
+- [wallet-red-packet-recovery.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/wallet-red-packet-recovery.md)
+- [wallet-transfers.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/wallet-transfers.md)
+
+## 旧商店专题
+
+- [store-extore-import.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/development/store-extore-import.md)
+- [merchant-store-analytics.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-analytics.md)
+- [merchant-store-capability-one-ci-probe.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-capability-one-ci-probe.md)
+- [merchant-store-delivery-templates.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-delivery-templates.md)
+- [merchant-store-fixed-content.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-fixed-content.md)
+- [merchant-store-guest-email.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-guest-email.md)
+- [merchant-store-lifecycle-writer-floor.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-lifecycle-writer-floor.md)
+- [merchant-store-minimum-price.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-minimum-price.md)
+- [merchant-store-payment-categories.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-payment-categories.md)
+- [merchant-store-product-test-mode.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-product-test-mode.md)
+- [merchant-store-refund-dispatch.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-refund-dispatch.md)
+- [merchant-store-refund-providers.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-refund-providers.md)
+- [merchant-store-refund-sync.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-refund-sync.md)
+- [merchant-store-refunds.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-refunds.md)
+- [merchant-store-sales-controls.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-sales-controls.md)
+- [merchant-store-startup-baseline.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-startup-baseline.md)
+- [merchant-store-support.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-support.md)
+- [merchant-store-variants-contract.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-variants-contract.md)
+- [merchant-store-writer-compatibility.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store-writer-compatibility.md)
+- [merchant-store.md](https://github.com/TokenNotIncluded/lmm-api/blob/c33503f212cbcfab0695d554f57b5153cd4f3bfd/docs/merchant-store.md)
+
+## 保留的历史记录
+
+- [Pi 远程控制 v1](pi-remote-control-api.md)：2026-11-17 归档，保留退役协议与当时的 WIP 限制；LMM 和 Pi 插件已移除该功能，远程控制由独立 ssmcp 项目提供。
+- [旧合并式 Changelog](history/changelog.md)：保留原文，不定义当前版本和发布状态。
+- [部署研究](deployment-research.md)：已移除实验的结论、原始来源和未接入项。
+- [恢复事故](incidents/2026-09-20-recovery-retirement.md)、[助手反馈审计](assistant-feedback-audit.md)和[注册安全边界](security/assistant-registration-guard.md)：保留事故、安全结论与原始限制。
+
+其余尚保留的供应商、支付和兼容性专题需结合当前源码阅读；前端存在某个界面不代表新后端已接入。许可证、来源归属和法律协议继续保留。
+
+## 合并专题（2026-11-12）
+
+下列小专题已归入现有主文档。左列固定保留合并前原文及其历史证据，右列是当前维护位置。
+
+| 合并前原文 | 当前入口 |
+| --- | --- |
+| [product-terminology.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/product-terminology.md) | [product.md#terminology](product.md#terminology) |
+| [brand-design.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/brand-design.md) | [product.md#brand](product.md#brand) |
+| [translation-glossary.fr.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/translation-glossary.fr.md) | [translation-glossary.md#french](translation-glossary.md#french) |
+| [translation-glossary.ru.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/translation-glossary.ru.md) | [translation-glossary.md#russian](translation-glossary.md#russian) |
+| [legal/privacy-policy.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/legal/privacy-policy.md) | [legal/README.md#要填写什么](legal/README.md#要填写什么) |
+| [legal/refund-policy.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/legal/refund-policy.md) | [legal/README.md#要填写什么](legal/README.md#要填写什么) |
+| [legal/terms-of-service.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/legal/terms-of-service.md) | [legal/README.md#要填写什么](legal/README.md#要填写什么) |
+| [legal/user-agreement.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/legal/user-agreement.md) | [legal/README.md#要填写什么](legal/README.md#要填写什么) |
+| [development-branches.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/development-branches.md) | [development.md#仓库与主线](development.md#仓库与主线) |
+| [contributing.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/contributing.md) | [agent-workflows.md#贡献与交付](agent-workflows.md#贡献与交付) |
+| [fork.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/fork.md) | [core-migration.md#来源与许可](core-migration.md#来源与许可) |
+| [untangle-codebase.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/untangle-codebase.md) | [archive.md#合并专题2026-11-12](archive.md#合并专题2026-11-12) |
+| [core-standalone.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/core-standalone.md) | [core-migration.md#独立启动与资源](core-migration.md#独立启动与资源) |
+| [ci-workflow-layout.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/ci-workflow-layout.md) | [development.md#github-actions](development.md#github-actions) |
+| [codewhale-provider.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/codewhale-provider.md) | [text-request-and-native-models.md#codewhale](text-request-and-native-models.md#codewhale) |
+| [opencode-provider.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/opencode-provider.md) | [text-request-and-native-models.md#opencode](text-request-and-native-models.md#opencode) |
+| [ollama-chat-transport.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/ollama-chat-transport.md) | [text-request-and-native-models.md#ollama-历史传输](text-request-and-native-models.md#ollama-历史传输) |
+| [jev-native-relay.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/jev-native-relay.md) | [text-request-and-native-models.md#system-one](text-request-and-native-models.md#system-one) |
+| [responses-tool-compatibility.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/responses-tool-compatibility.md) | [text-request-and-native-models.md#responses-历史工具转换](text-request-and-native-models.md#responses-历史工具转换) |
+| [core-input-count.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/core-input-count.md) | [model-billing.md#输入预留与精确计数](model-billing.md#输入预留与精确计数) |
+| [responses-missing-usage.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/responses-missing-usage.md) | [model-billing.md#responses-历史缺失用量](model-billing.md#responses-历史缺失用量) |
+| [claude-refusal-billing.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/claude-refusal-billing.md) | [model-billing.md#claude-历史无输出拒绝](model-billing.md#claude-历史无输出拒绝) |
+| [core-oauth2.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/core-oauth2.md) | [core-identity.md#客户端-oauth2-授权](core-identity.md#客户端-oauth2-授权) |
+| [oauth-grant-management.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/oauth-grant-management.md) | [core-identity.md#浏览器授权管理](core-identity.md#浏览器授权管理) |
+| [oidc-settings-save.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/oidc-settings-save.md) | [core-identity.md#oidc-设置保存](core-identity.md#oidc-设置保存) |
+| [account-appeals.md](https://github.com/TokenNotIncluded/lmm-api-source/blob/8e92080aa3e9cb180103e73cb42e78b87621a31e/docs/account-appeals.md) | [core-identity.md#账号停用与申诉](core-identity.md#账号停用与申诉) |
+
+## 过期状态快照（2026-11-13）
+
+- [Core cutover preflight 的 49 组件 WIP 合同与 2026-10-24 ArchDmit 记录](https://github.com/TokenNotIncluded/lmm-api-source/blob/5696aafe8bba500265e3fd1f3617dfffc25bbe44/docs/core-cutover-preflight.md#local-wip-fresh-install-contract-2026-11-04)：只证明对应日期的组件合同和主机观察，不描述当前 66 组件演练，也不构成切流批准。当前状态与阻塞只看[新架构进度](progress.md)，稳定预检规则见[当前预检文档](core-cutover-preflight.md)。
