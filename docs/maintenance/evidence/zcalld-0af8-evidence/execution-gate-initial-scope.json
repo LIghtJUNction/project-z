@@ -1,0 +1,13 @@
+{
+  "observed_at": "2026-11-21T00:51:06.093903+00:00",
+  "argv": [
+    "systemctl",
+    "--user",
+    "show",
+    "zcalld-listener-0af8-20261121.scope",
+    "--property=ActiveState,SubState,ControlGroup,InvocationID,MemoryPeak,Result"
+  ],
+  "exit_code": 0,
+  "stdout": "ActiveState=active\nSubState=running\nInvocationID=1018aea0b906485888a3871b87cd652a\nResult=success\nControlGroup=/user.slice/user-1000.slice/user@1000.service/app.slice/zcalld-listener-0af8-20261121.scope\nMemoryPeak=426926080\n",
+  "stderr": ""
+}

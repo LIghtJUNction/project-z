@@ -1,0 +1,40 @@
+{
+  "schema": "project-z.zcalld-0af8-postflight.v1",
+  "observed_at": "2026-11-21T00:52:44.278392+00:00",
+  "gate_job_id": "26c4545eae1eab8d27485f4a48077d3c-882",
+  "gate_exit_code": 0,
+  "both_eof": true,
+  "scope": {
+    "argv": [
+      "systemctl",
+      "--user",
+      "show",
+      "zcalld-listener-0af8-20261121.scope",
+      "--property=ActiveState,SubState,ControlGroup,InvocationID,MemoryPeak,Result"
+    ],
+    "exit_code": 0,
+    "stdout": "ActiveState=inactive\nSubState=dead\nInvocationID=\nResult=success\nControlGroup=\nMemoryPeak=[not set]\n",
+    "stderr": ""
+  },
+  "owned_processes": [
+    {
+      "pid": 3732614,
+      "exists": false
+    },
+    {
+      "pid": 3732615,
+      "exists": false
+    }
+  ],
+  "outer_lock": {
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "device": 34,
+    "inode": 63537699,
+    "rows": [
+      "312: FLOCK  ADVISORY  WRITE 3756319 00:20:63537699 0 EOF"
+    ]
+  },
+  "owned_scope_and_lock_released": true,
+  "global_outer_lock_observed_free": false,
+  "no_further_core_heavy_task_planned": true
+}

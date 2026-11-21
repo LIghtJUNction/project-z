@@ -1,0 +1,242 @@
+{
+  "schema": "project-z.ssmcp-image-summary-propagation-review.v1",
+  "reviewer": "builtin pr_org_repos",
+  "status": "same_image_summary_guard_mechanism_present_in_fixed_B",
+  "scope": "GitHub immutable commit/tree/blob reads and static reasoning only. No product build/test/runtime, private foreign worktree read/write, source/ref/PR/main-report write or extra model. No claim of new runtime reproduction or acceptance.",
+  "source_identities": {
+    "B": {
+      "commit": "be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1",
+      "tree": "5e8ea273c8f8bd8b0e7b1f87ccc0d19fd594601b",
+      "parents": [
+        "c8f5d1ecc25721937f6ebc585247c67cfa75a932"
+      ]
+    },
+    "f33": {
+      "commit": "f33ed8f14fc14aff05a2e4098743eb07e8527c06",
+      "tree": "f9bc35bf497c80d9d93d668f5d6e339c3d19c802",
+      "parents": [
+        "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+        "01e4a1659ae7184e0313b0c025107355f38ef0d7"
+      ]
+    },
+    "trees_complete": true,
+    "tree_counts": {
+      "B": 1315,
+      "f33": 1304
+    },
+    "comparisons": [
+      {
+        "path": "src/client/terminal/events.rs",
+        "B_blob": "c6c855d1a3ee4aced8d7c960481cc0126441ad9d",
+        "f33_blob": "c6c855d1a3ee4aced8d7c960481cc0126441ad9d",
+        "B_bytes": 183091,
+        "f33_bytes": 183091,
+        "identical_blob": true,
+        "source_read": true
+      },
+      {
+        "path": "src/client/terminal/events/correlation.rs",
+        "B_blob": "e1b86e154954b988bd7e32bb2146c36ae5cb6132",
+        "f33_blob": "e1b86e154954b988bd7e32bb2146c36ae5cb6132",
+        "B_bytes": 18701,
+        "f33_bytes": 18701,
+        "identical_blob": true,
+        "source_read": true
+      },
+      {
+        "path": "src/client/terminal/events/tool_summaries.rs",
+        "B_blob": "25c8be60b7feda6a5f32050c023c2534b627c9b8",
+        "f33_blob": "25c8be60b7feda6a5f32050c023c2534b627c9b8",
+        "B_bytes": 16322,
+        "f33_bytes": 16322,
+        "identical_blob": true,
+        "source_read": true
+      },
+      {
+        "path": "src/client/terminal/events/source_tests.rs",
+        "B_blob": "b0c52537da24276d07c74b172efdc0fccce52f41",
+        "f33_blob": "b0c52537da24276d07c74b172efdc0fccce52f41",
+        "B_bytes": 33584,
+        "f33_bytes": 33584,
+        "identical_blob": true,
+        "source_read": true
+      },
+      {
+        "path": "src/client/terminal/events/tool_summaries/tests.rs",
+        "B_blob": "562a54ba366e90e61365167c234ec769b2f26aca",
+        "f33_blob": "562a54ba366e90e61365167c234ec769b2f26aca",
+        "B_bytes": 39977,
+        "f33_bytes": 39977,
+        "identical_blob": true,
+        "source_read": false
+      },
+      {
+        "path": "src/client/terminal/images.rs",
+        "B_blob": "16cef0868d95790f5b59de579dc72c181e049eae",
+        "f33_blob": "16cef0868d95790f5b59de579dc72c181e049eae",
+        "B_bytes": 6671,
+        "f33_bytes": 6671,
+        "identical_blob": true,
+        "source_read": false
+      },
+      {
+        "path": "src/runtime/call_scope.rs",
+        "B_blob": "9b0bcc488585eb0312dc25e070c6d5d7e08b8d81",
+        "f33_blob": "9b0bcc488585eb0312dc25e070c6d5d7e08b8d81",
+        "B_bytes": 13715,
+        "f33_bytes": 13715,
+        "identical_blob": true,
+        "source_read": true
+      },
+      {
+        "path": "src/client/attachments.rs",
+        "B_blob": "357978cd0e59b45c1636a1c1aaaec9b252698443",
+        "f33_blob": "357978cd0e59b45c1636a1c1aaaec9b252698443",
+        "B_bytes": 40418,
+        "f33_bytes": 40418,
+        "identical_blob": true,
+        "source_read": false
+      },
+      {
+        "path": "src/client/terminal.rs",
+        "B_blob": "6bae50314018d672fb7464aabcc487d67b9c0756",
+        "f33_blob": "779946462185665af8f5aa08dda89b326b79371a",
+        "B_bytes": 170137,
+        "f33_bytes": 169339,
+        "identical_blob": false,
+        "source_read": true
+      }
+    ]
+  },
+  "terminal_callers": [
+    {
+      "function": "terminal::image",
+      "B_lines": [
+        536,
+        564
+      ],
+      "f33_lines": [
+        536,
+        564
+      ],
+      "bytes_identical": true,
+      "bytes": 821,
+      "sha256": "0a3c364c7302fa1aa4e11a55e5e49bc63b7324730a97d597977e9cefd30dd004"
+    },
+    {
+      "function": "State::image",
+      "B_lines": [
+        1718,
+        1731
+      ],
+      "f33_lines": [
+        1701,
+        1714
+      ],
+      "bytes_identical": true,
+      "bytes": 427,
+      "sha256": "0468ad52f5646afd17f3614b71f9924cab5b46d263d3b2d161b6d17163fdee67"
+    }
+  ],
+  "mechanism": {
+    "condition": "Decoded native image carries Some(call); summary_calls has its connection/request id mapped to a retained nonhistorical event with the same history and call scope. This is conditional, not failure of all images.",
+    "path": [
+      "terminal::image decodes native image, passes original DisplaySource to State::image.",
+      "State::image builds nonempty [IMAGE] placeholder text and calls EventView::ingest_image.",
+      "ingest_image builds default Log/false-read_bookkeeping metadata; Meta::set_source preserves source.call.",
+      "ingest_inner_with_source asks summary_event_for before insertion; matching metadata selects the existing summary row.",
+      "The matched branch appends image text without incrementing next_id.",
+      "The back-event new-id guard is false, so attach_image is skipped."
+    ],
+    "image_prefix_does_not_prevent_correlation": "[IMAGE] only participates in a later local conversation/expansion boolean; it does not set meta.kind=Conversation before summary_event_for.",
+    "static_consequence": "Under the stated registered-summary condition B contains the same preview omission mechanism reported by the other release owner. No new runtime occurrence on B was established.",
+    "not_a_payload_loss_claim": "This concerns display preview ownership/attachment, not proof of lost original tool image bytes."
+  },
+  "source_evidence": [
+    {
+      "path": "src/client/terminal/events.rs",
+      "function_lines": [
+        1545,
+        1566
+      ],
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1/src/client/terminal/events.rs#L1545-L1566",
+      "claim": "ingest_image retains source metadata, snapshots next_id, calls generic correlation, and attaches only to the saved new event id.",
+      "excerpt": "    pub(super) fn ingest_image(\n        &mut self,\n        bytes: &[u8],\n        preview: images::Preview,\n        source: Option<DisplaySource>,\n    ) {\n        self.read_boundary.interrupt();\n        let mut meta = Meta {\n            history: self.local_display_history(),\n            ..Meta::default()\n        };\n        if let Some(source) = source {\n            meta.set_source(source);\n        }\n        // The placeholder and image are one update. A skipped insertion must\n        // never attach the preview to a previously selected or retained card.\n        let id = self.next_id;\n        self.ingest_inner(bytes, meta);\n        if self.events.back().is_some_and(|event| event.id == id) {\n            self.attach_image(preview);\n        }\n    }"
+    },
+    {
+      "path": "src/client/terminal/events/correlation.rs",
+      "function_lines": [
+        314,
+        327
+      ],
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1/src/client/terminal/events/correlation.rs#L314-L327",
+      "claim": "set_source preserves source.call; same_source compares history and call.",
+      "excerpt": "    pub(super) fn set_source(&mut self, source: crate::runtime::call_scope::DisplaySource) {\n        self.history = source.history;\n        self.scope = source.call;\n    }\n\n    pub(super) fn same_source(&self, other: &Self) -> bool {\n        if self.history != other.history {\n            return false;\n        }\n        match (&self.scope, &other.scope) {\n            (Some(left), Some(right)) => left.same_call(right),\n            (None, None) => true,\n            _ => false,\n        }"
+    },
+    {
+      "path": "src/client/terminal/events/tool_summaries.rs",
+      "function_lines": [
+        306,
+        321
+      ],
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1/src/client/terminal/events/tool_summaries.rs#L306-L321",
+      "claim": "A registered matching call may resolve to a retained nonhistorical summary row.",
+      "excerpt": "    pub(super) fn summary_event_for(&self, meta: &Meta) -> Option<usize> {\n        if meta.kind == Kind::Conversation || meta.read_bookkeeping {\n            return None;\n        }\n        let call = meta.scope.as_ref()?;\n        let id = self\n            .summary_calls\n            .iter()\n            .find(|item| {\n                item.connection == call.connection() && item.request_id == call.request_id()\n            })?\n            .event_id;\n        self.events\n            .iter()\n            .position(|event| event.id == id && event.meta.same_source(meta) && !event.historical)\n    }"
+    },
+    {
+      "path": "src/client/terminal/events.rs",
+      "function_lines": [
+        1401,
+        1410
+      ],
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1/src/client/terminal/events.rs#L1401-L1410",
+      "claim": "Matched-row branch appends/merges without allocating next_id; insertion branch increments it.",
+      "excerpt": "            event.append(text, truncated);\n            if let Some(source) = command_source {\n                event.command_source = Some(source);\n            }\n            event.meta.merge(meta);\n            event.expanded |= expanded;\n            event.cache = None;\n        } else {\n            let id = self.next_id;\n            self.next_id = self.next_id.wrapping_add(1);"
+    },
+    {
+      "path": "src/client/terminal/events/source_tests.rs",
+      "function_lines": [
+        470,
+        489
+      ],
+      "url": "https://github.com/LIghtJUNction/ssmcp/blob/be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1/src/client/terminal/events/source_tests.rs#L470-L489",
+      "claim": "Existing image owner/empty-placeholder test sets call:None and does not exercise registered-summary coalescing.",
+      "excerpt": "    let block = json!({\"type\":\"image\",\"mimeType\":\"image/png\",\n        \"data\":STANDARD.encode(crate::client::input::paste::fixture_png())});\n    let preview = images::decode(&block, false).unwrap();\n    let source = DisplaySource {\n        history: DisplayHistory::Local(a.clone()),\n        call: None,\n    };\n    state\n        .events\n        .ingest_image(b\"\", preview.clone(), Some(source.clone()));\n    assert_eq!(state.events.events.len(), 1, \"no placeholder was inserted\");\n    assert!(state.events.events[0].image.is_none());\n    state.image(preview, \"image/png\", Some(source));\n\n    assert_eq!(state.events.visible_ids(), vec![b_card]);\n    assert!(state.events.events[0].image.is_none());\n    state.events.set_history_owner(Some(a));\n    let a_card = state.events.events.back().unwrap();\n    assert_eq!(state.events.visible_ids(), vec![a_card.id]);\n    assert!(a_card.image.is_some());"
+    }
+  ],
+  "minimal_propagation": {
+    "runtime_path": "src/client/terminal/events.rs",
+    "required_test_intent": "Carry original owner regression for Some(call) plus a registered summary row; assert actual preview belongs to the correct image event/history, while retaining existing empty-placeholder/call:None owner-isolation checks.",
+    "likely_existing_test_locations": [
+      "src/client/terminal/events/source_tests.rs",
+      "src/client/terminal/events/tool_summaries/tests.rs"
+    ],
+    "test_path_note": "Actual changed test files must come from the published fix. These are relevant current homes, not a claim about an unpublished patch.",
+    "supporting_paths_not_currently_requiring_changes": [
+      "src/client/terminal/events/correlation.rs",
+      "src/client/terminal/events/tool_summaries.rs",
+      "src/client/terminal/images.rs",
+      "src/runtime/call_scope.rs",
+      "src/client/attachments.rs"
+    ],
+    "preserve_guard": "Do not delete the new-id guard or attach blindly to events.back(). Skipped insertion could otherwise attach to an unrelated selected/retained card. Correct image target identity must preserve history/call provenance and normal tool-summary correlation.",
+    "terminal_rs_boundary": "Whole terminal.rs differs between B andf33, but the two image callers are byte-identical. Do not replace the whole file from the other release branch; preserve independent B input/agent/paste changes.",
+    "after_owner_publication": "Wait for original owner's fixed commit and exact diff/tests. PR159's source owner can integrate only necessary runtime/regression paths into a freshly fixed candidate, preserve unrelated main/B changes, record new head/tree, and obtain source-bound regression evidence. No propagation performed here.",
+    "dependency_expansion_required_by_this_review": false
+  },
+  "other_release_checkpoint": {
+    "source": "Root-provided owner observation00:51:06UTC, not independently read by this reviewer",
+    "head": "35de95d2924184daf994710b6f54a5c2a89b1218",
+    "tree": "8731180414b41beb63220acf43a22957ad457127",
+    "owner_status": "remaining_media_tests repair in ownrelease0.10.24 worktree; existing owner remains sole writer",
+    "fixed_patch_publication_seen": false
+  },
+  "verification_boundary": {
+    "new_product_tests": 0,
+    "new_builds": 0,
+    "new_runtime_reproductions": 0,
+    "existing_passes_promoted_to_B": false,
+    "publication_or_merge_action": false
+  },
+  "reviewed_at_utc": "2026-11-21T00:55:06.631468+00:00"
+}

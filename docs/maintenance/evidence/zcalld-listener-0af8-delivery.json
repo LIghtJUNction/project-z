@@ -1,0 +1,106 @@
+{
+  "schema": "project-z.zcalld-listener-0af8-delivery.v1",
+  "status": "local_gate_complete_final_p1_pending",
+  "source": {
+    "head": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05"
+  },
+  "source_root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source",
+  "raw_handoff": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/handoff.json",
+    "bytes": 17117,
+    "sha256": "5dd323b66fbbb44c0b0944c46f0bba93a8be3e3fe05ce70ddd0fe8025ecf0c07"
+  },
+  "markdown": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/handoff.md",
+    "bytes": 2457,
+    "sha256": "cfc765fba6d962f9615018de7f64349ff7dcd05c1f55b55bd899df39cc492ffa"
+  },
+  "archive": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/text-evidence-0af8.zip",
+    "bytes": 163136,
+    "sha256": "0607343a03c0316c05d5813a4dbdbf2d873ba83a5329c459681d3d8cd5cc0172"
+  },
+  "archive_manifest": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/text-evidence-manifest.json",
+    "bytes": 21243,
+    "sha256": "b9fb7bf92e0e0e5ff6eecc7a27cbac80ec91c9069c3289b044ed66bfa2336ea8"
+  },
+  "payload_count": 69,
+  "zip_member_count": 70,
+  "binary": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/zcalld",
+    "bytes": 2964896,
+    "sha256": "dbe2db6d7130a7751616162fe503468c5f77df0ee7b9c517cd690c2d0e95c63b"
+  },
+  "gate": {
+    "job": "26c4545eae1eab8d27485f4a48077d3c-882",
+    "exit_code": 0,
+    "duration_ms": 71635,
+    "both_eof": true,
+    "rust_passed": 182,
+    "rust_ignored": 0,
+    "listener_subset": 7,
+    "actual_root_clippy_calls": 2,
+    "real_curl_passed": 8,
+    "curl_skipped": 0
+  },
+  "cleanup": {
+    "owned_scope_inactive_dead": true,
+    "owned_cgroup_empty": true,
+    "owned_supervisor_and_flock_exited": true,
+    "postflight_new_foreign_holder_observed": 3756319,
+    "foreign_holder_later_observation": "At 2026-11-21T00:55:51.311241+00:00 PID3756319 was absent; no signals or lock acquisition occurred. This does not certify current global lock availability.",
+    "no_further_core_heavy_task_planned": true
+  },
+  "drive": [
+    {
+      "kind": "zip",
+      "id": "1IORVjkB4CW7XcozZeSxYXHuuE8_qAb7c",
+      "url": "https://drive.google.com/file/d/1IORVjkB4CW7XcozZeSxYXHuuE8_qAb7c/view",
+      "parent_folder_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+      "uploaded": true,
+      "downloaded_bytes_match": true,
+      "bytes": 163136,
+      "sha256": "0607343a03c0316c05d5813a4dbdbf2d873ba83a5329c459681d3d8cd5cc0172"
+    },
+    {
+      "kind": "json",
+      "id": "19Zi3-SHpoieDaJPdlWqgt6c326VBho37",
+      "url": "https://drive.google.com/file/d/19Zi3-SHpoieDaJPdlWqgt6c326VBho37/view",
+      "parent_folder_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+      "uploaded": true,
+      "downloaded_bytes_match": true,
+      "bytes": 17117,
+      "sha256": "5dd323b66fbbb44c0b0944c46f0bba93a8be3e3fe05ce70ddd0fe8025ecf0c07"
+    },
+    {
+      "kind": "md",
+      "id": "1INhZWiYgHc72rjAQnwdONHHx3b3JRY_t",
+      "url": "https://drive.google.com/file/d/1INhZWiYgHc72rjAQnwdONHHx3b3JRY_t/view",
+      "parent_folder_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+      "uploaded": true,
+      "downloaded_bytes_match": true,
+      "bytes": 2457,
+      "sha256": "cfc765fba6d962f9615018de7f64349ff7dcd05c1f55b55bd899df39cc492ffa"
+    }
+  ],
+  "github": {
+    "url": "https://github.com/LIghtJUNction/zcalld/pull/1",
+    "head": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "base": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "mergeable": true,
+    "updated_at": "2026-11-21T01:01:57Z",
+    "body_matches_submitted": true
+  },
+  "cloud": {
+    "handoff": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-listener-0af8-handoff.json",
+    "markdown": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-listener-0af8-handoff.md",
+    "zip": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-text-evidence.zip",
+    "extracted": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence"
+  },
+  "pending": "Existing SSMCP acceptance owner adapts the original evidence to 0.4.4/220 leaves/182 entries and runs its own final P1; root controls PR1 merge."
+}

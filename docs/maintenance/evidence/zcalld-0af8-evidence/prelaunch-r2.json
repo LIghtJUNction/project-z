@@ -1,0 +1,94 @@
+{
+  "schema": "project-z.zcalld-0af8-prelaunch.v1",
+  "ready": true,
+  "observed_at": "2026-11-21T00:50:44.994748+00:00",
+  "lock_acquisition_attempted": false,
+  "source": {
+    "head": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+    "status": "",
+    "lock": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source/Cargo.lock",
+      "bytes": 3129,
+      "sha256": "23fd8fbbefe0232b60749d048d09f4d2a7d6783ea2e85deac160c172e5a4ffca",
+      "mode": "0o600"
+    }
+  },
+  "helpers": {
+    "validate_0af8_candidate.py": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validate_0af8_candidate.py",
+      "bytes": 14868,
+      "sha256": "4b40fbfd0eded716ec62630497fa5653cce8bbdc1285aafb71d1a940df52c470",
+      "mode": "0o700"
+    },
+    "workspace-rustc-0af8.py": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/workspace-rustc-0af8.py",
+      "bytes": 590,
+      "sha256": "a9be4be225cfab383d84273889332e0d600882127304d6f3f98d68ba0187fb37",
+      "mode": "0o700"
+    },
+    "validation-request.json": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validation-request.json",
+      "bytes": 629,
+      "sha256": "1440e1924703033807a72334a0671399cbc05396808cf311f018cb1d7df0f371",
+      "mode": "0o600"
+    }
+  },
+  "python": {
+    "path": "/usr/bin/python3.14",
+    "bytes": 14424,
+    "sha256": "2f02aa4f93265e0ad19d8ffaaef9703d515921c14474a451b8e2d83c583ca233",
+    "mode": "0o755",
+    "version": "Python 3.14.10"
+  },
+  "ssmcp_scan": {
+    "root": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121",
+    "receipt_count": 151,
+    "historical_exclusion": {
+      "path": "prepaste-baseline-c248d42-build/build-receipt.json",
+      "reason": "Original owner cancelled this historical build-only attempt; root confirmed."
+    }
+  },
+  "active_ssmcp_receipts": [],
+  "outer_lock": {
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "device": 34,
+    "inode": 63537699,
+    "rows": [],
+    "flock_processes": []
+  },
+  "memory_available_bytes": 6804688896,
+  "scope_probe": {
+    "argv": [
+      "systemctl",
+      "--user",
+      "show",
+      "zcalld-listener-0af8-20261121.scope",
+      "--property=ActiveState,SubState,ControlGroup"
+    ],
+    "exit": 0,
+    "stdout": "ActiveState=inactive\nSubState=dead\nControlGroup=\n",
+    "stderr": ""
+  },
+  "request": {
+    "command": [
+      "systemd-run",
+      "--user",
+      "--scope",
+      "--quiet",
+      "--unit=zcalld-listener-0af8-20261121",
+      "--property=MemoryMax=2G",
+      "--property=MemorySwapMax=4G",
+      "--property=CPUQuota=100%",
+      "--property=RuntimeMaxSec=840",
+      "/usr/bin/flock",
+      "--nonblock",
+      "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "python3",
+      "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validate_0af8_candidate.py"
+    ],
+    "cwd": "/home/lightjunction/Documents/GITHUB",
+    "timeout_ms": 900000,
+    "title": "Validate fixed zcalld 0af8 listener candidate"
+  }
+}

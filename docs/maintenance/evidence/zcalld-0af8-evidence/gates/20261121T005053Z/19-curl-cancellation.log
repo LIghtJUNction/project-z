@@ -1,0 +1,13 @@
+test_cancel_curl_tcp_pending_head (__main__.GenerationCancellationTests.test_cancel_curl_tcp_pending_head) ... ok
+test_cancel_curl_tcp_pending_body (__main__.GenerationCancellationTests.test_cancel_curl_tcp_pending_body) ... ok
+test_cancel_curl_unix_pending_head (__main__.GenerationCancellationTests.test_cancel_curl_unix_pending_head) ... ok
+test_cancel_curl_unix_pending_body (__main__.GenerationCancellationTests.test_cancel_curl_unix_pending_body) ... ok
+test_half_close_curl_tcp_pending_head (__main__.GenerationCancellationTests.test_half_close_curl_tcp_pending_head) ... ok
+test_half_close_curl_tcp_pending_body (__main__.GenerationCancellationTests.test_half_close_curl_tcp_pending_body) ... ok
+test_half_close_curl_unix_pending_head (__main__.GenerationCancellationTests.test_half_close_curl_unix_pending_head) ... ok
+test_half_close_curl_unix_pending_body (__main__.GenerationCancellationTests.test_half_close_curl_unix_pending_body) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 5.008s
+
+OK

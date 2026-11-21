@@ -1,0 +1,466 @@
+{
+  "schema": "project-z.listener-followup-report-independent-review.v1",
+  "reviewed_at_utc": "2026-11-21T01:16:27.613524+00:00",
+  "reviewer": "builtin pr_core_repos",
+  "result": "no_material_reporting_blockers_in_fixed_report_and_corrected_pr7_draft",
+  "blocking_findings": [],
+  "scope": {
+    "task": "Independent review of the report authored by Org and PR7 body authored by root. Core was the original 882 executor; Personal separately reviewed the raw 882 runtime evidence. This record reviews reporting accuracy and provenance, not another product acceptance run.",
+    "read_only_inputs": true,
+    "product_tests_or_builds": 0,
+    "gui_or_runtime_runs": 0,
+    "native_tool_calls": 0,
+    "source_or_ref_mutations": 0,
+    "drive_mutations": 0,
+    "writes": "Only this independent review JSON and Markdown under pr-cleanup-root."
+  },
+  "fixed_snapshot": {
+    "at_utc": "2026-11-21T01:10:05.576102+00:00",
+    "at_taipei": "2026-11-21T09:10:05.576102+08:00",
+    "expected_base_commit": "cda8c15f9758f8770d03199560c7a88130e81852",
+    "base_tree": "8e418f3e97e53c202573de6a32c815f183332a80",
+    "prepared_manifest": {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-listener-followup-20261121/prepared.json",
+      "bytes": 52497,
+      "sha256": "eb4243d856d5db4da61a898097a47cd23e0639b6b71505f4ef0a15713a96e3a2"
+    },
+    "main_markdown": {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-listener-followup-20261121/2026-11-20-pr-and-dependencies.md",
+      "bytes": 53825,
+      "sha256": "571e5833786e2204a1e3ebd1f825ac8f066bc0038484a06747edb754b848f7b1"
+    },
+    "main_json": {
+      "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-listener-followup-20261121/2026-11-20-pr-and-dependencies.json",
+      "bytes": 966143,
+      "sha256": "f86edec06cd673e36abd91f709eaca2c79b74ad7469a769509a452d335f44f25"
+    }
+  },
+  "independent_github_reads": [
+    {
+      "url": "https://api.github.com/repos/LIghtJUNction/project-z/git/commits/cda8c15f9758f8770d03199560c7a88130e81852",
+      "result": "Exact commit points to8e418f3e97e53c202573de6a32c815f183332a80."
+    },
+    {
+      "url": "https://api.github.com/repos/LIghtJUNction/project-z/git/trees/8e418f3e97e53c202573de6a32c815f183332a80?recursive=1",
+      "result": "Not truncated;304 entries including279 leaves. Every indexed baseline leaf SHA/mode/type matches. Both previous main-report bytes hash to their actual Git blob IDs."
+    },
+    {
+      "url": "https://api.github.com/repos/LIghtJUNction/ssmcp/compare/f33ed8f14fc14aff05a2e4098743eb07e8527c06...be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1",
+      "result": "Fixed B ahead28/behind0;merge-base equals f33. Source ancestry only, no runtime conclusion."
+    }
+  ],
+  "file_integrity": {
+    "publishable_text_files": 31,
+    "added": 29,
+    "modified": 2,
+    "deleted": 0,
+    "all_modes": "100644",
+    "all_paths_under": "docs/maintenance/",
+    "each_size_sha256_git_blob_and_character_count_recomputed": true,
+    "all_utf8_text_no_nul_zip_or_elf": true,
+    "total_publishable_bytes": 1287145,
+    "source_originals_compared_bytewise": 27,
+    "generated_evidence_files": 2,
+    "generated_prior_status_eight_fields_equal_to_exact_cda_values": true,
+    "other_release_projection_original": {
+      "bytes": 3530,
+      "sha256": "40a67af5e0c8c62e70e7b4b83539b32ce680dd95fa897207e15630e1317db455",
+      "checked": "Source/version/clean state/base/status and cancelled-build statement agree; projection omits foreign owner labels, routing and unrelated gate counts."
+    },
+    "relative_links_checked": 81,
+    "relative_unique_targets": 81,
+    "broken_relative_links": [],
+    "new_json_file_references_checked": 75,
+    "distinct_new_json_reference_paths": 29,
+    "file_reference_size_or_hash_mismatches": [],
+    "summary_bytes": 966143,
+    "summary_headroom_below_1MiB": 82433
+  },
+  "historical_preservation": {
+    "original_pr_count": 85,
+    "counts": {
+      "已合并": 56,
+      "验收／集成中": 1,
+      "已关闭": 14,
+      "具体阻塞": 5,
+      "仓库已归档": 9
+    },
+    "deep_equal_fields": {
+      "counts": true,
+      "counting_rule": true,
+      "pull_requests": true,
+      "dependency_snapshot": true,
+      "final_source_cohort": true,
+      "final_aggregate_gates": true,
+      "consumer_propagation": true,
+      "component_integrations": true,
+      "component_integration_scope": true,
+      "previous_source_graph_validation": true,
+      "core_git_source_migrations": true,
+      "git_source_policy_followup": true,
+      "org_git_source_publications": true,
+      "mechrevo_git_source_migration": true
+    },
+    "ssmcp_original_gate_fields_deep_equal": {
+      "build_receipt": true,
+      "build_independent_review": true,
+      "complete_baseline": true,
+      "candidate_build_receipt": true,
+      "complete_candidate": true,
+      "paired_input_comparison": true
+    },
+    "no_new_final44_pass_claimed": true
+  },
+  "zcalld_report_alignment": {
+    "source": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+    "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+    "base": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+    "version": "0.4.4",
+    "source_leaves": 220,
+    "gui": "d491b627223807da7b2929f3feea7461393d124c",
+    "compat": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+    "job": "26c4545eae1eab8d27485f4a48077d3c-882",
+    "exit_code": 0,
+    "duration_ms": 71635,
+    "both_eof": true,
+    "actual_command_count": 22,
+    "all_exit_codes_zero": true,
+    "rust_raw_suite_counts": [
+      93,
+      7,
+      15,
+      0,
+      3,
+      0,
+      0,
+      32,
+      15,
+      3,
+      2,
+      9,
+      3
+    ],
+    "rust_raw_total": 182,
+    "rust_failed": 0,
+    "rust_ignored": 0,
+    "listener_raw_named_cases": 7,
+    "listener_cases_already_in182": true,
+    "clippy_raw_root_running_lines": 2,
+    "strict_flags_source": "Actual Cargo argv includes -D warnings and unique -Cmetadata; two actual root clippy-driver Running lines match the fixed source manifest.",
+    "release_seconds": 35.186,
+    "release_cargo_fresh": false,
+    "binary": {
+      "bytes": 2964896,
+      "sha256": "dbe2db6d7130a7751616162fe503468c5f77df0ee7b9c517cd690c2d0e95c63b"
+    },
+    "release_chain_scope": "Actual fixed-source compiler invocation and Cargo executable; copying while actual outer flock is observed; byte equality and owned descriptor used by the tests. A separate contemporaneous internal out-dir ELF hash is not recorded or claimed. This reporting review did not read/copy/rehash any ELF.",
+    "real_curl_raw_passed": 8,
+    "curl_skipped": 0,
+    "curl_cases": "cancel/half-close x TCP/Unix x pending-head/pending-body",
+    "archive": {
+      "bytes": 163136,
+      "sha256": "0607343a03c0316c05d5813a4dbdbf2d873ba83a5329c459681d3d8cd5cc0172",
+      "payloads": 69,
+      "manifest": 1,
+      "members": 70
+    },
+    "drive_three_downloads": "Their delivery record and preserved downloaded originals match; no new upload/download performed for this review.",
+    "cleanup": "Owned scope inactive/dead, empty cgroup and owned launcher/flock exited. Postflight foreign holder3756319 makes global-free false. Its later absence is only a later PID observation, not current lock availability.",
+    "final_p1": "Pending; PR1 draft and merge not claimed. No GUI/AUR execution or final44 acceptance assigned to882."
+  },
+  "history_and_scope_boundaries": [
+    "d531179+8 remain atd531; they are not added to or relabelled as0af results.",
+    "8fe806 ended1 at compat freshness after11 successful source/metadata/Git commands, before fmt/Rust/Clippy/release/curl. Original and cleanup remain referenced.",
+    "E1 discovered GUI movement during preparation and did not start a product gate. First0af prelaunch stopped on a legitimate existing holder without acquisition or queueing.",
+    "GUI d491 is packaging/workflow/helper change, not docs-only. Its Rust/UI/Cargo/lock/gitlink bytes are unchanged, and GUI/AUR is excluded from this listener runner.",
+    "All source observations are fixed snapshots; this review does not claim that remote heads or global lock state remain unchanged after their observation times."
+  ],
+  "ssmcp_B_alignment": {
+    "source": "be6da5bf1d9da74e8fd0c19576e63e8aacf4c1c1",
+    "tree": "5e8ea273c8f8bd8b0e7b1f87ccc0d19fd594601b",
+    "version": "0.10.24",
+    "freeze_at": "2026-11-21T00:43:00.589512+00:00",
+    "public_observation_at": "2026-11-21T01:05:05.095910+00:00",
+    "source_only": true,
+    "new_B_build_runtime_or_P1_pass_claimed": false,
+    "two_version24_workstreams": "Version/source coordination, not a demonstrated text merge conflict. Other-workstream counts are not copied onto B.",
+    "version25": "Proposed only, not frozen or published.",
+    "image_review": "Same conditional summary-correlation/new-ID-guard mechanism in fixed B;8 matching related blobs and2 identical image callers. Report correctly calls this static analysis, not new B runtime reproduction or proof of raw image payload loss.",
+    "existing_guards": "Report preserves history/call attribution and does not authorize deleting the image attachment guard.",
+    "FC": "781/FC input performance and source-specific build/runtime records remain unchanged; they do not validate B or the eventual image fix."
+  },
+  "pr7_body_review": {
+    "base": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/prepared-pr7-body-listener-followup-20261121/base-body.md",
+      "bytes": 27950,
+      "sha256": "da34874e190057233afa876391d104166dfd0c8e83fa6f17cbf89e01bf26cd1b"
+    },
+    "initial_draft": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/prepared-pr7-body-listener-followup-20261121/draft-body.md",
+      "bytes": 29691,
+      "sha256": "e93f54db9e90dff1d2c15fbc8af3375c0ddeb1efa3b0fafc3825cdfe40367604"
+    },
+    "corrected_draft": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/prepared-pr7-body-listener-followup-20261121/corrected-draft-body.md",
+      "bytes": 29682,
+      "sha256": "85c63ca1b3a75dcedcd75b87950b33bb3cd244ea3df21e606dd80ecc6685b425"
+    },
+    "resolved_accuracy_correction": {
+      "identified_by": "root before final review",
+      "old": "is proposed/prepared by",
+      "new": "is proposed by",
+      "removed_bytes": 9,
+      "only_change_independently_confirmed": true,
+      "status": "resolved_in_85c63ca1_fixed_draft"
+    },
+    "other_material_findings": [],
+    "publication_placeholders": [
+      "__LISTENER_REPORT_COMMIT__",
+      "__LISTENER_REPORT_SHORT__",
+      "__LISTENER_REPORT_SNAPSHOT__",
+      "__LISTENER_REPORT_VERIFICATION_SENTENCE__"
+    ],
+    "placeholder_boundary": "Intentional draft markers; not a publication claim. Root must bind exact report commit/snapshot and actual GitHub+Drive+native readback sentence, compare current PR7 head/body, and remove every marker before submission."
+  },
+  "originals_read": [
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-listener-0af8-handoff.json",
+      "bytes": 17117,
+      "sha256": "5dd323b66fbbb44c0b0944c46f0bba93a8be3e3fe05ce70ddd0fe8025ecf0c07"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-listener-0af8-delivery.json",
+      "bytes": 4441,
+      "sha256": "1ef18c0d3e5ef8b69edd75779df9c8e8e2ff9afe784ef4f146d44243978adb83"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-zcalld-0af8-runtime-independent-review.json",
+      "bytes": 17845,
+      "sha256": "2d802419058c52c9061b2c10dfc7e396d4734fd3d3291ff86aaa11c94b8cf3c8"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/candidate-validation.json",
+      "bytes": 30016,
+      "sha256": "3fe0f9676a5500296c11560835f9353047e64fdb5913291d2321b6090ce72313"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/gates/20261121T005053Z/15-workspace-tests.log",
+      "bytes": 102136,
+      "sha256": "fc3db345adc7e055d434feac06d3db09a6d1e7b536e9a9e1ad5b04f1b38d6ec6"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/gates/20261121T005053Z/16-clippy.log",
+      "bytes": 92065,
+      "sha256": "f01e6c346ce281c23ac0611972d89d280ef26e56cda5c51f8444c05fef6d87cc"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/zcalld-0af8-evidence/gates/20261121T005053Z/19-curl-cancellation.log",
+      "bytes": 1050,
+      "sha256": "b63e16de7a26adabc9a75950113b8748f70d299360dbe9a1afe2f91e3c93fd36"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-B-source-freeze-original.json",
+      "bytes": 2862,
+      "sha256": "518f21c2afe0c148f4d653ce861e8cd6ab0e590b899e21414c91f85eedc597c1"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-B-public-source-observation.json",
+      "bytes": 2265,
+      "sha256": "239fcbfccd299cc6f4b23df499e603e928a8593f891bb7a0f245ac6278271478"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-B-image-summary-propagation-review.json",
+      "bytes": 13664,
+      "sha256": "e9b283374fb9736a0e01e5dfe283a8796e5952dc5e26de3bcb13b1b0987bdc65"
+    }
+  ],
+  "reviewed_file_manifest": [
+    {
+      "repository_path": "docs/maintenance/2026-11-20-pr-and-dependencies.json",
+      "bytes": 966143,
+      "sha256": "f86edec06cd673e36abd91f709eaca2c79b74ad7469a769509a452d335f44f25",
+      "git_blob_sha1": "574f92d9ece9fa271986cd9f1c1e8215b21c0c20"
+    },
+    {
+      "repository_path": "docs/maintenance/2026-11-20-pr-and-dependencies.md",
+      "bytes": 53825,
+      "sha256": "571e5833786e2204a1e3ebd1f825ac8f066bc0038484a06747edb754b848f7b1",
+      "git_blob_sha1": "de3d6da92e843878c7114dced0be65dd90313355"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/listener-followup-prior-status-cda-20261121.json",
+      "bytes": 37359,
+      "sha256": "4def00b1d0ae2e7657b51b322ef994add8aede4f99ba24013056262ee070fd13",
+      "git_blob_sha1": "8a5d36e45feecc1636a5e56a107964362c5ef4ba"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/ssmcp-B-image-summary-propagation-review.json",
+      "bytes": 13664,
+      "sha256": "e9b283374fb9736a0e01e5dfe283a8796e5952dc5e26de3bcb13b1b0987bdc65",
+      "git_blob_sha1": "5520df05c0f4194748937aa5e0328f569b11e22f"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/ssmcp-B-public-source-observation.json",
+      "bytes": 2265,
+      "sha256": "239fcbfccd299cc6f4b23df499e603e928a8593f891bb7a0f245ac6278271478",
+      "git_blob_sha1": "5095d89b03e595ec66c8002eba9ee752b65c524d"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/ssmcp-B-source-freeze-original.json",
+      "bytes": 2862,
+      "sha256": "518f21c2afe0c148f4d653ce861e8cd6ab0e590b899e21414c91f85eedc597c1",
+      "git_blob_sha1": "4bf8f5438ebf47a4f8f8720e5b4da27f3db13ac6"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/ssmcp-release24-version-coordination-snapshot.json",
+      "bytes": 2085,
+      "sha256": "072ece8c81e10cfa20d50c5fe4f69b31334306f9aadd4f85f55edc3e1aaadb14",
+      "git_blob_sha1": "4e7a5e05f77e3885b75216a49f747096b8a8ea3c"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/candidate-validation.json",
+      "bytes": 30016,
+      "sha256": "3fe0f9676a5500296c11560835f9353047e64fdb5913291d2321b6090ce72313",
+      "git_blob_sha1": "a3931441a86e4dbbb74ac32c15808bf60fbcd158"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/execution-gate-initial-scope.json",
+      "bytes": 520,
+      "sha256": "3ab3407269cdcbdb3891c7e533695504db31c8abaffc0c24002006b1bed507d9",
+      "git_blob_sha1": "e04dd5150f973e52b7b4347601977c8e9c6567d7"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/execution-gate-start.json",
+      "bytes": 1419,
+      "sha256": "701679d1550be51a8805c10468fc2db8057c5aed864d5c87f63542019531d884",
+      "git_blob_sha1": "5804a79325236554472d7878942bb1b6dbe71a2e"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/execution-gate-status.json",
+      "bytes": 1340,
+      "sha256": "12ea3d5e1dc5a9c59befb1ec3765071485fa554b9d438e976c3b62a21176f92f",
+      "git_blob_sha1": "e1917922452c716a85db61f092470fd6b98b57f5"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/gates/20261121T005053Z/17-release-cli-compiler-artifacts.json",
+      "bytes": 975,
+      "sha256": "bd28aa3cd1e5b084c6b296f238a5bfbc1ed679640bc36b3a5e7c8e524d4d2040",
+      "git_blob_sha1": "3722fe3f1d603c48843167683ad905bf54816a68"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/gates/20261121T005053Z/19-curl-cancellation.log",
+      "bytes": 1050,
+      "sha256": "b63e16de7a26adabc9a75950113b8748f70d299360dbe9a1afe2f91e3c93fd36",
+      "git_blob_sha1": "8dd57ea9a240c16e76cb97a18fa0cdfb6a0304d5"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/historical/e1/gui-freshness-hold.json",
+      "bytes": 9238,
+      "sha256": "5b32b27132eac9471b8c7ee5587d6ddd66d2906588425a9d9946bd4cff5351dc",
+      "git_blob_sha1": "e205da87ea7776c39500968fcba95518a5227852"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/postflight-foreign-holder-observation.json",
+      "bytes": 186,
+      "sha256": "7d55652c60d8b1610322695401165da7d71134a28643343c8969d2bde08b96d5",
+      "git_blob_sha1": "7c9d5ac9ba9a9c9aa5806ef03399bf7f3a2110b6"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/postflight.json",
+      "bytes": 1080,
+      "sha256": "5a361d61ff5b7866195589b1b31ca7de8c3665bd98755d7e2a577b58c41ab6f8",
+      "git_blob_sha1": "68eddf6115f8a0d8a7d3f6082232861bb4c2a924"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/pr-cleanup-zcall-gui-d491-independent-review.json",
+      "bytes": 7460,
+      "sha256": "96963d8d59c7a233408bd42b1e4649f595034ab83ebaa3b8549bc5fe5f98099d",
+      "git_blob_sha1": "b78ee2632b3b54cca2748375b72bd2082780304f"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/pr-cleanup-zcalld-0af-gui-pin-independent-review.json",
+      "bytes": 2074,
+      "sha256": "faf51008344a29868ff18ff21fe9faf5046887153014d1251897f502b5f7efdf",
+      "git_blob_sha1": "278957181970f2e8ad295299fc81ebc6ddee5e4d"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/pr-cleanup-zcalld-0af-parameters-independent-review.json",
+      "bytes": 2302,
+      "sha256": "e397d0e59ffba51ee2dcd9dfcb86c28250e3e5b08ed024666eb8e3564268d83c",
+      "git_blob_sha1": "9edef737f0649994245f72856ad65ab118a5d080"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/prelaunch-r2.json",
+      "bytes": 3233,
+      "sha256": "041d73aecf35c503290d5c7db581c7026a1cf23dcb60c38f2aefb7da6e9cd5da",
+      "git_blob_sha1": "449b0f6431067a11dee931a2ac88c2fc4f5d8ba1"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/prelaunch.json",
+      "bytes": 3743,
+      "sha256": "8bdb4eaaa26a6b7adec09bbf86be333e81261fe11f0803e826cce54704a88141",
+      "git_blob_sha1": "d2cdb8273bee5db4f721133bf434af12b61036a2"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/source-Cargo.lock",
+      "bytes": 3129,
+      "sha256": "23fd8fbbefe0232b60749d048d09f4d2a7d6783ea2e85deac160c172e5a4ffca",
+      "git_blob_sha1": "533c2a374b6a833d6637dff69a2cea7f76dedc18"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/source-manifest.json",
+      "bytes": 59392,
+      "sha256": "022e49f7878e2f460da596e5f7a7e82c587964bb9c6d685ec61debc0a2d09c8e",
+      "git_blob_sha1": "eaa9153c37cc58b0164b3502097226645a788514"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-evidence/text-evidence-manifest.json",
+      "bytes": 21243,
+      "sha256": "b9fb7bf92e0e0e5ff6eecc7a27cbac80ec91c9069c3289b044ed66bfa2336ea8",
+      "git_blob_sha1": "affe33640e327b1805ea419821fa443135e3ac16"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-runtime-independent-review.json",
+      "bytes": 17845,
+      "sha256": "2d802419058c52c9061b2c10dfc7e396d4734fd3d3291ff86aaa11c94b8cf3c8",
+      "git_blob_sha1": "654e88d53e8eaee75d25e6e0cdbb4aa044d75219"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-runtime-review-mirror.json",
+      "bytes": 960,
+      "sha256": "e4270fd63fae9c50eaa6e8965d89f6073b04d4fc6253223fe675f403d3e3dffe",
+      "git_blob_sha1": "9fddeb051289b0a59448f31f0c9df76678cda780"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-0af8-source-publication-before-gate.json",
+      "bytes": 9750,
+      "sha256": "095bd3bddd619e11cee631ffec6a297f749c35b9a24f3c9c77fa2e648e87c1cd",
+      "git_blob_sha1": "2b65357c1ab0f84db3436cea5a931b9674f99d2c"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-listener-0af8-delivery.json",
+      "bytes": 4441,
+      "sha256": "1ef18c0d3e5ef8b69edd75779df9c8e8e2ff9afe784ef4f146d44243978adb83",
+      "git_blob_sha1": "2fe6ba4c03aa6000c70cacacf83956de1ed6df5a"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-listener-0af8-handoff.json",
+      "bytes": 17117,
+      "sha256": "5dd323b66fbbb44c0b0944c46f0bba93a8be3e3fe05ce70ddd0fe8025ecf0c07",
+      "git_blob_sha1": "db09d8ccf2b6b0f6c6b7d1d8b29002b6af2cb9ea"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-listener-0af8-handoff.md",
+      "bytes": 2457,
+      "sha256": "cfc765fba6d962f9615018de7f64349ff7dcd05c1f55b55bd899df39cc492ffa",
+      "git_blob_sha1": "f1596eca5d9752d600e7f6e152af00e9ff57833b"
+    },
+    {
+      "repository_path": "docs/maintenance/evidence/zcalld-listener-0af8-pr-readback.json",
+      "bytes": 7972,
+      "sha256": "8c9977d673c4445099ee4733336b235f3446ac04559845f493d24f29e8b65845",
+      "git_blob_sha1": "5f5fde5f1feacd12def691a0dbf962e084ba0727"
+    }
+  ],
+  "review_tooling_notes": "Initial reads assumed maintenance.md/summary.json aliases in the prepared directory; actual manifest names were used after FileNotFound. One audit assumed Clippy count was a list; corrected to recorded integer2 and independently counted2 raw Running lines. These were reviewer-local reads only, with no report/source/product changes."
+}

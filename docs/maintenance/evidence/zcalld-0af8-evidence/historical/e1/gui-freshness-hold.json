@@ -1,0 +1,240 @@
+{
+  "schema": "project-z.zcalld-e1-gui-freshness-hold.v1",
+  "source": {
+    "head": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+    "tree": "34795b388520d9a0587f0543ba5763d37b1aeb84",
+    "base": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+    "native_root": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-compat56a-20261121"
+  },
+  "gate_started": false,
+  "lock_acquisition_attempted": false,
+  "cargo_executed": false,
+  "prelaunch_local": {
+    "bytes": 3253,
+    "sha256": "4954157118a10e198d9ca0969ac5b00da2a8a9b3319682650a7d9d6f943712df",
+    "content": {
+      "schema": "project-z.zcalld-e1-prelaunch.v1",
+      "ready": true,
+      "observed_at": "2026-11-21T00:40:00.939768+00:00",
+      "lock_acquisition_attempted": false,
+      "source": {
+        "head": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+        "tree": "34795b388520d9a0587f0543ba5763d37b1aeb84",
+        "status": "",
+        "lock": {
+          "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-compat56a-20261121/source/Cargo.lock",
+          "bytes": 3129,
+          "sha256": "23fd8fbbefe0232b60749d048d09f4d2a7d6783ea2e85deac160c172e5a4ffca",
+          "mode": "0o600"
+        }
+      },
+      "helpers": {
+        "validate_e1e2_candidate.py": {
+          "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-compat56a-20261121/validate_e1e2_candidate.py",
+          "bytes": 14850,
+          "sha256": "fe23a634b285222be20717eded06e128879c74ba1cd9d35dfea8b60d60e141ba",
+          "mode": "0o700"
+        },
+        "workspace-rustc-e1e2.py": {
+          "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-compat56a-20261121/workspace-rustc-e1e2.py",
+          "bytes": 590,
+          "sha256": "a9be4be225cfab383d84273889332e0d600882127304d6f3f98d68ba0187fb37",
+          "mode": "0o700"
+        },
+        "validation-request.json": {
+          "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-compat56a-20261121/validation-request.json",
+          "bytes": 630,
+          "sha256": "7bd01ca7eab528e4d4906925151270d257c8ddcb5123b881d094fbae6df41463",
+          "mode": "0o600"
+        }
+      },
+      "python": {
+        "path": "/usr/bin/mise",
+        "bytes": 155495680,
+        "sha256": "1490afef0db4ccd8a31090255490783a645bce2abbea32c8f5f9f6e7f81959dd",
+        "mode": "0o755",
+        "version": "2026.11.10 linux-x64 (2026-11-18)"
+      },
+      "ssmcp_scan": {
+        "root": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121",
+        "receipt_count": 146,
+        "historical_exclusion": {
+          "path": "prepaste-baseline-c248d42-build/build-receipt.json",
+          "reason": "Original owner cancelled this historical build-only attempt; root confirmed."
+        }
+      },
+      "active_ssmcp_receipts": [],
+      "outer_lock": {
+        "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+        "device": 34,
+        "inode": 63537699,
+        "rows": [],
+        "flock_processes": []
+      },
+      "memory_available_bytes": 6661718016,
+      "scope_probe": {
+        "argv": [
+          "systemctl",
+          "--user",
+          "show",
+          "zcalld-listener-e1e2-20261121.scope",
+          "--property=ActiveState,SubState,ControlGroup"
+        ],
+        "exit": 0,
+        "stdout": "ActiveState=inactive\nSubState=dead\nControlGroup=\n",
+        "stderr": ""
+      },
+      "request": {
+        "command": [
+          "systemd-run",
+          "--user",
+          "--scope",
+          "--quiet",
+          "--unit=zcalld-listener-e1e2-20261121",
+          "--property=MemoryMax=2G",
+          "--property=MemorySwapMax=4G",
+          "--property=CPUQuota=100%",
+          "--property=RuntimeMaxSec=840",
+          "/usr/bin/flock",
+          "--nonblock",
+          "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+          "python3",
+          "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-compat56a-20261121/validate_e1e2_candidate.py"
+        ],
+        "cwd": "/home/lightjunction/Documents/GITHUB",
+        "timeout_ms": 900000,
+        "title": "Validate fixed zcalld e1e2 listener candidate"
+      }
+    }
+  },
+  "preparation": {
+    "bytes": 2255,
+    "sha256": "ffaa41a5aecd5896cc2a87f6139960e8485169dfdef5ec8e035b82eae952dc53",
+    "content": {
+      "schema": "project-z.zcalld-e1-source-preparation.v1",
+      "status": "prepared",
+      "started_at": "2026-11-21T00:38:57.251057+00:00",
+      "candidate": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+      "expected_tree": "34795b388520d9a0587f0543ba5763d37b1aeb84",
+      "old_candidate": "8fe9b42e8b25fc78328ac50e4bd2fc9b9faf438f",
+      "base": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+      "source": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-compat56a-20261121/source",
+      "cargo_or_runtime_executed": false,
+      "ancestor_instructions": [
+        {
+          "path": "/home/lightjunction/AGENTS.md",
+          "bytes": 7132,
+          "sha256": "cf0f7381bb0218465602c668b94ce6ac8318cca69249638edb5d672679b5e27f"
+        }
+      ],
+      "actual_head": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+      "actual_tree": "34795b388520d9a0587f0543ba5763d37b1aeb84",
+      "old_delta": [
+        "extensions/compat"
+      ],
+      "base_delta": [
+        "extensions/compat",
+        "src/curl.rs",
+        "src/listener.rs",
+        "src/listener/local.rs",
+        "src/listener/local/generation.rs",
+        "src/main.rs"
+      ],
+      "old_leaf_count": 220,
+      "candidate_leaf_count": 220,
+      "old_unchanged_leaf_count": 219,
+      "cargo_lock_sha256": "23fd8fbbefe0232b60749d048d09f4d2a7d6783ea2e85deac160c172e5a4ffca",
+      "gitlinks": {
+        "apps/zcall-gui": {
+          "mode": "160000",
+          "type": "commit",
+          "sha": "ca35a306088a85e49e9e851aab24329deed20056"
+        },
+        "apps/zcall-omarchy": {
+          "mode": "160000",
+          "type": "commit",
+          "sha": "7db52e74ceb6c9d398791406e01265eecc127f87"
+        },
+        "extensions/compat": {
+          "mode": "160000",
+          "type": "commit",
+          "sha": "56a15b330384531b3a6c444190f53b6d3720bd5e"
+        },
+        "vendor/zcall": {
+          "mode": "160000",
+          "type": "commit",
+          "sha": "317c52f101f112c6af671a629d8406305a168e4a"
+        },
+        "vendor/zconv": {
+          "mode": "160000",
+          "type": "commit",
+          "sha": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1"
+        },
+        "vendor/zplugin": {
+          "mode": "160000",
+          "type": "commit",
+          "sha": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+        },
+        "vendor/zsys": {
+          "mode": "160000",
+          "type": "commit",
+          "sha": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+        }
+      },
+      "finished_at": "2026-11-21T00:38:59.128522+00:00"
+    }
+  },
+  "github_readback": {
+    "pr": {
+      "head": "e1e23cf62402780bf934c4e187d98b78aa26b825",
+      "base": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+      "draft": true,
+      "state": "open"
+    },
+    "main": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+    "compat": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+    "gui": "d491b627223807da7b2929f3feea7461393d124c"
+  },
+  "drift": {
+    "url": "https://api.github.com/repos/LIghtJUNction/zcall-gui/compare/ca35a306088a85e49e9e851aab24329deed20056...d491b627223807da7b2929f3feea7461393d124c",
+    "old": "ca35a306088a85e49e9e851aab24329deed20056",
+    "current": "d491b627223807da7b2929f3feea7461393d124c",
+    "ahead": 1,
+    "behind": 0,
+    "files": [
+      {
+        "path": ".github/workflows/aur.yml",
+        "change": "added",
+        "blob": "c12fbbf8604b4d3c154f920175d541e5f173eb12"
+      },
+      {
+        "path": ".github/workflows/native.yml",
+        "change": "modified",
+        "blob": "2d5e4e4bb47ddfaa470a390211788a4420112e66"
+      },
+      {
+        "path": "packaging/aur/zcall-gui/PKGBUILD.in",
+        "change": "modified",
+        "blob": "44fc997f73a19325f0391f703834f6dd3ab2e815"
+      },
+      {
+        "path": "scripts/aur.py",
+        "change": "modified",
+        "blob": "8767db04034b4d67edf90d908eae6781ed2f2cf4"
+      },
+      {
+        "path": "scripts/test_aur_source.py",
+        "change": "added",
+        "blob": "70a9550f142eaf4a718c34187252f16bdd8f53d4"
+      },
+      {
+        "path": "scripts/test_release.py",
+        "change": "modified",
+        "blob": "af7e67d1fc83baf8843ac5084fe5ce9ce0946704"
+      }
+    ],
+    "classification": "One source-AUR packaging and validation/workflow change; not documentation-only. No UI/Rust/Cargo manifest/lock or gitlink changes.",
+    "proposal": "Only advance apps/zcall-gui to this new exact default-branch head; preserve all other E1 leaves. zcalld Rust/listener input files remain unchanged. New GUI AUR behavior is outside the listener gate and must retain its own upstream owner/evidence."
+  },
+  "metadata_correction": "The local prelaunch resolved the python3 shim to /usr/bin/mise and recorded mise's version, not the actual Python interpreter. This was a read-only readiness record, no gate ran. The next prelaunch must record sys.executable and sys.version from the running interpreter instead."
+}

@@ -1,0 +1,423 @@
+{
+  "schema": "project-z.text-evidence-archive.v1",
+  "head": "0af8f65653bc4035888380b8b2f390d774fd30fd",
+  "tree": "ca3cdf4a464543a1323b057d241d45983cba6a05",
+  "payload_count": 69,
+  "members": [
+    {
+      "archive_path": "bundle-readback.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/bundle-readback.json",
+      "bytes": 2815,
+      "sha256": "b55a2a13b50af4c906d702a503642b9e99f53a74ded3308e22b6fb069ad6277d"
+    },
+    {
+      "archive_path": "candidate-validation.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/candidate-validation.json",
+      "bytes": 30016,
+      "sha256": "3fe0f9676a5500296c11560835f9353047e64fdb5913291d2321b6090ce72313"
+    },
+    {
+      "archive_path": "collect_0af8_handoff.py",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/collect_0af8_handoff.py",
+      "bytes": 13602,
+      "sha256": "f4ea2996db1fd5cf4fc9a054ce77a5cad32f9e9c017f519b179138b0264cf489"
+    },
+    {
+      "archive_path": "command-log-index.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/command-log-index.json",
+      "bytes": 18014,
+      "sha256": "b5765616d8480f9c546e2f9f7df9679932347c0a00bfb15bb876e248f646960e"
+    },
+    {
+      "archive_path": "execution-gate-initial-scope.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/execution-gate-initial-scope.json",
+      "bytes": 520,
+      "sha256": "3ab3407269cdcbdb3891c7e533695504db31c8abaffc0c24002006b1bed507d9"
+    },
+    {
+      "archive_path": "execution-gate-start.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/execution-gate-start.json",
+      "bytes": 1419,
+      "sha256": "701679d1550be51a8805c10468fc2db8057c5aed864d5c87f63542019531d884"
+    },
+    {
+      "archive_path": "execution-gate-status.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/execution-gate-status.json",
+      "bytes": 1340,
+      "sha256": "12ea3d5e1dc5a9c59befb1ec3765071485fa554b9d438e976c3b62a21176f92f"
+    },
+    {
+      "archive_path": "execution-preparation-start.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/execution-preparation-start.json",
+      "bytes": 1081,
+      "sha256": "7ed2087483d9aa28c9de05f45accc9ed26331db3b159f9970c70049e46fa8bf7"
+    },
+    {
+      "archive_path": "execution-preparation-status.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/execution-preparation-status.json",
+      "bytes": 1001,
+      "sha256": "dcb29d829ba9721dcd679ae228bc1c8016c13be57faada8f94af9429795b2ae5"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/00-head.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/00-head.log",
+      "bytes": 41,
+      "sha256": "145c259b93c201e68fcb1bb4511c4a2cb07dba653f1c81a89d5b9b758be80778"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/01-tree.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/01-tree.log",
+      "bytes": 41,
+      "sha256": "fe3539cf57fdeef0832a9115f1e6b713978e967c17630c6c0043d422687e7c2b"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/02-clean-source.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/02-clean-source.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/03-candidate-paths.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/03-candidate-paths.log",
+      "bytes": 128,
+      "sha256": "6f7889618f5995d268c3f2a0cd4e5a93e74d1aeb20a8068870048525de3f874f"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/04-compat-source.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/04-compat-source.log",
+      "bytes": 73,
+      "sha256": "fdc954e4bcff182f370ede20f358392cfefab954796096c02b4db318ea9e4c80"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/05-locked-metadata.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/05-locked-metadata.log",
+      "bytes": 76848,
+      "sha256": "9fd5a336d020836ba93ccfb8d5e087866ee23f4fbf5df00ed5d786df9b5beb04"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/06-fresh-zcall.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/06-fresh-zcall.log",
+      "bytes": 72,
+      "sha256": "a647c8744ff8243b0b308907f4ab1a9cb33c7261fb6ceb5ef002a8b3b7f401d5"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/07-fresh-zconv.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/07-fresh-zconv.log",
+      "bytes": 72,
+      "sha256": "d57812d9274b31fe1be39380e5f8f9526399026477d4e6ff7a9b7ed3a9aac09a"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/08-fresh-zplugin.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/08-fresh-zplugin.log",
+      "bytes": 72,
+      "sha256": "137a246ffa75e3277f95e62b83cc8d97a4dcf0272f7d41c1c6cf4d08d61e68ed"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/09-fresh-zsys.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/09-fresh-zsys.log",
+      "bytes": 72,
+      "sha256": "451085ece399077d75426ea2230bcdea5197b5508d62dd2d042ce71afef43b47"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/10-fresh-compat.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/10-fresh-compat.log",
+      "bytes": 72,
+      "sha256": "6f1f03b5f7c7ce93becc5e8aa932bf29d825f5b48f223b81ed2e1692898ca9de"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/11-fresh-main.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/11-fresh-main.log",
+      "bytes": 72,
+      "sha256": "f1eb806f00f9d2e0a6c25b844f0214d942cd4889ff2f4bb3eee16de937298752"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/12-gui-source.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/12-gui-source.log",
+      "bytes": 70,
+      "sha256": "b462663eccf06b88e34e7326249f9c664355f00440202cdc2d68bcfcf7ca1db1"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/13-fresh-gui.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/13-fresh-gui.log",
+      "bytes": 72,
+      "sha256": "a6d050498fc6276f80e8cc8393c25f5cb7c10b566083a7df57b668730924a980"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/14-fmt.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/14-fmt.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/15-workspace-tests-compiler-artifacts.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/15-workspace-tests-compiler-artifacts.json",
+      "bytes": 1070,
+      "sha256": "172020e0da01a1376b66459ef182bec4fcd59ec2b294dac3220968f58ba1ac0d"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/15-workspace-tests.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/15-workspace-tests.log",
+      "bytes": 102136,
+      "sha256": "fc3db345adc7e055d434feac06d3db09a6d1e7b536e9a9e1ad5b04f1b38d6ec6"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/16-clippy-compiler-artifacts.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/16-clippy-compiler-artifacts.json",
+      "bytes": 1970,
+      "sha256": "a9e6f99ede9a8eb4491a70483ca2c2c8196e32a2873e025ad3507dcfeb755093"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/16-clippy.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/16-clippy.log",
+      "bytes": 92065,
+      "sha256": "f01e6c346ce281c23ac0611972d89d280ef26e56cda5c51f8444c05fef6d87cc"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/17-release-cli-compiler-artifacts.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/17-release-cli-compiler-artifacts.json",
+      "bytes": 975,
+      "sha256": "bd28aa3cd1e5b084c6b296f238a5bfbc1ed679640bc36b3a5e7c8e524d4d2040"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/17-release-cli.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/17-release-cli.log",
+      "bytes": 25396,
+      "sha256": "f7294adaa2ea43260c1f26dcbb42de7bd2560f3e3c2df6d76a601a52e8a4a43d"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/18-listener-help.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/18-listener-help.log",
+      "bytes": 2379,
+      "sha256": "d2ca8020172aa188080d5a7bbe75d0f0ed0a09274dcb2120c38eb9d6254846b3"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/19-curl-cancellation.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/19-curl-cancellation.log",
+      "bytes": 1050,
+      "sha256": "b63e16de7a26adabc9a75950113b8748f70d299360dbe9a1afe2f91e3c93fd36"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/20-final-clean-source.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/20-final-clean-source.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/21-final-head.log",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/21-final-head.log",
+      "bytes": 41,
+      "sha256": "145c259b93c201e68fcb1bb4511c4a2cb07dba653f1c81a89d5b9b758be80778"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/receipt.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/receipt.json",
+      "bytes": 30016,
+      "sha256": "3fe0f9676a5500296c11560835f9353047e64fdb5913291d2321b6090ce72313"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/rustc-invocations.jsonl",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/rustc-invocations.jsonl",
+      "bytes": 37660,
+      "sha256": "f239a868cb63a40529cb58bcb8811f96567bc507f230bbe02136086430a441f5"
+    },
+    {
+      "archive_path": "gates/20261121T005053Z/source-manifest.txt",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/gates/20261121T005053Z/source-manifest.txt",
+      "bytes": 18172,
+      "sha256": "34e70010c1d9b86cbe88f3fc78857e06897446f8f3c50cbd4e5d8eb66ae9fd25"
+    },
+    {
+      "archive_path": "github-publication.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/github-publication.json",
+      "bytes": 1493,
+      "sha256": "598c142ad558d05d45dc895cfd46f3ec39566f2d39a6042b7523d180d2b5e736"
+    },
+    {
+      "archive_path": "handoff.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/handoff.json",
+      "bytes": 17117,
+      "sha256": "5dd323b66fbbb44c0b0944c46f0bba93a8be3e3fe05ce70ddd0fe8025ecf0c07"
+    },
+    {
+      "archive_path": "handoff.md",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/handoff.md",
+      "bytes": 2457,
+      "sha256": "cfc765fba6d962f9615018de7f64349ff7dcd05c1f55b55bd899df39cc492ffa"
+    },
+    {
+      "archive_path": "historical/8fe/candidate-validation.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-37c-20261121/candidate-validation.json",
+      "bytes": 11715,
+      "sha256": "ebf57c7482bea178dc7fb83fbff46ab1fd0562cf0fdb9d39ac6f2a8e28c97c34"
+    },
+    {
+      "archive_path": "historical/8fe/execution-gate-start.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-37c-20261121/execution-gate-start.json",
+      "bytes": 1414,
+      "sha256": "8b05536e0821dbab6b4dd3dd6b0e776843ff365d373a950bf4d5632ea183559a"
+    },
+    {
+      "archive_path": "historical/8fe/execution-gate-status.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-37c-20261121/execution-gate-status.json",
+      "bytes": 1333,
+      "sha256": "1bfedfa9f21a7496894bf2e2cc92c1be0398f25fb7ce7dea0ec30c883e824dbc"
+    },
+    {
+      "archive_path": "historical/8fe/source-guard-stop.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-37c-20261121/source-guard-stop.json",
+      "bytes": 3604,
+      "sha256": "19daffafb0bcacc8603b6c5144733eb2759ef2f0f48e452c2dee2132f8b07731"
+    },
+    {
+      "archive_path": "historical/e1/gui-freshness-hold.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-compat56a-20261121/gui-freshness-hold.json",
+      "bytes": 9238,
+      "sha256": "5b32b27132eac9471b8c7ee5587d6ddd66d2906588425a9d9946bd4cff5351dc"
+    },
+    {
+      "archive_path": "postflight-foreign-holder-observation.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/postflight-foreign-holder-observation.json",
+      "bytes": 186,
+      "sha256": "7d55652c60d8b1610322695401165da7d71134a28643343c8969d2bde08b96d5"
+    },
+    {
+      "archive_path": "postflight.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/postflight.json",
+      "bytes": 1080,
+      "sha256": "5a361d61ff5b7866195589b1b31ca7de8c3665bd98755d7e2a577b58c41ab6f8"
+    },
+    {
+      "archive_path": "pr-cleanup-zcall-gui-d491-independent-review.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/pr-cleanup-zcall-gui-d491-independent-review.json",
+      "bytes": 7460,
+      "sha256": "96963d8d59c7a233408bd42b1e4649f595034ab83ebaa3b8549bc5fe5f98099d"
+    },
+    {
+      "archive_path": "pr-cleanup-zcalld-0af-gui-pin-independent-review.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/pr-cleanup-zcalld-0af-gui-pin-independent-review.json",
+      "bytes": 2074,
+      "sha256": "faf51008344a29868ff18ff21fe9faf5046887153014d1251897f502b5f7efdf"
+    },
+    {
+      "archive_path": "pr-cleanup-zcalld-0af-parameters-independent-review.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/pr-cleanup-zcalld-0af-parameters-independent-review.json",
+      "bytes": 2302,
+      "sha256": "e397d0e59ffba51ee2dcd9dfcb86c28250e3e5b08ed024666eb8e3564268d83c"
+    },
+    {
+      "archive_path": "prelaunch-r2.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/prelaunch-r2.json",
+      "bytes": 3233,
+      "sha256": "041d73aecf35c503290d5c7db581c7026a1cf23dcb60c38f2aefb7da6e9cd5da"
+    },
+    {
+      "archive_path": "prelaunch.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/prelaunch.json",
+      "bytes": 3743,
+      "sha256": "8bdb4eaaa26a6b7adec09bbf86be333e81261fe11f0803e826cce54704a88141"
+    },
+    {
+      "archive_path": "prelaunch_0af8.py",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/prelaunch_0af8.py",
+      "bytes": 6004,
+      "sha256": "0c19efb3df6cf4fb1c3e3016594ed863ddf45b00b2bdfe8ed0c236743403cc13"
+    },
+    {
+      "archive_path": "prelaunch_0af8_r2.py",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/prelaunch_0af8_r2.py",
+      "bytes": 6007,
+      "sha256": "40381086be58a878c4cc7f60589ad43f41f6fc8c34783c58f43cbaf980b6998b"
+    },
+    {
+      "archive_path": "preparation-result.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/preparation-result.json",
+      "bytes": 64775,
+      "sha256": "af12f950d8e2cc1bff042271ada7bd00b2f6b01435a5dfc81849090d4f9b2c59"
+    },
+    {
+      "archive_path": "preparation-summary.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/preparation-summary.json",
+      "bytes": 2275,
+      "sha256": "19fdef6514b7ef8ae14588c11e1082fe993df643eadd6c65314327c3380ae3d3"
+    },
+    {
+      "archive_path": "prepare_0af8_source.py",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/prepare_0af8_source.py",
+      "bytes": 5254,
+      "sha256": "1572fb62d85ce1fe2108c51d93b26e5ec2df7e055f4974f772f5f8511fc68306"
+    },
+    {
+      "archive_path": "source-Cargo.lock",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source-Cargo.lock",
+      "bytes": 3129,
+      "sha256": "23fd8fbbefe0232b60749d048d09f4d2a7d6783ea2e85deac160c172e5a4ffca"
+    },
+    {
+      "archive_path": "source-manifest.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source-manifest.json",
+      "bytes": 59392,
+      "sha256": "022e49f7878e2f460da596e5f7a7e82c587964bb9c6d685ec61debc0a2d09c8e"
+    },
+    {
+      "archive_path": "source-manifest.raw.txt",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source-manifest.raw.txt",
+      "bytes": 18172,
+      "sha256": "34e70010c1d9b86cbe88f3fc78857e06897446f8f3c50cbd4e5d8eb66ae9fd25"
+    },
+    {
+      "archive_path": "source-publication.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/source-publication.json",
+      "bytes": 9750,
+      "sha256": "095bd3bddd619e11cee631ffec6a297f749c35b9a24f3c9c77fa2e648e87c1cd"
+    },
+    {
+      "archive_path": "validate_0af8_candidate.py",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validate_0af8_candidate.py",
+      "bytes": 14868,
+      "sha256": "4b40fbfd0eded716ec62630497fa5653cce8bbdc1285aafb71d1a940df52c470"
+    },
+    {
+      "archive_path": "validation-driver-0af8-parameters.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validation-driver-0af8-parameters.json",
+      "bytes": 2550,
+      "sha256": "fc41d0f0c385f4eb5fe2912c6341ce15eb0571fc1316eedfbaf02f27c29a66b9"
+    },
+    {
+      "archive_path": "validation-driver-e1-to-0af8.diff",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validation-driver-e1-to-0af8.diff",
+      "bytes": 4195,
+      "sha256": "c6588faf968790a0afe98c902fe4dfba3e73db31258e6d72fd809534bb7486a6"
+    },
+    {
+      "archive_path": "validation-plan.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validation-plan.json",
+      "bytes": 3520,
+      "sha256": "0322c8385c6e557840f11c7e15f3d86f1839f40724f376783023362bc6b12141"
+    },
+    {
+      "archive_path": "validation-request.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/validation-request.json",
+      "bytes": 629,
+      "sha256": "1440e1924703033807a72334a0671399cbc05396808cf311f018cb1d7df0f371"
+    },
+    {
+      "archive_path": "workspace-all-compiler-artifacts.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/workspace-all-compiler-artifacts.json",
+      "bytes": 32279,
+      "sha256": "34320223a9df4c4bcf3df0df3564fd4ed1e786485a0b31023a7d0f6e12ed2496"
+    },
+    {
+      "archive_path": "workspace-rustc-0af8.py",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/workspace-rustc-0af8.py",
+      "bytes": 590,
+      "sha256": "a9be4be225cfab383d84273889332e0d600882127304d6f3f98d68ba0187fb37"
+    },
+    {
+      "archive_path": "workspace-test-index.json",
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-gui-d491-20261121/workspace-test-index.json",
+      "bytes": 21377,
+      "sha256": "9cc5b4ceb4d02e8c3ce76faef3ad74a1af82d5250ddf82111fb43509e890e684"
+    }
+  ],
+  "contains_binary_executable": false
+}
