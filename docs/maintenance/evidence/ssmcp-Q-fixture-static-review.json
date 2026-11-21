@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "review_type": "independent_fixed_source_static_review",
+  "reviewer": "/root/pr_core_repos",
+  "result": "no_blocking_issue_in_the_one_line_fixture_change",
+  "blocking_findings": [],
+  "material_inconsistencies": [],
+  "candidate": {
+    "repository": "LIghtJUNction/ssmcp",
+    "commit": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+    "tree": "5143f90c05066c95b2df58a9eab1831e05888a62",
+    "parents": [
+      "d29dae7e2b9ff6794f17f3c96c0cc37977936084"
+    ],
+    "raw_commit_sha256": "6517e112e4753668063a6cdb2f58ce672f91c625becf451f85e48dc193ff3ebd",
+    "git_object_oid_reconstructed": true,
+    "signature_verification_performed": false
+  },
+  "base": {
+    "commit": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+    "tree": "bf393700928fd9aa37f2dea8b8683ebe13b114cd",
+    "raw_commit_sha256": "e638340c8f1450481a93334f740b0e759a2945570e26b47fc98e15fc362fa826"
+  },
+  "access": {
+    "github_first_fixed_commit_read": "422 No commit found at the time of lookup; not a claim about subsequent publication",
+    "fallback": "Exact Git objects read through existing authorized SSMCP client",
+    "native_source_root": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final"
+  },
+  "tree_comparison": {
+    "base_leaf_count": 1114,
+    "candidate_leaf_count": 1114,
+    "changed_paths": [
+      "src/session/service.rs"
+    ],
+    "unchanged_leaf_count": 1113,
+    "unchanged_leaf_mode_type_and_oid_equal": true,
+    "base_tree_inventory_sha256": "c30b10fdcd883d32a87ad5820ed99388680ce3abe36bf35bb219ba55ec388764",
+    "candidate_tree_inventory_sha256": "1b398692567d8d085c00e4e509b73848f856ac5ff8b4f9678bba182410a3a6f4",
+    "changed_file": {
+      "path": "src/session/service.rs",
+      "before_bytes": 50761,
+      "before_git_blob": "2dd30f898276cc991d7ed6984ceed2d4136ee879",
+      "before_sha256": "08e51f66ec3810496d364f8d1664a39d354afa99386ec42317a9bc9ebbb4fd74",
+      "after_bytes": 50784,
+      "after_git_blob": "baf05e18c5dd297a9e9e37adfa6defa02968358d",
+      "after_sha256": "39384cc45c0042789e404d73db5ad3f6cf44e33f87e3ea9a5945a99ad913908a"
+    },
+    "one_line_proof": {
+      "old_occurrences": 1,
+      "new_occurrences": 1,
+      "exact_replacement_equals_Q": true,
+      "common_production_prefix_bytes": 33245,
+      "production_prefix_equal": true
+    },
+    "production_cargo_lock_gitlinks_and_other_files": "Unchanged; the sole changed file has an unchanged 33245-byte prefix before #[cfg(test)]."
+  },
+  "change": {
+    "location": "src/session/service.rs:918 in #[cfg(test)]",
+    "before": "let mut cases = vec![vec![\"--agent\", \"codex\"]];",
+    "after": "let mut cases = vec![vec![\"--input\", \"terminal\", \"--agent\", \"codex\"]];",
+    "insertions": 1,
+    "deletions": 1
+  },
+  "reasoning": [
+    {
+      "claim": "The old fixture reaches the saved-manifest ambiguity guard before the foreground-only-input guard.",
+      "evidence": [
+        "src/client.rs:478-509: parse_saved rejects non-default --agent without an explicit --input",
+        "src/client.rs:1251-1253: parse_saved runs before validate_saved_input"
+      ],
+      "classification": "Static control-flow inference. The original failure log shows the failed foreground substring assertion, not the returned error string."
+    },
+    {
+      "claim": "The revised fixture explicitly selects terminal input and therefore tests the intended rejection of terminal agent dispatch in a saved worker.",
+      "evidence": [
+        "src/session/service.rs:918",
+        "src/client.rs:491-508: explicit --input prevents the legacy-ambiguity branch",
+        "src/client/chat_io/options.rs:74-80: terminal plus a non-default agent returns the unchanged foreground-required error"
+      ],
+      "classification": "Static control-flow review; no candidate test execution."
+    },
+    {
+      "claim": "The patch preserves the original error and no-saved-session assertions and the Unix pipe and MCP-stdio cases.",
+      "evidence": [
+        "src/session/service.rs:919-920: unchanged pipe and mcp-stdio cases",
+        "src/session/service.rs:946-952: unchanged unwrap_err, foreground substring assertion, and session-directory absence assertion",
+        "Exact single-line replacement reconstructs the complete Q file."
+      ],
+      "classification": "Byte comparison and source inspection."
+    },
+    {
+      "claim": "Create still validates before acquiring its management lock, preparing a session directory, or starting a worker; spawn-failure cleanup and error propagation remain unchanged.",
+      "evidence": [
+        "src/session/service.rs:475-498",
+        "Unchanged production prefix and all other leaves"
+      ],
+      "classification": "Static control-flow review. This review does not run or observe a child process."
+    },
+    {
+      "claim": "The fix does not alter normal parser defaults or permit legacy ambiguous saved arguments.",
+      "evidence": [
+        "src/client/chat_io/options.rs:136-143 and 265-279: terminal default is unchanged",
+        "src/client.rs:478-508: the legacy guard is unchanged",
+        "src/client/chat_io/options.rs:243-244: none plus an explicit agent remains rejected"
+      ],
+      "classification": "Unchanged source and static inspection."
+    }
+  ],
+  "observed_historical_failure": {
+    "source_commit": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+    "library_private_result": {
+      "passed": 2049,
+      "failed": 3,
+      "ignored": 23,
+      "filtered_out": 4
+    },
+    "session_failure": "create_rejects_foreground_chat_modes_before_saving_or_spawning failed the foreground error-substring assertion.",
+    "socket_failures": [
+      "dropping_the_host_cleans_its_socket_without_explicit_shutdown",
+      "http_socket_uses_the_same_origin_and_authenticated_mcp_router"
+    ],
+    "socket_error": "local socket parent /tmp has unsafe ownership or permissions",
+    "historical_failure_record_unchanged": true
+  },
+  "pending_and_limits": {
+    "Q_product_or_test_pass_claimed": false,
+    "HOST6_driver_supplied": false,
+    "HOST6_driver_reviewed": false,
+    "two_socket_failures_resolved_claimed": false,
+    "planned_35_26_literal_20_14_counts_verified": false,
+    "publication_or_freeze_verified": false,
+    "full_release_or_final_P1_verified": false,
+    "note": "The independent original author retains Q implementation and actual validation ownership. This review is not an additional start-approval gate."
+  },
+  "operations": {
+    "candidate_scripts_imported_or_executed": false,
+    "tests_or_validators_run": false,
+    "builds_run": false,
+    "GUI_or_input_operations": false,
+    "target_lock_acquired": false,
+    "checkout_or_source_or_ref_changes": false,
+    "native_operations": "Only bounded git show, cat-file, rev-parse, ls-tree, grep, diff and read-only Python comparison of fixed Git objects. Read jobs 95e/95f/962/964 exited 0 with complete stdout/stderr."
+  },
+  "evidence": [
+    {
+      "path": "ssmcp-Q-fixture-static-inputs.json",
+      "bytes": 46477,
+      "sha256": "47ac888f7b34e385685043765840cd10e8007615c3f50e848e8f1487aa1806fa"
+    },
+    {
+      "path": "ssmcp-C-gate-failure-test-blocks.json",
+      "bytes": 2087,
+      "sha256": "db44ca345e5290e2a13e0ca9b19b945257427f5dde75a422206e64422cc68705"
+    },
+    {
+      "path": "ssmcp-C-source-freeze-original.json",
+      "bytes": 3162,
+      "sha256": "6c8bab3f7b542bc29235e04bcd4ddf25c12d9b3051cc7d7a0a3bb284cc3d29f9"
+    },
+    {
+      "path": "ssmcp-C-gate-failure-original-extract.json",
+      "bytes": 22941,
+      "sha256": "96eb6d9020a272435a7d9a285299ad54a35ae0332a47da81e466b3ac6f178559"
+    }
+  ]
+}
+

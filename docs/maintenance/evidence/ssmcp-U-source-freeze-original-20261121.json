@@ -1,0 +1,69 @@
+{
+  "author_exit": {
+    "bytes": 1514,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-reference-ui-fixtures/author-exit.json",
+    "sha256": "6875ed281a03391418f023ecf75f5cf92ba6df5245dc058625c15516f669f11e"
+  },
+  "cargo_lock": {
+    "bytes": 66476,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final/Cargo.lock",
+    "sha256": "0b6f1d93e319b27163106ce79475b37f3e737ff89f7a9ca8d35c09e8ad649608"
+  },
+  "checkout": {
+    "argv": [
+      "git",
+      "-C",
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+      "-c",
+      "submodule.recurse=false",
+      "checkout",
+      "--detach",
+      "784370b5fe1b817c788273a5f7b1ab826c743965"
+    ],
+    "exit_code": 0,
+    "stderr": "之前的 HEAD 位置是 647bce2 test: make the foreground session fixture explicit [skip ci]\nHEAD 目前位于 784370b test: align explicit Next caller fixture predicates [skip ci]\n",
+    "stdout": ""
+  },
+  "clean": true,
+  "github_readback": {
+    "bytes": 310,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-reference-ui-fixtures/github-U-readback.json",
+    "sha256": "d5b54fb6de064c6c097a79b3055337738e0db0474260171273df81a65d8ebd4c"
+  },
+  "heads": {
+    "bytes": 15488,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/git-heads-v25-r12.json",
+    "sha256": "2733da7c547f7e3afea6aaaa87fe582755870651129f673dd352b746da441ac7"
+  },
+  "historic_C_failed_gate_untouched": true,
+  "historic_Q_passed_gate_untouched": true,
+  "independent_review": {
+    "bytes": 10073,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-reference-ui-fixtures/independent-final-fixture-review.json",
+    "sha256": "d2a1016cb7b40a91912a580e4d41e11ad7fc9115e761132b714464b0a7653ce4"
+  },
+  "new_build_not_started": true,
+  "normal_push": {
+    "bytes": 760,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-reference-ui-fixtures/root-normal-push-receipt.json",
+    "sha256": "c2db9c1ffe94ae083265952cc2c26de8f3acfb80d223624328e341b202bc56ed"
+  },
+  "owner_agreement": {
+    "bytes": 4998,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/inputs/shared-target-agreement-v25-r12.json",
+    "sha256": "5e69903e73cd6e21d2982f70bb7a8f7e9315c777d2f4bb5b6ce61600ebcf932b"
+  },
+  "previous_source": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+  "schema": "ssmcp-source-freeze-v1",
+  "source_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+  "source_review": {
+    "bytes": 1789,
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/author-reference-ui-fixtures/root-static-review.json",
+    "sha256": "fadca862435294037fab1a4695e3a14b513592c33f1c37fbdf3e8dd0c2f2cfc8"
+  },
+  "source_revision": "784370b5fe1b817c788273a5f7b1ab826c743965",
+  "source_tree": "2c60d011da8c2b31aefd80367bf7f19e28f10b62",
+  "status": "frozen",
+  "utc": "2026-11-21T02:40:24.499674+00:00",
+  "version": "0.10.25"
+}

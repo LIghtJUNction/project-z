@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "review_type": "independent_narrow_static_review_of_unbound_HOST6_preparation",
+  "reviewer": "/root/pr_core_repos",
+  "reviewed_at_utc": "2026-11-21T02:12:22.063089+00:00",
+  "decision": {
+    "status": "no_blocking_change_found_in_fixed_prepared_delta",
+    "blocking_findings": [],
+    "material_inconsistencies": [],
+    "product_or_gate_pass_claimed": false,
+    "final_r11_binding_reviewed": false
+  },
+  "source_context": {
+    "Q": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+    "Q_tree": "5143f90c05066c95b2df58a9eab1831e05888a62",
+    "C": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+    "Q_review": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-fixture-static-review.json",
+      "bytes": 7646,
+      "sha256": "ae1f187c6276d38eda1ff81ff3414a94fb683420804443a7d00ee9abd0e691df"
+    },
+    "scope_note": "This supplements the earlier Q fixture-only review. Its earlier HOST6-not-yet-supplied boundary is preserved as a historical observation."
+  },
+  "fixed_prepared_files": [
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/v25-host-partition6-prepared-20261121/run_gates.host-partition6-unbound.py",
+      "bytes": 83518,
+      "sha256": "c878638aa8e0bd1cd09434c85b9815e3c9b175969192dc4b2ce1fd300b50873b"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/v25-host-partition6-prepared-20261121/run_bound.host-partition6-unbound.py",
+      "bytes": 7669,
+      "sha256": "742692b3196c1ce35fd00f8c7ead316fd89e30b83340aef04f05d9a94cccda78"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/v25-host-partition6-prepared-20261121/driver.full.diff",
+      "bytes": 2639,
+      "sha256": "cfccc99da11975e777226709eee9d7ee8253987e00aa9ecd2c8f51fda1318cf3"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/v25-host-partition6-prepared-20261121/launcher.full.diff",
+      "bytes": 1415,
+      "sha256": "cd6c6c91d9d42152b7d9a70693cf570738c5caa3065413af09e929cb51326f17"
+    }
+  ],
+  "baseline_comparison": {
+    "run_gates.host-partition6-unbound.py": {
+      "baseline_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/v25-context-prepared-20261121/run_gates.v25-unbound.py",
+      "baseline_bytes": 83318,
+      "baseline_sha256": "41e02fa502b123712674b749f365700ed95bbeb686e83eaeefe73c85ad8b51c7",
+      "baseline_hash_matches": true,
+      "full_diff_exactly_matches_saved": true,
+      "new_sha256": "c878638aa8e0bd1cd09434c85b9815e3c9b175969192dc4b2ce1fd300b50873b",
+      "ast_parse_ok": true
+    },
+    "run_bound.host-partition6-unbound.py": {
+      "baseline_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/v25-context-prepared-20261121/run_bound.v25-unbound.py",
+      "baseline_bytes": 7657,
+      "baseline_sha256": "7b1b2a65d91490c9a8b2bcf78641f6a91d8579ea98654904516c1c64999deff4",
+      "baseline_hash_matches": true,
+      "full_diff_exactly_matches_saved": true,
+      "new_sha256": "742692b3196c1ce35fd00f8c7ead316fd89e30b83340aef04f05d9a94cccda78",
+      "ast_parse_ok": true
+    }
+  },
+  "complete_delta": {
+    "driver": [
+      "release25-final10 -> release25-final11 output root",
+      "git-heads-v25.json -> git-heads-v25-r11.json observation path",
+      "Append the two previously failing socket tests to HOST_TESTS",
+      "Change two diagnostic strings from four to six; boolean conditions are unchanged"
+    ],
+    "launcher": [
+      "r10 -> r11 root/output paths",
+      "r11 Git-head observation and shared-target-agreement paths"
+    ],
+    "all_other_bytes_preserved": true,
+    "full_diff_recomputed_from_actual_old_and_new_files": true
+  },
+  "host_tests": [
+    "client::local::tests::bundled_runner_is_private_and_removed_after_failed_startup",
+    "client::local::tests::bundled_runner_never_overwrites_or_removes_a_replaced_file",
+    "client::local::tests::private_socket_rejects_symlinks_and_exposed_permissions",
+    "client::local::tests::gateway_checks_all_origins_and_has_no_portal_routes",
+    "client::local::socket::tests::dropping_the_host_cleans_its_socket_without_explicit_shutdown",
+    "client::local::socket::tests::http_socket_uses_the_same_origin_and_authenticated_mcp_router"
+  ],
+  "partition_and_assertions": [
+    {
+      "location": "driver:1308-1320",
+      "result": "All six exact names are skipped only in private_args and selected with --exact in host_args. The driver enumerates all/private/host names from the same library binary, requires private and host to be disjoint, their union to equal all tests, and host to equal the exact HOST_TESTS set."
+    },
+    {
+      "location": "driver:1320; selection:507-519",
+      "result": "All six host tests must be ordinary, not ignored. Their nonempty selection requires result=ok, passed=6, failed=0, ignored=0 and measured=0, with exact filtered count derived from the full inventory."
+    },
+    {
+      "location": "driver:1340-1343",
+      "result": "The existing private runner still uses bwrap with its private /tmp; the six-test host runner remains outside that wrapper, uses the same artifact and TMPDIR=/tmp, and remains serial. No test body or socket ownership check is changed."
+    },
+    {
+      "location": "driver:1032-1050, 1408-1417",
+      "result": "Per-stage artifact identity before/after, executable runner checks, exact final stage order, exit-0 requirements and exact Rust result-to-selection equality are unchanged. A missing host stage or incorrect selected count cannot satisfy finish."
+    },
+    {
+      "location": "launcher:50-85, 125-132",
+      "result": "Existing debug/assertion requirement, final-source/input binding checks, clean worktree requirement, single nonblocking owner lock and finally close are unchanged by this patch. The reviewer did not execute any of them."
+    }
+  ],
+  "planned_contract_counts": {
+    "status": "static_plan_only_not_actual_results",
+    "stages": 35,
+    "rust_stages": 26,
+    "integration_targets": 20,
+    "mandatory_ignored_tests": 14,
+    "derivation": {
+      "stages": "9 named initial stages + 20 integration stages + 4 ignored stages + release + decoder",
+      "rust_stages": "2 library partitions + 20 integration stages + 4 ignored stages",
+      "mandatory_ignored_tests": "2 code_mode + 7 two_tools + 3 workspace_bridge + 2 context_helpers"
+    },
+    "definitions_and_final_assertions_unchanged": true
+  },
+  "failure_relation": {
+    "observed_C_errors": "Both added host names are the two C tests that failed on unsafe /tmp parent ownership/permissions under the private runner.",
+    "interpretation": "The change assigns those tests to the already existing host-environment partition and requires them to execute there; it does not waive their assertions.",
+    "not_proved_here": "Whether the final bound Q/r11 execution passes these cases or the full gate. C failure evidence remains unchanged."
+  },
+  "unbound_boundary": {
+    "state": "prepared_unbound",
+    "final_bound_driver_or_launcher_path_received": false,
+    "final_Q_tree_runtime_observations_or_owner_receipts_bound_by_this_reviewer": false,
+    "placeholders_remain": "The prepared launcher retains UNBOUND_FINAL_OBSERVATIONS / UNBOUND_COORDINATION_RECEIPT and final-source placeholders; its early shape checks reject unbound inputs.",
+    "prepared_driver_sha_is_not_final_r11_sha": true,
+    "independent_review_is_not_additional_start_permission_gate": true
+  },
+  "evidence": [
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-Q-owner-fix-and-host-review-original.json",
+      "bytes": 5680,
+      "sha256": "19f5acd8063d92259c03af8cc32a36db146bf7db9f080bca3cbf2df1230035e5"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-prepared-static-inputs.json",
+      "bytes": 44379,
+      "sha256": "272fd86aa13ba1766791248a2bc303c319f0ecc669a256bf2aee58133c14479c"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-C-gate-failure-test-blocks.json",
+      "bytes": 2087,
+      "sha256": "db44ca345e5290e2a13e0ca9b19b945257427f5dde75a422206e64422cc68705"
+    }
+  ],
+  "operations": {
+    "candidate_or_producer_imported": false,
+    "candidate_or_producer_executed": false,
+    "product_tests_or_validators_run": false,
+    "compilation_or_GUI": false,
+    "target_lock_acquired": false,
+    "source_ref_or_worktree_changes": false,
+    "native_reads": "Three bounded read-only Python jobs, 971/975/976: file bytes, SHA256, difflib comparison and AST parsing only. All exit0/bothEOF.",
+    "outputs": "Only independent review JSON/Markdown and read-receipt bundle in shared scratch."
+  }
+}

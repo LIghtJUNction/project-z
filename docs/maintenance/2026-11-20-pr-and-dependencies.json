@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-21T02:02:30+00:00",
+ "generated_at": "2026-11-21T02:59:28.450376+00:00",
  "timezone": "Asia/Taipei",
  "scope": "Initial 85 PRs, latest GitHub default-branch dependency migration, generated-binary history cleanup, development-machine cache cleanup, release integration and the requested named local/remote contexts",
  "batch_status": "in_progress",
@@ -976,7 +976,7 @@
    }
   ],
   "pending": [
-   "Original owner repairs the exact C Gate35 failures and closes finalSSMCP/P1; root then decides zcalldPR1. Final fixed44-repository Git-source graph and downstream pins remain pending."
+   "Existing owners continue U/r12 and final consumer/UI/runtime/P1; adopted9fd snapshot is only19 running stages. Q35/35 remains historical. Fresh44 source propagation and zcalldPR1 final decision remain pending."
   ],
   "dependency_snapshot": {
    "status": "git_latest_source_migration_in_progress",
@@ -1042,7 +1042,7 @@
    "cargo_metadata_locked": "passed",
    "binary_installation": false
   },
-  "updated_at": "2026-11-21T02:02:30+00:00",
+  "updated_at": "2026-11-21T02:59:28.450376+00:00",
   "aggregate_pr": {
    "url": "https://github.com/LIghtJUNction/project-z/pull/7",
    "number": 7,
@@ -1370,13 +1370,13 @@
    },
    "current_source_owner_active": true,
    "current_release": {
-    "status": "C_gate35_failed_library_private_owner_repair_pending",
-    "candidate": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
-    "tree": "bf393700928fd9aa37f2dea8b8683ebe13b114cd",
+    "status": "Q_r11_gate35_passed_U_frozen_r12_running_at_024727",
+    "candidate": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "tree": "2c60d011da8c2b31aefd80367bf7f19e28f10b62",
     "source": {
-     "path": "evidence/ssmcp-C-source-freeze-original.json",
-     "bytes": 3162,
-     "sha256": "6c8bab3f7b542bc29235e04bcd4ddf25c12d9b3051cc7d7a0a3bb284cc3d29f9"
+     "path": "evidence/ssmcp-U-source-freeze-original-20261121.json",
+     "bytes": 3280,
+     "sha256": "72a113397d0381f59f50f10c74b0a3592c44131f44f71f85a4914c078301f62f"
     },
     "baseline_781": {
      "path": "evidence/ssmcp-781-complete-independent-review-20261121.json",
@@ -1401,9 +1401,9 @@
      "sha256": "91fe794f6e74b57cbd5c59b7a32622fbc58d08a40bc22b718b83f2fc604a2627"
     },
     "current_source_observation": {
-     "path": "evidence/ssmcp-C-source-freeze-original.json",
-     "bytes": 3162,
-     "sha256": "6c8bab3f7b542bc29235e04bcd4ddf25c12d9b3051cc7d7a0a3bb284cc3d29f9"
+     "path": "evidence/ssmcp-U-source-freeze-original-20261121.json",
+     "bytes": 3280,
+     "sha256": "72a113397d0381f59f50f10c74b0a3592c44131f44f71f85a4914c078301f62f"
     },
     "current_candidate_runtime_pass_claimed": false,
     "current_candidate_build_pass_claimed": false,
@@ -1417,15 +1417,31 @@
      "bytes": 9627,
      "sha256": "065da9246f1b6e2fba928b7dbaac770ae2c8f177db5422df501219527dda0ffd"
     },
-    "current_gate_failure": {
-     "path": "evidence/ssmcp-C-gate-failure-original-extract.json",
-     "bytes": 22941,
-     "sha256": "96eb6d9020a272435a7d9a285299ad54a35ae0332a47da81e466b3ac6f178559"
-    },
     "prior_status_b572": {
      "path": "evidence/C-readonly-prior-status-b572-20261121.json",
      "bytes": 23699,
      "sha256": "f35d2ba69243b34247748c8ec9bf8ecb1616cee146af2d94cbc1434b35b52b9f"
+    },
+    "previous_C_gate_failure": {
+     "path": "evidence/ssmcp-C-gate-failure-original-extract.json",
+     "bytes": 22941,
+     "sha256": "96eb6d9020a272435a7d9a285299ad54a35ae0332a47da81e466b3ac6f178559"
+    },
+    "prior_status_0d73": {
+     "path": "evidence/Q-r11-native-recovery-prior-status-0d73-20261121.json",
+     "bytes": 26774,
+     "sha256": "0dd20d68f877342b841b2712d7ba978acfd9aae298311463fb81d053533fc88b"
+    },
+    "candidate_identity_scope": "U source freeze and original02:47:27 progress only. Q is the separately completed historical Gate; no Q outcome is applied toU.",
+    "Q_completed_gate_review": {
+     "path": "evidence/ssmcp-Q-r11-gate-independent-review.json",
+     "bytes": 80595,
+     "sha256": "1e8d6899f5e44b78f412707a8834ab99c58184c8b575278e867dc22cbd2edb31"
+    },
+    "U_r12_progress": {
+     "path": "evidence/ssmcp-U-r12-progress-9fd-original-20261121.json",
+     "bytes": 7022,
+     "sha256": "b2b596aec110e0644c1a04d95bdabe6ed080a58088111171a48ff13d3352c045"
     }
    },
    "named_context_followup": {
@@ -1506,7 +1522,7 @@
   "tree": "df3e6ed3c4e9d950e6277bec472ea4c8406a94dc",
   "status": "draft_final_components_and_complete_44_repository_graph_pending",
   "base": "d2a6616c85b7e47c3faa32bd5728db49cdd9c142",
-  "source_snapshot_note": "Report-only increment based on B572. The code/gitlinks above remain the historical9d source snapshot; they are not the current report branch head. Original85/old-cohort gates are unchanged; final44 remains pending."
+  "source_snapshot_note": "Report-only preparation from fixed0d73/treea788 and all330 leaves. This is not a new aggregate/default-branch source selection. Preserve all existing source/gitlink/catalog leaves and later main changes at final44 integration."
  },
  "dependency_snapshot": {
   "status": "19_repository_migrations_published_recursive_checker_merged_final_44_graph_pending",
@@ -11611,10 +11627,110 @@
    "path": "evidence/C-readonly-prior-status-b572-20261121.json",
    "bytes": 23699,
    "sha256": "f35d2ba69243b34247748c8ec9bf8ecb1616cee146af2d94cbc1434b35b52b9f"
+  },
+  "ssmcp-Q-fixture-static-review.json": {
+   "path": "evidence/ssmcp-Q-fixture-static-review.json",
+   "bytes": 7646,
+   "sha256": "ae1f187c6276d38eda1ff81ff3414a94fb683420804443a7d00ee9abd0e691df"
+  },
+  "ssmcp-HOST6-prepared-independent-static-review.json": {
+   "path": "evidence/ssmcp-HOST6-prepared-independent-static-review.json",
+   "bytes": 8904,
+   "sha256": "edd940810cf1c2cf95a12f4e9a0df79099ccd45fe1904edbe5840b62f7558ab9"
+  },
+  "ssmcp-HOST6-r11-consumer-independent-static-review.json": {
+   "path": "evidence/ssmcp-HOST6-r11-consumer-independent-static-review.json",
+   "bytes": 18771,
+   "sha256": "bc6a4850ebf7143c200bc9bb18cdefa36a046f2631085994824444a9a875b620"
+  },
+  "ssmcp-HOST6-r11-consumer-independent-static-review.md": {
+   "path": "evidence/ssmcp-HOST6-r11-consumer-independent-static-review.md",
+   "bytes": 3724,
+   "sha256": "9befc42d2ac5d363740a7195a149a477176249215e1a8abb4a50e6feda9147f0"
+  },
+  "ssmcp-Q-public-source-observation.json": {
+   "path": "evidence/ssmcp-Q-public-source-observation.json",
+   "bytes": 1023,
+   "sha256": "3b7bb88dbf6955455a9584e5eaba470f75d00cb55f53019489b9d0b4ec66ebcf"
+  },
+  "ssmcp-Q-source-freeze-original.json": {
+   "path": "evidence/ssmcp-Q-source-freeze-original.json",
+   "bytes": 3242,
+   "sha256": "0eebae75a3f8f5ce772958e5f897c0ebc6652c245fd6a32285680e5e11f0db00"
+  },
+  "ssmcp-Q-original-goals-library-result-map.json": {
+   "path": "evidence/ssmcp-Q-original-goals-library-result-map.json",
+   "bytes": 6058,
+   "sha256": "5214c32c1178d446d9b0c4e2b4ddb2a32d4a1e48e958dc1924adaa2a3960eb59"
+  },
+  "ssmcp-Q-r11-launcher-exit-original.json": {
+   "path": "evidence/ssmcp-Q-r11-launcher-exit-original.json",
+   "bytes": 4792,
+   "sha256": "72b5f78ea2deedeb6f8998315c1a2df617809ceb6d1220ff8112b1840847b36c"
+  },
+  "ssmcp-Q-r11-launcher-launch-original.json": {
+   "path": "evidence/ssmcp-Q-r11-launcher-launch-original.json",
+   "bytes": 3624,
+   "sha256": "c62314dd39e23b5a0dd487fd70a91f9d631cb894043b47bb8ef16435a8076f0e"
+  },
+  "ssmcp-Q-r11-library-host-original.log": {
+   "path": "evidence/ssmcp-Q-r11-library-host-original.log",
+   "bytes": 2069,
+   "sha256": "ce3be8a1ea8c13b3dcbd6c35260c2072772dde98e9f98ab758478eadb8ec4318"
+  },
+  "ssmcp-Q-r11-owner-completed-gate-review-original.json": {
+   "path": "evidence/ssmcp-Q-r11-owner-completed-gate-review-original.json",
+   "bytes": 7663,
+   "sha256": "d34195f917a33264fc9d6618fa5f90149fc28521c58c12e8a53eb5acd840e60b"
+  },
+  "ssmcp-Q-r11-owner-count-clarification-original.json": {
+   "path": "evidence/ssmcp-Q-r11-owner-count-clarification-original.json",
+   "bytes": 1792,
+   "sha256": "c683c79e718368c28264f05e9b0101d4d409f986f125684b35590e5a25746fad"
+  },
+  "ssmcp-Q-r11-unit-start-original.json": {
+   "path": "evidence/ssmcp-Q-r11-unit-start-original.json",
+   "bytes": 742,
+   "sha256": "4202e558a03ca3a22d420ded41440ee5e57e3828f962dcaec42fe78199b1ad4f"
+  },
+  "ssmcp-Q-r11-outer-exit-original.json": {
+   "path": "evidence/ssmcp-Q-r11-outer-exit-original.json",
+   "bytes": 1167,
+   "sha256": "37e9a0929b8b6ea71bf158c5d758a4ebad0f056d63c781f4de7828be0d01885d"
+  },
+  "ssmcp-Q-r11-gate-independent-review.json": {
+   "path": "evidence/ssmcp-Q-r11-gate-independent-review.json",
+   "bytes": 80595,
+   "sha256": "1e8d6899f5e44b78f412707a8834ab99c58184c8b575278e867dc22cbd2edb31"
+  },
+  "ssmcp-Q-r11-gate-independent-review.md": {
+   "path": "evidence/ssmcp-Q-r11-gate-independent-review.md",
+   "bytes": 6779,
+   "sha256": "2b7e99bbaef74e0eb77e47fdfe8bb8d01831bf77990256fe2b1b217cade32b1a"
+  },
+  "ssmcp-Q-r11-final-gate-root-read.json": {
+   "path": "evidence/ssmcp-Q-r11-final-gate-root-read.json",
+   "bytes": 31346,
+   "sha256": "30729b47b74201addf7282c9b6bd2cbbca834a87be252c8f90cd5617e7ab9092"
+  },
+  "ssmcp-U-source-freeze-original-20261121.json": {
+   "path": "evidence/ssmcp-U-source-freeze-original-20261121.json",
+   "bytes": 3280,
+   "sha256": "72a113397d0381f59f50f10c74b0a3592c44131f44f71f85a4914c078301f62f"
+  },
+  "ssmcp-U-r12-progress-9fd-original-20261121.json": {
+   "path": "evidence/ssmcp-U-r12-progress-9fd-original-20261121.json",
+   "bytes": 7022,
+   "sha256": "b2b596aec110e0644c1a04d95bdabe6ed080a58088111171a48ff13d3352c045"
+  },
+  "Q-r11-native-recovery-prior-status-0d73-20261121.json": {
+   "path": "evidence/Q-r11-native-recovery-prior-status-0d73-20261121.json",
+   "bytes": 26774,
+   "sha256": "0dd20d68f877342b841b2712d7ba978acfd9aae298311463fb81d053533fc88b"
   }
  },
  "current_maintenance": {
-  "generated_at": "2026-11-21T02:02:30+00:00",
+  "generated_at": "2026-11-21T02:59:28.450376+00:00",
   "root_consumers": {
    "zcall-gui": {
     "status": "merged_and_main_tree_read_back",
@@ -16603,16 +16719,16 @@
    }
   },
   "ssmcp_release": {
-   "status": "C_gate35_failed_library_private_owner_repair_pending",
+   "status": "Q_r11_gate35_passed_U_frozen_r12_running_at_024727",
    "main_verified": "f33ed8f14fc14aff05a2e4098743eb07e8527c06",
-   "candidate": "d29dae7e2b9ff6794f17f3c96c0cc37977936084",
+   "candidate": "784370b5fe1b817c788273a5f7b1ab826c743965",
    "new_formal_release": false,
    "current_public_tree": "f9bc35bf497c80d9d93d668f5d6e339c3d19c802",
-   "scope_note": "V metadata and11deployment-policy tests are separate from C. C merges D4 repairs and retains V metadata and existing FC changes, but its first library-private stage failed. Fixed781/FC timing, seven originally compile-only FC unit functions and D4 owner-reported results are not promoted to C acceptance. Final P1 and44-source graph remain pending.",
+   "scope_note": "Q35/35 belongs to exactQ. U is a later frozen fixture successor with its own r12 progress, not a completed Gate in the adopted observation. OlderC/V/781/FC/0af8 evidence remains unchanged; finalUI/runtime/P1 and final44 are separate.",
    "previous_final_gate_plan_text": "pending on final fixed SSMCP cohort plus zcalld97d; original build commits and evidence stay separate",
    "current_final_gate_plan": {
-    "status": "C_gate35_failure_must_be_resolved_before_final_P1",
-    "plan": "Preserve the exact failed C attempt, obtain reviewed successor source and real remaining gates from the original owner, then close final P1 using the fixed0af8 CLI. The new read-only adapter proof alone grants no P1 execution or merge.",
+    "status": "Q_historical_gate_complete_U_r12_and_final_acceptance_pending",
+    "plan": "Retain completed exactQ/r11 and originalC failure. Continue the sole owners U/r12 fixed-source gates and artifact binding, then final consumer/UI/runtime and0af8 listenerP1. No Q-result transfer; fresh44 remains pending.",
     "original_32_scope": "The historical32 set included five shared-library checks, two Go checks and package/install work outside this P1 path. Those unrelated checks are not rerun or reported as new32 passes.",
     "merge_owner": "Project Z root, after native final acceptance and fresh main/candidate tree verification",
     "draft": true,
@@ -16639,22 +16755,34 @@
     "owner_reported_scope": "178 unit /14 CLI/10 isolated PTY passed;10 helper fixtures ignored; no root rerun"
    },
    "main_observation_scope": "Fixed public f33 snapshot at00:23:39UTC; PR162 is a separate release-source line. FC input gates do not validate the main union or the other release owner results.",
-   "candidate_tree": "bf393700928fd9aa37f2dea8b8683ebe13b114cd",
+   "candidate_tree": "2c60d011da8c2b31aefd80367bf7f19e28f10b62",
    "prior_source_audit_and_python_counts": {
     "path": "evidence/input-ui-prior-status-c2c-20261121.json",
     "bytes": 8683,
     "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
    },
    "current_progress": {
-    "phase": "C first attempt failed; original source owner is handling the three recorded failures. No successor acceptance is claimed by this snapshot.",
+    "phase": "Q/r11 complete; U frozen; original9fd r12 progress running at02:47:27.",
     "source_owner": "Existing native SSMCP source author and acceptance owner",
     "parallel_product_writer_created": false,
-    "build_or_runtime_on_union_claimed": false
+    "source_revision": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "source_tree": "2c60d011da8c2b31aefd80367bf7f19e28f10b62",
+    "observed_at_utc": "2026-11-21T02:47:27.199423+00:00",
+    "observed_completed_stages": 19,
+    "all_observed_stage_exits_zero": true,
+    "complete_r12_gate_pass_claimed": false,
+    "five_owned_U_artifact_pass_claimed": false,
+    "final_runtime_UI_P1_pass_claimed": false,
+    "evidence": {
+     "path": "evidence/ssmcp-U-r12-progress-9fd-original-20261121.json",
+     "bytes": 7022,
+     "sha256": "b2b596aec110e0644c1a04d95bdabe6ed080a58088111171a48ff13d3352c045"
+    }
    },
    "current_native_observation": {
-    "path": "evidence/ssmcp-C-gate-failure-original-extract.json",
-    "bytes": 22941,
-    "sha256": "96eb6d9020a272435a7d9a285299ad54a35ae0332a47da81e466b3ac6f178559"
+    "path": "evidence/ssmcp-U-r12-progress-9fd-original-20261121.json",
+    "bytes": 7022,
+    "sha256": "b2b596aec110e0644c1a04d95bdabe6ed080a58088111171a48ff13d3352c045"
    },
    "prior_status_794": {
     "path": "evidence/runtime-followup-prior-status-794-20261121.json",
@@ -16915,9 +17043,9 @@
     "counting": "80+31 are fixture assertions per source;271 reviewer consistency checks are not product tests."
    },
    "current_source_observation": {
-    "path": "evidence/ssmcp-C-source-freeze-original.json",
-    "bytes": 3162,
-    "sha256": "6c8bab3f7b542bc29235e04bcd4ddf25c12d9b3051cc7d7a0a3bb284cc3d29f9"
+    "path": "evidence/ssmcp-U-source-freeze-original-20261121.json",
+    "bytes": 3280,
+    "sha256": "72a113397d0381f59f50f10c74b0a3592c44131f44f71f85a4914c078301f62f"
    },
    "current_candidate_runtime_pass_claimed": false,
    "prior_status_cda": {
@@ -16925,7 +17053,7 @@
     "bytes": 37359,
     "sha256": "4def00b1d0ae2e7657b51b322ef994add8aede4f99ba24013056262ee070fd13"
    },
-   "current_native_observation_scope": "C first actual35-stage attempt stopped at stage5 library-private. First4 commands exited0, including library compilation only. Complete product build/five-ELF/runtime/finalP1 success is not established.",
+   "current_native_observation_scope": "Original9fd progress at02:47:27UTC:19 completed stages exit0, statusrunning, finished_atnull, no final launcher exit. This report does not claim subsequent r12 completion.",
    "current_candidate_build_pass_claimed": false,
    "version_coordination": {
     "status": "V0.10.25 metadata checkpoint published; C retains its version, exactlock and production-relay deferral.",
@@ -17031,6 +17159,236 @@
     "final_runtime_pass": false,
     "p1_pass": false,
     "release_pass": false
+   },
+   "prior_status_0d73": {
+    "path": "evidence/Q-r11-native-recovery-prior-status-0d73-20261121.json",
+    "bytes": 26774,
+    "sha256": "0dd20d68f877342b841b2712d7ba978acfd9aae298311463fb81d053533fc88b"
+   },
+   "candidate_identity_scope": "U source freeze and original02:47:27 progress only. Q is the separately completed historical Gate; no Q outcome is applied toU.",
+   "Q_r11_milestone": {
+    "source": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+    "tree": "5143f90c05066c95b2df58a9eab1831e05888a62",
+    "version": "0.10.25",
+    "role": "completed_historical_gate_only",
+    "source_review": {
+     "path": "evidence/ssmcp-Q-fixture-static-review.json",
+     "bytes": 7646,
+     "sha256": "ae1f187c6276d38eda1ff81ff3414a94fb683420804443a7d00ee9abd0e691df"
+    },
+    "source_freeze": {
+     "path": "evidence/ssmcp-Q-source-freeze-original.json",
+     "bytes": 3242,
+     "sha256": "0eebae75a3f8f5ce772958e5f897c0ebc6652c245fd6a32285680e5e11f0db00"
+    },
+    "public_source_observation": {
+     "path": "evidence/ssmcp-Q-public-source-observation.json",
+     "bytes": 1023,
+     "sha256": "3b7bb88dbf6955455a9584e5eaba470f75d00cb55f53019489b9d0b4ec66ebcf"
+    },
+    "HOST6_producer_static_review": {
+     "path": "evidence/ssmcp-HOST6-prepared-independent-static-review.json",
+     "bytes": 8904,
+     "sha256": "edd940810cf1c2cf95a12f4e9a0df79099ccd45fe1904edbe5840b62f7558ab9"
+    },
+    "HOST6_consumer_unbound_static_review": {
+     "path": "evidence/ssmcp-HOST6-r11-consumer-independent-static-review.json",
+     "bytes": 18771,
+     "sha256": "bc6a4850ebf7143c200bc9bb18cdefa36a046f2631085994824444a9a875b620"
+    },
+    "independent_actual_review": {
+     "path": "evidence/ssmcp-Q-r11-gate-independent-review.json",
+     "bytes": 80595,
+     "sha256": "1e8d6899f5e44b78f412707a8834ab99c58184c8b575278e867dc22cbd2edb31"
+    },
+    "independent_explanation": {
+     "path": "evidence/ssmcp-Q-r11-gate-independent-review.md",
+     "bytes": 6779,
+     "sha256": "2b7e99bbaef74e0eb77e47fdfe8bb8d01831bf77990256fe2b1b217cade32b1a"
+    },
+    "gate": {
+     "original": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-gates.json",
+      "bytes": 1282803,
+      "sha256": "645dd18969232888cbb393e4193542b421706161eaf6ef2af0af6acca553d7ec"
+     },
+     "run_id": "ecfe8f69dcb362096018be9a632ff96c",
+     "status": "passed",
+     "stage_count": 35,
+     "Rust_parent_stages": 26,
+     "all_stage_exits_zero": true,
+     "started_at": 1795227009.4109368,
+     "finished_at": 1795227737.5537446,
+     "root_readback": {
+      "path": "evidence/ssmcp-Q-r11-final-gate-root-read.json",
+      "bytes": 31346,
+      "sha256": "30729b47b74201addf7282c9b6bd2cbbca834a87be252c8f90cd5617e7ab9092"
+     },
+     "large_G_embedded_or_copied_to_report": false
+    },
+    "counts": {
+     "library_all_inventory": 2079,
+     "private_partition_inventory": 2073,
+     "host_partition_inventory": 6,
+     "library_private": {
+      "passed": 2050,
+      "failed": 0,
+      "ignored": 23,
+      "filtered": 6
+     },
+     "library_host": {
+      "passed": 6,
+      "failed": 0,
+      "ignored": 0,
+      "filtered": 2073
+     },
+     "partitions_disjoint_complete_and_host_not_ignored": true,
+     "integration_targets": 20,
+     "integration_total_passed": 102,
+     "ordinary_integration": {
+      "target_stages": 19,
+      "passed": 101
+     },
+     "separate_worker_target": {
+      "target_stages": 1,
+      "passed": 1,
+      "mode": "ignored-exact",
+      "name": "missing_worker_entry_is_recoverable_without_spawning_the_embedding_binary"
+     },
+     "additional_mandatory_ignored": {
+      "stages": 4,
+      "passed": 14,
+      "groups": {
+       "code_mode": 2,
+       "two_tools": 7,
+       "workspace_bridge": 3,
+       "context_helpers": 2
+      }
+     },
+     "original_17_goal_cases": {
+      "exact_raw_ok_lines_verified": 17,
+      "subset_of_private_2050": true,
+      "added_to_total": false
+     },
+     "nested_child_test_summaries_added": false,
+     "gate_stages_not_all_rust_tests": true
+    },
+    "original17_evidence": {
+     "path": "evidence/ssmcp-Q-original-goals-library-result-map.json",
+     "bytes": 6058,
+     "sha256": "5214c32c1178d446d9b0c4e2b4ddb2a32d4a1e48e958dc1924adaa2a3960eb59"
+    },
+    "host_log": {
+     "path": "evidence/ssmcp-Q-r11-library-host-original.log",
+     "bytes": 2069,
+     "sha256": "ce3be8a1ea8c13b3dcbd6c35260c2072772dde98e9f98ab758478eadb8ec4318"
+    },
+    "count_clarification": {
+     "original_review": {
+      "path": "evidence/ssmcp-Q-r11-owner-completed-gate-review-original.json",
+      "bytes": 7663,
+      "sha256": "d34195f917a33264fc9d6618fa5f90149fc28521c58c12e8a53eb5acd840e60b"
+     },
+     "correction": {
+      "path": "evidence/ssmcp-Q-r11-owner-count-clarification-original.json",
+      "bytes": 1792,
+      "sha256": "c683c79e718368c28264f05e9b0101d4d409f986f125684b35590e5a25746fad"
+     },
+     "both_original_bytes_retained": true,
+     "execution_and_total_unchanged": true
+    },
+    "source_manifest": {
+     "entries": 1849,
+     "files": 1545,
+     "directories": 304
+    },
+    "locked_metadata": {
+     "packages": 277,
+     "registry_packages": 264,
+     "Git_packages": 12,
+     "root_path_packages": 1,
+     "Git_checkouts": 11
+    },
+    "raw_original_texts_verified": 202,
+    "selected_artifacts_fresh_false": 26,
+    "owned_artifacts_rehashed": 5,
+    "owned_artifact_kinds": {
+     "debug_test": 1,
+     "release_bins": 3,
+     "release_example": 1
+    },
+    "Clippy": {
+     "commands": 2,
+     "exit_codes": [
+      0,
+      0
+     ],
+     "zero_warnings_claimed": false,
+     "retained_warning": "Cargo unused dependency qrcodegen"
+    },
+    "execution_chain": {
+     "unit_start": {
+      "path": "evidence/ssmcp-Q-r11-unit-start-original.json",
+      "bytes": 742,
+      "sha256": "4202e558a03ca3a22d420ded41440ee5e57e3828f962dcaec42fe78199b1ad4f"
+     },
+     "outer_exit": {
+      "path": "evidence/ssmcp-Q-r11-outer-exit-original.json",
+      "bytes": 1167,
+      "sha256": "37e9a0929b8b6ea71bf158c5d758a4ebad0f056d63c781f4de7828be0d01885d"
+     },
+     "launcher_launch": {
+      "path": "evidence/ssmcp-Q-r11-launcher-launch-original.json",
+      "bytes": 3624,
+      "sha256": "c62314dd39e23b5a0dd487fd70a91f9d631cb894043b47bb8ef16435a8076f0e"
+     },
+     "launcher_exit": {
+      "path": "evidence/ssmcp-Q-r11-launcher-exit-original.json",
+      "bytes": 4792,
+      "sha256": "72b5f78ea2deedeb6f8998315c1a2df617809ceb6d1220ff8112b1840847b36c"
+     },
+     "invocation_id": "880bd12873874a43a7f0a1eb9dc28c91",
+     "asynchronous96f_scope": "Submission only; completion is established by exact outer/launcher exits plus completeG.",
+     "outer_target_lock_acquisition": false,
+     "launcher_nonblocking_target_lock_once": true,
+     "continuous_kernel_lock_ownership_independently_observed": false,
+     "later_observation_utc": "2026-11-21T02:34:55.449139+00:00",
+     "later_unit_collected_and_originalPIDs_absent": true,
+     "historical_systemd_exit_or_all_period_kernel_lock_proof_claimed": false,
+     "global_lock_currently_free_claimed": false
+    },
+    "final_bound_consumer_result": null,
+    "UI_runtime_P1_pass_claimed": false,
+    "formal_release_or_merge_approval": false,
+    "results_transferred_to_U": false
+   },
+   "U_r12_observation": {
+    "source": "784370b5fe1b817c788273a5f7b1ab826c743965",
+    "tree": "2c60d011da8c2b31aefd80367bf7f19e28f10b62",
+    "previous_source": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+    "freeze_utc": "2026-11-21T02:40:24.499674+00:00",
+    "freeze": {
+     "path": "evidence/ssmcp-U-source-freeze-original-20261121.json",
+     "bytes": 3280,
+     "sha256": "72a113397d0381f59f50f10c74b0a3592c44131f44f71f85a4914c078301f62f"
+    },
+    "source_version": "0.10.25",
+    "progress": {
+     "path": "evidence/ssmcp-U-r12-progress-9fd-original-20261121.json",
+     "bytes": 7022,
+     "sha256": "b2b596aec110e0644c1a04d95bdabe6ed080a58088111171a48ff13d3352c045"
+    },
+    "read_job": "26c4545eae1eab8d27485f4a48077d3c-9fd",
+    "observed_at_utc": "2026-11-21T02:47:27.199423+00:00",
+    "run_id": "f38d16ea5cc34c21c5a56313245625a1",
+    "started_at": 1795228951.8733153,
+    "observed_state": "running",
+    "completed_stages": 19,
+    "all_observed_exit_codes_zero": true,
+    "finished_at": null,
+    "final_launcher_exit_exists": false,
+    "complete_Gate35_or_five_owned_artifacts_pass_claimed": false,
+    "UI_runtime_P1_pass_claimed": false
    }
   },
   "context_request": {
@@ -18392,7 +18750,7 @@
      "sha256": "670902fa9c55b7612911eb2e96ed180332c14305e4a0582bebc81bfadffdb481"
     }
    },
-   "ssmcp_consumer": "Fixed C retains zusea1 and V0.10.25 metadata after D4 image/Unix-lease source propagation. Its first Gate35 failed at library-private; no current product/P1 pass. Historical4237/B and781/FC results retain exact identities. zusePR3 remains feature-merge836 only; no new downstream selection or final44 claim.",
+   "ssmcp_consumer": "Q647 completed r11Gate35; U784 is a later frozen fixture source with original02:47:27 r12 progress only. No final downstream selection, completeU gate/runtime/P1 or latest44 claim. Historical dependency snapshots remain unchanged.",
    "aggregate_owner": "Personal is the sole source-graph/checkout writer; root reviews and publishes the maintenance report.",
    "oh_my_ztty": {
     "main": "f04f6ea8ae909e121edabbd766ee725a472f8146",
@@ -24021,29 +24379,43 @@
   },
   "native_path": "/home/lightjunction/Documents/GITHUB/pr-core-git-sources-20261120/pr-cleanup-mechrevo-git-source.json"
  },
- "current_snapshot_scope": "Fixed C d29/treebf3937 source and first Gate35 attempt: first four stages exit0; library-private exits101 with2049passed/3failed/23ignored/4filtered. No C full-gate/five-ELF/runtime/P1/release pass. V metadata policy11passed remains V-specific. 92c three schema contracts and92e one read-only input validation passed; they bind original0af8/882 evidence, not new182+8 product runs. Historical781/FC, zuse356, original85 and old graphs retain their identities. Final44 not executed.",
+ "current_snapshot_scope": "Q647/tree5143 r11 Gate35 is an independently reviewed completed historical milestone. U784/tree2c60 was frozen at02:40:24; original9fd observed r12 running with19 zero-exit stages at02:47:27, without completeGate/launcher exit. No Q results are transferred toU, final UI/runtime/P1 or final44. Original85, all historical graph/component results, C failure and0af8/882/92c/92e retain their identities.",
  "report_preparation": {
-  "source_report_commit": "b57291ca0feae61d691387f5a4f9ab2d9d99dd1d",
-  "source_report_tree": "d88659739eec7332d253fc40efda65470de8492b",
-  "prepared_at_utc": "2026-11-21T02:02:30+00:00",
-  "prepared_at_taipei": "2026-11-21T10:02:30+08:00",
-  "fixed_snapshot": true,
+  "source_report_commit": "0d73a83668ea8efb424a0d6536d2bd4f8d1e547a",
+  "source_report_tree": "a788332b8c3e1c2d68248f57725bfdc7f924cf3d",
+  "prepared_at_utc": "2026-11-21T02:59:28.450376+00:00",
+  "prepared_at_taipei": "2026-11-21T10:59:28.450376+08:00",
+  "fixed_observations": {
+   "Q_independent_review": "2026-11-21T02:36:57.650542+00:00",
+   "U_freeze": "2026-11-21T02:40:24.499674+00:00",
+   "U_progress": "2026-11-21T02:47:27.199423+00:00"
+  },
   "report_only": true,
   "not_published_by_preparer": true,
   "prior_status": {
-   "path": "evidence/C-readonly-prior-status-b572-20261121.json",
-   "bytes": 23699,
-   "sha256": "f35d2ba69243b34247748c8ec9bf8ecb1616cee146af2d94cbc1434b35b52b9f"
+   "path": "evidence/Q-r11-native-recovery-prior-status-0d73-20261121.json",
+   "bytes": 26774,
+   "sha256": "0dd20d68f877342b841b2712d7ba978acfd9aae298311463fb81d053533fc88b"
   },
-  "serialization": "indent1; old85 and all historical graph/component objects retained exactly; new evidence referenced instead of embedded.",
-  "source_times": {
-   "V_policy_finished_utc": "2026-11-21T01:19:12.721766+00:00",
-   "C_frozen_utc": "2026-11-21T01:46:07.352796+00:00",
-   "C_gate_failure_extract_utc": "2026-11-21T01:56:57.632168+00:00",
-   "C_source_review_utc": "2026-11-21 01:54:37 UTC",
-   "C_named_subset_review_utc": "2026-11-21T01:56:17Z",
-   "readonly_finished_utc": "2026-11-21T01:50:12.423298+00:00",
-   "readonly_independent_review_utc": "2026-11-21T01:59:32.341178+00:00"
-  }
+  "recovery": "New native candidate prepared from actual byte-verified0d73/native originals. Earlier inaccessible cloud21 remains unreviewed; this is not a byte-restoration claim.",
+  "old_unreviewed_cloud_candidate": {
+   "path": "/workspace/scratch/3cc863eec631/project-z-maintenance-20261120/prepared-Q-r11-followup-20261121",
+   "snapshot_utc": "2026-11-21T02:41:05+00:00",
+   "prepared_sha256": "4e8d1df26398876805c41f58e104bd7e671d7858fad02a8b08d7cefddbe71b28",
+   "markdown_sha256": "603b26aee2af6438461eee0eb2e0dd2811d90131cec1d9874451dfbd9dd4ada2",
+   "summary_sha256": "78223d530ce6ffbe609ca5df914d0ae72a846ae5800367b1ff797a3ecbfe45db",
+   "review_status": "not independently reviewed; inaccessible at native recovery preparation; no byte-restoration claim"
+  },
+  "unavailable_old_support_not_recreated": [
+   {
+    "name": "ssmcp-Q-next-consumer-status-observation-20261121.json",
+    "bytes": 1761,
+    "sha256": "2785050452c4af08ed9cfb5f8c163901cde1ff2a836a4aba9e0cc970d7c15795",
+    "replacement_scope": "Exact original 1761-byte coordination record is unavailable and is not fabricated. Actual U freeze and original9fd progress now provide newer directly readable facts."
+   }
+  ],
+  "large_G_not_embedded": true,
+  "private_v24_routing_report_excluded": true,
+  "serialization": "indent1; all original85, historical graph/component, C failure and0af8 validation objects remain exact."
  }
 }

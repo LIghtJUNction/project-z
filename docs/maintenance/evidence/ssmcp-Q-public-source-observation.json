@@ -1,0 +1,35 @@
+{
+  "observed_at_utc": "2026-11-21T02:09:24.743910+00:00",
+  "source": "GitHub plugin direct read",
+  "github": {
+    "pr": {
+      "number": 159,
+      "state": "open",
+      "draft": true,
+      "head": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+      "base": "f33ed8f14fc14aff05a2e4098743eb07e8527c06"
+    },
+    "commit": {
+      "sha": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+      "tree": "5143f90c05066c95b2df58a9eab1831e05888a62",
+      "parents": [
+        "d29dae7e2b9ff6794f17f3c96c0cc37977936084"
+      ]
+    }
+  },
+  "native_originals_read_job": "26c4545eae1eab8d27485f4a48077d3c-96c",
+  "native_read_exit": 0,
+  "both_eof": true,
+  "originals": [
+    {
+      "name": "ssmcp-Q-source-freeze-original.json",
+      "bytes": 3242,
+      "sha256": "0eebae75a3f8f5ce772958e5f897c0ebc6652c245fd6a32285680e5e11f0db00"
+    },
+    {
+      "name": "ssmcp-Q-owner-fix-and-host-review-original.json",
+      "bytes": 5680,
+      "sha256": "19f5acd8063d92259c03af8cc32a36db146bf7db9f080bca3cbf2df1230035e5"
+    }
+  ]
+}

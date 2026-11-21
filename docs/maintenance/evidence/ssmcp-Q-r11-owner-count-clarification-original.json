@@ -1,0 +1,49 @@
+{
+  "at_utc": "2026-11-21T02:29:41.458941+00:00",
+  "corrects_field": "ordinary_integration_passed",
+  "explicit_ignored_worker": {
+    "command": [
+      "/usr/bin/bwrap",
+      "--unshare-user",
+      "--uid",
+      "1000",
+      "--gid",
+      "1000",
+      "--dev-bind",
+      "/",
+      "/",
+      "--bind",
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/candidate-test-tmp",
+      "/tmp",
+      "--unsetenv",
+      "SSMCP_OUTPUT_RELOAD",
+      "--setenv",
+      "TMPDIR",
+      "/tmp",
+      "--chdir",
+      "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final11/source",
+      "/var/tmp/project-z-cargo-target/debug/build/ssmcp/6a662defcea56b89/out/zuse_worker_entry-6a662defcea56b89",
+      "--ignored",
+      "--exact",
+      "missing_worker_entry_is_recoverable_without_spawning_the_embedding_binary",
+      "--test-threads=1"
+    ],
+    "exit_code": 0,
+    "name": "integration-zuse_worker_entry",
+    "passed": 1
+  },
+  "gate_sha256": "645dd18969232888cbb393e4193542b421706161eaf6ef2af0af6acca553d7ec",
+  "integration_passed_including_worker": 102,
+  "integration_targets": 20,
+  "ordinary_integration_passed": 101,
+  "ordinary_target_count": 19,
+  "original_review": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r11-binding/root-completed-gate-review.json",
+    "retained_unchanged": true,
+    "sha256": "d34195f917a33264fc9d6618fa5f90149fc28521c58c12e8a53eb5acd840e60b"
+  },
+  "schema": "ssmcp-Q-gate-count-clarification-v1",
+  "separate_mandatory_ignored_groups_passed": 14,
+  "source_revision": "647bce2ec9cf74beab43adea831c2e0712d28ea8",
+  "test_execution_and_total_passes_unchanged": true
+}

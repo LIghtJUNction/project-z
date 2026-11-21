@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "systemd-run",
+    "--user",
+    "--unit=ssmcp-release25-gate35-r11-20261121.service",
+    "--property=Type=exec",
+    "--property=WorkingDirectory=/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/source-final",
+    "--collect",
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "-u",
+    "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/gate-tools/final-v25-r11-binding/run_owned.py"
+  ],
+  "at_utc": "2026-11-21T02:10:08.882821+00:00",
+  "exit_code": 0,
+  "stderr": "Running as unit: ssmcp-release25-gate35-r11-20261121.service; invocation ID: 880bd12873874a43a7f0a1eb9dc28c91\n",
+  "stdout": "",
+  "unit": "ssmcp-release25-gate35-r11-20261121.service"
+}

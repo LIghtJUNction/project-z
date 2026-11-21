@@ -1,0 +1,391 @@
+{
+  "schema": "project-z.ssmcp.HOST6-r11.consumer-independent-static-review.v1",
+  "reviewed_at_utc": "2026-11-21T02:14:50+00:00",
+  "reviewer": "/root/pr_personal_repos",
+  "verdict": "no_blocking_findings_in_fixed_unbound_consumer_delta",
+  "blocking_findings": [],
+  "material_inconsistencies": [],
+  "scope": "Static consumer/helper/inventory delta against the baseline bytes in the downloaded immutable preparation. Producer constants and launcher normalization are cross-checked only for consumer compatibility; the full producer review belongs to Core. No Q final binding, actual Gate11 or runtime/P1 result is reviewed here.",
+  "archive": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-unbound.zip",
+    "bytes": 105590,
+    "sha256": "a113a1dc557230452b1607f9036b3c13ce0ac5a9b146ba0d7f745e3f3fcd55c6",
+    "drive_id": "1Hi_udwmvBThG6DuQfGrhkgLLTKu-y7lR",
+    "drive_url": "https://drive.google.com/file/d/1Hi_udwmvBThG6DuQfGrhkgLLTKu-y7lR/view",
+    "file_name": "gate35-host6-r11-consumer-prepared-20261121.zip",
+    "mime_type": "application/zip",
+    "full_download": true,
+    "members": 19,
+    "payloads": 18,
+    "manifests": 1,
+    "manifest_path": "MANIFEST.json",
+    "all_crc32_verified": true,
+    "all_manifest_size_sha256_verified": true,
+    "all_text_utf8": true,
+    "unique_safe_regular_paths": true,
+    "locally_extracted_read_only": true,
+    "reuploaded": false
+  },
+  "inputs": {
+    "MANIFEST.json": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-unbound/MANIFEST.json",
+      "bytes": 4822,
+      "sha256": "91d7e4a406c8f00fd05b8dcf4d66f0430c9c610f684cbe5fe714a455fed350f4"
+    },
+    "baseline/gate10_binding.py": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-unbound/baseline/gate10_binding.py",
+      "bytes": 75547,
+      "sha256": "c53ec70844ab7331099006d37a98c2c6dbe5a4ebab23d0539482223e09dd147d"
+    },
+    "baseline/gate_inventory_gate10.py": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-unbound/baseline/gate_inventory_gate10.py",
+      "bytes": 19662,
+      "sha256": "037ffb76b1fc0c24e01a53ac6ec05f9a853911f6a94d69863625bdd97ed6f756"
+    },
+    "candidate/gate10_binding.py": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-unbound/candidate/gate10_binding.py",
+      "bytes": 75559,
+      "sha256": "eba2b9ff55e5394ecd2a87b7b51e75fe10189579d88923f40d1dbaa34fbe1435"
+    },
+    "candidate/gate_inventory_gate10.py": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-unbound/candidate/gate_inventory_gate10.py",
+      "bytes": 19859,
+      "sha256": "c1c447c83c3f5ee2d5c01687d3ccdc277ca44d28d43f42da3028efc2aa7bd1de"
+    },
+    "candidate/gate10_sources.py": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-unbound/candidate/gate10_sources.py",
+      "bytes": 11142,
+      "sha256": "d05b3c97044ff0396bd62de46c0942915f10c124c44970a0238c14a439cde9ff"
+    },
+    "candidate/gate10_dependencies.py": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-unbound/candidate/gate10_dependencies.py",
+      "bytes": 22452,
+      "sha256": "b340c225c1fad3049f75e08f88cd6cf825fde377eec3af73cd6e4e0cb100d62d"
+    },
+    "helper.diff": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-unbound/helper.diff",
+      "bytes": 2959,
+      "sha256": "6399f6e0eb7935df2e779c478d59ec34505ff2b74f0bddcad0e7d5175d4df483"
+    },
+    "full.diff": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-unbound/full.diff",
+      "bytes": 1296,
+      "sha256": "4fc82510a55d18cec74903a8ba2f97aaa0e2d5b4581b7e3172dead781b866217"
+    },
+    "producer/run_gates.host-partition6-unbound.py": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-unbound/producer/run_gates.host-partition6-unbound.py",
+      "bytes": 83518,
+      "sha256": "c878638aa8e0bd1cd09434c85b9815e3c9b175969192dc4b2ce1fd300b50873b"
+    },
+    "producer/run_bound.host-partition6-unbound.py": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-unbound/producer/run_bound.host-partition6-unbound.py",
+      "bytes": 7669,
+      "sha256": "742692b3196c1ce35fd00f8c7ead316fd89e30b83340aef04f05d9a94cccda78"
+    },
+    "reviews/independent-helper-static-review.json": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-unbound/reviews/independent-helper-static-review.json",
+      "bytes": 9700,
+      "sha256": "bcec966fddafd2d761b224a4fa62a045ef443a72199cfb112b4a623225b7b64d"
+    }
+  },
+  "local_support": {
+    "download_integrity": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-unbound-download-verification.json",
+      "bytes": 5261,
+      "sha256": "f30fd7da02c873c70d4687661eb076da8e59c8dfd815439fbb72574c4c77e98d"
+    },
+    "ast_facts": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-HOST6-r11-consumer-static-ast-facts.json",
+      "bytes": 5869,
+      "sha256": "08d95dd67e7013fb637d7462cf28ead4291ef7554d75faa8e8d6f322dc42da75"
+    }
+  },
+  "method": {
+    "candidate_imports": 0,
+    "candidate_validator_executions": 0,
+    "contracts_or_product_tests": 0,
+    "Cargo_commands": 0,
+    "native_calls": 0,
+    "lock_or_target_access": 0,
+    "source_or_ref_writes": 0,
+    "report_candidate_or_old_report_changes": 0,
+    "final44_runs": 0,
+    "review_method": "Read complete supplied bytes, verify CRC/size/SHA/UTF-8, parse AST without importing any candidate, compare normalized AST and complete diffs, inspect actual guard/selection/raw-log/binding source."
+  },
+  "helper_delta": {
+    "exact_changed_assignments": [
+      {
+        "name": "PREPARED_DRIVER_SHA256",
+        "before": "'41e02fa502b123712674b749f365700ed95bbeb686e83eaeefe73c85ad8b51c7'",
+        "after": "'c878638aa8e0bd1cd09434c85b9815e3c9b175969192dc4b2ce1fd300b50873b'"
+      },
+      {
+        "name": "PREPARED_LAUNCHER_SHA256",
+        "before": "'7b1b2a65d91490c9a8b2bcf78641f6a91d8579ea98654904516c1c64999deff4'",
+        "after": "'742692b3196c1ce35fd00f8c7ead316fd89e30b83340aef04f05d9a94cccda78'"
+      },
+      {
+        "name": "GATE_ROOT",
+        "before": "GATE_BASE / 'release25-final10'",
+        "after": "GATE_BASE / 'release25-final11'"
+      },
+      {
+        "name": "LAUNCH_ROOT",
+        "before": "GATE_BASE / 'release25-final10-launch'",
+        "after": "GATE_BASE / 'release25-final11-launch'"
+      },
+      {
+        "name": "GIT_HEADS",
+        "before": "GATE_BASE / 'inputs/git-heads-v25.json'",
+        "after": "GATE_BASE / 'inputs/git-heads-v25-r11.json'"
+      },
+      {
+        "name": "OWNER_AGREEMENT",
+        "before": "GATE_BASE / 'inputs/shared-target-agreement.json'",
+        "after": "GATE_BASE / 'inputs/shared-target-agreement-v25-r11.json'"
+      },
+      {
+        "name": "INVENTORY_SHA256",
+        "before": "'037ffb76b1fc0c24e01a53ac6ec05f9a853911f6a94d69863625bdd97ed6f756'",
+        "after": "'c1c447c83c3f5ee2d5c01687d3ccdc277ca44d28d43f42da3028efc2aa7bd1de'"
+      },
+      {
+        "name": "LAUNCHER_CONTRACT_AST_SHA256",
+        "before": "'47a85704759ec4af2ff9912b9d823397de12a654cc32f4477bb601348e8dc885'",
+        "after": "'650ee1a742e423988a068936190c088c6b47b5b2c96b201eb00b3f94c63ea09b'"
+      }
+    ],
+    "all_other_module_AST_identical": true,
+    "unchanged_top_level_definitions": 33,
+    "unchanged_functions": 30,
+    "unchanged_classes": 3,
+    "public_seven_argument_API_unchanged": true,
+    "complete_diff_reproduced_byte_for_byte": true,
+    "adjacent_components": {
+      "gate10_sources.py": "d05b3c97044ff0396bd62de46c0942915f10c124c44970a0238c14a439cde9ff",
+      "gate10_dependencies.py": "b340c225c1fad3049f75e08f88cd6cf825fde377eec3af73cd6e4e0cb100d62d"
+    },
+    "adjacent_component_boundary": "Both included adjacent modules hash to the unchanged COMPONENT_SHA256 map in baseline and candidate; this review does not claim a new complete audit of their existing algorithms."
+  },
+  "inventory_delta": {
+    "changed_top_level_nodes": [
+      "HOST_TESTS",
+      "validate_inventory"
+    ],
+    "HOST_TESTS_change": "Original four names retained in their original order; two required socket names appended in producer order.",
+    "validate_inventory_change": "Only four-to-six diagnostic literal; predicates, algorithms and raw-result parsing unchanged.",
+    "all_other_AST_identical_after_exact_normalization": true,
+    "complete_diff_reproduced_byte_for_byte": true,
+    "host_tests": [
+      "client::local::tests::bundled_runner_is_private_and_removed_after_failed_startup",
+      "client::local::tests::bundled_runner_never_overwrites_or_removes_a_replaced_file",
+      "client::local::tests::private_socket_rejects_symlinks_and_exposed_permissions",
+      "client::local::tests::gateway_checks_all_origins_and_has_no_portal_routes",
+      "client::local::socket::tests::dropping_the_host_cleans_its_socket_without_explicit_shutdown",
+      "client::local::socket::tests::http_socket_uses_the_same_origin_and_authenticated_mcp_router"
+    ],
+    "host_order_equals_included_producer": true
+  },
+  "mandatory_coverage_static_chain": [
+    {
+      "claim": "All six HOST tests must appear as ordinary tests in the complete library inventory.",
+      "source": "candidate/gate_inventory_gate10.py",
+      "lines": [
+        195,
+        215
+      ],
+      "reason": "host equals the exact HOST_TESTS set; private and host must be disjoint and union to all names; ignored is within all names and must not intersect host. Duplicate/blank names and boolean count substitutions are separately rejected."
+    },
+    {
+      "claim": "The two additional tests are moved out of the private namespace selection but remain mandatory in the serial host selection.",
+      "source": "candidate/gate_inventory_gate10.py",
+      "lines": [
+        218,
+        236
+      ],
+      "reason": "Private argv skips each of the six names; host argv executes the exact tuple with --exact and --test-threads=1. Both selections pass the same count validation; there is no empty-host or ignore exception."
+    },
+    {
+      "claim": "The supplied future host result must represent six passed tests with no failures, ignored or measured tests, plus the exact filtered count.",
+      "source": "candidate/gate_inventory_gate10.py",
+      "lines": [
+        123,
+        162
+      ],
+      "reason": "_selection derives selected names and expected parent counts from the validated census, requires exact plan keys/projections and matches the authenticated parent callback result. This is a static consequence of the predicates, not an executed negative test."
+    },
+    {
+      "claim": "A partial or wrong host invocation cannot be hidden behind a valid command suffix.",
+      "source": "candidate/gate10_binding.py",
+      "lines": [
+        330,
+        366
+      ],
+      "reason": "The outer consumer derives and compares the full argv for every stage, including sandbox placement, exact six-host order, jobs and full stage inventory."
+    },
+    {
+      "claim": "Inventory claims are checked against actual recorded --list output and raw parent logs rather than declared counts alone.",
+      "source": "candidate/gate10_binding.py",
+      "lines": [
+        1141,
+        1190
+      ],
+      "reason": "The fixed reader binds full log bytes and recorded tails, uses parent_result on the original log text, and compares exact list probe argv/cwd/exit/stdout to all/private/host/ignored names."
+    },
+    {
+      "claim": "Raw success text must be the complete final parent summary.",
+      "source": "candidate/gate_inventory_gate10.py",
+      "lines": [
+        340,
+        370
+      ],
+      "reason": "The last nonempty raw line is parsed strictly; a later diagnostic, duplicate parent summary, wrong child projections, wrong parent counts or a validation-error marker is rejected."
+    }
+  ],
+  "preserved_stage_contract": {
+    "total_stages": 35,
+    "rust_selection_stages": 26,
+    "integration_targets": 20,
+    "mandatory_ignored_minimum": 14,
+    "stage_order": [
+      "release-policy",
+      "deployment-policy",
+      "fmt",
+      "library-compile",
+      "library-private",
+      "library-host",
+      "clippy",
+      "windows-gnu-clippy",
+      "integration-compile",
+      "integration-allow_account",
+      "integration-cc_backend",
+      "integration-client_resources",
+      "integration-client_server_config",
+      "integration-codex_backend",
+      "integration-collaboration",
+      "integration-connection_context",
+      "integration-context",
+      "integration-context_helpers",
+      "integration-context_runtime",
+      "integration-oauth_security",
+      "integration-pi_backend",
+      "integration-release_client",
+      "integration-resources",
+      "integration-rsync",
+      "integration-server_runtime",
+      "integration-terminals",
+      "integration-two_tools",
+      "integration-workspace_bridge",
+      "integration-zuse_worker_entry",
+      "library-code-mode-ignored",
+      "integration-two_tools-ignored",
+      "integration-workspace_bridge-ignored",
+      "integration-context_helpers-ignored",
+      "release",
+      "decoder"
+    ],
+    "rust_stage_order": [
+      "library-private",
+      "library-host",
+      "integration-allow_account",
+      "integration-cc_backend",
+      "integration-client_resources",
+      "integration-client_server_config",
+      "integration-codex_backend",
+      "integration-collaboration",
+      "integration-connection_context",
+      "integration-context",
+      "integration-context_helpers",
+      "integration-context_runtime",
+      "integration-oauth_security",
+      "integration-pi_backend",
+      "integration-release_client",
+      "integration-resources",
+      "integration-rsync",
+      "integration-server_runtime",
+      "integration-terminals",
+      "integration-two_tools",
+      "integration-workspace_bridge",
+      "integration-zuse_worker_entry",
+      "library-code-mode-ignored",
+      "integration-two_tools-ignored",
+      "integration-workspace_bridge-ignored",
+      "integration-context_helpers-ignored"
+    ],
+    "integration_target_order": [
+      "allow_account",
+      "cc_backend",
+      "client_resources",
+      "client_server_config",
+      "codex_backend",
+      "collaboration",
+      "connection_context",
+      "context",
+      "context_helpers",
+      "context_runtime",
+      "oauth_security",
+      "pi_backend",
+      "release_client",
+      "resources",
+      "rsync",
+      "server_runtime",
+      "terminals",
+      "two_tools",
+      "workspace_bridge",
+      "zuse_worker_entry"
+    ],
+    "all_named_stage_assignments_identical_to_baseline": true,
+    "producer_consumer_literal_names_order_match": true,
+    "strict_zero_exit_codes_and_passed_status_preserved": true,
+    "mandatory_ignored_scope": "The 14 names remain a minimum: all actual code_mode ignored members and every listed ignored member of the three declared integration groups are required by their stages. The separate zuse_worker_entry ignored-exact case remains separately required; it is not silently added to the 14 or used to replace them.",
+    "no_new_execution_counts_claimed": true
+  },
+  "binding_and_fail_closed": {
+    "EXECUTION_ALLOWED": false,
+    "FINAL_BINDING": null,
+    "DRIVER_SHA256": null,
+    "inventory_DRIVER_BASELINE_SHA256": null,
+    "public_entry_guard_precedes_validation_or_evidence_read": true,
+    "private_parser_also_requires_final_driver_pin": true,
+    "caller_arguments_only_confirm_embedded_binding": true,
+    "prepared_driver_sha256": "c878638aa8e0bd1cd09434c85b9815e3c9b175969192dc4b2ce1fd300b50873b",
+    "prepared_launcher_sha256": "742692b3196c1ce35fd00f8c7ead316fd89e30b83340aef04f05d9a94cccda78",
+    "prepared_pins_are_not_acceptance_or_final_binding": true,
+    "launcher_AST_sha256_recomputed": "650ee1a742e423988a068936190c088c6b47b5b2c96b201eb00b3f94c63ea09b",
+    "launcher_AST_normalized_assignments_only": [
+      "EXPECTED",
+      "FINAL_SOURCE_SHA",
+      "FINAL_SOURCE_TREE"
+    ],
+    "source_tree_version_lock_archives_dependencies_and_five_artifacts_require_separate_final_binding": true,
+    "five_artifact_roles": [
+      "library",
+      "ssmcp",
+      "ssmcpd",
+      "ssmcp-frontend",
+      "vt_snapshot"
+    ],
+    "actual_source_revision_bound": null,
+    "actual_source_tree_bound": null,
+    "actual_gate_receipt_bound": null,
+    "actual_five_artifact_pins_bound": null,
+    "actual_gate_pass_claimed": false,
+    "actual_consumer_pass_claimed": false,
+    "runtime_or_P1_pass_claimed": false
+  },
+  "existing_binding_checks_preserved": [
+    "Exact clean-source revision/tree, Cargo.lock, source/dependency manifests and eleven Git repository identities remain separately pinned.",
+    "Five artifact roles, unique absolute paths and SHA256 values are required; actual compiled outputs must match those final pins.",
+    "Actual launcher claim/start/gate/finish chronology, exact command/environment, input paths and before/after hashes remain required.",
+    "The shared-target owner agreement and held-for-entire-batch record remain required; this static review does not probe or claim current lock availability.",
+    "Complete ordered launcher stdout is matched to every gate stage and the final passed summary; no prepared input substitutes for actual exit/receipt/raw streams."
+  ],
+  "limitations_and_next_binding_requirements": [
+    "The current package is UNBOUND. It contains producer preparation identities and no completed Q/r11 gate receipt or final artifact tuple.",
+    "The fact that Gate11 was reported running outside this review is not evidence of completion and is not adopted here.",
+    "After the owner freezes the actual successful producer/result/source/lock/artifact tuple, final consumer binding must be a separate exact reviewed change; future source and result observations are not inferred from this package.",
+    "No new negative contracts, consumer validation, product gate, Cargo build, namespace execution or P1 was run by this reviewer.",
+    "The supplied root-static-review.json has earlier pending items; its historical status is not treated as a fresh completion receipt. The later supplied owner review is hashed as an input, and the findings here were independently recomputed.",
+    "This scoped review found no missing preparation material needed for the requested consumer delta analysis. Absence of actual bound Gate11/Q evidence is intentional and still blocks acceptance, not preparation."
+  ]
+}
