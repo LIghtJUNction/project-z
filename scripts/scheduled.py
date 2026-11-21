@@ -170,13 +170,16 @@ def package():
         return
     # Registry availability is separate from the aggregate GitHub snapshot.
     from scheduled_registry import child_targets
-    children = child_targets(updates, catalog(sha)["repositories"], Path.cwd())
+    children = child_targets(updates, catalog(sha), Path.cwd())
     print(f"{len(children)} approved owner handoffs in staging")
     dest = Path(os.environ["RUNNER_TEMP"]) / "release-assets"
     actual = subprocess.check_output([sys.executable, "scripts/release.py", "patch", str(dest)],
                                      encoding="utf-8").strip()
     require(actual == tag, "official packager selected a different tag")
-    output(tag=tag, assets="snapshot-" + os.environ["GITHUB_RUN_ATTEMPT"],
+    frozen = dest / "registry-plan.json"
+    frozen.write_text(json.dumps(dict(base=base, candidate=sha, tag=tag, targets=children),
+                                 sort_keys=True, indent=2) + "\n", encoding="utf-8")
+    output(plan_digest=digest(frozen), tag=tag, assets="snapshot-" + os.environ["GITHUB_RUN_ATTEMPT"],
            archive_digest=digest(dest / f"project-z-{tag}.tar.gz"),
            manifest_digest=digest(dest / "commits.txt"))
     print(f"Staged {tag} for {sha}")
@@ -274,13 +277,27 @@ def record():
     files = {}
     if tag:
         dest = Path(os.environ["RUNNER_TEMP"]) / "release-assets"
-        for name, key in [(f"project-z-{tag}.tar.gz", "ARCHIVE_DIGEST"), ("commits.txt", "MANIFEST_DIGEST")]:
+        for name, key in [(f"project-z-{tag}.tar.gz", "ARCHIVE_DIGEST"), ("commits.txt", "MANIFEST_DIGEST"),
+                          ("registry-plan.json", "PLAN_DIGEST")]:
             path = dest / name
             require(not path.is_symlink() and path.is_file() and digest(path) == os.environ[key],
                     f"unverified artifact: {name}")
             files[name] = path, os.environ[key]
         require((dest / "commits.txt").read_text().splitlines()[:2] == [f"Project Z {tag}", f"project_z\t{sha}"],
                 "manifest does not identify the tested candidate")
+        from scheduled_registry import child_targets
+        changed = verify(base, sha)
+        updates = version_changes(base, sha, changed)
+        # The write job reads policy and executes code only from the trusted
+        # base. Environment names for dispatch are never accepted from CI.
+        historical = {(*key, v) for old_tag in git("tag", "--list").splitlines()
+                      if old_tag != tag and release.VERSION.fullmatch(old_tag)
+                      for key, v in versions(old_tag, changed).items()}
+        pending = [p for p in updates if (p["repository"], p["name"], p["version"]) not in historical]
+        targets = child_targets(pending, catalog(sha), Path.cwd(), audit=False)
+        frozen = json.loads((dest / "registry-plan.json").read_text(encoding="utf-8"))
+        require(frozen == dict(base=base, candidate=sha, tag=tag, targets=targets),
+                "frozen registry plan differs from trusted source receipts")
     fresh(sha)
     if head == base:
         local = {ref: oid for oid, ref in (line.split() for line in git("show-ref", "--tags").splitlines())
@@ -299,17 +316,7 @@ def record():
         require(current.get("refs/heads/main") == sha and current.get("refs/tags/" + tag) == sha,
                 "reserved release refs disagree")
         finish_release(tag, files)
-        from scheduled_registry import child_targets
-        changed = verify(base, sha)
-        updates = version_changes(base, sha, changed)
-        # The write job reads policy and executes code only from the trusted
-        # base. Environment names for dispatch are never accepted from CI.
-        historical = {(*key, v) for old_tag in git("tag", "--list").splitlines()
-                      if old_tag != tag and release.VERSION.fullmatch(old_tag)
-                      for key, v in versions(old_tag, changed).items()}
-        pending = [p for p in updates if (p["repository"], p["name"], p["version"]) not in historical]
-        targets = child_targets(pending, catalog(sha)["repositories"], Path.cwd())
-        output(children=json.dumps(targets, separators=(",", ":")))
+        output(children=json.dumps(frozen["targets"], separators=(",", ":")))
 
 
 def affected_tests():

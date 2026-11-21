@@ -1,15 +1,15 @@
 name: Sync and test Project Z
 on:
   schedule:
-    - cron: '23 */6 * * *'
+    - cron: '17 */6 * * *'
   workflow_dispatch:
 
 permissions:
   contents: read
 
-# Serialize with the formal release workflow, including tag reservation.
+# Keep scheduled runs single-flight. Only the writer shares the formal release lock.
 concurrency:
-  group: project-z-release
+  group: project-z-scheduled-sync
   cancel-in-progress: false
 
 env:
@@ -66,6 +66,7 @@ jobs:
     outputs:
       tag: ${{ steps.plan.outputs.tag }}
       assets: ${{ steps.plan.outputs.assets }}
+      plan_digest: ${{ steps.plan.outputs.plan_digest }}
       archive_digest: ${{ steps.plan.outputs.archive_digest }}
       manifest_digest: ${{ steps.plan.outputs.manifest_digest }}
     steps:
@@ -101,6 +102,9 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       children: ${{ steps.record.outputs.children }}
+    concurrency:
+      group: project-z-release
+      cancel-in-progress: false
     environment: project-z-snapshot
     permissions:
       contents: write
@@ -129,6 +133,7 @@ jobs:
           PROJECT_Z_SCHEDULED_WRITES: ${{ vars.PROJECT_Z_SCHEDULED_WRITES }}
           CANDIDATE: ${{ needs.prepare.outputs.sha }}
           RELEASE_TAG: ${{ needs.package.outputs.tag }}
+          PLAN_DIGEST: ${{ needs.package.outputs.plan_digest }}
           ARCHIVE_DIGEST: ${{ needs.package.outputs.archive_digest }}
           MANIFEST_DIGEST: ${{ needs.package.outputs.manifest_digest }}
         run: |
@@ -136,7 +141,7 @@ jobs:
           python3 scripts/scheduled.py record
 
   registry:
-    needs: record
+    needs: [prepare, package, record]
     if: needs.record.outputs.children != '' && needs.record.outputs.children != '[]'
     runs-on: ubuntu-latest
     strategy:
@@ -152,8 +157,13 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.13'
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: '1.100.0'
       - name: Request the approved owner's release at the verified revision
         env:
+          CANDIDATE: ${{ needs.prepare.outputs.sha }}
+          RELEASE_TAG: ${{ needs.package.outputs.tag }}
           CHILD_TARGET: ${{ toJSON(matrix.target) }}
           GH_TOKEN: ${{ secrets.CHILD_ACTIONS_TOKEN }}
         run: python3 scripts/scheduled_registry.py

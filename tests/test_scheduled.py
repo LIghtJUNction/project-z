@@ -136,7 +136,9 @@ class ScheduledTests(unittest.TestCase):
         archive.write_bytes(b"fixture archive")
         manifest = dest / "commits.txt"
         manifest.write_text(f"Project Z {tag}\nproject_z\t{sha}\n")
-        self.ctx.enter_context(patch.dict(os.environ, dict(GITHUB_SHA=self.base, CANDIDATE=sha,
+        frozen = dest / "registry-plan.json"
+        frozen.write_text(json.dumps(dict(base=self.base, candidate=sha, tag=tag, targets=[])))
+        self.ctx.enter_context(patch.dict(os.environ, dict(GITHUB_SHA=self.base, CANDIDATE=sha, PLAN_DIGEST=s.digest(frozen),
             RELEASE_TAG=tag, ARCHIVE_DIGEST=s.digest(archive), MANIFEST_DIGEST=s.digest(manifest))))
         self.ctx.enter_context(patch.object(s, "authorize_writer"))
         self.ctx.enter_context(patch.object(s, "fresh"))
@@ -210,22 +212,25 @@ class RegistryTests(unittest.TestCase):
 
     def test_registry_owner_entrypoint_and_retry(self):
         t = registry.approved_target(self.pkg, {"child": self.repo}, {"fixture": self.rule})
-        with patch.object(registry, "registry_status", return_value={"status": "missing"}) as check, \
+        t.update(receipt={"archive_sha256": "a"*64}, prerequisites=[])
+        with patch.object(registry, "present", return_value=False) as check, \
              patch.object(registry, "owns_crate", return_value=False) as owns, \
              patch.object(registry, "gh_api") as api, patch.object(subprocess, "run") as dispatch, \
              patch.dict(os.environ, dict(CHILD_TARGET=json.dumps(t), GH_TOKEN="fixture")):
-            registry.dispatch()
+            registry.publish_missing(t)
             dispatch.assert_not_called()
             owns.return_value = True
             responses = [{"full_name": "test/child", "default_branch": "main"}, {"sha": t["sha"]}]
             api.side_effect = [*responses, {"type": "file", "sha": "unreviewed"}]
-            registry.dispatch()
+            registry.publish_missing(t)
             dispatch.assert_not_called()
             api.side_effect = [*responses, {"type": "file", "sha": t["workflow_blob"]}]
-            registry.dispatch()
+            check.side_effect = [False, True]
+            registry.publish_missing(t)
             self.assertIn("source_sha=" + t["sha"], dispatch.call_args.args[0])
-            check.return_value = {"status": "present"}
-            registry.dispatch()
+            check.side_effect = None
+            check.return_value = True
+            registry.publish_missing(t)
             dispatch.assert_called_once()
             with patch.dict(os.environ, {"GH_TOKEN": ""}), self.assertRaisesRegex(ValueError, "permission"):
                 registry.dispatch()

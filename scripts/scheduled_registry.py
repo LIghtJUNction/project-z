@@ -4,10 +4,14 @@ import os
 from pathlib import Path
 import re
 import subprocess
+import tempfile
+import time
 import tomllib
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
+from project_z import ordered
+from release_receipts import read_receipts, verify_archives
 from maintenance import MaintenanceError, github_identity, registry_status
 
 
@@ -42,8 +46,6 @@ def approved_target(p, repos, rules):
 
 def eligible(target):
     name, repo = target["name"], target["repository"]
-    if registry_status(target)["status"] != "missing":
-        return False
     if not owns_crate(name, target["owner"]):
         return False
     meta = gh_api(f"repos/{repo}")
@@ -57,31 +59,127 @@ def eligible(target):
     return workflow.get("type") == "file" and workflow.get("sha") == target["workflow_blob"]
 
 
-def child_targets(updates, repositories, root):
-    rules = tomllib.loads((root / "project-z.toml").read_text(encoding="utf-8")).get("registry_handoffs", {})
-    repos = {repo["name"]: repo for repo in repositories}
-    result = []
+def source_receipt(pkg, repos, receipts):
+    repo = repos[pkg["repository"]]
+    receipt = receipts.get((pkg["name"], pkg["version"]))
+    if not receipt or github_identity(receipt["github"]) != github_identity(repo["url"]) or receipt["git_sha"] != repo["commit"]:
+        raise ValueError(f"{pkg['name']}@{pkg['version']}: missing exact owner-approved archive receipt")
+    return receipt
+
+
+def child_targets(updates, data, root, *, audit=True):
+    policy = tomllib.loads((root / "project-z.toml").read_text(encoding="utf-8"))
+    rules = policy.get("registry_handoffs", {})
+    repos = {repo["name"]: repo for repo in data["repositories"]}
+    packages = {p["name"]: p for p in data["packages"]}
+    targets = {}
     for p in updates:
         target = approved_target(p, repos, rules)
-        try:
-            if target and eligible(target):
-                result.append(target)
-            elif p["publish"] and not target:
+        if target:
+            targets[p["name"]] = target
+        elif audit and p["publish"]:
+            try:
                 status = registry_status(p)["status"]
-                print(f"{p['name']}@{p['version']}: crates.io {status}; no approved owner handoff")
-        except (MaintenanceError, OSError, subprocess.CalledProcessError, ValueError, KeyError) as error:
-            print(f"{p['name']}@{p['version']}: could not verify registry handoff; skipping ({error})")
+            except MaintenanceError as error:
+                status = f"unverified ({error})"
+            print(f"{p['name']}@{p['version']}: crates.io {status}; no approved owner handoff")
+    if not targets:
+        return []
+    receipts = read_receipts(root / "docs/registry-receipts.json", policy["scheduled"]["registry_receipts_sha256"])
+    graph = {}
+    for name, target in targets.items():
+        target["receipt"] = source_receipt(packages[name], repos, receipts)
+        deps = sorted({d["name"] for d in packages[name]["dependencies"] if d["kind"] != "dev" and d["name"] in packages})
+        target["prerequisites"] = [source_receipt(packages[dep], repos, receipts) for dep in deps]
+        graph[name] = set(deps) & targets.keys()
+    result = [targets[name] for name in ordered(graph)]
+    if audit:
+        for target in result:
+            if present(target["receipt"]):
+                status = "already consumable with approved checksum"
+            elif eligible(target):
+                status = "missing; owner handoff eligible"
+            else:
+                status = "missing; owner handoff unavailable"
+            print(f"{target['name']}@{target['version']}: {status}")
     return result
 
 
+def consume(receipt, registry_config=""):
+    """Resolve, fetch and verify this exact archive as a fresh Cargo consumer."""
+    name, version = receipt["package"], receipt["version"]
+    with tempfile.TemporaryDirectory(prefix="project-z-registry-") as directory:
+        root = Path(directory)
+        home = root / "cargo-home"
+        home.mkdir()
+        if registry_config:
+            (home / "config.toml").write_text(registry_config, encoding="utf-8")
+        (root / "src").mkdir()
+        (root / "src/lib.rs").touch()
+        (root / "Cargo.toml").write_text(
+            '[package]\nname="project-z-consumption-probe"\nversion="0.0.0"\nedition="2024"\n'
+            f'[dependencies]\n{name}="={version}"\n', encoding="utf-8")
+        env = {**os.environ, "CARGO_HOME": str(home)}
+        for args in (["generate-lockfile"], ["metadata", "--locked", "--format-version", "1"]):
+            subprocess.run(["cargo", *args], cwd=root, env=env, stdout=subprocess.DEVNULL, check=True, timeout=180)
+        lock = tomllib.loads((root / "Cargo.lock").read_text(encoding="utf-8"))
+        rows = [p for p in lock["package"] if p["name"] == name and p["version"] == version]
+        if len(rows) != 1 or rows[0].get("source") != "registry+https://github.com/rust-lang/crates.io-index" or rows[0]["checksum"] != receipt["archive_sha256"]:
+            raise ValueError(f"{name}@{version}: registry lock checksum/source differs from the staged receipt")
+        archives = list((home / "registry/cache").glob(f"*/{name}-{version}.crate"))
+        if len(archives) != 1:
+            raise ValueError(f"{name}@{version}: missing verified Cargo download")
+        verify_archives([receipt], {(name, version): receipt}, archives[0].parent)
+
+
+def present(receipt):
+    row = registry_status(dict(name=receipt["package"], version=receipt["version"], repository=receipt["github"]))
+    if row["status"] == "missing":
+        return False
+    if row["status"] != "present":
+        raise ValueError(f"{receipt['package']}: existing version is {row['status']}")
+    consume(receipt)
+    return True
+
+
+def publish_missing(target, before_dispatch=None):
+    for receipt in target["prerequisites"]:
+        if not present(receipt):
+            raise ValueError(f"required upstream is not consumable: {receipt['package']}@{receipt['version']}")
+    receipt = target["receipt"]
+    if present(receipt):
+        print(f"Already consumable: {target['name']}@{target['version']}")
+        return
+    if not eligible(target):
+        print(f"Skipping unverified owner, source or workflow for {target['name']}")
+        return
+    if before_dispatch:
+        before_dispatch()
+    subprocess.run(["gh", "workflow", "run", target["workflow"], "--repo", target["repository"],
+                    "--ref", target["branch"], "-f", "source_sha=" + target["sha"],
+                    "-f", "package=" + target["name"], "-f", "version=" + target["version"],
+                    "-f", "archive_sha256=" + receipt["archive_sha256"]], check=True)
+    for attempt in range(30):
+        if present(receipt):
+            return
+        if attempt < 29:
+            time.sleep(20)
+    raise ValueError(f"{target['name']}: owner dispatch has not produced a consumable archive; retry this plan")
+
+
 def dispatch():
-    target = json.loads(os.environ["CHILD_TARGET"])
     if not os.environ.get("GH_TOKEN"):
         raise ValueError("missing repository-scoped owner dispatch permission")
-    if eligible(target):
-        subprocess.run(["gh", "workflow", "run", target["workflow"], "--repo", target["repository"],
-                        "--ref", target["branch"], "-f", "source_sha=" + target["sha"],
-                        "-f", "package=" + target["name"], "-f", "version=" + target["version"]], check=True)
+    from scheduled import fresh, git, remote_refs, require, verify
+    def verify_cohort():
+        sha, tag = os.environ["CANDIDATE"], os.environ["RELEASE_TAG"]
+        git("fetch", "--no-tags", "origin", "refs/heads/main")
+        refs = remote_refs()
+        require(git("rev-parse", "FETCH_HEAD") == sha and refs.get("refs/heads/main") == sha and
+                refs.get("refs/tags/" + tag) == sha, "aggregate source moved since CI")
+        verify(os.environ["GITHUB_SHA"], sha)
+        fresh(sha)
+    publish_missing(json.loads(os.environ["CHILD_TARGET"]), verify_cohort)
 
 
 if __name__ == "__main__":
