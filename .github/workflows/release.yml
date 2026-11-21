@@ -19,6 +19,9 @@ on:
 permissions:
   contents: read
 
+env:
+  RUSTUP_TOOLCHAIN: '1.100.0'
+
 concurrency:
   group: project-z-release
   cancel-in-progress: false
@@ -46,6 +49,7 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: '1.100.0'
+          components: clippy, rustfmt
       - name: Package pinned sources
         id: package
         env:
