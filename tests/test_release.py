@@ -17,6 +17,12 @@ import os
 from pathlib import Path
 import sys
 
+def emit(text, *, error=False):
+    if os.environ.get("PROJECT_Z_RELEASE_UTF8"):
+        text += " \\u201d\\u4e2d\\u6587"
+    stream = sys.stderr if error else sys.stdout
+    stream.buffer.write((text + "\\n").encode("utf-8"))
+
 root = Path(__file__).resolve().parents[1]
 args = sys.argv[1:]
 with Path(os.environ["PROJECT_Z_RELEASE_TRACE"]).open("a") as trace:
@@ -24,16 +30,16 @@ with Path(os.environ["PROJECT_Z_RELEASE_TRACE"]).open("a") as trace:
 failure = os.environ.get("PROJECT_Z_RELEASE_FAILURE")
 if args == ["check"]:
     if failure == "check":
-        print("catalog validation failed", file=sys.stderr)
+        emit("catalog validation failed", error=True)
         sys.exit(1)
-    print("catalog validated")
+    emit("catalog validated")
 elif args == ["resolve", "--all"]:
     if failure == "resolve":
-        print("application dependency source could not be resolved", file=sys.stderr)
+        emit("application dependency source could not be resolved", error=True)
         sys.exit(1)
     if failure == "dirty":
         (root / "source.txt").write_text("modified during resolution\\n")
-    print("all Rust workspaces resolved")
+    emit("all Rust workspaces resolved")
 else:
     print("unexpected coordinator arguments: " + repr(args), file=sys.stderr)
     sys.exit(2)
@@ -79,15 +85,21 @@ class ReleaseTests(unittest.TestCase):
             ["git", *args], cwd=cwd, check=True, capture_output=True, text=True,
         ).stdout
 
-    def release(self, failure=""):
+    def release(self, failure="", *, utf8=False):
         environment = os.environ.copy()
         environment.update({
             "PROJECT_Z_RELEASE_TRACE": str(self.trace),
             "PROJECT_Z_RELEASE_FAILURE": failure,
         })
+        if utf8:
+            environment.update({
+                "LC_ALL": "C", "LANG": "C", "PYTHONUTF8": "0",
+                "PYTHONCOERCECLOCALE": "0", "PYTHONIOENCODING": "ascii:strict",
+                "PROJECT_Z_RELEASE_UTF8": "1",
+            })
         return subprocess.run(
             [sys.executable, str(self.root / "scripts/release.py"), "patch", str(self.output)],
-            cwd=self.root, env=environment, capture_output=True, text=True,
+            cwd=self.root, env=environment, capture_output=True, encoding="utf-8",
         )
 
     def validations(self):
@@ -136,6 +148,21 @@ class ReleaseTests(unittest.TestCase):
             self.assertEqual(
                 archive.extractfile(f"{prefix}/source.txt").read(), b"Project Z source\n",
             )
+
+    def test_utf8_validation_output_survives_legacy_locale(self):
+        result = self.release(utf8=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(result.stdout, "v0.0.1\n")
+        self.assertIn("catalog validated \u201d\u4e2d\u6587", result.stderr)
+        self.assertIn("all Rust workspaces resolved \u201d\u4e2d\u6587", result.stderr)
+        self.assertEqual(self.validations(), [["check"], ["resolve", "--all"]])
+
+    def test_utf8_resolution_error_preserves_diagnostic_and_blocks_artifacts(self):
+        result = self.release("resolve", utf8=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("application dependency source could not be resolved \u201d\u4e2d\u6587", result.stderr)
+        self.assertEqual(self.validations(), [["check"], ["resolve", "--all"]])
+        self.assertFalse(self.output.exists())
 
 
 if __name__ == "__main__":

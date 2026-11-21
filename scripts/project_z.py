@@ -27,7 +27,7 @@ class CoordinationError(RuntimeError):
 
 
 def command(argv, cwd=ROOT, timeout=600):
-    result = subprocess.run(argv, cwd=cwd, capture_output=True, text=True, timeout=timeout)
+    result = subprocess.run(argv, cwd=cwd, capture_output=True, text=True, encoding="utf-8", timeout=timeout)
     if result.returncode:
         raise CoordinationError(f"{' '.join(map(str, argv))}:\n{result.stderr.strip()}")
     return result.stdout
@@ -42,7 +42,7 @@ def relative(path, root=ROOT):
 
 def policy(root=ROOT):
     path = root / "project-z.toml"
-    return tomllib.loads(path.read_text()) if path.exists() else {}
+    return tomllib.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
 
 
 def github_url(url):
@@ -92,11 +92,11 @@ def freshness_errors(data, root=ROOT):
 
 def repositories(root=ROOT, *, allow_uninitialized=False):
     config = configparser.ConfigParser(interpolation=None)
-    if not config.read(root / ".gitmodules"):
+    if not config.read(root / ".gitmodules", encoding="utf-8"):
         raise CoordinationError("missing .gitmodules")
     result = []
     overrides = policy(root).get("repositories", {})
-    recorded = json.loads((root / CATALOG).read_text()).get("repositories", []) if (root / CATALOG).exists() else []
+    recorded = json.loads((root / CATALOG).read_text(encoding="utf-8")).get("repositories", []) if (root / CATALOG).exists() else []
     recorded_branches = {repo["name"]: repo.get("branch") for repo in recorded}
     for section in config.sections():
         path = config[section]["path"]
@@ -170,7 +170,7 @@ def sync_sources(root=ROOT):
 
 def explicit_version(manifest, workspace, dependency):
     """A path-only dependency need not satisfy the registry's prerelease rules."""
-    data = tomllib.loads(Path(manifest).read_text())
+    data = tomllib.loads(Path(manifest).read_text(encoding="utf-8"))
     table = data
     if dependency.get("target"):
         # Cargo formats cfg expressions; TOML retains the author's whitespace.
@@ -181,7 +181,7 @@ def explicit_version(manifest, workspace, dependency):
     key = dependency.get("rename") or dependency["name"]
     declared = table.get(section, {}).get(key)
     if isinstance(declared, dict) and declared.get("workspace"):
-        source = tomllib.loads((Path(workspace) / "Cargo.toml").read_text())
+        source = tomllib.loads((Path(workspace) / "Cargo.toml").read_text(encoding="utf-8"))
         declared = source.get("workspace", {}).get("dependencies", {}).get(key)
     return isinstance(declared, str) or isinstance(declared, dict) and "version" in declared
 
@@ -360,7 +360,7 @@ def source_link_errors(data, rules, root=ROOT, *, check_checkouts=True):
         if not module_file.exists():
             continue
         config = configparser.ConfigParser(interpolation=None)
-        config.read(module_file)
+        config.read(module_file, encoding="utf-8")
         options = link_rules.setdefault(repo["name"], {})
         links = options.get("source_links", {})
         if not isinstance(links, dict):
@@ -478,7 +478,7 @@ def internal_override_errors(data, root=ROOT):
     for path in sorted(paths):
         if not path.exists():
             continue
-        document = tomllib.loads(path.read_text())
+        document = tomllib.loads(path.read_text(encoding="utf-8"))
         tables = [document.get("replace", {}), *document.get("patch", {}).values()]
         for table in tables:
             for key, value in table.items():
@@ -498,7 +498,7 @@ def generated(data):
 def stale_generated(data, root=ROOT):
     return [f"{path}: stale; run python3 scripts/project_z.py sync"
             for path, content in generated(data).items()
-            if not (root / path).exists() or (root / path).read_text() != content]
+            if not (root / path).exists() or (root / path).read_text(encoding="utf-8") != content]
 
 
 def checkout_errors(data, root=ROOT, *, allow_uninitialized=False):
@@ -594,7 +594,7 @@ def locked_source_errors(data, repos, root=ROOT):
             if lock.is_symlink() or not lock.is_file():
                 errors.append(f"{workspace}/Cargo.lock: missing regular lockfile; refresh and commit it in the consumer repository")
                 continue
-            document = tomllib.loads(lock.read_text())
+            document = tomllib.loads(lock.read_text(encoding="utf-8"))
             for package in [*document.get("package", []), *document.get("patch", {}).get("unused", [])]:
                 expected = canonical.get(package["name"])
                 if not expected:
@@ -640,6 +640,9 @@ def resolved_paths(data, repos, root=ROOT, options=()):
 
 
 def main(argv=None):
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=ROOT)
     commands = parser.add_subparsers(dest="action", required=True)
@@ -673,13 +676,13 @@ def main(argv=None):
         if args.action == "sync":
             legacy = root / PATCH
             if legacy.exists():
-                if not legacy.read_text().startswith("# Generated by scripts/project_z.py sync;"):
+                if not legacy.read_text(encoding="utf-8").startswith("# Generated by scripts/project_z.py sync;"):
                     raise CoordinationError(f"{PATCH}: unrecognized configuration; preserve it and remove internal overrides explicitly")
                 legacy.unlink()
             for path, content in generated(data).items():
                 destination = root / path
                 destination.parent.mkdir(parents=True, exist_ok=True)
-                destination.write_text(content)
+                destination.write_text(content, encoding="utf-8")
             print(f"Recorded {len(data['repositories'])} repositories and {len(data['packages'])} packages; run check and resolve --all")
             return 0
         if args.action == "check":

@@ -43,7 +43,7 @@ Zuse 0.5.0 已由上述源码正式发行。[GitHub 正式发行运行 449247311
 | ztty | 在 `c63dbd5` 上运行原生 `cargo test`，255 passed、8 ignored；当前锁定的 `404864f` 与其运行代码一致。 |
 | zuse-skills | 代码提供 14 个函数，native 验证 34 项通过。 |
 | oh-my-ztty | 套件检查 181 项全部通过；采用 ztty 0.6.1 后，37 项来源契约复测通过，六个组件的递归源码与来源锁一致。 |
-| Project Z | 115 项测试通过。 |
+| Project Z | 115 项既有测试通过；新增 5 项 UTF-8 回归在旧代码上失败、修复后通过，本轮定向测试共 9 项通过。 |
 
 ssmcp 的 `exec.read` 已支持展开有界、脱敏的详细结果。生产渲染器生成的两帧夹具图已由 reviewer 看图验收；证据范围是 fixture 输出，未作为 live 桌面截图验收。开发机 CLI 已安装本轮修复提交，版本号仍为 0.10.25；当前运行会话保持运行，新启动的 CLI 使用该修复。
 
@@ -52,5 +52,7 @@ GTK 验证覆盖自有夹具中的编辑与取消，不代表真实 ChatGPT 桌�
 Project Z 首次初始化时先获取各仓库当前默认分支，避免被不可获取的历史子模块提交阻塞，再记录实际提交。正式 CI 测试命令移除 `--lib`，适配 3 个不包含库目标的 fuzz manifest；库单元测试和集成测试仍由 `--tests` 执行。
 
 发行工作流显式选择本轮聚合验证使用的 Rust 1.100.0，并在并行解析前安装 rustfmt、Clippy，避免多个 Cargo 进程同时首次初始化工具链时争抢下载临时文件。
+
+协调及发行脚本对 Git/Cargo 输出、源码文件和 CLI 文本显式使用 UTF-8，修复 Windows 按系统代码页解码 Unicode 文本时的失败。
 
 Project Z 聚合 `check` 通过：45 个仓库、72 个包的 Git 来源、锁文件及当前默认分支一致。`resolve --all` 在 39 个仓库通过锁定依赖解析。聚合源码快照通过 `release.yml` 的正式发行流程发布，流水线会再次验证来源、解析依赖，并执行 Linux、Windows、macOS 的核心库测试；发行状态和产物见 [Project Z Releases](https://github.com/LIghtJUNction/project-z/releases)。

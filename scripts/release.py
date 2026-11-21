@@ -19,7 +19,7 @@ def git(*args):
 def next_tag(bump):
     versions = [
         tuple(map(int, match.groups()))
-        for tag in git("tag", "--list").decode().splitlines()
+        for tag in git("tag", "--list").decode("utf-8").splitlines()
         if (match := VERSION.fullmatch(tag))
     ]
     version = list(max(versions, default=(0, 0, 0)))
@@ -30,6 +30,9 @@ def next_tag(bump):
 
 
 def main():
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("bump", choices=["major", "minor", "patch"])
     parser.add_argument("output", type=Path)
@@ -38,7 +41,7 @@ def main():
     for arguments in (["check"], ["resolve", "--all"]):
         verification = subprocess.run(
             [sys.executable, str(ROOT / "scripts/project_z.py"), *arguments],
-            cwd=ROOT, capture_output=True, text=True,
+            cwd=ROOT, capture_output=True, text=True, encoding="utf-8",
         )
         if verification.returncode:
             detail = verification.stderr.strip() or verification.stdout.strip()
@@ -46,11 +49,11 @@ def main():
         if verification.stdout.strip():
             print(verification.stdout.strip(), file=sys.stderr)
 
-    commit = git("rev-parse", "HEAD").decode().strip()
+    commit = git("rev-parse", "HEAD").decode("utf-8").strip()
     if git("status", "--porcelain", "--untracked-files=no", "--ignore-submodules=none"):
         parser.error("tracked files and submodule commits must match HEAD")
 
-    submodules = git("submodule", "status", "--recursive").decode().splitlines()
+    submodules = git("submodule", "status", "--recursive").decode("utf-8").splitlines()
     if not submodules or any(line[0] != " " for line in submodules):
         parser.error("initialize all submodules at their recorded commits")
 
@@ -66,7 +69,7 @@ def main():
     files = git("ls-files", "--cached", "--recurse-submodules", "-z").split(b"\0")
     with tarfile.open(args.output / f"{prefix}.tar.gz", "w:gz") as bundle:
         for filename in filter(None, files):
-            path = Path(filename.decode(errors="surrogateescape"))
+            path = Path(filename.decode("utf-8", errors="surrogateescape"))
             bundle.add(ROOT / path, arcname=f"{prefix}/{path}", recursive=False)
         bundle.add(args.output / "commits.txt", arcname=f"{prefix}/commits.txt")
     print(tag)
