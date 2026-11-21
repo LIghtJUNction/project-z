@@ -96,3 +96,7 @@ manifests = ["console/Cargo.toml"]
 role = "extension"
 manifests = []
 requires = ["zuse"]
+
+[repositories.zchat]
+role = "application"
+requires = ["zdistro"]

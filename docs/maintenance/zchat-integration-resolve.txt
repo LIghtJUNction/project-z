@@ -1,0 +1,40 @@
+project-z: ssmcp/'crates/zharness' -> 'zharness': pinned source 5f9a9f58f090326bf2d43f4df2cc90c1bc674c21 differs from snapshot 8907262ce6c8494f2849f8e5abd84f7a3da2e405
+ssmcp/'crates/zplugin' -> 'zplugin': ssmcp/crates/zharness: initialize the source repository first; preserve any local files
+ssmcp/'crates/ztuio' -> 'ztuio': ssmcp/crates/zharness: initialize the source repository first; preserve any local files
+ztty/'crates/zgpui' -> 'zgpui': pinned source 174a8b73087deeac2ecfa036cad8bddba71c612f differs from snapshot eeb909e956ed0cff05e14525d4f29f5a78c553ec
+ztty/'crates/zinput' -> 'zinput': ztty/crates/zgpui: initialize the source repository first; preserve any local files
+ztty/'crates/zpty' -> 'zpty': ztty/crates/zgpui: initialize the source repository first; preserve any local files
+ztty/'crates/zgraphics' -> 'zgraphics': ztty/crates/zgpui: initialize the source repository first; preserve any local files
+ztty/'crates/zterm' -> 'zterm': ztty/crates/zgpui: initialize the source repository first; preserve any local files
+zcalld/'apps/zcall-gui' -> 'zcall-gui': zcalld/apps/zcall-gui: initialize the source repository first; preserve any local files
+zcalld/'extensions/compat' -> 'zcalld-compat': zcalld/apps/zcall-gui: initialize the source repository first; preserve any local files
+zcalld/'vendor/zcall' -> 'zcall': zcalld/apps/zcall-gui: initialize the source repository first; preserve any local files
+zcalld/'vendor/zconv' -> 'zconv': zcalld/apps/zcall-gui: initialize the source repository first; preserve any local files
+zcalld/'vendor/zplugin' -> 'zplugin': zcalld/apps/zcall-gui: initialize the source repository first; preserve any local files
+zcalld/'vendor/zsys' -> 'zsys': zcalld/apps/zcall-gui: initialize the source repository first; preserve any local files
+zcalld/'apps/zcall-omarchy' -> 'zcall-omarchy': zcalld/apps/zcall-gui: initialize the source repository first; preserve any local files
+oh-my-ztty/'components/ztty' -> 'ztty': oh-my-ztty/components/ssmcp: initialize the source repository first; preserve any local files
+oh-my-ztty/'components/ssmcp' -> 'ssmcp': pinned source ffb7f32f527357202194b41be7b7a904153a02ba differs from snapshot f2e9dcf22df7d37df7672bb7d41d1bcf7e6fc690
+oh-my-ztty/'components/zshard' -> 'zshard': oh-my-ztty/components/ssmcp: initialize the source repository first; preserve any local files
+oh-my-ztty/'components/zdot' -> 'zdot': oh-my-ztty/components/ssmcp: initialize the source repository first; preserve any local files
+oh-my-ztty/'components/zrc' -> 'zrc': oh-my-ztty/components/ssmcp: initialize the source repository first; preserve any local files
+oh-my-ztty/'components/zfetch' -> 'zfetch': oh-my-ztty/components/ssmcp: initialize the source repository first; preserve any local files
+zcall-gui/'vendor/zgpui' -> 'zgpui': pinned source 174a8b73087deeac2ecfa036cad8bddba71c612f differs from snapshot eeb909e956ed0cff05e14525d4f29f5a78c553ec
+lmm-api-source/'apps/cli' -> 'lmm': lmm-api-source/.agents/skills/add-dependency: initialize the source repository first; preserve any local files
+ztype/'vendor/zgpui' -> 'zgpui': pinned source 174a8b73087deeac2ecfa036cad8bddba71c612f differs from snapshot eeb909e956ed0cff05e14525d4f29f5a78c553ec
+ztype/'vendor/zinput' -> 'zinput': ztype/vendor/zgpui: initialize the source repository first; preserve any local files
+zmcl/'vendor/zconv' -> 'zconv': zmcl/vendor/zclap: initialize the source repository first; preserve any local files
+zmcl/'vendor/zclap' -> 'zclap': pinned source 4d87f3ae3743e81509d5ac5500909955667c860f differs from snapshot a4c7e6f3e0ff860de701573117248fe8538c71e5
+zmcl/'vendor/zgpui' -> 'zgpui': pinned source 174a8b73087deeac2ecfa036cad8bddba71c612f differs from snapshot eeb909e956ed0cff05e14525d4f29f5a78c553ec
+zmcl/'vendor/zi18n' -> 'zi18n': pinned source cdff8dea19e97268d296afa827767ea689420591 differs from snapshot 755549f82fa513c4e4f2f5aaf6fdeea8da4a6347
+catalog.json: stale; run python3 scripts/project_z.py sync
+docs/PROJECTS.md: stale; run python3 scripts/project_z.py sync
+OniMods/mods/Jlib: initialize the source repository first; preserve any local files
+lmm-api-source/.agents/skills/add-dependency: initialize the source repository first; preserve any local files
+oh-my-ztty/components/ssmcp: initialize the source repository first; preserve any local files
+ssmcp/crates/zharness: initialize the source repository first; preserve any local files
+zcall-gui/vendor/zgpui: initialize the source repository first; preserve any local files
+zcalld/apps/zcall-gui: initialize the source repository first; preserve any local files
+zmcl/vendor/zclap: initialize the source repository first; preserve any local files
+ztty/crates/zgpui: initialize the source repository first; preserve any local files
+ztype/vendor/zgpui: initialize the source repository first; preserve any local files
