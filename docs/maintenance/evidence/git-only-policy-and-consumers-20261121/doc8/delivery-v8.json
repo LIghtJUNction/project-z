@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "state": "published_and_full_readback_verified",
+  "document_id": "1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+  "title": "Project Z 进度报告（2026-11-21）",
+  "url": "https://docs.google.com/document/d/1X7wuVkub_mHe93NTofh-VmB7a32_RWFJBY8E3ddDEgw",
+  "folder_id": "1vjkFko8onQm9WiScrw7QBopK9vNGTLx0",
+  "revision_id": "AHj4eMScwzt4cM_hgjTm25Y9Od6IxK63IJ7vKSzrMHuePeB3ed2xX_7i9j1bEMhaoOjt44LiXwpib8HFS8ku8Nw9xojyGIBn9LSRTRe2Oxo",
+  "status_cutoff_utc": "2026-11-21T06:23:03Z",
+  "immutable_archive_commit": "c9de7a60351b277a4903c9f40781cbae69cd6e5c",
+  "maintenance_publication": {
+    "report_commit": "c9de7a60351b277a4903c9f40781cbae69cd6e5c",
+    "report_changed_text_files": 24,
+    "snapshot_utc": "2026-11-21T06:23:03Z",
+    "merge_commit": "efe912eb54a8240fab39126d1f2f6a464cc67f8b",
+    "merge_tree": "dd9345a7bf252832ce46878e0a50c7a27df5e8c9",
+    "merge_parents": [
+      "c08d6e894efd1b8f134ae5abb55f66cb6e2ac178",
+      "be64e5ab88a8d72fe81956f6ba64a363e2299fde"
+    ],
+    "pr7_draft": true,
+    "independent_GitHub_object_reads": true,
+    "evidence_commit": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "evidence_added_text_files": 10,
+    "evidence_code_changes": false,
+    "release_fix_commit": "88fa3610f24cc21705107bff4917a6ec26c022d0",
+    "release_fix_tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+    "release_fix_parent": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "maintenance_branch_head": "c9de7a60351b277a4903c9f40781cbae69cd6e5c",
+    "previous_report_commit": "1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d",
+    "report_added_text_files": 24,
+    "report_code_changes": false,
+    "report_tree": "2f63fbb9c539cad4a2e7331dd2df0b6668045b27",
+    "report_parent": "1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d",
+    "report_evidence_files": 22,
+    "report_summary_files": 2,
+    "report_bytes": 325882,
+    "original_leaves_unchanged": 429,
+    "final_leaves": 453
+  },
+  "created_once": true,
+  "original_raw_drive_MD_JSON_unchanged": true,
+  "raw_drive_MD_JSON_version": "0d73",
+  "nonempty_paragraphs_including_native_headings": 31,
+  "native_table": {
+    "rows": 7,
+    "columns": 3,
+    "preserved_original": true
+  },
+  "source_hyperlinks": 31,
+  "native_numbered_items": 3,
+  "full_title_content_table_style_links_parent_readback": true,
+  "verification_checks": 192,
+  "visual_browser_render_not_performed": true,
+  "document_update_tests_builds_target_locks_not_executed": true,
+  "release_fix": {
+    "commit": "88fa3610f24cc21705107bff4917a6ec26c022d0",
+    "tree": "ad123c0aeda12ff63b3b1c1efb7804ff4a9282f4",
+    "base": "ba666696e38c350c7bf3cdcc01fd940fcfa69145",
+    "files_changed": 4,
+    "leaf_count": 400,
+    "unchanged_leaves": 396,
+    "tests": {
+      "total": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "modules": {
+        "release": 4,
+        "projection": 8,
+        "receipts": 6
+      }
+    },
+    "original_offline_fixture_metadata": {
+      "executions": 1,
+      "exit_code": 0,
+      "argv": [
+        "cargo",
+        "metadata",
+        "--offline",
+        "--no-deps",
+        "--format-version=1"
+      ]
+    },
+    "actual_job": "26c4545eae1eab8d27485f4a48077d3c-bc6",
+    "actual_exit": 0,
+    "both_eof": true,
+    "original_helper_reused": true,
+    "independent_static_review_no_blocker": true,
+    "not_final44_or_Rust_product_validation": true,
+    "handoff": {
+      "bytes": 11863,
+      "sha256": "257bad369feed9b69d6a238d655308ca919ac8ea76dbe3def603f3c924aef14e"
+    }
+  },
+  "W_r14": {
+    "source": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+    "gate35_passed": true,
+    "gate_finished_utc": "2026-11-21T05:56:01Z",
+    "gate_independent_review_passed": true,
+    "runtime18_independent_review": {
+      "status": "passed_with_stated_scope",
+      "blocking_findings": 0,
+      "source_revision": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+      "source_tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+      "runtime": {
+        "checks": 18,
+        "private_mcp": 12,
+        "transport": 6,
+        "duration_ms": 7993
+      },
+      "outer_exit": 0,
+      "outer_reaped": true,
+      "exact_before_after": true,
+      "helper_text_matches": 7,
+      "text_rehashes": 4,
+      "binary_descriptor_matches": 5,
+      "descriptor": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-r14-runtime-readonly-review-20261121/root-runtime-readback.json",
+        "bytes": 15078,
+        "sha256": "56555ef6d1bb631b628f4b4bf18d104244e262498348a7bb01d9387b4130ea5c"
+      },
+      "whole_file_byte_readback_verified": true
+    },
+    "UI": {
+      "started_utc": "2026-11-21T06:10:05Z",
+      "finished_utc": "2026-11-21T06:12:42Z",
+      "actual_exit": 1,
+      "both_eof": true,
+      "planned": 24,
+      "executed": 7,
+      "independent_pass": 6,
+      "failed": "account_compat",
+      "not_run": 17,
+      "alias_coverage_only": 1,
+      "producer_checks": 62,
+      "producer_pass": 61,
+      "producer_fail": 1,
+      "composer_executed": false,
+      "P1_run": false
+    },
+    "same_source_results_not_inherited_from_V2": true
+  },
+  "SSMCP_main_integration": {
+    "PR": 159,
+    "remote_operation": "squash_merge",
+    "merged_at_utc": "2026-11-21T06:13:34Z",
+    "F": "f1de4bf70d5406cf9f38347e298a829456b92e57",
+    "F_parents": [
+      "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+      "c12fdf1d413501ddeb03a2dd2fb8c47731d2129f"
+    ],
+    "P": "ea2bfcae6aea9672d8955f832a8ec5bd1e0749f4",
+    "P_parent": "c12fdf1d413501ddeb03a2dd2fb8c47731d2129f",
+    "W": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "shared_tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+    "compare": {
+      "status": "diverged",
+      "ahead": 2,
+      "behind": 46,
+      "merge_base": "f33ed8f14fc14aff05a2e4098743eb07e8527c06"
+    },
+    "W_is_not_ancestor_of_P": true,
+    "new_P_product_test_execution_claimed": false,
+    "v25_release_claimed": false,
+    "initial85_integration_item": "zcalld PR1",
+    "SSMCP_PR159_is_followup_outside_initial85": true
+  },
+  "pr4_feature_merge": {
+    "commit": "fe47f963e604c13a2646baf5d391df5a7c69fc36",
+    "tree": "af46f28f9db1b4cd9f1103dc0f97687669b770d5",
+    "base_kind": "feature_branch",
+    "main_unchanged": "a1bb8fd2cbce0a9d85134999883c578358065242"
+  },
+  "prior_revision_delivery": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/delivery-v7.json",
+    "bytes": 9842,
+    "sha256": "031ced0795a1a3e5f9c5dee52869302826e23da102502941faa45e03665c1ac2"
+  },
+  "prior_revision_id": "AHj4eMStxPJE5v7kHzsuHgLizBvpa5gc1ZZIQMvmSZKjyGOIBP0KYKTu3_hZr3n3rl1ico-GZhSs9P8FyH4Y0YJ24F9BQVbItzx7tlpKK-I",
+  "previous_archive_commit": "1154d2e7ea28c5a03838d9c9dc735f6ec7f6929d",
+  "snapshot_boundary": "2026-11-21 06:23:03 UTC; W r14 Gate35/runtime18 passed; W UI 6 independent passes, account_compat failure,17 not run; P1 not run. Actual F/P/W equal tree is distinct from W ancestry and does not establish any new product test on P. Later connectivity/new requirements excluded.",
+  "raw_readback_descriptors": {
+    "document-final-readback-v8.json": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-final-readback-v8.json",
+      "bytes": 138120,
+      "sha256": "75c9e6978399ced7bc1ace3a4bf73a4ccb736d17a90ae4cc41f88155cfbb5547"
+    },
+    "metadata-final-readback-v8.json": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/metadata-final-readback-v8.json",
+      "bytes": 758,
+      "sha256": "331cc69d318bb0ba27bd084df757861829ca3853264b9838c9745546932925b5"
+    },
+    "document-plan-v8.json": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-plan-v8.json",
+      "bytes": 31738,
+      "sha256": "fe33ca942bb2035b1dcf85480b403f750acb36d503afdb31762bd0a7c27f0b4b"
+    },
+    "document-update-receipt-v8.json": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-update-receipt-v8.json",
+      "bytes": 1209,
+      "sha256": "0ba4c6b95ffab2469d3745cccb4c92bf071fe5501dacbeee90198a169691d4cb"
+    },
+    "document-text-v8.md": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-text-v8.md",
+      "bytes": 11991,
+      "sha256": "db51fb20cdb589c6be00be08f66749ab264b1a1178708fd33302cf1544380000"
+    }
+  },
+  "text_projection_descriptor": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/document-text-v8.md",
+    "bytes": 11991,
+    "sha256": "db51fb20cdb589c6be00be08f66749ab264b1a1178708fd33302cf1544380000"
+  },
+  "verification_descriptor": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-progress-google-doc-20261121/readback-verification-v8.json",
+    "bytes": 58074,
+    "sha256": "428c8a1ede1309448be745551970ac77c5b953addc9923a2059f5783caaae5c2"
+  },
+  "whole_file_byte_readback_verified": true
+}

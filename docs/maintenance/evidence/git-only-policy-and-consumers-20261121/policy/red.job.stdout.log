@@ -1,0 +1,407 @@
+test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds (test_project_z.GitPolicyTests.test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds) ... 
+  test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds (test_project_z.GitPolicyTests.test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds) (publish=True, kind='normal') ... FAIL
+  test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds (test_project_z.GitPolicyTests.test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds) (publish=True, kind='build') ... FAIL
+test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) ... 
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='normal', requirement='*') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='normal', requirement='^1') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='normal', requirement='=1.0.0') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='normal', requirement='=0.9.0') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='normal', requirement='not-a-version') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='build', requirement='*') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='build', requirement='^1') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='build', requirement='=1.0.0') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='build', requirement='=0.9.0') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='build', requirement='not-a-version') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='dev', requirement='*') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='dev', requirement='^1') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='dev', requirement='=1.0.0') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='dev', requirement='=0.9.0') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='dev', requirement='not-a-version') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='normal', requirement='*') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='normal', requirement='^1') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='normal', requirement='=1.0.0') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='normal', requirement='=0.9.0') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='normal', requirement='not-a-version') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='build', requirement='*') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='build', requirement='^1') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='build', requirement='=1.0.0') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='build', requirement='=0.9.0') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='build', requirement='not-a-version') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='dev', requirement='*') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='dev', requirement='^1') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='dev', requirement='=1.0.0') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='dev', requirement='=0.9.0') ... FAIL
+  test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='dev', requirement='not-a-version') ... FAIL
+test_workspace_target_and_alias_versions_cannot_bypass_git_only (test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only) ... 
+  test_workspace_target_and_alias_versions_cannot_bypass_git_only (test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only) (inherited=False, kind='normal') ... FAIL
+  test_workspace_target_and_alias_versions_cannot_bypass_git_only (test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only) (inherited=False, kind='build') ... FAIL
+  test_workspace_target_and_alias_versions_cannot_bypass_git_only (test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only) (inherited=False, kind='dev') ... FAIL
+  test_workspace_target_and_alias_versions_cannot_bypass_git_only (test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only) (inherited=True, kind='normal') ... FAIL
+  test_workspace_target_and_alias_versions_cannot_bypass_git_only (test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only) (inherited=True, kind='build') ... FAIL
+  test_workspace_target_and_alias_versions_cannot_bypass_git_only (test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only) (inherited=True, kind='dev') ... FAIL
+test_git_source_does_not_bypass_missing_package_checks (test_project_z.GitPolicyTests.test_git_source_does_not_bypass_missing_package_checks) ... ok
+test_unknown_internal_package_cannot_hide_behind_alternate_github_spelling (test_project_z.GitPolicyTests.test_unknown_internal_package_cannot_hide_behind_alternate_github_spelling) ... ok
+
+======================================================================
+FAIL: test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds (test_project_z.GitPolicyTests.test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds) (publish=True, kind='normal')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 366, in test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds
+    self.assertEqual(pz.validate(data, {}, self.root), [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['app -> core: keep version metadata besid[44 chars]ncy'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'app -> core: keep version metadata beside Git for a publishable normal/build dependency'
+
++ []
+- ['app -> core: keep version metadata beside Git for a publishable normal/build '
+-  'dependency']
+
+======================================================================
+FAIL: test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds (test_project_z.GitPolicyTests.test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds) (publish=True, kind='build')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 366, in test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds
+    self.assertEqual(pz.validate(data, {}, self.root), [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['app -> core: keep version metadata besid[44 chars]ncy'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'app -> core: keep version metadata beside Git for a publishable normal/build dependency'
+
++ []
+- ['app -> core: keep version metadata beside Git for a publishable normal/build '
+-  'dependency']
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='normal', requirement='*')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='normal', requirement='^1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='normal', requirement='=1.0.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='normal', requirement='=0.9.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['app requires core =0.9.0, snapshot has 1.0.0']
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='normal', requirement='not-a-version')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ["app -> core: invalid Cargo version: 'not-a-version'"]
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='build', requirement='*')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='build', requirement='^1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='build', requirement='=1.0.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='build', requirement='=0.9.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['app requires core =0.9.0, snapshot has 1.0.0']
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='build', requirement='not-a-version')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ["app -> core: invalid Cargo version: 'not-a-version'"]
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='dev', requirement='*')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='dev', requirement='^1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='dev', requirement='=1.0.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='dev', requirement='=0.9.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['app requires core =0.9.0, snapshot has 1.0.0']
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=True, kind='dev', requirement='not-a-version')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ["app -> core: invalid Cargo version: 'not-a-version'"]
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='normal', requirement='*')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='normal', requirement='^1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='normal', requirement='=1.0.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='normal', requirement='=0.9.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['app requires core =0.9.0, snapshot has 1.0.0']
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='normal', requirement='not-a-version')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ["app -> core: invalid Cargo version: 'not-a-version'"]
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='build', requirement='*')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='build', requirement='^1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='build', requirement='=1.0.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='build', requirement='=0.9.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['app requires core =0.9.0, snapshot has 1.0.0']
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='build', requirement='not-a-version')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ["app -> core: invalid Cargo version: 'not-a-version'"]
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='dev', requirement='*')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='dev', requirement='^1')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='dev', requirement='=1.0.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='dev', requirement='=0.9.0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['app requires core =0.9.0, snapshot has 1.0.0']
+
+======================================================================
+FAIL: test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) (publish=False, kind='dev', requirement='not-a-version')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 418, in test_internal_git_rejects_every_explicit_version
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ["app -> core: invalid Cargo version: 'not-a-version'"]
+
+======================================================================
+FAIL: test_workspace_target_and_alias_versions_cannot_bypass_git_only (test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only) (inherited=False, kind='normal')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 444, in test_workspace_target_and_alias_versions_cannot_bypass_git_only
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_workspace_target_and_alias_versions_cannot_bypass_git_only (test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only) (inherited=False, kind='build')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 444, in test_workspace_target_and_alias_versions_cannot_bypass_git_only
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_workspace_target_and_alias_versions_cannot_bypass_git_only (test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only) (inherited=False, kind='dev')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 444, in test_workspace_target_and_alias_versions_cannot_bypass_git_only
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_workspace_target_and_alias_versions_cannot_bypass_git_only (test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only) (inherited=True, kind='normal')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 444, in test_workspace_target_and_alias_versions_cannot_bypass_git_only
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_workspace_target_and_alias_versions_cannot_bypass_git_only (test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only) (inherited=True, kind='build')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 444, in test_workspace_target_and_alias_versions_cannot_bypass_git_only
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+======================================================================
+FAIL: test_workspace_target_and_alias_versions_cannot_bypass_git_only (test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only) (inherited=True, kind='dev')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source/tests/test_project_z.py", line 444, in test_workspace_target_and_alias_versions_cannot_bypass_git_only
+    self.assertTrue(any("omit version" in error for error in errors), errors)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : []
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.019s
+
+FAILED (failures=38)
+{"phase": "red", "tests_run": 5, "failed_parent_ids": ["test_project_z.GitPolicyTests.test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds", "test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version", "test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only"], "failures": 38, "errors": 0, "skips": 0, "process_events": 0, "passed": false, "receipt": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/red.json", "bytes": 7395, "sha256": "ffa19aeb20e8ff1b29050afac28dc6cc752ae0ba7a604c41d14b6ffeb61e2100"}

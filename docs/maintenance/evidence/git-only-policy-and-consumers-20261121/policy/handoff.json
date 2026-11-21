@@ -1,0 +1,231 @@
+{
+  "schema": "project-z-git-only-policy-handoff.v1",
+  "created_at": "2026-11-21T07:20:54.331907+00:00",
+  "base": "c9de7a60351b277a4903c9f40781cbae69cd6e5c",
+  "candidate_tree": "03d67141b18a4b85b87343736bc0b247b69c611c",
+  "source_root": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source",
+  "remote_published": false,
+  "publisher": "root via GitHub plugin",
+  "changed_files": [
+    {
+      "repository_path": "AGENTS.md",
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/files/AGENTS.md",
+      "bytes": 3831,
+      "sha256": "5fba8646d5ff15f168da3141d1e78577de979f0d7dba7b58d2bfe7b12ce59679",
+      "git_blob": "70f6c8b805be7059fafc2dd3266adde00ad545ac",
+      "mode": "100644",
+      "base_git_blob": "f1e9837fc360b568ed9b6947096c1dae6c0e3607"
+    },
+    {
+      "repository_path": "CONTRIBUTING.md",
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/files/CONTRIBUTING.md",
+      "bytes": 2444,
+      "sha256": "3695205e01ed5d33f027c62d3e7f0ee8f17c79ef03fec490090e11b9bd9acffb",
+      "git_blob": "44c316b3f3831354cb2e73319763690b99eddcde",
+      "mode": "100644",
+      "base_git_blob": "a2c127f443c4b3d8e57372cd6bf81602941873c9"
+    },
+    {
+      "repository_path": "README.md",
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/files/README.md",
+      "bytes": 5117,
+      "sha256": "bfcdbcbd8f6b4739f4f132254e5c704ba869a34c7a0feac48a1fe599f1679f33",
+      "git_blob": "8c0ad841985fc8b7951a7d24725fd0d53f65a137",
+      "mode": "100644",
+      "base_git_blob": "0833b9e779c73ee6c7687005ceedca3846d7491e"
+    },
+    {
+      "repository_path": "docs/release-projection.md",
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/files/docs/release-projection.md",
+      "bytes": 5750,
+      "sha256": "73a91beab71173c137c41bd18f045add312d3e634cd214355f30960b9d25c003",
+      "git_blob": "52b13d230ab707398494e27bdc2e18ae36047369",
+      "mode": "100644",
+      "base_git_blob": "4461f954fe94defb8055e4e3deb434fcb38b7a6f"
+    },
+    {
+      "repository_path": "scripts/project_z.py",
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/files/scripts/project_z.py",
+      "bytes": 39435,
+      "sha256": "3bc2108f47b6c766f654d80f5c811c13aceaa57908aee1f35ed30f12d7de86b8",
+      "git_blob": "aaaf7a5637c31d319fc021b377ff189f45cd717b",
+      "mode": "100644",
+      "base_git_blob": "acfa1440286ea059b5b3bf7e679d161d939f45c4"
+    },
+    {
+      "repository_path": "tests/test_project_z.py",
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/files/tests/test_project_z.py",
+      "bytes": 38829,
+      "sha256": "d215418947d5e1bd02e9010256611597a7ff899d8c8d18c5823f4a00e78e17a4",
+      "git_blob": "4221c929f03038039058e34ba0282e17defe4084",
+      "mode": "100644",
+      "base_git_blob": "f2966841f843e0d51a01dc568f7d484184ddfbf2"
+    }
+  ],
+  "source_manifest": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source-manifest.json",
+    "bytes": 79929,
+    "sha256": "64194d9b0b1d1c9cc06a1f1e495adefe0a0bd127360ee39d588c012e7ec4428b"
+  },
+  "source_equivalence": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source-equivalence.json",
+    "bytes": 511,
+    "sha256": "5ea062fb886091ae118e4a04915bb4d842be0947e2abd10a9239800cce97f7cb"
+  },
+  "publication_patch": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/publication-patch.json",
+    "bytes": 16484,
+    "sha256": "1fa6fad31af68b0203f4efac93d36f22957677f022f73c3629c0f6235701ca22"
+  },
+  "candidate_diff": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/candidate.diff",
+    "bytes": 18709,
+    "sha256": "5cc13782cd17aca4e177fde7b190643be5c72de9a622157f89b32f5abe25a8fb"
+  },
+  "only_changed_production_top_level_ast": [
+    "validate"
+  ],
+  "preserved_release_files": {
+    "scripts/cargo_versions.py": {
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47a86e8016051616d547d5e5b401e6d4b1f42a79"
+    },
+    "scripts/release.py": {
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9148bfdbdcfe8b64c007d31a209846912d7e29d"
+    },
+    "scripts/release_projection.py": {
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee12250feb7c0cd12c7350ca5574c5b974a89318"
+    },
+    "scripts/release_receipts.py": {
+      "mode": "100644",
+      "type": "blob",
+      "sha": "903fba6a64ed267a3581a09358caf52639a30110"
+    },
+    "tests/test_release.py": {
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04a79e52b918cc8af17c65e457e5a401e446f8c7"
+    },
+    "tests/test_release_projection.py": {
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44f0a71b44ce4ce1a7e7823943aab752be815d74"
+    },
+    "tests/test_release_receipts.py": {
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b06534747913b6239809fa07388abcba8d6eaca2"
+    }
+  },
+  "red": {
+    "receipt": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/red.json",
+      "bytes": 7395,
+      "sha256": "ffa19aeb20e8ff1b29050afac28dc6cc752ae0ba7a604c41d14b6ffeb61e2100"
+    },
+    "raw_log": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/red.log",
+      "bytes": 40231,
+      "sha256": "1eec518443b8966a446d61fa7264f07b7b339aa0436caf925a8db20c7e71992d"
+    },
+    "tests_run": 5,
+    "failed_parent_methods": 3,
+    "failed_subtests": 38,
+    "errors": 0,
+    "skips": 0,
+    "actual": {
+      "stdout": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/red.job.stdout.log",
+        "bytes": 40903,
+        "sha256": "51921ffb17d024c48da4a03f7a65598588b297c41b1a68129083f2257a97e33b"
+      },
+      "stderr": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/red.job.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "actual_job": "b879919be66280447132d5d616be9361-4a4",
+      "exit_code": 1,
+      "running": false,
+      "stdout_eof": true,
+      "stderr_eof": true
+    }
+  },
+  "green": {
+    "receipt": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/green.json",
+      "bytes": 8671,
+      "sha256": "de21123e7dbdbdbca2f2d582a4dd1738312267807f9c1f168c5723a867f02ccb"
+    },
+    "raw_log": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/green.log",
+      "bytes": 4066,
+      "sha256": "b138fcfae58c32ef45b81eadc28219c0539d00aa8d33c2a98ca15e7d26667ae8"
+    },
+    "tests_run": 24,
+    "policy_methods": 15,
+    "declaration_methods": 4,
+    "unchanged_release_projection_methods": 5,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "actual": {
+      "stdout": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/green.job.stdout.log",
+        "bytes": 4463,
+        "sha256": "163b31400c7ac21adcbaede8530a096ddfe40b0efe87c850758c4d0e3d9671cf"
+      },
+      "stderr": {
+        "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/green.job.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "actual_job": "b879919be66280447132d5d616be9361-4a6",
+      "exit_code": 0,
+      "running": false,
+      "stdout_eof": true,
+      "stderr_eof": true
+    }
+  },
+  "same_tests_red_to_green": true,
+  "execution_observations": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/execution-observations.json",
+    "bytes": 44674,
+    "sha256": "842d10378c158b7685f42fe3fa3e3a43e005e52704e8726fcd631d1fe52dd368"
+  },
+  "fresh_remote_ref": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/remote-ref-before-handoff.json",
+    "bytes": 479,
+    "sha256": "69397b1a41d0014d658290908dd9dac704e4099a524efd0d780f98e1ce792e2c"
+  },
+  "runner": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/run_pure_tests.py",
+    "bytes": 5174,
+    "sha256": "07d0bcf88fdc6ce63229e9dd4e627919cf649c069ca9f20bf57c8534b49ac90a"
+  },
+  "scope": {
+    "observed_test_subprocess_events": 0,
+    "cargo": false,
+    "products": false,
+    "shared_target_or_lock": false,
+    "graph_sync_check_resolve_impact": false,
+    "remote_ci": false,
+    "whole_module_or_GitSourceFixture": false,
+    "release_offline_metadata": false,
+    "receipt_fixture_rerun": false
+  },
+  "not_run": [
+    "GitSourceIntegrationTests",
+    "full project suite",
+    "release stage offline metadata",
+    "release receipt Git fixtures",
+    "final44 source graph",
+    "consumer/product gates"
+  ],
+  "status": "M  AGENTS.md\nM  CONTRIBUTING.md\nM  README.md\nM  docs/release-projection.md\nM  scripts/project_z.py\nM  tests/test_project_z.py\n"
+}

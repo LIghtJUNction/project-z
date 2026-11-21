@@ -1,0 +1,209 @@
+{
+  "schema": "project-z-git-only-pure-python.v1",
+  "phase": "green",
+  "source_root": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source",
+  "base": "c9de7a60351b277a4903c9f40781cbae69cd6e5c",
+  "started_at": "2026-11-21T07:19:33.488063+00:00",
+  "finished_at": "2026-11-21T07:19:33.580898+00:00",
+  "duration_seconds": 0.09283559399773367,
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/run_pure_tests.py",
+    "green",
+    "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source",
+    "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121"
+  ],
+  "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/source",
+  "python_version": "3.14.10 (main, Nov  4 2026, 18:21:50) [GCC 16.2.1 20260810]",
+  "selected": [
+    "test_project_z.GitPolicyTests",
+    "test_project_z.VersionDeclarationTests",
+    "test_release_projection.MatchTests"
+  ],
+  "tests_run": 24,
+  "parent_test_ids": [
+    "test_project_z.GitPolicyTests.test_build_flags_keep_locked_and_feature_semantics_before_separator",
+    "test_project_z.GitPolicyTests.test_external_configuration_and_dependencies_are_preserved",
+    "test_project_z.GitPolicyTests.test_external_version_declarations_remain_allowed",
+    "test_project_z.GitPolicyTests.test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds",
+    "test_project_z.GitPolicyTests.test_git_source_does_not_bypass_missing_package_checks",
+    "test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version",
+    "test_project_z.GitPolicyTests.test_internal_patch_in_manifest_or_configuration_is_rejected_without_deleting_it",
+    "test_project_z.GitPolicyTests.test_registry_cross_path_and_every_fixed_git_selector_are_rejected",
+    "test_project_z.GitPolicyTests.test_same_repository_paths_remain_valid",
+    "test_project_z.GitPolicyTests.test_same_repository_version_requirements_remain_checked",
+    "test_project_z.GitPolicyTests.test_source_urls_cannot_select_another_host_or_revision",
+    "test_project_z.GitPolicyTests.test_target_optional_dev_and_alias_dependencies_have_the_same_source_rule",
+    "test_project_z.GitPolicyTests.test_unknown_external_git_packages_remain_allowed",
+    "test_project_z.GitPolicyTests.test_unknown_internal_package_cannot_hide_behind_alternate_github_spelling",
+    "test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only",
+    "test_project_z.VersionDeclarationTests.test_cargo_normalized_cfg_spacing_keeps_path_version_constraint",
+    "test_project_z.VersionDeclarationTests.test_cfg_normalization_preserves_spaces_inside_string_values",
+    "test_project_z.VersionDeclarationTests.test_path_only_prerelease_is_accepted_but_explicit_star_is_checked",
+    "test_project_z.VersionDeclarationTests.test_workspace_inherited_alias_retains_explicit_version_information",
+    "test_release_projection.MatchTests.test_compatible_version_metadata_preserves_options_and_uses_locked_pin",
+    "test_release_projection.MatchTests.test_exactly_one_git_pin_not_registry_or_other_repo",
+    "test_release_projection.MatchTests.test_mismatched_or_invalid_version_metadata_is_rejected_unchanged",
+    "test_release_projection.MatchTests.test_missing_malformed_selector_and_ambiguous_fail_closed",
+    "test_release_projection.MatchTests.test_preserves_unknown_external_dependency_and_rejects_selectors"
+  ],
+  "failed_parent_ids": [],
+  "failure_count": 0,
+  "error_count": 0,
+  "skip_count": 0,
+  "expected_failure_count": 0,
+  "unexpected_success_count": 0,
+  "inputs_before": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 3831,
+      "sha256": "5fba8646d5ff15f168da3141d1e78577de979f0d7dba7b58d2bfe7b12ce59679"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5117,
+      "sha256": "bfcdbcbd8f6b4739f4f132254e5c704ba869a34c7a0feac48a1fe599f1679f33"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 2444,
+      "sha256": "3695205e01ed5d33f027c62d3e7f0ee8f17c79ef03fec490090e11b9bd9acffb"
+    },
+    {
+      "path": "docs/release-projection.md",
+      "bytes": 5750,
+      "sha256": "73a91beab71173c137c41bd18f045add312d3e634cd214355f30960b9d25c003"
+    },
+    {
+      "path": "scripts/project_z.py",
+      "bytes": 39435,
+      "sha256": "3bc2108f47b6c766f654d80f5c811c13aceaa57908aee1f35ed30f12d7de86b8"
+    },
+    {
+      "path": "scripts/cargo_versions.py",
+      "bytes": 6810,
+      "sha256": "e8a39156886eee6279c7437fd6005bcea8483febf6aa8a4822716a3cbc201986"
+    },
+    {
+      "path": "scripts/catalog_docs.py",
+      "bytes": 3646,
+      "sha256": "a28a0d317e6c2d192c3939465f55c282d6c3aa18e95564e787579613185bac71"
+    },
+    {
+      "path": "scripts/release.py",
+      "bytes": 2906,
+      "sha256": "613995f0979066376388ac1a5d4f68763103c2403359e1e416d14dde52f960f4"
+    },
+    {
+      "path": "scripts/release_projection.py",
+      "bytes": 14539,
+      "sha256": "7df4df89eb8401aefa8124b45461a7c35df17fa0f7d6733f6eccf4a00cae63f2"
+    },
+    {
+      "path": "scripts/release_receipts.py",
+      "bytes": 7706,
+      "sha256": "2fb7c5949900879de718022a17eddb82d0d5645d9f3752a881e5d24e493802f6"
+    },
+    {
+      "path": "tests/test_project_z.py",
+      "bytes": 38829,
+      "sha256": "d215418947d5e1bd02e9010256611597a7ff899d8c8d18c5823f4a00e78e17a4"
+    },
+    {
+      "path": "tests/test_release.py",
+      "bytes": 5919,
+      "sha256": "391e9361a1a5efef6fba26f482cc62554eb5c4b4cd6c8dc27f4a175baf4e7896"
+    },
+    {
+      "path": "tests/test_release_projection.py",
+      "bytes": 11080,
+      "sha256": "3e81f32fe63b2a2265444676034b7caee64d6a3259fff6effd17774027bfcd37"
+    },
+    {
+      "path": "tests/test_release_receipts.py",
+      "bytes": 7563,
+      "sha256": "d0bbbc25f8d3b894f4315454625cba409da28dde010fbdc7a9c19fef0a92e084"
+    }
+  ],
+  "inputs_after": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 3831,
+      "sha256": "5fba8646d5ff15f168da3141d1e78577de979f0d7dba7b58d2bfe7b12ce59679"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5117,
+      "sha256": "bfcdbcbd8f6b4739f4f132254e5c704ba869a34c7a0feac48a1fe599f1679f33"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 2444,
+      "sha256": "3695205e01ed5d33f027c62d3e7f0ee8f17c79ef03fec490090e11b9bd9acffb"
+    },
+    {
+      "path": "docs/release-projection.md",
+      "bytes": 5750,
+      "sha256": "73a91beab71173c137c41bd18f045add312d3e634cd214355f30960b9d25c003"
+    },
+    {
+      "path": "scripts/project_z.py",
+      "bytes": 39435,
+      "sha256": "3bc2108f47b6c766f654d80f5c811c13aceaa57908aee1f35ed30f12d7de86b8"
+    },
+    {
+      "path": "scripts/cargo_versions.py",
+      "bytes": 6810,
+      "sha256": "e8a39156886eee6279c7437fd6005bcea8483febf6aa8a4822716a3cbc201986"
+    },
+    {
+      "path": "scripts/catalog_docs.py",
+      "bytes": 3646,
+      "sha256": "a28a0d317e6c2d192c3939465f55c282d6c3aa18e95564e787579613185bac71"
+    },
+    {
+      "path": "scripts/release.py",
+      "bytes": 2906,
+      "sha256": "613995f0979066376388ac1a5d4f68763103c2403359e1e416d14dde52f960f4"
+    },
+    {
+      "path": "scripts/release_projection.py",
+      "bytes": 14539,
+      "sha256": "7df4df89eb8401aefa8124b45461a7c35df17fa0f7d6733f6eccf4a00cae63f2"
+    },
+    {
+      "path": "scripts/release_receipts.py",
+      "bytes": 7706,
+      "sha256": "2fb7c5949900879de718022a17eddb82d0d5645d9f3752a881e5d24e493802f6"
+    },
+    {
+      "path": "tests/test_project_z.py",
+      "bytes": 38829,
+      "sha256": "d215418947d5e1bd02e9010256611597a7ff899d8c8d18c5823f4a00e78e17a4"
+    },
+    {
+      "path": "tests/test_release.py",
+      "bytes": 5919,
+      "sha256": "391e9361a1a5efef6fba26f482cc62554eb5c4b4cd6c8dc27f4a175baf4e7896"
+    },
+    {
+      "path": "tests/test_release_projection.py",
+      "bytes": 11080,
+      "sha256": "3e81f32fe63b2a2265444676034b7caee64d6a3259fff6effd17774027bfcd37"
+    },
+    {
+      "path": "tests/test_release_receipts.py",
+      "bytes": 7563,
+      "sha256": "d0bbbc25f8d3b894f4315454625cba409da28dde010fbdc7a9c19fef0a92e084"
+    }
+  ],
+  "inputs_unchanged": true,
+  "observed_process_events": [],
+  "cargo_executed": false,
+  "shared_target_or_lock_requested": false,
+  "product_or_graph_commands_requested": false,
+  "passed": true,
+  "exit_code": 0
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "project-z.git-only-consumers.coordination-observation.v1",
+  "snapshot_utc": "2026-11-21T07:30:11Z",
+  "method": "Selected facts from the root's existing durable checkpoint and delegated handoff. This is a bounded state summary, not new product execution or a reproduction result.",
+  "private_source": {
+    "path": "/home/lightjunction/.local/state/work-maintainer/project-z-pr-dependency-binary-cleanup-20261120.json",
+    "bytes": 221576,
+    "sha256": "f110a44a59e27137c1db62b57a75bdcb192eead03f3c5532b8c5a999e2dd95a3",
+    "full_source_not_published": true
+  },
+  "scope_boundary": "Private collaboration routes, authentication data, full user conversations and the full checkpoint are excluded.",
+  "superseding_development_policy": "Cross-repository Project Z development dependencies use canonical default-branch Git URLs without version, rev, tag or branch selectors; sync records resolved commits in locks and gitlinks. Registry versions are derived separately for external publication.",
+  "ssmcp_next_work": {
+    "public_source": "9e1a06c4c6a04fe6a7ac7919c9cee9ab497ac95b",
+    "tree": "6e6c0024c494d37b736432ae7d5ea91ad8783310",
+    "base": "3f678a7fca7ea64d220454f1723189e43d3b5546",
+    "branch": "work/local-startup-zuse-20261121",
+    "classification": "source-only; original author continuing bounded follow-up",
+    "scope": [
+      "account fixture retirement barrier preserving strict whole-empty-list and known-ID404",
+      "permanent local initialization errors retain concrete IO cause and avoid misleading watchdog retries",
+      "WebAction launch failure fallback",
+      "small concurrent same-bearer different-thread metadata ownership regression",
+      "all internal Git dependencies use actual latest default branches without development registry version selectors",
+      "actual locks and four gitlinks refreshed, including zuse830/0.3.0",
+      "release-only dependency version mapping from actual Git packages and lock"
+    ],
+    "new_Gate35_result_reported": false,
+    "new_runtime_UI_P1_result_reported": false
+  },
+  "newly_requested_work": [
+    {
+      "request": "ssmcp --version --all should display dependency versions as a tree",
+      "state": "accepted for source follow-up; no acceptance result in this snapshot"
+    },
+    {
+      "request": "Evaluate and enforce Computer Use off for direct zuse CLI as well as the Ctrl-Super-C entry",
+      "state": "user-reported bypass; not independently reproduced or fixed in this report"
+    },
+    {
+      "request": "Use a unified Computer Use On/Off model instead of foreground/background terminology",
+      "state": "accepted requirement; no finished product result claimed"
+    }
+  ],
+  "diagnostics": {
+    "W_single_diagnostic": "69 existing checks passed; original W UI failure not reproduced and cause not established.",
+    "Linux": "Read-only local permissions and old-system-binary clues; x's actual selected executable is still unknown."
+  },
+  "machine_health": {
+    "observed_utc": "2026-11-21T07:24:03.668926+00:00",
+    "memory": {
+      "MemTotal": 16476704768,
+      "MemAvailable": 5679116288,
+      "SwapTotal": 40529100800,
+      "SwapFree": 25506353152
+    },
+    "disks": {
+      "workspace": {
+        "path": "/home/lightjunction/Documents/GITHUB/ssmcp",
+        "available_bytes": 388672176128,
+        "total_bytes": 1000203091968
+      },
+      "shared_target": {
+        "path": "/var/tmp/project-z-cargo-target",
+        "available_bytes": 737576796160,
+        "total_bytes": 1023133351936
+      }
+    },
+    "loadavg": "4.58 4.99 5.38 2/3352 960245",
+    "visible_process_name_counts": {
+      "ssmcp": 30,
+      "codex": 3
+    },
+    "scope": "read-only point observation; no target lock probe, product, reload or global idle claim"
+  },
+  "initial_85": {
+    "total": 85,
+    "merged": 56,
+    "closed": 14,
+    "archived": 9,
+    "blocked": 5,
+    "integration_pending": 1,
+    "pending_item": "LIghtJUNction/zcalld PR #1",
+    "followups_not_added_to_original85": true
+  },
+  "coordination": {
+    "native_validation_window_returned": false,
+    "final44_started": false,
+    "no_global_idle_or_lock_free_claim": true
+  },
+  "retained_history": {
+    "report_commit": "c9de7a60351b277a4903c9f40781cbae69cd6e5c",
+    "Google_Doc_v8_cutoff_utc": "2026-11-21T06:23:03Z",
+    "not_rewritten": true
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "prepared_at_utc": "2026-11-21T07:04:14.126353+00:00",
+  "status": "ready_for_review_only",
+  "repository": "LIghtJUNction/ztype",
+  "base_commit": "e3e8c1014e29653da587cc993076cb02e469b456",
+  "base_tree": "930b79b4c49f21e252087e81f66494d4b4a1d7cc",
+  "expected_candidate_tree": "80efad744bd91f41e7567f5bb352a352e45774ff",
+  "zuse_target": {
+    "commit": "830fcefd2277cbba46536c67d206f29058ba7fb3",
+    "tree": "3c110034f10ba5f35b0e18ac6b890d533121a473",
+    "package": "zuse-computer",
+    "version": "0.3.0"
+  },
+  "files": [
+    {
+      "bytes": 1567,
+      "sha256": "97293ab1431b4c13b9876ae4d320b8d6e9342a4b4b57df083a08836a16a2c860",
+      "git_blob": "8e74edfb294b6b978936e405350b115ee165ffe9",
+      "target_git_path": "Cargo.toml",
+      "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-ztype-zuse030-20261121/files/Cargo.toml",
+      "mode": "100644",
+      "base_git_blob": "a02f78d7e78ca12e5787cb7c0498a12248c2b87b",
+      "source_relative_path": "Cargo.toml"
+    },
+    {
+      "bytes": 3526,
+      "sha256": "aa8364d887e1bbb249487d408db85f4adc277b3e65bdf3a41c51c260174c6cdc",
+      "git_blob": "35c6387c48cdc5027bf12d58fe8e32cabd87fe89",
+      "target_git_path": "Cargo.lock",
+      "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-ztype-zuse030-20261121/files/Cargo.lock",
+      "mode": "100644",
+      "base_git_blob": "be72d185a38ce68690c8214ae350a968631848a5",
+      "source_relative_path": "Cargo.lock"
+    }
+  ],
+  "total_candidate_bytes": 5093,
+  "support": [
+    {
+      "bytes": 2400,
+      "sha256": "54366b545fe79467b5f3874a033212ab22b69941ca971baf3325055714db5760",
+      "git_blob": "1a59e8f3dba50df16ce50dac78ff38250c22939f",
+      "source_relative_path": "minimal.diff",
+      "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-ztype-zuse030-20261121/minimal.diff",
+      "public_evidence_file": "minimal.diff"
+    },
+    {
+      "bytes": 42696,
+      "sha256": "318dfe902ceb0ff6874880b78155c14f7972381f5295ec7311a39a743ba43ba3",
+      "git_blob": "96395cbbae87056daa1959adc1ee10ca82c0230a",
+      "source_relative_path": "preparation-input.json",
+      "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-ztype-zuse030-20261121/preparation-input.json"
+    },
+    {
+      "bytes": 6842,
+      "sha256": "b3849ada2a00b1c02b6268f8a0a836ead338201bc96d8cf1f6c1189a4065c1f7",
+      "git_blob": "da0fc9213f7e6268b0eeb81dada33bc580673011",
+      "source_relative_path": "readback-proof.json",
+      "native_path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-ztype-zuse030-20261121/readback-proof.json",
+      "public_evidence_file": "readback-proof-public.json"
+    }
+  ],
+  "scope": {
+    "base_leaves": 112,
+    "modified_leaves": 2,
+    "unchanged_leaves": 110,
+    "rust_leaves_unchanged": 20,
+    "gitlinks_unchanged": [
+      {
+        "path": "vendor/zgpui",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "b4d5493e0cd985d00558c7be0b5726965ab5163a"
+      },
+      {
+        "path": "vendor/zinput",
+        "mode": "160000",
+        "type": "commit",
+        "sha": "fe1cbaec744fa790a043383d45f612b8d19dcd32"
+      }
+    ],
+    "method": "Only two root blob substitutions to the complete fixed GitHub base tree; all other SHA/mode/type entries remain identical."
+  },
+  "boundaries": {
+    "cargo_generated": false,
+    "cargo_resolution_executed": false,
+    "product_or_gui_executed": false,
+    "cargo_lock_acquired": false,
+    "target_modified": false,
+    "git_refs_written": false,
+    "existing_worktrees_modified": false,
+    "merge_ready": false,
+    "lock_status": "Source-derived proposed lock patch awaiting actual Cargo resolution and consumer gates; not generated or accepted by Cargo.",
+    "remaining_sources": "Other locked sources were preserved, not refreshed or claimed latest. A later graph refresh needs separate validation.",
+    "zcall_alignment": "Explicitly matches the selected 830 upstream lock graph; no claim of automatic dependency-lock propagation."
+  },
+  "publication_guard": "Root must fresh-check main/open PRs before publishing a draft. No remote write happened here.",
+  "public_copy": {
+    "kind": "public_derivative",
+    "original": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/prepared-ztype-zuse030-20261121/prepared.json",
+      "bytes": 3735,
+      "sha256": "fa26c535f3b4cc6010a3ef6d457174146e3061154c64f374f129bd5d4a2477ab"
+    },
+    "changes": [
+      {
+        "change": "Rename original preparation-relative path keys to source_relative_path and provide explicit native paths; link the selected public support copies.",
+        "reason": "Do not imply the complete private staging directory is reproduced in this bounded archive."
+      }
+    ],
+    "validation_results_unchanged": true
+  }
+}

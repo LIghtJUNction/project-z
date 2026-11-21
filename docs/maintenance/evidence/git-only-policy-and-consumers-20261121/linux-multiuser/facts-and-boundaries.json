@@ -1,0 +1,131 @@
+{
+  "schema": "ssmcp.linux-multiuser-readonly.facts.v1",
+  "scope": "Read-only observation of the x account, visible processes, specified original cwd, system ssmcp candidates and package metadata; no product invocation.",
+  "original_user_paste": {
+    "path": "/home/lightjunction/Documents/GITHUB/ssmcp/.ssmcp/inputs/paste-eb7b235b93f895c5bbfdc0258833b428.txt",
+    "bytes": 3415,
+    "sha256": "9e30d9f641d41ac99c3d1ea67e95bd4cce3c0b6a77d1a0cee2527041282e872a",
+    "read_complete": true,
+    "first_line": "x@light /h/l/D/G/ssmcp> ssmcp lightjunction@ssmcp.lmm.best",
+    "ellipsis_is_in_original_paste": true
+  },
+  "fixed_source": {
+    "W": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "P": "ea2bfcae6aea9672d8955f832a8ec5bd1e0749f4",
+    "tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+    "source_equivalence": "GitHub immutable P commit has the same tree as W",
+    "code_observation": "W already uses /tmp/ssmcp-<effective UID> for ordinary output and verifies /dev/tty fallback for an inherited foreign-owned controlling terminal."
+  },
+  "confirmed": {
+    "observer": {
+      "uid": 1000,
+      "euid": 1000
+    },
+    "target_user": {
+      "name": "x",
+      "uid": 1001,
+      "gid": 1001,
+      "home": "/home/x",
+      "login_shell": "/bin/fish"
+    },
+    "visible_target_uid_process_count": 0,
+    "proc_mount_has_hidepid": false,
+    "system_binary": {
+      "path": "/usr/bin/ssmcp",
+      "resolved_bin_alias": "/usr/bin/ssmcp",
+      "bytes": 9885680,
+      "sha256": "59f29540db09e78dc21d49e17bedc279f7c0721bf5aba8939a7d1ef99d13bc13",
+      "owner_uid": 0,
+      "mode": "0755",
+      "kind": "ELF",
+      "usr_local_bin_candidate_exists": false,
+      "package_name": "ssmcp-git",
+      "package_registered_version": "0.9.1.r377.gee05244-1",
+      "package_mtree_matches_size_and_sha256": true,
+      "logged_error_literal_present": true,
+      "legacy_tmp_literal_present": true,
+      "product_version_command_executed": false
+    },
+    "original_home": {
+      "path": "/home/lightjunction",
+      "uid": 1000,
+      "gid": 1000,
+      "mode": "0700",
+      "access_acl_query": {
+        "attribute": "system.posix_acl_access",
+        "errno": 61,
+        "name": "ENODATA",
+        "meaning": "No POSIX access ACL attribute was returned."
+      }
+    },
+    "target_home": {
+      "path": "/home/x",
+      "uid": 1001,
+      "gid": 1001,
+      "mode": "0700"
+    },
+    "target_private_paths": "The exact private bin, fish configuration and saved-session paths in job-11.stdout.json returned EACCES to UID 1000."
+  },
+  "inferences": [
+    {
+      "statement": "The verified old system ELF is a concrete candidate for the reported /tmp/ssmcp failure.",
+      "limit": "It is not proven to be the executable selected by the already-exited x shell."
+    },
+    {
+      "statement": "The current 0700 /home/lightjunction with no POSIX access ACL prevents ordinary UID 1001 from traversing the original absolute cwd.",
+      "limit": "No process was started under x and no product failure was reproduced. This supports the source canonicalize failure branch; it does not recover the truncated original error."
+    }
+  ],
+  "unresolved": {
+    "x_actual_command_resolution": null,
+    "x_actual_PATH": null,
+    "x_wrapper_or_function": null,
+    "x_saved_session_executable_pin": null,
+    "x_actual_HOME_and_XDG_environment": null,
+    "reason": "No visible target-UID processes remained, and the observer UID 1000 received EACCES on the target user's private paths. No privilege escalation or identity switch was attempted.",
+    "minimum_additional_evidence": "One read-only command-resolution/type/path and selected HOME/PATH/XDG path report from x's own existing login context, plus the selected file hash. No full environment or credentials."
+  },
+  "minimal_remediation_scope": [
+    "First establish x's actual selected executable or wrapper/session pin; then update that installation through the existing authorized release/install process to a reviewed build containing the already-present fixes.",
+    "Use a workspace traversable by x, or a shared workspace explicitly configured by its owners. Do not chmod/chown another user's home or private state.",
+    "If a source follow-up is desired, retain the workspace canonicalization I/O cause and distinguish deterministic local output-directory setup failures from retryable network disconnections. Do not repeat the existing per-UID and controlling-TTY fixes."
+  ],
+  "boundaries": {
+    "account_compat_multi_subject_fixture_is_separate": true,
+    "no_credentials_or_full_environment": true,
+    "no_product_or_model_execution": true,
+    "no_cargo": true,
+    "no_installation_changes": true,
+    "no_permission_changes": true,
+    "no_sudo_or_identity_switch": true,
+    "no_new_native_agent": true,
+    "no_diagnostic_rerun_for_save": true
+  },
+  "source_locations": [
+    {
+      "path": "src/output.rs",
+      "blob": "483da229603dbc250b14b2ca27b046b58975823c",
+      "anchors": "connection_in 181-195; guarded legacy reload 199-220; private directory 247-265"
+    },
+    {
+      "path": "src/client/terminal.rs",
+      "blob": "69f8e2c2e1c00c50a1737b101479c6d3f5f31ac9",
+      "anchors": "PhysicalOutput::open_terminal 2949-2999; verify_controlling_terminal 3002-3034"
+    },
+    {
+      "path": "src/client/interface/history.rs",
+      "blob": "267df707651c850fd4f245aacb62e24a73acbaf6",
+      "anchors": "default_directory 306-326; workspace 329-339; SafeDirectory 1158-1206"
+    },
+    {
+      "path": "src/client/context_memory.rs",
+      "blob": "7c3d95f698c26407056811e9064c77284a1f3011",
+      "anchors": "initialize 673-709"
+    },
+    {
+      "path": "src/client.rs",
+      "blob": "8c105204c063d2f6b5d35c053a5f0a4908d81b6a",
+      "anchors": "memory warning 1771-1778; watchdog classification 1943-1969"
+    }
+  ]
+}

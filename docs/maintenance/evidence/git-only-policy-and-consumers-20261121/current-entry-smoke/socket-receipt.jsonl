@@ -1,0 +1,1 @@
+{"output":"SOCKET_SMOKE_OK\n完整输入已保存","request_id":"chat-b5f74864f70171b7ab6b36a49404a93f","status":"completed","warnings":["@missing-socket-smoke.txt: No such file or directory (os error 2)","$missing_socket_smoke_skill: skill not found in the configured directories."]}

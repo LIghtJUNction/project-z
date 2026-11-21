@@ -1,0 +1,251 @@
+diff --git i/AGENTS.md w/AGENTS.md
+index f1e9837..70f6c8b 100644
+--- i/AGENTS.md
++++ w/AGENTS.md
+@@ -6,7 +6,8 @@ Read README, CONTRIBUTING and the target repository's AGENTS.md. Work in isolate
+ 
+ - Cross-repository Project Z Cargo dependencies use `git = "https://github.com/<owner>/<repo>.git"` and the latest default branch. Do not use a registry-only declaration, cross-repository path, fixed branch, tag or rev.
+ - Keep same-repository workspace/path dependencies. Preserve external dependency sources and feature boundaries.
+-- Keep `version` beside `git` for publishable crates' normal and build dependencies. Keep it compatible with the current source version; Cargo uses Git internally and normalizes the dependency to a registry version for external publication. Private crates and development-only dependencies may omit this publication metadata.
++- Internal cross-repository development declarations must not contain `version`, including publishable crates, normal/build/dev dependencies and workspace-inherited declarations. Keep package versions and lockfile versions as source identity.
++- For external registry publication, use `scripts/release_projection.py` to create a separate staging manifest with exact versions from the committed lock. Compatible historical `version` + `git` inputs remain supported by that staging tool; they are not valid new development declarations.
+ - Update consumers in dependency order: compatibility code, Git declarations, Cargo.lock and nested source gitlinks. Commit and push those changes before recording aggregate gitlinks. A lock records one verified update; it must not keep an older source on the next synchronization.
+ - `python3 scripts/project_z.py sync` fetches default branches into clean, detached submodule checkouts. It records exact commits and regenerates catalog.json and docs/PROJECTS.md. It does not repair consumer source or overwrite active branches.
+ - `check` verifies remote freshness and internal source identities. `resolve --all` uses real Cargo `--locked` resolution without local registry/path patches. A compatibility failure must be fixed or reported with its exact consumer and source; never hide it by retaining an old internal release.
+diff --git i/CONTRIBUTING.md w/CONTRIBUTING.md
+index a2c127f..44c316b 100644
+--- i/CONTRIBUTING.md
++++ w/CONTRIBUTING.md
+@@ -6,7 +6,7 @@
+ 
+ 1. 从 `.gitmodules` 核对来源，读取目标仓库的 `AGENTS.md`，确认现有分支和维护者。使用独立工作区。
+ 2. 用 `python3 scripts/project_z.py impact --repositories <名称>` 列出直接、间接、运行时和安装消费者，补齐遗漏关系。
+-3. 按依赖顺序修复消费者。跨仓 Cargo 依赖使用规范 Git URL，不写 branch/tag/rev；同仓 path 保留。发布用 version 与当前源码兼容。
++3. 按依赖顺序修复消费者。内部跨仓 Cargo 依赖使用规范 Git URL，不写 version/branch/tag/rev，包括可发布 crate 和构建/开发依赖；同仓 workspace/path 与外部依赖保留。版本依赖只在对外发布的独立 staging 中按已提交锁文件生成，不回写开发声明。
+ 4. 更新并提交各消费者的 Cargo.lock 和嵌套 gitlink。先验证、推送子仓，再执行聚合 `sync`、`check`、`resolve --all`。
+ 5. 按实际变化验证 GUI、设备、服务、插件 ABI 或安装包。及时提交推送并读回远端，记录真实结果和未覆盖范围。
+ 
+diff --git i/README.md w/README.md
+index 0833b9e..8c0ad84 100644
+--- i/README.md
++++ w/README.md
+@@ -21,7 +21,7 @@ python3 scripts/project_z.py resolve --all
+ | 命令 | 作用 |
+ | --- | --- |
+ | `sync` | 查询 GitHub 默认分支，更新干净且处于 detached 状态的子仓检出，记录确切提交并生成索引 |
+-| `check` | 核对 Git 来源、版本约束、锁文件、嵌套 gitlink、远端新鲜性和生成文件 |
++| `check` | 核对内部 Git 声明、锁文件、嵌套 gitlink、远端新鲜性和生成文件 |
+ | `resolve --all` | 用 Cargo `--locked` 解析全部 Rust 工作区，逐包核对 Git URL、提交与版本 |
+ | `impact --repositories <名称>` | 列出直接、间接和明确登记的运行时、安装消费者 |
+ | `run --affected <名称> -- <Cargo 参数>` | 在记录的源码上运行选定的 Rust 消费者验证 |
+@@ -37,7 +37,7 @@ python3 scripts/project_z.py resolve --all
+ zconv = { git = "https://github.com/LIghtJUNction/zconv.git" }
+ ```
+ 
+-需要发布的 crate 在声明中保留与上游 Cargo.toml 实际版本相符的 `version` 元数据；它校验 Git 源码版本，发布时成为外部使用的注册表依赖。同仓库内的 workspace/path 依赖继续保留。
++跨仓依赖的开发声明不写 `version`；可发布 crate、构建/开发依赖和 workspace 继承也遵循此规则。包自身版本及 Cargo.lock 中的版本继续保留，同仓 workspace/path 和外部依赖保持原有规则。对外发布时，在独立 staging 中按已提交锁文件生成精确版本依赖，见[发布投影](docs/release-projection.md)。
+ 
+ Cargo.lock 保存本轮解析的具体 Git 提交。维护者通过 `cargo update -p <包名>` 更新内部依赖，验证后提交锁文件；日常构建使用 `--locked`。这样既能在每次同步时使用最新源码，也能复现某次验证。版本号相同但 Git 提交不同，仍会被视为不同源码。
+ 
+diff --git i/docs/release-projection.md w/docs/release-projection.md
+index 4461f95..52b13d2 100644
+--- i/docs/release-projection.md
++++ w/docs/release-projection.md
+@@ -1,10 +1,10 @@
+ # Project Z dependency projection (review only)
+ 
+-Project Z source manifests use GitHub URLs for internal dependencies. Publishable
+-crates may also declare a compatible `version` requirement. The committed Git
+-lockfile identifies the exact source used to build that snapshot; the requirement
+-validates its package version and does not select a different Git commit.
+-crates.io does not accept normal/build dependencies that only exist in Git, so
++Project Z development manifests use GitHub default-branch sources for internal
++cross-repository dependencies, without `version`, `branch`, `tag` or `rev`.
++Package versions and the committed Git lockfile remain part of the source identity.
++For external publication, crates.io requires registry versions for normal/build
++dependencies that use Git during development, so
+ use a separate staging directory for the registry manifest. This tool does not
+ change the source manifest or source lock, create tags, or publish anything.
+ 
+@@ -31,8 +31,9 @@ must start from this same commit.
+ Staging archives tracked files from that commit and reads its committed workspace
+ Cargo.lock. It rewrites only HTTPS GitHub dependency declarations whose canonical
+ repository URL is listed in Project Z's .gitmodules. A unique name + URL Git lock
+-entry with a full Git SHA is required. If the declaration includes `version`,
+-the locked version must satisfy that Cargo requirement; malformed requirements
++entry with a full Git SHA is required. Historical commits may include `version`
++beside `git`; staging accepts them only when the locked version satisfies that
++Cargo requirement. Malformed requirements
+ and mismatches are rejected before conversion. Selectors (`rev`, `branch`,
+ `tag`) and mixed path, registry or workspace sources remain rejected. The result
+ uses exact =VERSION constraints from the lock, preserving aliases, features,
+@@ -83,7 +84,8 @@ availability, yank state, the complete transitive graph, or validate/install
+ the staged package. It does not change the staging-only label or enable CI.
+ 
+ Cargo's [multiple locations rule](https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html#multiple-locations)
+-permits `version` together with `git`: local development uses Git and checks the
+-version requirement; a published manifest uses the registry dependency. The
+-projection still requires an exact source receipt before accepting that registry
+-archive for release.
++permits `version` together with `git`. Project Z's development policy is stricter:
++internal cross-repository declarations use Git without a version selector. The
++projection retains compatibility with historical multiple-location declarations
++and still requires an exact source receipt before accepting a registry archive
++for release.
+diff --git i/scripts/project_z.py w/scripts/project_z.py
+index acfa144..aaaf7a5 100644
+--- i/scripts/project_z.py
++++ w/scripts/project_z.py
+@@ -435,15 +435,15 @@ def validate(data, rules, root=ROOT):
+                 if git_source_identity(dep["source"]) in identities:
+                     errors.append(f"{name} -> {dep['name']}: package from a registered repository is missing from the catalog")
+                 continue
+-            if dep["explicit_version"]:
+-                try:
+-                    compatible = satisfies(target["version"], dep["requirement"])
+-                except ValueError as error:
+-                    errors.append(f"{name} -> {dep['name']}: {error}")
+-                    continue
+-                if not compatible:
+-                    errors.append(f"{name} requires {dep['name']} {dep['requirement']}, snapshot has {target['version']}")
+             if target["repository"] == package["repository"]:
++                if dep["explicit_version"]:
++                    try:
++                        compatible = satisfies(target["version"], dep["requirement"])
++                    except ValueError as error:
++                        errors.append(f"{name} -> {dep['name']}: {error}")
++                        continue
++                    if not compatible:
++                        errors.append(f"{name} requires {dep['name']} {dep['requirement']}, snapshot has {target['version']}")
+                 expected_path = (root / target["manifest"]).parent.resolve()
+                 if dep["source"] or not dep["path"] or (root / dep["path"]).resolve() != expected_path:
+                     errors.append(f"{name} -> {dep['name']}: same-repository dependency must use its workspace/path source")
+@@ -451,8 +451,8 @@ def validate(data, rules, root=ROOT):
+                 expected_source = "git+" + repos[target["repository"]]["url"]
+                 if dep["source"] != expected_source or dep["path"]:
+                     errors.append(f"{name} -> {dep['name']}: use {expected_source} at its default branch, without path, branch, tag or rev")
+-                if package["publish"] and dep["kind"] != "dev" and not dep["explicit_version"]:
+-                    errors.append(f"{name} -> {dep['name']}: keep version metadata beside Git for a publishable normal/build dependency")
++                if dep["explicit_version"]:
++                    errors.append(f"{name} -> {dep['name']}: omit version from internal Git development dependencies; project registry versions only in external release staging")
+     errors.extend(internal_override_errors(data, root))
+     try:
+         ordered(dependency_graph(data))
+diff --git i/tests/test_project_z.py w/tests/test_project_z.py
+index f296684..4221c92 100644
+--- i/tests/test_project_z.py
++++ w/tests/test_project_z.py
+@@ -355,10 +355,15 @@ class SourceLinkTests(FilesystemFixture):
+ 
+ class GitPolicyTests(FilesystemFixture):
+     def data(self, dep=None):
+-        return catalog(package("core"), package("app", deps=[dep or dependency("core")]))
++        return catalog(package("core"), package("app", deps=[dep or dependency("core", requirement="*", explicit=False)]))
+ 
+-    def test_latest_git_with_publish_version_is_allowed(self):
+-        self.assertEqual(pz.validate(self.data(), {}, self.root), [])
++    def test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds(self):
++        for publish in (True, False):
++            for kind in ("normal", "build", "dev"):
++                with self.subTest(publish=publish, kind=kind):
++                    data = self.data(dependency("core", kind=kind, requirement="*", explicit=False))
++                    data["packages"][1]["publish"] = publish
++                    self.assertEqual(pz.validate(data, {}, self.root), [])
+ 
+     def test_registry_cross_path_and_every_fixed_git_selector_are_rejected(self):
+         for source, path in [
+@@ -385,21 +390,71 @@ class GitPolicyTests(FilesystemFixture):
+                        package("app", deps=[dependency("core", path="app/core")]))
+         self.assertEqual(pz.validate(data, {}, self.root), [])
+ 
+-    def test_git_source_does_not_bypass_current_version_or_missing_package_checks(self):
+-        dep = dependency("core", requirement="=0.9.0")
+-        self.assertTrue(any("requires core" in error for error in pz.validate(self.data(dep), {}, self.root)))
+-        dep = dependency("missing")
++    def test_same_repository_version_requirements_remain_checked(self):
++        for requirement, expected in (("^1", None), ("=0.9.0", "requires core"),
++                                      ("not-a-version", "invalid")):
++            with self.subTest(requirement=requirement):
++                data = catalog(package("core", repo="app", manifest="app/core/Cargo.toml"),
++                               package("app", deps=[dependency("core", path="app/core", requirement=requirement)]))
++                errors = pz.validate(data, {}, self.root)
++                if expected is None:
++                    self.assertEqual(errors, [])
++                else:
++                    self.assertTrue(any(expected in error for error in errors), errors)
++
++    def test_git_source_does_not_bypass_missing_package_checks(self):
++        dep = dependency("missing", requirement="*", explicit=False)
+         dep["source"] = "git+https://github.com/ProjectZTests/core.git"
+         self.assertTrue(any("missing from the catalog" in error for error in pz.validate(self.data(dep), {}, self.root)))
+ 
+-    def test_publishable_git_dependencies_keep_version_metadata(self):
+-        for kind in ("normal", "build"):
+-            with self.subTest(kind=kind):
+-                data = self.data(dependency("core", kind=kind, explicit=False))
+-                self.assertTrue(any("version metadata" in error for error in pz.validate(data, {}, self.root)))
+-                data["packages"][1]["publish"] = False
+-                self.assertEqual(pz.validate(data, {}, self.root), [])
+-        self.assertEqual(pz.validate(self.data(dependency("core", kind="dev", explicit=False)), {}, self.root), [])
++    def test_internal_git_rejects_every_explicit_version(self):
++        for publish in (True, False):
++            for kind in ("normal", "build", "dev"):
++                for requirement in ("*", "^1", "=1.0.0", "=0.9.0", "not-a-version"):
++                    with self.subTest(publish=publish, kind=kind, requirement=requirement):
++                        data = self.data(dependency("core", kind=kind, requirement=requirement))
++                        data["packages"][1]["publish"] = publish
++                        errors = pz.validate(data, {}, self.root)
++                        self.assertTrue(any("omit version" in error for error in errors), errors)
++
++    def test_workspace_target_and_alias_versions_cannot_bypass_git_only(self):
++        for inherited in (False, True):
++            for kind in ("normal", "build", "dev"):
++                with self.subTest(inherited=inherited, kind=kind):
++                    section = {"normal": "dependencies", "build": "build-dependencies",
++                               "dev": "dev-dependencies"}[kind]
++                    options = 'package = "core", git = "https://github.com/ProjectZTests/core.git"'
++                    target = 'cfg(target_os = "windows")'
++                    table = f'[target.\'cfg(target_os="windows")\'.{section}]\n'
++                    if inherited:
++                        version_source = self.write("Cargo.toml",
++                            '[workspace.dependencies]\nengine = { ' + options + ', version = "*" }\n')
++                        declaration = 'engine = { workspace = true }\n'
++                    else:
++                        declaration = 'engine = { ' + options + ', version = "*" }\n'
++                    manifest = self.write("app/Cargo.toml", table + declaration)
++                    if not inherited:
++                        version_source = manifest
++                    metadata = {"name": "core", "rename": "engine", "kind": kind, "target": target}
++                    dep = dependency("core", kind=kind, requirement="*",
++                                     explicit=pz.explicit_version(manifest, self.root, metadata))
++                    dep.update(alias="engine", target=target, optional=kind == "normal")
++                    self.assertTrue(dep["explicit_version"])
++                    errors = pz.validate(self.data(dep), {}, self.root)
++                    self.assertTrue(any("omit version" in error for error in errors), errors)
++
++                    version_source.write_text(version_source.read_text().replace(', version = "*"', ''))
++                    dep["explicit_version"] = pz.explicit_version(manifest, self.root, metadata)
++                    self.assertFalse(dep["explicit_version"])
++                    self.assertEqual(pz.validate(self.data(dep), {}, self.root), [])
++
++    def test_external_version_declarations_remain_allowed(self):
++        for source in ("registry+https://github.com/rust-lang/crates.io-index",
++                       "git+https://github.com/OtherOwner/external.git"):
++            with self.subTest(source=source):
++                dep = dependency("external", requirement="=2.0.0")
++                dep["source"] = source
++                self.assertEqual(pz.validate(self.data(dep), {}, self.root), [])
+ 
+     def test_unknown_internal_package_cannot_hide_behind_alternate_github_spelling(self):
+         for source in ("git+https://github.com/ProjectZTests/core",
+@@ -513,8 +568,8 @@ class GitSourceFixture(FilesystemFixture):
+         (self.app / "src/main.rs").write_text('fn main() {}\n')
+         (self.app / "Cargo.toml").write_text(
+             '[package]\nname = "tiny-app"\nversion = "1.0.0"\nedition = "2021"\npublish = false\n'
+-            '[dependencies]\ntiny-core = { git = "' + self.url + 'shared.git", version = "1.0.0" }\n'
+-            'tiny-private = { git = "' + self.url + 'shared.git", version = "1.0.0", optional = true }\n'
++            '[dependencies]\ntiny-core = { git = "' + self.url + 'shared.git" }\n'
++            'tiny-private = { git = "' + self.url + 'shared.git", optional = true }\n'
+             '[features]\nexperimental = ["dep:tiny-private"]\n')
+         self.cargo(self.app, "generate-lockfile")
+         self.app_initial = self.commit(self.app, "initial consumer lock")

@@ -1,0 +1,330 @@
+{
+  "schema": "project-z.account-compat-diagnostic.readonly-review.v1",
+  "reviewed_at_utc": "2026-11-21T06:44:50.355Z",
+  "status": "consistent_with_single_diagnostic_pass_no_original_cause_established",
+  "blocking_findings": [],
+  "material_inconsistencies": [],
+  "source": {
+    "binary_source_revision": "4de17310ce2ecdbc8b6c6ab86ee365653f753ee8",
+    "binary_source_tree": "5be29af415b915ef3307bfed08c6cefec2798898",
+    "frozen_source_root": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source",
+    "diagnostic_script_is_separate_copy": true,
+    "diagnostic_script": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/candidate/scripts/e2e_account_compat.py",
+      "bytes": 26466,
+      "sha256": "792baa38960f7491e72e3a826b83d3e5a399abcf9e23d54357b243d1f7519c3a"
+    },
+    "original_W_script": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/scripts/e2e_account_compat.py",
+      "bytes": 26221,
+      "sha256": "6464d132cf6d51777564ddf1245a3a95c3a2cf238c757b813c296c4d412ef5a4"
+    },
+    "original_W_script_unchanged": true,
+    "not_a_new_main_P_test": true
+  },
+  "originals": [
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/root-actual-execution.json",
+      "bytes": 1994,
+      "sha256": "8802c300eba769edfb9cb6f5b48d5f166ae1ae1a30a3db72025c077113f738c6"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/full.diff",
+      "bytes": 1566,
+      "sha256": "4bea2ad00e3380ed481e435c91dcc41cd2b8a092d6dd1d36f0daaaa5251f1cbe"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/input-pins.json",
+      "bytes": 5203,
+      "sha256": "4a15bae80ec7bbccb1165a43681fc4995c968e2973dfb02dd304e5c26940b797"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/static-review.json",
+      "bytes": 3402,
+      "sha256": "9f708c8b3fcc439d6ff34e9be97da780ebf96dfa4ab2fb935f7f908cb667425b"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/root-preflight.json",
+      "bytes": 1871,
+      "sha256": "8241c673cd5ac6c8d900179bf231bcd49502c3d7ba8f3dd1f07c9ca9ac4d079e"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/run-once/evidence/report.json",
+      "bytes": 9078,
+      "sha256": "eb7109754559f6e6cd937f61a83fc32f0254ea1eb4ae84a67f71bf6342d7f313"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/run-once/run.log",
+      "bytes": 6735,
+      "sha256": "2eb0ba61b13b1ca24cb2db4c18515fbf251d82ee0dcf93f5b34100c9dbefcca4"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/command.json",
+      "bytes": 17377,
+      "sha256": "295a9f87514b35a57a7c1c5a8677d968c82b41d5773c0b223636ed87afda2e88"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/controller-extracts.py.txt",
+      "bytes": 12209,
+      "sha256": "c44230e68c6b721ac76355a868029a1328e5563b44974c07c90b3b2d5519a22d"
+    },
+    {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/original-suite.json",
+      "bytes": 6457,
+      "sha256": "935f0fa9c2e7ced1f580fc1a2f52e4ded4f921babb89ca91bbb1218a0be92a17"
+    }
+  ],
+  "actual_job": {
+    "job_id": "f38688300b30e5d0bad6368b8bb014cc-d",
+    "exit_code": 0,
+    "running": false,
+    "state": "completed",
+    "duration_ms": 2670,
+    "stdout_bytes": 6735,
+    "stderr_bytes": 0,
+    "stdout_eof": true,
+    "stderr_eof": true,
+    "stdout_truncated": false,
+    "stderr_truncated": false,
+    "cancelled": false,
+    "timed_out": false,
+    "direct_exec_read_by_this_reviewer": true,
+    "command_and_cwd_from_atomic_snapshot": true,
+    "command_manifest": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/command.json",
+      "bytes": 17377,
+      "sha256": "295a9f87514b35a57a7c1c5a8677d968c82b41d5773c0b223636ed87afda2e88"
+    },
+    "argv_exact_to_manifest": true,
+    "cwd_exact_to_manifest": true,
+    "stdout_exact_to_saved_log": true,
+    "stdout_sha256": "2eb0ba61b13b1ca24cb2db4c18515fbf251d82ee0dcf93f5b34100c9dbefcca4",
+    "root_saved_execution_observation": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/root-actual-execution.json",
+      "bytes": 1994,
+      "sha256": "8802c300eba769edfb9cb6f5b48d5f166ae1ae1a30a3db72025c077113f738c6"
+    },
+    "owner_observed_utc": "2026-11-21T06:37:16.936186+00:00",
+    "independent_atomic_readback_descriptor": {
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/ssmcp-W-account-diagnostic-readonly-review-20261121/actual-job-readback.json",
+      "bytes": 15480,
+      "sha256": "0c1326fe1c47eb9dcf9a64d948c065149a75fcef280fa506dd3481bbe166871e"
+    }
+  },
+  "checks": {
+    "old": 36,
+    "new": 33,
+    "total": 69,
+    "passed": 69,
+    "all_passed": true,
+    "report_checks_equal_all_69_stdout_check_rows": true,
+    "stdout_summary_equal_report": true,
+    "old_and_new_server_results_separate": true,
+    "not_added_to_503_or_Gate_or_historical_counts": true
+  },
+  "focused_results": {
+    "old_list": {
+      "check": "old-0.10.13:another_subject_cannot_list_connection",
+      "passed": true,
+      "recorded_HTTP_status": 200,
+      "recorded_response": {
+        "clients": []
+      }
+    },
+    "W_list": {
+      "check": "new-main:another_subject_cannot_list_connection",
+      "passed": true,
+      "recorded_HTTP_status": 200,
+      "recorded_response": {
+        "clients": []
+      }
+    },
+    "known_client_calls": {
+      "old_passed": true,
+      "W_passed": true,
+      "unchanged_condition": "status == 404",
+      "candidate_line": 378,
+      "original_line": 376,
+      "raw_404_numeric_status_separately_logged": false,
+      "interpretation": "Both passed records execute the unchanged exact-404 predicate. This is predicate-level evidence, not a separately captured HTTP status trace."
+    },
+    "original_failure_not_reproduced": true,
+    "original_failure_cause_established": false,
+    "permission_vulnerability_inferred": false,
+    "residual_anonymous_connection_cause_inferred": false
+  },
+  "source_static": {
+    "baseline": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/baseline/e2e_account_compat.py",
+      "bytes": 26221,
+      "sha256": "6464d132cf6d51777564ddf1245a3a95c3a2cf238c757b813c296c4d412ef5a4"
+    },
+    "candidate": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/candidate/scripts/e2e_account_compat.py",
+      "bytes": 26466,
+      "sha256": "792baa38960f7491e72e3a826b83d3e5a399abcf9e23d54357b243d1f7519c3a"
+    },
+    "fixed_W": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/scripts/e2e_account_compat.py",
+      "bytes": 26221,
+      "sha256": "6464d132cf6d51777564ddf1245a3a95c3a2cf238c757b813c296c4d412ef5a4"
+    },
+    "baseline_matches_fixed_W": true,
+    "AST_equal_after_removing_exact_four_diagnostic_kwargs": true,
+    "removed": [
+      {
+        "check": "another_subject_cannot_list_connection",
+        "removed": [
+          "status",
+          "response",
+          "target_client_id"
+        ],
+        "line": 374
+      },
+      {
+        "check": "new_anonymous_multi_wire_policy_is_unchanged",
+        "removed": [
+          "anonymous_peer_client_id"
+        ],
+        "line": 428
+      }
+    ],
+    "check_call_sites_before": 21,
+    "check_call_sites_after": 21,
+    "whole_diff_equals_saved_full_diff": true
+  },
+  "launch_and_inputs": {
+    "original_suite": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/original-suite.json",
+      "bytes": 6457,
+      "sha256": "935f0fa9c2e7ced1f580fc1a2f52e4ded4f921babb89ca91bbb1218a0be92a17"
+    },
+    "only_five_path_substitutions_against_original_suite_argv": [
+      {
+        "index": 21,
+        "before": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/tmp/account_compat",
+        "after": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/tmp/account_compat"
+      },
+      {
+        "index": 51,
+        "before": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/suites/account_compat",
+        "after": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/run-once"
+      },
+      {
+        "index": 52,
+        "before": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/suites/account_compat",
+        "after": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/run-once"
+      },
+      {
+        "index": 57,
+        "before": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/scripts/e2e_account_compat.py",
+        "after": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/candidate/scripts/e2e_account_compat.py"
+      },
+      {
+        "index": 67,
+        "before": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/suites/account_compat/evidence/report.json",
+        "after": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-account-compat-diagnostic-v1/run-once/evidence/report.json"
+      }
+    ],
+    "actual_native_env_is_exact_env_i_replacement": true,
+    "isolation": [
+      "existing frozen bwrap",
+      "unshared user/PID/IPC/network/UTS",
+      "read-only root/fixed source/binaries",
+      "private writable tmp and run-once output",
+      "explicit original legacy runner; no __file__ fallback"
+    ],
+    "same_both_server_scope_and_check_default": true,
+    "declared_suite_timeout_seconds": 900,
+    "declared_native_timeout_ms": 900000,
+    "actual_timeout_observed": false,
+    "four_fixed_text_inputs_rehashed_and_match": [
+      {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/release25-final14/source/scripts/e2e_account_compat.py",
+        "bytes": 26221,
+        "sha256": "6464d132cf6d51777564ddf1245a3a95c3a2cf238c757b813c296c4d412ef5a4",
+        "matches_pin": true
+      },
+      {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-r14-bound-acceptance-prepared-20261121/shared/run_bound_w_ui24_mesa.py",
+        "bytes": 72945,
+        "sha256": "39c6f0777941b987610ecb2e741618359c7c793828de5a97b837e27da180708f",
+        "matches_pin": true
+      },
+      {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-ui24-acceptance-mesa-v1/suites/account_compat/suite.json",
+        "bytes": 6457,
+        "sha256": "935f0fa9c2e7ced1f580fc1a2f52e4ded4f921babb89ca91bbb1218a0be92a17",
+        "matches_pin": true
+      },
+      {
+        "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-acceptance-recovery-20261121/w-r14-bound-acceptance-prepared-20261121/ui/command.final.json",
+        "bytes": 4006,
+        "sha256": "6c2bdf944133b31cd5e192eb7b5a6e14cd5d77b2eabb18acad8c38ac98e8718d",
+        "matches_pin": true
+      }
+    ],
+    "binary_descriptors": {
+      "client": {
+        "sha256": "d654703a12f9479e97b9807ac8d61f370bd5c413963bf6e5b6e45dfbd8434f41",
+        "matches_pin": true
+      },
+      "old_server": {
+        "sha256": "e8f59d66493e68ba3c196a72ae3733b8b7336fbfb1da0cf92960069637f1f7bf",
+        "matches_pin": true
+      },
+      "new_server": {
+        "sha256": "c1991fac3c0c6aa0a229781c87fe67ef24c028fd5ffc88b0c50dc413baaa5527",
+        "matches_pin": true
+      },
+      "old_runner": {
+        "sha256": "6e169387073dfb5919f6714658ac28781cfe04c7e5800ada690c0c67fed3d4d0",
+        "matches_pin": true
+      }
+    },
+    "full_original_binary_ELF_rehash_by_this_reviewer": false,
+    "owner_inputs_after_unchanged_recorded": true,
+    "full_input_set_formula_recomputed": false,
+    "diagnostic_response_bound_characters": 2500,
+    "diagnostic_ID_bound_characters": 128,
+    "existing_redactor_retained": true
+  },
+  "cleanup_and_limitations": {
+    "actual_original_native_job_completed_and_both_EOF": true,
+    "owner_recorded_native_supervisor_pid_absent": true,
+    "owner_recorded_matching_candidate_processes": [],
+    "reviewer_new_process_or_host_proc_scan": false,
+    "report_contains_explicit_per_child_cleanup": false,
+    "full_descendant_or_global_lock_free_claim": false,
+    "production_state_used": false,
+    "production_connections_opened": false,
+    "global_configuration_modified": false,
+    "separate_standalone_diagnostic_not_full_UI_reexecution": true,
+    "original_failure_context_HTTP_status_and_body_remain_unknown": true,
+    "timing_or_race_root_cause_not_established": true,
+    "one_diagnostic_with_bounded_extra_serialization_not_a_fix": true,
+    "W_UI_original_failure_preserved": true,
+    "UI24_pass_claim": false,
+    "P1_executed": false,
+    "final44_executed": false,
+    "Google_Doc_v8_and_c9de_report_unchanged": true
+  },
+  "reviewer_operations": {
+    "product_runs": 0,
+    "Cargo_runs": 0,
+    "target_lock_acquisitions": 0,
+    "candidate_or_controller_import_or_execution": false,
+    "only_stdlib_AST_and_file_reads": true,
+    "source_worktree_refs_or_original_evidence_modified": false,
+    "auth_files_read": false,
+    "own_evidence_only_written": true
+  },
+  "readonly_native_jobs": [
+    "26c4545eae1eab8d27485f4a48077d3c-cff",
+    "26c4545eae1eab8d27485f4a48077d3c-d00",
+    "26c4545eae1eab8d27485f4a48077d3c-d02",
+    "26c4545eae1eab8d27485f4a48077d3c-d03",
+    "26c4545eae1eab8d27485f4a48077d3c-d05"
+  ],
+  "original_descriptors_match_at_archive": true
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "ssmcp.live-socket-smoke.v1",
+  "passed": true,
+  "argv": [
+    "/tmp/bin/ssmcp",
+    "local",
+    "--name",
+    "owned-socket-smoke",
+    "--no-browser",
+    "--input",
+    "sock",
+    "--input-socket",
+    "/tmp/socket/input.sock",
+    "--agent",
+    "exec",
+    "--agent-exec",
+    "/tmp/bin/fake-agent"
+  ],
+  "literal": "Socket 单次验证： @missing-socket-smoke.txt $missing_socket_smoke_skill",
+  "send_calls": 1,
+  "model_used": false,
+  "errors": [],
+  "endpoint_identity": {
+    "device": 68,
+    "inode": 187559716,
+    "uid": 0,
+    "mode": 384
+  },
+  "receipt": {
+    "output": "SOCKET_SMOKE_OK\n完整输入已保存",
+    "request_id": "chat-b5f74864f70171b7ab6b36a49404a93f",
+    "status": "completed",
+    "warnings": [
+      "@missing-socket-smoke.txt: No such file or directory (os error 2)",
+      "$missing_socket_smoke_skill: skill not found in the configured directories."
+    ]
+  },
+  "original_preserved": true,
+  "prepared_input": "Socket 单次验证： @missing-socket-smoke.txt $missing_socket_smoke_skill\n\n<ssmcp-references-v1>\n{\"references\":[{\"kind\":\"file\",\"path\":\"missing-socket-smoke.txt\",\"status\":\"unavailable\",\"warning\":\"@missing-socket-smoke.txt: No such file or directory (os error 2)\"},{\"kind\":\"skill\",\"name\":\"missing_socket_smoke_skill\",\"status\":\"unavailable\",\"warning\":\"$missing_socket_smoke_skill: skill not found in the configured directories.\"}],\"schema_version\":1,\"source_sha256\":\"19ce8c7f971e6fd6535db0635a70ec19db25887845ce75dcedf95e940525ad19\",\"usage\":\"These explicitly reference workspace files or installed and embedded skills. Unavailable references retain the user's text and carry a warning, without file contents or read actions. Read available sources with the delivering client's ID. File previews may be partial; read a selected skill in full before applying it.\"}\n</ssmcp-references-v1>",
+  "invocations": 1,
+  "write_half_closed": true,
+  "json_lines": 1,
+  "eof": true,
+  "peer": {
+    "pid": 4,
+    "uid": 0,
+    "gid": 0
+  },
+  "missing_references": [
+    {
+      "kind": "file",
+      "path": "missing-socket-smoke.txt",
+      "status": "unavailable",
+      "warning": "@missing-socket-smoke.txt: No such file or directory (os error 2)"
+    },
+    {
+      "kind": "skill",
+      "name": "missing_socket_smoke_skill",
+      "status": "unavailable",
+      "warning": "$missing_socket_smoke_skill: skill not found in the configured directories."
+    }
+  ],
+  "product_started": true,
+  "cleanup": {
+    "started": true,
+    "pid": 4,
+    "exit_code": 0,
+    "reaped": true,
+    "errors": [],
+    "endpoint": {
+      "state": "absent",
+      "absent": true
+    }
+  },
+  "final_invocations": 1
+}

@@ -1,0 +1,106 @@
+{
+  "observed_at_utc": "2026-11-21T06:50:25.562144+00:00",
+  "read_only": true,
+  "product_execution": false,
+  "logs": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/ubuntu-job-136712704265.log",
+      "bytes": 86917,
+      "sha256": "8bb23119f5b945a2a2bb87049b929737e3c6f22ff390a92e260d0fe150b3586d",
+      "UTF8_BOM": true,
+      "CRLF_count": 0,
+      "summary_rows": 22,
+      "passed": 289,
+      "failed": 0,
+      "ignored": 5,
+      "measured": 0,
+      "filtered": 0,
+      "actual_checkout": "cf9d3973db10a8639cdfbc3460af8b9230cf1e5c",
+      "command_lines": [
+        "2026-11-21T03:20:09.2410467Z + cargo fmt --all -- --check",
+        "2026-11-21T03:20:12.3912249Z + cargo test --locked",
+        "2026-11-21T03:20:31.8324942Z + cargo check --locked --no-default-features --lib",
+        "2026-11-21T03:20:31.9283778Z + cargo check --locked --no-default-features --lib --target wasm32-unknown-unknown",
+        "2026-11-21T03:20:32.0196496Z + cargo clippy --locked --all-targets -- -D warnings"
+      ],
+      "drop_non_drop_error_present": false,
+      "count_boundary": "Per-platform summary arithmetic; not cross-platform unique tests."
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/macos-job-136712704344.log",
+      "bytes": 73437,
+      "sha256": "4f4b88877c9e9c2955c293b0f21542729e068f747a04273415f1cc2f0969b1d0",
+      "UTF8_BOM": true,
+      "CRLF_count": 0,
+      "summary_rows": 22,
+      "passed": 267,
+      "failed": 0,
+      "ignored": 3,
+      "measured": 0,
+      "filtered": 0,
+      "actual_checkout": "cf9d3973db10a8639cdfbc3460af8b9230cf1e5c",
+      "command_lines": [
+        "2026-11-21T03:20:03.4882570Z + cargo fmt --all -- --check",
+        "2026-11-21T03:20:04.0185890Z + cargo test --locked",
+        "2026-11-21T03:20:37.3976680Z + cargo check --locked --no-default-features --lib",
+        "2026-11-21T03:20:37.7763410Z + cargo check --locked --no-default-features --lib --target wasm32-unknown-unknown",
+        "2026-11-21T03:20:38.1835980Z + cargo clippy --locked --all-targets -- -D warnings"
+      ],
+      "drop_non_drop_error_present": false,
+      "count_boundary": "Per-platform summary arithmetic; not cross-platform unique tests."
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/windows-job-136712704368.log",
+      "bytes": 74160,
+      "sha256": "198614e9e81662be027e22f5dc97c7fbaef74e2fd86aff1d2366598d2cb0d742",
+      "UTF8_BOM": true,
+      "CRLF_count": 795,
+      "summary_rows": 22,
+      "passed": 263,
+      "failed": 0,
+      "ignored": 2,
+      "measured": 0,
+      "filtered": 0,
+      "actual_checkout": "cf9d3973db10a8639cdfbc3460af8b9230cf1e5c",
+      "command_lines": [
+        "2026-11-21T03:20:40.1333872Z + cargo fmt --all -- --check",
+        "2026-11-21T03:20:43.7099189Z + cargo test --locked",
+        "2026-11-21T03:21:18.3093088Z + cargo check --locked --no-default-features --lib",
+        "2026-11-21T03:21:18.5579764Z + cargo check --locked --no-default-features --lib --target wasm32-unknown-unknown",
+        "2026-11-21T03:21:18.8353152Z + cargo clippy --locked --all-targets -- -D warnings"
+      ],
+      "drop_non_drop_error_present": false,
+      "count_boundary": "Per-platform summary arithmetic; not cross-platform unique tests."
+    }
+  ],
+  "descriptors": [
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/delivery.json",
+      "bytes": 5059,
+      "sha256": "4771a15cb6330b8d4ed40783346b9c625428969168517270e0240529ee35597e"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/zuse-67e-ci-independent-review.json",
+      "bytes": 21537,
+      "sha256": "fffe5fa895ed4b2452179ee20377cea9d34761647aa69021881a2fefc35ee813"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/ci-extracted-results.json",
+      "bytes": 32092,
+      "sha256": "caee487d2c9874bebc6f9a4dbfccb94e3b1906a127f3c5df6a780b16eb34c1c5"
+    },
+    {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-org-cloud-recovery-20261121/zuse-67e-ci-44860554142/originals-manifest.json",
+      "bytes": 12606,
+      "sha256": "423bcf72136699dd53d9c466efbfeef7832b678cf96833a420facdc290b00133"
+    }
+  ],
+  "execution": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-d09",
+    "exit_code": 0,
+    "stdout_eof": true,
+    "stderr_eof": true,
+    "stdout_truncated": false,
+    "stderr_truncated": false
+  }
+}

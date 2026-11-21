@@ -1,0 +1,30 @@
+test_build_flags_keep_locked_and_feature_semantics_before_separator (test_project_z.GitPolicyTests.test_build_flags_keep_locked_and_feature_semantics_before_separator) ... ok
+test_external_configuration_and_dependencies_are_preserved (test_project_z.GitPolicyTests.test_external_configuration_and_dependencies_are_preserved) ... ok
+test_external_version_declarations_remain_allowed (test_project_z.GitPolicyTests.test_external_version_declarations_remain_allowed) ... ok
+test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds (test_project_z.GitPolicyTests.test_git_only_is_allowed_for_all_publish_modes_and_dependency_kinds) ... ok
+test_git_source_does_not_bypass_missing_package_checks (test_project_z.GitPolicyTests.test_git_source_does_not_bypass_missing_package_checks) ... ok
+test_internal_git_rejects_every_explicit_version (test_project_z.GitPolicyTests.test_internal_git_rejects_every_explicit_version) ... ok
+test_internal_patch_in_manifest_or_configuration_is_rejected_without_deleting_it (test_project_z.GitPolicyTests.test_internal_patch_in_manifest_or_configuration_is_rejected_without_deleting_it) ... ok
+test_registry_cross_path_and_every_fixed_git_selector_are_rejected (test_project_z.GitPolicyTests.test_registry_cross_path_and_every_fixed_git_selector_are_rejected) ... ok
+test_same_repository_paths_remain_valid (test_project_z.GitPolicyTests.test_same_repository_paths_remain_valid) ... ok
+test_same_repository_version_requirements_remain_checked (test_project_z.GitPolicyTests.test_same_repository_version_requirements_remain_checked) ... ok
+test_source_urls_cannot_select_another_host_or_revision (test_project_z.GitPolicyTests.test_source_urls_cannot_select_another_host_or_revision) ... ok
+test_target_optional_dev_and_alias_dependencies_have_the_same_source_rule (test_project_z.GitPolicyTests.test_target_optional_dev_and_alias_dependencies_have_the_same_source_rule) ... ok
+test_unknown_external_git_packages_remain_allowed (test_project_z.GitPolicyTests.test_unknown_external_git_packages_remain_allowed) ... ok
+test_unknown_internal_package_cannot_hide_behind_alternate_github_spelling (test_project_z.GitPolicyTests.test_unknown_internal_package_cannot_hide_behind_alternate_github_spelling) ... ok
+test_workspace_target_and_alias_versions_cannot_bypass_git_only (test_project_z.GitPolicyTests.test_workspace_target_and_alias_versions_cannot_bypass_git_only) ... ok
+test_cargo_normalized_cfg_spacing_keeps_path_version_constraint (test_project_z.VersionDeclarationTests.test_cargo_normalized_cfg_spacing_keeps_path_version_constraint) ... ok
+test_cfg_normalization_preserves_spaces_inside_string_values (test_project_z.VersionDeclarationTests.test_cfg_normalization_preserves_spaces_inside_string_values) ... ok
+test_path_only_prerelease_is_accepted_but_explicit_star_is_checked (test_project_z.VersionDeclarationTests.test_path_only_prerelease_is_accepted_but_explicit_star_is_checked) ... ok
+test_workspace_inherited_alias_retains_explicit_version_information (test_project_z.VersionDeclarationTests.test_workspace_inherited_alias_retains_explicit_version_information) ... ok
+test_compatible_version_metadata_preserves_options_and_uses_locked_pin (test_release_projection.MatchTests.test_compatible_version_metadata_preserves_options_and_uses_locked_pin) ... ok
+test_exactly_one_git_pin_not_registry_or_other_repo (test_release_projection.MatchTests.test_exactly_one_git_pin_not_registry_or_other_repo) ... ok
+test_mismatched_or_invalid_version_metadata_is_rejected_unchanged (test_release_projection.MatchTests.test_mismatched_or_invalid_version_metadata_is_rejected_unchanged) ... ok
+test_missing_malformed_selector_and_ambiguous_fail_closed (test_release_projection.MatchTests.test_missing_malformed_selector_and_ambiguous_fail_closed) ... ok
+test_preserves_unknown_external_dependency_and_rejects_selectors (test_release_projection.MatchTests.test_preserves_unknown_external_dependency_and_rejects_selectors) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.020s
+
+OK
+{"phase": "green", "tests_run": 24, "failed_parent_ids": [], "failures": 0, "errors": 0, "skips": 0, "process_events": 0, "passed": true, "receipt": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-20261121/green.json", "bytes": 8671, "sha256": "de21123e7dbdbdbca2f2d582a4dd1738312267807f9c1f168c5723a867f02ccb"}

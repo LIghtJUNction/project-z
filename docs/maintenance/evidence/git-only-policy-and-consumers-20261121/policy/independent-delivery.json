@@ -1,0 +1,28 @@
+{
+  "schema": "project-z.git-only-independent-static-review-delivery.v1",
+  "recorded_at_utc": "2026-11-21T07:26:38.740826+00:00",
+  "base": "c9de7a60351b277a4903c9f40781cbae69cd6e5c",
+  "candidate_tree": "03d67141b18a4b85b87343736bc0b247b69c611c",
+  "files": [
+    {
+      "name": "project-z-git-only-independent-review.json",
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-independent-review-20261121/project-z-git-only-independent-review.json",
+      "bytes": 14816,
+      "sha256": "f11552268305c68cf1fe03025ae894fc6a28d8a61f2bd06337d4a4a3640eef7e",
+      "git_blob": "fb0a8f73d3336f1e956d56599a32ce641444af77"
+    },
+    {
+      "name": "project-z-git-only-independent-review.md",
+      "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/management-20261120/dist/pr-cleanup-20261120/git-policy-root/project-z-git-only-independent-review-20261121/project-z-git-only-independent-review.md",
+      "bytes": 2205,
+      "sha256": "ec6a2fce0735ddb0b870335a75d1c82ef36222091ce882b8a2d6b15c9a482743",
+      "git_blob": "e8fdd95d39fa47062596b5387dae3672337bd868"
+    }
+  ],
+  "all_readback_bytes_equal": true,
+  "relative_MD_link_valid": true,
+  "candidate_source_modified": false,
+  "candidate_or_product_execution": false,
+  "remote_ref_writes": 0,
+  "shared_target_or_lock_operations": 0
+}
