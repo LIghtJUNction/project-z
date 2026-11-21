@@ -65,9 +65,23 @@ class RegistryRecovery(unittest.TestCase):
     def test_partial_failure_replays_exact_versions_and_verified_archives(self):
         up, up_index = self.archive("fixture-up", [])
         down, down_index = self.archive("fixture-down", ["fixture-up"])
-        plan = [dict(name=r["package"], version=r["version"], sha=r["git_sha"], repository="test/" + r["package"],
-                     workflow="release.yml", branch="main", receipt=r, prerequisites=deps)
-                for r, deps in [(up, []), (down, [up])]]
+        receipt_file = self.root / "docs/registry-receipts.json"
+        receipt_file.parent.mkdir()
+        receipt_file.write_text(json.dumps({"schema_version": 1, "receipts": [up, down]}))
+        rules = ["[scheduled]", f'registry_receipts_sha256="{hashlib.sha256(receipt_file.read_bytes()).hexdigest()}"']
+        packages, repos = [], []
+        for receipt, deps in [(down, [up]), (up, [])]:
+            name = receipt["package"]
+            rules += [f"[registry_handoffs.{name}]", f'repository="test/{name}"', 'workflow="release.yml"',
+                      'workflow_blob="' + "2"*40 + '"', 'crate_owner="test"']
+            repos.append(dict(name=name, url=receipt["github"], commit=receipt["git_sha"], branch="main"))
+            packages.append(dict(name=name, repository=name, publish=True, version=receipt["version"],
+                                 dependencies=[dict(name=d["package"], kind="normal") for d in deps]))
+        (self.root / "project-z.toml").write_text("\n".join(rules))
+        data = dict(repositories=repos, packages=packages)
+        plan = registry.child_targets(packages, data, self.root, audit=False)
+        self.assertEqual([target["name"] for target in plan], ["fixture-up", "fixture-down"])
+        self.assertEqual(plan[1]["prerequisites"], [up])
         frozen = json.dumps(plan)
         index = self.root / "fi/xt"
         index.mkdir(parents=True)
