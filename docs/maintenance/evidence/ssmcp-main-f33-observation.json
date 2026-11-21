@@ -1,0 +1,137 @@
+{
+  "observed_at": "2026-11-21 00:23:39 UTC",
+  "main": "f33ed8f14fc14aff05a2e4098743eb07e8527c06",
+  "fixed_comparison": {
+    "base": "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+    "head": "f33ed8f14fc14aff05a2e4098743eb07e8527c06",
+    "tree": "f9bc35bf497c80d9d93d668f5d6e339c3d19c802",
+    "parents": [
+      "f208a03b5403332214f3acf6ee0b176752b5d2c9",
+      "01e4a1659ae7184e0313b0c025107355f38ef0d7"
+    ],
+    "status": "ahead",
+    "ahead": 9,
+    "files": [
+      {
+        "path": ".github/workflows/release.yml",
+        "sha": "28f7656410b7de7d76d27482b0c21f76273eb7b5",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "path": "Cargo.lock",
+        "sha": "fc05ddbc51b7790a09f834915b87dc28513b5541",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "Cargo.toml",
+        "sha": "72142c043bba6fd0d41e7b252fa207cb2d71423d",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "docs/release-notes-0.10.23.md",
+        "sha": "522d59f8181dbc3c844452d800d8e072a430217b",
+        "status": "added",
+        "additions": 23,
+        "deletions": 0
+      },
+      {
+        "path": "docs/releases.md",
+        "sha": "01516e21033eb0a48e93cedf7748eb32941b92ea",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "scripts/e2e.py",
+        "sha": "af4d2b021e060986bbffeaca2a0d83dc93902c41",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 0
+      },
+      {
+        "path": "scripts/test_release.py",
+        "sha": "8a04df5a1d8e3694f311ac42a18ac3012e7312d4",
+        "status": "modified",
+        "additions": 2,
+        "deletions": 2
+      },
+      {
+        "path": "src/client/interface/messages.rs",
+        "sha": "12bfe9b35e9dd8984ce1fe56435a7142dcd4e89a",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "src/client/interface/questions/history/tests.rs",
+        "sha": "eb70230f71c1d2914bd799ef0e86cedb1871b6a7",
+        "status": "modified",
+        "additions": 4,
+        "deletions": 2
+      },
+      {
+        "path": "src/client/terminal/conversation/goals/tests.rs",
+        "sha": "d5f9dd65dbf81ad6f3e771b961ac3b082682c4e4",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "src/client/terminal/conversation/questions/history_tests.rs",
+        "sha": "d9d1c587b3488c226da5521318fef2913e831f42",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "src/client/update/startup/tests.rs",
+        "sha": "1605cd1eb7c80da61f9525e3ba0b6e29e5bf6d6e",
+        "status": "modified",
+        "additions": 35,
+        "deletions": 22
+      },
+      {
+        "path": "src/computer/host_control/storage.rs",
+        "sha": "29cb30421a008bf70dd1afac05844714af638ec3",
+        "status": "modified",
+        "additions": 138,
+        "deletions": 6
+      },
+      {
+        "path": "src/computer/isolated/display.rs",
+        "sha": "50d3f573fa21d0dde005c6564c3c264575e84a04",
+        "status": "modified",
+        "additions": 12,
+        "deletions": 0
+      },
+      {
+        "path": "src/computer/isolated/display/tests.rs",
+        "sha": "7f21ee81e552e511c6e40eb902c07fb1e88e7e23",
+        "status": "modified",
+        "additions": 30,
+        "deletions": 0
+      },
+      {
+        "path": "src/runtime/time/relay.rs",
+        "sha": "a69882841dc08c7e4fa87cfe7039a27ce198b256",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      },
+      {
+        "path": "src/runtime/time/tests.rs",
+        "sha": "1abaf969ea82f92ef003d0fe79ebf66d0e831af6",
+        "status": "modified",
+        "additions": 1,
+        "deletions": 1
+      }
+    ]
+  },
+  "boundary": "Source metadata only; current main fixes must be retained by existing source owner before final cohort freeze. Old FC/781 gates remain separate."
+}

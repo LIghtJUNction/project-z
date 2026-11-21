@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "observed_at_utc": "2026-11-21 00:15:12 UTC",
+  "scope": "Read-only classification of fixed main successor; no source/ref writes or gate execution.",
+  "base": {
+    "commit": "0a0a62cdca25bbdf289a17f03dfeed1acc945595",
+    "tree": "69f60a24c0924b58d33cce4354fc3dc6a82210ed"
+  },
+  "successor": {
+    "commit": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+    "tree": "2e7f67ab489b9bd81221db3e9963068288446125",
+    "parents": [
+      "0a0a62cdca25bbdf289a17f03dfeed1acc945595"
+    ],
+    "commit_time": "2026-11-20T23:59:32Z"
+  },
+  "listener_candidate": {
+    "commit": "4cc2fd1cfb6eb49dacc022af6c15cc0f7825e409",
+    "tree": "262cb876bcf4f83ef2c66912863629f0401db89d"
+  },
+  "compare": {
+    "status": "ahead",
+    "ahead": 1,
+    "behind": 0,
+    "merge_base": "0a0a62cdca25bbdf289a17f03dfeed1acc945595"
+  },
+  "changed_paths": [
+    {
+      "path": "docs/RELEASE-0.4.4.md",
+      "status": "added",
+      "blob": "823b0095740322e27bed6c09083a9020824c671f",
+      "changes": 57
+    }
+  ],
+  "classification": "documentation only",
+  "listener_path_intersection": [],
+  "runtime_changes": false,
+  "lock_or_manifest_changes": false,
+  "helper_or_workflow_changes": false,
+  "gitlink_changes": false,
+  "required_preparation": "Preserve the added document in the authorized listener successor and bind launcher head/tree/base to that exact new candidate. Existing fresh-main==0a guard must not be bypassed or relaxed to arbitrary main. No gate was started; nothing is relabelled as a new execution.",
+  "release_claim_boundary": "The added document states v0.4.4 release success. This bounded review did not read that workflow/release itself and does not independently certify those claims.",
+  "sources": [
+    "https://github.com/LIghtJUNction/zcalld/compare/0a0a62cdca25bbdf289a17f03dfeed1acc945595...37c82ee7cec35594771a02869f7f72f12a3ace1d",
+    "https://github.com/LIghtJUNction/zcalld/commit/37c82ee7cec35594771a02869f7f72f12a3ace1d",
+    "https://github.com/LIghtJUNction/zcalld/blob/37c82ee7cec35594771a02869f7f72f12a3ace1d/docs/RELEASE-0.4.4.md"
+  ]
+}

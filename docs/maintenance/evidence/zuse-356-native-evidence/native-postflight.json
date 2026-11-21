@@ -1,0 +1,66 @@
+{
+  "schema": "project-z.zuse356-native-postflight.v1",
+  "observed_at": "2026-11-21T00:18:00.868464+00:00",
+  "job_id": "26c4545eae1eab8d27485f4a48077d3c-7c9",
+  "job_exit": 0,
+  "scope_probe": {
+    "argv": [
+      "systemctl",
+      "--user",
+      "show",
+      "zuse-356-native-20261120.scope",
+      "--property=ActiveState,SubState,Result,ControlGroup,MemoryPeak,ExecMainStatus"
+    ],
+    "exit": 0,
+    "stdout": "ActiveState=inactive\nSubState=dead\nResult=success\nControlGroup=\nMemoryPeak=[not set]\n",
+    "stderr": ""
+  },
+  "owned_pids_checked": [
+    3188302,
+    3188303,
+    3188334,
+    3188827,
+    3188950,
+    3190509,
+    3191932,
+    3192129,
+    3188355
+  ],
+  "owned_pids_still_present": [],
+  "outer_lock": {
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "device": 34,
+    "inode": 63537699,
+    "rows": []
+  },
+  "source_before": {
+    "head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "status": "",
+    "lock": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/Cargo.lock",
+      "bytes": 1138,
+      "sha256": "cffb29f3aa454c065523c6fc62ebf33721694df88af94e0aff2feea5d17855e0"
+    }
+  },
+  "source_after": {
+    "head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "status": "",
+    "lock": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/Cargo.lock",
+      "bytes": 1138,
+      "sha256": "cffb29f3aa454c065523c6fc62ebf33721694df88af94e0aff2feea5d17855e0"
+    }
+  },
+  "result": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/result.json",
+    "bytes": 14627,
+    "sha256": "ada3df93162ce40412aecda93c84023904a12f3539e22a307046489936fdc9df"
+  },
+  "mpx_cleanup": {
+    "owned_xvfb_exited": true,
+    "lease_absent": true,
+    "authority_absent": true
+  }
+}

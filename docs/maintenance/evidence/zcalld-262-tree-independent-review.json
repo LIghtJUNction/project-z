@@ -1,0 +1,303 @@
+{
+  "schema": 1,
+  "scope": "Independent GitHub tree-only review; no build, product test, merge, source or ref write by reviewer",
+  "reviewed_at_utc": "2026-11-20 23:55:40 UTC",
+  "base_main": {
+    "commit": "0a0a62cdca25bbdf289a17f03dfeed1acc945595",
+    "tree": "69f60a24c0924b58d33cce4354fc3dc6a82210ed"
+  },
+  "listener_source": {
+    "commit": "d5314fe930b0932bbce076ff578474d3ef084695",
+    "tree": "06826bbb2eb2857ea1f0e9cc834abe9b149d3625"
+  },
+  "integrated_unreferenced_tree": "262cb876bcf4f83ef2c66912863629f0401db89d",
+  "counts": {
+    "main_leaves": 216,
+    "candidate_leaves": 219,
+    "unchanged_main_leaves": 214,
+    "preserved_non_listener_main_leaves": 214,
+    "changed_existing_main_leaves": 2,
+    "added_leaves": 3,
+    "deleted_leaves": 0
+  },
+  "exact_changed_paths": [
+    "src/curl.rs",
+    "src/listener.rs",
+    "src/listener/local.rs",
+    "src/listener/local/generation.rs",
+    "src/main.rs"
+  ],
+  "exact_added_paths": [
+    "src/listener.rs",
+    "src/listener/local.rs",
+    "src/listener/local/generation.rs"
+  ],
+  "listener_blob_matrix": [
+    {
+      "path": "src/curl.rs",
+      "main": {
+        "sha": "ec2e014c49ee194ff2ddc8c6538371ff72a55d34",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "tested_listener": {
+        "sha": "9365406b23b9744bba9b21dae999e82d19683357",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate": {
+        "sha": "9365406b23b9744bba9b21dae999e82d19683357",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate_equals_listener": true
+    },
+    {
+      "path": "src/listener.rs",
+      "main": null,
+      "tested_listener": {
+        "sha": "8451bacea5c3c297ee49819fefbf505fc45fdfc8",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate": {
+        "sha": "8451bacea5c3c297ee49819fefbf505fc45fdfc8",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate_equals_listener": true
+    },
+    {
+      "path": "src/listener/local.rs",
+      "main": null,
+      "tested_listener": {
+        "sha": "3a88768ec95e5b0dbad07db72d65c4e7d9ba97c5",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate": {
+        "sha": "3a88768ec95e5b0dbad07db72d65c4e7d9ba97c5",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate_equals_listener": true
+    },
+    {
+      "path": "src/listener/local/generation.rs",
+      "main": null,
+      "tested_listener": {
+        "sha": "80ee8557e5e7291794e953bf695ddc884b4b21ca",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate": {
+        "sha": "80ee8557e5e7291794e953bf695ddc884b4b21ca",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate_equals_listener": true
+    },
+    {
+      "path": "src/main.rs",
+      "main": {
+        "sha": "52368bd765db740431d5bbc0949ee5ca5b3527e0",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "tested_listener": {
+        "sha": "efae67a5b9ee61bfeb36052aa286b63d9201db64",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate": {
+        "sha": "efae67a5b9ee61bfeb36052aa286b63d9201db64",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate_equals_listener": true
+    }
+  ],
+  "preserved_main_metadata": [
+    {
+      "path": "apps/zcall-gui",
+      "main": {
+        "sha": "ca35a306088a85e49e9e851aab24329deed20056",
+        "mode": "160000",
+        "type": "commit"
+      },
+      "candidate": {
+        "sha": "ca35a306088a85e49e9e851aab24329deed20056",
+        "mode": "160000",
+        "type": "commit"
+      },
+      "equal": true
+    },
+    {
+      "path": "extensions/compat",
+      "main": {
+        "sha": "c521d1fb1ce8eac173ea2bb481816d3cd1df82d3",
+        "mode": "160000",
+        "type": "commit"
+      },
+      "candidate": {
+        "sha": "c521d1fb1ce8eac173ea2bb481816d3cd1df82d3",
+        "mode": "160000",
+        "type": "commit"
+      },
+      "equal": true
+    },
+    {
+      "path": "vendor/zcall",
+      "main": {
+        "sha": "317c52f101f112c6af671a629d8406305a168e4a",
+        "mode": "160000",
+        "type": "commit"
+      },
+      "candidate": {
+        "sha": "317c52f101f112c6af671a629d8406305a168e4a",
+        "mode": "160000",
+        "type": "commit"
+      },
+      "equal": true
+    },
+    {
+      "path": "Cargo.toml",
+      "main": {
+        "sha": "8d30c76381b9f6ad72382f06a87bb8aa7a5f2970",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate": {
+        "sha": "8d30c76381b9f6ad72382f06a87bb8aa7a5f2970",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "equal": true
+    },
+    {
+      "path": "Cargo.lock",
+      "main": {
+        "sha": "533c2a374b6a833d6637dff69a2cea7f76dedc18",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate": {
+        "sha": "533c2a374b6a833d6637dff69a2cea7f76dedc18",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "equal": true
+    },
+    {
+      "path": "plugins/aliases/Cargo.toml",
+      "main": {
+        "sha": "b4d2194e994895f5e31b70609efef5d9de8a854e",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate": {
+        "sha": "b4d2194e994895f5e31b70609efef5d9de8a854e",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "equal": true
+    },
+    {
+      "path": "plugins/community/Cargo.toml",
+      "main": {
+        "sha": "24dd31a5bd741652fe8eb064361d10b826e7d62a",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate": {
+        "sha": "24dd31a5bd741652fe8eb064361d10b826e7d62a",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "equal": true
+    },
+    {
+      "path": "plugins/desktop/Cargo.toml",
+      "main": {
+        "sha": "2c69d0e3d21a5b5797c4542f24cfcd369213dd3f",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate": {
+        "sha": "2c69d0e3d21a5b5797c4542f24cfcd369213dd3f",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "equal": true
+    },
+    {
+      "path": "plugins/policy/Cargo.toml",
+      "main": {
+        "sha": "5658a4e6317786195d2217976cb0b6d51795cd21",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate": {
+        "sha": "5658a4e6317786195d2217976cb0b6d51795cd21",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "equal": true
+    },
+    {
+      "path": "plugins/redact/Cargo.toml",
+      "main": {
+        "sha": "d2dbc80bbc01eb07a6a5a7046d739f8f0f31c0fd",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate": {
+        "sha": "d2dbc80bbc01eb07a6a5a7046d739f8f0f31c0fd",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "equal": true
+    },
+    {
+      "path": "plugins/routing/Cargo.toml",
+      "main": {
+        "sha": "5f8fa964271f6ced4b66fb94d3ce488c3a6c7024",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "candidate": {
+        "sha": "5f8fa964271f6ced4b66fb94d3ce488c3a6c7024",
+        "mode": "100644",
+        "type": "blob"
+      },
+      "equal": true
+    }
+  ],
+  "main_delta_preservation": {
+    "source_base": "c4b4bbabe0c718430ffe2f46936408e9bdef4885",
+    "path_count": 25,
+    "all_main_delta_leaves_equal": true,
+    "missing_or_changed": []
+  },
+  "mismatches": {
+    "preserved_main": [],
+    "listener_blobs": [],
+    "deleted_main": []
+  },
+  "finding": "No blocking tree-composition issue. Tree262 equals complete main0a plus the exact five d531 listener blobs; GUIca35, compatc521, zcall317, all current manifests and lock are unchanged.",
+  "remaining": "New combined tree has not received product gates. Old d531 tests retain their original identity. Sole writer may prepare the authorized two-parent draft commit; root retains final merge ownership.",
+  "sources": [
+    {
+      "role": "main",
+      "url": "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/0a0a62cdca25bbdf289a17f03dfeed1acc945595?recursive=1"
+    },
+    {
+      "role": "listener",
+      "url": "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/d5314fe930b0932bbce076ff578474d3ef084695?recursive=1"
+    },
+    {
+      "role": "candidate",
+      "url": "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/262cb876bcf4f83ef2c66912863629f0401db89d?recursive=1"
+    }
+  ]
+}

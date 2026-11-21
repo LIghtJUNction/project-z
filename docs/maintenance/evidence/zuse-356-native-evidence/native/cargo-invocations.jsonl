@@ -1,0 +1,1 @@
+{"cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source", "argv": ["/home/lightjunction/.cargo/bin/cargo", "test", "--offline", "--manifest-path", "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/Cargo.toml", "--test", "accessibility_native", "--", "--ignored", "--nocapture"]}

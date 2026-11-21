@@ -1,0 +1,70 @@
+{
+  "schema": "project-z.zcalld37c-source-preparation.v1",
+  "status": "prepared",
+  "started_at": "2026-11-21T00:19:14.466759+00:00",
+  "old_candidate": "4cc2fd1cfb6eb49dacc022af6c15cc0f7825e409",
+  "base": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+  "expected_tree": "65c4d7a3ac4af29427510edbf1e407a5ef6f307d",
+  "cargo_or_runtime_executed": false,
+  "source": "/home/lightjunction/Documents/GITHUB/pr-core-zcalld-listen-37c-20261121/source",
+  "parent_instructions_sha256": "cf0f7381bb0218465602c668b94ce6ac8318cca69249638edb5d672679b5e27f",
+  "staged_tree": "65c4d7a3ac4af29427510edbf1e407a5ef6f307d",
+  "old_candidate_leaves": 219,
+  "base_leaves": 217,
+  "candidate_leaves": 220,
+  "old_delta": [
+    "docs/RELEASE-0.4.4.md"
+  ],
+  "main_delta": [
+    "src/curl.rs",
+    "src/listener.rs",
+    "src/listener/local.rs",
+    "src/listener/local/generation.rs",
+    "src/main.rs"
+  ],
+  "all_old_leaves_preserved": true,
+  "main_nonlistener_leaves_preserved": 215,
+  "release_doc": {
+    "mode": "100644",
+    "type": "blob",
+    "sha": "823b0095740322e27bed6c09083a9020824c671f"
+  },
+  "gitlinks": {
+    "apps/zcall-gui": {
+      "mode": "160000",
+      "type": "commit",
+      "sha": "ca35a306088a85e49e9e851aab24329deed20056"
+    },
+    "apps/zcall-omarchy": {
+      "mode": "160000",
+      "type": "commit",
+      "sha": "7db52e74ceb6c9d398791406e01265eecc127f87"
+    },
+    "extensions/compat": {
+      "mode": "160000",
+      "type": "commit",
+      "sha": "c521d1fb1ce8eac173ea2bb481816d3cd1df82d3"
+    },
+    "vendor/zcall": {
+      "mode": "160000",
+      "type": "commit",
+      "sha": "317c52f101f112c6af671a629d8406305a168e4a"
+    },
+    "vendor/zconv": {
+      "mode": "160000",
+      "type": "commit",
+      "sha": "0af1f7eb0766ff0ce9db5cee7c6184eff511a8c1"
+    },
+    "vendor/zplugin": {
+      "mode": "160000",
+      "type": "commit",
+      "sha": "cf02c1d9db575b92b36297dfe1fde72de9ee51e4"
+    },
+    "vendor/zsys": {
+      "mode": "160000",
+      "type": "commit",
+      "sha": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7"
+    }
+  },
+  "finished_at": "2026-11-21T00:19:15.983208+00:00"
+}

@@ -1,0 +1,98 @@
+{
+  "schema": "project-z.ssmcp-781-fc-original-hashes.v1",
+  "original_json_count": 8,
+  "original_jsons": [
+    {
+      "phase": "baseline",
+      "kind": "build",
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-baseline-build-receipt.json",
+      "bytes": 79446,
+      "sha256": "d2204375614807af510f6c7fd08ec657d212a98f18f504cb21376c63f47ea7c0"
+    },
+    {
+      "phase": "baseline",
+      "kind": "execution",
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline/execution-receipt.json",
+      "bytes": 29263,
+      "sha256": "aefc6b8a20c8bec808057acae758c60fb44630c5912cb1851cced2a7dc2eef63"
+    },
+    {
+      "phase": "baseline",
+      "kind": "six",
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline/six-cases-report.json",
+      "bytes": 19660,
+      "sha256": "7b7c9081616aca563d74efe883cd716e6be8da594e2671e283c904a7b096c64c"
+    },
+    {
+      "phase": "baseline",
+      "kind": "ctrlv",
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline/ctrlv-report.json",
+      "bytes": 13333,
+      "sha256": "df1d570ed1bbcf8e47d6a4e99c94d06357319ebc0ca22a9c5e9d3d82b05498d4"
+    },
+    {
+      "phase": "candidate",
+      "kind": "build",
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-fc-complete-candidate/build-receipt.json",
+      "bytes": 79517,
+      "sha256": "8e6154ba2bbb16bab14cfa8d4b0a693775c28656e3dc554ad1e5d5301108ddd7"
+    },
+    {
+      "phase": "candidate",
+      "kind": "execution",
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-fc-complete-candidate/execution-receipt.json",
+      "bytes": 30277,
+      "sha256": "13a685aa21e523c1d42e4c62b4bd61b6fb065fb0d8a5500a819e34218cb1e1bb"
+    },
+    {
+      "phase": "candidate",
+      "kind": "six",
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-fc-complete-candidate/six-cases-report.json",
+      "bytes": 21212,
+      "sha256": "4ef95978b201f9a3a8d3c42cd4ded2282ff4e7c802a269242027a32691cc6b49"
+    },
+    {
+      "phase": "candidate",
+      "kind": "ctrlv",
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-fc-complete-candidate/ctrlv-report.json",
+      "bytes": 13247,
+      "sha256": "af2b6f5a996ae60fe2a0bb4bf632e5c1bb39e015111a205deb3b8bf68d88be7f"
+    }
+  ],
+  "archives": {
+    "baseline": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline/original-receipts.zip",
+      "bytes": 13644,
+      "sha256": "2bd9cbcd765399c4f782e97cc9b47351f03fbe3f650685e16b0e8e29b92998f2",
+      "payloads": 3,
+      "members_including_manifest": 4,
+      "crc_and_all_payload_hashes_match": true
+    },
+    "candidate": {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-fc-complete-candidate/original-receipts.zip",
+      "bytes": 24932,
+      "sha256": "5bfaec731d428190d6d393456240362bcc52db284916f084cfd23b399755fb4b",
+      "payloads": 4,
+      "members_including_manifest": 5,
+      "crc_and_all_payload_hashes_match": true
+    }
+  },
+  "archive_manifests": [
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline/archive-manifest.json",
+      "bytes": 1246,
+      "sha256": "b71d834e494bcaf8eb0e44412b8d984a7778f09fa9e8f8bad378c890186c1c0f"
+    },
+    {
+      "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-fc-complete-candidate/archive-manifest.json",
+      "bytes": 1644,
+      "sha256": "5cf5781f41a7b3867844b7668711f49b8c63fc30398887aa3da7025936402c35"
+    }
+  ],
+  "supporting_source_observation": {
+    "path": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-fc-source-observation.json",
+    "bytes": 2079,
+    "sha256": "cda65fcdee12c23b804275340dab009db47d363664f8b2a2f059b055e8838963"
+  },
+  "bytes_rehashed": "Existing JSON and ZIP bytes only; no ELF or native source files read or rehashed."
+}

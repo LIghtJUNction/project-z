@@ -1,0 +1,268 @@
+{
+  "schema": "project-z.ssmcp-781-fc-paired-evidence.v1",
+  "scope": "Self-contained original baseline/candidate receipt pair and independent review. No product execution, new primary report, executable payload, configuration body or credential value.",
+  "source": {
+    "baseline": {
+      "head": "781b87df1d364137b6885f17f631a3e9e991bd58",
+      "tree": "6bf7beb143cfdce3878df856c27785164695430f"
+    },
+    "candidate": {
+      "head": "fc06728a36d0b4d2920e1e2bc29885721ced5780",
+      "tree": "088fe1cde36fe63a33df1f9b7cfb619ae5f8ee35"
+    }
+  },
+  "comparison_reviewed_at_utc": "2026-11-21T00:09:35.475798+00:00",
+  "payload_count": 20,
+  "outer_manifest_name": "paired-evidence-manifest.json",
+  "total_zip_members": 21,
+  "payload_types": {
+    "json": 16,
+    "markdown": 2,
+    "original_nested_zip": 2
+  },
+  "original_receipt_json_count": 8,
+  "files": [
+    {
+      "path": "ssmcp-781-baseline-build-independent-review.json",
+      "bytes": 11032,
+      "sha256": "b3af65610a8b9f78077ef89c2e857a0ab8df7a6a04f59e2957f5f582cd63955a",
+      "origin": "independent_review_or_observation",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-baseline-build-independent-review.json"
+    },
+    {
+      "path": "ssmcp-781-baseline-build-receipt.json",
+      "bytes": 79446,
+      "sha256": "d2204375614807af510f6c7fd08ec657d212a98f18f504cb21376c63f47ea7c0",
+      "origin": "native_original_receipt",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-baseline-build-receipt.json",
+      "source_native": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-build/build-receipt.json"
+    },
+    {
+      "path": "ssmcp-781-complete-baseline-independent-review.json",
+      "bytes": 14968,
+      "sha256": "633740c4eb75668806c36e6c32244b94c037afd4a7ef591ee514b6aa293ff07c",
+      "origin": "independent_review_or_observation",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline-independent-review.json"
+    },
+    {
+      "path": "ssmcp-781-complete-baseline-independent-review.md",
+      "bytes": 6005,
+      "sha256": "66fa1c3031238b677545fbb0b432d596f1577c2fdb54da568ba45b44c516c33e",
+      "origin": "independent_review_or_observation",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline-independent-review.md"
+    },
+    {
+      "path": "ssmcp-781-complete-baseline/archive-manifest.json",
+      "bytes": 1246,
+      "sha256": "b71d834e494bcaf8eb0e44412b8d984a7778f09fa9e8f8bad378c890186c1c0f",
+      "origin": "archive_manifest",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline/archive-manifest.json"
+    },
+    {
+      "path": "ssmcp-781-complete-baseline/ctrlv-report.json",
+      "bytes": 13333,
+      "sha256": "df1d570ed1bbcf8e47d6a4e99c94d06357319ebc0ca22a9c5e9d3d82b05498d4",
+      "origin": "native_original_receipt",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline/ctrlv-report.json",
+      "source_native": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-busy-run/ctrlv/report.json"
+    },
+    {
+      "path": "ssmcp-781-complete-baseline/execution-receipt.json",
+      "bytes": 29263,
+      "sha256": "aefc6b8a20c8bec808057acae758c60fb44630c5912cb1851cced2a7dc2eef63",
+      "origin": "native_original_receipt",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline/execution-receipt.json",
+      "source_native": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-busy-run/execution-receipt.json"
+    },
+    {
+      "path": "ssmcp-781-complete-baseline/original-receipts.zip",
+      "bytes": 13644,
+      "sha256": "2bd9cbcd765399c4f782e97cc9b47351f03fbe3f650685e16b0e8e29b92998f2",
+      "origin": "original_inner_archive",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline/original-receipts.zip"
+    },
+    {
+      "path": "ssmcp-781-complete-baseline/six-cases-report.json",
+      "bytes": 19660,
+      "sha256": "7b7c9081616aca563d74efe883cd716e6be8da594e2671e283c904a7b096c64c",
+      "origin": "native_original_receipt",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-complete-baseline/six-cases-report.json",
+      "source_native": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-baseline-781b87d-r4-busy-run/six-cases/report.json"
+    },
+    {
+      "path": "ssmcp-781-fc-independent-comparison-original-hashes.json",
+      "bytes": 3928,
+      "sha256": "128648ec6f7b6d05624f498e2961ea34dbd24dabcec0f8e079c69b41ff2a28d2",
+      "origin": "independent_review_or_observation",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-fc-independent-comparison-original-hashes.json"
+    },
+    {
+      "path": "ssmcp-781-fc-independent-comparison.json",
+      "bytes": 32554,
+      "sha256": "b42090be2532fc635f29f00691bf4a13ad9f5928d2955632871c83552b9ec9c3",
+      "origin": "independent_review_or_observation",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-fc-independent-comparison.json"
+    },
+    {
+      "path": "ssmcp-781-fc-independent-comparison.md",
+      "bytes": 7733,
+      "sha256": "0e966fc10a1f0201de60d7b43b24fdf221bc7326fa6957f6ce6e46c71eb4df31",
+      "origin": "independent_review_or_observation",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-fc-independent-comparison.md"
+    },
+    {
+      "path": "ssmcp-781-preserved-artifact-readback.json",
+      "bytes": 4442,
+      "sha256": "1a3a1ff057228a7b7b8bc92dbd911622bc815aaecd957254fd48df063f9713ad",
+      "origin": "independent_review_or_observation",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-781-preserved-artifact-readback.json"
+    },
+    {
+      "path": "ssmcp-fc-complete-candidate/archive-manifest.json",
+      "bytes": 1644,
+      "sha256": "5cf5781f41a7b3867844b7668711f49b8c63fc30398887aa3da7025936402c35",
+      "origin": "archive_manifest",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-fc-complete-candidate/archive-manifest.json"
+    },
+    {
+      "path": "ssmcp-fc-complete-candidate/build-receipt.json",
+      "bytes": 79517,
+      "sha256": "8e6154ba2bbb16bab14cfa8d4b0a693775c28656e3dc554ad1e5d5301108ddd7",
+      "origin": "native_original_receipt",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-fc-complete-candidate/build-receipt.json",
+      "source_native": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-build/build-receipt.json"
+    },
+    {
+      "path": "ssmcp-fc-complete-candidate/ctrlv-report.json",
+      "bytes": 13247,
+      "sha256": "af2b6f5a996ae60fe2a0bb4bf632e5c1bb39e015111a205deb3b8bf68d88be7f",
+      "origin": "native_original_receipt",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-fc-complete-candidate/ctrlv-report.json",
+      "source_native": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-run/ctrlv/report.json"
+    },
+    {
+      "path": "ssmcp-fc-complete-candidate/execution-receipt.json",
+      "bytes": 30277,
+      "sha256": "13a685aa21e523c1d42e4c62b4bd61b6fb065fb0d8a5500a819e34218cb1e1bb",
+      "origin": "native_original_receipt",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-fc-complete-candidate/execution-receipt.json",
+      "source_native": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-run/execution-receipt.json"
+    },
+    {
+      "path": "ssmcp-fc-complete-candidate/original-receipts.zip",
+      "bytes": 24932,
+      "sha256": "5bfaec731d428190d6d393456240362bcc52db284916f084cfd23b399755fb4b",
+      "origin": "original_inner_archive",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-fc-complete-candidate/original-receipts.zip"
+    },
+    {
+      "path": "ssmcp-fc-complete-candidate/six-cases-report.json",
+      "bytes": 21212,
+      "sha256": "4ef95978b201f9a3a8d3c42cd4ded2282ff4e7c802a269242027a32691cc6b49",
+      "origin": "native_original_receipt",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-fc-complete-candidate/six-cases-report.json",
+      "source_native": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-run/six-cases/report.json"
+    },
+    {
+      "path": "ssmcp-fc-source-observation.json",
+      "bytes": 2079,
+      "sha256": "cda65fcdee12c23b804275340dab009db47d363664f8b2a2f059b055e8838963",
+      "origin": "independent_review_or_observation",
+      "source_local": "/workspace/scratch/3cc863eec631/pr-cleanup-root/ssmcp-fc-source-observation.json",
+      "source_provider": "Existing GitHub plugin immutable commit/compare/PR observation."
+    }
+  ],
+  "nested_archives": [
+    {
+      "path": "ssmcp-781-complete-baseline/original-receipts.zip",
+      "member_count": 4,
+      "members": [
+        "execution-receipt.json",
+        "six-cases-report.json",
+        "ctrlv-report.json",
+        "archive-manifest.json"
+      ],
+      "crc_valid": true,
+      "scope": "Original receipt JSON and inner manifest only."
+    },
+    {
+      "path": "ssmcp-fc-complete-candidate/original-receipts.zip",
+      "member_count": 5,
+      "members": [
+        "build-receipt.json",
+        "execution-receipt.json",
+        "six-cases-report.json",
+        "ctrlv-report.json",
+        "archive-manifest.json"
+      ],
+      "crc_valid": true,
+      "scope": "Original receipt JSON and inner manifest only."
+    }
+  ],
+  "relative_markdown_links": {
+    "count": 13,
+    "all_resolve_inside_bundle": true,
+    "links": [
+      {
+        "from": "ssmcp-781-complete-baseline-independent-review.md",
+        "to": "ssmcp-781-complete-baseline/six-cases-report.json"
+      },
+      {
+        "from": "ssmcp-781-complete-baseline-independent-review.md",
+        "to": "ssmcp-781-complete-baseline/ctrlv-report.json"
+      },
+      {
+        "from": "ssmcp-781-complete-baseline-independent-review.md",
+        "to": "ssmcp-781-complete-baseline/execution-receipt.json"
+      },
+      {
+        "from": "ssmcp-781-fc-independent-comparison.md",
+        "to": "ssmcp-fc-complete-candidate/build-receipt.json"
+      },
+      {
+        "from": "ssmcp-781-fc-independent-comparison.md",
+        "to": "ssmcp-fc-complete-candidate/execution-receipt.json"
+      },
+      {
+        "from": "ssmcp-781-fc-independent-comparison.md",
+        "to": "ssmcp-fc-complete-candidate/six-cases-report.json"
+      },
+      {
+        "from": "ssmcp-781-fc-independent-comparison.md",
+        "to": "ssmcp-fc-complete-candidate/ctrlv-report.json"
+      },
+      {
+        "from": "ssmcp-781-fc-independent-comparison.md",
+        "to": "ssmcp-781-baseline-build-receipt.json"
+      },
+      {
+        "from": "ssmcp-781-fc-independent-comparison.md",
+        "to": "ssmcp-781-complete-baseline/execution-receipt.json"
+      },
+      {
+        "from": "ssmcp-781-fc-independent-comparison.md",
+        "to": "ssmcp-781-complete-baseline/six-cases-report.json"
+      },
+      {
+        "from": "ssmcp-781-fc-independent-comparison.md",
+        "to": "ssmcp-781-complete-baseline/ctrlv-report.json"
+      },
+      {
+        "from": "ssmcp-781-fc-independent-comparison.md",
+        "to": "ssmcp-781-fc-independent-comparison.json"
+      },
+      {
+        "from": "ssmcp-781-fc-independent-comparison.md",
+        "to": "ssmcp-781-fc-independent-comparison-original-hashes.json"
+      }
+    ]
+  },
+  "preservation": "Each listed payload is copied byte-for-byte; original directory names and relative Markdown links are retained. Inner ZIPs deliberately duplicate their extracted originals as source-chain evidence.",
+  "content_scope_check": {
+    "explicit_file_allowlist": true,
+    "utf8_json_markdown_or_original_json_zip_only": true,
+    "credential_fields_or_patterns_found": 0,
+    "configuration_reference_only": true
+  },
+  "statistical_boundary": "One observed pair per case. Includes slower secondary measures; not statistical confidence or OS clipboard performance."
+}

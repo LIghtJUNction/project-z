@@ -1,0 +1,357 @@
+{
+  "schema": "project-z.zuse-current-candidate-validation.v1",
+  "phase": "native",
+  "head": "35664746549c482c99082e6180419b2c0f5ff532",
+  "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+  "source": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+  "started_at": "2026-11-21T00:16:34.729466+00:00",
+  "status": "passed",
+  "commands": [
+    {
+      "name": "private-mpx",
+      "argv": [
+        "python3",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/private_mpx_356.py",
+        "--source",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+        "--test-binary",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/lib_test-e36daa4146c197cd",
+        "--output",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/mpx"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "started_at": "2026-11-21T00:16:34.838113+00:00",
+      "timeout_seconds": 120,
+      "pid": 3188334,
+      "exit": 0,
+      "seconds": 1.367,
+      "finished_at": "2026-11-21T00:16:36.205545+00:00",
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/private-mpx.log",
+        "bytes": 302,
+        "sha256": "c9ddff91e9a15ceff6b1c7ee474ef300cfbe99cdfbfb0b35ceb47d31d2e954f9"
+      },
+      "test_summaries": [],
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/private-mpx-compiler-artifacts.json",
+        "bytes": 3,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    },
+    {
+      "name": "private-cli",
+      "argv": [
+        "python3",
+        "tests/native_scoped_mice.py",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/cli-7a6a6d995b3a1b77"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "started_at": "2026-11-21T00:16:36.205995+00:00",
+      "timeout_seconds": 120,
+      "pid": 3188827,
+      "exit": 0,
+      "seconds": 0.766,
+      "finished_at": "2026-11-21T00:16:36.971975+00:00",
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/private-cli.log",
+        "bytes": 301,
+        "sha256": "b2aa03c36a964b51954c4b693553ca4ce37ad9b9ab247b60ca58504612d3d33c"
+      },
+      "test_summaries": [],
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/private-cli-compiler-artifacts.json",
+        "bytes": 3,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    },
+    {
+      "name": "private-accessibility",
+      "argv": [
+        "python3",
+        "tests/run_accessibility_native.py",
+        "--manifest-path",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/Cargo.toml"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "started_at": "2026-11-21T00:16:36.972546+00:00",
+      "timeout_seconds": 180,
+      "pid": 3188950,
+      "exit": 0,
+      "seconds": 4.423,
+      "finished_at": "2026-11-21T00:16:41.395972+00:00",
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/private-accessibility.log",
+        "bytes": 862,
+        "sha256": "d2f80af26774db812b36cd8b7342b1d889e6ad96f9478b6269a209d154794462"
+      },
+      "test_summaries": [
+        "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.17s"
+      ],
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/private-accessibility-compiler-artifacts.json",
+        "bytes": 3,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    },
+    {
+      "name": "private-wayland",
+      "argv": [
+        "python3",
+        "tests/native_wayland_private.py",
+        "--headless",
+        "--headless-parent",
+        "cage",
+        "--cage",
+        "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/native-fixtures/cage-v6/build/cage",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/cli-7a6a6d995b3a1b77",
+        "--state-tests",
+        "--render-node",
+        "/dev/dri/renderD129",
+        "--report",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/wayland.json"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "started_at": "2026-11-21T00:16:41.396630+00:00",
+      "timeout_seconds": 180,
+      "pid": 3190509,
+      "exit": 0,
+      "seconds": 5.376,
+      "finished_at": "2026-11-21T00:16:46.772809+00:00",
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/private-wayland.log",
+        "bytes": 1987,
+        "sha256": "51de38feb12bd75596d9a30ffc322b6712f2dc8dc54ff679cdb1f6f6d1b47e85"
+      },
+      "test_summaries": [],
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/private-wayland-compiler-artifacts.json",
+        "bytes": 3,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    },
+    {
+      "name": "private-serial",
+      "argv": [
+        "python3",
+        "tests/native_serial.py",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/cli-7a6a6d995b3a1b77",
+        "--output",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/serial"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "started_at": "2026-11-21T00:16:46.773411+00:00",
+      "timeout_seconds": 90,
+      "pid": 3191932,
+      "exit": 0,
+      "seconds": 0.365,
+      "finished_at": "2026-11-21T00:16:47.138476+00:00",
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/private-serial.log",
+        "bytes": 806,
+        "sha256": "461d40fcb7572fbd83dc5907735aead05dbef4656e0e58a8505c93133f209818"
+      },
+      "test_summaries": [],
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/private-serial-compiler-artifacts.json",
+        "bytes": 3,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    },
+    {
+      "name": "private-usb",
+      "argv": [
+        "python3",
+        "tests/native_usb.py",
+        "--binary",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/cli-7a6a6d995b3a1b77",
+        "--output",
+        "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/usb"
+      ],
+      "cwd": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source",
+      "started_at": "2026-11-21T00:16:47.139060+00:00",
+      "timeout_seconds": 120,
+      "pid": 3192129,
+      "exit": 0,
+      "seconds": 0.515,
+      "finished_at": "2026-11-21T00:16:47.654458+00:00",
+      "log": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/private-usb.log",
+        "bytes": 1762,
+        "sha256": "f53fb1331acf2eda8ab7bb849d845feb6880b427aceffb2019769000cd3554f1"
+      },
+      "test_summaries": [],
+      "compiler_artifacts": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/native/private-usb-compiler-artifacts.json",
+        "bytes": 3,
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    }
+  ],
+  "runtime_artifacts": {
+    "cli": {
+      "copy": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/cli-7a6a6d995b3a1b77",
+        "bytes": 17454624,
+        "sha256": "7a6a6d995b3a1b77e2cd5d4ea585e72e5c170e338e333d85684ec2dbca9b864b"
+      },
+      "shared_output": {
+        "path": "/var/tmp/project-z-cargo-target/debug/zuse",
+        "bytes": 17454624,
+        "sha256": "7a6a6d995b3a1b77e2cd5d4ea585e72e5c170e338e333d85684ec2dbca9b864b"
+      },
+      "compiler_record_command": "default-tests",
+      "fresh": false,
+      "target": {
+        "kind": [
+          "bin"
+        ],
+        "crate_types": [
+          "bin"
+        ],
+        "name": "zuse",
+        "src_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/src/main.rs",
+        "edition": "2024",
+        "required-features": [
+          "std"
+        ],
+        "doc": true,
+        "doctest": false,
+        "test": true
+      },
+      "features": [
+        "default",
+        "std"
+      ]
+    },
+    "accessibility_test": {
+      "copy": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/accessibility_test-d6e9f46a49db84ce",
+        "bytes": 19457200,
+        "sha256": "d6e9f46a49db84ce90acd6b16b60fe6785ed73b3fc91c15755d385511b67d58c"
+      },
+      "shared_output": {
+        "path": "/var/tmp/project-z-cargo-target/debug/build/zuse-computer/7f0e41a79d61769f/out/accessibility_native-7f0e41a79d61769f",
+        "bytes": 19457200,
+        "sha256": "d6e9f46a49db84ce90acd6b16b60fe6785ed73b3fc91c15755d385511b67d58c"
+      },
+      "compiler_record_command": "default-tests",
+      "fresh": false,
+      "target": {
+        "kind": [
+          "test"
+        ],
+        "crate_types": [
+          "bin"
+        ],
+        "name": "accessibility_native",
+        "src_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/tests/accessibility_native.rs",
+        "edition": "2024",
+        "doc": false,
+        "doctest": false,
+        "test": true
+      },
+      "features": [
+        "default",
+        "std"
+      ]
+    },
+    "lib_test": {
+      "copy": {
+        "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/artifacts/lib_test-e36daa4146c197cd",
+        "bytes": 21480832,
+        "sha256": "e36daa4146c197cdbf7822d06220561543dd8d168c4f8810e5966c202568e4fb"
+      },
+      "shared_output": {
+        "path": "/var/tmp/project-z-cargo-target/debug/build/zuse-computer/f4baf0c055c07362/out/zuse-f4baf0c055c07362",
+        "bytes": 21480832,
+        "sha256": "e36daa4146c197cdbf7822d06220561543dd8d168c4f8810e5966c202568e4fb"
+      },
+      "compiler_record_command": "default-tests",
+      "fresh": false,
+      "target": {
+        "kind": [
+          "lib"
+        ],
+        "crate_types": [
+          "lib"
+        ],
+        "name": "zuse",
+        "src_path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/src/lib.rs",
+        "edition": "2024",
+        "doc": true,
+        "doctest": true,
+        "test": true
+      },
+      "features": [
+        "default",
+        "std"
+      ]
+    }
+  },
+  "physical_input_requested": false,
+  "historical_pr2_totals_not_asserted": true,
+  "lock_receipt": {
+    "parent_pid": 3188303,
+    "parent_argv": [
+      "/usr/bin/flock",
+      "--nonblock",
+      "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+      "python3",
+      "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/gate.py",
+      "native",
+      ""
+    ],
+    "path": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+    "device": 34,
+    "inode": 63537699,
+    "proc_locks": [
+      "261: FLOCK  ADVISORY  WRITE 3188303 00:20:63537699 0 EOF"
+    ]
+  },
+  "source_before": {
+    "head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "status": "",
+    "lock": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/Cargo.lock",
+      "bytes": 1138,
+      "sha256": "cffb29f3aa454c065523c6fc62ebf33721694df88af94e0aff2feea5d17855e0"
+    }
+  },
+  "driver": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/gate.py",
+    "bytes": 13370,
+    "sha256": "8712f55de634c6cf47d13ac5b88984c4536317ad01fa064db3c8d4679eaaa231"
+  },
+  "environment": {
+    "CARGO_BUILD_JOBS": "1",
+    "CARGO_TARGET_DIR": "/var/tmp/project-z-cargo-target",
+    "CARGO_NET_OFFLINE": "true",
+    "RUSTC_WORKSPACE_WRAPPER": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/workspace-rustc.py"
+  },
+  "portable_receipt": {
+    "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/candidate-validation-356/portable/result.json",
+    "bytes": 24696,
+    "sha256": "53eda19a7a10de808b81ef99f56b454e2cf82bef6b468ee13f2f89222d5f7456"
+  },
+  "cage": {
+    "path": "/home/lightjunction/Documents/GITHUB/project_z/dist/worktrees/zuse-scoped-mice-20261121/target/native-fixtures/cage-v6/build/cage",
+    "bytes": 84072,
+    "sha256": "5fd303a55924b59d8a506256ce843bea3980e6f90a095354cfd886f2c0b609ad"
+  },
+  "accessibility_nested_command_note": "Unchanged helper invokes cargo test --offline --manifest-path ... --test accessibility_native -- --ignored --nocapture; it does not add --locked. Exact nested argv is in cargo-invocations.jsonl; the source/lock and shared candidate artifact hashes are checked before and after.",
+  "source_after": {
+    "head": "35664746549c482c99082e6180419b2c0f5ff532",
+    "tree": "0d1d19006dfcf4da8e804f1f27d13d284eb96299",
+    "status": "",
+    "lock": {
+      "path": "/home/lightjunction/Documents/GITHUB/pr-core-zuse-receipt-20261121/source/Cargo.lock",
+      "bytes": 1138,
+      "sha256": "cffb29f3aa454c065523c6fc62ebf33721694df88af94e0aff2feea5d17855e0"
+    }
+  },
+  "finished_at": "2026-11-21T00:16:47.769387+00:00"
+}

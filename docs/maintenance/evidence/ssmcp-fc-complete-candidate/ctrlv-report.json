@@ -1,0 +1,191 @@
+{
+  "status": "passed",
+  "label": "candidate",
+  "source_root": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export",
+  "fixture_root": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export",
+  "source_revision": "fc06728a36d0b4d2920e1e2bc29885721ced5780",
+  "source_revision_provenance": "caller-declared; C7 binds the build receipt",
+  "build_receipt_path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-build/build-receipt.json",
+  "binary_paths": {
+    "ssmcp": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-build/bin/ssmcp",
+    "ssmcpd": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-build/bin/ssmcpd",
+    "decoder": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-build/bin/examples/vt_snapshot",
+    "fixture": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-build/bin/library-test-fixture"
+  },
+  "identity_before": {
+    "product": {
+      "files": 801,
+      "sha256": "53f9ffb7c252ad68153d165620b07416bb90393071cf1e9f99e1ed6d56708a97"
+    },
+    "helpers": {
+      "supplement": "d840813f8135dc5feece1f03e8daff1011726f1144f55ca0f92be271473cbe40",
+      "frozen_driver": "ccdcc2fed932114125bf832be8370bc17ecfd082a18b95822dd2c3153190784e",
+      "scripts/e2e_account_gateway.py": "54d94dd8768c4dbbf32ccf277061935163f98fccf0bed8946e27aa8d6bfd697a",
+      "scripts/e2e.py": "138eebca6b1fdd546c66096ae175fdbba257cdef174a1b4396720545f629f2fe",
+      "scripts/e2e_dashboard.py": "5ec2c5a6a15d2650e0ed3540e9724b5a31d87cb17023597184b3af6f07b585c6",
+      "scripts/e2e_client_ui.py": "736cc0accfabb35d13dd72b7604c7f06495b9adb8657064345e66b40d9ba87db",
+      "scripts/e2e_account_relay.py": "66913456fee0e72606a788ef43386464abf35eff7abff4faf5d6b4239031a919",
+      "scripts/e2e_composer.py": "e50c0b66eca08e382a005f4960bc924ec85d32f00950aa8668060862086f40e1",
+      "scripts/e2e_input_history.py": "b0558d1ff4d2984b4bafd95162c88731cade0f6960e0b7593c236fcde5a1b4e2",
+      "scripts/e2e_interactions.py": "b4b3671f51c57e458eb00284e47864fe4846fa379ac3db27d55d4259006f36f2",
+      "scripts/e2e_file_paste.py": "52ca1ef57eddfa002886b79e7829002b6f76695eb183848fea9b09724ca13e34"
+    },
+    "helper_paths": {
+      "supplement": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/handoffs/paste-readiness-r3/e2e_clipboard_paste_performance.py",
+      "frozen_driver": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_paste_performance.py",
+      "scripts/e2e_account_gateway.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_account_gateway.py",
+      "scripts/e2e.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e.py",
+      "scripts/e2e_dashboard.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_dashboard.py",
+      "scripts/e2e_client_ui.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_client_ui.py",
+      "scripts/e2e_account_relay.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_account_relay.py",
+      "scripts/e2e_composer.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_composer.py",
+      "scripts/e2e_input_history.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_input_history.py",
+      "scripts/e2e_interactions.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_interactions.py",
+      "scripts/e2e_file_paste.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_file_paste.py"
+    },
+    "binaries": {
+      "ssmcp": "f5690dc624d2f03dd56269f07aa39c49b89e90db226316e75b178096a7dee771",
+      "ssmcpd": "909133cae9bfc0d9bcefdf4af4740a9bc3c50a1097025a3178bc8e04daa62e86",
+      "decoder": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f",
+      "fixture": "6ab9368340abb1ec715b3841ddf814aa2fd2bd9e0f371d622fc841e23806b7f3"
+    },
+    "build_receipt": "8e6154ba2bbb16bab14cfa8d4b0a693775c28656e3dc554ad1e5d5301108ddd7"
+  },
+  "identity_after": {
+    "product": {
+      "files": 801,
+      "sha256": "53f9ffb7c252ad68153d165620b07416bb90393071cf1e9f99e1ed6d56708a97"
+    },
+    "helpers": {
+      "supplement": "d840813f8135dc5feece1f03e8daff1011726f1144f55ca0f92be271473cbe40",
+      "frozen_driver": "ccdcc2fed932114125bf832be8370bc17ecfd082a18b95822dd2c3153190784e",
+      "scripts/e2e_account_gateway.py": "54d94dd8768c4dbbf32ccf277061935163f98fccf0bed8946e27aa8d6bfd697a",
+      "scripts/e2e.py": "138eebca6b1fdd546c66096ae175fdbba257cdef174a1b4396720545f629f2fe",
+      "scripts/e2e_dashboard.py": "5ec2c5a6a15d2650e0ed3540e9724b5a31d87cb17023597184b3af6f07b585c6",
+      "scripts/e2e_client_ui.py": "736cc0accfabb35d13dd72b7604c7f06495b9adb8657064345e66b40d9ba87db",
+      "scripts/e2e_account_relay.py": "66913456fee0e72606a788ef43386464abf35eff7abff4faf5d6b4239031a919",
+      "scripts/e2e_composer.py": "e50c0b66eca08e382a005f4960bc924ec85d32f00950aa8668060862086f40e1",
+      "scripts/e2e_input_history.py": "b0558d1ff4d2984b4bafd95162c88731cade0f6960e0b7593c236fcde5a1b4e2",
+      "scripts/e2e_interactions.py": "b4b3671f51c57e458eb00284e47864fe4846fa379ac3db27d55d4259006f36f2",
+      "scripts/e2e_file_paste.py": "52ca1ef57eddfa002886b79e7829002b6f76695eb183848fea9b09724ca13e34"
+    },
+    "helper_paths": {
+      "supplement": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/handoffs/paste-readiness-r3/e2e_clipboard_paste_performance.py",
+      "frozen_driver": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_paste_performance.py",
+      "scripts/e2e_account_gateway.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_account_gateway.py",
+      "scripts/e2e.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e.py",
+      "scripts/e2e_dashboard.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_dashboard.py",
+      "scripts/e2e_client_ui.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_client_ui.py",
+      "scripts/e2e_account_relay.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_account_relay.py",
+      "scripts/e2e_composer.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_composer.py",
+      "scripts/e2e_input_history.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_input_history.py",
+      "scripts/e2e_interactions.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_interactions.py",
+      "scripts/e2e_file_paste.py": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export/scripts/e2e_file_paste.py"
+    },
+    "binaries": {
+      "ssmcp": "f5690dc624d2f03dd56269f07aa39c49b89e90db226316e75b178096a7dee771",
+      "ssmcpd": "909133cae9bfc0d9bcefdf4af4740a9bc3c50a1097025a3178bc8e04daa62e86",
+      "decoder": "efdbeb3f200fcf4404b2612d836433047ecc90eb0744f345fc971ee7441db97f",
+      "fixture": "6ab9368340abb1ec715b3841ddf814aa2fd2bd9e0f371d622fc841e23806b7f3"
+    },
+    "build_receipt": "8e6154ba2bbb16bab14cfa8d4b0a693775c28656e3dc554ad1e5d5301108ddd7"
+  },
+  "inputs_unchanged": true,
+  "storage": {
+    "source": {
+      "path": "/home/lightjunction/.local/state/work-maintainer/ssmcp-release21-recovery-20261121/prepaste-candidate-fc06728-r4-export",
+      "device": 68,
+      "filesystem": "btrfs",
+      "mountpoint": "/home"
+    },
+    "temporary_root": {
+      "path": "/tmp",
+      "device": 68,
+      "filesystem": "btrfs",
+      "mountpoint": "/tmp"
+    },
+    "workspace": {
+      "path": "/tmp/ssmcp-clipboard-performance-w_mntqrn/workspace",
+      "device": 68,
+      "filesystem": "btrfs",
+      "mountpoint": "/tmp"
+    }
+  },
+  "samples": [
+    {
+      "name": "ctrl-v-multiline-2738",
+      "status": "passed",
+      "expected": "reference",
+      "trigger": "PTY Ctrl+V",
+      "trigger_hex": "16",
+      "bracketed": false,
+      "clipboard_payload_bytes": 2738,
+      "clipboard_payload_sha256": "20bcff3825dcba6114a09a7f0c38f6e8b6a3dd85a02e10be940e2b8418251f73",
+      "before_reference_paths": [],
+      "clock": "monotonic_ns",
+      "started_at": 155112500366398,
+      "wire_bytes": 1,
+      "pty_first_write_at": 155112500401206,
+      "pty_last_write_at": 155112500408040,
+      "first_visible_at": 155112512089437,
+      "preparing_visible_at": 155112512089437,
+      "ready_at": 155112546800557,
+      "reference_ready_at": 155112546800557,
+      "ready_reference": "@\".ssmcp/inputs/paste-5a4e04fdc4eb2f49b05c876fd0d53487.txt\"",
+      "write_calls": 1,
+      "short_writes": 0,
+      "write_attempts": 1,
+      "min_write_bytes": 1,
+      "max_write_bytes": 1,
+      "backpressure_waits": 0,
+      "vt_snapshots": 2,
+      "accepted_bytes": 1,
+      "ready_frame_grid_confirmed": true,
+      "ready_ms": 46.399351,
+      "after_trigger_write_ready_ms": 46.392517,
+      "stored_bytes": 2738,
+      "stored_sha256": "20bcff3825dcba6114a09a7f0c38f6e8b6a3dd85a02e10be940e2b8418251f73"
+    }
+  ],
+  "checks": 31,
+  "passed_checks": [
+    "the owned account router keeps its credentials in a private ready record",
+    "the isolated account has the expected stable provider identity and handle",
+    "the real production account router is healthy",
+    "the actual paste workspace shares the source storage device",
+    "the account connection advertises its exact identity-scoped MCP resource",
+    "MCP 401 advertises protected-resource metadata",
+    "resource metadata binds the exact account endpoint and OAuth issuer",
+    "OAuth discovery advertises authorization-code PKCE S256",
+    "public MCP client registers through OAuth DCR",
+    "the account OAuth endpoint requires provider consent instead of a connection login code",
+    "the OAuth browser binding is Secure, HttpOnly and SameSite Lax",
+    "OAuth pages cannot be cached and bind same-origin form submission",
+    "real identity exchange validates provider PKCE and requires explicit consent",
+    "OAuth consent preserves the registered callback, state and issuer",
+    "the real OAuth endpoint issues an identity-scoped MCP access token",
+    "OAuth access expires in eight hours and supplies a refresh token",
+    "OAuth token responses cannot be cached",
+    "the account relay credential cannot authenticate as an MCP access token",
+    "the measured client is a real account client, not a preview",
+    "each sample retains the ordinary Next caller route",
+    "clipboard content is synthetic 2738-byte multiline UTF-8",
+    "the private frontend begins with no user requirements",
+    "exactly one Ctrl+V byte was written, with no extra timed input",
+    "the completed import preserves the ordinary input route",
+    "the complete draft matches the exact new reference in the timed frame",
+    "exactly one new reference preserves every original clipboard byte",
+    "the imported text and directory retain private permissions",
+    "the production adapter reads the synthetic text MIME exactly once",
+    "Ctrl+V does not create or send a user requirement",
+    "ctrl-v-multiline-2738: the physical VT frame contains no fixture credential",
+    "no coding harness or external model was invoked"
+  ],
+  "frames": [
+    "paste-ctrl-v-multiline-2738.json"
+  ],
+  "clipboard_provider": "private PATH fake wl-paste; no OS clipboard",
+  "helper_program_sha256": "bc9b3f87359ec3e02b95b9fb334c007735cb8e5df7a6d51bd9f4af99c80f3951",
+  "timing_contract": "one PTY Ctrl+V byte to physical complete reference; includes adapter and storage; no timed RPC/key; not OS clipboard performance",
+  "elapsed_seconds": 4.931
+}

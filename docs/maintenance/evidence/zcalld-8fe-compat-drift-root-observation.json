@@ -1,0 +1,45 @@
+{
+  "schema": "project-z.zcalld-8fe-compat-drift-observation.v1",
+  "observed_at_utc": "2026-11-21 00:33:20 UTC",
+  "source_publication": {
+    "head": "8fe9b42e8b25fc78328ac50e4bd2fc9b9faf438f",
+    "tree": "65c4d7a3ac4af29427510edbf1e407a5ef6f307d",
+    "parents": [
+      "4cc2fd1cfb6eb49dacc022af6c15cc0f7825e409",
+      "37c82ee7cec35594771a02869f7f72f12a3ace1d"
+    ],
+    "base": "37c82ee7cec35594771a02869f7f72f12a3ace1d",
+    "draft": true,
+    "mergeable": true
+  },
+  "actual_job": {
+    "job_id": "26c4545eae1eab8d27485f4a48077d3c-806",
+    "exit_code": 1,
+    "running": false,
+    "stdout_eof": true,
+    "stderr_eof": true,
+    "stdout": "{\"gate\": \"head\", \"exit_code\": 0, \"elapsed_seconds\": 0.002}\n{\"gate\": \"tree\", \"exit_code\": 0, \"elapsed_seconds\": 0.002}\n{\"gate\": \"clean-source\", \"exit_code\": 0, \"elapsed_seconds\": 0.007}\n{\"gate\": \"candidate-paths\", \"exit_code\": 0, \"elapsed_seconds\": 0.002}\n{\"gate\": \"compat-source\", \"exit_code\": 0, \"elapsed_seconds\": 0.002}\n{\"gate\": \"locked-metadata\", \"exit_code\": 0, \"elapsed_seconds\": 0.5}\n{\"gate\": \"fresh-zcall\", \"exit_code\": 0, \"elapsed_seconds\": 0.729}\n{\"gate\": \"fresh-zconv\", \"exit_code\": 0, \"elapsed_seconds\": 0.718}\n{\"gate\": \"fresh-zplugin\", \"exit_code\": 0, \"elapsed_seconds\": 0.66}\n{\"gate\": \"fresh-zsys\", \"exit_code\": 0, \"elapsed_seconds\": 0.638}\n{\"gate\": \"fresh-compat\", \"exit_code\": 0, \"elapsed_seconds\": 0.698}\n{\"status\": \"failed\", \"candidate\": \"8fe9b42e8b25fc78328ac50e4bd2fc9b9faf438f\", \"tree\": \"65c4d7a3ac4af29427510edbf1e407a5ef6f307d\", \"binary\": null, \"error\": \"\"}\n",
+    "stderr": ""
+  },
+  "compat_drift": {
+    "previous": "c521d1fb1ce8eac173ea2bb481816d3cd1df82d3",
+    "current": "56a15b330384531b3a6c444190f53b6d3720bd5e",
+    "status": "ahead",
+    "ahead": 1,
+    "behind": 0,
+    "files": [
+      {
+        "path": "README.md",
+        "sha": "434f9c1db660d254788731701280d723b67f1bb3",
+        "status": "modified",
+        "patch": "@@ -162,7 +162,8 @@ or major and dispatches the release workflow explicitly.\n x86_64/aarch64 packages with Go 1.26.8 and CGO disabled. Guard inference uses the\n CPU implementation. The local gate executes Linux helpers; cross compilation\n alone does not establish runtime coverage on Windows or macOS. Each archive\n-contains both helpers, host scripts, builtin provider modules/catalog, licenses,\n+contains all three helpers (`zcalld-pluginctl`, `zcalld-privacy`, and\n+`zcalld-claude-tui`), host scripts, builtin provider modules/catalog, licenses,\n and build metadata. Source and generated AUR recipes are separate assets;\n SHA256SUMS covers every archive. Source staging requires a clean, committed tree.\n "
+      }
+    ]
+  },
+  "scope": {
+    "source_guard_stopped_before_rust_tests_clippy_build_and_curl": true,
+    "existing_fixed_d531_results_not_promoted": true,
+    "minimal_successor_authorized": "Change only compat gitlink to the classified README-only current default head, retain fixed listener+37c source, verify fresh exact identity before the first product gate.",
+    "owner_cleanup_report": "Core reports scope inactive/dead, empty ControlGroup, owned3398363/3398364 gone, outerlock clear; separate raw cleanup receipt pending root copy."
+  }
+}

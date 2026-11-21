@@ -1,0 +1,38 @@
+{
+  "schema": "project-z.ssmcp-fc-new-tests-execution-scope.v1",
+  "source": "fc06728a36d0b4d2920e1e2bc29885721ced5780",
+  "path": "src/client/terminal/conversation/tests/paste_batch.rs",
+  "url": "https://github.com/LIghtJUNction/ssmcp/blob/fc06728a36d0b4d2920e1e2bc29885721ced5780/src/client/terminal/conversation/tests/paste_batch.rs",
+  "source_bytes": 8620,
+  "source_sha256": "68511f539518cd13a8067598cf660734eefed4436fbeeb24d579a0f9215ef6e9",
+  "git_blob_sha1": "7008d284bea2324a7e9699fd4993b00a2bedcc3b",
+  "test_functions": [
+    "bracketed_paste_work_tracks_read_spans_not_payload_bytes",
+    "plain_text_completion_work_is_linear_in_each_input_batch",
+    "batched_paste_preserves_split_unicode_navigation_and_literal_commands",
+    "batched_binary_paste_keeps_embedded_markers_opaque",
+    "oversized_literal_span_rejects_the_paste_without_changing_the_draft",
+    "coalesced_controls_refresh_suggestions_before_accepting_or_dismissing",
+    "carriage_return_executes_the_command_before_paste_and_tail_input"
+  ],
+  "function_count": 7,
+  "actual_build_scope": "build_only",
+  "actual_build_product_tests_executed": 0,
+  "actual_library_command": [
+    "cargo",
+    "test",
+    "--lib",
+    "--no-run",
+    "--offline",
+    "--locked",
+    "--jobs",
+    "1",
+    "--message-format=json"
+  ],
+  "actual_runtime_steps": [
+    "six-cases",
+    "ctrlv"
+  ],
+  "runtime_cargo_executed": false,
+  "conclusion": "Seven new Rust regression functions compiled by --no-run; this batch does not establish their execution pass. FixedFC six-case80 plusCtrlV31 fixture results remain separate. Final source acceptance must bind actual unit execution to its own source."
+}

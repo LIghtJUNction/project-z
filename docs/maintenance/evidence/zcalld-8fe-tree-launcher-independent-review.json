@@ -1,0 +1,187 @@
+{
+  "schema": 1,
+  "reviewed_at_utc": "2026-11-21 00:28:57 UTC",
+  "status": "read_only_tree_and_launcher_review_no_blocking_findings",
+  "source_tree": {
+    "source": "8fe9b42e8b25fc78328ac50e4bd2fc9b9faf438f",
+    "tree": "65c4d7a3ac4af29427510edbf1e407a5ef6f307d",
+    "parents": [
+      "4cc2fd1cfb6eb49dacc022af6c15cc0f7825e409",
+      "37c82ee7cec35594771a02869f7f72f12a3ace1d"
+    ],
+    "old_leaves": 219,
+    "new_leaves": 220,
+    "main_leaves": 217,
+    "old_candidate_leaves_preserved": 219,
+    "main_non_listener_leaves_preserved": 215,
+    "diff_from_4cc": [
+      "docs/RELEASE-0.4.4.md"
+    ],
+    "diff_from_37c": [
+      "src/curl.rs",
+      "src/listener.rs",
+      "src/listener/local.rs",
+      "src/listener/local/generation.rs",
+      "src/main.rs"
+    ],
+    "doc": {
+      "sha": "823b0095740322e27bed6c09083a9020824c671f",
+      "mode": "100644",
+      "type": "blob"
+    },
+    "removed_old_leaves": [],
+    "listener_blobs": [
+      {
+        "path": "src/curl.rs",
+        "old": {
+          "sha": "9365406b23b9744bba9b21dae999e82d19683357",
+          "mode": "100644",
+          "type": "blob"
+        },
+        "new": {
+          "sha": "9365406b23b9744bba9b21dae999e82d19683357",
+          "mode": "100644",
+          "type": "blob"
+        },
+        "equal": true
+      },
+      {
+        "path": "src/listener.rs",
+        "old": {
+          "sha": "8451bacea5c3c297ee49819fefbf505fc45fdfc8",
+          "mode": "100644",
+          "type": "blob"
+        },
+        "new": {
+          "sha": "8451bacea5c3c297ee49819fefbf505fc45fdfc8",
+          "mode": "100644",
+          "type": "blob"
+        },
+        "equal": true
+      },
+      {
+        "path": "src/listener/local.rs",
+        "old": {
+          "sha": "3a88768ec95e5b0dbad07db72d65c4e7d9ba97c5",
+          "mode": "100644",
+          "type": "blob"
+        },
+        "new": {
+          "sha": "3a88768ec95e5b0dbad07db72d65c4e7d9ba97c5",
+          "mode": "100644",
+          "type": "blob"
+        },
+        "equal": true
+      },
+      {
+        "path": "src/listener/local/generation.rs",
+        "old": {
+          "sha": "80ee8557e5e7291794e953bf695ddc884b4b21ca",
+          "mode": "100644",
+          "type": "blob"
+        },
+        "new": {
+          "sha": "80ee8557e5e7291794e953bf695ddc884b4b21ca",
+          "mode": "100644",
+          "type": "blob"
+        },
+        "equal": true
+      },
+      {
+        "path": "src/main.rs",
+        "old": {
+          "sha": "efae67a5b9ee61bfeb36052aa286b63d9201db64",
+          "mode": "100644",
+          "type": "blob"
+        },
+        "new": {
+          "sha": "efae67a5b9ee61bfeb36052aa286b63d9201db64",
+          "mode": "100644",
+          "type": "blob"
+        },
+        "equal": true
+      }
+    ],
+    "all_gitlinks_unchanged": true
+  },
+  "launcher_parameters": {
+    "six_exact_parameter_substitutions_only": true,
+    "wrapper_bytes_unchanged": true,
+    "request_only_identity_path_title_changes": true,
+    "gate_operations_and_assertions_unchanged": true,
+    "outer_lock_and_resources_unchanged": true,
+    "new_driver_sha256": "f9b12ce65ba34267013f803f80679e5bae37624fb2c8aa842abffe58dbd5b2f6",
+    "new_wrapper_sha256": "a9be4be225cfab383d84273889332e0d600882127304d6f3f98d68ba0187fb37"
+  },
+  "reviewed_files": [
+    {
+      "name": "validate_8fe9_candidate.py",
+      "bytes": 14823,
+      "sha256": "f9b12ce65ba34267013f803f80679e5bae37624fb2c8aa842abffe58dbd5b2f6"
+    },
+    {
+      "name": "workspace-rustc-8fe9.py",
+      "bytes": 590,
+      "sha256": "a9be4be225cfab383d84273889332e0d600882127304d6f3f98d68ba0187fb37"
+    },
+    {
+      "name": "validation-request-8fe9.json",
+      "bytes": 624,
+      "sha256": "e587ab99cbcbf76478451222e13e090328f7b9fb41774371bf302a5dde6833cf"
+    },
+    {
+      "name": "validation-plan-8fe9.json",
+      "bytes": 3100,
+      "sha256": "2e439233a4e28d99ec99f053d62b7f7234f0750772cec68bcb5b3ae1335757af"
+    },
+    {
+      "name": "validation-driver-4cc-to-8fe9.diff",
+      "bytes": 2555,
+      "sha256": "78aa7d1a96d19f5b8473dad5f79f5d7444a6556382ea3f688ff656d92f48de16"
+    },
+    {
+      "name": "validation-driver-8fe9-parameters.json",
+      "bytes": 1617,
+      "sha256": "14ef62574bcf76e9d75900eb49edad2dbc437f52d92b1bd62cd10e359221eb45"
+    },
+    {
+      "name": "preparation-37c-summary.json",
+      "bytes": 2109,
+      "sha256": "92b1199a4f5ef17d031516657cff2245113ce5d2b3b3319dc0dae34e5a16a057"
+    }
+  ],
+  "conclusions": [
+    "8fe is the exact two-parent documentation successor of4cc and main37; every old candidate leaf is retained.",
+    "Against main37, the only source changes remain the five already reviewed listener Rust blobs. Current manifests, Cargo.lock, helpers, workflows and all seven gitlinks are preserved.",
+    "New launcher is byte-for-byte the reviewed4cc launcher after six explicit identity/path/Clippy-metadata substitutions. No gate operation, assertion, timeout, resource limit, outer-lock policy or cleanup behavior changed.",
+    "Wrapper contents are identical; the new path gives this candidate its own workspace compiler identity without changing global compiler configuration.",
+    "Request changes only the scope identity, launcher path and title. It retains one nonblocking outer-lock attempt, bounded scope and jobs1."
+  ],
+  "findings": [],
+  "execution_boundary": {
+    "reviewer_ran_launcher": false,
+    "reviewer_ran_cargo_or_product_tests": false,
+    "reviewer_modified_source_or_harness": false,
+    "reviewer_modified_refs": false,
+    "new_runtime_result_claimed": false,
+    "old4cc_gate_was_not_run_per_owner": true,
+    "final_p1_and_final44": "pending; not covered by this review"
+  },
+  "owner_next_steps": [
+    "Perform fresh main/candidate ref checks and the authorized expected4cc compare-and-swap publication; keep PR1 draft and root as final merge owner.",
+    "Read back clean native8fe/tree65c and verify the two helpers in the new37c work directory are executable and match the reviewed hashes; the earlier mode receipt covered the old0a directory.",
+    "When the coordinated window is available, make the single planned nonblocking gate attempt. Recover its original job rather than starting duplicates.",
+    "After execution, inspect actual commands/artifacts/results and independently read job EOF, scope/owned-process exit and outer-lock release. Do not add the seven listener tests to the workspace count, inherit old179 or equate8curl with finalP1."
+  ],
+  "prior_launcher_review": {
+    "path": "pr-cleanup-zcalld-4cc-launcher-independent-review.json",
+    "bytes": 6119,
+    "sha256": "ebb7a6dafbd862be2ac6a25360ec59cffd899e591a519421f2aaed3fb5ae859d"
+  },
+  "sources": [
+    "https://api.github.com/repos/LIghtJUNction/zcalld/commits/8fe9b42e8b25fc78328ac50e4bd2fc9b9faf438f",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/65c4d7a3ac4af29427510edbf1e407a5ef6f307d?recursive=1",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/262cb876bcf4f83ef2c66912863629f0401db89d?recursive=1",
+    "https://api.github.com/repos/LIghtJUNction/zcalld/git/trees/2e7f67ab489b9bd81221db3e9963068288446125?recursive=1"
+  ]
+}
