@@ -101,3 +101,12 @@ requires = ["zuse"]
 
 [repositories.zmem]
 role = "application"
+
+# Authoritative product versions for non-Cargo repositories.
+[scheduled.version_manifests]
+oh-my-ztty = "VERSION"
+zcall-omarchy = "VERSION"
+zcalld-compat = "VERSION"
+zshard = "VERSION"
+zdistro = "pyproject.toml"
+zuse-std = "zuse.json"
