@@ -2,3 +2,7 @@
 /_validation/
 __pycache__/
 *.pyc
+/.cache/
+/.docs-build-*/
+/.docs-previous-*/
+/preview/

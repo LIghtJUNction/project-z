@@ -1,0 +1,83 @@
+{
+  "accepted_at": "2026-11-22T06:35:00+08:00",
+  "portal": "https://lightjunction.github.io/project-z-site/",
+  "source_baseline_commit": "4811ec5b8f7af96ac3c8a6879a2ead49b30f6dea",
+  "initial_deployment": {
+    "commit": "ef59ec90a6e8d7f6221bba6a867efcef44a546c1",
+    "github_pages_status": "built"
+  },
+  "coverage": {
+    "projects": 49,
+    "registered_projects": 47,
+    "additional_public_projects": [
+      "zchat",
+      "zobs"
+    ],
+    "documentation_pages": 259,
+    "html_pages": 261,
+    "local_links_and_fragments": 40180,
+    "excluded_projects": []
+  },
+  "static_validation": {
+    "command": "python site/scripts/check.py",
+    "result": "passed",
+    "javascript_syntax": "node --check site/assets/docs.js: passed",
+    "source_integrity": "259 stored Markdown documents match their immutable public source bytes",
+    "source_limitations": "Independent review retained prerequisites, platform limits and experimental status in nine representative project overviews."
+  },
+  "browser_acceptance": {
+    "environment": "Cloud Chromium",
+    "viewport_widths_css_px": [
+      1363,
+      340
+    ],
+    "narrow_view_method": "Browser page zoom exercised responsive breakpoints. This was not a physical mobile-device test.",
+    "passed": [
+      "Homepage renders 49 projects and 259 documents",
+      "Project text filtering and empty state",
+      "Category filtering: five protocol projects",
+      "Global full-text search, including Chinese text",
+      "Ctrl+K opens search; arrows and Enter open a nested chapter; Escape closes search",
+      "Light/dark themes and preference across page navigation",
+      "Code copy matches the source code text in the browser clipboard",
+      "Desktop project switcher lists 49 projects and navigates to ztty",
+      "Chapter anchors and source links remain present",
+      "Narrow navigation expands, opens a chapter and closes",
+      "Narrow page outline navigates to a section",
+      "No document-width horizontal overflow on sampled homepage and zuse pages"
+    ],
+    "sampled_urls": [
+      "https://lightjunction.github.io/project-z-site/",
+      "https://lightjunction.github.io/project-z-site/ztty/",
+      "https://lightjunction.github.io/project-z-site/zuse/",
+      "https://lightjunction.github.io/project-z-site/zuse/session-protocol/"
+    ]
+  },
+  "acceptance_fixes": [
+    {
+      "issue": "A SKILL.md YAML description was incorrectly treated as a Setext title",
+      "fix": "Exclude frontmatter from heading extraction; use metadata title/name as fallback",
+      "validation": "Regression assertion and all 259 page titles recomputed; exactly one corrected title"
+    },
+    {
+      "issue": "Confirming an IME candidate with Enter could activate a search result",
+      "fix": "Ignore search navigation keys while isComposing or keyCode 229",
+      "validation": "Actual docs.js handler passed six Node VM cases: composing Enter/Down, keyCode229 Enter/Down, ordinary Enter/Down"
+    }
+  ],
+  "source_sha256": {
+    "scripts/build.py": "03acdb581e2ca575a54ad0f6135d372604577e4f779112c2412113419461014b",
+    "scripts/collect_docs.py": "3d86c8a91c13903a7fdc875b3f6c23037b54e126d287bd32043c2c0584ffc936",
+    "scripts/check.py": "d968de3aee56e897d02750af0729519ab179b6e4e2afa48a5256c667cd85bc79",
+    "assets/docs.js": "fa9c1b17a9d7f9838bbbdfdde2f5589f4b350f64406fe111495096db0737f0bd",
+    "assets/docs.css": "92f1b41cdbc360c19b88dc9588e5c578cc833ab333c14e9311f7a1c32db13aa9",
+    "templates/docs.html": "ef153155e371b3e6c094ee4563177239d2a8a75071b59a79a3ad2e271420d624",
+    "content-manifest.json": "0bd938c91e27b5906f3c05127c308f951ef01be4819a88a61625b6a9a80a945c",
+    "curation.json": "73db2c2b3019d6e7dad9d5564fed21613dbedfdf61ae2976e8bbde0ccee52345"
+  },
+  "notes": [
+    "Detailed documentation retains its original language; all 49 project introductions are curated in Chinese.",
+    "Each project includes up to 12 selected public source documents; additional source links remain available.",
+    "Figures link to their source. No generated screenshots or binary assets were added to Git."
+  ]
+}

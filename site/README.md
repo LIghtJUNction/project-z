@@ -1,68 +1,61 @@
-# Project Z public site
+# Project Z documentation
 
-This directory builds the Project Z introduction page with plain HTML, CSS and JavaScript. Python 3.11 or newer is used only to prepare and check the static files. The deployed page needs no package manager, framework, font service, analytics or runtime API request.
+This site gives every registered Project Z repository a dedicated documentation address, with the warm Ink design extracted from [oh-my-ztty](https://lightjunction.github.io/oh-my-ztty/). The public portal is [lightjunction.github.io/project-z-site](https://lightjunction.github.io/project-z-site/).
+
+The pages contain complete, pre-rendered documentation. JavaScript adds project filtering, full-text search, theme switching and code copying. Navigation and reading work without it. Styles, scripts and the search index are served locally; no analytics, external fonts or application API is required.
 
 ## Build and preview
 
+Use Python 3.11 or later. Install the same pinned Markdown renderer used by oh-my-ztty:
+
 ```sh
-python3 site/scripts/check.py
-python3 site/scripts/build.py
+python3 -m venv site/.cache/venv
+site/.cache/venv/bin/python -m pip install --require-hashes -r site/requirements.txt
+site/.cache/venv/bin/python site/scripts/check.py
+site/.cache/venv/bin/python site/scripts/build.py
 python3 -m http.server 8000 --bind 127.0.0.1 --directory site/dist
 ```
 
-Open the localhost address in a separate browser profile. Search and categories progressively enhance an already complete HTML list. With JavaScript disabled or unavailable, every project and its source/documentation links remain present.
+Open `http://127.0.0.1:8000/`. A project overview lives at `/<project>/`; its guides live at `/<project>/<chapter>/`. `--base-url` changes canonical and sitemap URLs when hosting under another prefix.
 
-## Public data and sources
+## Source documents and introductions
 
-`curation.json` contains the reviewed project IDs, categories and short descriptions. `projects.json` contains only confirmed public repository metadata, public README hashes, source-version references and verified crates.io versions/checksums. Source versions are labelled separately from published crate versions. The page counts are generated from those records.
+`content-manifest.json` records each public repository, exact default-branch commit, source path and local Markdown file. `content/projects/` contains the source documents. Chinese READMEs are preferred when available. The collector follows existing links to installation, configuration, API and other user guides, with up to twelve pages per project; it excludes operational reports, internal records and test evidence. Links to further source files remain available in the rendered document.
 
-Descriptions summarize the corresponding public README or published crate description. They do not claim performance rankings or completed platform validation. Retired UI package entries are excluded.
+The project scope comes from the aggregate `catalog.json`. The explicitly listed additional projects, zchat and zobs, identify themselves as Project Z in their public READMEs. Repository names alone do not establish membership.
 
-Refresh reviewed entries with:
-
-```sh
-python3 site/scripts/refresh_public.py
-python3 site/scripts/refresh_public.py --only zrc zgpui
-python3 site/scripts/refresh_public.py --verify-only
-```
-
-The refresh checks public visibility before fetching project content and matches Cargo package ownership to the public repository. It preserves the existing snapshot if a request or validation fails. Rate limits are errors, not evidence that a project is private or unpublished. An optional ephemeral `GH_TOKEN` or `GITHUB_TOKEN` is sent only to the official GitHub API and is never copied into generated data.
-
-## Deployment boundary
-
-The build reads no aggregate catalog, submodule or application configuration. It writes exactly six files:
-
-- `index.html`
-- `style.css`
-- `app.js`
-- `favicon.svg`
-- `projects.json`
-- `.nojekyll`
-
-Only `site/dist` is a deployment artifact. The builder rejects extra snapshot fields, nonpublic repository records, unreviewed project IDs, foreign documentation/crate links and output directories containing unrelated files. It also rejects symlinked build inputs.
-
-The manual build workflow verifies current public visibility and the exact published crate versions, then exports only this directory as the `project-z-public-site` artifact. It does not enable Pages on the private aggregate repository, change repository visibility or initialize submodules.
-
-The deployed site uses the separate public repository [LIghtJUNction/project-z-site](https://github.com/LIghtJUNction/project-z-site). Its Pages source is the root of the `main` branch. Publish only the six generated files and the public repository's short README; verify their hashes against `site/evidence/bundle-manifest.json` before pushing. All asset paths work under its `/project-z-site/` prefix. Do not copy the aggregate checkout, Git history, catalog or local configuration into that repository.
-
-The private repository's current plan does not support hosting Pages, as confirmed by the Pages API. The public site is therefore published independently while this repository retains its existing visibility. GitHub documents this plan boundary in [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site).
-
-## Local review
-
-With Node.js 22 or newer and Chromium already installed, run:
+Refresh public documents in the development workspace:
 
 ```sh
-node site/scripts/check_browser.mjs
+python3 site/scripts/collect_docs.py --inventory
+python3 site/scripts/collect_docs.py
+python3 site/scripts/collect_docs.py --only ztty zuse
 ```
 
-Set `CHROMIUM` to an alternate executable path when needed. Screenshots and the acceptance report are written to the ignored `site/_validation` directory. The browser uses a fresh temporary profile and a loopback-only server, both closed after validation.
+The collector uses anonymous public GitHub metadata and immutable source URLs, with a local ignored download cache. An HTTP failure does not establish that a repository is private. A failed refresh returns an error and preserves the previous complete project snapshot.
 
-`site/scripts/check.py` verifies the output boundary, pre-rendered fallback, escaping and rejection of private/unreviewed data. Browser acceptance uses an isolated, unsigned-in Chromium profile and checks desktop/mobile layout, search, category selection, keyboard access, empty results and the JavaScript-disabled view.
+`curation.json` supplies the reviewed Chinese introductions and six browsing categories. New projects must be covered there before a build succeeds. Introductions describe observable behavior and retain the distinction between currently implemented features and plans. Commands, prerequisites and limitations remain in their original source context.
 
-The export action interfaces are documented in the official [checkout v4](https://github.com/actions/checkout/tree/v4) and [upload-pages-artifact v3](https://github.com/actions/upload-pages-artifact/tree/v3) repositories. Ordinary source pushes do not dispatch this export workflow. A reviewed push to the public website repository triggers its Pages deployment.
+## Rendering and checks
 
-## Visual reference
+The renderer uses CommonMark, tables and strikethrough. It escapes code, strips active content and event attributes from source HTML, gives headings unique anchors and rewrites collected Markdown links to local pages. Other source links point at the recorded commit. Source figures remain links to their originals, keeping the static documentation independent of external image services.
 
-The warm Ink palette, restrained borders and z_ family wordmark follow the public [oh-my-ztty website](https://lightjunction.github.io/oh-my-ztty/). The page starts in warm dark mode and offers a warm light theme; the selection stays in local browser storage. Reference sources are [styles](https://github.com/LIghtJUNction/oh-my-ztty/blob/6d95c7eaa1a4ef27df2ae246edd7bddde5f3b31b/site/style.css), [wordmark/template](https://github.com/LIghtJUNction/oh-my-ztty/blob/6d95c7eaa1a4ef27df2ae246edd7bddde5f3b31b/site/template.html) and [favicon](https://github.com/LIghtJUNction/oh-my-ztty/blob/6d95c7eaa1a4ef27df2ae246edd7bddde5f3b31b/site/favicon.svg). The catalog layout is specific to this page.
+The build checks every local page, asset and fragment before replacing the previous output. `check.py` also verifies registered-project coverage, search-route completeness, unsafe HTML handling, literal code, table wrappers, nested links and duplicate headings. A failed build leaves the previous complete site in place.
 
-The saved [2026-11-20 validation record](VALIDATION.md) includes the before/after screenshots, browser checks and hashes of the six-file bundle.
+Browser acceptance covers the catalog, category and text filtering, global search and empty results, code copying, keyboard access, dark/light theme persistence, project switching and mobile navigation. Review representative short and long pages at desktop and narrow widths. Generated screenshots belong in ignored `site/_validation/`, never in source history.
+
+The [2026-11-22 acceptance record](evidence/documentation-20261122.json) records the 49-project coverage, source hashes, static checks, observed browser interactions and the limits of the narrow-screen check.
+
+## Publish
+
+The source and build tools live in `LIghtJUNction/project-z`. The generated site is published from `LIghtJUNction/project-z-site`, whose GitHub Pages source is the root of `main`.
+
+Only copy the built `site/dist/` contents into the public website checkout, preserving its Git metadata and README. Do not copy the source checkout, collector cache, configuration files or validation screenshots. Review the exact generated paths before committing. A push to the public website repository runs its Pages deployment; check the live homepage and representative nested documentation URLs after it completes.
+
+The manually invoked source-repository workflow installs the pinned renderer, checks the stored public documentation snapshot and exports the static bundle. It does not alter source dependencies or repository visibility.
+
+## Design source
+
+The design comes from oh-my-ztty commit `69771be7940818548d851dc1038424ac2c614638`: warm dark and light palettes, system typography, the `z_` wordmark, a three-column reading layout, restrained separators and responsive native navigation. It is also available as the reusable **Oh My Ztty 文档风格** (`oh-my-ztty-docs`) skill. The portal adds a project directory and cross-project search while using those same tokens and layout rules.
+
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for design attribution. Each source project retains its own license, linked from its documentation.

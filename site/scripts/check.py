@@ -1,66 +1,124 @@
 #!/usr/bin/env python3
-"""Check the deployment allowlist, public-data boundary and rendered fallback."""
-import copy
+"""Check documentation coverage, safe rendering and the complete static build."""
+
+from __future__ import annotations
 import json
 from pathlib import Path
 import tempfile
-
+from unittest.mock import patch
 import build
+from collect_docs import title_from
 
 
-def rejected(data, curation):
-    try:
-        build.validate(data, curation)
-    except ValueError:
-        return
-    raise AssertionError("unreviewed public data was accepted")
+def rendering_regressions():
+    assert title_from(
+        b"---\nname: zuse-skill-creator\ndescription: A long description.\n---\n\n1. A step.\n",
+        "skills/zuse-skill-creator/SKILL.md",
+    ) == "zuse-skill-creator", "Frontmatter must not become a document heading"
+    project = {
+        "id": "ztest",
+        "repository": "https://github.com/example/ztest",
+        "branch": "main",
+        "commit": "a" * 40,
+        "summary": "Test project",
+    }
+    page = {
+        "slug": "guide",
+        "path": "docs/guide.md",
+        "file": "fixture.md",
+        "title": "Guide",
+    }
+    target = {"slug": "", "path": "README.md"}
+    by_source = {("ztest", "README.md"): target}
+    by_repo = {"example/ztest": project}
+    source = """# Guide
+
+[Overview](../README.md#start)
+
+<script>alert("unsafe")</script>
+
+<a href="javascript:alert(1)" onclick="bad()">unsafe link</a>
+
+<a id="manual-anchor"></a>
+
+## Repeated
+
+## Repeated
+
+```sh
+printf '<script>literal</script><h1>literal heading</h1>'
+```
+
+| Key | Value |
+| --- | --- |
+| safe | text |
+"""
+    with patch.object(build, "read_regular", return_value=source):
+        html, toc, text = build.render_markdown(
+            build.make_markdown(), project, page, by_source, by_repo
+        )
+    assert 'href="../../ztest/#start"' in html, "Nested Markdown link did not resolve"
+    assert (
+        "<script>" not in html and "onclick=" not in html and "javascript:" not in html
+    ), "Raw HTML bypassed safe rendering"
+    assert (
+        "&lt;script&gt;literal&lt;/script&gt;&lt;h1&gt;literal heading&lt;/h1&gt;"
+        in html
+    ), "Code text must remain literal"
+    assert (
+        'id="repeated"' in html and 'id="repeated-1"' in html
+    ), "Repeated headings need unique anchors"
+    assert (
+        'class="table-wrap"' in html and 'data-copy="code-1"' in html
+    ), "Table or code interactions lost their markup"
+    assert (
+        'href="#repeated-1"' in toc and "printf" in text
+    ), "Search or outline lost content"
+    assert (
+        build.rewrite_url("mailto:dev@example.com", project, page, by_source, by_repo)
+        == "mailto:dev@example.com"
+    )
+    assert (
+        build.rewrite_url(
+            "https://github.com/example/ztest", project, page, by_source, by_repo
+        )
+        == "../../ztest/"
+    )
+    assert (
+        build.rewrite_url("other.md", project, page, by_source, by_repo)
+        == project["repository"] + "/blob/" + project["commit"] + "/docs/other.md"
+    )
 
 
-def main():
-    data = json.loads((build.SITE / "projects.json").read_text())
-    curation = json.loads((build.SITE / "curation.json").read_text())
-    with tempfile.TemporaryDirectory(prefix="project-z-page-check-") as temporary:
-        output = Path(temporary) / "site"
-        result = build.build(output)
-        assert {path.name for path in output.iterdir()} == build.OUTPUT_FILES
-        assert all(path.is_file() and not path.is_symlink() for path in output.iterdir())
-        page = (output / "index.html").read_text()
-        assert page.count('<li data-project=') == len(data["projects"])
-        assert "project-controls\" hidden" in page
-        assert '<ul id="project-list"' in page
-        assert not any(forbidden in page for forbidden in ("catalog.json", "project-z.toml", "zui-native", "/zui/"))
-        # An accidental output path must not overwrite unrelated work.
-        keep = output / "do-not-replace"
-        keep.write_text("private")
-        try:
-            build.build(output)
-        except ValueError:
-            pass
-        else:
-            raise AssertionError("an output containing unrelated files was accepted")
-        assert keep.read_text() == "private"
-    private = copy.deepcopy(data)
-    private["projects"][0]["repository"]["visibility"] = "private"
-    rejected(private, curation)
-    extra = copy.deepcopy(data)
-    extra["private_catalog"] = {"not_for_publication": True}
-    rejected(extra, curation)
-    external = copy.deepcopy(data)
-    external["projects"][0]["documentation"]["url"] = "https://example.com/unverified"
-    rejected(external, curation)
-    wrong_crate = copy.deepcopy(data)
-    next(item for item in wrong_crate["projects"] if item["crate"])["crate"]["repository"] = "https://github.com/other/private"
-    rejected(wrong_crate, curation)
-    # Public descriptions are treated as text, even if they contain markup.
-    escaped, edited = copy.deepcopy(data), copy.deepcopy(curation)
-    escaped["projects"][0]["summary"] = '<script>alert("test")</script>'
-    edited["projects"][0]["summary"] = escaped["projects"][0]["summary"]
-    build.validate(escaped, edited)
-    rendered = build.render(escaped)
-    assert '<script>alert("test")</script>' not in rendered
-    assert "&lt;script&gt;" in rendered
-    print(json.dumps({"checks": "passed", **result}, ensure_ascii=False, indent=2))
+def check():
+    rendering_regressions()
+    data, _, projects = build.load_sources()
+    canonical = json.loads((build.SITE.parent / "catalog.json").read_text())
+    expected = {p["name"] for p in canonical["repositories"]}
+    covered = {p["id"] for p in projects}
+    excluded = {p["id"] for p in data.get("excluded", [])}
+    missing = expected - covered - excluded
+    assert not missing, f"Missing registered projects: {sorted(missing)}"
+    with tempfile.TemporaryDirectory(prefix="project-z-docs-check-") as directory:
+        result = build.build(Path(directory) / "site")
+        output = Path(result["output"])
+        index = json.loads((output / "search-index.json").read_text())
+        assert len(index) == sum(len(p["pages"]) for p in projects)
+        assert len({entry["url"] for entry in index}) == len(
+            index
+        ), "Duplicate search routes"
+        assert all((output / entry["url"] / "index.html").is_file() for entry in index)
+        assert not any(
+            p.suffix in {".md", ".py", ".toml", ".log", ".env"}
+            for p in output.rglob("*")
+            if p.is_file()
+        ), "Source or runtime data leaked into public bundle"
+        result.pop("output")
+        result["registered_projects"] = len(expected)
+        result["additional_projects"] = sorted(covered - expected)
+        result["rendering_regressions"] = "passed"
+        return result
 
 
 if __name__ == "__main__":
-    main()
+    print(json.dumps(check(), ensure_ascii=False, indent=2))

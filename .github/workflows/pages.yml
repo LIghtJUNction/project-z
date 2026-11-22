@@ -1,4 +1,4 @@
-name: Build Project Z public site bundle
+name: Build Project Z documentation bundle
 on:
   workflow_dispatch:
 permissions:
@@ -14,14 +14,14 @@ jobs:
         with:
           submodules: false
           persist-credentials: false
-      - name: Verify public repository and crate sources
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: python3 site/scripts/refresh_public.py --verify-only
-      - name: Check and build the standalone site
+      - name: Install pinned documentation renderer
         run: |
-          python3 site/scripts/check.py
-          python3 site/scripts/build.py
+          python3 -m venv site/.cache/venv
+          site/.cache/venv/bin/python -m pip install --disable-pip-version-check --require-hashes -r site/requirements.txt
+      - name: Check and build the complete documentation site
+        run: |
+          site/.cache/venv/bin/python site/scripts/check.py
+          site/.cache/venv/bin/python site/scripts/build.py
       - uses: actions/upload-pages-artifact@v3
         with:
           name: project-z-public-site

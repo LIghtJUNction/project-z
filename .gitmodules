@@ -133,6 +133,12 @@
 [submodule "zuse-skills"]
 	path = zuse-skills
 	url = https://github.com/LIghtJUNction/zuse-skills.git
+[submodule "zuse-std"]
+	path = zuse-std
+	url = https://github.com/LIghtJUNction/zuse-std.git
+[submodule "zmem"]
+	path = zmem
+	url = https://github.com/LIghtJUNction/zmem.git
 [submodule "zchat"]
 	path = zchat
 	url = https://github.com/LIghtJUNction/zchat.git

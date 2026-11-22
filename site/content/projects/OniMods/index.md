@@ -1,0 +1,244 @@
+# OniMods
+
+[English](README.md)
+
+<p align="center">
+  <a href="mods/OniMcp/README.md"><img alt="ONI MCP Server — 缺氧 AI 殖民地控制服务" src="mods/OniMcp/preview.png" width="47%" /></a>
+  <a href="mods/CycleTrim/README.md"><img alt="CycleTrim — Rust 仿真内核 + GPU 算子 + 一格多物实验" src="mods/CycleTrim/preview.gif" width="47%" /></a>
+</p>
+
+<p align="center">
+  <a href="mods/OniOnline/README.md"><img alt="OniOnline — 联机框架" src="mods/OniOnline/preview.png" width="47%" /></a>
+  <a href="mods/Jlib/README.md"><img alt="Jlib — 共享前置库" src="https://raw.githubusercontent.com/LIghtJUNction/Jlib/e72c45633a05a54187a3ee1933243a46795932ab/Jlib/preview.png" width="47%" /></a>
+</p>
+
+<div align="center">
+  <p>
+    <a href="Cargo.toml"><img alt="Rust" src="https://img.shields.io/badge/Rust-2024-f46623?logo=rust&logoColor=white" /></a>
+    <a href="LICENSE"><img alt="AUL License" src="https://img.shields.io/badge/License-AUL--draft-green.svg" /></a>
+    <a href="mods/OniMcp/README.md"><img alt="ONI MCP docs" src="https://img.shields.io/badge/ONI%20MCP-docs-2f80ed" /></a>
+    <a href="docs/mcp-tools-reference.md"><img alt="Tools reference" src="https://img.shields.io/badge/Tools-reference-8b5cf6" /></a>
+  </p>
+</div>
+
+<p align="center">
+  <a href="#效果展示">效果展示</a>
+  ·
+  <a href="#快速入口">快速入口</a>
+  · <a href="#oni-mcp-server">ONI MCP</a>
+  · <a href="#onim">onim</a>
+</p>
+
+缺氧（Oxygen Not Included）Mod 工程仓库。开发、测试、发布就这三步：`onim dev`、`onim build`、`onim publish`。项目地址：[OniMods](https://github.com/LIghtJUNction/OniMods)。
+
+- `onim`：本仓库内置的缺氧 Mod 开发 CLI，用于初始化、构建、安装、卸载和发布 Mod。
+- `OniMcp`：让 AI 助手通过 MCP 读取并操作缺氧殖民地。
+- `CycleTrim`：高风险实验性性能模组。启动即用 Rust 仿真内核 OniSim 接管官方 SimDLL；热扩散和符合条件的气体/液体区域已在时间步内走 Vulkan（wgpu）GPU 算子，并实验一格多物。先加速，再兼容。
+- `OniOnline`：联机框架。安装后默认是大厅和聊天，其他玩法由单独模组注册。
+- `Jlib`：OniMcp 和 CycleTrim 共用的 PLib 兼容前置库（[创意工坊 3835083839](https://steamcommunity.com/sharedfiles/filedetails/?id=3835083839)）。游戏里要单独启用，并排在依赖它的模组前面。
+- `OniModTemplate`：用 `onim init` 开新模组时的目录模板。
+- `OniHarness`：缺氧 Mod 测试工具（子模块），支持任意形状物理地图、建筑模拟、Mod 安装测试与无窗口实机启动。
+
+> **兼容性警告**：`OniMcp` 在 `1.0.0` 之前 API 仍可能发生不兼容变更。二创、插件、脚本或第三方客户端请锁定具体版本，并以运行时 `tools_manifest` / `oni://tools/manifest` 为准做兼容适配。
+
+> **开源激励计划**：可购买 token，也可以通过参与开源项目贡献赚取 token。服务地址：[api.lmm.best](https://api.lmm.best)；[项目源码](https://github.com/TokenNotIncluded/api.lmm.best)由 [TokenNotIncluded](https://github.com/TokenNotIncluded) 组织托管，欢迎使用与贡献。
+
+## 效果展示
+
+> **测试来源：以下截图取自其他人测试 OniMcp 的视频，并非本项目作者本人测试。**
+
+[我把《缺氧》交给 GPT，这三个小人能活下来吗？-哔哩哔哩](https://b23.tv/isOd72t)
+
+让 GPT 通过 OniMcp 操作缺氧殖民地，看看它如何建造、种植，以及过程中遇到的问题。以下截图均取自视频，展示这次实验的实际过程。
+
+[![视频 03:05：GPT 操作后的殖民地全景](docs/images/gpt-oni-demo/colony-overview.jpg)](https://b23.tv/isOd72t)
+
+| 读取状态、下达操作 · 00:18 | 建造与挖掘过程 · 02:10 |
+| --- | --- |
+| ![视频中的 OniMcp 读取状态与下达操作示意](docs/images/gpt-oni-demo/mcp-workflow.jpg) | ![视频中的殖民地建造与挖掘任务](docs/images/gpt-oni-demo/colony-building.jpg) |
+
+## 快速入口
+
+| 项目 | 路径 | 说明 |
+|------|------|------|
+| `onim` | [src/](src/) | Rust 编写的 Mod 开发工具链 |
+| `OniMcp` | [mods/OniMcp/](mods/OniMcp/) | ONI MCP Server Mod |
+| `CycleTrim` | [mods/CycleTrim/](mods/CycleTrim/) | 高风险实验。Rust 仿真内核 + GPU 热扩散/气液区域算子 + 一格多物，先加速再兼容；进度见 [OniSim/gpu](mods/CycleTrim/OniSim/gpu/README.md) |
+| `OniOnline` | [mods/OniOnline/](mods/OniOnline/) | 联机框架，内置大厅和聊天；其他玩法由单独模组提供 |
+| `Jlib` | [mods/Jlib/](mods/Jlib/) | 可独立安装的 PLib 兼容共享前置库 |
+| `OniModTemplate` | [mods/OniModTemplate/](mods/OniModTemplate/) | `onim init` 使用的新模组目录模板 |
+| `OniHarness` | [tools/OniHarness/](tools/OniHarness/) · [说明](docs/oniharness.md) | Mod 测试、物理地图与建筑模拟、无窗口实机启动 |
+| `oni-skills` *(可选)* | [oni-skills/](oni-skills/) · [GitHub](https://github.com/LIghtJUNction/oni-skills) | 缺氧高阶游戏攻略与工程模块库（社区共建、开放完善） |
+| 架构与核心原理 | [docs/architecture-and-principles.md](docs/architecture-and-principles.md) | OniMcp 与 CycleTrim 的底层实现机制、世界文本化与性能优化设计 |
+| `OniMcp` 中文文档 | [mods/OniMcp/README.md](mods/OniMcp/README.md) | 安装、连接和功能说明 |
+| `OniMcp` English docs | [mods/OniMcp/README_EN.md](mods/OniMcp/README_EN.md) | English installation and usage guide |
+| 项目缘起与开源激励 | [写给所有对这个项目感兴趣的人](docs/open-source-letter-zh.md) | 了解 OniMods 的项目缘起与开源激励计划 |
+
+## ONI MCP Server
+
+[ONI MCP Server 文档](mods/OniMcp/README.md)
+
+支持 OniMcp 的开发与测试：[捐赠](https://donate.lmm.best/?project=onimcp)。
+
+[![OniMcp 捐赠进度](https://donate.lmm.best/badge.svg?project=onimcp&currency=CNY&lang=zh-CN&period=all&layout=compact&theme=dark&width=360&title=OniMCP)](https://donate.lmm.best/?project=onimcp)
+
+捐款，加速一切。
+
+<details>
+<summary>展开 Mod 介绍</summary>
+
+`OniMcp` 是为缺氧量身定制的 MCP 服务器 Mod。安装后，支持 MCP 的 AI 客户端可以通过本地 HTTP 接口读取殖民地状态、分析局势，并在授权后执行游戏操作。
+
+目前公开工具面是一组会出现在 `tools/list` 中的聚合入口：
+
+- `world_editor`：代码文件风格的世界编辑器。将存档视为虚拟目录，客户端通过读取文件观察状态，并通过 `edit` 配合 SEARCH/REPLACE 块来下达修改意图（如挖掘、建造、连接管线和设置优先级）。
+- `game_control`：游戏状态、速度、存档、UI 与游戏级操作。
+- `navigation_control`：相机、视图、覆盖层和截图操作。
+- `building_control`：建筑规划、放置、配置、生产与管线连接。
+- `orders_control`：挖掘、清扫、拖地、拆除等任务标记。
+- `server_control`：MCP 服务状态、会话清单、截图任务和后台任务管理。
+
+原有的 `colony_control`、`dupes_control`、`read_control`、`search_control` 和 `coordinate_control` 已降级为虚拟文件工作流的内部操作，不再注册为 MCP 工具，也不支持客户端按名称直接调用。
+
+它目前更适合作为“半自动操作助手”。复杂世界规划、长期自治游玩和高质量决策仍然需要人工监督。
+
+相关 AI Skill 实现参考：[zhuiyun.skill](https://github.com/LIghtJUNction/zhuiyun.skill)
+
+</details>
+
+<details>
+<summary>展开开发备忘</summary>
+
+当前交互约定：游戏操作优先使用语义搜索和虚拟文件编辑。每次工具调用都要提供简短任务说明，该说明会自动显示在玩家鼠标附近。
+
+省流结论：不要指望当前 AI 能长期自主玩好缺氧这类复杂模拟游戏。现阶段更现实的方向是让 AI 读取更多游戏数据、执行明确的小任务，并在玩家确认下辅助完成局部规划。
+
+</details>
+
+## onim
+
+`onim` 是缺氧 Mod 开发工具链，覆盖从项目初始化到 Steam 创意工坊发布的常用流程。
+
+## 一句话开始
+
+```bash
+cargo install --path .
+onim setup
+onim doctor
+onim init MyMod
+onim dev -m MyMod
+```
+
+`onim dev` 只在 `mods.json` 配置实际变化时备份，最多保留最近 5 份有效配置备份。
+每次构建必须生成新的 `dist/<AssemblyName>.zip`；编译成功但没有新包也会失败并恢复旧包。
+安装先解压、检查 DLL 和 `mod_info.yaml`，再替换目录；解压或 Dev 启用失败会保留原安装。
+它只启用选定的 Dev 条目，不会顺带启用同一 Mod 的其他副本。
+同一 `staticID` 在 Local、Dev、创意工坊之间只保留一份启用安装；核实的重复副本移到 `mods/.onim-recovery`，
+Jlib 等前置会自动排在消费模组之前。
+配置已写入但备份清理失败时，会单独警告，不把安装误报为失败。
+
+## 常用工作流
+
+```bash
+# 1. 安装 onim CLI
+cargo install --path .
+
+# 2. 交互式初始化：检测游戏路径、检查依赖、写入配置
+onim setup
+
+# 3. 只读检查本机开发环境
+onim doctor
+
+# 4. 创建新 Mod
+onim init MyMod --author YourName --desc "Mod 描述"
+
+# 5. 开发迭代
+onim dev -m MyMod          # 构建并安装到游戏 Dev 目录
+onim build -m MyMod        # 仅构建
+onim info                  # 查看已安装的 Mod
+
+# 6. 正式发布
+onim install -m MyMod      # Release 构建并安装到 Local 目录
+onim publish -m MyMod --dry-run   # 只构建并生成发布计划，不上传
+onim publish -m MyMod      # 单文件 Legacy ZIP 原生上传到 Steam 创意工坊
+
+# 7. 清理
+onim uninstall -m MyMod    # 从游戏目录卸载
+```
+
+`-m <name>` 用于指定 Mod。不指定时，`onim` 使用 [onim.toml](onim.toml) 中的 `default_mod`。
+
+首次构建前需要生成本机 MSBuild 配置：
+
+```bash
+cp Directory.Build.props.example Directory.Build.props
+# 然后把 Directory.Build.props 里的 OniGamePath 改为本机缺氧安装目录
+```
+
+也可以运行 `onim setup` 自动检测并写入配置。
+
+## 命令速查
+
+| 命令 | 作用 |
+|------|------|
+| `onim setup` | 初始化项目配置，检测游戏路径和依赖 |
+| `onim doctor` | 只读检查路径、外部工具和已配置 Mod 源码 |
+| `onim init <name>` | 从模板创建新 Mod |
+| `onim build` | 构建 Mod，`--release` 为 Release 构建 |
+| `onim dev` | 构建并安装到游戏 `mods/Dev/` |
+| `onim install` | Release 构建并安装到 `mods/Local/`；`--release OWNER/REPO` / `--repo OWNER/REPO` 从 GitHub 安装 |
+| `onim uninstall` | 卸载 Mod，支持 `--scope dev/local/all` |
+| `onim info` | 查看已安装的 Dev、Local 和 Steam Mod |
+| `onim publish` | 默认用原生单文件 Legacy ZIP 发布器上传；支持 `--dry-run`、`--preflight`、`--create`、`--resume`、`--update-preview`、`--gui` |
+| `onim workshop` | `search` / `install` / `uninstall` 创意工坊条目；`page show/set` 修改自有条目页面（不上传 ZIP） |
+| `onim list` | 列出配置文件中的 Mod |
+
+> **创意工坊硬性禁止**：不要用 SteamCMD `workshop_build_item` 或 `SteamUGC.SetItemContent` 目录模式上传，转换不可逆且会让缺氧无法安装该条目。详见 [Steam 发布说明](docs/steam-publishing.md)。
+
+## 目录结构
+
+```text
+.
+├── onim.toml          # onim 配置文件，记录默认 Mod 和 Mod 列表
+├── Directory.Build.props.example  # 本机 MSBuild 配置模板
+├── Directory.Build.props          # 本机生成配置，不提交
+├── Cargo.toml             # onim CLI
+├── src/                   # onim 源码
+├── mods/                  # Mod 项目目录
+│   ├── OniModTemplate/    # Mod 模板（ModInfo + Patches/）
+│   ├── OniMcp/            # ONI MCP Server
+│   │   ├── ModInfo.cs     # 仅入口
+│   │   ├── Patches/ UI/ Config/ Core/ Server/ Support/
+│   │   └── Tools/{Core,Entry,WorldEditor,Shared,Impl}/
+│   ├── CycleTrim/         # 高风险实验性性能模组，方向是把运算搬到 GPU
+│   │   ├── ModInfo.cs     # 仅入口
+│   │   ├── Core/          # 非补丁核心逻辑
+│   │   ├── Patches/       # Harmony 补丁
+│   │   └── OniSim/        # Rust 仿真内核、wgpu/WGSL GPU 算子、Lean 证明
+│   ├── OniOnline/         # 联机框架，默认大厅和聊天
+│   └── Jlib/              # 共享前置库（子模块）
+├── sdk/                   # OniOnline.Framework SDK、Jlib.Bootstrap
+├── examples/              # OniOnline 第三方玩法示例
+├── tools/                 # OniHarness（子模块）、Legacy ZIP Steam 发布器
+├── tests/  benchmarks/    # 宿主回归测试与消融基准
+├── oni-skills/            # 可选：缺氧高阶攻略与工程模块库
+├── docs/                  # 参考文档
+└── scripts/               # 辅助、校验与 Legacy ZIP 发布脚本
+```
+
+## 依赖
+
+代码回归检查：安装 Python 3 与 .NET SDK 10 后运行
+`python3 scripts/check_mods.py`。该入口不需要安装游戏；完整构建与游戏内验证步骤见
+[Mod 测试说明](docs/mod-testing.md)。
+
+- [Rust](https://rustup.rs/)：编译 `onim`
+- [.NET SDK](https://dotnet.microsoft.com/download)：构建 Mod
+- `unzip`：安装构建产物时解压
+- `tar`：打包源码
+
+`onim setup` 会自动检查依赖并提示安装方式。
+
+## 许可证
+
+本仓库中 LIghtJUNction 有权授权的原创材料采用 [Agent Upstream License（AUL）1.0-draft.1](LICENSE)。旧版 MIT 授权仍有效，原文见 [LICENSE.MIT](LICENSE.MIT)。第三方材料及来自其他贡献者的改动保持各自授权，具体见 [LICENSING.md](LICENSING.md)。AUL 是自定义草案，不是 OSI 已批准的开源许可证。Agent 需阅读 [AGENTS.md](AGENTS.md) 与 [UPSTREAM.toml](UPSTREAM.toml)。

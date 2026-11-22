@@ -8,7 +8,21 @@ zchat-plugin-api and zchat-providers. The committed zchat gitlink identifies the
 application source; its own repository maintains native build, runtime acceptance,
 registry publication and release evidence.
 
-## Evidence boundary
+## Recheck against current main (2026-11-22 UTC)
+
+On base `47bd4a54e3e6a48df8361cde4f61cc8974320795`, zchat remains pinned to
+`8da8def04b0529a6f9a03709be8e043f043ea57b` (v0.1.4). The catalog and
+project index were regenerated from the recorded sources. Their original
+47 repository records and 73 package records were preserved. The only new
+gitlink is zchat. All 110 recursive checkouts matched their recorded commits.
+
+Both `check` and `resolve --all` exited 1 at the consumer lock check.
+`zchat/Cargo.lock` selects zmcpio 0.5.2 at
+`97f61f9de32804f7e4d712b236ad4ba838f443a6`. The aggregate records zmcpio
+0.5.3 at `89a247ac274bcd96b760dd9e7dcb0d4d924a901e`. The zchat repository
+owns that lock update. Full Cargo resolution awaits a tested consumer commit.
+
+## Historical evidence boundary
 
 The integration attempt was captured on 2026-11-22 (Asia/Taipei), from aggregate
 baseline `6e786250812849079c870804ce4141b74f88f7d3`. The isolated worktree included
@@ -68,4 +82,4 @@ consumers have committed and pushed compatible source links and locks:
    `docs/PROJECTS.md`; merge this registration with that verified snapshot.
 
 Do not use `sync --record` or old dependency locks to make these checks appear to
-pass. This registration remains a blocked draft until the required gates pass.
+pass. Integration remains blocked until the required gates pass.

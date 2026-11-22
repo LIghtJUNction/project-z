@@ -1,5 +1,7 @@
 # Project Z
 
+[统一文档站](https://lightjunction.github.io/project-z-site/) · [文档构建与更新](site/README.md)
+
 Project Z 统一维护内部库及其消费者。**内部依赖直接使用 GitHub 默认分支的最新源码；Cargo 注册表用于外部发布。**
 
 本仓库记录每次更新实际采用的提交，检查消费者是否使用同一份源码，并计算变更影响。实现、许可证、正式发行和应用验收仍由各子仓库维护。

@@ -51,7 +51,7 @@
       "id": "zrc",
       "category": "tools",
       "kind": "tool",
-      "summary": "将十个原生应用配置模块组合为可由 zdot 部署的目录。",
+      "summary": "组合编辑器与终端工具的原生配置，供 zdot 预览和部署。",
       "package": "zrc"
     },
     {
@@ -65,14 +65,14 @@
       "id": "zsys",
       "category": "system",
       "kind": "library",
-      "summary": "复用系统信息、平台能力与共享的原生接口。",
+      "summary": "按需采集 Linux 的处理器、内存、进程与存储状态，提供可借用的数据视图。",
       "package": "zsys"
     },
     {
       "id": "zuse",
       "category": "applications",
       "kind": "tool",
-      "summary": "原生桌面控制、MCP 服务与人工接管的工具和库。",
+      "summary": "用有界脚本观察和操作桌面、浏览器与设备，并支持持久会话。",
       "package": "zuse-computer"
     },
     {
@@ -93,7 +93,7 @@
       "id": "zhex",
       "category": "data",
       "kind": "library",
-      "summary": "在字节数据与十六进制文本之间转换。",
+      "summary": "在字节数据与十六进制文本之间转换，写入调用方缓冲区。",
       "package": "zhex"
     },
     {
@@ -107,7 +107,7 @@
       "id": "zscan",
       "category": "data",
       "kind": "library",
-      "summary": "面向字节与子串的搜索原语。",
+      "summary": "在字节切片中正向或反向查找字节和子串，并返回原始位置。",
       "package": "zscan"
     },
     {
@@ -135,7 +135,7 @@
       "id": "zdwire",
       "category": "protocol",
       "kind": "library",
-      "summary": "解析与编码 DNS 消息的线格式。",
+      "summary": "解析与编码 DNS 消息，向调用方返回报文和记录视图。",
       "package": "zdwire"
     },
     {
@@ -198,14 +198,14 @@
       "id": "ztty",
       "category": "interface",
       "kind": "tool",
-      "summary": "组合终端状态、进程与原生渲染的 Linux 终端应用。",
+      "summary": "原生终端应用，在 Linux 上支持窗口、命令行与 MCP 共用会话。",
       "package": "ztty"
     },
     {
       "id": "ztype",
       "category": "interface",
       "kind": "tool",
-      "summary": "面向多语言组合输入的原生应用，支持候选与插件。",
+      "summary": "Linux 原生输入法，在应用中组合拼音、显示候选并提交文字。",
       "package": "ztype"
     },
     {
@@ -233,7 +233,7 @@
       "id": "zfetch",
       "category": "tools",
       "kind": "tool",
-      "summary": "以终端摘要查看 Linux 系统信息。",
+      "summary": "读取 Linux 系统与启动链信息，输出终端摘要或 JSON。",
       "package": "zfetch"
     },
     {
@@ -254,14 +254,14 @@
       "id": "oh-my-ztty",
       "category": "tools",
       "kind": "integration",
-      "summary": "把终端、shell 与配置工具组合成 Linux 使用入口。",
+      "summary": "组合终端、shell、应用配置与内存管理，提供 Linux 工作环境。",
       "package": "oh-my-ztty"
     },
     {
       "id": "zcalld",
       "category": "applications",
       "kind": "tool",
-      "summary": "本地模型网关，管理提供方、路由与调用。",
+      "summary": "本地模型网关，集中管理提供方、路由规则与模型调用。",
       "package": "zcalld"
     },
     {
@@ -305,6 +305,76 @@
       "kind": "library",
       "summary": "工具执行前的策略、能力与审批检查，提供有界审计接口。",
       "package": "zguard"
+    },
+    {
+      "id": "zchat",
+      "category": "applications",
+      "kind": "tool",
+      "summary": "以插件接入即时通信平台，统一账号、会话与消息操作。",
+      "package": "zchat"
+    },
+    {
+      "id": "OniMods",
+      "category": "applications",
+      "kind": "integration",
+      "summary": "整合《缺氧》模组开发、构建发布与 MCP 游戏观察和操作。",
+      "package": "OniMods"
+    },
+    {
+      "id": "lmm",
+      "category": "tools",
+      "kind": "tool",
+      "summary": "查询模型服务商预设、本地软件状态、账号模型目录与余额。",
+      "package": "lmm"
+    },
+    {
+      "id": "lmm-api-source",
+      "category": "applications",
+      "kind": "tool",
+      "summary": "模型网关与业务扩展平台，管理身份、权限、账本和调用路由。",
+      "package": "lmm-api-source"
+    },
+    {
+      "id": "mechrevo-drivers",
+      "category": "system",
+      "kind": "integration",
+      "summary": "机械革命笔记本的 Linux 平台驱动与设备控制台，按机型提供功能。",
+      "package": "mechrevo-drivers"
+    },
+    {
+      "id": "ssmcp",
+      "category": "applications",
+      "kind": "tool",
+      "summary": "通过授权 MCP 会话调用开发机的命令、文件和原生工具。",
+      "package": "ssmcp"
+    },
+    {
+      "id": "zmem",
+      "category": "system",
+      "kind": "tool",
+      "summary": "观测 Linux 内存压力，管理 Swap 并约束后台任务的内存预算。",
+      "package": "zmem"
+    },
+    {
+      "id": "zuse-skills",
+      "category": "applications",
+      "kind": "integration",
+      "summary": "提供可导入的桌面观察函数与浏览器验收模块，供 Zuse 脚本复用。",
+      "package": "zuse-skills"
+    },
+    {
+      "id": "zuse-std",
+      "category": "system",
+      "kind": "library",
+      "summary": "为 Zuse 提供绘图、分形、桌面操作、文字输入和计时函数。",
+      "package": "zuse-std"
+    },
+    {
+      "id": "zobs",
+      "category": "applications",
+      "kind": "tool",
+      "summary": "原生录制工作台，配置场景并通过 FFmpeg 录制、推流和查询进度。",
+      "package": "zobs"
     }
   ]
 }
