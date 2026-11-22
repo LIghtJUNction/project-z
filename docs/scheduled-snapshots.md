@@ -13,6 +13,12 @@ The scheduled workflow observes all repositories registered in `.gitmodules` at 
 
 Project Z has no root crate. Its patch tag identifies a GitHub source snapshot. Package versions come from Cargo metadata and the non-Cargo version manifests explicitly registered in `project-z.toml`. Other Git-only components still synchronize. A version change in a registered package can qualify that snapshot, including an internal package. The coordinator never edits a child version or lockfile.
 
+For a read-only diagnosis of an existing PR, manually run **Coordinate Project Z**
+on its branch with `diagnose_recorded_sources` enabled. When unit tests and
+full locked resolution pass, this permits platform tests to report their own
+results even if the source check fails. The dependency job and overall CI
+still fail. Scheduled and formal release calls keep their normal prerequisites.
+
 ## Enabling scheduled writes
 
 After merging, run **Sync and test Project Z** manually on main to review a dry run. An unset `PROJECT_Z_SCHEDULED_WRITES` repository variable leaves scheduled runs in staging. To enable writes, configure the `project-z-snapshot` GitHub Environment for main, its required reviewers if applicable, and set the variable to the exact string `true`. Release authorization is limited to the aggregate repository's `contents: write` job. The repository and organization must permit that workflow token to fast-forward main and create release tags and GitHub Releases under their existing rules. Where a reviewed PR is mandatory, the atomic push is rejected. Keep protection in place and use the normal reviewed path.

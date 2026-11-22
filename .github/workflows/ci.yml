@@ -2,6 +2,11 @@ name: Coordinate Project Z
 
 on:
   workflow_dispatch:
+    inputs:
+      diagnose_recorded_sources:
+        description: Run platform diagnostics if locked resolution passes and the final source check fails
+        type: boolean
+        default: false
   workflow_call:
     inputs:
       candidate_artifact:
@@ -23,6 +28,9 @@ concurrency:
 
 jobs:
   dependencies:
+    outputs:
+      resolution: ${{ steps.resolve.outcome }}
+      source_check: ${{ steps.source_check.outcome }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -44,13 +52,21 @@ jobs:
           components: clippy, rustfmt
       - name: Check coordination invariants
         run: python3 -m unittest discover -s tests -v
-      - name: Check pinned dependency graph and generated files
-        run: python3 scripts/project_z.py check
       - name: Verify local dependency resolution
+        id: resolve
         run: python3 scripts/project_z.py resolve --all
+      - name: Check pinned dependency graph and generated files
+        id: source_check
+        run: python3 scripts/project_z.py check
 
   core-libraries:
     needs: dependencies
+    # An explicit manual diagnostic can test the recorded, locked cohort.
+    # The dependency job's failure remains a failure of the whole workflow.
+    if: >-
+      !cancelled() && (needs.dependencies.result == 'success' ||
+      (github.event_name == 'workflow_dispatch' && inputs.diagnose_recorded_sources == true &&
+      needs.dependencies.outputs.resolution == 'success' && needs.dependencies.outputs.source_check == 'failure'))
     strategy:
       fail-fast: false
       matrix:
