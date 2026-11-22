@@ -360,7 +360,7 @@ class OfflineResolutionApply(source_fixtures.GitSourceFixture):
         super().setUp()
         source = Path(__file__).resolve().parents[1] / "scripts"
         (self.root / "scripts").mkdir()
-        for name in ("project_z.py", "cargo_versions.py", "catalog_docs.py"):
+        for name in ("project_z.py", "cargo_versions.py", "catalog_docs.py", "managed_build.py"):
             shutil.copy2(source / name, self.root / "scripts" / name)
         self.root_head = self.commit(self.root, "include coordinator")
         self.destination = self.base / "snapshot"
