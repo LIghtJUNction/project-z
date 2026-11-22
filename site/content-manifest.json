@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T22:53:47.242904Z",
+  "generated_at": "2026-11-22T11:52:08.089779Z",
   "projects": [
     {
       "id": "lmm",
@@ -85,96 +85,96 @@
       "name": "lmm-api-source",
       "repository": "https://github.com/TokenNotIncluded/lmm-api-source",
       "branch": "main",
-      "commit": "f19b97de14e908c0057667abdb9f38c7e84e8127",
+      "commit": "3385d567ef0e023a5b79e4499f27581be1309425",
       "description": "Implementation source for the LMM API Recipkg project",
       "visibility": "public",
       "metadata_source": "https://api.github.com/repos/TokenNotIncluded/lmm-api-source",
       "role": "application",
       "additional": false,
-      "readme_source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/f19b97de14e908c0057667abdb9f38c7e84e8127/README.md",
+      "readme_source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/3385d567ef0e023a5b79e4499f27581be1309425/README.md",
       "pages": [
         {
           "slug": "",
           "title": "概览",
           "file": "content/projects/lmm-api-source/index.md",
-          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/f19b97de14e908c0057667abdb9f38c7e84e8127/README.md",
+          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/3385d567ef0e023a5b79e4499f27581be1309425/README.md",
           "path": "README.md"
         },
         {
           "slug": "deployment-docker-readme",
           "title": "全新微内核 Docker 开发栈（WIP）",
           "file": "content/projects/lmm-api-source/deployment-docker-readme.md",
-          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/f19b97de14e908c0057667abdb9f38c7e84e8127/deployment/docker/README.md",
+          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/3385d567ef0e023a5b79e4499f27581be1309425/deployment/docker/README.md",
           "path": "deployment/docker/README.md"
         },
         {
           "slug": "deployment-postgres-readme",
           "title": "Explicit offline core roles",
           "file": "content/projects/lmm-api-source/deployment-postgres-readme.md",
-          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/f19b97de14e908c0057667abdb9f38c7e84e8127/deployment/postgres/README.md",
+          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/3385d567ef0e023a5b79e4499f27581be1309425/deployment/postgres/README.md",
           "path": "deployment/postgres/README.md"
         },
         {
           "slug": "agent-workflows",
           "title": "Agent 工作指南",
           "file": "content/projects/lmm-api-source/agent-workflows.md",
-          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/f19b97de14e908c0057667abdb9f38c7e84e8127/docs/agent-workflows.md",
+          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/3385d567ef0e023a5b79e4499f27581be1309425/docs/agent-workflows.md",
           "path": "docs/agent-workflows.md"
         },
         {
           "slug": "archive",
           "title": "历史资料索引",
           "file": "content/projects/lmm-api-source/archive.md",
-          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/f19b97de14e908c0057667abdb9f38c7e84e8127/docs/archive.md",
+          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/3385d567ef0e023a5b79e4499f27581be1309425/docs/archive.md",
           "path": "docs/archive.md"
         },
         {
           "slug": "core-migration",
           "title": "Core 与 Extensions 架构",
           "file": "content/projects/lmm-api-source/core-migration.md",
-          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/f19b97de14e908c0057667abdb9f38c7e84e8127/docs/core-migration.md",
+          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/3385d567ef0e023a5b79e4499f27581be1309425/docs/core-migration.md",
           "path": "docs/core-migration.md"
         },
         {
           "slug": "development",
           "title": "开发与测试",
           "file": "content/projects/lmm-api-source/development.md",
-          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/f19b97de14e908c0057667abdb9f38c7e84e8127/docs/development.md",
+          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/3385d567ef0e023a5b79e4499f27581be1309425/docs/development.md",
           "path": "docs/development.md"
         },
         {
           "slug": "extore",
           "title": "Extore 商品集成",
           "file": "content/projects/lmm-api-source/extore.md",
-          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/f19b97de14e908c0057667abdb9f38c7e84e8127/docs/extore.md",
+          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/3385d567ef0e023a5b79e4499f27581be1309425/docs/extore.md",
           "path": "docs/extore.md"
         },
         {
           "slug": "filesystem-layout",
           "title": "配置与文件路径",
           "file": "content/projects/lmm-api-source/filesystem-layout.md",
-          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/f19b97de14e908c0057667abdb9f38c7e84e8127/docs/filesystem-layout.md",
+          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/3385d567ef0e023a5b79e4499f27581be1309425/docs/filesystem-layout.md",
           "path": "docs/filesystem-layout.md"
         },
         {
           "slug": "legal-readme",
           "title": "可配置的协议模板",
           "file": "content/projects/lmm-api-source/legal-readme.md",
-          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/f19b97de14e908c0057667abdb9f38c7e84e8127/docs/legal/README.md",
+          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/3385d567ef0e023a5b79e4499f27581be1309425/docs/legal/README.md",
           "path": "docs/legal/README.md"
         },
         {
           "slug": "progress",
           "title": "新架构进度",
           "file": "content/projects/lmm-api-source/progress.md",
-          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/f19b97de14e908c0057667abdb9f38c7e84e8127/docs/progress.md",
+          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/3385d567ef0e023a5b79e4499f27581be1309425/docs/progress.md",
           "path": "docs/progress.md"
         },
         {
           "slug": "quality",
           "title": "本地质量检查与独立验收",
           "file": "content/projects/lmm-api-source/quality.md",
-          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/f19b97de14e908c0057667abdb9f38c7e84e8127/docs/quality.md",
+          "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/3385d567ef0e023a5b79e4499f27581be1309425/docs/quality.md",
           "path": "docs/quality.md"
         }
       ]
@@ -184,96 +184,96 @@
       "name": "mechrevo-drivers",
       "repository": "https://github.com/LIghtJUNction/mechrevo-drivers",
       "branch": "main",
-      "commit": "93a7614c79895fc7dcc5b1e7e1291800cc9de1d0",
+      "commit": "aaa7573dd2609e74936ba4c3724b169de1834f54",
       "description": "Unofficial MECHREVO Linux platform drivers, based on TUXEDO drivers, with stable upstream release sync",
       "visibility": "public",
       "metadata_source": "https://api.github.com/repos/LIghtJUNction/mechrevo-drivers",
       "role": "application",
       "additional": false,
-      "readme_source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/93a7614c79895fc7dcc5b1e7e1291800cc9de1d0/README.md",
+      "readme_source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/aaa7573dd2609e74936ba4c3724b169de1834f54/README.md",
       "pages": [
         {
           "slug": "",
           "title": "概览",
           "file": "content/projects/mechrevo-drivers/index.md",
-          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/93a7614c79895fc7dcc5b1e7e1291800cc9de1d0/README.md",
+          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/aaa7573dd2609e74936ba4c3724b169de1834f54/README.md",
           "path": "README.md"
         },
         {
           "slug": "aur",
           "title": "Arch Linux / AUR 打包",
           "file": "content/projects/mechrevo-drivers/aur.md",
-          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/93a7614c79895fc7dcc5b1e7e1291800cc9de1d0/docs/AUR.md",
+          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/aaa7573dd2609e74936ba4c3724b169de1834f54/docs/AUR.md",
           "path": "docs/AUR.md"
         },
         {
           "slug": "hardware-gm6bg0q",
           "title": "蛟龙 16K GM6BG0Q 本机记录",
           "file": "content/projects/mechrevo-drivers/hardware-gm6bg0q.md",
-          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/93a7614c79895fc7dcc5b1e7e1291800cc9de1d0/docs/hardware/GM6BG0Q.md",
+          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/aaa7573dd2609e74936ba4c3724b169de1834f54/docs/hardware/GM6BG0Q.md",
           "path": "docs/hardware/GM6BG0Q.md"
         },
         {
           "slug": "hardware-gm6px0x",
           "title": "旷世 16 Pro GM6PX0X 本机验证",
           "file": "content/projects/mechrevo-drivers/hardware-gm6px0x.md",
-          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/93a7614c79895fc7dcc5b1e7e1291800cc9de1d0/docs/hardware/GM6PX0X.md",
+          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/aaa7573dd2609e74936ba4c3724b169de1834f54/docs/hardware/GM6PX0X.md",
           "path": "docs/hardware/GM6PX0X.md"
         },
         {
           "slug": "hardware-native-kernel-controls",
           "title": "复用 Linux 已加载的原生驱动",
           "file": "content/projects/mechrevo-drivers/hardware-native-kernel-controls.md",
-          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/93a7614c79895fc7dcc5b1e7e1291800cc9de1d0/docs/hardware/NATIVE-KERNEL-CONTROLS.md",
+          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/aaa7573dd2609e74936ba4c3724b169de1834f54/docs/hardware/NATIVE-KERNEL-CONTROLS.md",
           "path": "docs/hardware/NATIVE-KERNEL-CONTROLS.md"
         },
         {
           "slug": "hardware-other-models",
           "title": "其他机械革命机型",
           "file": "content/projects/mechrevo-drivers/hardware-other-models.md",
-          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/93a7614c79895fc7dcc5b1e7e1291800cc9de1d0/docs/hardware/OTHER-MODELS.md",
+          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/aaa7573dd2609e74936ba4c3724b169de1834f54/docs/hardware/OTHER-MODELS.md",
           "path": "docs/hardware/OTHER-MODELS.md"
         },
         {
           "slug": "hardware-wujie-hpt-p916f",
           "title": "无界 15 Pro HPT 与星耀 P916F HPT-R",
           "file": "content/projects/mechrevo-drivers/hardware-wujie-hpt-p916f.md",
-          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/93a7614c79895fc7dcc5b1e7e1291800cc9de1d0/docs/hardware/WUJIE-HPT-P916F.md",
+          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/aaa7573dd2609e74936ba4c3724b169de1834f54/docs/hardware/WUJIE-HPT-P916F.md",
           "path": "docs/hardware/WUJIE-HPT-P916F.md"
         },
         {
           "slug": "mechrevo-console",
           "title": "Rust 双端控制台",
           "file": "content/projects/mechrevo-drivers/mechrevo-console.md",
-          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/93a7614c79895fc7dcc5b1e7e1291800cc9de1d0/docs/MECHREVO-CONSOLE.md",
+          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/aaa7573dd2609e74936ba4c3724b169de1834f54/docs/MECHREVO-CONSOLE.md",
           "path": "docs/MECHREVO-CONSOLE.md"
         },
         {
           "slug": "mechrevo",
           "title": "机械革命支持范围",
           "file": "content/projects/mechrevo-drivers/mechrevo.md",
-          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/93a7614c79895fc7dcc5b1e7e1291800cc9de1d0/docs/MECHREVO.md",
+          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/aaa7573dd2609e74936ba4c3724b169de1834f54/docs/MECHREVO.md",
           "path": "docs/MECHREVO.md"
         },
         {
           "slug": "power-control",
           "title": "CPU 长期功耗上限",
           "file": "content/projects/mechrevo-drivers/power-control.md",
-          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/93a7614c79895fc7dcc5b1e7e1291800cc9de1d0/docs/POWER-CONTROL.md",
+          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/aaa7573dd2609e74936ba4c3724b169de1834f54/docs/POWER-CONTROL.md",
           "path": "docs/POWER-CONTROL.md"
         },
         {
           "slug": "packaging-arch-mechrevo-console-readme",
           "title": "Arch / AUR 控制台包",
           "file": "content/projects/mechrevo-drivers/packaging-arch-mechrevo-console-readme.md",
-          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/93a7614c79895fc7dcc5b1e7e1291800cc9de1d0/packaging/arch/mechrevo-console/README.md",
+          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/aaa7573dd2609e74936ba4c3724b169de1834f54/packaging/arch/mechrevo-console/README.md",
           "path": "packaging/arch/mechrevo-console/README.md"
         },
         {
           "slug": "console-design",
           "title": "界面设计",
           "file": "content/projects/mechrevo-drivers/console-design.md",
-          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/93a7614c79895fc7dcc5b1e7e1291800cc9de1d0/console/DESIGN.md",
+          "source": "https://github.com/LIghtJUNction/mechrevo-drivers/blob/aaa7573dd2609e74936ba4c3724b169de1834f54/console/DESIGN.md",
           "path": "console/DESIGN.md"
         }
       ]
@@ -283,96 +283,96 @@
       "name": "oh-my-ztty",
       "repository": "https://github.com/LIghtJUNction/oh-my-ztty",
       "branch": "main",
-      "commit": "dbb909b78d152f21a0c270724a1b958b843d0388",
+      "commit": "2eb8340987a96fd8ecacc81a8e83742c86716525",
       "description": "A lean, AI-native Linux terminal suite built on Project Z",
       "visibility": "public",
       "metadata_source": "https://api.github.com/repos/LIghtJUNction/oh-my-ztty",
       "role": "suite",
       "additional": false,
-      "readme_source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/README.zh-CN.md",
+      "readme_source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/2eb8340987a96fd8ecacc81a8e83742c86716525/README.zh-CN.md",
       "pages": [
         {
           "slug": "",
           "title": "概览",
           "file": "content/projects/oh-my-ztty/index.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/README.zh-CN.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/2eb8340987a96fd8ecacc81a8e83742c86716525/README.zh-CN.md",
           "path": "README.zh-CN.md"
         },
         {
           "slug": "readme-en",
           "title": "oh-my-ztty",
           "file": "content/projects/oh-my-ztty/readme-en.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/README.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/2eb8340987a96fd8ecacc81a8e83742c86716525/README.md",
           "path": "README.md"
         },
         {
           "slug": "installation",
           "title": "Installation",
           "file": "content/projects/oh-my-ztty/installation.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/installation.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/2eb8340987a96fd8ecacc81a8e83742c86716525/site/content/installation.md",
           "path": "site/content/installation.md"
         },
         {
           "slug": "configuration",
           "title": "Configuration",
           "file": "content/projects/oh-my-ztty/configuration.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/configuration.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/2eb8340987a96fd8ecacc81a8e83742c86716525/site/content/configuration.md",
           "path": "site/content/configuration.md"
         },
         {
           "slug": "shell",
           "title": "Shell, PATH and environment",
           "file": "content/projects/oh-my-ztty/shell.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/shell.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/2eb8340987a96fd8ecacc81a8e83742c86716525/site/content/shell.md",
           "path": "site/content/shell.md"
         },
         {
           "slug": "memory",
           "title": "Memory and Swap",
           "file": "content/projects/oh-my-ztty/memory.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/memory.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/2eb8340987a96fd8ecacc81a8e83742c86716525/site/content/memory.md",
           "path": "site/content/memory.md"
         },
         {
           "slug": "plugins",
           "title": "Plugins",
           "file": "content/projects/oh-my-ztty/plugins.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/plugins.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/2eb8340987a96fd8ecacc81a8e83742c86716525/site/content/plugins.md",
           "path": "site/content/plugins.md"
         },
         {
           "slug": "ai",
           "title": "AI integration",
           "file": "content/projects/oh-my-ztty/ai.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/ai.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/2eb8340987a96fd8ecacc81a8e83742c86716525/site/content/ai.md",
           "path": "site/content/ai.md"
         },
         {
           "slug": "dotfiles",
           "title": "Dotfiles",
           "file": "content/projects/oh-my-ztty/dotfiles.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/dotfiles.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/2eb8340987a96fd8ecacc81a8e83742c86716525/site/content/dotfiles.md",
           "path": "site/content/dotfiles.md"
         },
         {
           "slug": "performance",
           "title": "Performance",
           "file": "content/projects/oh-my-ztty/performance.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/performance.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/2eb8340987a96fd8ecacc81a8e83742c86716525/site/content/performance.md",
           "path": "site/content/performance.md"
         },
         {
           "slug": "architecture",
           "title": "Architecture",
           "file": "content/projects/oh-my-ztty/architecture.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/architecture.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/2eb8340987a96fd8ecacc81a8e83742c86716525/site/content/architecture.md",
           "path": "site/content/architecture.md"
         },
         {
           "slug": "development",
           "title": "Development",
           "file": "content/projects/oh-my-ztty/development.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/development.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/2eb8340987a96fd8ecacc81a8e83742c86716525/site/content/development.md",
           "path": "site/content/development.md"
         }
       ]
@@ -481,96 +481,96 @@
       "name": "ssmcp",
       "repository": "https://github.com/LIghtJUNction/ssmcp",
       "branch": "main",
-      "commit": "add39e18ff92680ff3ac0c3e911407956e20b228",
+      "commit": "87c4a17faf0dd2c140cb707ec59b1f05725f06f0",
       "description": "remote harness",
       "visibility": "public",
       "metadata_source": "https://api.github.com/repos/LIghtJUNction/ssmcp",
       "role": "application",
       "additional": false,
-      "readme_source": "https://github.com/LIghtJUNction/ssmcp/blob/add39e18ff92680ff3ac0c3e911407956e20b228/README.md",
+      "readme_source": "https://github.com/LIghtJUNction/ssmcp/blob/87c4a17faf0dd2c140cb707ec59b1f05725f06f0/README.md",
       "pages": [
         {
           "slug": "",
           "title": "概览",
           "file": "content/projects/ssmcp/index.md",
-          "source": "https://github.com/LIghtJUNction/ssmcp/blob/add39e18ff92680ff3ac0c3e911407956e20b228/README.md",
+          "source": "https://github.com/LIghtJUNction/ssmcp/blob/87c4a17faf0dd2c140cb707ec59b1f05725f06f0/README.md",
           "path": "README.md"
         },
         {
           "slug": "windows-browser-setup",
           "title": "Windows 客户端与 Zuse CLI",
           "file": "content/projects/ssmcp/windows-browser-setup.md",
-          "source": "https://github.com/LIghtJUNction/ssmcp/blob/add39e18ff92680ff3ac0c3e911407956e20b228/docs/windows-browser-setup.md",
+          "source": "https://github.com/LIghtJUNction/ssmcp/blob/87c4a17faf0dd2c140cb707ec59b1f05725f06f0/docs/windows-browser-setup.md",
           "path": "docs/windows-browser-setup.md"
         },
         {
           "slug": "configuration",
           "title": "客户端连接、账号与授权",
           "file": "content/projects/ssmcp/configuration.md",
-          "source": "https://github.com/LIghtJUNction/ssmcp/blob/add39e18ff92680ff3ac0c3e911407956e20b228/docs/configuration.md",
+          "source": "https://github.com/LIghtJUNction/ssmcp/blob/87c4a17faf0dd2c140cb707ec59b1f05725f06f0/docs/configuration.md",
           "path": "docs/configuration.md"
         },
         {
           "slug": "client-accounts",
           "title": "客户端账号、授权与被控设备",
           "file": "content/projects/ssmcp/client-accounts.md",
-          "source": "https://github.com/LIghtJUNction/ssmcp/blob/add39e18ff92680ff3ac0c3e911407956e20b228/docs/client-accounts.md",
+          "source": "https://github.com/LIghtJUNction/ssmcp/blob/87c4a17faf0dd2c140cb707ec59b1f05725f06f0/docs/client-accounts.md",
           "path": "docs/client-accounts.md"
         },
         {
           "slug": "client-extension",
           "title": "可定制客户端、上下文工程与工具 hook",
           "file": "content/projects/ssmcp/client-extension.md",
-          "source": "https://github.com/LIghtJUNction/ssmcp/blob/add39e18ff92680ff3ac0c3e911407956e20b228/docs/client-extension.md",
+          "source": "https://github.com/LIghtJUNction/ssmcp/blob/87c4a17faf0dd2c140cb707ec59b1f05725f06f0/docs/client-extension.md",
           "path": "docs/client-extension.md"
         },
         {
           "slug": "client-input",
           "title": "客户端输入、引用与本地沟通",
           "file": "content/projects/ssmcp/client-input.md",
-          "source": "https://github.com/LIghtJUNction/ssmcp/blob/add39e18ff92680ff3ac0c3e911407956e20b228/docs/client-input.md",
+          "source": "https://github.com/LIghtJUNction/ssmcp/blob/87c4a17faf0dd2c140cb707ec59b1f05725f06f0/docs/client-input.md",
           "path": "docs/client-input.md"
         },
         {
           "slug": "client-server",
           "title": "选择中转服务器与固定服务器公钥",
           "file": "content/projects/ssmcp/client-server.md",
-          "source": "https://github.com/LIghtJUNction/ssmcp/blob/add39e18ff92680ff3ac0c3e911407956e20b228/docs/client-server.md",
+          "source": "https://github.com/LIghtJUNction/ssmcp/blob/87c4a17faf0dd2c140cb707ec59b1f05725f06f0/docs/client-server.md",
           "path": "docs/client-server.md"
         },
         {
           "slug": "client-ui",
           "title": "客户端 UI",
           "file": "content/projects/ssmcp/client-ui.md",
-          "source": "https://github.com/LIghtJUNction/ssmcp/blob/add39e18ff92680ff3ac0c3e911407956e20b228/docs/client-ui.md",
+          "source": "https://github.com/LIghtJUNction/ssmcp/blob/87c4a17faf0dd2c140cb707ec59b1f05725f06f0/docs/client-ui.md",
           "path": "docs/client-ui.md"
         },
         {
           "slug": "commands",
           "title": "客户端命令与独立任务",
           "file": "content/projects/ssmcp/commands.md",
-          "source": "https://github.com/LIghtJUNction/ssmcp/blob/add39e18ff92680ff3ac0c3e911407956e20b228/docs/commands.md",
+          "source": "https://github.com/LIghtJUNction/ssmcp/blob/87c4a17faf0dd2c140cb707ec59b1f05725f06f0/docs/commands.md",
           "path": "docs/commands.md"
         },
         {
           "slug": "browser-existing-session",
           "title": "用 Zuse 连接已有浏览器",
           "file": "content/projects/ssmcp/browser-existing-session.md",
-          "source": "https://github.com/LIghtJUNction/ssmcp/blob/add39e18ff92680ff3ac0c3e911407956e20b228/docs/browser-existing-session.md",
+          "source": "https://github.com/LIghtJUNction/ssmcp/blob/87c4a17faf0dd2c140cb707ec59b1f05725f06f0/docs/browser-existing-session.md",
           "path": "docs/browser-existing-session.md"
         },
         {
           "slug": "session-control",
           "title": "客户端会话、重连与输出管理",
           "file": "content/projects/ssmcp/session-control.md",
-          "source": "https://github.com/LIghtJUNction/ssmcp/blob/add39e18ff92680ff3ac0c3e911407956e20b228/docs/session-control.md",
+          "source": "https://github.com/LIghtJUNction/ssmcp/blob/87c4a17faf0dd2c140cb707ec59b1f05725f06f0/docs/session-control.md",
           "path": "docs/session-control.md"
         },
         {
           "slug": "agent-collaboration",
           "title": "会话内 Agent 协作",
           "file": "content/projects/ssmcp/agent-collaboration.md",
-          "source": "https://github.com/LIghtJUNction/ssmcp/blob/add39e18ff92680ff3ac0c3e911407956e20b228/docs/agent-collaboration.md",
+          "source": "https://github.com/LIghtJUNction/ssmcp/blob/87c4a17faf0dd2c140cb707ec59b1f05725f06f0/docs/agent-collaboration.md",
           "path": "docs/agent-collaboration.md"
         }
       ]
@@ -1725,20 +1725,41 @@
       "name": "zmem",
       "repository": "https://github.com/LIghtJUNction/zmem",
       "branch": "main",
-      "commit": "df778e868b916dddb13a629c19f0f7d66f54825c",
+      "commit": "24951ae66df31387f736f61b34d21a1963df9730",
       "description": "Project Z pressure-aware Linux memory and swap manager. Rust, cgroup v2, zram, reversible system integration.",
       "visibility": "public",
       "metadata_source": "https://api.github.com/repos/LIghtJUNction/zmem",
       "role": "application",
       "additional": false,
-      "readme_source": "https://github.com/LIghtJUNction/zmem/blob/df778e868b916dddb13a629c19f0f7d66f54825c/README.md",
+      "readme_source": "https://github.com/LIghtJUNction/zmem/blob/24951ae66df31387f736f61b34d21a1963df9730/README.md",
       "pages": [
         {
           "slug": "",
           "title": "概览",
           "file": "content/projects/zmem/index.md",
-          "source": "https://github.com/LIghtJUNction/zmem/blob/df778e868b916dddb13a629c19f0f7d66f54825c/README.md",
+          "source": "https://github.com/LIghtJUNction/zmem/blob/24951ae66df31387f736f61b34d21a1963df9730/README.md",
           "path": "README.md"
+        },
+        {
+          "slug": "background-admission",
+          "title": "Background admission",
+          "file": "content/projects/zmem/background-admission.md",
+          "source": "https://github.com/LIghtJUNction/zmem/blob/24951ae66df31387f736f61b34d21a1963df9730/docs/background-admission.md",
+          "path": "docs/background-admission.md"
+        },
+        {
+          "slug": "responsiveness",
+          "title": "Responsiveness, reclaim and background I/O",
+          "file": "content/projects/zmem/responsiveness.md",
+          "source": "https://github.com/LIghtJUNction/zmem/blob/24951ae66df31387f736f61b34d21a1963df9730/docs/responsiveness.md",
+          "path": "docs/responsiveness.md"
+        },
+        {
+          "slug": "swap-lifecycle-and-dedup",
+          "title": "Swap lifecycle and explicit memory deduplication",
+          "file": "content/projects/zmem/swap-lifecycle-and-dedup.md",
+          "source": "https://github.com/LIghtJUNction/zmem/blob/24951ae66df31387f736f61b34d21a1963df9730/docs/swap-lifecycle-and-dedup.md",
+          "path": "docs/swap-lifecycle-and-dedup.md"
         }
       ]
     },
@@ -2326,47 +2347,47 @@
       "name": "ztype",
       "repository": "https://github.com/LIghtJUNction/ztype",
       "branch": "main",
-      "commit": "1b08bedd4ffb1ef68effa5aea32c31775e51d268",
+      "commit": "5d245e5b0633b5ce0f9479fec9741fb23b7b5b80",
       "description": "Native multilingual composition application built on zinput and Project Z.",
       "visibility": "public",
       "metadata_source": "https://api.github.com/repos/LIghtJUNction/ztype",
       "role": "application",
       "additional": false,
-      "readme_source": "https://github.com/LIghtJUNction/ztype/blob/1b08bedd4ffb1ef68effa5aea32c31775e51d268/README.zh-CN.md",
+      "readme_source": "https://github.com/LIghtJUNction/ztype/blob/5d245e5b0633b5ce0f9479fec9741fb23b7b5b80/README.zh-CN.md",
       "pages": [
         {
           "slug": "",
           "title": "概览",
           "file": "content/projects/ztype/index.md",
-          "source": "https://github.com/LIghtJUNction/ztype/blob/1b08bedd4ffb1ef68effa5aea32c31775e51d268/README.zh-CN.md",
+          "source": "https://github.com/LIghtJUNction/ztype/blob/5d245e5b0633b5ce0f9479fec9741fb23b7b5b80/README.zh-CN.md",
           "path": "README.zh-CN.md"
         },
         {
           "slug": "readme-en",
           "title": "ztype",
           "file": "content/projects/ztype/readme-en.md",
-          "source": "https://github.com/LIghtJUNction/ztype/blob/1b08bedd4ffb1ef68effa5aea32c31775e51d268/README.md",
+          "source": "https://github.com/LIghtJUNction/ztype/blob/5d245e5b0633b5ce0f9479fec9741fb23b7b5b80/README.md",
           "path": "README.md"
         },
         {
           "slug": "service-installation",
           "title": "Native service installation",
           "file": "content/projects/ztype/service-installation.md",
-          "source": "https://github.com/LIghtJUNction/ztype/blob/1b08bedd4ffb1ef68effa5aea32c31775e51d268/docs/service-installation.md",
+          "source": "https://github.com/LIghtJUNction/ztype/blob/5d245e5b0633b5ce0f9479fec9741fb23b7b5b80/docs/service-installation.md",
           "path": "docs/service-installation.md"
         },
         {
           "slug": "interactive-trial-zh-cn",
           "title": "Ztype 0.2.1 安装与实测记录",
           "file": "content/projects/ztype/interactive-trial-zh-cn.md",
-          "source": "https://github.com/LIghtJUNction/ztype/blob/1b08bedd4ffb1ef68effa5aea32c31775e51d268/docs/interactive-trial.zh-CN.md",
+          "source": "https://github.com/LIghtJUNction/ztype/blob/5d245e5b0633b5ce0f9479fec9741fb23b7b5b80/docs/interactive-trial.zh-CN.md",
           "path": "docs/interactive-trial.zh-CN.md"
         },
         {
           "slug": "ztty-ui-0-4-2-zh-cn",
           "title": "ztype 0.4.2：候选界面与 ztty 输入验收",
           "file": "content/projects/ztype/ztty-ui-0-4-2-zh-cn.md",
-          "source": "https://github.com/LIghtJUNction/ztype/blob/1b08bedd4ffb1ef68effa5aea32c31775e51d268/docs/ztty-ui-0.4.2.zh-CN.md",
+          "source": "https://github.com/LIghtJUNction/ztype/blob/5d245e5b0633b5ce0f9479fec9741fb23b7b5b80/docs/ztty-ui-0.4.2.zh-CN.md",
           "path": "docs/ztty-ui-0.4.2.zh-CN.md"
         }
       ]
@@ -2376,96 +2397,96 @@
       "name": "zuse",
       "repository": "https://github.com/LIghtJUNction/zuse",
       "branch": "main",
-      "commit": "6e88dd885eb73545a1ab6a9cd50097ef63fba423",
+      "commit": "f13412e3c148ecf01c347423caba509d45df9ccc",
       "description": "Agent-native computer use shell and Rust library. Project Z: small core, native desktop control, MCP and human handoff.",
       "visibility": "public",
       "metadata_source": "https://api.github.com/repos/LIghtJUNction/zuse",
       "role": "application",
       "additional": false,
-      "readme_source": "https://github.com/LIghtJUNction/zuse/blob/6e88dd885eb73545a1ab6a9cd50097ef63fba423/README.zh-CN.md",
+      "readme_source": "https://github.com/LIghtJUNction/zuse/blob/f13412e3c148ecf01c347423caba509d45df9ccc/README.zh-CN.md",
       "pages": [
         {
           "slug": "",
           "title": "概览",
           "file": "content/projects/zuse/index.md",
-          "source": "https://github.com/LIghtJUNction/zuse/blob/6e88dd885eb73545a1ab6a9cd50097ef63fba423/README.zh-CN.md",
+          "source": "https://github.com/LIghtJUNction/zuse/blob/f13412e3c148ecf01c347423caba509d45df9ccc/README.zh-CN.md",
           "path": "README.zh-CN.md"
         },
         {
           "slug": "readme-en",
           "title": "zuse",
           "file": "content/projects/zuse/readme-en.md",
-          "source": "https://github.com/LIghtJUNction/zuse/blob/6e88dd885eb73545a1ab6a9cd50097ef63fba423/README.md",
+          "source": "https://github.com/LIghtJUNction/zuse/blob/f13412e3c148ecf01c347423caba509d45df9ccc/README.md",
           "path": "README.md"
         },
         {
           "slug": "language",
           "title": "Flat execution language",
           "file": "content/projects/zuse/language.md",
-          "source": "https://github.com/LIghtJUNction/zuse/blob/6e88dd885eb73545a1ab6a9cd50097ef63fba423/docs/language.md",
+          "source": "https://github.com/LIghtJUNction/zuse/blob/f13412e3c148ecf01c347423caba509d45df9ccc/docs/language.md",
           "path": "docs/language.md"
         },
         {
           "slug": "session-protocol",
           "title": "Zuse 会话协议 v1",
           "file": "content/projects/zuse/session-protocol.md",
-          "source": "https://github.com/LIghtJUNction/zuse/blob/6e88dd885eb73545a1ab6a9cd50097ef63fba423/docs/session-protocol.md",
+          "source": "https://github.com/LIghtJUNction/zuse/blob/f13412e3c148ecf01c347423caba509d45df9ccc/docs/session-protocol.md",
           "path": "docs/session-protocol.md"
         },
         {
           "slug": "sessions",
           "title": "持久会话：观察、执行与取消",
           "file": "content/projects/zuse/sessions.md",
-          "source": "https://github.com/LIghtJUNction/zuse/blob/6e88dd885eb73545a1ab6a9cd50097ef63fba423/docs/sessions.md",
+          "source": "https://github.com/LIghtJUNction/zuse/blob/f13412e3c148ecf01c347423caba509d45df9ccc/docs/sessions.md",
           "path": "docs/sessions.md"
         },
         {
           "slug": "platforms",
           "title": "Platform support and verification",
           "file": "content/projects/zuse/platforms.md",
-          "source": "https://github.com/LIghtJUNction/zuse/blob/6e88dd885eb73545a1ab6a9cd50097ef63fba423/docs/platforms.md",
+          "source": "https://github.com/LIghtJUNction/zuse/blob/f13412e3c148ecf01c347423caba509d45df9ccc/docs/platforms.md",
           "path": "docs/platforms.md"
         },
         {
           "slug": "chatgpt-desktop",
           "title": "ChatGPT desktop module",
           "file": "content/projects/zuse/chatgpt-desktop.md",
-          "source": "https://github.com/LIghtJUNction/zuse/blob/6e88dd885eb73545a1ab6a9cd50097ef63fba423/docs/chatgpt-desktop.md",
+          "source": "https://github.com/LIghtJUNction/zuse/blob/f13412e3c148ecf01c347423caba509d45df9ccc/docs/chatgpt-desktop.md",
           "path": "docs/chatgpt-desktop.md"
         },
         {
           "slug": "development",
           "title": "Development and release",
           "file": "content/projects/zuse/development.md",
-          "source": "https://github.com/LIghtJUNction/zuse/blob/6e88dd885eb73545a1ab6a9cd50097ef63fba423/docs/development.md",
+          "source": "https://github.com/LIghtJUNction/zuse/blob/f13412e3c148ecf01c347423caba509d45df9ccc/docs/development.md",
           "path": "docs/development.md"
         },
         {
           "slug": "device-io",
           "title": "Native serial and USB I/O",
           "file": "content/projects/zuse/device-io.md",
-          "source": "https://github.com/LIghtJUNction/zuse/blob/6e88dd885eb73545a1ab6a9cd50097ef63fba423/docs/device-io.md",
+          "source": "https://github.com/LIghtJUNction/zuse/blob/f13412e3c148ecf01c347423caba509d45df9ccc/docs/device-io.md",
           "path": "docs/device-io.md"
         },
         {
           "slug": "drawing",
           "title": "绘图原语与窗口锚点",
           "file": "content/projects/zuse/drawing.md",
-          "source": "https://github.com/LIghtJUNction/zuse/blob/6e88dd885eb73545a1ab6a9cd50097ef63fba423/docs/drawing.md",
+          "source": "https://github.com/LIghtJUNction/zuse/blob/f13412e3c148ecf01c347423caba509d45df9ccc/docs/drawing.md",
           "path": "docs/drawing.md"
         },
         {
           "slug": "ios",
           "title": "iOS through WebDriverAgent",
           "file": "content/projects/zuse/ios.md",
-          "source": "https://github.com/LIghtJUNction/zuse/blob/6e88dd885eb73545a1ab6a9cd50097ef63fba423/docs/ios.md",
+          "source": "https://github.com/LIghtJUNction/zuse/blob/f13412e3c148ecf01c347423caba509d45df9ccc/docs/ios.md",
           "path": "docs/ios.md"
         },
         {
           "slug": "key-holds",
           "title": "Bounded key holds",
           "file": "content/projects/zuse/key-holds.md",
-          "source": "https://github.com/LIghtJUNction/zuse/blob/6e88dd885eb73545a1ab6a9cd50097ef63fba423/docs/key-holds.md",
+          "source": "https://github.com/LIghtJUNction/zuse/blob/f13412e3c148ecf01c347423caba509d45df9ccc/docs/key-holds.md",
           "path": "docs/key-holds.md"
         }
       ]

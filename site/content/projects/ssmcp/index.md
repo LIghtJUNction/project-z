@@ -1,8 +1,12 @@
 # ssmcp
 
-### 把你的电脑接到 Agent。用一个 `code_mode` 调用原生工具。
+### 面向 Astra Pro 的 harness
 
-ssmcp 是一个可自建的远程 harness 通道。客户端把命令、文件、会话和已安装的开发工具接入授权会话；Agent 通过 MCP 选择设备并调用这些工具。模型可以在云端，工作区、执行环境和工具状态留在你的机器上。
+**支持 Astra Pro 集群，在你自己的开发环境中协同完成开发任务。**
+
+ssmcp 把多个已授权的 Astra Pro 会话连接到你的开发机，围绕同一项目分工、交换进度、执行命令并汇总结果。命令和工具在你的开发环境中运行，所需结果与上下文通过已授权的会话传递。
+
+你可以让不同会话分别实现功能、检查改动和运行测试，通过成员身份和定向消息协作，把结果提交到同一个项目。[了解集群协作](docs/agent-collaboration.md)
 
 [演示视频](#演示视频) · [快速开始](#快速开始) · [本地与远程目标](docs/connection-contexts.md) · [会话操作](docs/client-input.md) · [工具与 Zuse CLI](docs/computer-use.md) · [编写自己的客户端](docs/client-extension.md) · [部署服务器](docs/deployment.md)
 
@@ -135,7 +139,8 @@ ssmcp context use here
 
 | 操作 | 用法 |
 | --- | --- |
-| 发给指定 Agent | 光标在草稿开头时按 **←**，选择成员，Enter / → 返回 |
+| 查看会话统计 | 向左进入统计页，查看会话进程 ID、主 Agent 线程 ID 与实际计数 |
+| 发给指定 Agent | `/sessions` 或 `/message` 打开收件人选择器，选定后返回输入框发送 |
 | 引用文件、图片 | 输入 `@` 枚举工作区；支持中文、带空格路径和目录续补 |
 | 粘贴图片 | **Ctrl + V** 或 `/paste`；`/attach PATH` 导入本地图片 |
 | 引用技能 | 输入 `$` 枚举有效技能；项目技能覆盖同名全局技能 |
@@ -300,3 +305,4 @@ cargo run --locked --bin ssmcp -- ui preview
 ---
 
 [MIT License](LICENSE)
+

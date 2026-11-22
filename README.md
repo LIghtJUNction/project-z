@@ -63,6 +63,10 @@ python3 scripts/project_z.py order
 
 默认的 `run` 和 `resolve` 选择公共库；`resolve --all` 包含应用。非 Rust、桌面、服务、设备及发行包仍执行自己的验收，不能用 Cargo 解析成功代替。
 
+`project_z.py run` 启动 Cargo 构建、检查、测试、基准、Clippy、文档和编译任务时，会在 Linux 上优先使用已验证的 zmem 0.2 或更新版本，把新任务放入后台资源组。内存从任务启动时就记入该组，zmem 因而能够按实际使用量和系统余量调整预算。系统未提供可用的 systemd 管理器或可信的活动 zmem 服务时，入口会说明原因并照常执行。设置 `ZMEM_BUILD_BACKGROUND=0` 可让本批任务沿用调用者的分组；已有任务保持原分组，共享 Cargo 构建锁仍由外层批次持有。
+
+使用 zmem 0.4 或更新版本时，这些后台任务还会在启动前检查可用内存和内存 PSI。压力高时默认等待最多 60 秒，超时返回 75，命令不会启动；显式运行可用 `--wait-timeout` 调整等待。交互任务绕过准入，Cargo metadata 查询不加入等待。该入口只纳管它启动的任务，不拦截任意终端命令。参见 [zmem 启动准入说明](https://github.com/LIghtJUNction/zmem/blob/main/docs/background-admission.md)。
+
 ## 记录与发布
 
 日常开发以本地验证为准；正式发行保留必要的构建、签名、制品与部署流程。报告记录实际源码、命令、结果和未覆盖范围，历史记录中的旧 SHA 保持原样。
