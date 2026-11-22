@@ -30,7 +30,7 @@
       "path": "lmm-api-source",
       "url": "https://github.com/TokenNotIncluded/lmm-api-source.git",
       "branch": "main",
-      "commit": "40fd249fcb5358b608ccfd665c3cac6cda81f2b8",
+      "commit": "3385d567ef0e023a5b79e4499f27581be1309425",
       "role": "application",
       "manifests": [
         "services/core/Cargo.toml"
@@ -54,7 +54,7 @@
       "path": "oh-my-ztty",
       "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
       "branch": "main",
-      "commit": "c4d94d20018ece30a729239e46c8d5e7dfe34782",
+      "commit": "47b39f7c74c0088f56234b6c183993e5a38ecf66",
       "role": "suite",
       "manifests": [],
       "requires": [
@@ -72,7 +72,7 @@
       "path": "ssmcp",
       "url": "https://github.com/LIghtJUNction/ssmcp.git",
       "branch": "main",
-      "commit": "61a4de1cf522358691998ecb724b4a8518b91c47",
+      "commit": "87c4a17faf0dd2c140cb707ec59b1f05725f06f0",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -388,7 +388,7 @@
       "path": "zmem",
       "url": "https://github.com/LIghtJUNction/zmem.git",
       "branch": "main",
-      "commit": "94343545e1e918ca528a3032d764b70ae14c018f",
+      "commit": "24951ae66df31387f736f61b34d21a1963df9730",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -4379,7 +4379,7 @@
     },
     {
       "name": "zmem-manager",
-      "version": "0.3.0",
+      "version": "0.4.1",
       "repository": "zmem",
       "manifest": "zmem/Cargo.toml",
       "workspace": "zmem",
