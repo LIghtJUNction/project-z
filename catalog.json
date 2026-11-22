@@ -30,7 +30,7 @@
       "path": "lmm-api-source",
       "url": "https://github.com/TokenNotIncluded/lmm-api-source.git",
       "branch": "main",
-      "commit": "f19b97de14e908c0057667abdb9f38c7e84e8127",
+      "commit": "40fd249fcb5358b608ccfd665c3cac6cda81f2b8",
       "role": "application",
       "manifests": [
         "services/core/Cargo.toml"
@@ -42,7 +42,7 @@
       "path": "mechrevo-drivers",
       "url": "https://github.com/LIghtJUNction/mechrevo-drivers.git",
       "branch": "main",
-      "commit": "93a7614c79895fc7dcc5b1e7e1291800cc9de1d0",
+      "commit": "aaa7573dd2609e74936ba4c3724b169de1834f54",
       "role": "application",
       "manifests": [
         "console/Cargo.toml"
@@ -54,7 +54,7 @@
       "path": "oh-my-ztty",
       "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
       "branch": "main",
-      "commit": "dbb909b78d152f21a0c270724a1b958b843d0388",
+      "commit": "c4d94d20018ece30a729239e46c8d5e7dfe34782",
       "role": "suite",
       "manifests": [],
       "requires": [
@@ -72,7 +72,7 @@
       "path": "ssmcp",
       "url": "https://github.com/LIghtJUNction/ssmcp.git",
       "branch": "main",
-      "commit": "add39e18ff92680ff3ac0c3e911407956e20b228",
+      "commit": "61a4de1cf522358691998ecb724b4a8518b91c47",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -388,7 +388,7 @@
       "path": "zmem",
       "url": "https://github.com/LIghtJUNction/zmem.git",
       "branch": "main",
-      "commit": "df778e868b916dddb13a629c19f0f7d66f54825c",
+      "commit": "94343545e1e918ca528a3032d764b70ae14c018f",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -535,7 +535,7 @@
       "path": "ztype",
       "url": "https://github.com/LIghtJUNction/ztype.git",
       "branch": "main",
-      "commit": "1b08bedd4ffb1ef68effa5aea32c31775e51d268",
+      "commit": "5d245e5b0633b5ce0f9479fec9741fb23b7b5b80",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -549,7 +549,7 @@
       "path": "zuse",
       "url": "https://github.com/LIghtJUNction/zuse.git",
       "branch": "main",
-      "commit": "6e88dd885eb73545a1ab6a9cd50097ef63fba423",
+      "commit": "f13412e3c148ecf01c347423caba509d45df9ccc",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -2473,7 +2473,7 @@
     },
     {
       "name": "ssmcp",
-      "version": "0.10.25",
+      "version": "0.10.27",
       "repository": "ssmcp",
       "manifest": "ssmcp/Cargo.toml",
       "workspace": "ssmcp",
@@ -2671,6 +2671,21 @@
           "path": null
         },
         {
+          "name": "rcgen",
+          "alias": null,
+          "requirement": "^0.14.10",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "ring"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
           "name": "reqwest",
           "alias": null,
           "requirement": "^0.13.5",
@@ -2685,6 +2700,19 @@
             "query",
             "rustls-no-provider"
           ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "ring",
+          "alias": null,
+          "requirement": "^0.17",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
           "source": "registry+https://github.com/rust-lang/crates.io-index",
           "path": null
         },
@@ -2834,13 +2862,12 @@
           "alias": null,
           "requirement": "^0.26",
           "explicit_version": true,
-          "kind": "dev",
+          "kind": "normal",
           "target": null,
           "optional": false,
           "default_features": false,
           "features": [
-            "ring",
-            "tls12"
+            "ring"
           ],
           "source": "registry+https://github.com/rust-lang/crates.io-index",
           "path": null
@@ -2985,7 +3012,7 @@
         {
           "name": "zip",
           "alias": null,
-          "requirement": "^6.0.0",
+          "requirement": "^9.0.5",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -4352,7 +4379,7 @@
     },
     {
       "name": "zmem-manager",
-      "version": "0.1.2",
+      "version": "0.3.0",
       "repository": "zmem",
       "manifest": "zmem/Cargo.toml",
       "workspace": "zmem",
