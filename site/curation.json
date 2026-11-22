@@ -356,13 +356,6 @@
       "package": "zmem"
     },
     {
-      "id": "zuse-skills",
-      "category": "applications",
-      "kind": "integration",
-      "summary": "提供可导入的桌面观察函数与浏览器验收模块，供 Zuse 脚本复用。",
-      "package": "zuse-skills"
-    },
-    {
       "id": "zuse-std",
       "category": "system",
       "kind": "library",

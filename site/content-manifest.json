@@ -2492,42 +2492,6 @@
       ]
     },
     {
-      "id": "zuse-skills",
-      "name": "zuse-skills",
-      "repository": "https://github.com/LIghtJUNction/zuse-skills",
-      "branch": "main",
-      "commit": "201a7508d3ed2928295ebaf0853ea4528212b980",
-      "description": "Composable, non-preemptive GUI skills for zuse",
-      "visibility": "public",
-      "metadata_source": "https://api.github.com/repos/LIghtJUNction/zuse-skills",
-      "role": "extension",
-      "additional": false,
-      "readme_source": "https://github.com/LIghtJUNction/zuse-skills/blob/201a7508d3ed2928295ebaf0853ea4528212b980/README.md",
-      "pages": [
-        {
-          "slug": "",
-          "title": "概览",
-          "file": "content/projects/zuse-skills/index.md",
-          "source": "https://github.com/LIghtJUNction/zuse-skills/blob/201a7508d3ed2928295ebaf0853ea4528212b980/README.md",
-          "path": "README.md"
-        },
-        {
-          "slug": "zgpui-native",
-          "title": "zgpui → zuse: native automation contract (proposal)",
-          "file": "content/projects/zuse-skills/zgpui-native.md",
-          "source": "https://github.com/LIghtJUNction/zuse-skills/blob/201a7508d3ed2928295ebaf0853ea4528212b980/docs/zgpui-native.md",
-          "path": "docs/zgpui-native.md"
-        },
-        {
-          "slug": "skills-zuse-skill-creator-skill",
-          "title": "zuse-skill-creator",
-          "file": "content/projects/zuse-skills/skills-zuse-skill-creator-skill.md",
-          "source": "https://github.com/LIghtJUNction/zuse-skills/blob/201a7508d3ed2928295ebaf0853ea4528212b980/skills/zuse-skill-creator/SKILL.md",
-          "path": "skills/zuse-skill-creator/SKILL.md"
-        }
-      ]
-    },
-    {
       "id": "zuse-std",
       "name": "zuse-std",
       "repository": "https://github.com/LIghtJUNction/zuse-std",
