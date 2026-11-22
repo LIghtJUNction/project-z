@@ -54,7 +54,7 @@
       "path": "oh-my-ztty",
       "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
       "branch": "main",
-      "commit": "a585177e25e341ef6e1b2ad6653ea52a769fe2bf",
+      "commit": "dbb909b78d152f21a0c270724a1b958b843d0388",
       "role": "suite",
       "manifests": [],
       "requires": [

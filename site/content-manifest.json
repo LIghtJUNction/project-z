@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T22:17:29.793042Z",
+  "generated_at": "2026-11-21T22:53:47.242904Z",
   "projects": [
     {
       "id": "lmm",
@@ -283,96 +283,96 @@
       "name": "oh-my-ztty",
       "repository": "https://github.com/LIghtJUNction/oh-my-ztty",
       "branch": "main",
-      "commit": "69771be7940818548d851dc1038424ac2c614638",
+      "commit": "dbb909b78d152f21a0c270724a1b958b843d0388",
       "description": "A lean, AI-native Linux terminal suite built on Project Z",
       "visibility": "public",
       "metadata_source": "https://api.github.com/repos/LIghtJUNction/oh-my-ztty",
       "role": "suite",
       "additional": false,
-      "readme_source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/69771be7940818548d851dc1038424ac2c614638/README.zh-CN.md",
+      "readme_source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/README.zh-CN.md",
       "pages": [
         {
           "slug": "",
           "title": "概览",
           "file": "content/projects/oh-my-ztty/index.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/69771be7940818548d851dc1038424ac2c614638/README.zh-CN.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/README.zh-CN.md",
           "path": "README.zh-CN.md"
         },
         {
           "slug": "readme-en",
           "title": "oh-my-ztty",
           "file": "content/projects/oh-my-ztty/readme-en.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/69771be7940818548d851dc1038424ac2c614638/README.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/README.md",
           "path": "README.md"
         },
         {
           "slug": "installation",
           "title": "Installation",
           "file": "content/projects/oh-my-ztty/installation.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/69771be7940818548d851dc1038424ac2c614638/site/content/installation.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/installation.md",
           "path": "site/content/installation.md"
         },
         {
           "slug": "configuration",
           "title": "Configuration",
           "file": "content/projects/oh-my-ztty/configuration.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/69771be7940818548d851dc1038424ac2c614638/site/content/configuration.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/configuration.md",
           "path": "site/content/configuration.md"
         },
         {
           "slug": "shell",
           "title": "Shell, PATH and environment",
           "file": "content/projects/oh-my-ztty/shell.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/69771be7940818548d851dc1038424ac2c614638/site/content/shell.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/shell.md",
           "path": "site/content/shell.md"
         },
         {
           "slug": "memory",
           "title": "Memory and Swap",
           "file": "content/projects/oh-my-ztty/memory.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/69771be7940818548d851dc1038424ac2c614638/site/content/memory.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/memory.md",
           "path": "site/content/memory.md"
         },
         {
           "slug": "plugins",
           "title": "Plugins",
           "file": "content/projects/oh-my-ztty/plugins.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/69771be7940818548d851dc1038424ac2c614638/site/content/plugins.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/plugins.md",
           "path": "site/content/plugins.md"
         },
         {
           "slug": "ai",
           "title": "AI integration",
           "file": "content/projects/oh-my-ztty/ai.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/69771be7940818548d851dc1038424ac2c614638/site/content/ai.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/ai.md",
           "path": "site/content/ai.md"
         },
         {
           "slug": "dotfiles",
           "title": "Dotfiles",
           "file": "content/projects/oh-my-ztty/dotfiles.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/69771be7940818548d851dc1038424ac2c614638/site/content/dotfiles.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/dotfiles.md",
           "path": "site/content/dotfiles.md"
         },
         {
           "slug": "performance",
           "title": "Performance",
           "file": "content/projects/oh-my-ztty/performance.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/69771be7940818548d851dc1038424ac2c614638/site/content/performance.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/performance.md",
           "path": "site/content/performance.md"
         },
         {
           "slug": "architecture",
           "title": "Architecture",
           "file": "content/projects/oh-my-ztty/architecture.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/69771be7940818548d851dc1038424ac2c614638/site/content/architecture.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/architecture.md",
           "path": "site/content/architecture.md"
         },
         {
           "slug": "development",
           "title": "Development",
           "file": "content/projects/oh-my-ztty/development.md",
-          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/69771be7940818548d851dc1038424ac2c614638/site/content/development.md",
+          "source": "https://github.com/LIghtJUNction/oh-my-ztty/blob/dbb909b78d152f21a0c270724a1b958b843d0388/site/content/development.md",
           "path": "site/content/development.md"
         }
       ]
@@ -1725,19 +1725,19 @@
       "name": "zmem",
       "repository": "https://github.com/LIghtJUNction/zmem",
       "branch": "main",
-      "commit": "57deca203bf6e1aab33b3e96e4c7abdcd2fbd0b6",
+      "commit": "df778e868b916dddb13a629c19f0f7d66f54825c",
       "description": "Project Z pressure-aware Linux memory and swap manager. Rust, cgroup v2, zram, reversible system integration.",
       "visibility": "public",
       "metadata_source": "https://api.github.com/repos/LIghtJUNction/zmem",
       "role": "application",
       "additional": false,
-      "readme_source": "https://github.com/LIghtJUNction/zmem/blob/57deca203bf6e1aab33b3e96e4c7abdcd2fbd0b6/README.md",
+      "readme_source": "https://github.com/LIghtJUNction/zmem/blob/df778e868b916dddb13a629c19f0f7d66f54825c/README.md",
       "pages": [
         {
           "slug": "",
           "title": "概览",
           "file": "content/projects/zmem/index.md",
-          "source": "https://github.com/LIghtJUNction/zmem/blob/57deca203bf6e1aab33b3e96e4c7abdcd2fbd0b6/README.md",
+          "source": "https://github.com/LIghtJUNction/zmem/blob/df778e868b916dddb13a629c19f0f7d66f54825c/README.md",
           "path": "README.md"
         }
       ]
