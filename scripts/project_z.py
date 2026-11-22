@@ -15,6 +15,7 @@ from pathlib import Path
 
 from cargo_versions import satisfies
 from catalog_docs import render as render_catalog_docs
+from managed_build import background_command
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = Path("catalog.json")
@@ -660,7 +661,9 @@ def main(argv=None):
     resolve = commands.add_parser("resolve", help="Verify Cargo --locked resolves the recorded GitHub sources")
     resolve.add_argument("--all", action="store_true", help="Resolve every Rust workspace, including applications")
     resolve.add_argument("names", nargs="*")
-    run = commands.add_parser("run", help="Run explicit Cargo arguments across selected repositories")
+    run = commands.add_parser("run", help="Run explicit Cargo arguments across selected repositories",
+                              epilog="Build/check commands use an available verified zmem >=0.2 "
+                              "background class; ZMEM_BUILD_BACKGROUND=0 keeps the caller's classification.")
     run.add_argument("--repo", action="append", default=[])
     run.add_argument("--affected", action="append", default=[])
     run.add_argument("cargo_args", nargs=argparse.REMAINDER)
@@ -748,7 +751,7 @@ def main(argv=None):
                 for manifest in repo["manifests"]:
                     print(f"[{repo['name']}] cargo {' '.join(cargo_args)}", flush=True)
                     invocation = cargo_invocation(cargo_args, root / repo["path"] / manifest)
-                    result = subprocess.run(invocation, cwd=root)
+                    result = subprocess.run(background_command(invocation), cwd=root)
                     if result.returncode:
                         failures.append(f"{repo['name']}: exit {result.returncode}")
             if failures:
