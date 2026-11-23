@@ -314,7 +314,48 @@ def repository_impact(data, changed):
         affected = expanded
 
 
-def verify_source_checkout(checkout, wanted, root=ROOT, *, checked=None, allow_uninitialized=False):
+def verify_retained_submodule(checkout, parent, root):
+    """Refuse to reuse module metadata owned by a different checkout."""
+    label = relative(checkout, root)
+    module_path = relative(checkout, parent)
+    entries = command(
+        ["git", "config", "--null", "--file", str(parent / ".gitmodules"), "--list"],
+        parent,
+    )
+    names = []
+    for entry in filter(None, entries.split("\0")):
+        key, _, value = entry.partition("\n")
+        if key.startswith("submodule.") and key.endswith(".path") and value == module_path:
+            names.append(key[len("submodule."):-len(".path")])
+    if len(names) != 1 or not names[0]:
+        raise CoordinationError(f"{label}: cannot identify one submodule name in {parent / '.gitmodules'}")
+
+    # Git resolves modules/ under a linked worktree's private namespace.
+    # The name comes from .gitmodules; it need not match the checkout path.
+    module = Path(command(
+        ["git", "rev-parse", "--path-format=absolute", "--git-path", f"modules/{names[0]}"],
+        parent,
+    ).strip()).resolve()
+    config = module / "config"
+    if not config.exists():
+        return
+    config_args = ["git", "config", "--includes", "--null", "--file", str(config)]
+    entries = command([*config_args, "--list"], parent)
+    if not any(entry.partition("\n")[0] == "core.worktree" for entry in entries.split("\0")):
+        return
+    # Read the file directly: entering a repository with a stale worktree can
+    # already fail. --path expands Git's pathname syntax without changing it.
+    worktrees = command([*config_args, "--path", "--get-all", "core.worktree"], parent)
+    for worktree in worktrees.removesuffix("\0").split("\0"):
+        owner = (module / worktree).resolve()
+        if owner != checkout:
+            raise CoordinationError(
+                f"{label}: retained submodule metadata {module} belongs to {owner}; "
+                f"expected {checkout}; preserve its metadata and use an isolated checkout"
+            )
+
+
+def verify_source_checkout(checkout, wanted, root=ROOT, *, checked=None, allow_uninitialized=False, parent=None):
     """Check every recorded gitlink directly; parent status can hide descendants."""
     source = Path(checkout)
     checkout = source.resolve()
@@ -325,6 +366,7 @@ def verify_source_checkout(checkout, wanted, root=ROOT, *, checked=None, allow_u
     if not (checkout / ".git").exists():
         if allow_uninitialized and not source.is_symlink() and (
                 not source.exists() or (source.is_dir() and not any(source.iterdir()))):
+            verify_retained_submodule(checkout, root if parent is None else parent, root)
             return
         raise CoordinationError(f"{label}: initialize the source repository first; preserve any local files")
     actual_root = Path(command(["git", "rev-parse", "--show-toplevel"], checkout).strip()).resolve()
@@ -342,7 +384,8 @@ def verify_source_checkout(checkout, wanted, root=ROOT, *, checked=None, allow_u
         relative(nested, checkout)
         if nested.resolve() == checkout or kind != "commit":
             raise CoordinationError(f"{label}/{path}: invalid nested source repository")
-        verify_source_checkout(nested, pinned, root, checked=checked, allow_uninitialized=allow_uninitialized)
+        verify_source_checkout(nested, pinned, root, checked=checked,
+                               allow_uninitialized=allow_uninitialized, parent=checkout)
     if command(["git", "status", "--porcelain", "--untracked-files=normal", "--ignore-submodules=none"], checkout):
         raise CoordinationError(f"{label}: source checkout is not clean")
     checked.add((checkout, wanted))

@@ -10,6 +10,7 @@ from __future__ import annotations
 import importlib.util
 import os
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -35,6 +36,8 @@ finally:
 
 class RecursiveSourceCheckoutTests(unittest.TestCase):
     """A -> B -> C -> D, with a separate canonical checkout for each source."""
+
+    MODULE_NAME = "registered.source"
 
     def setUp(self):
         # Isolate Git configuration in this test process, not in the user's
@@ -91,7 +94,7 @@ class RecursiveSourceCheckoutTests(unittest.TestCase):
         self.deep_leaf = self.deep_parent / "nested"
         # This local setting is the regression: ordinary status at A or its
         # direct B copy does not expose a change below this ignored gitlink.
-        self.git(self.deep_parent, "config", "submodule.nested.ignore", "all")
+        self.git(self.deep_parent, "config", f"submodule.{self.MODULE_NAME}.ignore", "all")
 
     def git(self, cwd, *args):
         result = subprocess.run(
@@ -118,7 +121,7 @@ class RecursiveSourceCheckoutTests(unittest.TestCase):
         self.git(path, "commit", "--quiet", "-m", "initial source")
         if target is not None:
             self.git(
-                path, "submodule", "add", "--quiet",
+                path, "submodule", "add", "--quiet", "--name", self.MODULE_NAME,
                 str(self.root / target), "nested",
             )
             self.git(
@@ -216,9 +219,11 @@ class RecursiveSourceCheckoutTests(unittest.TestCase):
         self.assertTrue(commands, "sync did not inspect any source checkout")
         self.assertEqual(self._source_state(), before)
 
-    def _sync_local_sources(self):
+    def _sync_local_sources(self, relocated=None):
+        relocated = {} if relocated is None else relocated
         repositories = [
-            {**repo, "url": str(self.root / repo["path"])}
+            {**repo, "path": relocated.get(repo["name"], repo["path"]),
+             "url": str(self.root / repo["path"])}
             for repo in self.data["repositories"]
         ]
         heads = {
@@ -254,6 +259,144 @@ class RecursiveSourceCheckoutTests(unittest.TestCase):
         self.assertEqual((self.deep_leaf / "tracked.txt").read_text(), "D current\n")
         self.assertEqual(self._source_state(), before)
         self.assertEqual(project_z.checkout_errors(self.data, self.root), [])
+
+    def test_missing_owned_checkout_passes_preflight_without_rewriting_metadata(self):
+        module = Path(self.git(self.deep_leaf, "rev-parse", "--absolute-git-dir"))
+        self.git(self.deep_parent, "submodule", "deinit", "--force", "--", "nested")
+        self.deep_leaf.rmdir()
+        config = module / "config"
+        before = config.read_bytes()
+        self.assertEqual(project_z.checkout_errors(
+            {"repositories": [{"path": "nested", "commit": self.data["repositories"][-1]["commit"]}]},
+            self.deep_parent, allow_uninitialized=True,
+        ), [])
+        self.assertEqual(config.read_bytes(), before)
+        self.assertFalse(self.deep_leaf.exists())
+
+    def _assert_foreign_metadata_rejected(self, *, owner_exists, checkout_exists, relative_owner):
+        module = Path(self.git(self.deep_leaf, "rev-parse", "--absolute-git-dir"))
+        owner = self.root / "foreign leaf"
+        self.deep_leaf.rename(owner)
+        if checkout_exists:
+            self.deep_leaf.mkdir()
+        (owner / ".git").write_text(f"gitdir: {module}\n", encoding="utf-8")
+        if not owner_exists:
+            shutil.rmtree(owner)
+        owner_value = os.path.relpath(owner, module) if relative_owner else str(owner)
+        config = module / "config"
+        self.git(
+            self.deep_parent, "config", "--file", str(config),
+            "core.worktree", owner_value,
+        )
+        before = config.read_bytes()
+
+        def foreign_state():
+            if not owner_exists:
+                return None
+            return {
+                "head": self.git(owner, "rev-parse", "HEAD"),
+                "toplevel": self.git(owner, "rev-parse", "--show-toplevel"),
+                "status": self.git(owner, "status", "--porcelain"),
+                "tracked": (owner / "tracked.txt").read_bytes(),
+            }
+
+        original_owner = foreign_state()
+        # Exercise the top-level entry too: its parent is the supplied root,
+        # while sync below reaches the same path through recursive gitlinks.
+        errors = project_z.checkout_errors(
+            {"repositories": [{"path": "nested", "commit": self.data["repositories"][-1]["commit"]}]},
+            self.deep_parent, allow_uninitialized=True,
+        )
+        self.assertTrue(errors, "preflight accepted retained metadata belonging to another checkout")
+        self.assertIn("retained submodule metadata", "\n".join(errors))
+        self.assertIn(str(owner), "\n".join(errors))
+        self.assertIn(str(self.deep_leaf), "\n".join(errors))
+
+        commands = []
+        original_command = project_z.command
+
+        def traced_command(argv, *args, **kwargs):
+            commands.append(tuple(argv))
+            git_commands = set(argv[1:]) if argv and argv[0] == "git" else set()
+            forbidden = {
+                "clone", "fetch", "checkout", "switch", "reset", "read-tree",
+                "update-index", "update-ref", "symbolic-ref",
+            }
+            if git_commands & forbidden or (
+                "submodule" in git_commands and git_commands & {"init", "update", "sync"}
+            ):
+                self.fail(f"sync mutated a source before rejecting foreign metadata: {argv!r}")
+            return original_command(argv, *args, **kwargs)
+
+        with mock.patch.object(project_z, "command", side_effect=traced_command):
+            with self.assertRaisesRegex(project_z.CoordinationError, "retained submodule metadata"):
+                self._sync_local_sources()
+
+        self.assertTrue(commands, "sync did not inspect any source checkout")
+        self.assertEqual(config.read_bytes(), before)
+        self.assertEqual(foreign_state(), original_owner)
+        self.assertEqual(owner.exists(), owner_exists)
+        self.assertEqual(self.deep_leaf.exists(), checkout_exists)
+        if checkout_exists:
+            self.assertEqual(list(self.deep_leaf.iterdir()), [])
+
+    def test_sync_rejects_retained_metadata_for_existing_foreign_checkout(self):
+        self._assert_foreign_metadata_rejected(
+            owner_exists=True, checkout_exists=True, relative_owner=True,
+        )
+
+    def test_sync_rejects_retained_metadata_for_missing_foreign_checkout(self):
+        self._assert_foreign_metadata_rejected(
+            owner_exists=False, checkout_exists=True, relative_owner=False,
+        )
+
+    def test_sync_rejects_foreign_metadata_when_checkout_path_is_missing(self):
+        self._assert_foreign_metadata_rejected(
+            owner_exists=True, checkout_exists=False, relative_owner=False,
+        )
+
+    def test_sync_rejects_missing_foreign_target_when_checkout_path_is_missing(self):
+        self._assert_foreign_metadata_rejected(
+            owner_exists=False, checkout_exists=False, relative_owner=True,
+        )
+
+    def _assert_isolated_sync(self, *, linked):
+        before = self._source_state()
+        original_module = Path(self.git(self.deep_leaf, "rev-parse", "--absolute-git-dir"))
+        original_config = (original_module / "config").read_bytes()
+        isolated = self.root / ("A-linked" if linked else "A-fresh")
+        if linked:
+            self.git(self.root / "A", "worktree", "add", "--detach", str(isolated), "HEAD")
+        else:
+            self.git(
+                self.root, "clone", "--quiet", "--no-recurse-submodules",
+                str(self.root / "A"), str(isolated),
+            )
+        retained = Path(self.git(
+            isolated, "rev-parse", "--path-format=absolute", "--git-path",
+            f"modules/{self.MODULE_NAME}",
+        ))
+        self.assertFalse(retained.exists())
+
+        self._sync_local_sources({"A": isolated.name})
+
+        leaf = isolated / "nested" / "nested" / "nested"
+        isolated_module = Path(self.git(leaf, "rev-parse", "--absolute-git-dir"))
+        self.assertNotEqual(isolated_module, original_module)
+        self.assertEqual((original_module / "config").read_bytes(), original_config)
+        self.assertEqual(self.git(leaf, "rev-parse", "HEAD"), self.git(self.deep_leaf, "rev-parse", "HEAD"))
+        self.assertEqual(Path(self.git(leaf, "rev-parse", "--show-toplevel")), leaf)
+        self.assertEqual(self._source_state(), before)
+        self.assertEqual(
+            Path(self.git(isolated / "nested", "rev-parse", "--absolute-git-dir")),
+            retained,
+        )
+
+    def test_sync_initializes_plain_clone_with_independent_nested_metadata(self):
+        self._assert_isolated_sync(linked=False)
+
+    def test_sync_initializes_linked_worktree_with_independent_nested_metadata(self):
+        self._assert_isolated_sync(linked=True)
 
     def test_sync_preserves_user_file_in_uninitialized_deep_source(self):
         self.git(self.deep_parent, "submodule", "deinit", "--force", "--", "nested")
