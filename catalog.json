@@ -54,7 +54,7 @@
       "path": "oh-my-ztty",
       "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
       "branch": "main",
-      "commit": "1278b5808d52df9145f0854b9853a823d744ccff",
+      "commit": "74a6ec7599786ba6fd8d950b0fa0ac9fcbfa00fa",
       "role": "suite",
       "manifests": [],
       "requires": [
@@ -388,7 +388,7 @@
       "path": "zmem",
       "url": "https://github.com/LIghtJUNction/zmem.git",
       "branch": "main",
-      "commit": "c1892c6193762ae478a383366178937bfdbbbff6",
+      "commit": "ff07982d751f48cbf4c9fca554760c658d882d43",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -4379,7 +4379,7 @@
     },
     {
       "name": "zmem-manager",
-      "version": "0.4.4",
+      "version": "0.4.5",
       "repository": "zmem",
       "manifest": "zmem/Cargo.toml",
       "workspace": "zmem",
