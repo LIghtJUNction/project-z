@@ -53,6 +53,8 @@ Cargo.lock 保存本轮解析的具体 Git 提交。维护者通过 `cargo updat
 
 [项目索引](docs/PROJECTS.md) 列出仓库、实际 package、版本、关联与提交。`.gitmodules` 定义仓库 URL，`project-z.toml` 定义角色、特殊 manifest 和运行时关系。一个仓库可以含多个 package；独立子模块属于自己的仓库，不按目录位置误归给应用。
 
+[底层 z 库依赖替换计划](docs/maintenance/2026-11-23-dependency-replacement.md) 按实际调用边界安排通用能力复用、消费者代码删除与传播验收，并记录 zrun 接入 zharness、ssmcp 前仍需补齐的能力。
+
 底层库的负责人负责推进所有受影响的消费者，包括兼容适配、声明、锁文件、源码指针和对应行为的验证。按依赖顺序先推送子仓，再同步聚合图。新增库使用 `git submodule add <GitHub URL> <目录>` 登记；不要凭名称前缀推断包归属。
 
 ```sh

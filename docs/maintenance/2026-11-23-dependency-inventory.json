@@ -1,0 +1,689 @@
+{
+  "schema_version": 1,
+  "catalog_commit": "5b6ed98b630197fa7ef0f2bf7851d5c31aec9650",
+  "repositories": 46,
+  "packages": 73,
+  "scope": "recorded_catalog_only",
+  "method": "Cross-repository Cargo package references plus repository.requires; self excluded from transitive counts; normal/build/dev references retained.",
+  "rows": [
+    {
+      "name": "OniMods",
+      "role": "application",
+      "dependencies": [
+        "zhex"
+      ],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "lmm",
+      "role": "application",
+      "dependencies": [
+        "zhex"
+      ],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "lmm-api-source",
+      "role": "application",
+      "dependencies": [
+        "zclap",
+        "zconv",
+        "zhex"
+      ],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "mechrevo-drivers",
+      "role": "application",
+      "dependencies": [
+        "zclap",
+        "zhex"
+      ],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "oh-my-ztty",
+      "role": "suite",
+      "dependencies": [
+        "ssmcp",
+        "zdot",
+        "zfetch",
+        "zmem",
+        "zrc",
+        "zshard",
+        "ztty"
+      ],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "ssmcp",
+      "role": "application",
+      "dependencies": [
+        "zharness",
+        "zplugin",
+        "ztuio",
+        "zuse"
+      ],
+      "direct_consumers": [
+        "oh-my-ztty",
+        "zrc"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "zrc"
+      ]
+    },
+    {
+      "name": "z58",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "z64",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [
+        "zuse"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zrc",
+        "ztype",
+        "zuse",
+        "zuse-std"
+      ]
+    },
+    {
+      "name": "zcall",
+      "role": "library",
+      "dependencies": [
+        "zconv"
+      ],
+      "direct_consumers": [
+        "zcalld",
+        "zharness",
+        "zmcpio"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zharness",
+        "zmcpio",
+        "zrc",
+        "ztype",
+        "zuse",
+        "zuse-std"
+      ]
+    },
+    {
+      "name": "zcall-gui",
+      "role": "application",
+      "dependencies": [
+        "zcalld",
+        "zgpui"
+      ],
+      "direct_consumers": [
+        "zcalld"
+      ],
+      "transitive_consumers": [
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat"
+      ]
+    },
+    {
+      "name": "zcall-omarchy",
+      "role": "application",
+      "dependencies": [
+        "zcalld",
+        "zcalld-compat"
+      ],
+      "direct_consumers": [
+        "zcalld"
+      ],
+      "transitive_consumers": [
+        "zcall-gui",
+        "zcalld",
+        "zcalld-compat"
+      ]
+    },
+    {
+      "name": "zcalld",
+      "role": "application",
+      "dependencies": [
+        "zcall",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld-compat",
+        "zconv",
+        "zplugin",
+        "zsys"
+      ],
+      "direct_consumers": [
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld-compat"
+      ],
+      "transitive_consumers": [
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld-compat"
+      ]
+    },
+    {
+      "name": "zcalld-compat",
+      "role": "extension",
+      "dependencies": [
+        "zcalld"
+      ],
+      "direct_consumers": [
+        "zcall-omarchy",
+        "zcalld"
+      ],
+      "transitive_consumers": [
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld"
+      ]
+    },
+    {
+      "name": "zclap",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [
+        "lmm-api-source",
+        "mechrevo-drivers",
+        "zclick",
+        "zdot",
+        "zmcl",
+        "zuse"
+      ],
+      "transitive_consumers": [
+        "lmm-api-source",
+        "mechrevo-drivers",
+        "oh-my-ztty",
+        "ssmcp",
+        "zclick",
+        "zdot",
+        "zmcl",
+        "zrc",
+        "ztype",
+        "zuse",
+        "zuse-std"
+      ]
+    },
+    {
+      "name": "zclick",
+      "role": "bindings",
+      "dependencies": [
+        "zclap"
+      ],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "zconv",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [
+        "lmm-api-source",
+        "zcall",
+        "zcalld",
+        "zmcl",
+        "zrc"
+      ],
+      "transitive_consumers": [
+        "lmm-api-source",
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zharness",
+        "zmcl",
+        "zmcpio",
+        "zrc",
+        "ztype",
+        "zuse",
+        "zuse-std"
+      ]
+    },
+    {
+      "name": "zdistro",
+      "role": "application",
+      "dependencies": [],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "zdot",
+      "role": "application",
+      "dependencies": [
+        "zclap"
+      ],
+      "direct_consumers": [
+        "oh-my-ztty",
+        "zrc"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "zrc"
+      ]
+    },
+    {
+      "name": "zdwire",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "zfetch",
+      "role": "application",
+      "dependencies": [],
+      "direct_consumers": [
+        "oh-my-ztty"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty"
+      ]
+    },
+    {
+      "name": "zgpui",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [
+        "zcall-gui",
+        "zmcl",
+        "zterm",
+        "ztty",
+        "ztype"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zmcl",
+        "zterm",
+        "ztty",
+        "ztype"
+      ]
+    },
+    {
+      "name": "zgraphics",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [
+        "zterm",
+        "ztty"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "zterm",
+        "ztty"
+      ]
+    },
+    {
+      "name": "zguard",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [
+        "zharness"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zharness",
+        "zrc"
+      ]
+    },
+    {
+      "name": "zharness",
+      "role": "library",
+      "dependencies": [
+        "zcall",
+        "zguard",
+        "zplugin"
+      ],
+      "direct_consumers": [
+        "ssmcp"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zrc"
+      ]
+    },
+    {
+      "name": "zhex",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [
+        "OniMods",
+        "lmm",
+        "lmm-api-source",
+        "mechrevo-drivers"
+      ],
+      "transitive_consumers": [
+        "OniMods",
+        "lmm",
+        "lmm-api-source",
+        "mechrevo-drivers"
+      ]
+    },
+    {
+      "name": "zi18n",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [
+        "zmcl"
+      ],
+      "transitive_consumers": [
+        "zmcl"
+      ]
+    },
+    {
+      "name": "zinput",
+      "role": "library",
+      "dependencies": [
+        "zplugin",
+        "zsys"
+      ],
+      "direct_consumers": [
+        "zterm",
+        "ztty",
+        "ztype"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "zterm",
+        "ztty",
+        "ztype"
+      ]
+    },
+    {
+      "name": "zldap",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "zmcl",
+      "role": "application",
+      "dependencies": [
+        "zclap",
+        "zconv",
+        "zgpui",
+        "zi18n"
+      ],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "zmcpio",
+      "role": "library",
+      "dependencies": [
+        "zcall"
+      ],
+      "direct_consumers": [
+        "zuse"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zrc",
+        "ztype",
+        "zuse",
+        "zuse-std"
+      ]
+    },
+    {
+      "name": "zmem",
+      "role": "application",
+      "dependencies": [],
+      "direct_consumers": [
+        "oh-my-ztty"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty"
+      ]
+    },
+    {
+      "name": "zmime",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "zplugin",
+      "role": "library",
+      "dependencies": [
+        "zsys"
+      ],
+      "direct_consumers": [
+        "ssmcp",
+        "zcalld",
+        "zharness",
+        "zinput",
+        "ztty",
+        "ztype"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zharness",
+        "zinput",
+        "zrc",
+        "zterm",
+        "ztty",
+        "ztype"
+      ]
+    },
+    {
+      "name": "zpty",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [
+        "ztty"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "ztty"
+      ]
+    },
+    {
+      "name": "zrc",
+      "role": "configuration",
+      "dependencies": [
+        "ssmcp",
+        "zconv",
+        "zdot"
+      ],
+      "direct_consumers": [
+        "oh-my-ztty"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty"
+      ]
+    },
+    {
+      "name": "zscan",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "zshard",
+      "role": "shell",
+      "dependencies": [],
+      "direct_consumers": [
+        "oh-my-ztty"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty"
+      ]
+    },
+    {
+      "name": "zsyn",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "zsys",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [
+        "zcalld",
+        "zinput",
+        "zplugin",
+        "zuse"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zcall-gui",
+        "zcall-omarchy",
+        "zcalld",
+        "zcalld-compat",
+        "zharness",
+        "zinput",
+        "zplugin",
+        "zrc",
+        "zterm",
+        "ztty",
+        "ztype",
+        "zuse",
+        "zuse-std"
+      ]
+    },
+    {
+      "name": "zterm",
+      "role": "library",
+      "dependencies": [
+        "zgpui",
+        "zgraphics",
+        "zinput",
+        "zvte"
+      ],
+      "direct_consumers": [
+        "ztty"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "ztty"
+      ]
+    },
+    {
+      "name": "ztty",
+      "role": "application",
+      "dependencies": [
+        "zgpui",
+        "zgraphics",
+        "zinput",
+        "zplugin",
+        "zpty",
+        "zterm"
+      ],
+      "direct_consumers": [
+        "oh-my-ztty"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty"
+      ]
+    },
+    {
+      "name": "ztuio",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [
+        "ssmcp"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zrc"
+      ]
+    },
+    {
+      "name": "ztype",
+      "role": "application",
+      "dependencies": [
+        "zgpui",
+        "zinput",
+        "zplugin",
+        "zuse"
+      ],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "zuse",
+      "role": "application",
+      "dependencies": [
+        "z64",
+        "zclap",
+        "zmcpio",
+        "zsys"
+      ],
+      "direct_consumers": [
+        "ssmcp",
+        "ztype",
+        "zuse-std"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "ssmcp",
+        "zrc",
+        "ztype",
+        "zuse-std"
+      ]
+    },
+    {
+      "name": "zuse-std",
+      "role": "extension",
+      "dependencies": [
+        "zuse"
+      ],
+      "direct_consumers": [],
+      "transitive_consumers": []
+    },
+    {
+      "name": "zvte",
+      "role": "library",
+      "dependencies": [],
+      "direct_consumers": [
+        "zterm"
+      ],
+      "transitive_consumers": [
+        "oh-my-ztty",
+        "zterm",
+        "ztty"
+      ]
+    }
+  ]
+}
