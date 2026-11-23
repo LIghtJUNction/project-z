@@ -1,0 +1,169 @@
+name: Sync and test Project Z
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Keep scheduled runs single-flight. Only the writer shares the formal release lock.
+concurrency:
+  group: project-z-scheduled-sync
+  cancel-in-progress: false
+
+env:
+  RUSTUP_TOOLCHAIN: '1.100.0'
+
+jobs:
+  prepare:
+    if: github.repository == 'LIghtJUNction/project-z' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    outputs:
+      sha: ${{ steps.prepare.outputs.sha }}
+      bundle: ${{ steps.prepare.outputs.bundle }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: '1.100.0'
+      - name: Build a clean candidate in an isolated worktree
+        id: prepare
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python3 scripts/maintenance.py --require-catalog --apply --worktree "$RUNNER_TEMP/cohort"
+          python3 scripts/scheduled.py bundle
+      - uses: actions/upload-artifact@v7
+        if: steps.prepare.outputs.sha != ''
+        with:
+          name: ${{ steps.prepare.outputs.bundle }}
+          path: ${{ runner.temp }}/cohort.bundle
+          if-no-files-found: error
+      - if: always()
+        run: test ! -f dist/maintenance/summary.md || cat dist/maintenance/summary.md >> "$GITHUB_STEP_SUMMARY"
+
+  validate:
+    needs: prepare
+    if: needs.prepare.outputs.sha != ''
+    uses: ./.github/workflows/ci.yml
+    with:
+      candidate_sha: ${{ needs.prepare.outputs.sha }}
+      candidate_artifact: ${{ needs.prepare.outputs.bundle }}
+
+  package:
+    needs: [prepare, validate]
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    outputs:
+      tag: ${{ steps.plan.outputs.tag }}
+      assets: ${{ steps.plan.outputs.assets }}
+      plan_digest: ${{ steps.plan.outputs.plan_digest }}
+      archive_digest: ${{ steps.plan.outputs.archive_digest }}
+      manifest_digest: ${{ steps.plan.outputs.manifest_digest }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - uses: ./.github/actions/candidate
+        with:
+          artifact: ${{ needs.prepare.outputs.bundle }}
+          sha: ${{ needs.prepare.outputs.sha }}
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: '1.100.0'
+      - name: Check version deltas and stage official snapshot assets
+        id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/scheduled.py package
+      - uses: actions/upload-artifact@v7
+        if: steps.plan.outputs.tag != ''
+        with:
+          name: ${{ steps.plan.outputs.assets }}
+          path: ${{ runner.temp }}/release-assets/
+          if-no-files-found: error
+
+  record:
+    needs: [prepare, validate, package]
+    if: github.event_name == 'schedule' && vars.PROJECT_Z_SCHEDULED_WRITES == 'true'
+    runs-on: ubuntu-latest
+    outputs:
+      children: ${{ steps.record.outputs.children }}
+    concurrency:
+      group: project-z-release
+      cancel-in-progress: false
+    environment: project-z-snapshot
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - uses: ./.github/actions/candidate
+        with:
+          artifact: ${{ needs.prepare.outputs.bundle }}
+          sha: ${{ needs.prepare.outputs.sha }}
+          recursive: 'false'
+      - uses: actions/download-artifact@v8
+        if: needs.package.outputs.tag != ''
+        with:
+          name: ${{ needs.package.outputs.assets }}
+          path: ${{ runner.temp }}/release-assets
+      - name: Record the tested commit and complete its reserved GitHub release
+        id: record
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROJECT_Z_SCHEDULED_WRITES: ${{ vars.PROJECT_Z_SCHEDULED_WRITES }}
+          CANDIDATE: ${{ needs.prepare.outputs.sha }}
+          RELEASE_TAG: ${{ needs.package.outputs.tag }}
+          PLAN_DIGEST: ${{ needs.package.outputs.plan_digest }}
+          ARCHIVE_DIGEST: ${{ needs.package.outputs.archive_digest }}
+          MANIFEST_DIGEST: ${{ needs.package.outputs.manifest_digest }}
+        run: |
+          gh auth setup-git --hostname github.com
+          python3 scripts/scheduled.py record
+
+  registry:
+    needs: [prepare, package, record]
+    if: needs.record.outputs.children != '' && needs.record.outputs.children != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        target: ${{ fromJSON(needs.record.outputs.children) }}
+    environment: project-z-crate-${{ matrix.target.name }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: '1.100.0'
+      - name: Request the approved owner's release at the verified revision
+        env:
+          CANDIDATE: ${{ needs.prepare.outputs.sha }}
+          RELEASE_TAG: ${{ needs.package.outputs.tag }}
+          CHILD_TARGET: ${{ toJSON(matrix.target) }}
+          GH_TOKEN: ${{ secrets.CHILD_ACTIONS_TOKEN }}
+        run: python3 scripts/scheduled_registry.py

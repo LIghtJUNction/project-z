@@ -165,6 +165,30 @@ with patch.object(pz, 'inventory', side_effect=pz.CoordinationError(text)):
         self.assertIn("project-z: \u201d\u4e2d\u6587", result.stderr)
 
 
+class ManagedBuildEntryTests(FilesystemFixture):
+    def test_routed_runner_retains_arguments_workdir_and_failure_diagnostic(self):
+        data = catalog(package("app"))
+        prefix = ["/installed/zmem", "run", "--class", "background", "--"]
+        for status in (0, 37):
+            with self.subTest(status=status), \
+                    patch.object(pz, "inventory", return_value=data), \
+                    patch.object(pz, "validate", return_value=[]), \
+                    patch.object(pz, "stale_generated", return_value=[]), \
+                    patch.object(pz, "resolved_paths", return_value=[]), \
+                    patch.object(pz, "background_command", side_effect=lambda argv: prefix + argv), \
+                    patch.object(pz.subprocess, "run", return_value=SimpleNamespace(returncode=status)) as invoke, \
+                    redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()) as errors:
+                result = pz.main(["--root", str(self.root), "run", "--repo", "app",
+                                  "--", "test", "--offline", "--", "--nocapture"])
+            self.assertEqual(result, 0 if status == 0 else 1)
+            self.assertEqual(invoke.call_count, 1)
+            self.assertEqual(invoke.call_args.args[0][:6], prefix + ["cargo"])
+            self.assertEqual(invoke.call_args.args[0][-2:], ["--", "--nocapture"])
+            self.assertEqual(invoke.call_args.kwargs, {"cwd": self.root})
+            if status:
+                self.assertIn("app: exit 37", errors.getvalue())
+
+
 class DependencyGraphTests(unittest.TestCase):
     def test_dependencies_and_build_tools_precede_consumers(self):
         data = catalog(
@@ -828,7 +852,8 @@ class GitSourceIntegrationTests(GitSourceFixture):
                 executed.append(argv)
                 return SimpleNamespace(returncode=0)
             return original_run(argv, **kwargs)
-        with patch.object(pz.subprocess, "run", side_effect=invoke), redirect_stdout(io.StringIO()):
+        with patch.dict(os.environ, {"ZMEM_BUILD_BACKGROUND": "0"}), \
+                patch.object(pz.subprocess, "run", side_effect=invoke), redirect_stdout(io.StringIO()):
             code = pz.main(["--root", str(self.root), "run", "--repo", "app", "--", "test", "--offline", "--", "--nocapture"])
         self.assertEqual(code, 0)
         self.assertEqual(len(executed), 1)
