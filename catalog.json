@@ -179,7 +179,7 @@
       "path": "zcalld",
       "url": "https://github.com/LIghtJUNction/zcalld.git",
       "branch": "main",
-      "commit": "d8e75988b862060b9704769ad7404923b82337d9",
+      "commit": "701e56eb431edf28bc6a9a50aab732f7275f17d3",
       "role": "application",
       "manifests": [
         "Cargo.toml"

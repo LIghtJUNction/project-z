@@ -220,13 +220,24 @@
     },
     "zcalld": {
       "repository": "LIghtJUNction/zcalld",
-      "base": "6eab1150e8d58d330583c1b3206bf91e7862dc9a",
-      "candidate": "6a9e889df48e0b6558a0cfc44d6f3e4ccb464dbf",
-      "head": "d8e75988b862060b9704769ad7404923b82337d9",
-      "tree": "3f2473d011195fd7edd68b47de7e5021fba19376",
+      "base": "d8e75988b862060b9704769ad7404923b82337d9",
+      "candidate": "589c13cff4b7252d8facdca4812d14f3768c7efb",
+      "head": "701e56eb431edf28bc6a9a50aab732f7275f17d3",
+      "tree": "0e2010d4edf0fbd51ae5515c25b05eabfa603cc2",
       "readback_verified": true,
-      "published_at": "2026-11-23T17:37:25.837Z",
-      "ci": "[skip ci]; next formal release gate"
+      "published_at": "2026-11-23T18:47:27.612Z",
+      "validation": "Existing Windows vcpkg recipe extracted without changing commands or pins; YAML expansion equivalence passed. Native execution remains required by formal Release.",
+      "ci": "[skip ci]",
+      "previous_publication": {
+        "repository": "LIghtJUNction/zcalld",
+        "base": "6eab1150e8d58d330583c1b3206bf91e7862dc9a",
+        "candidate": "6a9e889df48e0b6558a0cfc44d6f3e4ccb464dbf",
+        "head": "d8e75988b862060b9704769ad7404923b82337d9",
+        "tree": "3f2473d011195fd7edd68b47de7e5021fba19376",
+        "readback_verified": true,
+        "published_at": "2026-11-23T17:37:25.837Z",
+        "ci": "[skip ci]; next formal release gate"
+      }
     },
     "mechrevo-drivers": {
       "repository": "LIghtJUNction/mechrevo-drivers",

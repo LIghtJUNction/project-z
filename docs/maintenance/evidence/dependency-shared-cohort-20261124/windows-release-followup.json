@@ -1,0 +1,73 @@
+{
+  "schema": "project-z-windows-release-followup-v1",
+  "observed_run": 45238502803,
+  "url": "https://github.com/LIghtJUNction/project-z/actions/runs/45238502803",
+  "source": "d73492bf49bf676bdb6e80ac6d772a73fa18cfe7",
+  "jobs": [
+    {
+      "id": 137916515055,
+      "name": "validate / dependencies",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 137918244688,
+      "name": "validate / core-libraries (macos-latest)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 137918245029,
+      "name": "validate / core-libraries (ubuntu-latest)",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 137918245127,
+      "name": "validate / core-libraries (windows-latest)",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "id": 137925936133,
+      "name": "publish",
+      "status": "completed",
+      "conclusion": "skipped"
+    },
+    {
+      "id": 137925936978,
+      "name": "package",
+      "status": "completed",
+      "conclusion": "skipped"
+    }
+  ],
+  "publication": "not_published",
+  "failures": [
+    {
+      "scope": "zsys",
+      "test": "windows::privacy::tests::directory_children::inspection_keeps_per_entry_inheritance_and_access_mask_policy",
+      "observed": "InspectAccess",
+      "root_cause": "unresolved; actual Windows descriptor and native error diagnostics required"
+    },
+    {
+      "scope": "zcalld",
+      "observed": "LNK1181: cannot open input file zstd.lib",
+      "followup": "reuse unchanged pinned transport recipe from shared action",
+      "provider": "701e56eb431edf28bc6a9a50aab732f7275f17d3"
+    }
+  ],
+  "probe_validation": {
+    "cross_compile_only": true,
+    "rust_msvc_metadata": 0,
+    "python_ast": 0,
+    "independent_review": "FFI, lifetime, source binding and unchanged original gates; no blocking issue found",
+    "native_windows_execution": "pending"
+  },
+  "original_privacy_gates": {
+    "zsys": 8,
+    "gui": 4,
+    "daemon": 3,
+    "installer": 3
+  },
+  "policy_or_test_expectation_changes": false
+}

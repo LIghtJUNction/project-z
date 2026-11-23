@@ -161,3 +161,30 @@ No GPU performance claim, actual ONI gameplay result, Mechrevo hardware operatio
 service deployment or real account/broadcast operation is implied by these checks.
 The subsequent Release page records the actual hosted outcomes and artifact
 checksums for the immutable tagged source.
+
+## First formal release attempt and Windows follow-up
+
+[Run 45238502803](https://github.com/LIghtJUNction/project-z/actions/runs/45238502803)
+tested source `d73492bf49bf676bdb6e80ac6d772a73fa18cfe7`. Dependency validation,
+Linux and macOS passed. The Linux job completed the Core interface check and
+SSMCP checks that had received SIGKILL in the sandbox. Windows failed; packaging
+and publication were skipped, so this run did not publish v0.1.2.
+
+The Windows log records two separate failures. One of the eight zsys privacy
+tests returned `InspectAccess` while testing the directory-children policy with
+different per-entry inheritance flags and access masks. The log does not identify
+the individual combination or underlying Win32 error. A standalone diagnostic now
+links the clean, catalog-recorded zsys source and prints the six combinations'
+actual security descriptors, metadata results and inspection results. It also
+compares a pre-opened handle with explicit attribute-read access. Cross compilation
+and an independent FFI/lifetime review passed; actual Windows execution is pending.
+No access policy, test expectation or original native permission gate was relaxed.
+
+The daemon's native test executable also could not link `zstd.lib`. Its existing
+pinned Windows transport recipe has been extracted into the zcalld repository's
+shared composite action, at `701e56eb431edf28bc6a9a50aab732f7275f17d3`.
+Both the daemon and aggregate release call that action. The vcpkg revision,
+curl/zstd/zlib choices, library paths and DLL setup retain the existing recipe.
+The follow-up aggregate source check and locked resolution passed. The next
+formal Release must still pass all three platforms and all original privacy
+tests before any package or Release is published.

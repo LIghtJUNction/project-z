@@ -105,6 +105,12 @@ jobs:
       - name: Enable the Windows native C compiler
         if: runner.os == 'Windows'
         uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756
+      - name: Inspect Windows ACL round-trip behavior
+        if: ${{ !cancelled() && runner.os == 'Windows' && inputs.release_consumers }}
+        run: python3 scripts/windows_privacy_diagnostics.py
+      - name: Prepare the shared Windows daemon transport
+        if: runner.os == 'Windows' && inputs.release_consumers
+        uses: ./zcalld/.github/actions/windows-transport
       - name: Test libraries against the same local dependency snapshot
         run: python3 scripts/project_z.py run -- test --tests
       - name: Test Windows privacy provider and native consumers
