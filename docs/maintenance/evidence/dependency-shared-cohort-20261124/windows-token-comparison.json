@@ -1,0 +1,186 @@
+{
+  "zcalld": {
+    "protect": [
+      {
+        "before": "",
+        "after": ", inheritance : DirectoryInheritance"
+      },
+      {
+        "before": "String",
+        "after": "Error"
+      },
+      {
+        "before": "\"cannot restrict the private file to this Windows account and SYSTEM\" . to_string ( )",
+        "after": "Error : : RestrictAccess"
+      },
+      {
+        "before": "",
+        "after": "match inheritance { DirectoryInheritance : : ObjectOnly = > \"\" , DirectoryInheritance : : FilesAndDirectories = > {"
+      },
+      {
+        "before": "",
+        "after": "} }"
+      },
+      {
+        "before": ",",
+        "after": ""
+      },
+      {
+        "before": ",",
+        "after": ""
+      }
+    ],
+    "private_user": [
+      {
+        "before": "String",
+        "after": "Error"
+      },
+      {
+        "before": "\"cannot inspect the current Windows account\" . to_string ( )",
+        "after": "Error : : CurrentAccount"
+      }
+    ],
+    "check_private": [
+      {
+        "before": "String",
+        "after": "Error"
+      },
+      {
+        "before": "{ \"private Windows files must be owned by this account and accessible only to it and SYSTEM\" . to_string ( ) }",
+        "after": "Error : : InspectAccess"
+      },
+      {
+        "before": ",",
+        "after": ""
+      },
+      {
+        "before": ",",
+        "after": ""
+      },
+      {
+        "before": ",",
+        "after": ""
+      },
+      {
+        "before": "",
+        "after": "IsValidSid ( sid ) = = 0 | |"
+      },
+      {
+        "before": "| | IsValidSid ( sid ) = = 0",
+        "after": ""
+      }
+    ],
+    "protect_created": [
+      {
+        "before": "",
+        "after": ", inheritance : DirectoryInheritance"
+      },
+      {
+        "before": "String",
+        "after": "Error"
+      },
+      {
+        "before": "\"cannot set the new private object's Windows owner\" . into ( )",
+        "after": "Error : : SetOwner"
+      },
+      {
+        "before": "",
+        "after": ", inheritance"
+      }
+    ]
+  },
+  "zcall-gui": {
+    "protect": [
+      {
+        "before": "",
+        "after": ", inheritance : DirectoryInheritance"
+      },
+      {
+        "before": "String",
+        "after": "Error"
+      },
+      {
+        "before": "\"cannot restrict the private file to this Windows account and SYSTEM\"",
+        "after": "Error : : RestrictAccess ; let inheritance = match inheritance { DirectoryInheritance : : ObjectOnly = > \"\" , DirectoryInheritance : : FilesAndDirectories = > { if file"
+      },
+      {
+        "before": "to_string",
+        "after": "metadata"
+      },
+      {
+        "before": "",
+        "after": ". map_err ( | _ | error ( ) ) ? . is_dir ( ) { \"OICI\" } else { \"\" } } }"
+      },
+      {
+        "before": "\"D:P(A;;FA;;;{sid})(A;;FA;;;SY)\"",
+        "after": "\"D:P(A;{inheritance};FA;;;{sid})(A;{inheritance};FA;;;SY)\""
+      },
+      {
+        "before": ",",
+        "after": ""
+      },
+      {
+        "before": ",",
+        "after": ""
+      }
+    ],
+    "private_user": [
+      {
+        "before": "String",
+        "after": "Error"
+      },
+      {
+        "before": "\"cannot inspect the current Windows account\" . to_string ( )",
+        "after": "Error : : CurrentAccount"
+      }
+    ],
+    "check_private": [
+      {
+        "before": "String",
+        "after": "Error"
+      },
+      {
+        "before": "{ \"private Windows files must be owned by this account and accessible only to it and SYSTEM\" . to_string ( ) }",
+        "after": "Error : : InspectAccess"
+      },
+      {
+        "before": ",",
+        "after": ""
+      },
+      {
+        "before": ",",
+        "after": ""
+      },
+      {
+        "before": ",",
+        "after": ""
+      },
+      {
+        "before": "",
+        "after": "IsValidSid ( sid ) = = 0 | |"
+      },
+      {
+        "before": "| | IsValidSid ( sid ) = = 0",
+        "after": ""
+      }
+    ],
+    "protect_created": [
+      {
+        "before": "",
+        "after": ", inheritance : DirectoryInheritance"
+      },
+      {
+        "before": "String",
+        "after": "Error"
+      },
+      {
+        "before": "\"cannot set the new private object's Windows owner\" . into ( )",
+        "after": "Error : : SetOwner"
+      },
+      {
+        "before": "",
+        "after": ", inheritance"
+      }
+    ]
+  }
+}

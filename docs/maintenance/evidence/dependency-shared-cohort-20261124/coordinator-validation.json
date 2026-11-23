@@ -1,0 +1,79 @@
+{
+  "scope": {
+    "repositories": 49,
+    "packages": 85,
+    "rust_repositories": 43,
+    "recursive_gitlinks": 117
+  },
+  "checks": [
+    {
+      "label": "unit",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 148.89,
+      "log_sha256": "546e8612f4d35af9853b499aef5c945c4b8c170308af63ce02450d1424562827",
+      "log_summary": "s_exclude_only_test_items) ... ok\ntest_nested_comments_raw_strings_chars_and_doc_text_are_not_code (test_shared_implementations.LexicalBoundaries.test_nested_comments_raw_strings_chars_and_doc_text_are_not_code) ... ok\n\n----------------------------------------------------------------------\nRan 183 tests in 148.550s\n\nOK\nSkipping unverified owner, source or workflow for fixture\nSkipping unverified owner, source or workflow for fixture\nAlready consumable: fixture@0.1.1\nNo upstream gitlink updates.\n0 approved owner handoffs in staging\nAlready consumable: fixture-up@0.2.1\nAlready consumable: fixture-up@0.2.1\nAlready consumable: fixture-down@0.2.1\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 90.103,
+      "log_sha256": "f1823d574fb93354f63dbbac6e2c8287a717b28f92defb4942838ba56f6df8e7",
+      "log_summary": "OK: 49 repositories, 85 packages; Git sources, locks and latest default heads agree\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "resolve",
+        "--all"
+      ],
+      "exit_code": 0,
+      "seconds": 17.262,
+      "log_sha256": "ab875662b122e072b0c6f32a23646a060186847c30293102b0b5f2577b1893a0",
+      "log_summary": "OK: locked Git sources resolved in 43 repositories\n"
+    }
+  ],
+  "input_sha256": {
+    "project-z.toml": "fa5ae566353b385818ff6c5a25263da4392198292c385f209271dd8ac0f4f0c3",
+    "catalog.json": "eb058a96f87efe6ddd951ea99e1d3493ae2eb6910936d9198d5b690ad9f7d432",
+    ".github/workflows/ci.yml": "8393641111c4161e39f6c4d02b54ec5481fad4ace54dc940ca5d06beb04cd869",
+    "scripts/cargo_versions.py": "ae395687fa15b375eea0f4d9d482288ea7dd16904de8c7c4da814f7d4d741baa",
+    "scripts/catalog_docs.py": "a28a0d317e6c2d192c3939465f55c282d6c3aa18e95564e787579613185bac71",
+    "scripts/maintenance.py": "30e6eaed5b175cef7e3285f4ff3edba1c02d02bee651b32ed8aaa59b7c574a7e",
+    "scripts/managed_build.py": "d19aaaa923ba349e9b6f72480663c42fcfef0fd046084c3843f9263d37d25a3c",
+    "scripts/project_z.py": "00d16fa290d6a58b89d929c293cd261ab10092cef31bbfec5159058cd347649d",
+    "scripts/release.py": "87d6015c2c2e619f41fe2b7bf9a92f9b2875cc691f401bd1d0c97b70d4b1a5ea",
+    "scripts/release_projection.py": "7df4df89eb8401aefa8124b45461a7c35df17fa0f7d6733f6eccf4a00cae63f2",
+    "scripts/release_receipts.py": "2fb7c5949900879de718022a17eddb82d0d5645d9f3752a881e5d24e493802f6",
+    "scripts/rust_source.py": "dfc6c30f95276f2d74f38d5bc0b7fcb7f8dd9a25c00aedd604ac25b3888e6bbe",
+    "scripts/scheduled.py": "64d799bbe884f050ca298ff4263f87dc6705426ea1418ad8ee023aeb6b4825d7",
+    "scripts/scheduled_registry.py": "cac4f0fe3cd0e1a1b2c0f339f3743be58824210d40aed63b49d6326c05646f19",
+    "scripts/shared_implementations.json": "2316643b84dc9b7505dadf1a17513d82d6587834ee1f9dc915283c5c4edf613d",
+    "scripts/shared_implementations.py": "0cf5fff38dd98eeb85c3ea57b1a10fb418473dce66367c312e7c399325222a1c",
+    "tests/test_cargo_versions.py": "14b922f1cae4cf0ea21a73459a7e6d73c0a6d683937bdd6885a1931bab29fd2b",
+    "tests/test_maintenance.py": "632c12d75e0feb640b82d2e78023efd709e8fd616533dd69aeb4c50b9371542e",
+    "tests/test_managed_build.py": "6c7161d074ac08e9c8f0192070b0d6aaaf45cd45c581c2239a874ae55c12aea2",
+    "tests/test_project_z.py": "b136c8ed6079af1e788ba178f9f3aa219b8de84f318205cbbfa9a83a490dd9c2",
+    "tests/test_recursive_sources.py": "c12a3208cd94a3493440e96955dcd660135a24e8bca194b290c1d2f8a5b703ea",
+    "tests/test_release.py": "5897e7b3a6d7d41117029f16e85d9a45f320eabfcf058ddb746cd04282371ae4",
+    "tests/test_release_projection.py": "3e81f32fe63b2a2265444676034b7caee64d6a3259fff6effd17774027bfcd37",
+    "tests/test_release_receipts.py": "d0bbbc25f8d3b894f4315454625cba409da28dde010fbdc7a9c19fef0a92e084",
+    "tests/test_scheduled.py": "05f3421d123dc180f7b0fd52f682204ee37620351a20eec2d8042b411e58138e",
+    "tests/test_scheduled_registry.py": "8b3bc9fb94622986c850955e2f7bac78add4b02246890942cf663c8a70789604",
+    "tests/test_shared_implementations.py": "be5ad52b838092cb8371edf93b4d3cfba37febc873ab6c12a74a95a9f05b4a2f"
+  },
+  "formal_release": "Not yet dispatched; hosted platform results are not claimed."
+}

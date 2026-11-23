@@ -107,15 +107,74 @@ jobs:
         uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756
       - name: Test libraries against the same local dependency snapshot
         run: python3 scripts/project_z.py run -- test --tests
+      - name: Test Windows privacy provider and native consumers
+        if: ${{ !cancelled() && runner.os == 'Windows' && inputs.release_consumers }}
+        shell: python {0}
+        run: |
+          import re
+          import shutil
+          import subprocess
+          import sys
+
+          if sys.platform != "win32":
+              raise SystemExit("Privacy release tests require native Windows execution")
+          for tool in ("cl", "lib", "rc"):
+              if shutil.which(tool) is None:
+                  raise SystemExit(f"MSVC and Windows SDK tool is unavailable: {tool}")
+
+          provider_tests = {
+              "windows::privacy::tests::" + name for name in (
+                  "object_only::creation_protects_owner_and_current_account_system_access_before_data",
+                  "object_only::existing_foreign_read_access_is_rejected_without_rewriting_security_or_data",
+                  "object_only::existing_unprotected_dacl_is_rejected_without_repair",
+                  "object_only::existing_directories_are_read_without_changing_their_private_acl",
+                  "directory_children::directory_reprotection_preserves_inherited_children_and_new_private_files",
+                  "directory_children::directory_inspection_accepts_legacy_acl_and_rejects_other_flags_and_subjects",
+                  "directory_children::regular_file_protection_keeps_non_inheriting_explicit_private_acl",
+                  "directory_children::inspection_keeps_per_entry_inheritance_and_access_mask_policy",
+              )
+          }
+          gates = (
+              ("zsys", ["--manifest-path", "zsys/Cargo.toml", "--lib", "windows::privacy::tests"], 8),
+              ("zcall-gui", ["--manifest-path", "zcall-gui/Cargo.toml", "--bin", "zcall-gui", "core_install_io::windows::tests"], 4),
+              ("zcalld", ["--manifest-path", "zcalld/Cargo.toml", "-p", "zcalld", "--bin", "zcalld", "state_json::privacy_windows::tests"], 3),
+              ("zcalld-installer", ["--manifest-path", "zcalld/Cargo.toml", "-p", "zcalld-installer", "--lib", "private::privacy_windows::tests"], 3),
+          )
+          failures = []
+          for name, arguments, minimum in gates:
+              command = ["cargo", "test", "--locked", *arguments, "--", "--format=pretty", "--color=never", "--test-threads=1"]
+              print(f"::group::{name} native Windows privacy", flush=True)
+              print(subprocess.list2cmdline(command), flush=True)
+              result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                      text=True, encoding="utf-8", errors="replace")
+              print(result.stdout, end="", flush=True)
+              summaries = re.findall(r"^test result: ok\. (\d+) passed; (\d+) failed; (\d+) ignored;", result.stdout, re.MULTILINE)
+              passed_names = set(re.findall(r"^test (.+) \.\.\. ok$", result.stdout, re.MULTILINE))
+              valid = (result.returncode == 0 and len(summaries) == 1
+                       and int(summaries[0][0]) >= minimum
+                       and summaries[0][1:] == ("0", "0"))
+              if name == "zsys":
+                  valid = valid and provider_tests.issubset(passed_names)
+              if not valid:
+                  failures.append(name)
+                  print(f"::error::{name}: native privacy tests failed, were ignored, or fewer than {minimum} fixtures ran", flush=True)
+              print("::endgroup::", flush=True)
+          if failures:
+              raise SystemExit("Windows privacy release gates failed: " + ", ".join(failures))
       - name: Test terminal library on native Linux
         if: ${{ !cancelled() && runner.os == 'Linux' && inputs.release_consumers }}
         run: cargo test --locked --manifest-path ztty/Cargo.toml --lib
       - name: Test input service on native Linux
         if: ${{ !cancelled() && runner.os == 'Linux' && inputs.release_consumers }}
         run: cargo test --locked --manifest-path ztype/Cargo.toml --workspace --tests
+      - name: Test automation library and sessions on native Linux
+        if: ${{ !cancelled() && runner.os == 'Linux' && inputs.release_consumers }}
+        run: cargo test --locked --manifest-path zuse/Cargo.toml --lib --test sessions
       - name: Test daemon transports on native Linux
         if: ${{ !cancelled() && runner.os == 'Linux' && inputs.release_consumers }}
-        run: cargo test --locked --manifest-path zcalld/Cargo.toml -p zcalld --bin zcalld
+        run: |
+          cargo test --locked --manifest-path zcalld/Cargo.toml -p zcalld --bin zcalld
+          cargo test --locked --manifest-path zcalld/Cargo.toml -p zcalld-compat-client --lib
       - name: Test configuration special-file rejection on native Linux
         if: ${{ !cancelled() && runner.os == 'Linux' && inputs.release_consumers }}
         run: cargo test --locked --manifest-path zrc/Cargo.toml --tests
@@ -124,6 +183,26 @@ jobs:
         env:
           TERM: xterm-256color
         run: make -C zfetch check
+      - name: Check Core dependency interfaces on native Linux
+        if: ${{ !cancelled() && runner.os == 'Linux' && inputs.release_consumers }}
+        env:
+          CARGO_BUILD_JOBS: '1'
+          CARGO_PROFILE_DEV_DEBUG: '0'
+          CARGO_INCREMENTAL: '0'
+        run: cargo check --locked --manifest-path lmm-api-source/services/core/Cargo.toml --lib --jobs 1
+      - name: Test SSMCP archive and configuration consumers on native Linux
+        if: ${{ !cancelled() && runner.os == 'Linux' && inputs.release_consumers }}
+        env:
+          CARGO_BUILD_JOBS: '1'
+          CARGO_PROFILE_DEV_DEBUG: '0'
+          CARGO_PROFILE_TEST_DEBUG: '0'
+          CARGO_INCREMENTAL: '0'
+        run: |
+          cargo clippy --locked --manifest-path ssmcp/Cargo.toml --lib --all-features -- -D warnings
+          cargo test --locked --manifest-path ssmcp/Cargo.toml --lib computer::tests:: --jobs 1 -- --test-threads=1
+          cargo test --locked --manifest-path ssmcp/Cargo.toml --lib client::config::tests:: --jobs 1 -- --test-threads=1
+          cargo test --locked --manifest-path ssmcp/Cargo.toml --lib client::connection_context::tests:: --jobs 1 -- --test-threads=1
+          cargo test --locked --manifest-path ssmcp/Cargo.toml --lib client::version::tests:: --jobs 1 -- --test-threads=1
       - name: Test affected Rust consumers and suite on Linux
         if: runner.os == 'Linux' && inputs.candidate_artifact != ''
         run: |

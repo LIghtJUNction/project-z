@@ -1,0 +1,13 @@
+{
+  "repository": "zterm",
+  "source_tree_ids": {
+    "55e24949c3cf5773535215d81fed71e3364c4802": "f6592ee22e789513c82f94a13557c5608d4208c6",
+    "4fc5aafd90d36146f4c1d9affa04e1877c1c4888": "f6592ee22e789513c82f94a13557c5608d4208c6"
+  },
+  "cargo_manifest_blob_ids": {
+    "55e24949c3cf5773535215d81fed71e3364c4802": "11260059c9a69ac21f7604c8c719bf03e7cba6e0",
+    "4fc5aafd90d36146f4c1d9affa04e1877c1c4888": "11260059c9a69ac21f7604c8c719bf03e7cba6e0"
+  },
+  "source_unchanged": true,
+  "manifest_unchanged": true
+}

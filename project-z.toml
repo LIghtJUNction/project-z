@@ -95,7 +95,13 @@ requires = ["zconv", "zclap", "zgpui", "zi18n"]
 
 [repositories.OniMods]
 role = "application"
-manifests = ["Cargo.toml"]
+# Keep active standalone simulation workspaces in locked source verification.
+manifests = [
+  "Cargo.toml",
+  "mods/CycleTrim/OniSim/gpu/Cargo.toml",
+  "mods/CycleTrim/OniSim/native/Cargo.toml",
+  "mods/CycleTrim/OniSim/lean-lab/harness/Cargo.toml",
+]
 
 [repositories.zcall-omarchy]
 role = "application"

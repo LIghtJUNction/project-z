@@ -6,10 +6,13 @@
       "path": "OniMods",
       "url": "https://github.com/LIghtJUNction/OniMods.git",
       "branch": "main",
-      "commit": "9ee0d1df7473e570b494b89d99902e6de6c7fb05",
+      "commit": "7a4ae7f3389f43f625e678809069812b61039ee7",
       "role": "application",
       "manifests": [
-        "Cargo.toml"
+        "Cargo.toml",
+        "mods/CycleTrim/OniSim/gpu/Cargo.toml",
+        "mods/CycleTrim/OniSim/native/Cargo.toml",
+        "mods/CycleTrim/OniSim/lean-lab/harness/Cargo.toml"
       ],
       "requires": []
     },
@@ -18,7 +21,7 @@
       "path": "lmm",
       "url": "https://github.com/TokenNotIncluded/lmm.git",
       "branch": "main",
-      "commit": "e04695efe394b8d8bc4bb7eff5c6f9a9f29463d0",
+      "commit": "3f8f3898eef040cbcb7ee7c8d15ea9031f93acec",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -30,7 +33,7 @@
       "path": "lmm-api-source",
       "url": "https://github.com/TokenNotIncluded/lmm-api-source.git",
       "branch": "main",
-      "commit": "b6179424adf622416c6ff8340f99ccb8658acef4",
+      "commit": "6f81c6319ee4d283f21b2611ce14ade4be2df6a4",
       "role": "application",
       "manifests": [
         "services/core/Cargo.toml"
@@ -42,7 +45,7 @@
       "path": "mechrevo-drivers",
       "url": "https://github.com/LIghtJUNction/mechrevo-drivers.git",
       "branch": "main",
-      "commit": "2874af81c0cf59bdbe6b6e79e969ea17204e50c3",
+      "commit": "37a16508dfdd6fb07f460c7679569171d071c604",
       "role": "application",
       "manifests": [
         "console/Cargo.toml"
@@ -54,7 +57,7 @@
       "path": "oh-my-ztty",
       "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
       "branch": "main",
-      "commit": "b34de32ed007015872fbaf92ee55185dfd8e031d",
+      "commit": "b766c4bd9984b20c22bdacf10df973683fb97f4a",
       "role": "suite",
       "manifests": [],
       "requires": [
@@ -72,7 +75,7 @@
       "path": "ssmcp",
       "url": "https://github.com/LIghtJUNction/ssmcp.git",
       "branch": "main",
-      "commit": "b5fdceea9af1b14f6f178bbc1677969fd3ff73c9",
+      "commit": "4c8b05c46c01cc9796edc443eb18deb5b6d99b8d",
       "role": "application",
       "manifests": [
         "Cargo.toml",
@@ -87,7 +90,7 @@
       "path": "z58",
       "url": "https://github.com/LIghtJUNction/z58.git",
       "branch": "main",
-      "commit": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+      "commit": "544522d5ec0e1d85ff6d46b06cdb1f541d11c684",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -99,7 +102,7 @@
       "path": "z64",
       "url": "https://github.com/LIghtJUNction/z64.git",
       "branch": "main",
-      "commit": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+      "commit": "7d7ade9c1612fac91b8bddffc26235847a1f5f3d",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -111,7 +114,7 @@
       "path": "zaccel",
       "url": "https://github.com/LIghtJUNction/zaccel.git",
       "branch": "main",
-      "commit": "549faf7cd9657fb3b23a480ade5a2d93e2c9a39e",
+      "commit": "458e788cd14314dadedbd195f79491e10824f83a",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -135,7 +138,7 @@
       "path": "zcall",
       "url": "https://github.com/LIghtJUNction/zcall.git",
       "branch": "main",
-      "commit": "49784ef8d537af2cad65917486bda6a641337a01",
+      "commit": "311e152afb6d6dda7b123f60a13173a5ddf62878",
       "role": "library",
       "manifests": [
         "Cargo.toml",
@@ -148,7 +151,7 @@
       "path": "zcall-gui",
       "url": "https://github.com/LIghtJUNction/zcall-gui.git",
       "branch": "main",
-      "commit": "3b9a0f4673c08a9aa259b52e02858c0a88f43f6b",
+      "commit": "b9e487dea5bc36453a1d292f9dca64479bf81dbb",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -176,7 +179,7 @@
       "path": "zcalld",
       "url": "https://github.com/LIghtJUNction/zcalld.git",
       "branch": "main",
-      "commit": "6eab1150e8d58d330583c1b3206bf91e7862dc9a",
+      "commit": "d8e75988b862060b9704769ad7404923b82337d9",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -204,7 +207,7 @@
       "path": "zclap",
       "url": "https://github.com/LIghtJUNction/zclap.git",
       "branch": "main",
-      "commit": "a4c7e6f3e0ff860de701573117248fe8538c71e5",
+      "commit": "6bc825d3bbba8570462d2bdce8cb7945286b12c9",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -216,7 +219,7 @@
       "path": "zclick",
       "url": "https://github.com/LIghtJUNction/zclick.git",
       "branch": "main",
-      "commit": "c437230dcf9467b9d1decaf0142215ea054bcf07",
+      "commit": "4c8944d2c9f60c78bb1b19f27f7e8cd299fddc39",
       "role": "bindings",
       "manifests": [
         "Cargo.toml"
@@ -228,7 +231,7 @@
       "path": "zconv",
       "url": "https://github.com/LIghtJUNction/zconv.git",
       "branch": "main",
-      "commit": "11df5d00117ed87a7f5aebc5a2677f59fccff9b1",
+      "commit": "f9448d27997dc70dac05f0c0e58857bcce43ab72",
       "role": "library",
       "manifests": [
         "Cargo.toml",
@@ -251,7 +254,7 @@
       "path": "zdot",
       "url": "https://github.com/LIghtJUNction/zdot.git",
       "branch": "main",
-      "commit": "645fa9a5504672cf7f1ffee522c9889cabb111f3",
+      "commit": "84225ac96f85a0d91cc77e5d352253ae23b1250a",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -263,7 +266,7 @@
       "path": "zdwire",
       "url": "https://github.com/LIghtJUNction/zdwire.git",
       "branch": "main",
-      "commit": "c046e3182b0adf15d43500400a427b7dd7389525",
+      "commit": "e35c7a0b343b69c2924cc5e6e62ebb64531edbcb",
       "role": "library",
       "manifests": [
         "Cargo.toml",
@@ -324,7 +327,7 @@
       "path": "zharness",
       "url": "https://github.com/LIghtJUNction/zharness.git",
       "branch": "main",
-      "commit": "f2554ea288e04f69c985506f54845f6d7a268be8",
+      "commit": "96635fac40980a4175ed6480dffec67f49439f0f",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -360,7 +363,7 @@
       "path": "zinput",
       "url": "https://github.com/LIghtJUNction/zinput.git",
       "branch": "main",
-      "commit": "da22743e1ad16bedb79751c8e8bb71e63c45d197",
+      "commit": "b801edfcee8b107757fb450faf77dd93e4bf29f4",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -372,7 +375,7 @@
       "path": "zldap",
       "url": "https://github.com/LIghtJUNction/zldap.git",
       "branch": "main",
-      "commit": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+      "commit": "09155564de1d97b00ab7b3ea73f260dc899fe5e3",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -384,7 +387,7 @@
       "path": "zmcl",
       "url": "https://github.com/LIghtJUNction/zmcl.git",
       "branch": "main",
-      "commit": "61c3655806fee9f4a20fc8bea2e881ce0531fc48",
+      "commit": "d8fb6c11e8b48ff6173e4c8dbeebbc379662b772",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -401,7 +404,7 @@
       "path": "zmcpio",
       "url": "https://github.com/LIghtJUNction/zmcpio.git",
       "branch": "main",
-      "commit": "aba5ee5e775142f67a2cb0b181fc1fecdc286e98",
+      "commit": "9c1d8dfaf8432375de7f20dad74d756f2d52089d",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -413,7 +416,7 @@
       "path": "zmem",
       "url": "https://github.com/LIghtJUNction/zmem.git",
       "branch": "main",
-      "commit": "5997b9581f5b6962c9d9cd12774a2ce119e46ca7",
+      "commit": "18bc12b2d7f11dfd5e30f84e33652b6786ceb25c",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -425,7 +428,7 @@
       "path": "zmime",
       "url": "https://github.com/LIghtJUNction/zmime.git",
       "branch": "main",
-      "commit": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+      "commit": "42d55a378d7b778c9cf809bf0f40f560481831cc",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -437,7 +440,7 @@
       "path": "zplugin",
       "url": "https://github.com/LIghtJUNction/zplugin.git",
       "branch": "main",
-      "commit": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+      "commit": "cb24ece40f49257b077da54091b0ecaebea7488a",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -461,7 +464,7 @@
       "path": "zrc",
       "url": "https://github.com/LIghtJUNction/zrc.git",
       "branch": "main",
-      "commit": "237a5a939c6a9df647539451ff61a705af71d4ba",
+      "commit": "6947a092eed4d0b989551970f6178d4cca59326b",
       "role": "configuration",
       "manifests": [
         "Cargo.toml"
@@ -510,7 +513,7 @@
       "path": "zsyn",
       "url": "https://github.com/LIghtJUNction/zsyn.git",
       "branch": "main",
-      "commit": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+      "commit": "703afeecd403a4753ce51765c967b09aa40b4d77",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -522,7 +525,7 @@
       "path": "zsys",
       "url": "https://github.com/LIghtJUNction/zsys.git",
       "branch": "main",
-      "commit": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+      "commit": "48c4cafaf940fd7a404b885adefd2e1201b51881",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -534,7 +537,7 @@
       "path": "zterm",
       "url": "https://github.com/LIghtJUNction/zterm.git",
       "branch": "main",
-      "commit": "55e24949c3cf5773535215d81fed71e3364c4802",
+      "commit": "4fc5aafd90d36146f4c1d9affa04e1877c1c4888",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -546,7 +549,7 @@
       "path": "ztty",
       "url": "https://github.com/LIghtJUNction/ztty.git",
       "branch": "main",
-      "commit": "963afbd7f9463f6de61a96e1968fdf26d3bc8990",
+      "commit": "f51bf443dd5de1931ae18455054c4846a0b069d4",
       "role": "application",
       "manifests": [
         "Cargo.toml",
@@ -572,7 +575,7 @@
       "path": "ztype",
       "url": "https://github.com/LIghtJUNction/ztype.git",
       "branch": "main",
-      "commit": "d61eb478e665fbf862fc2f58a37cb91fb9aa0162",
+      "commit": "dae32464655554545f57a07d5c3858532291d111",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -586,7 +589,7 @@
       "path": "zuse",
       "url": "https://github.com/LIghtJUNction/zuse.git",
       "branch": "main",
-      "commit": "13be18166f9f1bdfb219da851c28b3319fdb7653",
+      "commit": "b2466b90ea43f0fdc0b59fb91c9cd6d49c387f8d",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -906,7 +909,7 @@
         {
           "name": "clap",
           "alias": null,
-          "requirement": "^4.6.7",
+          "requirement": "^4.6.9",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -988,7 +991,7 @@
         {
           "name": "rand",
           "alias": null,
-          "requirement": "^0.10.3",
+          "requirement": "^0.10.4",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -1116,7 +1119,7 @@
         {
           "name": "toml",
           "alias": null,
-          "requirement": "=1.2.1",
+          "requirement": "=1.2.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -1133,7 +1136,7 @@
         {
           "name": "url",
           "alias": null,
-          "requirement": "^2.5.8",
+          "requirement": "^2.5.9",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -1159,7 +1162,7 @@
         {
           "name": "zeroize",
           "alias": null,
-          "requirement": "^1.9.1",
+          "requirement": "^1.9.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -1330,7 +1333,7 @@
         {
           "name": "form_urlencoded",
           "alias": null,
-          "requirement": "=1.2.2",
+          "requirement": "=1.2.3",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -1515,7 +1518,7 @@
         {
           "name": "lettre",
           "alias": null,
-          "requirement": "=0.11.23",
+          "requirement": "=0.11.24",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -1653,7 +1656,7 @@
         {
           "name": "psl",
           "alias": null,
-          "requirement": "=2.1.256",
+          "requirement": "=2.1.261",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -1679,7 +1682,7 @@
         {
           "name": "regex",
           "alias": null,
-          "requirement": "=1.13.1",
+          "requirement": "=1.13.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -1787,7 +1790,7 @@
         {
           "name": "sqlx",
           "alias": null,
-          "requirement": "=0.9.0",
+          "requirement": "=0.9.1",
           "explicit_version": true,
           "kind": "dev",
           "target": null,
@@ -1802,7 +1805,7 @@
         {
           "name": "sqlx",
           "alias": null,
-          "requirement": "=0.9.0",
+          "requirement": "=0.9.1",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -1929,7 +1932,7 @@
         {
           "name": "toml",
           "alias": null,
-          "requirement": "=1.2.1",
+          "requirement": "=1.2.2",
           "explicit_version": true,
           "kind": "dev",
           "target": null,
@@ -1944,7 +1947,7 @@
         {
           "name": "toml",
           "alias": null,
-          "requirement": "=1.2.1",
+          "requirement": "=1.2.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -2115,7 +2118,7 @@
         {
           "name": "zeroize",
           "alias": null,
-          "requirement": "=1.9.1",
+          "requirement": "=1.9.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -2399,6 +2402,61 @@
       ]
     },
     {
+      "name": "oni-sim-core",
+      "version": "0.1.0",
+      "repository": "OniMods",
+      "manifest": "OniMods/mods/CycleTrim/OniSim/native/Cargo.toml",
+      "workspace": "OniMods/mods/CycleTrim/OniSim/native",
+      "publish": true,
+      "rust_version": "1.99",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "onisim-gpu",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "OniMods/mods/CycleTrim/OniSim/gpu"
+        },
+        {
+          "name": "rayon",
+          "alias": null,
+          "requirement": "^1.12.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tokio",
+          "alias": null,
+          "requirement": "=1.54.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "rt",
+            "sync"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
       "name": "onim",
       "version": "0.1.13",
       "repository": "OniMods",
@@ -2412,7 +2470,7 @@
         {
           "name": "anyhow",
           "alias": null,
-          "requirement": "^1.0.102",
+          "requirement": "^1.0.105",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -2425,7 +2483,7 @@
         {
           "name": "clap",
           "alias": null,
-          "requirement": "^4.6.1",
+          "requirement": "^4.6.9",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -2440,7 +2498,7 @@
         {
           "name": "libloading",
           "alias": null,
-          "requirement": "^0.9",
+          "requirement": "^0.9.1",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -2453,7 +2511,7 @@
         {
           "name": "serde",
           "alias": null,
-          "requirement": "^1.0.228",
+          "requirement": "^1.0.229",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -2468,7 +2526,7 @@
         {
           "name": "serde_json",
           "alias": null,
-          "requirement": "^1.0.145",
+          "requirement": "^1.0.154",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -2494,7 +2552,7 @@
         {
           "name": "toml",
           "alias": null,
-          "requirement": "^1.1.2",
+          "requirement": "^1.2.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -2520,7 +2578,7 @@
         {
           "name": "zip",
           "alias": null,
-          "requirement": "^9.2",
+          "requirement": "^9.8.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -2528,6 +2586,151 @@
           "default_features": false,
           "features": [
             "deflate"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "onisim-diamond-validation",
+      "version": "0.1.0",
+      "repository": "OniMods",
+      "manifest": "OniMods/mods/CycleTrim/OniSim/lean-lab/harness/Cargo.toml",
+      "workspace": "OniMods/mods/CycleTrim/OniSim/lean-lab/harness",
+      "publish": false,
+      "rust_version": "1.99",
+      "library": false,
+      "features": {
+        "allocation_stats": []
+      },
+      "dependencies": [
+        {
+          "name": "rayon",
+          "alias": null,
+          "requirement": "^1.12.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "onisim-gpu",
+      "version": "0.1.0",
+      "repository": "OniMods",
+      "manifest": "OniMods/mods/CycleTrim/OniSim/gpu/Cargo.toml",
+      "workspace": "OniMods/mods/CycleTrim/OniSim/gpu",
+      "publish": true,
+      "rust_version": "1.99",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "bytemuck",
+          "alias": null,
+          "requirement": "=1.25.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "naga",
+          "alias": null,
+          "requirement": "=30.0.2",
+          "explicit_version": true,
+          "kind": "dev",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "wgsl-in"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "pollster",
+          "alias": null,
+          "requirement": "=1.0.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "derive"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "serde_json",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "tokio",
+          "alias": null,
+          "requirement": "=1.54.1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "rt",
+            "sync",
+            "time"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "wgpu",
+          "alias": null,
+          "requirement": "=30.0.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "parking_lot",
+            "std",
+            "vulkan",
+            "wgsl"
           ],
           "source": "registry+https://github.com/rust-lang/crates.io-index",
           "path": null
@@ -2714,19 +2917,6 @@
           "explicit_version": true,
           "kind": "normal",
           "target": "cfg(not(target_os = \"linux\"))",
-          "optional": false,
-          "default_features": true,
-          "features": [],
-          "source": "registry+https://github.com/rust-lang/crates.io-index",
-          "path": null
-        },
-        {
-          "name": "qrcodegen",
-          "alias": null,
-          "requirement": "^1.8.0",
-          "explicit_version": true,
-          "kind": "normal",
-          "target": null,
           "optional": false,
           "default_features": true,
           "features": [],
@@ -2954,7 +3144,7 @@
         {
           "name": "toml",
           "alias": null,
-          "requirement": "^1.2.1",
+          "requirement": "^1.2.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -2972,7 +3162,7 @@
         {
           "name": "toml_edit",
           "alias": null,
-          "requirement": "^0.25.19",
+          "requirement": "^0.25.20",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3114,7 +3304,7 @@
         {
           "name": "zip",
           "alias": null,
-          "requirement": "^9.0.5",
+          "requirement": "^9.8.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3338,7 +3528,7 @@
         {
           "name": "naga",
           "alias": null,
-          "requirement": "^30.0.1",
+          "requirement": "^30.0.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3381,7 +3571,7 @@
         {
           "name": "wgpu",
           "alias": null,
-          "requirement": "^30.0.1",
+          "requirement": "^30.0.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -3536,6 +3726,19 @@
           "path": null
         },
         {
+          "name": "zconv",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "git+https://github.com/LIghtJUNction/zconv.git",
+          "path": null
+        },
+        {
           "name": "zgpui",
           "alias": null,
           "requirement": "*",
@@ -3561,6 +3764,19 @@
           "default_features": true,
           "features": [],
           "source": "git+https://github.com/LIghtJUNction/zhex.git",
+          "path": null
+        },
+        {
+          "name": "zsys",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": "cfg(windows)",
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "git+https://github.com/LIghtJUNction/zsys.git",
           "path": null
         }
       ]
@@ -3683,6 +3899,19 @@
           ],
           "source": "git+https://github.com/LIghtJUNction/zplugin.git",
           "path": null
+        },
+        {
+          "name": "zsys",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": "cfg(windows)",
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "git+https://github.com/LIghtJUNction/zsys.git",
+          "path": null
         }
       ]
     },
@@ -3788,6 +4017,19 @@
           "default_features": true,
           "features": [],
           "source": "git+https://github.com/LIghtJUNction/zhex.git",
+          "path": null
+        },
+        {
+          "name": "zsys",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": "cfg(windows)",
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "git+https://github.com/LIghtJUNction/zsys.git",
           "path": null
         }
       ]
@@ -4932,10 +5174,24 @@
           "std"
         ],
         "std": [
+          "dep:zconv",
           "dep:zhex"
         ]
       },
       "dependencies": [
+        {
+          "name": "zconv",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": false,
+          "features": [],
+          "source": "git+https://github.com/LIghtJUNction/zconv.git",
+          "path": null
+        },
         {
           "name": "zhex",
           "alias": null,
@@ -4998,7 +5254,7 @@
         {
           "name": "wasmi",
           "alias": null,
-          "requirement": "=2.0.0",
+          "requirement": "=2.0.2",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -5717,6 +5973,19 @@
           "path": null
         },
         {
+          "name": "zconv",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "git+https://github.com/LIghtJUNction/zconv.git",
+          "path": null
+        },
+        {
           "name": "zgpui",
           "alias": null,
           "requirement": "*",
@@ -6104,6 +6373,7 @@
           "std"
         ],
         "std": [
+          "dep:zconv",
           "dep:sha1",
           "dep:zmcpio",
           "dep:zclap",
@@ -6152,6 +6422,19 @@
           "default_features": false,
           "features": [],
           "source": "git+https://github.com/LIghtJUNction/zclap.git",
+          "path": null
+        },
+        {
+          "name": "zconv",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": false,
+          "features": [],
+          "source": "git+https://github.com/LIghtJUNction/zconv.git",
           "path": null
         },
         {

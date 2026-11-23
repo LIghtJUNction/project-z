@@ -1,0 +1,39 @@
+{
+  "base": "6eab1150e8d58d330583c1b3206bf91e7862dc9a",
+  "commit": "6a9e889df48e0b6558a0cfc44d6f3e4ccb464dbf",
+  "tree": "3f2473d011195fd7edd68b47de7e5021fba19376",
+  "files": {
+    "Cargo.toml": {
+      "sha256": "2115714ff397225795cc15aded65c0773e5ca2af9f29150a9c77a79aa0639fb0",
+      "matches_review_snapshot": true
+    },
+    "crates/zcalld-compat-client/src/lib.rs": {
+      "sha256": "5335f941a7e24e5f7684158d4eb8598b4acc23d81c5998068db99afbac9da1a4",
+      "matches_review_snapshot": true
+    },
+    "crates/zcalld-installer/Cargo.toml": {
+      "sha256": "6e5786e3a0b4531e6ea707c63c29c4f8800ac97a70c621d561fd70faa7d9a6cd",
+      "matches_review_snapshot": true
+    },
+    "src/privacy_windows.rs": {
+      "sha256": "908087066e7e4e17cd0741fc04f407fea5416af69dbf12983308bd5ef7f9d12b",
+      "matches_review_snapshot": true
+    }
+  },
+  "tree_matches": true,
+  "all_reviewed_production_and_manifest_files_match": true,
+  "tests_executed": false,
+  "changed_files_from_original_base": [
+    "CHANGELOG.md",
+    "Cargo.lock",
+    "Cargo.toml",
+    "apps/zcall-gui",
+    "crates/zcalld-compat-client/src/lib.rs",
+    "crates/zcalld-installer/Cargo.toml",
+    "src/privacy_windows.rs",
+    "vendor/zcall",
+    "vendor/zconv",
+    "vendor/zplugin",
+    "vendor/zsys"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "baseline_source_sha256": "2b4d5a7042e05d2082c6115a7742f526dac4cf44ee061ff78625cd2d2fce9947",
+  "current_source_sha256": "2b4d5a7042e05d2082c6115a7742f526dac4cf44ee061ff78625cd2d2fce9947",
+  "identical": true,
+  "failure_before_migrated_code": "UnixListener::bind at src/platform/wayland.rs:1222",
+  "af_unix_stream_creation": {
+    "errno": 1,
+    "error": "[Errno 1] Operation not permitted"
+  }
+}

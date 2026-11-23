@@ -71,4 +71,66 @@
 
 临时保留的重复生产实现应有可追踪的后续项。完成了公共库或单个消费者，只能报告该部分完成；其余消费者仍需迁移或明确交接。必要的平台差异和独立测试参考可以长期保留，前提是其职责清晰且有对应验证。
 
-现有自动检查能够核对来源、锁和依赖图，不能判断所有语义重复。维护者需要结合以上证据审查共享边界；不以简单的相似度阈值作为拆库或合并实现的硬门槛。
+自动检查能够核对来源、锁、依赖图，以及下节已登记迁移的回归条件，不能判断所有语义重复。维护者仍需结合以上证据审查共享边界；不以简单的相似度阈值作为拆库或合并实现的硬门槛。
+
+## 6. 已确认迁移的自动回归门禁
+
+`project_z.validate` 现在检查下列十个消费者。`check`、`resolve` 和 `run` 复用这一入口；`maintenance.py` 建立隔离快照后的既有 `check` / `resolve` 调用也执行同一规则，没有另设重复审计命令或工作流。检查使用已有 Cargo inventory、Git 命令和路径边界函数；新增的源码检查本身不调用 Cargo，也不访问网络。
+
+范围来自[十消费者迁移证据](maintenance/evidence/release-cohort-20261123/dedup-proof.json)和[第二轮 JSON / Windows 契约及源码记录](maintenance/evidence/shared-contracts-regression.json)。可审查规则保存在 [shared_implementations.json](../scripts/shared_implementations.json)，实现位于 [shared_implementations.py](../scripts/shared_implementations.py)。仅对 inventory 中实际登记、GitHub 身份与规则一致的消费者启用；一个只登记其他仓库的小型测试快照，不必伪造这十个消费者。路径从实际登记的仓库根解析，包归属按包含入口文件的最深 Cargo manifest 确定。
+
+第一轮登记十三条 Hex、Base64 和摘要使用路径：
+
+| 消费者 | 生产路径 | 提供者与入口 |
+| --- | --- | --- |
+| zterm | `src/clipboard.rs` | z64 `encode`、`decode` |
+| zuse | `src/browser.rs` | z64 `encode`、`decode`；sha1 `Sha1` |
+| zmcpio | `src/http.rs` | z64 `encode`、`decode` |
+| ztty | `src/broker/encoding.rs`；`src/output_tail.rs` | 前者使用 zhex `encode_lower`、`decode`；后者使用 z64 `encode` |
+| zmcl | `crates/zmcl-core/src/hash.rs` | zhex `encode_lower`；sha1 `Sha1`；sha2 `Sha256` |
+| zcalld | `src/digest.rs`；`crates/zcalld-installer/src/hash.rs`；`crates/zcalld-compat-client/src/lib.rs` | 前两者使用 sha2 `Sha256` 和 zhex `encode_lower`；compat 使用 z64 `encode` 和 base64 `engine::general_purpose::GeneralPurpose` |
+| zmem | `src/install.rs` | zhex `encode_lower`、`decode` |
+| ssmcp | `src/hex.rs` | zhex `encode_lower` |
+| zcall-gui | `src/updater.rs` | sha2 `Sha256`；zhex `encode_lower` |
+| mechrevo-drivers | `console/crates/core/src/brightness.rs` | z64 `encode` |
+
+第二轮增加八条路径，并为已有 compat-client 路径增加 JSON 提供者要求，总计仍是十个消费者、二十一条路径。JSON 检查同时要求 `zconv::json::Writer::new` 与 `zconv::json::ControlEscapes::Unicode` 的生产引用；Unicode 策略保留旧输出中的 `\u0008` / `\u000c`，不改变其他使用者的短转义默认行为。Windows 检查要求实际使用的 privacy API 和各消费者原有的目录继承模式。
+
+| 消费者 | 入口路径 | 新增提供者要求与引用位置 |
+| --- | --- | --- |
+| zuse | `src/json.rs`；`src/platform/mod.rs` | zconv JSON；platform 的引用证据位于本仓 `src/json.rs` |
+| ztty | `src/json.rs` | zconv JSON；结构化序列化与解析器继续保留 |
+| zmem | `src/json.rs` | zconv JSON |
+| zcall-gui | `src/json.rs`；`src/core_install_windows.rs` | 前者使用 zconv JSON；后者使用 zsys `check_private`、`protect_created`、`DirectoryInheritance::ObjectOnly` |
+| zcalld | `crates/zcalld-compat-client/src/lib.rs` | 增加 zconv JSON；原 Base64 要求保留 |
+| zcalld 与 installer | `src/privacy_windows.rs`；`crates/zcalld-installer/src/private.rs` | zsys `check_private`、`protect`、`protect_created`、`DirectoryInheritance::FilesAndDirectories`；installer 的引用证据位于本仓 `src/privacy_windows.rs` |
+
+所有路径分别接受三项独立检查：
+
+1. **运行时依赖。** 文件所属包必须声明规则指定来源的 normal dependency；只有 dev 或 build dependency 不足以通过。可选依赖、平台条件和 Cargo 别名可以保留，例如 Windows 专用的 z64 依赖。内部提供者采用已登记的 Git 来源，sha1、sha2、base64 使用 crates.io 来源；版本与锁的验证继续由原有门禁负责。
+2. **生产引用。** 每条路径必须引用对应入口函数或摘要类型，并满足已登记的模式要求。支持直接限定路径、显式 `use` 树、命名别名及函数值引用；别名必须来自上一步接受的依赖来源，不能用另一来源的同名包替代。仅有 manifest 项、`use` 声明、模式枚举、注释、字符串或测试代码均不足以证明接入。该检查不固定当前适配函数的名称、排版或完整源码。
+3. **历史算法主体。** 在这十个仓库自己的受版本控制的生产 Rust 文件中查找已确认删除的主体，移到其他生产文件也会被检查。已有依赖和入口引用不能抵消历史主体命中。当前登记 34 个真实旧主体：第一轮 22 个 Hex、Base64、SHA1 / SHA256 主体，加上第二轮六个 JSON 输出主体和六个 Windows owner / DACL 主体。不登记通用缓冲区或 token 查询辅助函数、单字符校验、SHA 包装方法或仍需保留的 MD5 主体。
+
+两条间接路由通过显式 `reference_path` 指定引用所在文件。该字段只能指向同仓 Git 跟踪的生产 Rust 文件；绝对路径、非规范的 `.` / `..` 路径、符号链接、vendor、嵌套子模块、未跟踪文件和纯测试文件均不能充当证据。依赖归属仍取入口文件：installer 必须自己声明合格的 zsys normal dependency，daemon 的依赖不能替代它。显式路径只指定词法检查位置，不证明 Rust 模块可达性、转调关系或实例方法的数据流；这些关系由已记录的源码审查和消费者测试验证。
+
+历史规则保存仓库、完整提交、文件、函数、原始行号、原文件 SHA256、函数片段 SHA256 和两种主体指纹。[测试夹具](../tests/fixtures/shared_implementations/)保存对应的源码片段，方便复核算法确实存在于旧版本。第二轮直接从五个消费者的原始基线提取 JSON 转义循环和 Windows 权限实现；`protect_created` 样本包含原生 owner 写入过程，不把当前转调公共库的包装注册为历史主体。ssmcp 的较早 proof 基线对象在复核检出中不可用，其 Hex 样本使用迁移 `b799d0c5fe03c5b19ed4441f200de715c6c7d512` 的直接父提交 `1388cf11458eb88618ceedd4be8194d9ec026277`，规则中明确记录了这一来源差别。
+
+合法保留样例也来自实际源码。原有 14 个适配层、短包装和 MD5 样例之外，第二轮增加 18 个源码片段，覆盖新的 JSON / Windows 薄适配层、保留的结构化序列化、四处解析辅助函数，以及 SSMCP 接受 TokenOwner 的独立权限策略。门禁不会要求这些消费者改用同一种解析器，也不把 SSMCP 的不同权限契约列为回退。
+
+指纹比较完整函数主体的词法 token，不使用相似度阈值。空白、注释和函数名不参与主体比较；第二种指纹还归一化可识别的参数和简单 `let` / `for` 局部绑定。调用名、方法名、字段、限定路径、运算符和字面量拼写保持区分。因此，协议字符串、错误映射及实际操作不同的短函数，不会仅因结构相似就被合并或拒绝。规则不保存当前适配层的指纹。
+
+### 扫描边界与误报处理
+
+[rust_source.py](../scripts/rust_source.py)由本轮生产重复审计的词法器和函数遍历提取，统一处理注释、原始字符串、字符及函数范围，并修正了数组类型分号导致函数签名漏识别的问题。它是有界词法检查，不能代替 Rust 解析器、类型检查器或程序行为测试。
+
+扫描只读取每个消费者自己的 `git ls-files` 结果，不递归进入其嵌套子模块。`tests`、`fixtures`、`vendor`、第三方源码、示例、基准和其他明确的非生产路径，以及测试命名文件和 `build.rs`，按模块中集中列出的路径规则排除。本轮全部路径均为运行时能力；将来若加入构建期能力，需要单独登记 `build.rs` 和 build dependency 契约。
+
+测试项支持 `#[test]`、外层及模块或文件内层的 `cfg(test)`，以及在 `test=false` 时可确定为假的 `all` / `any` / `not` 组合。平台与 feature 条件保守地保留，例如 `cfg(any(test, windows))` 仍进入生产检查。`cfg_attr`、宏展开、跨文件重新导出、局部名字遮蔽和复杂绑定不作完整语义解析；遇到不支持的合法结构，应先补充最小反例和有界支持，不要扩大为忽略整仓库。
+
+生成文件只允许在规则的 `generated_paths` 中登记明确路径及原因，当前十仓均无此豁免。文件名含 `generated` 或源码写了 `@generated` / `DO NOT EDIT` 不会跳过检查。需要排除时应同时提供生成器或上游来源，并确认排除项不覆盖已登记的调用路径。
+
+这道门禁能阻止已登记的历史主体原样或以支持的局部重命名方式回流。改变控制流、拆分函数、改写字面量、经宏生成或采用新的算法写法，可能不命中；源码引用也不证明它可达或最终结果一定来自提供者。因此，通过结果不能表述为“全部语义重复已清零”或“所有绕过均已排除”。行为、平台、特性和来源锁仍按第 4 节验证。
+
+更新合法路径、提供者入口或生成边界时，应同时修改规则、迁移证据和对应测试。新增历史主体必须附可核对来源，并先检查保留的薄适配层是否会误报。`python3 -m unittest discover -s tests -p test_shared_implementations.py -v` 验证真实旧片段、合法适配层 / 解析器 / MD5 / TokenOwner 策略、依赖种类与别名、间接引用路径边界、installer 包归属、JSON 策略和 Windows 继承模式；总仓既有 `python3 -m unittest discover -s tests -v` 自动包含这些用例。
+
+首次接入的实际命令、退出码、当前消费者源码检查结果及未覆盖范围记录在[任务 10 验收证据](maintenance/evidence/shared-regression-task10.json)。该记录区分本轮新增门禁的验证与既有 Rust 业务测试，不把源码检查表述为全平台验收。

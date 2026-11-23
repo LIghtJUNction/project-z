@@ -1,0 +1,1005 @@
+{
+  "schema": 1,
+  "baseline": "2e32aacc3cd243aa7a4f43564e8e895ab3ba732c",
+  "observed_at": "2026-11-23T17:08:04+00:00",
+  "read_only_audit": true,
+  "counts": {
+    "repositories": 17,
+    "active_lockfiles": 24,
+    "direct_declarations": 163,
+    "direct_crate_names": 104,
+    "registry_crate_names": 730,
+    "registry_name_versions": 872,
+    "cache_revalidated": 729,
+    "compatible_declarations": 16,
+    "outside_range_declarations": 18
+  },
+  "official_registry_errors": [],
+  "compatible_direct_candidates": [
+    {
+      "repository": "OniMods",
+      "consumer_package": "onim",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "anyhow",
+      "declared_range": "1.0.102",
+      "locked_versions": [
+        "1.0.102"
+      ],
+      "declared_msrv": null,
+      "latest_allowed_msrv_stable": {
+        "version": "1.0.105",
+        "yanked": false,
+        "rust_version": "1.68"
+      },
+      "latest_stable": {
+        "version": "1.0.105",
+        "yanked": false,
+        "rust_version": "1.68"
+      },
+      "registry_source": "https://index.crates.io/an/yh/anyhow"
+    },
+    {
+      "repository": "OniMods",
+      "consumer_package": "onim",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "clap",
+      "declared_range": "4.6.1",
+      "locked_versions": [
+        "4.6.1"
+      ],
+      "declared_msrv": null,
+      "latest_allowed_msrv_stable": {
+        "version": "4.6.9",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "latest_stable": {
+        "version": "4.6.9",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "registry_source": "https://index.crates.io/cl/ap/clap"
+    },
+    {
+      "repository": "OniMods",
+      "consumer_package": "onim",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "libloading",
+      "declared_range": "0.9",
+      "locked_versions": [
+        "0.9.0"
+      ],
+      "declared_msrv": null,
+      "latest_allowed_msrv_stable": {
+        "version": "0.9.1",
+        "yanked": false,
+        "rust_version": "1.88.0"
+      },
+      "latest_stable": {
+        "version": "0.9.1",
+        "yanked": false,
+        "rust_version": "1.88.0"
+      },
+      "registry_source": "https://index.crates.io/li/bl/libloading"
+    },
+    {
+      "repository": "OniMods",
+      "consumer_package": "onim",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "serde",
+      "declared_range": "1.0.228",
+      "locked_versions": [
+        "1.0.228"
+      ],
+      "declared_msrv": null,
+      "latest_allowed_msrv_stable": {
+        "version": "1.0.229",
+        "yanked": false,
+        "rust_version": "1.56"
+      },
+      "latest_stable": {
+        "version": "1.0.229",
+        "yanked": false,
+        "rust_version": "1.56"
+      },
+      "registry_source": "https://index.crates.io/se/rd/serde"
+    },
+    {
+      "repository": "OniMods",
+      "consumer_package": "onim",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "serde_json",
+      "declared_range": "1.0.145",
+      "locked_versions": [
+        "1.0.150"
+      ],
+      "declared_msrv": null,
+      "latest_allowed_msrv_stable": {
+        "version": "1.0.154",
+        "yanked": false,
+        "rust_version": "1.71"
+      },
+      "latest_stable": {
+        "version": "1.0.154",
+        "yanked": false,
+        "rust_version": "1.71"
+      },
+      "registry_source": "https://index.crates.io/se/rd/serde_json"
+    },
+    {
+      "repository": "OniMods",
+      "consumer_package": "onim",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "toml",
+      "declared_range": "1.1.2",
+      "locked_versions": [
+        "1.1.2+spec-1.1.0"
+      ],
+      "declared_msrv": null,
+      "latest_allowed_msrv_stable": {
+        "version": "1.2.2+spec-1.1.0",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "latest_stable": {
+        "version": "1.2.2+spec-1.1.0",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "registry_source": "https://index.crates.io/to/ml/toml"
+    },
+    {
+      "repository": "OniMods",
+      "consumer_package": "onim",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "zip",
+      "declared_range": "9.2",
+      "locked_versions": [
+        "9.4.1"
+      ],
+      "declared_msrv": null,
+      "latest_allowed_msrv_stable": {
+        "version": "9.8.2",
+        "yanked": false,
+        "rust_version": "1.89"
+      },
+      "latest_stable": {
+        "version": "9.8.2",
+        "yanked": false,
+        "rust_version": "1.89"
+      },
+      "registry_source": "https://index.crates.io/3/z/zip"
+    },
+    {
+      "repository": "lmm",
+      "consumer_package": "lmm-cli",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "clap",
+      "declared_range": "4.6.7",
+      "locked_versions": [
+        "4.6.7"
+      ],
+      "declared_msrv": "1.99.1",
+      "latest_allowed_msrv_stable": {
+        "version": "4.6.9",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "latest_stable": {
+        "version": "4.6.9",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "registry_source": "https://index.crates.io/cl/ap/clap"
+    },
+    {
+      "repository": "lmm",
+      "consumer_package": "lmm-cli",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "rand",
+      "declared_range": "0.10.3",
+      "locked_versions": [
+        "0.10.3"
+      ],
+      "declared_msrv": "1.99.1",
+      "latest_allowed_msrv_stable": {
+        "version": "0.10.4",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "latest_stable": {
+        "version": "0.10.4",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "registry_source": "https://index.crates.io/ra/nd/rand"
+    },
+    {
+      "repository": "lmm",
+      "consumer_package": "lmm-cli",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "url",
+      "declared_range": "2.5.8",
+      "locked_versions": [
+        "2.5.8"
+      ],
+      "declared_msrv": "1.99.1",
+      "latest_allowed_msrv_stable": {
+        "version": "2.5.9",
+        "yanked": false,
+        "rust_version": "1.63"
+      },
+      "latest_stable": {
+        "version": "2.5.9",
+        "yanked": false,
+        "rust_version": "1.63"
+      },
+      "registry_source": "https://index.crates.io/3/u/url"
+    },
+    {
+      "repository": "lmm",
+      "consumer_package": "lmm-cli",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "zeroize",
+      "declared_range": "1.9.1",
+      "locked_versions": [
+        "1.9.1"
+      ],
+      "declared_msrv": "1.99.1",
+      "latest_allowed_msrv_stable": {
+        "version": "1.9.2",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "latest_stable": {
+        "version": "1.9.2",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "registry_source": "https://index.crates.io/ze/ro/zeroize"
+    },
+    {
+      "repository": "ssmcp",
+      "consumer_package": "ssmcp",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "zip",
+      "declared_range": "9.0.5",
+      "locked_versions": [
+        "9.0.5"
+      ],
+      "declared_msrv": "1.100",
+      "latest_allowed_msrv_stable": {
+        "version": "9.8.2",
+        "yanked": false,
+        "rust_version": "1.89"
+      },
+      "latest_stable": {
+        "version": "9.8.2",
+        "yanked": false,
+        "rust_version": "1.89"
+      },
+      "registry_source": "https://index.crates.io/3/z/zip"
+    },
+    {
+      "repository": "ssmcp",
+      "consumer_package": "ssmcp",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "toml",
+      "declared_range": "1.2.1",
+      "locked_versions": [
+        "1.2.1+spec-1.1.0"
+      ],
+      "declared_msrv": "1.100",
+      "latest_allowed_msrv_stable": {
+        "version": "1.2.2+spec-1.1.0",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "latest_stable": {
+        "version": "1.2.2+spec-1.1.0",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "registry_source": "https://index.crates.io/to/ml/toml"
+    },
+    {
+      "repository": "ssmcp",
+      "consumer_package": "ssmcp",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "toml_edit",
+      "declared_range": "0.25.19",
+      "locked_versions": [
+        "0.25.19+spec-1.1.0"
+      ],
+      "declared_msrv": "1.100",
+      "latest_allowed_msrv_stable": {
+        "version": "0.25.20+spec-1.1.0",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "latest_stable": {
+        "version": "0.25.20+spec-1.1.0",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "registry_source": "https://index.crates.io/to/ml/toml_edit"
+    },
+    {
+      "repository": "zaccel",
+      "consumer_package": "zaccel",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "wgpu",
+      "declared_range": "30.0.1",
+      "locked_versions": [
+        "30.0.1"
+      ],
+      "declared_msrv": "1.100",
+      "latest_allowed_msrv_stable": {
+        "version": "30.0.2",
+        "yanked": false,
+        "rust_version": "1.87.0"
+      },
+      "latest_stable": {
+        "version": "30.0.2",
+        "yanked": false,
+        "rust_version": "1.87.0"
+      },
+      "registry_source": "https://index.crates.io/wg/pu/wgpu"
+    },
+    {
+      "repository": "zaccel",
+      "consumer_package": "zaccel",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "naga",
+      "declared_range": "30.0.1",
+      "locked_versions": [
+        "30.0.1"
+      ],
+      "declared_msrv": "1.100",
+      "latest_allowed_msrv_stable": {
+        "version": "30.0.2",
+        "yanked": false,
+        "rust_version": "1.87"
+      },
+      "latest_stable": {
+        "version": "30.0.2",
+        "yanked": false,
+        "rust_version": "1.87"
+      },
+      "registry_source": "https://index.crates.io/na/ga/naga"
+    }
+  ],
+  "exact_pin_same_line_core_candidates": [
+    {
+      "package": "lettre",
+      "kind": "dependencies",
+      "from": "=0.11.23",
+      "to": "=0.11.24",
+      "rust_version": "1.85",
+      "yanked": false,
+      "source": "https://index.crates.io/le/tt/lettre"
+    },
+    {
+      "package": "form_urlencoded",
+      "kind": "dependencies",
+      "from": "=1.2.2",
+      "to": "=1.2.3",
+      "rust_version": "1.51",
+      "yanked": false,
+      "source": "https://index.crates.io/fo/rm/form_urlencoded"
+    },
+    {
+      "package": "regex",
+      "kind": "dependencies",
+      "from": "=1.13.1",
+      "to": "=1.13.2",
+      "rust_version": "1.65",
+      "yanked": false,
+      "source": "https://index.crates.io/re/ge/regex"
+    },
+    {
+      "package": "sqlx",
+      "kind": "dependencies",
+      "from": "=0.9.0",
+      "to": "=0.9.1",
+      "rust_version": "1.94.0",
+      "yanked": false,
+      "source": "https://index.crates.io/sq/lx/sqlx"
+    },
+    {
+      "package": "zeroize",
+      "kind": "dependencies",
+      "from": "=1.9.1",
+      "to": "=1.9.2",
+      "rust_version": "1.85",
+      "yanked": false,
+      "source": "https://index.crates.io/ze/ro/zeroize"
+    },
+    {
+      "package": "psl",
+      "kind": "dependencies",
+      "from": "=2.1.256",
+      "to": "=2.1.261",
+      "rust_version": null,
+      "yanked": false,
+      "source": "https://index.crates.io/3/p/psl"
+    },
+    {
+      "package": "toml",
+      "kind": "dependencies",
+      "from": "=1.2.1",
+      "to": "=1.2.2+spec-1.1.0",
+      "rust_version": "1.85",
+      "yanked": false,
+      "source": "https://index.crates.io/to/ml/toml"
+    },
+    {
+      "package": "toml",
+      "kind": "dev-dependencies",
+      "from": "=1.2.1",
+      "to": "=1.2.2+spec-1.1.0",
+      "rust_version": "1.85",
+      "yanked": false,
+      "source": "https://index.crates.io/to/ml/toml"
+    },
+    {
+      "package": "sqlx",
+      "kind": "dev-dependencies",
+      "from": "=0.9.0",
+      "to": "=0.9.1",
+      "rust_version": "1.94.0",
+      "yanked": false,
+      "source": "https://index.crates.io/sq/lx/sqlx"
+    }
+  ],
+  "outside_range_candidates": [
+    {
+      "repository": "OniMods",
+      "consumer_package": "onisim-gpu",
+      "manifest": "mods/CycleTrim/OniSim/gpu/Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "wgpu",
+      "declared_range": "=30.0.1",
+      "locked_versions": [
+        "30.0.1"
+      ],
+      "declared_msrv": "1.99",
+      "latest_allowed_msrv_stable": {
+        "version": "30.0.1",
+        "yanked": false,
+        "rust_version": "1.87.0"
+      },
+      "latest_stable": {
+        "version": "30.0.2",
+        "yanked": false,
+        "rust_version": "1.87.0"
+      },
+      "registry_source": "https://index.crates.io/wg/pu/wgpu"
+    },
+    {
+      "repository": "OniMods",
+      "consumer_package": "onisim-gpu",
+      "manifest": "mods/CycleTrim/OniSim/gpu/Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "pollster",
+      "declared_range": "=1.0.1",
+      "locked_versions": [
+        "1.0.1"
+      ],
+      "declared_msrv": "1.99",
+      "latest_allowed_msrv_stable": {
+        "version": "1.0.1",
+        "yanked": false,
+        "rust_version": "1.69"
+      },
+      "latest_stable": {
+        "version": "1.0.3",
+        "yanked": false,
+        "rust_version": "1.69"
+      },
+      "registry_source": "https://index.crates.io/po/ll/pollster"
+    },
+    {
+      "repository": "OniMods",
+      "consumer_package": "onisim-gpu",
+      "manifest": "mods/CycleTrim/OniSim/gpu/Cargo.toml",
+      "kind": "dev-dependencies",
+      "dependency": "naga",
+      "declared_range": "=30.0.1",
+      "locked_versions": [
+        "30.0.1"
+      ],
+      "declared_msrv": "1.99",
+      "latest_allowed_msrv_stable": {
+        "version": "30.0.1",
+        "yanked": false,
+        "rust_version": "1.87"
+      },
+      "latest_stable": {
+        "version": "30.0.2",
+        "yanked": false,
+        "rust_version": "1.87"
+      },
+      "registry_source": "https://index.crates.io/na/ga/naga"
+    },
+    {
+      "repository": "lmm",
+      "consumer_package": "lmm-cli",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "rusqlite",
+      "declared_range": "0.42.0",
+      "locked_versions": [
+        "0.42.0"
+      ],
+      "declared_msrv": "1.99.1",
+      "latest_allowed_msrv_stable": {
+        "version": "0.42.0",
+        "yanked": false,
+        "rust_version": "1.89.0"
+      },
+      "latest_stable": {
+        "version": "0.43.0",
+        "yanked": false,
+        "rust_version": "1.89.0"
+      },
+      "registry_source": "https://index.crates.io/ru/sq/rusqlite"
+    },
+    {
+      "repository": "lmm",
+      "consumer_package": "lmm-cli",
+      "manifest": "Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "toml",
+      "declared_range": "=1.2.1",
+      "locked_versions": [
+        "1.2.1+spec-1.1.0"
+      ],
+      "declared_msrv": "1.99.1",
+      "latest_allowed_msrv_stable": {
+        "version": "1.2.1+spec-1.1.0",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "latest_stable": {
+        "version": "1.2.2+spec-1.1.0",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "registry_source": "https://index.crates.io/to/ml/toml"
+    },
+    {
+      "repository": "lmm-api-source",
+      "consumer_package": "lmm-core",
+      "manifest": "services/core/Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "lettre",
+      "declared_range": "=0.11.23",
+      "locked_versions": [
+        "0.11.23"
+      ],
+      "declared_msrv": "1.100.0",
+      "latest_allowed_msrv_stable": {
+        "version": "0.11.23",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "latest_stable": {
+        "version": "0.11.24",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "registry_source": "https://index.crates.io/le/tt/lettre"
+    },
+    {
+      "repository": "lmm-api-source",
+      "consumer_package": "lmm-core",
+      "manifest": "services/core/Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "form_urlencoded",
+      "declared_range": "=1.2.2",
+      "locked_versions": [
+        "1.2.2"
+      ],
+      "declared_msrv": "1.100.0",
+      "latest_allowed_msrv_stable": {
+        "version": "1.2.2",
+        "yanked": false,
+        "rust_version": "1.51"
+      },
+      "latest_stable": {
+        "version": "1.2.3",
+        "yanked": false,
+        "rust_version": "1.51"
+      },
+      "registry_source": "https://index.crates.io/fo/rm/form_urlencoded"
+    },
+    {
+      "repository": "lmm-api-source",
+      "consumer_package": "lmm-core",
+      "manifest": "services/core/Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "jsonschema",
+      "declared_range": "=0.61.2",
+      "locked_versions": [
+        "0.61.2"
+      ],
+      "declared_msrv": "1.100.0",
+      "latest_allowed_msrv_stable": {
+        "version": "0.61.2",
+        "yanked": false,
+        "rust_version": "1.85.0"
+      },
+      "latest_stable": {
+        "version": "0.63.1",
+        "yanked": false,
+        "rust_version": "1.85.0"
+      },
+      "registry_source": "https://index.crates.io/js/on/jsonschema"
+    },
+    {
+      "repository": "lmm-api-source",
+      "consumer_package": "lmm-core",
+      "manifest": "services/core/Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "regex",
+      "declared_range": "=1.13.1",
+      "locked_versions": [
+        "1.13.1"
+      ],
+      "declared_msrv": "1.100.0",
+      "latest_allowed_msrv_stable": {
+        "version": "1.13.1",
+        "yanked": false,
+        "rust_version": "1.65"
+      },
+      "latest_stable": {
+        "version": "1.13.2",
+        "yanked": false,
+        "rust_version": "1.65"
+      },
+      "registry_source": "https://index.crates.io/re/ge/regex"
+    },
+    {
+      "repository": "lmm-api-source",
+      "consumer_package": "lmm-core",
+      "manifest": "services/core/Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "sqlx",
+      "declared_range": "=0.9.0",
+      "locked_versions": [
+        "0.9.0"
+      ],
+      "declared_msrv": "1.100.0",
+      "latest_allowed_msrv_stable": {
+        "version": "0.9.0",
+        "yanked": false,
+        "rust_version": "1.94.0"
+      },
+      "latest_stable": {
+        "version": "0.9.1",
+        "yanked": false,
+        "rust_version": "1.94.0"
+      },
+      "registry_source": "https://index.crates.io/sq/lx/sqlx"
+    },
+    {
+      "repository": "lmm-api-source",
+      "consumer_package": "lmm-core",
+      "manifest": "services/core/Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "zeroize",
+      "declared_range": "=1.9.1",
+      "locked_versions": [
+        "1.9.1"
+      ],
+      "declared_msrv": "1.100.0",
+      "latest_allowed_msrv_stable": {
+        "version": "1.9.1",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "latest_stable": {
+        "version": "1.9.2",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "registry_source": "https://index.crates.io/ze/ro/zeroize"
+    },
+    {
+      "repository": "lmm-api-source",
+      "consumer_package": "lmm-core",
+      "manifest": "services/core/Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "webauthn-rs",
+      "declared_range": "=0.5.5",
+      "locked_versions": [
+        "0.5.5"
+      ],
+      "declared_msrv": "1.100.0",
+      "latest_allowed_msrv_stable": {
+        "version": "0.5.5",
+        "yanked": false,
+        "rust_version": "1.88"
+      },
+      "latest_stable": {
+        "version": "0.6.2",
+        "yanked": false,
+        "rust_version": "1.89"
+      },
+      "registry_source": "https://index.crates.io/we/ba/webauthn-rs"
+    },
+    {
+      "repository": "lmm-api-source",
+      "consumer_package": "lmm-core",
+      "manifest": "services/core/Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "webauthn-rs-core",
+      "declared_range": "=0.5.5",
+      "locked_versions": [
+        "0.5.5"
+      ],
+      "declared_msrv": "1.100.0",
+      "latest_allowed_msrv_stable": {
+        "version": "0.5.5",
+        "yanked": false,
+        "rust_version": "1.88"
+      },
+      "latest_stable": {
+        "version": "0.6.2",
+        "yanked": false,
+        "rust_version": "1.89"
+      },
+      "registry_source": "https://index.crates.io/we/ba/webauthn-rs-core"
+    },
+    {
+      "repository": "lmm-api-source",
+      "consumer_package": "lmm-core",
+      "manifest": "services/core/Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "psl",
+      "declared_range": "=2.1.256",
+      "locked_versions": [
+        "2.1.256"
+      ],
+      "declared_msrv": "1.100.0",
+      "latest_allowed_msrv_stable": {
+        "version": "2.1.256",
+        "yanked": false,
+        "rust_version": null
+      },
+      "latest_stable": {
+        "version": "2.1.261",
+        "yanked": false,
+        "rust_version": null
+      },
+      "registry_source": "https://index.crates.io/3/p/psl"
+    },
+    {
+      "repository": "lmm-api-source",
+      "consumer_package": "lmm-core",
+      "manifest": "services/core/Cargo.toml",
+      "kind": "dependencies",
+      "dependency": "toml",
+      "declared_range": "=1.2.1",
+      "locked_versions": [
+        "1.2.1+spec-1.1.0"
+      ],
+      "declared_msrv": "1.100.0",
+      "latest_allowed_msrv_stable": {
+        "version": "1.2.1+spec-1.1.0",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "latest_stable": {
+        "version": "1.2.2+spec-1.1.0",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "registry_source": "https://index.crates.io/to/ml/toml"
+    },
+    {
+      "repository": "lmm-api-source",
+      "consumer_package": "lmm-core",
+      "manifest": "services/core/Cargo.toml",
+      "kind": "dev-dependencies",
+      "dependency": "toml",
+      "declared_range": "=1.2.1",
+      "locked_versions": [
+        "1.2.1+spec-1.1.0"
+      ],
+      "declared_msrv": "1.100.0",
+      "latest_allowed_msrv_stable": {
+        "version": "1.2.1+spec-1.1.0",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "latest_stable": {
+        "version": "1.2.2+spec-1.1.0",
+        "yanked": false,
+        "rust_version": "1.85"
+      },
+      "registry_source": "https://index.crates.io/to/ml/toml"
+    },
+    {
+      "repository": "lmm-api-source",
+      "consumer_package": "lmm-core",
+      "manifest": "services/core/Cargo.toml",
+      "kind": "dev-dependencies",
+      "dependency": "webauthn-authenticator-rs",
+      "declared_range": "=0.5.5",
+      "locked_versions": [
+        "0.5.5"
+      ],
+      "declared_msrv": "1.100.0",
+      "latest_allowed_msrv_stable": {
+        "version": "0.5.5",
+        "yanked": false,
+        "rust_version": "1.88"
+      },
+      "latest_stable": {
+        "version": "0.6.2",
+        "yanked": false,
+        "rust_version": "1.89"
+      },
+      "registry_source": "https://index.crates.io/we/ba/webauthn-authenticator-rs"
+    },
+    {
+      "repository": "lmm-api-source",
+      "consumer_package": "lmm-core",
+      "manifest": "services/core/Cargo.toml",
+      "kind": "dev-dependencies",
+      "dependency": "sqlx",
+      "declared_range": "=0.9.0",
+      "locked_versions": [
+        "0.9.0"
+      ],
+      "declared_msrv": "1.100.0",
+      "latest_allowed_msrv_stable": {
+        "version": "0.9.0",
+        "yanked": false,
+        "rust_version": "1.94.0"
+      },
+      "latest_stable": {
+        "version": "0.9.1",
+        "yanked": false,
+        "rust_version": "1.94.0"
+      },
+      "registry_source": "https://index.crates.io/sq/lx/sqlx"
+    }
+  ],
+  "yanked_locked_packages": [
+    {
+      "package": "async-executor",
+      "source": "https://index.crates.io/as/yn/async-executor",
+      "observed_at": "2026-11-23T17:07:59+00:00",
+      "version": "1.14.0",
+      "present": true,
+      "yanked": true,
+      "rust_version": "1.65",
+      "consumers": [
+        {
+          "repository": "mechrevo-drivers",
+          "lockfile": "console/Cargo.lock"
+        }
+      ],
+      "latest_stable": {
+        "version": "1.14.1",
+        "yanked": false,
+        "rust_version": "1.63"
+      }
+    },
+    {
+      "package": "clipboard-win",
+      "source": "https://index.crates.io/cl/ip/clipboard-win",
+      "observed_at": "2026-11-23T17:07:59+00:00",
+      "version": "5.4.1",
+      "present": true,
+      "yanked": true,
+      "rust_version": null,
+      "consumers": [
+        {
+          "repository": "mechrevo-drivers",
+          "lockfile": "console/Cargo.lock"
+        }
+      ],
+      "latest_stable": {
+        "version": "5.4.3",
+        "yanked": false,
+        "rust_version": null
+      }
+    }
+  ],
+  "msrv_exceeding_direct_candidates": [],
+  "onisim_catalog_additions": [
+    {
+      "manifest": "mods/CycleTrim/OniSim/gpu/Cargo.toml",
+      "package": "onisim-gpu",
+      "declared_msrv": "1.99",
+      "toolchain": "1.99.1",
+      "independent_workspace": true,
+      "activity_evidence": ".github/workflows/onisim-native.yml and .github/workflows/onisim-diamond.yml",
+      "path_dependency": null
+    },
+    {
+      "manifest": "mods/CycleTrim/OniSim/native/Cargo.toml",
+      "package": "oni-sim-core",
+      "declared_msrv": "1.99",
+      "toolchain": "1.99.1",
+      "independent_workspace": true,
+      "activity_evidence": "scripts/build_onisim_native.py and .github/workflows/onisim-native.yml",
+      "path_dependency": "../gpu"
+    },
+    {
+      "manifest": "mods/CycleTrim/OniSim/lean-lab/harness/Cargo.toml",
+      "package": "onisim-diamond-validation",
+      "declared_msrv": "1.99",
+      "toolchain": "1.99.1",
+      "independent_workspace": true,
+      "activity_evidence": ".github/workflows/onisim-diamond.yml",
+      "path_dependency": null
+    }
+  ],
+  "excluded_historical_files": [
+    {
+      "repository": "ztty",
+      "path": "docs/reports/host-9f5a77a-20261120/registry/consumers/combined/Cargo.lock",
+      "reason": "historical report snapshot"
+    },
+    {
+      "repository": "ztty",
+      "path": "docs/reports/host-9f5a77a-20261120/registry/consumers/combined/Cargo.toml",
+      "reason": "historical report snapshot"
+    },
+    {
+      "repository": "ztty",
+      "path": "docs/reports/host-9f5a77a-20261120/registry/consumers/zterm/Cargo.lock",
+      "reason": "historical report snapshot"
+    },
+    {
+      "repository": "ztty",
+      "path": "docs/reports/host-9f5a77a-20261120/registry/consumers/zterm/Cargo.toml",
+      "reason": "historical report snapshot"
+    },
+    {
+      "repository": "ztty",
+      "path": "docs/reports/host-9f5a77a-20261120/source/Cargo.lock",
+      "reason": "historical report snapshot"
+    },
+    {
+      "repository": "ztty",
+      "path": "docs/reports/host-9f5a77a-20261120/source/Cargo.toml",
+      "reason": "historical report snapshot"
+    }
+  ],
+  "scope_notes": [
+    "153 catalog direct declarations plus 10 from OniSim independent workspaces; 163 total.",
+    "No direct compatible updates found in zcalld, zcall-gui, ztty, zmem, zuse; their production owners retain edit ownership.",
+    "OniSim transport-lab has no registry dependencies and remains a historical comparison experiment; no registry update proposed.",
+    "Dependency-declared MSRV is metadata, not an actual minimum-toolchain test. Undeclared MSRV remains unknown.",
+    "Transitive global latest versions are not automatically valid replacements; actual incoming constraints and Cargo resolution control updates.",
+    "Original manifests, historical report locks, benchmark measurements, and independent test oracles were not changed by this audit."
+  ],
+  "implementation_scope_authorized": [
+    "lmm including exact same-line toml patch",
+    "OniMods root plus active OniSim gpu/native patch locks",
+    "ssmcp root and desktop with final public provider propagation",
+    "zaccel root"
+  ]
+}

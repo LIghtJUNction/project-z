@@ -1,0 +1,29 @@
+{
+  "preflight_scope": "zinput b801edfcee8b107757fb450faf77dd93e4bf29f4 and zterm baseline55e24949c3cf5773535215d81fed71e3364c4802",
+  "full_library": {
+    "passed": 28,
+    "failed": 1,
+    "ignored": 8
+  },
+  "failed_test": "graphics_io::linux::tests::normal_root_owned_sticky_temp_path_is_cleaned_without_leaking_files",
+  "assertion": "source file read succeeds but is intentionally retained under untrusted parent; assert !retained fails",
+  "tmp": {
+    "uid": 1000,
+    "mode": "0o755"
+  },
+  "euid": 1000,
+  "cause": "sandbox /tmp is user-owned mode0755, not root-owned sticky or private0700; existing cleanup guard refuses deletion",
+  "source_identity": {
+    "src/graphics_io/linux.rs": {
+      "baseline_sha256": "b7ecaffa2456eb205fa0bd680060537c76e5fa8e09bc12f5f56f5770fd473c5d",
+      "current_sha256": "b7ecaffa2456eb205fa0bd680060537c76e5fa8e09bc12f5f56f5770fd473c5d",
+      "same": true
+    },
+    "src/graphics_io/linux/tests.rs": {
+      "baseline_sha256": "80c305be74b974019c4471480279974f6792236ee8a4f8e6cb954e8b1ed62853",
+      "current_sha256": "80c305be74b974019c4471480279974f6792236ee8a4f8e6cb954e8b1ed62853",
+      "same": true
+    }
+  },
+  "environment_mutations": "none; do not change shared /tmp ownership or mode to force acceptance"
+}

@@ -16,6 +16,7 @@ from pathlib import Path
 from cargo_versions import satisfies
 from catalog_docs import render as render_catalog_docs
 from managed_build import background_command
+from shared_implementations import errors as shared_implementation_errors
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = Path("catalog.json")
@@ -505,6 +506,7 @@ def validate(data, rules, root=ROOT):
                 if dep["explicit_version"]:
                     errors.append(f"{name} -> {dep['name']}: omit version from internal Git development dependencies; project registry versions only in external release staging")
     errors.extend(internal_override_errors(data, root))
+    errors.extend(shared_implementation_errors(data, root, command=command, relative=relative, identity=github_identity))
     try:
         ordered(dependency_graph(data))
     except CoordinationError as error:

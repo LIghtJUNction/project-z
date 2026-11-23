@@ -1,0 +1,308 @@
+{
+  "purpose": "Read-only behavioral comparison of exact pre-migration parsers; not consumer Cargo integration acceptance",
+  "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+  "baseline_sources": {
+    "zmem": {
+      "commit": "5997b9581f5b6962c9d9cd12774a2ce119e46ca7",
+      "file": "src/json.rs",
+      "sha256": "c4c6c9e7dffce98fec1afc4dd97e70c65bae4536b1f547bc936fd424d93badbf"
+    },
+    "zcall-gui": {
+      "commit": "3b9a0f4673c08a9aa259b52e02858c0a88f43f6b",
+      "file": "src/json.rs",
+      "sha256": "1f038011f5c3a53908cef0485ff81d8f48d30553cadf33febcae56f3dd485dc6"
+    },
+    "ztty": {
+      "commit": "963afbd7f9463f6de61a96e1968fdf26d3bc8990",
+      "file": "src/json.rs",
+      "sha256": "814d16236f1fb7b1c49206c5febc142a6f5cb654a63cf667e74ecc3a449e6ec4"
+    }
+  },
+  "zconv_public": "f9448d27997dc70dac05f0c0e58857bcce43ab72",
+  "zgpui_baseline": "d34c41f79ddab343e7468c5192885a82ca487687",
+  "commands": [
+    [
+      "rustc",
+      "--edition",
+      "2024",
+      "--crate-name",
+      "zconv",
+      "--crate-type",
+      "rlib",
+      "/workspace/scratch/e498b1cce251/project-z-toolchain/cargo/git/checkouts/zconv-062a6abd27915ce6/f9448d2/src/lib.rs",
+      "-o",
+      "/workspace/scratch/cf069aef8887/dedup-contracts-task9/evidence/parser-contracts/libzconv.rlib"
+    ],
+    [
+      "rustc",
+      "--edition",
+      "2024",
+      "--crate-name",
+      "zgpui",
+      "--crate-type",
+      "rlib",
+      "/workspace/scratch/cf069aef8887/dedup-contracts-task9/zgpui/src/lib.rs",
+      "-o",
+      "/workspace/scratch/cf069aef8887/dedup-contracts-task9/evidence/parser-contracts/libzgpui.rlib"
+    ],
+    [
+      "rustc",
+      "--edition",
+      "2024",
+      "/workspace/scratch/cf069aef8887/dedup-contracts-task9/evidence/parser-contracts/probe.rs",
+      "--extern",
+      "zconv=/workspace/scratch/cf069aef8887/dedup-contracts-task9/evidence/parser-contracts/libzconv.rlib",
+      "--extern",
+      "zgpui=/workspace/scratch/cf069aef8887/dedup-contracts-task9/evidence/parser-contracts/libzgpui.rlib",
+      "-o",
+      "/workspace/scratch/cf069aef8887/dedup-contracts-task9/evidence/parser-contracts/probe"
+    ]
+  ],
+  "observations": [
+    {
+      "case": "form_feed_before_null",
+      "parser": "gui",
+      "actual": "ok"
+    },
+    {
+      "case": "form_feed_before_null",
+      "parser": "zmem",
+      "actual": "error \"expected a JSON value at byte 0\""
+    },
+    {
+      "case": "form_feed_before_null",
+      "parser": "ztty",
+      "actual": "error \"expected JSON value\""
+    },
+    {
+      "case": "form_feed_before_null",
+      "parser": "zconv",
+      "actual": "error InvalidJson { offset: 0, kind: Syntax }"
+    },
+    {
+      "case": "plus_in_unicode_escape",
+      "parser": "gui",
+      "actual": "ok"
+    },
+    {
+      "case": "plus_in_unicode_escape",
+      "parser": "zmem",
+      "actual": "error \"invalid Unicode escape at byte 3\""
+    },
+    {
+      "case": "plus_in_unicode_escape",
+      "parser": "ztty",
+      "actual": "error \"invalid Unicode escape\""
+    },
+    {
+      "case": "plus_in_unicode_escape",
+      "parser": "zconv",
+      "actual": "error InvalidJson { offset: 3, kind: InvalidUnicode }"
+    },
+    {
+      "case": "invalid_unicode_digit",
+      "parser": "gui",
+      "actual": "error \"Invalid JSON Unicode escape\""
+    },
+    {
+      "case": "invalid_unicode_digit",
+      "parser": "zmem",
+      "actual": "error \"invalid Unicode escape at byte 4\""
+    },
+    {
+      "case": "invalid_unicode_digit",
+      "parser": "ztty",
+      "actual": "error \"invalid Unicode escape\""
+    },
+    {
+      "case": "invalid_unicode_digit",
+      "parser": "zconv",
+      "actual": "error InvalidJson { offset: 4, kind: InvalidUnicode }"
+    },
+    {
+      "case": "33_empty_arrays_provider_depth_32",
+      "parser": "gui",
+      "actual": "ok"
+    },
+    {
+      "case": "33_empty_arrays_provider_depth_32",
+      "parser": "zmem",
+      "actual": "ok"
+    },
+    {
+      "case": "33_empty_arrays_provider_depth_32",
+      "parser": "ztty",
+      "actual": "ok"
+    },
+    {
+      "case": "33_empty_arrays_provider_depth_32",
+      "parser": "zconv",
+      "actual": "error DepthLimitExceeded { limit: 32 }"
+    },
+    {
+      "case": "33_scalar_arrays_provider_depth_33",
+      "parser": "gui",
+      "actual": "error \"JSON nesting exceeds 32\""
+    },
+    {
+      "case": "33_scalar_arrays_provider_depth_33",
+      "parser": "zmem",
+      "actual": "ok"
+    },
+    {
+      "case": "33_scalar_arrays_provider_depth_33",
+      "parser": "ztty",
+      "actual": "ok"
+    },
+    {
+      "case": "33_scalar_arrays_provider_depth_33",
+      "parser": "zconv",
+      "actual": "ok tokens=34"
+    },
+    {
+      "case": "65_empty_arrays_provider_depth_65",
+      "parser": "gui",
+      "actual": "error \"JSON nesting exceeds 32\""
+    },
+    {
+      "case": "65_empty_arrays_provider_depth_65",
+      "parser": "zmem",
+      "actual": "ok"
+    },
+    {
+      "case": "65_empty_arrays_provider_depth_65",
+      "parser": "ztty",
+      "actual": "ok"
+    },
+    {
+      "case": "65_empty_arrays_provider_depth_65",
+      "parser": "zconv",
+      "actual": "error DepthLimitExceeded { limit: 64 }"
+    },
+    {
+      "case": "65536_array_elements",
+      "parser": "gui",
+      "actual": "ok"
+    },
+    {
+      "case": "65536_array_elements",
+      "parser": "zmem",
+      "actual": "ok"
+    },
+    {
+      "case": "65536_array_elements",
+      "parser": "ztty",
+      "actual": "error \"too many JSON values\""
+    },
+    {
+      "case": "65536_array_elements",
+      "parser": "zconv",
+      "actual": "ok tokens=65537"
+    },
+    {
+      "case": "object_three_fields_token_budget_four",
+      "parser": "ztty",
+      "actual": "ok"
+    },
+    {
+      "case": "object_three_fields_token_budget_four",
+      "parser": "zconv",
+      "actual": "error LimitExceeded { kind: \"JSON tokens\", limit: 4 }"
+    },
+    {
+      "case": "trailing_comma",
+      "parser": "gui",
+      "actual": "error \"Invalid JSON value\""
+    },
+    {
+      "case": "trailing_comma",
+      "parser": "zmem",
+      "actual": "error \"expected a JSON value at byte 3\""
+    },
+    {
+      "case": "trailing_comma",
+      "parser": "ztty",
+      "actual": "error \"expected JSON value\""
+    },
+    {
+      "case": "trailing_comma",
+      "parser": "zconv",
+      "actual": "error InvalidJson { offset: 3, kind: Syntax }"
+    },
+    {
+      "case": "decoded_duplicate_key",
+      "parser": "gui",
+      "actual": "error \"JSON duplicate key\""
+    },
+    {
+      "case": "decoded_duplicate_key",
+      "parser": "zmem",
+      "actual": "error \"duplicate JSON object key at byte 17\""
+    },
+    {
+      "case": "decoded_duplicate_key",
+      "parser": "ztty",
+      "actual": "error \"duplicate JSON object key\""
+    },
+    {
+      "case": "decoded_duplicate_key",
+      "parser": "zconv",
+      "actual": "error DuplicateKey { offset: 7 }"
+    },
+    {
+      "case": "object_order_and_number_spelling",
+      "parser": "gui",
+      "actual": "{\"a\":9007199254740993,\"z\":1e+02}"
+    },
+    {
+      "case": "object_order_and_number_spelling",
+      "parser": "zmem",
+      "actual": "{\"a\":9007199254740993,\"z\":1e+02}"
+    },
+    {
+      "case": "object_order_and_number_spelling",
+      "parser": "ztty",
+      "actual": "{\"z\":1e+02,\"a\":9007199254740993}"
+    },
+    {
+      "case": "typed_valid_capability",
+      "parser": "zgpui",
+      "actual": "Ok(Capabilities)"
+    },
+    {
+      "case": "typed_valid_capability",
+      "parser": "zconv",
+      "actual": "ok tokens=5"
+    },
+    {
+      "case": "typed_unknown_field",
+      "parser": "zgpui",
+      "actual": "Err(UnknownField)"
+    },
+    {
+      "case": "typed_unknown_field",
+      "parser": "zconv",
+      "actual": "ok tokens=7"
+    },
+    {
+      "case": "typed_fractional_version",
+      "parser": "zgpui",
+      "actual": "Err(Syntax)"
+    },
+    {
+      "case": "typed_fractional_version",
+      "parser": "zconv",
+      "actual": "ok tokens=5"
+    },
+    {
+      "case": "typed_generic_array",
+      "parser": "zgpui",
+      "actual": "Err(Syntax)"
+    },
+    {
+      "case": "typed_generic_array",
+      "parser": "zconv",
+      "actual": "ok tokens=1"
+    }
+  ]
+}

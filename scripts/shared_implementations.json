@@ -1,0 +1,883 @@
+{
+  "schema_version": 1,
+  "proof": "docs/maintenance/evidence/release-cohort-20261123/dedup-proof.json",
+  "fingerprint": "rust_source v2: full body token JSON SHA256; second hash normalizes conservative local bindings only. Calls, fields (including struct shorthand), paths, operators and literal spellings stay distinct.",
+  "provider_sources": {
+    "z64": "git+https://github.com/LIghtJUNction/z64.git",
+    "zhex": "git+https://github.com/LIghtJUNction/zhex.git",
+    "sha1": "registry+https://github.com/rust-lang/crates.io-index",
+    "sha2": "registry+https://github.com/rust-lang/crates.io-index",
+    "base64": "registry+https://github.com/rust-lang/crates.io-index",
+    "zconv": "git+https://github.com/LIghtJUNction/zconv.git",
+    "zsys": "git+https://github.com/LIghtJUNction/zsys.git"
+  },
+  "consumers": [
+    {
+      "repository": "zterm",
+      "url": "https://github.com/LIghtJUNction/zterm.git",
+      "routes": [
+        {
+          "path": "src/clipboard.rs",
+          "providers": {
+            "z64": [
+              "encode",
+              "decode"
+            ]
+          }
+        }
+      ],
+      "generated_paths": {}
+    },
+    {
+      "repository": "zuse",
+      "url": "https://github.com/LIghtJUNction/zuse.git",
+      "routes": [
+        {
+          "path": "src/browser.rs",
+          "providers": {
+            "z64": [
+              "encode",
+              "decode"
+            ],
+            "sha1": [
+              "Sha1"
+            ]
+          }
+        },
+        {
+          "path": "src/json.rs",
+          "providers": {
+            "zconv": [
+              "json::Writer::new",
+              "json::ControlEscapes::Unicode"
+            ]
+          }
+        },
+        {
+          "path": "src/platform/mod.rs",
+          "reference_path": "src/json.rs",
+          "providers": {
+            "zconv": [
+              "json::Writer::new",
+              "json::ControlEscapes::Unicode"
+            ]
+          }
+        }
+      ],
+      "generated_paths": {}
+    },
+    {
+      "repository": "zmcpio",
+      "url": "https://github.com/LIghtJUNction/zmcpio.git",
+      "routes": [
+        {
+          "path": "src/http.rs",
+          "providers": {
+            "z64": [
+              "encode",
+              "decode"
+            ]
+          }
+        }
+      ],
+      "generated_paths": {}
+    },
+    {
+      "repository": "ztty",
+      "url": "https://github.com/LIghtJUNction/ztty.git",
+      "routes": [
+        {
+          "path": "src/broker/encoding.rs",
+          "providers": {
+            "zhex": [
+              "encode_lower",
+              "decode"
+            ]
+          }
+        },
+        {
+          "path": "src/output_tail.rs",
+          "providers": {
+            "z64": [
+              "encode"
+            ]
+          }
+        },
+        {
+          "path": "src/json.rs",
+          "providers": {
+            "zconv": [
+              "json::Writer::new",
+              "json::ControlEscapes::Unicode"
+            ]
+          }
+        }
+      ],
+      "generated_paths": {}
+    },
+    {
+      "repository": "zmcl",
+      "url": "https://github.com/LIghtJUNction/zmcl.git",
+      "routes": [
+        {
+          "path": "crates/zmcl-core/src/hash.rs",
+          "providers": {
+            "zhex": [
+              "encode_lower"
+            ],
+            "sha1": [
+              "Sha1"
+            ],
+            "sha2": [
+              "Sha256"
+            ]
+          }
+        }
+      ],
+      "generated_paths": {}
+    },
+    {
+      "repository": "zcalld",
+      "url": "https://github.com/LIghtJUNction/zcalld.git",
+      "routes": [
+        {
+          "path": "src/digest.rs",
+          "providers": {
+            "sha2": [
+              "Sha256"
+            ],
+            "zhex": [
+              "encode_lower"
+            ]
+          }
+        },
+        {
+          "path": "crates/zcalld-installer/src/hash.rs",
+          "providers": {
+            "sha2": [
+              "Sha256"
+            ],
+            "zhex": [
+              "encode_lower"
+            ]
+          }
+        },
+        {
+          "path": "crates/zcalld-compat-client/src/lib.rs",
+          "providers": {
+            "z64": [
+              "encode"
+            ],
+            "base64": [
+              "engine::general_purpose::GeneralPurpose"
+            ],
+            "zconv": [
+              "json::Writer::new",
+              "json::ControlEscapes::Unicode"
+            ]
+          }
+        },
+        {
+          "path": "src/privacy_windows.rs",
+          "providers": {
+            "zsys": [
+              "windows::privacy::check_private",
+              "windows::privacy::protect",
+              "windows::privacy::protect_created",
+              "windows::privacy::DirectoryInheritance::FilesAndDirectories"
+            ]
+          }
+        },
+        {
+          "path": "crates/zcalld-installer/src/private.rs",
+          "reference_path": "src/privacy_windows.rs",
+          "providers": {
+            "zsys": [
+              "windows::privacy::check_private",
+              "windows::privacy::protect",
+              "windows::privacy::protect_created",
+              "windows::privacy::DirectoryInheritance::FilesAndDirectories"
+            ]
+          }
+        }
+      ],
+      "generated_paths": {}
+    },
+    {
+      "repository": "zmem",
+      "url": "https://github.com/LIghtJUNction/zmem.git",
+      "routes": [
+        {
+          "path": "src/install.rs",
+          "providers": {
+            "zhex": [
+              "encode_lower",
+              "decode"
+            ]
+          }
+        },
+        {
+          "path": "src/json.rs",
+          "providers": {
+            "zconv": [
+              "json::Writer::new",
+              "json::ControlEscapes::Unicode"
+            ]
+          }
+        }
+      ],
+      "generated_paths": {}
+    },
+    {
+      "repository": "ssmcp",
+      "url": "https://github.com/LIghtJUNction/ssmcp.git",
+      "routes": [
+        {
+          "path": "src/hex.rs",
+          "providers": {
+            "zhex": [
+              "encode_lower"
+            ]
+          }
+        }
+      ],
+      "generated_paths": {}
+    },
+    {
+      "repository": "zcall-gui",
+      "url": "https://github.com/LIghtJUNction/zcall-gui.git",
+      "routes": [
+        {
+          "path": "src/updater.rs",
+          "providers": {
+            "sha2": [
+              "Sha256"
+            ],
+            "zhex": [
+              "encode_lower"
+            ]
+          }
+        },
+        {
+          "path": "src/json.rs",
+          "providers": {
+            "zconv": [
+              "json::Writer::new",
+              "json::ControlEscapes::Unicode"
+            ]
+          }
+        },
+        {
+          "path": "src/core_install_windows.rs",
+          "providers": {
+            "zsys": [
+              "windows::privacy::check_private",
+              "windows::privacy::protect_created",
+              "windows::privacy::DirectoryInheritance::ObjectOnly"
+            ]
+          }
+        }
+      ],
+      "generated_paths": {}
+    },
+    {
+      "repository": "mechrevo-drivers",
+      "url": "https://github.com/LIghtJUNction/mechrevo-drivers.git",
+      "routes": [
+        {
+          "path": "console/crates/core/src/brightness.rs",
+          "providers": {
+            "z64": [
+              "encode"
+            ]
+          }
+        }
+      ],
+      "generated_paths": {}
+    }
+  ],
+  "historical_bodies": [
+    {
+      "id": "zterm-reply",
+      "capability": "Base64 encode",
+      "source": {
+        "repository": "zterm",
+        "commit": "f1da2db1613f97d613ed98b7f3e8cae231e5eae1",
+        "path": "src/clipboard.rs",
+        "function": "reply",
+        "line": 22,
+        "file_sha256": "9a6412f5d9274eefa74147e2eeeb3fcf20ca0ce0cb030c9a94a8fdcde7a0dd13"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zterm.rs",
+      "fragment_sha256": "23e573e2c07f2c5830c43ca2ff4ef9a39a0b03a20d4a12b8da5a56c01ebf7a18",
+      "tokens": 342,
+      "body_sha256": "7e376ded0f58ea764759b4fd7b73b1b42a3d11bbe4231c0891c8395ec9018745",
+      "identifiers_sha256": "152ff51c6569d0c5de70589684ccd5894d8f47dce6f884f5baa8d9a835104757"
+    },
+    {
+      "id": "zterm-decode",
+      "capability": "Base64 decode",
+      "source": {
+        "repository": "zterm",
+        "commit": "f1da2db1613f97d613ed98b7f3e8cae231e5eae1",
+        "path": "src/clipboard.rs",
+        "function": "decode",
+        "line": 189,
+        "file_sha256": "9a6412f5d9274eefa74147e2eeeb3fcf20ca0ce0cb030c9a94a8fdcde7a0dd13"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zterm.rs",
+      "fragment_sha256": "6637de2fa9783ac7b383dad2b1c4cac6f862965b89a39f67a0cec345340f228a",
+      "tokens": 442,
+      "body_sha256": "e7769852e1ab7749c0b398216195a0bec3289b35146714429e823736daea6cfa",
+      "identifiers_sha256": "0e3c21684efe351e802d8dee2cab2c3ba5a118ba9c4d17f0353028c7466b4414"
+    },
+    {
+      "id": "zuse-encode_base64",
+      "capability": "Base64 encode",
+      "source": {
+        "repository": "zuse",
+        "commit": "f13412e3c148ecf01c347423caba509d45df9ccc",
+        "path": "src/browser.rs",
+        "function": "encode_base64",
+        "line": 1834,
+        "file_sha256": "8cfec500cb2e4773a8353cc6f50d0da1d2b675376c1df1e299b8dffea8f63ba1"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zuse.rs",
+      "fragment_sha256": "07c4a9bf34ed42b385ed3ee3213234318f8235ed417c8e9695333192f100a91a",
+      "tokens": 218,
+      "body_sha256": "b096f51669b5ac48d06bbaa202cd14acd2ec91aa43a48c04c8d85e66c7f984f8",
+      "identifiers_sha256": "ba3ba2e44341bf4f8ec3d26e09404b8517ea3fee6d65c5f03b309fce559f21f6"
+    },
+    {
+      "id": "zuse-decode_base64",
+      "capability": "Base64 decode",
+      "source": {
+        "repository": "zuse",
+        "commit": "f13412e3c148ecf01c347423caba509d45df9ccc",
+        "path": "src/browser.rs",
+        "function": "decode_base64",
+        "line": 1857,
+        "file_sha256": "8cfec500cb2e4773a8353cc6f50d0da1d2b675376c1df1e299b8dffea8f63ba1"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zuse.rs",
+      "fragment_sha256": "d1532709205d1b597887ce774ab5642169c76e21fde62aab949597cd686df164",
+      "tokens": 426,
+      "body_sha256": "2cbbc4eb7a0b70fb7f363cb2a9a58588ecc9e71ac84b89d633e20af63ab4ff62",
+      "identifiers_sha256": "79391dbf311d98344d8cad7ac79a2dd333b8ffd121ae8bd7cf8e22f44f84aef4"
+    },
+    {
+      "id": "zuse-sha1",
+      "capability": "SHA1",
+      "source": {
+        "repository": "zuse",
+        "commit": "f13412e3c148ecf01c347423caba509d45df9ccc",
+        "path": "src/browser.rs",
+        "function": "sha1",
+        "line": 1897,
+        "file_sha256": "8cfec500cb2e4773a8353cc6f50d0da1d2b675376c1df1e299b8dffea8f63ba1"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zuse.rs",
+      "fragment_sha256": "7c5628d6bac4bf392900d27420b3b2ed40962d7f695216eb5ff1c3a44bd00675",
+      "tokens": 468,
+      "body_sha256": "03dae833756098d9beec67c813c1d83f2390ddc2cede5f94d88696ddd66cf0b3",
+      "identifiers_sha256": "b28bce8e0324d8182b44013cc636b3a044ae8fdf45d6c4178f188a37c98fe907"
+    },
+    {
+      "id": "zmcpio-encode_value",
+      "capability": "Base64 encode",
+      "source": {
+        "repository": "zmcpio",
+        "commit": "89a247ac274bcd96b760dd9e7dcb0d4d924a901e",
+        "path": "src/http.rs",
+        "function": "encode_value",
+        "line": 703,
+        "file_sha256": "a74a51fbad9f82352003c5e0f25c10000e7f23aaea5cedbbeb9c581d6a7849bf"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zmcpio.rs",
+      "fragment_sha256": "fe2232f67691850d372a5538143fa1ca0f6eeecf7f4fc54a5b693a0583b3ac41",
+      "tokens": 256,
+      "body_sha256": "8c2551d252a9d39758b63aa67d9a2ce3548563043bfe26f7756ec18c15de1abc",
+      "identifiers_sha256": "1225e20a1b0e56952ae81619df3366cca97dcc4c51b0a283b3271e7e30a81baa"
+    },
+    {
+      "id": "zmcpio-decode_header_value",
+      "capability": "Base64 decode",
+      "source": {
+        "repository": "zmcpio",
+        "commit": "89a247ac274bcd96b760dd9e7dcb0d4d924a901e",
+        "path": "src/http.rs",
+        "function": "decode_header_value",
+        "line": 733,
+        "file_sha256": "a74a51fbad9f82352003c5e0f25c10000e7f23aaea5cedbbeb9c581d6a7849bf"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zmcpio.rs",
+      "fragment_sha256": "124eb1afa638bded88677e0af20390b0a93b430cc91d37116169b589cbff2218",
+      "tokens": 521,
+      "body_sha256": "f0ef409ccd8a0d54b93bf581c12ec56456fa73e716d72b924bae9b39691e94dd",
+      "identifiers_sha256": "e4e43e34eaadf99a2e7547016c58c77ebaa66bceaa1dc0c718f364f4282fef1e"
+    },
+    {
+      "id": "ztty-hex",
+      "capability": "Hex encode",
+      "source": {
+        "repository": "ztty",
+        "commit": "c0f195d9b93065040b4efef35f3615831db11b38",
+        "path": "src/broker.rs",
+        "function": "hex",
+        "line": 315,
+        "file_sha256": "60b7ec88650ae3b2adbd1995ca070240355e444bf570a68c6d2bc51b13b9cd2f"
+      },
+      "fixture": "tests/fixtures/shared_implementations/ztty.rs",
+      "fragment_sha256": "a31e5eb94957d6ef055ddaa7f14e54f61d41c2cb0da1908d450ba55e82a759e3",
+      "tokens": 77,
+      "body_sha256": "5692651e21b281ff674ced98751bbf82326907e2fbd94bc5822132c04d2c1611",
+      "identifiers_sha256": "cb5f969d9320dbf946ff6633723e3f254f8e61cc30af9911a7c414bfb0744079"
+    },
+    {
+      "id": "ztty-unhex_bytes",
+      "capability": "Hex decode",
+      "source": {
+        "repository": "ztty",
+        "commit": "c0f195d9b93065040b4efef35f3615831db11b38",
+        "path": "src/broker.rs",
+        "function": "unhex_bytes",
+        "line": 329,
+        "file_sha256": "60b7ec88650ae3b2adbd1995ca070240355e444bf570a68c6d2bc51b13b9cd2f"
+      },
+      "fixture": "tests/fixtures/shared_implementations/ztty.rs",
+      "fragment_sha256": "5ee7d7e593b388fcb806044cbd1785cb242c411e5865d652b4a986b6dc35be97",
+      "tokens": 164,
+      "body_sha256": "b713acba5311e0eb9611b1bf92e103de34bde89aa200449d89d14c99acc25b37",
+      "identifiers_sha256": "087cc2ae4bede582213b8a9580457688bebc5c2611a7ddcbdc913efa232d8541"
+    },
+    {
+      "id": "ztty-output_base64",
+      "capability": "Base64 encode",
+      "source": {
+        "repository": "ztty",
+        "commit": "c0f195d9b93065040b4efef35f3615831db11b38",
+        "path": "src/output_tail.rs",
+        "function": "output_base64",
+        "line": 26,
+        "file_sha256": "34defce9b834489232bc3ecf502fd7c79991c056faddb4931a97e5b09a0f544a"
+      },
+      "fixture": "tests/fixtures/shared_implementations/ztty.rs",
+      "fragment_sha256": "06de7b82a7c96ae98bab8e7ae0f61d83b42890cf9c4bdfdcafba74ccf2bc160e",
+      "tokens": 224,
+      "body_sha256": "156b4f7a912ef4375ec1cbbb32259eb5f26ebb511c3891a7546878fd784edf6f",
+      "identifiers_sha256": "ae21219c21d42190a341f4932b2c93d9696f0177934bf72c1b5e7e9cba4438a8"
+    },
+    {
+      "id": "zmcl-hex",
+      "capability": "Hex encode",
+      "source": {
+        "repository": "zmcl",
+        "commit": "6a83e6215d583a4e03c02a3e07df576cc599081d",
+        "path": "crates/zmcl-core/src/hash.rs",
+        "function": "hex",
+        "line": 290,
+        "file_sha256": "637f6c1c68256a1cfe9a85c48c0ebfe1a8725468ee45cac2fcb908a66706a1c9"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zmcl.rs",
+      "fragment_sha256": "a31e5eb94957d6ef055ddaa7f14e54f61d41c2cb0da1908d450ba55e82a759e3",
+      "tokens": 77,
+      "body_sha256": "5692651e21b281ff674ced98751bbf82326907e2fbd94bc5822132c04d2c1611",
+      "identifiers_sha256": "cb5f969d9320dbf946ff6633723e3f254f8e61cc30af9911a7c414bfb0744079"
+    },
+    {
+      "id": "zmcl-sha1_block",
+      "capability": "SHA1 compression",
+      "source": {
+        "repository": "zmcl",
+        "commit": "6a83e6215d583a4e03c02a3e07df576cc599081d",
+        "path": "crates/zmcl-core/src/hash.rs",
+        "function": "sha1_block",
+        "line": 92,
+        "file_sha256": "637f6c1c68256a1cfe9a85c48c0ebfe1a8725468ee45cac2fcb908a66706a1c9"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zmcl.rs",
+      "fragment_sha256": "b845adb174f26e05d7eba24dd8b2782ac94251aa177819b3f90b3027def869f6",
+      "tokens": 316,
+      "body_sha256": "d0705365241a7acc0d0c9cc0ab8c36c283aa9a328993366478991e419104b34c",
+      "identifiers_sha256": "774316eef13af02044bc8a61214f21998f9108ee5f50af9408bd8f32a760ed93"
+    },
+    {
+      "id": "zmcl-sha256_block",
+      "capability": "SHA256 compression",
+      "source": {
+        "repository": "zmcl",
+        "commit": "6a83e6215d583a4e03c02a3e07df576cc599081d",
+        "path": "crates/zmcl-core/src/hash.rs",
+        "function": "sha256_block",
+        "line": 160,
+        "file_sha256": "637f6c1c68256a1cfe9a85c48c0ebfe1a8725468ee45cac2fcb908a66706a1c9"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zmcl.rs",
+      "fragment_sha256": "db616e5bf5ed50e54ccf6452018f62326ee423f2a5c2edb4dd4faa79ae4b9ea3",
+      "tokens": 548,
+      "body_sha256": "96d2d6ae3767bf24643a1ffb9d9f3c599364b185a16acbb1dd41d292cad74469",
+      "identifiers_sha256": "c782f580145792eb8553edf05ec4db3ecdfdeeb4fac23d39359b97a1c003ed8d"
+    },
+    {
+      "id": "zcalld-sha256",
+      "capability": "SHA256 and Hex",
+      "source": {
+        "repository": "zcalld",
+        "commit": "8e52d791c305a3730d2ea876b8dffb6be2e2c04c",
+        "path": "src/digest.rs",
+        "function": "sha256",
+        "line": 2,
+        "file_sha256": "a32e5ce7f6113d47619e50095a073fe0c0bd1743682163b937a91426cac8acd4"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zcalld.rs",
+      "fragment_sha256": "752e313578a800e6a9ff07b5b71dd0c17d7c1009dda32fcf720c5ac4789e0039",
+      "tokens": 644,
+      "body_sha256": "f719728f0610e1b3860b56c35809f99c03f2481d80d2085db6d79aaa5a4b1ca8",
+      "identifiers_sha256": "3761794f022228a679c68e9e97f440e06ec36edd8372bb5e7a9173a67b2ec7e8"
+    },
+    {
+      "id": "zcalld-compress",
+      "capability": "SHA256 compression",
+      "source": {
+        "repository": "zcalld",
+        "commit": "8e52d791c305a3730d2ea876b8dffb6be2e2c04c",
+        "path": "crates/zcalld-installer/src/hash.rs",
+        "function": "compress",
+        "line": 45,
+        "file_sha256": "05a58449221d823ca0821fb31eddcbee59f35f31cff49d497d2315cd939a38b1"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zcalld.rs",
+      "fragment_sha256": "89d00c0b7ad54c72ab5f34b38440b8fbb3a1ba5c24e1e3104a27f47fc9c82505",
+      "tokens": 385,
+      "body_sha256": "6bd96a5e3d4518f522a4cbe9894035e4f985afe437810e6e23f39378346c7d76",
+      "identifiers_sha256": "b8a8f3216081780551a8c9b9263f7afdd5c873a6f228399a89757fb64c416268"
+    },
+    {
+      "id": "zcalld-encode",
+      "capability": "Base64 encode",
+      "source": {
+        "repository": "zcalld",
+        "commit": "8e52d791c305a3730d2ea876b8dffb6be2e2c04c",
+        "path": "crates/zcalld-compat-client/src/lib.rs",
+        "function": "encode",
+        "line": 311,
+        "file_sha256": "506606a234f1844c1a0dd04478bbb3edcea06913950bb0e3f526ec4c796ea0e8"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zcalld.rs",
+      "fragment_sha256": "5ada7db118d1507ece28284b84b6cb2b96e8716646de59e0d85d44180c0fe7f5",
+      "tokens": 195,
+      "body_sha256": "aa52f15d12dca274fae4928bcede627d1f3dc9c16ad706ca18baa2fbd93dcae9",
+      "identifiers_sha256": "976346a505d9f29a311a64091e7bd7a5b72f9738774a3e6d64fe3350020e6107"
+    },
+    {
+      "id": "zcalld-decode",
+      "capability": "Base64 decode",
+      "source": {
+        "repository": "zcalld",
+        "commit": "8e52d791c305a3730d2ea876b8dffb6be2e2c04c",
+        "path": "crates/zcalld-compat-client/src/lib.rs",
+        "function": "decode",
+        "line": 333,
+        "file_sha256": "506606a234f1844c1a0dd04478bbb3edcea06913950bb0e3f526ec4c796ea0e8"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zcalld.rs",
+      "fragment_sha256": "b51175856a01b2f54ab23fdc45f74b188bc7bfb5ae50670ac0f3595f41b1dc5f",
+      "tokens": 273,
+      "body_sha256": "78798a1af35bc75900a6de4bf539105c6bcd77142b2ad67914e5a31955f30f23",
+      "identifiers_sha256": "6e90f9cf1d3a1ae8d81c7b67c6c907f40972fb996b929e6938cc116d7abc7d2b"
+    },
+    {
+      "id": "zmem-encode_path",
+      "capability": "Hex encode",
+      "source": {
+        "repository": "zmem",
+        "commit": "ff07982d751f48cbf4c9fca554760c658d882d43",
+        "path": "src/install.rs",
+        "function": "encode_path",
+        "line": 1615,
+        "file_sha256": "ee6fbbcb869fc02004d60f7ddfd384521abb24038f99f5a5eeb42116173271bf"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zmem.rs",
+      "fragment_sha256": "3fca766c5a7855570731e31d33c6c1a0bc8c45ca6326ee80738ca8d02b5624f2",
+      "tokens": 90,
+      "body_sha256": "ecf19c2110b9a4edaec5d860055f6603c1b46ed35a84e41ac462def1987c951f",
+      "identifiers_sha256": "5da95ce4331bff4c0eebc3aacdca3578e314d1d6c86ee5b32c80f7433e129385"
+    },
+    {
+      "id": "zmem-decode_path",
+      "capability": "Hex decode",
+      "source": {
+        "repository": "zmem",
+        "commit": "ff07982d751f48cbf4c9fca554760c658d882d43",
+        "path": "src/install.rs",
+        "function": "decode_path",
+        "line": 1625,
+        "file_sha256": "ee6fbbcb869fc02004d60f7ddfd384521abb24038f99f5a5eeb42116173271bf"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zmem.rs",
+      "fragment_sha256": "eac0450d59f132f58a461a16315de57affcadd521d406f6501c3b609d239caf2",
+      "tokens": 123,
+      "body_sha256": "10002504c20df84da9137a9630ecbf92f6330daf72bfe088d135fd3e7e00b248",
+      "identifiers_sha256": "3add726631169d25dfd86667b84a6a80d40f5c78639110bdde877fbbc481f00f"
+    },
+    {
+      "id": "ssmcp-encode",
+      "capability": "Hex encode",
+      "source": {
+        "repository": "ssmcp",
+        "commit": "1388cf11458eb88618ceedd4be8194d9ec026277",
+        "path": "src/hex.rs",
+        "function": "encode",
+        "line": 6,
+        "file_sha256": "6775d530029010a26ae4664c0c8d02e59e9bd513f5318262cadd3db92b849746",
+        "note": "Immediate parent of migration b799d0c5fe03c5b19ed4441f200de715c6c7d512; the earlier proof base object is unavailable in the review checkout."
+      },
+      "fixture": "tests/fixtures/shared_implementations/ssmcp.rs",
+      "fragment_sha256": "f035b4d1cb96fa39a79b0cc06b359223fa595425dac95643f0584bd3f20f019b",
+      "tokens": 51,
+      "body_sha256": "b7d95eb38ae2984374e0ef28771f319ca6d28906c12eed833659563ffbb99aed",
+      "identifiers_sha256": "7688c38d04a4654aff988269e04297cea366340593fe73374f27c1a7cac91e69"
+    },
+    {
+      "id": "zcall-gui-sha256",
+      "capability": "SHA256 and Hex",
+      "source": {
+        "repository": "zcall-gui",
+        "commit": "daa540307573d86838b108f4a76aa45230fca5f5",
+        "path": "src/updater.rs",
+        "function": "sha256",
+        "line": 335,
+        "file_sha256": "bdd14ae79b437d20b46eab52c53e9eab48b6d6fd1d2d7187b2040d36eb7c6219"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zcall-gui.rs",
+      "fragment_sha256": "752e313578a800e6a9ff07b5b71dd0c17d7c1009dda32fcf720c5ac4789e0039",
+      "tokens": 644,
+      "body_sha256": "f719728f0610e1b3860b56c35809f99c03f2481d80d2085db6d79aaa5a4b1ca8",
+      "identifiers_sha256": "3761794f022228a679c68e9e97f440e06ec36edd8372bb5e7a9173a67b2ec7e8"
+    },
+    {
+      "id": "mechrevo-drivers-base64",
+      "capability": "Base64 encode",
+      "source": {
+        "repository": "mechrevo-drivers",
+        "commit": "aaa7573dd2609e74936ba4c3724b169de1834f54",
+        "path": "console/crates/core/src/brightness.rs",
+        "function": "base64",
+        "line": 617,
+        "file_sha256": "fed75c94867f3c88fe28418a55c1f70e56dc0fbfc37ae828976289a5fe2052fd"
+      },
+      "fixture": "tests/fixtures/shared_implementations/mechrevo-drivers.rs",
+      "fragment_sha256": "fdff9b83dced0bdaca245eb77ec5db0a72c47b320840c7d3528bc1ed8301b990",
+      "tokens": 206,
+      "body_sha256": "92772b6354dc5392ab2ad368162f7fe6488d7a0b6ff210b7856edfbd3e9a4b0d",
+      "identifiers_sha256": "2226312b416bad8b17f3eccf5af6ee3d8817567cef8424a0079cfbc056d55a4e"
+    },
+    {
+      "id": "zcalld-json-quote",
+      "capability": "JSON string escaping",
+      "source": {
+        "repository": "zcalld",
+        "commit": "6eab1150e8d58d330583c1b3206bf91e7862dc9a",
+        "path": "crates/zcalld-compat-client/src/lib.rs",
+        "function": "quote",
+        "line": 290,
+        "file_sha256": "0c4c5017fda6469ab80cdef8cf3e316c0ebcea0b07c1fd09523aea7776126268"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zcalld.rs",
+      "fragment_sha256": "e0e995b1ad420233e04625713909acb494b78e59681fb8f4a799245c66698897",
+      "tokens": 142,
+      "body_sha256": "2c36ce2b66805937cbf8f62d3ca2f47bc27842d2f22fcb2b8fb28778b57484ad",
+      "identifiers_sha256": "a2f5d8a2272b0c8f84586dd5179be5f425f5326a41c6e4e3fb345128fb52300c"
+    },
+    {
+      "id": "zcall-gui-json-quote",
+      "capability": "JSON string escaping",
+      "source": {
+        "repository": "zcall-gui",
+        "commit": "3b9a0f4673c08a9aa259b52e02858c0a88f43f6b",
+        "path": "src/json.rs",
+        "function": "quote",
+        "line": 65,
+        "file_sha256": "1f038011f5c3a53908cef0485ff81d8f48d30553cadf33febcae56f3dd485dc6"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zcall-gui.rs",
+      "fragment_sha256": "7b1b4263773e8d5300f22f20412c9c6440f269b5f0f59483a94d1ccf83991f0a",
+      "tokens": 119,
+      "body_sha256": "44c1c9342c8ce009d67c32566a21b20663ecae967680d7cf9af36c651e71eabc",
+      "identifiers_sha256": "8023d638ab10624a58520ee8fc8c1b4525b00ee259a112c6e863aaaa674eb806"
+    },
+    {
+      "id": "ztty-json-encode",
+      "capability": "JSON string/key escaping within value output",
+      "source": {
+        "repository": "ztty",
+        "commit": "963afbd7f9463f6de61a96e1968fdf26d3bc8990",
+        "path": "src/json.rs",
+        "function": "encode",
+        "line": 399,
+        "file_sha256": "814d16236f1fb7b1c49206c5febc142a6f5cb654a63cf667e74ecc3a449e6ec4"
+      },
+      "fixture": "tests/fixtures/shared_implementations/ztty.rs",
+      "fragment_sha256": "0067c88f12f3f62004d9d6d53c4548d7a933ebe68b8c826c68c7bacbd9c0eab0",
+      "tokens": 346,
+      "body_sha256": "868d117afc8f3f48d3d1ca350a50c9251a15e309aca7a6f8212e7b51967b27a5",
+      "identifiers_sha256": "494c2464010fa7844864a36f4d031c3c0720de910dc381ec8339cfe4af047448"
+    },
+    {
+      "id": "zmem-json-quote",
+      "capability": "JSON string escaping",
+      "source": {
+        "repository": "zmem",
+        "commit": "5997b9581f5b6962c9d9cd12774a2ce119e46ca7",
+        "path": "src/json.rs",
+        "function": "quote",
+        "line": 6,
+        "file_sha256": "c4c6c9e7dffce98fec1afc4dd97e70c65bae4536b1f547bc936fd424d93badbf"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zmem.rs",
+      "fragment_sha256": "aa62cb2e39d37b482c4191e7d05d16c2f756b6ea48bbdc984e1c8f82b8101b65",
+      "tokens": 137,
+      "body_sha256": "c08918d6722a0b007d4e4c3b797d67f0d948c71332d91b679b13c87e07927b09",
+      "identifiers_sha256": "2609b529ac3d1222f06d7bfa1935553624f03821a9533cb3b5356e1ee84c2110"
+    },
+    {
+      "id": "zuse-json-quote",
+      "capability": "JSON string escaping",
+      "source": {
+        "repository": "zuse",
+        "commit": "13be18166f9f1bdfb219da851c28b3319fdb7653",
+        "path": "src/json.rs",
+        "function": "quote",
+        "line": 7,
+        "file_sha256": "b50f69b2aee80303ea4eff7eda87b4629152a4d61047b3997471defab51f4658"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zuse.rs",
+      "fragment_sha256": "825312cedcadebbdda38b3ada35a9afe241a761a9c2735e46c3bba1b8f45c03f",
+      "tokens": 133,
+      "body_sha256": "c07c317b529d8f1460e278badf72cfe66d5857977597bb5472daf96c6812babd",
+      "identifiers_sha256": "52177df1246088241e5378152a43ef458fbfc16d4bb2f03b5b707bfb82b12687"
+    },
+    {
+      "id": "zuse-platform-json-quote",
+      "capability": "JSON string escaping",
+      "source": {
+        "repository": "zuse",
+        "commit": "13be18166f9f1bdfb219da851c28b3319fdb7653",
+        "path": "src/platform/mod.rs",
+        "function": "quote",
+        "line": 66,
+        "file_sha256": "bfcf264e00e3af074c15585865aa1311a6717ce1b58fc87ddba1ce41f88e6780"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zuse-platform-json.rs",
+      "fragment_sha256": "e0e995b1ad420233e04625713909acb494b78e59681fb8f4a799245c66698897",
+      "tokens": 142,
+      "body_sha256": "2c36ce2b66805937cbf8f62d3ca2f47bc27842d2f22fcb2b8fb28778b57484ad",
+      "identifiers_sha256": "a2f5d8a2272b0c8f84586dd5179be5f425f5326a41c6e4e3fb345128fb52300c"
+    },
+    {
+      "id": "zcalld-windows-protect",
+      "capability": "Windows private DACL installation",
+      "source": {
+        "repository": "zcalld",
+        "commit": "6eab1150e8d58d330583c1b3206bf91e7862dc9a",
+        "path": "src/privacy_windows.rs",
+        "function": "protect",
+        "line": 70,
+        "file_sha256": "8a30917ed7ff5670a4c9bafe6c992f2df39a272576d30fa74a7679236a1f4922"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zcalld.rs",
+      "fragment_sha256": "0025e17183616345fd508b9ff48f8122ea2e3151c76b4fec9d964e95bb9268cc",
+      "tokens": 580,
+      "body_sha256": "1fd2d055f660481851511462adec241086f66379d0f0c31b15fbd8a5a70b5a21",
+      "identifiers_sha256": "d2d9240677be72026566cda3c18e9fd25ccfb62cf82d364cb807004952c89e5c"
+    },
+    {
+      "id": "zcalld-windows-check_private",
+      "capability": "Windows private owner/DACL validation",
+      "source": {
+        "repository": "zcalld",
+        "commit": "6eab1150e8d58d330583c1b3206bf91e7862dc9a",
+        "path": "src/privacy_windows.rs",
+        "function": "check_private",
+        "line": 217,
+        "file_sha256": "8a30917ed7ff5670a4c9bafe6c992f2df39a272576d30fa74a7679236a1f4922"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zcalld.rs",
+      "fragment_sha256": "88add4569cc1589e5519e6b2c7f4b811a399c53bb44559f190867013acf20d33",
+      "tokens": 803,
+      "body_sha256": "9c55890f60b75a61d7e3a8c2cfe79aadfb63311d4062275fdfc984fcc617e3a7",
+      "identifiers_sha256": "49783e9c59a971ffac3d2751b28ce56f737bad975968a3886c3f6cd3c5615285"
+    },
+    {
+      "id": "zcalld-windows-protect_created",
+      "capability": "Windows new-object owner and DACL protection",
+      "source": {
+        "repository": "zcalld",
+        "commit": "6eab1150e8d58d330583c1b3206bf91e7862dc9a",
+        "path": "src/privacy_windows.rs",
+        "function": "protect_created",
+        "line": 338,
+        "file_sha256": "8a30917ed7ff5670a4c9bafe6c992f2df39a272576d30fa74a7679236a1f4922"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zcalld.rs",
+      "fragment_sha256": "9454f19e3a98b6b2df807b9e6599c2f66406b96733fca1161ce32b0d7ba1e151",
+      "tokens": 98,
+      "body_sha256": "0a5fd82d0e37553a9bed068d18701059a77d821051659532f986b0219a41c8fd",
+      "identifiers_sha256": "34ab620ecbd127d93b8e8b5a4cfcd74f6edbd59f84a07fc787fa611ce0ea472e"
+    },
+    {
+      "id": "zcall-gui-windows-protect",
+      "capability": "Windows private DACL installation",
+      "source": {
+        "repository": "zcall-gui",
+        "commit": "3b9a0f4673c08a9aa259b52e02858c0a88f43f6b",
+        "path": "src/core_install_windows.rs",
+        "function": "protect",
+        "line": 61,
+        "file_sha256": "5a425b9ca513ed789a90c0522f22a58effd243ce18b27252dcc2dc9f679dbff6"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zcall-gui.rs",
+      "fragment_sha256": "0b2e9f7f8297ec6369dd689c3c4fcc187df6ec224bc5ed29077555b22e8f95e6",
+      "tokens": 548,
+      "body_sha256": "081177d650a2152084c235799039580e96360e52cdff1ca75797f6211aff0994",
+      "identifiers_sha256": "e9d45706deefe5ef69978ad048fd25a0baf5a2eb9e9d6023d2f7cad5ca21d243"
+    },
+    {
+      "id": "zcall-gui-windows-check_private",
+      "capability": "Windows private owner/DACL validation",
+      "source": {
+        "repository": "zcall-gui",
+        "commit": "3b9a0f4673c08a9aa259b52e02858c0a88f43f6b",
+        "path": "src/core_install_windows.rs",
+        "function": "check_private",
+        "line": 201,
+        "file_sha256": "5a425b9ca513ed789a90c0522f22a58effd243ce18b27252dcc2dc9f679dbff6"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zcall-gui.rs",
+      "fragment_sha256": "88add4569cc1589e5519e6b2c7f4b811a399c53bb44559f190867013acf20d33",
+      "tokens": 803,
+      "body_sha256": "9c55890f60b75a61d7e3a8c2cfe79aadfb63311d4062275fdfc984fcc617e3a7",
+      "identifiers_sha256": "49783e9c59a971ffac3d2751b28ce56f737bad975968a3886c3f6cd3c5615285"
+    },
+    {
+      "id": "zcall-gui-windows-protect_created",
+      "capability": "Windows new-object owner and DACL protection",
+      "source": {
+        "repository": "zcall-gui",
+        "commit": "3b9a0f4673c08a9aa259b52e02858c0a88f43f6b",
+        "path": "src/core_install_windows.rs",
+        "function": "protect_created",
+        "line": 322,
+        "file_sha256": "5a425b9ca513ed789a90c0522f22a58effd243ce18b27252dcc2dc9f679dbff6"
+      },
+      "fixture": "tests/fixtures/shared_implementations/zcall-gui.rs",
+      "fragment_sha256": "9454f19e3a98b6b2df807b9e6599c2f66406b96733fca1161ce32b0d7ba1e151",
+      "tokens": 98,
+      "body_sha256": "0a5fd82d0e37553a9bed068d18701059a77d821051659532f986b0219a41c8fd",
+      "identifiers_sha256": "34ab620ecbd127d93b8e8b5a4cfcd74f6edbd59f84a07fc787fa611ce0ea472e"
+    }
+  ],
+  "additional_proofs": [
+    "docs/maintenance/evidence/shared-contracts-regression.json"
+  ]
+}

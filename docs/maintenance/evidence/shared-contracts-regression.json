@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "scope": "Second reviewed shared contracts: JSON string output in five consumers and Windows privacy in GUI, daemon and installer. Historical bodies come from their exact pre-migration commits. Validation commits identify the independently reviewed source candidates, not a new runtime acceptance.",
+  "provider_sources": {
+    "zconv": "f9448d27997dc70dac05f0c0e58857bcce43ab72",
+    "zsys": "48c4cafaf940fd7a404b885adefd2e1201b51881"
+  },
+  "derived_from_sha256": {
+    "baseline-callers.json": "ceddef590253823f88daf71d45b7d1ccd72409a048195fa2bd8e527bfcda9bea",
+    "contract-review.md": "3cf3e54b9a50c2fb7eefc4262307cfc5c345e54b3638419ab4b382896f15033f"
+  },
+  "rows": [
+    {
+      "repo": "zuse",
+      "base": "13be18166f9f1bdfb219da851c28b3319fdb7653",
+      "validation_commit": "617e9160a119a0b3ea13e8f51940119dd90b9f3b",
+      "validation_tree": "c38a620aa4a82bfb125d32bd343669f7b0977f50",
+      "files": {
+        "src/json.rs": "18d8ae4e2906d69bf33c9509373818653b273c93d78925f6704d7f78b2dafcfe",
+        "src/platform/mod.rs": "f79b53053af126839c1aa92052de64c37ac59a4daf1f1589f0d65fc896def173"
+      },
+      "providers": [
+        "zconv"
+      ]
+    },
+    {
+      "repo": "zmem",
+      "base": "5997b9581f5b6962c9d9cd12774a2ce119e46ca7",
+      "validation_commit": "4f3ffc9465f25ee35fac2002cb127a305b20574d",
+      "validation_tree": "0f9bf94ef85b9975aa5f836a8ed0a4a8753d7aee",
+      "files": {
+        "src/json.rs": "7aca0fe47b95131d75dca01040550ac11a6b6ecb27839682fc0b135dc32c3dd7"
+      },
+      "providers": [
+        "zconv"
+      ]
+    },
+    {
+      "repo": "ztty",
+      "base": "963afbd7f9463f6de61a96e1968fdf26d3bc8990",
+      "validation_commit": "a9d5dede2b2b6b726ca0fd87786ed0f81e6125b8",
+      "validation_tree": "951c6c38d6c6f16a906d38ed0ece58a89d67e20c",
+      "files": {
+        "src/json.rs": "b9942d0bd1577447e453e9fa06cf8200e1c4e600770b4a9dfe30b7d5ae57942e"
+      },
+      "providers": [
+        "zconv"
+      ]
+    },
+    {
+      "repo": "zcall-gui",
+      "base": "3b9a0f4673c08a9aa259b52e02858c0a88f43f6b",
+      "validation_commit": "795a85044504e844d04575c44dd8b10da7384aa8",
+      "validation_tree": "0724c56da3e7503756308ca830ce32d2fafaba41",
+      "files": {
+        "src/core_install_windows.rs": "4516ddf8456e8436dd2617fff75c99360d3f36829c2dee9ccac5d425477b34c0",
+        "src/json.rs": "36ffef29e561ab0f147ea3acdd2bfda24fe5cfd7707a9b80259859846fbaff42"
+      },
+      "providers": [
+        "zconv",
+        "zsys"
+      ]
+    },
+    {
+      "repo": "zcalld",
+      "base": "6eab1150e8d58d330583c1b3206bf91e7862dc9a",
+      "validation_commit": "6a9e889df48e0b6558a0cfc44d6f3e4ccb464dbf",
+      "validation_tree": "3f2473d011195fd7edd68b47de7e5021fba19376",
+      "files": {
+        "crates/zcalld-compat-client/src/lib.rs": "5335f941a7e24e5f7684158d4eb8598b4acc23d81c5998068db99afbac9da1a4",
+        "crates/zcalld-installer/src/private.rs": "4c5c56e620464b0625ea4c5db1052ed174c746ab3eaf9016355e8b6c802a30c8",
+        "src/privacy_windows.rs": "908087066e7e4e17cd0741fc04f407fea5416af69dbf12983308bd5ef7f9d12b"
+      },
+      "providers": [
+        "zconv",
+        "zsys"
+      ]
+    }
+  ],
+  "historical_ids": [
+    "zcalld-json-quote",
+    "zcall-gui-json-quote",
+    "ztty-json-encode",
+    "zmem-json-quote",
+    "zuse-json-quote",
+    "zuse-platform-json-quote",
+    "zcalld-windows-protect",
+    "zcalld-windows-check_private",
+    "zcalld-windows-protect_created",
+    "zcall-gui-windows-protect",
+    "zcall-gui-windows-check_private",
+    "zcall-gui-windows-protect_created"
+  ],
+  "retained_functions": [
+    {
+      "repository": "zcalld",
+      "commit": "6a9e889df48e0b6558a0cfc44d6f3e4ccb464dbf",
+      "path": "crates/zcalld-compat-client/src/lib.rs",
+      "function": "quote",
+      "line": 290,
+      "file_sha256": "5335f941a7e24e5f7684158d4eb8598b4acc23d81c5998068db99afbac9da1a4",
+      "fragment_sha256": "b3062843e05043fb418de2a628b5e21c582379ea63bfa1dfff27ceaea682eeea",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 5
+    },
+    {
+      "repository": "zcall-gui",
+      "commit": "795a85044504e844d04575c44dd8b10da7384aa8",
+      "path": "src/json.rs",
+      "function": "quote",
+      "line": 65,
+      "file_sha256": "36ffef29e561ab0f147ea3acdd2bfda24fe5cfd7707a9b80259859846fbaff42",
+      "fragment_sha256": "5902372bef8f0427dcda43b38782b15b89e48c379b2ef28f18420f95bff16c47",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 21
+    },
+    {
+      "repository": "ztty",
+      "commit": "a9d5dede2b2b6b726ca0fd87786ed0f81e6125b8",
+      "path": "src/json.rs",
+      "function": "quote_into",
+      "line": 398,
+      "file_sha256": "b9942d0bd1577447e453e9fa06cf8200e1c4e600770b4a9dfe30b7d5ae57942e",
+      "fragment_sha256": "95f804cfff88d6c40cc4f051557ca137993a1cf20dbacabd807de8126dca7a65",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 37
+    },
+    {
+      "repository": "zmem",
+      "commit": "4f3ffc9465f25ee35fac2002cb127a305b20574d",
+      "path": "src/json.rs",
+      "function": "quote",
+      "line": 3,
+      "file_sha256": "7aca0fe47b95131d75dca01040550ac11a6b6ecb27839682fc0b135dc32c3dd7",
+      "fragment_sha256": "b3062843e05043fb418de2a628b5e21c582379ea63bfa1dfff27ceaea682eeea",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 58
+    },
+    {
+      "repository": "zuse",
+      "commit": "617e9160a119a0b3ea13e8f51940119dd90b9f3b",
+      "path": "src/json.rs",
+      "function": "quote",
+      "line": 6,
+      "file_sha256": "18d8ae4e2906d69bf33c9509373818653b273c93d78925f6704d7f78b2dafcfe",
+      "fragment_sha256": "7c22eb3b4238a46b02dacee8f1f1a8ab73a9f64b04945b33b9d331745c1f28d7",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 74
+    },
+    {
+      "repository": "zuse",
+      "commit": "617e9160a119a0b3ea13e8f51940119dd90b9f3b",
+      "path": "src/platform/mod.rs",
+      "function": "quote",
+      "line": 66,
+      "file_sha256": "f79b53053af126839c1aa92052de64c37ac59a4daf1f1589f0d65fc896def173",
+      "fragment_sha256": "f2b3b5d8941bd39c80f1300329d11b519c297e9f81b5f422a83477703343f2c4",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 90
+    },
+    {
+      "repository": "ztty",
+      "commit": "a9d5dede2b2b6b726ca0fd87786ed0f81e6125b8",
+      "path": "src/json.rs",
+      "function": "encode",
+      "line": 418,
+      "file_sha256": "b9942d0bd1577447e453e9fa06cf8200e1c4e600770b4a9dfe30b7d5ae57942e",
+      "fragment_sha256": "900bc585fb0e21afdfb5accb7a8523f2c9c1ea9ad952b50bcc241122601ce191",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 95
+    },
+    {
+      "repository": "zcalld",
+      "commit": "6a9e889df48e0b6558a0cfc44d6f3e4ccb464dbf",
+      "path": "src/privacy_windows.rs",
+      "function": "protect",
+      "line": 17,
+      "file_sha256": "908087066e7e4e17cd0741fc04f407fea5416af69dbf12983308bd5ef7f9d12b",
+      "fragment_sha256": "23f740fff9770b6d7d132a4b010c8533232c2864f0290ecb8b5b16130a34ad34",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 128
+    },
+    {
+      "repository": "zcalld",
+      "commit": "6a9e889df48e0b6558a0cfc44d6f3e4ccb464dbf",
+      "path": "src/privacy_windows.rs",
+      "function": "check_private",
+      "line": 27,
+      "file_sha256": "908087066e7e4e17cd0741fc04f407fea5416af69dbf12983308bd5ef7f9d12b",
+      "fragment_sha256": "40c997d9fdbed549f702819d5c93414a9d1b200ff47867065c2dc34645d8aae4",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 137
+    },
+    {
+      "repository": "zcalld",
+      "commit": "6a9e889df48e0b6558a0cfc44d6f3e4ccb464dbf",
+      "path": "src/privacy_windows.rs",
+      "function": "protect_created",
+      "line": 33,
+      "file_sha256": "908087066e7e4e17cd0741fc04f407fea5416af69dbf12983308bd5ef7f9d12b",
+      "fragment_sha256": "6851c57f0ffef5e6aeaaec2a4f57ad1032a4c35b1390eea4df02d7ddb58e525f",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 142
+    },
+    {
+      "repository": "zcall-gui",
+      "commit": "795a85044504e844d04575c44dd8b10da7384aa8",
+      "path": "src/core_install_windows.rs",
+      "function": "check_private",
+      "line": 3,
+      "file_sha256": "4516ddf8456e8436dd2617fff75c99360d3f36829c2dee9ccac5d425477b34c0",
+      "fragment_sha256": "40c997d9fdbed549f702819d5c93414a9d1b200ff47867065c2dc34645d8aae4",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 151
+    },
+    {
+      "repository": "zcall-gui",
+      "commit": "795a85044504e844d04575c44dd8b10da7384aa8",
+      "path": "src/core_install_windows.rs",
+      "function": "protect_created",
+      "line": 8,
+      "file_sha256": "4516ddf8456e8436dd2617fff75c99360d3f36829c2dee9ccac5d425477b34c0",
+      "fragment_sha256": "46d533743d371c013113fb346350f6d1e12b622454902c8d562c2d930e436a87",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 156
+    },
+    {
+      "repository": "ztty",
+      "commit": "963afbd7f9463f6de61a96e1968fdf26d3bc8990",
+      "path": "src/json.rs",
+      "function": "hex4",
+      "line": 290,
+      "file_sha256": "814d16236f1fb7b1c49206c5febc142a6f5cb654a63cf667e74ecc3a449e6ec4",
+      "fragment_sha256": "52e4bdbacd4dbb7da8d64cc8b4745c2f3a033c3d121f452e33967971343bcf66",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 165
+    },
+    {
+      "repository": "zcall-gui",
+      "commit": "3b9a0f4673c08a9aa259b52e02858c0a88f43f6b",
+      "path": "src/json.rs",
+      "function": "hex4",
+      "line": 223,
+      "file_sha256": "1f038011f5c3a53908cef0485ff81d8f48d30553cadf33febcae56f3dd485dc6",
+      "fragment_sha256": "ec9cb511727ef30fc9818650d1ec73e0fbca8174f05fce8b812105b3969b4c8a",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 185
+    },
+    {
+      "repository": "zmem",
+      "commit": "5997b9581f5b6962c9d9cd12774a2ce119e46ca7",
+      "path": "src/json.rs",
+      "function": "hex_quad",
+      "line": 313,
+      "file_sha256": "c4c6c9e7dffce98fec1afc4dd97e70c65bae4536b1f547bc936fd424d93badbf",
+      "fragment_sha256": "67fab8d38ee186d780c49e9d0bb41b4c31f7beced916eb6c5748468395c3d04e",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 197
+    },
+    {
+      "repository": "zgpui",
+      "commit": "d34c41f79ddab343e7468c5192885a82ca487687",
+      "path": "src/wire.rs",
+      "function": "hex4",
+      "line": 468,
+      "file_sha256": "2c6e7794044e3815b2ae07f42e57bdfa9621b479ceb8eda77e7b176cc034172f",
+      "fragment_sha256": "be11a6deef17a641d5859ca158fb136079183c18f44877c7c3d95762c66a50fa",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 213
+    },
+    {
+      "repository": "ssmcp",
+      "commit": "b5fdceea9af1b14f6f178bbc1677969fd3ff73c9",
+      "path": "src/platform_windows.rs",
+      "function": "current",
+      "line": 51,
+      "file_sha256": "190b4a2fd0582bce9b883afe46955cb04ff0b8f04b52cb4922deaaa2043404bd",
+      "fragment_sha256": "cfa6eeb35a36bc051ab4ec8d7e48e53337b6d4be96967eb9572b6b25dfdc7a4d",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 230
+    },
+    {
+      "repository": "ssmcp",
+      "commit": "b5fdceea9af1b14f6f178bbc1677969fd3ff73c9",
+      "path": "src/platform_windows.rs",
+      "function": "verify_private",
+      "line": 115,
+      "file_sha256": "190b4a2fd0582bce9b883afe46955cb04ff0b8f04b52cb4922deaaa2043404bd",
+      "fragment_sha256": "e041d9c324e49b162fc5516539930cc05605bbedf4695c68bca73894570ee14f",
+      "fixture": "tests/fixtures/shared_implementations/retained_contracts.rs",
+      "fixture_line": 272
+    }
+  ],
+  "contracts": {
+    "json": "Keep Unicode control spelling including lowercase \\u0008/\\u000c; ordinary UTF-8 and object/number representation stay with the existing consumer adapter. Writer constructor and Unicode policy references are checked; receiver dataflow remains a behavior-review concern.",
+    "windows": "Keep read-only owner/DACL checks, DACL-only reprotection, owner initialization only for new objects; GUI uses ObjectOnly, daemon and installer use FilesAndDirectories. The removed protect_created bodies perform a native owner write and the protection/validation sequence; the new forwarding wrappers are retained.",
+    "indirect_routes": "zuse platform forwards to src/json.rs. Installer private.rs includes ../../../src/privacy_windows.rs. The registered reference_path supplies lexical provider evidence while the entry path determines its owning Cargo package; these records do not resolve a Rust module graph.",
+    "retained": "Do not replace original parsers or their hex4/hex_quad error/capacity contracts. SSMCP accepts TokenOwner and has different DACL inheritance/count/presence rules; its current/verify_private functions are negative fixtures. Token-buffer helpers and BCrypt randomness are outside the removed ACL body inventory."
+  }
+}

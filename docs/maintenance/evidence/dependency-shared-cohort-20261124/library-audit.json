@@ -1,0 +1,1965 @@
+{
+  "baseline": "2e32aacc3cd243aa7a4f43564e8e895ab3ba732c",
+  "observed_at": "2026-11-23T16:39:46.162217+00:00",
+  "counts": {
+    "repositories": 26,
+    "manifests": 60,
+    "locks": 41,
+    "registry_names": 172,
+    "locked_observations": 321
+  },
+  "repositories": [
+    {
+      "name": "z58",
+      "base": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+      "manifests": [
+        "Cargo.toml",
+        "comparison/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock",
+        "comparison/Cargo.lock"
+      ]
+    },
+    {
+      "name": "z64",
+      "base": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+      "manifests": [
+        "Cargo.toml",
+        "comparison/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock",
+        "comparison/Cargo.lock"
+      ]
+    },
+    {
+      "name": "zbridge",
+      "base": "1cfeb5b1f11c26c35cf7456c9b8b60d1f2d5d8de",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "name": "zcall",
+      "base": "49784ef8d537af2cad65917486bda6a641337a01",
+      "manifests": [
+        "Cargo.toml",
+        "fuzz/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock",
+        "fuzz/Cargo.lock"
+      ]
+    },
+    {
+      "name": "zclap",
+      "base": "a4c7e6f3e0ff860de701573117248fe8538c71e5",
+      "manifests": [
+        "Cargo.toml",
+        "comparison/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock",
+        "comparison/Cargo.lock"
+      ]
+    },
+    {
+      "name": "zconv",
+      "base": "11df5d00117ed87a7f5aebc5a2677f59fccff9b1",
+      "manifests": [
+        "Cargo.toml",
+        "comparison/Cargo.toml",
+        "fuzz/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock",
+        "comparison/Cargo.lock",
+        "fuzz/Cargo.lock"
+      ]
+    },
+    {
+      "name": "zdwire",
+      "base": "c046e3182b0adf15d43500400a427b7dd7389525",
+      "manifests": [
+        "Cargo.toml",
+        "comparison/Cargo.toml",
+        "fuzz/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock",
+        "comparison/Cargo.lock",
+        "fuzz/Cargo.lock"
+      ]
+    },
+    {
+      "name": "zgpui",
+      "base": "d34c41f79ddab343e7468c5192885a82ca487687",
+      "manifests": [
+        "Cargo.toml",
+        "raster/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "name": "zgraphics",
+      "base": "aa0ed19fb706ad147aff1df54c4ef762d918e864",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "name": "zguard",
+      "base": "6772b932a65e18f64e13591dee6edb2f6b099406",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "name": "zharness",
+      "base": "f2554ea288e04f69c985506f54845f6d7a268be8",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "name": "zhex",
+      "base": "52515207f9d97a2580182169b611b4763366b328",
+      "manifests": [
+        "Cargo.toml",
+        "comparison/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock",
+        "comparison/Cargo.lock"
+      ]
+    },
+    {
+      "name": "zi18n",
+      "base": "755549f82fa513c4e4f2f5aaf6fdeea8da4a6347",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "name": "zinput",
+      "base": "da22743e1ad16bedb79751c8e8bb71e63c45d197",
+      "manifests": [
+        "Cargo.toml",
+        "native/wayland/Cargo.toml",
+        "native/x11/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "name": "zldap",
+      "base": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+      "manifests": [
+        "Cargo.toml",
+        "comparison/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock",
+        "comparison/Cargo.lock"
+      ]
+    },
+    {
+      "name": "zmcpio",
+      "base": "aba5ee5e775142f67a2cb0b181fc1fecdc286e98",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "name": "zmime",
+      "base": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+      "manifests": [
+        "Cargo.toml",
+        "comparison/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock",
+        "comparison/Cargo.lock"
+      ]
+    },
+    {
+      "name": "zplugin",
+      "base": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+      "manifests": [
+        "Cargo.toml",
+        "crates/zplugin-macros/Cargo.toml",
+        "examples/async/host/Cargo.toml",
+        "examples/async/interface/Cargo.toml",
+        "examples/async/plugin/Cargo.toml",
+        "examples/foreign/interface/Cargo.toml",
+        "examples/host/Cargo.toml",
+        "examples/interface/Cargo.toml",
+        "examples/plugin/Cargo.toml",
+        "tools/bench/Cargo.toml",
+        "tools/contract-tests/Cargo.toml",
+        "tools/foreign-tests/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "name": "zpty",
+      "base": "d263f9a8f0881d259e46c51a7b6753c61ab9be59",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "name": "zrun",
+      "base": "beeea183b7dcbff7fe34ea0add9039d6058c2edb",
+      "manifests": [
+        "Cargo.toml",
+        "crates/zrun-bench/Cargo.toml",
+        "crates/zrun-executor/Cargo.toml",
+        "crates/zrun-sync/Cargo.toml",
+        "crates/zrun-task/Cargo.toml",
+        "crates/zrun-time/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "name": "zscan",
+      "base": "c000a84c748d8e090ff662b2aef3858aa4880b09",
+      "manifests": [
+        "Cargo.toml",
+        "comparison/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock",
+        "comparison/Cargo.lock"
+      ]
+    },
+    {
+      "name": "zsyn",
+      "base": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+      "manifests": [
+        "Cargo.toml",
+        "comparison/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock",
+        "comparison/Cargo.lock"
+      ]
+    },
+    {
+      "name": "zsys",
+      "base": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+      "manifests": [
+        "Cargo.toml",
+        "benchmarks/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock",
+        "benchmarks/Cargo.lock"
+      ]
+    },
+    {
+      "name": "zterm",
+      "base": "55e24949c3cf5773535215d81fed71e3364c4802",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "name": "ztuio",
+      "base": "9c632b30f7e2c2fd51a19b4bc5d90d529041ae7e",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "name": "zvte",
+      "base": "b4e50a5cde476fb5303060f3ecbc9200ccea5cc0",
+      "manifests": [
+        "Cargo.toml",
+        "comparison/Cargo.toml"
+      ],
+      "locks": [
+        "Cargo.lock",
+        "comparison/Cargo.lock"
+      ]
+    }
+  ],
+  "compatible_candidates": [
+    {
+      "repo": "z58",
+      "lock": "comparison/Cargo.lock",
+      "name": "cc",
+      "locked": "1.11.1",
+      "locked_yanked": false,
+      "latest_same_compat_line": "1.11.3",
+      "candidate_rust_version": "1.65.0",
+      "latest_stable": {
+        "vers": "1.11.3",
+        "rust_version": "1.65.0"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "z64",
+      "lock": "comparison/Cargo.lock",
+      "name": "encodify",
+      "locked": "1.0.2",
+      "locked_yanked": false,
+      "latest_same_compat_line": "1.0.3",
+      "candidate_rust_version": "1.89",
+      "latest_stable": {
+        "vers": "1.0.3",
+        "rust_version": "1.89"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zclap",
+      "lock": "comparison/Cargo.lock",
+      "name": "clap",
+      "locked": "4.6.7",
+      "locked_yanked": false,
+      "latest_same_compat_line": "4.6.9",
+      "candidate_rust_version": "1.85",
+      "latest_stable": {
+        "vers": "4.6.9",
+        "rust_version": "1.85"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zclap",
+      "lock": "comparison/Cargo.lock",
+      "name": "clap_lex",
+      "locked": "1.1.1",
+      "locked_yanked": false,
+      "latest_same_compat_line": "1.1.2",
+      "candidate_rust_version": "1.85",
+      "latest_stable": {
+        "vers": "1.1.2",
+        "rust_version": "1.85"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zdwire",
+      "lock": "comparison/Cargo.lock",
+      "name": "jiff",
+      "locked": "0.2.42",
+      "locked_yanked": false,
+      "latest_same_compat_line": "0.2.46",
+      "candidate_rust_version": "1.70",
+      "latest_stable": {
+        "vers": "1.0.2",
+        "rust_version": "1.85"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zdwire",
+      "lock": "comparison/Cargo.lock",
+      "name": "jiff-core",
+      "locked": "0.1.4",
+      "locked_yanked": false,
+      "latest_same_compat_line": "0.1.8",
+      "candidate_rust_version": "1.70",
+      "latest_stable": {
+        "vers": "1.0.1",
+        "rust_version": "1.85"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zdwire",
+      "lock": "comparison/Cargo.lock",
+      "name": "jiff-static",
+      "locked": "0.2.42",
+      "locked_yanked": false,
+      "latest_same_compat_line": "0.2.46",
+      "candidate_rust_version": "1.70",
+      "latest_stable": {
+        "vers": "1.0.2",
+        "rust_version": "1.85"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zharness",
+      "lock": "Cargo.lock",
+      "name": "wasmi",
+      "locked": "2.0.0",
+      "locked_yanked": true,
+      "latest_same_compat_line": "2.0.2",
+      "candidate_rust_version": "1.86",
+      "latest_stable": {
+        "vers": "2.0.2",
+        "rust_version": "1.86"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zharness",
+      "lock": "Cargo.lock",
+      "name": "wasmi_collections",
+      "locked": "2.0.0",
+      "locked_yanked": false,
+      "latest_same_compat_line": "2.0.2",
+      "candidate_rust_version": "1.86",
+      "latest_stable": {
+        "vers": "2.0.2",
+        "rust_version": "1.86"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zharness",
+      "lock": "Cargo.lock",
+      "name": "wasmi_core",
+      "locked": "2.0.0",
+      "locked_yanked": true,
+      "latest_same_compat_line": "2.0.2",
+      "candidate_rust_version": "1.86",
+      "latest_stable": {
+        "vers": "2.0.2",
+        "rust_version": "1.86"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zharness",
+      "lock": "Cargo.lock",
+      "name": "wasmi_ir",
+      "locked": "2.0.0",
+      "locked_yanked": false,
+      "latest_same_compat_line": "2.0.2",
+      "candidate_rust_version": "1.86",
+      "latest_stable": {
+        "vers": "2.0.2",
+        "rust_version": "1.86"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zldap",
+      "lock": "comparison/Cargo.lock",
+      "name": "bumpalo",
+      "locked": "3.20.3",
+      "locked_yanked": false,
+      "latest_same_compat_line": "3.20.4",
+      "candidate_rust_version": "1.71.1",
+      "latest_stable": {
+        "vers": "3.20.4",
+        "rust_version": "1.71.1"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zldap",
+      "lock": "comparison/Cargo.lock",
+      "name": "bytes",
+      "locked": "1.11.1",
+      "locked_yanked": false,
+      "latest_same_compat_line": "1.12.2",
+      "candidate_rust_version": "1.57",
+      "latest_stable": {
+        "vers": "1.12.2",
+        "rust_version": "1.57"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zldap",
+      "lock": "comparison/Cargo.lock",
+      "name": "pin-project-lite",
+      "locked": "0.2.17",
+      "locked_yanked": false,
+      "latest_same_compat_line": "0.2.18",
+      "candidate_rust_version": "1.37",
+      "latest_stable": {
+        "vers": "0.2.18",
+        "rust_version": "1.37"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zldap",
+      "lock": "comparison/Cargo.lock",
+      "name": "uuid",
+      "locked": "1.29.2",
+      "locked_yanked": false,
+      "latest_same_compat_line": "1.29.3",
+      "candidate_rust_version": "1.89.0",
+      "latest_stable": {
+        "vers": "1.29.3",
+        "rust_version": "1.89.0"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zmime",
+      "lock": "comparison/Cargo.lock",
+      "name": "encodify",
+      "locked": "1.0.2",
+      "locked_yanked": false,
+      "latest_same_compat_line": "1.0.3",
+      "candidate_rust_version": "1.89",
+      "latest_stable": {
+        "vers": "1.0.3",
+        "rust_version": "1.89"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zmime",
+      "lock": "comparison/Cargo.lock",
+      "name": "mail-parser",
+      "locked": "1.0.1",
+      "locked_yanked": false,
+      "latest_same_compat_line": "1.0.2",
+      "candidate_rust_version": "1.98",
+      "latest_stable": {
+        "vers": "1.0.2",
+        "rust_version": "1.98"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zplugin",
+      "lock": "Cargo.lock",
+      "name": "wasmi",
+      "locked": "2.0.0",
+      "locked_yanked": true,
+      "latest_same_compat_line": "2.0.2",
+      "candidate_rust_version": "1.86",
+      "latest_stable": {
+        "vers": "2.0.2",
+        "rust_version": "1.86"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zplugin",
+      "lock": "Cargo.lock",
+      "name": "wasmi_collections",
+      "locked": "2.0.0",
+      "locked_yanked": false,
+      "latest_same_compat_line": "2.0.2",
+      "candidate_rust_version": "1.86",
+      "latest_stable": {
+        "vers": "2.0.2",
+        "rust_version": "1.86"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zplugin",
+      "lock": "Cargo.lock",
+      "name": "wasmi_core",
+      "locked": "2.0.0",
+      "locked_yanked": true,
+      "latest_same_compat_line": "2.0.2",
+      "candidate_rust_version": "1.86",
+      "latest_stable": {
+        "vers": "2.0.2",
+        "rust_version": "1.86"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zplugin",
+      "lock": "Cargo.lock",
+      "name": "wasmi_ir",
+      "locked": "2.0.0",
+      "locked_yanked": false,
+      "latest_same_compat_line": "2.0.2",
+      "candidate_rust_version": "1.86",
+      "latest_stable": {
+        "vers": "2.0.2",
+        "rust_version": "1.86"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zsyn",
+      "lock": "comparison/Cargo.lock",
+      "name": "hashbrown",
+      "locked": "0.17.1",
+      "locked_yanked": false,
+      "latest_same_compat_line": "0.17.2",
+      "candidate_rust_version": "1.85.0",
+      "latest_stable": {
+        "vers": "0.17.2",
+        "rust_version": "1.85.0"
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zsyn",
+      "lock": "comparison/Cargo.lock",
+      "name": "smallvec",
+      "locked": "1.16.5",
+      "locked_yanked": false,
+      "latest_same_compat_line": "1.16.6",
+      "candidate_rust_version": null,
+      "latest_stable": {
+        "vers": "1.16.6",
+        "rust_version": null
+      },
+      "newer_same_line": true,
+      "error": null
+    },
+    {
+      "repo": "zsys",
+      "lock": "benchmarks/Cargo.lock",
+      "name": "sysinfo",
+      "locked": "0.40.3",
+      "locked_yanked": false,
+      "latest_same_compat_line": "0.40.4",
+      "candidate_rust_version": "1.95",
+      "latest_stable": {
+        "vers": "0.40.4",
+        "rust_version": "1.95"
+      },
+      "newer_same_line": true,
+      "error": null
+    }
+  ],
+  "other_compatibility_line_observations": [
+    {
+      "repo": "zcall",
+      "lock": "fuzz/Cargo.lock",
+      "name": "r-efi",
+      "locked": "6.0.0",
+      "latest_in_current_compatibility_line": "6.0.0",
+      "latest_stable_other_line": "7.2.0",
+      "other_line_rust_version": "1.68",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/r-/ef/r-efi",
+        "observed_utc": "2026-11-23T16:38:22.590123+00:00",
+        "sha256": "7b8cb580f34fe403eeffcbd1fa8010555fa46b5d93c3035a72e1d9e5ec470a4a",
+        "bytes": 8552,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:22 GMT",
+          "ETag": "\"39c984a63508ce1f9848e29aec361c79\"",
+          "Last-Modified": "Fri, 13 Nov 2026 12:15:11 GMT"
+        },
+        "latest_stable": {
+          "vers": "7.2.0",
+          "rust_version": "1.68"
+        }
+      }
+    },
+    {
+      "repo": "zconv",
+      "lock": "fuzz/Cargo.lock",
+      "name": "r-efi",
+      "locked": "6.0.0",
+      "latest_in_current_compatibility_line": "6.0.0",
+      "latest_stable_other_line": "7.2.0",
+      "other_line_rust_version": "1.68",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/r-/ef/r-efi",
+        "observed_utc": "2026-11-23T16:38:22.590123+00:00",
+        "sha256": "7b8cb580f34fe403eeffcbd1fa8010555fa46b5d93c3035a72e1d9e5ec470a4a",
+        "bytes": 8552,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:22 GMT",
+          "ETag": "\"39c984a63508ce1f9848e29aec361c79\"",
+          "Last-Modified": "Fri, 13 Nov 2026 12:15:11 GMT"
+        },
+        "latest_stable": {
+          "vers": "7.2.0",
+          "rust_version": "1.68"
+        }
+      }
+    },
+    {
+      "repo": "zdwire",
+      "lock": "comparison/Cargo.lock",
+      "name": "domain-macros",
+      "locked": "0.12.3",
+      "latest_in_current_compatibility_line": "0.12.3",
+      "latest_stable_other_line": "0.13.0",
+      "other_line_rust_version": "1.87.0",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/do/ma/domain-macros",
+        "observed_utc": "2026-11-23T16:37:19.851429+00:00",
+        "sha256": "64a4835f741a4ee3d0eee971216ee5c59e51361249f82ff6d3be896d009b008e",
+        "bytes": 4018,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:37:19 GMT",
+          "ETag": "\"9634448acad548d9ae26a176aa030a86\"",
+          "Last-Modified": "Mon, 23 Nov 2026 13:55:53 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.13.0",
+          "rust_version": "1.87.0"
+        }
+      }
+    },
+    {
+      "repo": "zdwire",
+      "lock": "comparison/Cargo.lock",
+      "name": "jiff",
+      "locked": "0.2.42",
+      "latest_in_current_compatibility_line": "0.2.46",
+      "latest_stable_other_line": "1.0.2",
+      "other_line_rust_version": "1.85",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/ji/ff/jiff",
+        "observed_utc": "2026-11-23T16:37:45.435758+00:00",
+        "sha256": "028990d4d4463f906dba84048cd97c3a38d53d0b574a10de2b6bb00eefe0079a",
+        "bytes": 340314,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:37:45 GMT",
+          "ETag": "\"bc612c83ead6181fc92eb12cf4110284\"",
+          "Last-Modified": "Sat, 21 Nov 2026 16:15:31 GMT"
+        },
+        "latest_stable": {
+          "vers": "1.0.2",
+          "rust_version": "1.85"
+        }
+      }
+    },
+    {
+      "repo": "zdwire",
+      "lock": "comparison/Cargo.lock",
+      "name": "jiff-core",
+      "locked": "0.1.4",
+      "latest_in_current_compatibility_line": "0.1.8",
+      "latest_stable_other_line": "1.0.1",
+      "other_line_rust_version": "1.85",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/ji/ff/jiff-core",
+        "observed_utc": "2026-11-23T16:37:45.413666+00:00",
+        "sha256": "37a4cb39b5ff963849c5e95d418d2d6d35324a2073f447d51ffb3cb3022a192a",
+        "bytes": 9510,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:37:45 GMT",
+          "ETag": "\"798a6a9605fb309e651f2be56c63210d\"",
+          "Last-Modified": "Wed, 18 Nov 2026 00:49:49 GMT"
+        },
+        "latest_stable": {
+          "vers": "1.0.1",
+          "rust_version": "1.85"
+        }
+      }
+    },
+    {
+      "repo": "zdwire",
+      "lock": "comparison/Cargo.lock",
+      "name": "jiff-static",
+      "locked": "0.2.42",
+      "latest_in_current_compatibility_line": "0.2.46",
+      "latest_stable_other_line": "1.0.2",
+      "other_line_rust_version": "1.85",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/ji/ff/jiff-static",
+        "observed_utc": "2026-11-23T16:37:45.409585+00:00",
+        "sha256": "fcfd327e3453ecbea88e39cc48aad9e40c3547d1d607e5eb68f49e645d8edb09",
+        "bytes": 39263,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:37:45 GMT",
+          "ETag": "\"e8b322087b0ab67e8fa0af681f5444a7\"",
+          "Last-Modified": "Sat, 21 Nov 2026 16:15:25 GMT"
+        },
+        "latest_stable": {
+          "vers": "1.0.2",
+          "rust_version": "1.85"
+        }
+      }
+    },
+    {
+      "repo": "zdwire",
+      "lock": "comparison/Cargo.lock",
+      "name": "syn",
+      "locked": "2.0.119",
+      "latest_in_current_compatibility_line": "2.0.119",
+      "latest_stable_other_line": "3.0.10",
+      "other_line_rust_version": "1.71",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/3/s/syn",
+        "observed_utc": "2026-11-23T16:38:48.122480+00:00",
+        "sha256": "a5d3865c90ee68ddb71e6b0292a1b2a284d871469857d2248d2d3b56198c5138",
+        "bytes": 659907,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:47 GMT",
+          "ETag": "\"5fe00e4ead385362ec480b624ecb6cb7\"",
+          "Last-Modified": "Mon, 09 Nov 2026 05:53:14 GMT"
+        },
+        "latest_stable": {
+          "vers": "3.0.10",
+          "rust_version": "1.71"
+        }
+      }
+    },
+    {
+      "repo": "zharness",
+      "lock": "Cargo.lock",
+      "name": "spin",
+      "locked": "0.9.9",
+      "latest_in_current_compatibility_line": "0.9.9",
+      "latest_stable_other_line": "0.12.3",
+      "other_line_rust_version": "1.71",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/sp/in/spin",
+        "observed_utc": "2026-11-23T16:38:47.911659+00:00",
+        "sha256": "96bc0c045cb5889661881520e6c17f8cc68d2b3cca718922febc10e001e2797a",
+        "bytes": 24633,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:47 GMT",
+          "ETag": "\"b8374c02fb2a69300259be4e52cdd190\"",
+          "Last-Modified": "Mon, 17 Aug 2026 20:21:32 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.12.3",
+          "rust_version": "1.71"
+        }
+      }
+    },
+    {
+      "repo": "zharness",
+      "lock": "Cargo.lock",
+      "name": "syn",
+      "locked": "2.0.119",
+      "latest_in_current_compatibility_line": "2.0.119",
+      "latest_stable_other_line": "3.0.10",
+      "other_line_rust_version": "1.71",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/3/s/syn",
+        "observed_utc": "2026-11-23T16:38:48.122480+00:00",
+        "sha256": "a5d3865c90ee68ddb71e6b0292a1b2a284d871469857d2248d2d3b56198c5138",
+        "bytes": 659907,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:47 GMT",
+          "ETag": "\"5fe00e4ead385362ec480b624ecb6cb7\"",
+          "Last-Modified": "Mon, 09 Nov 2026 05:53:14 GMT"
+        },
+        "latest_stable": {
+          "vers": "3.0.10",
+          "rust_version": "1.71"
+        }
+      }
+    },
+    {
+      "repo": "zharness",
+      "lock": "Cargo.lock",
+      "name": "wasmparser",
+      "locked": "0.228.0",
+      "latest_in_current_compatibility_line": "0.228.0",
+      "latest_stable_other_line": "0.263.0",
+      "other_line_rust_version": "1.88.0",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wa/sm/wasmparser",
+        "observed_utc": "2026-11-23T16:39:27.061658+00:00",
+        "sha256": "3e4ecfb11c5182060ace0bf6bb8c7fc53e19b59bf9e7b85b15979ac5c7897dab",
+        "bytes": 280448,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:27 GMT",
+          "ETag": "\"9ea27f91f39650d258d06ea6736c7401\"",
+          "Last-Modified": "Fri, 30 Oct 2026 20:31:20 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.263.0",
+          "rust_version": "1.88.0"
+        }
+      }
+    },
+    {
+      "repo": "zhex",
+      "lock": "comparison/Cargo.lock",
+      "name": "bitflags",
+      "locked": "1.3.2",
+      "latest_in_current_compatibility_line": "1.3.2",
+      "latest_stable_other_line": "2.13.2",
+      "other_line_rust_version": "1.56.0",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/bi/tf/bitflags",
+        "observed_utc": "2026-11-23T16:36:53.631627+00:00",
+        "sha256": "d3aa8cbad37c9526e2cf25544efcb8ba215649143476a2dd732e413e570cd017",
+        "bytes": 63713,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:36:53 GMT",
+          "ETag": "\"2f227433c3a80beec62d23c34bbed0ae\"",
+          "Last-Modified": "Thu, 10 Sep 2026 01:11:40 GMT"
+        },
+        "latest_stable": {
+          "vers": "2.13.2",
+          "rust_version": "1.56.0"
+        }
+      }
+    },
+    {
+      "repo": "zhex",
+      "lock": "comparison/Cargo.lock",
+      "name": "cpufeatures",
+      "locked": "0.2.17",
+      "latest_in_current_compatibility_line": "0.2.17",
+      "latest_stable_other_line": "0.3.1",
+      "other_line_rust_version": "1.85",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/cp/uf/cpufeatures",
+        "observed_utc": "2026-11-23T16:37:06.797387+00:00",
+        "sha256": "f947bbced0242d2afec044c148bf0220e8c6cc4d1d454f35c3e7a32cbd215b8d",
+        "bytes": 17632,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:37:06 GMT",
+          "ETag": "\"79ee26535188ff3158f33956c562207d\"",
+          "Last-Modified": "Thu, 27 Aug 2026 21:37:03 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.3.1",
+          "rust_version": "1.85"
+        }
+      }
+    },
+    {
+      "repo": "zhex",
+      "lock": "comparison/Cargo.lock",
+      "name": "defmt",
+      "locked": "0.3.101",
+      "latest_in_current_compatibility_line": "0.3.101",
+      "latest_stable_other_line": "1.2.0",
+      "other_line_rust_version": "1.81",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/de/fm/defmt",
+        "observed_utc": "2026-11-23T16:37:13.397371+00:00",
+        "sha256": "8d485828442846e72acb594f16d0b7f737577d6dc870a4dcca899ec897cf13ad",
+        "bytes": 21923,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:37:13 GMT",
+          "ETag": "\"3a128967909999250b85370ac207cb7f\"",
+          "Last-Modified": "Thu, 15 Oct 2026 14:48:00 GMT"
+        },
+        "latest_stable": {
+          "vers": "1.2.0",
+          "rust_version": "1.81"
+        }
+      }
+    },
+    {
+      "repo": "zhex",
+      "lock": "comparison/Cargo.lock",
+      "name": "fashex",
+      "locked": "0.1.2",
+      "latest_in_current_compatibility_line": "0.1.2",
+      "latest_stable_other_line": "0.2.1",
+      "other_line_rust_version": "1.95.0",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/fa/sh/fashex",
+        "observed_utc": "2026-11-23T16:37:26.266506+00:00",
+        "sha256": "7e7c11f930d99bc8c03f9d95be27e9cd8c708f02e9de5176ede30abcc5e585ec",
+        "bytes": 39768,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:37:26 GMT",
+          "ETag": "\"c58fa0403b55224b345475d26c19740b\"",
+          "Last-Modified": "Thu, 19 Nov 2026 09:05:32 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.2.1",
+          "rust_version": "1.95.0"
+        }
+      }
+    },
+    {
+      "repo": "zhex",
+      "lock": "comparison/Cargo.lock",
+      "name": "faster-hex",
+      "locked": "1.0.0",
+      "latest_in_current_compatibility_line": "1.0.0",
+      "latest_stable_other_line": "2.0.0",
+      "other_line_rust_version": "1.95.0",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/fa/st/faster-hex",
+        "observed_utc": "2026-11-23T16:37:25.941543+00:00",
+        "sha256": "52a3ecf14eb202dd8df854d3147d9a9401709324348a5f994e649bd79952aff6",
+        "bytes": 18862,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:37:25 GMT",
+          "ETag": "\"c0ebc052da7ecb9628c3677b4fe4ad67\"",
+          "Last-Modified": "Fri, 20 Nov 2026 03:51:17 GMT"
+        },
+        "latest_stable": {
+          "vers": "2.0.0",
+          "rust_version": "1.95.0"
+        }
+      }
+    },
+    {
+      "repo": "zhex",
+      "lock": "comparison/Cargo.lock",
+      "name": "r-efi",
+      "locked": "6.0.0",
+      "latest_in_current_compatibility_line": "6.0.0",
+      "latest_stable_other_line": "7.2.0",
+      "other_line_rust_version": "1.68",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/r-/ef/r-efi",
+        "observed_utc": "2026-11-23T16:38:22.590123+00:00",
+        "sha256": "7b8cb580f34fe403eeffcbd1fa8010555fa46b5d93c3035a72e1d9e5ec470a4a",
+        "bytes": 8552,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:22 GMT",
+          "ETag": "\"39c984a63508ce1f9848e29aec361c79\"",
+          "Last-Modified": "Fri, 13 Nov 2026 12:15:11 GMT"
+        },
+        "latest_stable": {
+          "vers": "7.2.0",
+          "rust_version": "1.68"
+        }
+      }
+    },
+    {
+      "repo": "zinput",
+      "lock": "Cargo.lock",
+      "name": "syn",
+      "locked": "2.0.119",
+      "latest_in_current_compatibility_line": "2.0.119",
+      "latest_stable_other_line": "3.0.10",
+      "other_line_rust_version": "1.71",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/3/s/syn",
+        "observed_utc": "2026-11-23T16:38:48.122480+00:00",
+        "sha256": "a5d3865c90ee68ddb71e6b0292a1b2a284d871469857d2248d2d3b56198c5138",
+        "bytes": 659907,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:47 GMT",
+          "ETag": "\"5fe00e4ead385362ec480b624ecb6cb7\"",
+          "Last-Modified": "Mon, 09 Nov 2026 05:53:14 GMT"
+        },
+        "latest_stable": {
+          "vers": "3.0.10",
+          "rust_version": "1.71"
+        }
+      }
+    },
+    {
+      "repo": "zldap",
+      "lock": "comparison/Cargo.lock",
+      "name": "base64",
+      "locked": "0.22.1",
+      "latest_in_current_compatibility_line": "0.22.1",
+      "latest_stable_other_line": "0.23.1",
+      "other_line_rust_version": "1.71.0",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/ba/se/base64",
+        "observed_utc": "2026-11-23T16:36:47.221846+00:00",
+        "sha256": "42a061d4b29c30417df7b028aa5274a1dfe5b7304794ac05e5bce9ac44b40153",
+        "bytes": 28467,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:36:47 GMT",
+          "ETag": "\"0a30877d3d90dcb766fb987c9d120ad9\"",
+          "Last-Modified": "Tue, 04 Aug 2026 12:34:35 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.23.1",
+          "rust_version": "1.71.0"
+        }
+      }
+    },
+    {
+      "repo": "zldap",
+      "lock": "comparison/Cargo.lock",
+      "name": "nom",
+      "locked": "7.1.3",
+      "latest_in_current_compatibility_line": "7.1.3",
+      "latest_stable_other_line": "8.0.0",
+      "other_line_rust_version": "1.65.0",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/3/n/nom",
+        "observed_utc": "2026-11-23T16:38:03.645813+00:00",
+        "sha256": "24b6380acf0e74079001ba7ab4be214bbdd6476a26683ca78206f5720f6b7d40",
+        "bytes": 74104,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:03 GMT",
+          "ETag": "\"d109b005e3bafb304de8e842641b1bff\"",
+          "Last-Modified": "Sun, 01 Feb 2026 12:29:26 GMT"
+        },
+        "latest_stable": {
+          "vers": "8.0.0",
+          "rust_version": "1.65.0"
+        }
+      }
+    },
+    {
+      "repo": "zldap",
+      "lock": "comparison/Cargo.lock",
+      "name": "syn",
+      "locked": "2.0.119",
+      "latest_in_current_compatibility_line": "2.0.119",
+      "latest_stable_other_line": "3.0.10",
+      "other_line_rust_version": "1.71",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/3/s/syn",
+        "observed_utc": "2026-11-23T16:38:48.122480+00:00",
+        "sha256": "a5d3865c90ee68ddb71e6b0292a1b2a284d871469857d2248d2d3b56198c5138",
+        "bytes": 659907,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:47 GMT",
+          "ETag": "\"5fe00e4ead385362ec480b624ecb6cb7\"",
+          "Last-Modified": "Mon, 09 Nov 2026 05:53:14 GMT"
+        },
+        "latest_stable": {
+          "vers": "3.0.10",
+          "rust_version": "1.71"
+        }
+      }
+    },
+    {
+      "repo": "zplugin",
+      "lock": "Cargo.lock",
+      "name": "libloading",
+      "locked": "0.8.9",
+      "latest_in_current_compatibility_line": "0.8.9",
+      "latest_stable_other_line": "0.9.1",
+      "other_line_rust_version": "1.88.0",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/li/bl/libloading",
+        "observed_utc": "2026-11-23T16:37:51.421564+00:00",
+        "sha256": "595586b63cd7dc2a38e8d9be5ab7719d06a4e84eaee5639dd7ce886ab2f13bae",
+        "bytes": 28228,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:37:51 GMT",
+          "ETag": "\"f9470697b59183841cc8fe8d605c5e31\"",
+          "Last-Modified": "Fri, 13 Nov 2026 14:41:57 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.9.1",
+          "rust_version": "1.88.0"
+        }
+      }
+    },
+    {
+      "repo": "zplugin",
+      "lock": "Cargo.lock",
+      "name": "spin",
+      "locked": "0.9.9",
+      "latest_in_current_compatibility_line": "0.9.9",
+      "latest_stable_other_line": "0.12.3",
+      "other_line_rust_version": "1.71",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/sp/in/spin",
+        "observed_utc": "2026-11-23T16:38:47.911659+00:00",
+        "sha256": "96bc0c045cb5889661881520e6c17f8cc68d2b3cca718922febc10e001e2797a",
+        "bytes": 24633,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:47 GMT",
+          "ETag": "\"b8374c02fb2a69300259be4e52cdd190\"",
+          "Last-Modified": "Mon, 17 Aug 2026 20:21:32 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.12.3",
+          "rust_version": "1.71"
+        }
+      }
+    },
+    {
+      "repo": "zplugin",
+      "lock": "Cargo.lock",
+      "name": "syn",
+      "locked": "2.0.119",
+      "latest_in_current_compatibility_line": "2.0.119",
+      "latest_stable_other_line": "3.0.10",
+      "other_line_rust_version": "1.71",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/3/s/syn",
+        "observed_utc": "2026-11-23T16:38:48.122480+00:00",
+        "sha256": "a5d3865c90ee68ddb71e6b0292a1b2a284d871469857d2248d2d3b56198c5138",
+        "bytes": 659907,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:47 GMT",
+          "ETag": "\"5fe00e4ead385362ec480b624ecb6cb7\"",
+          "Last-Modified": "Mon, 09 Nov 2026 05:53:14 GMT"
+        },
+        "latest_stable": {
+          "vers": "3.0.10",
+          "rust_version": "1.71"
+        }
+      }
+    },
+    {
+      "repo": "zplugin",
+      "lock": "Cargo.lock",
+      "name": "wasmparser",
+      "locked": "0.228.0",
+      "latest_in_current_compatibility_line": "0.228.0",
+      "latest_stable_other_line": "0.263.0",
+      "other_line_rust_version": "1.88.0",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wa/sm/wasmparser",
+        "observed_utc": "2026-11-23T16:39:27.061658+00:00",
+        "sha256": "3e4ecfb11c5182060ace0bf6bb8c7fc53e19b59bf9e7b85b15979ac5c7897dab",
+        "bytes": 280448,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:27 GMT",
+          "ETag": "\"9ea27f91f39650d258d06ea6736c7401\"",
+          "Last-Modified": "Fri, 30 Oct 2026 20:31:20 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.263.0",
+          "rust_version": "1.88.0"
+        }
+      }
+    },
+    {
+      "repo": "zplugin",
+      "lock": "Cargo.lock",
+      "name": "windows-link",
+      "locked": "0.2.1",
+      "latest_in_current_compatibility_line": "0.2.1",
+      "latest_stable_other_line": "0.100.0",
+      "other_line_rust_version": "1.85",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wi/nd/windows-link",
+        "observed_utc": "2026-11-23T16:39:33.326137+00:00",
+        "sha256": "2f6055c24a984135453c9932bd3c2d82e5885d0cc9a27877f7b24a405e7c8830",
+        "bytes": 1665,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:33 GMT",
+          "ETag": "\"8a139c5ab8bf38a5513b4961de82f0cc\"",
+          "Last-Modified": "Thu, 03 Sep 2026 16:39:04 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.100.0",
+          "rust_version": "1.85"
+        }
+      }
+    },
+    {
+      "repo": "zscan",
+      "lock": "comparison/Cargo.lock",
+      "name": "cpufeatures",
+      "locked": "0.2.17",
+      "latest_in_current_compatibility_line": "0.2.17",
+      "latest_stable_other_line": "0.3.1",
+      "other_line_rust_version": "1.85",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/cp/uf/cpufeatures",
+        "observed_utc": "2026-11-23T16:37:06.797387+00:00",
+        "sha256": "f947bbced0242d2afec044c148bf0220e8c6cc4d1d454f35c3e7a32cbd215b8d",
+        "bytes": 17632,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:37:06 GMT",
+          "ETag": "\"79ee26535188ff3158f33956c562207d\"",
+          "Last-Modified": "Thu, 27 Aug 2026 21:37:03 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.3.1",
+          "rust_version": "1.85"
+        }
+      }
+    },
+    {
+      "repo": "zsyn",
+      "lock": "comparison/Cargo.lock",
+      "name": "ecow",
+      "locked": "0.2.6",
+      "latest_in_current_compatibility_line": "0.2.6",
+      "latest_stable_other_line": "0.3.1",
+      "other_line_rust_version": "1.73",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/ec/ow/ecow",
+        "observed_utc": "2026-11-23T16:37:19.806217+00:00",
+        "sha256": "52835794fe3e6619467d0f7eb2d1ee88ccca8b7027ba1473b109e560fb0d93b0",
+        "bytes": 5658,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:37:19 GMT",
+          "ETag": "\"7cdb79a010f1e5da55f79c5ee7ec3aa9\"",
+          "Last-Modified": "Wed, 02 Sep 2026 08:23:03 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.3.1",
+          "rust_version": "1.73"
+        }
+      }
+    },
+    {
+      "repo": "zsyn",
+      "lock": "comparison/Cargo.lock",
+      "name": "lock_api",
+      "locked": "0.4.14",
+      "latest_in_current_compatibility_line": "0.4.14",
+      "latest_stable_other_line": "0.5.0",
+      "other_line_rust_version": "1.95",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/lo/ck/lock_api",
+        "observed_utc": "2026-11-23T16:37:57.481434+00:00",
+        "sha256": "d7a74b6e2c178ebe08b19b5996036caef9f840367ccb73771ea765c3486ce8ad",
+        "bytes": 16284,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:37:57 GMT",
+          "ETag": "\"7bfd4e0482ad27090f8d93b1d7ea03de\"",
+          "Last-Modified": "Wed, 21 Oct 2026 10:30:38 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.5.0",
+          "rust_version": "1.95"
+        }
+      }
+    },
+    {
+      "repo": "zsyn",
+      "lock": "comparison/Cargo.lock",
+      "name": "parking_lot",
+      "locked": "0.12.5",
+      "latest_in_current_compatibility_line": "0.12.5",
+      "latest_stable_other_line": "0.13.0",
+      "other_line_rust_version": "1.95",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/pa/rk/parking_lot",
+        "observed_utc": "2026-11-23T16:38:09.766724+00:00",
+        "sha256": "71a9476c1fd4d6148ba4209c24a15201526066f0eb933ea24fea6dc3fb67a6eb",
+        "bytes": 45684,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:09 GMT",
+          "ETag": "\"94d03487a99387e72c054f3898cba1f3\"",
+          "Last-Modified": "Wed, 21 Oct 2026 10:30:47 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.13.0",
+          "rust_version": "1.95"
+        }
+      }
+    },
+    {
+      "repo": "zsyn",
+      "lock": "comparison/Cargo.lock",
+      "name": "parking_lot_core",
+      "locked": "0.9.12",
+      "latest_in_current_compatibility_line": "0.9.12",
+      "latest_stable_other_line": "0.10.0",
+      "other_line_rust_version": "1.95",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/pa/rk/parking_lot_core",
+        "observed_utc": "2026-11-23T16:38:09.774828+00:00",
+        "sha256": "f12aca8a889c421b3480b30f1fe802c34b7a8e8f58f38e1d644ed7a6c3278028",
+        "bytes": 68098,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:09 GMT",
+          "ETag": "\"7a96646fdbefe1f302e008a7f5f2f08d\"",
+          "Last-Modified": "Wed, 21 Oct 2026 10:30:43 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.10.0",
+          "rust_version": "1.95"
+        }
+      }
+    },
+    {
+      "repo": "zsyn",
+      "lock": "comparison/Cargo.lock",
+      "name": "redox_syscall",
+      "locked": "0.5.18",
+      "latest_in_current_compatibility_line": "0.5.18",
+      "latest_stable_other_line": "0.10.0",
+      "other_line_rust_version": null,
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/re/do/redox_syscall",
+        "observed_utc": "2026-11-23T16:38:28.909952+00:00",
+        "sha256": "7b6daae22e213c9560a7f1f4ecae20108fd775a9a20a56cd67dadd57ac95a625",
+        "bytes": 42121,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:28 GMT",
+          "ETag": "\"3c548360906699a24aab15257dca6fe9\"",
+          "Last-Modified": "Sat, 21 Nov 2026 16:46:51 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.10.0",
+          "rust_version": null
+        }
+      }
+    },
+    {
+      "repo": "zsyn",
+      "lock": "comparison/Cargo.lock",
+      "name": "serde_spanned",
+      "locked": "0.6.9",
+      "latest_in_current_compatibility_line": "0.6.9",
+      "latest_stable_other_line": "1.1.3",
+      "other_line_rust_version": "1.85",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/se/rd/serde_spanned",
+        "observed_utc": "2026-11-23T16:38:41.487090+00:00",
+        "sha256": "38c1b1daefc06eb0f489d524571925d7b1508c3286756b3da908fa526e4203a6",
+        "bytes": 12341,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:41 GMT",
+          "ETag": "\"755edf643863e49daffce5fa36ce315b\"",
+          "Last-Modified": "Fri, 06 Nov 2026 13:52:01 GMT"
+        },
+        "latest_stable": {
+          "vers": "1.1.3",
+          "rust_version": "1.85"
+        }
+      }
+    },
+    {
+      "repo": "zsyn",
+      "lock": "comparison/Cargo.lock",
+      "name": "toml",
+      "locked": "0.8.23",
+      "latest_in_current_compatibility_line": "0.8.23",
+      "latest_stable_other_line": "1.2.2+spec-1.1.0",
+      "other_line_rust_version": "1.85",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/to/ml/toml",
+        "observed_utc": "2026-11-23T16:38:54.585911+00:00",
+        "sha256": "6967dbde2654ec5bd4841a24813badec947330fd0fdf179b4f3a7add51c034b0",
+        "bytes": 177713,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:54 GMT",
+          "ETag": "\"82562a7abdd97b0630e4f3ba56ce1c95\"",
+          "Last-Modified": "Sat, 21 Nov 2026 04:25:31 GMT"
+        },
+        "latest_stable": {
+          "vers": "1.2.2+spec-1.1.0",
+          "rust_version": "1.85"
+        }
+      }
+    },
+    {
+      "repo": "zsyn",
+      "lock": "comparison/Cargo.lock",
+      "name": "toml_datetime",
+      "locked": "0.6.11",
+      "latest_in_current_compatibility_line": "0.6.11",
+      "latest_stable_other_line": "1.1.3+spec-1.1.0",
+      "other_line_rust_version": "1.85",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/to/ml/toml_datetime",
+        "observed_utc": "2026-11-23T16:38:54.478338+00:00",
+        "sha256": "5c6d81c8215a7430cc96590989096fb2ec2e813c8838f1e8f9d2a27dd19fe61f",
+        "bytes": 11811,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:54 GMT",
+          "ETag": "\"aa76cd9ae4321fdecbfe25b660b8b0c4\"",
+          "Last-Modified": "Fri, 06 Nov 2026 13:52:01 GMT"
+        },
+        "latest_stable": {
+          "vers": "1.1.3+spec-1.1.0",
+          "rust_version": "1.85"
+        }
+      }
+    },
+    {
+      "repo": "zsyn",
+      "lock": "comparison/Cargo.lock",
+      "name": "toml_edit",
+      "locked": "0.22.27",
+      "latest_in_current_compatibility_line": "0.22.27",
+      "latest_stable_other_line": "0.25.20+spec-1.1.0",
+      "other_line_rust_version": "1.85",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/to/ml/toml_edit",
+        "observed_utc": "2026-11-23T16:38:54.581700+00:00",
+        "sha256": "0f268491fdda26d0dade7636af5195ac59fff18a2cf4a7ef323846bba8b7c9c8",
+        "bytes": 245863,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:54 GMT",
+          "ETag": "\"64ac12cad41a3cfe7fe49251c1f6e621\"",
+          "Last-Modified": "Sat, 21 Nov 2026 04:25:31 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.25.20+spec-1.1.0",
+          "rust_version": "1.85"
+        }
+      }
+    },
+    {
+      "repo": "zsyn",
+      "lock": "comparison/Cargo.lock",
+      "name": "windows-link",
+      "locked": "0.2.1",
+      "latest_in_current_compatibility_line": "0.2.1",
+      "latest_stable_other_line": "0.100.0",
+      "other_line_rust_version": "1.85",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wi/nd/windows-link",
+        "observed_utc": "2026-11-23T16:39:33.326137+00:00",
+        "sha256": "2f6055c24a984135453c9932bd3c2d82e5885d0cc9a27877f7b24a405e7c8830",
+        "bytes": 1665,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:33 GMT",
+          "ETag": "\"8a139c5ab8bf38a5513b4961de82f0cc\"",
+          "Last-Modified": "Thu, 03 Sep 2026 16:39:04 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.100.0",
+          "rust_version": "1.85"
+        }
+      }
+    },
+    {
+      "repo": "zsyn",
+      "lock": "comparison/Cargo.lock",
+      "name": "winnow",
+      "locked": "0.7.15",
+      "latest_in_current_compatibility_line": "0.7.15",
+      "latest_stable_other_line": "1.0.5",
+      "other_line_rust_version": "1.65.0",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wi/nn/winnow",
+        "observed_utc": "2026-11-23T16:39:39.720718+00:00",
+        "sha256": "3be1d08d4b14fe381a3e0a62e8f30e3f4f08874a3adced4be7426d3af88d3afa",
+        "bytes": 237886,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:39 GMT",
+          "ETag": "\"f65ec301552af7321f430783dd218f47\"",
+          "Last-Modified": "Thu, 05 Nov 2026 01:18:43 GMT"
+        },
+        "latest_stable": {
+          "vers": "1.0.5",
+          "rust_version": "1.65.0"
+        }
+      }
+    },
+    {
+      "repo": "zsys",
+      "lock": "benchmarks/Cargo.lock",
+      "name": "syn",
+      "locked": "2.0.119",
+      "latest_in_current_compatibility_line": "2.0.119",
+      "latest_stable_other_line": "3.0.10",
+      "other_line_rust_version": "1.71",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/3/s/syn",
+        "observed_utc": "2026-11-23T16:38:48.122480+00:00",
+        "sha256": "a5d3865c90ee68ddb71e6b0292a1b2a284d871469857d2248d2d3b56198c5138",
+        "bytes": 659907,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:38:47 GMT",
+          "ETag": "\"5fe00e4ead385362ec480b624ecb6cb7\"",
+          "Last-Modified": "Mon, 09 Nov 2026 05:53:14 GMT"
+        },
+        "latest_stable": {
+          "vers": "3.0.10",
+          "rust_version": "1.71"
+        }
+      }
+    },
+    {
+      "repo": "zsys",
+      "lock": "benchmarks/Cargo.lock",
+      "name": "windows-collections",
+      "locked": "0.3.2",
+      "latest_in_current_compatibility_line": "0.3.2",
+      "latest_stable_other_line": "0.100.0",
+      "other_line_rust_version": "1.95",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wi/nd/windows-collections",
+        "observed_utc": "2026-11-23T16:39:33.322702+00:00",
+        "sha256": "0f6639360a1b08d7fe7c1e4642df5f52296d645a508beb17c35272ce0b5b1c4b",
+        "bytes": 4319,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:33 GMT",
+          "ETag": "\"9d3444645efe865a663e7c09f7fbf72e\"",
+          "Last-Modified": "Thu, 03 Sep 2026 16:43:49 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.100.0",
+          "rust_version": "1.95"
+        }
+      }
+    },
+    {
+      "repo": "zsys",
+      "lock": "benchmarks/Cargo.lock",
+      "name": "windows-core",
+      "locked": "0.62.2",
+      "latest_in_current_compatibility_line": "0.62.2",
+      "latest_stable_other_line": "0.100.0",
+      "other_line_rust_version": "1.95",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wi/nd/windows-core",
+        "observed_utc": "2026-11-23T16:39:33.408875+00:00",
+        "sha256": "0d59f00a7ddda72230d726ce583da65ea71498a84ccf492617e1a4b18c13536b",
+        "bytes": 14979,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:33 GMT",
+          "ETag": "\"083b2dfa2ec1c530bb97adafc7247931\"",
+          "Last-Modified": "Thu, 03 Sep 2026 16:42:57 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.100.0",
+          "rust_version": "1.95"
+        }
+      }
+    },
+    {
+      "repo": "zsys",
+      "lock": "benchmarks/Cargo.lock",
+      "name": "windows-future",
+      "locked": "0.3.2",
+      "latest_in_current_compatibility_line": "0.3.2",
+      "latest_stable_other_line": "0.100.0",
+      "other_line_rust_version": "1.95",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wi/nd/windows-future",
+        "observed_utc": "2026-11-23T16:39:33.327002+00:00",
+        "sha256": "e39eb0578b36044293e00d149e22a4689c29aa71a0cd3d2ad3b9cdbf546d6f22",
+        "bytes": 5784,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:33 GMT",
+          "ETag": "\"0080beda5d4bab84fa20516e049e856a\"",
+          "Last-Modified": "Thu, 03 Sep 2026 16:44:05 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.100.0",
+          "rust_version": "1.95"
+        }
+      }
+    },
+    {
+      "repo": "zsys",
+      "lock": "benchmarks/Cargo.lock",
+      "name": "windows-implement",
+      "locked": "0.60.2",
+      "latest_in_current_compatibility_line": "0.60.2",
+      "latest_stable_other_line": "0.100.0",
+      "other_line_rust_version": "1.95",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wi/nd/windows-implement",
+        "observed_utc": "2026-11-23T16:39:33.369605+00:00",
+        "sha256": "1639b6814b1e68849d8c093a1e9c5d4683f487c6bc4577bcb05358ba1f224e24",
+        "bytes": 17504,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:33 GMT",
+          "ETag": "\"538ff45f14f4371a55e91bbd9d67f6c0\"",
+          "Last-Modified": "Thu, 03 Sep 2026 16:38:27 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.100.0",
+          "rust_version": "1.95"
+        }
+      }
+    },
+    {
+      "repo": "zsys",
+      "lock": "benchmarks/Cargo.lock",
+      "name": "windows-interface",
+      "locked": "0.59.3",
+      "latest_in_current_compatibility_line": "0.59.3",
+      "latest_stable_other_line": "0.100.0",
+      "other_line_rust_version": "1.95",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wi/nd/windows-interface",
+        "observed_utc": "2026-11-23T16:39:33.361424+00:00",
+        "sha256": "f9c04e74a25264179598632a9fddbba776a3dce9bf27d43056bf344a4131ccba",
+        "bytes": 17222,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:33 GMT",
+          "ETag": "\"cb4ce17419fb28f8d307d30b62affaf2\"",
+          "Last-Modified": "Thu, 03 Sep 2026 16:38:49 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.100.0",
+          "rust_version": "1.95"
+        }
+      }
+    },
+    {
+      "repo": "zsys",
+      "lock": "benchmarks/Cargo.lock",
+      "name": "windows-link",
+      "locked": "0.2.1",
+      "latest_in_current_compatibility_line": "0.2.1",
+      "latest_stable_other_line": "0.100.0",
+      "other_line_rust_version": "1.85",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wi/nd/windows-link",
+        "observed_utc": "2026-11-23T16:39:33.326137+00:00",
+        "sha256": "2f6055c24a984135453c9932bd3c2d82e5885d0cc9a27877f7b24a405e7c8830",
+        "bytes": 1665,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:33 GMT",
+          "ETag": "\"8a139c5ab8bf38a5513b4961de82f0cc\"",
+          "Last-Modified": "Thu, 03 Sep 2026 16:39:04 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.100.0",
+          "rust_version": "1.85"
+        }
+      }
+    },
+    {
+      "repo": "zsys",
+      "lock": "benchmarks/Cargo.lock",
+      "name": "windows-numerics",
+      "locked": "0.3.1",
+      "latest_in_current_compatibility_line": "0.3.1",
+      "latest_stable_other_line": "0.100.0",
+      "other_line_rust_version": "1.95",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wi/nd/windows-numerics",
+        "observed_utc": "2026-11-23T16:39:39.589068+00:00",
+        "sha256": "f514e192b13a366f222ea1444ba891a11300fc0ceb1faf652dbd97a452608645",
+        "bytes": 3048,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:39 GMT",
+          "ETag": "\"5c5d8ad145c1892da0a72152dada9838\"",
+          "Last-Modified": "Thu, 03 Sep 2026 16:44:17 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.100.0",
+          "rust_version": "1.95"
+        }
+      }
+    },
+    {
+      "repo": "zsys",
+      "lock": "benchmarks/Cargo.lock",
+      "name": "windows-result",
+      "locked": "0.4.1",
+      "latest_in_current_compatibility_line": "0.4.1",
+      "latest_stable_other_line": "0.100.0",
+      "other_line_rust_version": "1.95",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wi/nd/windows-result",
+        "observed_utc": "2026-11-23T16:39:39.665061+00:00",
+        "sha256": "85f0e881b74d8b55584d54bcdfa7127cbc4c7886c7c4368066bc42c8dd2bfd18",
+        "bytes": 4871,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:39 GMT",
+          "ETag": "\"29ac1e84c9b387ad7667093c3a518bdc\"",
+          "Last-Modified": "Thu, 03 Sep 2026 16:41:26 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.100.0",
+          "rust_version": "1.95"
+        }
+      }
+    },
+    {
+      "repo": "zsys",
+      "lock": "benchmarks/Cargo.lock",
+      "name": "windows-strings",
+      "locked": "0.5.1",
+      "latest_in_current_compatibility_line": "0.5.1",
+      "latest_stable_other_line": "0.100.0",
+      "other_line_rust_version": "1.95",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wi/nd/windows-strings",
+        "observed_utc": "2026-11-23T16:39:39.591242+00:00",
+        "sha256": "460eb1b778d5bb430a097377d1d7e60ef35713bdd0de797fbccdb9eb50eefb90",
+        "bytes": 3959,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:39 GMT",
+          "ETag": "\"6b531a18d918f4588fff7106a58797ac\"",
+          "Last-Modified": "Thu, 03 Sep 2026 16:41:45 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.100.0",
+          "rust_version": "1.95"
+        }
+      }
+    },
+    {
+      "repo": "zsys",
+      "lock": "benchmarks/Cargo.lock",
+      "name": "windows-threading",
+      "locked": "0.2.1",
+      "latest_in_current_compatibility_line": "0.2.1",
+      "latest_stable_other_line": "0.100.0",
+      "other_line_rust_version": "1.95",
+      "reason": "Different semver compatibility line; bulk breaking migrations excluded by assignment. Parent dependency requirements and API migration were not overridden. This record does not claim that an intentional migration is impossible.",
+      "registry_source": {
+        "url": "https://index.crates.io/wi/nd/windows-threading",
+        "observed_utc": "2026-11-23T16:39:39.660685+00:00",
+        "sha256": "d210834d9f7febabf1f13edae302f5acc1fda94c3829fcaf99728ad77ed4d98a",
+        "bytes": 1543,
+        "headers": {
+          "Date": "Mon, 23 Nov 2026 16:39:39 GMT",
+          "ETag": "\"87691e150c64f6b64979a8bb84c4b84a\"",
+          "Last-Modified": "Thu, 03 Sep 2026 16:42:00 GMT"
+        },
+        "latest_stable": {
+          "vers": "0.100.0",
+          "rust_version": "1.95"
+        }
+      }
+    }
+  ],
+  "comparators": [
+    {
+      "repo": "z58",
+      "base": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+      "candidate": "66cf30e42955b35bc864daf39a48b2b11e25a052",
+      "tree": "89ce400fd5d52caf8a5f7e12c0e5d31d82a4098b",
+      "receipt": "/workspace/scratch/ad6d3de008b0/library-updates-20261124/evidence/candidates/z58.json",
+      "receipt_sha256": "00e273fa5e2ee05a296d4f32f7d03fbc84bfd915bad2eadbf37e2b3a57e89224",
+      "behavior_tests_passed": 4,
+      "strict_clippy": "pre-existing failure"
+    },
+    {
+      "repo": "z64",
+      "base": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+      "candidate": "9cf2474eed23154ae40adf99030f1e874c6b8e28",
+      "tree": "6f8525ea47549c9c4f0dc6e5aa5883d90f8d1cb4",
+      "receipt": "/workspace/scratch/ad6d3de008b0/library-updates-20261124/evidence/candidates/z64.json",
+      "receipt_sha256": "80ffc075efe2dcebf534fff53a8737ec5536c8839e7b4706c391cae49971bb95",
+      "behavior_tests_passed": 6,
+      "strict_clippy": "pass"
+    },
+    {
+      "repo": "zclap",
+      "base": "a4c7e6f3e0ff860de701573117248fe8538c71e5",
+      "candidate": "a76e3c01a8de9135bad10d35882eded341cca882",
+      "tree": "44aaa219ae80418e1b77bb5fa0b5170ca637df60",
+      "receipt": "/workspace/scratch/ad6d3de008b0/library-updates-20261124/evidence/candidates/zclap.json",
+      "receipt_sha256": "9a2866bfc43c362010ed5f93e6db060a8acff2859b08d1fbc0b3d5a5f2aaf6ba",
+      "behavior_tests_passed": 0,
+      "strict_clippy": "pass"
+    },
+    {
+      "repo": "zdwire",
+      "base": "c046e3182b0adf15d43500400a427b7dd7389525",
+      "candidate": "926dd901a0abfe0667724b8b7230b3917ade80bb",
+      "tree": "1269fcf30a3df252ae200859ad3e84097a5a8bc6",
+      "receipt": "/workspace/scratch/ad6d3de008b0/library-updates-20261124/evidence/candidates/zdwire.json",
+      "receipt_sha256": "76b8ca34c80d7aee4c0a7b24d5c924a5205062ea8cab00dd800ec6525a9c41da",
+      "behavior_tests_passed": 10,
+      "strict_clippy": "pre-existing failure"
+    },
+    {
+      "repo": "zldap",
+      "base": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+      "candidate": "5d442fa97d5d3fdba3217c78152068f32dd7f901",
+      "tree": "1f1397b8b1882d4412fe6664cca6c283fd285974",
+      "receipt": "/workspace/scratch/ad6d3de008b0/library-updates-20261124/evidence/candidates/zldap.json",
+      "receipt_sha256": "a76daae579e1c05e49926247d64411917d8f9cc1f43b96ad90b5fd2fd4d5b2b0",
+      "behavior_tests_passed": 10,
+      "strict_clippy": "pass"
+    },
+    {
+      "repo": "zmime",
+      "base": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+      "candidate": "48611be2639ba5c7a4adb8aaa2328f0f6926329f",
+      "tree": "6ca873502f95dcf7288fc8d0d5252dff78eaa7d1",
+      "receipt": "/workspace/scratch/ad6d3de008b0/library-updates-20261124/evidence/candidates/zmime.json",
+      "receipt_sha256": "850a0a1a3c33a91559d95d889f163b8e2a8a6d62a0fba22e45d12c10fa1ebf2f",
+      "behavior_tests_passed": 9,
+      "strict_clippy": "pass"
+    },
+    {
+      "repo": "zsyn",
+      "base": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+      "candidate": "49ad0cf84cb9276dc6733a96bfb80fe952d6a90c",
+      "tree": "0933f9a52f83932911b170e786c6be2e8e37ddef",
+      "receipt": "/workspace/scratch/ad6d3de008b0/library-updates-20261124/evidence/candidates/zsyn.json",
+      "receipt_sha256": "3715a77d2ae97ab3b430c1021199ac5fa49c234acd9ab1bbaff4915b9afca2ce",
+      "behavior_tests_passed": 42,
+      "strict_clippy": "pass"
+    }
+  ],
+  "source_sha256": {
+    "inventory.json": "f3f435eca7408bf48ec6b30615b7a93c73e1e292e7aed8a1896fd9be35e913c9",
+    "registry-audit.json": "e661ff4fb9c26ef331db2a90e2e2c98aefde7b4008c9e8c5d4bfb98581b5e790",
+    "registry-update-candidates.json": "0f3d4b54959483daba914c9675adc31a9c65eaeea384d726ab882d84dc134126",
+    "major-line-deferrals.json": "d5e2c6ea0d7cbdbddb2e089a88ea003b3e3c73229fbccba22e91298062f9d706",
+    "comparator-candidates.json": "6cfad6095032bc3170c0ca75a054fc45e862bd9ba37833fa59c9a486576fde4a"
+  }
+}

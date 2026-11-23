@@ -1,0 +1,16 @@
+{
+  "file": "src/transport.rs",
+  "baseline": "6eab1150e8d58d330583c1b3206bf91e7862dc9a",
+  "baseline_sha256": "fffc29232270edb36b50617a47022e56b1ce9268dd9c952b75f0c44b9f454d9a",
+  "current_sha256": "fffc29232270edb36b50617a47022e56b1ce9268dd9c952b75f0c44b9f454d9a",
+  "identical": true,
+  "failed_tests": [
+    "cleanup_preserves_replaced_path_and_rejects_public_directory",
+    "drop_releases_lock_while_an_inherited_descriptor_remains_open",
+    "does_not_replace_files_symlinks_or_unknown_sockets",
+    "private_socket_exchanges_bytes_and_cleans_up",
+    "reclaims_only_recorded_stale_socket"
+  ],
+  "native_error": "AF_UNIX socket creation returns EPERM",
+  "independent_probe": "zuse-environment-blocker.json"
+}

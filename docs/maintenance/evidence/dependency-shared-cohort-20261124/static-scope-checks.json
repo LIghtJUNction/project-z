@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "gui_existing_parser_and_tests_byte_unchanged": true,
+    "zmem_other_serializers_parser_and_tests_byte_unchanged": true,
+    "zuse_existing_parsing_helpers_byte_unchanged": true,
+    "ztty_parser_prefix_unchanged_except_unused_format_import": true,
+    "compat_transport_and_parser_prefix_byte_unchanged": true,
+    "compat_base64_and_existing_tests_byte_unchanged": true,
+    "zuse_platform_prefix_byte_unchanged": true,
+    "zuse_platform_suffix_byte_unchanged": true,
+    "zcalld:src/state_json.rs_unchanged": true,
+    "zcalld:crates/zcalld-installer/src/private.rs_unchanged": true,
+    "zcall-gui:src/core_install_io.rs_unchanged": true
+  },
+  "unchanged_windows_callers_sha256": {
+    "zcalld/src/state_json.rs": "91e091cf0e4dfd889b5e8ac91b360b83b55e6302b6e4e9d1934c58fc78e5189c",
+    "zcalld/crates/zcalld-installer/src/private.rs": "4c5c56e620464b0625ea4c5db1052ed174c746ab3eaf9016355e8b6c802a30c8",
+    "zcall-gui/src/core_install_io.rs": "6a8b6251d5c0eaf9a9fd0d021d1ba5cecea77780f8d347ce80f0e72f7d45c369"
+  },
+  "manifest_boundary_checks": "passed",
+  "zconv_msrv": "1.99.1",
+  "zsys_default_features": [
+    "std"
+  ],
+  "compilation_or_runtime_tests_executed": false
+}

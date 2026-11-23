@@ -1,0 +1,29 @@
+[
+  {
+    "repo": "zmem",
+    "baseline": "5997b9581f5b6962c9d9cd12774a2ce119e46ca7",
+    "region_start": "pub fn parse(",
+    "region_end_exclusive": "#[cfg(test)]",
+    "unchanged": true,
+    "baseline_sha256": "0bb8bb81a18b0286f0afca8940ac0e6a775c930c05ca02a59b046422dd61e396",
+    "current_sha256": "0bb8bb81a18b0286f0afca8940ac0e6a775c930c05ca02a59b046422dd61e396"
+  },
+  {
+    "repo": "zcall-gui",
+    "baseline": "3b9a0f4673c08a9aa259b52e02858c0a88f43f6b",
+    "region_start": "pub fn parse(",
+    "region_end_exclusive": "#[cfg(test)]",
+    "unchanged": true,
+    "baseline_sha256": "ca78bb639570d505d2eeea842eadfd721b45968c28900cd452c91063d4f5e9b5",
+    "current_sha256": "ca78bb639570d505d2eeea842eadfd721b45968c28900cd452c91063d4f5e9b5"
+  },
+  {
+    "repo": "ztty",
+    "baseline": "963afbd7f9463f6de61a96e1968fdf26d3bc8990",
+    "region_start": "pub const MAX_MESSAGE",
+    "region_end_exclusive": "pub fn stringify(",
+    "unchanged": true,
+    "baseline_sha256": "7d5f1c73107847db85b260ac325432ec2a020a88e8ab755a18626a9af7791622",
+    "current_sha256": "7d5f1c73107847db85b260ac325432ec2a020a88e8ab755a18626a9af7791622"
+  }
+]

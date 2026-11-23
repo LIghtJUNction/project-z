@@ -1,0 +1,96 @@
+[
+  {
+    "label": "impact",
+    "command": [
+      "python3",
+      "scripts/project_z.py",
+      "impact",
+      "--repositories",
+      "ztty"
+    ],
+    "exit_code": 0,
+    "seconds": 0.943
+  },
+  {
+    "label": "dedent-update",
+    "command": [
+      "cargo",
+      "update",
+      "--manifest-path",
+      "examples/dedent-plugin/Cargo.toml",
+      "-p",
+      "zplugin",
+      "-p",
+      "zsys"
+    ],
+    "exit_code": 0,
+    "seconds": 25.122
+  },
+  {
+    "label": "dedent-metadata",
+    "command": [
+      "cargo",
+      "metadata",
+      "--locked",
+      "--format-version",
+      "1",
+      "--manifest-path",
+      "examples/dedent-plugin/Cargo.toml"
+    ],
+    "exit_code": 0,
+    "seconds": 0.079
+  },
+  {
+    "label": "dedent-build",
+    "command": [
+      "cargo",
+      "build",
+      "--locked",
+      "--manifest-path",
+      "examples/dedent-plugin/Cargo.toml"
+    ],
+    "exit_code": 0,
+    "seconds": 8.378
+  },
+  {
+    "label": "fixture-update",
+    "command": [
+      "cargo",
+      "update",
+      "--manifest-path",
+      "tests/fixtures/text-plugin/Cargo.toml",
+      "-p",
+      "zplugin",
+      "-p",
+      "zsys"
+    ],
+    "exit_code": 0,
+    "seconds": 22.432
+  },
+  {
+    "label": "fixture-metadata",
+    "command": [
+      "cargo",
+      "metadata",
+      "--locked",
+      "--format-version",
+      "1",
+      "--manifest-path",
+      "tests/fixtures/text-plugin/Cargo.toml"
+    ],
+    "exit_code": 0,
+    "seconds": 0.044
+  },
+  {
+    "label": "fixture-build",
+    "command": [
+      "cargo",
+      "build",
+      "--locked",
+      "--manifest-path",
+      "tests/fixtures/text-plugin/Cargo.toml"
+    ],
+    "exit_code": 0,
+    "seconds": 0.603
+  }
+]

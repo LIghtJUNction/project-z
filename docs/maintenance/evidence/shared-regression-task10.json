@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "task": "worker task 10: shared implementation regression gates",
+  "base_commit": "2e32aacc3cd243aa7a4f43564e8e895ab3ba732c",
+  "scope": "Root scripts, tests and shared-implementation documentation; no consumer source edits.",
+  "checked_files_sha256": {
+    "scripts/project_z.py": "00d16fa290d6a58b89d929c293cd261ab10092cef31bbfec5159058cd347649d",
+    "scripts/shared_implementations.py": "c4db974d968e15196d73b608e933d3f01c2afe16ac32c906e54419ccb144a580",
+    "scripts/rust_source.py": "fdec466bb0bd842cf609c0ee5c3c24d7056563af227274cfabd1095d374f2a0b",
+    "scripts/shared_implementations.json": "3eac4b012e89da3c2d9b75a5a4826307d398d333c83b930a5699b3ea4280bfe3",
+    "tests/test_shared_implementations.py": "f15c9ae5b99fb9a06fd8401464b986e3b8c86b5bbf0044306d89282727c5a09f",
+    "tests/test_maintenance.py": "632c12d75e0feb640b82d2e78023efd709e8fd616533dd69aeb4c50b9371542e"
+  },
+  "source_gate": {
+    "operation": "shared_implementations.errors(catalog, checkout, command=project_z.command, relative=project_z.relative, identity=project_z.github_identity)",
+    "catalog_sha256": "c6089c46977f68e555968c459a8ada876c402a778973014bd1e03a41a8fa22c8",
+    "cohort_root_commit": "2e32aacc3cd243aa7a4f43564e8e895ab3ba732c",
+    "reviewed_consumers": [
+      "zterm",
+      "zuse",
+      "zmcpio",
+      "ztty",
+      "zmcl",
+      "zcalld",
+      "zmem",
+      "ssmcp",
+      "zcall-gui",
+      "mechrevo-drivers"
+    ],
+    "consumers": 10,
+    "routes": 13,
+    "historical_bodies": 22,
+    "elapsed_seconds": 9.161,
+    "errors": [],
+    "limit": "Read-only source gate using the recorded catalog and current source files; not a fresh whole-cohort check, resolve, Cargo metadata build or platform acceptance."
+  },
+  "tests": [
+    {
+      "command": "python3 -m unittest discover -s tests -p test_shared_implementations.py -v",
+      "tests": 21,
+      "seconds": 0.523,
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "tests": 171,
+      "seconds": 127.275,
+      "exit_code": 0,
+      "skipped": 0,
+      "environment": "Sandbox Python 3.12.14, Rust/Cargo 1.100.0 available on PATH; one outer shared Cargo flock. Existing offline/local Git and registry fixtures executed.",
+      "targeted_test_file_sha256_at_run": "4d27cec7517c8334ff4ae85f8dc994f1c3421d4299c09e2c6a8eb6129d790a50",
+      "checkpoint_note": "The complete suite passed before two byte-string boundary examples were added to an existing lexical test. Production implementation was unchanged; the 21-test targeted suite passed again after that addition."
+    }
+  ],
+  "behavior_cases": "22 real removed algorithm fragments; 14 real retained adapter/MD5 excerpts; binding/function renames; calls/operators/fields/literals remain distinct; independent normal-dependency/source-reference/history failures; aliases, optional/Windows normal dependencies; nested cfg/test boundaries; generated-marker rejection; tracked symlink escape rejection.",
+  "limitations": [
+    "Known historical shapes only; no semantic-equivalence threshold and no exhaustive duplicate-code claim.",
+    "Lexical references are not a reachability/dataflow proof; complex macros/re-exports/bindings and changed algorithm shapes require review.",
+    "No full Rust business suite or whole-cohort check/resolve rerun for this root-only change.",
+    "No remote push, public CI trigger, release, canonical-workspace mutation or new model."
+  ],
+  "followups": [
+    {
+      "base_candidate": "0351dee28f5957ec233a73738284b96a6cef98e3",
+      "changes": [
+        "Preserve struct shorthand field names during local-binding normalization; update only the normalized zmcpio-decode_header_value fingerprint. All original source fragments and exact body hashes remain unchanged.",
+        "Associate provider references only with aliases of accepted normal dependency sources; an unused accepted registry sha2 cannot borrow references from a different Git-source sha2 alias."
+      ],
+      "checked_files_sha256": {
+        "scripts/rust_source.py": "dfc6c30f95276f2d74f38d5bc0b7fcb7f8dd9a25c00aedd604ac25b3888e6bbe",
+        "scripts/shared_implementations.py": "d3ebe5a9305da917b7344b7145c86934b638b646e416426aecd1dd7ed9f724ab",
+        "scripts/shared_implementations.json": "164b172376eab4036253d8e941ccdb3ea948e2bf4a6f5563a2dcdfebe19ed878",
+        "tests/test_shared_implementations.py": "18ccd387c7cf645f6744fc97cf65732c6577b453725ae1d7bb14ce7652282720"
+      },
+      "targeted_tests": {
+        "command": "python3 -m unittest discover -s tests -p test_shared_implementations.py -v",
+        "tests": 23,
+        "seconds": 0.378,
+        "exit_code": 0
+      },
+      "complete_suite": {
+        "command": "python3 -m unittest discover -s tests -v",
+        "tests": 173,
+        "seconds": 123.967,
+        "skipped": 0,
+        "exit_code": 0,
+        "log_sha256": "b6a99a9f0c7b43010ac41a76fe0eca0457a3c5e82d150b73289b1cd8f83cd3f3",
+        "environment": "Same sandbox Python/Rust and outer Cargo flock as the initial complete suite."
+      },
+      "source_gate": {
+        "cohort_root_commit": "5bb09a98c2125b57b58ad227629cce50d5950566",
+        "catalog_sha256": "c6089c46977f68e555968c459a8ada876c402a778973014bd1e03a41a8fa22c8",
+        "elapsed_seconds": 13.515,
+        "errors": []
+      },
+      "source_gate_limit": "Read-only source check with recorded catalog. The shared review root advanced to the recorded commit; this is not fresh Cargo metadata/lock resolution or platform acceptance."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "candidate": "a9d5dede2b2b6b726ca0fd87786ed0f81e6125b8",
+  "tree": "951c6c38d6c6f16a906d38ed0ece58a89d67e20c",
+  "files": {
+    "Cargo.toml": {
+      "sha256": "bdda77c4db5eb875fd065b5082ff3f1463c159ad1bc54644e3f58f573a392a92",
+      "matches_review_snapshot": true
+    },
+    "src/json.rs": {
+      "sha256": "b9942d0bd1577447e453e9fa06cf8200e1c4e600770b4a9dfe30b7d5ae57942e",
+      "matches_review_snapshot": true
+    }
+  }
+}

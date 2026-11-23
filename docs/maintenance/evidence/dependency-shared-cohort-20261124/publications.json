@@ -1,0 +1,342 @@
+{
+  "published": {
+    "zconv": {
+      "base": "11df5d00117ed87a7f5aebc5a2677f59fccff9b1",
+      "candidate": "d4763aa598f335796db3806f80c45092fbf7e4ac",
+      "head": "f9448d27997dc70dac05f0c0e58857bcce43ab72",
+      "tree": "e770b53558e2976021d9244835efd9a95dd84501",
+      "readback_verified": true,
+      "published_at": "2026-11-23T16:58:34.781024+00:00",
+      "ci": "[skip ci]; next formal release gate"
+    },
+    "z58": {
+      "base": "c70d50eafb3f50eb9a709861f9e1ed2c2fa48dc3",
+      "candidate": "66cf30e42955b35bc864daf39a48b2b11e25a052",
+      "head": "544522d5ec0e1d85ff6d46b06cdb1f541d11c684",
+      "tree": "89ce400fd5d52caf8a5f7e12c0e5d31d82a4098b",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:00:30.520028+00:00"
+    },
+    "z64": {
+      "base": "7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+      "candidate": "9cf2474eed23154ae40adf99030f1e874c6b8e28",
+      "head": "7d7ade9c1612fac91b8bddffc26235847a1f5f3d",
+      "tree": "6f8525ea47549c9c4f0dc6e5aa5883d90f8d1cb4",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:00:36.314903+00:00"
+    },
+    "zclap": {
+      "base": "a4c7e6f3e0ff860de701573117248fe8538c71e5",
+      "candidate": "a76e3c01a8de9135bad10d35882eded341cca882",
+      "head": "6bc825d3bbba8570462d2bdce8cb7945286b12c9",
+      "tree": "44aaa219ae80418e1b77bb5fa0b5170ca637df60",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:00:41.221120+00:00"
+    },
+    "zdwire": {
+      "base": "c046e3182b0adf15d43500400a427b7dd7389525",
+      "candidate": "926dd901a0abfe0667724b8b7230b3917ade80bb",
+      "head": "e35c7a0b343b69c2924cc5e6e62ebb64531edbcb",
+      "tree": "1269fcf30a3df252ae200859ad3e84097a5a8bc6",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:00:46.004998+00:00"
+    },
+    "zldap": {
+      "base": "d90e02d2ed107c6ede7ad4a56bfe329c82eb4fe8",
+      "candidate": "5d442fa97d5d3fdba3217c78152068f32dd7f901",
+      "head": "09155564de1d97b00ab7b3ea73f260dc899fe5e3",
+      "tree": "1f1397b8b1882d4412fe6664cca6c283fd285974",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:00:50.846065+00:00"
+    },
+    "zmime": {
+      "base": "2d5930955ed8086e12a6ab6cd3dd5caa837e1a42",
+      "candidate": "48611be2639ba5c7a4adb8aaa2328f0f6926329f",
+      "head": "42d55a378d7b778c9cf809bf0f40f560481831cc",
+      "tree": "6ca873502f95dcf7288fc8d0d5252dff78eaa7d1",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:00:55.494445+00:00"
+    },
+    "zsyn": {
+      "base": "b1cb68fd61101e98c504a90e47b74e2bccdd0165",
+      "candidate": "49ad0cf84cb9276dc6733a96bfb80fe952d6a90c",
+      "head": "703afeecd403a4753ce51765c967b09aa40b4d77",
+      "tree": "0933f9a52f83932911b170e786c6be2e8e37ddef",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:01:00.333043+00:00"
+    },
+    "zsys": {
+      "base": "808fcfdb73584ca7ca122e20b76f0209f56ab0f7",
+      "candidate": "765d5e4c172b111cc356d6eedf09443d7b361b2f",
+      "head": "48c4cafaf940fd7a404b885adefd2e1201b51881",
+      "tree": "b4d3e3233dde245d76efd8c402fdbd77c8a77ac5",
+      "readback_verified": true,
+      "ci": "[skip ci]; native Windows execution awaits formal release",
+      "published_at": "2026-11-23T17:02:27.223633+00:00"
+    },
+    "zcall": {
+      "base": "49784ef8d537af2cad65917486bda6a641337a01",
+      "candidate": "60da35db492de607184a15fb4dd7a9f102b70dbf",
+      "head": "311e152afb6d6dda7b123f60a13173a5ddf62878",
+      "tree": "ac812c00cc55ce58841f7ee0da1c17a4336be778",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:07:22.315552+00:00"
+    },
+    "zmcpio": {
+      "base": "aba5ee5e775142f67a2cb0b181fc1fecdc286e98",
+      "candidate": "342e419a9bf12721a20bedb6aedf4513caa0d6a5",
+      "head": "9c1d8dfaf8432375de7f20dad74d756f2d52089d",
+      "tree": "d8ad2df6c3aca2fbf5e42f05bc3a90073723950e",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:12:42.479652+00:00"
+    },
+    "zclick": {
+      "base": "c437230dcf9467b9d1decaf0142215ea054bcf07",
+      "candidate": "8de528081eedd017ba1e87aba98ca82b9b15cda1",
+      "head": "4c8944d2c9f60c78bb1b19f27f7e8cd299fddc39",
+      "tree": "ee1dcc8be9cfedcfa3e2a22939a73bfd413b7907",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:12:47.048611+00:00"
+    },
+    "zdot": {
+      "base": "645fa9a5504672cf7f1ffee522c9889cabb111f3",
+      "candidate": "225969053e4dbc58ca3b12fb45dfe589bd7596f4",
+      "head": "84225ac96f85a0d91cc77e5d352253ae23b1250a",
+      "tree": "ca9d807b55f4c0f064a428e3447f60719ac3d8a5",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:12:51.728633+00:00"
+    },
+    "zmcl": {
+      "base": "61c3655806fee9f4a20fc8bea2e881ce0531fc48",
+      "candidate": "65df931516909d8166de3a7582464c193153a9c4",
+      "head": "d8fb6c11e8b48ff6173e4c8dbeebbc379662b772",
+      "tree": "edfdefd80a8cb4cc98d85e9870172656c913b187",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:12:56.891361+00:00"
+    },
+    "zmem": {
+      "base": "5997b9581f5b6962c9d9cd12774a2ce119e46ca7",
+      "candidate": "4f3ffc9465f25ee35fac2002cb127a305b20574d",
+      "head": "18bc12b2d7f11dfd5e30f84e33652b6786ceb25c",
+      "tree": "0f9bf94ef85b9975aa5f836a8ed0a4a8753d7aee",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:15:04.345467+00:00"
+    },
+    "zplugin": {
+      "repository": "LIghtJUNction/zplugin",
+      "base": "592a1be623b81a775026c470e6f0efe91fcf78f3",
+      "candidate": "a2471fc4e52fa82a4395eec0d61ae4b583d287b2",
+      "head": "cb24ece40f49257b077da54091b0ecaebea7488a",
+      "tree": "7dd61d153e5516433dc217c6c5caa1a8534ca04d",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:23:10.681875+00:00"
+    },
+    "zcall-gui": {
+      "repository": "LIghtJUNction/zcall-gui",
+      "base": "3b9a0f4673c08a9aa259b52e02858c0a88f43f6b",
+      "candidate": "795a85044504e844d04575c44dd8b10da7384aa8",
+      "head": "b9e487dea5bc36453a1d292f9dca64479bf81dbb",
+      "tree": "0724c56da3e7503756308ca830ce32d2fafaba41",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:23:15.850127+00:00"
+    },
+    "zuse": {
+      "repository": "LIghtJUNction/zuse",
+      "base": "13be18166f9f1bdfb219da851c28b3319fdb7653",
+      "candidate": "617e9160a119a0b3ea13e8f51940119dd90b9f3b",
+      "head": "b2466b90ea43f0fdc0b59fb91c9cd6d49c387f8d",
+      "tree": "c38a620aa4a82bfb125d32bd343669f7b0977f50",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:23:21.093231+00:00"
+    },
+    "lmm": {
+      "repository": "TokenNotIncluded/lmm",
+      "base": "e04695efe394b8d8bc4bb7eff5c6f9a9f29463d0",
+      "candidate": "f42728281d15a8283cb152ee634a989e8c61aea8",
+      "head": "3f8f3898eef040cbcb7ee7c8d15ea9031f93acec",
+      "tree": "d47d67f8c2f455fba365b7f5588914448797dbef",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:23:26.594923+00:00"
+    },
+    "zrc": {
+      "repository": "LIghtJUNction/zrc",
+      "base": "237a5a939c6a9df647539451ff61a705af71d4ba",
+      "candidate": "9c0b07fe5f86f53217482679e29c694da4c02e43",
+      "head": "6947a092eed4d0b989551970f6178d4cca59326b",
+      "tree": "c603fea12195562f24cd021efe217be08ab44d3f",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:23:31.257069+00:00"
+    },
+    "zinput": {
+      "repository": "LIghtJUNction/zinput",
+      "base": "da22743e1ad16bedb79751c8e8bb71e63c45d197",
+      "candidate": "0918fb3637cff76bbe50623e7f706b17ea58914b",
+      "head": "b801edfcee8b107757fb450faf77dd93e4bf29f4",
+      "tree": "c74102b3b2ba226f098f6c1265736c3464b99492",
+      "published": true,
+      "verified": true,
+      "url": "https://github.com/LIghtJUNction/zinput/commit/b801edfcee8b107757fb450faf77dd93e4bf29f4",
+      "readback_verified": true,
+      "published_at": "2026-11-23T17:35:21.146697+00:00",
+      "ci": "[skip ci]; next formal release gate"
+    },
+    "OniMods": {
+      "repository": "LIghtJUNction/OniMods",
+      "base": "9ee0d1df7473e570b494b89d99902e6de6c7fb05",
+      "candidate": "98086b711569268836a7704e4cae3f949766af02",
+      "head": "7a4ae7f3389f43f625e678809069812b61039ee7",
+      "tree": "bb6266f3f7270ca78caad2f4da13426a097f47a0",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:35:48.354Z"
+    },
+    "zaccel": {
+      "repository": "LIghtJUNction/zaccel",
+      "base": "549faf7cd9657fb3b23a480ade5a2d93e2c9a39e",
+      "candidate": "0b0d6d7a089a72b59110a216d49f825b194c5895",
+      "head": "458e788cd14314dadedbd195f79491e10824f83a",
+      "tree": "20424e86cb34dd0598ad9d2f7398fd4f626ff7e3",
+      "readback_verified": true,
+      "ci": "[skip ci]; next formal release gate",
+      "published_at": "2026-11-23T17:35:54.244Z"
+    },
+    "zcalld": {
+      "repository": "LIghtJUNction/zcalld",
+      "base": "6eab1150e8d58d330583c1b3206bf91e7862dc9a",
+      "candidate": "6a9e889df48e0b6558a0cfc44d6f3e4ccb464dbf",
+      "head": "d8e75988b862060b9704769ad7404923b82337d9",
+      "tree": "3f2473d011195fd7edd68b47de7e5021fba19376",
+      "readback_verified": true,
+      "published_at": "2026-11-23T17:37:25.837Z",
+      "ci": "[skip ci]; next formal release gate"
+    },
+    "mechrevo-drivers": {
+      "repository": "LIghtJUNction/mechrevo-drivers",
+      "base": "2874af81c0cf59bdbe6b6e79e969ea17204e50c3",
+      "candidate": "c14bceb9dafed13c3418193f656d47a8915d2343",
+      "head": "37a16508dfdd6fb07f460c7679569171d071c604",
+      "tree": "3bec98a31cbabd20ab2c095263e2dcce98985442",
+      "readback_verified": true,
+      "published_at": "2026-11-23T17:37:33.382Z",
+      "ci": "[skip ci]; next formal release gate"
+    },
+    "lmm-api-source": {
+      "repository": "TokenNotIncluded/lmm-api-source",
+      "base": "b6179424adf622416c6ff8340f99ccb8658acef4",
+      "candidate": "aab987b26f5f39c3bbff2ed497b547852062554c",
+      "head": "6f81c6319ee4d283f21b2611ce14ade4be2df6a4",
+      "tree": "ccdd0b4f905b4f35b6c2b54b73a668ff30c932f3",
+      "readback_verified": true,
+      "published_at": "2026-11-23T17:38:49.348Z",
+      "ci": "[skip ci]; required native Linux Core interface gate added to next formal release",
+      "validation": "Locked metadata passed; sandbox lmm-core rustc SIGKILL without a completed interface check. Release packaging remains gated on hosted jobs1 cargo check --lib."
+    },
+    "zterm": {
+      "repository": "LIghtJUNction/zterm",
+      "base": "55e24949c3cf5773535215d81fed71e3364c4802",
+      "candidate": "7c8229daa775ccdd04bd10e27f8e4d1d350f9543",
+      "head": "4fc5aafd90d36146f4c1d9affa04e1877c1c4888",
+      "tree": "b6e8fc8b76de2c9a0fd68ad0f9a936ac17bdff37",
+      "readback_verified": true,
+      "published_at": "2026-11-23T17:39:28.612Z",
+      "ci": "[skip ci]; next formal release gate"
+    },
+    "zharness": {
+      "repository": "LIghtJUNction/zharness",
+      "base": "f2554ea288e04f69c985506f54845f6d7a268be8",
+      "candidate": "32ea814d9eb4df997869dac2ab81a64e93469190",
+      "head": "96635fac40980a4175ed6480dffec67f49439f0f",
+      "tree": "bd589967bdb9c2ad4429c51ba204feee3b83f160",
+      "readback_verified": true,
+      "published_at": "2026-11-23T17:40:47.353Z",
+      "ci": "[skip ci]; next formal release gate",
+      "validation": "Rust 1.99.1 all-features --tests: 133 passed, 0 failed, 0 ignored; 7 real Wasm tests included"
+    },
+    "ztype": {
+      "repository": "LIghtJUNction/ztype",
+      "base": "d61eb478e665fbf862fc2f58a37cb91fb9aa0162",
+      "candidate": "e3a44245456f26c12dd04403183b9fdbaf1ebce8",
+      "head": "dae32464655554545f57a07d5c3858532291d111",
+      "tree": "083d1d1b7da33f397cab925b3419ac98ad894ef2",
+      "readback_verified": true,
+      "published_at": "2026-11-23T17:42:58.242Z",
+      "ci": "[skip ci]; native Linux default-feature tests required by formal release",
+      "validation": "Full locked metadata and 22 desktop/plugins composition/plugin tests passed; default features blocked by existing native headers in sandbox."
+    },
+    "ztty": {
+      "repository": "LIghtJUNction/ztty",
+      "base": "310b124d45d653d3555ea3f66bb3457d3b2b87a3",
+      "candidate": "260e189fad6ba41d52fe1661727a7d3d19e10bce",
+      "head": "f51bf443dd5de1931ae18455054c4846a0b069d4",
+      "tree": "1df13e3f3ba190aaa0364f63caa5152b0658d5a4",
+      "readback_verified": true,
+      "published_at": "2026-11-23T18:21:15.416Z",
+      "ci": "[skip ci]; formal Release follows",
+      "validation": "Two fixture locks updated by real Cargo; both locked metadata and actual native cdylib builds passed on Rust 1.100.0. Prior 62 consumer tests and strict Clippy unchanged.",
+      "previous_publication": {
+        "repository": "LIghtJUNction/ztty",
+        "base": "963afbd7f9463f6de61a96e1968fdf26d3bc8990",
+        "candidate": "a9d5dede2b2b6b726ca0fd87786ed0f81e6125b8",
+        "head": "310b124d45d653d3555ea3f66bb3457d3b2b87a3",
+        "tree": "951c6c38d6c6f16a906d38ed0ece58a89d67e20c",
+        "readback_verified": true,
+        "published_at": "2026-11-23T17:45:31.710Z",
+        "ci": "[skip ci]; complete native Linux library gate required by formal release",
+        "validation": "62 focused tests, no_std and strict Clippy passed on final locks; earlier full-lib sandbox /tmp ownership failure retained."
+      }
+    },
+    "ssmcp": {
+      "repository": "LIghtJUNction/ssmcp",
+      "base": "54b461d8fa367899f8788669dca8523a87622a81",
+      "candidate": "8780194c59453121f54cd55cc20d2a4eb8ac6da1",
+      "previous_candidate": "db8743f5717023ca8a16086912bc9a60005e0994",
+      "head": "4c8b05c46c01cc9796edc443eb18deb5b6d99b8d",
+      "tree": "acc6faea65302c14e3d73ab2527c718bf7596070",
+      "readback_verified": true,
+      "published_at": "2026-11-23T18:10:11.865Z",
+      "ci": "[skip ci]; required strict Clippy and 4 native Linux test groups in formal Release",
+      "validation": "Rebased onto concurrent public main, both full locked metadata/fmt/diff passed, 23 Git lock sources and 6 gitlinks verified. Original lib-test and production Clippy received SIGKILL; behavioral and Clippy acceptance pending formal gate."
+    },
+    "oh-my-ztty": {
+      "repository": "LIghtJUNction/oh-my-ztty",
+      "base": "cef6c52c863578d4d08e43b934efb1065ecd58de",
+      "candidate": "4fe55aeb77fc7e72ec57c4cc487803f3ec1bf0c6",
+      "head": "b766c4bd9984b20c22bdacf10df973683fb97f4a",
+      "tree": "dbb302233577adcaa327334544ef0d2c9504b541",
+      "readback_verified": true,
+      "published_at": "2026-11-23T18:22:37.036Z",
+      "ci": "[skip ci]; formal Release follows",
+      "validation": "Updated terminal gitlink and its matching observed dependency lock to f51bf443; other six verified components unchanged.",
+      "previous_publication": {
+        "repository": "LIghtJUNction/oh-my-ztty",
+        "base": "b34de32ed007015872fbaf92ee55185dfd8e031d",
+        "candidate": "40067bcae2d4ec011c66f2893b463458bbc7996e",
+        "head": "cef6c52c863578d4d08e43b934efb1065ecd58de",
+        "tree": "8b774133fbb62eb4af0ccbbe4fc3214afa9a4c7a",
+        "readback_verified": true,
+        "published_at": "2026-11-23T18:11:37.206Z",
+        "ci": "[skip ci]; next Project Z formal release",
+        "validation": "Seven observed public heads match recorded lock and gitlinks; 5 gitlinks changed. No standalone suite binary release claimed."
+      }
+    }
+  },
+  "cohort_base": "2e32aacc3cd243aa7a4f43564e8e895ab3ba732c"
+}
