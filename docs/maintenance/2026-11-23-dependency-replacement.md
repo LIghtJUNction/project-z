@@ -2,7 +2,7 @@
 
 日期：2026-11-23。本计划把 Project Z 的协同维护落到依赖替换：通用底层能力由一个 z 库维护，上层项目调用它并删除相同实现。每批都交付可复用的底层提交、消费者适配、删除范围、真实锁文件及行为证据。
 
-## 本轮已经具备的基础
+## 首轮调查时已经具备的基础
 
 - 子模块归属保护补丁在隔离源码中完成：空目录或缺失目录仍检查保留的 Git 元数据是否属于另一份 checkout。原始协调基线为 `573a7070dbeb0101920fbe1bf137e7dcca80619d`，补丁提交为 `680773d664be3effc6b5d4ba69ea060a371e628e`，原始相关 Python/Git fixture 39 项通过。集成时使用当前公开主线，保留原始验证身份；详见 [归属检查报告](2026-11-23-submodule-ownership.md)。
 - zrun 的独立 P0 已有单线程 spawn/block_on/join/yield/timer、取消与关闭实现；设计提交 `b33e0d087102fdf8c33adc12fc2e49fe36a53dfb`，实现提交 `12e6421ddfc898658ab59f97e922979e85d8b597`。43 项常规测试、显式百万任务测试、35 项核心 Miri 检查、400 个独立比较样本通过正确性检查。120 秒短测完成 2,995 万个任务并结束于 active=0。性能普通/挑战门槛尚未达到；Loom、多线程、I/O 和 24 小时稳定性仍未完成。zrun 本轮未部署、未公开发布。
@@ -25,13 +25,37 @@
 
 zharness 的 `TaskBoard` 管理的是任务依赖、能力匹配和租约。其核心是 no_std、调用方提供缓冲区和时钟的同步状态机，目前没有内部异步执行器。接入 zrun 的合适位置是可选的 std 运行适配层：应用提交有界工作、等待结果、取消与计时；基础状态机继续保留原有无分配和调用方控制的语义。租约到期不能自动重放已经产生外部副作用的操作。[源码](https://github.com/LIghtJUNction/zharness/tree/8907262ce6c8494f2849f8e5abd84f7a3da2e405)
 
-ssmcp 的 `src/backend/opencode/cleanup.rs` 是可复用能力的具体候选：`Finalizers`、`Finalizer`、`DeferredWork`、`Shutdown` 管理异步与普通线程两类完成句柄，保证排队归档工作在运行时关闭时仍有归属，并在流完成后关闭事件日志。zrun 需要先提供有界阻塞池、明确的完成句柄及 drain 契约；然后消费者留下归档业务顺序，删除通用队列和等待实现。现有 `queued_archive_survives_runtime_shutdown_exactly_once` 行为必须保留。[源码](https://github.com/LIghtJUNction/ssmcp/blob/7bb087582e74e7b75cdb2e6997d61d826d5cebd8/src/backend/opencode/cleanup.rs)
+首轮基线中的 ssmcp `src/backend/opencode/cleanup.rs` 曾是可复用能力的具体候选：`Finalizers`、`Finalizer`、`DeferredWork`、`Shutdown` 管理异步与普通线程两类完成句柄，保证排队归档工作在运行时关闭时仍有归属，并在流完成后关闭事件日志。zrun 需要先提供有界阻塞池、明确的完成句柄及 drain 契约；然后消费者留下归档业务顺序，删除通用队列和等待实现。现有 `queued_archive_survives_runtime_shutdown_exactly_once` 行为必须保留。[源码](https://github.com/LIghtJUNction/ssmcp/blob/7bb087582e74e7b75cdb2e6997d61d826d5cebd8/src/backend/opencode/cleanup.rs)
+
+2026-11-24 复核时，公开主线 `b5fdceea9af1b14f6f178bbc1677969fd3ff73c9` 已删除嵌入式 OpenCode 等后端，上述路径和测试随之退役。后续应从当前 `src/worker/executor.rs` 的阻塞历史写入重新建立接入基线，保留捕获的提交 owner、先记录请求再派发、持久化结果以及派发后 unknown 不自动重放的语义。该候选仍需要有界 blocking 模块与新的行为验收；旧后端的测试记录只作为历史设计依据。[当前 worker 执行边界](https://github.com/LIghtJUNction/ssmcp/blob/b5fdceea9af1b14f6f178bbc1677969fd3ff73c9/src/worker/executor.rs)
 
 ssmcp 的主服务还使用 Tokio 网络、TLS/WebSocket、进程、信号、文件与同步设施。P0 zrun 没有 I/O reactor 或阻塞池，不能承担这些职责。后续适配可以按边界逐段交接，但需要有界消息和明确的运行域，不能直接在 zrun 中 poll 依赖 Tokio reactor 的 Future。`session/service.rs` 的进程组、guardian/Windows Job、认证和 epoch 判断属于业务资源归属，仍由 ssmcp 保管。[服务代码](https://github.com/LIghtJUNction/ssmcp/blob/7bb087582e74e7b75cdb2e6997d61d826d5cebd8/src/session/service.rs)
 
 zaccel 的 `wait_future` 也有通用 Future 驱动和等待，但同时必须调用 `wgpu::Device::poll` 并检测设备错误；它需要外部事件驱动接口和截止时间，不能只换一个 block_on 调用。CLI 的进程看门狗继续处理原生驱动调用可能阻塞的问题。[GPU 等待代码](https://github.com/LIghtJUNction/zaccel/blob/04be97d271c7d0db50b2856bec5cbf225e031f7a/src/gpu.rs)
 
-zrun 的具体接入设计、拟议 blocking API 和验收报告位于本轮 P0 源码交付中的 `docs/adoption.md`、`docs/design.md`、`docs/measurements/p0-linux-20261123.md`。它尚未公开，因此本轮不向消费者加入不可解析的 Git 依赖，也不以本地 path/registry patch 代替最终标准解析。
+zrun 的具体接入设计、拟议 blocking API 和验收报告位于本轮 P0 源码交付中的 `docs/adoption.md`、`docs/design.md`、`docs/measurements/p0-linux-20261123.md`。首轮交付时尚未公开，因此当时没有向消费者加入不可解析的 Git 依赖。公开仓库随后在同一 P0 基线上增加了预览提交 `beeea183b7dcbff7fe34ea0add9039d6058c2edb`；本轮通知优化候选仍未整合到该公开主线，也没有加入消费者生产依赖。后续保持默认分支来源规则，不以本地 path/registry patch 代替最终标准解析。
+
+## 2026-11-24 续进展（UTC+8）
+
+总仓最新已记录快照为 `2e32aac`，其 49 个仓库、82 个包、43 个 Rust 仓库 locked 解析及 150 项协调测试的范围见[发行快照记录](2026-11-23-release-cohort.md)。下述增量候选尚不在该快照中，不能把既有全图记录当作这些新提交的验收。
+
+### ssmcp 的剩余 hex 调用
+
+公开 `b799d0c` 已将 `src/hex.rs` 接入 zhex，并随 `b5fdcee` 保留在当前上游。续作基于该上游提交，继续迁移 55 处生产或测试夹具的字节转小写 hex 调用；这包括身份随机值、摘要与有限前缀的编码。随机源、哈希输入、截断长度、命名空间和上层校验规则由原调用者继续负责。提供者是锁文件中实际的 zhex `52515207f9d97a2580182169b611b4763366b328`，开发声明仍为默认分支 Git URL。
+
+首轮候选有 58 处：其中两处随上游旧后端删除，一处 release checksum 测试保留独立的格式化预期。hex 边界检查同样使用独立参考，覆盖所有字节值、非对齐切片和 21 个长度；没有把生产 codec 用来计算这些测试的预期值。未使用的 `qrcodegen` 从真实依赖及根、桌面两份锁文件中移除；Base64 仍有实际传递消费者，本轮未增加另一份实现。
+
+已推送的源码为 `d51f6b44e2a30f12a217d7378af17b934a3bcd10`，含两项取消测试修复：等待整个任务清理完成再检查 socket；让超时与取消分别使用独立请求夹具，并给就绪等待设置上限。它保留了上游的原生后端调整、lint 修复和历史归属契约。相对 `b5fdcee`，这批源码、测试和锁文件共新增 97 行、删除 186 行；Rust 部分净减少 74 行，提供者新增代码为零。行数只用于说明维护范围，未据此宣称性能改善。
+
+该精确提交的严格 Clippy、格式检查、四项已有 codec 测试与桌面工作区完整 locked metadata 已通过；两项取消测试按源码等值复用既有通过记录。完整服务测试编译收到 SIGKILL，四次原生 Cargo 批次因共享锁占用而没有启动；完整服务测试仍未验收。详见 [消费者验证报告](https://github.com/LIghtJUNction/ssmcp/blob/c6c95dafcfeda7eb9bacbeace1658c0b4c317d62/docs/reports/zhex-adoption-20261124/README.md)。随后主线上游已独立合入其他代码至 `b2f7858`，这些新增变更不在本批精确源码检查的覆盖范围。本续进展不推进新的聚合 gitlink。
+
+### zrun 通知优化候选
+
+实现候选 `156188c1a22fa70d50ab89e937ee69425223619d` 让执行器先声明准备休眠，再检查任务与定时器；只有命中该休眠状态的通知才进入线程唤醒路径。任务布局、队列、每轮 64 次任务预算和工作负载保持相同。AcqRel 原子交换保留通知与状态发布顺序，三个 Loom 模型覆盖实际通知握手；43 项常规测试和 14 项执行器 Miri 检查通过。
+
+10 轮、4 个任务规模、5 个场景、2 个修订组成的 400 个独立进程样本全部通过正确性核对，顺序交替，保留全部样本。与原 P0 基线相比，1 千、1 万、100 万任务的自唤醒吞吐中位数分别提高约 14.9%、13.8%、10.9%，各自配对 95% 区间完整高于 1；10 万任务的区间跨过 1，结论仍不确定。spawn 与每任务内存没有明确改善。此次比较的两端都是 zrun，首次相对 Tokio 未达标的结论没有被改写。
+
+完整文档候选为 `0240c304c1ef8428da0268b89cb66f083333604d`，源码和原始证据保留在本轮交付包，开发机隔离源码工作树干净、没有配置远端。这一候选没有推送、发布或部署；已存在的公开 P0 预览与它分别记录。局部 Loom 不覆盖未来多 worker 的全部状态机，24 小时稳定性、I/O/TCP 和跨平台门槛仍待实际完成。
 
 ## 每批可审核的交付
 
@@ -44,7 +68,7 @@ zrun 的具体接入设计、拟议 blocking API 和验收报告位于本轮 P0 
 
 共享开发机上的 Cargo 仍使用统一 target 和一个外层锁；本轮不干预其他会话持有的锁或正在进行的编译。能够在沙箱复现的下载、CPU 测试和统计分析留在沙箱，开发机主要承担必要的设备验收。
 
-## 全部已登记仓库的传播范围
+## 首轮 catalog 中已登记仓库的传播范围
 
 下表由上述固定 catalog 的跨仓 Cargo 引用与 `requires` 关系计算。包含 normal/build/dev 引用；间接数去掉自身。运行时/安装关系可能形成互相依赖的组件组，需要成组验收，不能把这张图误读为纯 Cargo DAG。表中的零只说明当前记录未发现消费者，不证明没有外部用户。计划开始时仍要运行现有 `impact` 并补齐实际漏记关系。
 
@@ -97,4 +121,4 @@ zrun 的具体接入设计、拟议 blocking API 和验收报告位于本轮 P0 
 | zuse-std | extension | zuse | 0 | 0 |
 | zvte | library | — | 1 | 3 |
 
-完整消费者名称和计算口径保存在 [JSON 清单](2026-11-23-dependency-inventory.json)。本次只更新协调工具和计划文档；catalog、聚合 gitlink 和子仓工作区的未验证变动不随此文档自动接收。
+完整消费者名称和计算口径保存在 [JSON 清单](2026-11-23-dependency-inventory.json)。上表保留首轮固定快照；最新快照与本次增量分别见前文。catalog、聚合 gitlink 和子仓工作区的未验证变动不随此文档自动接收。
