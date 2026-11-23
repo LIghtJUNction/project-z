@@ -136,3 +136,6 @@
 [submodule "zmem"]
 	path = zmem
 	url = https://github.com/LIghtJUNction/zmem.git
+[submodule "zchat"]
+	path = zchat
+	url = https://github.com/LIghtJUNction/zchat.git

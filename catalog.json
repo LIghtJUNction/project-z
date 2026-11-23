@@ -175,6 +175,20 @@
       ]
     },
     {
+      "name": "zchat",
+      "path": "zchat",
+      "url": "https://github.com/LIghtJUNction/zchat.git",
+      "branch": "main",
+      "commit": "8da8def04b0529a6f9a03709be8e043f043ea57b",
+      "role": "application",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": [
+        "zdistro"
+      ]
+    },
+    {
       "name": "zclap",
       "path": "zclap",
       "url": "https://github.com/LIghtJUNction/zclap.git",
@@ -3715,6 +3729,262 @@
             "std"
           ],
           "source": "git+https://github.com/LIghtJUNction/zplugin.git",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zchat",
+      "version": "0.1.4",
+      "repository": "zchat",
+      "manifest": "zchat/Cargo.toml",
+      "workspace": "zchat",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {
+        "default": [
+          "gui"
+        ],
+        "gui": [
+          "dep:zgpui",
+          "zgpui/native"
+        ],
+        "linux-software": [
+          "gui",
+          "zgpui/linux-software"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "zchat-core",
+          "alias": null,
+          "requirement": "=0.1.4",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zchat/crates/zchat-core"
+        },
+        {
+          "name": "zchat-plugin-api",
+          "alias": null,
+          "requirement": "=0.1.4",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zchat/crates/zchat-plugin-api"
+        },
+        {
+          "name": "zchat-providers",
+          "alias": null,
+          "requirement": "=0.1.4",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zchat/crates/zchat-providers"
+        },
+        {
+          "name": "zgpui",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": true,
+          "default_features": true,
+          "features": [],
+          "source": "git+https://github.com/LIghtJUNction/zgpui.git",
+          "path": null
+        },
+        {
+          "name": "zmcpio",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "std"
+          ],
+          "source": "git+https://github.com/LIghtJUNction/zmcpio.git",
+          "path": null
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "macros",
+            "std"
+          ],
+          "source": "git+https://github.com/LIghtJUNction/zplugin.git",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zchat-core",
+      "version": "0.1.4",
+      "repository": "zchat",
+      "manifest": "zchat/crates/zchat-core/Cargo.toml",
+      "workspace": "zchat",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {
+        "default": [],
+        "std": []
+      },
+      "dependencies": [
+        {
+          "name": "zconv",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "git+https://github.com/LIghtJUNction/zconv.git",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zchat-plugin-api",
+      "version": "0.1.4",
+      "repository": "zchat",
+      "manifest": "zchat/crates/zchat-plugin-api/Cargo.toml",
+      "workspace": "zchat",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {
+        "default": [],
+        "std": [
+          "zplugin/std"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "alloc",
+            "macros"
+          ],
+          "source": "git+https://github.com/LIghtJUNction/zplugin.git",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "zchat-providers",
+      "version": "0.1.4",
+      "repository": "zchat",
+      "manifest": "zchat/crates/zchat-providers/Cargo.toml",
+      "workspace": "zchat",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": true,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "tungstenite",
+          "alias": null,
+          "requirement": "^0.30.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "handshake"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "zchat-core",
+          "alias": null,
+          "requirement": "=0.1.4",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zchat/crates/zchat-core"
+        },
+        {
+          "name": "zchat-plugin-api",
+          "alias": null,
+          "requirement": "=0.1.4",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zchat/crates/zchat-plugin-api"
+        },
+        {
+          "name": "zplugin",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "macros",
+            "std"
+          ],
+          "source": "git+https://github.com/LIghtJUNction/zplugin.git",
+          "path": null
+        },
+        {
+          "name": "zsys",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "dylib"
+          ],
+          "source": "git+https://github.com/LIghtJUNction/zsys.git",
           "path": null
         }
       ]

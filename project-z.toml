@@ -102,6 +102,10 @@ requires = ["zuse"]
 [repositories.zmem]
 role = "application"
 
+[repositories.zchat]
+role = "application"
+requires = ["zdistro"]
+
 # Authoritative product versions for non-Cargo repositories.
 [scheduled.version_manifests]
 oh-my-ztty = "VERSION"

@@ -1,0 +1,91 @@
+diff --git i/oh-my-ztty w/oh-my-ztty
+index 2fa1b47..adfbdc6 160000
+--- i/oh-my-ztty
++++ w/oh-my-ztty
+@@ -1 +1 @@
+-Subproject commit 2fa1b47d41fbc441b482d7c4c23beac0c1e903e4
++Subproject commit adfbdc6e15c718ddc115d7250d243b3674c040c0
+diff --git i/ssmcp w/ssmcp
+index dde2938..f2e9dcf 160000
+--- i/ssmcp
++++ w/ssmcp
+@@ -1 +1 @@
+-Subproject commit dde2938e050e1d9f8186a600f57dbb67e12de211
++Subproject commit f2e9dcf22df7d37df7672bb7d41d1bcf7e6fc690
+diff --git i/zcall w/zcall
+index 8dd30a9..aaac542 160000
+--- i/zcall
++++ w/zcall
+@@ -1 +1 @@
+-Subproject commit 8dd30a922a0aedbe821f610649b1ab26078d1882
++Subproject commit aaac54236f7ce0f4e1559c6e3b78d680d9dabf41
+diff --git i/zcalld w/zcalld
+index 61df8ac..d22ccce 160000
+--- i/zcalld
++++ w/zcalld
+@@ -1 +1 @@
+-Subproject commit 61df8ac1c4e135f07313e6984dc389f49acc5afe
++Subproject commit d22ccce779111ab775ec058062a0e1e506d8f0a4
+diff --git i/zclap w/zclap
+index 4d87f3a..a4c7e6f 160000
+--- i/zclap
++++ w/zclap
+@@ -1 +1 @@
+-Subproject commit 4d87f3ae3743e81509d5ac5500909955667c860f
++Subproject commit a4c7e6f3e0ff860de701573117248fe8538c71e5
+diff --git i/zgpui w/zgpui
+index 174a8b7..eeb909e 160000
+--- i/zgpui
++++ w/zgpui
+@@ -1 +1 @@
+-Subproject commit 174a8b73087deeac2ecfa036cad8bddba71c612f
++Subproject commit eeb909e956ed0cff05e14525d4f29f5a78c553ec
+diff --git i/zharness w/zharness
+index 5f9a9f5..8907262 160000
+--- i/zharness
++++ w/zharness
+@@ -1 +1 @@
+-Subproject commit 5f9a9f58f090326bf2d43f4df2cc90c1bc674c21
++Subproject commit 8907262ce6c8494f2849f8e5abd84f7a3da2e405
+diff --git i/zhex w/zhex
+index 09dfaa0..9fc8de3 160000
+--- i/zhex
++++ w/zhex
+@@ -1 +1 @@
+-Subproject commit 09dfaa0adee628d0714e2f9e96921555e619b2f6
++Subproject commit 9fc8de3901b2726e650537f4a6330355e8a965e7
+diff --git i/zi18n w/zi18n
+index cdff8de..755549f 160000
+--- i/zi18n
++++ w/zi18n
+@@ -1 +1 @@
+-Subproject commit cdff8dea19e97268d296afa827767ea689420591
++Subproject commit 755549f82fa513c4e4f2f5aaf6fdeea8da4a6347
+diff --git i/zmcpio w/zmcpio
+index c114a5a..65e8184 160000
+--- i/zmcpio
++++ w/zmcpio
+@@ -1 +1 @@
+-Subproject commit c114a5ae9f925c64f3b090b8524016cbb90b6cff
++Subproject commit 65e8184ae8adf374b0d727c80fcfda609bc8acbf
+diff --git i/ztype w/ztype
+index bb2c1dc..a64866a 160000
+--- i/ztype
++++ w/ztype
+@@ -1 +1 @@
+-Subproject commit bb2c1dc71a0f1dc77b56b0bc1bc7fd3cdb2501f8
++Subproject commit a64866a89d55a8be12899cf1f0ec187e6364fc7b
+diff --git i/zuse w/zuse
+index b5ebbd3..f8fb142 160000
+--- i/zuse
++++ w/zuse
+@@ -1 +1 @@
+-Subproject commit b5ebbd3679af215706cbd73b17045e014f5e0524
++Subproject commit f8fb142005177b9dcaa8a864c15a2182ec0b0af3
+diff --git i/zuse-skills w/zuse-skills
+index fce48d7..d73a338 160000
+--- i/zuse-skills
++++ w/zuse-skills
+@@ -1 +1 @@
+-Subproject commit fce48d78dcbedbecaaa56a09fdf11b12b9a6b09a
++Subproject commit d73a338a33fe7972a93b1a04ab1f1a9e2ae0f10a
