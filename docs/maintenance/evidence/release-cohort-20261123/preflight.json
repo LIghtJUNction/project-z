@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "baseline_root": "dbeecf0c038d9184825e6fb2a25dfdc5eb951e40",
+  "validation_scope": "Local release preflight for the selected source cohort; hosted release jobs run after this commit is published.",
+  "toolchain": "Rust/Cargo 1.100.0",
+  "inventory": {
+    "repositories": 49,
+    "packages": 82,
+    "recursive_sources": 113,
+    "all_gitlinks_match_index": true,
+    "unclean_prefixes": []
+  },
+  "gates": [
+    {
+      "step": "record",
+      "command": [
+        "python3",
+        "-B",
+        "scripts/project_z.py",
+        "sync",
+        "--record"
+      ],
+      "exit_code": 0,
+      "seconds": 0.922,
+      "ended_utc": "2026-11-23T16:03:31.593576+00:00",
+      "stdout": "Recorded 49 repositories and 82 packages; run check and resolve --all\n",
+      "stderr": ""
+    },
+    {
+      "step": "check",
+      "command": [
+        "python3",
+        "-B",
+        "scripts/project_z.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 130.486,
+      "ended_utc": "2026-11-23T16:05:42.080223+00:00",
+      "stdout": "OK: 49 repositories, 82 packages; Git sources, locks and latest default heads agree\n",
+      "stderr": ""
+    },
+    {
+      "step": "resolve",
+      "command": [
+        "python3",
+        "-B",
+        "scripts/project_z.py",
+        "resolve",
+        "--all"
+      ],
+      "exit_code": 0,
+      "seconds": 46.704,
+      "ended_utc": "2026-11-23T16:06:28.790098+00:00",
+      "stdout": "OK: locked Git sources resolved in 43 repositories\n",
+      "stderr": ""
+    }
+  ],
+  "coordinator_tests": {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 179.644,
+    "utc": "2026-11-23T15:51:18.082228+00:00",
+    "tests": 150
+  },
+  "coordinator_test_log_sha256": {
+    "coordinator-tests.stdout": "7603abdb445209feb4afcf9167f1d48dc0a4ca37fb00c254b43ab9a780b5afd1",
+    "coordinator-tests.stderr": "2966824c91a9add8f5c2feb079031752a2270e932105cc17c7ed3f60c4865b66"
+  },
+  "source_file_sha256": {
+    "scripts/project_z.py": "907ae962cf189676f61754e1c6db0fee3fb39049d6a437e8fd2ab58a6f196663",
+    "scripts/release.py": "87d6015c2c2e619f41fe2b7bf9a92f9b2875cc691f401bd1d0c97b70d4b1a5ea",
+    "scripts/release_projection.py": "7df4df89eb8401aefa8124b45461a7c35df17fa0f7d6733f6eccf4a00cae63f2",
+    "scripts/release_receipts.py": "2fb7c5949900879de718022a17eddb82d0d5645d9f3752a881e5d24e493802f6",
+    "project-z.toml": "1d736d3ff4ef99e1f4b452a53ceddf6298b96329b8a8919b8c83f0e3765bc8bb",
+    ".gitmodules": "97058774d3e25cf469b6ecbeed7433fc2cf90189a396b36e6a24de1653f403d2",
+    "catalog.json": "c6089c46977f68e555968c459a8ada876c402a778973014bd1e03a41a8fa22c8",
+    ".github/workflows/ci.yml": "6597b67fe201b3d1777e5611118ef2d2f4a0b7d6fc7f4eb47811958d750a62f3",
+    ".github/workflows/release.yml": "59795479bf5623d424d8140697abe491e969fcb714f8a69164e5e8c75bec57c5",
+    "ztype/.github/actions/setup-linux/action.yml": "fc9802b2a1029c519b9765bee840ac3b199e43923e51f94f9ab63d5be9c8d749"
+  },
+  "dedup_proof_sha256": "7606d6f816a0cdcb6025e544e5e48707068f58d92cd79d994b12b16c29162220",
+  "hosted_release_status": "Not executed at this source checkpoint; formal release workflow retains failure gates before packaging and publication."
+}

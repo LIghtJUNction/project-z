@@ -1,0 +1,19 @@
+
+running 9 tests
+test tests::counters_round_trip_above_javascript_integer_precision ... ok
+test tests::observer_and_stale_generation_never_execute_commands ... ok
+test tests::event_retention_is_bounded_and_a_missing_cursor_starts_live ... ok
+test tests::delivery_rechecks_authority_and_preserves_uncertain_command_effects ... ok
+test tests::oversized_event_does_not_advance_the_cursor_or_evict_retained_events ... ok
+test tests::request_json_cannot_supply_an_owner_or_authentication_context ... ok
+test tests::response_validation_rejects_late_or_mismatched_results_and_bad_pages ... ok
+test tests::successful_native_receipt_is_preserved_without_claiming_completion ... ok
+test tests::request_arguments_and_raw_frames_are_bounded ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

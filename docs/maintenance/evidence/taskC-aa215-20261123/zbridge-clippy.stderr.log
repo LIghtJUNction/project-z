@@ -1,0 +1,8 @@
+    Checking serde_core v1.0.229
+    Checking itoa v1.0.19
+    Checking memchr v2.8.3
+    Checking zmij v1.0.23
+    Checking serde v1.0.229
+    Checking serde_json v1.0.154
+    Checking zbridge v0.1.0 (/workspace/scratch/ad6d3de008b0/pz-maintenance-integration-20261123/zbridge)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.93s

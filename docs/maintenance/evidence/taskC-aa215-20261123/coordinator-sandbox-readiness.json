@@ -1,0 +1,133 @@
+{
+  "updated_at": "2026-11-23T14:59:40.443907+00:00",
+  "root_head": "dbeecf0c038d9184825e6fb2a25dfdc5eb951e40",
+  "status": "BLOCKED_SOURCE_COHORT_NOT_RELEASE_READY",
+  "registered_sources": 46,
+  "source_download_failures": 0,
+  "inventory_packages": 73,
+  "nested_initialized": 51,
+  "nested_download_failures": 0,
+  "nested_blocked_stale_pins": [
+    {
+      "path": "zcall-gui/vendor/zgpui",
+      "pinned": "eeb909e956ed0cff05e14525d4f29f5a78c553ec",
+      "expected": "d34c41f79ddab343e7468c5192885a82ca487687",
+      "canonical": "zgpui"
+    },
+    {
+      "path": "oh-my-ztty/components/ztty/crates/zgpui",
+      "pinned": "eeb909e956ed0cff05e14525d4f29f5a78c553ec",
+      "expected": "d34c41f79ddab343e7468c5192885a82ca487687",
+      "canonical": "zgpui"
+    },
+    {
+      "path": "oh-my-ztty/components/ztty/crates/zterm",
+      "pinned": "c0860ae44dbf5dedeaea5719449004b8bb1ec65f",
+      "expected": "f1da2db1613f97d613ed98b7f3e8cae231e5eae1",
+      "canonical": "zterm"
+    },
+    {
+      "path": "oh-my-ztty/components/ssmcp",
+      "pinned": "87c4a17faf0dd2c140cb707ec59b1f05725f06f0",
+      "expected": "7bb087582e74e7b75cdb2e6997d61d826d5cebd8",
+      "canonical": "ssmcp"
+    },
+    {
+      "path": "zmcl/vendor/zgpui",
+      "pinned": "eeb909e956ed0cff05e14525d4f29f5a78c553ec",
+      "expected": "d34c41f79ddab343e7468c5192885a82ca487687",
+      "canonical": "zgpui"
+    },
+    {
+      "path": "ztty/crates/zgpui",
+      "pinned": "eeb909e956ed0cff05e14525d4f29f5a78c553ec",
+      "expected": "d34c41f79ddab343e7468c5192885a82ca487687",
+      "canonical": "zgpui"
+    },
+    {
+      "path": "ztty/crates/zterm",
+      "pinned": "c0860ae44dbf5dedeaea5719449004b8bb1ec65f",
+      "expected": "f1da2db1613f97d613ed98b7f3e8cae231e5eae1",
+      "canonical": "zterm"
+    },
+    {
+      "path": "zcalld/apps/zcall-gui/vendor/zgpui",
+      "pinned": "eeb909e956ed0cff05e14525d4f29f5a78c553ec",
+      "expected": "d34c41f79ddab343e7468c5192885a82ca487687",
+      "canonical": "zgpui"
+    },
+    {
+      "path": "ztype/vendor/zgpui",
+      "pinned": "eeb909e956ed0cff05e14525d4f29f5a78c553ec",
+      "expected": "d34c41f79ddab343e7468c5192885a82ca487687",
+      "canonical": "zgpui"
+    }
+  ],
+  "gate_results": [
+    {
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "check"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 5.50024693999876
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/project_z.py",
+        "resolve",
+        "--all"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 2.933108175999223
+    }
+  ],
+  "core_checkouts": {
+    "zconv": {
+      "head": "f78b97b7065bbb7cf9ddfd0914d7f2296bbfe712",
+      "worktree_status": " M fuzz/Cargo.lock\n",
+      "status_exit": 0
+    },
+    "zclap": {
+      "head": "a4c7e6f3e0ff860de701573117248fe8538c71e5",
+      "worktree_status": "",
+      "status_exit": 0
+    },
+    "zhex": {
+      "head": "9fc8de3901b2726e650537f4a6330355e8a965e7",
+      "worktree_status": "",
+      "status_exit": 0
+    },
+    "zfetch": {
+      "head": "f0614f3b76eca222f4b3880f8dd1707d1308f098",
+      "worktree_status": "",
+      "status_exit": 0
+    },
+    "zcall": {
+      "head": "aaac54236f7ce0f4e1559c6e3b78d680d9dabf41",
+      "worktree_status": "",
+      "status_exit": 0
+    },
+    "zmcpio": {
+      "head": "89a247ac274bcd96b760dd9e7dcb0d4d924a901e",
+      "worktree_status": "",
+      "status_exit": 0
+    }
+  },
+  "root_worktree_status": " M catalog.json\n M docs/PROJECTS.md\n M lmm-api-source\n M ssmcp\n m zconv\n M zgpui\n M zterm\n",
+  "toolchain_root": "/workspace/scratch/e498b1cce251/project-z-toolchain",
+  "zfetch_make_check": {
+    "exit_code": 2,
+    "receipt": "zfetch-make-check.json"
+  },
+  "zfetch_cli_normalized_term": {
+    "exit_code": 1,
+    "receipt": "zfetch-cli-xterm.json",
+    "remaining_environment_dependency": "/sys/devices/system/cpu/online is absent"
+  },
+  "committed": false,
+  "pushed": false,
+  "published": false
+}

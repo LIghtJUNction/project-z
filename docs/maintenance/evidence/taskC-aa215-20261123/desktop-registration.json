@@ -1,0 +1,49 @@
+{
+  "observed_at": "2026-11-23T15:22:08.462526+00:00",
+  "source_commit": "7bb087582e74e7b75cdb2e6997d61d826d5cebd8",
+  "tracked_files": [
+    {
+      "path": "apps/ssmcp-desktop/Cargo.toml",
+      "git_tree_entry": "100644 blob b1827ba799daa58ec9dd71d88f617b254a785330\tapps/ssmcp-desktop/Cargo.toml",
+      "sha256": "e82e93adc079257f773bc57876be4a0ecab9b5e3e689da3db361ce04ff885944",
+      "bytes": 1171
+    },
+    {
+      "path": "apps/ssmcp-desktop/Cargo.lock",
+      "git_tree_entry": "100644 blob 986f9e48869edc29b842c5fceba495013d52d45b\tapps/ssmcp-desktop/Cargo.lock",
+      "sha256": "6acba3c0706f23d107f921f9e83f124a09cfab85c3325456136dbf28ca041a39",
+      "bytes": 73206
+    }
+  ],
+  "manifest_package": {
+    "name": "ssmcp-desktop",
+    "version": "0.1.0",
+    "edition": "2024",
+    "rust-version": "1.100",
+    "publish": false,
+    "description": "A native, capability-driven desktop client for existing ssmcp sessions",
+    "license": "MIT"
+  },
+  "independent_workspace": {
+    "resolver": "3"
+  },
+  "same_repository_dependency": {
+    "path": "../.."
+  },
+  "observed_zgpui_dependency_before_consumer_fix": {
+    "git": "https://github.com/LIghtJUNction/zgpui.git",
+    "rev": "d34c41f79ddab343e7468c5192885a82ca487687",
+    "default-features": false,
+    "features": [
+      "native",
+      "bridge"
+    ]
+  },
+  "registered_manifests": [
+    "Cargo.toml",
+    "apps/ssmcp-desktop/Cargo.toml"
+  ],
+  "existing_role_and_runtime_requires_preserved": true,
+  "committed_catalog_omits_desktop": true,
+  "validation": "Existing repositories() reads both manifest entries. No desktop Cargo commands or consumer mutations performed. Final inventory and locked resolution belong to coordinator with the updated ssmcp commit."
+}

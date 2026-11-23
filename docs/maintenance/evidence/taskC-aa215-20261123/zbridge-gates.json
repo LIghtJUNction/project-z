@@ -1,0 +1,90 @@
+{
+  "source_commit": "1cfeb5b1f11c26c35cf7456c9b8b60d1f2d5d8de",
+  "started_at": "2026-11-23T15:12:47.263777+00:00",
+  "scope": "sandbox, zbridge existing peripheral-free gates",
+  "target": "/var/tmp/project-z-cargo-target",
+  "outer_lock": "/var/tmp/project-z-cargo-target/.project-z-cargo-owner.lock",
+  "rustc": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+  "lock_sha256_before": "87827aba6a44bbc7ac08d20b7c6bddcdce2b283d3f59f6360915090bf5cda1f7",
+  "commands": [
+    {
+      "name": "fmt",
+      "command": [
+        "/workspace/scratch/e498b1cce251/project-z-toolchain/rustup/toolchains/1.100.0-x86_64-unknown-linux-gnu/bin/cargo",
+        "fmt",
+        "--all",
+        "--",
+        "--check"
+      ],
+      "cwd": "/workspace/scratch/ad6d3de008b0/pz-maintenance-integration-20261123/zbridge",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.2019241640009568,
+      "stdout": {
+        "path": "zbridge-fmt.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "zbridge-fmt.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "name": "test",
+      "command": [
+        "/workspace/scratch/e498b1cce251/project-z-toolchain/rustup/toolchains/1.100.0-x86_64-unknown-linux-gnu/bin/cargo",
+        "test",
+        "--locked",
+        "--offline",
+        "--all-targets"
+      ],
+      "cwd": "/workspace/scratch/ad6d3de008b0/pz-maintenance-integration-20261123/zbridge",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 6.587629036002909,
+      "stdout": {
+        "path": "zbridge-test.stdout.log",
+        "sha256": "fae813143ee40862f2e2495ac4a17ae557c420598f8fefee4fc11bde1856ba41",
+        "bytes": 945
+      },
+      "stderr": {
+        "path": "zbridge-test.stderr.log",
+        "sha256": "13224edc3453c09f8775d32d4862d2526a71e307790a188f9d63fe893d21ee7f",
+        "bytes": 787
+      }
+    },
+    {
+      "name": "clippy",
+      "command": [
+        "/workspace/scratch/e498b1cce251/project-z-toolchain/rustup/toolchains/1.100.0-x86_64-unknown-linux-gnu/bin/cargo",
+        "clippy",
+        "--locked",
+        "--offline",
+        "--all-targets",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "cwd": "/workspace/scratch/ad6d3de008b0/pz-maintenance-integration-20261123/zbridge",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 3.0217276330004097,
+      "stdout": {
+        "path": "zbridge-clippy.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "zbridge-clippy.stderr.log",
+        "sha256": "65509ad3b1d3c258a87887225ce3b4fe86731a82909bad577bb655f56684331d",
+        "bytes": 351
+      }
+    }
+  ],
+  "lock_sha256_after": "87827aba6a44bbc7ac08d20b7c6bddcdce2b283d3f59f6360915090bf5cda1f7",
+  "source_status": "",
+  "completed_at": "2026-11-23T15:12:57.149884+00:00",
+  "status": "passed"
+}

@@ -1,0 +1,60 @@
+{
+  "observed_at": "2026-11-23T15:18:29.610790+00:00",
+  "root_baseline": "dbeecf0c038d9184825e6fb2a25dfdc5eb951e40",
+  "branch": "task/astra-maintenance-20261123",
+  "checks": {
+    "registered_repository_count": 47,
+    "existing_gitlinks_preserved": 46,
+    "added_gitlink": {
+      "zbridge": "1cfeb5b1f11c26c35cf7456c9b8b60d1f2d5d8de"
+    },
+    "zbridge_registry_entry": {
+      "name": "zbridge",
+      "path": "zbridge",
+      "url": "https://github.com/LIghtJUNction/zbridge.git",
+      "branch": "main",
+      "commit": "1cfeb5b1f11c26c35cf7456c9b8b60d1f2d5d8de",
+      "role": "library",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    "zbridge_ownership_and_checkout": "passed using existing verify_source_checkout",
+    "zbridge_status": "",
+    "protected_files_unchanged": [
+      "catalog.json",
+      "docs/PROJECTS.md",
+      "scripts/project_z.py",
+      "tests/test_recursive_sources.py",
+      "tests/test_project_z.py",
+      "tests/test_maintenance.py"
+    ],
+    "ssmcp_source_commit": "7bb087582e74e7b75cdb2e6997d61d826d5cebd8",
+    "ssmcp_nested_gitlink": "160000 commit 1cfeb5b1f11c26c35cf7456c9b8b60d1f2d5d8de\tcrates/zbridge"
+  },
+  "zbridge_manifest": {
+    "version": "0.1.0",
+    "rust_version": "1.85",
+    "dependencies": {
+      "serde": {
+        "version": "1",
+        "features": [
+          "derive"
+        ]
+      },
+      "serde_json": "1"
+    }
+  },
+  "scope": "registration and checkout validation; no full graph inventory/check/resolve executed",
+  "harness_setup_attempts": [
+    {
+      "status": "failed before checks",
+      "reason": "scripts directory absent from import path; cargo_versions not found"
+    },
+    {
+      "status": "corrected",
+      "change": "add scripts to sys.path; no repository source change"
+    }
+  ]
+}

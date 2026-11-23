@@ -1,0 +1,31 @@
+{
+  "job_id": "e968dedf4e63a140c6b2d941182288ad-972",
+  "exit_code": 2,
+  "running": false,
+  "stdout_eof": true,
+  "stderr_eof": true,
+  "stderr": "",
+  "command": [
+    "python3",
+    "-B",
+    "scripts/maintenance.py",
+    "--require-catalog",
+    "--workers",
+    "4",
+    "--timeout",
+    "15",
+    "--owner",
+    "LIghtJUNction",
+    "--output",
+    "docs/maintenance/evidence/taskC-aa215-20261123/remote-audit.json",
+    "--report",
+    "docs/maintenance/evidence/taskC-aa215-20261123/remote-audit.md"
+  ],
+  "cwd": "/home/lightjunction/Documents/GITHUB/project_z/dist/pz-maintenance-integration-20261123",
+  "copied_report": {
+    "source_path": "project_z/dist/pz-maintenance-integration-20261123/docs/maintenance/evidence/taskC-aa215-20261123/remote-audit.json",
+    "bytes": 20161,
+    "sha256": "2cd9e899b453a6024a86c78e08cfe80fe5794b593362c170147b740d96cfa288"
+  },
+  "scope": "Observed the existing remote job and copied its complete text evidence; did not rerun the audit."
+}

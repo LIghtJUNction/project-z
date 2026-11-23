@@ -1,0 +1,139 @@
+{
+  "observed_at": "2026-11-23T15:18:49.906513+00:00",
+  "scope": "planning from committed catalog.json; repository_impact function only, no Cargo metadata or CLI impact run",
+  "catalog_sha256": "4714ce7c8d46ddca09d41747f3e558f2a94f765a17e55a3bcef5ade278a7d5e6",
+  "repository_count": 46,
+  "package_count": 73,
+  "changed_repositories": [
+    "zconv",
+    "zclap",
+    "zhex",
+    "zfetch",
+    "zcall",
+    "zmcpio",
+    "zgpui",
+    "zterm",
+    "ssmcp"
+  ],
+  "affected_repositories": [
+    "OniMods",
+    "lmm",
+    "lmm-api-source",
+    "mechrevo-drivers",
+    "oh-my-ztty",
+    "ssmcp",
+    "zcall",
+    "zcall-gui",
+    "zcall-omarchy",
+    "zcalld",
+    "zcalld-compat",
+    "zclap",
+    "zclick",
+    "zconv",
+    "zdot",
+    "zfetch",
+    "zgpui",
+    "zharness",
+    "zhex",
+    "zmcl",
+    "zmcpio",
+    "zrc",
+    "zterm",
+    "ztty",
+    "ztype",
+    "zuse",
+    "zuse-std"
+  ],
+  "per_source": {
+    "zconv": [
+      "lmm-api-source",
+      "oh-my-ztty",
+      "ssmcp",
+      "zcall",
+      "zcall-gui",
+      "zcall-omarchy",
+      "zcalld",
+      "zcalld-compat",
+      "zconv",
+      "zharness",
+      "zmcl",
+      "zmcpio",
+      "zrc",
+      "ztype",
+      "zuse",
+      "zuse-std"
+    ],
+    "zclap": [
+      "lmm-api-source",
+      "mechrevo-drivers",
+      "oh-my-ztty",
+      "ssmcp",
+      "zclap",
+      "zclick",
+      "zdot",
+      "zmcl",
+      "zrc",
+      "ztype",
+      "zuse",
+      "zuse-std"
+    ],
+    "zhex": [
+      "OniMods",
+      "lmm",
+      "lmm-api-source",
+      "mechrevo-drivers",
+      "zhex"
+    ],
+    "zfetch": [
+      "oh-my-ztty",
+      "zfetch"
+    ],
+    "zcall": [
+      "oh-my-ztty",
+      "ssmcp",
+      "zcall",
+      "zcall-gui",
+      "zcall-omarchy",
+      "zcalld",
+      "zcalld-compat",
+      "zharness",
+      "zmcpio",
+      "zrc",
+      "ztype",
+      "zuse",
+      "zuse-std"
+    ],
+    "zmcpio": [
+      "oh-my-ztty",
+      "ssmcp",
+      "zmcpio",
+      "zrc",
+      "ztype",
+      "zuse",
+      "zuse-std"
+    ],
+    "zgpui": [
+      "oh-my-ztty",
+      "zcall-gui",
+      "zcall-omarchy",
+      "zcalld",
+      "zcalld-compat",
+      "zgpui",
+      "zmcl",
+      "zterm",
+      "ztty",
+      "ztype"
+    ],
+    "zterm": [
+      "oh-my-ztty",
+      "zterm",
+      "ztty"
+    ],
+    "ssmcp": [
+      "oh-my-ztty",
+      "ssmcp",
+      "zrc"
+    ]
+  },
+  "limitation": "Committed catalog predates zbridge registration; new relationships require the coordinator full inventory refresh."
+}

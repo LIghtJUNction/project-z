@@ -1,0 +1,301 @@
+{
+  "schema": 1,
+  "observed_utc": "2026-11-23T16:00:57.080450+00:00",
+  "scope": "Review of ten named migrations: source, bounded rg, Git diff/hash; no tests run or source changes by this worker.",
+  "publication_boundary": "Nine candidate trees equal ledger-published trees; publication itself is not reverified. ssmcp candidate equals migration tree; latest Hex preservation relies on receipt.",
+  "provider_locks": {
+    "z64": "0.1.2 git LIghtJUNction/z64#7e9cff67beae2c484f8b9749b83ae24a1d0e1bbd",
+    "zhex": "0.1.3 git LIghtJUNction/zhex#52515207f9d97a2580182169b611b4763366b328",
+    "sha1": "RustCrypto registry 0.11.0",
+    "sha2": "RustCrypto registry 0.11.1",
+    "base64": "registry 0.23.1; compat decoding only"
+  },
+  "findings": [
+    "Named production calls use providers; replaced algorithm bodies are deleted.",
+    "Initial ztty Hex-decoder finding is fixed and verified by the final follow-up. MD5 remains outside SHA1/SHA256 scope; error adapters and test oracles remain.",
+    "No exhaustive audit, performance claim, global zero-duplicate claim or all-platform success claim."
+  ],
+  "reuse_boundary": "Tests are reused receipts at recorded checkpoints, not new runs. Later dependency/publication updates were not retested here; file hashes identify reviewed bytes.",
+  "derived_from_sha256": "3ad700304a0de3cd79626d8dd036a82e67be995f6d60802e596deb7898bc0336",
+  "derivation": "Public source-review summary; local filesystem roots and checkout labels omitted. Validation and limitation statements retained.",
+  "rows": [
+    {
+      "repo": "zterm",
+      "base": "f1da2db1613f97d613ed98b7f3e8cae231e5eae1",
+      "files": {
+        "src/clipboard.rs": "11c5c3a24f64c0db5f4d39169d9708bf11c5e8effb2e17e8e0265f7f056c1ad5"
+      },
+      "publication": {
+        "sha": "55e24949c3cf5773535215d81fed71e3364c4802",
+        "candidate_tree_matches": true
+      },
+      "capability": "OSC52 Base64 encode/decode",
+      "providers": [
+        "z64"
+      ],
+      "route": "ClipboardRequest::reply -> z64::encode; clipboard Set path -> decode -> z64::decode. ztty src/session/osc52.rs calls reply.",
+      "removed": "ALPHABET table, 3-byte packing and quartet digit/bit decoding loops.",
+      "retained": "Limit-before-invalid precedence, selectors and output wrapping; fixed vectors and invalid-padding tests remain.",
+      "verification": "Receipt term: cargo test --locked --lib, 195 passed/1 ignored, including 10 clipboard tests.",
+      "receipts": [
+        "term"
+      ],
+      "limits": "Existing exhaustive Unicode scalar test ignored; no live clipboard/OS run.",
+      "validation_commit": "2d02dd3eb0e5b1f343cb3a435f25625342d1cb40"
+    },
+    {
+      "repo": "zuse",
+      "base": "f13412e3c148ecf01c347423caba509d45df9ccc",
+      "files": {
+        "src/browser.rs": "db7f975af9f81d9223a9e91530f28ef9f83330b6e023883fba6e8116b9520aa3"
+      },
+      "publication": {
+        "sha": "13be18166f9f1bdfb219da851c28b3319fdb7653",
+        "candidate_tree_matches": true
+      },
+      "capability": "Browser Base64 and WebSocket SHA1",
+      "providers": [
+        "z64",
+        "sha1"
+      ],
+      "route": "Screenshot decode and WebSocket key/accept paths call encode_base64/decode_base64/sha1 -> z64 and sha1::Sha1.",
+      "removed": "Base64 alphabet/quartet/bit assembly; SHA1 padding, schedule expansion and 80-round loop.",
+      "retained": "base64_error inspects a rejected quantum for old error precedence; it does not decode bytes. Fixed Base64/SHA1 vectors remain.",
+      "verification": "Receipt use: 12 browser tests passed; --no-default-features --lib check passed.",
+      "receipts": [
+        "use"
+      ],
+      "limits": "No live browser session; source hash equals receipt despite later HEAD.",
+      "validation_commit": "bec0a2b07c5d25bf2f0a04dcd6ca7fd0976fc17c"
+    },
+    {
+      "repo": "zmcpio",
+      "base": "89a247ac274bcd96b760dd9e7dcb0d4d924a901e",
+      "files": {
+        "src/http.rs": "6231f23ece2d62c3657e47856bf405c4a1f596eb7ee7aa0a631c2b8c6e44f4e7"
+      },
+      "publication": {
+        "sha": "aba5ee5e775142f67a2cb0b181fc1fecdc286e98",
+        "candidate_tree_matches": true
+      },
+      "capability": "HTTP sentinel Base64 encode/decode",
+      "providers": [
+        "z64"
+      ],
+      "route": "HTTP header serialization -> encode_value -> z64::encode; header parsing -> decode_header_value -> z64::decode.",
+      "removed": "TABLE encoder, 3-byte packing, base64 digit mapper and quartet reconstruction.",
+      "retained": "=?base64? marker, caller-buffer required-length accounting, Capacity/InvalidHeader mapping and UTF8 validation.",
+      "verification": "mcp: locked core and std --lib --tests runs exit 0; no-default lib check exit 0. mcp-final repeats no-default/source audit successfully.",
+      "receipts": [
+        "mcp",
+        "mcp-final"
+      ],
+      "limits": "Rust 1.100.0 receipts are not executed MSRV tests; std run has 2 ignored tests.",
+      "validation_commit": "1cecd50dc378156665c84a3dfc50cb3116b05449"
+    },
+    {
+      "repo": "ztty",
+      "base": "c0f195d9b93065040b4efef35f3615831db11b38",
+      "files": {
+        "src/broker.rs": "bd4c0dc57f5d37b1379d8fc181ae1fad7c215f987b7115c530f44d00780dc87e",
+        "src/broker/encoding.rs": "5c12f04c18ed3afe855f7c6a43124a2bd89066276a1aba773258aac5e358a7ab",
+        "src/output_tail.rs": "4e591f650672a5d127197e07c9a20dcaad61aa3f0b6df7c8eb69855eacbc4dd7"
+      },
+      "publication": {
+        "sha": "963afbd7f9463f6de61a96e1968fdf26d3bc8990",
+        "candidate_tree_matches": true,
+        "initial_migration_sha": "307913f88197e9bab705470a10cc3aa53f360580"
+      },
+      "capability": "Broker Hex encode/decode and output Base64 encode",
+      "providers": [
+        "zhex",
+        "z64"
+      ],
+      "route": "requests/reload -> broker::unhex -> zhex::decode; broker metadata hex -> encode_lower. session/queries.rs:219 calls OutputChunk::output_base64 -> z64.",
+      "removed": "HEX nibble encoder and Base64 packing removed initially; review found remaining digit/pair decoder, now deleted by follow-up (3+/15-).",
+      "retained": "Only odd-length/uppercase checks, error/CString policy and paging API. Tests and Cargo.toml/lock unchanged; literal and test-only format!(02x) oracles remain.",
+      "verification": "tty-decoder: 3 existing broker tests, matching clippy, fmt/diff pass. shared: 3 output-tail tests pass. Final tree equals ledger publication.",
+      "receipts": [
+        "tty-decoder",
+        "shared",
+        "b-final"
+      ],
+      "limits": "Initial decoder build lacked HarfBuzz; rerun with existing sysroot passed. Full lib not rerun; historical /tmp failure remains (also on baseline).",
+      "validation_commit": "80200d09cc94fc570d0e968339efd6f7d4457dbf"
+    },
+    {
+      "repo": "zmcl",
+      "base": "6a83e6215d583a4e03c02a3e07df576cc599081d",
+      "files": {
+        "crates/zmcl-core/src/hash.rs": "9d2fb45eb6e7b50c57d4fb12a82548dd291b307aef5fa9635190a1ce8f70b1db"
+      },
+      "publication": {
+        "sha": "61c3655806fee9f4a20fc8bea2e881ce0531fc48",
+        "candidate_tree_matches": true
+      },
+      "capability": "Hex encode, SHA1 and SHA256",
+      "providers": [
+        "zhex",
+        "sha1",
+        "sha2"
+      ],
+      "route": "src/store.rs constructs hash::Sha1/Sha256, updates/finalizes and calls hash::hex; content/transaction.rs uses sha256_hex.",
+      "removed": "HEX nibble loop and sha1_block/sha256_block compression, schedules and constants.",
+      "retained": "Option-backed wrappers preserve const new/Default/Clone and streaming API. MD5 Blocks/md5_block remains. Test-only format!(02x) is an independent oracle.",
+      "verification": "shared: fixed digest vectors, million-a, all chunk boundaries, const/clone and binary-file digest tests exit 0; no-default core check/clippy pass.",
+      "receipts": [
+        "shared",
+        "b-final"
+      ],
+      "limits": "MD5 is a separate algorithm outside this migration; no whole-launcher/platform acceptance.",
+      "validation_commit": "24add4632456b0a3bc086cbf11d859ec9bfd90a0"
+    },
+    {
+      "repo": "zcalld",
+      "base": "8e52d791c305a3730d2ea876b8dffb6be2e2c04c",
+      "files": {
+        "src/digest.rs": "f91ea9aa31e5f12fda1fa4ed4e9dbc6742cfa2c8deea571159b14806ee077201",
+        "crates/zcalld-installer/src/hash.rs": "1fb271e0299478a461fffb54445022a85680ec0cc7262b7243af84ab40db8c43",
+        "crates/zcalld-compat-client/src/lib.rs": "0c4c5017fda6469ab80cdef8cf3e316c0ebcea0b07c1fd09523aea7776126268"
+      },
+      "publication": {
+        "sha": "6eab1150e8d58d330583c1b3206bf91e7862dc9a",
+        "candidate_tree_matches": true
+      },
+      "capability": "Gateway/installer SHA256+Hex; compat Base64",
+      "providers": [
+        "sha2",
+        "zhex",
+        "z64",
+        "base64"
+      ],
+      "route": "Gateway file digests and installer release/transaction calls use SHA256 wrappers. community/redact plugins call compat encode (z64) and decode (base64 STANDARD, allow_trailing_bits=true).",
+      "removed": "Both local SHA256 compression/padding implementations; compat B64 alphabet and encode/decode byte-assembly loops.",
+      "retained": "Installer streaming API; worker_encoding_error only restores old error precedence. Permissive tail bits are intentional. Separate legacy differential reference remains outside production.",
+      "verification": "calld: installer 15 passed; core 86 passed/5 failed; clippy pass. compat: 10 passed; existing differential 310172 decoder cases/257 encoder inputs match outputs/error strings.",
+      "receipts": [
+        "calld",
+        "compat"
+      ],
+      "limits": "Core Unix socket EPERM failures remain; compat differential used an isolated probe with different zconv resolution, documented in receipt; no live gateway/platform run.",
+      "validation_commit": "586b855e0771b392fd156b8899c6e68cde4df170"
+    },
+    {
+      "repo": "zmem",
+      "base": "ff07982d751f48cbf4c9fca554760c658d882d43",
+      "files": {
+        "src/install.rs": "9a79470200fcfa78c74fccdcba2cacc9eb6dd89d4d3cd38965882a0259b9f4d1"
+      },
+      "publication": {
+        "sha": "5997b9581f5b6962c9d9cd12774a2ce119e46ca7",
+        "candidate_tree_matches": true
+      },
+      "capability": "Installation-manifest path Hex encode/decode",
+      "providers": [
+        "zhex"
+      ],
+      "route": "Manifest serialization/parsing -> encode_path/decode_path -> zhex::encode_lower/decode.",
+      "removed": "HEX nibble encoder and per-pair input radix parsing loop.",
+      "retained": "Leading '+' normalization per pair preserves old radix acceptance; odd length/NUL/error type retained. from_str_radix('!') only builds an error; test-only radix parsing is independent oracle.",
+      "verification": "mem: locked --lib --bins exit 0 (recorded tail 219 passed/3 ignored). mem-final: codec tests, no-std and clippy exit 0; source includes exhaustive 128x128 ASCII-pair comparison.",
+      "receipts": [
+        "mem",
+        "mem-final"
+      ],
+      "limits": "No live installation; existing receipts reused.",
+      "validation_commit": "0f17dd3f1c39e5fddd822e1ecb2c0417d5014440"
+    },
+    {
+      "repo": "ssmcp",
+      "base": "2c2218b310101076f65b1c6e2495e11e5b90c38a",
+      "files": {
+        "src/hex.rs": "31e55971fbacf7a38e36a59362ba88afde3defe496d33314fdaead1d1a0200d5"
+      },
+      "publication": {
+        "sha": "b5fdceea9af1b14f6f178bbc1677969fd3ff73c9",
+        "candidate_tree_matches": false,
+        "migration_sha": "b799d0c5fe03c5b19ed4441f200de715c6c7d512",
+        "migration_tree": "f16a025b3b6e42db92921c294916471ffca53aba"
+      },
+      "capability": "Hex encode",
+      "providers": [
+        "zhex"
+      ],
+      "route": "session.rs digest/identity and output.rs chunk hashing call crate::hex::encode -> zhex::encode_lower.",
+      "removed": "Per-byte fmt::Write/write!(02x) loop.",
+      "retained": "AsRef<[u8]> -> String API; literal all-byte and SHA256/zero-padding fixtures.",
+      "verification": "consumer: actual src/hex.rs imported by path in isolated probe; 3 Hex tests + 1 unrelated locale test passed. ssmcp-advance records unchanged Hex across upstream PR193.",
+      "receipts": [
+        "consumer",
+        "ssmcp-advance"
+      ],
+      "limits": "No full ssmcp service suite. Latest public commit object absent in this checkout; preservation beyond migration relies on existing coordinator receipt.",
+      "validation_commit": "a5877a6d7ac327bc0bec685352e48f563e3f22a1"
+    },
+    {
+      "repo": "zcall-gui",
+      "base": "daa540307573d86838b108f4a76aa45230fca5f5",
+      "files": {
+        "src/updater.rs": "12d8c0ad99746d266bada8f565d1b0dbc78eefb70fb4956cd1403dc341a4e911"
+      },
+      "publication": {
+        "sha": "3b9a0f4673c08a9aa259b52e02858c0a88f43f6b",
+        "candidate_tree_matches": true
+      },
+      "capability": "Updater SHA256 and Hex",
+      "providers": [
+        "sha2",
+        "zhex"
+      ],
+      "route": "Updater and core_install integrity checks call updater::sha256 -> sha2::Sha256::digest + zhex::encode_lower.",
+      "removed": "Local K constants, padding/state, schedule/64 rounds and formatting Hex loop.",
+      "retained": "String digest API and fixed binary/block-boundary golden tests.",
+      "verification": "consumer: cargo test --locked --offline --bin zcall-gui, 44 passed; local published src/updater.rs object equals current bytes.",
+      "receipts": [
+        "consumer"
+      ],
+      "limits": "No live GUI, installer or OS exercise.",
+      "validation_commit": "c59c0d7443d8e4356c121d2ff80bf884915043bd"
+    },
+    {
+      "repo": "mechrevo-drivers",
+      "base": "aaa7573dd2609e74936ba4c3724b169de1834f54",
+      "files": {
+        "console/crates/core/src/brightness.rs": "d9c239699213d16482772299017072a95a9ec4c4113114ebb4f40c6e0b915077"
+      },
+      "publication": {
+        "sha": "2874af81c0cf59bdbe6b6e79e969ea17204e50c3",
+        "candidate_tree_matches": true
+      },
+      "capability": "Windows brightness payload Base64 encode",
+      "providers": [
+        "z64"
+      ],
+      "route": "Windows brightness apply -> set_script -> base64 -> z64::encode(Standard); encoded JSON is embedded in WMI PowerShell request.",
+      "removed": "TABLE alphabet and 3-byte bit-packing loop.",
+      "retained": "Windows cfg dependency plus dev-dependency allow Linux fixture coverage; fixed empty/tail/binary vectors.",
+      "verification": "hardware: 14 brightness tests passed; core all-target clippy and fmt pass.",
+      "receipts": [
+        "hardware"
+      ],
+      "limits": "Byte encoding and script construction only; no Windows host, WMI call, hardware I/O or installation.",
+      "validation_commit": "9aac0161f8e58d33bece76f6261945260df9c78a"
+    }
+  ],
+  "receipt_sha256": {
+    "term": "64640c925bc49e2c1cebf53b4ee1e69289d6a96bf1424f74c02ad8b7a58f133f",
+    "use": "d5bd018a90ef86eee99a16c95e4f03b82cd2a5d6f9659ea40a8a97677e15ee1e",
+    "mcp": "af149328a610e8ee13bf55f77220386c38a9bc8b648ecfcfb8a1e14275bd9fd5",
+    "mcp-final": "f4fac872c679ebfa98ce35f866aee6948c28c7db4fbfe751769941ee26f53191",
+    "shared": "4b88177d6978a5f97892a6245c700586e2026af29af4d9501aab3a3c10747821",
+    "b-final": "04c7dd2b00481bae9f96f95dabd6462402e93b7811a9165f7b197efca9832044",
+    "calld": "2e3ffabd01f65bd5afc9d238e4f9fde6f388387ac2b79b9b4e528e235aabea4c",
+    "compat": "0d8257ae477651aac1430ce7dbd652c55a52bcb257eb0c4f36d485b2940f5baa",
+    "mem": "0c76f457944a932412ff775f103ced6d1ccc626f9862f44f7bbf23a838ec96b8",
+    "mem-final": "cbb4776c3837333f01cdeeed1d29f0520aedc777c231210f718b8fb65dfd7051",
+    "consumer": "9680ef1965fe40601967e871a44afd06762e4f27d64e98e72b2f616eb70529e2",
+    "ssmcp-advance": "44db40d853be709cc326fdb279aa1f3d38e16ab51b6364c608ca717191553fee",
+    "hardware": "4c0d7e219de199afe6706cfbf7054584c961da5d7a33735c15272b7d29bef8a7",
+    "tty-decoder": "5811db46233fb9ab45338f003c24fc192f961e4353acb0e5b298ed4e614d0464"
+  }
+}

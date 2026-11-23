@@ -1,0 +1,3 @@
+# Preserve the original bytes of these recorded command outputs.
+docs/maintenance/evidence/taskC-aa215-20261123/remote-audit.md whitespace=-blank-at-eof
+docs/maintenance/evidence/taskC-aa215-20261123/zbridge-test.stdout.log whitespace=-blank-at-eof

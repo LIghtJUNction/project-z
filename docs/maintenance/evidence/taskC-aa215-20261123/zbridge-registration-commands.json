@@ -1,0 +1,114 @@
+{
+  "scope": "Actual local registration command receipts; child source cloned independently from the coordinator cache before these commands.",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/ad6d3de008b0/pz-maintenance-integration-20261123/zbridge",
+        "fetch",
+        "--no-tags",
+        "origin",
+        "+refs/heads/main:refs/remotes/origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/ad6d3de008b0/pz-maintenance-integration-20261123/zbridge",
+        "remote",
+        "set-head",
+        "origin",
+        "main"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/ad6d3de008b0/pz-maintenance-integration-20261123/zbridge",
+        "checkout",
+        "--detach",
+        "refs/remotes/origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "HEAD is now at 1cfeb5b fix: use standard noop waker and lock protocol dependencies [skip ci]\n"
+    },
+    {
+      "command": [
+        "git",
+        "submodule",
+        "add",
+        "--name",
+        "zbridge",
+        "https://github.com/LIghtJUNction/zbridge.git",
+        "zbridge"
+      ],
+      "exit_code": 0,
+      "stdout": "Adding existing repo at 'zbridge' to the index\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "submodule",
+        "absorbgitdirs",
+        "zbridge"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Migrating git directory of 'zbridge' from\n'/workspace/scratch/ad6d3de008b0/pz-maintenance-integration-20261123/zbridge/.git' to\n'/workspace/scratch/ad6d3de008b0/pz-maintenance-integration-20261123/.git/modules/zbridge'\n"
+    },
+    {
+      "command": [
+        "git",
+        "ls-files",
+        "--stage",
+        "--",
+        "zbridge"
+      ],
+      "exit_code": 0,
+      "stdout": "160000 1cfeb5b1f11c26c35cf7456c9b8b60d1f2d5d8de 0\tzbridge\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/workspace/scratch/ad6d3de008b0/pz-maintenance-integration-20261123/zbridge",
+        "ls-files",
+        "Cargo.lock"
+      ],
+      "exit_code": 0,
+      "stdout": "Cargo.lock\n",
+      "stderr": ""
+    },
+    {
+      "zbridge_head": "1cfeb5b1f11c26c35cf7456c9b8b60d1f2d5d8de",
+      "cargo_lock_exists": true,
+      "toolchain_directories": [
+        "rustup",
+        "cargo"
+      ]
+    }
+  ],
+  "default_branch_observation": {
+    "command": [
+      "git",
+      "ls-remote",
+      "--symref",
+      "https://github.com/LIghtJUNction/zbridge.git",
+      "HEAD"
+    ],
+    "result": "ref: refs/heads/main\tHEAD\n1cfeb5b1f11c26c35cf7456c9b8b60d1f2d5d8de\tHEAD\n",
+    "timing": "Observed before the recorded fetch/checkout and before the 2026-11-23T15:12:47Z gate batch; not rerun for this report."
+  }
+}

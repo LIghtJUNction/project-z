@@ -15,6 +15,9 @@ on:
       candidate_sha:
         type: string
         default: ''
+      release_consumers:
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -72,7 +75,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
-    timeout-minutes: ${{ inputs.candidate_artifact && 90 || 30 }}
+    timeout-minutes: ${{ (inputs.candidate_artifact || inputs.release_consumers) && 90 || 30 }}
     steps:
       - uses: actions/checkout@v6
         with:
@@ -93,11 +96,34 @@ jobs:
       - name: Install Linux native library headers
         if: runner.os == 'Linux'
         run: sudo apt-get update && sudo apt-get install -y libx11-dev libgl1-mesa-dev libfreetype6-dev libfontconfig1-dev
+      - name: Prepare the shared Linux input environment
+        if: runner.os == 'Linux' && inputs.release_consumers
+        uses: ./ztype/.github/actions/setup-linux
+      - name: Install remaining Linux consumer headers
+        if: runner.os == 'Linux' && inputs.release_consumers
+        run: sudo apt-get install -y --no-install-recommends libcurl4-openssl-dev libzstd-dev zlib1g-dev pkg-config libxrender-dev libxft-dev libharfbuzz-dev
       - name: Enable the Windows native C compiler
         if: runner.os == 'Windows'
         uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756
       - name: Test libraries against the same local dependency snapshot
         run: python3 scripts/project_z.py run -- test --tests
+      - name: Test terminal library on native Linux
+        if: ${{ !cancelled() && runner.os == 'Linux' && inputs.release_consumers }}
+        run: cargo test --locked --manifest-path ztty/Cargo.toml --lib
+      - name: Test input service on native Linux
+        if: ${{ !cancelled() && runner.os == 'Linux' && inputs.release_consumers }}
+        run: cargo test --locked --manifest-path ztype/Cargo.toml --workspace --tests
+      - name: Test daemon transports on native Linux
+        if: ${{ !cancelled() && runner.os == 'Linux' && inputs.release_consumers }}
+        run: cargo test --locked --manifest-path zcalld/Cargo.toml -p zcalld --bin zcalld
+      - name: Test configuration special-file rejection on native Linux
+        if: ${{ !cancelled() && runner.os == 'Linux' && inputs.release_consumers }}
+        run: cargo test --locked --manifest-path zrc/Cargo.toml --tests
+      - name: Test system information CLI on native Linux
+        if: ${{ !cancelled() && runner.os == 'Linux' && inputs.release_consumers }}
+        env:
+          TERM: xterm-256color
+        run: make -C zfetch check
       - name: Test affected Rust consumers and suite on Linux
         if: runner.os == 'Linux' && inputs.candidate_artifact != ''
         run: |

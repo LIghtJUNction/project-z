@@ -1,0 +1,30 @@
+{
+  "observed_at": "2026-11-23T15:18:29.610790+00:00",
+  "scope": "read existing coordinator evidence; no gate rerun",
+  "files": [
+    {
+      "source": "/workspace/scratch/e498b1cce251/project-z-review/artifacts/sandbox-sources-20261123/sandbox-readiness.json",
+      "copy": "coordinator-sandbox-readiness.json",
+      "sha256": "6ace55a718f2f82d1791beed5fc1661371759b0776c4f73d6e009ff296489af3",
+      "bytes": 3969
+    },
+    {
+      "source": "/workspace/scratch/e498b1cce251/project-z-review/artifacts/sandbox-sources-20261123/gates.json",
+      "copy": "coordinator-gates.json",
+      "sha256": "52247c73ac9cf1c77b9ab20324cf28d3dcd34a286371b836a305c0bbb145dbb5",
+      "bytes": 11020
+    },
+    {
+      "source": "/workspace/scratch/e498b1cce251/project-z-review/artifacts/sandbox-sources-20261123/locked-source-errors.json",
+      "copy": "coordinator-locked-source-errors.json",
+      "sha256": "fe670d83c281011d8c42be5d1ba5e3e58e7a2635bc96f4bafb2b87058a4cff48",
+      "bytes": 2072
+    },
+    {
+      "source": "/workspace/scratch/e498b1cce251/project-z-review/artifacts/sandbox-sources-20261123/source-link-preflight.json",
+      "copy": "coordinator-source-link-preflight.json",
+      "sha256": "675ab1c4d17cd309e0cbd19cf31dcf228b736939e169e68a75ab2df8c11c489f",
+      "bytes": 15508
+    }
+  ]
+}

@@ -4,8 +4,21 @@ schema_version = 1
 system_library = "zsys"
 forbidden_packages = ["ztty-ui", "ztui-core", "zui", "zui-native"]
 
+[repositories.zrun]
+role = "library"
+manifests = ["Cargo.toml"]
+
+[repositories.zaccel]
+role = "application"
+manifests = ["Cargo.toml"]
+
+[repositories.zbridge]
+role = "library"
+manifests = ["Cargo.toml"]
+
 [repositories.ssmcp]
 role = "application"
+manifests = ["Cargo.toml", "apps/ssmcp-desktop/Cargo.toml"]
 # Manages the standalone Zuse CLI at runtime; it is not a linked Cargo dependency.
 requires = ["zuse"]
 

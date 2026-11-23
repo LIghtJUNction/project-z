@@ -1,0 +1,77 @@
+{
+  "observed_at": "2026-11-23T15:23:15.756382+00:00",
+  "markdown_local_links_checked": 34,
+  "missing_local_links": [],
+  "all_evidence_is_bounded_utf8_text": true,
+  "all_evidence_json_parsed": true,
+  "zbridge_log_byte_counts_and_sha256_verified": true,
+  "full_diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "exit_code": 2,
+    "stdout": "docs/maintenance/evidence/taskC-aa215-20261123/remote-audit.md:49: new blank line at EOF.\ndocs/maintenance/evidence/taskC-aa215-20261123/zbridge-test.stdout.log:19: new blank line at EOF.\n",
+    "stderr": ""
+  },
+  "source_and_document_diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check",
+      "--",
+      ".",
+      ":(exclude)docs/maintenance/evidence/taskC-aa215-20261123/remote-audit.md",
+      ":(exclude)docs/maintenance/evidence/taskC-aa215-20261123/zbridge-test.stdout.log"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "preserved_raw_output_exceptions": [
+    "docs/maintenance/evidence/taskC-aa215-20261123/remote-audit.md",
+    "docs/maintenance/evidence/taskC-aa215-20261123/zbridge-test.stdout.log"
+  ],
+  "zbridge_source_clean": true,
+  "protected_files_unchanged": [
+    "catalog.json",
+    "docs/PROJECTS.md",
+    "scripts/project_z.py",
+    "tests/test_recursive_sources.py",
+    "tests/test_project_z.py",
+    "tests/test_maintenance.py"
+  ],
+  "staged_paths_before_this_receipt": [
+    ".gitmodules",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "docs/maintenance/2026-11-23-shared-implementation-integration.md",
+    "docs/maintenance/evidence/taskC-aa215-20261123/coordinator-evidence-provenance.json",
+    "docs/maintenance/evidence/taskC-aa215-20261123/coordinator-gates.json",
+    "docs/maintenance/evidence/taskC-aa215-20261123/coordinator-locked-source-errors.json",
+    "docs/maintenance/evidence/taskC-aa215-20261123/coordinator-sandbox-readiness.json",
+    "docs/maintenance/evidence/taskC-aa215-20261123/coordinator-source-link-preflight.json",
+    "docs/maintenance/evidence/taskC-aa215-20261123/desktop-registration.json",
+    "docs/maintenance/evidence/taskC-aa215-20261123/ownership-fix-reuse.json",
+    "docs/maintenance/evidence/taskC-aa215-20261123/recorded-catalog-impact.json",
+    "docs/maintenance/evidence/taskC-aa215-20261123/registration.json",
+    "docs/maintenance/evidence/taskC-aa215-20261123/remote-audit-observation.json",
+    "docs/maintenance/evidence/taskC-aa215-20261123/remote-audit.json",
+    "docs/maintenance/evidence/taskC-aa215-20261123/remote-audit.md",
+    "docs/maintenance/evidence/taskC-aa215-20261123/zbridge-clippy.stderr.log",
+    "docs/maintenance/evidence/taskC-aa215-20261123/zbridge-clippy.stdout.log",
+    "docs/maintenance/evidence/taskC-aa215-20261123/zbridge-fmt.stderr.log",
+    "docs/maintenance/evidence/taskC-aa215-20261123/zbridge-fmt.stdout.log",
+    "docs/maintenance/evidence/taskC-aa215-20261123/zbridge-gates.json",
+    "docs/maintenance/evidence/taskC-aa215-20261123/zbridge-registration-commands.json",
+    "docs/maintenance/evidence/taskC-aa215-20261123/zbridge-test.stderr.log",
+    "docs/maintenance/evidence/taskC-aa215-20261123/zbridge-test.stdout.log",
+    "docs/shared-implementations.md",
+    "project-z.toml",
+    "zbridge"
+  ],
+  "limitations": "Local registration/document/evidence review only; no full graph gate rerun."
+}

@@ -1,0 +1,29 @@
+{
+  "observed_at": "2026-11-23T15:18:29.610790+00:00",
+  "baseline": "dbeecf0c038d9184825e6fb2a25dfdc5eb951e40",
+  "integrated_fix": "9f3a46cffabdd6f271cc3db7b4f61c5d4d92820c",
+  "files": {
+    "scripts/project_z.py": {
+      "sha256": "907ae962cf189676f61754e1c6db0fee3fb39049d6a437e8fd2ab58a6f196663",
+      "bytes": 42860,
+      "equals_integrated_fix_9f3a46c": true
+    },
+    "tests/test_recursive_sources.py": {
+      "sha256": "c12a3208cd94a3493440e96955dcd660135a24e8bca194b290c1d2f8a5b703ea",
+      "bytes": 19267,
+      "equals_integrated_fix_9f3a46c": true
+    },
+    "tests/test_project_z.py": {
+      "sha256": "b136c8ed6079af1e788ba178f9f3aa219b8de84f318205cbbfa9a83a490dd9c2",
+      "bytes": 48475,
+      "equals_integrated_fix_9f3a46c": true
+    },
+    "tests/test_maintenance.py": {
+      "sha256": "7528ab066fc455dd062bfda6dfeabd3e8cfa7eb6ddbb1057efcccc4215cb2463",
+      "bytes": 24459,
+      "equals_integrated_fix_9f3a46c": true
+    }
+  },
+  "tests_rerun": false,
+  "historical_evidence": "../../2026-11-23-submodule-ownership.md"
+}

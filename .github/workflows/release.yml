@@ -30,6 +30,8 @@ jobs:
   validate:
     if: github.ref == 'refs/heads/main'
     uses: ./.github/workflows/ci.yml
+    with:
+      release_consumers: true
 
   package:
     needs: validate

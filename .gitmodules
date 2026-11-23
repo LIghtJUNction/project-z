@@ -136,3 +136,12 @@
 [submodule "zmem"]
 	path = zmem
 	url = https://github.com/LIghtJUNction/zmem.git
+[submodule "zbridge"]
+	path = zbridge
+	url = https://github.com/LIghtJUNction/zbridge.git
+[submodule "zrun"]
+	path = zrun
+	url = https://github.com/LIghtJUNction/zrun.git
+[submodule "zaccel"]
+	path = zaccel
+	url = https://github.com/LIghtJUNction/zaccel.git

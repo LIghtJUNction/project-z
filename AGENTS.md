@@ -13,6 +13,13 @@ Read README, CONTRIBUTING and the target repository's AGENTS.md. Work in isolate
 - `check` verifies remote freshness and internal source identities. `resolve --all` uses real Cargo `--locked` resolution without local registry/path patches. A compatibility failure must be fixed or reported with its exact consumer and source; never hide it by retaining an old internal release.
 - Normal builds use the recorded lock. Run sync and validation for a new update; do not make builds silently choose different commits.
 
+## Shared implementations
+
+- Follow [shared implementation rules](docs/shared-implementations.md) before adding another production implementation of an existing cross-repository capability. Identify concrete consumers and compare their behavior contracts; reuse an appropriate Project Z provider, or extract a shared library when the common responsibility has a sound boundary.
+- Record source commits and locations, provider ownership, API/error/resource contracts, feature/MSRV/platform constraints, and the migration plan. Similar syntax or a common algorithm alone is not proof of duplicate responsibility.
+- Keep necessary platform backends, thin adapters and independent test oracles explicit. Do not introduce a crate for a trivial local helper, create dependency cycles, or share the implementation that computes a test's expected result.
+- Accept only the documented migrated scope: real callers use the provider, replaced production logic is removed or tracked with an owner, and affected source/lock/gitlink and local behavior gates are verified. A new library, fewer lines, or one migrated consumer does not establish graph-wide completion or a measured performance improvement.
+
 ## Propagation and verification
 
 Use `python3 scripts/project_z.py impact --repositories <repository-or-package>` to enumerate direct and transitive consumers, including runtime services and installers. Register missing relationships and coordinate existing owners.
