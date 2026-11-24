@@ -31,13 +31,20 @@ class ObservationTests(unittest.TestCase):
         self.bin.mkdir()
         self.summary = self.temp / "summary"
         subprocess.run(["git", "init", "--quiet", self.repo], check=True)
-        for name in ("", "nested", "failed", "dirty"):
+        for name in ("", "nested", "failed", "dirty", "duplicate", "escaped"):
             path = self.repo / name
             path.mkdir(exist_ok=True)
             (path / "Cargo.toml").write_text("synthetic", encoding="utf-8")
         subprocess.run(["git", "add", "."], cwd=self.repo, check=True)
         self.sha = commit(self.repo)
-        self.tool("cargo", 'test "$PWD" != "$SOURCE/failed"')
+        self.tool("cargo", '''case "$PWD" in
+ "$SOURCE/failed") exit 2 ;;
+ "$SOURCE/duplicate") workspace="$SOURCE/nested" ;;
+ "$SOURCE/escaped") workspace="$SOURCE/.." ;;
+ *) workspace="$PWD" ;;
+esac
+printf '{"workspace_root":"%s"}\n' "$workspace"
+''')
         self.tool("deslop-please", '''
 case "$PWD" in
   "$SOURCE/nested") echo "synthetic module-cycle"; exit 1 ;;
@@ -68,6 +75,16 @@ esac
         self.assertIn("missing", logs[2])
         self.assertIn("manifest could not be resolved", logs[3].lower())
         self.assertIn("Tracked files changed", logs[4])
+
+    def test_duplicate_manifest_uses_one_analyzer_run(self):
+        manifests = tuple(safe_path(p) for p in ("nested/Cargo.toml", "duplicate/Cargo.toml", "escaped/Cargo.toml"))
+        rows = list(scan_manifests(self.repo, self.output, "deslop-please",
+                                   ("fixture", "", self.sha, manifests), True, ["git"], os.environ))
+        self.assertEqual([r["status"] for r in rows], ["findings", "findings", "tool_error"])
+        self.assertEqual([r["workspace"] for r in rows], ["nested", "nested", None])
+        self.assertEqual([r["reused"] for r in rows], [False, True, False])
+        self.assertIn("see fixture-1.log", (self.output / "fixture-2.log").read_text())
+        self.assertIn("escapes", (self.output / "fixture-3.log").read_text())
 
     def test_catalog_overrides_and_owner_are_verified(self):
         root = self.temp / "aggregate"

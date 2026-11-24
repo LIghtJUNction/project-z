@@ -30,10 +30,10 @@ def safe_path(value):
     return PurePosixPath(value)
 
 
-def run(argv, cwd, output, timeout, env=None, *, quiet_stdout=False):
+def run(argv, cwd, output, timeout, env=None, *, capture=None):
     # Kill the whole process group, not just the wrapper, when Cargo/RA hangs.
-    stdout = subprocess.DEVNULL if quiet_stdout else output
-    stderr = output if quiet_stdout else subprocess.STDOUT
+    stdout = capture if capture is not None else output
+    stderr = output if capture is not None else subprocess.STDOUT
     with subprocess.Popen(argv, cwd=cwd, stdout=stdout, stderr=stderr,
                           start_new_session=True, env=env) as process:
         try:
@@ -88,12 +88,27 @@ def targets(root, selected):
     return results, sorted(skipped)
 
 
+def workspace_root(directory, checkout, log):
+    with tempfile.TemporaryFile(mode="w+", encoding="utf-8") as metadata:
+        if run(["cargo", "metadata", "--locked", "--format-version=1"], directory,
+               log, 30, capture=metadata):
+            raise ValueError("Manifest could not be resolved with cargo metadata --locked.")
+        metadata.seek(0)
+        workspace = Path(json.load(metadata)["workspace_root"]).resolve()
+    if not workspace.is_relative_to(checkout.resolve()):
+        raise ValueError("Cargo workspace root escapes the recorded checkout")
+    if not (workspace / "Cargo.toml").is_file() or (workspace / "Cargo.toml").is_symlink():
+        raise ValueError("Cargo workspace manifest is missing or a symlink")
+    return workspace
+
+
 def scan_manifests(checkout, output, tool, repo, ready, git, git_env):
     name, _, sha, manifests = repo
+    workspace_results = {}
     for i, manifest in enumerate(manifests, 1):
         log = f"{name}-{i}.log"
         directory = (checkout / str(manifest.parent)).resolve()
-        code = 2
+        code, workspace_path, reused = 2, None, False
         with (output / log).open("w", encoding="utf-8") as stream:
             if not ready:
                 print(f"Recorded checkout unavailable. See {name}-checkout.log.", file=stream)
@@ -104,25 +119,27 @@ def scan_manifests(checkout, output, tool, repo, ready, git, git_env):
             else:
                 try:
                     status_cmd = git + ["status", "--porcelain", "--untracked-files=no"]
-                    before = subprocess.check_output(status_cmd, cwd=checkout, env=git_env)
-                    if before:
+                    if subprocess.check_output(status_cmd, cwd=checkout, env=git_env):
                         raise ValueError("recorded checkout already contains modifications")
-                    code = run(["cargo", "metadata", "--locked", "--format-version=1"],
-                               directory, stream, 30, quiet_stdout=True)
-                    if code:
-                        code = 2
-                        print("Manifest could not be resolved with cargo metadata --locked.", file=stream, flush=True)
+                    workspace = workspace_root(directory, checkout, stream)
+                    workspace_path = workspace.relative_to(checkout.resolve()).as_posix()
+                    if workspace_path in workspace_results:
+                        code, source_log = workspace_results[workspace_path]
+                        reused = True
+                        print(f"Same workspace and configuration; see {source_log}.", file=stream)
                     else:
-                        code = run([tool], directory, stream, SCAN_TIMEOUT)
-                    after = subprocess.check_output(status_cmd, cwd=checkout, env=git_env)
-                    if after:
-                        code = 2
-                        print("Tracked files changed during analysis; findings are not accepted.", file=stream, flush=True)
-                except (OSError, subprocess.CalledProcessError, ValueError) as error:
+                        code = run([tool], workspace, stream, SCAN_TIMEOUT)
+                        if subprocess.check_output(status_cmd, cwd=checkout, env=git_env):
+                            code = 2
+                            print("Tracked files changed during analysis; findings are not accepted.",
+                                  file=stream, flush=True)
+                        workspace_results[workspace_path] = (code, log)
+                except (OSError, subprocess.CalledProcessError, ValueError, KeyError, TypeError) as error:
                     print(f"Tool failed: {error}", file=stream, flush=True)
                     code = 2
-        yield {"repo": name, "commit": sha, "manifest": str(manifest),
-               "status": STATUSES[code] if code in (0, 1) else "tool_error", "log": log}
+        yield {"repo": name, "commit": sha, "manifest": str(manifest), "workspace": workspace_path,
+               "reused": reused, "status": STATUSES[code] if code in (0, 1) else "tool_error",
+               "log": log}
 
 
 def scan_repo(output, tool, repo):
@@ -158,17 +175,26 @@ def main():
         rows = [row for group in groups for row in group]
     statuses = {name: max((STATUSES.index(row["status"]) for row in rows if row["repo"] == name))
                 for name, *_ in chosen}
+    detected_workspaces = sum(row["workspace"] is not None and not row["reused"] for row in rows)
+    duplicate_entries = sum(row["reused"] for row in rows)
     report = {"aggregate_commit": subprocess.check_output(["git", "rev-parse", "HEAD"],
                                                             cwd=root, text=True).strip(),
               "repositories": {name: STATUSES[code] for name, code in statuses.items()},
+              "detected_workspaces": detected_workspaces, "duplicate_manifest_entries": duplicate_entries,
               "skipped": skipped, "workspaces": rows}
     (output / "report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     counts = ", ".join(f"{label}: {list(statuses.values()).count(i)}"
                        for i, label in enumerate(STATUSES))
     summary = [f"### Project Z architecture observation\n\n{counts}\n",
-               "| Repository | Commit | Manifest | Status |", "| --- | --- | --- | --- |"]
+               f"{len(rows)} Cargo entries, {detected_workspaces} resolved workspace roots, "
+               f"{duplicate_entries} duplicate entries reused.\n",
+               "| Repository | Commit | Manifest | Workspace root | Status |", "| --- | --- | --- | --- | --- |"]
     for row in rows:
-        summary.append(f"| {row['repo']} | `{row['commit'][:12]}` | `{row['manifest']}` | {row['status']} |")
+        workspace = row["workspace"]
+        # Do not render an arbitrary path from child-tool output as Markdown.
+        workspace = workspace if workspace and re.fullmatch(r"[A-Za-z0-9_./-]+", workspace) else "—"
+        status = row["status"] + (" (reused)" if row["reused"] else "")
+        summary.append(f"| {row['repo']} | `{row['commit'][:12]}` | `{row['manifest']}` | `{workspace}` | {status} |")
     message = "\n".join(summary) + "\n"
     print(message)
     if path := os.environ.get("GITHUB_STEP_SUMMARY"):

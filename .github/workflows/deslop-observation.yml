@@ -2,7 +2,7 @@ name: Observe Project Z Rust architecture
 
 on:
   schedule:
-    - cron: '43 2 * * *'
+    - cron: '43 2 * * 1'
   workflow_dispatch:
 
 permissions:
