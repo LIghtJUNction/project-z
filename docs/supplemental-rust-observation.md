@@ -1,0 +1,9 @@
+# Supplemental Rust architecture observation
+
+The supplemental catalog is separate from the Project Z gitlink catalog. It records an inventory of 115 active public, non-fork repositories owned by LIghtJUNction outside Project Z; 81 have no Cargo manifests and are not Rust targets. The remaining 34 repositories contain 36 independent Cargo workspaces. URLs and refs are not accepted from Actions inputs; the observer constructs an anonymous GitHub URL with the verified owner and fetches only the reviewed catalog SHA.
+
+Use the manual workflow with profile `smoke` (bilibilive, coolapk-cli, emailctl, markref) or a shard number `0`–`6` for the current inventory. Each numbered shard contains at most four candidate workspaces, sorted by repository and manifest. One hosted Linux runner processes a shard serially with the existing locked Cargo metadata and scanner timeouts, a 15-minute job cap, and two build/analyzer threads. No checkout credentials, no write token scopes, no secrets or release gate. The pilot uses analyzer/toolchain Rust 1.100.0: this measures its default Linux view, not a matrix across MSRV, feature sets and targets.
+
+`report.json` records every workspace as `clean`, `findings`, `tool_error`, `environment_review` or `not_selected`. The ten `environment_review` entries are explicitly not executed pending validation of Android targets, native media/desktop dependencies or custom registries. `not_selected` is coverage remaining outside the selected shard, not a passed scan. Findings are advisory; tool errors are visible on the standalone workflow. The artifact retains report and per-target logs for seven days.
+
+To enable a held workspace, verify toolchain requirements, Cargo resolution and representative analyzer coverage in a hosted run, then update its reviewed catalog entry. Refresh pinned SHAs explicitly and preserve the separation from the canonical Project Z index. No source changes or suppression files are generated.
