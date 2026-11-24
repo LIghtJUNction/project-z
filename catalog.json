@@ -57,7 +57,7 @@
       "path": "oh-my-ztty",
       "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
       "branch": "main",
-      "commit": "b766c4bd9984b20c22bdacf10df973683fb97f4a",
+      "commit": "c43b31bf747d62a53ead311e1854eebe4ca22a1b",
       "role": "suite",
       "manifests": [],
       "requires": [
@@ -576,7 +576,7 @@
       "path": "ztype",
       "url": "https://github.com/LIghtJUNction/ztype.git",
       "branch": "main",
-      "commit": "e237997a5a26b6f9e33b817ada4ddb9bac6e2465",
+      "commit": "47174e6fdddeff79dae3556e89364528546ebe02",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -590,7 +590,7 @@
       "path": "zuse",
       "url": "https://github.com/LIghtJUNction/zuse.git",
       "branch": "main",
-      "commit": "1df2ab46fa39349627fafa52120d9d0bb9fa1454",
+      "commit": "2228f9318d167435c354bfacef889dc0df58c09b",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -6374,7 +6374,7 @@
     },
     {
       "name": "zuse-computer",
-      "version": "0.6.0",
+      "version": "0.7.0",
       "repository": "zuse",
       "manifest": "zuse/Cargo.toml",
       "workspace": "zuse",
