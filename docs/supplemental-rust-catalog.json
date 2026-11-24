@@ -1,0 +1,765 @@
+{
+  "schema_version": 1,
+  "inventory": {
+    "public_owned_non_project_z": 115,
+    "tree_verified": 115,
+    "tree_unresolved": [],
+    "tree_no_cargo": [
+      "LIghtJUNction/AGENTS.md",
+      "LIghtJUNction/AGENT_ADDRESS_BOOK",
+      "LIghtJUNction/AGENT_VOID",
+      "LIghtJUNction/AUL",
+      "LIghtJUNction/AliLoginCompat",
+      "LIghtJUNction/HI_AGENT",
+      "LIghtJUNction/LightFlowUI",
+      "LIghtJUNction/LsposedModuleModel",
+      "LIghtJUNction/MagicMihomo",
+      "LIghtJUNction/MagicNet",
+      "LIghtJUNction/MagicNetRules",
+      "LIghtJUNction/MagicSingBox",
+      "LIghtJUNction/Magicap",
+      "LIghtJUNction/MatriXpost",
+      "LIghtJUNction/OniHarness",
+      "LIghtJUNction/RstrBot",
+      "LIghtJUNction/SeliMirror",
+      "LIghtJUNction/ZhiLianEXue-CheatProgress",
+      "LIghtJUNction/ace5-kernelsu-next-susfs",
+      "LIghtJUNction/agent.sh",
+      "LIghtJUNction/algorithms",
+      "LIghtJUNction/android-app-development",
+      "LIghtJUNction/anime-reaction-gif",
+      "LIghtJUNction/apk2cli",
+      "LIghtJUNction/art-fd-rebind",
+      "LIghtJUNction/ascii-morph-gif",
+      "LIghtJUNction/asl-ksu",
+      "LIghtJUNction/astrbot-recipkg",
+      "LIghtJUNction/aur-obscura-browser-bin",
+      "LIghtJUNction/awesome-submit",
+      "LIghtJUNction/coolapk-skills",
+      "LIghtJUNction/cortexfs",
+      "LIghtJUNction/dash.astrbot.men",
+      "LIghtJUNction/douyin-uid-filter",
+      "LIghtJUNction/draw-project-meme",
+      "LIghtJUNction/dsh-caffeinate",
+      "LIghtJUNction/dsh-compass",
+      "LIghtJUNction/dsh-context-folding",
+      "LIghtJUNction/dsh-dotenv",
+      "LIghtJUNction/dsh-file-context",
+      "LIghtJUNction/dsh-hashline",
+      "LIghtJUNction/dsh-mono",
+      "LIghtJUNction/dsh-notes",
+      "LIghtJUNction/dsh-recall",
+      "LIghtJUNction/dsh-red-green",
+      "LIghtJUNction/dsh-rewind",
+      "LIghtJUNction/dsh-rtk-optimizer",
+      "LIghtJUNction/go.lmm.best",
+      "LIghtJUNction/gogogo",
+      "LIghtJUNction/handdrawn-gif-explainer",
+      "LIghtJUNction/hello_dkms",
+      "LIghtJUNction/human-mcp-webui",
+      "LIghtJUNction/index",
+      "LIghtJUNction/lab-safety-system-frontend",
+      "LIghtJUNction/lightnest",
+      "LIghtJUNction/linux-windows-apps",
+      "LIghtJUNction/magpie-rs",
+      "LIghtJUNction/mihomo-party-ghproxy-git",
+      "LIghtJUNction/oh-my-ztty",
+      "LIghtJUNction/omarchy-project-bees",
+      "LIghtJUNction/oni-skills",
+      "LIghtJUNction/painterly-loop-gif",
+      "LIghtJUNction/paperclay-slides-skill",
+      "LIghtJUNction/particle-sculpture-skill",
+      "LIghtJUNction/password-store",
+      "LIghtJUNction/pi-reload",
+      "LIghtJUNction/project-bees",
+      "LIghtJUNction/project-z-site",
+      "LIghtJUNction/skills",
+      "LIghtJUNction/snapveil",
+      "LIghtJUNction/ssmcp-tools",
+      "LIghtJUNction/used-car-video-copywriting-skill",
+      "LIghtJUNction/vibe-shader",
+      "LIghtJUNction/x-quality-growth",
+      "LIghtJUNction/x-skills",
+      "LIghtJUNction/zcall-omarchy",
+      "LIghtJUNction/zcalld-compat",
+      "LIghtJUNction/zdistro",
+      "LIghtJUNction/zshard",
+      "LIghtJUNction/zuse-skills",
+      "LIghtJUNction/zuse-std"
+    ],
+    "cargo_metadata_pending": []
+  },
+  "repositories": [
+    {
+      "name": "agentic-bees",
+      "default_branch": "main",
+      "commit": "b25c622e78c4c82b30708b676a6141c9671922b3",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "agentic-bees",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": "1.88",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/agentic-bees/blob/b25c622e78c4c82b30708b676a6141c9671922b3/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "androiduse-zygisk-loader",
+      "default_branch": "main",
+      "commit": "248019d3ce9edc4d1d0720fef2ff79e0c335c6ef",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "androiduse-zygisk-loader",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "environment_review",
+          "known_constraints": "Android Zygisk: require representative Android target/NDK validation; native host result would be partial.",
+          "evidence": "https://github.com/LIghtJUNction/androiduse-zygisk-loader/blob/248019d3ce9edc4d1d0720fef2ff79e0c335c6ef/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "bilibilive",
+      "default_branch": "main",
+      "commit": "6a6801492e0d70ca6cc8103f92fe76ac7f2da2df",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "bilibilive",
+          "toolchain": "1.100.0",
+          "toolchain_evidence": "rust-toolchain.toml",
+          "cargo_rust_version": "1.100",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/bilibilive/blob/6a6801492e0d70ca6cc8103f92fe76ac7f2da2df/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "BossKit",
+      "default_branch": "main",
+      "commit": "eef9a1a82223da48901f6541091ea810860dcfd6",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "bosskit",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/BossKit/blob/eef9a1a82223da48901f6541091ea810860dcfd6/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "codensity",
+      "default_branch": "main",
+      "commit": "64a23d1db979d4ec777b80c2cb9f76a51ca60909",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "codensity",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/codensity/blob/64a23d1db979d4ec777b80c2cb9f76a51ca60909/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "codex-sync",
+      "default_branch": "main",
+      "commit": "4e2762f60e51eb83485df7d1568dfa0bff7dd75a",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "codex-sync",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/codex-sync/blob/4e2762f60e51eb83485df7d1568dfa0bff7dd75a/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "coolapk-cli",
+      "default_branch": "main",
+      "commit": "cf0dfcbf965a46df75a695143a5e3051ab8fbeff",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "coolapk-cli",
+          "toolchain": "1.99.1",
+          "toolchain_evidence": "rust-toolchain.toml",
+          "cargo_rust_version": "1.99",
+          "compiler_for_pilot": "1.99.1",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/coolapk-cli/blob/cf0dfcbf965a46df75a695143a5e3051ab8fbeff/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "cpyref",
+      "default_branch": "main",
+      "commit": "c533f1ab44bd5ea2bcc22c3c6a0ce35869cf2415",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "cpyref",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": "1.89",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/cpyref/blob/c533f1ab44bd5ea2bcc22c3c6a0ce35869cf2415/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "dessa",
+      "default_branch": "main",
+      "commit": "805741edb04fd5473150dcf6f1d5ca5d9a0d98be",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "dessa",
+          "toolchain": "stable",
+          "toolchain_evidence": "rust-toolchain.toml",
+          "cargo_rust_version": "1.88",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/dessa/blob/805741edb04fd5473150dcf6f1d5ca5d9a0d98be/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "douyin",
+      "default_branch": "main",
+      "commit": "d70bd348bfab096ed7e876aefaf6c1a5978150fe",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "douyin-cli",
+          "toolchain": "1.100.0",
+          "toolchain_evidence": "rust-toolchain.toml",
+          "cargo_rust_version": "1.100",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/douyin/blob/d70bd348bfab096ed7e876aefaf6c1a5978150fe/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "emailctl",
+      "default_branch": "main",
+      "commit": "ce023dbc7c9d8850feb8d65b71d4c716e2c786e6",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "emailctl",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": "1.85",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/emailctl/blob/ce023dbc7c9d8850feb8d65b71d4c716e2c786e6/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "geg",
+      "default_branch": "main",
+      "commit": "65ff1c10997bf755fddaea6858dc474336a22c65",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "geg",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": "1.88",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/geg/blob/65ff1c10997bf755fddaea6858dc474336a22c65/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "humangrant",
+      "default_branch": "main",
+      "commit": "3b47b8aff82d854b24b93d95c66cc484a325f3b3",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "humangrant",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": "1.82",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/humangrant/blob/3b47b8aff82d854b24b93d95c66cc484a325f3b3/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "lab-safety-system",
+      "default_branch": "main",
+      "commit": "8aa1674daf001905e8911a106ddba035bbd1f51f",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "lab-safety-system",
+          "toolchain": "1.96.0",
+          "toolchain_evidence": "rust-toolchain.toml",
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.96.0",
+          "validation": "environment_review",
+          "known_constraints": "Cargo replaces crates.io with rsproxy; confirm availability and registry trust policy before enabling.",
+          "evidence": "https://github.com/LIghtJUNction/lab-safety-system/blob/8aa1674daf001905e8911a106ddba035bbd1f51f/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "LightFlow",
+      "default_branch": "main",
+      "commit": "ba52a3cfdd234eeb0206d70d02e63c59aeb478c0",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "lightflow",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Default Linux analysis verified; CUDA/Vulkan/Metal and optional accelerated features not exercised.",
+          "evidence": "https://github.com/LIghtJUNction/LightFlow/blob/ba52a3cfdd234eeb0206d70d02e63c59aeb478c0/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "lightflow-auto-editing",
+      "default_branch": "main",
+      "commit": "c0cfd25b0346c24d9c4356ae340d3adaae3a6ddf",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": null,
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "environment_review",
+          "known_constraints": "Media workflows and path/Git dependencies require resolution verification.",
+          "evidence": "https://github.com/LIghtJUNction/lightflow-auto-editing/blob/c0cfd25b0346c24d9c4356ae340d3adaae3a6ddf/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "lightflow-flux",
+      "default_branch": "main",
+      "commit": "748dc404c94003e4aa9472456248408b011f2c50",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": null,
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "environment_review",
+          "known_constraints": "Native/media workspace; Linux-only and optional targets need validation.",
+          "evidence": "https://github.com/LIghtJUNction/lightflow-flux/blob/748dc404c94003e4aa9472456248408b011f2c50/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "lightflow-rig",
+      "default_branch": "main",
+      "commit": "dc7cdc89e9038b14f5c3c405e8cbc9b3ca27c2ae",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": null,
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Locked metadata and analyzer pass with the pinned LightFlow host staged exactly two directories above the plug-in checkout.",
+          "evidence": "https://github.com/LIghtJUNction/lightflow-rig/blob/dc7cdc89e9038b14f5c3c405e8cbc9b3ca27c2ae/Cargo.toml",
+          "lightflow_host": "ba52a3cfdd234eeb0206d70d02e63c59aeb478c0"
+        }
+      ]
+    },
+    {
+      "name": "lightflow-std",
+      "default_branch": "main",
+      "commit": "0faf24be4823a9d2129e1d5a5ce7a4ab9546f668",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": null,
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "environment_review",
+          "known_constraints": "Standalone relative host path fails; the exact LightFlow v0.1.4 host resolves the path but requires a lockfile update. No lockfile is changed by observation.",
+          "evidence": "https://github.com/LIghtJUNction/lightflow-std/blob/0faf24be4823a9d2129e1d5a5ce7a4ab9546f668/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "lightjunction",
+      "default_branch": "main",
+      "commit": "f4f5bf4ccc57d4c2e5050f9ea3de31a08fca47aa",
+      "workspaces": [
+        {
+          "manifest": "cli/Cargo.toml",
+          "root": "cli",
+          "package": "lightjunction",
+          "toolchain": "1.99.1",
+          "toolchain_evidence": "cli/rust-toolchain.toml",
+          "cargo_rust_version": "1.99.1",
+          "compiler_for_pilot": "1.99.1",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/lightjunction/blob/f4f5bf4ccc57d4c2e5050f9ea3de31a08fca47aa/cli/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "MagicBox",
+      "default_branch": "main",
+      "commit": "24c511a056c928f13ccfc65ee5e0bd6b533886a6",
+      "workspaces": [
+        {
+          "manifest": "native/runtime/Cargo.toml",
+          "root": "native/runtime",
+          "package": "magicbox-runtime",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "environment_review",
+          "known_constraints": "Rust runtime embedded in mixed native application; confirm native targets and generated prerequisites before adoption.",
+          "evidence": "https://github.com/LIghtJUNction/MagicBox/blob/24c511a056c928f13ccfc65ee5e0bd6b533886a6/native/runtime/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "magicnet-android",
+      "default_branch": "main",
+      "commit": "387fe9ec7aba14033e2c6ac1c23dca19ae6bff8d",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": null,
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "environment_review",
+          "known_constraints": "Android Rust targets have named linker configuration and may need the Android NDK.",
+          "evidence": "https://github.com/LIghtJUNction/magicnet-android/blob/387fe9ec7aba14033e2c6ac1c23dca19ae6bff8d/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "magpie-context-folding",
+      "default_branch": "main",
+      "commit": "cf571b9733f7ac68d5233db6d37b828d8350e893",
+      "workspaces": [
+        {
+          "manifest": "context-folding/sdks/rust/Cargo.toml",
+          "root": "context-folding/sdks/rust",
+          "package": "context-folding",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": "1.74",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/magpie-context-folding/blob/cf571b9733f7ac68d5233db6d37b828d8350e893/context-folding/sdks/rust/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "magpie-rs-source",
+      "default_branch": "main",
+      "commit": "8aef4dc63960863799669005f767f774804c26c4",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": null,
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": "1.85",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/magpie-rs-source/blob/8aef4dc63960863799669005f767f774804c26c4/Cargo.toml"
+        },
+        {
+          "manifest": "apps/desktop/Cargo.toml",
+          "root": "apps/desktop",
+          "package": "magpie-desktop",
+          "toolchain": "1.99.1",
+          "toolchain_evidence": "apps/desktop/rust-toolchain.toml",
+          "cargo_rust_version": "1.99.1",
+          "compiler_for_pilot": "1.99.1",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Default Linux GPUI indexing verified without native UI build or other target coverage.",
+          "evidence": "https://github.com/LIghtJUNction/magpie-rs-source/blob/8aef4dc63960863799669005f767f774804c26c4/apps/desktop/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "markref",
+      "default_branch": "main",
+      "commit": "d17f33f6a888487adc1feeebcc82f55990af9c17",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "markref",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/markref/blob/d17f33f6a888487adc1feeebcc82f55990af9c17/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "Mimic-Node",
+      "default_branch": "main",
+      "commit": "4d7370f21d4fbf285c1cefec08949cabbce1d337",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "mimictl",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": "1.88",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/Mimic-Node/blob/4d7370f21d4fbf285c1cefec08949cabbce1d337/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "readme",
+      "default_branch": "main",
+      "commit": "bdf187f87797e717155712a825d52a77ad36b2b9",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "readme-viewer-tui",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/readme/blob/bdf187f87797e717155712a825d52a77ad36b2b9/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "rstrbot-implementation",
+      "default_branch": "main",
+      "commit": "e87b28cee818770dcffbb4d951c9d90feaf677fe",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "rstrbot",
+          "toolchain": "1.99.1",
+          "toolchain_evidence": "rust-toolchain.toml",
+          "cargo_rust_version": "1.90",
+          "compiler_for_pilot": "1.99.1",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/rstrbot-implementation/blob/e87b28cee818770dcffbb4d951c9d90feaf677fe/Cargo.toml"
+        },
+        {
+          "manifest": "desktop/src-tauri/Cargo.toml",
+          "root": "desktop/src-tauri",
+          "package": "rstrbot-desktop",
+          "toolchain": "1.99.1",
+          "toolchain_evidence": "rust-toolchain.toml",
+          "cargo_rust_version": "1.90",
+          "compiler_for_pilot": "1.99.1",
+          "validation": "environment_review",
+          "known_constraints": "Separate Tauri desktop workspace; Linux representative coverage may require WebKit/GTK packages.",
+          "evidence": "https://github.com/LIghtJUNction/rstrbot-implementation/blob/e87b28cee818770dcffbb4d951c9d90feaf677fe/desktop/src-tauri/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "sq",
+      "default_branch": "main",
+      "commit": "0a7ff8e66f1860f05c5aee4ce95e23c185025069",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "sq-system-one",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": "1.85",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/sq/blob/0a7ff8e66f1860f05c5aee4ce95e23c185025069/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "VeyTerm",
+      "default_branch": "main",
+      "commit": "9f8bca932b366fa9b87b6404b440ce698d281d68",
+      "workspaces": [
+        {
+          "manifest": "rust-core/Cargo.toml",
+          "root": "rust-core",
+          "package": "veyterm-core",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "environment_review",
+          "known_constraints": "Android application with a Rust core; confirm Android target/NDK coverage before treating host-only results as complete.",
+          "evidence": "https://github.com/LIghtJUNction/VeyTerm/blob/9f8bca932b366fa9b87b6404b440ce698d281d68/rust-core/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "video-work-api",
+      "default_branch": "main",
+      "commit": "b89ab69263a7f27791b16ddb5372c45edd6fc0f9",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "video-work-api",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": "1.88",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/video-work-api/blob/b89ab69263a7f27791b16ddb5372c45edd6fc0f9/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "weyriva-shell",
+      "default_branch": "main",
+      "commit": "6a79f3f59d80456d6930566fe7fe8687177ec209",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": null,
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": "1.88",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/weyriva-shell/blob/6a79f3f59d80456d6930566fe7fe8687177ec209/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "zchat",
+      "default_branch": "main",
+      "commit": "8da8def04b0529a6f9a03709be8e043f043ea57b",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "zchat",
+          "toolchain": "1.100.0",
+          "toolchain_evidence": "rust-toolchain.toml",
+          "cargo_rust_version": "1.100",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/zchat/blob/8da8def04b0529a6f9a03709be8e043f043ea57b/Cargo.toml"
+        }
+      ]
+    },
+    {
+      "name": "zobs",
+      "default_branch": "main",
+      "commit": "bb009de906fccca351f1d7efd05f45d4d50bc1ae",
+      "workspaces": [
+        {
+          "manifest": "Cargo.toml",
+          "root": ".",
+          "package": "zobs",
+          "toolchain": "1.100.0",
+          "toolchain_evidence": "rust-toolchain.toml",
+          "cargo_rust_version": "1.100",
+          "compiler_for_pilot": "1.100.0",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "evidence": "https://github.com/LIghtJUNction/zobs/blob/bb009de906fccca351f1d7efd05f45d4d50bc1ae/Cargo.toml"
+        }
+      ]
+    }
+  ]
+}

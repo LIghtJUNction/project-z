@@ -142,36 +142,80 @@ def scan_manifests(checkout, output, tool, repo, ready, git, git_env):
                "log": log}
 
 
-def scan_repo(output, tool, repo):
+def fetch_checkout(checkout, url, sha, stream, git, git_env):
+    checkout.mkdir(parents=True, exist_ok=True)
+    commands = (
+        git + ["init", "--quiet"],
+        git + ["fetch", "--depth=1", "--no-tags", "--", url, sha],
+        git + ["checkout", "--quiet", "--detach", sha],
+    )
+    return all(run(argv, checkout, stream, REPO_TIMEOUT, git_env) == 0 for argv in commands)
+
+
+def scan_repo(output, tool, repo, *, lightflow_host=None):
     name, url, sha, _ = repo
-    # Each repo lives in its own ephemeral checkout, with neither the main
-    # repository's credentials nor existing submodule overrides.
+    # Public snapshots use ephemeral checkouts and no inherited Git config.
     git_env = dict(os.environ, GIT_TERMINAL_PROMPT="0", GIT_CONFIG_GLOBAL="/dev/null",
                    GIT_CONFIG_NOSYSTEM="1")
     git = ["git", "-c", "credential.helper=", "-c", "core.askPass="]
     with tempfile.TemporaryDirectory(prefix="project-z-deslop-") as tmp:
         checkout = Path(tmp)
-        commands = (
-            git + ["init", "--quiet"],
-            git + ["fetch", "--depth=1", "--no-tags", "--", url, sha],
-            git + ["checkout", "--quiet", "--detach", sha],
-        )
         with (output / f"{name}-checkout.log").open("w", encoding="utf-8") as stream:
-            ready = all(run(argv, checkout, stream, REPO_TIMEOUT, git_env) == 0 for argv in commands)
-        return list(scan_manifests(checkout, output, tool, repo, ready, git, git_env))
+            ready = True
+            if lightflow_host is not None:
+                host = checkout / "lightflow"
+                ready = fetch_checkout(host, "https://github.com/LIghtJUNction/LightFlow.git",
+                                       lightflow_host, stream, git, git_env)
+                # Plug-in manifests resolve their host with a source-controlled ../.. path.
+                checkout = host / "projects" / name
+                if checkout.resolve() != checkout:
+                    print("Unsafe host project path; refusing nested checkout.", file=stream)
+                    ready = False
+            if ready:
+                ready = fetch_checkout(checkout, url, sha, stream, git, git_env)
+        rows = list(scan_manifests(checkout, output, tool, repo, ready, git, git_env))
+        if lightflow_host is not None:
+            host_changed = False
+            if ready:
+                try:
+                    host_changed = bool(subprocess.check_output(
+                        git + ["status", "--porcelain", "--ignore-submodules=all", "--untracked-files=no"],
+                        cwd=host, env=git_env))
+                except (OSError, subprocess.CalledProcessError):
+                    host_changed = True
+            for row in rows:
+                row["context_host_commit"] = lightflow_host
+                if host_changed:
+                    row["status"] = "tool_error"
+                    with (output / row["log"]).open("a", encoding="utf-8") as stream:
+                        print("Pinned host tracked-file integrity check failed.", file=stream)
+        return rows
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", required=True, type=Path, help="new report directory")
     parser.add_argument("--repo", action="append", default=[], help="restrict to registered repository (repeatable)")
+    parser.add_argument("--supplemental", metavar="SMOKE_OR_SHARD",
+                        help="scan the supplemental public catalog, by smoke profile or shard number")
     args = parser.parse_args()
+    if args.repo and args.supplemental is not None:
+        parser.error("--repo and --supplemental are mutually exclusive")
     root = Path(__file__).resolve().parents[1]
     output = args.output.resolve()
     output.mkdir(parents=True, exist_ok=False)
-    chosen, skipped = targets(root, set(args.repo))
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
-        groups = pool.map(lambda repo: scan_repo(output, "deslop-please", repo), chosen)
+    coverage = None
+    if args.supplemental is None:
+        chosen, skipped = targets(root, set(args.repo))
+    else:
+        from deslop_supplemental import coverage_summary, plan
+        chosen, coverage = plan(root, args.supplemental)
+        skipped = []
+    contexts = {row["repo"]: row["context_host_commit"] for row in (coverage or [])
+                if "context_host_commit" in row}
+    with ThreadPoolExecutor(max_workers=1 if coverage is not None else MAX_WORKERS) as pool:
+        groups = pool.map(lambda repo: scan_repo(output, "deslop-please", repo,
+                                                lightflow_host=contexts.get(repo[0])), chosen)
         rows = [row for group in groups for row in group]
     statuses = {name: max((STATUSES.index(row["status"]) for row in rows if row["repo"] == name))
                 for name, *_ in chosen}
@@ -182,6 +226,9 @@ def main():
               "repositories": {name: STATUSES[code] for name, code in statuses.items()},
               "detected_workspaces": detected_workspaces, "duplicate_manifest_entries": duplicate_entries,
               "skipped": skipped, "workspaces": rows}
+    if coverage is not None:
+        report["coverage"] = coverage
+        report["coverage_counts"] = coverage_summary(coverage, rows)
     (output / "report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     counts = ", ".join(f"{label}: {list(statuses.values()).count(i)}"
                        for i, label in enumerate(STATUSES))
@@ -195,6 +242,14 @@ def main():
         workspace = workspace if workspace and re.fullmatch(r"[A-Za-z0-9_./-]+", workspace) else "—"
         status = row["status"] + (" (reused)" if row["reused"] else "")
         summary.append(f"| {row['repo']} | `{row['commit'][:12]}` | `{row['manifest']}` | `{workspace}` | {status} |")
+    if coverage is not None:
+        summary[0] = "### Supplemental Rust architecture observation\n"
+        summary.extend(["", "Catalog coverage: " + ", ".join(
+            f"{status}: {count}" for status, count in report["coverage_counts"].items()
+        ), "", "Requires environment review (not scanned):"])
+        for row in coverage:
+            if row["status"] == "environment_review":
+                summary.append(f"- {row['repo']} — `{row['manifest']}`")
     message = "\n".join(summary) + "\n"
     print(message)
     if path := os.environ.get("GITHUB_STEP_SUMMARY"):
