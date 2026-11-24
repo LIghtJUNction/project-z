@@ -56,9 +56,12 @@ def plan(root, profile):
         if len(chosen) != SHARD_SIZE or {r["repo"] for r in chosen} != SMOKE:
             raise ValueError("all four smoke workspaces must be present and eligible")
     else:
-        if not re.fullmatch(r"[0-9]{1,3}", profile):
-            raise ValueError("expected 'smoke' or a non-negative shard number")
-        i = int(profile) * SHARD_SIZE
+        match = re.fullmatch(r"(remaining-)?([0-9]{1,3})", profile)
+        if not match:
+            raise ValueError("expected 'smoke', a non-negative shard number, or 'remaining-N'")
+        if match[1]:
+            candidates = [r for r in candidates if r["repo"] not in SMOKE]
+        i = int(match[2]) * SHARD_SIZE
         chosen = candidates[i:i + SHARD_SIZE]
         if not chosen:
             raise ValueError("unknown supplemental shard")

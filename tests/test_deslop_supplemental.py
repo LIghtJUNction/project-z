@@ -27,6 +27,21 @@ class SupplementalTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             plan(ROOT, "999")
 
+    def test_followup_shards_exclude_smoke(self):
+        smoke, inventory = plan(ROOT, "smoke")
+        smoke_set = {(n, str(p)) for n, _, _, paths in smoke for p in paths}
+        remaining = {(r["repo"], r["manifest"]) for r in inventory
+                     if r["status"] == "not_selected"} - smoke_set
+        self.assertEqual(len(remaining), 22)
+        found = set()
+        for i in range(6):
+            groups, _ = plan(ROOT, f"remaining-{i}")
+            shard = {(n, str(p)) for n, _, _, paths in groups for p in paths}
+            self.assertTrue(0 < len(shard) <= 4)
+            self.assertFalse(shard & (smoke_set | found))
+            found |= shard
+        self.assertEqual(found, remaining)
+
     def test_smoke_reports_failures_and_environment_hold(self):
         groups, coverage = plan(ROOT, "smoke")
         self.assertEqual([n for n, *_ in groups], ["bilibilive", "coolapk-cli", "emailctl", "markref"])

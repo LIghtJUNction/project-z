@@ -19,7 +19,7 @@ concurrency:
 jobs:
   observe:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 28
     env:
       RUSTUP_TOOLCHAIN: '1.100.0'
       CARGO_BUILD_JOBS: '2'
