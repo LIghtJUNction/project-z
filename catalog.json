@@ -57,7 +57,7 @@
       "path": "oh-my-ztty",
       "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
       "branch": "main",
-      "commit": "397e7b87938ed3b5f1b95412c5a5be143976ba0e",
+      "commit": "920438c14aedcc8abd64417eb095854d2f39b909",
       "role": "suite",
       "manifests": [],
       "requires": [
@@ -76,7 +76,7 @@
       "path": "ssmcp",
       "url": "https://github.com/LIghtJUNction/ssmcp.git",
       "branch": "main",
-      "commit": "0445006bec008ce129b6e9c005070037bcb680bb",
+      "commit": "a927bd15326ffc4a3424b16546611c533dc3d498",
       "role": "application",
       "manifests": [
         "Cargo.toml",
@@ -480,7 +480,7 @@
       "path": "zrun",
       "url": "https://github.com/LIghtJUNction/zrun.git",
       "branch": "main",
-      "commit": "0619e02e4327ecfaa25b7504497b2b6c84bdb773",
+      "commit": "5b88c17ddf549de9540a83bacb18f70c48061ed2",
       "role": "library",
       "manifests": [
         "Cargo.toml"
