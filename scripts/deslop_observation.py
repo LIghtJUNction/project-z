@@ -142,23 +142,54 @@ def scan_manifests(checkout, output, tool, repo, ready, git, git_env):
                "log": log}
 
 
-def scan_repo(output, tool, repo):
+def fetch_checkout(checkout, url, sha, stream, git, git_env):
+    checkout.mkdir(parents=True, exist_ok=True)
+    commands = (
+        git + ["init", "--quiet"],
+        git + ["fetch", "--depth=1", "--no-tags", "--", url, sha],
+        git + ["checkout", "--quiet", "--detach", sha],
+    )
+    return all(run(argv, checkout, stream, REPO_TIMEOUT, git_env) == 0 for argv in commands)
+
+
+def scan_repo(output, tool, repo, *, lightflow_host=None):
     name, url, sha, _ = repo
-    # Each repo lives in its own ephemeral checkout, with neither the main
-    # repository's credentials nor existing submodule overrides.
+    # Public snapshots use ephemeral checkouts and no inherited Git config.
     git_env = dict(os.environ, GIT_TERMINAL_PROMPT="0", GIT_CONFIG_GLOBAL="/dev/null",
                    GIT_CONFIG_NOSYSTEM="1")
     git = ["git", "-c", "credential.helper=", "-c", "core.askPass="]
     with tempfile.TemporaryDirectory(prefix="project-z-deslop-") as tmp:
         checkout = Path(tmp)
-        commands = (
-            git + ["init", "--quiet"],
-            git + ["fetch", "--depth=1", "--no-tags", "--", url, sha],
-            git + ["checkout", "--quiet", "--detach", sha],
-        )
         with (output / f"{name}-checkout.log").open("w", encoding="utf-8") as stream:
-            ready = all(run(argv, checkout, stream, REPO_TIMEOUT, git_env) == 0 for argv in commands)
-        return list(scan_manifests(checkout, output, tool, repo, ready, git, git_env))
+            ready = True
+            if lightflow_host is not None:
+                host = checkout / "lightflow"
+                ready = fetch_checkout(host, "https://github.com/LIghtJUNction/LightFlow.git",
+                                       lightflow_host, stream, git, git_env)
+                # Plug-in manifests resolve their host with a source-controlled ../.. path.
+                checkout = host / "projects" / name
+                if checkout.resolve() != checkout:
+                    print("Unsafe host project path; refusing nested checkout.", file=stream)
+                    ready = False
+            if ready:
+                ready = fetch_checkout(checkout, url, sha, stream, git, git_env)
+        rows = list(scan_manifests(checkout, output, tool, repo, ready, git, git_env))
+        if lightflow_host is not None:
+            host_changed = False
+            if ready:
+                try:
+                    host_changed = bool(subprocess.check_output(
+                        git + ["status", "--porcelain", "--ignore-submodules=all", "--untracked-files=no"],
+                        cwd=host, env=git_env))
+                except (OSError, subprocess.CalledProcessError):
+                    host_changed = True
+            for row in rows:
+                row["context_host_commit"] = lightflow_host
+                if host_changed:
+                    row["status"] = "tool_error"
+                    with (output / row["log"]).open("a", encoding="utf-8") as stream:
+                        print("Pinned host tracked-file integrity check failed.", file=stream)
+        return rows
 
 
 def main():
@@ -180,8 +211,11 @@ def main():
         from deslop_supplemental import coverage_summary, plan
         chosen, coverage = plan(root, args.supplemental)
         skipped = []
+    contexts = {row["repo"]: row["context_host_commit"] for row in (coverage or [])
+                if "context_host_commit" in row}
     with ThreadPoolExecutor(max_workers=1 if coverage is not None else MAX_WORKERS) as pool:
-        groups = pool.map(lambda repo: scan_repo(output, "deslop-please", repo), chosen)
+        groups = pool.map(lambda repo: scan_repo(output, "deslop-please", repo,
+                                                lightflow_host=contexts.get(repo[0])), chosen)
         rows = [row for group in groups for row in group]
     statuses = {name: max((STATUSES.index(row["status"]) for row in rows if row["repo"] == name))
                 for name, *_ in chosen}

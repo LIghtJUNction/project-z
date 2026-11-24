@@ -8,6 +8,8 @@ import re
 SHARD_SIZE = 4
 MAX_CATALOG_WORKSPACES = 128
 SMOKE = {"bilibilive", "coolapk-cli", "emailctl", "markref"}
+NATIVE = {("LightFlow", "Cargo.toml"), ("lightflow-rig", "Cargo.toml"),
+          ("magpie-rs-source", "apps/desktop/Cargo.toml")}
 NAME = re.compile(r"[A-Za-z0-9_][A-Za-z0-9_.-]{0,99}", re.ASCII)
 SHA = re.compile(r"[0-9a-f]{40}", re.ASCII)
 ELIGIBLE = {"unscanned_candidate", "environment_review"}
@@ -44,9 +46,14 @@ def plan(root, profile):
             eligibility = w["validation"]
             if eligibility not in ELIGIBLE:
                 raise ValueError(f"{name}: unknown coverage status")
-            all_rows.append({"repo": name, "commit": sha, "manifest": p,
-                             "status": "environment_review" if eligibility == "environment_review" else "not_selected",
-                             "reason": w["known_constraints"] if eligibility == "environment_review" else None})
+            row = {"repo": name, "commit": sha, "manifest": p,
+                   "status": "environment_review" if eligibility == "environment_review" else "not_selected",
+                   "reason": w["known_constraints"] if eligibility == "environment_review" else None}
+            if host := w.get("lightflow_host"):
+                if name != "lightflow-rig" or p != "Cargo.toml" or not SHA.fullmatch(host):
+                    raise ValueError("unexpected or unpinned LightFlow checkout context")
+                row["context_host_commit"] = host
+            all_rows.append(row)
     all_rows.sort(key=lambda row: (row["repo"].casefold(), row["manifest"]))
     if not 0 < len(all_rows) <= MAX_CATALOG_WORKSPACES:
         raise ValueError("supplemental inventory exceeds its safety limit")
@@ -55,10 +62,14 @@ def plan(root, profile):
         chosen = [r for r in candidates if r["repo"] in SMOKE]
         if len(chosen) != SHARD_SIZE or {r["repo"] for r in chosen} != SMOKE:
             raise ValueError("all four smoke workspaces must be present and eligible")
+    elif profile == "native":
+        chosen = [r for r in candidates if (r["repo"], r["manifest"]) in NATIVE]
+        if len(chosen) != len(NATIVE):
+            raise ValueError("all three Linux-qualified workspaces must be present and eligible")
     else:
         match = re.fullmatch(r"(remaining-)?([0-9]{1,3})", profile)
         if not match:
-            raise ValueError("expected 'smoke', a non-negative shard number, or 'remaining-N'")
+            raise ValueError("expected 'smoke', a non-negative shard number, 'remaining-N', or 'native'")
         if match[1]:
             candidates = [r for r in candidates if r["repo"] not in SMOKE]
         i = int(match[2]) * SHARD_SIZE

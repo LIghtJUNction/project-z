@@ -1,4 +1,4 @@
-name: Qualify host-native supplemental analyzer coverage
+name: Validate supplemental native-host adapter
 
 on:
   pull_request:
@@ -38,76 +38,16 @@ jobs:
           cargo install --locked --version '=0.1.3' --root "$RUNNER_TEMP/deslop-tool" deslop-please
           echo "$RUNNER_TEMP/deslop-tool/bin" >> "$GITHUB_PATH"
           rust-analyzer --version
-      - name: Qualify locked native-host and pinned LightFlow workspaces
+      - name: Observe a bounded supplemental shard
         env:
-          PYTHONPATH: scripts
-        shell: bash
+          PROFILE: native
         run: |
-          python3 - <<'PYTHON'
-          import os
-          import json
-          import tempfile
-          from pathlib import Path
-          from deslop_observation import scan_manifests, scan_repo, safe_path, run
-          from deslop_supplemental import plan
-
-          expected = {("LightFlow", "Cargo.toml"), ("magpie-rs-source", "apps/desktop/Cargo.toml")}
-          _, coverage = plan(Path.cwd(), "smoke")
-          selected = [r for r in coverage if (r["repo"], r["manifest"]) in expected]
-          if len(selected) != 2 or any(r["status"] != "environment_review" for r in selected):
-              raise ValueError("native qualification target mismatch")
-          output = Path(os.environ["RUNNER_TEMP"]) / "supplemental-deslop"
-          output.mkdir(exist_ok=False)
-          rows = []
-          for row in selected:
-              repo = row["repo"]
-              spec = (repo, f"https://github.com/LIghtJUNction/{repo}.git", row["commit"],
-                      (safe_path(row["manifest"]),))
-              rows.extend(scan_repo(output, "deslop-please", spec))
-          host_pins = {
-              "lightflow-rig": "ba52a3cfdd234eeb0206d70d02e63c59aeb478c0",
-              "lightflow-std": "4c64b81716860fed40f2aaf7d7eb46dae9183e40",
-          }
-          git_env = dict(os.environ, GIT_TERMINAL_PROMPT="0", GIT_CONFIG_GLOBAL="/dev/null",
-                         GIT_CONFIG_NOSYSTEM="1")
-          git = ["git", "-c", "credential.helper=", "-c", "core.askPass="]
-          def checkout(path, slug, sha, log):
-              path.mkdir(parents=True, exist_ok=True)
-              commands = (
-                  git + ["init", "--quiet"],
-                  git + ["fetch", "--depth=1", "--no-tags", "--",
-                         f"https://github.com/LIghtJUNction/{slug}.git", sha],
-                  git + ["checkout", "--quiet", "--detach", sha],
-              )
-              return all(run(cmd, path, log, 45, git_env) == 0 for cmd in commands)
-          for row in (r for r in coverage if r["repo"] in host_pins):
-              repo = row["repo"]
-              if row["manifest"] != "Cargo.toml":
-                  raise ValueError("unexpected LightFlow plug-in workspace")
-              sha = row["commit"]
-              host_sha = host_pins[repo]
-              with tempfile.TemporaryDirectory(prefix="host-qualified-lightflow-") as temp:
-                  host = Path(temp) / "lightflow"
-                  child = host / "projects" / repo
-                  with (output / f"{repo}-checkout.log").open("w", encoding="utf-8") as log:
-                      ready = checkout(host, "LightFlow", host_sha, log) and checkout(child, repo, sha, log)
-                  spec = (repo, None, sha, (safe_path(row["manifest"]),))
-                  for result in scan_manifests(child, output, "deslop-please", spec, ready, git, git_env):
-                      result["context_host_commit"] = host_sha
-                      rows.append(result)
-          (output / "qualification.json").write_text(json.dumps(rows, indent=2)+"\n", encoding="utf-8")
-          for r in rows:
-              status = r["status"]
-              if status not in {"clean", "findings", "tool_error"}:
-                  raise ValueError("unexpected result")
-              print(r["repo"], r["commit"], r["manifest"], status, r.get("context_host_commit", ""))
-          raise SystemExit(2 if any(r["status"] == "tool_error" for r in rows) else 0)
-          PYTHON
+          python3 scripts/deslop_observation.py --supplemental="$PROFILE" --output "$RUNNER_TEMP/supplemental-deslop"
       - name: Upload diagnostics
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
-          name: supplemental-deslop-environment
+          name: supplemental-deslop-native
           path: ${{ runner.temp }}/supplemental-deslop
           retention-days: 7
           if-no-files-found: warn

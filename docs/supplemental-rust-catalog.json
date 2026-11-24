@@ -369,8 +369,8 @@
           "toolchain_evidence": null,
           "cargo_rust_version": null,
           "compiler_for_pilot": "1.100.0",
-          "validation": "environment_review",
-          "known_constraints": "Native/media dependencies need Linux analyzer validation before counting representative coverage.",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Default Linux analysis verified; CUDA/Vulkan/Metal and optional accelerated features not exercised.",
           "evidence": "https://github.com/LIghtJUNction/LightFlow/blob/ba52a3cfdd234eeb0206d70d02e63c59aeb478c0/Cargo.toml"
         }
       ]
@@ -427,8 +427,9 @@
           "cargo_rust_version": null,
           "compiler_for_pilot": "1.100.0",
           "validation": "unscanned_candidate",
-          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
-          "evidence": "https://github.com/LIghtJUNction/lightflow-rig/blob/dc7cdc89e9038b14f5c3c405e8cbc9b3ca27c2ae/Cargo.toml"
+          "known_constraints": "Locked metadata and analyzer pass with the pinned LightFlow host staged exactly two directories above the plug-in checkout.",
+          "evidence": "https://github.com/LIghtJUNction/lightflow-rig/blob/dc7cdc89e9038b14f5c3c405e8cbc9b3ca27c2ae/Cargo.toml",
+          "lightflow_host": "ba52a3cfdd234eeb0206d70d02e63c59aeb478c0"
         }
       ]
     },
@@ -445,8 +446,8 @@
           "toolchain_evidence": null,
           "cargo_rust_version": null,
           "compiler_for_pilot": "1.100.0",
-          "validation": "unscanned_candidate",
-          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
+          "validation": "environment_review",
+          "known_constraints": "Standalone relative host path fails; the exact LightFlow v0.1.4 host resolves the path but requires a lockfile update. No lockfile is changed by observation.",
           "evidence": "https://github.com/LIghtJUNction/lightflow-std/blob/0faf24be4823a9d2129e1d5a5ce7a4ab9546f668/Cargo.toml"
         }
       ]
@@ -552,8 +553,8 @@
           "toolchain_evidence": "apps/desktop/rust-toolchain.toml",
           "cargo_rust_version": "1.99.1",
           "compiler_for_pilot": "1.99.1",
-          "validation": "environment_review",
-          "known_constraints": "Separate GPUI desktop workspace, with pinned Git dependencies and platform-specific prerequisites to verify.",
+          "validation": "unscanned_candidate",
+          "known_constraints": "Default Linux GPUI indexing verified without native UI build or other target coverage.",
           "evidence": "https://github.com/LIghtJUNction/magpie-rs-source/blob/8aef4dc63960863799669005f767f774804c26c4/apps/desktop/Cargo.toml"
         }
       ]

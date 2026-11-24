@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       profile:
-        description: 'smoke or a numbered shard (0–6 for the current catalog)'
+        description: 'smoke, native, or a numbered shard (0–6 for the current catalog)'
         type: string
         required: true
         default: smoke
