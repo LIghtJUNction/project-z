@@ -16,7 +16,7 @@ OWNER_URL = re.compile(r"https://github\.com/LIghtJUNction/([A-Za-z0-9_.-]+)\.gi
 PATH_PART = re.compile(r"[A-Za-z0-9_.-]+")
 STATUSES = ("clean", "findings", "tool_error")
 REPO_TIMEOUT = 45
-SCAN_TIMEOUT = 80
+SCAN_TIMEOUT = 240
 MAX_WORKSPACES = 96
 MAX_WORKERS = 3
 
