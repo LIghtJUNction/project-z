@@ -7,6 +7,8 @@ forbidden_packages = ["ztty-ui", "ztui-core", "zui", "zui-native"]
 [repositories.zrun]
 role = "library"
 manifests = ["Cargo.toml"]
+# zrun --zmem optionally launches the standalone zmem CLI.
+requires = ["zmem"]
 
 [repositories.zaccel]
 role = "application"
