@@ -8,9 +8,6 @@ on:
         type: string
         required: true
         default: smoke
-  pull_request:
-    branches: [dot/project-z-deslop-observation]
-    paths: ['.github/workflows/deslop-supplemental.yml']
 
 permissions:
   contents: read
