@@ -1,3 +1,4 @@
+# Dedicated branch-only acceptance; remove this workflow after its run.
 name: Validate Project Z architecture observer once
 
 on:
