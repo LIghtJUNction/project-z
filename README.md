@@ -51,6 +51,8 @@ Cargo.lock 保存本轮解析的具体 Git 提交。维护者通过 `cargo updat
 
 ## 项目与传播
 
+Project Z 本地服务共用 [Unix socket 规范](docs/unix-sockets.md)，定义默认路径、权限、生命周期和 MCP 接入方式。
+
 [项目索引](docs/PROJECTS.md) 列出仓库、实际 package、版本、关联与提交。`.gitmodules` 定义仓库 URL，`project-z.toml` 定义角色、特殊 manifest 和运行时关系。一个仓库可以含多个 package；独立子模块属于自己的仓库，不按目录位置误归给应用。
 
 [底层 z 库依赖替换计划](docs/maintenance/2026-11-23-dependency-replacement.md) 按实际调用边界安排通用能力复用、消费者代码删除与传播验收，并记录 zrun 接入 zharness、ssmcp 前仍需补齐的能力。
