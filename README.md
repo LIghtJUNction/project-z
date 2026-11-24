@@ -73,6 +73,8 @@ python3 scripts/project_z.py order
 
 ## 记录与发布
 
+[可选 Rust 架构观测](docs/deslop-observation.md)用 `deslop-please` 报告已登记的公开 Rust 工作区，独立于发布与既有 CI。
+
 日常开发以本地验证为准；正式发行保留必要的构建、签名、制品与部署流程。报告记录实际源码、命令、结果和未覆盖范围，历史记录中的旧 SHA 保持原样。
 
 生成截图、APK、压缩包和编译物放到云盘或指定制品位置，Git 保存文字证据和链接。必要图标、字体、测试夹具及构建引导文件按用途保留。开发机使用共享 Cargo target，相关命令由外层批次持有共享锁，见 [AGENTS.md](AGENTS.md)。
