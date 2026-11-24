@@ -60,7 +60,7 @@ role = "shell"
 
 [repositories.oh-my-ztty]
 role = "suite"
-requires = ["ztty", "ssmcp", "zshard", "zdot", "zrc", "zfetch", "zmem"]
+requires = ["ztty", "ssmcp", "zshard", "zdot", "zrc", "zfetch", "zmem", "zuse"]
 
 [repositories.zcall-gui]
 role = "application"
@@ -112,6 +112,11 @@ requires = ["zcalld", "zcalld-compat"]
 [repositories.mechrevo-drivers]
 role = "application"
 manifests = ["console/Cargo.toml"]
+
+[repositories.zuse-skills]
+role = "extension"
+manifests = []
+requires = ["zuse"]
 
 [repositories.zuse-std]
 role = "extension"

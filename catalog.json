@@ -67,7 +67,8 @@
         "zmem",
         "zrc",
         "zshard",
-        "ztty"
+        "ztty",
+        "zuse"
       ]
     },
     {
@@ -575,7 +576,7 @@
       "path": "ztype",
       "url": "https://github.com/LIghtJUNction/ztype.git",
       "branch": "main",
-      "commit": "dae32464655554545f57a07d5c3858532291d111",
+      "commit": "85f55836d36dc292900d5c6ff50cb9627021a4b8",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -589,12 +590,24 @@
       "path": "zuse",
       "url": "https://github.com/LIghtJUNction/zuse.git",
       "branch": "main",
-      "commit": "b2466b90ea43f0fdc0b59fb91c9cd6d49c387f8d",
+      "commit": "9c66eec42e6768d6c790437d3cdcf288daaff265",
       "role": "application",
       "manifests": [
         "Cargo.toml"
       ],
       "requires": []
+    },
+    {
+      "name": "zuse-skills",
+      "path": "zuse-skills",
+      "url": "https://github.com/LIghtJUNction/zuse-skills.git",
+      "branch": "main",
+      "commit": "201a7508d3ed2928295ebaf0853ea4528212b980",
+      "role": "extension",
+      "manifests": [],
+      "requires": [
+        "zuse"
+      ]
     },
     {
       "name": "zuse-std",
