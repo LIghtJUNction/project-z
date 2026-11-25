@@ -87,6 +87,9 @@ role = "configuration"
 manifests = ["Cargo.toml"]
 requires = ["zdot", "ssmcp"]
 
+[repositories.ztok]
+role = "application"
+
 [repositories.zfetch]
 role = "application"
 

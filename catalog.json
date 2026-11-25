@@ -551,6 +551,18 @@
       "requires": []
     },
     {
+      "name": "ztok",
+      "path": "ztok",
+      "url": "https://github.com/LIghtJUNction/ztok.git",
+      "branch": "main",
+      "commit": "67155209ee98836be539806cda4c74119447b7fc",
+      "role": "application",
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
       "name": "ztty",
       "path": "ztty",
       "url": "https://github.com/LIghtJUNction/ztty.git",
@@ -6351,6 +6363,18 @@
           "path": null
         }
       ]
+    },
+    {
+      "name": "ztok",
+      "version": "0.1.0",
+      "repository": "ztok",
+      "manifest": "ztok/Cargo.toml",
+      "workspace": "ztok",
+      "publish": true,
+      "rust_version": "1.88",
+      "library": true,
+      "features": {},
+      "dependencies": []
     },
     {
       "name": "ztty",

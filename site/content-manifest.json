@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T11:52:08.089779Z",
+  "generated_at": "2026-11-25T21:31:06.650711Z",
   "projects": [
     {
       "id": "lmm",
@@ -2168,6 +2168,35 @@
           "file": "content/projects/zterm/index.md",
           "source": "https://github.com/LIghtJUNction/zterm/blob/c0860ae44dbf5dedeaea5719449004b8bb1ec65f/README.md",
           "path": "README.md"
+        }
+      ]
+    },
+    {
+      "id": "ztok",
+      "name": "ztok",
+      "repository": "https://github.com/LIghtJUNction/ztok",
+      "branch": "main",
+      "commit": "67155209ee98836be539806cda4c74119447b7fc",
+      "description": "Project Z lossless compression with a ranked Gemma 4 vocabulary and Zstandard",
+      "visibility": "public",
+      "metadata_source": "https://api.github.com/repos/LIghtJUNction/ztok",
+      "role": "application",
+      "additional": false,
+      "readme_source": "https://github.com/LIghtJUNction/ztok/blob/67155209ee98836be539806cda4c74119447b7fc/README.md",
+      "pages": [
+        {
+          "slug": "",
+          "title": "概览",
+          "file": "content/projects/ztok/index.md",
+          "source": "https://github.com/LIghtJUNction/ztok/blob/67155209ee98836be539806cda4c74119447b7fc/README.md",
+          "path": "README.md"
+        },
+        {
+          "slug": "data-readme",
+          "title": "Embedded vocabulary v1",
+          "file": "content/projects/ztok/data-readme.md",
+          "source": "https://github.com/LIghtJUNction/ztok/blob/67155209ee98836be539806cda4c74119447b7fc/data/README.md",
+          "path": "data/README.md"
         }
       ]
     },

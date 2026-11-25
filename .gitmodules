@@ -148,3 +148,6 @@
 [submodule "zuse-skills"]
 	path = zuse-skills
 	url = https://github.com/LIghtJUNction/zuse-skills.git
+[submodule "ztok"]
+	path = ztok
+	url = https://github.com/LIghtJUNction/ztok.git
