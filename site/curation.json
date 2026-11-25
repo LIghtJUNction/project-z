@@ -361,13 +361,6 @@
       "kind": "library",
       "summary": "为 Zuse 提供绘图、分形、桌面操作、文字输入和计时函数。",
       "package": "zuse-std"
-    },
-    {
-      "id": "zobs",
-      "category": "applications",
-      "kind": "tool",
-      "summary": "原生录制工作台，配置场景并通过 FFmpeg 录制、推流和查询进度。",
-      "package": "zobs"
     }
   ]
 }

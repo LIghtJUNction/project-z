@@ -1807,42 +1807,6 @@
       ]
     },
     {
-      "id": "zobs",
-      "name": "zobs",
-      "repository": "https://github.com/LIghtJUNction/zobs",
-      "branch": "main",
-      "commit": "6bddc40f46cc8eb97d9f5219ef3654adb06486bb",
-      "description": "Lightweight Project Z recording studio with zgpui, CLI and MCP",
-      "visibility": "public",
-      "metadata_source": "https://api.github.com/repos/LIghtJUNction/zobs",
-      "role": "application",
-      "additional": true,
-      "readme_source": "https://github.com/LIghtJUNction/zobs/blob/6bddc40f46cc8eb97d9f5219ef3654adb06486bb/README.md",
-      "pages": [
-        {
-          "slug": "",
-          "title": "概览",
-          "file": "content/projects/zobs/index.md",
-          "source": "https://github.com/LIghtJUNction/zobs/blob/6bddc40f46cc8eb97d9f5219ef3654adb06486bb/README.md",
-          "path": "README.md"
-        },
-        {
-          "slug": "operations",
-          "title": "Operating zobs",
-          "file": "content/projects/zobs/operations.md",
-          "source": "https://github.com/LIghtJUNction/zobs/blob/6bddc40f46cc8eb97d9f5219ef3654adb06486bb/docs/OPERATIONS.md",
-          "path": "docs/OPERATIONS.md"
-        },
-        {
-          "slug": "performance",
-          "title": "Performance evaluation",
-          "file": "content/projects/zobs/performance.md",
-          "source": "https://github.com/LIghtJUNction/zobs/blob/6bddc40f46cc8eb97d9f5219ef3654adb06486bb/docs/PERFORMANCE.md",
-          "path": "docs/PERFORMANCE.md"
-        }
-      ]
-    },
-    {
       "id": "zplugin",
       "name": "zplugin",
       "repository": "https://github.com/LIghtJUNction/zplugin",

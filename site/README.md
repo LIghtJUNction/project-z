@@ -22,7 +22,7 @@ Open `http://127.0.0.1:8000/`. A project overview lives at `/<project>/`; its gu
 
 `content-manifest.json` records each public repository, exact default-branch commit, source path and local Markdown file. `content/projects/` contains the source documents. Chinese READMEs are preferred when available. The collector follows existing links to installation, configuration, API and other user guides, with up to twelve pages per project; it excludes operational reports, internal records and test evidence. Links to further source files remain available in the rendered document.
 
-The project scope comes from the aggregate `catalog.json`. The explicitly listed additional projects, zchat and zobs, identify themselves as Project Z in their public READMEs. Repository names alone do not establish membership.
+The project scope comes from the aggregate `catalog.json`. The explicitly listed additional project, zchat, identifies itself as Project Z in its public README. Repository names alone do not establish membership.
 
 Refresh public documents in the development workspace:
 

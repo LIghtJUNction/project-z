@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "inventory": {
-    "public_owned_non_project_z": 115,
-    "tree_verified": 115,
+    "public_owned_non_project_z": 114,
+    "tree_verified": 114,
     "tree_unresolved": [],
     "tree_no_cargo": [
       "LIghtJUNction/AGENTS.md",
@@ -739,25 +739,6 @@
           "validation": "unscanned_candidate",
           "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
           "evidence": "https://github.com/LIghtJUNction/zchat/blob/8da8def04b0529a6f9a03709be8e043f043ea57b/Cargo.toml"
-        }
-      ]
-    },
-    {
-      "name": "zobs",
-      "default_branch": "main",
-      "commit": "bb009de906fccca351f1d7efd05f45d4d50bc1ae",
-      "workspaces": [
-        {
-          "manifest": "Cargo.toml",
-          "root": ".",
-          "package": "zobs",
-          "toolchain": "1.100.0",
-          "toolchain_evidence": "rust-toolchain.toml",
-          "cargo_rust_version": "1.100",
-          "compiler_for_pilot": "1.100.0",
-          "validation": "unscanned_candidate",
-          "known_constraints": "Cargo metadata and target requirements not runtime-verified.",
-          "evidence": "https://github.com/LIghtJUNction/zobs/blob/bb009de906fccca351f1d7efd05f45d4d50bc1ae/Cargo.toml"
         }
       ]
     }

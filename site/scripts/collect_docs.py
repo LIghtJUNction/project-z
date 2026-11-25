@@ -33,7 +33,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SITE = ROOT / "site"
 CACHE = SITE / ".cache" / "public-docs"
 MANIFEST = SITE / "content-manifest.json"
-ADDITIONAL = ("zchat", "zobs")
+ADDITIONAL = ("zchat",)
 README_NAMES = (
     "README.zh-CN.md", "README.zh_CN.md", "README.zh.md", "README_zh.md",
     "README-ZH.md", "README_ZH.md", "README_CN.md", "README.cn.md", "README.md",
