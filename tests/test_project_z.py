@@ -717,6 +717,25 @@ class GitSourceFixture(FilesystemFixture):
 
 @unittest.skipUnless(shutil.which("git") and shutil.which("cargo"), "requires Git and Cargo")
 class GitSourceIntegrationTests(GitSourceFixture):
+    def test_new_checkout_remains_retryable_if_default_head_moves(self):
+        fresh = self.base / "fresh aggregate"
+        self.git(self.base, "clone", "-q", "--no-recurse-submodules", str(self.root), str(fresh))
+        observed_heads = pz.latest_heads
+
+        def advance_after_observation(repos, root):
+            heads = observed_heads(repos, root)
+            self.advance_shared()
+            return heads
+
+        with patch.object(pz, "latest_heads", side_effect=advance_after_observation):
+            with self.assertRaisesRegex(pz.CoordinationError, "default branch moved"):
+                pz.sync_sources(fresh)
+        shared = fresh / "shared"
+        self.assertEqual(self.git(shared, "status", "--porcelain"), "")
+        self.assertEqual(self.git(shared, "rev-parse", "--abbrev-ref", "HEAD"), "HEAD")
+        pz.sync_sources(fresh)
+        self.assertEqual(self.git(shared, "rev-parse", "HEAD"), self.git(self.shared, "rev-parse", "HEAD"))
+
     def test_sync_bootstraps_plain_clone_without_fetching_unavailable_gitlinks(self):
         for name in ("shared", "app"):
             self.git(self.root, "update-index", "--cacheinfo", f"160000,{'1' * 40},{name}")

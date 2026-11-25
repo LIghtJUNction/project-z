@@ -151,6 +151,9 @@ def sync_sources(root=ROOT):
             # gitlink that may no longer be available after upstream cleanup.
             command(["git", "clone", "--no-checkout", "--no-recurse-submodules", "--single-branch",
                      "--no-tags", "--branch", branch, "--", repo["url"], str(source)], root)
+            # A concurrent push can invalidate the observation at fetch time.
+            # Leave our new checkout clean and detached so the next sync can retry.
+            command(["git", "-c", "submodule.recurse=false", "checkout", "--detach", "HEAD"], source)
             command(["git", "submodule", "init", "--", repo["path"]], root)
         command(["git", "fetch", "--no-tags", "--no-recurse-submodules", "--", repo["url"],
                  f"+refs/heads/{branch}:{remote_ref}"], source)
