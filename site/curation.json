@@ -90,13 +90,6 @@
       "package": "z64"
     },
     {
-      "id": "ztok",
-      "category": "data",
-      "kind": "tool",
-      "summary": "用 Gemma 4 词表和 zstd 无损压缩文本与代码，按需为含重复片段的二进制块建立词典。",
-      "package": "ztok"
-    },
-    {
       "id": "zhex",
       "category": "data",
       "kind": "library",
