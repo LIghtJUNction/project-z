@@ -555,7 +555,7 @@
       "path": "ztok",
       "url": "https://github.com/LIghtJUNction/ztok.git",
       "branch": "main",
-      "commit": "67155209ee98836be539806cda4c74119447b7fc",
+      "commit": "237af9e3f6097b3eee90e68b356137541ae8587c",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -6366,7 +6366,7 @@
     },
     {
       "name": "ztok",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "repository": "ztok",
       "manifest": "ztok/Cargo.toml",
       "workspace": "ztok",

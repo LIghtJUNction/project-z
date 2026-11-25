@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T21:31:06.650711Z",
+  "generated_at": "2026-11-25T22:02:05.147469Z",
   "projects": [
     {
       "id": "lmm",
@@ -2176,27 +2176,41 @@
       "name": "ztok",
       "repository": "https://github.com/LIghtJUNction/ztok",
       "branch": "main",
-      "commit": "67155209ee98836be539806cda4c74119447b7fc",
+      "commit": "237af9e3f6097b3eee90e68b356137541ae8587c",
       "description": "Project Z lossless compression with a ranked Gemma 4 vocabulary and Zstandard",
       "visibility": "public",
       "metadata_source": "https://api.github.com/repos/LIghtJUNction/ztok",
       "role": "application",
       "additional": false,
-      "readme_source": "https://github.com/LIghtJUNction/ztok/blob/67155209ee98836be539806cda4c74119447b7fc/README.md",
+      "readme_source": "https://github.com/LIghtJUNction/ztok/blob/237af9e3f6097b3eee90e68b356137541ae8587c/README.md",
       "pages": [
         {
           "slug": "",
           "title": "概览",
           "file": "content/projects/ztok/index.md",
-          "source": "https://github.com/LIghtJUNction/ztok/blob/67155209ee98836be539806cda4c74119447b7fc/README.md",
+          "source": "https://github.com/LIghtJUNction/ztok/blob/237af9e3f6097b3eee90e68b356137541ae8587c/README.md",
           "path": "README.md"
+        },
+        {
+          "slug": "data-preset-v2",
+          "title": "Native text preset v2",
+          "file": "content/projects/ztok/data-preset-v2.md",
+          "source": "https://github.com/LIghtJUNction/ztok/blob/237af9e3f6097b3eee90e68b356137541ae8587c/data/preset-v2.md",
+          "path": "data/preset-v2.md"
         },
         {
           "slug": "data-readme",
           "title": "Embedded vocabulary v1",
           "file": "content/projects/ztok/data-readme.md",
-          "source": "https://github.com/LIghtJUNction/ztok/blob/67155209ee98836be539806cda4c74119447b7fc/data/README.md",
+          "source": "https://github.com/LIghtJUNction/ztok/blob/237af9e3f6097b3eee90e68b356137541ae8587c/data/README.md",
           "path": "data/README.md"
+        },
+        {
+          "slug": "data-token-preset-v2",
+          "title": "Zstandard dictionary for Gemma token streams",
+          "file": "content/projects/ztok/data-token-preset-v2.md",
+          "source": "https://github.com/LIghtJUNction/ztok/blob/237af9e3f6097b3eee90e68b356137541ae8587c/data/token-preset-v2.md",
+          "path": "data/token-preset-v2.md"
         }
       ]
     },
