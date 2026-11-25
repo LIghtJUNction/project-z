@@ -43,6 +43,19 @@
       ]
     },
     {
+      "name": "magicbox-core",
+      "path": "magicbox-core",
+      "url": "https://github.com/LIghtJUNction/magicbox-core.git",
+      "branch": "main",
+      "commit": "679000a92e5ce4f37171f50443c5550b9b866cd6",
+      "role": "application",
+      "manifests": [
+        "Cargo.toml",
+        "crates/dns-wire/Cargo.toml"
+      ],
+      "requires": []
+    },
+    {
       "name": "mechrevo-drivers",
       "path": "mechrevo-drivers",
       "url": "https://github.com/LIghtJUNction/mechrevo-drivers.git",
@@ -2175,6 +2188,182 @@
           "path": null
         }
       ]
+    },
+    {
+      "name": "magicbox",
+      "version": "0.1.0",
+      "repository": "magicbox-core",
+      "manifest": "magicbox-core/Cargo.toml",
+      "workspace": "magicbox-core",
+      "publish": true,
+      "rust_version": "1.99.1",
+      "library": false,
+      "features": {},
+      "dependencies": [
+        {
+          "name": "libc",
+          "alias": null,
+          "requirement": "^0.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": "cfg(unix)",
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "magicbox-dns-wire",
+          "alias": null,
+          "requirement": "^0.1.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "magicbox-core/crates/dns-wire"
+        },
+        {
+          "name": "md-5",
+          "alias": null,
+          "requirement": "^0.10",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "ring",
+          "alias": null,
+          "requirement": "^0.17",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "rustls",
+          "alias": null,
+          "requirement": "^0.23",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "ring",
+            "std",
+            "tls12"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "saphyr-parser",
+          "alias": null,
+          "requirement": "^0.2",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "subtle",
+          "alias": null,
+          "requirement": "^2.6",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "toml",
+          "alias": null,
+          "requirement": "^1.0",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [
+            "parse",
+            "serde",
+            "std"
+          ],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "webpki-roots",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "z64",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "git+https://github.com/LIghtJUNction/z64.git",
+          "path": null
+        },
+        {
+          "name": "zeroize",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        }
+      ]
+    },
+    {
+      "name": "magicbox-dns-wire",
+      "version": "0.1.0",
+      "repository": "magicbox-core",
+      "manifest": "magicbox-core/crates/dns-wire/Cargo.toml",
+      "workspace": "magicbox-core/crates/dns-wire",
+      "publish": true,
+      "rust_version": "1.85",
+      "library": true,
+      "features": {},
+      "dependencies": []
     },
     {
       "name": "mechrevo-console-cli",

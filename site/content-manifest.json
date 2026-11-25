@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T22:02:05.147469Z",
+  "generated_at": "2026-11-25T22:27:08.060221Z",
   "projects": [
     {
       "id": "lmm",
@@ -176,6 +176,35 @@
           "file": "content/projects/lmm-api-source/quality.md",
           "source": "https://github.com/TokenNotIncluded/lmm-api-source/blob/3385d567ef0e023a5b79e4499f27581be1309425/docs/quality.md",
           "path": "docs/quality.md"
+        }
+      ]
+    },
+    {
+      "id": "magicbox-core",
+      "name": "magicbox-core",
+      "repository": "https://github.com/LIghtJUNction/magicbox-core",
+      "branch": "main",
+      "commit": "679000a92e5ce4f37171f50443c5550b9b866cd6",
+      "description": "Rust proxy core with TOML configuration, encrypted DNS and scoped TCP forwarding",
+      "visibility": "public",
+      "metadata_source": "https://api.github.com/repos/LIghtJUNction/magicbox-core",
+      "role": "application",
+      "additional": false,
+      "readme_source": "https://github.com/LIghtJUNction/magicbox-core/blob/679000a92e5ce4f37171f50443c5550b9b866cd6/README.md",
+      "pages": [
+        {
+          "slug": "",
+          "title": "概览",
+          "file": "content/projects/magicbox-core/index.md",
+          "source": "https://github.com/LIghtJUNction/magicbox-core/blob/679000a92e5ce4f37171f50443c5550b9b866cd6/README.md",
+          "path": "README.md"
+        },
+        {
+          "slug": "dns-guard",
+          "title": "Scoped DNS guard",
+          "file": "content/projects/magicbox-core/dns-guard.md",
+          "source": "https://github.com/LIghtJUNction/magicbox-core/blob/679000a92e5ce4f37171f50443c5550b9b866cd6/docs/dns-guard.md",
+          "path": "docs/dns-guard.md"
         }
       ]
     },
