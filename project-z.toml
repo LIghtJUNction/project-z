@@ -62,7 +62,8 @@ role = "shell"
 
 [repositories.oh-my-ztty]
 role = "suite"
-requires = ["ztty", "ssmcp", "zshard", "zdot", "zrc", "zfetch", "zmem", "zuse"]
+# Linux launchers select the separately installed native zrun shell by default.
+requires = ["ztty", "zrun", "ssmcp", "zshard", "zdot", "zrc", "zfetch", "zmem", "zuse"]
 
 [repositories.zcall-gui]
 role = "application"
@@ -70,6 +71,7 @@ requires = ["zcalld", "zgpui"]
 
 [repositories.lmm-api-source]
 role = "application"
+requires = ["lmm"]
 manifests = ["services/core/Cargo.toml"]
 source_links = { "apps/cli" = "lmm" }
 

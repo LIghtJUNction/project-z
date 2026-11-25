@@ -6,7 +6,7 @@
       "path": "OniMods",
       "url": "https://github.com/LIghtJUNction/OniMods.git",
       "branch": "main",
-      "commit": "7a4ae7f3389f43f625e678809069812b61039ee7",
+      "commit": "cc1e294d18bf1076354c9fb6e763968321f724d8",
       "role": "application",
       "manifests": [
         "Cargo.toml",
@@ -21,7 +21,7 @@
       "path": "lmm",
       "url": "https://github.com/TokenNotIncluded/lmm.git",
       "branch": "main",
-      "commit": "3f8f3898eef040cbcb7ee7c8d15ea9031f93acec",
+      "commit": "9bba15f6fe21341750c5ded4403f17f34b2012c0",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -33,12 +33,14 @@
       "path": "lmm-api-source",
       "url": "https://github.com/TokenNotIncluded/lmm-api-source.git",
       "branch": "main",
-      "commit": "6f81c6319ee4d283f21b2611ce14ade4be2df6a4",
+      "commit": "a6a7e55ed5981243fa9dee8370f81d6ff4d3d1ac",
       "role": "application",
       "manifests": [
         "services/core/Cargo.toml"
       ],
-      "requires": []
+      "requires": [
+        "lmm"
+      ]
     },
     {
       "name": "mechrevo-drivers",
@@ -57,7 +59,7 @@
       "path": "oh-my-ztty",
       "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
       "branch": "main",
-      "commit": "602c8a682ea53bd27a36944eadc620a001255af7",
+      "commit": "ee868058e815e0eee80d7b8a3e46bfed555dfe82",
       "role": "suite",
       "manifests": [],
       "requires": [
@@ -66,6 +68,7 @@
         "zfetch",
         "zmem",
         "zrc",
+        "zrun",
         "zshard",
         "ztty",
         "zuse"
@@ -76,7 +79,7 @@
       "path": "ssmcp",
       "url": "https://github.com/LIghtJUNction/ssmcp.git",
       "branch": "main",
-      "commit": "eae3174d0e335ab6adcb56469db159d0e13dde99",
+      "commit": "d2c6d867b61de958900443cccc152531616223a0",
       "role": "application",
       "manifests": [
         "Cargo.toml",
@@ -152,7 +155,7 @@
       "path": "zcall-gui",
       "url": "https://github.com/LIghtJUNction/zcall-gui.git",
       "branch": "main",
-      "commit": "edd8fb8c4c371a3663e5045304d0c37e1cd017ca",
+      "commit": "3e46b6f66270d9114c26a5f0249d0f2e72dd141d",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -180,7 +183,7 @@
       "path": "zcalld",
       "url": "https://github.com/LIghtJUNction/zcalld.git",
       "branch": "main",
-      "commit": "782d9516b4119c9915406d23a5a982d314e253c9",
+      "commit": "2ee08db44eb0370d4580c3c072860ed79fdbfdd4",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -480,7 +483,7 @@
       "path": "zrun",
       "url": "https://github.com/LIghtJUNction/zrun.git",
       "branch": "main",
-      "commit": "5346e6bd9c5471af3d2f3255a8a5a57645833a21",
+      "commit": "4bd2913188ff665e78a2f3b16f776cc8be764f51",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -552,7 +555,7 @@
       "path": "ztty",
       "url": "https://github.com/LIghtJUNction/ztty.git",
       "branch": "main",
-      "commit": "141ae17f087ceef755575d1e43f7c5b455ed4f8a",
+      "commit": "95aec33bb80f77895f1993fe57c24c635b0aa8b4",
       "role": "application",
       "manifests": [
         "Cargo.toml",
@@ -2754,7 +2757,7 @@
     },
     {
       "name": "ssmcp",
-      "version": "0.10.37",
+      "version": "0.10.41",
       "repository": "ssmcp",
       "manifest": "ssmcp/Cargo.toml",
       "workspace": "ssmcp",
@@ -2869,6 +2872,19 @@
           "path": null
         },
         {
+          "name": "httpdate",
+          "alias": null,
+          "requirement": "^1",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
           "name": "image",
           "alias": null,
           "requirement": "^0.25.10",
@@ -2893,6 +2909,19 @@
           "explicit_version": true,
           "kind": "normal",
           "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "mime",
+          "alias": null,
+          "requirement": "^0.3",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": "cfg(all(not(target_os = \"macos\"), not(windows)))",
           "optional": false,
           "default_features": true,
           "features": [],
@@ -5618,7 +5647,7 @@
     },
     {
       "name": "zrun",
-      "version": "0.1.0-p0.11",
+      "version": "0.1.0-p0.13",
       "repository": "zrun",
       "manifest": "zrun/Cargo.toml",
       "workspace": "zrun",
@@ -5652,7 +5681,7 @@
         {
           "name": "zrun-executor",
           "alias": null,
-          "requirement": "=0.1.0-p0.11",
+          "requirement": "=0.1.0-p0.13",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -5665,7 +5694,7 @@
         {
           "name": "zrun-io",
           "alias": null,
-          "requirement": "=0.1.0-p0.11",
+          "requirement": "=0.1.0-p0.13",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -5678,7 +5707,7 @@
         {
           "name": "zrun-sync",
           "alias": null,
-          "requirement": "=0.1.0-p0.11",
+          "requirement": "=0.1.0-p0.13",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -5691,7 +5720,7 @@
         {
           "name": "zrun-task",
           "alias": null,
-          "requirement": "=0.1.0-p0.11",
+          "requirement": "=0.1.0-p0.13",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -5704,7 +5733,7 @@
         {
           "name": "zrun-time",
           "alias": null,
-          "requirement": "=0.1.0-p0.11",
+          "requirement": "=0.1.0-p0.13",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -5718,7 +5747,7 @@
     },
     {
       "name": "zrun-bench",
-      "version": "0.1.0-p0.11",
+      "version": "0.1.0-p0.13",
       "repository": "zrun",
       "manifest": "zrun/crates/zrun-bench/Cargo.toml",
       "workspace": "zrun",
@@ -5792,7 +5821,7 @@
     },
     {
       "name": "zrun-cli",
-      "version": "0.1.0-p0.11",
+      "version": "0.1.0-p0.13",
       "repository": "zrun",
       "manifest": "zrun/crates/zrun-cli/Cargo.toml",
       "workspace": "zrun",
@@ -5926,7 +5955,7 @@
         {
           "name": "zrun",
           "alias": null,
-          "requirement": "=0.1.0-p0.11",
+          "requirement": "=0.1.0-p0.13",
           "explicit_version": true,
           "kind": "normal",
           "target": "cfg(target_os = \"linux\")",
@@ -5941,7 +5970,7 @@
         {
           "name": "zrun-plugin-api",
           "alias": null,
-          "requirement": "=0.1.0-p0.11",
+          "requirement": "=0.1.0-p0.13",
           "explicit_version": true,
           "kind": "normal",
           "target": "cfg(target_os = \"linux\")",
@@ -5955,7 +5984,7 @@
     },
     {
       "name": "zrun-executor",
-      "version": "0.1.0-p0.11",
+      "version": "0.1.0-p0.13",
       "repository": "zrun",
       "manifest": "zrun/crates/zrun-executor/Cargo.toml",
       "workspace": "zrun",
@@ -5984,7 +6013,7 @@
         {
           "name": "zrun-io",
           "alias": null,
-          "requirement": "=0.1.0-p0.11",
+          "requirement": "=0.1.0-p0.13",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -5997,7 +6026,7 @@
         {
           "name": "zrun-sync",
           "alias": null,
-          "requirement": "=0.1.0-p0.11",
+          "requirement": "=0.1.0-p0.13",
           "explicit_version": true,
           "kind": "dev",
           "target": null,
@@ -6010,7 +6039,7 @@
         {
           "name": "zrun-task",
           "alias": null,
-          "requirement": "=0.1.0-p0.11",
+          "requirement": "=0.1.0-p0.13",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -6023,7 +6052,7 @@
         {
           "name": "zrun-time",
           "alias": null,
-          "requirement": "=0.1.0-p0.11",
+          "requirement": "=0.1.0-p0.13",
           "explicit_version": true,
           "kind": "normal",
           "target": null,
@@ -6037,7 +6066,7 @@
     },
     {
       "name": "zrun-io",
-      "version": "0.1.0-p0.11",
+      "version": "0.1.0-p0.13",
       "repository": "zrun",
       "manifest": "zrun/crates/zrun-io/Cargo.toml",
       "workspace": "zrun",
@@ -6080,7 +6109,7 @@
     },
     {
       "name": "zrun-plugin-api",
-      "version": "0.1.0-p0.11",
+      "version": "0.1.0-p0.13",
       "repository": "zrun",
       "manifest": "zrun/crates/zrun-plugin-api/Cargo.toml",
       "workspace": "zrun",
@@ -6123,7 +6152,7 @@
     },
     {
       "name": "zrun-sync",
-      "version": "0.1.0-p0.11",
+      "version": "0.1.0-p0.13",
       "repository": "zrun",
       "manifest": "zrun/crates/zrun-sync/Cargo.toml",
       "workspace": "zrun",
@@ -6135,7 +6164,7 @@
     },
     {
       "name": "zrun-task",
-      "version": "0.1.0-p0.11",
+      "version": "0.1.0-p0.13",
       "repository": "zrun",
       "manifest": "zrun/crates/zrun-task/Cargo.toml",
       "workspace": "zrun",
@@ -6161,7 +6190,7 @@
     },
     {
       "name": "zrun-time",
-      "version": "0.1.0-p0.11",
+      "version": "0.1.0-p0.13",
       "repository": "zrun",
       "manifest": "zrun/crates/zrun-time/Cargo.toml",
       "workspace": "zrun",
@@ -6325,7 +6354,7 @@
     },
     {
       "name": "ztty",
-      "version": "0.6.2",
+      "version": "0.6.3",
       "repository": "ztty",
       "manifest": "ztty/Cargo.toml",
       "workspace": "ztty",
