@@ -617,18 +617,6 @@
       "requires": []
     },
     {
-      "name": "zuse-skills",
-      "path": "zuse-skills",
-      "url": "https://github.com/LIghtJUNction/zuse-skills.git",
-      "branch": "main",
-      "commit": "201a7508d3ed2928295ebaf0853ea4528212b980",
-      "role": "extension",
-      "manifests": [],
-      "requires": [
-        "zuse"
-      ]
-    },
-    {
       "name": "zuse-std",
       "path": "zuse-std",
       "url": "https://github.com/LIghtJUNction/zuse-std.git",

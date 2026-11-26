@@ -118,11 +118,6 @@ requires = ["zcalld", "zcalld-compat"]
 role = "application"
 manifests = ["console/Cargo.toml"]
 
-[repositories.zuse-skills]
-role = "extension"
-manifests = []
-requires = ["zuse"]
-
 [repositories.zuse-std]
 role = "extension"
 manifests = []
