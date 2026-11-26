@@ -72,7 +72,7 @@
       "path": "oh-my-ztty",
       "url": "https://github.com/LIghtJUNction/oh-my-ztty.git",
       "branch": "main",
-      "commit": "ee868058e815e0eee80d7b8a3e46bfed555dfe82",
+      "commit": "a1f4ff6791194469ba4aa8972b4066790ad7358f",
       "role": "suite",
       "manifests": [],
       "requires": [
@@ -92,7 +92,7 @@
       "path": "ssmcp",
       "url": "https://github.com/LIghtJUNction/ssmcp.git",
       "branch": "main",
-      "commit": "d2c6d867b61de958900443cccc152531616223a0",
+      "commit": "89a1b3f9782b27247a1893e64577899df9309427",
       "role": "application",
       "manifests": [
         "Cargo.toml",
@@ -168,7 +168,7 @@
       "path": "zcall-gui",
       "url": "https://github.com/LIghtJUNction/zcall-gui.git",
       "branch": "main",
-      "commit": "3e46b6f66270d9114c26a5f0249d0f2e72dd141d",
+      "commit": "d5ada3f442c3bf96626fbf7d580865e5665914fb",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -196,7 +196,7 @@
       "path": "zcalld",
       "url": "https://github.com/LIghtJUNction/zcalld.git",
       "branch": "main",
-      "commit": "2ee08db44eb0370d4580c3c072860ed79fdbfdd4",
+      "commit": "b8e0ad8a33499a592610150edc93253ed1bab351",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -308,7 +308,7 @@
       "path": "zgpui",
       "url": "https://github.com/LIghtJUNction/zgpui.git",
       "branch": "main",
-      "commit": "2ad0e1e7986e57b2084e2a80d3f5066740c10a33",
+      "commit": "bd482f6868718b9766840db8ac5a04031ee4ea9d",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -404,7 +404,7 @@
       "path": "zmcl",
       "url": "https://github.com/LIghtJUNction/zmcl.git",
       "branch": "main",
-      "commit": "90853309074c3b99d2153d49d2b603a09f2dce85",
+      "commit": "659c0be01a6ac1c7bc39d66d9c1755d3d95d8350",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -556,7 +556,7 @@
       "path": "zterm",
       "url": "https://github.com/LIghtJUNction/zterm.git",
       "branch": "main",
-      "commit": "8dac2dbdedb3107eaff140af20c822fd6036864c",
+      "commit": "a815245a2477b5da9378c89739d9a010820a7125",
       "role": "library",
       "manifests": [
         "Cargo.toml"
@@ -568,7 +568,7 @@
       "path": "ztty",
       "url": "https://github.com/LIghtJUNction/ztty.git",
       "branch": "main",
-      "commit": "95aec33bb80f77895f1993fe57c24c635b0aa8b4",
+      "commit": "5d3e19074c8c12bb148a6b2fa24834d4dde0927f",
       "role": "application",
       "manifests": [
         "Cargo.toml",
@@ -594,7 +594,7 @@
       "path": "ztype",
       "url": "https://github.com/LIghtJUNction/ztype.git",
       "branch": "main",
-      "commit": "22ad608ea3f73c010b097ebdc4ed2c2f0c86b6f5",
+      "commit": "92e57e6fcf8b52aa45ce9ef6f31a4fe72fce764b",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -608,7 +608,7 @@
       "path": "zuse",
       "url": "https://github.com/LIghtJUNction/zuse.git",
       "branch": "main",
-      "commit": "6fd80103c8889f9f7e045a85e93fbe92f94c2c76",
+      "commit": "619d919ad766f4def76be3b83f187bc6066be982",
       "role": "application",
       "manifests": [
         "Cargo.toml",
@@ -2947,7 +2947,7 @@
     },
     {
       "name": "ssmcp",
-      "version": "0.10.41",
+      "version": "0.10.54",
       "repository": "ssmcp",
       "manifest": "ssmcp/Cargo.toml",
       "workspace": "ssmcp",
@@ -3314,6 +3314,19 @@
           "explicit_version": true,
           "kind": "normal",
           "target": null,
+          "optional": false,
+          "default_features": false,
+          "features": [],
+          "source": "registry+https://github.com/rust-lang/crates.io-index",
+          "path": null
+        },
+        {
+          "name": "time",
+          "alias": null,
+          "requirement": "^0.3.55",
+          "explicit_version": true,
+          "kind": "normal",
+          "target": "cfg(target_os = \"linux\")",
           "optional": false,
           "default_features": false,
           "features": [],
@@ -4944,7 +4957,7 @@
     },
     {
       "name": "zgpui",
-      "version": "0.1.8",
+      "version": "0.1.9",
       "repository": "zgpui",
       "manifest": "zgpui/Cargo.toml",
       "workspace": "zgpui",
@@ -6544,7 +6557,7 @@
     },
     {
       "name": "ztty",
-      "version": "0.6.3",
+      "version": "0.6.4",
       "repository": "ztty",
       "manifest": "ztty/Cargo.toml",
       "workspace": "ztty",
@@ -6984,7 +6997,7 @@
     },
     {
       "name": "zuse-computer",
-      "version": "0.8.0",
+      "version": "0.9.1",
       "repository": "zuse",
       "manifest": "zuse/Cargo.toml",
       "workspace": "zuse",
