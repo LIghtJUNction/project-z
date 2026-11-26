@@ -594,7 +594,7 @@
       "path": "ztype",
       "url": "https://github.com/LIghtJUNction/ztype.git",
       "branch": "main",
-      "commit": "8471afc83e1bca9a928e8b5ccd12eb83a9b57d75",
+      "commit": "4c6084a16823c2f716a7479911502f7452e10cf3",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -608,7 +608,7 @@
       "path": "zuse",
       "url": "https://github.com/LIghtJUNction/zuse.git",
       "branch": "main",
-      "commit": "409b04c6bbab190753bbd50c9b540fd9a01140c3",
+      "commit": "0834dce7d7373e8f433c142fbb41f8739c952f80",
       "role": "application",
       "manifests": [
         "Cargo.toml",
