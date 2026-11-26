@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "inventory": {
-    "public_owned_non_project_z": 114,
-    "tree_verified": 114,
+    "public_owned_non_project_z": 113,
+    "tree_verified": 113,
     "tree_unresolved": [],
     "tree_no_cargo": [
       "LIghtJUNction/AGENTS.md",
@@ -472,25 +472,6 @@
       ]
     },
     {
-      "name": "MagicBox",
-      "default_branch": "main",
-      "commit": "24c511a056c928f13ccfc65ee5e0bd6b533886a6",
-      "workspaces": [
-        {
-          "manifest": "native/runtime/Cargo.toml",
-          "root": "native/runtime",
-          "package": "magicbox-runtime",
-          "toolchain": null,
-          "toolchain_evidence": null,
-          "cargo_rust_version": null,
-          "compiler_for_pilot": "1.100.0",
-          "validation": "environment_review",
-          "known_constraints": "Rust runtime embedded in mixed native application; confirm native targets and generated prerequisites before adoption.",
-          "evidence": "https://github.com/LIghtJUNction/MagicBox/blob/24c511a056c928f13ccfc65ee5e0bd6b533886a6/native/runtime/Cargo.toml"
-        }
-      ]
-    },
-    {
       "name": "magicnet-android",
       "default_branch": "main",
       "commit": "387fe9ec7aba14033e2c6ac1c23dca19ae6bff8d",
@@ -741,6 +722,29 @@
           "evidence": "https://github.com/LIghtJUNction/zchat/blob/8da8def04b0529a6f9a03709be8e043f043ea57b/Cargo.toml"
         }
       ]
+    }
+  ],
+  "historical_repositories": [
+    {
+      "name": "MagicBox",
+      "default_branch": "main",
+      "commit": "24c511a056c928f13ccfc65ee5e0bd6b533886a6",
+      "workspaces": [
+        {
+          "manifest": "native/runtime/Cargo.toml",
+          "root": "native/runtime",
+          "package": "magicbox-runtime",
+          "toolchain": null,
+          "toolchain_evidence": null,
+          "cargo_rust_version": null,
+          "compiler_for_pilot": "1.100.0",
+          "validation": "environment_review",
+          "known_constraints": "Rust runtime embedded in mixed native application; confirm native targets and generated prerequisites before adoption.",
+          "evidence": "https://github.com/LIghtJUNction/MagicBox/blob/24c511a056c928f13ccfc65ee5e0bd6b533886a6/native/runtime/Cargo.toml"
+        }
+      ],
+      "historical_evidence": "docs/maintenance/2026-11-20-pr-and-dependencies.md",
+      "reason": "The former Android app and native runtime used this GitHub name. The current magicbox proxy repository has a different history."
     }
   ]
 }

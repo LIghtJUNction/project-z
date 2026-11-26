@@ -180,30 +180,30 @@
       ]
     },
     {
-      "id": "magicbox-core",
-      "name": "magicbox-core",
-      "repository": "https://github.com/LIghtJUNction/magicbox-core",
+      "id": "magicbox",
+      "name": "magicbox",
+      "repository": "https://github.com/LIghtJUNction/magicbox",
       "branch": "main",
-      "commit": "679000a92e5ce4f37171f50443c5550b9b866cd6",
+      "commit": "8f7365c604a11e99c0b0b3731be4381d0f3c3331",
       "description": "Rust proxy core with TOML configuration, encrypted DNS and scoped TCP forwarding",
       "visibility": "public",
-      "metadata_source": "https://api.github.com/repos/LIghtJUNction/magicbox-core",
+      "metadata_source": "https://api.github.com/repos/LIghtJUNction/magicbox",
       "role": "application",
       "additional": false,
-      "readme_source": "https://github.com/LIghtJUNction/magicbox-core/blob/679000a92e5ce4f37171f50443c5550b9b866cd6/README.md",
+      "readme_source": "https://github.com/LIghtJUNction/magicbox/blob/8f7365c604a11e99c0b0b3731be4381d0f3c3331/README.md",
       "pages": [
         {
           "slug": "",
           "title": "概览",
-          "file": "content/projects/magicbox-core/index.md",
-          "source": "https://github.com/LIghtJUNction/magicbox-core/blob/679000a92e5ce4f37171f50443c5550b9b866cd6/README.md",
+          "file": "content/projects/magicbox/index.md",
+          "source": "https://github.com/LIghtJUNction/magicbox/blob/8f7365c604a11e99c0b0b3731be4381d0f3c3331/README.md",
           "path": "README.md"
         },
         {
           "slug": "dns-guard",
           "title": "Scoped DNS guard",
-          "file": "content/projects/magicbox-core/dns-guard.md",
-          "source": "https://github.com/LIghtJUNction/magicbox-core/blob/679000a92e5ce4f37171f50443c5550b9b866cd6/docs/dns-guard.md",
+          "file": "content/projects/magicbox/dns-guard.md",
+          "source": "https://github.com/LIghtJUNction/magicbox/blob/8f7365c604a11e99c0b0b3731be4381d0f3c3331/docs/dns-guard.md",
           "path": "docs/dns-guard.md"
         }
       ]

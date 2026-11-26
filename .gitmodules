@@ -148,6 +148,6 @@
 [submodule "zuse-skills"]
 	path = zuse-skills
 	url = https://github.com/LIghtJUNction/zuse-skills.git
-[submodule "magicbox-core"]
-	path = magicbox-core
-	url = https://github.com/LIghtJUNction/magicbox-core.git
+[submodule "magicbox"]
+	path = magicbox
+	url = https://github.com/LIghtJUNction/magicbox.git

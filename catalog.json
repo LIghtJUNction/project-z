@@ -43,11 +43,11 @@
       ]
     },
     {
-      "name": "magicbox-core",
-      "path": "magicbox-core",
-      "url": "https://github.com/LIghtJUNction/magicbox-core.git",
+      "name": "magicbox",
+      "path": "magicbox",
+      "url": "https://github.com/LIghtJUNction/magicbox.git",
       "branch": "main",
-      "commit": "679000a92e5ce4f37171f50443c5550b9b866cd6",
+      "commit": "8f7365c604a11e99c0b0b3731be4381d0f3c3331",
       "role": "application",
       "manifests": [
         "Cargo.toml",
@@ -2192,9 +2192,9 @@
     {
       "name": "magicbox",
       "version": "0.1.0",
-      "repository": "magicbox-core",
-      "manifest": "magicbox-core/Cargo.toml",
-      "workspace": "magicbox-core",
+      "repository": "magicbox",
+      "manifest": "magicbox/Cargo.toml",
+      "workspace": "magicbox",
       "publish": true,
       "rust_version": "1.99.1",
       "library": false,
@@ -2224,7 +2224,7 @@
           "default_features": true,
           "features": [],
           "source": null,
-          "path": "magicbox-core/crates/dns-wire"
+          "path": "magicbox/crates/dns-wire"
         },
         {
           "name": "md-5",
@@ -2356,9 +2356,9 @@
     {
       "name": "magicbox-dns-wire",
       "version": "0.1.0",
-      "repository": "magicbox-core",
-      "manifest": "magicbox-core/crates/dns-wire/Cargo.toml",
-      "workspace": "magicbox-core/crates/dns-wire",
+      "repository": "magicbox",
+      "manifest": "magicbox/crates/dns-wire/Cargo.toml",
+      "workspace": "magicbox/crates/dns-wire",
       "publish": true,
       "rust_version": "1.85",
       "library": true,

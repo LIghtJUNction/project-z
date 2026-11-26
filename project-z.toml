@@ -139,6 +139,6 @@ zshard = "VERSION"
 zdistro = "pyproject.toml"
 zuse-std = "zuse.json"
 
-[repositories.magicbox-core]
+[repositories.magicbox]
 role = "application"
 manifests = ["Cargo.toml", "crates/dns-wire/Cargo.toml"]

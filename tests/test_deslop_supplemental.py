@@ -14,12 +14,12 @@ class SupplementalTests(unittest.TestCase):
         _, coverage = plan(ROOT, "smoke")
         selected = set()
         expect = {(r["repo"], r["manifest"]) for r in coverage if r["status"] == "not_selected"}
-        self.assertEqual(len(coverage), 35)
+        self.assertEqual(len(coverage), 34)
         self.assertEqual(len(expect), 26)
         for i in range((len(expect) + 3) // 4):
             groups, rows = plan(ROOT, str(i))
             found = {(n, str(p)) for n, _, _, paths in groups for p in paths}
-            self.assertEqual(len(rows), 35)
+            self.assertEqual(len(rows), 34)
             self.assertTrue(0 < len(found) <= 4)
             self.assertFalse(found & selected)
             selected |= found
@@ -47,7 +47,7 @@ class SupplementalTests(unittest.TestCase):
         self.assertEqual([n for n, *_ in groups], ["bilibilive", "coolapk-cli", "emailctl", "markref"])
         row = dict(repo="bilibilive", manifest="Cargo.toml", status="tool_error", log="x.log", workspace=None)
         self.assertEqual(coverage_summary(coverage, [row]), dict(clean=0, findings=0, tool_error=1,
-                                                                 environment_review=9, not_selected=25))
+                                                                 environment_review=8, not_selected=25))
 
     def test_native_profile_is_bounded_and_host_is_pinned(self):
         groups, coverage = plan(ROOT, "native")

@@ -363,10 +363,10 @@
       "package": "zuse-std"
     },
     {
-      "id": "magicbox-core",
+      "id": "magicbox",
       "category": "protocol",
       "kind": "tool",
-      "summary": "为 Linux 和 Android 提供 SOCKS5 与 HTTP CONNECT 代理，内含可独立复用的 DNS 报文编解码库。",
+      "summary": "为 Linux 和 Android 提供 SOCKS5 与 HTTP CONNECT 连接服务，附带可单独使用的 DNS 报文编解码库。",
       "package": "magicbox"
     }
   ]

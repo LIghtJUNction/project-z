@@ -1,6 +1,6 @@
 # MagicBox
 
-MagicBox 是给应用和网关使用的 Rust 代理。客户端在同一个回环端口接收 SOCKS5 CONNECT 和 HTTP CONNECT。它通过选定上游转发目的地址。服务端提供经过证书验证和用户认证的 HTTPS CONNECT，并用 DNS-over-TLS 解析域名。两个角色共用一个二进制文件。
+MagicBox 用一个 Rust 程序提供客户端和服务端。客户端在同一个回环端口接收 SOCKS5 CONNECT 和 HTTP CONNECT 请求，经选定的上游建立连接。服务端接受 HTTPS CONNECT 请求，验证用户凭据，并通过 DNS-over-TLS 解析目标域名。
 
 ## 客户端
 
@@ -8,12 +8,13 @@ MagicBox 是给应用和网关使用的 Rust 代理。客户端在同一个回�
 
 ~~~sh
 cargo build --locked --release --bin magicbox
+export PATH="$PWD/target/release:$PATH"
 ~~~
 
-在私有文件 client.toml 中填入你的代理地址、证书域名和凭据。下面使用文档保留地址。
+在私有文件 `client.toml` 中填入上游地址、证书域名和凭据。下面使用文档保留地址。
 
 ~~~toml
-upstream = "https://alice:REPLACE_WITH_PASSWORD@192.0.2.10:8443?server_name=proxy.example"
+upstream = "https://alice:REPLACE_WITH_PASSWORD@192.0.2.10:8443?server_name=relay.example"
 ~~~
 
 ~~~sh
@@ -25,7 +26,7 @@ magicbox run client.toml
 客户端就绪后在标准错误输出 ready 和实际监听地址。默认监听 127.0.0.1:1080。可通过 listen 字符串选择其他回环 IP 和端口。使用支持远端解析的应用连接这个端口，例如以下 curl 命令。
 
 ~~~sh
-curl --proxy socks5h://127.0.0.1:1080 https://example.org/
+curl -x socks5h://127.0.0.1:1080 https://example.org/
 ~~~
 
 | 上游方案 | 身份与传输 |
@@ -39,7 +40,7 @@ curl --proxy socks5h://127.0.0.1:1080 https://example.org/
 
 用户名与密码中的 URI 特殊字符可以百分号编码。私有 CA 通过 MAGICBOX_CA_BUNDLE 指定 PEM 文件。配置不含 upstream 时，监听器可以启动，所有转发请求都会被拒绝。上游连接失败时，客户端向本地应用返回失败。
 
-## 运行自己的代理服务器
+## 运行 HTTPS CONNECT 服务端
 
 准备可验证的证书链、对应私钥和一个只允许服务账户读取的凭据文件。下例创建随机密码，凭据保存在单独文件中。客户端配置使用相同的用户名与密码。
 
@@ -74,11 +75,11 @@ magicbox serve server.toml
 magicbox redirect client.toml 19870
 ~~~
 
-监听成功会输出 ready [::]:19870。端口同时服务 IPv4 和 IPv6。此入口只处理由宿主规则实际送达的 TCP，不安装系统规则。原始 IP 没有域名信息，按域名匹配的规则仅能用于显式提供域名的连接。端口 53、私网、回环和常见保留地址不会从此入口出站。系统解析器代查、独立的 UDP 流和其他应用流量需要各自的宿主策略。独立应用配置 DoH 时，HTTPS 连接可以跟随选定的 TCP 路径。入站流量保持端到端加密语义，MagicBox 不签发代理证书。
+监听成功会输出 ready [::]:19870。端口同时服务 IPv4 和 IPv6。此入口只处理由宿主规则实际送达的 TCP，不安装系统规则。原始 IP 没有域名信息，按域名匹配的规则仅能用于显式提供域名的连接。端口 53、私网、回环和常见保留地址不会从此入口出站。系统解析器代查、独立的 UDP 流和其他应用流量需要各自的宿主策略。独立应用配置 DoH 时，HTTPS 连接可以跟随选定的 TCP 路径。应用与目标服务之间的 TLS 会话保持端到端加密。
 
 ## 订阅与规则
 
-尚未选择代理时，可以用 fetch 下载第一个 HTTPS 订阅。URL 可以通过标准输入传给进程，避免令牌出现在命令行参数中。下载在证书验证、完整读取和大小检查通过后才产生标准输出。
+首次配置时，可以用 `fetch` 直接下载 HTTPS 订阅。URL 可以通过标准输入传给进程，避免令牌出现在命令行参数中。下载在证书验证、完整读取和大小检查通过后才产生标准输出。
 
 ~~~sh
 umask 077
@@ -100,11 +101,11 @@ MAGICBOX_BLOCKLIST 指向经过排序的精确域名规则文件，首行为 mag
 
 ## 作用范围
 
-代理路径内的域名通过 SOCKS5 域名字段或 CONNECT 的目标名称交给上游。应用自行解析后交给代理的 IP 已经失去原域名信息。应用绕过代理的连接由宿主网络策略决定。核心本身无需修改设备路由、系统 DNS 或防火墙。HTTPS 保护到代理服务器的链路；代理服务器能够看见转发目的地。
+应用通过 SOCKS5 或 CONNECT 提交域名时，上游可以读取目标名称。应用自行解析并只提交 IP 时，MagicBox 只能取得目标地址。应用直接发起的其他连接沿用宿主网络策略。核心本身无需修改设备路由、系统 DNS 或防火墙。使用 HTTPS 上游时，TLS 保护客户端到上游的链路，上游仍能看到转发目的地。
 
 可选的 Linux cgroup eBPF DNS 守卫按指定 cgroup 生效。操作方式和覆盖边界见 [DNS guard](docs/dns-guard.md)。
 
-SOCKS5 上游还支持 RFC 1928 UDP ASSOCIATE。应用须保留控制连接并使用协商的本地 UDP 中继。核心检查数据报端点、目的地址及域名规则，关闭控制连接时撤销关联。当前没有通用 TUN、透明 UDP 路由或 Shadowsocks UDP。Shadowsocks 插件、AEAD-2022、VMess、VLESS、WireGuard、Hysteria2 和 TUIC 等仍待实现。受支持的主要部署目标为 Linux 和 Android。Android 模块、规则下载与增量更新由 MagicNet 集成仓库提供。
+SOCKS5 上游还支持 RFC 1928 UDP ASSOCIATE。应用须保留控制连接并使用协商的本地 UDP 中继。核心检查数据报端点、目的地址及域名规则，关闭控制连接时撤销关联。当前没有通用 TUN、透明 UDP 路由或 Shadowsocks UDP。Shadowsocks 插件、AEAD-2022、VMess、VLESS、WireGuard、Hysteria2 和 TUIC 等仍待实现。受支持的主要部署目标为 Linux 和 Android。Android 模块、规则下载与增量更新由 [MagicNet Astra Pro](https://github.com/LIghtJUNction/magicnet-astra-pro) 提供。
 
 ## 验证和测量
 
@@ -124,7 +125,7 @@ python3 tests/compare.py target/release/magicbox /path/to/reference/sing-box
 
 集成测试需要 Python 3、OpenSSL 和 C 编译器。测试会生成一次性 CA，验证错误证书、认证失败、上游断开、双向数据、半关闭以及使用加密 DNS 的完整客户端与服务端链路。测试将一个指定的公开 IP 映射到本地回显服务，便于普通 Linux 用户运行。
 
-DNS 路径测试优先使用 strace 观察 socket 和 connect 系统调用。在禁用 ptrace 的环境中使用 libc 插桩，并在输出标明观察层次。性能脚本使用本地持续 TCP 连接，记录吞吐量、请求往返延迟及 Linux 进程峰值 RSS；compare.py 在相同的回显负载下轮换运行 MagicBox 和给定的 sing-box 二进制。实际网络、规则规模、并发数和代理协议均会改变测量结果。
+DNS 路径测试优先使用 strace 观察 socket 和 connect 系统调用。在禁用 ptrace 的环境中使用 libc 插桩，并在输出标明观察层次。性能脚本使用本地持续 TCP 连接，记录吞吐量、请求往返延迟及 Linux 进程峰值 RSS；compare.py 在相同的回显负载下轮换运行 MagicBox 和给定的 sing-box 二进制。实际网络、规则规模、并发数和上游协议均会影响测量结果。
 
 ## 一次可重复的对照测量
 
