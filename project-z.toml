@@ -37,6 +37,7 @@ source_links = { "apps/zcall-gui" = "zcall-gui" }
 
 [repositories.zuse]
 role = "application"
+manifests = ["Cargo.toml", "apps/writer/Cargo.toml"]
 
 [repositories.zcall]
 manifests = ["Cargo.toml", "fuzz/Cargo.toml"]

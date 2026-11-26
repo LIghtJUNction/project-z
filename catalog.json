@@ -594,7 +594,7 @@
       "path": "ztype",
       "url": "https://github.com/LIghtJUNction/ztype.git",
       "branch": "main",
-      "commit": "0ede150a4521f455c2fed34f052069822ce09e9e",
+      "commit": "8471afc83e1bca9a928e8b5ccd12eb83a9b57d75",
       "role": "application",
       "manifests": [
         "Cargo.toml"
@@ -608,10 +608,11 @@
       "path": "zuse",
       "url": "https://github.com/LIghtJUNction/zuse.git",
       "branch": "main",
-      "commit": "1bfccf07658630e9fb3b033e6f4d54113ebb9d87",
+      "commit": "409b04c6bbab190753bbd50c9b540fd9a01140c3",
       "role": "application",
       "manifests": [
-        "Cargo.toml"
+        "Cargo.toml",
+        "apps/writer/Cargo.toml"
       ],
       "requires": []
     },
@@ -6983,7 +6984,7 @@
     },
     {
       "name": "zuse-computer",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "repository": "zuse",
       "manifest": "zuse/Cargo.toml",
       "workspace": "zuse",
@@ -7088,6 +7089,51 @@
           ],
           "source": "git+https://github.com/LIghtJUNction/zsys.git",
           "path": null
+        }
+      ]
+    },
+    {
+      "name": "zuse-writer",
+      "version": "0.1.0",
+      "repository": "zuse",
+      "manifest": "zuse/apps/writer/Cargo.toml",
+      "workspace": "zuse/apps/writer",
+      "publish": true,
+      "rust_version": "1.100",
+      "library": false,
+      "features": {
+        "linux-software": [
+          "zgpui/linux-software"
+        ]
+      },
+      "dependencies": [
+        {
+          "name": "zgpui",
+          "alias": null,
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [
+            "native"
+          ],
+          "source": "git+https://github.com/LIghtJUNction/zgpui.git",
+          "path": null
+        },
+        {
+          "name": "zuse-computer",
+          "alias": "zuse",
+          "requirement": "*",
+          "explicit_version": false,
+          "kind": "normal",
+          "target": null,
+          "optional": false,
+          "default_features": true,
+          "features": [],
+          "source": null,
+          "path": "zuse"
         }
       ]
     },
