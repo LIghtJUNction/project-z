@@ -9,6 +9,10 @@ on:
         default: false
   workflow_call:
     inputs:
+      diagnose_recorded_sources:
+        description: Test the recorded checkout when resolution passes and the source check fails
+        type: boolean
+        default: false
       candidate_artifact:
         type: string
         default: ''
@@ -64,11 +68,11 @@ jobs:
 
   core-libraries:
     needs: dependencies
-    # An explicit manual diagnostic can test the recorded, locked cohort.
+    # Explicit diagnostics use the recorded checkout and its verified locks.
     # The dependency job's failure remains a failure of the whole workflow.
     if: >-
       !cancelled() && (needs.dependencies.result == 'success' ||
-      (github.event_name == 'workflow_dispatch' && inputs.diagnose_recorded_sources == true &&
+      (inputs.diagnose_recorded_sources == true && inputs.candidate_artifact == '' && inputs.candidate_sha == '' &&
       needs.dependencies.outputs.resolution == 'success' && needs.dependencies.outputs.source_check == 'failure'))
     strategy:
       fail-fast: false

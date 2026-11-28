@@ -23,6 +23,7 @@ jobs:
     outputs:
       sha: ${{ steps.prepare.outputs.sha }}
       bundle: ${{ steps.prepare.outputs.bundle }}
+      snapshot_status: ${{ steps.report.outputs.snapshot_status }}
     steps:
       - uses: actions/checkout@v6
         with:
@@ -48,8 +49,22 @@ jobs:
           name: ${{ steps.prepare.outputs.bundle }}
           path: ${{ runner.temp }}/cohort.bundle
           if-no-files-found: error
-      - if: always()
-        run: test ! -f dist/maintenance/summary.md || cat dist/maintenance/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Report snapshot preparation
+        id: report
+        if: always()
+        run: |
+          test ! -f dist/maintenance/summary.md || cat dist/maintenance/summary.md >> "$GITHUB_STEP_SUMMARY"
+          if test -f dist/maintenance/audit.json && jq -e '.snapshot.status == "blocked"' dist/maintenance/audit.json > /dev/null; then
+            echo "snapshot_status=blocked" >> "$GITHUB_OUTPUT"
+          fi
+
+  diagnose-recorded:
+    name: Diagnose recorded checkout after blocked preparation
+    needs: prepare
+    if: failure() && needs.prepare.result == 'failure' && needs.prepare.outputs.snapshot_status == 'blocked'
+    uses: ./.github/workflows/ci.yml
+    with:
+      diagnose_recorded_sources: true
 
   validate:
     needs: prepare

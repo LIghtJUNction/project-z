@@ -17,7 +17,9 @@ For a read-only diagnosis of an existing PR, manually run **Coordinate Project Z
 on its branch with `diagnose_recorded_sources` enabled. When unit tests and
 full locked resolution pass, this permits platform tests to report their own
 results even if the source check fails. The dependency job and overall CI
-still fail. Scheduled and formal release calls keep their normal prerequisites.
+still fail. If scheduled preparation reports a blocked snapshot, the same read-only
+diagnostics run on the original workflow SHA. The failed preparation remains visible.
+Only a successfully prepared candidate can reach candidate validation, packaging or recording.
 
 ## Enabling scheduled writes
 
